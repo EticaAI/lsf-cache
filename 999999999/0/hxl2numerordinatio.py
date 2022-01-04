@@ -24,9 +24,6 @@
 #
 #  REQUIREMENTS:  - python3
 #                     - libhxl (@see https://pypi.org/project/libhxl/)
-#                     - hug (https://github.com/hugapi/hug/)
-#                     - your-extra-python-lib-here
-#                 - your-non-python-dependency-here
 #          BUGS:  ---
 #         NOTES:  ---
 #       AUTHORS:  Emerson Rocha <rocha[at]ieee.org>
@@ -41,6 +38,8 @@
 #      REVISION:  ---
 # ==============================================================================
 
+# ./999999999/0/hxl2numerordinatio.py
+
 import sys
 import os
 import logging
@@ -53,11 +52,12 @@ import hxl.converters
 import hxl.filters
 import hxl.io
 
+import csv
 import tempfile
 
-# @see https://github.com/hugapi/hug
-#     pip3 install hug --upgrade
-import hug
+# # @see https://github.com/hugapi/hug
+# #     pip3 install hug --upgrade
+# import hug
 
 # In Python2, sys.stdin is a byte stream; in Python3, it's a text stream
 STDIN = sys.stdin.buffer
@@ -81,6 +81,12 @@ class HXL2Example:
         self.EXIT_ERROR = 1
         self.EXIT_SYNTAX = 2
 
+        self.original_outfile = None
+        self.original_outfile_is_stdout = True
+
+        self.conceptum_hxl = ''
+        self.conceptum_caput_index = 0
+
     def make_args_hxl2example(self):
 
         self.hxlhelper = HXLUtils()
@@ -90,67 +96,117 @@ class HXL2Example:
                          "interfaces that could work to export HXL files to "
                          "other formats."))
 
+        parser.add_argument(
+            '--conceptum-hxl',
+            help='The HXL tag with the numeric code',
+            # metavar='number',
+            # type=int,
+            default=None,
+            nargs='?'
+        )
+
         self.args = parser.parse_args()
         return self.args
 
-    def execute_cli(self, args,
-                    stdin=STDIN, stdout=sys.stdout, stderr=sys.stderr):
-        """
-        The execute_cli is the main entrypoint of HXL2Example. When
-        called will convert the HXL source to example format.
-        """
-
-        # NOTE: the next lines, in fact, only generate an csv outut. So you
-        #       can use as starting point.
-        with self.hxlhelper.make_source(args, stdin) as source, \
-                self.hxlhelper.make_output(args, stdout) as output:
-            hxl.io.write_hxl(output.output, source,
-                             show_tags=not args.strip_tags)
-
-        return self.EXIT_OK
-
-    def execute_web(self, source_url, stdin=STDIN, stdout=sys.stdout,
+    def execute_cli(self, args, stdin=STDIN, stdout=sys.stdout,
                     stderr=sys.stderr, hxlmeta=False):
         """
-        The execute_web is the main entrypoint of HXL2Tab when this class is
-        called outside command line interface, like the build in HTTP use with
-        hug
+        The execute_cli is the main entrypoint of HXL2Tab when used via command
+        line interface.
         """
+        # hxltabconverter = HXLTabConverter()
 
-        # TODO: the execute_web needs to output the tabfile with correct
-        #       mimetype, compression, etc
-        #       (fititnt, 2021-02-07 15:59 UTC)
+        self.conceptum_hxl = args.conceptum_hxl
 
-        self.hxlhelper = HXLUtils()
+        # print('args', args)
+        # print('self.conceptum_hxlself.conceptum_hxl 0', self.conceptum_hxl)
+
+        # print(hxltabconverter.ORANGE_REFERENCE)
+        # print(hxltabconverter.HXL_REFERENCE)
+
+        # If the user specified an output file, we will save on
+        # self.original_outfile. The args.outfile will be used for temporary
+        # output
+        if args.outfile:
+            self.original_outfile = args.outfile
+            self.original_outfile_is_stdout = False
 
         try:
-            temp_input = tempfile.NamedTemporaryFile('w')
-            temp_output = tempfile.NamedTemporaryFile('w')
+            temp = tempfile.NamedTemporaryFile()
+            args.outfile = temp.name
 
-            webargs = type('obj', (object,), {
-                "infile": source_url,
-                "sheet_index": None,
-                "selector": None,
-                'sheet': None,
-                'http_header': None,
-                'ignore_certs': False
-            })
+            with self.hxlhelper.make_source(args, stdin) as source, \
+                    self.hxlhelper.make_output(args, stdout) as output:
+                hxl.io.write_hxl(output.output, source,
+                                 show_tags=not args.strip_tags)
 
-            with self.hxlhelper.make_source(webargs, stdin) as source:
-                for line in source.gen_csv(True, True):
-                    temp_input.write(line)
-
-                temp_input.seek(0)
-                # self.hxl2tab(temp_input.name, temp_output.name, False)
-
-                result_file = open(temp_input.name, 'r')
-                return result_file.read()
+            # if args.hxlmeta:
+            #     print('TODO: hxlmeta')
+            #     # print('output.output', output.output)
+            #     # print('source', source)
+            #     # # print('source.columns', source.headers())
+            #     # hxlmeta = HXLMeta(local_hxl_file=output.output.name)
+            #     # hxlmeta.debuginfo()
+            # else:
+            #     self.execute_numerordinatio(args.outfile, self.original_outfile,
+            #                  self.original_outfile_is_stdout)
+            self.execute_numerordinatio(args.outfile, self.original_outfile,
+                                        self.original_outfile_is_stdout)
 
         finally:
-            temp_input.close()
-            temp_output.close()
+            temp.close()
 
         return self.EXIT_OK
+
+    def execute_numerordinatio(self, hxlated_input, tab_output, is_stdout):
+        """
+        hxl2tab is  is the main method to de facto make the conversion.
+        """
+
+        # print('self.conceptum_hxlself.conceptum_hxl 1', self.conceptum_hxl)
+
+        with open(hxlated_input, 'r') as csv_file:
+            csv_reader = csv.reader(csv_file)
+
+            # Hotfix: skip first non-HXL header. Ideally I think the already
+            # exported HXlated file should already save without headers.
+            next(csv_reader)
+            header_original = next(csv_reader)
+            # header_new = self.caput_index(header_original)
+            caput_index_num = self.caput_index(header_original)
+            # print('caput_index_num', caput_index_num)
+
+            if is_stdout:
+                txt_writer = csv.writer(sys.stdout, delimiter='\t')
+                # txt_writer.writerow(header_new)
+                txt_writer.writerow(header_original)
+                for line in csv_reader:
+                    txt_writer.writerow(line)
+            else:
+
+                tab_output_cleanup = open(tab_output, 'w')
+                tab_output_cleanup.truncate()
+                tab_output_cleanup.close()
+
+                with open(tab_output, 'a') as new_txt:
+                    txt_writer = csv.writer(new_txt, delimiter='\t')
+                    # txt_writer.writerow(header_new)
+                    txt_writer.writerow(header_original)
+                    for line in csv_reader:
+                        txt_writer.writerow(line)
+
+    def caput_index(self, hxlated_header):
+        """
+        Detect the _de facto_ numeric index
+        """
+
+        if self.conceptum_hxl:
+            # print('testando...')
+            neo_index = hxlated_header.index(self.conceptum_hxl)
+            return neo_index
+
+        # Potential error; we will assume first column have numeric code
+        return self.conceptum_caput_index
 
 
 class HXLUtils:
@@ -362,29 +418,3 @@ if __name__ == "__main__":
     args = hxl2example.make_args_hxl2example()
 
     hxl2example.execute_cli(args)
-
-
-@hug.format.content_type('text/csv')
-def output_csv(data, response):
-    if isinstance(data, dict) and 'errors' in data:
-        response.content_type = 'application/json'
-        return hug.output_format.json(data)
-    response.content_type = 'text/csv'
-    if hasattr(data, "read"):
-        return data
-
-    return str(data).encode("utf8")
-
-
-@hug.get('/hxl2example.csv', output=output_csv)
-def api_hxl2example(source_url):
-    """hxl2example (@see https://github.com/EticaAI/HXL-Data-Science-file-formats)
-
-    Example:
-    http://localhost:8000/hxl2example.csv?source_url=https://docs.google.com/spreadsheets/u/1/d/1l7POf1WPfzgJb-ks4JM86akFSvaZOhAUWqafSJsm3Y4/edit#gid=634938833
-
-    """
-
-    hxl2example = HXL2Example()
-
-    return hxl2example.execute_web(source_url)
