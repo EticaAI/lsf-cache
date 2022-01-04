@@ -9,7 +9,8 @@
 #
 #       OPTIONS:  ---
 #
-#  REQUIREMENTS:  ---
+#  REQUIREMENTS:  - POSIX shell (or better)
+#                 - wget
 #          BUGS:  ---
 #         NOTES:  ---
 #        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>

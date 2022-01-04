@@ -9,7 +9,9 @@
 #
 #       OPTIONS:  ---
 #
-#  REQUIREMENTS:  ---
+#  REQUIREMENTS:  - POSIX shell (or better)
+#                 - wget
+#                 - mlr (https://miller.readthedocs.io/en/latest/)
 #          BUGS:  ---
 #         NOTES:  ---
 #        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>
@@ -33,3 +35,15 @@ ROOTDIR="$(pwd)"
 DATA_ISO_15924_TXT="https://www.unicode.org/iso15924/iso15924.txt"
 
 wget -qO- "$DATA_ISO_15924_TXT" > "${ROOTDIR}/99999999/1603/47/15924/1603.47.15924.txt"
+
+# mlr --csv head 99999999/1603/47/15924/1603.47.15924.txt
+# mlr --csv skip-trivial-records 99999999/1603/47/15924/1603.47.15924.txt
+
+# tail -n +4 99999999/1603/47/15924/1603.47.15924.txt
+# tail -n +8 99999999/1603/47/15924/1603.47.15924.txt | mrl --csv --irs=";" --ors=","
+
+echo "#code+v_iso1524a;#code+v_iso1524n;#item+name+i_eng+is_latn;#item+name+i_fra+is_latn;#meta+pva;#meta+unicode+version;#date" > "${ROOTDIR}/99999999/1603/47/15924/1603.47.15924.csv"
+tail -n +8 "${ROOTDIR}/99999999/1603/47/15924/1603.47.15924.txt" >> "${ROOTDIR}/99999999/1603/47/15924/1603.47.15924.csv"
+
+
+#  ./999999999/0/hxl2numerordinatio.py 99999999/1603/47/15924/1603.47.15924.csv
