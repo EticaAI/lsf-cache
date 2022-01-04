@@ -39,8 +39,7 @@ DATA_ISO_15924_TXT="https://www.unicode.org/iso15924/iso15924.txt"
 
 # @TODO: implement some option to use cached file instead of re-download; 
 #        for now we're just commenting the next line
-# wget -qO- "$DATA_ISO_15924_TXT" > "${ROOTDIR}/99999999/1603/47/15924/1603.47.15924.txt"
-
+wget -qO- "$DATA_ISO_15924_TXT" > "${ROOTDIR}/99999999/1603/47/15924/1603.47.15924.txt"
 
 
 ## 1603.47.15924.txt --> 1603.47.15924.hxl.csv
@@ -49,7 +48,7 @@ echo "#code+v_iso1524a;#code+v_iso1524n;#item+name+i_eng+is_latn;#item+name+i_fr
 tail -n +8 "${ROOTDIR}/99999999/1603/47/15924/1603.47.15924.txt" \
   >> "${ROOTDIR}/99999999/1603/47/15924/1603.47.15924.hxl.csv"
 
-## 1603.47.15924.hxl.csv --> 1603.47.15924.tm.hxl.csv
+### 1603.47.15924.hxl.csv --> 1603.47.15924.tm.hxl.csv _________________________
 hxlrename \
   --rename="#code+v_iso1524n:#item+rem+i_zxx+is_zmth+ix_iso1524n" \
   --rename="#code+v_iso1524a:#item+rem+i_zxx+is_latn+ix_iso1524a" \
