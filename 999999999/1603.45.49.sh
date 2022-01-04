@@ -42,7 +42,7 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
 
 # @TODO: implement some option to use cached file instead of re-download; 
 #        for now we're just commenting the next line
-wget -qO- "$DATA_UN_M49_CSV" > "${ROOTDIR}/99999999/1603/45/49/1603.45.49.hxl.csv"
+wget -qO- "$DATA_UN_M49_CSV" > "${ROOTDIR}/999999/1603/45/49/1603.45.49.hxl.csv"
 
 
 ### 1603.45.49.hxl.csv --> 1603.45.49.tm.hxl.csv _______________________________
@@ -56,7 +56,7 @@ hxlrename \
   --rename="#country+name+i_ru+alt+v_unterm:#item+rem+i_rus+is_cyrl+ix_unterm" \
   --rename="#country+name+i_zh+alt+v_unterm:#item+rem+i_zho+is_hans+ix_unterm" \
   --rename="#country+name+i_ar+alt+v_unterm:#item+rem+i_ara+is_arab+ix_unterm" \
-  "${ROOTDIR}/99999999/1603/45/49/1603.45.49.hxl.csv" \
+  "${ROOTDIR}/999999/1603/45/49/1603.45.49.hxl.csv" \
   | hxlselect --query="#country+code+num+v_m49>0" \
   | hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unfts={{#country+code+v_fts}}" \
   | hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unreliefweb={{#country+code+v_reliefweb}}" \
@@ -64,20 +64,22 @@ hxlrename \
   | hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unm49={{#country+code+num+v_m49}}" \
   | hxladd --before --spec="#item+conceptum+codicem={{#country+code+num+v_m49}}" \
   | hxlsort --tags="#item+conceptum" \
-  > "${ROOTDIR}/99999999/1603/45/49/1603.45.49.tm.hxl.csv"
+  > "${ROOTDIR}/999999/1603/45/49/1603.45.49.tm.hxl.csv"
 
 # @TODO: only do this if hxl did not removed empty header files ,,,,,,
-sed -i '1d' "${ROOTDIR}/99999999/1603/45/49/1603.45.49.tm.hxl.csv"
+sed -i '1d' "${ROOTDIR}/999999/1603/45/49/1603.45.49.tm.hxl.csv"
 
 ### 1603.45.49.tm.hxl.csv --> 1603.45.49.no1.tm.hxl.csv ________________________
 
 hxlrename \
   --rename="#country+code+v_iso2:#item+rem+i_zxx+is_latn+ix_iso3166p1a2" \
   --rename="#country+code+v_iso3:#item+rem+i_zxx+is_latn+ix_iso3166p1a3" \
-  "${ROOTDIR}/99999999/1603/45/49/1603.45.49.tm.hxl.csv" \
+  "${ROOTDIR}/999999/1603/45/49/1603.45.49.tm.hxl.csv" \
   | hxladd --before --spec="#item+conceptum+numerordinatio=${PRAEFIXUM}{{(#item+conceptum+codicem)+1-1}}" \
   | hxlcut --include="#item+conceptum,#item+rem" \
   > "${ROOTDIR}/1603/45/49/1603.45.49.no1.tm.hxl.csv"
 
 # @TODO: only do this if hxl did not removed empty header files ,,,,,,
 sed -i '1d' "${ROOTDIR}/1603/45/49/1603.45.49.no1.tm.hxl.csv"
+
+set +x
