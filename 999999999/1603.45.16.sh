@@ -4,6 +4,7 @@
 #          FILE:  1603.45.16.sh
 #
 #         USAGE:  ./999999999/1603.45.16.sh
+#                 time ./999999999/1603.45.16.sh
 #
 #   DESCRIPTION:  ...
 #
@@ -11,6 +12,7 @@
 #
 #  REQUIREMENTS:  - POSIX shell (or better)
 #                 - wget
+#                 - csvkit (https://github.com/wireservice/csvkit)
 #          BUGS:  ---
 #         NOTES:  ---
 #        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>
@@ -31,10 +33,10 @@ set -x
 #   - https://drive.google.com/file/d/1jRshR0Mywd_w8r6W2njUFWv7oDVLgKQi/view?usp=sharing
 #     - https://drive.google.com/uc?export=download&id=1jRshR0Mywd_w8r6W2njUFWv7oDVLgKQi
 
-
 ROOTDIR="$(pwd)"
 PRAEFIXUM="1603.45.16:"
 
+REBUILD_CSV_FROM_XLSX="0" # REBUILD_CSV_FROM_XLSX="0"
 
 #######################################
 # Normalization of PCode sheets
@@ -80,7 +82,9 @@ fi
 # export PYTHONWARNINGS="ignore"
 # PYTHONWARNINGS="ignore"
 
-echo "#meta,#meta+archivum,#meta+iso3,#meta+sheets+original,#meta+sheets+new" > "${ROOTDIR}"/999999/1603/45/16/___.csv
+echo "#meta,#meta+archivum,#meta+iso3,#meta+sheets+original,#meta+sheets+new" > "${ROOTDIR}"/999999/1603/45/16/meta-de-archivum.csv
+echo "" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
+echo "#meta,#meta+archivum,#meta+caput" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
 
 for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
   ISO3166p1a3=$(basename --suffix=.xlsx "$file_path")
@@ -95,14 +99,29 @@ for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
     file_xlsx_sheets_new_item=$(un_pcode_sheets_norma "$ISO3166p1a3" "$sheet_name")
     file_xlsx_sheets_new="${file_xlsx_sheets_new} ${file_xlsx_sheets_new_item}"
 
-    in2csv --sheet="${sheet_name}" "$file_path" > "${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv"
+    if [ ! -f "${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv" ] || [ "${REBUILD_CSV_FROM_XLSX}" -eq "1" ]; then
+        in2csv --sheet="${sheet_name}" "$file_path" > "${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv"
+    fi
+
+    caput=$(head -n 1 "${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv" | tr ',' "\n")
+    echo "$caput" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
+    # echo "${PRAEFIXUM},$caput" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
+    echo "$caput" | while IFS= read -r line ; do
+      # echo $line
+      echo "${PRAEFIXUM},${file_xlsx},${line}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
+    done
+
   done
   file_xlsx_sheets=$(trim "$file_xlsx_sheets")
   file_xlsx_sheets_new=$(trim "$file_xlsx_sheets_new")
 
   # Save learned metadata
-  echo "${PRAEFIXUM},${file_xlsx},${ISO3166p1a3},${file_xlsx_sheets},${file_xlsx_sheets_new}" >> "${ROOTDIR}"/999999/1603/45/16/___.csv
+  echo "${PRAEFIXUM},${file_xlsx},${ISO3166p1a3},${file_xlsx_sheets},${file_xlsx_sheets_new}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-archivum.csv
 
 done
+
+sort "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt | uniq > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.uniq.txt
+
+rm "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
 
 set +x
