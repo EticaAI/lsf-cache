@@ -30,6 +30,24 @@ ROOTDIR="$(pwd)"
 
 PRAEFIXUM="1603.45.16:"
 
+
+#######################################
+# Normalization of PCode sheets
+# Globals:
+#   BACKUP_DIR
+#   ORACLE_SID
+# Arguments:
+#   ISO3166p1a3
+#   sheetname
+#######################################
+un_pcode_sheets_norma() {
+  # $1
+  # $2
+  echo "$1_$2"
+}
+
+
+
 # Source:
 # - https://data.humdata.org/dataset?ext_cod=1&res_format=XLSX
 #   - https://drive.google.com/file/d/1jRshR0Mywd_w8r6W2njUFWv7oDVLgKQi/view?usp=sharing
@@ -53,19 +71,26 @@ fi
 # export PYTHONWARNINGS="ignore"
 # PYTHONWARNINGS="ignore"
 
+echo "#meta,#meta+archivum,#meta+iso3,#meta+sheets+original,#meta+sheets+new" > "${ROOTDIR}"/999999/1603/45/16/___.csv
+
 for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
   ISO3166p1a3=$(basename --suffix=.xlsx "$file_path")
+  file_xlsx="${ISO3166p1a3}.xlsx"
+  file_xlsx_sheets=$(in2csv --names "$file_path" | tr '\n' ' ')
+  # file_xlsx_sheets_new=$file_xlsx_sheets
+  file_xlsx_sheets_new=""
+  # file_xlsx_sheets_new=$(in2csv --names "$file_path" | tr '\n' ' ')
 #   ISO3166p1a3=$(echo "$i" | sed "s/${ROOTDIR}/999999/1603/45/16/xlsx///")
 #   echo "$i"
-  echo "$ISO3166p1a3"
+  # echo "$ISO3166p1a3"
 
-  # files
-#   PYTHONWARNINGS="ignore" in2csv --names "$file_path"
-  in2csv --names "$file_path"
+  echo "${PRAEFIXUM},${file_xlsx},${ISO3166p1a3},${file_xlsx_sheets},${file_xlsx_sheets_new}" >> "${ROOTDIR}"/999999/1603/45/16/___.csv
 
-  for sheet_name in $(in2csv --names "$file_path"); do
-    echo "  $sheet_name"
-  done
+  # in2csv --names "$file_path"
+
+  # for sheet_name in $(in2csv --names "$file_path"); do
+  #   echo "  $sheet_name"
+  # done
 
 done
 
