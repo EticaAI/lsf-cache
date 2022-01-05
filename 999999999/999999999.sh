@@ -94,10 +94,26 @@ un_pcode_hxl_from_header() {
 #   rawheader
 un_pcode_rawheader_is_pcode() {
     rawheader="$1"
-    if [ "$(contains "$rawheader" "Pcode" )" ] || [ "$(contains "$rawheader" "pcode" )" ]; then
+
+    # if echo "$rawheader" | grep -q -E "Pcode|pcode"; then
+    if echo "$rawheader" | grep -q -E "Pcode|pcode"; then
+    # if echo "$rawheader" | grep -E "Pcode|pcode" | wc -c; then
+        # echo "   pentrou"
+        return 1
+    else
         return 0
     fi
-    return 1
+
+
+    # if [ "$(contains "$rawheader" "Pcode" )" ] || [ "$(contains "$rawheader" "adm" )" ]; then
+    #     return 0
+    # fi
+    # return 1
+    # if [ "$(contains "$rawheader" "Pcode" )" ] && [ "$(contains "$rawheader" "adm" )" ]; then
+    # if [ "$(contains "$rawheader" "Pcode" )" ] || [ "$(contains "$rawheader" "pcode" )" ]; then
+    #     return 0
+    # fi
+    # return 1
 }
 
 #######################################
@@ -107,10 +123,10 @@ un_pcode_rawheader_is_pcode() {
 #   None
 # Arguments:
 #   rawheader
-un_pcode_rawheader_is_admin_name() {
+un_pcode_rawheader_is_name() {
     rawheader="$1"
-    if [ "$(contains "$rawheader" "Adm" )" ] || [ "$(contains "$rawheader" "adm" )" ]; then
-        if [ "$(contains "$rawheader" "Name" )" ] || [ "$(contains "$rawheader" "name" )" ]; then
+    if [ ! "$(contains "$rawheader" "Adm" )" ] || [ ! "$(contains "$rawheader" "adm" )" ]; then
+        if [ ! "$(contains "$rawheader" "Name" )" ] || [ ! "$(contains "$rawheader" "name" )" ]; then
             return 0
         fi
     fi
@@ -129,14 +145,70 @@ trim() {
   echo "$trimmed"
 }
 
-
 # contains "abcd" "e" || echo "abcd does not contain e"
 # contains "abcd" "ab" && echo "abcd contains ab"
 
-un_pcode_rawheader_is_pcode "admin1Name_ar" || echo "admin1Name_ar not Pcode"
-un_pcode_rawheader_is_pcode "admin1Name_ar" && echo "admin1Name_ar is Pcode"
-un_pcode_rawheader_is_pcode "admin2Pcode" && echo "admin2Pcode is Pcode"
+# echo ""
 
-# un_pcode_rawheader_is_admin_name "admin1Name_ar" || echo "admin1Name_ar not name"
-# un_pcode_rawheader_is_admin_name "admin1Name_ar" && echo "admin1Name_ar is name"
-# un_pcode_rawheader_is_admin_name "admin2Pcode" && echo "admin2Pcode is name"
+# un_pcode_rawheader_is_pcode "admin1Name_ar" || echo "admin1Name_ar not Pcode"
+# un_pcode_rawheader_is_pcode "admin1Name_ar" && echo "admin1Name_ar is Pcode"
+# un_pcode_rawheader_is_pcode "admin2Pcode" || echo "admin2Pcode is Pcode"
+# un_pcode_rawheader_is_pcode "admin2Pcode" && echo "admin2Pcode is not Pcode"
+# un_pcode_rawheader_is_pcode "lalala" || echo "lalala is Pcode"
+# un_pcode_rawheader_is_pcode "lalala" && echo "lalala is not Pcode"
+
+# echo ""
+
+# # un_pcode_rawheader_is_name "admin1Name_ar" || echo "admin1Name_ar not name"
+# # un_pcode_rawheader_is_name "admin1Name_ar" && echo "admin1Name_ar is name"
+# # un_pcode_rawheader_is_name "admin2Pcode" && echo "admin2Pcode is name"
+
+# # un_pcode_rawheader_is_name "admin1Name_ar" || echo "admin1Name_ar not name"
+# # un_pcode_rawheader_is_name "admin1Name_ar" && echo "admin1Name_ar is name"
+# # un_pcode_rawheader_is_name "admin2Pcode" || echo "admin2Pcode is name"
+# # un_pcode_rawheader_is_name "admin2Pcode" && echo "admin2Pcode is not name"
+# # un_pcode_rawheader_is_name "lalala" || echo "lalala is name"
+# # un_pcode_rawheader_is_name "lalala" && echo "lalala is not name"
+
+# string='This is a sample 123 text and some 987 numbers'
+# echo "$string" | sed -rn 's/[^[:digit:]]*([[:digit:]]+)[^[:digit:]]+([[:digit:]]+)[^[:digit:]]*/\1 \2/p'
+
+# echo "ooi"
+
+# string2='admin1Name_ar'
+# # echo "$string2" | sed -rn 's/[^[:digit:]]*([[:digit:]]+)[^[:digit:]]+([[:digit:]]+)[^[:digit:]]*/\1 \2/p'
+# echo "$string2" | sed -rn 's/[^[:digit:]]*([[:digit:]]+)[^[:digit:]]+([[:digit:]]+)[^[:digit:]]*/\1 \2/p'
+
+
+# echo "fini"
+
+
+# all 3 groups
+# echo "admin2Pcode" | sed -E 's/^(Admin|admin)([0-9]){1}(Pcode|pcode)$/_\1_ _\2_ _\3_/'
+# echo "admin2AltName2_zh" | sed -E 's/^(Admin|admin)([0-9]){1}(Pcode|pcode)$/_\1_ _\2_ _\3_/'
+
+# # Admin level (of only if matches PCode)
+# echo "admin2Pcode" | sed -E 's/^(Admin|admin)([0-9])(Pcode|pcode)$/_\1_ _\2_ _\3_/'
+# echo "admin3Name_sw" | sed -E 's/^(Admin|admin)([0-9])(Pcode|pcode)$/_\1_ _\2_ _\3_/'
+# echo "admin2AltName2_zh" | sed -E 's/^(Admin|admin)([0-9])(Pcode|pcode)$/_\1_ _\2_ _\3_/'
+
+
+# https://stackoverflow.com/questions/6011661/regexp-sed-suppress-no-match-output
+
+
+un_pcode_rawheader_admin_level() {
+    rawheader="$1"
+    sed_result=$(echo "${rawheader}" | sed -E 's/^(Admin|admin)([0-9]){1}(Pcode|pcode)$/\2/')
+    # If sed fail, it returns entire line as it was the input
+    if [ "$rawheader" != "$sed_result" ]; then
+        echo "$sed_result"
+        return 0
+    fi
+    echo ""
+    return 1
+}
+
+un_pcode_rawheader_admin_level "admin2Pcode" || echo "admin2Pcode no admin of pcode"
+un_pcode_rawheader_admin_level "admin2Pcode" && echo "admin2Pcode is admin of pcode"
+un_pcode_rawheader_admin_level "admin2AltName2_zh" || echo "admin2AltName2_zh no admin  of pcode"
+un_pcode_rawheader_admin_level "admin2AltName2_zh" && echo "admin2AltName2_zh is admin  of pcode"
