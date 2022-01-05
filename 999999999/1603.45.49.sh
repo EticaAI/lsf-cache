@@ -40,9 +40,12 @@ PRAEFIXUM="1603.45.49:"
 
 DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=cut&cut-skip-untagged01=on&filter02=sort&sort-tags02=%23country%2Bcode%2Bnum%2Bv_m49&strip-headers=on&url=https%3A%2F%2Fdocs.google.com%2Fspreadsheets%2Fd%2F1NjSI2LaS3SqbgYc0HdD8oIb7lofGtiHgoKKATCpwVdY%2Fedit%23gid%3D1088874596"
 
-# @TODO: implement some option to use cached file instead of re-download; 
-#        for now we're just commenting the next line
-wget -qO- "$DATA_UN_M49_CSV" > "${ROOTDIR}/999999/1603/45/49/1603.45.49.hxl.csv"
+# TODO: implement option to rebuild even if file already on disk
+if [ ! -f "${ROOTDIR}/999999/1603/45/49/1603.45.49.hxl.csv" ]; then
+    wget -qO- "$DATA_UN_M49_CSV" > "${ROOTDIR}/999999/1603/45/49/1603.45.49.hxl.csv"
+else
+    echo "Cached: ${ROOTDIR}/999999/1603/45/49/1603.45.49.hxl.csv"
+fi
 
 
 ### 1603.45.49.hxl.csv --> 1603.45.49.tm.hxl.csv _______________________________

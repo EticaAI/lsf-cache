@@ -37,10 +37,12 @@ PRAEFIXUM="1603:47:15924:"
 
 DATA_ISO_15924_TXT="https://www.unicode.org/iso15924/iso15924.txt"
 
-
-# @TODO: implement some option to use cached file instead of re-download; 
-#        for now we're just commenting the next line
-wget -qO- "$DATA_ISO_15924_TXT" > "${ROOTDIR}/999999/1603/47/15924/1603.47.15924.txt"
+# TODO: implement option to rebuild even if file already on disk
+if [ ! -f "${ROOTDIR}/999999/1603/47/15924/1603.47.15924.txt" ]; then
+    wget -qO- "$DATA_ISO_15924_TXT" > "${ROOTDIR}/999999/1603/47/15924/1603.47.15924.txt"
+else
+    echo "Cached: ${ROOTDIR}/999999/1603/47/15924/1603.47.15924.txt"
+fi
 
 
 ## 1603.47.15924.txt --> 1603.47.15924.hxl.csv
