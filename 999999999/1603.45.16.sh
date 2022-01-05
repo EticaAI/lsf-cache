@@ -59,7 +59,7 @@ fi
 
 echo "#meta,#meta+archivum,#meta+iso3,#meta+sheets+original,#meta+sheets+new" > "${ROOTDIR}"/999999/1603/45/16/meta-de-archivum.csv
 echo "" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
-echo "#meta,#meta+archivum,#meta+caput" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
+echo "#meta,#meta+archivum,#meta+caput,#meta+level,#meta+language+#meta+hxlhashtag" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
 
 for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
   ISO3166p1a3=$(basename --suffix=.xlsx "$file_path")
@@ -82,8 +82,11 @@ for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
     echo "$caput" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
     # echo "${PRAEFIXUM},$caput" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
     echo "$caput" | while IFS= read -r line ; do
+      administrative_level=$(un_pcode_csvheader_administrative_level "${line}")
+      name_language=$(un_pcode_rawheader_name_language "$raw_header_item")
+      hxlhashtag=$(un_pcode_rawhader_to_hxl "$line")
       # echo $line
-      echo "${PRAEFIXUM},${file_xlsx},${line}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
+      echo "${PRAEFIXUM},${file_xlsx},${line},${administrative_level},${name_language}${hxlhashtag}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
     done
 
   done
