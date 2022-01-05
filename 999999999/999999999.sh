@@ -349,6 +349,22 @@ un_pcode_rawhader_to_hxl() {
     echo "$hxlheader"
 }
 
+#######################################
+# Generate an HXL Hashtag based on a raw CSV header item
+#
+# Globals:
+#   None
+# Arguments:
+#   csv_input
+#   csv_hxlated_output
+#######################################
+un_pcode_csv_to_hxl() {
+    csv_input="$1"
+    csv_hxlated_output="$1"
+    csv_header=$(head -n 1 "${csv_input}")
+    echo "TODO"
+}
+
 # un_pcode_rawheader_admin_level "admin2Pcode" || echo "admin2Pcode no admin of pcode"
 # un_pcode_rawheader_admin_level "admin2Pcode" && echo "admin2Pcode is admin of pcode"
 # un_pcode_rawheader_admin_level "admin2AltName2_zh" || echo "admin2AltName2_zh no admin  of pcode"

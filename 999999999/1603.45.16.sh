@@ -62,7 +62,8 @@ echo "" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
 echo "#meta,#meta+archivum,#meta+caput,#meta+level,#meta+language+#meta+hxlhashtag" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
 
 for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
-  ISO3166p1a3=$(basename --suffix=.xlsx "$file_path")
+  ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
+  ISO3166p1a3=$( echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
   file_xlsx="${ISO3166p1a3}.xlsx"
 
   file_xlsx_sheets=""
@@ -83,7 +84,7 @@ for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
     # echo "${PRAEFIXUM},$caput" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
     echo "$caput" | while IFS= read -r line ; do
       administrative_level=$(un_pcode_csvheader_administrative_level "${line}")
-      name_language=$(un_pcode_rawheader_name_language "$raw_header_item")
+      name_language=$(un_pcode_rawheader_name_language "$line")
       hxlhashtag=$(un_pcode_rawhader_to_hxl "$line")
       # echo $line
       echo "${PRAEFIXUM},${file_xlsx},${line},${administrative_level},${name_language}${hxlhashtag}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
@@ -94,7 +95,7 @@ for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
   file_xlsx_sheets_new=$(trim "$file_xlsx_sheets_new")
 
   # Save learned metadata
-  echo "${PRAEFIXUM},${file_xlsx},${ISO3166p1a3},${file_xlsx_sheets},${file_xlsx_sheets_new}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-archivum.csv
+  echo "${PRAEFIXUM},${file_xlsx},${ISO3166p1a3_original},${file_xlsx_sheets},${file_xlsx_sheets_new}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-archivum.csv
 
 done
 
