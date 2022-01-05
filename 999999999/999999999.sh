@@ -350,7 +350,8 @@ un_pcode_rawhader_to_hxl() {
 }
 
 #######################################
-# Generate an HXL Hashtag based on a raw CSV header item
+# From a list of comma separated raw headers, return a comma separated
+# HXLAted headers. Only for P-Code-like CSV files
 #
 # Globals:
 #   None
@@ -358,17 +359,65 @@ un_pcode_rawhader_to_hxl() {
 #   csv_input
 #   csv_hxlated_output
 #######################################
-un_pcode_csv_to_hxl() {
+un_pcode_hxlate_csv_header() {
+    csv_header_input="$1"
+    csv_header_input_lines=$(echo "${csv_header_input}" | tr ',' "\n")
+    hxlated_header=""
+
+    # RESULT=""
+    for item in $csv_header_input_lines
+    do
+        hxlated_item=$(un_pcode_rawhader_to_hxl "$item")
+        hxlated_header="${hxlated_header:+${hxlated_header},}${hxlated_item}"
+    done
+    echo "$hxlated_header"
+
+    # echo "$csv_header_input_lines" | while IFS= read -r csv_header_item ; do
+    #   administrative_level=$(un_pcode_csvheader_administrative_level "${line}")
+    #   name_language=$(un_pcode_rawheader_name_language "$line")
+    #   hxlhashtag=$(un_pcode_rawhader_to_hxl "$line")
+    #   # echo $line
+    #   hxlated_header
+    # done
+}
+
+#######################################
+# Generate an HXL Hashtag based on a raw CSV header item
+#
+# Example:
+#    un_pcode_hxlate_csv_file AFG_1.csv > AFG_1.hxl.csv
+#
+# Globals:
+#   None
+# Arguments:
+#   csv_input
+#   csv_hxlated_output
+#######################################
+un_pcode_hxlate_csv_file() {
     csv_input="$1"
-    csv_hxlated_output="$1"
-    csv_header=$(head -n 1 "${csv_input}")
-    echo "TODO"
+    # csv_hxlated_output="$1"
+    # csv_header=$(head -n 1 "${csv_input}")
+
+    linenumber=0
+    while IFS= read -r line; do
+        if [ "$linenumber" -eq "0" ]; then
+            echo "$line"
+            un_pcode_hxlate_csv_header=$(un_pcode_hxlate_csv_header "$line")
+            echo "$un_pcode_hxlate_csv_header"
+        else
+            echo "$line"
+        fi
+        linenumber=$(( linenumber + 1 ))
+    done < "${csv_input}"
 }
 
 # un_pcode_rawheader_admin_level "admin2Pcode" || echo "admin2Pcode no admin of pcode"
 # un_pcode_rawheader_admin_level "admin2Pcode" && echo "admin2Pcode is admin of pcode"
 # un_pcode_rawheader_admin_level "admin2AltName2_zh" || echo "admin2AltName2_zh no admin  of pcode"
 # un_pcode_rawheader_admin_level "admin2AltName2_zh" && echo "admin2AltName2_zh is admin  of pcode"
+
+# un_pcode_hxlate_csv_file 999999/1603/45/16/csv/AFG_0.csv > 999999/1603/45/16/hxl/AFG_0.hxl.csv
+# un_pcode_hxlate_csv_file 999999/1603/45/16/csv/AFG_1.csv > 999999/1603/45/16/hxl/AFG_1.hxl.csv
 
 
 # while read -r raw_header_item; do
