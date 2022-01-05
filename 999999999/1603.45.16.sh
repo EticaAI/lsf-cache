@@ -28,42 +28,17 @@
 set -e
 set -x
 
+PRAEFIXUM="1603.45.16:"
+REBUILD_CSV_FROM_XLSX="0" # REBUILD_CSV_FROM_XLSX="0"
+
 # Source:
 # - https://data.humdata.org/dataset?ext_cod=1&res_format=XLSX
 #   - https://drive.google.com/file/d/1jRshR0Mywd_w8r6W2njUFWv7oDVLgKQi/view?usp=sharing
 #     - https://drive.google.com/uc?export=download&id=1jRshR0Mywd_w8r6W2njUFWv7oDVLgKQi
 
 ROOTDIR="$(pwd)"
-PRAEFIXUM="1603.45.16:"
-
-REBUILD_CSV_FROM_XLSX="0" # REBUILD_CSV_FROM_XLSX="0"
-
-#######################################
-# Normalization of PCode sheets
-# Globals:
-#   None
-# Arguments:
-#   ISO3166p1a3
-#   sheetname
-#######################################
-un_pcode_sheets_norma() {
-  # $1
-  # $2
-  number=$(echo "$2" | tr -d -c 0-9)
-  echo "$1_$number"
-}
-
-#######################################
-# Trim whitespace
-# Globals:
-#   None
-# Arguments:
-#   String
-#######################################
-trim() {
-  trimmed=$(echo "$1" | xargs echo -n)
-  echo "$trimmed"
-}
+# shellcheck source=999999999.sh
+. "$ROOTDIR"/999999999/999999999.sh
 
 
 DATA_UN_PCode_ZIP="https://drive.google.com/uc?export=download&id=1jRshR0Mywd_w8r6W2njUFWv7oDVLgKQi"
