@@ -491,12 +491,12 @@ __numerordinatio_translatio() {
 # Change Numerordĭnātĭo rank separator
 #
 # Example:
-#    # 12/34/56
-#    numerordinatio_codicem_transation_separator "12/34/56" "/"
-#    # 十二/三十四/五十六
-#    numerordinatio_codicem_transation_separator "十二:三十四:五十六" "/"
-#    # errorem [ / :]
-#    numerordinatio_codicem_transation_separator "" "/" ":"
+#    # 4
+#    numerordinatio_translatio_alpha_in_digito__beta "111" 3
+#    # 1111
+#    numerordinatio_translatio_alpha_in_digito__beta "aaa" 3
+#    # 44136
+#    numerordinatio_translatio_alpha_in_digito__beta "ZZZ" 3
 #
 # Globals:
 #   None
@@ -506,6 +506,10 @@ __numerordinatio_translatio() {
 numerordinatio_translatio_alpha_in_digito__beta() {
     codicem="$1"
     total_characters="$2"
+    _TEMPDIR=$(mktemp --directory)
+    _FIFO_total="$_TEMPDIR/total"
+    mkfifo "${_FIFO_total}"
+
 
     universum_alpha_usascii="NOP,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,NOP,NOP,NOP"
     # universum_alphanum_usascii="0123456789abcdefghijklmnopqrstuvwxyz"
@@ -515,25 +519,37 @@ numerordinatio_translatio_alpha_in_digito__beta() {
     codicem=$(echo "$codicem" | tr '[:upper:]' '[:lower:]')
     numeric_total=0
 
+    # mkfifo "${TMPDIR}"/_nmt_total
+    echo "$numeric_total" > "$_FIFO_total" &
+
     # https://stackoverflow.com/questions/6834347/named-pipe-closing-prematurely-in-script/
 
     linenumber=0
     # @see https://stackoverflow.com/a/10572879/894546
     echo "${codicem}" | sed -e 's/\(.\)/\1\n/g'  | while IFS= read -r character; do
         numerum=$(__numerordinatio_translatio "$universum_alpha_usascii" "$character")
-        
-        # shellcheck disable=SC2003
-        # pow_now=$(expr total_characters \* 10 )
-        pow_now=$((total_characters * 10 ))
-        # shellcheck disable=SC2003
-        # numeric_total=$(expr numerum \* pow_now)
-        numeric_total=$(( numeric_total + numerum * pow_now))
-        echo "$character:$numerum:$numeric_total"
+        numerum=$((numerum))
+
+        _total=$(cat "$_FIFO_total")
+        # numeric_now=$((numerum * pow_now))
+        numeric_now=$(echo "$numerum ^ $total_characters" | bc)
+        # echo "$numerum ^ $total_characters"
+
+        numeric_total=$(( _total + numeric_now))
+        echo "$numeric_total" > "$_FIFO_total" &
+
+        # TO Debug, remove next comment
+        # echo "c [$character]: cn [$numerum]:cnv [$numeric_now]: p: [$total_characters] :cnt [$numeric_total]"
         linenumber=$(( linenumber + 1 ))
         total_characters=$(( total_characters - 1 ))
+
     done
 
-    echo "${codicem}: total $numeric_total"
+    _total=$(cat "$_FIFO_total")
+    echo "$_total"
+    # echo "${codicem}: total [[[[$_total]]]]]"
+
+    rm "${_FIFO_total:-'unknow-file'}"
 
     # separator_finale="$2"
     # separator_initiale="${3:-\:}"
@@ -546,10 +562,23 @@ numerordinatio_translatio_alpha_in_digito__beta() {
     # echo "$resultatum"
 }
 
+# echo ">> 111 3"
+# numerordinatio_translatio_alpha_in_digito__beta "111" 3
+# echo ""
+# echo ">> aaa 3"
+# numerordinatio_translatio_alpha_in_digito__beta "aaa" 3
+# echo ""
 # echo ">> abc 3"
 # numerordinatio_translatio_alpha_in_digito__beta "abc" 3
+# echo ""
 # echo ">> 123 3"
 # numerordinatio_translatio_alpha_in_digito__beta "123" 3
+# echo ""
+# echo ">> ZZZ 3"
+# numerordinatio_translatio_alpha_in_digito__beta "ZZZ" 3
+# echo ""
+# echo ">> ZZZZ 4"
+# numerordinatio_translatio_alpha_in_digito__beta "ZZZZ" 4
 
 
 #######################################
