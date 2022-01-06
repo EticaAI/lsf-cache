@@ -418,6 +418,49 @@ un_pcode_hxlate_csv_file() {
     done < "${csv_input}"
 }
 
+#######################################
+# Return an 1603.45.49 (UN m49 numeric code) from other common systems
+#
+# Example:
+#    un_pcode_hxlate_csv_file AFG_1.csv > AFG_1.hxl.csv
+#
+# Globals:
+#   NUMERORDINATIO_DATUM
+# Arguments:
+#   scienciam_codicem
+#   scienciam_variable_pointer
+#######################################
+__numerordinatio_scientiam_initiale() {
+    scienciam_codicem="$1"
+    scienciam_variable_pointer="$2" # Ponter, https://tldp.org/LDP/abs/html/ivr.html
+    # _data=$(eval "${scienciam_variable}")
+    # _data=${scienciam_variable}
+
+    # https://tldp.org/LDP/abs/html/ivr.html
+    # https://stackoverflow.com/a/19634966/894546
+
+    echo "----D49-"
+    echo "$D49"
+    echo "----D49-"
+
+    eval local_variable_content=\$$scienciam_variable_pointer
+    echo "local_variable_content  before   $local_variable_content"
+    # echo "-----"
+
+    # eval local_variable_content=\$"$scienciam_variable_pointer"
+    if [ -z "${local_variable_content}" ]; then
+        local_variable_content=$(cat "${NUMERORDINATIO_DATUM}/${scienciam_codicem}.tsv")
+
+        echo "entrou"
+    else
+        echo "error"
+    fi
+
+    echo "    ----D49-"
+    echo "   $D49"
+    echo "   ----D49-"
+    # return 0
+}
 
 __numerordinatio_codicem_lineam() {
     lineam="$1"
@@ -433,39 +476,73 @@ __numerordinatio_codicem_lineam() {
 # Return an 1603.45.49 (UN m49 numeric code) from other common systems
 #
 # Example:
-#    un_pcode_hxlate_csv_file AFG_1.csv > AFG_1.hxl.csv
+#    # > 76
+#    numerordinatio_codicem_locali__1603_45_49 "BRA"
 #
 # Globals:
-#   NUMERORDINATIO_DATUM
+#   NUMERORDINATIO_DATUM__1603_45_49
 # Arguments:
-#   csv_input
-#   csv_hxlated_output
+#   terminum
 #######################################
 numerordinatio_codicem_locali__1603_45_49() {
     terminum="$1"
-    referens="${NUMERORDINATIO_DATUM}/1603.45.49.tsv"
     codicem_locali=""
-    # csv_hxlated_output="$1"
-    # csv_header=$(head -n 1 "${csv_input}")
 
-    if [ -z "${terminum}" ]; then
-        echo ""
-    fi
-
-    while IFS= read -r line; do
+    echo "$NUMERORDINATIO_DATUM__1603_45_49" | while IFS= read -r line; do
         codicem_locali=$(__numerordinatio_codicem_lineam "$line")
-
         if [ -n "$codicem_locali" ]; then
             echo "$codicem_locali"
             return 0
         fi
-    done < "${referens}"
-    echo "none for $terminum"
+        # echo "line $line"
+    done
+    # echo "none for $terminum"
 }
 
+#######################################
+# Return an 1603.45.49 (UN m49 numeric code) from other common systems
+# TODO:
+#    Create numeric codes
+#
+# Example:
+#    # > 76
+#    numerordinatio_codicem_locali__1603_47_639_3 "pt"
+#
+# Globals:
+#   NUMERORDINATIO_DATUM__1603_47_639_3
+# Arguments:
+#   terminum
+#######################################
+numerordinatio_codicem_locali__1603_47_639_3() {
+    terminum="$1"
+    codicem_locali=""
+
+    echo "$NUMERORDINATIO_DATUM__1603_47_639_3" | while IFS= read -r line; do
+        codicem_locali=$(__numerordinatio_codicem_lineam "$line")
+        if [ -n "$codicem_locali" ]; then
+            echo "$codicem_locali"
+            return 0
+        fi
+        # echo "line $line"
+    done
+    # echo "none for $terminum"
+}
+
+# https://superuser.com/questions/279141/why-is-reading-a-file-faster-than-reading-a-variable
+NUMERORDINATIO_DATUM__1603_45_49=$(cat "${NUMERORDINATIO_DATUM}/1603.45.49.tsv")
+NUMERORDINATIO_DATUM__1603_47_639_3=$(cat "${NUMERORDINATIO_DATUM}/1603.47.639.3.tsv")
 # numerordinatio_codicem_locali__1603_45_49 "br"
-# numerordinatio_codicem_locali__1603_45_49 "BRA"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
+numerordinatio_codicem_locali__1603_45_49 "BRA"
+numerordinatio_codicem_locali__1603_45_49 "SWZ"
+numerordinatio_codicem_locali__1603_45_49 "SWZ"
+numerordinatio_codicem_locali__1603_45_49 "SWZ"
+numerordinatio_codicem_locali__1603_45_49 "SAU"
+
+echo ""
+numerordinatio_codicem_locali__1603_47_639_3 "pt"
+numerordinatio_codicem_locali__1603_47_639_3 "es"
+numerordinatio_codicem_locali__1603_47_639_3 "en"
+
 # numerordinatio_codicem_locali__1603_45_49 "zmb"
 # numerordinatio_codicem_locali__1603_45_49 "zmb"
 # numerordinatio_codicem_locali__1603_45_49 "zmb"
@@ -479,6 +556,10 @@ numerordinatio_codicem_locali__1603_45_49() {
 # numerordinatio_codicem_locali__1603_45_49 "zmb"
 # numerordinatio_codicem_locali__1603_45_49 "zmb"
 # numerordinatio_codicem_locali__1603_45_49 "YE"
+
+# D49=""
+# __numerordinatio_scientiam_initiale "1603.45.49" "D49"
+# __numerordinatio_scientiam_initiale "1603.45.49" "D49"
 
 # un_pcode_rawheader_admin_level "admin2Pcode" || echo "admin2Pcode no admin of pcode"
 # un_pcode_rawheader_admin_level "admin2Pcode" && echo "admin2Pcode is admin of pcode"
