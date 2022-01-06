@@ -180,17 +180,70 @@ bootstrap_999999_1603_45_16_metadata_pre_deploy() {
 #   ROOTDIR
 # Arguments:
 #   None
+# Outputs:
+#   999999/1603/45/16/4_meta-numerordinatio.temp.txt (temp)
+#   ${ROOTDIR}/1603/45/16 sub directories
 #######################################
 deploy_1603_45_16_prepare_directories() {
-    echo "TODO deploy_1603_45_16"
+    # echo "TODO deploy_1603_45_16"
+
+    hxlcut --include="#item+conceptum+numerordinatio" \
+        "${ROOTDIR}/999999/1603/45/16/3_meta-hxl.tm.hxl.csv" \
+        "${ROOTDIR}/999999/1603/45/16/4_meta-numerordinatio.temp.txt"
+
+    sed -i '1,2d' "${ROOTDIR}/999999/1603/45/16/4_meta-numerordinatio.temp.txt"
+
+    while IFS= read -r line; do
+        if [ -n "$line" ]; then
+            # echo "[[[$line]]]]"
+            itemdir=$(numerordinatio_codicem_transation_separator "$line" "/")
+
+            # Note: this will ignore last item of numerordinatio
+            newodir=$(dirname "${ROOTDIR}/$itemdir")
+            # newodir="llalalala"
+            if [ "$newodir" = "${newodir#"${ROOTDIR}"}" ]; then
+                echo "ERROR! Outside basedir!"
+                # return 1
+                break
+            else
+                # echo "TODO: check directory creation..."
+                if [ ! -d "$newodir" ]; then
+                    echo "Creating directory: [${newodir}]"
+                    mkdir --parents "${newodir}"
+                fi
+            fi
+        else
+            continue
+            # echo "nop $lineam"
+        fi
+    done < "${ROOTDIR}/999999/1603/45/16/4_meta-numerordinatio.temp.txt"
+
+    rm -f "${ROOTDIR}/999999/1603/45/16/4_meta-numerordinatio.temp.txt"
+}
+
+#######################################
+# Prepare the directories
+# Consumes 999999/1603/45/16/3_meta-hxl.hxl.csv
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   None
+# Outputs:
+#   1603/45/16/1/1603.45.16.1.no1.tm.hxl.csv
+#######################################
+deploy_1603_45_16_global() {
+    echo "TODO deploy_1603_45_16_global"
+
+    echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
+        > "${ROOTDIR}/1603/45/16/1/1603.45.16.1.no1.tm.hxl.csv"
 }
 
 bootstrap_999999_1603_45_16_fetch_data
-
 bootstrap_999999_1603_45_16
-
 bootstrap_999999_1603_45_16_metadata_pre_deploy
 
 deploy_1603_45_16_prepare_directories
+deploy_1603_45_16_global
 
 set +x

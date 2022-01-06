@@ -473,6 +473,39 @@ __numerordinatio_codicem_lineam() {
 }
 
 #######################################
+# Change Numerordĭnātĭo rank separator
+#
+# Example:
+#    # 12/34/56
+#    numerordinatio_codicem_transation_separator "12/34/56" "/"
+#    # 十二/三十四/五十六
+#    numerordinatio_codicem_transation_separator "十二:三十四:五十六" "/"
+#    # errorem [ / :]
+#    numerordinatio_codicem_transation_separator "" "/" ":"
+#
+# Globals:
+#   None
+# Arguments:
+#   terminum
+#######################################
+numerordinatio_codicem_transation_separator() {
+    numerordinatio_codicem="$1"
+    separator_finale="$2"
+    separator_initiale="${3:-\:}"
+    resultatum=""
+    if [ -z "$numerordinatio_codicem" ] || [ -z "$separator_finale" ]; then
+        echo "errorem [$*]"
+        return 1
+    fi
+    resultatum=$(echo "$numerordinatio_codicem" | sed "s|${separator_initiale}|${separator_finale}|g")
+    echo "$resultatum"
+}
+
+# numerordinatio_codicem_transation_separator "12:34:56" "/"
+# numerordinatio_codicem_transation_separator "十二:三十四:五十六" "/"
+# numerordinatio_codicem_transation_separator "" "/" ":"
+
+#######################################
 # Return an 1603.45.49 (UN m49 numeric code) from other common systems
 #
 # Example:
