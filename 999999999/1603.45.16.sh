@@ -28,7 +28,7 @@
 set -e
 # set -x
 
-PRAEFIXUM="1603.45.16:"
+PRAEFIXUM="1603:45:16:"
 REBUILD_CSV_FROM_XLSX="0" # REBUILD_CSV_FROM_XLSX="0"
 DATA_UN_PCode_ZIP="https://drive.google.com/uc?export=download&id=1jRshR0Mywd_w8r6W2njUFWv7oDVLgKQi"
 # Source:
@@ -75,16 +75,16 @@ bootstrap_999999_1603_45_16() {
   # export PYTHONWARNINGS="ignore"
   # PYTHONWARNINGS="ignore"
 
-  echo "#meta,#meta+m49,#meta+archivum,#meta+iso3,#meta+sheets+original,#meta+sheets+new" > "${ROOTDIR}"/999999/1603/45/16/meta-de-archivum.csv
-  echo "" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
-  echo "#meta,#meta+m49,#meta+archivum,#meta+caput,#meta+level,#meta+language+#meta+hxlhashtag" > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
+  echo "#meta,#meta+m49,#meta+archivum,#meta+iso3,#meta+sheets+original,#meta+sheets+new" > "${ROOTDIR}"/999999/1603/45/16/1_meta-de-archivum.csv
+  echo "" > "${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt
+  echo "#meta,#meta+m49,#meta+archivum,#meta+caput,#meta+level,#meta+language+#meta+hxlhashtag" > "${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.csv
 
   for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
     ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
     ISO3166p1a3=$( echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
     UNm49=$(numerordinatio_codicem_locali__1603_45_49 "$ISO3166p1a3")
 
-    file_xlsx="${ISO3166p1a3}.xlsx"
+    file_xlsx="${ISO3166p1a3_original}.xlsx"
 
     file_xlsx_sheets=""
     file_xlsx_sheets_new=""
@@ -103,14 +103,14 @@ bootstrap_999999_1603_45_16() {
       fi
 
       caput=$(head -n 1 "${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv" | tr ',' "\n")
-      echo "$caput" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
+      echo "$caput" >> "${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt
       # echo "${PRAEFIXUM},$caput" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
       echo "$caput" | while IFS= read -r line ; do
         administrative_level=$(un_pcode_csvheader_administrative_level "${line}")
         name_language=$(un_pcode_rawheader_name_language "$line")
         hxlhashtag=$(un_pcode_rawhader_to_hxl "$line")
         # echo $line
-        echo "${PRAEFIXUM}${UNm49},${UNm49},${file_xlsx},${line},${administrative_level},${name_language}${hxlhashtag}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
+        echo "${PRAEFIXUM}${UNm49},${UNm49},${file_xlsx},${line},${administrative_level},${name_language}${hxlhashtag}" >> "${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.csv
       done
 
     done
@@ -118,13 +118,13 @@ bootstrap_999999_1603_45_16() {
     file_xlsx_sheets_new=$(trim "$file_xlsx_sheets_new")
 
     # Save learned metadata
-    echo "${PRAEFIXUM}${UNm49},${UNm49},${ISO3166p1a3_original},${file_xlsx_sheets},${file_xlsx_sheets_new}" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-archivum.csv
+    echo "${PRAEFIXUM}${UNm49},${UNm49},${file_xlsx},${ISO3166p1a3},${file_xlsx_sheets},${file_xlsx_sheets_new}" >> "${ROOTDIR}"/999999/1603/45/16/1_meta-de-archivum.csv
 
   done
 
-  sort "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt | uniq > "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.uniq.txt
+  sort "${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt | uniq > "${ROOTDIR}"/999999/1603/45/16/2.1_meta-de-caput.uniq.txt
 
-  rm "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.txt
+  rm "${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt
 }
 
 #######################################
@@ -134,14 +134,63 @@ bootstrap_999999_1603_45_16() {
 #   ROOTDIR
 # Arguments:
 #   None
+# Outputs:
+#   999999/1603/45/16/3_meta-hxl-temp.tm.hxl.csv (temp)
+#   999999/1603/45/16/3_meta-hxl.tm.hxl.csv
 #######################################
-bootstrap_1603_45_16() {
-  echo "TODO"
+bootstrap_999999_1603_45_16_metadata_pre_deploy() {
+    # echo "TODO"
+
+    # About administrative civision https://en.wikipedia.org/wiki/Administrative_division
+
+    echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel,#meta+source" \
+      > "${ROOTDIR}/999999/1603/45/16/3_meta-hxl-temp.tm.hxl.csv"
+
+    for archivum_loci in "${ROOTDIR}"/999999/1603/45/16/hxl/*.hxl.csv; do
+        archivum_rel=$(echo "$archivum_loci" | sed "s|${ROOTDIR}/||")
+        archivum_nomen=$(basename --suffix=.hxl.csv "$archivum_loci")
+        administrative_level=$(echo "$archivum_nomen" | tr -d -c 0-9)
+        ISO3166p1a3=$(echo "$archivum_nomen" | tr -d -c "[:upper:]")
+        UNm49=$(numerordinatio_codicem_locali__1603_45_49 "$ISO3166p1a3")
+        numerordinatio="${PRAEFIXUM}${UNm49}:${administrative_level}"
+        conceptum_codicem="${UNm49}:${administrative_level}"
+        # echo "archivum ${numerordinatio} $ISO3166p1a3 ${administrative_level} ${archivum_rel}"
+        # echo ""
+        echo "${numerordinatio},${conceptum_codicem},${UNm49},${administrative_level},${archivum_rel}" \
+          >> "${ROOTDIR}/999999/1603/45/16/3_meta-hxl-temp.tm.hxl.csv"
+    done
+
+    # echo "TODO delete 999999/1603/45/16/3_meta-hxl-temp.hxl.csv"
+
+    hxlsort --tags="#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
+      "${ROOTDIR}/999999/1603/45/16/3_meta-hxl-temp.tm.hxl.csv" \
+      "${ROOTDIR}/999999/1603/45/16/3_meta-hxl.tm.hxl.csv"
+
+    # @TODO: only do this if hxl did not removed empty header files ,,,,,,
+    sed -i '1d' "${ROOTDIR}/999999/1603/45/16/3_meta-hxl.tm.hxl.csv"
+
+    rm -f "${ROOTDIR}/999999/1603/45/16/3_meta-hxl-temp.tm.hxl.csv"
 }
 
+#######################################
+# Prepare the directories
+# Consumes 999999/1603/45/16/3_meta-hxl.hxl.csv
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   None
+#######################################
+deploy_1603_45_16_prepare_directories() {
+    echo "TODO deploy_1603_45_16"
+}
+
+bootstrap_999999_1603_45_16_fetch_data
 
 bootstrap_999999_1603_45_16
-bootstrap_999999_1603_45_16_fetch_data
-bootstrap_1603_45_16
+
+bootstrap_999999_1603_45_16_metadata_pre_deploy
+
+deploy_1603_45_16_prepare_directories
 
 set +x
