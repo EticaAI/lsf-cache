@@ -63,7 +63,6 @@ hxlrename \
   | hxlsort --tags="#item+conceptum" \
   > "${ROOTDIR}/999999/1603/47/15924/1603.47.15924.tm.hxl.csv"
 
-
 # @TODO: only do this if hxl did not removed empty header files ,,,,,,
 sed -i '1d' "${ROOTDIR}/999999/1603/47/15924/1603.47.15924.tm.hxl.csv"
 
@@ -76,13 +75,21 @@ sed -i '1d' "${ROOTDIR}/1603/47/15924/1603.47.15924.no1.tm.hxl.csv"
 
 # TODO: make the conversion to JSON format. Or enable the JavaScript to support tm.hxl.csv files
 
-hxladd --before --spec="#x_item={{#item+rem+i_zxx+is_latn+ix_iso1524a}}" \
+hxladd \
+  --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso1524a}}" \
+  --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso1524a}}" \
   "${ROOTDIR}/1603/47/15924/1603.47.15924.no1.tm.hxl.csv"\
+  | hxladd --before --spec="#x_item={{#item+rem+i_zxx+is_latn+ix_iso1524a}}" \
   | hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" \
   | hxladd --before --spec="#x_item={{1-1+(#item+conceptum+codicem)}}" \
+  | hxlclean --lower="#x_item+lower" \
+  | hxlclean --upper="#x_item+upper" \
   | hxlcut --include="#x_item" \
   | csvformat --out-tabs --skip-lines 2 \
   > "${ROOTDIR}/999999/999999/1603.47.15924.tsv"
+
+  # | hxlreplace --tags="#x_item" --pattern="/(.)/" --substitution="" \
+  # TypeError: 'TagPattern' object is not iterabl
 
 # TODO: fix the "None from 1603.45.16.tsv"
 

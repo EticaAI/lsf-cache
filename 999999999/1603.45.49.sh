@@ -86,13 +86,21 @@ hxlrename \
 sed -i '1d' "${ROOTDIR}/1603/45/49/1603.45.49.no1.tm.hxl.csv"
 
 
-hxladd --before --spec="#x_item={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
+hxladd \
+  --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
+  --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
   "${ROOTDIR}/1603/45/49/1603.45.49.no1.tm.hxl.csv" \
-  | hxladd --before --spec="#x_item={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" \
+  | hxladd --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" \
+  | hxladd --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" \
   | hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" \
   | hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" \
+  | hxlclean --lower="#x_item+lower" \
+  | hxlclean --upper="#x_item+upper" \
   | hxlcut --include="#x_item" \
   | csvformat --out-tabs --skip-lines 2 \
+  | sed 's/None//' | sed 's/None//' | sed 's/None//' | sed 's/None//' \
+  | sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' \
+  | sed 's/none//' | sed 's/none//' | sed 's/none//' | sed 's/none//' \
   > "${ROOTDIR}/999999/999999/1603.45.16.tsv"
 
 # TODO: fix the "None from 1603.45.16.tsv"
