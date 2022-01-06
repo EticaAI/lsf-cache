@@ -85,4 +85,16 @@ hxlrename \
 # @TODO: only do this if hxl did not removed empty header files ,,,,,,
 sed -i '1d' "${ROOTDIR}/1603/45/49/1603.45.49.no1.tm.hxl.csv"
 
+
+hxladd --before --spec="#x_item={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
+  "${ROOTDIR}/1603/45/49/1603.45.49.no1.tm.hxl.csv" \
+  | hxladd --before --spec="#x_item={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" \
+  | hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" \
+  | hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" \
+  | hxlcut --include="#x_item" \
+  | csvformat --out-tabs --skip-lines 2 \
+  > "${ROOTDIR}/999999/999999/1603.45.16.tsv"
+
+# TODO: fix the "None from 1603.45.16.tsv"
+
 set +x

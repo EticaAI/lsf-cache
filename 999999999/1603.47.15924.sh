@@ -76,4 +76,14 @@ sed -i '1d' "${ROOTDIR}/1603/47/15924/1603.47.15924.no1.tm.hxl.csv"
 
 # TODO: make the conversion to JSON format. Or enable the JavaScript to support tm.hxl.csv files
 
+hxladd --before --spec="#x_item={{#item+rem+i_zxx+is_latn+ix_iso1524a}}" \
+  "${ROOTDIR}/1603/47/15924/1603.47.15924.no1.tm.hxl.csv"\
+  | hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" \
+  | hxladd --before --spec="#x_item={{1-1+(#item+conceptum+codicem)}}" \
+  | hxlcut --include="#x_item" \
+  | csvformat --out-tabs --skip-lines 2 \
+  > "${ROOTDIR}/999999/999999/1603.47.15924.tsv"
+
+# TODO: fix the "None from 1603.45.16.tsv"
+
 set +x
