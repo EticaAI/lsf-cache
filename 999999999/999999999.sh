@@ -472,6 +472,86 @@ __numerordinatio_codicem_lineam() {
     done
 }
 
+__numerordinatio_translatio() {
+    codewordlist="$1"
+    codicem_rem="$2"
+
+    linenumber=0
+    echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r line; do
+        if [ "${line}" = "${codicem_rem}" ];then
+            echo "$linenumber"
+            break
+        fi
+        linenumber=$(( linenumber + 1 ))
+        # echo " tentativa $linenumber"
+    done
+}
+
+#######################################
+# Change Numerordĭnātĭo rank separator
+#
+# Example:
+#    # 12/34/56
+#    numerordinatio_codicem_transation_separator "12/34/56" "/"
+#    # 十二/三十四/五十六
+#    numerordinatio_codicem_transation_separator "十二:三十四:五十六" "/"
+#    # errorem [ / :]
+#    numerordinatio_codicem_transation_separator "" "/" ":"
+#
+# Globals:
+#   None
+# Arguments:
+#   terminum
+#######################################
+numerordinatio_translatio_alpha_in_digito__beta() {
+    codicem="$1"
+    total_characters="$2"
+
+    universum_alpha_usascii="NOP,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,NOP,NOP,NOP"
+    # universum_alphanum_usascii="0123456789abcdefghijklmnopqrstuvwxyz"
+
+    # @see https://en.wikipedia.org/wiki/ISO_639-3#Code_space
+
+    codicem=$(echo "$codicem" | tr '[:upper:]' '[:lower:]')
+    numeric_total=0
+
+    # https://stackoverflow.com/questions/6834347/named-pipe-closing-prematurely-in-script/
+
+    linenumber=0
+    # @see https://stackoverflow.com/a/10572879/894546
+    echo "${codicem}" | sed -e 's/\(.\)/\1\n/g'  | while IFS= read -r character; do
+        numerum=$(__numerordinatio_translatio "$universum_alpha_usascii" "$character")
+        
+        # shellcheck disable=SC2003
+        # pow_now=$(expr total_characters \* 10 )
+        pow_now=$((total_characters * 10 ))
+        # shellcheck disable=SC2003
+        # numeric_total=$(expr numerum \* pow_now)
+        numeric_total=$(( numeric_total + numerum * pow_now))
+        echo "$character:$numerum:$numeric_total"
+        linenumber=$(( linenumber + 1 ))
+        total_characters=$(( total_characters - 1 ))
+    done
+
+    echo "${codicem}: total $numeric_total"
+
+    # separator_finale="$2"
+    # separator_initiale="${3:-\:}"
+    # resultatum=""
+    # if [ -z "$numerordinatio_codicem" ] || [ -z "$separator_finale" ]; then
+    #     echo "errorem [$*]"
+    #     return 1
+    # fi
+    # resultatum=$(echo "$numerordinatio_codicem" | sed "s|${separator_initiale}|${separator_finale}|g")
+    # echo "$resultatum"
+}
+
+# echo ">> abc 3"
+# numerordinatio_translatio_alpha_in_digito__beta "abc" 3
+# echo ">> 123 3"
+# numerordinatio_translatio_alpha_in_digito__beta "123" 3
+
+
 #######################################
 # Change Numerordĭnātĭo rank separator
 #
