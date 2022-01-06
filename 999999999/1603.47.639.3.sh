@@ -42,4 +42,23 @@ else
     echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
 fi
 
+hxladd \
+  --before --spec="#x_item+lower={{#vocab+code+v_6391}}" \
+  --before --spec="#x_item+upper={{#vocab+code+v_6391}}" \
+  "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" \
+  | hxladd --before --spec="#x_item+lower={{#vocab+code+v_3692_3letter+z_terminology}}" \
+  | hxladd --before --spec="#x_item+upper={{#vocab+code+v_3692_3letter+z_terminology}}" \
+  | hxladd --before --spec="#x_item+lower={{#vocab+code+v_iso3692_3letter+z_bibliographic}}" \
+  | hxladd --before --spec="#x_item+upper={{#vocab+code+v_iso3692_3letter+z_bibliographic}}" \
+  | hxladd --before --spec="#x_item+upper={{#vocab+id+v_iso6393_3letter}}" \
+  | hxladd --before --spec="#x_item+lower={{#vocab+id+v_iso6393_3letter}}" \
+  | hxlclean --lower="#x_item+lower" \
+  | hxlclean --upper="#x_item+upper" \
+  | hxlcut --include="#x_item" \
+  | sed 's/None//' | sed 's/None//' | sed 's/None//' | sed 's/None//' \
+  | sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' \
+  | sed 's/none//' | sed 's/none//' | sed 's/none//' | sed 's/none//' \
+  | csvformat --out-tabs --skip-lines 2 \
+  > "${ROOTDIR}/999999/999999/1603.47.639.3.tsv"
+
 set +x

@@ -26,6 +26,13 @@
 # Quick tests
 #   ./999999999/999999999.sh
 
+ROOTDIR="$(pwd)"
+
+## Directory that stores basic TSVs to allow bare minimum conversions
+# These files are also generated as part of bootstrapping step
+# 1603.45.49.tsv, 1603.47.639.3.tsv, 1603.47.15924.tsv,
+NUMERORDINATIO_DATUM="${ROOTDIR}/999999/999999"
+
 #######################################
 # contains(string, substring)
 #
@@ -410,6 +417,68 @@ un_pcode_hxlate_csv_file() {
         linenumber=$(( linenumber + 1 ))
     done < "${csv_input}"
 }
+
+
+__numerordinatio_codicem_lineam() {
+    lineam="$1"
+    echo "$lineam" | tr '\t' '\n' | while IFS= read -r value; do
+        if [ "$value" = "${terminum}" ]; then
+            echo "$line" | cut -f1
+            return 0
+        fi
+    done
+}
+
+#######################################
+# Return an 1603.45.49 (UN m49 numeric code) from other common systems
+#
+# Example:
+#    un_pcode_hxlate_csv_file AFG_1.csv > AFG_1.hxl.csv
+#
+# Globals:
+#   NUMERORDINATIO_DATUM
+# Arguments:
+#   csv_input
+#   csv_hxlated_output
+#######################################
+numerordinatio_codicem_locali__1603_45_49() {
+    terminum="$1"
+    referens="${NUMERORDINATIO_DATUM}/1603.45.49.tsv"
+    codicem_locali=""
+    # csv_hxlated_output="$1"
+    # csv_header=$(head -n 1 "${csv_input}")
+
+    if [ -z "${terminum}" ]; then
+        echo ""
+    fi
+
+    while IFS= read -r line; do
+        codicem_locali=$(__numerordinatio_codicem_lineam "$line")
+
+        if [ -n "$codicem_locali" ]; then
+            echo "$codicem_locali"
+            return 0
+        fi
+    done < "${referens}"
+    echo "none for $terminum"
+}
+
+# numerordinatio_codicem_locali__1603_45_49 "br"
+# numerordinatio_codicem_locali__1603_45_49 "BRA"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "zmb"
+# numerordinatio_codicem_locali__1603_45_49 "YE"
 
 # un_pcode_rawheader_admin_level "admin2Pcode" || echo "admin2Pcode no admin of pcode"
 # un_pcode_rawheader_admin_level "admin2Pcode" && echo "admin2Pcode is admin of pcode"
