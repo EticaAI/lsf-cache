@@ -488,6 +488,11 @@ numerordinatio_codicem_locali__1603_45_49() {
     terminum="$1"
     codicem_locali=""
 
+    if [ -z "$NUMERORDINATIO_DATUM__1603_45_49" ]; then
+        echo "non NUMERORDINATIO_DATUM__1603_45_49 1603.47.639.3.tsv"
+        return 1
+    fi
+
     echo "$NUMERORDINATIO_DATUM__1603_45_49" | while IFS= read -r line; do
         codicem_locali=$(__numerordinatio_codicem_lineam "$line")
         if [ -n "$codicem_locali" ]; then
@@ -517,7 +522,46 @@ numerordinatio_codicem_locali__1603_47_639_3() {
     terminum="$1"
     codicem_locali=""
 
+    if [ -z "$NUMERORDINATIO_DATUM__1603_47_639_3" ]; then
+        echo "non NUMERORDINATIO_DATUM__1603_47_15924 1603.45.49.tsv"
+        return 1
+    fi
+
     echo "$NUMERORDINATIO_DATUM__1603_47_639_3" | while IFS= read -r line; do
+        codicem_locali=$(__numerordinatio_codicem_lineam "$line")
+        if [ -n "$codicem_locali" ]; then
+            echo "$codicem_locali"
+            return 0
+        fi
+        # echo "line $line"
+    done
+    # echo "none for $terminum"
+}
+
+#######################################
+# Return an 1603.45.49 (UN m49 numeric code) from other common systems
+# TODO:
+#    Create numeric codes
+#
+# Example:
+#    # > 215
+#    numerordinatio_codicem_locali__1603_47_15924 "Latn"
+#
+# Globals:
+#   NUMERORDINATIO_DATUM__1603_47_639_3
+# Arguments:
+#   terminum
+#######################################
+numerordinatio_codicem_locali__1603_47_15924() {
+    terminum="$1"
+    codicem_locali=""
+
+    if [ -z "$NUMERORDINATIO_DATUM__1603_47_15924" ]; then
+        echo "non NUMERORDINATIO_DATUM__1603_47_15924 1603.47.15924.tsv"
+        return 1
+    fi
+
+    echo "$NUMERORDINATIO_DATUM__1603_47_15924" | while IFS= read -r line; do
         codicem_locali=$(__numerordinatio_codicem_lineam "$line")
         if [ -n "$codicem_locali" ]; then
             echo "$codicem_locali"
@@ -531,58 +575,22 @@ numerordinatio_codicem_locali__1603_47_639_3() {
 # https://superuser.com/questions/279141/why-is-reading-a-file-faster-than-reading-a-variable
 NUMERORDINATIO_DATUM__1603_45_49=$(cat "${NUMERORDINATIO_DATUM}/1603.45.49.tsv")
 NUMERORDINATIO_DATUM__1603_47_639_3=$(cat "${NUMERORDINATIO_DATUM}/1603.47.639.3.tsv")
-# numerordinatio_codicem_locali__1603_45_49 "br"
-numerordinatio_codicem_locali__1603_45_49 "BRA"
-numerordinatio_codicem_locali__1603_45_49 "SWZ"
-numerordinatio_codicem_locali__1603_45_49 "SWZ"
-numerordinatio_codicem_locali__1603_45_49 "SWZ"
-numerordinatio_codicem_locali__1603_45_49 "SAU"
+NUMERORDINATIO_DATUM__1603_47_15924=$(cat "${NUMERORDINATIO_DATUM}/1603.47.15924.tsv")
 
-echo ""
-numerordinatio_codicem_locali__1603_47_639_3 "pt"
-numerordinatio_codicem_locali__1603_47_639_3 "es"
-numerordinatio_codicem_locali__1603_47_639_3 "en"
+# echo ""
+# # numerordinatio_codicem_locali__1603_45_49 "br"
+# numerordinatio_codicem_locali__1603_45_49 "BRA"
+# numerordinatio_codicem_locali__1603_45_49 "SWZ"
+# numerordinatio_codicem_locali__1603_45_49 "SWZ"
+# numerordinatio_codicem_locali__1603_45_49 "SWZ"
+# numerordinatio_codicem_locali__1603_45_49 "SAU"
 
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "zmb"
-# numerordinatio_codicem_locali__1603_45_49 "YE"
+# echo ""
+# numerordinatio_codicem_locali__1603_47_639_3 "pt"
+# numerordinatio_codicem_locali__1603_47_639_3 "es"
+# numerordinatio_codicem_locali__1603_47_639_3 "en"
 
-# D49=""
-# __numerordinatio_scientiam_initiale "1603.45.49" "D49"
-# __numerordinatio_scientiam_initiale "1603.45.49" "D49"
-
-# un_pcode_rawheader_admin_level "admin2Pcode" || echo "admin2Pcode no admin of pcode"
-# un_pcode_rawheader_admin_level "admin2Pcode" && echo "admin2Pcode is admin of pcode"
-# un_pcode_rawheader_admin_level "admin2AltName2_zh" || echo "admin2AltName2_zh no admin  of pcode"
-# un_pcode_rawheader_admin_level "admin2AltName2_zh" && echo "admin2AltName2_zh is admin  of pcode"
-
-# un_pcode_hxlate_csv_file 999999/1603/45/16/csv/AFG_0.csv > 999999/1603/45/16/hxl/AFG_0.hxl.csv
-# un_pcode_hxlate_csv_file 999999/1603/45/16/csv/AFG_1.csv > 999999/1603/45/16/hxl/AFG_1.hxl.csv
-
-
-# while read -r raw_header_item; do
-#     administrative_level=$(un_pcode_csvheader_administrative_level "$raw_header_item")
-#     name_language=$(un_pcode_rawheader_name_language "$raw_header_item")
-#     _date=$(un_pcode_csvheader_date "$raw_header_item")
-#     _date_valid_on=$(un_pcode_csvheader_date_valid_on "$raw_header_item")
-#     _date_valid_to=$(un_pcode_csvheader_date_valid_to "$raw_header_item")
-#     _hxlhashtag=$(un_pcode_rawhader_to_hxl "$raw_header_item")
-#     echo "${raw_header_item},${administrative_level},${name_language},${_date},${_date_valid_on},${_date_valid_to},${_hxlhashtag}"
-# done < "999999/1603/45/16/meta-de-caput.uniq.txt"
-
-
-# echo "admin2AltName2_en" | sed -E 's/^(Admin|admin)([0-9]){1}(AltName|Name)([0-9]){0,1}\_([a-z])$/\2/'
-
-# echo "admin2AltName2_en" | sed -E 's/^(Admin|admin)([0-9]){1}(Name|RefName|AltName|AltName1|AltName2)_([a-z]{2,3})/_\1_ _\2_ _\3_ _\4_/'
-# _admin_ _2_ _AltName2_ _en_
-
+# echo ""
+# numerordinatio_codicem_locali__1603_47_15924 "Latn"
+# numerordinatio_codicem_locali__1603_47_15924 "Arab"
+# numerordinatio_codicem_locali__1603_47_15924 "cyrl"
