@@ -510,6 +510,9 @@ numerordinatio_translatio_in_digito__beta() {
     _FIFO_total="$_TEMPDIR/total"
     mkfifo "${_FIFO_total}"
 
+    # Must be betwen 1 and 9. Around 5 start to be impractical
+    _exact_packed_chars_number="$total_characters"
+
     universum_alpha_usascii="NOP,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP"
     # universum_alphanum_usascii="0123456789abcdefghijklmnopqrstuvwxyz"
 
@@ -544,8 +547,12 @@ numerordinatio_translatio_in_digito__beta() {
 
     done
 
+    # TODO: implement a real CRC, to allow check later. 0 means no check
+    total_namespace_multiple_of_60="1"
+    crc_check="0"
+
     _total=$(cat "$_FIFO_total")
-    echo "$_total"
+    echo "${_total}${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
     # echo "${codicem}: total [[[[$_total]]]]]"
 
     rm "${_FIFO_total:-'unknow-file'}"

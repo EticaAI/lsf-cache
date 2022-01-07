@@ -109,22 +109,22 @@ if [ ! -f "${ROOTDIR}/999999/2600/a-z__2__b60.tsv" ]; then
     > "${ROOTDIR}/999999/2600/a-z__2__b60.tsv"
 fi
 
-# TODO: implement some way to rebuild the cache without deleting the files
-if [ ! -f "${ROOTDIR}/999999/2600/a-z__3__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 3 \
-    > "${ROOTDIR}/999999/2600/a-z__3__b60.tsv"
-fi
+# # TODO: implement some way to rebuild the cache without deleting the files
+# if [ ! -f "${ROOTDIR}/999999/2600/a-z__3__b60.tsv" ]; then
+#   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 3 \
+#     > "${ROOTDIR}/999999/2600/a-z__3__b60.tsv"
+# fi
 
-# TODO: implement some way to rebuild the cache without deleting the files
-if [ ! -f "${ROOTDIR}/999999/2600/a-z__4__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 4 \
-    > "${ROOTDIR}/999999/2600/a-z__4__b60.tsv"
-fi
-# TODO: implement some way to rebuild the cache without deleting the files
-if [ ! -f "${ROOTDIR}/999999/2600/a-z__5__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 5 \
-    > "${ROOTDIR}/999999/2600/a-z__5__b60.tsv"
-fi
+# # TODO: implement some way to rebuild the cache without deleting the files
+# if [ ! -f "${ROOTDIR}/999999/2600/a-z__4__b60.tsv" ]; then
+#   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 4 \
+#     > "${ROOTDIR}/999999/2600/a-z__4__b60.tsv"
+# fi
+# # TODO: implement some way to rebuild the cache without deleting the files
+# if [ ! -f "${ROOTDIR}/999999/2600/a-z__5__b60.tsv" ]; then
+#   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 5 \
+#     > "${ROOTDIR}/999999/2600/a-z__5__b60.tsv"
+# fi
 
 
 ### US_ASCII_alphanum _____________________________________________________________
@@ -141,21 +141,21 @@ if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv" ]; then
     > "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv"
 fi
 
-# TODO: implement some way to rebuild the cache without deleting the files
-if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 3 \
-    > "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv"
-fi
+# # TODO: implement some way to rebuild the cache without deleting the files
+# if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv" ]; then
+#   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 3 \
+#     > "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv"
+# fi
 
-# TODO: implement some way to rebuild the cache without deleting the files
-if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__4__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 4 \
-    > "${ROOTDIR}/999999/2600/0-9a-z__4__b60.tsv"
-fi
-# TODO: implement some way to rebuild the cache without deleting the files
-if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__5__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 5 \
-    > "${ROOTDIR}/999999/2600/0-9a-z__5__b60.tsv"
-fi
+# # TODO: implement some way to rebuild the cache without deleting the files
+# if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__4__b60.tsv" ]; then
+#   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 4 \
+#     > "${ROOTDIR}/999999/2600/0-9a-z__4__b60.tsv"
+# fi
+# # TODO: implement some way to rebuild the cache without deleting the files
+# if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__5__b60.tsv" ]; then
+#   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 5 \
+#     > "${ROOTDIR}/999999/2600/0-9a-z__5__b60.tsv"
+# fi
 
 # bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 5 999999/2600
