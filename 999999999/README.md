@@ -60,3 +60,14 @@ Art by                    ( `/  ^  ^   (  \/>   /(   \    \  \
 
 ## @TODO
 - Get part of data from <https://github.com/EticaAI/HXL-Data-Science-file-formats/tree/main/ontologia/codicem>
+
+
+<!--
+Self notes;
+
+- sed
+  - GNU sed:
+    - https://www.gnu.org/software/sed/manual/sed.html
+  - BSD sed:
+    - https://www.freebsd.org/cgi/man.cgi?query=sed
+-->
