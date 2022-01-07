@@ -503,7 +503,7 @@ __numerordinatio_translatio() {
 # Arguments:
 #   terminum
 #######################################
-numerordinatio_translatio_alpha_in_digito__beta() {
+numerordinatio_translatio_in_digito__beta() {
     codicem="$1"
     total_characters="$2"
     _TEMPDIR=$(mktemp --directory)
@@ -511,7 +511,7 @@ numerordinatio_translatio_alpha_in_digito__beta() {
     mkfifo "${_FIFO_total}"
 
 
-    universum_alpha_usascii="NOP,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,NOP,NOP,NOP"
+    universum_alpha_usascii="NOP,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP,NOP"
     # universum_alphanum_usascii="0123456789abcdefghijklmnopqrstuvwxyz"
 
     # @see https://en.wikipedia.org/wiki/ISO_639-3#Code_space
@@ -563,7 +563,7 @@ numerordinatio_translatio_alpha_in_digito__beta() {
 }
 
 # echo ">> 111 3"
-# numerordinatio_translatio_alpha_in_digito__beta "111" 3
+# numerordinatio_translatio_in_digito__beta "111" 3
 # echo ""
 # echo ">> aaa 3"
 # numerordinatio_translatio_alpha_in_digito__beta "aaa" 3
