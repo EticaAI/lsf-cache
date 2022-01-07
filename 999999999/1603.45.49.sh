@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #===============================================================================
 #
 #          FILE:  1603.45.49.sh
@@ -9,7 +9,7 @@
 #
 #       OPTIONS:  ---
 #
-#  REQUIREMENTS:  - POSIX shell (or better)
+#  REQUIREMENTS:  - Bash shell (or better)
 #                 - wget
 #          BUGS:  1. fix the "None" which may appear on mathematical fields.
 #                    Maybe https://github.com/HXLStandard/hxl-proxy/wiki

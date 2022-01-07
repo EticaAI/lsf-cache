@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #===============================================================================
 #
 #          FILE:  2600.sh
@@ -10,7 +10,7 @@
 #
 #       OPTIONS:  ---
 #
-#  REQUIREMENTS:  - POSIX shell (or better)
+#  REQUIREMENTS:  - Bash shell (or better)
 #                 - wget
 #                 - libhxl (https://github.com/HXLStandard/libhxl-python)
 #                 - csvkit (https://github.com/wireservice/csvkit)

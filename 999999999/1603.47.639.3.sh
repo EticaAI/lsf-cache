@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #===============================================================================
 #
 #          FILE:  1603.47.639.3.sh
@@ -9,7 +9,7 @@
 #
 #       OPTIONS:  ---
 #
-#  REQUIREMENTS:  - POSIX shell (or better)
+#  REQUIREMENTS:  - Bash shell (or better)
 #                 - wget
 #          BUGS:  ---
 #         NOTES:  ---

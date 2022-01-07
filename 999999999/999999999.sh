@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #===============================================================================
 #
 #          FILE:  999999999.sh
@@ -10,7 +10,7 @@
 #
 #       OPTIONS:  ---
 #
-#  REQUIREMENTS:  - POSIX shell (or better)
+#  REQUIREMENTS:  - Bash shell (or better)
 #
 #          BUGS:  ---
 #         NOTES:  ---
@@ -60,7 +60,6 @@ contains() {
         return 1    # $substring is not in $string
     fi
 }
-
 
 #######################################
 # Normalization of PCode sheets. The RawSheetname may (or not) have ISO3166p1a3
@@ -151,53 +150,6 @@ trim() {
   trimmed=$(echo "$1" | xargs echo -n)
   echo "$trimmed"
 }
-
-# contains "abcd" "e" || echo "abcd does not contain e"
-# contains "abcd" "ab" && echo "abcd contains ab"
-
-# echo ""
-
-# un_pcode_rawheader_is_pcode "admin1Name_ar" || echo "admin1Name_ar not Pcode"
-# un_pcode_rawheader_is_pcode "admin1Name_ar" && echo "admin1Name_ar is Pcode"
-# un_pcode_rawheader_is_pcode "admin2Pcode" || echo "admin2Pcode is Pcode"
-# un_pcode_rawheader_is_pcode "admin2Pcode" && echo "admin2Pcode is not Pcode"
-# un_pcode_rawheader_is_pcode "lalala" || echo "lalala is Pcode"
-# un_pcode_rawheader_is_pcode "lalala" && echo "lalala is not Pcode"
-
-# echo ""
-
-# # un_pcode_rawheader_is_name "admin1Name_ar" || echo "admin1Name_ar not name"
-# # un_pcode_rawheader_is_name "admin1Name_ar" && echo "admin1Name_ar is name"
-# # un_pcode_rawheader_is_name "admin2Pcode" && echo "admin2Pcode is name"
-
-# # un_pcode_rawheader_is_name "admin1Name_ar" || echo "admin1Name_ar not name"
-# # un_pcode_rawheader_is_name "admin1Name_ar" && echo "admin1Name_ar is name"
-# # un_pcode_rawheader_is_name "admin2Pcode" || echo "admin2Pcode is name"
-# # un_pcode_rawheader_is_name "admin2Pcode" && echo "admin2Pcode is not name"
-# # un_pcode_rawheader_is_name "lalala" || echo "lalala is name"
-# # un_pcode_rawheader_is_name "lalala" && echo "lalala is not name"
-
-# string='This is a sample 123 text and some 987 numbers'
-# echo "$string" | sed -rn 's/[^[:digit:]]*([[:digit:]]+)[^[:digit:]]+([[:digit:]]+)[^[:digit:]]*/\1 \2/p'
-
-# echo "ooi"
-
-# string2='admin1Name_ar'
-# # echo "$string2" | sed -rn 's/[^[:digit:]]*([[:digit:]]+)[^[:digit:]]+([[:digit:]]+)[^[:digit:]]*/\1 \2/p'
-# echo "$string2" | sed -rn 's/[^[:digit:]]*([[:digit:]]+)[^[:digit:]]+([[:digit:]]+)[^[:digit:]]*/\1 \2/p'
-
-
-# echo "fini"
-
-
-# all 3 groups
-# echo "admin2Pcode" | sed -E 's/^(Admin|admin)([0-9]){1}(Pcode|pcode)$/_\1_ _\2_ _\3_/'
-# echo "admin2AltName2_zh" | sed -E 's/^(Admin|admin)([0-9]){1}(Pcode|pcode)$/_\1_ _\2_ _\3_/'
-
-# # Admin level (of only if matches PCode)
-# echo "admin2Pcode" | sed -E 's/^(Admin|admin)([0-9])(Pcode|pcode)$/_\1_ _\2_ _\3_/'
-# echo "admin3Name_sw" | sed -E 's/^(Admin|admin)([0-9])(Pcode|pcode)$/_\1_ _\2_ _\3_/'
-# echo "admin2AltName2_zh" | sed -E 's/^(Admin|admin)([0-9])(Pcode|pcode)$/_\1_ _\2_ _\3_/'
 
 
 # https://stackoverflow.com/questions/6011661/regexp-sed-suppress-no-match-output
@@ -487,6 +439,24 @@ __numerordinatio_translatio() {
     done
 }
 
+__numerordinatio_translatio_numerum_pariae() {
+    local codeword_purum="$1"
+    local linenumber=0
+    local total=0
+
+    while read -r -n 1 char ; do
+        # echo "$char"
+        # char_intval=$(("$char"))
+        total=$((total + char))
+    done <<< "$codeword_purum"
+
+    # echo "Debug: input $codeword_purum: Sum: $total; parity; ${total: -1}"
+    echo "${total: -1}"
+}
+
+# __numerordinatio_translatio_numerum_pariae 123
+# __numerordinatio_translatio_numerum_pariae 456
+
 #######################################
 # Change Numerordĭnātĭo rank separator
 #
@@ -546,12 +516,11 @@ numerordinatio_translatio_in_digito__beta() {
         total_characters=$(( total_characters - 1 ))
 
     done
-
+    _total=$(cat "$_FIFO_total")
     # TODO: implement a real CRC, to allow check later. 0 means no check
     total_namespace_multiple_of_60="1"
-    crc_check="0"
+    crc_check=$(__numerordinatio_translatio_numerum_pariae "$_total")
 
-    _total=$(cat "$_FIFO_total")
     echo "${_total}${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
     # echo "${codicem}: total [[[[$_total]]]]]"
 

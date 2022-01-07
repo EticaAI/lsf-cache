@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #===============================================================================
 #
 #          FILE:  0.0.sh
@@ -10,7 +10,7 @@
 #
 #       OPTIONS:  ---
 #
-#  REQUIREMENTS:  - POSIX shell (or better)
+#  REQUIREMENTS:  - Bash shell (or better)
 #                 - wget
 #                 - sed (GNU sed better tested)
 #                 - Python
@@ -32,12 +32,12 @@ set -e
 
 ROOTDIR="$(pwd)"
 
-sh "${ROOTDIR}/999999999/2600.sh"
+bash "${ROOTDIR}/999999999/2600.sh"
 
-sh "${ROOTDIR}/999999999/1603.47.15924.sh"
+bash "${ROOTDIR}/999999999/1603.47.15924.sh"
 
-sh "${ROOTDIR}/999999999/1603.47.639.3.sh"
+bash "${ROOTDIR}/999999999/1603.47.639.3.sh"
 
-sh "${ROOTDIR}/999999999/1603.45.49.sh"
+bash "${ROOTDIR}/999999999/1603.45.49.sh"
 
-sh "${ROOTDIR}/999999999/1603.45.16.sh"
+bash "${ROOTDIR}/999999999/1603.45.16.sh"

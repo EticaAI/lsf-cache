@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #===============================================================================
 #
 #          FILE:  1603.47.15924.sh
@@ -9,7 +9,7 @@
 #
 #       OPTIONS:  ---
 #
-#  REQUIREMENTS:  - POSIX shell (or better)
+#  REQUIREMENTS:  - Bash shell (or better)
 #                 - wget
 #                 - mlr (https://miller.readthedocs.io/en/latest/)
 #          BUGS:  ---
