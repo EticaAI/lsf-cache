@@ -471,11 +471,14 @@ __numerordinatio_translatio_numerum_pariae() {
 # Globals:
 #   None
 # Arguments:
-#   terminum
+#   codicem
+#   total_characters
+#   tab_expanded
 #######################################
 numerordinatio_translatio_in_digito__beta() {
     codicem="$1"
     total_characters="$2"
+    tab_expanded="${3}"
     _TEMPDIR=$(mktemp --directory)
     _FIFO_total="$_TEMPDIR/total"
     mkfifo "${_FIFO_total}"
@@ -521,8 +524,15 @@ numerordinatio_translatio_in_digito__beta() {
     total_namespace_multiple_of_60="1"
     crc_check=$(__numerordinatio_translatio_numerum_pariae "$_total")
 
-    echo "${_total}${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
-    # echo "${codicem}: total [[[[$_total]]]]]"
+    fullcode="${_total}${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
+    if [ -z "$tab_expanded" ]; then
+        echo "$fullcode"
+    else
+        printf "%s\t%s\t%s\t%s\t%s\n" "$fullcode" "${_total}" "${_exact_packed_chars_number}" "${total_namespace_multiple_of_60}" "${crc_check}"
+        # echo "${_total}\t${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
+    fi
+    
+
 
     rm "${_FIFO_total:-'unknow-file'}"
 
@@ -538,10 +548,12 @@ numerordinatio_translatio_in_digito__beta() {
 }
 
 # echo ">> 111 3"
-# numerordinatio_translatio_in_digito__beta "111" 3
+# numerordinatio_translatio_in_digito__beta "111" 3 "verbose"
 # echo ""
 # echo ">> aaa 3"
-# numerordinatio_translatio_alpha_in_digito__beta "aaa" 3
+# numerordinatio_translatio_in_digito__beta "aaa" 3
+# echo ">> aaa 3"
+# numerordinatio_translatio_in_digito__beta "aaa" 3 "verbose"
 # echo ""
 # echo ">> abc 3"
 # numerordinatio_translatio_alpha_in_digito__beta "abc" 3

@@ -12,3 +12,13 @@
 ---
 
 [![Richard Brathwait, The Yong Mans Gleaning](https://howtospeakmachine.com/wp-content/uploads/2019/02/Screen-Shot-2019-02-23-at-9.23.31-PM.jpg)](https://quod.lib.umich.edu/e/eebo/A00514.0001.001?rgn=main;view=fulltext)
+
+<!--
+Potential TODOs
+
+- https://en.wikipedia.org/wiki/Arabic_alphabet#Alphabetical_order
+- https://en.wikipedia.org/wiki/Abjad_numerals
+- https://en.wikipedia.org/wiki/Cyrillic_script
+- https://en.wikisource.org/wiki/Translation:List_of_Frequently_Used_Characters_in_Modern_Chinese
+-
+-->
