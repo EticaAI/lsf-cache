@@ -547,6 +547,11 @@ numerordinatio_translatio_in_digito__beta() {
     # echo "$resultatum"
 }
 
+# 4314	003
+# 4314	012
+# 4314	102
+# 4314	111
+
 # echo ">> 111 3"
 # numerordinatio_translatio_in_digito__beta "111" 3 "verbose"
 # echo ""

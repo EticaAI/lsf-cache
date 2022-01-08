@@ -101,18 +101,21 @@ bootstrap_999999_2600() {
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__1__b60.tsv" ]; then
   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 1 \
     > "${ROOTDIR}/999999/2600/a-z__1__b60.tsv"
+  sort -k1 -n "${ROOTDIR}"/999999/2600/a-z__1__b60.tsv > "${ROOTDIR}"/999999/2600/a-z__1__b60.sorted.tsv
 fi
 
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__2__b60.tsv" ]; then
   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 2 \
     > "${ROOTDIR}/999999/2600/a-z__2__b60.tsv"
+  sort -k1 -n "${ROOTDIR}"/999999/2600/a-z__2__b60.tsv > "${ROOTDIR}"/999999/2600/a-z__2__b60.sorted.tsv
 fi
 
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__3__b60.tsv" ]; then
   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 3 \
     > "${ROOTDIR}/999999/2600/a-z__3__b60.tsv"
+  sort -k1 -n "${ROOTDIR}"/999999/2600/a-z__3__b60.tsv > "${ROOTDIR}"/999999/2600/a-z__3__b60.sorted.tsv
 fi
 
 # # TODO: implement some way to rebuild the cache without deleting the files
@@ -133,18 +136,21 @@ fi
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__1__b60.tsv" ]; then
   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 1 \
     > "${ROOTDIR}/999999/2600/0-9a-z__1__b60.tsv"
+  sort -k1 -n "${ROOTDIR}"/999999/2600/0-9a-z__1__b60.tsv > "${ROOTDIR}"/999999/2600/0-9a-z__1__b60.sorted.tsv
 fi
 
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv" ]; then
   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 2 \
     > "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv"
+  sort -k1 -n "${ROOTDIR}"/999999/2600/0-9a-z__2__b60.tsv > "${ROOTDIR}"/999999/2600/0-9a-z__2__b60.sorted.tsv
 fi
 
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv" ]; then
   bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 3 \
     > "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv"
+  sort -k1 -n "${ROOTDIR}"/999999/2600/0-9a-z__3__b60.tsv > "${ROOTDIR}"/999999/2600/0-9a-z__3__b60.sorted.tsv
 fi
 
 # # TODO: implement some way to rebuild the cache without deleting the files
