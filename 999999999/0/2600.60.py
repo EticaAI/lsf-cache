@@ -41,7 +41,8 @@ from typing import (
     Union
 )
 
-from itertools import permutations
+# from itertools import permutations
+from itertools import product
 # valueee = list(itertools.permutations([1, 2, 3]))
 import csv
 
@@ -157,8 +158,9 @@ class NDT2600:
     def quod_tabulam_multiplicatio(self):
         resultatum = []
 
-        collectionem = permutations(
-            self.codex_verbum_tabulae, self.verbum_limiti)
+        # collectionem = permutations(
+        collectionem = product(
+            self.codex_verbum_tabulae, repeat=self.verbum_limiti)
         for item in collectionem:
             # print('item', item)
             resultatum.append(''.join(item))

@@ -34,6 +34,8 @@ _2600_b60__US_ASCII_alpha_lowercase="a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v
 _2600_b60__US_ASCII_alpha_uppercase="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"
 _2600_b60__US_ASCII_alphanum_lowercase="0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z"
 _2600_b60__US_ASCII_alphanum_uppercase="0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z"
+_2600_b60__US_ASCII_alpha_seed=",a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,"
+_2600_b60__US_ASCII_alphanum_seed=",0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,"
 export _2600_b60__US_ASCII_alpha_lowercase
 export _2600_b60__US_ASCII_alpha_uppercase
 export _2600_b60__US_ASCII_alphanum_lowercase
@@ -115,24 +117,43 @@ bootstrap_999999_2600() {
 
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__1__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 1 \
+  ./999999999/0/2600.60.py --actionem codex \
+    --verbum-limiti=1 \
+    --codex-verbum-tabulae="${_2600_b60__US_ASCII_alpha_seed}" \
     > "${ROOTDIR}/999999/2600/a-z__1__b60.tsv"
+
+  # bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 1 \
+  #   > "${ROOTDIR}/999999/2600/a-z__1__b60.tsv"
+
   sort -k1 -n "${ROOTDIR}"/999999/2600/a-z__1__b60.tsv > "${ROOTDIR}"/999999/2600/a-z__1__b60.sorted.tsv
   cut -f1 "${ROOTDIR}"/999999/2600/a-z__1__b60.sorted.tsv | uniq -d | xargs -I '{}' sh -c "grep -w '{}' ""${ROOTDIR}""/999999/2600/a-z__1__b60.sorted.tsv" > "${ROOTDIR}"/999999/2600/a-z__1__b60.non-uniq.sorted.tsv
 fi
 
+# set -x
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__2__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 2 \
+  ./999999999/0/2600.60.py --actionem codex \
+    --verbum-limiti=2 \
+    --codex-verbum-tabulae="${_2600_b60__US_ASCII_alpha_seed}" \
     > "${ROOTDIR}/999999/2600/a-z__2__b60.tsv"
+
+  # bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 2 \
+  #   > "${ROOTDIR}/999999/2600/a-z__2__b60.tsv"
   sort -k1 -n "${ROOTDIR}"/999999/2600/a-z__2__b60.tsv > "${ROOTDIR}"/999999/2600/a-z__2__b60.sorted.tsv
   cut -f1 "${ROOTDIR}"/999999/2600/a-z__2__b60.sorted.tsv | uniq -d | xargs -I '{}' sh -c "grep -w '{}' ""${ROOTDIR}""/999999/2600/a-z__2__b60.sorted.tsv" > "${ROOTDIR}"/999999/2600/a-z__2__b60.non-uniq.sorted.tsv
 fi
 
+# set +x
+
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__3__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 3 \
+  ./999999999/0/2600.60.py --actionem codex \
+    --verbum-limiti=3 \
+    --codex-verbum-tabulae="${_2600_b60__US_ASCII_alpha_seed}" \
     > "${ROOTDIR}/999999/2600/a-z__3__b60.tsv"
+
+  # bootstrap_999999_2600 "${_2600_b60__US_ASCII_alpha_lowercase}" 3 \
+  #   > "${ROOTDIR}/999999/2600/a-z__3__b60.tsv"
   sort -k1 -n "${ROOTDIR}"/999999/2600/a-z__3__b60.tsv > "${ROOTDIR}"/999999/2600/a-z__3__b60.sorted.tsv
   cut -f1 "${ROOTDIR}"/999999/2600/a-z__3__b60.sorted.tsv | uniq -d | xargs -I '{}' sh -c "grep -w '{}' ""${ROOTDIR}""/999999/2600/a-z__3__b60.sorted.tsv" > "${ROOTDIR}"/999999/2600/a-z__3__b60.non-uniq.sorted.tsv
 fi
@@ -153,24 +174,40 @@ fi
 
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__1__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 1 \
+  ./999999999/0/2600.60.py --actionem codex \
+    --verbum-limiti=1 \
+    --codex-verbum-tabulae="${_2600_b60__US_ASCII_alphanum_seed}" \
     > "${ROOTDIR}/999999/2600/0-9a-z__1__b60.tsv"
+
+  # bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 1 \
+  #   > "${ROOTDIR}/999999/2600/0-9a-z__1__b60.tsv"
+
   sort -k1 -n "${ROOTDIR}"/999999/2600/0-9a-z__1__b60.tsv > "${ROOTDIR}"/999999/2600/0-9a-z__1__b60.sorted.tsv
   cut -f1 "${ROOTDIR}"/999999/2600/0-9a-z__1__b60.sorted.tsv | uniq -d | xargs -I '{}' sh -c "grep -w '{}' ""${ROOTDIR}""/999999/2600/0-9a-z__1__b60.sorted.tsv" > "${ROOTDIR}"/999999/2600/0-9a-z__1__b60.non-uniq.sorted.tsv
 fi
 
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 2 \
+  ./999999999/0/2600.60.py --actionem codex \
+    --verbum-limiti=2 \
+    --codex-verbum-tabulae="${_2600_b60__US_ASCII_alphanum_seed}" \
     > "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv"
+  # bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 2 \
+  #   > "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv"
+
   sort -k1 -n "${ROOTDIR}"/999999/2600/0-9a-z__2__b60.tsv > "${ROOTDIR}"/999999/2600/0-9a-z__2__b60.sorted.tsv
   cut -f1 "${ROOTDIR}"/999999/2600/0-9a-z__2__b60.sorted.tsv | uniq -d | xargs -I '{}' sh -c "grep -w '{}' ""${ROOTDIR}""/999999/2600/0-9a-z__2__b60.sorted.tsv" > "${ROOTDIR}"/999999/2600/0-9a-z__2__b60.non-uniq.sorted.tsv
 fi
 
 # TODO: implement some way to rebuild the cache without deleting the files
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv" ]; then
-  bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 3 \
+  ./999999999/0/2600.60.py --actionem codex \
+    --verbum-limiti=3 \
+    --codex-verbum-tabulae="${_2600_b60__US_ASCII_alphanum_seed}" \
     > "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv"
+  # bootstrap_999999_2600 "${_2600_b60__US_ASCII_alphanum_lowercase}" 3 \
+  #   > "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv"
+
   sort -k1 -n "${ROOTDIR}"/999999/2600/0-9a-z__3__b60.tsv > "${ROOTDIR}"/999999/2600/0-9a-z__3__b60.sorted.tsv
   cut -f1 "${ROOTDIR}"/999999/2600/0-9a-z__3__b60.sorted.tsv | uniq -d | xargs -I '{}' sh -c "grep -w '{}' ""${ROOTDIR}""/999999/2600/0-9a-z__3__b60.sorted.tsv" > "${ROOTDIR}"/999999/2600/0-9a-z__3__b60.non-uniq.sorted.tsv
 fi
