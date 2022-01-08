@@ -117,7 +117,7 @@ bootstrap_999999_2600() {
 
 
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__1__b60.tsv" ]; then
-  ./999999999/0/2600.60.py --actionem codex \
+  ./999999999/0/2600.60.py --actionem-codex-tabulae-completum \
     --verbum-limiti=1 \
     --codex-verbum-tabulae="${_2600_b60__US_ASCII_alpha_seed}" \
     > "${ROOTDIR}/999999/2600/a-z__1__b60.tsv"
@@ -130,7 +130,7 @@ if [ ! -f "${ROOTDIR}/999999/2600/a-z__1__b60.tsv" ]; then
 fi
 
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__2__b60.tsv" ]; then
-  ./999999999/0/2600.60.py --actionem codex \
+  ./999999999/0/2600.60.py --actionem-codex-tabulae-completum \
     --verbum-limiti=2 \
     --codex-verbum-tabulae="${_2600_b60__US_ASCII_alpha_seed}" \
     > "${ROOTDIR}/999999/2600/a-z__2__b60.tsv"
@@ -143,7 +143,7 @@ fi
 
 
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__3__b60.tsv" ]; then
-  ./999999999/0/2600.60.py --actionem codex \
+  ./999999999/0/2600.60.py --actionem-codex-tabulae-completum \
     --verbum-limiti=3 \
     --codex-verbum-tabulae="${_2600_b60__US_ASCII_alpha_seed}" \
     > "${ROOTDIR}/999999/2600/a-z__3__b60.tsv"
@@ -155,7 +155,7 @@ if [ ! -f "${ROOTDIR}/999999/2600/a-z__3__b60.tsv" ]; then
 fi
 
 if [ ! -f "${ROOTDIR}/999999/2600/a-z__4__b60.tsv" ]; then
-  ./999999999/0/2600.60.py --actionem codex \
+  ./999999999/0/2600.60.py --actionem-codex-tabulae-completum \
     --verbum-limiti=4 \
     --codex-verbum-tabulae="${_2600_b60__US_ASCII_alpha_seed}" \
     > "${ROOTDIR}/999999/2600/a-z__4__b60.tsv"
@@ -168,7 +168,7 @@ fi
 
 
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__1__b60.tsv" ]; then
-  ./999999999/0/2600.60.py --actionem codex \
+  ./999999999/0/2600.60.py --actionem-codex-tabulae-completum \
     --verbum-limiti=1 \
     --codex-verbum-tabulae="${_2600_b60__US_ASCII_alphanum_seed}" \
     > "${ROOTDIR}/999999/2600/0-9a-z__1__b60.tsv"
@@ -182,7 +182,7 @@ fi
 
 
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv" ]; then
-  ./999999999/0/2600.60.py --actionem codex \
+  ./999999999/0/2600.60.py --actionem-codex-tabulae-completum \
     --verbum-limiti=2 \
     --codex-verbum-tabulae="${_2600_b60__US_ASCII_alphanum_seed}" \
     > "${ROOTDIR}/999999/2600/0-9a-z__2__b60.tsv"
@@ -195,7 +195,7 @@ fi
 
 
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv" ]; then
-  ./999999999/0/2600.60.py --actionem codex \
+  ./999999999/0/2600.60.py --actionem-codex-tabulae-completum \
     --verbum-limiti=3 \
     --codex-verbum-tabulae="${_2600_b60__US_ASCII_alphanum_seed}" \
     > "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv"
@@ -207,7 +207,7 @@ if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__3__b60.tsv" ]; then
 fi
 
 if [ ! -f "${ROOTDIR}/999999/2600/0-9a-z__4__b60.tsv" ]; then
-  ./999999999/0/2600.60.py --actionem codex \
+  ./999999999/0/2600.60.py --actionem-codex-tabulae-completum \
     --verbum-limiti=4 \
     --codex-verbum-tabulae="${_2600_b60__US_ASCII_alphanum_seed}" \
     > "${ROOTDIR}/999999/2600/0-9a-z__4__b60.tsv"

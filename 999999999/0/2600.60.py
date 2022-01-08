@@ -31,6 +31,11 @@
 #   ./999999999/0/2600.60.py --verbum-limiti=4 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=fontem-verbum-tabulae
 #   ./999999999/0/2600.60.py --verbum-limiti=4 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=codex
 
+# Generate a list of hex
+# a_list = range(60)
+# print (',' + '{}'.format(','.join(hex(x) for x in a_list)) + ',')
+#    ./999999999/0/2600.60.py --actionem-neo-scripturam --neo-scripturam-tabulae-hxl-nomini="#item+rem+i_mul+is_zsym+ix_ndt60+ix_hex" --neo-scripturam-tabulae-symbola=',0x0,0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8,0x9,0xa,0xb,0xc,0xd,0xe,0xf,0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17,0x18,0x19,0x1a,0x1b,0x1c,0x1d,0x1e,0x1f,0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x29,0x2a,0x2b,0x2c,0x2d,0x2e,0x2f,0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,0x3a,0x3b,'
+
 
 import os
 import sys
@@ -69,6 +74,8 @@ STDIN = sys.stdin.buffer
 class NDT2600:
     def __init__(self):
         self.D1613_2_60 = self._init_1613_2_60_datum()
+        # self.scientia_de_scriptura = {}
+        self.scientia_de_scriptura = self.D1613_2_60
         self.total_namespace_multiple_of_60 = 1
         self.codex_verbum_tabulae = []
         self.verbum_limiti = 2
@@ -101,6 +108,41 @@ class NDT2600:
             crudum_tabulae = tabulae.split(separator)
             self.codex_verbum_tabulae = list(filter(None, crudum_tabulae))
 
+    def est_neo_scripturam_tabulae(self, tabulae: str, nomini: str):
+        separator = tabulae[0]
+        # print('tabulae22222222', tabulae)
+        if tabulae.count(separator) < 2:
+            raise ValueError(
+                "Separator [" + separator + "] of [" + str(tabulae) + "]? --help")
+
+        crudum_tabulae = tabulae.split(separator)
+        tabula_array = list(filter(None, crudum_tabulae))
+
+        scientia_de_scriptura_len = len(self.scientia_de_scriptura.keys())
+        neo_scripturam_tabulae_len = len(tabula_array)
+
+        if scientia_de_scriptura_len != neo_scripturam_tabulae_len:
+            raise ValueError(
+                "scientia_de_scriptura_len ["
+                + str(scientia_de_scriptura_len) +
+                "] neo_scripturam_tabulae != [" +
+                str(neo_scripturam_tabulae_len)
+                + "]"
+            )
+
+        # print('self.scientia_de_scriptura[index]',
+        #       self.scientia_de_scriptura, scientia_de_scriptura_len)
+        # print('')
+        # print('tabula_array', tabula_array, neo_scripturam_tabulae_len)
+        # print('')
+        for index in range(scientia_de_scriptura_len):
+            # print('index', index)
+            # self.scientia_de_scriptura[index][nomini] = tabula_array[index]
+            self.scientia_de_scriptura[index][nomini] = tabula_array.pop(0)
+
+        # print('testeee', self.scientia_de_scriptura)
+        # # print('TODO...')
+
     def est_verbum_limiti(self, verbum_limiti: int):
         self.verbum_limiti = int(verbum_limiti)
         return self
@@ -108,6 +150,30 @@ class NDT2600:
     def est_resultatum_separato(self, resultatum_separato: str):
         self.resultatum_separato = resultatum_separato
         return self
+
+    def exportatum_scientia_de_scriptura(self):
+        # self.resultatum_separato = resultatum_separato
+        tabula = []
+
+        caput = self.scientia_de_scriptura[0].keys()
+
+        # print('clavem', caput)
+        tabula_caput = []
+        tabula_caput.append('#item+conceptum+numerordinatio')
+        for clavem in caput:
+            tabula_caput.append(clavem)
+
+        tabula.append(tabula_caput)
+        for clavem_numerum, rem in self.scientia_de_scriptura.items():
+            lineam = [str(clavem_numerum)]
+            lineam.extend(rem.values())
+            tabula.append(lineam)
+
+        # print(tabula)
+        # print(self.D1613_2_60)
+        return tabula
+
+        return self.D1613_2_60
 
     def _quod_crc_check(self, numerum):
         numerum_textum = str(numerum)
@@ -119,7 +185,8 @@ class NDT2600:
     def _quod_numerordinatio_digitalem_punctum(self, punctum: str):
         # for conceptum in self.D1613_2_60:
         #     print('TODO')
-        for clavem, rem in self.D1613_2_60.items():
+        # for clavem, rem in self.D1613_2_60.items():
+        for clavem, rem in self.scientia_de_scriptura.items():
             if punctum in rem.values():
                 return clavem
 
@@ -308,6 +375,7 @@ class CLI_2600:
             'First character determine the spliter. ' +
             'Example 1: ",0,1,(.....),8,9,"',
             metavar='neo_scripturam_tabulae',
+            dest='neo_scripturam_tabulae',
             # default="2",
             nargs='?'
         )
@@ -315,7 +383,8 @@ class CLI_2600:
         neo_scripturam.add_argument(
             '--neo-scripturam-tabulae-hxl-nomini',
             help='(internal use) Inject reference table. ' +
-            'An HXL Standard tag name',
+            'An HXL Standard tag name.' +
+            'Default: #item+rem+i_mul+is_zsym+ix_ndt60+ix_neo',
             dest='neo_scripturam_nomini',
             default="#item+rem+i_mul+is_zsym+ix_ndt60+ix_neo",
             nargs='?'
@@ -357,6 +426,10 @@ class CLI_2600:
         if args.codex_verbum_tabulae:
             ndt2600.est_codex_verbum_tabulae(args.codex_verbum_tabulae)
 
+        if args.neo_scripturam_tabulae:
+            ndt2600.est_neo_scripturam_tabulae(
+                args.neo_scripturam_tabulae, args.neo_scripturam_nomini)
+
         if self.pyargs.verbum_simplex:
             tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
             return self.output(tabulam_multiplicatio)
@@ -366,8 +439,8 @@ class CLI_2600:
             return self.output(tabulam_multiplicatio)
 
         if self.pyargs.neo_scripturam:
-            # tabulam_multiplicatio = ndt2600.quod_codex()
-            return self.output(["TODO"])
+            scientia = ndt2600.exportatum_scientia_de_scriptura()
+            return self.output(scientia)
 
         # Let's default to full table
         tabulam_multiplicatio = ndt2600.quod_codex()
