@@ -479,9 +479,9 @@ numerordinatio_translatio_in_digito__beta() {
     codicem="$1"
     total_characters="$2"
     tab_expanded="${3}"
-    _TEMPDIR=$(mktemp --directory)
-    _FIFO_total="$_TEMPDIR/total"
-    mkfifo "${_FIFO_total}"
+    # _TEMPDIR=$(mktemp --directory)
+    # _FIFO_total="$_TEMPDIR/total"
+    # mkfifo "${_FIFO_total}"
 
     # Must be betwen 1 and 9. Around 5 start to be impractical
     _exact_packed_chars_number="$total_characters"
@@ -497,46 +497,52 @@ numerordinatio_translatio_in_digito__beta() {
     numeric_total=0
 
     # mkfifo "${TMPDIR}"/_nmt_total
-    echo "$numeric_total" > "$_FIFO_total" &
+    # echo "$numeric_total" > "$_FIFO_total" &
 
     # https://stackoverflow.com/questions/6834347/named-pipe-closing-prematurely-in-script/
 
     linenumber=0
     # @see https://stackoverflow.com/a/10572879/894546
-    echo "${codicem}" | sed -e 's/\(.\)/\1\n/g'  | while IFS= read -r character; do
+    # echo "${codicem}" | sed -e 's/\(.\)/\1\n/g'  | while IFS= read -r character; do
+    # shellcheck disable=SC2001
+    while IFS= read -r character; do
         numerum=$(__numerordinatio_translatio "$universum_alpha_usascii" "$character")
         numerum=$((numerum))
 
-        _total=$(cat "$_FIFO_total")
+        # echo ">>> numeric_total $numeric_total"
+        # _total=$(cat "$_FIFO_total")
         # numeric_now=$((numerum * pow_now))
         numeric_now=$(echo "$numerum ^ $total_characters" | bc)
         # echo "$numerum ^ $total_characters"
 
-        numeric_total=$(( _total + numeric_now))
-        echo "$numeric_total" > "$_FIFO_total" &
+        # numeric_total=$(( _total + numeric_now))
+        numeric_total=$(( numeric_total + numeric_now))
+        # echo "$numeric_total" > "$_FIFO_total" &
 
         # TO Debug, remove next comment
         # echo "c [$character]: cn [$numerum]:cnv [$numeric_now]: p: [$total_characters] :cnt [$numeric_total]"
         linenumber=$(( linenumber + 1 ))
         total_characters=$(( total_characters - 1 ))
+    # done
+    done <<< "$(echo "${codicem}" | sed -e 's/\(.\)/\1\n/g')"
 
-    done
-    _total=$(cat "$_FIFO_total")
+    # _total=$(cat "$_FIFO_total")
     # TODO: implement a real CRC, to allow check later. 0 means no check
     total_namespace_multiple_of_60="1"
-    crc_check=$(__numerordinatio_translatio_numerum_pariae "$_total")
+    # crc_check=$(__numerordinatio_translatio_numerum_pariae "$_total")
+    crc_check=$(__numerordinatio_translatio_numerum_pariae "$numeric_total")
 
-    fullcode="${_total}${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
+    # fullcode="${_total}${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
+    fullcode="${numeric_total}${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
     if [ -z "$tab_expanded" ]; then
         echo "$fullcode"
     else
-        printf "%s\t%s\t%s\t%s\t%s\n" "$fullcode" "${_total}" "${_exact_packed_chars_number}" "${total_namespace_multiple_of_60}" "${crc_check}"
+        # printf "%s\t%s\t%s\t%s\t%s\n" "$fullcode" "${_total}" "${_exact_packed_chars_number}" "${total_namespace_multiple_of_60}" "${crc_check}"
+        printf "%s\t%s\t%s\t%s\t%s\n" "$fullcode" "${numeric_total}" "${_exact_packed_chars_number}" "${total_namespace_multiple_of_60}" "${crc_check}"
         # echo "${_total}\t${_exact_packed_chars_number}${total_namespace_multiple_of_60}${crc_check}"
     fi
-    
 
-
-    rm "${_FIFO_total:-'unknow-file'}"
+    # rm "${_FIFO_total:-'unknow-file'}"
 
     # separator_finale="$2"
     # separator_initiale="${3:-\:}"
@@ -553,12 +559,20 @@ numerordinatio_translatio_in_digito__beta() {
 # 4314	012
 # 4314	102
 # 4314	111
+# benchmark
+# END=100
+# END=100
+# for ((i=1;i<=END;i++)); do
+#     # echo ">> 111111 6"
+#     # numerordinatio_translatio_in_digito__beta "111111" 6 "verbose"
+#     numerordinatio_translatio_in_digito__beta "111111" 6 "verbose" >/dev/null
+#     # echo ""
+#     # echo ">> aaaaaa 6 verbose"
+#     # numerordinatio_translatio_in_digito__beta "aaaaaa" 6 "verbose"
+#     numerordinatio_translatio_in_digito__beta "aaaaaa" 6 "verbose" >/dev/null
+# done
 
-# echo ">> 111 3"
-# numerordinatio_translatio_in_digito__beta "111" 3 "verbose"
-# echo ""
-# echo ">> aaa 3"
-# numerordinatio_translatio_in_digito__beta "aaa" 3
+
 # echo ">> aaa 3"
 # numerordinatio_translatio_in_digito__beta "aaa" 3 "verbose"
 # echo ""
