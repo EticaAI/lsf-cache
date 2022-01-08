@@ -28,6 +28,9 @@
 # TL;DR:
 #   ./999999999/0/2600.60.py
 #   NUMERORDINATIO_BASIM="/external/ndata" ./999999999/0/2600.60.py
+#   ./999999999/0/2600.60.py --verbum-limiti=5 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=fontem-verbum-tabulae
+#   ./999999999/0/2600.60.py --verbum-limiti=5 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=codex
+
 
 import os
 import sys
@@ -37,6 +40,9 @@ from typing import (
     # Type,
     Union
 )
+
+from itertools import permutations
+# valueee = list(itertools.permutations([1, 2, 3]))
 import csv
 
 NUMERORDINATIO_BASIM = os.getenv('NUMERORDINATIO_BASIM', os.getcwd())
@@ -64,6 +70,8 @@ class NDT2600:
         self.D1613_2_60 = self._init_1613_2_60_datum()
         self.total_namespace_multiple_of_60 = 1
         self.codex_verbum_tabulae = []
+        self.verbum_limiti = 2
+        self.resultatum_separato = "\t"
 
     def _init_1613_2_60_datum(self):
         archivum = NUMERORDINATIO_BASIM + "/1613/1603.2.60.no1.tm.hxl.tsv"
@@ -85,11 +93,20 @@ class NDT2600:
             self.codex_verbum_tabulae = tabulae
         else:
             separator = tabulae[0]
+            # print('tabulae', tabulae)
             if tabulae.count(separator) < 2:
                 raise ValueError(
                     "Separator [" + separator + "] of [" + str(tabulae) + "]? --help")
             crudum_tabulae = tabulae.split(separator)
             self.codex_verbum_tabulae = list(filter(None, crudum_tabulae))
+
+    def est_verbum_limiti(self, verbum_limiti: int):
+        self.verbum_limiti = int(verbum_limiti)
+        return self
+
+    def est_resultatum_separato(self, resultatum_separato: str):
+        self.resultatum_separato = resultatum_separato
+        return self
 
     def _quod_crc_check(self, numerum):
         numerum_textum = str(numerum)
@@ -137,6 +154,32 @@ class NDT2600:
         # print('todo')
         return ''.join(resultatum)
 
+    def quod_tabulam_multiplicatio(self):
+        resultatum = []
+
+        collectionem = permutations(
+            self.codex_verbum_tabulae, self.verbum_limiti)
+        for item in collectionem:
+            # print('item', item)
+            resultatum.append(''.join(item))
+        return resultatum
+
+    def quod_codex(self):
+        fontem_verbum = self.quod_tabulam_multiplicatio()
+        resultatum = []
+
+        for item in fontem_verbum:
+            # print('item', item)
+            codex_digitum = self.quod_numerordinatio_digitalem(item)
+            resultatum.append([
+                codex_digitum,
+                item
+            ])
+
+        # resultatum = list(permutations(self.codex_verbum_tabulae, self.verbum_limiti))
+
+        return resultatum
+
 
 class CLI_2600:
     def __init__(self):
@@ -158,6 +201,22 @@ class CLI_2600:
 
         # cōdex verbum tabulae
         parser.add_argument(
+            '--actionem',
+            help='Action to execute',
+            # choices=['rock', 'paper', 'scissors'],
+            choices=[
+                'codex',
+                'fontem-verbum-tabulae'
+            ],
+            dest='actionem',
+            required=True,
+            default='codex',
+            const='codex',
+            type=str,
+            nargs='?'
+        )
+
+        parser.add_argument(
             '--codex-verbum-tabulae',
             help='Multiplication table of the code words. ' +
             'First character determine the splider. ' +
@@ -166,6 +225,35 @@ class CLI_2600:
             metavar='codex_verbum_tabulae',
             nargs='?'
         )
+        parser.add_argument(
+            '--resultatum-limiti',
+            help='Codeword limit when when creating multiplication tables' +
+            'Most western codetables are between 2 and 4. ' +
+            'Defaults to 2',
+            metavar='verbum_limiti',
+            default="2",
+            nargs='?'
+        )
+
+        parser.add_argument(
+            '--punctum-separato-de-resultatum',
+            help='Character(s) used as separator for generate output.' +
+            'Defaults to tab "\t"',
+            dest='resultatum_separato',
+            default="\t",
+            nargs='?'
+        )
+
+        parser.add_argument(
+            '--verbum-limiti',
+            help='Codeword limit when when creating multiplication tables' +
+            'Most western codetables are between 2 and 4. ' +
+            'Defaults to 2',
+            metavar='verbum_limiti',
+            default="2",
+            nargs='?'
+        )
+
         parser.add_argument(
             '--verbose',
             help='Verbose output',
@@ -196,12 +284,38 @@ class CLI_2600:
 
         # print('self.pyargs', self.pyargs)
 
+        ndt2600.est_verbum_limiti(args.verbum_limiti)
+        ndt2600.est_resultatum_separato(args.resultatum_separato)
+
         if args.codex_verbum_tabulae:
             ndt2600.est_codex_verbum_tabulae(args.codex_verbum_tabulae)
+
+        if self.pyargs.actionem == 'fontem-verbum-tabulae':
+            tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
+            return self.output(tabulam_multiplicatio)
+
+        if self.pyargs.actionem == 'codex':
+            tabulam_multiplicatio = ndt2600.quod_codex()
+            return self.output(tabulam_multiplicatio)
+
+        # print('tabulam_multiplicatio', tabulam_multiplicatio)
 
         # print(ndt2600.__dict__)
         # Show help if no option defined
         # pyargs.print_help()
+        print('unknow option.')
+        return self.EXIT_ERROR
+
+    def output(self, output_collectiom):
+        for item in output_collectiom:
+            # TODO: check if result is a file instead of print
+
+            # print(type(item))
+            if isinstance(item, int) or isinstance(item, str):
+                print(item)
+            else:
+                print(self.pyargs.resultatum_separato.join(item))
+
         return self.EXIT_OK
 
 
@@ -214,6 +328,12 @@ if __name__ == "__main__":
     # args.execute_cli(args)
     cli_2600.execute_cli(args)
 
+
+# import itertools
+# valueee = list(permutations([1, 2, 3]))
+# valueee = list(permutations([1, 2, 3]))
+
+# print(valueee)
 
 # ndt2600 = NDT2600()
 
