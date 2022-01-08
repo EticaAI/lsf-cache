@@ -53,46 +53,62 @@ export _2600_b60__US_ASCII_alphanum_uppercase
 bootstrap_999999_2600() {
   codewordlist="$1"
   totalitems=$((${2:-2}))
-  echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r a1; do
+  codewordlist_arr=$(echo "${codewordlist}" | tr ',' '\n')
+  # echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r a1; do
+  finalstring=""
+  while IFS= read -r a1; do
     if [ "$totalitems" -lt 2 ]; then
       codenum="$(numerordinatio_translatio_in_digito__beta "$a1" 1)"
-      printf '%s\t%s\n' "$codenum" "$a1"
+      finalstring+="$codenum"$'\t'"$a1"$'\n'
       continue
     fi
-    echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r b2; do
+    # echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r b2; do
+    while IFS= read -r b2; do
       if [ "$totalitems" -lt 3 ]; then
         codenum="$(numerordinatio_translatio_in_digito__beta "$a1$b2" 2)"
-        printf '%s\t%s\n' "$codenum" "$a1$b2"
+        # printf '%s\t%s\n' "$codenum" "$a1$b2"
+        # finalstring+=$(printf '%s\t%s\n' "$codenum" "$a1$b2")
+        finalstring+="$codenum"$'\t'"$a1$b2"$'\n'
         continue
       fi
-      echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r c3; do
+      # echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r c3; do
+      while IFS= read -r c3; do
         if [ "$totalitems" -lt 4 ]; then
           codenum="$(numerordinatio_translatio_in_digito__beta "$a1$b2$c3" 3)"
-          printf '%s\t%s\n' "$codenum" "$a1$b2$c3"
+          # printf '%s\t%s\n' "$codenum" "$a1$b2$c3"
+          # finalstring+=$(printf '%s\t%s\n' "$codenum" "$a1$b2$c3")
+          finalstring+="$codenum"$'\t'"$a1$b2$c3"$'\n'
           # echo "$a1$b2$c3"
           continue
         fi
-        echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r d4; do
+        # echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r d4; do
+        while IFS= read -r d4; do
           if [ "$totalitems" -lt 5 ]; then
             codenum="$(numerordinatio_translatio_in_digito__beta "$a1$b2$c3$d4" 4)"
-            printf '%s\t%s\n' "$codenum" "$a1$b2$c3$d4"
+            # printf '%s\t%s\n' "$codenum" "$a1$b2$c3$d4"
+            # finalstring+=$(printf '%s\t%s\n' "$codenum" "$a1$b2$c3$d4")
+            finalstring+="$codenum"$'\t'"$a1$b2$c3$d4"$'\n'
             # echo "$a1$b2$c3$d4"
             continue
           fi
-          echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r e5; do
+          # echo "${codewordlist}" | tr ',' '\n'  | while IFS= read -r e5; do
+          while IFS= read -r e5; do
             if [ "$totalitems" -lt 6 ]; then
               codenum="$(numerordinatio_translatio_in_digito__beta "$a1$b2$c3$d4$e5" 5)"
-              printf '%s\t%s\n' "$codenum" "$a1$b2$c3$d4$e5"
+              # printf '%s\t%s\n' "$codenum" "$a1$b2$c3$d4$e5"
+              # finalstring+=$(printf '%s\t%s\n' "$codenum" "$a1$b2$c3$d4$e5")
+              finalstring+="$codenum"$'\t'"$a1$b2$c3$d4$e5"$'\n'
               # echo "$a1$b2$c3$d4$e5"
               continue
             fi
             echo "ERROR: implemented only for short codes"
             return 1
-          done
-        done
-      done
-    done
-  done
+          done  <<< "$codewordlist_arr"
+        done  <<< "$codewordlist_arr"
+      done  <<< "$codewordlist_arr"
+    done  <<< "$codewordlist_arr"
+  done <<< "$codewordlist_arr"
+  printf "%s" "$finalstring"
 }
 
 ### US_ASCII_alpha _____________________________________________________________
