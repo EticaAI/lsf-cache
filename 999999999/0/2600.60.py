@@ -28,8 +28,8 @@
 # TL;DR:
 #   ./999999999/0/2600.60.py
 #   NUMERORDINATIO_BASIM="/external/ndata" ./999999999/0/2600.60.py
-#   ./999999999/0/2600.60.py --verbum-limiti=5 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=fontem-verbum-tabulae
-#   ./999999999/0/2600.60.py --verbum-limiti=5 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=codex
+#   ./999999999/0/2600.60.py --verbum-limiti=4 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=fontem-verbum-tabulae
+#   ./999999999/0/2600.60.py --verbum-limiti=4 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=codex
 
 
 import os
@@ -134,7 +134,8 @@ class NDT2600:
         for pumctum in reversed(codicem_minor):
             digitalem_punctum = self._quod_numerordinatio_digitalem_punctum(
                 pumctum)
-            digitalem_punctum_ordo = digitalem_punctum * pow(NUMERORDINATIO_DEFALLO, ordo)
+            digitalem_punctum_ordo = digitalem_punctum * \
+                pow(NUMERORDINATIO_DEFALLO, ordo)
             digitalem_verus = digitalem_verus + digitalem_punctum_ordo
 
             # print('pumctum', pumctum, digitalem_punctum,
@@ -202,40 +203,22 @@ class CLI_2600:
         # https://en.wikipedia.org/wiki/Coded_set
 
         # cōdex verbum tabulae
-        parser.add_argument(
-            '--actionem',
-            help='Action to execute',
-            # choices=['rock', 'paper', 'scissors'],
-            choices=[
-                'codex',
-                'fontem-verbum-tabulae'
-            ],
-            dest='actionem',
-            required=True,
-            default='codex',
-            const='codex',
-            type=str,
-            nargs='?'
-        )
-
-        parser.add_argument(
-            '--codex-verbum-tabulae',
-            help='Multiplication table of the code words. ' +
-            'First character determine the splider. ' +
-            'Example 1: " 0 1 2 3 4 5 6 7 8 9 a b c d e f ". '
-            'Example 2: ",a,e,i,o,u,"',
-            metavar='codex_verbum_tabulae',
-            nargs='?'
-        )
-        parser.add_argument(
-            '--resultatum-limiti',
-            help='Codeword limit when when creating multiplication tables' +
-            'Most western codetables are between 2 and 4. ' +
-            'Defaults to 2',
-            metavar='verbum_limiti',
-            default="2",
-            nargs='?'
-        )
+        # parser.add_argument(
+        #     '--actionem',
+        #     help='Action to execute. Defaults to codex.',
+        #     # choices=['rock', 'paper', 'scissors'],
+        #     choices=[
+        #         'codex',
+        #         'fontem-verbum-tabulae',
+        #         'neo-scripturam',
+        #     ],
+        #     dest='actionem',
+        #     required=True,
+        #     default='codex',
+        #     const='codex',
+        #     type=str,
+        #     nargs='?'
+        # )
 
         parser.add_argument(
             '--punctum-separato-de-resultatum',
@@ -246,13 +229,95 @@ class CLI_2600:
             nargs='?'
         )
 
-        parser.add_argument(
+        neo_codex = parser.add_argument_group(
+            "neo-codex-tabulae",
+            "(DEFAULT USE) Operations to pre-build codes with their meanings")
+
+        neo_codex.add_argument(
+            '--actionem-codex-tabulae-completum',
+            help='Define mode to operate with new code ' +
+            'tables with their meanings',
+            metavar='',
+            dest='codex_completum',
+            const=True,
+            nargs='?'
+        )
+
+        neo_codex.add_argument(
+            '--actionem-verbum-simplex',
+            help='Do not generate the codes. Just calculate the full matrix ' +
+            'of possible codes using the rules',
+            metavar='',
+            dest='verbum_simplex',
+            nargs='?'
+        )
+
+        neo_codex.add_argument(
             '--verbum-limiti',
             help='Codeword limit when when creating multiplication tables' +
             'Most western codetables are between 2 and 4. ' +
             'Defaults to 2',
             metavar='verbum_limiti',
             default="2",
+            nargs='?'
+        )
+
+        neo_codex.add_argument(
+            '--codex-verbum-tabulae',
+            help='Multiplication table of the code words. ' +
+            'First character determine the spliter. ' +
+            'Example 1: " 0 1 2 3 4 5 6 7 8 9 a b c d e f ". '
+            'Example 2: ",a,e,i,o,u,"',
+            nargs='?'
+        )
+
+        neo_codex.add_argument(
+            '--resultatum-limiti',
+            help='Codeword limit when when creating multiplication tables' +
+            'Most western codetables are between 2 and 4. ' +
+            'Defaults to 2',
+            metavar='verbum_limiti',
+            default="2",
+            nargs='?'
+        )
+
+        neo_scripturam = parser.add_argument_group(
+            "neo-scripturam",
+            "(internal use) Operations related to associate new symbols " +
+            "to entire new writing systems without users needing to " +
+            "pre-translate to existing tables.")
+
+        neo_scripturam.add_argument(
+            '--actionem-neo-scripturam',
+            help='(required) Define mode actionem-neo-scripturam',
+            metavar='',
+            dest='neo_scripturam',
+            const=True,
+            nargs='?'
+        )
+
+        # https://stackoverflow.com/questions/59661738/argument-dependency-in-argparse
+        # Scriptura cuneiformis
+        # https://en.wikipedia.org/wiki/Cuneiform#Decipherment
+        # https://la.wikipedia.org/wiki/Scriptura_cuneiformis
+        neo_scripturam.add_argument(
+            '--neo-scripturam-tabulae-symbola',
+            help='(internal use) Inject reference table. ' +
+            'This requires entire list of the used base system ' +
+            ' (e.g. 60 items for base64 items.' +
+            'First character determine the spliter. ' +
+            'Example 1: ",0,1,(.....),8,9,"',
+            metavar='neo_scripturam_tabulae',
+            # default="2",
+            nargs='?'
+        )
+
+        neo_scripturam.add_argument(
+            '--neo-scripturam-tabulae-hxl-nomini',
+            help='(internal use) Inject reference table. ' +
+            'An HXL Standard tag name',
+            dest='neo_scripturam_nomini',
+            default="#item+rem+i_mul+is_zsym+ix_ndt60+ix_neo",
             nargs='?'
         )
 
@@ -292,21 +357,23 @@ class CLI_2600:
         if args.codex_verbum_tabulae:
             ndt2600.est_codex_verbum_tabulae(args.codex_verbum_tabulae)
 
-        if self.pyargs.actionem == 'fontem-verbum-tabulae':
+        if self.pyargs.verbum_simplex:
             tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
             return self.output(tabulam_multiplicatio)
 
-        if self.pyargs.actionem == 'codex':
+        if self.pyargs.codex_completum:
             tabulam_multiplicatio = ndt2600.quod_codex()
             return self.output(tabulam_multiplicatio)
 
-        # print('tabulam_multiplicatio', tabulam_multiplicatio)
+        if self.pyargs.neo_scripturam:
+            # tabulam_multiplicatio = ndt2600.quod_codex()
+            return self.output(["TODO"])
 
-        # print(ndt2600.__dict__)
-        # Show help if no option defined
-        # pyargs.print_help()
-        print('unknow option.')
-        return self.EXIT_ERROR
+        # Let's default to full table
+        tabulam_multiplicatio = ndt2600.quod_codex()
+        return self.output(tabulam_multiplicatio)
+        # print('unknow option.')
+        # return self.EXIT_ERROR
 
     def output(self, output_collectiom):
         for item in output_collectiom:

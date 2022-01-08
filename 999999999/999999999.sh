@@ -414,6 +414,7 @@ __numerordinatio_scientiam_initiale() {
     # return 0
 }
 
+# DEPRECATED! Use 0/2600.60.py
 __numerordinatio_codicem_lineam() {
     lineam="$1"
     echo "$lineam" | tr '\t' '\n' | while IFS= read -r value; do
@@ -424,6 +425,7 @@ __numerordinatio_codicem_lineam() {
     done
 }
 
+# DEPRECATED! Use 0/2600.60.py
 __numerordinatio_translatio() {
     codewordlist="$1"
     codicem_rem="$2"
@@ -439,6 +441,7 @@ __numerordinatio_translatio() {
     done
 }
 
+# DEPRECATED! Use 0/2600.60.py
 __numerordinatio_translatio_numerum_pariae() {
     local codeword_purum="$1"
     local linenumber=0
@@ -459,6 +462,8 @@ __numerordinatio_translatio_numerum_pariae() {
 
 #######################################
 # Change Numerordĭnātĭo rank separator
+#
+# DEPRECATED! Use 0/2600.60.py
 #
 # Example:
 #    # 4
