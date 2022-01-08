@@ -47,7 +47,7 @@ from itertools import product
 import csv
 
 NUMERORDINATIO_BASIM = os.getenv('NUMERORDINATIO_BASIM', os.getcwd())
-NUMERORDINATIO_DEFALLO = int(os.getenv('NUMERORDINATIO_DEFALLO', '60'))  # <?>
+NUMERORDINATIO_DEFALLO = int(os.getenv('NUMERORDINATIO_DEFALLO', '60'))  # �
 DESCRIPTION = """
 2600.60 is (...)
 """
@@ -134,7 +134,7 @@ class NDT2600:
         for pumctum in reversed(codicem_minor):
             digitalem_punctum = self._quod_numerordinatio_digitalem_punctum(
                 pumctum)
-            digitalem_punctum_ordo = pow(digitalem_punctum, ordo)
+            digitalem_punctum_ordo = digitalem_punctum * pow(NUMERORDINATIO_DEFALLO, ordo)
             digitalem_verus = digitalem_verus + digitalem_punctum_ordo
 
             # print('pumctum', pumctum, digitalem_punctum,
