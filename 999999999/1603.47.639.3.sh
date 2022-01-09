@@ -24,7 +24,7 @@
 #===============================================================================
 # Comment next line if not want to stop on first error
 set -e
-set -x
+# set -x
 
 ROOTDIR="$(pwd)"
 
@@ -33,6 +33,7 @@ ROOTDIR="$(pwd)"
 #   - https://proxy.hxlstandard.org/data/edit?tagger-match-all=on&tagger-01-header=id&tagger-01-tag=%23vocab+%2Bid+%2Bv_iso6393_3letter&tagger-02-header=part2b&tagger-02-tag=%23vocab+%2Bcode+%2Bv_iso3692_3letter+%2Bz_bibliographic&tagger-03-header=part2t&tagger-03-tag=%23vocab+%2Bcode+%2Bv_3692_3letter+%2Bz_terminology&tagger-04-header=part1&tagger-04-tag=%23vocab+%2Bcode+%2Bv_6391&tagger-05-header=scope&tagger-05-tag=%23status&tagger-06-header=language_type&tagger-06-tag=%23vocab+%2Btype&tagger-07-header=ref_name&tagger-07-tag=%23description+%2Bname+%2Bi_en&tagger-08-header=comment&tagger-08-tag=%23description+%2Bcomment+%2Bi_en&url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1mlc3zLkdgGRMOts36PiK2eFrMazgidKs%2Fview%3Fusp%3Dsharing&header-row=1&dest=data_view
 #     - https://proxy.hxlstandard.org/data.csv?tagger-match-all=on&tagger-01-header=id&tagger-01-tag=%23vocab+%2Bid+%2Bv_iso6393_3letter&tagger-02-header=part2b&tagger-02-tag=%23vocab+%2Bcode+%2Bv_iso3692_3letter+%2Bz_bibliographic&tagger-03-header=part2t&tagger-03-tag=%23vocab+%2Bcode+%2Bv_3692_3letter+%2Bz_terminology&tagger-04-header=part1&tagger-04-tag=%23vocab+%2Bcode+%2Bv_6391&tagger-05-header=scope&tagger-05-tag=%23status&tagger-06-header=language_type&tagger-06-tag=%23vocab+%2Btype&tagger-07-header=ref_name&tagger-07-tag=%23description+%2Bname+%2Bi_en&tagger-08-header=comment&tagger-08-tag=%23description+%2Bcomment+%2Bi_en&url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1mlc3zLkdgGRMOts36PiK2eFrMazgidKs%2Fview%3Fusp%3Dsharing&header-row=1&dest=data_view
 
+DATA_ISO_639_3_TAB="https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3.tab"
 DATA_ISO_639_3_CSV="https://proxy.hxlstandard.org/data.csv?tagger-match-all=on&tagger-01-header=id&tagger-01-tag=%23vocab+%2Bid+%2Bv_iso6393_3letter&tagger-02-header=part2b&tagger-02-tag=%23vocab+%2Bcode+%2Bv_iso3692_3letter+%2Bz_bibliographic&tagger-03-header=part2t&tagger-03-tag=%23vocab+%2Bcode+%2Bv_3692_3letter+%2Bz_terminology&tagger-04-header=part1&tagger-04-tag=%23vocab+%2Bcode+%2Bv_6391&tagger-05-header=scope&tagger-05-tag=%23status&tagger-06-header=language_type&tagger-06-tag=%23vocab+%2Btype&tagger-07-header=ref_name&tagger-07-tag=%23description+%2Bname+%2Bi_en&tagger-08-header=comment&tagger-08-tag=%23description+%2Bcomment+%2Bi_en&url=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1mlc3zLkdgGRMOts36PiK2eFrMazgidKs%2Fview%3Fusp%3Dsharing&header-row=1&dest=data_view"
 
 # shellcheck source=999999999.sh
@@ -48,12 +49,44 @@ DATA_ISO_639_3_CSV="https://proxy.hxlstandard.org/data.csv?tagger-match-all=on&t
 #   None
 #######################################
 bootstrap_999999_1603_47_639_3_fetch_data() {
-  # TODO: implement option to rebuild even if file already on disk
+
+  # An Non HXLated version
+  if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab" ]; then
+      wget -qO- "$DATA_ISO_639_3_TAB" > "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
+  else
+      echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+  fi
+
+  # TODO: investigage edge case very peculiar were HXLProxy may forgot
+  #       a tab exactly on jrr around 65,8 KB of data.
+  #      "It looks like row 2787 should actually have 8 columns, instead of 7. in line 2786."
+
   if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" ]; then
       wget -qO- "$DATA_ISO_639_3_CSV" > "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
   else
       echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
   fi
+
+  is_valid=$(csvclean --dry-run "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv")
+  if [ "$is_valid" != "No errors." ]; then
+    csvclean "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+    if [ -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv" ]; then
+      rm "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv" 
+    fi
+    # mv "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv"
+    rm "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+    mv "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_out.csv" "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+  else
+    echo "Cached already is valid. Ok."
+  fi
+
+#   echo "is_valid $is_valid"
+#   echo "is_valid2 $is_valid2"
+
+#   hxlclean 999999/1603/47/639/3/1603.47.639.3.hxl.csv > 999999/1603/47/639/3/1603.47.639.3.TEST.hxl.csv
+#   hxlclean 999999/1603/47/639/3/1603.47.639.3.TEST.hxl.csv > 999999/1603/47/639/3/1603.47.639.3.TEST3333.hxl.csv
+
+#   csvclean -n 999999/1603/47/639/3/1603.47.639.3.hxl.csv
 }
 
 #######################################

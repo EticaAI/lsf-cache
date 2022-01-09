@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #===============================================================================
 #
 #          FILE:  0.0.sh
@@ -6,7 +6,8 @@
 #         USAGE:  ./999999999/0.0.sh
 #                 time ./999999999/0.0.sh
 #
-#   DESCRIPTION:  The happy path to initialy everything from outside sources
+#   DESCRIPTION:  The happy path to initialy everything from outside sources.
+#                 Except the 1613. That data folder is handcrafted.
 #
 #       OPTIONS:  ---
 #
@@ -33,6 +34,8 @@ set -e
 ROOTDIR="$(pwd)"
 
 bash "${ROOTDIR}/999999999/2600.sh"
+
+sh "${ROOTDIR}/999999999/1603.87.sh"
 
 bash "${ROOTDIR}/999999999/1603.47.15924.sh"
 
