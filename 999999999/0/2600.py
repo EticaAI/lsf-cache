@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # ==============================================================================
 #
-#          FILE:  2600.60.py
+#          FILE:  2600.py
 #
-#         USAGE:  ./999999999/0/2600.60.py
-#                 NUMERORDINATIO_BASIM="/dir/ndata" ./999999999/0/2600.60.py
+#         USAGE:  ./999999999/0/2600.py
+#                 NUMERORDINATIO_BASIM="/dir/ndata" ./999999999/0/2600.py
 #
 #   DESCRIPTION:  ---
 #
@@ -26,19 +26,21 @@
 # ==============================================================================
 
 # pytest
-#    python3 -m pytest ./999999999/0/2600.py
+#    python3 -m doctest ./999999999/0/2600.py
 
 # TL;DR:
-#   ./999999999/0/2600.60.py
-#   NUMERORDINATIO_BASIM="/external/ndata" ./999999999/0/2600.60.py
-#   ./999999999/0/2600.60.py --verbum-limiti=4 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=fontem-verbum-tabulae
-#   ./999999999/0/2600.60.py --verbum-limiti=4 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=codex
+#   ./999999999/0/2600.py
+#   NUMERORDINATIO_BASIM="/external/ndata" ./999999999/0/2600.py
+#   ./999999999/0/2600.py --verbum-limiti=4 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=fontem-verbum-tabulae
+#   ./999999999/0/2600.py --verbum-limiti=4 --codex-verbum-tabulae=',0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z' --actionem=codex
 
 # Generate a list of hex
 # a_list = range(60)
 # print (',' + '{}'.format(','.join(hex(x) for x in a_list)) + ',')
-#    ./999999999/0/2600.60.py --actionem-neo-scripturam --neo-scripturam-tabulae-hxl-nomini="#item+rem+i_mul+is_zsym+ix_ndt60+ix_hex" --neo-scripturam-tabulae-symbola=',0x0,0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8,0x9,0xa,0xb,0xc,0xd,0xe,0xf,0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17,0x18,0x19,0x1a,0x1b,0x1c,0x1d,0x1e,0x1f,0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x29,0x2a,0x2b,0x2c,0x2d,0x2e,0x2f,0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,0x3a,0x3b,'
-
+#    ./999999999/0/2600.py --actionem-neo-scripturam --neo-scripturam-tabulae-hxl-nomini="#item+rem+i_mul+is_zsym+ix_ndt60+ix_hex" --neo-scripturam-tabulae-symbola=',0x0,0x1,0x2,0x3,0x4,0x5,0x6,0x7,0x8,0x9,0xa,0xb,0xc,0xd,0xe,0xf,0x10,0x11,0x12,0x13,0x14,0x15,0x16,0x17,0x18,0x19,0x1a,0x1b,0x1c,0x1d,0x1e,0x1f,0x20,0x21,0x22,0x23,0x24,0x25,0x26,0x27,0x28,0x29,0x2a,0x2b,0x2c,0x2d,0x2e,0x2f,0x30,0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38,0x39,0x3a,0x3b,'
+#
+#    ./999999999/0/2600.py --actionem-neo-scripturam --neo-scripturam-tabulae-hxl-nomini="#item+rem+i_mul+is_zsym+ix_ndt60+ix_hex" --neo-scripturam-tabulae-symbola=',�,�,�,�,�,�,�,�,�,�,�,�,�,�,�,�,�,�,�,�,0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,�,�,�,�,'
+# �
 
 import os
 import sys
@@ -84,6 +86,15 @@ class RadicemNumerali:
     See:
         - https://cs.stackexchange.com/questions/10318
 
+    Exemplōrum gratiā (et Python doctest, id est, testum automata):
+
+        >>> RadicemNumerali.convertBase([1,1,2,0], 3, 2)
+        [1, 0, 1, 0, 1, 0]
+        >>> RadicemNumerali.toDigits(720, 60)
+        [12, 0]
+
+        # aa [12, 12]
+        >>> RadicemNumerali.toDigits(4392, 60)
     """
 
     @staticmethod
@@ -190,7 +201,7 @@ class NDT2600:
         return self
 
     # a b aa bb
-    # printf "720119\n780115\n43920218\n47580214\n" | ./999999999/0/2600.60.py --actionem-decifram
+    # printf "720119\n780115\n43920218\n47580214\n" | ./999999999/0/2600.py --actionem-decifram
     def decifram_codicem_numerae(self, codicem):
         # self.resultatum_separato = resultatum_separato
         fontem = ''
@@ -220,7 +231,49 @@ class NDT2600:
         # # print(self.D1613_2_60)
         return fontem
 
-        return self.D1613_2_60
+    def exportatum_scientia_de_scriptura(
+            self, hxl_selectum: str = None):
+        # self.resultatum_separato = resultatum_separato
+        tabula = []
+
+        caput = self.scientia_de_scriptura[0].keys()
+
+        # print('clavem', caput)
+        # print('neo_scripturam_hxl_selectum', hxl_selectum)
+        tabula_caput = []
+        tabula_caput.append('#item+conceptum+numerordinatio')
+        tabula_non = []
+        index = 1
+        for clavem in caput:
+            tabula_caput.append(clavem)
+            if hxl_selectum is not None:
+                # print('testing....', clavem, hxl_selectum, clavem.find(hxl_selectum))
+                if clavem.find(hxl_selectum) == -1:
+                    tabula_non.append(index)
+                    # print('exclude this')
+            index += 1
+
+        tabula.append(tabula_caput)
+        for clavem_numerum, rem in self.scientia_de_scriptura.items():
+            lineam = [str(clavem_numerum)]
+            lineam.extend(rem.values())
+            tabula.append(lineam)
+
+        if len(tabula_non):
+            tabula_selectum = []
+            for lineam in tabula:
+                neo_lineam = []
+                for idx, rem in enumerate(lineam):
+                    if idx not in tabula_non:
+                        neo_lineam.append(rem)
+                    # print(idx, val)
+                tabula_selectum.append(neo_lineam)
+            # print('oi')
+            return tabula_selectum
+
+        # print(tabula)
+        # print(self.D1613_2_60)
+        return tabula
 
     def _quod_crc_check(self, numerum):
         numerum_textum = str(numerum)
@@ -451,6 +504,16 @@ class CLI_2600:
             nargs='?'
         )
 
+        neo_scripturam.add_argument(
+            '--neo-scripturam-tabulae-hxl-selectum',
+            help='(internal use) Inject reference table. ' +
+            'When exporting, define some pattern tags must have' +
+            'Example: ix_neo',
+            dest='neo_scripturam_hxl_selectum',
+            default=None,
+            nargs='?'
+        )
+
         parser.add_argument(
             '--verbose',
             help='Verbose output',
@@ -520,7 +583,8 @@ class CLI_2600:
             return self.output(tabulam_multiplicatio)
 
         if self.pyargs.neo_scripturam:
-            scientia = ndt2600.exportatum_scientia_de_scriptura()
+            scientia = ndt2600.exportatum_scientia_de_scriptura(
+                args.neo_scripturam_hxl_selectum)
             return self.output(scientia)
 
         # Let's default to full table
