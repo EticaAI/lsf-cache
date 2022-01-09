@@ -71,6 +71,23 @@ STDIN = sys.stdin.buffer
 #         return list(tsv_file)
 
 
+class RadicemNumerali:
+    """rādīcem numerālī
+
+    Trivia:
+        - rādīcem, https://en.wiktionary.org/wiki/radix#Latin
+        - numerālī, https://en.wiktionary.org/wiki/numeralis#Latin
+
+    See:
+        - https://cs.stackexchange.com/questions/10318
+
+    """
+
+    @staticmethod
+    def todo():
+        pass
+
+
 class NDT2600:
     def __init__(self):
         self.D1613_2_60 = self._init_1613_2_60_datum()
@@ -151,27 +168,36 @@ class NDT2600:
         self.resultatum_separato = resultatum_separato
         return self
 
-    def exportatum_scientia_de_scriptura(self):
+    # a b aa bb
+    # printf "720119\n780115\n43920218\n47580214\n" | ./999999999/0/2600.60.py --actionem-decifram
+    def decifram_codicem_numerae(self, codicem):
         # self.resultatum_separato = resultatum_separato
-        tabula = []
+        fontem = ''
 
-        caput = self.scientia_de_scriptura[0].keys()
+        codicem_textum = str(codicem)[:-3]
 
-        # print('clavem', caput)
-        tabula_caput = []
-        tabula_caput.append('#item+conceptum+numerordinatio')
-        for clavem in caput:
-            tabula_caput.append(clavem)
+        # print('TODOcodicem')
+        fontem = "@todo[" + codicem_textum + ']'
+        
+        # tabula = []
 
-        tabula.append(tabula_caput)
-        for clavem_numerum, rem in self.scientia_de_scriptura.items():
-            lineam = [str(clavem_numerum)]
-            lineam.extend(rem.values())
-            tabula.append(lineam)
+        # caput = self.scientia_de_scriptura[0].keys()
 
-        # print(tabula)
-        # print(self.D1613_2_60)
-        return tabula
+        # # print('clavem', caput)
+        # tabula_caput = []
+        # tabula_caput.append('#item+conceptum+numerordinatio')
+        # for clavem in caput:
+        #     tabula_caput.append(clavem)
+
+        # tabula.append(tabula_caput)
+        # for clavem_numerum, rem in self.scientia_de_scriptura.items():
+        #     lineam = [str(clavem_numerum)]
+        #     lineam.extend(rem.values())
+        #     tabula.append(lineam)
+
+        # # print(tabula)
+        # # print(self.D1613_2_60)
+        return fontem
 
         return self.D1613_2_60
 
@@ -445,28 +471,24 @@ class CLI_2600:
                 args.neo_scripturam_tabulae, args.neo_scripturam_nomini)
 
         if self.pyargs.actionem_decifram:
-            # tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
 
-            # from sys import stdin
-            # from os import isatty
-
-            # is_pipe = not isatty(stdin.fileno())
-
-            # print('is_pipe 2', is_pipe)
-
-            # if not sys.stdin.isatty():
-            if not stdin.isatty():
-                # print("not sys.stdin.isatty")
-                for line in sys.stdin:
-                    sys.stdout.write("line " + line)
-            else:
-                print("ERROR.Please pipe data. \nExample:\n"
-                     "cat data.txt | {0} --actionem-decifram".format(__file__))
-
+            if stdin.isatty():
+                print("ERROR. Please pipe data in. \nExample:\n"
+                      "  cat data.txt | {0} --actionem-decifram\n"
+                      "  prinf \"1234\\n5678\\n\" | {0} --actionem-decifram"
+                      "".format(__file__))
                 return self.EXIT_ERROR
-                print("is  sys.stdin.isatty")
 
-            return self.output(['todo'])
+            for line in sys.stdin:
+                codicem = line.replace('\n', ' ').replace('\r', '')
+                fontem = ndt2600.decifram_codicem_numerae(codicem)
+                sys.stdout.writelines(
+                    "{0}{1}{2}\n".format(
+                        codicem, args.resultatum_separato, fontem)
+                )
+            return self.EXIT_OK
+
+            # return self.output(['todo'])
 
         if self.pyargs.verbum_simplex:
             tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
