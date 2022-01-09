@@ -59,6 +59,7 @@ import csv
 
 NUMERORDINATIO_BASIM = os.getenv('NUMERORDINATIO_BASIM', os.getcwd())
 NUMERORDINATIO_DEFALLO = int(os.getenv('NUMERORDINATIO_DEFALLO', '60'))  # �
+NUMERORDINATIO_MISSING = "�"
 DESCRIPTION = """
 2600.60 is (...)
 """
@@ -76,6 +77,12 @@ STDIN = sys.stdin.buffer
 #         tsv_file = csv.DictReader(file, delimiter="\t")
 #         return list(tsv_file)
 
+# a b aa bb
+# printf "30160\n31161\n1830260\n1891267\n" | ./999999999/0/2600.py --actionem-decifram
+
+# a aa aaa
+# printf "30160\n1830260\n109830360\n" | ./999999999/0/2600.py --actionem-decifram
+
 
 class RadicemNumerali:
     """rādīcem numerālī
@@ -91,11 +98,22 @@ class RadicemNumerali:
 
         >>> RadicemNumerali.convertBase([1,1,2,0], 3, 2)
         [1, 0, 1, 0, 1, 0]
-        >>> RadicemNumerali.toDigits(720, 60)
-        [12, 0]
 
-        # aa [12, 12]
-        >>> RadicemNumerali.toDigits(4392, 60)
+        # 30 = a {30} (b60)
+        >>> RadicemNumerali.toDigits(30, 60)
+        [30]
+
+        # 1830 = aa{30 30} (b60)
+        >>> RadicemNumerali.toDigits(1830, 60)
+        [30, 30]
+
+        # 109830 = aaa<30 30 30> (b60)
+        >>> RadicemNumerali.toDigits(109830, 60)
+        [30, 30, 30]
+
+        # [30, 30, 30] -> 109830
+        >>> RadicemNumerali.fromDigits([30, 30, 30], 60)
+        109830
     """
 
     @staticmethod
@@ -117,8 +135,10 @@ class RadicemNumerali:
 
     @staticmethod
     def convertBase(digits, b, c):
-        """Convert the digits representation of a number from base b to base c."""
-        return RadicemNumerali.toDigits(RadicemNumerali.fromDigits(digits, b), c)
+        """Convert the digits representation of
+        a number from base b to base c."""
+        return RadicemNumerali.toDigits(
+            RadicemNumerali.fromDigits(digits, b), c)
 
 
 class NDT2600:
@@ -154,7 +174,8 @@ class NDT2600:
             # print('tabulae', tabulae)
             if tabulae.count(separator) < 2:
                 raise ValueError(
-                    "Separator [" + separator + "] of [" + str(tabulae) + "]? --help")
+                    "Separator [" + separator + "] of [" +
+                    str(tabulae) + "]? --help")
             crudum_tabulae = tabulae.split(separator)
             self.codex_verbum_tabulae = list(filter(None, crudum_tabulae))
 
@@ -163,7 +184,8 @@ class NDT2600:
         # print('tabulae22222222', tabulae)
         if tabulae.count(separator) < 2:
             raise ValueError(
-                "Separator [" + separator + "] of [" + str(tabulae) + "]? --help")
+                "Separator [" + separator + "] of [" +
+                str(tabulae) + "]? --help")
 
         crudum_tabulae = tabulae.split(separator)
         tabula_array = list(filter(None, crudum_tabulae))
@@ -173,25 +195,16 @@ class NDT2600:
 
         if scientia_de_scriptura_len != neo_scripturam_tabulae_len:
             raise ValueError(
-                "scientia_de_scriptura_len ["
-                + str(scientia_de_scriptura_len) +
-                "] neo_scripturam_tabulae != [" +
-                str(neo_scripturam_tabulae_len)
-                + "]"
+                "scientia_de_scriptura_len [{0}] " +
+                "neo_scripturam_tabulae != [{1}]".format(
+                    str(scientia_de_scriptura_len),
+                    str(neo_scripturam_tabulae_len))
             )
 
-        # print('self.scientia_de_scriptura[index]',
-        #       self.scientia_de_scriptura, scientia_de_scriptura_len)
-        # print('')
-        # print('tabula_array', tabula_array, neo_scripturam_tabulae_len)
-        # print('')
         for index in range(scientia_de_scriptura_len):
             # print('index', index)
             # self.scientia_de_scriptura[index][nomini] = tabula_array[index]
             self.scientia_de_scriptura[index][nomini] = tabula_array.pop(0)
-
-        # print('testeee', self.scientia_de_scriptura)
-        # # print('TODO...')
 
     def est_verbum_limiti(self, verbum_limiti: int):
         self.verbum_limiti = int(verbum_limiti)
@@ -201,35 +214,25 @@ class NDT2600:
         self.resultatum_separato = resultatum_separato
         return self
 
-    # a b aa bb
-    # printf "720119\n780115\n43920218\n47580214\n" | ./999999999/0/2600.py --actionem-decifram
     def decifram_codicem_numerae(self, codicem):
         # self.resultatum_separato = resultatum_separato
         fontem = ''
 
-        codicem_textum = str(codicem)[:-3]
+        # TODO: check vality of number before make the tests
+
+        codicem_textum = str(codicem)[:-4]
 
         # print('TODOcodicem')
-        fontem = "@todo[" + codicem_textum + ']'
+        # fontem = "@todo[" + codicem_textum + ']'
 
-        # tabula = []
+        # fontem += str(RadicemNumerali.toDigits(int(codicem_textum), 60))
 
-        # caput = self.scientia_de_scriptura[0].keys()
+        codicem_numerum_collectionem = RadicemNumerali.toDigits(
+            int(codicem_textum), 60)
 
-        # # print('clavem', caput)
-        # tabula_caput = []
-        # tabula_caput.append('#item+conceptum+numerordinatio')
-        # for clavem in caput:
-        #     tabula_caput.append(clavem)
+        for rem in codicem_numerum_collectionem:
+            fontem += self.quod_punctum(rem)
 
-        # tabula.append(tabula_caput)
-        # for clavem_numerum, rem in self.scientia_de_scriptura.items():
-        #     lineam = [str(clavem_numerum)]
-        #     lineam.extend(rem.values())
-        #     tabula.append(lineam)
-
-        # # print(tabula)
-        # # print(self.D1613_2_60)
         return fontem
 
     def exportatum_scientia_de_scriptura(
@@ -248,7 +251,6 @@ class NDT2600:
         for clavem in caput:
             tabula_caput.append(clavem)
             if hxl_selectum is not None:
-                # print('testing....', clavem, hxl_selectum, clavem.find(hxl_selectum))
                 if clavem.find(hxl_selectum) == -1:
                     tabula_non.append(index)
                     # print('exclude this')
@@ -292,6 +294,32 @@ class NDT2600:
                 return clavem
 
         return NUMERORDINATIO_DEFALLO
+
+    def quod_punctum(self, digitalem: int, hxl_selectum: str = None) -> str:
+        """quod_punctum Quod Puntum?
+
+        Return a unicode code point based on numeric key
+
+        Args:
+            digitalem (int): [description]
+            hxl_selectum (str, optional): [description]. Defaults to None.
+
+        Returns:
+            str: [description]
+        """
+
+        # TODO: deal with overflows for number (not just concept)
+        conceptum = self.scientia_de_scriptura[digitalem]
+
+        for _clavem, punctum in conceptum.items():
+            # _clavem...
+            if hxl_selectum is not None:
+                raise NotImplemented(
+                    " TODO: implement hxl_selectum")
+            if punctum != NUMERORDINATIO_MISSING:
+                return punctum
+
+        return NUMERORDINATIO_MISSING
 
     def quod_numerordinatio_digitalem(
             self, codicem: str = '', verbose: bool = False) -> str:
