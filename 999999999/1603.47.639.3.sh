@@ -107,6 +107,7 @@ bootstrap_999999_1603_47_639_3_fetch_data_raw() {
 
 #######################################
 # Generate the 999999/999999/1603.47.639.3.tsv
+# DEPRECATED use bootstrap_999999_1603_47_639_3_hxl
 #
 # Globals:
 #   ROOTDIR
@@ -138,64 +139,95 @@ bootstrap_999999_1603_47_639_3_old() {
 }
 
 #######################################
+# Consumes 999999/1603/47/639/3/1603.47.639.3.tab and generate
+# 999999/1603/47/639/3/1603.47.639.3.hxl.csv
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   None
+#   File: 999999/1603/47/639/3/1603.47.639.3.tab
+# Outputs:
+#   File: 999999/1603/47/639/3/1603.47.639.3.hxl.csv
+#######################################
+bootstrap_999999_1603_47_639_3_hxl() {
+    fontem_archivum="${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
+    temp_archivum="${ROOTDIR}/999999/999999/1603.47.639.3.TEMP.hxl.tsv"
+    objectivum_archivum="${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+
+    # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+
+    # echo "$0 sources changed_recently. Reloading..."
+
+    printf "Id\tPart2B\tPart2T\tPart1\tScope\tLanguage_Type\tRef_Name\tComment\n" >"$temp_archivum"
+    printf "#vocab+id+code+v_iso639p3a3\t#vocab+code+v_iso639p2a3b\t#vocab+code+v_iso639p2a3t\t#vocab+code+v_iso639p1\t#status\t#vocab+type\t#vocab+name+i_eng+is_latn\t#description+name+i_eng+is_latn\n" \
+        >> "$temp_archivum"
+    {
+        # This read skip first line
+        read -r
+        
+        while IFS= read -r lineam; do
+            echo "$lineam" >> "$temp_archivum"
+        done
+    } < "$fontem_archivum"
+    # } < <(cat "$fontem_archivum" | tr '\t' '|')
+
+    csvformat --delimiter="$(printf '\t')" --out-delimiter="," "$temp_archivum" > "$objectivum_archivum"
+    rm "$temp_archivum"
+}
+
+#######################################
 # Transform 999999/1603/47/639/3/1603.47.639.3.tab into
 # 999999/999999/1603.47.639.3.tsv
 #
 # Globals:
 #   ROOTDIR
 # Arguments:
-#   None
+#   File: 999999/1603/47/639/3/1603.47.639.3.hxl.csv
 # Outputs:
-#   999999/999999/1603.47.639.3.tsv
+#   999999/999999/1603.45.49.tsv
 #######################################
-bootstrap_999999_1603_47_639_3() {
-    fontem_archivum="${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
-    # objectivum_archivum="${ROOTDIR}/999999/999999/1603.47.639.3.tsv"
-    objectivum_archivum="${ROOTDIR}/999999/999999/1603.47.639.3-neo.tsv"
-    objectivum_archivum_temp="${ROOTDIR}/999999/999999/1603.47.639.3.TEMP.tsv"
+bootstrap_999999_1603_47_639_3_tsv() {
+    fontem_archivum="${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+    objectivum_archivum="${ROOTDIR}/999999/999999/1603.45.49.tsv"
+    objectivum_archivum_temp="${ROOTDIR}/999999/999999/1603.45.49.TEMP.tsv"
 
     # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
 
-    echo "$0 TODO..."
+    # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-    echo "" >"$objectivum_archivum_temp"
+    csvcut --columns "1,2,3,4" "$fontem_archivum" \
+        | csvformat --skip-lines=2 --out-tabs \
+        > "$objectivum_archivum_temp"
 
-    # while IFS= read -r lineam; do
-    #     # arr_csv+=("$line")
-    #     # echo "$lineam"
-    #     while IFS=$'\t' read -r -a line_arr; do
-    #         # echo "${line_arr[0]}"
-    #         # echo "${line_arr[1]}"
-    #         # echo "${line_arr[2]}"
-    #         printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "${line_arr[0]}" "${line_arr[0]^^}" "${line_arr[1]}" "${line_arr[1]^^}" "${line_arr[2]}" "${line_arr[2]^^}" "${line_arr[3]}"  "${line_arr[3]^^}"
-    #         # echo "${line_arr[0]}"
-    #     done <<<"$lineam"
-    # done <"$fontem_archivum"
+    ./999999999/0/2600.py --actionem-cifram < "$objectivum_archivum_temp" > "$objectivum_archivum"
 
-    {
-        # This read skip first line
-        read -r
-        # shellcheck disable=SC2002
-        while IFS= read -r lineam; do
-            # arr_csv+=("$line")
-            # echo "$lineam"
-            while IFS="|" read -r -a line_arr; do
-                # echo "${line_arr[0]}"
-                # echo "${line_arr[1]}"
-                # echo "${line_arr[2]}"
-                printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "${line_arr[0]}" "${line_arr[0]^^}" "${line_arr[1]}" "${line_arr[1]^^}" "${line_arr[2]}" "${line_arr[2]^^}" "${line_arr[3]}" "${line_arr[3]^^}"
-                # echo "${line_arr[0]}"
-            done <<<"$lineam"
-            # done <"$fontem_archivum"
-        done
-    } < <(cat "$fontem_archivum" | tr '\t' '|')
+    rm "$objectivum_archivum_temp"
 
-    # cat 999999/1603/47/639/3/1603.47.639.3.tab | head | tail -n 4 | ./999999999/0/2600.py --actionem-cifram
+    # cat "$objectivum_archivum_temp" | ./999999999/0/2600.py --actionem-decifram 
+    # csvformat --skip-lines=2 --delimiter="$(printf '\t')" --out-tabs "$fontem_archivum" > "$objectivum_archivum_temp"
 
-    # if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab.CHANGED" ]; then
-    #     echo "$0 no refrech "
-    # fi
-    # 999999/1603/47/639/3/1603.47.639.3.tab
+    # echo "" >"$objectivum_archivum_temp"
+
+    # {
+    #     # This read skip first line
+    #     read -r
+    #     # shellcheck disable=SC2002
+    #     while IFS= read -r lineam; do
+    #         # arr_csv+=("$line")
+    #         # echo "$lineam"
+    #         while IFS="|" read -r -a line_arr; do
+    #             # echo "${line_arr[0]}"
+    #             # echo "${line_arr[1]}"
+    #             # echo "${line_arr[2]}"
+    #             printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "${line_arr[0]}" "${line_arr[0]^^}" "${line_arr[1]}" "${line_arr[1]^^}" "${line_arr[2]}" "${line_arr[2]^^}" "${line_arr[3]}" "${line_arr[3]^^}"
+    #             # echo "${line_arr[0]}"
+    #         done <<<"$lineam"
+    #         # done <"$fontem_archivum"
+    #     done
+    # } < <(cat "$fontem_archivum" | tr '\t' '|')
+
+
 }
 
 ### Note: using raw data fetch for now
@@ -203,7 +235,9 @@ bootstrap_999999_1603_47_639_3() {
 # bootstrap_999999_1603_47_639_3_old
 
 bootstrap_999999_1603_47_639_3_fetch_data_raw
-bootstrap_999999_1603_47_639_3
+bootstrap_999999_1603_47_639_3_hxl
+bootstrap_999999_1603_47_639_3_tsv
+# bootstrap_999999_1603_47_639_3
 
 # find 999999/1603/47/639/3/1603.47.639.3.tab -mtime -1 -type f -exec ls -l {} \;
 # find 999999/1603/47/639/3/1603.47.639.3.tab -name
