@@ -214,6 +214,24 @@ class NDT2600:
         self.resultatum_separato = resultatum_separato
         return self
 
+    def cifram_lineam(self, datum_lineam: str, index: int = 0):
+        # self.resultatum_separato = resultatum_separato
+        fontem_separato = "\t"
+        resultatum = []
+
+        lineam_arr = datum_lineam.split(fontem_separato)
+
+        codicem_numerae = self.quod_numerordinatio_digitalem(lineam_arr[index])
+        resultatum.append(codicem_numerae)
+
+        for rem in lineam_arr:
+            resultatum.append(rem)
+
+        # print('...', resultatum, fontem_separato.join(resultatum))
+        # print('...', fontem_separato.join(resultatum))
+
+        return fontem_separato.join(resultatum)
+
     def decifram_codicem_numerae(self, codicem):
         # self.resultatum_separato = resultatum_separato
         fontem = ''
@@ -513,6 +531,18 @@ class CLI_2600:
             const=True,
             nargs='?'
         )
+        decifram = parser.add_argument_group(
+            "cifram",
+            "Cifram (e.g. the act of encode first column of data on B60)")
+
+        decifram.add_argument(
+            '--actionem-cifram',
+            help='(required) Define mode decifram',
+            metavar='',
+            dest='actionem_cifram',
+            const=True,
+            nargs='?'
+        )
 
         # https://stackoverflow.com/questions/59661738/argument-dependency-in-argparse
         # Scriptura cuneiformis
@@ -591,12 +621,29 @@ class CLI_2600:
             ndt2600.est_neo_scripturam_tabulae(
                 args.neo_scripturam_tabulae, args.neo_scripturam_nomini)
 
+# printf "abc\tABC\nefg\tEFG\n" | ./999999999/0/2600.py --actionem-cifram
+# cat 999999/1603/47/639/3/1603.47.639.3.tab | head | tail -n 4 | ./999999999/0/2600.py --actionem-cifram
+        if self.pyargs.actionem_cifram:
+
+            if stdin.isatty():
+                print("ERROR. Please pipe data in. \nExample:\n"
+                      "  cat data.tsv | {0} --actionem-cifram\n"
+                      "  printf \"abc\\nefg\\n\" | {0} --actionem-cifram"
+                      "".format(__file__))
+                return self.EXIT_ERROR
+
+            for line in sys.stdin:
+                codicem = line.replace('\n', ' ').replace('\r', '')
+                neo_lineam = ndt2600.cifram_lineam(codicem)
+                sys.stdout.writelines("{0}\n".format(neo_lineam))
+            return self.EXIT_OK
+
         if self.pyargs.actionem_decifram:
 
             if stdin.isatty():
                 print("ERROR. Please pipe data in. \nExample:\n"
                       "  cat data.txt | {0} --actionem-decifram\n"
-                      "  prinf \"1234\\n5678\\n\" | {0} --actionem-decifram"
+                      "  printf \"1234\\n5678\\n\" | {0} --actionem-decifram"
                       "".format(__file__))
                 return self.EXIT_ERROR
 
@@ -608,8 +655,6 @@ class CLI_2600:
                         codicem, args.resultatum_separato, fontem)
                 )
             return self.EXIT_OK
-
-            # return self.output(['todo'])
 
         if self.pyargs.verbum_simplex:
             tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()

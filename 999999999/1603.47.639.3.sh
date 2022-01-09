@@ -52,37 +52,36 @@ DATA_ISO_639_3_CSV="https://proxy.hxlstandard.org/data.csv?tagger-match-all=on&t
 #######################################
 bootstrap_999999_1603_47_639_3_fetch_data_hxlated() {
 
-  # An Non HXLated version
-  if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab" ]; then
-      wget -qO- "$DATA_ISO_639_3_TAB" > "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
-  else
-      echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
-  fi
-
-  # TODO: investigage edge case very peculiar were HXLProxy may forgot
-  #       a tab exactly on jrr around 65,8 KB of data.
-  #      "It looks like row 2787 should actually have 8 columns, instead of 7. in line 2786."
-
-  if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" ]; then
-      wget -qO- "$DATA_ISO_639_3_CSV" > "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
-  else
-      echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
-  fi
-
-  is_valid=$(csvclean --dry-run "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv")
-  if [ "$is_valid" != "No errors." ]; then
-    csvclean "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
-    if [ -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv" ]; then
-      rm "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv" 
+    # An Non HXLated version
+    if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab" ]; then
+        wget -qO- "$DATA_ISO_639_3_TAB" >"${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
+    else
+        echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
     fi
-    # mv "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv"
-    rm "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
-    mv "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_out.csv" "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
-  else
-    echo "Cached already is valid. Ok."
-  fi
-}
 
+    # TODO: investigage edge case very peculiar were HXLProxy may forgot
+    #       a tab exactly on jrr around 65,8 KB of data.
+    #      "It looks like row 2787 should actually have 8 columns, instead of 7. in line 2786."
+
+    if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" ]; then
+        wget -qO- "$DATA_ISO_639_3_CSV" >"${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+    else
+        echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+    fi
+
+    is_valid=$(csvclean --dry-run "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv")
+    if [ "$is_valid" != "No errors." ]; then
+        csvclean "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+        if [ -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv" ]; then
+            rm "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv"
+        fi
+        # mv "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_original.csv"
+        rm "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+        mv "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl_out.csv" "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+    else
+        echo "Cached already is valid. Ok."
+    fi
+}
 
 #######################################
 # Download external source files
@@ -97,13 +96,13 @@ bootstrap_999999_1603_47_639_3_fetch_data_hxlated() {
 #######################################
 bootstrap_999999_1603_47_639_3_fetch_data_raw() {
 
-  # An Non HXLated version
-  if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab" ]; then
-      wget -qO- "$DATA_ISO_639_3_TAB" > "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
-      touch "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab.CHANGED"
-  else
-      echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
-  fi
+    # An Non HXLated version
+    if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab" ]; then
+        wget -qO- "$DATA_ISO_639_3_TAB" >"${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
+        touch "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab.CHANGED"
+    else
+        echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
+    fi
 }
 
 #######################################
@@ -121,21 +120,21 @@ bootstrap_999999_1603_47_639_3_old() {
     hxladd \
         --before --spec="#x_item+lower={{#vocab+code+v_6391}}" \
         --before --spec="#x_item+upper={{#vocab+code+v_6391}}" \
-        "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" \
-        | hxladd --before --spec="#x_item+lower={{#vocab+code+v_3692_3letter+z_terminology}}" \
-        | hxladd --before --spec="#x_item+upper={{#vocab+code+v_3692_3letter+z_terminology}}" \
-        | hxladd --before --spec="#x_item+lower={{#vocab+code+v_iso3692_3letter+z_bibliographic}}" \
-        | hxladd --before --spec="#x_item+upper={{#vocab+code+v_iso3692_3letter+z_bibliographic}}" \
-        | hxladd --before --spec="#x_item+upper={{#vocab+id+v_iso6393_3letter}}" \
-        | hxladd --before --spec="#x_item+lower={{#vocab+id+v_iso6393_3letter}}" \
-        | hxlclean --lower="#x_item+lower" \
-        | hxlclean --upper="#x_item+upper" \
-        | hxlcut --include="#x_item" \
-        | sed 's/None//' | sed 's/None//' | sed 's/None//' | sed 's/None//' \
-        | sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' \
-        | sed 's/none//' | sed 's/none//' | sed 's/none//' | sed 's/none//' \
-        | csvformat --out-tabs --skip-lines 2 \
-        > "${ROOTDIR}/999999/999999/1603.47.639.3.tsv"
+        "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv" |
+        hxladd --before --spec="#x_item+lower={{#vocab+code+v_3692_3letter+z_terminology}}" |
+        hxladd --before --spec="#x_item+upper={{#vocab+code+v_3692_3letter+z_terminology}}" |
+        hxladd --before --spec="#x_item+lower={{#vocab+code+v_iso3692_3letter+z_bibliographic}}" |
+        hxladd --before --spec="#x_item+upper={{#vocab+code+v_iso3692_3letter+z_bibliographic}}" |
+        hxladd --before --spec="#x_item+upper={{#vocab+id+v_iso6393_3letter}}" |
+        hxladd --before --spec="#x_item+lower={{#vocab+id+v_iso6393_3letter}}" |
+        hxlclean --lower="#x_item+lower" |
+        hxlclean --upper="#x_item+upper" |
+        hxlcut --include="#x_item" |
+        sed 's/None//' | sed 's/None//' | sed 's/None//' | sed 's/None//' |
+        sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' |
+        sed 's/none//' | sed 's/none//' | sed 's/none//' | sed 's/none//' |
+        csvformat --out-tabs --skip-lines 2 \
+            >"${ROOTDIR}/999999/999999/1603.47.639.3.tsv"
 }
 
 #######################################
@@ -150,13 +149,48 @@ bootstrap_999999_1603_47_639_3_old() {
 #   999999/999999/1603.47.639.3.tsv
 #######################################
 bootstrap_999999_1603_47_639_3() {
-    source_file="${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
-    # target_file="${ROOTDIR}/999999/999999/1603.47.639.3.tsv"
-    target_file="${ROOTDIR}/999999/999999/1603.47.639.3-neo.tsv"
+    fontem_archivum="${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
+    # objectivum_archivum="${ROOTDIR}/999999/999999/1603.47.639.3.tsv"
+    objectivum_archivum="${ROOTDIR}/999999/999999/1603.47.639.3-neo.tsv"
+    objectivum_archivum_temp="${ROOTDIR}/999999/999999/1603.47.639.3.TEMP.tsv"
 
-    # if [ -z "$(changed_recently "$source_file")" ]; then return 0; fi
+    # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
 
     echo "$0 TODO..."
+
+    echo "" >"$objectivum_archivum_temp"
+
+    # while IFS= read -r lineam; do
+    #     # arr_csv+=("$line")
+    #     # echo "$lineam"
+    #     while IFS=$'\t' read -r -a line_arr; do
+    #         # echo "${line_arr[0]}"
+    #         # echo "${line_arr[1]}"
+    #         # echo "${line_arr[2]}"
+    #         printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "${line_arr[0]}" "${line_arr[0]^^}" "${line_arr[1]}" "${line_arr[1]^^}" "${line_arr[2]}" "${line_arr[2]^^}" "${line_arr[3]}"  "${line_arr[3]^^}"
+    #         # echo "${line_arr[0]}"
+    #     done <<<"$lineam"
+    # done <"$fontem_archivum"
+
+    {
+        # This read skip first line
+        read -r
+        # shellcheck disable=SC2002
+        while IFS= read -r lineam; do
+            # arr_csv+=("$line")
+            # echo "$lineam"
+            while IFS="|" read -r -a line_arr; do
+                # echo "${line_arr[0]}"
+                # echo "${line_arr[1]}"
+                # echo "${line_arr[2]}"
+                printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n" "${line_arr[0]}" "${line_arr[0]^^}" "${line_arr[1]}" "${line_arr[1]^^}" "${line_arr[2]}" "${line_arr[2]^^}" "${line_arr[3]}" "${line_arr[3]^^}"
+                # echo "${line_arr[0]}"
+            done <<<"$lineam"
+            # done <"$fontem_archivum"
+        done
+    } < <(cat "$fontem_archivum" | tr '\t' '|')
+
+    # cat 999999/1603/47/639/3/1603.47.639.3.tab | head | tail -n 4 | ./999999999/0/2600.py --actionem-cifram
 
     # if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab.CHANGED" ]; then
     #     echo "$0 no refrech "
@@ -171,16 +205,13 @@ bootstrap_999999_1603_47_639_3() {
 bootstrap_999999_1603_47_639_3_fetch_data_raw
 bootstrap_999999_1603_47_639_3
 
-
 # find 999999/1603/47/639/3/1603.47.639.3.tab -mtime -1 -type f -exec ls -l {} \;
-# find 999999/1603/47/639/3/1603.47.639.3.tab -name 
+# find 999999/1603/47/639/3/1603.47.639.3.tab -name
 
 # ls -l --time-style=long-iso find 999999/1603/47/639/3/
-# find 999999/1603/47/639/3/ -mmin -60 
+# find 999999/1603/47/639/3/ -mmin -60
 
 # echo "changed_recently"
 # changed_recently 999999/1603/47/639/3/ 60
-
-
 
 set +x
