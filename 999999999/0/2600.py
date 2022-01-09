@@ -25,6 +25,9 @@
 #      REVISION:  ---
 # ==============================================================================
 
+# pytest
+#    python3 -m pytest ./999999999/0/2600.py
+
 # TL;DR:
 #   ./999999999/0/2600.60.py
 #   NUMERORDINATIO_BASIM="/external/ndata" ./999999999/0/2600.60.py
@@ -84,8 +87,26 @@ class RadicemNumerali:
     """
 
     @staticmethod
-    def todo():
-        pass
+    def toDigits(n, b):
+        """Convert a positive number n to its digit representation in base b."""
+        digits = []
+        while n > 0:
+            digits.insert(0, n % b)
+            n = n // b
+        return digits
+
+    @staticmethod
+    def fromDigits(digits, b):
+        """Compute the number given by digits in base b."""
+        n = 0
+        for d in digits:
+            n = b * n + d
+        return n
+
+    @staticmethod
+    def convertBase(digits, b, c):
+        """Convert the digits representation of a number from base b to base c."""
+        return RadicemNumerali.toDigits(RadicemNumerali.fromDigits(digits, b), c)
 
 
 class NDT2600:
@@ -178,7 +199,7 @@ class NDT2600:
 
         # print('TODOcodicem')
         fontem = "@todo[" + codicem_textum + ']'
-        
+
         # tabula = []
 
         # caput = self.scientia_de_scriptura[0].keys()
