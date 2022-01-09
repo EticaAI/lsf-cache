@@ -126,7 +126,7 @@ class NDT2600:
         self.D1613_2_60 = self._init_1613_2_60_datum()
         # self.scientia_de_scriptura = {}
         self.scientia_de_scriptura = self.D1613_2_60
-        self.total_namespace_multiple_of_60 = 1
+        self.cifram_signaturae = 6  # TODO: make it flexible
         self.codex_verbum_tabulae = []
         self.verbum_limiti = 2
         self.resultatum_separato = "\t"
@@ -298,7 +298,7 @@ class NDT2600:
         # Some unicode code poits may have upper case, but most do not.
         codicem_minor = codicem.lower()
         digitalem_verus = 0
-        ordo = 1
+        ordo = 0
         for pumctum in reversed(codicem_minor):
             digitalem_punctum = self._quod_numerordinatio_digitalem_punctum(
                 pumctum)
@@ -311,11 +311,19 @@ class NDT2600:
 
             ordo = ordo + 1
 
+        # signātūrum, https://en.wiktionary.org/wiki/signaturus#Latin
+        # decimālī, https://en.wiktionary.org/wiki/decimalis#Latin
+
+        signaturum_in_decimali = self._quod_crc_check(
+            digitalem_verus + ordo + int(self.cifram_signaturae)
+        )
+
         resultatum = [
             str(digitalem_verus),
-            str(ordo - 1),
-            str(self.total_namespace_multiple_of_60),
-            str(self._quod_crc_check(digitalem_verus))
+            str(ordo),
+            str(self.cifram_signaturae),
+            # str(self._quod_crc_check(digitalem_verus))
+            str(signaturum_in_decimali)
         ]
 
         if verbose:
