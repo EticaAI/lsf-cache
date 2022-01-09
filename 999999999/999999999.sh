@@ -34,6 +34,31 @@ ROOTDIR="$(pwd)"
 NUMERORDINATIO_DATUM="${ROOTDIR}/999999/999999"
 
 #######################################
+# Return if a path (or a file) don't exist or if did not changed recently.
+# Use case: reload functions that depend on action of older ones
+#
+# Globals:
+#   None
+# Arguments:
+#   path_or_file
+#   maximum_time (default: 5 minutes)
+# Outputs:
+#   1 (if need reload, Void if no reload need)
+#######################################
+changed_recently() {
+    path_or_file="$1"
+    maximum_time="${2:-5}"
+    if [ -e "$path_or_file" ]; then
+        changes=$(find "$path_or_file" -mmin -"$maximum_time")
+        if [ -z "$changes" ]; then
+            return 0
+        fi
+    fi
+    echo "1"
+}
+
+
+#######################################
 # contains(string, substring)
 #
 # Returns 0 if the specified string contains the specified substring,

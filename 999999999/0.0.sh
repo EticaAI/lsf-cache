@@ -44,3 +44,6 @@ bash "${ROOTDIR}/999999999/1603.47.639.3.sh"
 bash "${ROOTDIR}/999999999/1603.45.49.sh"
 
 bash "${ROOTDIR}/999999999/1603.45.16.sh"
+
+# For a list of POSIX utils _granted_ to be installed everywhere:
+# @see https://en.wikipedia.org/wiki/List_of_Unix_commands
