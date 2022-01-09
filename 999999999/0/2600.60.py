@@ -363,6 +363,20 @@ class CLI_2600:
             nargs='?'
         )
 
+        # cifram, https://translate.google.com/?sl=la&tl=en&text=cifram&op=translate
+        decifram = parser.add_argument_group(
+            "decifram",
+            "Decipher (e.g. the act of decode numeric codes)")
+
+        decifram.add_argument(
+            '--actionem-decifram',
+            help='(required) Define mode decifram',
+            metavar='',
+            dest='actionem_decifram',
+            const=True,
+            nargs='?'
+        )
+
         # https://stackoverflow.com/questions/59661738/argument-dependency-in-argparse
         # Scriptura cuneiformis
         # https://en.wikipedia.org/wiki/Cuneiform#Decipherment
@@ -430,6 +444,30 @@ class CLI_2600:
             ndt2600.est_neo_scripturam_tabulae(
                 args.neo_scripturam_tabulae, args.neo_scripturam_nomini)
 
+        if self.pyargs.actionem_decifram:
+            # tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
+
+            # from sys import stdin
+            # from os import isatty
+
+            # is_pipe = not isatty(stdin.fileno())
+
+            # print('is_pipe 2', is_pipe)
+
+            # if not sys.stdin.isatty():
+            if not stdin.isatty():
+                # print("not sys.stdin.isatty")
+                for line in sys.stdin:
+                    sys.stdout.write("line " + line)
+            else:
+                print("ERROR.Please pipe data. \nExample:\n"
+                     "cat data.txt | {0} --actionem-decifram".format(__file__))
+
+                return self.EXIT_ERROR
+                print("is  sys.stdin.isatty")
+
+            return self.output(['todo'])
+
         if self.pyargs.verbum_simplex:
             tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
             return self.output(tabulam_multiplicatio)
@@ -459,6 +497,32 @@ class CLI_2600:
                 print(self.pyargs.resultatum_separato.join(item))
 
         return self.EXIT_OK
+
+# if not sys.stdin.isatty():
+#     print ("not sys.stdin.isatty")
+# else:
+#     print ("is  sys.stdin.isatty")
+
+# import fcntl
+# import os
+# import sys
+
+# # make stdin a non-blocking file
+# fd = sys.stdin.fileno()
+# fl = fcntl.fcntl(fd, fcntl.F_GETFL)
+# fcntl.fcntl(fd, fcntl.F_SETFL, fl | os.O_NONBLOCK)
+
+# try:
+#     print(sys.stdin.read())
+# except:
+#     print('No input')
+
+# from sys import stdin
+# from os import isatty
+
+# is_pipe = not isatty(stdin.fileno())
+
+# print('is_pipe', is_pipe)
 
 
 if __name__ == "__main__":
