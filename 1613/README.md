@@ -24,7 +24,7 @@
 
 Index | initial reference | Unicode notes | Comments
 --- | --- | --- | --- |
-1 | ` ` \|| Zs	Separator, space | Default to generic space, tabs, line breaks... All variants are Zs too
+1 | `�` |Not assigned. | Not assigned.
 2 | `+` | 1. Zs	Separator, space | TODO: explain more
 3 | `-` | 1. Pd	Punctuation, dash<br>2. Sm	Symbol, math<br>3. (...) | TODO: needs proof of concept
 4 | `*` \| `x` | 1. P, Punctuation<br>2. Sm	Symbol, math<br>3. (...) | TODO: needs proof of concept
@@ -37,8 +37,8 @@ Index | initial reference | Unicode notes | Comments
 19 | `�` | Private use | Not assigned.
 56 | `�` | Not assigned. | Not assigned.
 57 | `�` | Not assigned. | Not assigned.
-58 | `�` | Not assigned. | Not assigned.
-59 | `�` | Not assigned. | Not assigned.
+58 | ` ` | Zs	Separator, space | Default to generic space, tabs, line breaks... All variants are Zs too
+59 | `\` | Control character | TODO: explain use cases (in special on different modes)
 
 
 ### Know missing symbols:
