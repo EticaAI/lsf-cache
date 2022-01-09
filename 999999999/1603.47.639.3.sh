@@ -96,10 +96,14 @@ bootstrap_999999_1603_47_639_3_fetch_data_hxlated() {
 #######################################
 bootstrap_999999_1603_47_639_3_fetch_data_raw() {
 
+    # TODO: for functions that fetch data from outside,
+    #       do different checking
+    # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+    # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
     # An Non HXLated version
     if [ ! -f "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab" ]; then
         wget -qO- "$DATA_ISO_639_3_TAB" >"${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab"
-        touch "${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.tab.CHANGED"
     else
         echo "Cached: ${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
     fi
@@ -155,9 +159,8 @@ bootstrap_999999_1603_47_639_3_hxl() {
     temp_archivum="${ROOTDIR}/999999/999999/1603.47.639.3.TEMP.hxl.tsv"
     objectivum_archivum="${ROOTDIR}/999999/1603/47/639/3/1603.47.639.3.hxl.csv"
 
-    # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
-
-    # echo "$0 sources changed_recently. Reloading..."
+    if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+    echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
     printf "Id\tPart2B\tPart2T\tPart1\tScope\tLanguage_Type\tRef_Name\tComment\n" >"$temp_archivum"
     printf "#vocab+id+code+v_iso639p3a3\t#vocab+code+v_iso639p2a3b\t#vocab+code+v_iso639p2a3t\t#vocab+code+v_iso639p1\t#status\t#vocab+type\t#vocab+name+i_eng+is_latn\t#description+name+i_eng+is_latn\n" \
@@ -192,9 +195,9 @@ bootstrap_999999_1603_47_639_3_tsv() {
     objectivum_archivum="${ROOTDIR}/999999/999999/1603.45.49.tsv"
     objectivum_archivum_temp="${ROOTDIR}/999999/999999/1603.45.49.TEMP.tsv"
 
-    # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+    if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
 
-    # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+    echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
     csvcut --columns "1,2,3,4" "$fontem_archivum" \
         | csvformat --skip-lines=2 --out-tabs \
