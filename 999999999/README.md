@@ -65,6 +65,8 @@ Art by                    ( `/  ^  ^   (  \/>   /(   \    \  \
 <!--
 Self notes;
 
+- Style guide
+  - https://google.github.io/styleguide/shellguide.html
 - sed
   - GNU sed:
     - https://www.gnu.org/software/sed/manual/sed.html
