@@ -36,7 +36,8 @@ NUMERORDINATIO_DATUM="${ROOTDIR}/999999/999999"
 
 #######################################
 # Return if a path (or a file) don't exist or if did not changed recently.
-# Use case: reload functions that depend on action of older ones
+# Use case: reload functions that depend on action of older ones.
+# Opposite: stale_archive
 #
 # Globals:
 #   None
@@ -51,6 +52,32 @@ changed_recently() {
   maximum_time="${2:-5}"
   if [ -e "$path_or_file" ]; then
     changes=$(find "$path_or_file" -mmin -"$maximum_time")
+    if [ -z "$changes" ]; then
+      return 0
+    fi
+  fi
+  echo "1"
+}
+
+#######################################
+# Return "1" if file is too old (default 24 hours). Use case: fetch
+# data from outside sources.
+#
+# Opposite: changed_recently
+#
+# Globals:
+#   None
+# Arguments:
+#   path_or_file
+#   maximum_time (default: 24h)
+# Outputs:
+#   1 (if need reload, Void if no reload need)
+#######################################
+stale_archive() {
+  path_or_file="$1"
+  maximum_time="${2:-86400}"
+  if [ -e "$path_or_file" ]; then
+    changes=$(find "$path_or_file" -mmin +"$maximum_time")
     if [ -z "$changes" ]; then
       return 0
     fi

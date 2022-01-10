@@ -54,6 +54,50 @@ ROOTDIR="$(pwd)"
 
 #   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
 # }
+
+#######################################
+# Return list of administrative level 0 codes ("country/territory" codes)
+#
+# Globals:
+#   None
+# Arguments:
+#   None
+# Outputs:
+#   csvfile (stdout)
+#######################################
+1603_3_12_wikipedia_adm0() {
+  # fontem_archivum=
+  objectivum_archivum="${ROOTDIR}/1603/3/1603_3__adm0.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/1603/3/1603_3__adm0.TEMP.csv"
+
+  if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
+
+  curl --header "Accept: text/csv" --silent --show-error \
+    --get https://query.wikidata.org/sparql --data-urlencode query='
+SELECT ?country ?unm49 ?iso3166n ?iso3166p1a2 ?iso3166p1a3 ?osmrelid ?unescot ?usciafb ?usfips4 ?gadm
+WHERE
+{
+  ?country wdt:P31 wd:Q6256 ;
+  OPTIONAL { ?country wdt:P2082 ?unm49. }
+  OPTIONAL { ?country wdt:P299 ?iso3166n. }
+  OPTIONAL { ?country wdt:P297 ?iso3166p1a2. }
+  OPTIONAL { ?country wdt:P298 ?iso3166p1a3. }
+  OPTIONAL { ?country wdt:P402 ?osmrelid. }
+  OPTIONAL { ?country wdt:P3916 ?unescot. }
+  OPTIONAL { ?country wdt:P9948 ?usciafb. }
+  OPTIONAL { ?country wdt:P901 ?usfips4. }
+  OPTIONAL { ?country wdt:P8714 ?gadm. }   
+
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
+}
+' >"$objectivum_archivum_temporarium"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+
 #######################################
 # Return Wikipedia/Wikidata language codes (used to know how many
 # languages do wikipedia have)
@@ -70,14 +114,13 @@ ROOTDIR="$(pwd)"
   objectivum_archivum="${ROOTDIR}/1603/3/1603_3__languages.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/1603/3/1603_3__languages.TEMP.csv"
 
-  if [ -n "$(changed_recently "$objectivum_archivum" 3600)" ]; then return 0; fi
+  if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 
   echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
 
   curl --header "Accept: text/csv" --silent --show-error \
     --get https://query.wikidata.org/sparql --data-urlencode query='
-# SELECT ?wd ?wmCode ?iso6391 ?iso6392 ?iso6393 ?iso6396 ?native ?label {
-SELECT ?wmCode ?iso6391 ?iso6392 ?iso6393 ?iso6396 ?native ?label {
+SELECT ?wd ?wmCode ?iso6391 ?iso6392 ?iso6393 ?iso6396 ?native ?label {
   VALUES (?language_type) { (wd:Q34770) (wd:Q25295) }
   ?wd wdt:P31/wdt:P279* ?language_type
       
@@ -99,8 +142,10 @@ order by (?wmCode)
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
-# echo "oooi"
+
 
 1603_3_12_wikipedia_language_codes
+
+1603_3_12_wikipedia_adm0
 
 exit 0
