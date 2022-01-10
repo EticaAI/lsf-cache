@@ -152,7 +152,7 @@ class NDT2600:
         self.resultatum_separato = "\t"
 
     def _init_1613_2_60_datum(self):
-        archivum = NUMERORDINATIO_BASIM + "/1613/1603.2.60.no1.tm.hxl.tsv"
+        archivum = NUMERORDINATIO_BASIM + "/1613/1603_2_60.no1.tm.hxl.tsv"
         datum = {}
         with open(archivum) as file:
             tsv_file = csv.DictReader(file, delimiter="\t")

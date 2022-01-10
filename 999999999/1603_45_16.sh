@@ -221,27 +221,29 @@ deploy_1603_45_16_prepare_directories() {
 }
 
 #######################################
-# Compile Administrative Level 0 of entire world
+# Compile Administrative Level X of entire world
 #
 # Globals:
 #   ROOTDIR
 # Arguments:
+#   administrative_level (integer, usually 0 to 6)
 #   [directory] 999999/1603/45/16/hxl
 # Outputs:
-#   [file] 1603/45/16/999/1603_45_16_1_0.hxl.csv
+#   [file] 1603/45/16/999/1603_45_16_1_{{X}}.hxl.csv
 #######################################
-deploy_1603_45_16_global_adm0() {
+deploy_1603_45_16_global_admX() {
+  administrative_level=${1}
   fontem_semitam="${ROOTDIR}/999999/1603/45/16/hxl"
-  objectivum_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_0.hxl.csv"
-  objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/999/1603_45_16_1_0.TEMP.hxl.csv"
+  objectivum_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.TEMP.hxl.csv"
 
   if [ -z "$(changed_recently "$fontem_semitam")" ]; then return 0; fi
 
-  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+  echo "${FUNCNAME[0]} [$administrative_level] sources changed_recently. Reloading..."
 
   # echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
   #   >"${ROOTDIR}/1603/45/16/1/1603_45_16_1.no1.tm.hxl.csv"
-  echo "#adm0+code+pcode,#date,#date+valid_on,#date+valid_to" \
+  echo "#adm${administrative_level}+code+pcode,#date,#date+valid_on,#date+valid_to" \
     > "${objectivum_archivum_temporarium}"
 
   # ls "${ROOTDIR}/999999/1603/45/16/hxl"
@@ -249,58 +251,14 @@ deploy_1603_45_16_global_adm0() {
   # find 999999/1603/45/16/hxl -name *_0.hxl.csv | hxlcut --include="#adm0+code+pcode"
 
   # find 999999/1603/45/16/hxl -name *_0.hxl.csv
-  for archivum in "${ROOTDIR}"/999999/1603/45/16/hxl/*_0.hxl.csv; do
+  for archivum in "${ROOTDIR}"/999999/1603/45/16/hxl/*_"${administrative_level}".hxl.csv; do
     # echo "$archivum"
     # archivum_nomen=$(basename -- "$archivum")
     # hxlcut --include="#adm0+code+pcode,#date,#date+valid_on,#date+valid_to,#meta+archivum" \
-    hxlcut --include="#adm0+code+pcode,#date,#date+valid_on,#date+valid_to" \
-      "$archivum" \
-      | tail -n +3 \
-      >> "${objectivum_archivum_temporarium}"
-  done
-
-  # TODO: maybe create a deploy script
-  if [ -f "$objectivum_archivum" ]; then
-    rm "$objectivum_archivum"
-  fi
-
-  mv "${objectivum_archivum_temporarium}" "$objectivum_archivum"
-}
-
-#######################################
-# Compile Administrative Level 1 of entire world
-#
-# Globals:
-#   ROOTDIR
-# Arguments:
-#   [directory] 999999/1603/45/16/hxl
-# Outputs:
-#   [file] 1603/45/16/999/1603_45_16_1_1.hxl.csv
-#######################################
-deploy_1603_45_16_global_adm1() {
-  fontem_semitam="${ROOTDIR}/999999/1603/45/16/hxl"
-  objectivum_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_1.hxl.csv"
-  objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/999/1603_45_16_1_1.TEMP.hxl.csv"
-
-  # if [ -z "$(changed_recently "$fontem_semitam")" ]; then return 0; fi
-
-  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
-
-  # echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
-  #   >"${ROOTDIR}/1603/45/16/1/1603_45_16_1.no1.tm.hxl.csv"
-  echo "#adm1+code+pcode,#date,#date+valid_on,#date+valid_to" \
-    > "${objectivum_archivum_temporarium}"
-
-  # ls "${ROOTDIR}/999999/1603/45/16/hxl"
-
-  # find 999999/1603/45/16/hxl -name *_0.hxl.csv | hxlcut --include="#adm0+code+pcode"
-
-  # find 999999/1603/45/16/hxl -name *_0.hxl.csv
-  for archivum in "${ROOTDIR}"/999999/1603/45/16/hxl/*_1.hxl.csv; do
-    # echo "$archivum"
-    # archivum_nomen=$(basename -- "$archivum")
-    # hxlcut --include="#adm0+code+pcode,#date,#date+valid_on,#date+valid_to,#meta+archivum" \
-    hxlcut --include="#adm1+code+pcode,#date,#date+valid_on,#date+valid_to" \
+    if [ ! -f "$archivum" ]; then
+      continue
+    fi
+    hxlcut --include="#adm${administrative_level}+code+pcode,#date,#date+valid_on,#date+valid_to" \
       "$archivum" \
       | tail -n +3 \
       >> "${objectivum_archivum_temporarium}"
@@ -325,19 +283,23 @@ deploy_1603_45_16_global_adm1() {
 # Outputs:
 #   [file] 1603/45/16/999/1603_45_16_1_{{X}}.hxl.csv
 #######################################
-deploy_1603_45_16_global_admX() {
-  administrative_level=${1}
+deploy_1603_45_16_global_admX_unicum() {
+  # administrative_level=${1}
   fontem_semitam="${ROOTDIR}/999999/1603/45/16/hxl"
-  objectivum_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.hxl.csv"
-  objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.TEMP.hxl.csv"
+  objectivum_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_15828996298662.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/999/1603_45_16_1_15828996298662.TEMP.hxl.csv"
 
   # if [ -z "$(changed_recently "$fontem_semitam")" ]; then return 0; fi
 
-  echo "${FUNCNAME[0]} [$administrative_level] sources changed_recently. Reloading..."
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  # printf "01234\n" | ./999999999/0/2600.py --actionem-cifram
+  # 15828996298662	01234 
+
 
   # echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
   #   >"${ROOTDIR}/1603/45/16/1/1603_45_16_1.no1.tm.hxl.csv"
-  echo "#adm${administrative_level}+code+pcode,#date,#date+valid_on,#date+valid_to" \
+  echo "#meta+adm_level,#meta+code+pcode,#date,#date+valid_on,#date+valid_to" \
     > "${objectivum_archivum_temporarium}"
 
   # ls "${ROOTDIR}/999999/1603/45/16/hxl"
@@ -345,12 +307,19 @@ deploy_1603_45_16_global_admX() {
   # find 999999/1603/45/16/hxl -name *_0.hxl.csv | hxlcut --include="#adm0+code+pcode"
 
   # find 999999/1603/45/16/hxl -name *_0.hxl.csv
-  for archivum in "${ROOTDIR}"/999999/1603/45/16/hxl/*_"${administrative_level}".hxl.csv; do
+  # for archivum in "${ROOTDIR}"/999999/1603/45/16/hxl/*_"${administrative_level}".hxl.csv; do
+  for administrative_level in {0..4..1}
+  do
+    fontem_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.hxl.csv"
     # echo "$archivum"
     # archivum_nomen=$(basename -- "$archivum")
     # hxlcut --include="#adm0+code+pcode,#date,#date+valid_on,#date+valid_to,#meta+archivum" \
-    hxlcut --include="#adm${administrative_level}+code+pcode,#date,#date+valid_on,#date+valid_to" \
-      "$archivum" \
+    if [ ! -f "$fontem_archivum" ]; then
+      continue
+    fi
+    hxladd \
+      --spec="#meta+adm_level=${administrative_level}" --before \
+      "$fontem_archivum" \
       | tail -n +3 \
       >> "${objectivum_archivum_temporarium}"
   done
@@ -370,12 +339,14 @@ deploy_1603_45_16_global_admX() {
 # deploy_1603_45_16_prepare_directories
 
 
-# deploy_1603_45_16_global_adm0
-# deploy_1603_45_16_global_adm1
-deploy_1603_45_16_global_admX 0
-deploy_1603_45_16_global_admX 1
-deploy_1603_45_16_global_admX 2
-deploy_1603_45_16_global_admX 3
-deploy_1603_45_16_global_admX 4
+# deploy_1603_45_16_global_admX 0
+# deploy_1603_45_16_global_admX 1
+# deploy_1603_45_16_global_admX 2
+# deploy_1603_45_16_global_admX 3
+# deploy_1603_45_16_global_admX 4
+# deploy_1603_45_16_global_admX 5
+# deploy_1603_45_16_global_admX 6
+
+deploy_1603_45_16_global_admX_unicum
 
 set +x
