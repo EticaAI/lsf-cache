@@ -13,7 +13,6 @@
 #
 #  REQUIREMENTS:  - Bash shell (or better)
 #                 - wget
-#                 - sed (GNU sed better tested)
 #                 - Python
 #                   - libhxl (https://github.com/HXLStandard/libhxl-python)
 #                   - csvkit (https://github.com/wireservice/csvkit)
@@ -33,16 +32,23 @@ set -e
 
 ROOTDIR="$(pwd)"
 
+
+printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/2600.sh"
 bash "${ROOTDIR}/999999999/2600.sh"
 
+printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603.87.sh"
 sh "${ROOTDIR}/999999999/1603.87.sh"
 
+printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603.47.15924.sh"
 bash "${ROOTDIR}/999999999/1603.47.15924.sh"
 
+printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603.47.639.3.sh"
 bash "${ROOTDIR}/999999999/1603.47.639.3.sh"
 
+printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603.45.49.sh"
 bash "${ROOTDIR}/999999999/1603.45.49.sh"
 
+printf '\n\t\e[1;32m%-6s\e[m\n' "9999999999/1603.45.16.sh"
 bash "${ROOTDIR}/999999999/1603.45.16.sh"
 
 # For a list of POSIX utils _granted_ to be installed everywhere:

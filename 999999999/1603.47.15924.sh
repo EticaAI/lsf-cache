@@ -25,7 +25,7 @@
 #===============================================================================
 # Comment next line if not want to stop on first error
 set -e
-set -x
+# set -x
 
 ROOTDIR="$(pwd)"
 

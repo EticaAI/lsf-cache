@@ -774,3 +774,8 @@ NUMERORDINATIO_DATUM__1603_47_15924=$(cat "${NUMERORDINATIO_DATUM}/1603.47.15924
 # numerordinatio_codicem_locali__1603_47_15924 "Latn"
 # numerordinatio_codicem_locali__1603_47_15924 "Arab"
 # numerordinatio_codicem_locali__1603_47_15924 "cyrl"
+
+
+#### wikidata tests
+# @see https://github.com/maxlath/wikibase-cli
+# npm install -g wikibase-cli

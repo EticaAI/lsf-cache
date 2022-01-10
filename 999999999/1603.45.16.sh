@@ -232,8 +232,8 @@ deploy_1603_45_16_prepare_directories() {
 # Outputs:
 #   1603/45/16/1/1603.45.16.1.no1.tm.hxl.csv
 #######################################
-deploy_1603_45_16_global() {
-    echo "TODO deploy_1603_45_16_global"
+deploy_1603_45_16_global_adm0() {
+    echo "TODO deploy_1603_45_16_global_adm0"
 
     echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
         > "${ROOTDIR}/1603/45/16/1/1603.45.16.1.no1.tm.hxl.csv"
@@ -244,6 +244,6 @@ bootstrap_999999_1603_45_16
 bootstrap_999999_1603_45_16_metadata_pre_deploy
 
 deploy_1603_45_16_prepare_directories
-deploy_1603_45_16_global
+deploy_1603_45_16_global_adm0
 
 set +x
