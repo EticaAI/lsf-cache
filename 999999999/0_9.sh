@@ -59,7 +59,8 @@ deploy_0_9_commit() {
     --git-dir /workspace/git/EticaAI/n-data.git-metadata \
     --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam \
     push
-  return 0
+  # return 0
+  exit 0
 }
 
 deploy_0_9_exit() {
@@ -86,3 +87,6 @@ done
 
 # cd /workspace/git/EticaAI/n-data-pseudobase
 # git --git-dir /workspace/git/EticaAI/n-data.git-metadata --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam gui
+
+# GIT_DIR="/workspace/git/EticaAI/n-data.git-metadata" GIT_WORK_TREE="/workspace/git/EticaAI/n-data-pseudobase" code /workspace/git/EticaAI/multilingual-lexicography-automation/officinam
+

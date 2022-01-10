@@ -232,18 +232,40 @@ deploy_1603_45_16_prepare_directories() {
 #   1603/45/16/1/1603_45_16_1.no1.tm.hxl.csv
 #######################################
 deploy_1603_45_16_global_adm0() {
-  # fontem_archivum="${ROOTDIR}/999999/1603/47/639/3/1603_47_639_3.hxl.csv"
-  # objectivum_archivum="${ROOTDIR}/999999/999999/1603_45_49.tsv"
-  # objectivum_archivum_temp="${ROOTDIR}/999999/999999/1603_45_49.TEMP.tsv"
+  fontem_semitam="${ROOTDIR}/999999/1603/45/16/hxl"
+  objectivum_archivum="${ROOTDIR}/1603/45/16/1/1603_45_16_1_0.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/1/1603_45_16_1_0.TEMP.hxl.csv"
 
-  # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+  # if [ -z "$(changed_recently "$fontem_semitam")" ]; then return 0; fi
 
-  # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  echo "TODO deploy_1603_45_16_global_adm0"
+  # echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
+  #   >"${ROOTDIR}/1603/45/16/1/1603_45_16_1.no1.tm.hxl.csv"
+  echo "#adm0+code+pcode,#date,#date+valid_on,#date+valid_to" \
+    > "${objectivum_archivum_temporarium}"
 
-  echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
-    >"${ROOTDIR}/1603/45/16/1/1603_45_16_1.no1.tm.hxl.csv"
+  # ls "${ROOTDIR}/999999/1603/45/16/hxl"
+
+  # find 999999/1603/45/16/hxl -name *_0.hxl.csv | hxlcut --include="#adm0+code+pcode"
+
+  # find 999999/1603/45/16/hxl -name *_0.hxl.csv
+  for archivum in "${ROOTDIR}"/999999/1603/45/16/hxl/*_0.hxl.csv; do
+    # echo "$archivum"
+    # archivum_nomen=$(basename -- "$archivum")
+    # hxlcut --include="#adm0+code+pcode,#date,#date+valid_on,#date+valid_to,#meta+archivum" \
+    hxlcut --include="#adm0+code+pcode,#date,#date+valid_on,#date+valid_to" \
+      "$archivum" \
+      | tail -n +3 \
+      >> "${objectivum_archivum_temporarium}"
+  done
+
+  # TODO: maybe create a deploy script
+  if [ -f "$objectivum_archivum" ]; then
+    rm "$objectivum_archivum"
+  fi
+
+  mv "${objectivum_archivum_temporarium}" "$objectivum_archivum"
 }
 
 bootstrap_999999_1603_45_16_fetch_data
@@ -251,6 +273,8 @@ bootstrap_999999_1603_45_16
 bootstrap_999999_1603_45_16_metadata_pre_deploy
 
 deploy_1603_45_16_prepare_directories
+
+
 deploy_1603_45_16_global_adm0
 
 set +x
