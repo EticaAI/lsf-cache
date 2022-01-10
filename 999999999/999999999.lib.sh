@@ -59,6 +59,62 @@ changed_recently() {
 }
 
 #######################################
+# Return if a path (or a file) don't exist or if did not changed recently.
+# Use case: reload functions that depend on action of older ones
+#
+# Globals:
+#   None
+# Arguments:
+#   path_or_file
+#   maximum_time (default: 5 minutes)
+# Outputs:
+#   1 (if need reload, Void if no reload need)
+#######################################
+file_update_if_necessary() {
+  formatum_archivum="$1"
+  fontem_archivum="$2"
+  objectivum_archivum="$3"
+
+  # echo "starting file_update_if_necessary ..."
+
+  case "${formatum_archivum}" in
+  csv)
+    is_valid=$(csvclean --dry-run "$fontem_archivum")
+    if [ "$is_valid" != "No errors." ]; then
+      echo "$is_valid"
+      return 1
+    fi
+    ;;
+  *)
+    echo "Lint not implemented for this case. Skiping"
+    ;;
+  esac
+
+  echo "middle file_update_if_necessary ..."
+
+  if [ -f "$objectivum_archivum" ]; then
+    sha256sum "$objectivum_archivum"
+    sha256sum "$fontem_archivum"
+    # TODO: review this logic
+    if test "$(cmp --silent "$fontem_archivum" "$objectivum_archivum")"; then
+      echo "INFO: already equal."
+      echo "      [$fontem_archivum]"
+      echo "      [$objectivum_archivum]"
+      rm "$fontem_archivum"
+    else
+      echo "not equal"
+      rm "$objectivum_archivum"
+      mv "$fontem_archivum" "$objectivum_archivum"
+    fi
+  else
+    mv "$fontem_archivum" "$objectivum_archivum"
+  fi
+
+  # echo "done file_update_if_necessary ..."
+  return 0
+}
+
+#######################################
 # contains(string, substring)
 #
 # Returns 0 if the specified string contains the specified substring,

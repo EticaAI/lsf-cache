@@ -1,5 +1,5 @@
-# {999999999} /hic sunt dracones/@lat-Latn
-
+# `999999999` multilingual-lexicography-automation
+<!--
 > - {999999} /temporary files/@eng-Latn:
 >   - [../999999](../999999)
 
@@ -57,7 +57,7 @@ Art by                    ( `/  ^  ^   (  \/>   /(   \    \  \
             (-'  `                                                          
              `
 ```
-
+-->
 ## @TODO
 - Get part of data from <https://github.com/EticaAI/HXL-Data-Science-file-formats/tree/main/ontologia/codicem>
 
