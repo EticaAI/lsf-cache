@@ -37,23 +37,22 @@ ROOTDIR="$(pwd)"
 # https://www.wikidata.org/wiki/Property:P299
 # ISO 3166-1 numeric code (P299)
 
-# https://w.wiki/4fHT
-# SELECT ?country ?unm49 ?iso3166n ?iso3166p1a2 ?iso3166p1a3 ?osmrelid ?unescot ?usciafb ?usfips4 ?gadm
-# WHERE
-# {
-#   ?country wdt:P31 wd:Q6256 ;
-#   OPTIONAL { ?country wdt:P2082 ?unm49. }
-#   OPTIONAL { ?country wdt:P299 ?iso3166n. }
-#   OPTIONAL { ?country wdt:P297 ?iso3166p1a2. }
-#   OPTIONAL { ?country wdt:P298 ?iso3166p1a3. }
-#   OPTIONAL { ?country wdt:P402 ?osmrelid. }
-#   OPTIONAL { ?country wdt:P3916 ?unescot. }
-#   OPTIONAL { ?country wdt:P9948 ?usciafb. }
-#   OPTIONAL { ?country wdt:P901 ?usfips4. }
-#   OPTIONAL { ?country wdt:P8714 ?gadm. }
+# @see also https://www.wikidata.org/wiki/Wikidata:List_of_properties
+#  - UN/LOCODE (P1937) https://www.wikidata.org/wiki/Property:P1937
+#  - M.49 code (P2082)
+#  - UNDP country code (P2983)
+#    - This seems to be not used on last decade
 
-#   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE]". }
-# }
+
+# TODO: https://w.wiki/4fMq
+# # organização estabelecida pelas Nações Unidas (Q15285626)
+# SELECT ?wikidataq  ?wikidataqLabel WHERE {
+#    ?wikidataq wdt:P31 wd:Q15285626 .
+#    SERVICE wikibase:label {
+#     bd:serviceParam wikibase:language "en" .
+#    }
+
+#  } ORDER BY ?start
 
 #######################################
 # Return list of administrative level 0 codes ("country/territory" codes)
@@ -117,6 +116,25 @@ WHERE
   if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 
   echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
+
+  # TODO: this alternative query only select the Wikipedia ones
+  # #title: All languages with a Wikimedia language code (P424)
+  # # Date: 2021-09-24
+  # SELECT DISTINCT ?lang_code ?itemLabel ?item
+  # WHERE
+  # {
+  #   # ?lang is one of these options
+  #   VALUES ?lang {
+  #     wd:Q34770   # language
+  #     wd:Q436240  # ancient language
+  #     wd:Q1288568 # modern language
+  #     wd:Q33215   # constructed language
+  #   }
+  #   ?item wdt:P31 ?lang ;
+  #     # get the language code
+  #     wdt:P424 ?lang_code .
+  #   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  # } ORDER BY ?lang_code
 
   curl --header "Accept: text/csv" --silent --show-error \
     --get https://query.wikidata.org/sparql --data-urlencode query='
