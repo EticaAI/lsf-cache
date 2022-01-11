@@ -10,7 +10,8 @@
 #       OPTIONS:  ---
 #
 #  REQUIREMENTS:  - Bash shell (or better)
-#                 - wget
+#                 - curl
+#                 - libhxl
 #          BUGS:  1. fix the "None" which may appear on mathematical fields.
 #                    Maybe https://github.com/HXLStandard/hxl-proxy/wiki
 #                    /Replace-data-filter ?
@@ -151,15 +152,14 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
 }
 
 #######################################
-# numerordinatio2tsv
+# 1603_45_49__numerordinatio2tsv
 #
 # Globals:
 #   ROOTDIR
-#   DATA_UN_M49_CSV
 # Arguments:
-#   [File] 999999/1603/45/49/1603_45_49.tm.hxl.csv
-# Outputs:
 #   [File] 1603/45/49/1603_45_49.no1.tm.hxl.csv
+# Outputs:
+#   [File] 999999/999999/1603_45_49.tsv
 #######################################
 1603_45_49__numerordinatio2tsv() {
   fontem_archivum="${ROOTDIR}/1603/45/49/1603_45_49.no1.tm.hxl.csv"
@@ -190,9 +190,82 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
 
+#######################################
+# 1603_45_49__numerordinatio2hxlr: generate replace maps to UN m49.
+#
+# See:
+#   https://github.com/HXLStandard/hxl-proxy/wiki/Replacement-maps
+#   https://github.com/HXLStandard/libhxl-python/wiki/Replacement-maps
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   [File] 1603/45/49/1603_45_49.no1.tm.hxl.csv
+# Outputs:
+#   [File] 1603/45/49/1603_45_49.no1.tm.hxl.csv
+#######################################
+1603_45_49__numerordinatio2hxlr() {
+  fontem_archivum="${ROOTDIR}/1603/45/49/1603_45_49.no1.tm.hxl.csv"
+  objectivum_archivum="${ROOTDIR}/1603/13/1603/45/49/1603_13_1603_45_49~1603_47_3166_1.r.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603_13_1603_45_49~1603_47_3166_1.r.hxl.csv"
+  # objectivum_archivum_temporarium_2="${objectivum_archivum_temporarium}.t2.csv"
+
+  # 1603/13/1603/45/49/1603_13_1603_45_49~1603_47_3166_1.r.hxl.csv
+
+  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  echo "#x_pattern,#x_substitution,#x_tag" >"$objectivum_archivum_temporarium"
+
+  # echo "$fontem_archivum"
+
+  # echo "hxlcut --include='#item+conceptum+codicem,#item+rem+i_zxx+is_latn+ix_iso3166p1a2' $fontem_archivum"
+
+  # ISO 3166 part 1 alpha 2
+  hxlcut \
+    --include='#item+conceptum+codicem,#item+rem+i_zxx+is_latn+ix_iso3166p1a2' \
+    "$fontem_archivum" \
+    | hxlselect --query='#item+rem+i_zxx+is_latn+ix_iso3166p1a2 is not empty' \
+    | hxladd --spec='#x_tag=item+conceptum+codicem+numeralem' \
+    | tail -n +3  \
+    >>"${objectivum_archivum_temporarium}"
+
+  # ISO 3166 part 1 alpha 3
+  hxlcut \
+    --include='#item+conceptum+codicem,#item+rem+i_zxx+is_latn+ix_iso3166p1a3' \
+    "$fontem_archivum" \
+    | hxlselect --query='#item+rem+i_zxx+is_latn+ix_iso3166p1a3 is not empty' \
+    | hxladd --spec='#x_tag=item+conceptum+codicem+numeralem' \
+    | tail -n +3  \
+    >>"${objectivum_archivum_temporarium}"
+
+  # hxlselect --query='#x_substitution is not empty' 999999/0/1603_13_1603_45_49~1603_47_3166_1.r.hxl.csv
+
+  # hxladd \
+  #   --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
+  #   --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
+  #   "${fontem_archivum}" |
+  #   hxladd --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" |
+  #   hxladd --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" |
+  #   hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" |
+  #   hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" |
+  #   hxlclean --lower="#x_item+lower" |
+  #   hxlclean --upper="#x_item+upper" |
+  #   hxlcut --include="#x_item" |
+  #   csvformat --out-tabs --skip-lines 2 |
+  #   sed 's/None//' | sed 's/None//' | sed 's/None//' | sed 's/None//' |
+  #   sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' | sed 's/NONE//' |
+  #   sed 's/none//' | sed 's/none//' | sed 's/none//' | sed 's/none//' \
+  #   >"${objectivum_archivum_temporarium}"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
 1603_45_49__external_fetch
 1603_45_49__hxl2hxltm
 1603_45_49__hxltm2numerordinatio
 1603_45_49__numerordinatio2tsv
+1603_45_49__numerordinatio2hxlr
 
 set +x

@@ -124,16 +124,16 @@ file_update_if_necessary() {
   # echo "middle file_update_if_necessary ..."
 
   if [ -f "$objectivum_archivum" ]; then
-    sha256sum "$objectivum_archivum"
-    sha256sum "$fontem_archivum"
+    # sha256sum "$objectivum_archivum"
+    # sha256sum "$fontem_archivum"
 
     if [ -s "$objectivum_archivum" ] && [ "$(cmp "$fontem_archivum" "$objectivum_archivum")" = "" ]; then
-      echo "INFO: already equal. Temporary will be discarted"
-      echo "      [$fontem_archivum]"
-      echo "      [$objectivum_archivum]"
+      # echo "INFO: already equal. Temporary will be discarted"
+      # echo "      [$fontem_archivum]"
+      # echo "      [$objectivum_archivum]"
       rm "$fontem_archivum"
     else
-      echo "Not equal. Temporary will replace target file"
+      # echo "Not equal. Temporary will replace target file"
       rm "$objectivum_archivum"
       mv "$fontem_archivum" "$objectivum_archivum"
     fi
