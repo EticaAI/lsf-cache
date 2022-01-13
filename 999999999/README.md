@@ -1,4 +1,5 @@
-# `999999999` multilingual-lexicography-automation
+# [`999999999`] /namespace for automation scripts/
+
 <!--
 > - {999999} /temporary files/@eng-Latn:
 >   - [../999999](../999999)

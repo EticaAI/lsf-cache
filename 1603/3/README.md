@@ -12,8 +12,6 @@
 > _Wikidata is a collaboratively edited multilingual knowledge graph hosted by the Wikimedia Foundation.[2] It is a common source of open data that Wikimedia projects such as Wikipedia,[3][4] and anyone else, can use under the **CC0 public domain license**. Wikidata is a wiki powered by the software MediaWiki, and is also powered by the set of knowledge graph MediaWiki extensions known as Wikibase. (...) Launched29 October **2012**; 9 years ago[1] (...) Logo
 The bars on the logo contain the word "WIKI" encoded in Morse code.[38] It was created by Arun Ganesh and selected through community decision.[39]_ -- https://en.wikipedia.org/wiki/Wikidata
 
-
-
 <!--
 
 Multiple languages of same item
