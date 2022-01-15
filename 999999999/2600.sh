@@ -223,6 +223,10 @@ UNICODE_UCD_DERIVED_NUMERIC_TYPE="https://www.unicode.org/Public/UCD/latest/ucd/
       # echo "nomen = '$nomen'"
 
       echo "${codicem},${nomen},'${initiale}','${finale}'" >> "$objectivum_archivum_temporarium"
+
+      # This is just a lazy way to copypaste to officinam/999999999/0/2600.py
+      # echo "'${nomen}': [0x${initiale},0x${finale}],"
+
     else
       # TODO: fix these
       # 0030..0039    ; Decimal # Nd  [10] DIGIT ZERO..DIGIT NINE
@@ -259,4 +263,7 @@ UNICODE_UCD_DERIVED_NUMERIC_TYPE="https://www.unicode.org/Public/UCD/latest/ucd/
 
 1603_87__external_fetch__DerivedNumericType
 1603_87__process_DerivedNumericType
+
+./999999999/0/2600.py --actionem-tabulam-numerae --tabulam-numerae-finale 10000 > "${ROOTDIR}/1603/2600/1/1603_2600_1.tm.hxl.tsv"
+
 # https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt
