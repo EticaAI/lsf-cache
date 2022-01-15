@@ -4,6 +4,7 @@
 #          FILE:  2600.py
 #
 #         USAGE:  ./999999999/0/2600.py
+#                 ./999999999/0/2600.py --help
 #                 NUMERORDINATIO_BASIM="/dir/ndata" ./999999999/0/2600.py
 #
 #   DESCRIPTION:  ---
@@ -84,6 +85,15 @@ STDIN = sys.stdin.buffer
 # printf "30160\n1830260\n109830360\n" | ./999999999/0/2600.py --actionem-decifram
 
 
+# https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt
+numerum_decimalem = {
+    # 0030..0039    ; Decimal # Nd  [10] DIGIT ZERO..DIGIT NINE
+    'DIGIT': [0x0030, 0x0039],
+    # 0660..0669    ; Decimal # Nd  [10] ARABIC-INDIC DIGIT ZERO..ARABIC-INDIC DIGIT NINE
+    'ARABIC-INDIC': [0x0660, 0x0669],
+
+}
+
 class RadicemNumerali:
     """rādīcem numerālī
 
@@ -139,6 +149,56 @@ class RadicemNumerali:
         a number from base b to base c."""
         return RadicemNumerali.toDigits(
             RadicemNumerali.fromDigits(digits, b), c)
+
+
+class SystemaNumerali:
+    """Systēma numerālī
+
+    Trivia:
+        - systēma, n, https://en.wiktionary.org/wiki/systema#Latin
+        - numerālī, https://en.wiktionary.org/wiki/numeralis#Latin
+
+    See:
+        - unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt
+
+    Exemplōrum gratiā (et Python doctest, id est, testum automata):
+
+        # 0030..0039
+        >>> digitae = SystemaNumerali('DIGIT', 0x0030, 0x0039)
+        >>> digitae.de(1)
+        '1'
+        >>> digitae.tabulam()
+        ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+        >>> arabic_indic = SystemaNumerali('ARABIC-INDIC', 0x0660, 0x0669)
+        >>> arabic_indic.de(1)
+        '1'
+        >>> arabic_indic.tabulam()
+        ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩']
+
+    """
+
+    def __init__(
+            self,
+            nomen: str = '',
+            unicode_initiale: str = None,
+            unicode_finale: str = None
+    ):
+        # TODO: implement non-decimal systems
+        self.nomen = nomen
+        self.unicode_initiale = unicode_initiale
+        self.unicode_finale = unicode_finale
+
+    def de(self, digitum: int) -> str:
+        return str(digitum)
+        # pass
+
+    def tabulam(self):
+        resultatum = []
+        for rem in range(self.unicode_initiale, self.unicode_finale + 1, 1):
+            resultatum.append(chr(rem))
+
+        return resultatum
 
 
 class NDT2600:
@@ -503,6 +563,19 @@ class CLI_2600:
             nargs='?'
         )
 
+        neo_tabulam_numerae = parser.add_argument_group(
+            "neo-tabulam-numerae",
+            "Automated generation of numerical tables")
+
+        neo_tabulam_numerae.add_argument(
+            '--actionem-tabulam-numerae',
+            help='Define mode to numetical tables',
+            metavar='',
+            dest='neo_tabulam_numerae',
+            const=True,
+            nargs='?'
+        )
+
         neo_scripturam = parser.add_argument_group(
             "neo-scripturam",
             "(internal use) Operations related to associate new symbols " +
@@ -655,6 +728,11 @@ class CLI_2600:
                         codicem, args.resultatum_separato, fontem)
                 )
             return self.EXIT_OK
+
+        if self.pyargs.neo_tabulam_numerae:
+            # tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
+            tabulam_numerae = ['TODO']
+            return self.output(tabulam_numerae)
 
         if self.pyargs.verbum_simplex:
             tabulam_multiplicatio = ndt2600.quod_tabulam_multiplicatio()
