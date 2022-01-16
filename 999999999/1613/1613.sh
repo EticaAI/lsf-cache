@@ -177,7 +177,7 @@ PREFIX_1603_44_1="1603:44:1"
   hxlcut --exclude="#meta" \
     "$fontem_archivum" \
     | hxlselect --query="#item+conceptum+codicem>0" \
-    | hxladd --before --spec="#item+conceptum+numerordinatio=${PREFIX_1603_44_1}:{{#item+conceptum+codicem}}" \
+    | hxladd --before --spec="#item+conceptum+numerordinatio=${PREFIX_1603_994_1}:{{#item+conceptum+codicem}}" \
     > "$objectivum_archivum_temporarium"
 
   #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
@@ -234,3 +234,7 @@ PREFIX_1603_44_1="1603:44:1"
 
 1603_44_1__external_fetch
 1603_44_1__deploy
+
+
+# TODO: to download later large files, this may help
+# https://stackoverflow.com/questions/25010369/wget-curl-large-file-from-google-drive
