@@ -11,7 +11,7 @@
 #       OPTIONS:  ---
 #
 #  REQUIREMENTS:  - Bash shell (or better)
-#                 - wget
+#                 - curl
 #          BUGS:  ---
 #         NOTES:  ---
 #        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>

@@ -47,6 +47,10 @@ The multilingual-lexicography-automation project will use `1603` as the main nam
 ### [`1603:87`] /Unicode/
 - [1603/87/](1603/87/)
 
+### [`1603:994`] /dentāle vocābulāriō/
+- [1603/994/](1603/994/)
+
+
 ### [`1603:2600`] /Generic - Multiplication tables/
 - [1603/2600/](1603/2600/)
 
