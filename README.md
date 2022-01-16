@@ -53,6 +53,8 @@ The multilingual-lexicography-automation project will use `1603` as the main nam
 ## [`1613`] /namespace for handcrafted data/
 - [1613/](1613/)
 
+Note: this dedicated top level namespace `1613` will eventually be moved (with other code) inside `1603`. More data compilations are starting to get handcrafted, without possibility of automation.
+
 <details>
 <summary>Click to see additional iternal data files</summary>
 
@@ -70,6 +72,42 @@ The multilingual-lexicography-automation project will use `1603` as the main nam
 Except by _[`999999999`] /namespace for automation scripts/_ and _`1613` /namespace for handcrafted data/_
 
 This repository contains mixed license and copyright owners.
+-->
+
+
+## [`1603:*`] Numerordĭnātĭo stability (global level)
+> Note: this section assumes data tables published by @EticaAI / @HXL-CPLP **and** global level reference between concepts. Every concept-group have both global numerordĭnātĭo and a local identificator recommended to be used when transposing.
+
+### Stable namespaces
+
+- `1603`
+  - the base namespace `1603` will be used by @EticaAI / @HXL-CPLP as a tradeoff between something unique while not overlong.
+- `1603:45:49` /Standard country or area codes for statistical use (M49)/
+  - Comments:
+    - Any local identifier MUST be aligned with the reference organization.
+    - This namespace can have from 0 to 999 items. No value out of this range is allowed. If used to exchange data with tools that expect UN m49, pre-prend leading zeros to fill 3 characters. However, under Numerordĭnātĭo scheme they are not necessary.
+    - `900..999` range may have additional semantics when used under `1603:45:49`
+      Some will be granted to never change.
+  - External guides:
+    - https://unstats.un.org/unsd/publication/SeriesM/Series_M49_(1970)_en-fr.pdf
+    - https://unstats.un.org/unsd/methodology/m49/
+    - https://undocs.org/pdf?symbol=en/ST/CS/SER.F/347/Rev.1
+    - https://en.wikipedia.org/wiki/UN_M49
+
+### Likely near stable namespaces
+
+- `1603:45:16` /Place codes/
+  - Comments:
+    - This namespace, as its first level, reuses `1603:45:49` with the exception of range `900..999`.
+- `1603:3:12`:
+  - TODO: document Q and P and make it stable interface.
+
+### Intentionally non-stable namespaces
+
+- [`1603:999999`]: namespace for local cache of data files.
+
+<!--
+- [`1603:999999999`]: this is just an alias for store automation scripts.
 -->
 
 

@@ -167,3 +167,32 @@ order by (?wmCode)
 1603_3_12_wikipedia_adm0
 
 exit 0
+
+
+# TODO: maybe check https://www.npmjs.com/package/wikidata-taxonomy
+#       npm install -g wikidata-taxonomy
+# Examples
+# wdtaxonomy P2082
+
+
+### Current query for download translations (have bugs)
+# # Variant of
+# # - https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#UN_member_states
+# # - https://stackoverflow.com/questions/43258341/how-to-get-wikidata-labels-in-more-than-one-language
+# PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+# PREFIX wikibase: <http://wikiba.se/ontology#>
+# PREFIX wd: <http://www.wikidata.org/entity/>
+# PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+# #SELECT DISTINCT ?adm0 ?iso3166p1n ?label (lang(?label) as ?label_lang)
+# SELECT DISTINCT ?iso3166p1n ?label (lang(?label) as ?label_lang)
+# {
+#   ?adm0 wdt:P31/wdt:P279* wd:Q3624078;
+#   rdfs:label ?label
+#   OPTIONAL { ?adm0 wdt:P2082|wdt:P299 ?iso3166p1n. }
+  
+#   #FILTER(?iso3166p1n > xsd:integer(0))
+# }
+# # order by ?adm0
+# order by ASC(?iso3166p1n)
+# LIMIT 1000
