@@ -5,7 +5,7 @@
 #
 #         USAGE:  ./999999999/1613/1613.sh
 #
-#   DESCRIPTION:  ---
+#   DESCRIPTION:  DEPRECATED: use officinam/999999999/1603_17.sh
 #
 #       OPTIONS:  ---
 #
