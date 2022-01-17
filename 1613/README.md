@@ -1,5 +1,13 @@
 # [`1613`] /namespace for handcrafted data/
 
+Files moved from/to:
+- 1603_2_60.no1.tm.hxl.tsv
+  - 17/17/1603_17_17.no1.tm.hxl.csv
+- 1603_2_60.no1.tm.hxl.tsv
+  - 17/2/60/1613_17_2_60.no1.tm.hxl.tsv
+
+## Old notes here
+
 > \_[eng-Latn]Note to readers: use the 1613 for data which need to be built from scratch and cannot be generated more automated with algoritms from [../999999999](../999999999) [eng-Latn]\_
 
 - https://en.wikipedia.org/wiki/Computer_(occupation)#cite_note-1

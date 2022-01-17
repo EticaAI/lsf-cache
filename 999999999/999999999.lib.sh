@@ -29,6 +29,9 @@
 
 ROOTDIR="$(pwd)"
 
+# FORCE_REDOWNLOAD="1" # Use if want ignore 1day local cache
+# FORCE_CHANGED="1" # Use if want default 5 min change
+
 ## Directory that stores basic TSVs to allow bare minimum conversions
 # These files are also generated as part of bootstrapping step
 # 1603_45_49.tsv, 1603_47_639_3.tsv, 1603_47_15924.tsv,
@@ -40,7 +43,7 @@ NUMERORDINATIO_DATUM="${ROOTDIR}/999999/999999"
 # Opposite: stale_archive
 #
 # Globals:
-#   None
+#   FORCE_CHANGED
 # Arguments:
 #   path_or_file
 #   maximum_time (default: 5 minutes)
@@ -50,6 +53,12 @@ NUMERORDINATIO_DATUM="${ROOTDIR}/999999/999999"
 changed_recently() {
   path_or_file="$1"
   maximum_time="${2:-5}"
+
+  if [ -n "$FORCE_CHANGED" ]; then
+    echo "1"
+    return 0
+  fi
+
   if [ -e "$path_or_file" ]; then
     changes=$(find "$path_or_file" -mmin -"$maximum_time")
     if [ -z "$changes" ]; then
@@ -143,6 +152,162 @@ file_update_if_necessary() {
 
   # echo "done file_update_if_necessary ..."
   return 0
+}
+
+#######################################
+# What relative path from an numerordinatio string?
+#
+# Example:
+#  quod_path_de_numerordinatio 1603:1:2:3 "_"
+#  # 1603_1_2_3
+#  quod_path_de_numerordinatio 1603:1:2:3 ":"
+#  # 1603:1:2:3
+#
+# Globals:
+#   None
+# Arguments:
+#   numerordinatio
+#   separatum
+# Outputs:
+#   relative path
+#######################################
+numerordinatio_neo_separatum() {
+  numerordinatio="$1"
+  separatum="$2"
+  _part1=${numerordinatio//_/"$separatum"}
+  _part2=${_part1//:/"$separatum"}
+
+  # TODO: make it tolerate more separators
+  # _part1=${numerordinatio//_/\/}
+  # _part2=${_part1//:/\/}
+  # echo "$numerordinatio $_part2"
+  # echo "numerordinatio_neo_separatum [$numerordinatio $separatum] [$_part2]"
+  echo "$_part2"
+}
+
+#######################################
+# Download remote file. Only executed if local file is old. Try validate
+# downloads before replacing objective files.
+#
+# Globals:
+#   ROOTDIR
+#   FORCE_REDOWNLOAD
+# Arguments:
+#   iri
+#   numerordinatio
+#   archivum_typum (Exemplum: csv)
+#   archivum_extensionem  (Exemplum: hxl.csv)
+#   downloader  (Exemplum: hxltmcli, curl)
+# Outputs:
+#   Writes to 999999/1603/45/49/1603_45_49.hxl.csv
+#######################################
+file_download_if_necessary() {
+  iri="$1"
+  numerordinatio="$2"
+  archivum_typum="$3"
+  archivum_extensionem="$4"
+  downloader="${5:-"hxltmcli"}"
+  est_temporarium="${6:-"1"}"
+
+  if [ "$est_temporarium" -eq "1" ]; then
+    _basim="${ROOTDIR}/999999"
+  else
+    _basim="${ROOTDIR}"
+  fi
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+
+  # objectivum_archivum="${ROOTDIR}/999999/1613/1613.tm.hxl.csv"
+  objectivum_archivum="${_basim}/$_path/$_nomen.$archivum_extensionem"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$archivum_extensionem"
+
+  # if [ -d "${_basim}/$_path/" ]; then
+  #   echo "${_basim}/$_path/"
+  # fi
+
+  # echo "oi $_basim $_path $_nomen"
+  # echo "objectivum_archivum $objectivum_archivum"
+  # echo "objectivum_archivum_temporarium $objectivum_archivum_temporarium"
+
+  # return 0
+
+  if [ -z "$FORCE_REDOWNLOAD" ]; then
+    if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+    echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
+  else
+    echo "${FUNCNAME[0]} forced re-download [$objectivum_archivum]"
+  fi
+
+  if [ "$downloader" == "hxltmcli" ]; then
+    hxltmcli "$iri" >"$objectivum_archivum_temporarium"
+  else
+    curl --compressed --silent --show-error \
+      -get "$iri" \
+      --output "$objectivum_archivum_temporarium"
+  fi
+
+  file_update_if_necessary "$archivum_typum" "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+
+#######################################
+# Convert HXLTM to numerordinatio with these defaults:
+# - '#meta' are removed
+# - Fields with empty or zeroed concept code are excluded
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (dfault "0", from real namespace)
+# Outputs:
+#   Convert files
+#######################################
+file_convert_numerordinatio_de_hxltm() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+
+  # echo "$fontem_archivum"
+
+  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  hxlcut --exclude="#meta" \
+    "$fontem_archivum" \
+    | hxlselect --query="#item+conceptum+codicem>0" \
+    | hxladd --before --spec="#item+conceptum+numerordinatio=${_prefix}:{{#item+conceptum+codicem}}" \
+    > "$objectivum_archivum_temporarium"
+
+  #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
+
+  # cp "$fontem_archivum" "$objectivum_archivum_temporarium"
+
+  # Strip empty header (already is likely to be ,,,,,,)
+  sed -i '1d' "${objectivum_archivum_temporarium}"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
 
 #######################################

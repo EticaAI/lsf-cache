@@ -5,6 +5,8 @@
 #
 #         USAGE:  ./999999999/0_0.sh
 #                 time ./999999999/0_0.sh
+#                 FORCE_REDOWNLOAD=1 time ./999999999/0_0.sh
+#                 FORCE_CHANGED=1 time ./999999999/0_0.sh
 #
 #   DESCRIPTION:  The happy path to initialy everything from outside sources.
 #                 Except the 1613. That data folder is handcrafted.
