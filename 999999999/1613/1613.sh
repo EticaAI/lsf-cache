@@ -27,6 +27,7 @@
 DATA_1613_3="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1281616178"
 DATA_1603_994_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1366500643"
 DATA_1603_44_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1333477190"
+DATA_1603_44_142="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=455141043"
 
 
 ROOTDIR="$(pwd)"
@@ -34,6 +35,7 @@ ROOTDIR="$(pwd)"
 PREFIX_1613_3="1613:3"
 PREFIX_1603_994_1="1603:994:1"
 PREFIX_1603_44_1="1603:44:1"
+PREFIX_1603_44_142="1603:44:142"
 
 # shellcheck source=../999999999.lib.sh
 . "$ROOTDIR"/999999999/999999999.lib.sh
@@ -115,6 +117,30 @@ PREFIX_1603_44_1="1603:44:1"
   echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
 
   hxltmcli "$DATA_1603_44_1" > "$objectivum_archivum_temporarium"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+#######################################
+# Download DATA_1603_44_142 from external source files
+#
+# Globals:
+#   ROOTDIR
+#   DATA_1603_44_1
+# Arguments:
+#   None
+# Outputs:
+#   Writes to 999999/1603/44/142/1603_44_142.tm.hxl.csv
+#######################################
+1603_44_142__external_fetch() {
+  objectivum_archivum="${ROOTDIR}/999999/1603/44/142/1603_44_142.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603_44_142.tm.hxl.csv"
+
+  if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
+
+  hxltmcli "$DATA_1603_44_142" > "$objectivum_archivum_temporarium"
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
@@ -226,6 +252,42 @@ PREFIX_1603_44_1="1603:44:1"
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
 
+######################################
+# Deploy 1603_44_142
+#
+# Globals:
+#   ROOTDIR
+#   PREFIX_1603_44_142
+# Arguments:
+#   [File] 999999/1603/44/1/1603_44_142.tm.hxl.csv
+# Outputs:
+#   [File] 1603/44/142/1603_44_142.no1.tm.hxl.csv
+#######################################
+1603_44_142__deploy() {
+  fontem_archivum="${ROOTDIR}/999999/1603/44/142/1603_44_142.tm.hxl.csv"
+  objectivum_archivum="${ROOTDIR}/1603/44/142/1603_44_142.no1.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603_44_142.no1.tm.hxl.csv"
+
+  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  hxlcut --exclude="#meta" \
+    "$fontem_archivum" \
+    | hxlselect --query="#item+conceptum+codicem>0" \
+    | hxladd --before --spec="#item+conceptum+numerordinatio=${PREFIX_1603_44_142}:{{#item+conceptum+codicem}}" \
+    > "$objectivum_archivum_temporarium"
+
+  #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
+
+  # cp "$fontem_archivum" "$objectivum_archivum_temporarium"
+
+  # Strip empty header (already is likely to be ,,,,,,)
+  sed -i '1d' "${objectivum_archivum_temporarium}"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
 1613_3__external_fetch
 1613_3__deploy
 
@@ -234,6 +296,9 @@ PREFIX_1603_44_1="1603:44:1"
 
 1603_44_1__external_fetch
 1603_44_1__deploy
+
+1603_44_142__external_fetch
+1603_44_142__deploy
 
 
 # TODO: to download later large files, this may help

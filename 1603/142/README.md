@@ -17,3 +17,6 @@ The earliest surviving chemical formula of gunpowder dates to 1044[18] in the fo
 
 - https://en.wikipedia.org/wiki/Wujing_Zongyao
 -->
+
+## TODOs
+- https://latin.stackexchange.com/questions/509/why-is-there-no-word-meaning-firearm-in-contemporary-latin
