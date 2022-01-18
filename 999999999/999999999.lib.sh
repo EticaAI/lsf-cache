@@ -298,9 +298,13 @@ file_convert_numerordinatio_de_hxltm() {
     "$fontem_archivum" \
     | hxlselect --query="#item+conceptum+codicem>0" \
     | hxladd --before --spec="#item+conceptum+numerordinatio=${_prefix}:{{#item+conceptum+codicem}}" \
+    | hxlreplace --map="${ROOTDIR}/1603/13/1603_13.r.hxl.csv" \
     > "$objectivum_archivum_temporarium"
 
   #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
+
+
+  # hxlreplace --map="1603/13/1603_13.r.hxl.csv" 999999/999999/2020/4/1/1603_45_1.no1.tm.hxl.csv
 
   # cp "$fontem_archivum" "$objectivum_archivum_temporarium"
 
