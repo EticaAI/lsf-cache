@@ -1,4 +1,4 @@
-# [`999999`] /namespace for intermediate cached files/
+# [`999999`] /Data temporāriīs/
 
 TL;DR:
 - _"[`999999999`] /namespace for automation scripts/"_  + _"[`1613`] /namespace for handcrafted data/"_ can be used to generate this directory automatically.

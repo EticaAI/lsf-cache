@@ -1,11 +1,10 @@
 # [`1603:3`] /Commūnitās scientiae/
 
+
 > _Wikimedia Foundation, Inc. (WMF, or simply Wikimedia) is an American foundation headquartered in San Francisco, California.[9] It owns and operates the Wikimedia projects.[10][11][12][13]. It was established in **2003** by Jimmy Wales as a way to fund Wikipedia and its sibling projects through non-profit means.[1][2] As of 2021, it employs over 550 staff and contractors, with annual revenues in excess of US$150 million._ -- https://en.wikipedia.org/wiki/Wikimedia_Foundation
 
 ### 1603:3.1 (Wikipedia)
 > _Launched	January 15, 2001 (20 years ago) _ -- https://en.wikipedia.org/wiki/Wikipedia
-
-
 
 ### 1603:3.2 (Wikitionary)
 > _Wiktionary was brought online on December 12, **2002**,[2] following a proposal by Daniel Alston and an idea by Larry Sanger, co-founder of Wikipedia.[3] _ -- https://en.wikipedia.org/wiki/Wiktionary
@@ -23,6 +22,12 @@ The bars on the logo contain the word "WIKI" encoded in Morse code.[38] It was c
 - "vicīdatum"
 </s>
 - https://la.wikipedia.org/wiki/Vicipaedia:Pagina_prima as 2022-01-27 uses "Vicidata"
+
+
+- https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual
+- https://www.wikidata.org/wiki/Wikidata:In_one_page
+  - https://upload.wikimedia.org/wikipedia/commons/8/8d/Wikidata-in-brief-1.0.pdf
+
 
 ### [`1603:3.12:6`] /Speciālis 	collēctiōnī de Vicidata Proprietātī/
 - speciālis, f/m, singular, https://en.wiktionary.org/wiki/specialis#Latin
@@ -46,6 +51,121 @@ The bars on the logo contain the word "WIKI" encoded in Morse code.[38] It was c
 - "Vicidata rēs identitāte"
 
 
+### [`1603:3.1603:45:1`] //
+
+
+
+- Fontem: [../45/1/1603_45_1.no1.tm.hxl.csv](../45/1/1603_45_1.no1.tm.hxl.csv)
+
+Exemplum:
+```
+Q1065	UN
+Q15925165	
+Q82151	FAO
+Q125761	ICAO
+Q689859	IFAD
+Q54129	ILO
+Q7804	IMF
+```
+- https://www.wikidata.org/wiki/Wikidata:Lexicographical_data
+
+<!--
+# Variant of
+# - https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#UN_member_states
+# - https://stackoverflow.com/questions/43258341/how-to-get-wikidata-labels-in-more-than-one-language
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+#SELECT DISTINCT ?adm0 ?iso3166p1n ?label (lang(?label) as ?label_lang)
+SELECT DISTINCT ?iso3166p1n ?label (lang(?label) as ?label_lang)
+{
+  ?adm0 wdt:P31/wdt:P279* wd:Q3624078;
+  rdfs:label ?label
+  OPTIONAL { ?adm0 wdt:P2082|wdt:P299 ?iso3166p1n. }
+  
+  #FILTER(?iso3166p1n > xsd:integer(0))
+}
+# order by ?adm0
+order by ASC(?iso3166p1n)
+LIMIT 1000
+-->
+
+<!--
+# https://stackoverflow.com/questions/46291486/wikidata-query-service-how-do-i-search-by-item
+# https://query.wikidata.org/#SELECT%20DISTINCT%20%3Fadm0%20%3Flabel%20%28lang%28%3Flabel%29%20as%20%3Flabel_lang%29%0A%7B%0A%20%20%3Fadm0%20wdt%3AP31%2Fwdt%3AP279%2a%20wd%3AQ3624078%3B%0A%20%20rdfs%3Alabel%20%3Flabel%0A%20%20VALUES%20%3Fadm0%20%7B%20wd%3AQ1065%20wd%3AQ986%20wd%3AQ983%20wd%3AQ974%7D%0A%20%20%23%20FILTER%20%28%3Fadm0%20IN%20%28wd%3AQ114%2C%20wd%3AQ181795%29%29%0A%7D%0Aorder%20by%20DESC%28%3Fadm0%29%20ASC%28%3Flabel_lang%29%0ALIMIT%201000
+
+SELECT DISTINCT ?adm0 ?label (lang(?label) as ?label_lang)
+{
+  ?adm0 wdt:P31/wdt:P279* wd:Q3624078;
+  rdfs:label ?label
+  VALUES ?adm0 { wd:Q1065 wd:Q986 wd:Q983 wd:Q974}
+  # FILTER (?adm0 IN (wd:Q114, wd:Q181795))
+}
+order by DESC(?adm0) ASC(?label_lang)
+LIMIT 1000
+-->
+
+
+<!--
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?item ?label (lang(?label) as ?label_lang)
+{
+  ?item wdt:P31/wdt:P279* wd:Q15925165;
+  rdfs:label ?label
+  VALUES ?item { wd:Q356694 wd:Q161718 wd:Q82151 wd:Q7809}
+
+}
+order by DESC(?adm0) ASC(?label_lang)
+LIMIT 1000
+
+-->
+
+<!--
+## https://w.wiki/4igC
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX wikibase: <http://wikiba.se/ontology#>
+PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT DISTINCT ?item ?label (lang(?label) as ?label_lang)
+{
+  ?item wdt:P31/wdt:P279* wd:Q15925165;
+  rdfs:label ?label
+  VALUES ?item { wd:Q356694 wd:Q161718 wd:Q82151 wd:Q7809}
+
+}
+order by DESC(?adm0) ASC(?label_lang)
+LIMIT 1000
+
+-->
+
+
+<!--
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples/en#The_number_of_existing_translations_for_diseases_in_Wikidata
+
+https://query.wikidata.org/#SELECT%20%3Fdisease%20%3Fdoid%20%3FenLabel%20%28count%28%3Flanguage%29%20as%20%3Flanguages%29%0AWHERE%0A%7B%0A%20%20%3Fdisease%20wdt%3AP699%20%3Fdoid%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3Flabel%20%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20rdfs%3Alabel%20%3FenLabel%20.%0A%20%20%20%20FILTER%20%28lang%28%3FenLabel%29%20%3D%20%22en%22%29%0A%20%20%20%0A%20%20%20%20BIND%20%28lang%28%3Flabel%29%20AS%20%3Flanguage%29%0A%7D%0Agroup%20by%20%3Fdisease%20%3Fdoid%20%3FenLabel%0Aorder%20by%20desc%28%3Flanguages%29
+
+
+SELECT ?disease ?doid ?enLabel (count(?language) as ?languages)
+WHERE
+{
+  ?disease wdt:P699 ?doid ;
+             rdfs:label ?label ;
+             rdfs:label ?enLabel .
+    FILTER (lang(?enLabel) = "en")
+   
+    BIND (lang(?label) AS ?language)
+}
+group by ?disease ?doid ?enLabel
+order by desc(?languages)
+-->
+
 ----
 
 <!-- ### Neo latin term for citizen science
@@ -61,3 +181,8 @@ Multiple languages of same item
 - https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Names_of_Wikipedia_articles_in_multiple_languages
 
 -->
+
+### Self notes
+
+- Help:Wikimedia language codes/lists/all
+  - https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all

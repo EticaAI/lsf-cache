@@ -72,6 +72,12 @@ hxladd --before --spec="#item+conceptum+numerordinatio=${PRAEFIXUM}{{(#item+conc
 # @TODO: only do this if hxl did not removed empty header files ,,,,,,
 sed -i '1d' "${ROOTDIR}/1603/47/15924/1603_47_15924.no1.tm.hxl.csv"
 
+if [ -f "${ROOTDIR}/1603/1/4/1603_1_4.no1.tm.hxl.csv" ]; then
+  rm "${ROOTDIR}/1603/1/4/1603_1_4.no1.tm.hxl.csv"
+fi
+
+cp "${ROOTDIR}/1603/47/15924/1603_47_15924.no1.tm.hxl.csv" "${ROOTDIR}/1603/1/4/1603_1_4.no1.tm.hxl.csv"
+
 # TODO: make the conversion to JSON format. Or enable the JavaScript to support tm.hxl.csv files
 
 hxladd \
@@ -86,6 +92,7 @@ hxladd \
   hxlcut --include="#x_item" |
   csvformat --out-tabs --skip-lines 2 \
     >"${ROOTDIR}/999999/999999/1603_47_15924.tsv"
+
 
 # | hxlreplace --tags="#x_item" --pattern="/(.)/" --substitution="" \
 # TypeError: 'TagPattern' object is not iterabl

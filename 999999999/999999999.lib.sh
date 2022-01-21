@@ -192,6 +192,7 @@ numerordinatio_neo_separatum() {
 # Globals:
 #   ROOTDIR
 #   FORCE_REDOWNLOAD
+#   FORCE_REDOWNLOAD_REM
 # Arguments:
 #   iri
 #   numerordinatio
@@ -231,12 +232,25 @@ file_download_if_necessary() {
 
   # return 0
 
-  if [ -z "$FORCE_REDOWNLOAD" ]; then
+  # echo "oi22 FORCE_REDOWNLOAD_REM [${FORCE_REDOWNLOAD_REM}] numerordinatio [$numerordinatio]"
+  # if [ -z "${FORCE_REDOWNLOAD_REM}" ]; then
+  if [ "${FORCE_REDOWNLOAD_REM}" != "" ]; then
+    # echo "testa se é igual"
+    _nomen_force=$(numerordinatio_neo_separatum "${FORCE_REDOWNLOAD_REM}" "_")
+    if [[ "$_nomen" == "$_nomen_force" ]]; then
+      # echo "_nomen_force [$_nomen_force] [$_nomen]"
+      _FORCE_REDOWNLOAD="1"
+    fi
+  fi
+
+  if [ -z "${FORCE_REDOWNLOAD}" ] && [ -z "${_FORCE_REDOWNLOAD}" ]; then
     if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
-    echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
   else
     echo "${FUNCNAME[0]} forced re-download [$objectivum_archivum]"
+    _FORCE_REDOWNLOAD=""
   fi
+
+  # echo "going to download again.."
 
   if [ "$downloader" == "hxltmcli" ]; then
     hxltmcli "$iri" >"$objectivum_archivum_temporarium"
@@ -248,7 +262,6 @@ file_download_if_necessary() {
 
   file_update_if_necessary "$archivum_typum" "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
-
 
 #######################################
 # Convert HXLTM to numerordinatio with these defaults:
@@ -295,14 +308,13 @@ file_convert_numerordinatio_de_hxltm() {
   echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
   hxlcut --exclude="#meta" \
-    "$fontem_archivum" \
-    | hxlselect --query="#item+conceptum+codicem>0" \
-    | hxladd --before --spec="#item+conceptum+numerordinatio=${_prefix}:{{#item+conceptum+codicem}}" \
-    | hxlreplace --map="${ROOTDIR}/1603/13/1603_13.r.hxl.csv" \
-    > "$objectivum_archivum_temporarium"
+    "$fontem_archivum" |
+    hxlselect --query="#item+conceptum+codicem>0" |
+    hxladd --before --spec="#item+conceptum+numerordinatio=${_prefix}:{{#item+conceptum+codicem}}" |
+    hxlreplace --map="${ROOTDIR}/1603/13/1603_13.r.hxl.csv" \
+      >"$objectivum_archivum_temporarium"
 
   #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
-
 
   # hxlreplace --map="1603/13/1603_13.r.hxl.csv" 999999/999999/2020/4/1/1603_45_1.no1.tm.hxl.csv
 

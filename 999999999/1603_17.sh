@@ -6,6 +6,7 @@
 #         USAGE:  ./999999999/1603_17.sh
 #                 FORCE_REDOWNLOAD=1 ./999999999/1603_17.sh
 #                 FORCE_CHANGED=1 ./999999999/1603_17.sh
+#                 FORCE_REDOWNLOAD_REM="1603_1_51" ./999999999/1603_17.sh
 #   DESCRIPTION:  ---
 #
 #       OPTIONS:  ---
@@ -29,9 +30,11 @@ DATA_1603_1_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NR
 # DATA_1603_17_17="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1281616178"
 DATA_1603_3_12_6="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1281616178"
 DATA_1603_45_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1894917893"
-DATA_1603_994_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1366500643"
+# DATA_1603_994_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1366500643"
+DATA_1603_84_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1366500643"
 DATA_1603_44_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1333477190"
 DATA_1603_44_142="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=455141043"
+DATA_1603_1_51="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=272891124"
 
 
 ROOTDIR="$(pwd)"
@@ -47,6 +50,11 @@ ROOTDIR="$(pwd)"
 file_download_if_necessary "$DATA_1603_1_1" "1603_1_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_1_1" "1" "0"
 
+
+# FORCE_REDOWNLOAD_REM="1603_1_51"
+file_download_if_necessary "$DATA_1603_1_51" "1603_1_51" "csv" "tm.hxl.csv" "hxltmcli" "1"
+file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
+
 # file_download_if_necessary "$DATA_1603_17_17" "1603_17_17" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # file_convert_numerordinatio_de_hxltm "1603_17_17" "1" "0"
 file_download_if_necessary "$DATA_1603_3_12_6" "1603_3_12_6" "csv" "tm.hxl.csv" "hxltmcli" "1"
@@ -58,8 +66,11 @@ file_convert_numerordinatio_de_hxltm "1603_44_142" "1" "0"
 file_download_if_necessary "$DATA_1603_44_1" "1603_44_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_44_1" "1" "0"
 
-file_download_if_necessary "$DATA_1603_994_1" "1603_994_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_994_1" "1" "0"
+# file_download_if_necessary "$DATA_1603_994_1" "1603_994_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# file_convert_numerordinatio_de_hxltm "1603_994_1" "1" "0"
+
+file_download_if_necessary "$DATA_1603_84_1" "1603_84_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
+file_convert_numerordinatio_de_hxltm "1603_84_1" "1" "0"
 
 file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_45_1" "1" "0"

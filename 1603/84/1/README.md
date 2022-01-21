@@ -1,9 +1,7 @@
-# [`1603:994`] /dentāle vocābulāriō/ <sup>(`994` is a temporary base code)</sup>
+# [`1603:84:1`] /Dictiōnāria dentāria/
 
 See discussion at https://github.com/EticaAI/multilingual-lexicography-automation/issues/8.
 
-## About naming
-994 is an temporary base code. `4` was decided based on letter D (as in dentāle), but 99 prefix was added to avoid any code explicitly added as numberic 4.
 
 ## Extra notes
 - Wikipedia on this subject
