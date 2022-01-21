@@ -1,5 +1,10 @@
 # Numerordĭnātĭo pre-compiled data tables and automation scripts
 
+> **Note: most (but not all) of this overview is being converted to machine processable format on [1603/1/1/1603_1_1.no1.tm.hxl.csv](1603/1/1/1603_1_1.no1.tm.hxl.csv)** (online version at [HXL-CPLP-Vocab_Auxilium-Humanitarium-API/1603_1_1.tm.hxl](https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=2095477004)). Some notable changes:
+>  - Base namespaces, instead of "group codes released by an organization" are renamed by suggested intent.
+>  - _TODO: add more explanations here_
+
+
 When referring to concepts, we use as exchange keys numeric codes with explicit self taxonomy.
 This decision both allows neutrality when working with multiple cultures, and already will feel familiar for people who have [administrative divisions](https://en.wikipedia.org/wiki/Administrative_division) where the baseline can change depending on who is considered a reference.
 
@@ -17,7 +22,6 @@ While decisions on how to organize, as of 2021-01, are still open, **such numeri
 
 The multilingual-lexicography-automation project will use `1603` as the main namespace to reference other references.
 
-<!-- > Note: if you need to reuse data and injest full namespace, but "1603" (... todo write more, maybe cite timestamp of https://github.com/HXL-CPLP/forum/blob/master/LICENSE) -->
 
 ### [`1603:1`] /Metadata overview of 1603 namespaces/
 - [1603/1](1603/1)
@@ -70,14 +74,6 @@ The multilingual-lexicography-automation project will use `1603` as the main nam
 
 </details>
 
-<!--
-## License
-
-Except by _[`999999999`] /namespace for automation scripts/_ and _`1613` /namespace for handcrafted data/_
-
-This repository contains mixed license and copyright owners.
--->
-
 
 ## [`1603:*`] Numerordĭnātĭo stability (global level)
 > Note: this section assumes data tables published by @EticaAI / @HXL-CPLP **and** global level reference between concepts. Every concept-group have both global numerordĭnātĭo and a local identificator recommended to be used when transposing.
@@ -109,10 +105,6 @@ This repository contains mixed license and copyright owners.
 ### Intentionally non-stable namespaces
 
 - [`1603:999999`]: namespace for local cache of data files.
-
-<!--
-- [`1603:999999999`]: this is just an alias for store automation scripts.
--->
 
 
 ## Disclaimers

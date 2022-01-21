@@ -29,11 +29,11 @@ ROOTDIR="$(pwd)"
 
 WORKDIR="${ROOTDIR}/999999/999999/2020/4/1/"
 
-if [ -f "${WORKDIR}/1603_1.no1.tm.hxl.csv" ]; then
-  rm "${WORKDIR}/1603_1.no1.tm.hxl.csv"
+if [ -f "${WORKDIR}/1603_1_1.no1.tm.hxl.csv" ]; then
+  rm "${WORKDIR}/1603_1_1.no1.tm.hxl.csv"
 fi
-if [ -f "${WORKDIR}/1603_2600_1.tm.hxl.tsv" ]; then
-  rm "${WORKDIR}/1603_2600_1.tm.hxl.tsv"
+if [ -f "${WORKDIR}/1603_1_2.tm.hxl.csv" ]; then
+  rm "${WORKDIR}/1603_1_2.tm.hxl.csv"
 fi
 if [ -f "${WORKDIR}/1603_3.no1.tm.hxl.csv" ]; then
   rm "${WORKDIR}/1603_3.no1.tm.hxl.csv"
@@ -41,15 +41,16 @@ fi
 if [ -f "${WORKDIR}/1603_994_1.no1.tm.hxl.csv" ]; then
   rm "${WORKDIR}/1603_994_1.no1.tm.hxl.csv"
 fi
-if [ -f "${WORKDIR}/1603_44_142.tm.hxl.csv" ]; then
-  rm "${WORKDIR}/1603_44_142.tm.hxl.csv"
+if [ -f "${WORKDIR}/1603_44_142.no1.tm.hxl.csv" ]; then
+  rm "${WORKDIR}/1603_44_142.no1.tm.hxl.csv"
 fi
 if [ -f "${WORKDIR}/1603_45_1.no1.tm.hxl.csv" ]; then
   rm "${WORKDIR}/1603_45_1.no1.tm.hxl.csv"
 fi
 
-cp "${ROOTDIR}/1603/1/1603_1.no1.tm.hxl.csv" "${WORKDIR}/1603_1.no1.tm.hxl.csv"
-cp "${ROOTDIR}/1603/2600/1/1603_2600_1.tm.hxl.tsv" "${WORKDIR}/1603_2600_1.tm.hxl.tsv"
+cp "${ROOTDIR}/1603/1/1/1603_1_1.no1.tm.hxl.csv" "${WORKDIR}/1603_1_1.no1.tm.hxl.csv"
+cp "${ROOTDIR}/1603/1/2/1603_1_2.tm.hxl.csv" "${WORKDIR}/1603_1_2.tm.hxl.csv"
+# cp "${ROOTDIR}/1603/2600/1/1603_2600_1.tm.hxl.tsv" "${WORKDIR}/1603_2600_1.tm.hxl.tsv"
 cp "${ROOTDIR}/1603/994/1/1603_994_1.no1.tm.hxl.csv" "${WORKDIR}/1603_994_1.no1.tm.hxl.csv"
-cp "${ROOTDIR}/999999/1603/44/142/1603_44_142.tm.hxl.csv" "${WORKDIR}/1603_44_142.tm.hxl.csv"
+cp "${ROOTDIR}/1603/44/142/1603_44_142.no1.tm.hxl.csv" "${WORKDIR}/1603_44_142.no1.tm.hxl.csv"
 cp "${ROOTDIR}/1603/45/1/1603_45_1.no1.tm.hxl.csv" "${WORKDIR}/1603_45_1.no1.tm.hxl.csv"

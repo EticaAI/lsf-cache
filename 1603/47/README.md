@@ -1,4 +1,4 @@
-# 1603:47
+# [`1603:47`] /normās interindustriās/
 
 ```yaml
 ### '47'?
@@ -25,3 +25,15 @@
   qaa-Zyyy:
     '0': 'Latn'
 ```
+
+### Latinas viva ad anglicum "<s>international</s> industry standards"
+- normae, f, plural, https://en.wiktionary.org/wiki/norma#Latin
+- normās, f, plural, (Accusative), https://en.wiktionary.org/wiki/norma#Latin
+  - http://ducange.enc.sorbonne.fr/NORMA
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=norma
+- industriās, n, plural, (Accusative	) https://en.wiktionary.org/wiki/industria#Latin
+- inter (+ accusative), preposition, https://en.wiktionary.org/wiki/inter#Latin
+- "normās interindustriās"
+
+
+- https://en.wikipedia.org/wiki/International_standard

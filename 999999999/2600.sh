@@ -264,7 +264,9 @@ UNICODE_UCD_DERIVED_NUMERIC_TYPE="https://www.unicode.org/Public/UCD/latest/ucd/
 1603_87__external_fetch__DerivedNumericType
 1603_87__process_DerivedNumericType
 
-./999999999/0/2600.py --actionem-tabulam-numerae --tabulam-numerae-finale 10 > "${ROOTDIR}/1603/1/2/1603_1_2.tm.hxl.tsv"
-./999999999/0/2600.py --actionem-tabulam-numerae --tabulam-numerae-finale 100 > "${ROOTDIR}/1603/1/20/1603_1_20.tm.hxl.tsv"
+# ./999999999/0/2600.py --actionem-tabulam-numerae --tabulam-numerae-finale 10 > "${ROOTDIR}/1603/1/2/1603_1_2.tm.hxl.tsv"
+./999999999/0/2600.py --actionem-tabulam-numerae --tabulam-numerae-finale 9 | hxlclean > "${ROOTDIR}/1603/1/2/1603_1_2.tm.hxl.csv"
+# ./999999999/0/2600.py --actionem-tabulam-numerae --tabulam-numerae-finale 100 > "${ROOTDIR}/1603/1/20/1603_1_20.tm.hxl.tsv"
+./999999999/0/2600.py --actionem-tabulam-numerae --tabulam-numerae-finale 100 | hxlclean > "${ROOTDIR}/1603/1/20/1603_1_20.tm.hxl.csv"
 
 # https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt
