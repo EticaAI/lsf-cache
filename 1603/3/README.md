@@ -27,6 +27,12 @@ The bars on the logo contain the word "WIKI" encoded in Morse code.[38] It was c
 - https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual
 - https://www.wikidata.org/wiki/Wikidata:In_one_page
   - https://upload.wikimedia.org/wikipedia/commons/8/8d/Wikidata-in-brief-1.0.pdf
+- https://sinaahmadi.github.io/posts/10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
+- https://en.wikibooks.org/wiki/SPARQL
+
+> TODO: is possible also generate diffs; see
+> - https://www.wikidata.org/wiki/Help:Wikimedia_language_codes/lists/all
+>   - https://wikidata-todo.toolforge.org/sparql_rc.php?start=last+week&end=&user_lang=&sort_mode=last_edit&no_bots=1&skip_unchanged=1&sparql=SELECT%0A%20%20%3Fitem%20%0A%20%20%3Fc%20%28CONTAINS%28%3Fc%2C%22-%22%29%20as%20%3Fsubtag%29%0A%20%20%3Fwdlabelen%0A%20%20%28CONCAT%28%22%5B%5B%3Aen%3A%22%2C%3Fenwikipeda%2C%22%5Cu007C%22%2C%3Fenwikipeda%2C%22%5D%5D%22%29%20as%20%3Fwikipedia_link_en%29%0A%20%20%3Flang%0A%20%20%3Fwdlabelinlang%0A%20%20%28CONCAT%28%22%5B%5B%3A%22%2C%3Flang%2C%22%3A%22%2C%3Fwikipeda%2C%22%5Cu007C%22%2C%3Fwikipeda%2C%22%5D%5D%22%29%20as%20%3Fwikipedia_link%29%0AWHERE%0A%7B%0A%20%20VALUES%20%3Flang%20%7B%20%22fr%22%20%7D%0A%20%20%3Fitem%20wdt%3AP424%20%3Fc%20.%0A%20%20hint%3APrior%20hint%3ArangeSafe%20true%20.%0A%20%20MINUS%7B%3Fitem%20wdt%3AP31%20wd%3AQ47495990%7D%0A%20%20MINUS%7B%3Fitem%20wdt%3AP31%2Fwdt%3AP279%2A%20wd%3AQ14827288%7D%20%23exclude%20Wikimedia%20projects%0A%20%20MINUS%7B%3Fitem%20wdt%3AP31%2Fwdt%3AP279%2A%20wd%3AQ17442446%7D%20%23exclude%20Wikimedia%20internal%20stuff%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fwdlabelinlang%20.%20FILTER%28%20lang%28%3Fwdlabelinlang%29%3D%20%22fr%22%20%29%20%7D%0A%20%20OPTIONAL%20%7B%20%3Fitem%20rdfs%3Alabel%20%3Fwdlabelen%20.%20FILTER%28lang%28%3Fwdlabelen%29%3D%22en%22%29%20%7D%0A%20%20OPTIONAL%20%7B%20%5B%5D%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AinLanguage%20%3Flang%3B%20schema%3AisPartOf%20%2F%20wikibase%3AwikiGroup%20%22wikipedia%22%20%3B%20schema%3Aname%20%3Fwikipeda%20%7D%20%0A%20%20OPTIONAL%20%7B%20%5B%5D%20schema%3Aabout%20%3Fitem%20%3B%20schema%3AinLanguage%20%22en%22%3B%20schema%3AisPartOf%20%2F%20wikibase%3AwikiGroup%20%22wikipedia%22%20%3B%20schema%3Aname%20%3Fenwikipeda%20%7D%20%0A%7D%0AORDER%20BY%20%3Fc
 
 
 ### [`1603:3.12:6`] /Speciālis 	collēctiōnī de Vicidata Proprietātī/
@@ -52,8 +58,6 @@ The bars on the logo contain the word "WIKI" encoded in Morse code.[38] It was c
 
 
 ### [`1603:3.1603:45:1`] //
-
-
 
 - Fontem: [../45/1/1603_45_1.no1.tm.hxl.csv](../45/1/1603_45_1.no1.tm.hxl.csv)
 
