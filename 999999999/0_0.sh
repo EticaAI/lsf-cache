@@ -39,6 +39,9 @@ ROOTDIR="$(pwd)"
 printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/2600.sh"
 bash "${ROOTDIR}/999999999/2600.sh"
 
+printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603_17.sh"
+bash "${ROOTDIR}/999999999/1603_17.sh"
+
 printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603_87.sh"
 sh "${ROOTDIR}/999999999/1603_87.sh"
 
@@ -51,9 +54,11 @@ bash "${ROOTDIR}/999999999/1603_47_639_3.sh"
 printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603_45_49.sh"
 bash "${ROOTDIR}/999999999/1603_45_49.sh"
 
+printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603_3_1603_45_1.sh"
+bash "${ROOTDIR}/999999999/1603_3_1603_45_1.sh"
+
 printf '\n\t\e[1;32m%-6s\e[m\n' "9999999999/1603_45_16.sh"
 bash "${ROOTDIR}/999999999/1603_45_16.sh"
-
 
 
 # sudo apt install fonts-noto fonts-noto-color-emoji

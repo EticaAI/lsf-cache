@@ -327,6 +327,107 @@ file_convert_numerordinatio_de_hxltm() {
 }
 
 #######################################
+# (...)
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (dfault "0", from real namespace)
+# Outputs:
+#   Convert files
+#######################################
+file_translate_csv_de_numerordinatio_q() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no1.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.wikiq.tm.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+  objectivum_archivum_temporarium_b="${ROOTDIR}/999999/0/$_nomen.q.txt"
+  objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
+  objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.csv"
+
+  # echo "$fontem_archivum"
+
+  # echo "file_translate_csv_de_numerordinatio_q $1 TODO"
+  # echo "fontem_archivum [$fontem_archivum]"
+  # echo "objectivum_archivum [$objectivum_archivum]"
+  # echo "objectivum_archivum_temporarium [$objectivum_archivum_temporarium]"
+  # head -n 2 "$fontem_archivum"
+  hxlcut \
+    --include="#item+rem+i_qcc+is_zxxx+ix_wikiq,#item+conceptum+numerordinatio" \
+    "$fontem_archivum" |
+    hxlselect --query="#item+rem+i_qcc+is_zxxx+ix_wikiq>0" \
+      >"$objectivum_archivum_temporarium"
+
+  hxlcut \
+    --include="#item+rem+i_qcc+is_zxxx+ix_wikiq" \
+    "$fontem_archivum" |
+    hxlselect --query="#item+rem+i_qcc+is_zxxx+ix_wikiq>0" \
+      >"$objectivum_archivum_temporarium_b"
+
+  sed -i '1,2d' "${objectivum_archivum_temporarium_b}"
+
+  # sort --numeric-sort < "$objectivum_archivum_temporarium_b" > "$objectivum_archivum_temporarium_b_u"
+  # sort --version-sort < "$objectivum_archivum_temporarium_b" > "$objectivum_archivum_temporarium_b_u"
+  # sort --version-sort --field-separator="Q" < "$objectivum_archivum_temporarium_b" > "$objectivum_archivum_temporarium_b_u"
+  sort --version-sort --field-separator="Q" <"$objectivum_archivum_temporarium_b" | uniq >"$objectivum_archivum_temporarium_b_u"
+
+  "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --query <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv \
+    > "$objectivum_archivum_temporarium_b_u_wiki"
+  # "$objectivum_archivum_temporarium_b_u"
+
+  rm "$objectivum_archivum_temporarium"
+  rm "$objectivum_archivum_temporarium_b"
+  rm "$objectivum_archivum_temporarium_b_u"
+
+  mv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
+
+  return 0
+
+  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  hxlcut --exclude="#meta" \
+    "$fontem_archivum" |
+    hxlselect --query="#item+conceptum+codicem>0" |
+    hxladd --before --spec="#item+conceptum+numerordinatio=${_prefix}:{{#item+conceptum+codicem}}" |
+    hxlreplace --map="${ROOTDIR}/1603/13/1603_13.r.hxl.csv" \
+      >"$objectivum_archivum_temporarium"
+
+  #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
+
+  # hxlreplace --map="1603/13/1603_13.r.hxl.csv" 999999/999999/2020/4/1/1603_45_1.no1.tm.hxl.csv
+
+  # cp "$fontem_archivum" "$objectivum_archivum_temporarium"
+
+  # Strip empty header (already is likely to be ,,,,,,)
+  sed -i '1d' "${objectivum_archivum_temporarium}"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+#######################################
 # contains(string, substring)
 #
 # Returns 0 if the specified string contains the specified substring,
