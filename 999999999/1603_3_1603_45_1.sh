@@ -39,6 +39,6 @@ ROOTDIR="$(pwd)"
 
 file_translate_csv_de_numerordinatio_q "1603_45_1" "0" "0"
 
-echo "TODO $1"
+# echo "TODO $1"
 
 # Use this to fetch translations from 1603_45_1

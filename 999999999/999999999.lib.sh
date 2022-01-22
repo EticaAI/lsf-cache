@@ -326,8 +326,15 @@ file_convert_numerordinatio_de_hxltm() {
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
 
+
+# @TODO: create helper to remove empty translations;
+#        @see https://github.com/wireservice/csvkit/issues/962
+#        Potential example:
+#        csvstat --csv 1603/45/1/1603_45_1.wikiq.tm.csv
+
 #######################################
-# (...)
+# Extract Wikipedia QIDs from numerordinatio no1.tm.hxl.csv and generate an
+# wikiq.tm.csv
 #
 # Globals:
 #   ROOTDIR
@@ -342,6 +349,7 @@ file_translate_csv_de_numerordinatio_q() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
   est_temporarium_objectivum="${3:-"0"}"
+
 
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
@@ -364,6 +372,10 @@ file_translate_csv_de_numerordinatio_q() {
   objectivum_archivum_temporarium_b="${ROOTDIR}/999999/0/$_nomen.q.txt"
   objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
   objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.csv"
+
+  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
   # echo "$fontem_archivum"
 
@@ -400,31 +412,11 @@ file_translate_csv_de_numerordinatio_q() {
   rm "$objectivum_archivum_temporarium_b"
   rm "$objectivum_archivum_temporarium_b_u"
 
-  mv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
+  # mv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
 
   return 0
-
-  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
-
-  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
-
-  hxlcut --exclude="#meta" \
-    "$fontem_archivum" |
-    hxlselect --query="#item+conceptum+codicem>0" |
-    hxladd --before --spec="#item+conceptum+numerordinatio=${_prefix}:{{#item+conceptum+codicem}}" |
-    hxlreplace --map="${ROOTDIR}/1603/13/1603_13.r.hxl.csv" \
-      >"$objectivum_archivum_temporarium"
-
-  #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
-
-  # hxlreplace --map="1603/13/1603_13.r.hxl.csv" 999999/999999/2020/4/1/1603_45_1.no1.tm.hxl.csv
-
-  # cp "$fontem_archivum" "$objectivum_archivum_temporarium"
-
-  # Strip empty header (already is likely to be ,,,,,,)
-  sed -i '1d' "${objectivum_archivum_temporarium}"
-
-  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
 
 #######################################

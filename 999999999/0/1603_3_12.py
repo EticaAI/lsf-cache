@@ -34,6 +34,7 @@
 #    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-quod-sparql
 #    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --wikidata-link
 #    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --tsv > 999999/0/test.tsv
+#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv > 999999/0/test.csv
 
 # TODO: https://sinaahmadi.github.io/posts/10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
 
@@ -632,10 +633,7 @@ class CLI_2600:
                     'query': payload_query
                 })
 
-                # print('oi tsv', r.text)
-                # print('r.request.headers', r.request.headers)
-                # print('r.headers', r.headers)
-                print(r.text)
+                print(r.text.strip())
                 # print(r.content)
                 return self.EXIT_OK
 
