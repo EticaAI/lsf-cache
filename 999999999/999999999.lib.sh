@@ -29,6 +29,10 @@
 
 ROOTDIR="$(pwd)"
 
+# If columns are defined (and not empty), we may remove some numbers before publishing
+NUMERORDINATIO_STATUS_CONCEPTUM_MINIMAM="${NUMERORDINATIO_STATUS_CONCEPTUM_MINIMAM:-10}"
+NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM="${NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM:-10}"
+
 # FORCE_REDOWNLOAD="1" # Use if want ignore 1day local cache
 # FORCE_CHANGED="1" # Use if want default 5 min change
 
@@ -116,6 +120,8 @@ file_update_if_necessary() {
   objectivum_archivum="$3"
 
   # echo "starting file_update_if_necessary ..."
+  # echo "fontem_archivum $fontem_archivum"
+  # echo "objectivum_archivum $objectivum_archivum"
 
   case "${formatum_archivum}" in
   csv)
@@ -267,9 +273,13 @@ file_download_if_necessary() {
 # Convert HXLTM to numerordinatio with these defaults:
 # - '#meta' are removed
 # - Fields with empty or zeroed concept code are excluded
+# - '#status+conceptum' (if defined) less than 0 are excluded
+# - '#status' are removed
 #
 # Globals:
 #   ROOTDIR
+#   NUMERORDINATIO_STATUS_CONCEPTUM_MINIMAM
+#   NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM
 # Arguments:
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
@@ -307,15 +317,23 @@ file_convert_numerordinatio_de_hxltm() {
 
   echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
+  # @TODO: implement NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM
+  #        instead of hardcode 1|2|3|4|5|6|7|8|9
+
   hxlcut --exclude="#meta" \
     "$fontem_archivum" |
     hxlselect --query="#item+conceptum+codicem>0" |
+    hxlselect --query='#status+conceptum+codicem~^(1|2|3|4|5|6|7|8|9)$' --reverse |
     hxladd --before --spec="#item+conceptum+numerordinatio=${_prefix}:{{#item+conceptum+codicem}}" |
     hxlreplace --map="${ROOTDIR}/1603/13/1603_13.r.hxl.csv" \
       >"$objectivum_archivum_temporarium"
 
-  #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
+  #     hxlcut --exclude="#status" |
+  # hxlselect --query='#status+conceptum!~(-1|-2|-3|-4|-5|-6|-7|-8|-9)' |
+  # hxlselect --query="#status+conceptum!=" --query="#status+conceptum<0" --reverse |
 
+  #| hxlreplace --tags="#item+conceptum+numerordinatio" --pattern="_" --substitution=":" \
+  # hxlselect --query="#status+conceptum!=" --query="#status+conceptum<0" --reverse |
   # hxlreplace --map="1603/13/1603_13.r.hxl.csv" 999999/999999/2020/4/1/1603_45_1.no1.tm.hxl.csv
 
   # cp "$fontem_archivum" "$objectivum_archivum_temporarium"
@@ -325,6 +343,14 @@ file_convert_numerordinatio_de_hxltm() {
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
+
+
+## Tem definidos
+# cat 999999/1603/1/1/1603_1_1.tm.hxl.csv | hxlselect --query="#status+conceptum<0"
+# cat 999999/1603/1/1/1603_1_1.tm.hxl.csv | hxlselect --query='#status+conceptum+codicem~^(1|2|3|4|5|6|7|8|9)$' --reverse
+## Nao tem definidos
+# cat 1603/45/1/1603_45_1.no1.tm.hxl.csv | hxlselect --query="#status+conceptum<0"
+# cat 1603/45/1/1603_45_1.no1.tm.hxl.csv | hxlselect --query='#status+conceptum+codicem~^(1|2|3|4|5|6|7|8|9)$' --reverse
 
 
 # @TODO: create helper to remove empty translations;
@@ -349,7 +375,6 @@ file_translate_csv_de_numerordinatio_q() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
   est_temporarium_objectivum="${3:-"0"}"
-
 
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
@@ -405,7 +430,7 @@ file_translate_csv_de_numerordinatio_q() {
 
   "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --query <"$objectivum_archivum_temporarium_b_u" |
     ./999999999/0/1603_3_12.py --actionem-sparql --csv \
-    > "$objectivum_archivum_temporarium_b_u_wiki"
+      >"$objectivum_archivum_temporarium_b_u_wiki"
   # "$objectivum_archivum_temporarium_b_u"
 
   rm "$objectivum_archivum_temporarium"
