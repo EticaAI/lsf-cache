@@ -76,3 +76,13 @@ file_convert_numerordinatio_de_hxltm "1603_84_1" "1" "0"
 
 file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_45_1" "1" "0"
+
+
+# TODO: maybe move this to somewhere else
+# TODO: fix the corner cases where there is more than one concept,
+#       as is the case with the language table itself
+#       cat 1603/1/51/1603_1_51.no1.tm.hxl.csv | hxlclean
+# file_translate_csv_de_numerordinatio_q "1603_1_51" "0" "0"
+
+
+file_translate_csv_de_numerordinatio_q "1603_45_1" "0" "0"

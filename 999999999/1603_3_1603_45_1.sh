@@ -11,7 +11,6 @@
 #       OPTIONS:  ---
 #
 #  REQUIREMENTS:  - Bash shell (or better)
-#                 - wikibase-cli (https://github.com/maxlath/wikibase-cli)
 #          BUGS:  ---
 #         NOTES:  ---
 #        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>
