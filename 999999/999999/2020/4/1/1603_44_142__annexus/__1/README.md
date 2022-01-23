@@ -31,7 +31,7 @@ Eversão das bordas do tecido, de forma estrelada, com presença de vestígios d
 Determina o sentido do projetil de arma de fogo no osso, em especial no crânio. A tábua óssea primeiro rompida apresenta diâmetro menor que a segunda.
 
 ### `10_5` /orla de Chavigny/
-- Zona de tatuagem deChavigny
+- Zona de tatuagem de Chavigny
 
 Resultante da pólvora incombusta incrustada na pele **que não se removem com o lavado**.
 

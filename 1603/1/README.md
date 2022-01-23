@@ -80,3 +80,10 @@
   - http://micmap.org/dicfro/search/gaffiot/archium
   - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=archium
 - ...Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo
+
+
+<!--
+- statūs, https://en.wiktionary.org/wiki/status#Latin
+  - http://www.perseus.tufts.edu/hopper/resolveform?type=exact&lookup=status&lang=latin
+  - http://ducange.enc.sorbonne.fr/STATUS
+-->

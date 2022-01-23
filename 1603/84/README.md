@@ -26,10 +26,21 @@ No links for books on `1603:84` for these reasons:
 - vocābulāria, https://en.wiktionary.org/wiki/vocabularium#Latin
 - dens, https://en.wiktionary.org/wiki/dens#Latin -->
 
-## [`1603:84:1`] /dictiōnāria dentāria/
+## [`1603:84:1`] /Dictiōnāria dentālium/@lat-Latn
 
-### Neo latin term for /dictiōnāria dentāria/
+### Neo latin term for /Dictiōnāria dentāriōrum/
 - dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
-- dentālia, n, plural, https://en.wiktionary.org/wiki/dentalis#Latin
-- dentāria, n, plural, https://en.wiktionary.org/wiki/dentarius#Latin
+- dentālia, n, plural, https://en.wiktionary.org/wiki/dentalis#Latin (not the same)
+- dentāria, n, plural, https://en.wiktionary.org/wiki/dentarius#Latin (not the same)
   - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=dentarius
+- dentāriōrum, n, plural, (Gengitive) https://en.wiktionary.org/wiki/dentarius#Latin
+- ... Dictiōnāria dentāriōrum
+
+- dictiōnāria, n, plural, (nominative) https://en.wiktionary.org/wiki/dictionarium#Latin
+- dentium, m, plural, (gengitive), https://en.wiktionary.org/wiki/dens#Latin
+- dentālium, n/m/f, plural, (gengitive), https://en.wiktionary.org/wiki/dentalis#Latin
+- ... **Dictiōnāria dentālium**
+
+- /Dictiōnāria dentālium/@lat-Latn:
+  - /Dicionários dentais/@por-Latn:
+  - /Dental dictionaries/@por-Latn:
