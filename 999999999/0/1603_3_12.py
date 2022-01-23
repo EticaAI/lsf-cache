@@ -629,7 +629,7 @@ class CLI_2600:
                     headers = {'Accept': 'text/csv'}
 
                 payload_query = "".join(full_query)
-                r = requests.get(sparql_backend, headers=headers, params={
+                r = requests.post(sparql_backend, headers=headers, data={
                     'query': payload_query
                 })
 
