@@ -35,6 +35,7 @@
 #    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --wikidata-link
 #    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --tsv > 999999/0/test.tsv
 #    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv > 999999/0/test.csv
+#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm
 
 # TODO: https://sinaahmadi.github.io/posts/10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
 
@@ -92,7 +93,32 @@ STDIN = sys.stdin.buffer
 #   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 # }
 
+
+def hxltm_hastag_de_csvhxlated(csv_caput: list) -> list:
+    """hxltm_hastag_de_csvhxlated [summary]
+
+    Make this type of conversion:
+    - 'item__conceptum__codicem' => '#item+conceptum+codicem'
+    - 'item__rem__i_ara__is_arab' => '#item+rem+i_ara+is_arab'
+    - '' => ''
+
+    Args:
+        csv_caput (list): Array of input items
+
+    Returns:
+        [list]:
+    """
+    resultatum = []
+    for item in csv_caput:
+        if len(item):
+            resultatum.append('#' + item.replace('__', '+').replace('?', ''))
+        else:
+            resultatum.append('')
+    return resultatum
+
 # https://stackoverflow.com/questions/43258341/how-to-get-wikidata-labels-in-more-than-one-language
+
+
 class CS1603z3z12:
     """ [summary]
 
@@ -194,12 +220,12 @@ class CS1603z3z12:
 #   }
 # }
 
-
     def query(self):
         qid = ['wd:' + x for x in self.qid if isinstance(x, str)]
         # select = '?item ' + " ".join(self._query_linguam())
 
-        select = ['?item']
+        # select = ['(?item AS ?item__conceptum__codicem)']
+        select = ['(STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem)']
         filter_otional = []
         for pair in self.D1613_1_51_langpair:
             select.append('?' + pair[1])
@@ -222,8 +248,10 @@ SELECT {select}
 WHERE
 {{
   VALUES ?item {{ {qitems} }}
+  bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
 {langfilter}
 }}
+ORDER BY ASC (?id_numeric)
         """.format(
             qitems=" ".join(qid),
             select=" ".join(select),
@@ -325,11 +353,23 @@ class CLI_2600:
             const=True,
             nargs='?'
         )
+
         neo_codex.add_argument(
             '--tsv',
             help='Generate TSV output (from piped in query)',
             metavar='',
             dest='tsv',
+            const=True,
+            nargs='?'
+        )
+
+        neo_codex.add_argument(
+            '--hxltm',
+            help='Generate HXL-tagged output (from piped in query). ' +
+            'Concepts use #item+conceptum+codicem instead ' +
+            'of #item+code+v_wiki_q',
+            metavar='',
+            dest='hxltm',
             const=True,
             nargs='?'
         )
@@ -624,8 +664,13 @@ class CLI_2600:
                 # https://www.mediawiki.org/wiki/Wikidata_Query_Service/User_Manual/en#Supported_formats
 
                 if self.pyargs.tsv:
+                    separator = "\t"
                     headers = {'Accept': 'text/tab-separated-values'}
                 if self.pyargs.csv:
+                    separator = ","
+                    headers = {'Accept': 'text/csv'}
+                if self.pyargs.hxltm:
+                    # headers = {'Accept': 'text/tab-separated-values'}
                     headers = {'Accept': 'text/csv'}
 
                 payload_query = "".join(full_query)
@@ -633,7 +678,32 @@ class CLI_2600:
                     'query': payload_query
                 })
 
-                print(r.text.strip())
+                # @TODO: --tsv --hxltm is know to be bugged (not sure if
+                #        Wikidata result already skip values)
+
+                if self.pyargs.hxltm:
+                    result_string = r.text.strip()
+
+                    # @TODO: this likely to break with fields with newlines.
+                    #        however no testing sample exists at the moment.
+                    #        Eventually needs be checked.
+                    lines = result_string.splitlines()
+                    # caput = hxltm_hastag_de_csvhxlated(next(iter(lines)).split(","))
+                    caput_crudum = lines.pop(0)
+                    # print('caput_crudum', caput_crudum)
+                    caput = hxltm_hastag_de_csvhxlated(caput_crudum.split(','))
+                    print(separator.join(caput))
+                    print("\n".join(lines))
+
+                    # reader = csv.reader(lines, delimiter="\t")
+                    # caput = hxltm_hastag_de_csvhxlated(next(reader))
+                    # print(separator.join(caput))
+                    # for row in reader:
+                    #     print(separator.join(row))
+                else:
+                    print(r.text.strip())
+
+                # TODO: generate explicit error messages and return code
                 # print(r.content)
                 return self.EXIT_OK
 

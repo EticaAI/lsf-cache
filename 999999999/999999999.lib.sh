@@ -127,6 +127,7 @@ file_update_if_necessary() {
   csv)
     is_valid=$(csvclean --dry-run "$fontem_archivum")
     if [ "$is_valid" != "No errors." ]; then
+      echo "$fontem_archivum"
       echo "$is_valid"
       return 1
     fi
@@ -142,7 +143,8 @@ file_update_if_necessary() {
     # sha256sum "$objectivum_archivum"
     # sha256sum "$fontem_archivum"
 
-    if [ -s "$objectivum_archivum" ] && [ "$(cmp "$fontem_archivum" "$objectivum_archivum")" = "" ]; then
+    # if [ -s "$objectivum_archivum" ] && [ "$(cmp "$fontem_archivum" "$objectivum_archivum")" = "" ]; then
+    if [ -s "$objectivum_archivum" ] && [ "$(cmp --silent "$fontem_archivum" "$objectivum_archivum")" = "" ]; then
       # echo "INFO: already equal. Temporary will be discarted"
       # echo "      [$fontem_archivum]"
       # echo "      [$objectivum_archivum]"
@@ -393,17 +395,17 @@ file_translate_csv_de_numerordinatio_q() {
   fi
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no1.tm.hxl.csv"
-  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.wikiq.tm.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.wikiq.tm.hxl.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
   objectivum_archivum_temporarium_b="${ROOTDIR}/999999/0/$_nomen.q.txt"
   objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
-  objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.csv"
+  objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
 
   # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
 
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+  # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 
   echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
 
@@ -445,7 +447,7 @@ file_translate_csv_de_numerordinatio_q() {
   sort --version-sort --field-separator="Q" <"$objectivum_archivum_temporarium_b" | uniq >"$objectivum_archivum_temporarium_b_u"
 
   "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --query <"$objectivum_archivum_temporarium_b_u" |
-    ./999999999/0/1603_3_12.py --actionem-sparql --csv \
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
       >"$objectivum_archivum_temporarium_b_u_wiki"
   # "$objectivum_archivum_temporarium_b_u"
 
