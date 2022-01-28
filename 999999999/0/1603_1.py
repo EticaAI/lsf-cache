@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # ==============================================================================
 #
-#          FILE:  1603_3_12.py
+#          FILE:  1603_1.py
 #
-#         USAGE:  ./999999999/0/1603_3_12.py
-#                 ./999999999/0/1603_3_12.py --help
-#                 NUMERORDINATIO_BASIM="/dir/ndata" ./999999999/0/1603_3_12.py
+#         USAGE:  ./999999999/0/1603_1.py
+#                 ./999999999/0/1603_1.py --help
+#                 NUMERORDINATIO_BASIM="/dir/ndata" ./999999999/0/1603_1.py
 #
 #   DESCRIPTION:  ---
 #
@@ -22,20 +22,20 @@
 #       LICENSE:  Public Domain dedication or Zero-Clause BSD
 #                 SPDX-License-Identifier: Unlicense OR 0BSD
 #       VERSION:  v0.5.0
-#       CREATED:  2022-01-21 17:07 UTC created. Based on 2600.py
+#       CREATED:  2022-01-27 17:07 UTC created. Based on 1603_3_12.py
 #      REVISION:  ---
 # ==============================================================================
 
 # pytest
-#    python3 -m doctest ./999999999/0/1603_3_12.py
+#    python3 -m doctest ./999999999/0/1603_1.py
 
-#    ./999999999/0/1603_3_12.py
-#    NUMERORDINATIO_BASIM="/external/ndata" ./999999999/0/1603_3_12.py
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --wikidata-link
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --tsv > 999999/0/test.tsv
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv > 999999/0/test.csv
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm
+#    ./999999999/0/1603_1.py
+#    NUMERORDINATIO_BASIM="/external/ndata" ./999999999/0/1603_1.py
+#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_1.py --actionem-sparql --query
+#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_1.py --actionem-sparql --query | ./999999999/0/1603_1.py --actionem-sparql --wikidata-link
+#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_1.py --actionem-sparql --query | ./999999999/0/1603_1.py --actionem-sparql --tsv > 999999/0/test.tsv
+#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_1.py --actionem-sparql --query | ./999999999/0/1603_1.py --actionem-sparql --csv > 999999/0/test.csv
+#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_1.py --actionem-sparql --query | ./999999999/0/1603_1.py --actionem-sparql --csv --hxltm
 
 # TODO: https://sinaahmadi.github.io/posts/10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
 
@@ -81,7 +81,7 @@ STDIN = sys.stdin.buffer
 
 # a aa aaa
 # printf "30160\n1830260\n109830360\n" | ./999999999/0/2600.py --actionem-decifram
-# ./999999999/0/1603_3_12.py --actionem-quod-sparql
+# ./999999999/0/1603_1.py --actionem-quod-sparql
 
 
 # SELECT ?item ?itemLabel
@@ -312,6 +312,20 @@ class CLI_2600:
             'Defaults to tab "\t"',
             dest='resultatum_separato',
             default="\t",
+            nargs='?'
+        )
+
+        hxlcaput = parser.add_argument_group(
+            "sparql",
+            "(DEFAULT USE) SPARQL query")
+
+        hxlcaput.add_argument(
+            '--actionem-sparql',
+            help='Define mode to operate with generation of SPARQL ' +
+            'queries',
+            metavar='',
+            dest='actionem_sparql',
+            const=True,
             nargs='?'
         )
 
@@ -555,21 +569,21 @@ class CLI_2600:
 
         self.pyargs = pyargs
 
-        # cs1603_3_12 = cs1603_3_12()
-        cs1603_3_12 = CS1603z3z12()
+        # cs1603_1 = cs1603_1()
+        cs1603_1 = CS1603z3z12()
 
-        # cs1603_3_12 = cs1603_3_12()
+        # cs1603_1 = cs1603_1()
 
         # print('self.pyargs', self.pyargs)
 
-        # cs1603_3_12.est_verbum_limiti(args.verbum_limiti)
-        cs1603_3_12.est_resultatum_separato(args.resultatum_separato)
+        # cs1603_1.est_verbum_limiti(args.verbum_limiti)
+        cs1603_1.est_resultatum_separato(args.resultatum_separato)
 
         # if args.codex_verbum_tabulae:
-        #     cs1603_3_12.est_codex_verbum_tabulae(args.codex_verbum_tabulae)
+        #     cs1603_1.est_codex_verbum_tabulae(args.codex_verbum_tabulae)
 
         # if args.neo_scripturam_tabulae:
-        #     cs1603_3_12.est_neo_scripturam_tabulae(
+        #     cs1603_1.est_neo_scripturam_tabulae(
         #         args.neo_scripturam_tabulae, args.neo_scripturam_nomini)
 
 # printf "abc\tABC\nefg\tEFG\n" | ./999999999/0/2600.py --actionem-cifram
@@ -585,7 +599,7 @@ class CLI_2600:
 
         #     for line in sys.stdin:
         #         codicem = line.replace('\n', ' ').replace('\r', '')
-        #         neo_lineam = cs1603_3_12.cifram_lineam(codicem)
+        #         neo_lineam = cs1603_1.cifram_lineam(codicem)
         #         sys.stdout.writelines("{0}\n".format(neo_lineam))
         #     return self.EXIT_OK
 
@@ -600,7 +614,7 @@ class CLI_2600:
 
         #     for line in sys.stdin:
         #         codicem = line.replace('\n', ' ').replace('\r', '')
-        #         fontem = cs1603_3_12.decifram_codicem_numerae(codicem)
+        #         fontem = cs1603_1.decifram_codicem_numerae(codicem)
         #         sys.stdout.writelines(
         #             "{0}{1}{2}\n".format(
         #                 codicem, args.resultatum_separato, fontem)
@@ -621,9 +635,9 @@ class CLI_2600:
                 for line in sys.stdin:
                     codicem = line.replace('\n', ' ').replace('\r', '')
                     # TODO: deal with cases were have more than Qcode
-                    cs1603_3_12.est_wikidata_q(codicem)
+                    cs1603_1.est_wikidata_q(codicem)
 
-                quod_query = cs1603_3_12.exportatum_sparql()
+                quod_query = cs1603_1.exportatum_sparql()
                 # tabulam_numerae = ['TODO']
                 # return self.output(tabulam_numerae)
                 return self.output(quod_query)
@@ -708,20 +722,20 @@ class CLI_2600:
                 return self.EXIT_OK
 
         # if self.pyargs.verbum_simplex:
-        #     tabulam_multiplicatio = cs1603_3_12.quod_tabulam_multiplicatio()
+        #     tabulam_multiplicatio = cs1603_1.quod_tabulam_multiplicatio()
         #     return self.output(tabulam_multiplicatio)
 
         # if self.pyargs.codex_completum:
-        #     tabulam_multiplicatio = cs1603_3_12.quod_codex()
+        #     tabulam_multiplicatio = cs1603_1.quod_codex()
         #     return self.output(tabulam_multiplicatio)
 
         # if self.pyargs.neo_scripturam:
-        #     scientia = cs1603_3_12.exportatum_scientia_de_scriptura(
+        #     scientia = cs1603_1.exportatum_scientia_de_scriptura(
         #         args.neo_scripturam_hxl_selectum)
         #     return self.output(scientia)
 
         # Let's default to full table
-        # tabulam_multiplicatio = cs1603_3_12.quod_codex()
+        # tabulam_multiplicatio = cs1603_1.quod_codex()
         # return self.output(tabulam_multiplicatio)
         print('unknow option.')
         return self.EXIT_ERROR
@@ -781,14 +795,14 @@ if __name__ == "__main__":
 
 # print(valueee)
 
-# cs1603_3_12 = cs1603_3_12()
+# cs1603_1 = cs1603_1()
 
 # # print(quod_1613_2_60_datum())
-# # print(cs1603_3_12)
+# # print(cs1603_1)
 
 # print('0')
-# print(cs1603_3_12.quod_numerordinatio_digitalem('0', True))
+# print(cs1603_1.quod_numerordinatio_digitalem('0', True))
 # print('05')
-# print(cs1603_3_12.quod_numerordinatio_digitalem('05', True))
+# print(cs1603_1.quod_numerordinatio_digitalem('05', True))
 # print('zz')
-# print(cs1603_3_12.quod_numerordinatio_digitalem('zz', True))
+# print(cs1603_1.quod_numerordinatio_digitalem('zz', True))

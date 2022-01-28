@@ -22,10 +22,19 @@
 - Medicina, https://la.wikipedia.org/wiki/Medicina
 
 
-### [`1603:25:1`] /general regions of the body/
+### [`1603:25:1`] /partes corporis humani/
 
 - https://en.wikipedia.org/wiki/List_of_human_anatomical_regions
 - https://en.wikipedia.org/wiki/List_of_human_anatomical_regions#/media/File:Morris_1933_1.png
+
+### Neo latin term for dictiōnāria de partes corporis humani
+> **@TODO: 2021-01-27 necessary name more generic (like external or generic) since this dictionary is not full anatomical body parts**
+
+- "partes corporis humani"
+  - "Basle Nomina Anatomica 1895", https://books.google.com.br/books?id=pN8EAQAAIAAJ&printsec=frontcover&hl=pt-BR&source=gbs_ge_summary_r&cad=0#v=onepage&q=partes%20corporis%20humani&f=false
+  - "Terminologia Anatomica 1998", https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/Entity%20TA98%20EN/01.1.00.000%20Entity%20TA98%20EN.htm
+- Temporary name:
+  - //dictiōnāria de partes corporis humani//
 
 ----
 
