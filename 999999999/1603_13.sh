@@ -42,7 +42,7 @@ numerordiatio_caput() {
   basim="$1"
   shopt -s nullglob globstar
   # for i in "$basim/"**
-  echo "#meta+id,#meta+archivum,#meta+conceptum+total,#meta+caput+total,#status+ix_hxlix,#status+ix_hxlvoc,#meta+caput,#meta+value+ix_hxlix,#meta+value+ix_hxlvoc"
+  echo "#meta+id,#meta+archivum,#meta+conceptum+total,#meta+caput+total,#status+ix_hxlix,#status+ix_hxlvoc,#status+ix_wikip,#status+ix_wikiq,#meta+caput,#meta+value+ix_hxlix,#meta+value+ix_hxlvoc,#meta+value+ix_wikip,#meta+value+ix_wikiq"
   for i in "$basim/"**/*no1.tm.hxl.csv; do
     if [[ "$i" =~ .meta. ]]; then
       # echo "Skiping meta..."
@@ -52,6 +52,9 @@ numerordiatio_caput() {
     relative_path="${relative_path//\.\//''}"
     status_ix_hxlix="0"
     status_ix_hxlvoc="0"
+    #item +rem +i_qcc +is_zxxx +ix_wikiq
+    status_ix_wikip="0"
+    status_ix_wikiq="0"
     concept_count=$(wc --lines "$relative_path" | cut --fields=1 --delimiter=' ')
     concept_count=$((concept_count - 1))
     # echo "$i"
@@ -69,20 +72,34 @@ numerordiatio_caput() {
       status_ix_hxlix="1"
       #echo "status_ix_hxlix $relative_path"
       # hxlcut --include="#item+rem+i_zxx+is_latn+ix_hxl+ix_hxlvoc"  1603/25/1/1603_25_1.no1.tm.hxl.csv
-      values_ix_hxlix=$(hxlcut --include="#item+rem+i_zxx+is_latn+ix_hxl+ix_hxlix" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_hxlix=$(hxlcut --include="#item+rem+i_zxx+is_zxxx+ix_hxlix" "$relative_path" | tail -n +3 | sort | uniq)
       values_ix_hxlix=$(echo "$values_ix_hxlix" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
       values_ix_hxlix=$(echo "$values_ix_hxlix" | tr --delete "[:blank:]" )
     fi
     if [[ "$caput" =~ ix_hxlvoc ]]; then
       status_ix_hxlvoc="1"
       #echo "status_ix_hxlvoc $relative_path"
-      values_ix_hxlvoc=$(hxlcut --include="#item+rem+i_zxx+is_latn+ix_hxl+ix_hxlvoc" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_hxlvoc=$(hxlcut --include="#item+rem+i_zxx+is_zxxx+ix_hxlvoc" "$relative_path" | tail -n +3 | sort | uniq)
       values_ix_hxlvoc=$(echo "$values_ix_hxlvoc" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
       values_ix_hxlvoc=$(echo "$values_ix_hxlvoc" | tr --delete "[:blank:]" )
     fi
+    if [[ "$caput" =~ ix_wikip ]]; then
+      status_ix_wikip="1"
+      #echo "status_ix_wikip $relative_path"
+      values_ix_wikip=$(hxlcut --include="#item+rem+i_zxx+is_zxxx+ix_wikip" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_wikip=$(echo "$values_ix_wikip" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
+      values_ix_wikip=$(echo "$values_ix_wikip" | tr --delete "[:blank:]" )
+    fi
+    if [[ "$caput" =~ ix_wikiq ]]; then
+      status_ix_wikiq="1"
+      #echo "status_ix_wikiq $relative_path"
+      values_ix_wikiq=$(hxlcut --include="#item+rem+i_zxx+is_zxxx+ix_wikiq" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_wikiq=$(echo "$values_ix_wikiq" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
+      values_ix_wikiq=$(echo "$values_ix_wikiq" | tr --delete "[:blank:]" )
+    fi
 
     # echo "$caput"
-    echo "$numerordiation,$relative_path,$concept_count,$caput_count,$status_ix_hxlix,$status_ix_hxlvoc,$caput,$values_ix_hxlix,$values_ix_hxlvoc"
+    echo "$numerordiation,$relative_path,$concept_count,$caput_count,$status_ix_hxlix,$status_ix_hxlvoc,$status_ix_wikip,$status_ix_wikiq,$caput,$values_ix_hxlix,$values_ix_hxlvoc,$values_ix_wikip,$values_ix_wikiq"
     # echo "$numerordiation,$relative_path,$concept_count,$caput_count,$status_ix_hxlix,$status_ix_hxlvoc,<$caput>,,"
   done
 }
@@ -128,7 +145,7 @@ numerordiatio_caput() {
 # echo "$ROOTDIR"
 # numerordiatio_search "$ROOTDIR/1603/"
 # numerordiatio_caput "$ROOTDIR/1603"
-numerordiatio_caput "$ROOTDIR/1603" > 999999/0/simple_caput.csv
+numerordiatio_caput "$ROOTDIR/1603" > 999999/1603/13/1603~meta.hxl.csv
 
 # numerordiatio_caput_ix_hxlix "$ROOTDIR/1603" > 999999/0/simple_caput_ix_hxlix.csv
 
