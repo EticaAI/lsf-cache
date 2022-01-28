@@ -42,8 +42,12 @@ bash "${ROOTDIR}/999999999/2600.sh"
 printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603_17.sh"
 bash "${ROOTDIR}/999999999/1603_17.sh"
 
+# TODO: maybe we shoud re-run at the end too?
+printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603_13.sh"
+bash "${ROOTDIR}/999999999/1603_13.sh"
+
 printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603_87.sh"
-sh "${ROOTDIR}/999999999/1603_87.sh"
+bash "${ROOTDIR}/999999999/1603_87.sh"
 
 printf '\n\t\e[1;32m%-6s\e[m\n' "999999999/1603_47_15924.sh"
 bash "${ROOTDIR}/999999999/1603_47_15924.sh"

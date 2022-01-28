@@ -78,6 +78,9 @@ file_convert_numerordinatio_de_hxltm "1603_44_1" "1" "0"
 file_download_if_necessary "$DATA_1603_84_1" "1603_84_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_84_1" "1" "0"
 
+# TODO: convert this to an function
+./999999999/0/1603_1.py --punctum-separato-de-resultatum=',' --de-archivum 1603/84/1/1603_84_1.no1.tm.hxl.csv > 1603/84/1/1603_84_1.meta.no1.tm.hxl.csv
+
 file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_45_1" "1" "0"
 

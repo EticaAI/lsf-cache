@@ -251,6 +251,10 @@ file_download_if_necessary() {
     fi
   fi
 
+  # echo "oi2"
+  # echo "$objectivum_archivum"
+  # echo "$(stale_archive "$objectivum_archivum")"
+
   if [ -z "${FORCE_REDOWNLOAD}" ] && [ -z "${_FORCE_REDOWNLOAD}" ]; then
     if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
   else
@@ -315,9 +319,18 @@ file_convert_numerordinatio_de_hxltm() {
 
   # echo "$fontem_archivum"
 
-  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+  # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+  # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  if [ ! -e "$objectivum_archivum" ]; then
+    echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
+  elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
+    # echo "${FUNCNAME[0]} objective exist, sources not changed recently"
+    return 0
+  else
+    echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
+  fi
 
   # @TODO: implement NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM
   #        instead of hardcode 1|2|3|4|5|6|7|8|9
