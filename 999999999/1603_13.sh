@@ -28,37 +28,21 @@ ROOTDIR="$(pwd)"
 # . "$ROOTDIR"/999999999/999999999.lib.sh
 
 #######################################
-# numerordiatio_search (...)
+# numerordiatio_caput extract from no1.tm.hxl.csv some quick metadata.
+# Mostly focused on patters of the headings.
 #
 # Globals:
 #   ROOTDIR
 # Arguments:
 #   basim
 # Outputs:
-#   ...
-#######################################
-numerordiatio_search() {
-  basim="${1//$ROOTDIR/'.'}"
-
-  echo "path_or_file $basim"
-  find "$basim" -type f -name "*no1.tm.hxl.csv" ! -name "*.meta.*"
-}
-
-#######################################
-# numerordiatio_caput extract from no1.tm.hxl.csv their headings
-#
-# Globals:
-#   ROOTDIR
-# Arguments:
-#   basim
-# Outputs:
-#   ...
+#   HXLated tabular output (not HXLTM neither Numeroordinatio)
 #######################################
 numerordiatio_caput() {
   basim="$1"
   shopt -s nullglob globstar
   # for i in "$basim/"**
-  echo "#meta+id,#meta+archivum,#meta+caput"
+  echo "#meta+id,#meta+archivum,#meta+conceptum+total,#meta+caput+total,#status+ix_hxlix,#status+ix_hxlvoc,#meta+caput,#meta+value+ix_hxlix,#meta+value+ix_hxlvoc"
   for i in "$basim/"**/*no1.tm.hxl.csv; do
     if [[ "$i" =~ .meta. ]]; then
       # echo "Skiping meta..."
@@ -66,22 +50,87 @@ numerordiatio_caput() {
     fi
     relative_path="${i//$ROOTDIR/'.'}"
     relative_path="${relative_path//\.\//''}"
+    status_ix_hxlix="0"
+    status_ix_hxlvoc="0"
+    concept_count=$(wc --lines "$relative_path" | cut --fields=1 --delimiter=' ')
+    concept_count=$((concept_count - 1))
     # echo "$i"
     # basename "$i"
     # echo "$relative_path"
     numerordiation=$(basename "$i" .no1.tm.hxl.csv)
     # caput=$(head -n 1 "$i" | tr '\n' ' ')
-    caput=$(head -n 1 "$i")
-    caput=$(head -n 1 "$i" | tr -d '\n' | tr ',' '|')
-    echo "$numerordiation,$relative_path,$caput"
+    caput=$(head -n 1 "$i" | tr -d '\n' | tr --squeeze-repeats ',' '|' | tr --delete "[:space:]")
+
+    caput_count=$(echo "$caput" | tr -d -c '|' | wc -c)
+    caput_count=$((caput_count + 1))
+    values_ix_hxlix=""
+    values_ix_hxlvoc=""
+    if [[ "$caput" =~ ix_hxlix ]]; then
+      status_ix_hxlix="1"
+      #echo "status_ix_hxlix $relative_path"
+      # hxlcut --include="#item+rem+i_zxx+is_latn+ix_hxl+ix_hxlvoc"  1603/25/1/1603_25_1.no1.tm.hxl.csv
+      values_ix_hxlix=$(hxlcut --include="#item+rem+i_zxx+is_latn+ix_hxl+ix_hxlix" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_hxlix=$(echo "$values_ix_hxlix" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
+      values_ix_hxlix=$(echo "$values_ix_hxlix" | tr --delete "[:blank:]" )
+    fi
+    if [[ "$caput" =~ ix_hxlvoc ]]; then
+      status_ix_hxlvoc="1"
+      #echo "status_ix_hxlvoc $relative_path"
+      values_ix_hxlvoc=$(hxlcut --include="#item+rem+i_zxx+is_latn+ix_hxl+ix_hxlvoc" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_hxlvoc=$(echo "$values_ix_hxlvoc" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
+      values_ix_hxlvoc=$(echo "$values_ix_hxlvoc" | tr --delete "[:blank:]" )
+    fi
+
+    # echo "$caput"
+    echo "$numerordiation,$relative_path,$concept_count,$caput_count,$status_ix_hxlix,$status_ix_hxlvoc,$caput,$values_ix_hxlix,$values_ix_hxlvoc"
+    # echo "$numerordiation,$relative_path,$concept_count,$caput_count,$status_ix_hxlix,$status_ix_hxlvoc,<$caput>,,"
   done
 }
+
+# #######################################
+# # numerordiatio_caput extract from no1.tm.hxl.csv their headings
+# #
+# # Globals:
+# #   ROOTDIR
+# # Arguments:
+# #   basim
+# # Outputs:
+# #   ...
+# #######################################
+# numerordiatio_caput_ix_hxlix() {
+#   basim="$1"
+#   shopt -s nullglob globstar
+#   # for i in "$basim/"**
+#   echo "#meta+id,#meta+archivum,#status+ix_hxlix"
+#   for i in "$basim/"**/*no1.tm.hxl.csv; do
+#     if [[ "$i" =~ .meta. ]]; then
+#       # echo "Skiping meta..."
+#       continue
+#     fi
+#     relative_path="${i//$ROOTDIR/'.'}"
+#     relative_path="${relative_path//\.\//''}"
+#     # echo "$i"
+#     # basename "$i"
+#     # echo "$relative_path"
+#     numerordiation=$(basename "$i" .no1.tm.hxl.csv)
+#     # caput=$(head -n 1 "$i" | tr '\n' ' ')
+#     # caput=$(head -n 1 "$i")
+#     caput=$(head -n 1 "$i" | tr -d '\n' | tr ',' '|')
+#     # echo "$numerordiation,$relative_path,$caput"
+#     if [[ "$caput" =~ ix_hxlix ]]; then
+#       # echo "ix_hxlix present"
+#       echo "$numerordiation,$relative_path,1,$caput"
+#     fi
+#   done
+# }
 
 # find path/to/dir -name "*.ext1" -o -name "*.ext2"
 # echo "$ROOTDIR"
 # numerordiatio_search "$ROOTDIR/1603/"
 # numerordiatio_caput "$ROOTDIR/1603"
 numerordiatio_caput "$ROOTDIR/1603" > 999999/0/simple_caput.csv
+
+# numerordiatio_caput_ix_hxlix "$ROOTDIR/1603" > 999999/0/simple_caput_ix_hxlix.csv
 
 echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxxx+ix_hxlix'"
 echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxx+ix_hxlvoc'"
