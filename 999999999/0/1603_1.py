@@ -36,6 +36,9 @@ Exemplōrum gratiā:
     cat 1603/1/1/1603_1_1.no1.tm.hxl.csv | \
 {0} --de-archivum
     {0} --de-archivum 1603/1/1/1603_1_1.no1.tm.hxl.csv
+
+    {0} ./999999999/0/1603_1.py --dictionaria-numerordinatio
+
 """.format(__file__)
 
 
@@ -104,7 +107,6 @@ class DictionariaLinguarum:
                 "/1603/1/51/1603_1_51.no1.tm.hxl.csv"
 
         self.dictionaria_codex = self._init_dictionaria()
-        pass
 
     def _init_dictionaria(self):
 
@@ -140,6 +142,177 @@ class DictionariaLinguarum:
                     return linguam
 
         return None
+
+
+class DictionariaNumerordinatio:
+    def __init__(self):
+        self.dictionaria_codex = DictionariaLinguarum()
+
+    def _basim(self) -> list:
+        resultatum = []
+        # ix_regexc | ix_regexvdc | ix_hxlt | ix_hxla | i_mul+is_zyyy
+        resultatum.append([
+            '{{1603_13_1_2}}',  # hxlhashtag
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '[Rēgula expressiōnī cōnstrūctae (HXL Standard Tag)]',
+        ])
+        resultatum.append([
+            '',
+            '{{1603_13_1_2}}',
+            '#item',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '[Factum ad Rēgula expressiōnī cōnstrūctae (HXL Standard Tag)]',
+        ])
+        resultatum.append([
+            '',
+            '{{1603_13_1_2}}',
+            '#status',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '[Status ad Rēgula expressiōnī cōnstrūctae (HXL Standard Tag)]',
+        ])
+        resultatum.append([
+            '',
+            '{{1603_13_1_2}}',
+            '#meta',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '[Meta ad Rēgula expressiōnī cōnstrūctae (HXL Standard Tag)]',
+        ])
+        resultatum.append([
+            '{{1603_13_1_3}}',  # hxlhashtag
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '[Rēgula expressiōnī cōnstrūctae (HXL Standard attributes)]',
+        ])
+        resultatum.append([
+            '{{1603_13_1_23}}',  # hxlhashtag + attribute
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '[Rēgula expressiōnī cōnstrūctae (HXL Standard composed prefix, Hashtag + attributes)]',
+        ])
+        resultatum.append([
+            '{{1603_13_1_23_3}}',  # [3] C (concept)
+            '{{1603_13_1_23}}',
+            '1',
+            '',
+            '',
+            '',
+            '',
+            '',
+            '/Concept level information/',
+        ])
+        resultatum.append([
+            '{{1603_13_1_23_3_10}}',  # 10 identifier (1), no variant (0)
+            '{{1603_13_1_23_3}}',
+            '1',
+            '',
+            '',
+            '#item',
+            'conceptum+codicem',
+            '#item+conceptum+codicem',
+            '/Concept level information, local identifier/',
+        ])
+        resultatum.append([
+            '{{1603_13_1_23_3_11}}',  # [11] identifier (1), status (1)
+            '{{1603_13_1_23_3}}',
+            '1',
+            '',
+            '',
+            '#status',
+            'conceptum+codicem',
+            '#status+conceptum+codicem',
+            '/Educated guees on stability (1-100) of local identifier/',
+        ])
+        resultatum.append([
+            '{{1603_13_1_23_3_19}}',  # [11] identifier (1), metadata (9)
+            '{{1603_13_1_23_3}}',
+            '1',
+            '',
+            '',
+            '#meta',
+            'conceptum+codicem',
+            '#meta+conceptum+codicem',
+            '/Concept level information, local identifier, metadata/',
+        ])
+        resultatum.append([
+            '{{1603_13_1_23_3_21}}',
+            '{{1603_13_1_23_3}}',
+            '1',
+            '',
+            '',
+            '#status',
+            'conceptum+definitionem',
+            '#status+conceptum+definitionem',
+            '/Educated guess on comprehensibility (1-100) of concept/',
+        ])
+        return resultatum
+
+    def exportatum(self) -> list:
+        resultatum = []
+        resultatum.append([
+            '#item+conceptum+codicem',
+            '#item+rem+i_qcc+is_zxxx+ix_regexc',  # regex constructor
+            '#item+rem+i_qcc+is_zxxx+ix_regexvdc',  # value de regex constructor
+            '#item+rem+i_qcc+is_zxxx+ix_tconceptuae',  # if is conceptual
+            '#item+rem+i_qcc+is_zxxx+ix_tlinguae',  # if is linguistic
+            '#item+rem+i_qcc+is_zxxx+ix_tterminum',  # if varies at term level
+            '#item+rem+i_qcc+is_zxxx+ix_hxlt',
+            '#item+rem+i_qcc+is_zxxx+ix_hxla',
+            '#item+rem+i_qcc+is_zxxx+ix_exemplum',
+            '#item+rem+i_mul+is_zyyy',
+            # '#meta',
+        ])
+
+        index = 0
+        for item in self._basim():
+            # print('item', item)
+            index = index + 1
+            item.insert(0, str(index))
+            resultatum.append(item)
+        # for item in self.ix_hxlhstg:
+        #     # print('item', item)
+        #     index = index + 1
+        #     rem = NumerordinatioItem(
+        #         item, dictionaria_codex=self.dictionaria_codex)
+
+        #     meta = rem.quod_meta()
+        #     meta_nomen = '' if meta is None else meta['#item+rem+i_lat+is_latn']
+        #     resultatum.append([
+        #         str(index),
+        #         rem.quod_ix_hxlhstg(),
+        #         rem.quod_ix_hxlt(),
+        #         rem.quod_ix_hxla(),
+        #         meta_nomen
+        #     ])
+
+        return resultatum
 
 
 class A1603z1:
@@ -320,15 +493,31 @@ class CLI_2600:
             nargs='?'
         )
 
-        hxlcaput = parser.add_argument_group(
+        archivum = parser.add_argument_group(
             "archivum",
             "(DEFAULT USE) Use archive as source (directory not ready yet)")
 
-        hxlcaput.add_argument(
+        archivum.add_argument(
             '--de-archivum',
             help='Parse single archive',
             # metavar='',
             dest='de_archivum',
+            # const=True,
+            action='store_true',
+            # nargs='?'
+        )
+
+        archivum = parser.add_argument_group(
+            "dictionaria",
+            "Generate dictionaries. No input required (uses disk 1603 and "
+            "999999999/1603 data files)")
+
+        archivum.add_argument(
+            '--dictionaria-numerordinatio',
+            help='Dictionary of all possible values on stricter '
+            ' Numerordĭnātĭo (HXLStantad container)',
+            # metavar='',
+            dest='dictionaria_numerordinatio',
             # const=True,
             action='store_true',
             # nargs='?'
@@ -355,6 +544,11 @@ class CLI_2600:
         a1603z1.est_fontem_separato(args.fontem_separato)
 
         # if self.pyargs.actionem_sparql:
+        if self.pyargs.dictionaria_numerordinatio:
+            dictionaria_numerordinatio = DictionariaNumerordinatio()
+            # data = ['TODO']
+            return self.output(dictionaria_numerordinatio.exportatum())
+
         if self.pyargs.de_archivum:
 
             if stdin.isatty():
@@ -388,6 +582,9 @@ class CLI_2600:
         return self.EXIT_ERROR
 
     def output(self, output_collectiom):
+
+        spamwriter = csv.writer(
+            sys.stdout, delimiter=self.pyargs.resultatum_separato)
         for item in output_collectiom:
             # TODO: check if result is a file instead of print
 
@@ -395,7 +592,7 @@ class CLI_2600:
             if isinstance(item, int) or isinstance(item, str):
                 print(item)
             else:
-                print(self.pyargs.resultatum_separato.join(item))
+                spamwriter.writerow(item)
 
         return self.EXIT_OK
 

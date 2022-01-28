@@ -158,7 +158,10 @@ hxlexpand --query="#status+ix_wikiq>0" --tags="#meta+value+ix_wikiq" 999999/1603
 # hxlexpand --tags="#meta+value+ix_hxlix" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_hxlix"
 # numerordiatio_caput_ix_hxlix "$ROOTDIR/1603" > 999999/0/simple_caput_ix_hxlix.csv
 
-echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxxx+ix_hxlix'"
-echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxx+ix_hxlvoc'"
+# ./999999999/0/1603_1.py ./999999999/0/1603_1.py --dictionaria-numerordinatio
+./999999999/0/1603_1.py ./999999999/0/1603_1.py --dictionaria-numerordinatio --punctum-separato-de-resultatum=',' > 999999/1603/13/1603~dictionaria.hxl.csv
+
+# echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxxx+ix_hxlix'"
+# echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxx+ix_hxlvoc'"
 
 # echo "TODO $0"
