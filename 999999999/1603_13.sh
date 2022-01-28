@@ -38,7 +38,7 @@ ROOTDIR="$(pwd)"
 # Outputs:
 #   HXLated tabular output (not HXLTM neither Numeroordinatio)
 #######################################
-numerordiatio_caput() {
+numerordiatio_summarium() {
   basim="$1"
   shopt -s nullglob globstar
   # for i in "$basim/"**
@@ -72,30 +72,34 @@ numerordiatio_caput() {
       status_ix_hxlix="1"
       #echo "status_ix_hxlix $relative_path"
       # hxlcut --include="#item+rem+i_zxx+is_latn+ix_hxl+ix_hxlvoc"  1603/25/1/1603_25_1.no1.tm.hxl.csv
-      values_ix_hxlix=$(hxlcut --include="#item+rem+i_zxx+is_zxxx+ix_hxlix" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_hxlix=$(hxlcut --include="#item+rem+i_qcc+is_zxxx+ix_hxlix" "$relative_path" | tail -n +3 | sort | uniq)
       values_ix_hxlix=$(echo "$values_ix_hxlix" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
       values_ix_hxlix=$(echo "$values_ix_hxlix" | tr --delete "[:blank:]" )
     fi
     if [[ "$caput" =~ ix_hxlvoc ]]; then
       status_ix_hxlvoc="1"
       #echo "status_ix_hxlvoc $relative_path"
-      values_ix_hxlvoc=$(hxlcut --include="#item+rem+i_zxx+is_zxxx+ix_hxlvoc" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_hxlvoc=$(hxlcut --include="#item+rem+i_qcc+is_zxxx+ix_hxlvoc" "$relative_path" | tail -n +3 | sort | uniq)
       values_ix_hxlvoc=$(echo "$values_ix_hxlvoc" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
       values_ix_hxlvoc=$(echo "$values_ix_hxlvoc" | tr --delete "[:blank:]" )
     fi
     if [[ "$caput" =~ ix_wikip ]]; then
       status_ix_wikip="1"
       #echo "status_ix_wikip $relative_path"
-      values_ix_wikip=$(hxlcut --include="#item+rem+i_zxx+is_zxxx+ix_wikip" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_wikip=$(hxlcut --include="#item+rem+i_qcc+is_zxxx+ix_wikip" "$relative_path" | tail -n +3 | sort | uniq)
       values_ix_wikip=$(echo "$values_ix_wikip" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
       values_ix_wikip=$(echo "$values_ix_wikip" | tr --delete "[:blank:]" )
     fi
     if [[ "$caput" =~ ix_wikiq ]]; then
       status_ix_wikiq="1"
       #echo "status_ix_wikiq $relative_path"
-      values_ix_wikiq=$(hxlcut --include="#item+rem+i_zxx+is_zxxx+ix_wikiq" "$relative_path" | tail -n +3 | sort | uniq)
+
+      values_ix_wikiq=$(hxlcut --include="#item+rem+i_qcc+is_zxxx+ix_wikiq" "$relative_path" | tail -n +3 | sort | uniq)
       values_ix_wikiq=$(echo "$values_ix_wikiq" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|"  | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
       values_ix_wikiq=$(echo "$values_ix_wikiq" | tr --delete "[:blank:]" )
+
+      # 1603_1_51 have two columns with Q codes for different concepts
+      values_ix_wikiq="$(echo "$values_ix_wikiq" | tr "," "|" | sed 's/^|//' | sed 's/|$//' | tr --squeeze-repeats "|" "\r\n" | sort --version-sort --field-separator="Q" | uniq | tr --squeeze-repeats "\r\n" "|" | sed 's/^|//' | sed 's/|$//' )"
     fi
 
     # echo "$caput"
@@ -145,8 +149,13 @@ numerordiatio_caput() {
 # echo "$ROOTDIR"
 # numerordiatio_search "$ROOTDIR/1603/"
 # numerordiatio_caput "$ROOTDIR/1603"
-numerordiatio_caput "$ROOTDIR/1603" > 999999/1603/13/1603~meta.hxl.csv
+numerordiatio_summarium "$ROOTDIR/1603" > 999999/1603/13/1603~meta.hxl.csv
+hxlexpand --query="#status+ix_hxlix>0" --tags="#meta+value+ix_hxlix" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_hxlix" > 999999/1603/13/1603~meta__ix_hxlix.hxl.csv
+hxlexpand --query="#status+ix_hxlvoc>0" --tags="#meta+value+ix_hxlvoc" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_hxlvoc" > 999999/1603/13/1603~meta__ix_hxlvoc.hxl.csv
+hxlexpand --query="#status+ix_wikip>0" --tags="#meta+value+ix_wikip" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_wikip" > 999999/1603/13/1603~meta__ix_wikip.hxl.csv
+hxlexpand --query="#status+ix_wikiq>0" --tags="#meta+value+ix_wikiq" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_wikiq" > 999999/1603/13/1603~meta__ix_wikiq.hxl.csv
 
+# hxlexpand --tags="#meta+value+ix_hxlix" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_hxlix"
 # numerordiatio_caput_ix_hxlix "$ROOTDIR/1603" > 999999/0/simple_caput_ix_hxlix.csv
 
 echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxxx+ix_hxlix'"

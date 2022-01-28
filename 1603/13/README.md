@@ -1,6 +1,9 @@
 # `1603:13`
 
 - @see https://hxlstandard.org/
+- @see https://github.com/hxl-team/HXL-Vocab
+  - Note: circa 2013 pre-HXLStandard, HXL was more RDF-like than tabular format.
+    For a small subset of definitions not ported to HXLStandards page, this could be a source.
 
 > _Standardising humanitarian data for a better response: The Humanitarian eXchange Language About this case study (...) Start date 1 December 2013_ -- https://www.elrha.org/wp-content/uploads/2017/05/hif-alnap-unocha-exchange-language-case-study-2016-1.pdf (alternative: https://web.archive.org/web/20220111050807/https://www.elrha.org/wp-content/uploads/2017/05/hif-alnap-unocha-exchange-language-case-study-2016-1.pdf)
 
