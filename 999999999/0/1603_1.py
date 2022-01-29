@@ -223,7 +223,7 @@ class Codex:
             codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
             codicem_ordo = numerordinatio_ordo(codicem_loci)
             resultatum.append(
-                ('#' * (codicem_ordo + 1)) + " " + codicem_loci + ' ' + nomen + "\n"
+                ('#' * (codicem_ordo + 1)) + '[`' + codicem_loci + '`] ' + nomen + "\n"
             )
             resultatum.append("<a id='{0}' href='#{0}'>§ {0}</a>".format(codicem_normale))
             resultatum.append("\n")
