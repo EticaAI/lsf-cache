@@ -322,7 +322,6 @@ file_convert_numerordinatio_de_hxltm() {
   # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-
   if [ ! -e "$objectivum_archivum" ]; then
     echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
   elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
@@ -357,6 +356,67 @@ file_convert_numerordinatio_de_hxltm() {
   sed -i '1d' "${objectivum_archivum_temporarium}"
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+#######################################
+# Create a codex (documentation) from an Numerordinatio standard file
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (default "0", from real namespace)
+#   est_objectivum_linguam
+#   est_auxilium_linguam
+# Outputs:
+#   Create documentation
+#######################################
+neo_codex_de_numerordinatio() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+  est_objectivum_linguam="${4:-"mul-Zyyy"}"
+  est_auxilium_linguam="${5:-"lat-Latn,por-Latn,eng-Latn"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no1.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.md"
+  # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+
+  # echo "$fontem_archivum"
+
+  # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+  # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  if [ ! -e "$objectivum_archivum" ]; then
+    echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
+  elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
+    # echo "${FUNCNAME[0]} objective exist, sources not changed recently"
+    return 0
+  else
+    echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
+  fi
+
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --objectivum-linguam="$est_objectivum_linguam" \
+    --auxilium-linguam="$est_auxilium_linguam" \
+    --codex-de "$_nomen" \
+    >"$objectivum_archivum"
 }
 
 ## Tem definidos
@@ -443,7 +503,7 @@ file_translate_csv_de_numerordinatio_q() {
   hxlcut \
     --include='#*+ix_wikiq,#*+v_wiki_q,#item+conceptum+numerordinatio' \
     "$fontem_archivum" |
-    hxlselect --query='#*+ix_wikiq>0'  --query='#*+v_wiki_q>0' \
+    hxlselect --query='#*+ix_wikiq>0' --query='#*+v_wiki_q>0' \
       >"$objectivum_archivum_temporarium"
 
   hxlcut \

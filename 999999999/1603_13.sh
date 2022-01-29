@@ -172,7 +172,20 @@ hxlexpand --query="#status+ix_wikiq>0" --tags="#meta+value+ix_wikiq" 999999/1603
   --codex-de 1603_1_51 \
   >999999/1603/1/51/1603_1_51.mul-Zyyy.codex.md
 
-  officinam/999999/1603/1/51/1603_1_51.tm.hxl.csv
+./999999999/0/1603_1.py \
+  --objectivum-linguam="lat-Latn" \
+  --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \
+  --codex-de 1603_1_51 \
+  >999999/1603/1/51/1603_1_51.mul-Zyyy.codex.md
+
+# ./999999999/0/1603_1.py \
+#   --objectivum-linguam="lat-Latn" \
+#   --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \
+#   --codex-de 1603_1_1 \
+#   >1603/1/1/1603_1_1.mul-Zyyy.codex.md
+
+# officinam/1603/1/1/1603_1_1.no1.tm.hxl.csv
+
 # echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxxx+ix_hxlix'"
 # echo "TODO: compile non-empty '#item+rem+i_qcc+is_zxx+ix_hxlvoc'"
 
