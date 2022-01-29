@@ -1,5 +1,10 @@
 # Numerordĭnātĭo pre-compiled data tables and automation scripts
 
+- [1603/1/1/1603_1_1.no1.tm.hxl.csv](1603/1/1/1603_1_1.no1.tm.hxl.csv)
+- [HXL-CPLP-Vocab_Auxilium-Humanitarium-API/1603_1_1.tm.hxl](https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=2095477004)
+- https://github.com/EticaAI/n-data/tree/main/1603
+
+<!--
 > **Note: most (but not all) of this overview is being converted to machine processable format on [1603/1/1/1603_1_1.no1.tm.hxl.csv](1603/1/1/1603_1_1.no1.tm.hxl.csv)** (online version at [HXL-CPLP-Vocab_Auxilium-Humanitarium-API/1603_1_1.tm.hxl](https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=2095477004)). Some notable changes:
 >  - Base namespaces, instead of "group codes released by an organization" are renamed by suggested intent.
 >  - _TODO: add more explanations here_
@@ -16,6 +21,7 @@ While decisions on how to organize, as of 2021-01, are still open, **such numeri
 > - We opt for _`1603:45:49` /UN m49/_ instead of _`1603:47:3166:1` (the neutral number to reference ISO 3166)_ as the default key to reference one type of concept group.
 > - We inject information, in special translations, from namespaces such as _`1603:3:12` /Wikidata/_ on `1603:45:49`.
 > - We make sure that the compiled tables in special vocabularies (the translations) have references from where the data was from, so implementers can decide use or not. However the biggest relevance of this is for languages without official translations (even if they do exist, only are not pre-compiled).
+
 
 ## [`1603`] /Base prefix/
 - [1603/](1603/)
@@ -106,6 +112,7 @@ The multilingual-lexicography-automation project will use `1603` as the main nam
 
 - [`1603:999999`]: namespace for local cache of data files.
 
+-->
 
 ## Disclaimers
 

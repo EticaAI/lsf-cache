@@ -82,6 +82,8 @@ neo_codex_de_numerordinatio "1603_44_1" "0" "0"
 # file_download_if_necessary "$DATA_1603_994_1" "1603_994_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # file_convert_numerordinatio_de_hxltm "1603_994_1" "1" "0"
 
+# ![1603_84_1.~1/0~0.svg](1603_84_1.~1/0~0.svg)
+
 file_download_if_necessary "$DATA_1603_84_1" "1603_84_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_84_1" "1" "0"
 neo_codex_de_numerordinatio "1603_84_1" "0" "0"
