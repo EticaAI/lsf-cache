@@ -225,7 +225,7 @@ class Codex:
             resultatum.append(
                 ('#' * (codicem_ordo + 1)) + " " + codicem_loci + ' ' + nomen + "\n"
             )
-            resultatum.append("<a id='{0}'>§ {0}</a>".format(codicem_normale))
+            resultatum.append("<a id='{0}' href='#{0}'>§ {0}</a>".format(codicem_normale))
             resultatum.append("\n")
 
             resultatum.append(numerordinatio_lineam_hxml5_details(item))
