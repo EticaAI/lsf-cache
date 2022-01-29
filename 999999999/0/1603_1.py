@@ -220,10 +220,13 @@ class Codex:
         for item in self.codex:
             codicem_loci = item['#item+conceptum+codicem']
             nomen = numerordinatio_nomen(item)
+            codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
             codicem_ordo = numerordinatio_ordo(codicem_loci)
             resultatum.append(
-                ('#' * codicem_ordo) + " " + codicem_loci + ' ' + nomen + "\n"
+                ('#' * (codicem_ordo + 1)) + " " + codicem_loci + ' ' + nomen + "\n"
             )
+            resultatum.append("<a id='{0}'>§ {0}</a>".format(codicem_normale))
+            resultatum.append("\n")
 
             resultatum.append(numerordinatio_lineam_hxml5_details(item))
 
