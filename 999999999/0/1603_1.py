@@ -119,16 +119,16 @@ def numerordinatio_lineam_hxml5_details(rem: dict) -> str:
     # codex = rem['#item+conceptum+codicem']
 
     resultatum = '<details><summary>🔎' + \
-        rem['#item+conceptum+codicem'] + '🔍</summary>'
-    resultatum += '<dl>'
+        rem['#item+conceptum+codicem'] + '🔍</summary>' + "\n"
+    resultatum += '  <dl>' + "\n"
     for clavem, item in rem.items():
         if item:
-            resultatum += '<dt>' + clavem + '</dt>'
-            resultatum += '<dd>' + item + '</dd>'
+            resultatum += '    <dt>' + clavem + '</dt>' + "\n"
+            resultatum += '    <dd>' + item + '</dd>' + "\n"
         # print(item)
 
-    resultatum += '</dl>'
-    resultatum += '</details>'
+    resultatum += '  </dl>' + "\n"
+    resultatum += '</details>' + "\n"
     return resultatum
 
 
@@ -138,7 +138,9 @@ def numerordinatio_nomen(
 
     # TODO: this obviously is hardcoded; Implement full inferences
     if '#item+rem+i_lat+is_latn' in rem and rem['#item+rem+i_lat+is_latn']:
-        return rem['#item+rem+i_lat+is_latn']
+        return '/' + rem['#item+rem+i_lat+is_latn'] + '/@lat-Latn'
+    if '#item+rem+i_eng+is_latn' in rem and rem['#item+rem+i_eng+is_latn']:
+        return '/' + rem['#item+rem+i_eng+is_latn'] + '/@eng-Latn'
     if '#item+rem+i_mul+is_zyyy' in rem and rem['#item+rem+i_mul+is_zyyy']:
         return rem['#item+rem+i_mul+is_zyyy']
 
