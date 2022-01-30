@@ -478,28 +478,10 @@ file_translate_csv_de_numerordinatio_q() {
 
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+  if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 
   echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
 
-  # echo "$fontem_archivum"
-
-  # echo "file_translate_csv_de_numerordinatio_q $1 TODO"
-  # echo "fontem_archivum [$fontem_archivum]"
-  # echo "objectivum_archivum [$objectivum_archivum]"
-  # echo "objectivum_archivum_temporarium [$objectivum_archivum_temporarium]"
-  # head -n 2 "$fontem_archivum"
-  # hxlcut \
-  #   --include="#item+rem+i_qcc+is_zxxx+ix_wikiq,#item+conceptum+numerordinatio" \
-  #   "$fontem_archivum" |
-  #   hxlselect --query="#item+rem+i_qcc+is_zxxx+ix_wikiq>0" \
-  #     >"$objectivum_archivum_temporarium"
-
-  # hxlcut \
-  #   --include="#item+rem+i_qcc+is_zxxx+ix_wikiq" \
-  #   "$fontem_archivum" |
-  #   hxlselect --query="#item+rem+i_qcc+is_zxxx+ix_wikiq>0" \
-  #     >"$objectivum_archivum_temporarium_b"
   hxlcut \
     --include='#*+ix_wikiq,#*+v_wiki_q,#item+conceptum+numerordinatio' \
     "$fontem_archivum" |
@@ -534,6 +516,71 @@ file_translate_csv_de_numerordinatio_q() {
   # mv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
+
+  return 0
+}
+
+#######################################
+# Merge no1.tm.hxl.csv with wikiq.tm.hxl.csv
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (dfault "0", from real namespace)
+# Outputs:
+#   Convert files
+#######################################
+file_merge_numerordinatio_de_wiki_q() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no1.tm.hxl.csv"
+  fontem_q_archivum="${_basim_fontem}/$_path/$_nomen.wikiq.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"
+  # objectivum_archivum_temporarium_b="${ROOTDIR}/999999/0/$_nomen.q.txt"
+  # objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
+  # objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
+
+  # TODO: implement check if necessary to revalidate
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  # echo "fontem_archivum $fontem_archivum"
+  # echo "fontem_q_archivum $fontem_q_archivum"
+  # echo "objectivum_archivum $objectivum_archivum"
+  # echo "hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' --tags='#item+rem' --merge='$fontem_archivum'  $fontem_q_archivum > $objectivum_archivum_temporarium"
+  # echo ""
+  # echo ""
+  # echo ""
+  # echo "hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' --tags='#item+rem' --merge='$fontem_q_archivum'  $fontem_archivum > $objectivum_archivum_temporarium"
+
+  hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
+    --tags='#item+rem' \
+    --merge="$fontem_q_archivum" \
+    "$fontem_archivum" \
+    >"$objectivum_archivum_temporarium"
+
+  sed -i '1d' "${objectivum_archivum_temporarium}"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 
   return 0
 }
