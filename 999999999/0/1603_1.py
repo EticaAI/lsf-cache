@@ -174,7 +174,6 @@ class Codex:
         fullpath = fullpath + '/' + \
             numerordinatio_neo_separatum(numerordinatio_1603_1_1, '_')
         fullpath = fullpath + '.no1.tm.hxl.csv'
-        test = numerordinatio_neo_separatum(numerordinatio_1603_1_1, '/')
         # print('test', test, self.de_codex)
         # print('fullpath', fullpath)
         with open(fullpath) as csvfile:
@@ -188,13 +187,17 @@ class Codex:
 
     def _init_codex(self):
         numerordinatio = numerordinatio_neo_separatum(self.de_codex, ':')
-        fullpath = numerordinatio_neo_separatum(self.de_codex, '/')
-        fullpath = fullpath + '/' + \
+        basepath = numerordinatio_neo_separatum(self.de_codex, '/')
+        basepath = basepath + '/' + \
             numerordinatio_neo_separatum(self.de_codex, '_')
-        fullpath = fullpath + '.no1.tm.hxl.csv'
-        test = numerordinatio_neo_separatum(self.de_codex, '/')
-        # print('test', test, self.de_codex)
-        # print('fullpath', fullpath)
+        fullpath_no1 = basepath + '.no1.tm.hxl.csv'
+        fullpath_no11 = basepath + '.no11.tm.hxl.csv'
+
+        if os.path.exists(fullpath_no11):
+            fullpath = fullpath_no11
+        # else:
+        #     fullpath = fullpath_no1
+
         codex_lineam = []
         with open(fullpath) as csvfile:
             reader = csv.DictReader(csvfile)

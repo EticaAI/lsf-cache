@@ -69,9 +69,9 @@ neo_codex_de_numerordinatio "1603_3_12_6" "0" "0"
 
 file_download_if_necessary "$DATA_1603_25_1" "1603_25_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_25_1" "1" "0"
-neo_codex_de_numerordinatio "1603_25_1" "0" "0"
-# file_translate_csv_de_numerordinatio_q "1603_25_1" "0" "0"
+file_translate_csv_de_numerordinatio_q "1603_25_1" "0" "0"
 file_merge_numerordinatio_de_wiki_q "1603_25_1" "0" "0"
+neo_codex_de_numerordinatio "1603_25_1" "0" "0"
 
 file_download_if_necessary "$DATA_1603_44_142" "1603_44_142" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_44_142" "1" "0"
