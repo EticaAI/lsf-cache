@@ -603,6 +603,8 @@ file_merge_numerordinatio_de_wiki_q() {
 
   sed -i '1d' "${objectivum_archivum_temporarium}"
 
+  rm "$fontem_q_archivum_temporarium"
+
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 
   return 0

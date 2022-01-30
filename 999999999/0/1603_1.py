@@ -117,11 +117,13 @@ def numerordinatio_ordo(numerordinatio: str) -> int:
     return (normale.count('_') + 1)
 
 
-def numerordinatio_lineam_hxml5_details(rem: dict) -> str:
+def numerordinatio_lineam_hxml5_details(rem: dict, title: str = None) -> str:
     # codex = rem['#item+conceptum+codicem']
 
+    title = title if title else rem['#item+conceptum+codicem']
+
     resultatum = '<details><summary>🔎' + \
-        rem['#item+conceptum+codicem'] + '🔍</summary>' + "\n"
+        title + '🔍</summary>' + "\n"
     resultatum += '  <dl>' + "\n"
     for clavem, item in rem.items():
         if item:
@@ -218,14 +220,18 @@ class Codex:
             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
             + '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
         resultatum.append("\n")
-        resultatum.append('<!--' + str(self.m1603_1_1__de_codex) + '-->')
+        resultatum.append(
+            numerordinatio_lineam_hxml5_details(
+                self.m1603_1_1__de_codex,
+                self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
+            ))
 
         return resultatum
 
-    def _toc(self):
+    def _toc3(self):
         resultatum = []
-        resultatum.append("<ul>")
-        ordo_previus = 1
+        resultatum.append('----')
+        resultatum.append('')
         for item in self.codex:
             codicem_loci = item['#item+conceptum+codicem']
 
@@ -235,22 +241,12 @@ class Codex:
             nomen = numerordinatio_nomen(item)
             codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
             codicem_ordo = numerordinatio_ordo(codicem_loci)
-            # resultatum.append(
-            #     ('#' * (codicem_ordo + 1)) + ' [`' + codicem_loci + '`] ' + nomen + "\n"
-            # )
-            resultatum.append(
-                "<!-- {0} {1}--->".format(ordo_previus, codicem_ordo))
 
-            if codicem_ordo > ordo_previus:
-                resultatum.append("  <ul>")
-            resultatum.append("{2}<li><a href='#{0}'>[{0}] {1}</a></li>".format(
-                codicem_normale, nomen, ('  ' * (codicem_ordo))))
-            # resultatum.append("\n")
-            if codicem_ordo < ordo_previus:
-                resultatum.append("  </ul>")
-            ordo_previus = codicem_ordo
-            # resultatum.append("\n")
-        resultatum.append("</ul>\n")
+            resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
+                codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
+        resultatum.append('')
+        resultatum.append('----')
+        resultatum.append('')
         return resultatum
 
     def _corpus(self):
@@ -283,7 +279,9 @@ class Codex:
         resultatum = []
 
         resultatum.extend(self._caput())
-        resultatum.extend(self._toc())
+        # resultatum.extend(self._toc2())
+        resultatum.extend(self._toc3())
+        # resultatum.append(self._toc())
         resultatum.extend(self._corpus())
 
         # return "\n".join(resultatum)
