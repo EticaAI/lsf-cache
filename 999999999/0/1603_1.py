@@ -30,6 +30,7 @@
 #    python3 -m doctest ./999999999/0/1603_1.py
 
 # ./999999999/0/1603_1.py ./999999999/0/1603_1.py --codex-de 1603_45_1 > 999999/0/test.md
+# ./999999999/0/1603_1.py ./999999999/0/1603_1.py --codex-de 1603_84_1 > 1603/84/1/1603_84_1.mul-Zyyy.codex.md
 
 __EPILOGUM__ = """
 Exemplōrum gratiā:
@@ -55,7 +56,7 @@ from typing import (
     Type,
     Union
 )
-
+import glob
 import urllib.parse
 import requests
 
@@ -113,7 +114,6 @@ def numerordinatio_neo_separatum(
 
 def numerordinatio_ordo(numerordinatio: str) -> int:
     normale = numerordinatio_neo_separatum(numerordinatio, '_')
-
     return (normale.count('_') + 1)
 
 
@@ -136,6 +136,52 @@ def numerordinatio_lineam_hxml5_details(rem: dict, title: str = None) -> str:
     return resultatum
 
 
+def numerordinatio_summary(rem: dict, title: str = None) -> str:
+    # codex = rem['#item+conceptum+codicem']
+
+    title = title if title else rem['#item+conceptum+codicem']
+    resultatum = []
+
+    status_definitionem = qhxl(rem, '#status+conceptum+definitionem')
+    if status_definitionem:
+        resultatum.append(
+            "<progress value='{0}' max='100' title='definitionem: "
+            "{0}/100'>{0}/100</progress>".format(
+                status_definitionem))
+
+    status_codicem = qhxl(rem, '#status+conceptum+codicem')
+    if status_codicem:
+        resultatum.append(
+            "<progress value='{0}' max='100' title='cōdex stabilitātī:"
+            " {0}/100'>{0}/100</progress>".format(
+                status_codicem))
+
+    resultatum.append('<ul>')
+
+    ix_wikiq = qhxl(rem, '+ix_wikiq')
+    if ix_wikiq:
+        resultatum.append(
+            "<li><a href='https://www.wikidata.org/wiki/{0}'>"
+            "{0}</a></li>".format(
+                ix_wikiq))
+    resultatum.append('</ul>')
+
+    # resultatum = '<details><summary>🔎' + \
+    #     title + '🔍</summary>' + "\n"
+    # resultatum += '  <dl>' + "\n"
+    # for clavem, item in rem.items():
+    #     if item:
+    #         resultatum += '    <dt>' + clavem + '</dt>' + "\n"
+    #         resultatum += '    <dd>' + item + '</dd>' + "\n"
+    #     # print(item)
+
+    # resultatum += '  </dl>' + "\n"
+    # resultatum += '</details>' + "\n"
+    # resultatum.append(str(rem))
+    # resultatum.append('<progress value="70" max="100">70 %</progress>')
+    return resultatum
+
+
 def numerordinatio_nomen(
         rem: dict, objectivum_linguam: str = None,
         auxilium_linguam: list = None) -> str:
@@ -149,6 +195,19 @@ def numerordinatio_nomen(
         return rem['#item+rem+i_mul+is_zyyy']
 
     return ''
+
+# /Educated guess on stability (1-100) of local identifier if dictionary still in use in a century/
+# #status+conceptum+codicem
+# /Educated guess on comprehensibility (1-100) of concept/
+# #status+conceptum+definitionem
+
+
+def qhxl(rem: dict, query: str):
+    for clavem, rem_item in rem.items():
+        # print(clavem, rem_item, clavem.find(query))
+        if clavem.find(query) > -1:
+            return rem_item
+    return None
 
 
 class Codex:
@@ -171,6 +230,7 @@ class Codex:
         self.dictionaria_linguarum = DictionariaLinguarum()
         self.m1603_1_1__de_codex = self._init_1603_1_1()
         self.codex = self._init_codex()
+        self.annexa = self._init_annexa()
 
     def _init_1603_1_1(self):
         numerordinatio_neo_codex = numerordinatio_neo_separatum(
@@ -191,8 +251,59 @@ class Codex:
         raise ValueError("{0} not defined on 1603_1_1 [{1}]".format(
             self.de_codex, fullpath))
 
+    def _init_annexa(self):
+
+        annexa = {
+            'picturam': [],
+            '__debug': None
+        }
+        resultatum = []
+        basepath = numerordinatio_neo_separatum(self.de_codex, '/')
+        # basepath = basepath + '/' + \
+        #     numerordinatio_neo_separatum(self.de_codex, '_') + '.~[0-9]/'
+
+        # https://stackoverflow.com/questions/18394147/how-to-do-a-recursive-sub-folder-search-and-return-files-in-a-list
+
+        # files = glob.glob(basepath + '*.(jpg|jpeg|gif|png|svg)', recursive=True)
+        # files = glob.glob(basepath + '*.svg', recursive=True)
+        import re
+        file_num = 3
+        # file_re = r"[a-z_]+{file_num}\.txt".format(file_num=file_num)
+        # file_re = r"*.svg"
+        # match_file = re.compile(file_re, flags=re.IGNORECASE).match
+
+        # work_dir = basepath
+        # files2 = list(filter(match_file, os.listdir(work_dir)))
+        # files = glob.glob(basepath + '*.svg', recursive=True)
+
+        import fnmatch
+        import os
+
+        images = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.svg']
+        matches = []
+
+        annexa["0"] = []
+
+        for root, dirnames, filenames in os.walk(basepath):
+            for extensions in images:
+                for filename in fnmatch.filter(filenames, extensions):
+                    matches.append(os.path.join(root, filename))
+                    annexa["0"].append(os.path.join(root, filename))
+                    annexa['picturam'].append(
+                        os.path.join(root, filename).replace(basepath + '/', '')
+                    )
+
+        resultatum.append(basepath)
+        # resultatum.append(files)
+        # resultatum.append(files2)
+        resultatum.append(matches)
+        # resultatum.append(self.annexa_picturam)
+
+        annexa['__debug'] = resultatum
+        return annexa
+
     def _init_codex(self):
-        numerordinatio = numerordinatio_neo_separatum(self.de_codex, ':')
+        # numerordinatio = numerordinatio_neo_separatum(self.de_codex, ':')
         basepath = numerordinatio_neo_separatum(self.de_codex, '/')
         basepath = basepath + '/' + \
             numerordinatio_neo_separatum(self.de_codex, '_')
@@ -225,6 +336,12 @@ class Codex:
                 self.m1603_1_1__de_codex,
                 self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
             ))
+
+        # resultatum.append('<!-- ' + str(self.annexa) + ' -->')
+
+        if self.annexa and self.annexa['picturam']:
+            for picturam in self.annexa['picturam']:
+                resultatum.append('![{0}]({0})'.format(picturam))
 
         return resultatum
 
@@ -266,8 +383,10 @@ class Codex:
             )
             resultatum.append(
                 "<a id='{0}' href='#{0}'>§ {0}</a>".format(codicem_normale))
-            resultatum.append("\n")
 
+            resultatum.append("\n")
+            resultatum.append(numerordinatio_summary(item))
+            resultatum.append("\n")
             resultatum.append(numerordinatio_lineam_hxml5_details(item))
 
             # resultatum.append("<!-- " + str(item) + " -->")
@@ -521,7 +640,7 @@ class DictionariaNumerordinatio:
             '#status',
             'conceptum+codicem',
             '#status+conceptum+codicem',
-            '/Educated guess on stability (1-100) of local identifier/',
+            '/Educated guess on stability (1-100) of local identifier if dictionary still in use in a century/',
             ''
         ])
         resultatum.append([

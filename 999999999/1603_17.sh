@@ -49,6 +49,15 @@ ROOTDIR="$(pwd)"
 # shellcheck source=999999999.lib.sh
 . "$ROOTDIR"/999999999/999999999.lib.sh
 
+
+### Really boostrapping downloads, start
+file_download_if_necessary "$DATA_1603_1_1" "1603_1_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
+file_convert_numerordinatio_de_hxltm "1603_1_1" "1" "0"
+file_download_if_necessary "$DATA_1603_1_51" "1603_1_51" "csv" "tm.hxl.csv" "hxltmcli" "1"
+file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
+### Really boostrapping downloads, end
+
+
 file_download_if_necessary "$DATA_1603_1_1" "1603_1_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_1_1" "1" "0"
 # file_merge_numerordinatio_de_wiki_q "1603_1_1" "0" "0"
