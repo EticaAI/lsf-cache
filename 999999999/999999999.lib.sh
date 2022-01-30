@@ -403,14 +403,16 @@ neo_codex_de_numerordinatio() {
   # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  if [ ! -e "$objectivum_archivum" ]; then
-    echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
-  elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
-    # echo "${FUNCNAME[0]} objective exist, sources not changed recently"
-    return 0
-  else
-    echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
-  fi
+  # if [ ! -e "$objectivum_archivum" ]; then
+  #   echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
+  # elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
+  #   # echo "${FUNCNAME[0]} objective exist, sources not changed recently"
+  #   return 0
+  # else
+  #   echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
+  # fi
+
+  echo "${FUNCNAME[0]} [$objectivum_archivum]"
 
   "${ROOTDIR}/999999999/0/1603_1.py" \
     --objectivum-linguam="$est_objectivum_linguam" \
@@ -567,16 +569,6 @@ file_merge_numerordinatio_de_wiki_q() {
 
   # TODO: implement check if necessary to revalidate
   echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
-
-  # echo "fontem_archivum $fontem_archivum"
-  # echo "fontem_q_archivum $fontem_q_archivum"
-  # echo "objectivum_archivum $objectivum_archivum"
-  # echo "hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' --tags='#item+rem' --merge='$fontem_archivum'  $fontem_q_archivum > $objectivum_archivum_temporarium"
-  # echo ""
-  # echo ""
-  # echo ""
-  # echo "hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' --tags='#item+rem' --merge='$fontem_q_archivum'  $fontem_archivum > $objectivum_archivum_temporarium"
-  # echo "oi1"
 
   if [ "$est_non_normale" -eq "1" ]; then
     # We apply 'hxlclean --lower' only on writting systems which this make
