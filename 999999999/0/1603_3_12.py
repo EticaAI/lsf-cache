@@ -49,8 +49,6 @@
 #   OPTIONAL { ?item wdt:P18 ?pic }
 #   OPTIONAL { ?item rdfs:label ?item__rem__i_qcc__is_zxxx filter (lang(?item__rem__i_qcc__is_zxxx) = ""). }
 #   OPTIONAL { ?item rdfs:label ?item__rem__i_lat__is_latn filter (lang(?item__rem__i_lat__is_latn) = "la"). }
-  
-
 # }
 # ORDER BY ASC (?id_numeric)
 
