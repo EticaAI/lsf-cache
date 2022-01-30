@@ -515,6 +515,8 @@ file_translate_csv_de_numerordinatio_q() {
 
   # mv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
 
+  echo "debug objectivum_archivum_temporarium_b_u_wiki $objectivum_archivum_temporarium_b_u_wiki"
+
   file_update_if_necessary csv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
 
   return 0
@@ -529,6 +531,7 @@ file_translate_csv_de_numerordinatio_q() {
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
 #   est_temporarium_objectivumm (dfault "0", from real namespace)
+#   est_non_normale
 # Outputs:
 #   Convert files
 #######################################
@@ -536,6 +539,7 @@ file_merge_numerordinatio_de_wiki_q() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
   est_temporarium_objectivum="${3:-"0"}"
+  est_non_normale="${4:-"0"}"
 
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
@@ -562,7 +566,7 @@ file_merge_numerordinatio_de_wiki_q() {
   # objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
 
   # TODO: implement check if necessary to revalidate
-  echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+  echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
 
   # echo "fontem_archivum $fontem_archivum"
   # echo "fontem_q_archivum $fontem_q_archivum"
@@ -572,20 +576,32 @@ file_merge_numerordinatio_de_wiki_q() {
   # echo ""
   # echo ""
   # echo "hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' --tags='#item+rem' --merge='$fontem_q_archivum'  $fontem_archivum > $objectivum_archivum_temporarium"
-  
-  # We apply 'hxlclean --lower' only on writting systems which this make
-  # sence. On this case at least '+is_latn,+is_cyrl'
-  hxlrename \
-    --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
-    "$fontem_q_archivum" |
-    hxlclean --lower='#*+is_latn,#*+is_cyrl' \
+  # echo "oi1"
+
+  if [ "$est_non_normale" -eq "1" ]; then
+    # We apply 'hxlclean --lower' only on writting systems which this make
+    # sence. On this case at least '+is_latn,+is_cyrl'
+    hxlrename \
+      --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
+      "$fontem_q_archivum" |
+      hxlclean --lower='#*+is_latn,#*+is_cyrl' \
+        >"$fontem_q_archivum_temporarium"
+  else
+    # We apply 'hxlclean --lower' only on writting systems which this make
+    # sence. On this case at least '+is_latn,+is_cyrl'
+    hxlrename \
+      --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
+      "$fontem_q_archivum" \
       >"$fontem_q_archivum_temporarium"
+  fi
 
   # hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
   #   --tags='#item+rem' \
   #   --merge="$fontem_q_archivum" \
   #   "$fontem_archivum" \
   #   >"$objectivum_archivum_temporarium"
+
+  # echo "oi2"
 
   hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
     --tags='#item+rem' \

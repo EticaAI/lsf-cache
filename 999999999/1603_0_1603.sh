@@ -26,16 +26,15 @@ set -e
 
 ROOTDIR="$(pwd)"
 
-echo "TODO $0"
 
 # tutorial https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays
 PURGATORIA_CONCEPTUM=()
-PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "tm.hxl.csv" )
+PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" "tm.hxl.csv" )
 
 # PURGATORIA_CONCEPTUM+=( "1603_1_1" )
 # PURGATORIA_CONCEPTUM+=( "1603_1_51" )
 
-PURGATORIA_CONCEPTUM+=( "1603_3_12_6" )
+# PURGATORIA_CONCEPTUM+=( "1603_3_12_6" )
 
 # PURGATORIA_CONCEPTUM+=( "1603_25_1" )
 # PURGATORIA_CONCEPTUM+=( "1603_84_1" )

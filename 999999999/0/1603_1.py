@@ -195,8 +195,8 @@ class Codex:
 
         if os.path.exists(fullpath_no11):
             fullpath = fullpath_no11
-        # else:
-        #     fullpath = fullpath_no1
+        else:
+            fullpath = fullpath_no1
 
         codex_lineam = []
         with open(fullpath) as csvfile:
