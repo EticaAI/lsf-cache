@@ -56,12 +56,10 @@ from typing import (
     Type,
     Union
 )
-import glob
-import urllib.parse
-import requests
+import fnmatch
 
 # from itertools import permutations
-from itertools import product
+# from itertools import product
 # valueee = list(itertools.permutations([1, 2, 3]))
 import csv
 
@@ -166,19 +164,6 @@ def numerordinatio_summary(rem: dict, title: str = None) -> str:
                 ix_wikiq))
     resultatum.append('</ul>')
 
-    # resultatum = '<details><summary>🔎' + \
-    #     title + '🔍</summary>' + "\n"
-    # resultatum += '  <dl>' + "\n"
-    # for clavem, item in rem.items():
-    #     if item:
-    #         resultatum += '    <dt>' + clavem + '</dt>' + "\n"
-    #         resultatum += '    <dd>' + item + '</dd>' + "\n"
-    #     # print(item)
-
-    # resultatum += '  </dl>' + "\n"
-    # resultatum += '</details>' + "\n"
-    # resultatum.append(str(rem))
-    # resultatum.append('<progress value="70" max="100">70 %</progress>')
     return resultatum
 
 
@@ -259,25 +244,7 @@ class Codex:
         }
         resultatum = []
         basepath = numerordinatio_neo_separatum(self.de_codex, '/')
-        # basepath = basepath + '/' + \
-        #     numerordinatio_neo_separatum(self.de_codex, '_') + '.~[0-9]/'
 
-        # https://stackoverflow.com/questions/18394147/how-to-do-a-recursive-sub-folder-search-and-return-files-in-a-list
-
-        # files = glob.glob(basepath + '*.(jpg|jpeg|gif|png|svg)', recursive=True)
-        # files = glob.glob(basepath + '*.svg', recursive=True)
-        import re
-        file_num = 3
-        # file_re = r"[a-z_]+{file_num}\.txt".format(file_num=file_num)
-        # file_re = r"*.svg"
-        # match_file = re.compile(file_re, flags=re.IGNORECASE).match
-
-        # work_dir = basepath
-        # files2 = list(filter(match_file, os.listdir(work_dir)))
-        # files = glob.glob(basepath + '*.svg', recursive=True)
-
-        import fnmatch
-        import os
 
         images = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.svg']
         matches = []
@@ -290,7 +257,8 @@ class Codex:
                     matches.append(os.path.join(root, filename))
                     annexa["0"].append(os.path.join(root, filename))
                     annexa['picturam'].append(
-                        os.path.join(root, filename).replace(basepath + '/', '')
+                        os.path.join(root, filename).replace(
+                            basepath + '/', '')
                     )
 
         resultatum.append(basepath)
@@ -341,7 +309,7 @@ class Codex:
 
         if self.annexa and self.annexa['picturam']:
             for picturam in self.annexa['picturam']:
-                resultatum.append('![{0}]({0})'.format(picturam))
+                resultatum.append('![{0}]({0})\n'.format(picturam))
 
         return resultatum
 

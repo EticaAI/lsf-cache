@@ -37,6 +37,24 @@
 #    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv > 999999/0/test.csv
 #    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm
 
+# 1603_25_1 query
+# printf "Q3409626\nQ41055\nQ3321315\nQ160695\nQ9645\nQ9597\nQ713102\nQ133279\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query
+
+
+# SELECT ?pic (STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem) ?item__rem__i_lat__is_latn
+# WHERE
+# {
+#   VALUES ?item { wd:Q3409626  wd:Q41055  wd:Q3321315  wd:Q160695  wd:Q9645  wd:Q9597  wd:Q713102  wd:Q133279  }
+#   bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
+#   OPTIONAL { ?item wdt:P18 ?pic }
+#   OPTIONAL { ?item rdfs:label ?item__rem__i_qcc__is_zxxx filter (lang(?item__rem__i_qcc__is_zxxx) = ""). }
+#   OPTIONAL { ?item rdfs:label ?item__rem__i_lat__is_latn filter (lang(?item__rem__i_lat__is_latn) = "la"). }
+  
+
+# }
+# ORDER BY ASC (?id_numeric)
+
+
 # TODO: https://sinaahmadi.github.io/posts/10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
 
 import os

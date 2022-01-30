@@ -66,3 +66,11 @@ based on:
 - dentālia, n, plural, https://en.wiktionary.org/wiki/dentalis#Latin
 - dens, https://en.wiktionary.org/wiki/dens#Latin
 - "-ica", plural, (nominative, accusative, vocative), https://en.wiktionary.org/wiki/-icus#Latin
+
+<!--
+- https://en.wikipedia.org/wiki/Gray%27s_Anatomy
+  - https://archive.org/details/texts?query=Gray+Anatomy
+  - First edition: London in 1858.
+  - https://archive.org/details/anatomyofhumanbo1918gray
+  - Classical image of the neck https://archive.org/details/anatomyofhumanbo1918gray/page/550/mode/2up?view=theater
+-->
