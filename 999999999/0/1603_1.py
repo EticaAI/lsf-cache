@@ -285,10 +285,10 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
             rem[query])
     if query.find('+ix_ta98') > -1:
         term = rem[query].replace('A', '')
-        resultatum = "<a href='https://ifaa.unifr.ch/Public/EntryPage/" + \
-            "TA98%20Tree/Entity%20TA98%20EN/{0}%20Entity%20TA98%20EN.htm'>" + \
-            "{1}</a>".format(
-                term, rem[query])
+        resultatum = (
+            '<a href="https://ifaa.unifr.ch/Public/EntryPage/'
+            'TA98%20Tree/Entity%20TA98%20EN/{0}%20Entity%20TA98%20EN.htm">'
+            '{1}</a>').format(term, rem[query])
         return resultatum
 
     # https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/Entity%20TA98%20EN/01.1.00.013%20Entity%20TA98%20EN.htm
