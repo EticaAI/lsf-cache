@@ -36,6 +36,11 @@
 # ./999999999/0/1603_1.py ./999999999/0/1603_1.py \
 # --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Zyyy.codex.md
 
+# quotes
+# - https://en.wiktionary.org/wiki/res,_non_verba#Latin
+# - https://en.wikipedia.org/wiki/Nullius_in_verba
+#   - https://artigos.wiki/blog/en/Nullius_in_verba
+
 
 from multiprocessing.sharedctypes import Value
 import os
@@ -164,32 +169,34 @@ def numerordinatio_lineam_hxml5_details(rem: dict, title: str = None) -> str:
 def numerordinatio_summary(rem: dict, title: str = None) -> str:
     # codex = rem['#item+conceptum+codicem']
 
-    title = title if title else rem['#item+conceptum+codicem']
+    # TODO: maybe remove this?
+
+    # title = title if title else rem['#item+conceptum+codicem']
     resultatum = []
 
-    status_definitionem = qhxl(rem, '#status+conceptum+definitionem')
-    if status_definitionem:
-        resultatum.append(
-            "<progress value='{0}' max='100' title='definitionem: "
-            "{0}/100'>{0}/100</progress>".format(
-                status_definitionem))
+    # status_definitionem = qhxl(rem, '#status+conceptum+definitionem')
+    # if status_definitionem:
+    #     resultatum.append(
+    #         "<progress value='{0}' max='100' title='definitionem: "
+    #         "{0}/100'>{0}/100</progress>".format(
+    #             status_definitionem))
 
-    status_codicem = qhxl(rem, '#status+conceptum+codicem')
-    if status_codicem:
-        resultatum.append(
-            "<progress value='{0}' max='100' title='cōdex stabilitātī:"
-            " {0}/100'>{0}/100</progress>".format(
-                status_codicem))
+    # status_codicem = qhxl(rem, '#status+conceptum+codicem')
+    # if status_codicem:
+    #     resultatum.append(
+    #         "<progress value='{0}' max='100' title='cōdex stabilitātī:"
+    #         " {0}/100'>{0}/100</progress>".format(
+    #             status_codicem))
 
-    resultatum.append('<ul>')
+    # resultatum.append('<ul>')
 
-    ix_wikiq = qhxl(rem, '+ix_wikiq')
-    if ix_wikiq:
-        resultatum.append(
-            "<li><a href='https://www.wikidata.org/wiki/{0}'>"
-            "{0}</a></li>".format(
-                ix_wikiq))
-    resultatum.append('</ul>')
+    # ix_wikiq = qhxl(rem, '+ix_wikiq')
+    # if ix_wikiq:
+    #     resultatum.append(
+    #         "<li><a href='https://www.wikidata.org/wiki/{0}'>"
+    #         "{0}</a></li>".format(
+    #             ix_wikiq))
+    # resultatum.append('</ul>')
 
     return resultatum
 
@@ -268,6 +275,26 @@ def trivium_annexum_numerordinatio_locali(
     return trivium
 
 
+def res_interlingualibus_formata(rem: dict, query) -> str:
+
+    if not rem[query]:
+        return ''
+
+    if query.find('+ix_wikiq') > -1:
+        return "<a href='https://www.wikidata.org/wiki/{0}'>{0}</a>".format(
+            rem[query])
+    if query.find('+ix_ta98') > -1:
+        term = rem[query].replace('A', '')
+        resultatum = "<a href='https://ifaa.unifr.ch/Public/EntryPage/" + \
+            "TA98%20Tree/Entity%20TA98%20EN/{0}%20Entity%20TA98%20EN.htm'>" + \
+            "{1}</a>".format(
+                term, rem[query])
+        return resultatum
+
+    # https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/Entity%20TA98%20EN/01.1.00.013%20Entity%20TA98%20EN.htm
+
+    return rem[query]
+
 # /Educated guess on stability (1-100) of local identifier
 # if dictionary still in use in a century/
 # #status+conceptum+codicem
@@ -290,6 +317,15 @@ class Codex:
     - Cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex
     - https://latin.stackexchange.com/questions/2102
       /most-accurate-latin-word-for-book-in-this-context
+
+
+    - verbīs, n, pl, (Dative) https://en.wiktionary.org/wiki/verbum#Latin
+    - https://en.wiktionary.org/wiki/terminus#Latin
+
+
+    - verba, n, pl (Nominative), https://en.wiktionary.org/wiki/verbum#Latin
+    - conceptiō, f, s, (Nominative),
+      https://en.wiktionary.org/wiki/conceptio#Latin
 
 
     Exemplōrum gratiā (et Python doctest, id est, testum automata)
@@ -424,6 +460,15 @@ class Codex:
 
         picturae = self.annexis.quod_picturae(numerordinatio_locali='0')
         if picturae:
+            codicem_ordo = 2
+            resultatum.append(
+                ('#' * (codicem_ordo + 2)) + ' ' +
+                '<span lang="la">Annexa</span>'
+            )
+            resultatum.append(
+                ('#' * (codicem_ordo + 3)) + ' ' +
+                '<span lang="la">Pictūrae</span>'
+            )
             for item in picturae:
 
                 trivium = item.quod_temp_rel_pic()
@@ -510,6 +555,14 @@ class Codex:
             picturae = self.annexis.quod_picturae(
                 numerordinatio_locali=codicem_normale)
             if picturae:
+                resultatum.append(
+                    ('#' * (codicem_ordo + 2)) + ' ' +
+                    '<span lang="la">Annexa</span>'
+                )
+                resultatum.append(
+                    ('#' * (codicem_ordo + 3)) + ' ' +
+                    '<span lang="la">Pictūrae</span>'
+                )
                 for item in picturae:
                     trivium = item.quod_temp_rel_pic()
                     titulum = item.quod_temp_titulum()
@@ -571,8 +624,8 @@ class Codex:
             resultatum.append("")
             resultatum.append("")
             resultatum.append(
-                "| <span lang='la'>Linguam</span> | "
-                "<span lang='la'>Significātum</span> |")
+                "| <span lang='la'>Lingua de verba</span> | "
+                "<span lang='la'>Verba de conceptiō</span> |")
             resultatum.append("| ------------- | ------------- |")
             resultatum.extend(resultatum_corpus)
 
@@ -608,6 +661,7 @@ class Codex:
             if item_textum:
                 clavem_i18n = clavem
                 item_text_i18n = item_textum
+                item_text_i18n = res_interlingualibus_formata(rem, clavem)
                 if clavem.startswith('#item+rem+i_qcc'):
                     self.usus_ix_qcc.add(clavem)
 
@@ -624,12 +678,16 @@ class Codex:
                 resultatum_corpus.append(
                     "| {0} | {1} |".format(clavem_i18n, item_text_i18n))
 
+        # - linguālia, https://en.wiktionary.org/wiki/lingualis#Latin
+        # -rēs, f, s, (Nominative),
+        #   https://en.wiktionary.org/wiki/lingualis#Latin
         if resultatum_corpus:
             resultatum.append("")
             resultatum.append("")
             resultatum.append(
-                "| <span lang='la'>Cōdicibus</span> | "
-                "<span lang='la'>Significātum</span> |")
+                "| <span lang='la'>Non lingua</span> | "
+                #    "<span lang='la'>Verba de conceptiō</span> |")
+                "<span lang='la'>//Rēs interlinguālibus//</span> |")
             resultatum.append("| ------------- | ------------- |")
             resultatum.extend(resultatum_corpus)
 
@@ -995,7 +1053,7 @@ class DictionariaLinguarum:
                 ix_glottocode = \
                     "<a href='https://glottolog.org/resource/languoid/id/{0}'>{0}</a>".format(
                         ix_glottocode)
-    
+
             if len(ix_iso639p3a3):
                 ix_iso639p3a3 = \
                     "<a href='https://iso639-3.sil.org/code/{0}'>{0}</a>".format(
