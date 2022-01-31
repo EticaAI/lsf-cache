@@ -280,6 +280,13 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
     if not rem[query]:
         return ''
 
+    if query.find('#status+conceptum+definitionem') > -1:
+        return "{0} <sup><em>(1-100)</em></sup>".format(
+            rem[query])
+    if query.find('#status+conceptum+codicem') > -1:
+        return "{0} <sup><em>(1-100)</em></sup>".format(
+            rem[query])
+
     if query.find('+ix_wikiq') > -1:
         return "<a href='https://www.wikidata.org/wiki/{0}'>{0}</a>".format(
             rem[query])
