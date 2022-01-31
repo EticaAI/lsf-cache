@@ -240,39 +240,6 @@ class Codex:
         raise ValueError("{0} not defined on 1603_1_1 [{1}]".format(
             self.de_codex, fullpath))
 
-    # def _init_annexa(self):
-
-    #     annexa = {
-    #         'picturam': [],
-    #         '__debug': None
-    #     }
-    #     resultatum = []
-    #     basepath = numerordinatio_neo_separatum(self.de_codex, '/')
-
-    #     images = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.svg']
-    #     matches = []
-
-    #     annexa["0"] = []
-
-    #     for root, dirnames, filenames in os.walk(basepath):
-    #         for extensions in images:
-    #             for filename in fnmatch.filter(filenames, extensions):
-    #                 matches.append(os.path.join(root, filename))
-    #                 annexa["0"].append(os.path.join(root, filename))
-    #                 annexa['picturam'].append(
-    #                     os.path.join(root, filename).replace(
-    #                         basepath + '/', '')
-    #                 )
-
-    #     resultatum.append(basepath)
-    #     # resultatum.append(files)
-    #     # resultatum.append(files2)
-    #     resultatum.append(matches)
-    #     # resultatum.append(self.annexa_picturam)
-
-    #     annexa['__debug'] = resultatum
-    #     return annexa
-
     def _init_codex(self):
         # numerordinatio = numerordinatio_neo_separatum(self.de_codex, ':')
         basepath = numerordinatio_neo_separatum(self.de_codex, '/')
@@ -309,10 +276,9 @@ class Codex:
             ))
 
         # resultatum.append('<!-- ' + str(self.annexa) + ' -->')
-        resultatum.append('')
-        resultatum.append('')
-        resultatum.append('<!-- ' + str(self.annexis.__dict__) + ' -->')
-
+        # resultatum.append('')
+        # resultatum.append('')
+        # resultatum.append('<!-- ' + str(self.annexis.__dict__) + ' -->')
 
         picturae = self.annexis.quod_picturae()
         if picturae:
@@ -323,8 +289,6 @@ class Codex:
                 # resultatum.append('')
                 trivium = item.quod_temp_rel_pic()
                 resultatum.append('![{0}]({0})\n'.format(trivium))
-                
-
 
         # if self.annexa and self.annexa['picturam']:
         #     for picturam in self.annexa['picturam']:
