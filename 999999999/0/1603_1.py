@@ -102,6 +102,34 @@ STDIN = sys.stdin.buffer
 #   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
 # }
 
+# Trivia:
+# - extēnsiōnēs, f, pl (Nominative)
+#   https://en.wiktionary.org/wiki/extensio#Latin
+# - archīva, n, pl, (nominative)
+#   https://en.wiktionary.org/wiki/archivum
+# - pictūrīs, f, pl (Dative)
+#   https://en.wiktionary.org/wiki/pictura#Latin
+# - ignōrātīs, f, pl, (Dative)
+#   https://en.wiktionary.org/wiki/ignoratus#Latin
+ARCHIVA_IGNORATIS = [
+    '.gitkeep',
+    '.gitignore',
+    'README.md',
+    'LICENSE.md'
+]
+EXTENSIONES_PICTURIS = [
+    'gif',
+    'jpg',
+    'jpeg',
+    'png',
+    'tiff',
+    'svg',
+]
+EXTENSIONES_IGNORATIS = [
+
+]
+
+
 def numerordinatio_neo_separatum(
         numerordinatio: str, separatum: str = "_") -> str:
     resultatum = ''
@@ -183,6 +211,66 @@ def numerordinatio_nomen(
 
     return ''
 
+
+def numerordinatio_trivium_sarcina(
+        trivium: str, de_codex: str) -> str:
+    """numerordinatio_trivium_sarcina
+
+    Args:
+        trivium (str): /Path to file/@eng-Latn
+        de_codex (str): /Numerordinatio/@eng-Latn
+
+    Returns:
+        str: sarcina
+
+    Exemplōrum gratiā (et Python doctest, id est, testum automata)
+        >>> numerordinatio_trivium_sarcina(
+        ...    '1603/84/1/1603_84_1.~1/0.nnx.tm.hxl.csv', '1603_84_1')
+        '~1'
+
+        >>> numerordinatio_trivium_sarcina(
+        ...    '1603/84/1/1603_84_1.tm.hxl.csv', '1603_84_1')
+    """
+    radix = numerordinatio_neo_separatum(de_codex, '/')
+
+    temp1 = trivium.replace(radix + '/', '')
+    if temp1.find('~') > -1 and temp1.find('/') > -1:
+        temp2 = temp1.split('/')[0]
+        if temp2.find('~') > -1:
+            return '~' + temp2.split('~')[1]
+
+    return None
+
+
+def trivium_annexum_numerordinatio_locali(
+        trivium: str) -> str:
+    """trivium_annexum_numerordinatio_locali
+
+    Args:
+        trivium (str): /Path to file/@eng-Latn
+        de_codex (str): /Numerordinatio/@eng-Latn
+
+    Returns:
+        str: numerordinatio_locali
+
+    Exemplōrum gratiā (et Python doctest, id est, testum automata)
+        >>> trivium_annexum_numerordinatio_locali(
+        ...    '1603/84/1/1603_84_1.~1/0.nnx.tm.hxl.csv')
+        '0'
+        >>> trivium_annexum_numerordinatio_locali(
+        ...    '1603/84/1/1603_84_1.~1/0~0.svg')
+        '0'
+    """
+    if trivium.find('/') > -1:
+        trivium = trivium.split('/').pop()
+    if trivium.find('.') > -1:
+        trivium = trivium.split('.').pop(0)
+    if trivium.find('~') > -1:
+        trivium = trivium.split('~').pop(0)
+
+    return trivium
+
+
 # /Educated guess on stability (1-100) of local identifier if dictionary still in use in a century/
 # #status+conceptum+codicem
 # /Educated guess on comprehensibility (1-100) of concept/
@@ -198,6 +286,17 @@ def qhxl(rem: dict, query: str):
 
 
 class Codex:
+    """Cōdex
+
+    Trivia:
+    - Cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex
+
+
+    Exemplōrum gratiā (et Python doctest, id est, testum automata)
+        # >>> codex = Codex('1603_25_1')
+        # >>> codex.sarcinarum.__dict__
+    """
+
     def __init__(
         self,
         de_codex: str,
@@ -220,6 +319,7 @@ class Codex:
         # self.annexa = self._init_annexa()
 
         self.annexis = CodexAnnexis(self.de_codex)
+        self.sarcinarum = CodexSarcinarumAdnexis(self.de_codex)
 
     def _init_1603_1_1(self):
         numerordinatio_neo_codex = numerordinatio_neo_separatum(
@@ -280,7 +380,7 @@ class Codex:
         # resultatum.append('')
         # resultatum.append('<!-- ' + str(self.annexis.__dict__) + ' -->')
 
-        picturae = self.annexis.quod_picturae()
+        picturae = self.annexis.quod_picturae(numerordinatio_locali='0')
         if picturae:
             for item in picturae:
                 # resultatum.append('')
@@ -340,6 +440,13 @@ class Codex:
             resultatum.append("\n")
             resultatum.append(numerordinatio_lineam_hxml5_details(item))
 
+            picturae = self.annexis.quod_picturae(
+                numerordinatio_locali=codicem_normale)
+            if picturae:
+                for item in picturae:
+                    trivium = item.quod_temp_rel_pic()
+                    resultatum.append('![{0}]({0})\n'.format(trivium))
+
             # resultatum.append("<!-- " + str(item) + " -->")
             resultatum.append("\n")
 
@@ -373,6 +480,7 @@ class CodexAnnexo:
     ):
         self.de_codex = de_codex
         self.trivium = trivium
+        self.sarcina = numerordinatio_trivium_sarcina(trivium, de_codex)
 
     def quod_temp_rel_pic(self):
         self.radix_codex = numerordinatio_neo_separatum(self.de_codex, '/')
@@ -386,46 +494,7 @@ class CodexAnnexis:
     Trivia:
     - cōdex, m, s, (Nominative) https://en.wiktionary.org/wiki/codex#Latin
     - annexīs, m/f/n, pl (Dative) https://en.wiktionary.org/wiki/annexus#Latin
-
-    >>> ca1603_25_1 = CodexAnnexis('1603_25_1')
-
-    # >>> ca1603_25_1.__dict__
-
-
-    # >>> ca1603_25_1.quod_archivum()
-    # >>> ca1603_25_1.quod_picturae()
-
-
     """
-
-    # Trivia:
-    # - extēnsiōnēs, f, pl (Nominative)
-    #   https://en.wiktionary.org/wiki/extensio#Latin
-    # - archīva, n, pl, (nominative)
-    #   https://en.wiktionary.org/wiki/archivum
-    # - pictūrīs, f, pl (Dative)
-    #   https://en.wiktionary.org/wiki/pictura#Latin
-    # - ignōrātīs, f, pl, (Dative)
-    #   https://en.wiktionary.org/wiki/ignoratus#Latin
-
-    ARCHIVA_IGNORATIS = [
-        '.gitkeep',
-        '.gitignore',
-        'README.md',
-        'LICENSE.md'
-    ]
-
-    EXTENSIONES_PICTURIS = [
-        'gif',
-        'jpg',
-        'jpeg',
-        'png',
-        'tiff',
-        'svg',
-    ]
-    EXTENSIONES_IGNORATIS = [
-
-    ]
 
     de_codex = ''
     # complētum	, n, s, (Nominative), https://en.wiktionary.org/wiki/completus
@@ -437,6 +506,7 @@ class CodexAnnexis:
         de_codex: str,
 
     ):
+        self.de_codex = de_codex
         self.de_codex = de_codex
         self.initiari()
         self.initiari_triviis()
@@ -454,54 +524,9 @@ class CodexAnnexis:
 
         for root, dirnames, filenames in os.walk(basepath):
             for filename in fnmatch.filter(filenames, '*'):
-                if filename in self.ARCHIVA_IGNORATIS:
+                if filename in ARCHIVA_IGNORATIS:
                     continue
                 self.completum.append(os.path.join(root, filename))
-
-        # raise ValueError(self.et_al)
-
-    # def initiari_picturae(self):
-    #     """initiarī_picturae Initalise pictures
-
-    #     Trivia:
-    #     - initiārī, https://en.wiktionary.org/wiki/initio#Latin
-    #     - pictūrae, f, pl, (nominative)
-    #       https://en.wiktionary.org/wiki/pictura#Latin
-
-    #     Returns:
-    #         [Dict]:
-    #     """
-
-    #     annexa = {
-    #         'picturam': [],
-    #         '__debug': None
-    #     }
-    #     resultatum = []
-    #     basepath = numerordinatio_neo_separatum(self.de_codex, '/')
-
-    #     images = ['*.jpg', '*.jpeg', '*.png', '*.tif', '*.tiff', '*.svg']
-    #     matches = []
-
-    #     annexa["0"] = []
-
-    #     for root, dirnames, filenames in os.walk(basepath):
-    #         for extensions in images:
-    #             for filename in fnmatch.filter(filenames, extensions):
-    #                 matches.append(os.path.join(root, filename))
-    #                 annexa["0"].append(os.path.join(root, filename))
-    #                 annexa['picturam'].append(
-    #                     os.path.join(root, filename).replace(
-    #                         basepath + '/', '')
-    #                 )
-
-    #     resultatum.append(basepath)
-
-    #     resultatum.append(matches)
-    #     # resultatum.append('sarcinae')
-    #     # resultatum.append(self.triviis['sarcinae'])
-
-    #     annexa['__debug'] = resultatum
-    #     return annexa
 
     def initiari_triviis(self):
         """initiari_triviīs initiārī triviīs
@@ -514,30 +539,15 @@ class CodexAnnexis:
             [dict]:
         """
 
-        # resultatum = {
-        #     'radix': '',
-        #     'sarcinae': ['www']
-        # }
         radix = ''
         sarcinae = []
-        # sarcinae = set()
-        # - sarcinae, f, pl, (nominative),
-        #   https://en.wiktionary.org/wiki/sarcina#Latin
 
         basepath = numerordinatio_neo_separatum(self.de_codex, '/')
         radix = basepath
 
-        # resultatum['sarcinae'] = [123]
-
         for root, dirnames, filenames in os.walk(basepath):
             sarcinae = dirnames
-            # raise ValueError('dirnames' + str(dirnames))
-            # pass
-            # raise ValueError('sarcinae' + str(sarcinae))
             self.sarcinae = sarcinae
-
-        # resultatum['sarcinae'] = list(sarcinae)
-        # raise ValueError('sarcinae' + str(sarcinae))
 
         return [radix, sarcinae]
 
@@ -552,16 +562,68 @@ class CodexAnnexis:
         """
         return self.completum
 
-    def quod_picturae(self) -> List[Type['CodexAnnexo']]:
+    def quod_sarcinae(self) -> List[Type[str]]:
+        resultatum = []
+        # TODO: do it
+        return resultatum
+
+    def quod_picturae(
+            self,
+            numerordinatio_locali: str = None) -> List[Type['CodexAnnexo']]:
         resultatum = []
         for item in self.completum:
-            if item.endswith(tuple(self.EXTENSIONES_PICTURIS)):
+            if numerordinatio_locali is not None:
+                nl = trivium_annexum_numerordinatio_locali(item)
+                if nl != numerordinatio_locali:
+                    continue
+            if item.endswith(tuple(EXTENSIONES_PICTURIS)):
                 resultatum.append(CodexAnnexo(self.de_codex, item))
         return resultatum
         # debug = []
         # for item in resultatum:
         #     debug.append(item.__dict__)
         # return debug
+
+
+class CodexSarcinarumAdnexis:
+    """Codex Sarcinarum Adnexīs
+
+    //Packages of attachments from Codex//
+
+    Trivia:
+    - cōdex, m, s, (Nominative) https://en.wiktionary.org/wiki/codex#Latin
+    - adnexīs, m/f/n, pl (Dative) https://en.wiktionary.org/wiki/adnexus#Latin
+    - annexīs, m/f/n, pl (Dative) https://en.wiktionary.org/wiki/annexus#Latin
+    - sarcinārum, f, pl, (Gengitive) https://en.wiktionary.org/wiki/sarcina#Latin
+
+    # >>> ca1603_25_1.quod_picturae()
+    """
+
+    # sarcinae = ['todo']
+    completum = []
+
+    def __init__(
+        self,
+        de_codex: str,
+
+    ):
+        self.de_codex = de_codex
+        self.initiari()
+        # print('completum', self.completum)
+
+    def initiari(self):
+        """initiarī
+
+        Trivia:
+        - initiārī, https://en.wiktionary.org/wiki/initio#Latin
+        """
+        basepath = numerordinatio_neo_separatum(self.de_codex, '/')
+
+        for root, dirnames, filenames in os.walk(basepath):
+            self.completum.extend(dirnames)
+
+    def quod_sarcinarum(self):
+        return self.completum
 
 
 class DictionariaLinguarum:
