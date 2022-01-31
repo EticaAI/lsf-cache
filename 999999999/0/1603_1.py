@@ -29,9 +29,12 @@
 # pytest
 #    python3 -m doctest ./999999999/0/1603_1.py
 
-# ./999999999/0/1603_1.py ./999999999/0/1603_1.py --codex-de 1603_45_1 > 999999/0/test.md
-# ./999999999/0/1603_1.py ./999999999/0/1603_1.py --codex-de 1603_84_1 > 1603/84/1/1603_84_1.mul-Zyyy.codex.md
-# ./999999999/0/1603_1.py ./999999999/0/1603_1.py --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Zyyy.codex.md
+# ./999999999/0/1603_1.py ./999999999/0/1603_1.py \
+# --codex-de 1603_45_1 > 999999/0/test.md
+# ./999999999/0/1603_1.py ./999999999/0/1603_1.py \
+# --codex-de 1603_84_1 > 1603/84/1/1603_84_1.mul-Zyyy.codex.md
+# ./999999999/0/1603_1.py ./999999999/0/1603_1.py \
+# --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Zyyy.codex.md
 
 
 from multiprocessing.sharedctypes import Value
@@ -75,21 +78,14 @@ Explain the dictionaries
 # In Python2, sys.stdin is a byte stream; in Python3, it's a text stream
 STDIN = sys.stdin.buffer
 
-# print('getcwd:      ', os.getcwd())
-# print('oi', NUMERORDINATIO_BASIM)
-
-
-# def quod_1613_2_60_datum():
-#     datum = {}
-#     with open(NUMERORDINATIO_BASIM + "/1613/1603.2.60.no1.tm.hxl.tsv") as file:
-#         tsv_file = csv.DictReader(file, delimiter="\t")
-#         return list(tsv_file)
 
 # a b aa bb
-# printf "30160\n31161\n1830260\n1891267\n" | ./999999999/0/2600.py --actionem-decifram
+# printf "30160\n31161\n1830260\n1891267\n" | \
+# ./999999999/0/2600.py --actionem-decifram
 
 # a aa aaa
-# printf "30160\n1830260\n109830360\n" | ./999999999/0/2600.py --actionem-decifram
+# printf "30160\n1830260\n109830360\n" | \
+# ./999999999/0/2600.py --actionem-decifram
 # ./999999999/0/1603_1.py --actionem-quod-sparql
 
 
@@ -99,7 +95,8 @@ STDIN = sys.stdin.buffer
 #   VALUES ?item { wd:Q1065 wd:Q82151 wd:Q125761 wd:Q7809}
 #   # mother of
 #   OPTIONAL { ?item wdt:P25 ?pseudoquery. }
-#   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+#   SERVICE wikibase:label { bd:serviceParam wikibase:language
+# "[AUTO_LANGUAGE],en". }
 # }
 
 # Trivia:
@@ -271,7 +268,8 @@ def trivium_annexum_numerordinatio_locali(
     return trivium
 
 
-# /Educated guess on stability (1-100) of local identifier if dictionary still in use in a century/
+# /Educated guess on stability (1-100) of local identifier
+# if dictionary still in use in a century/
 # #status+conceptum+codicem
 # /Educated guess on comprehensibility (1-100) of concept/
 # #status+conceptum+definitionem
@@ -290,6 +288,8 @@ class Codex:
 
     Trivia:
     - Cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex
+    - https://latin.stackexchange.com/questions/2102
+      /most-accurate-latin-word-for-book-in-this-context
 
 
     Exemplōrum gratiā (et Python doctest, id est, testum automata)
@@ -320,6 +320,8 @@ class Codex:
 
         self.annexis = CodexAnnexis(self, self.de_codex)
         self.sarcinarum = CodexSarcinarumAdnexis(self.de_codex)
+        self.usus_linguae = set()
+        self.usus_ix_qcc = set()
 
     def _init_1603_1_1(self):
         numerordinatio_neo_codex = numerordinatio_neo_separatum(
@@ -334,7 +336,8 @@ class Codex:
         with open(fullpath) as csvfile:
             reader = csv.DictReader(csvfile)
             for lineam in reader:
-                if lineam['#item+rem+i_qcc+is_zxxx+ix_n1603'] == numerordinatio_neo_codex:
+                if lineam['#item+rem+i_qcc+is_zxxx+ix_n1603'] \
+                        == numerordinatio_neo_codex:
                     return lineam
 
         raise ValueError("{0} not defined on 1603_1_1 [{1}]".format(
@@ -361,7 +364,16 @@ class Codex:
 
         return codex_lineam
 
-    def _caput(self):
+    def codex_capiti(self) -> list:
+        """cōdex capitī /book header/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - capitī, n, s, (Dative), https://en.wiktionary.org/wiki/caput#Latin
+
+        Returns:
+            [list]:
+        """
         resultatum = []
         # resultatum.append(self._caput())
         resultatum.append(
@@ -369,33 +381,44 @@ class Codex:
             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
             '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
         resultatum.append("\n")
+
+        return resultatum
+
+    def codex_praefatio(self) -> list:
+        """cōdex praefātiōnī /book preface/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - praefātiōnī, f, s, (Dative), https://en.wiktionary.org/wiki/praefatio
+
+        Returns:
+            [list]:
+        """
+        resultatum = []
+        resultatum.append("# [0] /Praefātiō/@lat-Latn \n")
+        resultatum.append("<a id='0' href='#0'>§ 0</a> \n")
+
+        resultatum.extend(self.conceptum_ad_tabula_verbis(
+            self.m1603_1_1__de_codex))
+        resultatum.extend(self.conceptum_ad_tabula_codicibus(
+            self.m1603_1_1__de_codex))
+
         # resultatum.append(
         #     numerordinatio_lineam_hxml5_details(
         #         self.m1603_1_1__de_codex,
         #         self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
         #     ))
 
-        # picturae = self.annexis.quod_picturae(numerordinatio_locali='0')
-        # if picturae:
-        #     for item in picturae:
+        if len(self.usus_ix_qcc):
+            resultatum.append("<!-- @TODO {0} -->".format(
+                str(self.usus_ix_qcc)))
 
-        #         trivium = item.quod_temp_rel_pic()
-        #         titulum = item.quod_temp_titulum()
-        #         resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
-        #         resultatum.append('{0}\n'.format(titulum))
+        if len(self.usus_linguae):
+            resultatum.append("### Linguae in cōdex")
+            # resultatum.append(str(self.usus_linguae))
 
-        return resultatum
-
-    def _praefatio(self):
-        resultatum = []
-        resultatum.append("# [0] /Praefātiō/@lat-Latn \n")
-        resultatum.append("<a id='0' href='#0'>§ 0</a> \n")
-
-        resultatum.append(
-            numerordinatio_lineam_hxml5_details(
-                self.m1603_1_1__de_codex,
-                self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
-            ))
+            resultatum.extend(self.dictionaria_linguarum.imprimere(
+                list(self.usus_linguae)))
 
         resultatum.append("----\n")
 
@@ -417,7 +440,17 @@ class Codex:
 
         return resultatum
 
-    def _toc3(self):
+    def codex_indici(self) -> list:
+        """cōdex indicī /book index/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - indicī, m, s, (Dative), https://en.wiktionary.org/wiki/index#Latin
+
+        Returns:
+            [list]:
+        """
+
         resultatum = []
         resultatum.append('----')
         resultatum.append('')
@@ -439,7 +472,16 @@ class Codex:
         resultatum.append('')
         return resultatum
 
-    def _corpus(self):
+    def codex_corpori(self) -> list:
+        """cōdex corporī /book body/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - corporī, n, s, (Dative), https://en.wiktionary.org/wiki/corpus#Latin
+
+        Returns:
+            [list]:
+        """
         resultatum = []
         for item in self.codex:
             codicem_loci = item['#item+conceptum+codicem']
@@ -459,7 +501,9 @@ class Codex:
 
             resultatum.append("\n")
             resultatum.append(numerordinatio_summary(item))
-            resultatum.append(self._terminum(item))
+            resultatum.extend(self.conceptum_ad_tabula_codicibus(item))
+            resultatum.append("\n")
+            resultatum.extend(self.conceptum_ad_tabula_verbis(item))
             resultatum.append("\n")
             # resultatum.append(numerordinatio_lineam_hxml5_details(item))
 
@@ -482,24 +526,114 @@ class Codex:
 
         return resultatum
 
-    def _terminum(self, rem: dict):
+    def conceptum_ad_tabula_verbis(self, rem: dict) -> list:
+        """conceptum ad tabula verbīs
+
+        Trivia:
+        - conceptum	, n, s, (Nominative),
+          https://en.wiktionary.org/wiki/conceptus#Latin
+        - tabula, f, s, (Nominative), https://en.wiktionary.org/wiki/tabula
+        - verbīs, n, pl, (Dative), https://en.wiktionary.org/wiki/verbum#Latin
+
+        Returns:
+            [list]:
+        """
 
         resultatum = []
         resultatum_corpus = []
 
         for clavem, item_textum in rem.items():
-            if item_textum:
-                resultatum_corpus.append("| {0} | {1} |".format(clavem, item_textum))
+            if clavem.startswith('#item+conceptum'):
+                continue
+            if clavem.startswith('#status+conceptum'):
+                continue
+            if clavem.startswith('#item+rem+i_qcc'):
+                continue
+
+            if item_textum and len(item_textum) > 0:
+                clavem_i18n = clavem
+                self.usus_linguae.add(clavem)
+                item_text_i18n = item_textum
+                dlinguam = self.dictionaria_linguarum.quod(clavem)
+                if dlinguam and dlinguam['#item+rem+i_lat+is_latn']:
+                    clavem_i18n = '<span lang="la">' + \
+                        dlinguam['#item+rem+i_lat+is_latn'] + '</span>'
+
+                if dlinguam and dlinguam['#item+rem+i_qcc+is_zxxx+ix_wikilngm']:
+                    item_text_i18n = '<span lang="{1}">{0}</span>'.format(
+                        item_textum,
+                        dlinguam['#item+rem+i_qcc+is_zxxx+ix_wikilngm']
+                    )
+                resultatum_corpus.append(
+                    "| {0} | {1} |".format(clavem_i18n, item_text_i18n))
 
         if resultatum_corpus:
             resultatum.append("")
             resultatum.append("")
-            resultatum.append("| /Linguam/@lat-Latn | /significātum/@lat-Latn |")
+            resultatum.append(
+                "| <span lang='la'>Linguam</span> | "
+                "<span lang='la'>Significātum</span> |")
             resultatum.append("| ------------- | ------------- |")
             resultatum.extend(resultatum_corpus)
 
-        return "\n".join(resultatum)
+        return resultatum
 
+    def conceptum_ad_tabula_codicibus(self, rem: dict) -> list:
+        """conceptum ad tabula cōdicibus
+
+        Trivia:
+        - conceptum	, n, s, (Nominative),
+          https://en.wiktionary.org/wiki/conceptus#Latin
+        - tabula, f, s, (Nominative), https://en.wiktionary.org/wiki/tabula
+        - cōdicibus, m, pl, (Dative), https://en.wiktionary.org/wiki/codex
+
+        Returns:
+            [list]:
+        """
+
+        resultatum = []
+        resultatum_corpus = []
+
+        for clavem, item_textum in rem.items():
+
+            if not clavem.startswith('#item+conceptum') and not \
+                    clavem.startswith('#status+conceptum') and not \
+                    clavem.startswith('#item+rem+i_qcc'):
+                continue
+            # if clavem.startswith('#status+conceptum'):
+            #     continue
+            # if clavem.startswith('#item+rem+i_qcc'):
+            #     continue
+
+            if item_textum:
+                clavem_i18n = clavem
+                item_text_i18n = item_textum
+                if clavem.startswith('#item+rem+i_qcc'):
+                    self.usus_ix_qcc.add(clavem)
+
+                # dlinguam = self.dictionaria_linguarum.quod(clavem)
+                # if dlinguam and dlinguam['#item+rem+i_lat+is_latn']:
+                #     clavem_i18n = '<span lang="la">' + \
+                #         dlinguam['#item+rem+i_lat+is_latn'] + '</span>'
+
+                # if dlinguam and dlinguam['#item+rem+i_qcc+is_zxxx+ix_wikilngm']:
+                #     item_text_i18n = '<span lang="{1}">{0}</span>'.format(
+                #         item_textum,
+                #         dlinguam['#item+rem+i_qcc+is_zxxx+ix_wikilngm']
+                #     )
+                resultatum_corpus.append(
+                    "| {0} | {1} |".format(clavem_i18n, item_text_i18n))
+
+        if resultatum_corpus:
+            resultatum.append("")
+            resultatum.append("")
+            resultatum.append(
+                "| <span lang='la'>Cōdicibus</span> | "
+                "<span lang='la'>Significātum</span> |")
+            resultatum.append("| ------------- | ------------- |")
+            resultatum.extend(resultatum_corpus)
+
+        return resultatum
 
     def _sarcinarum(self):
         resultatum = []
@@ -507,23 +641,40 @@ class Codex:
         self.sarcinarum
         resultatum.append(
             "<!-- " + str(self.sarcinarum.quod_sarcinarum()) + " -->")
-        # for item in self.codex:
-
-        #     resultatum.append("\n")
 
         return resultatum
 
-    def exportatum(self) -> list:
-        resultatum = []
+    def imprimere(self) -> list:
+        """imprimere /print/@eng-Latn
 
-        resultatum.extend(self._caput())
-        resultatum.extend(self._toc3())
-        resultatum.extend(self._praefatio())
-        resultatum.extend(self._corpus())
-        resultatum.extend(self._sarcinarum())
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
+        - pāginae, f, pl, (Nominative), https://en.wiktionary.org/wiki/pagina
 
-        # return "\n".join(resultatum)
-        return resultatum
+        Returns:
+            [list]:
+        """
+        paginae = []
+        codex_capiti = self.codex_capiti()
+        codex_indici = self.codex_indici()
+        codex_corpori = self.codex_corpori()
+
+        # Compute codex_praefatio last (to receive statistics of others)
+        codex_praefatio = self.codex_praefatio()
+
+        paginae.extend(codex_capiti)
+        paginae.extend(codex_indici)
+        paginae.extend(codex_praefatio)
+        paginae.extend(codex_corpori)
+
+        # paginae.extend(self.codex_indici())
+        # paginae.extend(self.codex_praefatio())
+        # paginae.extend(self.codex_corpori())
+        # paginae.extend(self._sarcinarum())
+
+        # return "\n".join(paginae)
+        return paginae
 
 
 class CodexAnnexo:
@@ -555,7 +706,8 @@ class CodexAnnexo:
         _sarcina = self.codex.sarcinarum.quod_sarcinarum(self.sarcina)
         titulum = ''
 
-        if _sarcina and 'titulum' in _sarcina['meta'] and _sarcina['meta']['titulum']:
+        if _sarcina and 'titulum' in _sarcina['meta'] and \
+                _sarcina['meta']['titulum']:
             titulum = '🖼️ ' + _sarcina['meta']['titulum']
         else:
             titulum = 'Sine nomine'
@@ -566,7 +718,8 @@ class CodexAnnexo:
         _sarcina = self.codex.sarcinarum.quod_sarcinarum(self.sarcina)
         link = ''
 
-        if _sarcina and 'ix_wikip854' in _sarcina['meta'] and _sarcina['meta']['ix_wikip854']:
+        if _sarcina and 'ix_wikip854' in _sarcina['meta'] and \
+                _sarcina['meta']['ix_wikip854']:
             link = _sarcina['meta']['ix_wikip854']
 
         return link
@@ -679,7 +832,7 @@ class CodexSarcinarumAdnexis:
     - cōdex, m, s, (Nominative) https://en.wiktionary.org/wiki/codex#Latin
     - adnexīs, m/f/n, pl (Dative) https://en.wiktionary.org/wiki/adnexus#Latin
     - annexīs, m/f/n, pl (Dative) https://en.wiktionary.org/wiki/annexus#Latin
-    - sarcinārum, f, pl, (Gengitive) https://en.wiktionary.org/wiki/sarcina#Latin
+    - sarcinārum, f, pl, (Gengitive) https://en.wiktionary.org/wiki/sarcina
 
     # >>> ca1603_25_1.quod_picturae()
     """
@@ -714,7 +867,8 @@ class CodexSarcinarumAdnexis:
                     'index': sarcina_index,
                     'sarcina': item,
                     # @TODO: make this not as hardcoded as it is now
-                    'meta': self._quod_meta(root + '/' + item + '/0.nnx.tm.hxl.csv')
+                    'meta': self._quod_meta(
+                        root + '/' + item + '/0.nnx.tm.hxl.csv')
                 })
                 # self.sarcina_index.append(index)
 
@@ -782,8 +936,7 @@ class CodexSarcinarumAdnexis:
 class DictionariaLinguarum:
     def __init__(self, fontem_archivum: str = None):
         if fontem_archivum:
-            self.D1613_1_51_fontem = self._init_1613_1_51_datum(
-                fontem_archivum)
+            self.D1613_1_51_fontem = fontem_archivum
         else:
             self.D1613_1_51_fontem = NUMERORDINATIO_BASIM + \
                 "/1603/1/51/1603_1_51.no1.tm.hxl.csv"
@@ -804,6 +957,84 @@ class DictionariaLinguarum:
                     if not clavem.startswith('#item+conceptum+codicem'):
                         datum[int_clavem][clavem] = rem
         return datum
+
+    def imprimere(self, linguam: list = None) -> list:
+        """imprimere /print/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
+        - pāginae, f, pl, (Nominative), https://en.wiktionary.org/wiki/pagina
+
+        Returns:
+            [list]:
+        """
+        resultatum = []
+        resultatum_corpus = []
+        linguam_clavem = []
+        if linguam:
+            for item in linguam:
+                linguam_clavem.append(
+                    item.replace('#item+rem', '')
+                )
+        # resultatum_corpus.append(linguam_clavem)
+        # resultatum_corpus.append(len(linguam_clavem))
+        for clavem, lineam in self.dictionaria_codex.items():
+
+            if len(linguam_clavem) > 0:
+                if lineam['#item+rem+i_qcc+is_zxxx+ix_hxla'] not in \
+                        linguam_clavem:
+                    continue
+
+            clavem_i18n = lineam['#item+rem+i_qcc+is_zxxx+ix_uid']
+            item_text_i18n = lineam['#item+rem+i_lat+is_latn']
+            ix_glottocode = lineam['#item+rem+i_qcc+is_zxxx+ix_glottocode']
+            ix_iso639p3a3 = lineam['#item+rem+i_qcc+is_zxxx+ix_iso639p3a3']
+            ix_wikiq = lineam['#item+rem+i_qcc+is_zxxx+ix_wikiq+ix_linguam']
+            if len(ix_glottocode):
+                ix_glottocode = \
+                    "<a href='https://glottolog.org/resource/languoid/id/{0}'>{0}</a>".format(
+                        ix_glottocode)
+    
+            if len(ix_iso639p3a3):
+                ix_iso639p3a3 = \
+                    "<a href='https://iso639-3.sil.org/code/{0}'>{0}</a>".format(
+                        ix_iso639p3a3)
+            if len(ix_wikiq):
+                ix_wikiq = \
+                    "<a href='https://www.wikidata.org/wiki/{0}'>{0}</a>".format(
+                        ix_wikiq)
+            # resultatum_corpus.append(str(lineam))
+            # resultatum_corpus.append(linguam)
+            resultatum_corpus.append(
+                "| {0} | {1} | {2} | {3} | {4} |".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
+
+        if resultatum_corpus:
+            resultatum.append("")
+
+            # cōdex, m, s, (nominative)
+            # tōtālis, m/f, s, (Nominative)
+            # linguae, f, s, (Dative)
+            resultatum.append(
+                "<span lang='la'>Tōtālis linguae in cōdex: {0}</span>".format(
+                    len(resultatum_corpus)))
+            resultatum.append("")
+
+            # https://en.wiktionary.org/wiki/latinus#Latin
+            # nōmina, n, pl, (Nominative)
+            #     shttps://en.wiktionary.org/wiki/nomen#Latin
+            # "nōmen Latīnum"
+            # https://en.wiktionary.org/wiki/Latinus#Latin
+            resultatum.append(
+                "| <span lang='la'>Cōdex<br>linguae</span> | "
+                "<span lang='la'>Glotto<br>cōdicī</span> | "
+                "<span lang='la'>ISO<br>639-3</span> | "
+                "<span lang='la'>Wiki QID<br>cōdicī</span> | "
+                "<span lang='la'>Nōmen Latīnum</span> |")
+            resultatum.append("| --- | --- | --- | --- | --- |")
+            resultatum.extend(resultatum_corpus)
+
+        return resultatum
 
     def quod(self, terminum: str,
              #  factum: str = '#item+rem+i_lat+is_latn',
@@ -866,7 +1097,8 @@ class DictionariaNumerordinatio:
             '',
             '',
             '',
-            '[Rēgula expressiōnī cōnstrūctae (HXL Standard composed prefix, Hashtag + attributes)]',
+            '[Rēgula expressiōnī cōnstrūctae (HXL Standard ' +
+            'composed prefix, Hashtag + attributes)]',
             ''
         ])
         resultatum.append([
@@ -878,7 +1110,8 @@ class DictionariaNumerordinatio:
             '',
             '',
             '',
-            '[Rēgula expressiōnī cōnstrūctae (HXL Standard attributes, language +i_)]',
+            '[Rēgula expressiōnī cōnstrūctae ' +
+            '(HXL Standard attributes, language +i_)]',
             ''
         ])
         resultatum.append([
@@ -890,7 +1123,8 @@ class DictionariaNumerordinatio:
             '',
             '',
             '',
-            '[Rēgula expressiōnī cōnstrūctae (HXL Standard attributes, writting system +is_)]',
+            '[Rēgula expressiōnī cōnstrūctae ' +
+            '(HXL Standard attributes, writting system +is_)]',
             ''
         ])
         resultatum.append([
@@ -915,7 +1149,8 @@ class DictionariaNumerordinatio:
             '',
             '',
             '',
-            '[Rēgula expressiōnī cōnstrūctae (HXL Standard attributes, +i_zzz+is_zzzz)]',
+            '[Rēgula expressiōnī cōnstrūctae ' +
+            '(HXL Standard attributes, +i_zzz+is_zzzz)]',
             ''
         ])
         resultatum.append([
@@ -928,7 +1163,9 @@ class DictionariaNumerordinatio:
             '',
             '',
             '',
-            '[Rēgula expressiōnī cōnstrūctae (HXL Standard composed prefix #hashtag+rem+i_zzz+is_zzzz+ix_zzzzzzz)]',
+            '[Rēgula expressiōnī cōnstrūctae ' +
+            '(HXL Standard composed prefix ' +
+            '#hashtag+rem+i_zzz+is_zzzz+ix_zzzzzzz)]',
             ''
         ])
         resultatum.append([
@@ -968,17 +1205,6 @@ class DictionariaNumerordinatio:
             ''
         ])
 
-        # resultatum.append([
-        #     '{{1603_13_1_23}}',  # hxlhashtag + attribute, specific with ix_*
-        #     '',
-        #     '',
-        #     '',
-        #     '',
-        #     '',
-        #     '',
-        #     '',
-        #     '[Rēgula expressiōnī cōnstrūctae (HXL Standard composed prefix, Hashtag + attributes)]',
-        # ])
         resultatum.append([
             '{{1603_13_1_23_3}}',  # [3] C (concept)
             '{{1603_13_1_23}}',
@@ -1012,7 +1238,8 @@ class DictionariaNumerordinatio:
             '#status',
             'conceptum+codicem',
             '#status+conceptum+codicem',
-            '/Educated guess on stability (1-100) of local identifier if dictionary still in use in a century/',
+            '/Educated guess on stability (1-100) ' +
+            'of local identifier if dictionary still in use in a century/',
             ''
         ])
         resultatum.append([
@@ -1140,7 +1367,7 @@ class DictionariaNumerordinatio:
         resultatum.append([
             '#item+conceptum+codicem',
             '#item+rem+i_qcc+is_zxxx+ix_regexc',  # regex constructor
-            '#item+rem+i_qcc+is_zxxx+ix_regexvdc',  # value de regex constructor
+            '#item+rem+i_qcc+is_zxxx+ix_regexvdc',  # Value de regex constr.
             '#item+rem+i_qcc+is_zxxx+ix_tconceptuae',  # if is conceptual
             '#item+rem+i_qcc+is_zxxx+ix_tlinguae',  # if is linguistic
             '#item+rem+i_qcc+is_zxxx+ix_tterminum',  # if varies at term level
@@ -1263,7 +1490,8 @@ class NumerordinatioItem:
     """
 
     def __init__(
-            self, ix_hxlhstg: str, dictionaria_codex: Type['DictionariaLinguarum']):
+            self, ix_hxlhstg:
+            str, dictionaria_codex: Type['DictionariaLinguarum']):
         self.ix_hxlhstg = ix_hxlhstg
         self.dictionaria_codex = dictionaria_codex
 
@@ -1498,7 +1726,7 @@ class CLI_2600:
                 formatum=formatum
             )
             # data = ['TODO']
-            return self.output(codex.exportatum())
+            return self.output(codex.imprimere())
 
         if self.pyargs.dictionaria_numerordinatio:
             dictionaria_numerordinatio = DictionariaNumerordinatio()
