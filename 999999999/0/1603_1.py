@@ -427,6 +427,7 @@ class Codex:
             '== [`' +
             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
             '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
+        resultatum.append(":toc:")
         resultatum.append("\n")
 
         return resultatum
