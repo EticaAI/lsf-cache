@@ -345,7 +345,7 @@ class Codex:
         de_codex: str,
         objectivum_linguam: str = None,
         auxilium_linguam: list = None,
-        formatum: str = 'markdown',
+        formatum: str = 'asciidoctor',
 
     ):
 
@@ -468,7 +468,7 @@ class Codex:
             resultatum.extend(self.dictionaria_linguarum.imprimere(
                 list(self.usus_linguae)))
 
-        resultatum.append("----\n")
+        # resultatum.append("----\n")
 
         picturae = self.annexis.quod_picturae(numerordinatio_locali='0')
         if picturae:
@@ -501,7 +501,7 @@ class Codex:
                 else:
                     resultatum.append('{0}\n'.format(titulum))
 
-            resultatum.append("'''''\n")
+            # resultatum.append("'''''\n")
             # resultatum.append("----\n")
 
         return resultatum
@@ -519,7 +519,7 @@ class Codex:
 
         resultatum = []
         # resultatum.append('----')
-        resultatum.append("'''''")
+        # resultatum.append("'''''")
         resultatum.append('')
         # resultatum.append("- <a href='#0'>[0] /Praefātiō/@lat-Latn</a>")
         resultatum.append("* <a href='#0'>[0] /Praefātiō/@lat-Latn</a>")
@@ -537,11 +537,13 @@ class Codex:
             #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
             # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
             #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
+            # resultatum.append("{2} <a href='#{0}'>[{0}] {1}</a>".format(
+            #     codicem_normale, nomen, ('*' * (codicem_ordo - 1))))
             resultatum.append("{2} <a href='#{0}'>[{0}] {1}</a>".format(
-                codicem_normale, nomen, ('*' * (codicem_ordo - 1))))
+                codicem_normale, nomen, ('*' * (codicem_ordo))))
         resultatum.append('')
         # resultatum.append('----')
-        resultatum.append("'''''")
+        # resultatum.append("'''''")
         resultatum.append('')
         return resultatum
 
@@ -1131,6 +1133,7 @@ class DictionariaLinguarum:
                 "<span lang='la'>Nōmen Latīnum</span> |")
             resultatum.append("| --- | --- | --- | --- | --- |")
             resultatum.extend(resultatum_corpus)
+            resultatum.append("")
 
         return resultatum
 
@@ -1769,19 +1772,19 @@ class CLI_2600:
         #     # nargs='?'
         # )
 
-        dictionaria.add_argument(
-            '--objectivum-formatum-markdown',
-            help='(default) Output Markdown format',
-            # metavar='',
-            dest='ad_markdown',
-            # const=True,
-            action='store_true',
-            # nargs='?'
-        )
+        # dictionaria.add_argument(
+        #     '--objectivum-formatum-markdown',
+        #     help='(default) Output Markdown format',
+        #     # metavar='',
+        #     dest='ad_markdown',
+        #     # const=True,
+        #     action='store_true',
+        #     # nargs='?'
+        # )
 
         dictionaria.add_argument(
             '--objectivum-formatum-asciidoctor',
-            help='(Not fully implemented) Output Asciidoctor format',
+            help='(Default) Output Asciidoctor format',
             # metavar='',
             dest='ad_asciidoctor',
             # const=True,
@@ -1811,11 +1814,11 @@ class CLI_2600:
 
         # if self.pyargs.actionem_sparql:
         if self.pyargs.codex_de:
-            formatum = 'markdown'
+            formatum = 'asciidoctor'
             if self.pyargs.ad_asciidoctor:
                 formatum = 'asciidoctor'
-            if self.pyargs.ad_markdown:
-                formatum = 'markdown'
+            # if self.pyargs.ad_markdown:
+            #     formatum = 'markdown'
 
             codex = Codex(
                 self.pyargs.codex_de,
