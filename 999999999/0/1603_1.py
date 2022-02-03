@@ -209,7 +209,7 @@ def numerordinatio_nomen(
     # if '#item+rem+i_lat+is_latn' in rem and rem['#item+rem+i_lat+is_latn']:
     #     return '/' + rem['#item+rem+i_lat+is_latn'] + '/@lat-Latn'
     if '#item+rem+i_lat+is_latn' in rem and rem['#item+rem+i_lat+is_latn']:
-        return rem['#item+rem+i_lat+is_latn'] + '/@lat-Latn'
+        return rem['#item+rem+i_lat+is_latn']
     if '#item+rem+i_eng+is_latn' in rem and rem['#item+rem+i_eng+is_latn']:
         return '/' + rem['#item+rem+i_eng+is_latn'] + '/@eng-Latn'
     if '#item+rem+i_mul+is_zyyy' in rem and rem['#item+rem+i_mul+is_zyyy']:
@@ -412,6 +412,46 @@ class Codex:
 
         return codex_lineam
 
+    def codex_appendici(self) -> list:
+        """cōdex appendicī /book appendix/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - appendicī, f, s, (Dative), https://en.wiktionary.org/wiki/appendix#Latin
+
+        Returns:
+            [list]:
+        """
+        resultatum = []
+
+        resultatum.append("[appendix]")
+        resultatum.append("= //Open issues on exported PDF format//@eng-Latn")
+        resultatum.append('')
+
+        resultatum.append('')
+        resultatum.append("=== //Documentation about how to use the machine-readable dictionaries//@eng-Latn")
+        resultatum.append('')
+        resultatum.append('Is necessary to give a quick introduction (or at least mention) the files generated with this implementer documentation.')
+        resultatum.append('')
+
+        resultatum.append("=== //Missing fonts to render all term variants//@eng-Latn")
+        resultatum.append('The generated PDF does not include all necessary fonts.')
+        resultatum.append('Here potential strategy to fix it https://github.com/asciidoctor/asciidoctor-pdf/blob/main/docs/theming-guide.adoc#custom-fonts')
+
+        resultatum.append('')
+        resultatum.append("=== //Reliability statuses//@eng-Latn")
+        resultatum.append('')
+        resultatum.append('Currently, the reliability of numeric statuses are not well explained on PDF version.')
+
+        # resultatum.append("=== First Subsection")
+        # resultatum.append("")
+        # resultatum.append("=== Second Subsection")
+        # resultatum.append("")
+        # resultatum.append("[appendix]")
+        # resultatum.append("= Second Appendix")
+
+        return resultatum
+
     def codex_capiti(self) -> list:
         """cōdex capitī /book header/@eng-Latn
 
@@ -428,16 +468,24 @@ class Codex:
         #     '# [`' +
         #     self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
         #     '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
-        resultatum.append(
-            '= [`' +
-            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
-            '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
+        # resultatum.append(
+        #     '= [`' +
+        #     self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
+        #     '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
+        resultatum.append("= Cōdex [{0}]: {1}".format(
+            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
+            self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        ))
         resultatum.append(":doctype: book")
-        resultatum.append(":title: Cōdex: {0}".format(
+        resultatum.append(":title: Cōdex [{0}]: {1}".format(
+            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
             self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
         ))
         resultatum.append(":lang: la")
         resultatum.append(":toc:")
+        resultatum.append(":toclevels: 4")
+        # resultatum.append(":orgname: Etica.AI")
+        # resultatum.append(":version: 1.2.3")
 
         # TODO: see the rest from here
         # https://docs.asciidoctor.org/asciidoctor/latest/localization-support/
@@ -479,8 +527,14 @@ class Codex:
         resultatum.append("== Praefātiō \n")
         # resultatum.append("<a id='0' href='#0'>§ 0</a> \n")
 
+        # https://en.wiktionary.org/wiki/translatio#Latin
+        resultatum.append("=== //Cōdex trānslātiōnēs//")
+
         resultatum.extend(self.conceptum_ad_tabula_verbis(
             self.m1603_1_1__de_codex))
+
+        resultatum.append("=== //Rēs interlinguālibus//")
+
         resultatum.extend(self.conceptum_ad_tabula_codicibus(
             self.m1603_1_1__de_codex))
 
@@ -496,13 +550,84 @@ class Codex:
 
         if len(self.usus_linguae):
             # resultatum.append("### Linguae in cōdex")
-            resultatum.append("=== Linguae in cōdex")
+            # resultatum.append("=== Linguae in cōdex")
             # resultatum.append(str(self.usus_linguae))
 
             resultatum.extend(self.dictionaria_linguarum.imprimere(
                 list(self.usus_linguae)))
 
         # resultatum.append("----\n")
+
+
+            # resultatum.append("'''''\n")
+            # resultatum.append("----\n")
+
+        return resultatum
+
+    # def codex_indici(self) -> list:
+    #     """cōdex indicī /book index/@eng-Latn
+
+    #     @deprecated /use ASCIDoctor [toc]/@eng-Latn
+
+    #     Trivia:
+    #     - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+    #     - indicī, m, s, (Dative), https://en.wiktionary.org/wiki/index#Latin
+
+    #     Returns:
+    #         [list]:
+    #     """
+
+    #     resultatum = []
+    #     # resultatum.append('----')
+    #     # resultatum.append("'''''")
+    #     resultatum.append('')
+    #     # resultatum.append("- <a href='#0'>[0] /Praefātiō/@lat-Latn</a>")
+    #     resultatum.append("* +++<a href='#0'>[0] /Praefātiō/@lat-Latn</a>+++")
+    #     for item in self.codex:
+    #         codicem_loci = item['#item+conceptum+codicem']
+
+    #         if codicem_loci.find('0_999') == 0:
+    #             continue
+
+    #         nomen = numerordinatio_nomen(item)
+    #         codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
+    #         codicem_ordo = numerordinatio_ordo(codicem_loci)
+
+    #         # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
+    #         #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
+    #         # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
+    #         #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
+    #         # resultatum.append("{2} <a href='#{0}'>[{0}] {1}</a>".format(
+    #         #     codicem_normale, nomen, ('*' * (codicem_ordo - 1))))
+    #         resultatum.append("{2} +++<a href='#{0}'>[{0}] {1}</a>+++".format(
+    #             codicem_normale, nomen, ('*' * (codicem_ordo))))
+    #     resultatum.append('')
+    #     # resultatum.append('----')
+    #     # resultatum.append("'''''")
+    #     resultatum.append('')
+    #     return resultatum
+
+    def codex_corpori(self) -> list:
+        """cōdex corporī /book body/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - corporī, n, s, (Dative), https://en.wiktionary.org/wiki/corpus#Latin
+
+        Returns:
+            [list]:
+        """
+        resultatum = []
+
+        # TODO: create the codex
+        # resultatum.append("[id='{0}']".format(codicem_normale))
+        # resultatum.append("== [{0}] {1}".format(
+        #     self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
+        #     self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        # ))
+        resultatum.append("== {0}".format(
+            self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        ))
 
         picturae = self.annexis.quod_picturae(numerordinatio_locali='0')
         if picturae:
@@ -515,10 +640,12 @@ class Codex:
             #     ('#' * (codicem_ordo + 3)) + ' ' +
             #     '<span lang="la">Pictūrae</span>'
             # )
+            resultatum.append('[discrete]')
             resultatum.append(
                 ('=' * (codicem_ordo + 2)) + ' ' +
                 'Annexa'
             )
+            resultatum.append('[discrete]')
             resultatum.append(
                 ('=' * (codicem_ordo + 3)) + ' ' +
                 'Pictūrae'
@@ -537,65 +664,6 @@ class Codex:
                 else:
                     resultatum.append('{0}\n'.format(titulum))
 
-            # resultatum.append("'''''\n")
-            # resultatum.append("----\n")
-
-        return resultatum
-
-    def codex_indici(self) -> list:
-        """cōdex indicī /book index/@eng-Latn
-
-        @deprecated /use ASCIDoctor [toc]/@eng-Latn
-
-        Trivia:
-        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
-        - indicī, m, s, (Dative), https://en.wiktionary.org/wiki/index#Latin
-
-        Returns:
-            [list]:
-        """
-
-        resultatum = []
-        # resultatum.append('----')
-        # resultatum.append("'''''")
-        resultatum.append('')
-        # resultatum.append("- <a href='#0'>[0] /Praefātiō/@lat-Latn</a>")
-        resultatum.append("* +++<a href='#0'>[0] /Praefātiō/@lat-Latn</a>+++")
-        for item in self.codex:
-            codicem_loci = item['#item+conceptum+codicem']
-
-            if codicem_loci.find('0_999') == 0:
-                continue
-
-            nomen = numerordinatio_nomen(item)
-            codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
-            codicem_ordo = numerordinatio_ordo(codicem_loci)
-
-            # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
-            #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
-            # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
-            #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
-            # resultatum.append("{2} <a href='#{0}'>[{0}] {1}</a>".format(
-            #     codicem_normale, nomen, ('*' * (codicem_ordo - 1))))
-            resultatum.append("{2} +++<a href='#{0}'>[{0}] {1}</a>+++".format(
-                codicem_normale, nomen, ('*' * (codicem_ordo))))
-        resultatum.append('')
-        # resultatum.append('----')
-        # resultatum.append("'''''")
-        resultatum.append('')
-        return resultatum
-
-    def codex_corpori(self) -> list:
-        """cōdex corporī /book body/@eng-Latn
-
-        Trivia:
-        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
-        - corporī, n, s, (Dative), https://en.wiktionary.org/wiki/corpus#Latin
-
-        Returns:
-            [list]:
-        """
-        resultatum = []
         for item in self.codex:
             codicem_loci = item['#item+conceptum+codicem']
 
@@ -611,7 +679,7 @@ class Codex:
             # )
             resultatum.append("[id='{0}']".format(codicem_normale))
             resultatum.append(
-                ('=' * (codicem_ordo + 1)) +
+                ('=' * (codicem_ordo + 2)) +
                 ' [`' + codicem_loci + '`] ' + nomen + "\n"
             )
             # resultatum.append(
@@ -628,28 +696,15 @@ class Codex:
             picturae = self.annexis.quod_picturae(
                 numerordinatio_locali=codicem_normale)
             if picturae:
-                # resultatum.append(
-                #     ('#' * (codicem_ordo + 2)) + ' ' +
-                #     '<span lang="la">Annexa</span>'
-                # )
-                # resultatum.append(
-                #     ('#' * (codicem_ordo + 3)) + ' ' +
-                #     '<span lang="la">Pictūrae</span>'
-                # )
-                # resultatum.append(
-                #     ('=' * (codicem_ordo + 2)) + ' ' +
-                #     '+++<span lang="la">Annexa</span>+++'
-                # )
-                # resultatum.append(
-                #     ('=' * (codicem_ordo + 3)) + ' ' +
-                #     '+++<span lang="la">Pictūrae</span>+++'
-                # )
-                resultatum.append(
-                    ('=' * (codicem_ordo + 2)) + ' ' +
-                    'Annexa'
-                )
+
+                resultatum.append('[discrete]')
                 resultatum.append(
                     ('=' * (codicem_ordo + 3)) + ' ' +
+                    'Annexa'
+                )
+                resultatum.append('[discrete]')
+                resultatum.append(
+                    ('=' * (codicem_ordo + 4)) + ' ' +
                     'Pictūrae'
                 )
                 for item in picturae:
@@ -828,6 +883,7 @@ class Codex:
         codex_capiti = self.codex_capiti()
         # codex_indici = self.codex_indici()
         codex_corpori = self.codex_corpori()
+        codex_appendici = self.codex_appendici()
 
         # Compute codex_praefatio last (to receive statistics of others)
         codex_praefatio = self.codex_praefatio()
@@ -836,6 +892,7 @@ class Codex:
         # paginae.extend(codex_indici)
         paginae.extend(codex_praefatio)
         paginae.extend(codex_corpori)
+        paginae.extend(codex_appendici)
 
         # paginae.extend(self.codex_indici())
         # paginae.extend(self.codex_praefatio())
@@ -877,7 +934,8 @@ class CodexAnnexo:
 
         if _sarcina and 'titulum' in _sarcina['meta'] and \
                 _sarcina['meta']['titulum']:
-            titulum = '🖼️ ' + _sarcina['meta']['titulum']
+            # titulum = '🖼️ ' + _sarcina['meta']['titulum']
+            titulum = _sarcina['meta']['titulum']
         else:
             titulum = 'Sine nomine'
 
@@ -1188,6 +1246,9 @@ class DictionariaLinguarum:
 
         if resultatum_corpus:
             resultatum.append("")
+
+            resultatum.append("=== Linguae in cōdex: {0}".format(
+                    len(self.dictionaria_codex.keys())))
 
             # cōdex, m, s, (nominative)
             # tōtālis, m/f, s, (Nominative)
