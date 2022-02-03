@@ -419,8 +419,12 @@ class Codex:
         """
         resultatum = []
         # resultatum.append(self._caput())
+        # resultatum.append(
+        #     '# [`' +
+        #     self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
+        #     '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
         resultatum.append(
-            '# [`' +
+            '== [`' +
             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
             '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
         resultatum.append("\n")
@@ -457,7 +461,8 @@ class Codex:
                 str(self.usus_ix_qcc)))
 
         if len(self.usus_linguae):
-            resultatum.append("### Linguae in cōdex")
+            # resultatum.append("### Linguae in cōdex")
+            resultatum.append("==== Linguae in cōdex")
             # resultatum.append(str(self.usus_linguae))
 
             resultatum.extend(self.dictionaria_linguarum.imprimere(
@@ -532,7 +537,7 @@ class Codex:
             #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
             # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
             #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
-            resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
+            resultatum.append("{2} <a href='#{0}'>[{0}] {1}</a>".format(
                 codicem_normale, nomen, ('*' * (codicem_ordo - 1))))
         resultatum.append('')
         # resultatum.append('----')
