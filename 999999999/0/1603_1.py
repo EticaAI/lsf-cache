@@ -316,7 +316,8 @@ def qhxl(rem: dict, query: str):
             return rem_item
     return None
 
-
+# About github ASCIDoctor
+#  - https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74
 class Codex:
     """Cōdex
 
@@ -424,11 +425,16 @@ class Codex:
         #     self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
         #     '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
         resultatum.append(
-            '== [`' +
+            '= [`' +
             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
             '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
+        resultatum.append(":doctype: book")
+        resultatum.append(":title: {0}".format(
+            self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        ))
         resultatum.append(":toc:")
         resultatum.append("\n")
+        resultatum.append("toc::[]")
 
         return resultatum
 
@@ -463,7 +469,7 @@ class Codex:
 
         if len(self.usus_linguae):
             # resultatum.append("### Linguae in cōdex")
-            resultatum.append("==== Linguae in cōdex")
+            resultatum.append("=== Linguae in cōdex")
             # resultatum.append(str(self.usus_linguae))
 
             resultatum.extend(self.dictionaria_linguarum.imprimere(
@@ -483,11 +489,11 @@ class Codex:
             #     '<span lang="la">Pictūrae</span>'
             # )
             resultatum.append(
-                ('=' * (codicem_ordo + 3)) + ' ' +
+                ('=' * (codicem_ordo + 2)) + ' ' +
                 '+++<span lang="la">Annexa</span>+++'
             )
             resultatum.append(
-                ('=' * (codicem_ordo + 4)) + ' ' +
+                ('=' * (codicem_ordo + 3)) + ' ' +
                 '+++<span lang="la">Pictūrae</span>+++'
             )
             for item in picturae:
@@ -574,7 +580,7 @@ class Codex:
             #     ' [`' + codicem_loci + '`] ' + nomen + "\n"
             # )
             resultatum.append(
-                ('=' * (codicem_ordo + 2)) +
+                ('=' * (codicem_ordo + 1)) +
                 ' [`' + codicem_loci + '`] ' + nomen + "\n"
             )
             resultatum.append(
@@ -600,11 +606,11 @@ class Codex:
                 #     '<span lang="la">Pictūrae</span>'
                 # )
                 resultatum.append(
-                    ('=' * (codicem_ordo + 3)) + ' ' +
+                    ('=' * (codicem_ordo + 2)) + ' ' +
                     '+++<span lang="la">Annexa</span>+++'
                 )
                 resultatum.append(
-                    ('=' * (codicem_ordo + 4)) + ' ' +
+                    ('=' * (codicem_ordo + 3)) + ' ' +
                     '+++<span lang="la">Pictūrae</span>+++'
                 )
                 for item in picturae:

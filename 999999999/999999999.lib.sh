@@ -376,7 +376,8 @@ neo_codex_de_numerordinatio() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
   est_temporarium_objectivum="${3:-"0"}"
-  est_objectivum_linguam="${4:-"mul-Zyyy"}"
+  # est_objectivum_linguam="${4:-"mul-Zyyy"}"
+  est_objectivum_linguam="${4:-"mul-Latn"}"
   est_auxilium_linguam="${5:-"lat-Latn,por-Latn,eng-Latn"}"
 
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
@@ -395,7 +396,7 @@ neo_codex_de_numerordinatio() {
   fi
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no1.tm.hxl.csv"
-  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.md"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
   # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
 
   # echo "$fontem_archivum"
