@@ -206,8 +206,10 @@ def numerordinatio_nomen(
         auxilium_linguam: list = None) -> str:
 
     # TODO: this obviously is hardcoded; Implement full inferences
+    # if '#item+rem+i_lat+is_latn' in rem and rem['#item+rem+i_lat+is_latn']:
+    #     return '/' + rem['#item+rem+i_lat+is_latn'] + '/@lat-Latn'
     if '#item+rem+i_lat+is_latn' in rem and rem['#item+rem+i_lat+is_latn']:
-        return '/' + rem['#item+rem+i_lat+is_latn'] + '/@lat-Latn'
+        return rem['#item+rem+i_lat+is_latn'] + '/@lat-Latn'
     if '#item+rem+i_eng+is_latn' in rem and rem['#item+rem+i_eng+is_latn']:
         return '/' + rem['#item+rem+i_eng+is_latn'] + '/@eng-Latn'
     if '#item+rem+i_mul+is_zyyy' in rem and rem['#item+rem+i_mul+is_zyyy']:
@@ -281,21 +283,21 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
         return ''
 
     if query.find('#status+conceptum+definitionem') > -1:
-        return "{0} <sup><em>(1-100)</em></sup>".format(
+        return "{0} +++<sup><em>(1-100)</em></sup>+++".format(
             rem[query])
     if query.find('#status+conceptum+codicem') > -1:
-        return "{0} <sup><em>(1-100)</em></sup>".format(
+        return "{0} +++<sup><em>(1-100)</em></sup>+++".format(
             rem[query])
 
     if query.find('+ix_wikiq') > -1:
-        return "<a href='https://www.wikidata.org/wiki/{0}'>{0}</a>".format(
+        return "https://www.wikidata.org/wiki/{0}[{0}]".format(
             rem[query])
     if query.find('+ix_ta98') > -1:
         term = rem[query].replace('A', '')
         resultatum = (
-            '<a href="https://ifaa.unifr.ch/Public/EntryPage/'
-            'TA98%20Tree/Entity%20TA98%20EN/{0}%20Entity%20TA98%20EN.htm">'
-            '{1}</a>').format(term, rem[query])
+            'link:++https://ifaa.unifr.ch/Public/EntryPage/'
+            'TA98%20Tree/Entity%20TA98%20EN/{0}%20Entity%20TA98%20EN.htm++['
+            '{1}]').format(term, rem[query])
         return resultatum
 
     # https://ifaa.unifr.ch/Public/EntryPage/TA98%20Tree/Entity%20TA98%20EN/01.1.00.013%20Entity%20TA98%20EN.htm
@@ -318,6 +320,8 @@ def qhxl(rem: dict, query: str):
 
 # About github ASCIDoctor
 #  - https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74
+
+
 class Codex:
     """Cōdex
 
@@ -429,12 +433,33 @@ class Codex:
             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'] +
             '`] ' + self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy'])
         resultatum.append(":doctype: book")
-        resultatum.append(":title: {0}".format(
+        resultatum.append(":title: Cōdex: {0}".format(
             self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
         ))
+        resultatum.append(":lang: la")
         resultatum.append(":toc:")
+
+        # TODO: see the rest from here
+        # https://docs.asciidoctor.org/asciidoctor/latest/localization-support/
+        resultatum.append(":toc-title: Tabula contentorum")
+        resultatum.append(":table-caption: Tabula")
+        resultatum.append(":figure-caption: Pictūra")
+        resultatum.append(":example-caption: Exemplum")
+        # https://en.wiktionary.org/wiki/renovatio
+        resultatum.append(":last-update-label: Renovatio")
+        # https://en.wiktionary.org/wiki/versio#Latin
+        resultatum.append(":version-label: Versiō")
+
+        # @see https://docs.asciidoctor.org/asciidoc/latest/sections/appendix/
+        # https://en.wiktionary.org/wiki/appendix#Latin
+        resultatum.append(":appendix-caption: Appendix")
+
         resultatum.append("\n")
         resultatum.append("toc::[]")
+
+        # TODO: potential list of images
+        # @see https://github.com/asciidoctor/asciidoctor/issues/2189
+        # @see https://github.com/Alwinator/asciidoctor-lists
 
         return resultatum
 
@@ -449,8 +474,10 @@ class Codex:
             [list]:
         """
         resultatum = []
-        resultatum.append("# [0] /Praefātiō/@lat-Latn \n")
-        resultatum.append("<a id='0' href='#0'>§ 0</a> \n")
+        resultatum.append("[id=0_999_1603_1]")
+        # resultatum.append("== [0] /Praefātiō/@lat-Latn \n")
+        resultatum.append("== Praefātiō \n")
+        # resultatum.append("<a id='0' href='#0'>§ 0</a> \n")
 
         resultatum.extend(self.conceptum_ad_tabula_verbis(
             self.m1603_1_1__de_codex))
@@ -463,9 +490,9 @@ class Codex:
         #         self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
         #     ))
 
-        if len(self.usus_ix_qcc):
-            resultatum.append("+++<!-- @TODO {0} -->+++".format(
-                str(self.usus_ix_qcc)))
+        # if len(self.usus_ix_qcc):
+        #     resultatum.append("+++<!-- @TODO {0} -->+++".format(
+        #         str(self.usus_ix_qcc)))
 
         if len(self.usus_linguae):
             # resultatum.append("### Linguae in cōdex")
@@ -490,11 +517,11 @@ class Codex:
             # )
             resultatum.append(
                 ('=' * (codicem_ordo + 2)) + ' ' +
-                '+++<span lang="la">Annexa</span>+++'
+                'Annexa'
             )
             resultatum.append(
                 ('=' * (codicem_ordo + 3)) + ' ' +
-                '+++<span lang="la">Pictūrae</span>+++'
+                'Pictūrae'
             )
             for item in picturae:
 
@@ -502,7 +529,8 @@ class Codex:
                 titulum = item.quod_temp_titulum()
                 link = item.quod_temp_link()
                 # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
-                resultatum.append('image::{1}[title="{0}"]\n'.format(titulum, trivium))
+                resultatum.append(
+                    'image::{1}[title="{0}"]\n'.format(titulum, trivium))
                 if link:
                     resultatum.append(
                         'link:{1}[{0}]\n'.format(titulum, link))
@@ -516,6 +544,8 @@ class Codex:
 
     def codex_indici(self) -> list:
         """cōdex indicī /book index/@eng-Latn
+
+        @deprecated /use ASCIDoctor [toc]/@eng-Latn
 
         Trivia:
         - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
@@ -579,12 +609,13 @@ class Codex:
             #     ('#' * (codicem_ordo + 1)) +
             #     ' [`' + codicem_loci + '`] ' + nomen + "\n"
             # )
+            resultatum.append("[id='{0}']".format(codicem_normale))
             resultatum.append(
                 ('=' * (codicem_ordo + 1)) +
                 ' [`' + codicem_loci + '`] ' + nomen + "\n"
             )
-            resultatum.append(
-                "+++<a id='{0}' href='#{0}'>§ {0}</a>+++".format(codicem_normale))
+            # resultatum.append(
+            #     "+++<a id='{0}' href='#{0}'>§ {0}</a>+++".format(codicem_normale))
 
             resultatum.append("\n")
             resultatum.append(numerordinatio_summary(item))
@@ -605,25 +636,34 @@ class Codex:
                 #     ('#' * (codicem_ordo + 3)) + ' ' +
                 #     '<span lang="la">Pictūrae</span>'
                 # )
+                # resultatum.append(
+                #     ('=' * (codicem_ordo + 2)) + ' ' +
+                #     '+++<span lang="la">Annexa</span>+++'
+                # )
+                # resultatum.append(
+                #     ('=' * (codicem_ordo + 3)) + ' ' +
+                #     '+++<span lang="la">Pictūrae</span>+++'
+                # )
                 resultatum.append(
                     ('=' * (codicem_ordo + 2)) + ' ' +
-                    '+++<span lang="la">Annexa</span>+++'
+                    'Annexa'
                 )
                 resultatum.append(
                     ('=' * (codicem_ordo + 3)) + ' ' +
-                    '+++<span lang="la">Pictūrae</span>+++'
+                    'Pictūrae'
                 )
                 for item in picturae:
                     trivium = item.quod_temp_rel_pic()
                     titulum = item.quod_temp_titulum()
                     link = item.quod_temp_link()
-                    resultatum.append('image::{1}[title="{0}"]\n'.format(titulum, trivium))
+                    resultatum.append(
+                        'image::{1}[title="{0}"]\n'.format(titulum, trivium))
                     # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
                     if link:
                         resultatum.append(
-                            '+++<a href="{1}">{0}</a>+++\n'.format(titulum, link))
-                    else:
-                        resultatum.append('{0}\n'.format(titulum))
+                            'link:{1}[{0}]\n'.format(titulum, link))
+                    # else:
+                    #     resultatum.append('{0}\n'.format(titulum))
 
             # resultatum.append("<!-- " + str(item) + " -->")
             resultatum.append("\n")
@@ -659,9 +699,12 @@ class Codex:
                 self.usus_linguae.add(clavem)
                 item_text_i18n = item_textum
                 dlinguam = self.dictionaria_linguarum.quod(clavem)
+                # if dlinguam and dlinguam['#item+rem+i_lat+is_latn']:
+                #     clavem_i18n = '<span lang="la">' + \
+                #         dlinguam['#item+rem+i_lat+is_latn'] + '</span>'
                 if dlinguam and dlinguam['#item+rem+i_lat+is_latn']:
-                    clavem_i18n = '<span lang="la">' + \
-                        dlinguam['#item+rem+i_lat+is_latn'] + '</span>'
+                    clavem_i18n = '' + \
+                        dlinguam['#item+rem+i_lat+is_latn'] + ''
 
                 if dlinguam and dlinguam['#item+rem+i_qcc+is_zxxx+ix_wikilngm']:
                     item_text_i18n = '<span lang="{1}">{0}</span>'.format(
@@ -670,7 +713,7 @@ class Codex:
                     )
                 # resultatum_corpus.append(
                 #     "| {0} | {1} |".format(clavem_i18n, item_text_i18n))
-                resultatum_corpus.append("| +++{0}+++".format(clavem_i18n))
+                resultatum_corpus.append("| {0}".format(clavem_i18n))
                 resultatum_corpus.append("| +++{0}+++".format(item_text_i18n))
                 resultatum_corpus.append("")
 
@@ -678,15 +721,19 @@ class Codex:
             resultatum.append("")
             resultatum.append("")
             # resultatum.append('[cols="1,1"]')
-            resultatum.append('[cols="~,~"]')
+            resultatum.append('[%header,cols="~,~"]')
             resultatum.append('|===')
             # resultatum.append(
             #     "| +++<span lang='la'>Lingua de verba</span>+++ | "
             #     "+++<span lang='la'>Verba de conceptiō</span>+++ |")
+            # resultatum.append(
+            #     "| +++<span lang='la'>Lingua de verba</span>+++")
+            # resultatum.append(
+            #     "|+++<span lang='la'>Verba de conceptiō</span>+++")
             resultatum.append(
-                "| +++<span lang='la'>Lingua de verba</span>+++")
+                "| Lingua de verba")
             resultatum.append(
-                "|+++<span lang='la'>Verba de conceptiō</span>+++")
+                "| Verba de conceptiō")
             # resultatum.append("| ------------- | ------------- |")
             resultatum.extend(resultatum_corpus)
             resultatum.append('|===')
@@ -727,8 +774,9 @@ class Codex:
                 if clavem.startswith('#item+rem+i_qcc'):
                     self.usus_ix_qcc.add(clavem)
 
-                resultatum_corpus.append("| +++{0}+++".format(clavem_i18n))
-                resultatum_corpus.append("| +++{0}+++".format(item_text_i18n))
+                # resultatum_corpus.append("| +++{0}+++".format(clavem_i18n))
+                resultatum_corpus.append("| {0}".format(clavem_i18n))
+                resultatum_corpus.append("| {0}".format(item_text_i18n))
                 resultatum_corpus.append("")
 
         # - linguālia, https://en.wiktionary.org/wiki/lingualis#Latin
@@ -739,14 +787,16 @@ class Codex:
             # resultatum.append('[cols="1,1"]')
             # resultatum.append('[%autowidth]')
             # resultatum.append('[cols="25h,~"]')
-            resultatum.append('[cols="~,~"]')
+            resultatum.append('[%header,cols="~,~"]')
             resultatum.append('|===')
             # resultatum.append(
             #     "| +++<span lang='la'>Non lingua</span>+++ | "
             #     #    "<span lang='la'>Verba de conceptiō</span> |")
             #     "+++<span lang='la'>//Rēs interlinguālibus//</span>+++ |")
-            resultatum.append("| +++<span lang='la'>Non lingua</span>+++")
-            resultatum.append("| +++<span lang='la'>//Rēs interlinguālibus//</span>+++")
+            # resultatum.append("| +++<span lang='la'>Non lingua</span>+++")
+            # resultatum.append("| +++<span lang='la'>//Rēs interlinguālibus//</span>+++")
+            resultatum.append("| Non lingua")
+            resultatum.append("| //Rēs interlinguālibus//")
             resultatum.append("")
 
             resultatum.extend(resultatum_corpus)
@@ -776,14 +826,14 @@ class Codex:
         """
         paginae = []
         codex_capiti = self.codex_capiti()
-        codex_indici = self.codex_indici()
+        # codex_indici = self.codex_indici()
         codex_corpori = self.codex_corpori()
 
         # Compute codex_praefatio last (to receive statistics of others)
         codex_praefatio = self.codex_praefatio()
 
         paginae.extend(codex_capiti)
-        paginae.extend(codex_indici)
+        # paginae.extend(codex_indici)
         paginae.extend(codex_praefatio)
         paginae.extend(codex_corpori)
 
@@ -1112,16 +1162,16 @@ class DictionariaLinguarum:
             ix_wikiq = lineam['#item+rem+i_qcc+is_zxxx+ix_wikiq+ix_linguam']
             if len(ix_glottocode):
                 ix_glottocode = \
-                    "+++<a href='https://glottolog.org/resource/languoid/id/{0}'>{0}</a>+++".format(
+                    "https://glottolog.org/resource/languoid/id/{0}[{0}]".format(
                         ix_glottocode)
 
             if len(ix_iso639p3a3):
                 ix_iso639p3a3 = \
-                    "+++<a href='https://iso639-3.sil.org/code/{0}'>{0}</a>+++".format(
+                    "https://iso639-3.sil.org/code/{0}[{0}]".format(
                         ix_iso639p3a3)
             if len(ix_wikiq):
                 ix_wikiq = \
-                    "+++<a href='https://www.wikidata.org/wiki/{0}'>{0}</a>+++".format(
+                    "https://www.wikidata.org/wiki/{0}[{0}]".format(
                         ix_wikiq)
             # resultatum_corpus.append(str(lineam))
             # resultatum_corpus.append(linguam)
@@ -1139,16 +1189,15 @@ class DictionariaLinguarum:
         if resultatum_corpus:
             resultatum.append("")
 
-
             # cōdex, m, s, (nominative)
             # tōtālis, m/f, s, (Nominative)
             # linguae, f, s, (Dative)
             resultatum.append(
-                "+++<span lang='la'>Tōtālis linguae in cōdex: {0}</span>+++".format(
-                    len(resultatum_corpus)))
+                "Tōtālis linguae in cōdex: {0}".format(
+                    len(self.dictionaria_codex.keys())))
             resultatum.append("")
 
-            resultatum.append('[cols="~,~,~,~,~"]')
+            resultatum.append('[%header,cols="~,~,~,~,~"]')
             resultatum.append('|===')
             # https://en.wiktionary.org/wiki/latinus#Latin
             # nōmina, n, pl, (Nominative)
@@ -1162,11 +1211,11 @@ class DictionariaLinguarum:
             #     "<span lang='la'>Wiki QID<br>cōdicī</span> | "
             #     "<span lang='la'>Nōmen Latīnum</span> |")
             # resultatum.append("| --- | --- | --- | --- | --- |")
-            resultatum.append("| +++<span lang='la'>Cōdex<br>linguae</span>+++")
-            resultatum.append("| +++<span lang='la'>Glotto<br>cōdicī</span>+++")
-            resultatum.append("| +++<span lang='la'>ISO<br>639-3</span>+++")
-            resultatum.append("| +++<span lang='la'>Wiki QID<br>cōdicī</span>+++")
-            resultatum.append("| +++<span lang='la'>Nōmen Latīnum</span>+++")
+            resultatum.append("| Cōdex linguae")
+            resultatum.append("| Glotto cōdicī")
+            resultatum.append("| ISO 639-3")
+            resultatum.append("| Wiki QID cōdicī")
+            resultatum.append("| Nōmen Latīnum")
             resultatum.append('')
             resultatum.extend(resultatum_corpus)
             resultatum.append('|===')
