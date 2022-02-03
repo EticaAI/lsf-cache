@@ -468,12 +468,20 @@ class Codex:
         picturae = self.annexis.quod_picturae(numerordinatio_locali='0')
         if picturae:
             codicem_ordo = 2
+            # resultatum.append(
+            #     ('#' * (codicem_ordo + 2)) + ' ' +
+            #     '<span lang="la">Annexa</span>'
+            # )
+            # resultatum.append(
+            #     ('#' * (codicem_ordo + 3)) + ' ' +
+            #     '<span lang="la">Pictūrae</span>'
+            # )
             resultatum.append(
-                ('#' * (codicem_ordo + 2)) + ' ' +
+                ('=' * (codicem_ordo + 3)) + ' ' +
                 '<span lang="la">Annexa</span>'
             )
             resultatum.append(
-                ('#' * (codicem_ordo + 3)) + ' ' +
+                ('=' * (codicem_ordo + 4)) + ' ' +
                 '<span lang="la">Pictūrae</span>'
             )
             for item in picturae:
@@ -488,7 +496,8 @@ class Codex:
                 else:
                     resultatum.append('{0}\n'.format(titulum))
 
-            resultatum.append("----\n")
+            resultatum.append("'''''\n")
+            # resultatum.append("----\n")
 
         return resultatum
 
@@ -504,9 +513,11 @@ class Codex:
         """
 
         resultatum = []
-        resultatum.append('----')
+        # resultatum.append('----')
+        resultatum.append("'''''")
         resultatum.append('')
-        resultatum.append("- <a href='#0'>[0] /Praefātiō/@lat-Latn</a>")
+        # resultatum.append("- <a href='#0'>[0] /Praefātiō/@lat-Latn</a>")
+        resultatum.append("* <a href='#0'>[0] /Praefātiō/@lat-Latn</a>")
         for item in self.codex:
             codicem_loci = item['#item+conceptum+codicem']
 
@@ -517,10 +528,15 @@ class Codex:
             codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
             codicem_ordo = numerordinatio_ordo(codicem_loci)
 
+            # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
+            #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
+            # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
+            #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
             resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
-                codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
+                codicem_normale, nomen, ('*' * (codicem_ordo - 1))))
         resultatum.append('')
-        resultatum.append('----')
+        # resultatum.append('----')
+        resultatum.append("'''''")
         resultatum.append('')
         return resultatum
 
@@ -544,8 +560,12 @@ class Codex:
             nomen = numerordinatio_nomen(item)
             codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
             codicem_ordo = numerordinatio_ordo(codicem_loci)
+            # resultatum.append(
+            #     ('#' * (codicem_ordo + 1)) +
+            #     ' [`' + codicem_loci + '`] ' + nomen + "\n"
+            # )
             resultatum.append(
-                ('#' * (codicem_ordo + 1)) +
+                ('=' * (codicem_ordo + 2)) +
                 ' [`' + codicem_loci + '`] ' + nomen + "\n"
             )
             resultatum.append(
@@ -562,12 +582,20 @@ class Codex:
             picturae = self.annexis.quod_picturae(
                 numerordinatio_locali=codicem_normale)
             if picturae:
+                # resultatum.append(
+                #     ('#' * (codicem_ordo + 2)) + ' ' +
+                #     '<span lang="la">Annexa</span>'
+                # )
+                # resultatum.append(
+                #     ('#' * (codicem_ordo + 3)) + ' ' +
+                #     '<span lang="la">Pictūrae</span>'
+                # )
                 resultatum.append(
-                    ('#' * (codicem_ordo + 2)) + ' ' +
+                    ('=' * (codicem_ordo + 3)) + ' ' +
                     '<span lang="la">Annexa</span>'
                 )
                 resultatum.append(
-                    ('#' * (codicem_ordo + 3)) + ' ' +
+                    ('=' * (codicem_ordo + 4)) + ' ' +
                     '<span lang="la">Pictūrae</span>'
                 )
                 for item in picturae:
