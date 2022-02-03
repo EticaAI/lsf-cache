@@ -483,11 +483,11 @@ class Codex:
             # )
             resultatum.append(
                 ('=' * (codicem_ordo + 3)) + ' ' +
-                '<span lang="la">Annexa</span>'
+                '+++<span lang="la">Annexa</span>+++'
             )
             resultatum.append(
                 ('=' * (codicem_ordo + 4)) + ' ' +
-                '<span lang="la">Pictūrae</span>'
+                '+++<span lang="la">Pictūrae</span>+++'
             )
             for item in picturae:
 
@@ -495,10 +495,10 @@ class Codex:
                 titulum = item.quod_temp_titulum()
                 link = item.quod_temp_link()
                 # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
-                resultatum.append('image:{1}[title="{0}"]\n'.format(titulum, trivium))
+                resultatum.append('image::{1}[title="{0}"]\n'.format(titulum, trivium))
                 if link:
                     resultatum.append(
-                        '+++<a href="{1}">{0}</a>+++\n'.format(titulum, link))
+                        'link:{1}[{0}]\n'.format(titulum, link))
                 else:
                     resultatum.append('{0}\n'.format(titulum))
 
@@ -610,10 +610,11 @@ class Codex:
                     trivium = item.quod_temp_rel_pic()
                     titulum = item.quod_temp_titulum()
                     link = item.quod_temp_link()
-                    resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
+                    resultatum.append('image::{1}[title="{0}"]\n'.format(titulum, trivium))
+                    # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
                     if link:
                         resultatum.append(
-                            '<a href="{1}">{0}</a>\n'.format(titulum, link))
+                            '+++<a href="{1}">{0}</a>+++\n'.format(titulum, link))
                     else:
                         resultatum.append('{0}\n'.format(titulum))
 
