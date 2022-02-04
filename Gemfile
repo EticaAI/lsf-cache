@@ -50,7 +50,7 @@ gem 'hexapdf'
 #   ./999999999/0/1603_1.py --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf --attribute optimize=screen 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; evince 1603/25/1/1603_25_1.mul-Latn.codex.pdf
 #   ./999999999/0/1603_1.py --codex-de 1603_45_1 > 1603/45/1/1603_45_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf --attribute optimize=screen 1603/45/1/1603_45_1.mul-Latn.codex.adoc ; evince 1603/45/1/1603_45_1.mul-Latn.codex.pdf
 
-#   ./999999999/0/1603_1.py --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; evince 1603/25/1/1603_25_1.mul-Latn.codex.pdf
+#   ./999999999/0/1603_1.py --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/25/1/1603_25_1.mul-Latn.codex.adoc - ; evince 1603/25/1/1603_25_1.mul-Latn.codex.pdf
 
 #    bundle exec hexapdf optimize 1603/45/1/1603_45_1.mul-Latn.codex.pdf 1603/45/1/1603_45_1__2.mul-Latn.codex.pdf
 #    bundle exec hexapdf optimize 1603/25/1/1603_25_1.mul-Latn.codex.pdf 1603/25/1/1603_25_1__2.mul-Latn.codex.pdf
