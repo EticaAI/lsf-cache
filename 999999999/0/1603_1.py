@@ -429,19 +429,25 @@ class Codex:
         resultatum.append('')
 
         resultatum.append('')
-        resultatum.append("=== //Documentation about how to use the machine-readable dictionaries//@eng-Latn")
+        resultatum.append(
+            "=== //Documentation about how to use the machine-readable dictionaries//@eng-Latn")
         resultatum.append('')
-        resultatum.append('Is necessary to give a quick introduction (or at least mention) the files generated with this implementer documentation.')
+        resultatum.append(
+            'Is necessary to give a quick introduction (or at least mention) the files generated with this implementer documentation.')
         resultatum.append('')
 
-        resultatum.append("=== //Missing fonts to render all term variants//@eng-Latn")
-        resultatum.append('The generated PDF does not include all necessary fonts.')
-        resultatum.append('Here potential strategy to fix it https://github.com/asciidoctor/asciidoctor-pdf/blob/main/docs/theming-guide.adoc#custom-fonts')
+        resultatum.append(
+            "=== //Missing fonts to render all term variants//@eng-Latn")
+        resultatum.append(
+            'The generated PDF does not include all necessary fonts.')
+        resultatum.append(
+            'Here potential strategy to fix it https://github.com/asciidoctor/asciidoctor-pdf/blob/main/docs/theming-guide.adoc#custom-fonts')
 
         resultatum.append('')
         resultatum.append("=== //Reliability statuses//@eng-Latn")
         resultatum.append('')
-        resultatum.append('Currently, the reliability of numeric statuses are not well explained on PDF version.')
+        resultatum.append(
+            'Currently, the reliability of numeric statuses are not well explained on PDF version.')
 
         # resultatum.append("=== First Subsection")
         # resultatum.append("")
@@ -557,7 +563,6 @@ class Codex:
                 list(self.usus_linguae)))
 
         # resultatum.append("----\n")
-
 
             # resultatum.append("'''''\n")
             # resultatum.append("----\n")
@@ -1248,7 +1253,7 @@ class DictionariaLinguarum:
             resultatum.append("")
 
             resultatum.append("=== Linguae in cōdex: {0}".format(
-                    len(self.dictionaria_codex.keys())))
+                len(self.dictionaria_codex.keys())))
 
             # cōdex, m, s, (nominative)
             # tōtālis, m/f, s, (Nominative)

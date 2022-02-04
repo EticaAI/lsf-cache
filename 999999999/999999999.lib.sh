@@ -258,7 +258,7 @@ file_download_if_necessary() {
   if [ -z "${FORCE_REDOWNLOAD}" ] && [ -z "${_FORCE_REDOWNLOAD}" ]; then
     if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
   else
-    echo "${FUNCNAME[0]} forced re-download [$objectivum_archivum]"
+    echo "[ DOWNLOAD ] ${FUNCNAME[0]} forced re-download [$objectivum_archivum]"
     _FORCE_REDOWNLOAD=""
   fi
 
@@ -422,6 +422,74 @@ neo_codex_de_numerordinatio() {
     >"$objectivum_archivum"
 }
 
+#######################################
+# From an .codex.adoc, create an PDF file
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (default "0", from real namespace)
+#   est_objectivum_linguam
+#   est_auxilium_linguam
+# Outputs:
+#   Create documentation
+#######################################
+neo_codex_de_numerordinatio_pdf() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+  # est_objectivum_linguam="${4:-"mul-Zyyy"}"
+  est_objectivum_linguam="${4:-"mul-Latn"}"
+  est_auxilium_linguam="${5:-"lat-Latn,por-Latn,eng-Latn"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.pdf"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.pdf"
+
+  # echo "$fontem_archivum"
+
+  # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+  # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  # if [ ! -e "$objectivum_archivum" ]; then
+  #   echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
+  # elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
+  #   # echo "${FUNCNAME[0]} objective exist, sources not changed recently"
+  #   return 0
+  # else
+  #   echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
+  # fi
+
+  echo "${FUNCNAME[0]} [$objectivum_archivum]"
+  # return 0
+
+  bundle exec asciidoctor-pdf "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
+
+  if [ -f "$objectivum_archivum" ]; then
+    rm "$objectivum_archivum"
+  fi
+  bundle exec hexapdf optimize "$objectivum_archivum_temporarium" "$objectivum_archivum"
+
+  rm "$objectivum_archivum_temporarium"
+}
+
 ## Tem definidos
 # cat 999999/1603/1/1/1603_1_1.tm.hxl.csv | hxlselect --query="#status+conceptum<0"
 # cat 999999/1603/1/1/1603_1_1.tm.hxl.csv | hxlselect --query='#status+conceptum+codicem~^(1|2|3|4|5|6|7|8|9)$' --reverse
@@ -477,13 +545,13 @@ file_translate_csv_de_numerordinatio_q() {
   objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
   objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
 
-  # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
 
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+  if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 
-  echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
+  echo "[ DOWNLOAD Wikidata ] ${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
 
   hxlcut \
     --include='#*+ix_wikiq,#*+v_wiki_q,#item+conceptum+numerordinatio' \

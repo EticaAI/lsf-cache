@@ -6,7 +6,15 @@ gem 'asciidoctor-epub3'
 gem 'prawn-gmagick'
 gem 'rouge'
 
+# This one could be a license issue. Is only used to compress the public domain PDFs
+# and, with hexapdf, is AGPL
+gem 'rghost'
 
+## PDF compression
+# https://pdfbox.apache.org/1.8/commandline.html
+# https://en.wikipedia.org/wiki/List_of_PDF_software
+# https://github.com/asciidoctor/docker-asciidoctor/issues/111
+gem 'hexapdf'
 
 ### gem 'prawn-gmagick' dependencies ___________________________________________
 # 'asciidoctor: WARNING: GIF image format not supported. Install the prawn-gmagick gem or convert'
@@ -39,7 +47,13 @@ gem 'rouge'
 #   ./999999999/0/1603_1.py --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Latn.codex.adoc
 #   bundle exec asciidoctor-pdf 1603/25/1/1603_25_1.mul-Latn.codex.adoc
 #
+#   ./999999999/0/1603_1.py --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf --attribute optimize=screen 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; evince 1603/25/1/1603_25_1.mul-Latn.codex.pdf
+#   ./999999999/0/1603_1.py --codex-de 1603_45_1 > 1603/45/1/1603_45_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf --attribute optimize=screen 1603/45/1/1603_45_1.mul-Latn.codex.adoc ; evince 1603/45/1/1603_45_1.mul-Latn.codex.pdf
+
 #   ./999999999/0/1603_1.py --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; evince 1603/25/1/1603_25_1.mul-Latn.codex.pdf
+
+#    bundle exec hexapdf optimize 1603/45/1/1603_45_1.mul-Latn.codex.pdf 1603/45/1/1603_45_1__2.mul-Latn.codex.pdf
+#    bundle exec hexapdf optimize 1603/25/1/1603_25_1.mul-Latn.codex.pdf 1603/25/1/1603_25_1__2.mul-Latn.codex.pdf
 
 # Maybe this would work to fix the issues with <span lang="zz">...</span> on
 # PDF backend??
