@@ -8,7 +8,7 @@ gem 'rouge'
 
 # This one could be a license issue. Is only used to compress the public domain PDFs
 # and, with hexapdf, is AGPL
-gem 'rghost'
+# gem 'rghost'
 
 ## PDF compression
 # https://pdfbox.apache.org/1.8/commandline.html

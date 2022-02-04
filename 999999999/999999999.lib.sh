@@ -262,7 +262,7 @@ file_download_if_necessary() {
     _FORCE_REDOWNLOAD=""
   fi
 
-  # echo "going to download again.."
+  echo "[ DOWNLOAD ] [$iri] [$objectivum_archivum]"
 
   if [ "$downloader" == "hxltmcli" ]; then
     hxltmcli "$iri" >"$objectivum_archivum_temporarium"
