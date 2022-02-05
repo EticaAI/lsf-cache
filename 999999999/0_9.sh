@@ -26,7 +26,6 @@
 set -e
 
 # set -x
-
 _DEPLOY_0_9_COMMIT_MESSAGE="$(TZ=":Zulu" date +"%Y-%m-%d %T") 🤖🧮💾"
 DEPLOY_0_9_COMMIT_MESSAGE="${DEPLOY_0_9_COMMIT_MESSAGE:-${_DEPLOY_0_9_COMMIT_MESSAGE}}"
 

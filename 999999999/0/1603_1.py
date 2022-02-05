@@ -29,12 +29,14 @@
 # pytest
 #    python3 -m doctest ./999999999/0/1603_1.py
 
-# ./999999999/0/1603_1.py ./999999999/0/1603_1.py \
-# --codex-de 1603_45_1 > 999999/0/test.md
-# ./999999999/0/1603_1.py ./999999999/0/1603_1.py \
-# --codex-de 1603_84_1 > 1603/84/1/1603_84_1.mul-Zyyy.codex.md
-# ./999999999/0/1603_1.py ./999999999/0/1603_1.py \
-# --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Zyyy.codex.md
+# ./999999999/0/1603_1.py \
+# --codex-de 1603_45_1 > 999999/0/test.adoc
+# ./999999999/0/1603_1.py \
+# --codex-de 1603_84_1 > 1603/84/1/1603_84_1.mul-Latn.codex.adoc
+# ./999999999/0/1603_1.py \
+# --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Latn.codex.adoc
+# ./999999999/0/1603_1.py \
+# --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc
 
 # quotes
 # - https://en.wiktionary.org/wiki/res,_non_verba#Latin
@@ -292,6 +294,11 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
     if query.find('+ix_wikiq') > -1:
         return "https://www.wikidata.org/wiki/{0}[{0}]".format(
             rem[query])
+
+    if query.find('+ix_wikip') > -1:
+        return "https://www.wikidata.org/wiki/Property:{0}[{0}]".format(
+            rem[query])
+
     if query.find('+ix_ta98') > -1:
         term = rem[query].replace('A', '')
         resultatum = (
@@ -362,6 +369,7 @@ class Codex:
             self.auxilium_linguam = auxilium_linguam
 
         self.dictionaria_linguarum = DictionariaLinguarum()
+        self.dictionaria_interlinguarum = DictionariaInterlinguarum()
         self.m1603_1_1__de_codex = self._init_1603_1_1()
         self.codex = self._init_codex()
         # self.annexa = self._init_annexa()
@@ -561,6 +569,22 @@ class Codex:
 
             resultatum.extend(self.dictionaria_linguarum.imprimere(
                 list(self.usus_linguae)))
+
+        if len(self.usus_ix_qcc):
+            # resultatum.append("### Linguae in cōdex")
+            # resultatum.append("=== Linguae in cōdex")
+            # resultatum.append(str(self.usus_linguae))
+
+            resultatum.extend(self.dictionaria_interlinguarum.imprimere(
+                list(self.usus_ix_qcc)))
+        
+        # resultatum.append("oioi")
+        # resultatum.append("")
+        # # resultatum.extend(self.dictionaria_interlinguarum.imprimere(
+        # #     list(self.usus_linguae)))
+        # resultatum.extend(self.dictionaria_interlinguarum.imprimere(None))
+        
+        # resultatum.append("oi2oi2")
 
         # resultatum.append("----\n")
 
@@ -813,26 +837,41 @@ class Codex:
             [list]:
         """
 
+        # @TODO: implement '#item+conceptum' and '#status+conceptum' as
+        #        dedicated part; here we're only realing with interlingual
+        #        things
+
         resultatum = []
         resultatum_corpus = []
 
         for clavem, item_textum in rem.items():
 
-            if not clavem.startswith('#item+conceptum') and not \
-                    clavem.startswith('#status+conceptum') and not \
-                    clavem.startswith('#item+rem+i_qcc'):
+            # if not clavem.startswith('#item+conceptum') and not \
+            #         clavem.startswith('#status+conceptum') and not \
+            #         clavem.startswith('#item+rem+i_qcc'):
+            #     continue
+            if not clavem.startswith('#item+rem+i_qcc'):
                 continue
             # if clavem.startswith('#status+conceptum'):
             #     continue
             # if clavem.startswith('#item+rem+i_qcc'):
             #     continue
+            clavem_i18n = None
+            dinterlinguam = self.dictionaria_interlinguarum.quod(clavem)
+            # raise ValueError(dinterlinguam)
+            if dinterlinguam and dinterlinguam['#item+rem+i_lat+is_latn']:
+                clavem_i18n = '' + \
+                    dinterlinguam['#item+rem+i_lat+is_latn'] + ''
 
             if item_textum:
-                clavem_i18n = clavem
+                clavem_i18n = clavem if clavem_i18n is None else clavem_i18n
+                # clavem_i18n = clavem
                 item_text_i18n = item_textum
                 item_text_i18n = res_interlingualibus_formata(rem, clavem)
-                if clavem.startswith('#item+rem+i_qcc'):
-                    self.usus_ix_qcc.add(clavem)
+                if clavem.startswith('#item+rem+i_qcc+is_zxxx+'):
+                    self.usus_ix_qcc.add(clavem.replace(
+                        '#item+rem+i_qcc+is_zxxx+', ''
+                    ))
 
                 # resultatum_corpus.append("| +++{0}+++".format(clavem_i18n))
                 resultatum_corpus.append("| {0}".format(clavem_i18n))
@@ -861,6 +900,9 @@ class Codex:
 
             resultatum.extend(resultatum_corpus)
             resultatum.append('|===')
+
+        # resultatum.append('')
+        # resultatum.append('TODO DictionariaInterlinguarum')
 
         return resultatum
 
@@ -1165,6 +1207,169 @@ class CodexSarcinarumAdnexis:
         return resultatum
 
 
+class DictionariaInterlinguarum:
+    def __init__(self, fontem_archivum: str = None):
+        if fontem_archivum:
+            self.D1613_1_7_fontem = fontem_archivum
+        else:
+            self.D1613_1_7_fontem = NUMERORDINATIO_BASIM + \
+                "/1603/1/7/1603_1_7.no1.tm.hxl.csv"
+
+        self.dictionaria_codex = self._init_dictionaria()
+
+    def _init_dictionaria(self):
+
+        datum = {}
+        with open(self.D1613_1_7_fontem) as file:
+            csv_file = csv.DictReader(file)
+            # return list(tsv_file)
+            for conceptum in csv_file:
+                # print('conceptum', conceptum)
+                int_clavem = int(conceptum['#item+conceptum+codicem'])
+                datum[int_clavem] = {}
+                for clavem, rem in conceptum.items():
+                    if not clavem.startswith('#item+conceptum+codicem'):
+                        datum[int_clavem][clavem] = rem
+        return datum
+
+    def imprimere(self, linguam: list = None) -> list:
+        """imprimere /print/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
+        - pāginae, f, pl, (Nominative), https://en.wiktionary.org/wiki/pagina
+
+        Returns:
+            [list]:
+        """
+        resultatum = []
+        resultatum_corpus = []
+        resultatum_corpus_totale = 0
+        linguam_clavem = []
+        if linguam:
+            for item in linguam:
+                linguam_clavem.append(
+                    item.replace('#item+rem', '')
+                )
+        # resultatum_corpus.append(linguam_clavem)
+        # resultatum_corpus.append(len(linguam_clavem))
+        for clavem, lineam in self.dictionaria_codex.items():
+
+            if len(linguam_clavem) > 0:
+                if lineam['#item+rem+i_qcc+is_zxxx+ix_hxlix'] not in \
+                        linguam_clavem:
+                    continue
+
+            # clavem_i18n = lineam['#item+rem+i_qcc+is_zxxx+ix_uid']
+            clavem_i18n = lineam['#item+rem+i_qcc+is_zxxx+ix_hxlix']
+            definitionem = lineam['#item+rem+definitionem+i_eng+is_latn']
+            item_text_i18n = lineam['#item+rem+i_lat+is_latn']
+            ix_wikip = lineam['#item+rem+i_qcc+is_zxxx+ix_wikip']
+            # ix_glottocode = ''
+            # ix_iso639p3a3 = lineam['#item+rem+i_qcc+is_zxxx+ix_iso639p3a3']
+            ix_iso639p3a3 = ''
+            # ix_wikiq = lineam['#item+rem+i_qcc+is_zxxx+ix_wikiq+ix_linguam']
+            # ix_wikiq = ''
+            ix_wikip = ''
+            if len(ix_wikip):
+                ix_wikip = \
+                    "https://www.wikidata.org/wiki/Property:{0}[{0}]".format(
+                        ix_wikip)
+
+            if len(ix_iso639p3a3):
+                ix_iso639p3a3 = \
+                    "https://iso639-3.sil.org/code/{0}[{0}]".format(
+                        ix_iso639p3a3)
+            # if len(ix_wikiq):
+            #     ix_wikiq = \
+            #         "https://www.wikidata.org/wiki/{0}[{0}]".format(
+            #             ix_wikiq)
+            # resultatum_corpus.append(str(lineam))
+            # resultatum_corpus.append(linguam)
+            # resultatum_corpus.append(
+            #     "| {0} | {1} | {2} | {3} | {4} |".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
+            resultatum_corpus.append("| {0}".format(clavem_i18n))
+            resultatum_corpus.append("| {0}".format(ix_wikip))
+            resultatum_corpus.append("| {0}".format(ix_iso639p3a3))
+            # resultatum_corpus.append("| {0}".format(ix_wikiq))
+            resultatum_corpus.append("| {0}".format(item_text_i18n))
+            resultatum_corpus.append("| {0}".format(definitionem))
+            # resultatum_corpus.append("| {0}".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
+            # resultatum_corpus.append("| {0}".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
+            resultatum_corpus.append('')
+            resultatum_corpus_totale += 1
+
+        if resultatum_corpus:
+            resultatum.append("")
+
+            resultatum.append("=== Interlinguae in cōdex: {0}".format(
+                resultatum_corpus_totale))
+
+            # cōdex, m, s, (nominative)
+            # tōtālis, m/f, s, (Nominative)
+            # linguae, f, s, (Dative)
+            resultatum.append(
+                "Tōtālis linguae in cōdex: {0}".format(
+                    resultatum_corpus_totale))
+            resultatum.append("")
+
+            resultatum.append('[%header,cols="~,~,~,~,~"]')
+            resultatum.append('|===')
+            # https://en.wiktionary.org/wiki/latinus#Latin
+            # nōmina, n, pl, (Nominative)
+            #     shttps://en.wiktionary.org/wiki/nomen#Latin
+            # "nōmen Latīnum"
+            # https://en.wiktionary.org/wiki/Latinus#Latin
+            # resultatum.append(
+            #     "| <span lang='la'>Cōdex<br>linguae</span> | "
+            #     "<span lang='la'>Glotto<br>cōdicī</span> | "
+            #     "<span lang='la'>ISO<br>639-3</span> | "
+            #     "<span lang='la'>Wiki QID<br>cōdicī</span> | "
+            #     "<span lang='la'>Nōmen Latīnum</span> |")
+            # resultatum.append("| --- | --- | --- | --- | --- |")
+            resultatum.append("| Interlinguae")
+            resultatum.append("| /Wiki P/")
+            resultatum.append("| ISO 639-3")
+            # resultatum.append("| Wiki QID cōdicī")
+            resultatum.append("| Nōmen Latīnum")
+            resultatum.append("| Definitionem")
+            resultatum.append('')
+            resultatum.extend(resultatum_corpus)
+            resultatum.append('|===')
+            resultatum.append("")
+
+        return resultatum
+
+    def quod(self, terminum: str,
+             #  factum: str = '#item+rem+i_lat+is_latn',
+             clavem: str = None):
+        # clavem_defallo = [
+        #     '#item+rem+i_qcc+is_zxxx+ix_hxla',
+        #     '#item+rem+i_qcc+is_zxxx+ix_csvsffxm'
+        # ]
+        # raise ValueError(terminum, self.dictionaria_codex.keys())
+        if not terminum:
+            return None
+
+        clavem_defallo = [
+            '#item+rem+i_qcc+is_zxxx+ix_hxlix',
+            '#item+rem+i_qcc+is_zxxx+ix_hxlvoc'
+        ]
+        _clavem = clavem_defallo if clavem is None else [clavem]
+        # _clavem = clavem_defallo
+
+        for item in _clavem:
+            # print('item', item)
+            for _k, linguam in self.dictionaria_codex.items():
+                # print('linguam', linguam)
+                if terminum.find(linguam[item]) > -1 and linguam[item]:
+                    # return linguam[factum]
+                    return linguam
+
+        return None
+
+
 class DictionariaLinguarum:
     def __init__(self, fontem_archivum: str = None):
         if fontem_archivum:
@@ -1203,6 +1408,7 @@ class DictionariaLinguarum:
         """
         resultatum = []
         resultatum_corpus = []
+        resultatum_corpus_totale = 0
         linguam_clavem = []
         if linguam:
             for item in linguam:
@@ -1248,19 +1454,20 @@ class DictionariaLinguarum:
             # resultatum_corpus.append("| {0}".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
             # resultatum_corpus.append("| {0}".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
             resultatum_corpus.append('')
+            resultatum_corpus_totale += 1
 
         if resultatum_corpus:
             resultatum.append("")
 
             resultatum.append("=== Linguae in cōdex: {0}".format(
-                len(self.dictionaria_codex.keys())))
+                resultatum_corpus_totale))
 
             # cōdex, m, s, (nominative)
             # tōtālis, m/f, s, (Nominative)
             # linguae, f, s, (Dative)
             resultatum.append(
                 "Tōtālis linguae in cōdex: {0}".format(
-                    len(self.dictionaria_codex.keys())))
+                    resultatum_corpus_totale))
             resultatum.append("")
 
             resultatum.append('[%header,cols="~,~,~,~,~"]')
