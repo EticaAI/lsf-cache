@@ -32,6 +32,8 @@ PURGATORIA_CONCEPTUM=()
 PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" "tm.hxl.csv" "mul-Latn.codex.pdf" "mul-Latn.codex.adoc" )
 
 PURGATORIA_CONCEPTUM+=( "1603_1_1" )
+# PURGATORIA_CONCEPTUM+=( "1603_1_6" )
+# PURGATORIA_CONCEPTUM+=( "1603_1_7" )
 # PURGATORIA_CONCEPTUM+=( "1603_1_51" )
 # PURGATORIA_CONCEPTUM+=( "1603_1_101" )
 

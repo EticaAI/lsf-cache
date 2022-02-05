@@ -59,6 +59,39 @@
 - scrīpta, n, plural, https://en.wiktionary.org/wiki/scriptus#Latin
 
 ## [`1603:1:5`] //
+
+## [`1603:1:6`] /Dictiōnāria de terminī typīs/
+- https://github.com/EticaAI/multilingual-lexicography/issues/16
+
+- dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
+  - http://micmap.org/dicfro/search/gaffiot/dictionarium
+  - http://nlw.renaessancestudier.org/words/start2.htm?../words/2/000422.htm
+- terminus, m, s, (Nominative), https://en.wiktionary.org/wiki/terminus#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=terminus
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0062:entry=terminus-harpers
+- terminī, m, pl, (Nominative) ...
+- typīs, m, pl (Dative) https://en.wiktionary.org/wiki/typus#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=typus
+  - http://ducange.enc.sorbonne.fr/TYPUS
+
+## [`1603:1:7`] //Dictiōnāria basibus de rēs interlinguīs//
+- https://github.com/EticaAI/multilingual-lexicography/issues/15
+
+- dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
+  - http://micmap.org/dicfro/search/gaffiot/dictionarium
+  - http://nlw.renaessancestudier.org/words/start2.htm?../words/2/000422.htm
+- inter (+ accusative), https://en.wiktionary.org/wiki/inter#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059%3Aentry%3Dinter1
+- inter-, https://en.wiktionary.org/wiki/inter-#Latin
+- linguīs, f, pl, (Dative) https://en.wiktionary.org/wiki/lingua#Latin
+- rēs, f, pl, (nominative), https://en.wiktionary.org/wiki/res#Latin
+- generālia, n, pl ()
+- generālium, m/f/n, pl, (gentitive)
+  - **I'm not sure if this is the best choise -- Rocha**
+- basibus, f, pl, (dative) https://en.wiktionary.org/wiki/basis#Latin
+- ...dictiōnāria basibus de rēs interlinguīs
+
+
 ## [`1603:1:20`] //
 ## [`1603:1:51`] //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//@lat-Latn
 - dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
