@@ -11,40 +11,151 @@
 :last-update-label: Renovatio
 :version-label: Versiō
 :appendix-caption: Appendix
+:source-highlighter: rouge
 
 
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[quote]
+/_**Public domain means that each major common issue only needs to be resolved once**_/@eng-Latn
+
+<<<
 toc::[]
+
+
 [id=0_999_1603_1]
 == Praefātiō 
 
-=== //Cōdex trānslātiōnēs//
-
-
-[%header,cols="~,~"]
+[%header,cols="25h,~a"]
 |===
-| Lingua de verba
-| Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
-| +++//dictiōnāria de vulnera ab arma ignifera//+++
+|
+Lingua de verba
+|
+Verba de conceptiō
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+_**"Cōdex [1603:44:142]"**_ is the book format of the machine-readable dictionaries _**"[1603:44:142] //dictiōnāria de vulnera ab arma ignifera//"**_,
+which are distributed for implementers on external applications.
+This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
 
-| Linguae multiplīs (Scrīptum incognitō)
-| +++[142] 魏伯陽 +++
+Practical lexicography is the art or craft of compiling, writing and editing dictionaries.
+The basics are not far different than a millennia ago:
+it is still a very humane, creative work.
+It is necessary to be humble:
+most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws.
+Making sure of a source idea of what a concept represents,
+even if it means rewrite and make simpler, annex pictures,
+show examples, do whatever to make it be understood,
+makes even non-professional translators that care about their own language deliver better results than any alternative.
+In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+
+The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use.
+All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares.
+Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
 
 |===
-=== //Rēs interlinguālibus//
 
-[%header,cols="~,~"]
+<<<
+
+== Methodī ex cōdice
+[%header,cols="25h,~a"]
 |===
-| Non lingua
-| //Rēs interlinguālibus//
-
-| Numerordĭnātĭo
-| 1603:44:142
+|
+Lingua de verba
+|
+Verba de conceptiō
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations.
 
 |===
 
-=== Linguae in cōdex: 2
-Tōtālis linguae in cōdex: 2
+=== Methodī ex dictiōnāriōrum corde
+NOTE: #@TODO this is a draft. Soon will be imple#
+
+=== Methodī ex verbīs in dictiōnāriīs
+NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data],  which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+
+==== Methodī ex verbīs in Vicidata (Q modō)
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The ***[1603:44:142] //dictiōnāria de vulnera ab arma ignifera//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+
+This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**How reliable are the community translations (Wikidata source)?**
+
+The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+
+As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests.
+This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+
+However, even when the result is correct,
+the current version needs improved differentiation, at minimum, acronym and long form.
+For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**Major reasons for "wrong translations" are not translators fault**
+
+TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+
+NOTE: Both at concept level and (as general statistics) book level, is planned to have indication concept likelihood of being well understood for very stricter translations initiatives.
+
+The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+
+It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+
+. The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_44_142.no1.tm.hxl.csv`, may reference Wiki QID.
+. Every unique QID of  `1603_44_142.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works.
+.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+. The query result, with all QIDs and term labels, is shared as `1603_44_142.wikiq.tm.hxl.csv`
+. The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_44_142.wikiq.tm.hxl.csv`
+. `1603_44_142.no1.tm.hxl.csv` plus `1603_44_142.wikiq.tm.hxl.csv` created `1603_44_142.no11.tm.hxl.csv`
+
+|===
+
+=== Rēs dē factō in dictiōnāriīs
+
+==== Rēs linguālibus: 1
 
 [%header,cols="~,~,~,~,~"]
 |===
@@ -54,12 +165,6 @@ Tōtālis linguae in cōdex: 2
 | Wiki QID cōdicī
 | Nōmen Latīnum
 
-| mul-Zyyy
-| 
-| 
-| 
-| Linguae multiplīs (Scrīptum incognitō)
-
 | eng-Latn
 | https://glottolog.org/resource/languoid/id/stan1293[stan1293]
 | https://iso639-3.sil.org/code/eng[eng]
@@ -68,37 +173,43 @@ Tōtālis linguae in cōdex: 2
 
 |===
 
+==== Rēs interlinguālibus: 2
 
-=== Interlinguae in cōdex: 3
-Tōtālis linguae in cōdex: 3
 
-[%header,cols="~,~,~,~,~"]
-|===
-| Interlinguae
-| /Wiki P/
-| ISO 639-3
-| Nōmen Latīnum
-| Definitionem
+===== 1603:1:7:1:91 
 
-| ix_n1603
-| 
-| 
-| Numerordĭnātĭo
-| a generic strategy of arranging numbers in an taxonomy-like explicit way
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "1_91",
+    "#item+conceptum+numerordinatio": "1603:1:7:1:91",
+    "#item+rem+definitionem+i_eng+is_latn": "QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter \"Q\" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.",
+    "#item+rem+i_lat+is_latn": "/Wiki QID/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikiq",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_q",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
+    "#status+conceptum+codicem": "19",
+    "#status+conceptum+definitionem": "50"
+}
+----
 
-| ix_wikiq
-| 
-| 
-| /Wiki QID/
-| QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
+===== 1603:1:7:1:200 
 
-| ix_hxl
-| 
-| 
-| /HXL Standard, hashtag, base tab, or attribute (but not readable header)/
-| /HXL Standard, hashtag, base tab, or attribute (but not readable header)/
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "1_200",
+    "#item+conceptum+numerordinatio": "1603:1:7:1:200",
+    "#item+rem+definitionem+i_eng+is_latn": "/HXL Standard, hashtag, base tab, or attribute (but not readable header)/",
+    "#item+rem+i_lat+is_latn": "/HXL Standard, hashtag, base tab, or attribute (but not readable header)/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_hxl",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_hxl",
+    "#status+conceptum+codicem": "19",
+    "#status+conceptum+definitionem": "50"
+}
+----
 
-|===
+<<<
 
 == //dictiōnāria de vulnera ab arma ignifera//
 [id='1']
@@ -400,6 +511,9 @@ Tōtālis linguae in cōdex: 3
 
 
 
+
+
+<<<
 
 [appendix]
 = //Open issues on exported PDF format//@eng-Latn

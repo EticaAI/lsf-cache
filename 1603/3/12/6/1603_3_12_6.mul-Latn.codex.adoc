@@ -11,100 +11,112 @@
 :last-update-label: Renovatio
 :version-label: Versiō
 :appendix-caption: Appendix
+:source-highlighter: rouge
 
 
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[quote]
+/_**Public domain means that each major common issue only needs to be resolved once**_/@eng-Latn
+
+<<<
 toc::[]
+
+
 [id=0_999_1603_1]
 == Praefātiō 
 
-=== //Cōdex trānslātiōnēs//
-
-
-[%header,cols="~,~"]
+[%header,cols="25h,~a"]
 |===
-| Lingua de verba
-| Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
-| +++//Speciālis collēctiōnī de Vicidata Proprietātī//+++
+|
+Lingua de verba
+|
+Verba de conceptiō
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+_**"Cōdex [1603:3:12:6]"**_ is the book format of the machine-readable dictionaries _**"[1603:3:12:6] //Speciālis collēctiōnī de Vicidata Proprietātī//"**_,
+which are distributed for implementers on external applications.
+This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
 
-| Linguae multiplīs (Scrīptum incognitō)
-| +++[6] (16 - 10) P+++
+Practical lexicography is the art or craft of compiling, writing and editing dictionaries.
+The basics are not far different than a millennia ago:
+it is still a very humane, creative work.
+It is necessary to be humble:
+most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws.
+Making sure of a source idea of what a concept represents,
+even if it means rewrite and make simpler, annex pictures,
+show examples, do whatever to make it be understood,
+makes even non-professional translators that care about their own language deliver better results than any alternative.
+In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Speciālis collēctiōnī de Vicidata Proprietātī//</span>+++
-
-|===
-=== //Rēs interlinguālibus//
-
-[%header,cols="~,~"]
-|===
-| Non lingua
-| //Rēs interlinguālibus//
-
-| Numerordĭnātĭo
-| 1603:3:12:6
-
-| /Wiki QID/
-| https://www.wikidata.org/wiki/Q18616576[Q18616576]
+The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use.
+All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares.
+Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
 
 |===
 
-=== Linguae in cōdex: 2
-Tōtālis linguae in cōdex: 2
+<<<
 
-[%header,cols="~,~,~,~,~"]
+== Methodī ex cōdice
+[%header,cols="25h,~a"]
 |===
-| Cōdex linguae
-| Glotto cōdicī
-| ISO 639-3
-| Wiki QID cōdicī
-| Nōmen Latīnum
-
-| mul-Zyyy
-| 
-| 
-| 
-| Linguae multiplīs (Scrīptum incognitō)
-
-| lat-Latn
-| https://glottolog.org/resource/languoid/id/lati1261[lati1261]
-| https://iso639-3.sil.org/code/lat[lat]
-| https://www.wikidata.org/wiki/Q397[Q397]
-| Lingua Latina (Abecedarium Latinum)
+|
+Lingua de verba
+|
+Verba de conceptiō
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations.
 
 |===
 
+=== Methodī ex dictiōnāriōrum corde
+NOTE: #@TODO this is a draft. Soon will be imple#
 
-=== Interlinguae in cōdex: 3
-Tōtālis linguae in cōdex: 3
+=== Rēs dē factō in dictiōnāriīs
+==== Rēs interlinguālibus: 1
 
-[%header,cols="~,~,~,~,~"]
-|===
-| Interlinguae
-| /Wiki P/
-| ISO 639-3
-| Nōmen Latīnum
-| Definitionem
 
-| ix_n1603
-| 
-| 
-| Numerordĭnātĭo
-| a generic strategy of arranging numbers in an taxonomy-like explicit way
+===== 1603:1:7:1:92 
 
-| ix_wikiq
-| 
-| 
-| /Wiki QID/
-| QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "1_92",
+    "#item+conceptum+numerordinatio": "1603:1:7:1:92",
+    "#item+rem+definitionem+i_eng+is_latn": "Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example \"color\" for the data value \"blue\". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.",
+    "#item+rem+i_lat+is_latn": "/Wiki P/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "P[1-9]\\d*",
+    "#status+conceptum+codicem": "19",
+    "#status+conceptum+definitionem": "50"
+}
+----
 
-| ix_wikip
-| 
-| 
-| /Wiki P/
-| Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.
-
-|===
+<<<
 
 == //Speciālis collēctiōnī de Vicidata Proprietātī//
 [id='1']
@@ -1043,6 +1055,9 @@ Tōtālis linguae in cōdex: 3
 
 
 
+
+
+<<<
 
 [appendix]
 = //Open issues on exported PDF format//@eng-Latn

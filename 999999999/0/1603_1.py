@@ -55,6 +55,7 @@ from typing import (
     List
 )
 import fnmatch
+import json
 
 # from itertools import permutations
 # from itertools import product
@@ -311,6 +312,38 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
 
     return rem[query]
 
+
+def descriptio_tabulae_de_lingua(
+        lingua_textum: Union[str, list], rem_textum: Union[str, list]) -> list:
+
+    if isinstance(lingua_textum, str):
+        lingua_textum = [lingua_textum]
+
+    if isinstance(rem_textum, str):
+        rem_textum = [rem_textum]
+
+    paginae = []
+    paginae.append('[%header,cols="25h,~a"]')
+    paginae.append('|===')
+    paginae.append("|")
+    paginae.append("Lingua de verba")
+    paginae.append("|")
+    paginae.append("Verba de conceptiō")
+
+    for item_lingua in lingua_textum:
+        item_textum = rem_textum.pop(0)
+        paginae.append('|')
+        paginae.append(item_lingua)
+        paginae.append('|')
+        paginae.append(item_textum.strip())
+        # paginae.append(item_textum.strip().replace("\n\n",
+        #                " +++<br><br>+++").replace("\n", " "))
+        paginae.append('')
+
+    paginae.append('|===')
+
+    return paginae
+
 # /Educated guess on stability (1-100) of local identifier
 # if dictionary still in use in a century/
 # #status+conceptum+codicem
@@ -368,14 +401,16 @@ class Codex:
         if auxilium_linguam:
             self.auxilium_linguam = auxilium_linguam
 
+        self.archiva = []
+        self.m1603_1_1__de_codex = self._init_1603_1_1()
         self.dictionaria_linguarum = DictionariaLinguarum()
         self.dictionaria_interlinguarum = DictionariaInterlinguarum()
-        self.m1603_1_1__de_codex = self._init_1603_1_1()
         self.codex = self._init_codex()
         # self.annexa = self._init_annexa()
 
         self.annexis = CodexAnnexis(self, self.de_codex)
         self.sarcinarum = CodexSarcinarumAdnexis(self.de_codex)
+        self.extero = CodexExtero(self)
         self.usus_linguae = set()
         self.usus_ix_qcc = set()
 
@@ -408,8 +443,10 @@ class Codex:
         fullpath_no11 = basepath + '.no11.tm.hxl.csv'
 
         if os.path.exists(fullpath_no11):
+            self.archiva.extend(['no1', 'no11'])
             fullpath = fullpath_no11
         else:
+            self.archiva.append('no1')
             fullpath = fullpath_no1
 
         codex_lineam = []
@@ -515,13 +552,47 @@ class Codex:
         # @see https://docs.asciidoctor.org/asciidoc/latest/sections/appendix/
         # https://en.wiktionary.org/wiki/appendix#Latin
         resultatum.append(":appendix-caption: Appendix")
+        resultatum.append(":source-highlighter: rouge")
 
         resultatum.append("\n")
+        resultatum.append("\n")
+
+        dominium_publicum = self.codex_dominium_publicum()
+
+        resultatum.extend(dominium_publicum)
+        resultatum.append("<<<")
         resultatum.append("toc::[]")
+        resultatum.append("\n")
 
         # TODO: potential list of images
         # @see https://github.com/asciidoctor/asciidoctor/issues/2189
         # @see https://github.com/Alwinator/asciidoctor-lists
+
+        return resultatum
+
+    def codex_dominium_publicum(self) -> list:
+        """cōdex praefātiōnī /book preface/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - praefātiōnī, f, s, (Dative), https://en.wiktionary.org/wiki/praefatio
+
+        Returns:
+            [list]:
+        """
+        resultatum = []
+        # resultatum.append("[id=0_999_1603_1]")
+        # resultatum.append("== [0] /Praefātiō/@lat-Latn \n")
+        # resultatum.append("== Praefātiō \n")
+        resultatum.extend((["{nbsp} +"] * 20))
+
+        # resultatum.append("[.text-rigth]")
+        # resultatum.append("[.lead]")
+        resultatum.append("[quote]")
+        resultatum.append(
+            "/_**Public domain means that each major common issue "
+            "only needs to be resolved once**_/@eng-Latn")
+        resultatum.append("")
 
         return resultatum
 
@@ -535,106 +606,45 @@ class Codex:
         Returns:
             [list]:
         """
-        resultatum = []
-        resultatum.append("[id=0_999_1603_1]")
+
+        paginae = []
+
+        paginae.append("[id=0_999_1603_1]")
         # resultatum.append("== [0] /Praefātiō/@lat-Latn \n")
-        resultatum.append("== Praefātiō \n")
-        # resultatum.append("<a id='0' href='#0'>§ 0</a> \n")
+        paginae.append("== Praefātiō \n")
 
-        # https://en.wiktionary.org/wiki/translatio#Latin
-        resultatum.append("=== //Cōdex trānslātiōnēs//")
+        codex_praefatio_textum = """
+_**"Cōdex [{0}]"**_ is the book format of the machine-readable dictionaries _**"[{0}] {1}"**_,
+which are distributed for implementers on external applications.
+This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
 
-        resultatum.extend(self.conceptum_ad_tabula_verbis(
-            self.m1603_1_1__de_codex))
+Practical lexicography is the art or craft of compiling, writing and editing dictionaries.
+The basics are not far different than a millennia ago:
+it is still a very humane, creative work.
+It is necessary to be humble:
+most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws.
+Making sure of a source idea of what a concept represents,
+even if it means rewrite and make simpler, annex pictures,
+show examples, do whatever to make it be understood,
+makes even non-professional translators that care about their own language deliver better results than any alternative.
+In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
 
-        resultatum.append("=== //Rēs interlinguālibus//")
+The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use.
+All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares.
+Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release. 
+        """.format(  # noqa
+            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
+            self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        )
 
-        resultatum.extend(self.conceptum_ad_tabula_codicibus(
-            self.m1603_1_1__de_codex))
+        paginae.extend(descriptio_tabulae_de_lingua(
+            'Lingua Anglica (Abecedarium Latinum)',
+            codex_praefatio_textum
+            # ("".join(lineam) + '+' + "\n")
+        ))
 
-        # resultatum.append(
-        #     numerordinatio_lineam_hxml5_details(
-        #         self.m1603_1_1__de_codex,
-        #         self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
-        #     ))
-
-        # if len(self.usus_ix_qcc):
-        #     resultatum.append("+++<!-- @TODO {0} -->+++".format(
-        #         str(self.usus_ix_qcc)))
-
-        if len(self.usus_linguae):
-            # resultatum.append("### Linguae in cōdex")
-            # resultatum.append("=== Linguae in cōdex")
-            # resultatum.append(str(self.usus_linguae))
-
-            resultatum.extend(self.dictionaria_linguarum.imprimere(
-                list(self.usus_linguae)))
-
-        if len(self.usus_ix_qcc):
-            # resultatum.append("### Linguae in cōdex")
-            # resultatum.append("=== Linguae in cōdex")
-            # resultatum.append(str(self.usus_linguae))
-
-            resultatum.extend(self.dictionaria_interlinguarum.imprimere(
-                list(self.usus_ix_qcc)))
-        
-        # resultatum.append("oioi")
-        # resultatum.append("")
-        # # resultatum.extend(self.dictionaria_interlinguarum.imprimere(
-        # #     list(self.usus_linguae)))
-        # resultatum.extend(self.dictionaria_interlinguarum.imprimere(None))
-        
-        # resultatum.append("oi2oi2")
-
-        # resultatum.append("----\n")
-
-            # resultatum.append("'''''\n")
-            # resultatum.append("----\n")
-
-        return resultatum
-
-    # def codex_indici(self) -> list:
-    #     """cōdex indicī /book index/@eng-Latn
-
-    #     @deprecated /use ASCIDoctor [toc]/@eng-Latn
-
-    #     Trivia:
-    #     - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
-    #     - indicī, m, s, (Dative), https://en.wiktionary.org/wiki/index#Latin
-
-    #     Returns:
-    #         [list]:
-    #     """
-
-    #     resultatum = []
-    #     # resultatum.append('----')
-    #     # resultatum.append("'''''")
-    #     resultatum.append('')
-    #     # resultatum.append("- <a href='#0'>[0] /Praefātiō/@lat-Latn</a>")
-    #     resultatum.append("* +++<a href='#0'>[0] /Praefātiō/@lat-Latn</a>+++")
-    #     for item in self.codex:
-    #         codicem_loci = item['#item+conceptum+codicem']
-
-    #         if codicem_loci.find('0_999') == 0:
-    #             continue
-
-    #         nomen = numerordinatio_nomen(item)
-    #         codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
-    #         codicem_ordo = numerordinatio_ordo(codicem_loci)
-
-    #         # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
-    #         #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
-    #         # resultatum.append("{2}- <a href='#{0}'>[{0}] {1}</a>".format(
-    #         #     codicem_normale, nomen, ('  ' * (codicem_ordo - 1))))
-    #         # resultatum.append("{2} <a href='#{0}'>[{0}] {1}</a>".format(
-    #         #     codicem_normale, nomen, ('*' * (codicem_ordo - 1))))
-    #         resultatum.append("{2} +++<a href='#{0}'>[{0}] {1}</a>+++".format(
-    #             codicem_normale, nomen, ('*' * (codicem_ordo))))
-    #     resultatum.append('')
-    #     # resultatum.append('----')
-    #     # resultatum.append("'''''")
-    #     resultatum.append('')
-    #     return resultatum
+        return paginae
+        # return resultatum
 
     def codex_corpori(self) -> list:
         """cōdex corporī /book body/@eng-Latn
@@ -843,6 +853,7 @@ class Codex:
 
         resultatum = []
         resultatum_corpus = []
+        resultatum_corpus_totale = 0
 
         for clavem, item_textum in rem.items():
 
@@ -877,11 +888,16 @@ class Codex:
                 resultatum_corpus.append("| {0}".format(clavem_i18n))
                 resultatum_corpus.append("| {0}".format(item_text_i18n))
                 resultatum_corpus.append("")
+                resultatum_corpus_totale += 1
 
         # - linguālia, https://en.wiktionary.org/wiki/lingualis#Latin
         # -rēs, f, s, (Nominative),
         #   https://en.wiktionary.org/wiki/lingualis#Latin
         if resultatum_corpus:
+
+            # resultatum.append("==== Rēs interlinguālibus: {0}".format(
+            #     resultatum_corpus_totale))
+
             resultatum.append("")
             # resultatum.append('[cols="1,1"]')
             # resultatum.append('[%autowidth]')
@@ -928,17 +944,25 @@ class Codex:
         """
         paginae = []
         codex_capiti = self.codex_capiti()
+        # dominium_publicum = self.codex_dominium_publicum()
+        codex_praefatio = self.codex_praefatio()
         # codex_indici = self.codex_indici()
         codex_corpori = self.codex_corpori()
         codex_appendici = self.codex_appendici()
+        # methodi_ex_codice = self.methodi_ex_codice()
 
-        # Compute codex_praefatio last (to receive statistics of others)
-        codex_praefatio = self.codex_praefatio()
+       # Compute methodi_ex_codice last (to receive statistics of others)
+        methodi_ex_codice = self.methodi_ex_codice()
 
         paginae.extend(codex_capiti)
+        # paginae.extend(dominium_publicum)
         # paginae.extend(codex_indici)
         paginae.extend(codex_praefatio)
+        paginae.extend(['', '<<<', ''])
+        paginae.extend(methodi_ex_codice)
+        paginae.extend(['', '<<<', ''])
         paginae.extend(codex_corpori)
+        paginae.extend(['', '<<<', ''])
         paginae.extend(codex_appendici)
 
         # paginae.extend(self.codex_indici())
@@ -947,6 +971,159 @@ class Codex:
         # paginae.extend(self._sarcinarum())
 
         # return "\n".join(paginae)
+        return paginae
+
+    def methodi_ex_codice(self) -> list:
+        """Methodī ex cōdice
+
+        Trivia:
+        - rēs, f, pl, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - cōdice, m, s, (Ablative), https://en.wiktionary.org/wiki/codex#Latin
+        - methodī, f, pl, (Nominative), https://en.wiktionary.org/wiki/methodus
+        - ex (+ ablative) https://en.wiktionary.org/wiki/ex#Latin
+        - in (+ ablative), in (+ accusative)
+           https://en.wiktionary.org/wiki/in#Latin
+        - cordibus, n, pl, (Dative), https://en.wiktionary.org/wiki/cor#Latin
+        - corde, n, s, (abrative), https://en.wiktionary.org/wiki/cor#Latin
+        - dictiōnāria, n, pl, (Nominative, Accusative)
+          https://en.wiktionary.org/wiki/dictionarium#Latin
+        - dictiōnāriīs, n, pl, (Ablative)
+        - dictiōnāriōrum, n, pl, (Gentitive)
+        - verbīs, n, pl, (Ablative) https://en.wiktionary.org/wiki/verbum#Latin
+        - Vicidata,
+          - Attested in https://la.wiktionary.org/wiki/Victionarium:Pagina_prima
+        - dē (+ ablative), https://en.wiktionary.org/wiki/de#Latin
+        - factō, n, s, (ablative), https://en.wiktionary.org/wiki/factum#Latin
+        - linguālibus, m/f/n, pl, (Dative)
+          https://en.wiktionary.org/wiki/lingualis#Latin
+
+        Returns:
+            [list]:
+        """
+
+        # methodō, f, s, (dative), https://en.wiktionary.org/wiki/methodus#Latin
+        paginae = []
+
+        paginae.append('== Methodī ex cōdice')
+
+        intro = self.extero.intro()
+        if intro:
+            paginae.extend(intro)
+            paginae.append('')
+
+        # //dictiōnāria de hūmānitātēs interimperia//
+
+        # Methodī ex dictiōnāriōrum corde =
+        #   //Methods out of the heart of dictionaries//
+        if 'no1' in self.archiva:
+            paginae.append('=== Methodī ex dictiōnāriōrum corde')
+            paginae.append(
+                'NOTE: #@TODO this is a draft. Soon will be imple#'
+            )
+            paginae.append('')
+
+        if 'no11' in self.archiva:
+            paginae.append('=== Methodī ex verbīs in dictiōnāriīs')
+
+            paginae.append(
+                'NOTE: /At the moment, '
+                'there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], '
+                ' which actually could be used as storage for stricter '
+                'nomenclature. The current implementations use only '
+                'Wikidata concepts, the Q-items./@eng-Latn'
+            )
+            paginae.append('')
+
+# From https://www.wikidata.org/wiki/Wikidata:Introduction[Wikidata:Introduction]:
+# __"Wikidata is a free, collaborative, multilingual, secondary database, collecting structured data to provide support for Wikipedia, Wikimedia Commons, the other wikis of the Wikimedia movement, and to anyone in the world."__
+            vicidata_q_modo_1 = """
+The ***[{1}] {2}*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+
+This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+            """.format(
+            self.de_codex,
+            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
+            self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        )
+            # raise ValueError(str(self.m1603_1_1__de_codex))
+
+            vicidata_q_modo_11 = """
+**How reliable are the community translations (Wikidata source)?**
+
+The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+
+As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests.
+This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+
+However, even when the result is correct,
+the current version needs improved differentiation, at minimum, acronym and long form.
+For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+            """.format(self.de_codex)
+
+            vicidata_q_modo = """
+**Major reasons for "wrong translations" are not translators fault**
+
+TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+
+NOTE: Both at concept level and (as general statistics) book level, is planned to have indication concept likelihood of being well understood for very stricter translations initiatives.
+
+The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+
+It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+            """.format(self.de_codex)
+
+            vicidata_q_modo2 = """
+From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+
+. The main handcrafted lexicographical table (explained on previous topic), also provided on `{0}.no1.tm.hxl.csv`, may reference Wiki QID.
+. Every unique QID of  `{0}.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works.
+.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+. The query result, with all QIDs and term labels, is shared as `{0}.wikiq.tm.hxl.csv`
+. The community reviewed translations of each singular QID is pre-compiled on an individual file `{0}.wikiq.tm.hxl.csv`
+. `{0}.no1.tm.hxl.csv` plus `{0}.wikiq.tm.hxl.csv` created `{0}.no11.tm.hxl.csv`
+            """.format(self.de_codex)
+
+            # modō, m, s, (dative) https://en.wiktionary.org/wiki/modus#Latin
+            paginae.append('==== Methodī ex verbīs in Vicidata (Q modō)')
+
+            paginae.extend(descriptio_tabulae_de_lingua(
+                ['Lingua Anglica (Abecedarium Latinum)'] * 4,
+                [
+                    vicidata_q_modo_1,
+                    vicidata_q_modo_11,
+                    vicidata_q_modo,
+                    vicidata_q_modo2
+                ]))
+
+            paginae.append('')
+
+        # resultatum.append("<a id='0' href='#0'>§ 0</a> \n")
+
+        paginae.append("=== Rēs dē factō in dictiōnāriīs")
+
+        if len(self.usus_linguae):
+            # paginae.append("==== Rēs linguālibus")
+            paginae.extend(self.dictionaria_linguarum.imprimere(
+                list(self.usus_linguae)))
+
+        # https://en.wiktionary.org/wiki/translatio#Latin
+
+        # TODO: check where to put these global information later
+        # paginae.append("==== //Cōdex trānslātiōnēs//")
+
+        # paginae.extend(self.conceptum_ad_tabula_verbis(
+        #     self.m1603_1_1__de_codex))
+
+        # paginae.append("==== //Rēs interlinguālibus//")
+
+        # paginae.extend(self.conceptum_ad_tabula_codicibus(
+        #     self.m1603_1_1__de_codex))
+
+        if len(self.usus_ix_qcc):
+            paginae.extend(self.dictionaria_interlinguarum.imprimere(
+                list(self.usus_ix_qcc)))
+
         return paginae
 
 
@@ -1097,6 +1274,58 @@ class CodexAnnexis:
         # return debug
 
 
+CODEX_EXTERO_TEMPORI = {
+    '1603_1_51__conceptum': "This Numerodinatio namespace contains dictionaries about natural languages with explicit writing systems. The main objective is to explain data already shared on other Numerodinatio dictionaries.\n\nAll work on the main concept tables is manually compiled and reviewed by EticaAI.",
+    'license': '0_999_999_10'
+}
+
+
+class CodexExtero:
+    """Cōdex exterō
+
+    _[eng-Latn]
+    Temporary class to bridge some metadata; needs refactoring later
+    [eng-Latn]_
+
+    Trivia:
+    - Cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex
+    - https://latin.stackexchange.com/questions/2102
+      /most-accurate-latin-word-for-book-in-this-context
+    - exterō, m, s, (Dative) https://en.wiktionary.org/wiki/exter#Latin
+    """
+
+    def __init__(
+        self,
+        codex: Type['Codex']
+
+    ):
+        pass
+
+    def intro(self):
+
+        # TODO: this obviously is temporary
+
+        paginae = []
+
+        methodi_ex_codice_intro = """This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations."""
+
+        paginae.extend(descriptio_tabulae_de_lingua(
+            'Lingua Anglica (Abecedarium Latinum)',
+            methodi_ex_codice_intro
+        ))
+        return paginae
+
+    def cavere(self):
+        # https://en.wiktionary.org/wiki/caveo#Latin
+        # https://en.wiktionary.org/wiki/caveo#Latin
+        return "TODO CodexExtero cavere"
+
+    def methodis(self):
+        # https://en.wiktionary.org/wiki/caveo#Latin
+        # methodīs, f, pl, (Dative) https://en.wiktionary.org/wiki/methodus#Latin
+        return "TODO CodexExtero methodis"
+
+
 class CodexSarcinarumAdnexis:
     """Codex Sarcinarum Adnexīs
 
@@ -1215,7 +1444,7 @@ class DictionariaInterlinguarum:
             self.D1613_1_7_fontem = NUMERORDINATIO_BASIM + \
                 "/1603/1/7/1603_1_7.no1.tm.hxl.csv"
 
-        self.dictionaria_codex = self._init_dictionaria()
+        self.dictionaria = self._init_dictionaria()
 
     def _init_dictionaria(self):
 
@@ -1228,11 +1457,113 @@ class DictionariaInterlinguarum:
                 int_clavem = int(conceptum['#item+conceptum+codicem'])
                 datum[int_clavem] = {}
                 for clavem, rem in conceptum.items():
-                    if not clavem.startswith('#item+conceptum+codicem'):
-                        datum[int_clavem][clavem] = rem
+                    datum[int_clavem][clavem] = rem
+                    # if not clavem.startswith('#item+conceptum+codicem'):
+                    #     datum[int_clavem][clavem] = rem
         return datum
 
     def imprimere(self, linguam: list = None) -> list:
+        """imprimere /print/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
+        - pāginae, f, pl, (Nominative), https://en.wiktionary.org/wiki/pagina
+
+        Returns:
+            [list]:
+        """
+        resultatum = []
+        resultatum_corpus = []
+        resultatum_corpus_totale = 0
+        resultatum_corpus_obj = []
+        linguam_clavem = []
+        if linguam:
+            for item in linguam:
+                linguam_clavem.append(
+                    item.replace('#item+rem+i_qcc+is_zxxx+', '')
+                )
+        # resultatum_corpus.append(linguam_clavem)
+        # resultatum_corpus.append(len(linguam_clavem))
+        for clavem, lineam in self.dictionaria.items():
+
+            if len(linguam_clavem) > 0:
+                if lineam['#item+rem+i_qcc+is_zxxx+ix_hxlix'] not in \
+                        linguam_clavem:
+                    continue
+
+            neo_lineam = {}
+            for k, v in lineam.items():
+                # neo_lineam[k] = v
+                if v:
+                    neo_lineam[k] = v
+
+            resultatum_corpus_obj.append(neo_lineam)
+
+            resultatum_corpus_totale += 1
+
+        if resultatum_corpus_obj:
+
+            resultatum.append("==== Rēs interlinguālibus: {0}".format(
+                resultatum_corpus_totale))
+
+            # import pprint
+            resultatum.append("")
+            for res in resultatum_corpus_obj:
+                resultatum.append("")
+                resultatum.append('===== {0} '.format(
+                    res['#item+conceptum+numerordinatio'])
+                )
+                resultatum.append("")
+                resultatum.append("[source,json]")
+                resultatum.append("----")
+                resultatum.append(json.dumps(
+                    res, indent=4, sort_keys=True, ensure_ascii=False))
+                resultatum.append("----")
+                # resultatum.append(pprint.pprint(res))
+
+        # if resultatum_corpus:
+            # resultatum.append("")
+
+            # resultatum.append("=== Interlinguae in cōdex: {0}".format(
+            #     resultatum_corpus_totale))
+
+            # # cōdex, m, s, (nominative)
+            # # tōtālis, m/f, s, (Nominative)
+            # # linguae, f, s, (Dative)
+            # resultatum.append(
+            #     "Tōtālis linguae in cōdex: {0}".format(
+            #         resultatum_corpus_totale))
+            # resultatum.append("")
+
+            # resultatum.append('[%header,cols="~,~,~,~,~"]')
+            # resultatum.append('|===')
+            # # https://en.wiktionary.org/wiki/latinus#Latin
+            # # nōmina, n, pl, (Nominative)
+            # #     shttps://en.wiktionary.org/wiki/nomen#Latin
+            # # "nōmen Latīnum"
+            # # https://en.wiktionary.org/wiki/Latinus#Latin
+            # # resultatum.append(
+            # #     "| <span lang='la'>Cōdex<br>linguae</span> | "
+            # #     "<span lang='la'>Glotto<br>cōdicī</span> | "
+            # #     "<span lang='la'>ISO<br>639-3</span> | "
+            # #     "<span lang='la'>Wiki QID<br>cōdicī</span> | "
+            # #     "<span lang='la'>Nōmen Latīnum</span> |")
+            # # resultatum.append("| --- | --- | --- | --- | --- |")
+            # resultatum.append("| Interlinguae")
+            # resultatum.append("| /Wiki P/")
+            # resultatum.append("| ISO 639-3")
+            # # resultatum.append("| Wiki QID cōdicī")
+            # resultatum.append("| Nōmen Latīnum")
+            # resultatum.append("| Definitionem")
+            # resultatum.append('')
+            # resultatum.extend(resultatum_corpus)
+            # resultatum.append('|===')
+            # resultatum.append("")
+
+        return resultatum
+
+    def imprimereTabula(self, linguam: list = None) -> list:
         """imprimere /print/@eng-Latn
 
         Trivia:
@@ -1250,11 +1581,11 @@ class DictionariaInterlinguarum:
         if linguam:
             for item in linguam:
                 linguam_clavem.append(
-                    item.replace('#item+rem', '')
+                    item.replace('#item+rem+i_qcc+is_zxxx+', '')
                 )
         # resultatum_corpus.append(linguam_clavem)
         # resultatum_corpus.append(len(linguam_clavem))
-        for clavem, lineam in self.dictionaria_codex.items():
+        for clavem, lineam in self.dictionaria.items():
 
             if len(linguam_clavem) > 0:
                 if lineam['#item+rem+i_qcc+is_zxxx+ix_hxlix'] not in \
@@ -1361,7 +1692,7 @@ class DictionariaInterlinguarum:
 
         for item in _clavem:
             # print('item', item)
-            for _k, linguam in self.dictionaria_codex.items():
+            for _k, linguam in self.dictionaria.items():
                 # print('linguam', linguam)
                 if terminum.find(linguam[item]) > -1 and linguam[item]:
                     # return linguam[factum]
@@ -1459,15 +1790,17 @@ class DictionariaLinguarum:
         if resultatum_corpus:
             resultatum.append("")
 
-            resultatum.append("=== Linguae in cōdex: {0}".format(
+            # resultatum.append("=== Linguae in cōdex: {0}".format(
+            #     resultatum_corpus_totale))
+            resultatum.append("==== Rēs linguālibus: {0}".format(
                 resultatum_corpus_totale))
 
             # cōdex, m, s, (nominative)
             # tōtālis, m/f, s, (Nominative)
             # linguae, f, s, (Dative)
-            resultatum.append(
-                "Tōtālis linguae in cōdex: {0}".format(
-                    resultatum_corpus_totale))
+            # resultatum.append(
+            #     "Tōtālis linguae in cōdex: {0}".format(
+            #         resultatum_corpus_totale))
             resultatum.append("")
 
             resultatum.append('[%header,cols="~,~,~,~,~"]')

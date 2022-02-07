@@ -54,6 +54,9 @@ ROOTDIR="$(pwd)"
 # neo_codex_de_numerordinatio "1603_44_1" "0" "0"
 # neo_codex_de_numerordinatio_pdf "1603_45_1" "0" "0"
 
+# ./999999999/0/1603_1.py --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc
+# ./999999999/0/1603_1.py --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/1/7/1603_1_7.mul-Latn.codex.adoc --out-file 1603/1/7/1603_1_7.mul-Latn.codex.pdf
+
 # exit 0
 
 ### Really boostrapping downloads, start _______________________________________
