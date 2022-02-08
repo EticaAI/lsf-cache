@@ -4,7 +4,7 @@
 #          FILE:  1603_0_1603.sh
 #
 #         USAGE:  ./999999999/1603_0_1603.sh
-#                 DE_FACTUM=1 ./999999999/1603_0_1603.sh
+#                 DE_FACTO=1 ./999999999/1603_0_1603.sh
 #
 #   DESCRIPTION:  1603_0_1603.sh is a manual purge of files. Is not intented
 #                 to be run automatically
@@ -45,7 +45,7 @@ PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" "
 # PURGATORIA_CONCEPTUM+=( "1603_44_142" )
 # PURGATORIA_CONCEPTUM+=( "1603_45_1" )
 
-DE_FACTUM="${DE_FACTUM:-'0'}"
+DE_FACTO="${DE_FACTO:-'0'}"
 # DRYRUM="0"
 
 
@@ -58,7 +58,7 @@ DE_FACTUM="${DE_FACTUM:-'0'}"
 #   ROOTDIR
 #   PURGATORIA
 #   PURGATORIA_EXTENSIONEM
-#   DE_FACTUM
+#   DE_FACTO
 # Arguments:
 #   basim
 # Outputs:
@@ -85,15 +85,15 @@ purgatoria() {
         for item in "${PURGATORIA_CONCEPTUM[@]}"; do
           if [[ "$conceptum" == "$item" ]]; then
             # echo "    needs purge $i"
-            # echo "    DE_FACTUM [${DE_FACTUM}]"
-            if [ "$DE_FACTUM" = "1" ]; then
+            # echo "    DE_FACTO [${DE_FACTO}]"
+            if [ "$DE_FACTO" = "1" ]; then
               echo "    $conceptum"
               echo "        > rm $i"
               rm "$i"
             else
               echo "    candidate [$i]"
               echo "    requires run with"
-              echo "        DE_FACTUM=1 $0"
+              echo "        DE_FACTO=1 $0"
             fi
             # rm "$i"
           fi

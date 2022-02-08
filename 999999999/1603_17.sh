@@ -57,6 +57,8 @@ ROOTDIR="$(pwd)"
 # ./999999999/0/1603_1.py --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc
 # ./999999999/0/1603_1.py --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/1/7/1603_1_7.mul-Latn.codex.adoc --out-file 1603/1/7/1603_1_7.mul-Latn.codex.pdf
 
+# ./999999999/0/1603_1.py --codex-de 1603_1_1 > 1603/1/1/1603_1_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/1/1/1603_1_1.mul-Latn.codex.adoc --out-file 1603/1/1/1603_1_1.mul-Latn.codex.pdf
+
 # exit 0
 
 ### Really boostrapping downloads, start _______________________________________
