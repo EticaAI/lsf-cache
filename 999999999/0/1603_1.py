@@ -650,9 +650,12 @@ Naturally, each book version gives extensive explanations for collaborators on h
         ))
 
         meta = {}
+        # meta_langs = [
+        #     '#item+rem+i_mul+is_zyyy',
+        #     '#item+rem+i_lat+is_latn'
+        # ]
         meta_langs = [
-            '#item+rem+i_mul+is_zyyy',
-            '#item+rem+i_lat+is_latn'
+            '#item+rem+i_qcc+is_zxxx+ix_codexfacto'
         ]
 
         scrīptor = self.quod_res('0_1603_1_7_2616_50')
@@ -1101,11 +1104,32 @@ Naturally, each book version gives extensive explanations for collaborators on h
 
         # Methodī ex dictiōnāriōrum corde =
         #   //Methods out of the heart of dictionaries//
+
         if 'no1' in self.archiva:
             paginae.append('=== Methodī ex dictiōnāriōrum corde')
-            paginae.append(
-                'NOTE: #@TODO this is a draft. Soon will be imple#'
-            )
+
+            meta = {}
+            meta_langs = [
+                '#item+rem+i_qcc+is_zxxx+ix_codexfacto'
+            ]
+            scope_and_content = self.quod_res('0_1603_1_7_2616_7535')
+            # paginae.append(str(scope_and_content))
+            if scope_and_content and \
+                    qhxl(scope_and_content, meta_langs) is not None:
+                meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
+                    qhxl(scope_and_content, meta_langs)
+
+            # paginae.append("")
+            # paginae.append(str(meta))
+            # paginae.append("")
+            if len(meta.keys()) > 0 and meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535']:
+                meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
+                paginae.extend(meta_tabulae)
+                paginae.append("")
+            else:
+                paginae.append(
+                    'NOTE: #`0_1603_1_7_2616_7535` ?#'
+                )
             paginae.append('')
 
         if 'no11' in self.archiva:

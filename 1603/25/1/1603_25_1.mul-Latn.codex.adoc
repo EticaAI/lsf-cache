@@ -82,8 +82,23 @@ Naturally, each book version gives extensive explanations for collaborators on h
 | Rēs interlinguālibus
 | Factum
 
-| ix_wikip393
-| 2022-02-08T03:09:58
+| scrīptor
+| Multiplicēs scrīptōribus
+
+| //cōdex pūblicandī//
+| EticaAI
+
+| /publication date/@eng-Latn
+| 2022-01-27
+
+| numerus editionis
+| 2022-02-08T06:07:11
+
+| /SPDX license ID/@eng-Latn
+| CC-PDDC
+
+| /reference URL/@eng-Latn
+| https://github.com/EticaAI/multilingual-lexicography/issues/11
 
 |===
 
@@ -105,7 +120,17 @@ This section explains the methodology of this book and it's machine readable for
 |===
 
 === Methodī ex dictiōnāriōrum corde
-NOTE: #@TODO this is a draft. Soon will be imple#
+
+[%header,cols="25h,~"]
+|===
+| Rēs interlinguālibus
+| Factum
+
+| /scope and content/@eng-Latn
+| This Numerodinatio namespace contains dictionaries related to general human body parts. Latin (while a natural language) actually is used as interlingual code. It's mostly based on Basle Nomina Anatomica 1895 ("BNA1895") and, if any difference, archaic terms are replaced with Terminologia Anatomica 95 ("TA95").\n\nCompared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to external body parts.\n\nAll work on the main concept tables is manually compiled and reviewed by EticaAI.
+
+|===
+
 
 === Methodī ex verbīs in dictiōnāriīs
 NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data],  which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
@@ -431,7 +456,7 @@ From the point of view of data conciliation, the following methodology is used t
 
 |===
 
-==== Rēs interlinguālibus: 2
+==== Rēs interlinguālibus: 9
 
 
 ===== 1603:1:7:1:91 
@@ -451,6 +476,91 @@ From the point of view of data conciliation, the following methodology is used t
 }
 ----
 
+===== 1603:1:7:2616:50 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_50",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
+    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
+    "#item+rem+i_lat+is_latn": "scrīptor",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:123 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_123",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "//cōdex pūblicandī//",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:393 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:577 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_577",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
+    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
+    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:854 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_854",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
+    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
+    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
 ===== 1603:1:7:2616:1323 
 
 [source,json]
@@ -465,6 +575,42 @@ From the point of view of data conciliation, the following methodology is used t
     "#item+rem+i_qcc+is_zxxx+ix_regulam": "A\\d{2}\\.\\d\\.\\d{2}\\.\\d{3}[FM]?",
     "#item+rem+i_qcc+is_zxxx+ix_wikip": "P1323",
     "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://wikidata-externalid-url.toolforge.org/?p=1323&url_prefix=https:%2F%2Fwww.unifr.ch%2Fifaa%2FPublic%2FEntryPage%2FTA98%20Tree%2FEntity%20TA98%20EN%2F&url_suffix=%20Entity%20TA98%20EN.htm&id=$1",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:2479 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_2479",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
+    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
+    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:7535 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_7535",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:7535",
+    "#item+rem+definitionem+i_eng+is_latn": "a summary statement providing an overview of the archival collection",
+    "#item+rem+i_lat+is_latn": "/scope and content/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip7535",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_7535",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P7535",
     "#status+conceptum+codicem": "60",
     "#status+conceptum+definitionem": "60"
 }
@@ -526,89 +672,89 @@ link:https://archive.org/details/bub_gb_5Xby3nxU3XMC[1543 De humani corporis fab
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">caput humanum</span>+++
+| #item+rem+i_lat+is_latn
+| +++caput humanum+++
 
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">رأس الإنسان</span>+++
+| #item+rem+i_ara+is_arab
+| +++رأس الإنسان+++
 
-| Lingua Bengali (?)
-| +++<span lang="bn">মানুষের মাথা</span>+++
+| #item+rem+i_ben+is_beng
+| +++মানুষের মাথা+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">голова человека</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++голова человека+++
 
-| Lingua Sanscrita
-| +++<span lang="sa">शिरः</span>+++
+| #item+rem+i_san+is_zzzz
+| +++शिरः+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">cabeça humana</span>+++
+| #item+rem+i_por+is_latn
+| +++cabeça humana+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">human head</span>+++
+| #item+rem+i_eng+is_latn
+| +++human head+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">tête humaine</span>+++
+| #item+rem+i_fra+is_latn
+| +++tête humaine+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">menselijk hoofd</span>+++
+| #item+rem+i_nld+is_latn
+| +++menselijk hoofd+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">kopf des menschen</span>+++
+| #item+rem+i_deu+is_latn
+| +++kopf des menschen+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">cabeza humana</span>+++
+| #item+rem+i_spa+is_latn
+| +++cabeza humana+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">testa umana</span>+++
+| #item+rem+i_ita+is_latn
+| +++testa umana+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">människohuvud</span>+++
+| #item+rem+i_swe+is_latn
+| +++människohuvud+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">głowa człowieka</span>+++
+| #item+rem+i_pol+is_latn
+| +++głowa człowieka+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">đầu người</span>+++
+| #item+rem+i_vie+is_latn
+| +++đầu người+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">cap humà</span>+++
+| #item+rem+i_cat+is_latn
+| +++cap humà+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">голова людини</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++голова людини+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">menneskehode</span>+++
+| #item+rem+i_nob+is_latn
+| +++menneskehode+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">hlava</span>+++
+| #item+rem+i_ces+is_latn
+| +++hlava+++
 
-| Lingua Danica (Abecedarium Latinum)
-| +++<span lang="da">menneskehovede</span>+++
+| #item+rem+i_dan+is_latn
+| +++menneskehovede+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">ヒトの頭</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++ヒトの頭+++
 
-| /Nynorsk/ (Abecedarium Latinum)
-| +++<span lang="nn">menneskehovud</span>+++
+| #item+rem+i_nno+is_latn
+| +++menneskehovud+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">سر انسان</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++سر انسان+++
 
-| Lingua Hungarica (Abecedarium Latinum)
-| +++<span lang="hu">emberi fej</span>+++
+| #item+rem+i_hun+is_latn
+| +++emberi fej+++
 
-| Lingua Cambrica (Abecedarium Latinum)
-| +++<span lang="cy">pen dynol</span>+++
+| #item+rem+i_cym+is_latn
+| +++pen dynol+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">homa kapo</span>+++
+| #item+rem+i_epo+is_latn
+| +++homa kapo+++
 
-| Macrolingua Malayana (?)
-| +++<span lang="ms">kepala manusia</span>+++
+| #item+rem+i_msa+is_zzzz
+| +++kepala manusia+++
 
-| Interlingua (Abecedarium Latinum)
-| +++<span lang="ia">capite human</span>+++
+| #item+rem+i_ina+is_latn
+| +++capite human+++
 
 |===
 
@@ -648,119 +794,119 @@ link:https://archive.org/details/bub_gb_5Xby3nxU3XMC[1543 De humani corporis fab
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">sinciput</span>+++
+| #item+rem+i_lat+is_latn
+| +++sinciput+++
 
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">جبهة</span>+++
+| #item+rem+i_ara+is_arab
+| +++جبهة+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">лоб</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++лоб+++
 
-| Lingua Sanscrita
-| +++<span lang="sa">ललाटम्</span>+++
+| #item+rem+i_san+is_zzzz
+| +++ललाटम्+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">testa</span>+++
+| #item+rem+i_por+is_latn
+| +++testa+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">forehead</span>+++
+| #item+rem+i_eng+is_latn
+| +++forehead+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">front</span>+++
+| #item+rem+i_fra+is_latn
+| +++front+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">voorhoofd</span>+++
+| #item+rem+i_nld+is_latn
+| +++voorhoofd+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">stirn</span>+++
+| #item+rem+i_deu+is_latn
+| +++stirn+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">frente</span>+++
+| #item+rem+i_spa+is_latn
+| +++frente+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">fronte</span>+++
+| #item+rem+i_ita+is_latn
+| +++fronte+++
 
-| Lingua Hibernica (Abecedarium Latinum)
-| +++<span lang="ga">éadan</span>+++
+| #item+rem+i_gle+is_latn
+| +++éadan+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">panna</span>+++
+| #item+rem+i_swe+is_latn
+| +++panna+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">czoło</span>+++
+| #item+rem+i_pol+is_latn
+| +++czoło+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">otsa</span>+++
+| #item+rem+i_fin+is_latn
+| +++otsa+++
 
-| Lingua Dacoromanica (Abecedarium Latinum)
-| +++<span lang="ro">frunte</span>+++
+| #item+rem+i_ron+is_latn
+| +++frunte+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">trán</span>+++
+| #item+rem+i_vie+is_latn
+| +++trán+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">front</span>+++
+| #item+rem+i_cat+is_latn
+| +++front+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">чоло</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++чоло+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">чело</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++чело+++
 
-| /Waray language/ (Abecedarium Latinum)
-| +++<span lang="war">agtáng</span>+++
+| #item+rem+i_war+is_latn
+| +++agtáng+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">panne</span>+++
+| #item+rem+i_nob+is_latn
+| +++panne+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">čelo</span>+++
+| #item+rem+i_ces+is_latn
+| +++čelo+++
 
-| Lingua Danica (Abecedarium Latinum)
-| +++<span lang="da">pande</span>+++
+| #item+rem+i_dan+is_latn
+| +++pande+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">額</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++額+++
 
-| /Nynorsk/ (Abecedarium Latinum)
-| +++<span lang="nn">panne</span>+++
+| #item+rem+i_nno+is_latn
+| +++panne+++
 
-| Lingua Malabarica (/Malayalam script/)
-| +++<span lang="ml">നെറ്റി</span>+++
+| #item+rem+i_mal+is_mlym
+| +++നെറ്റി+++
 
-| Lingua Indonesiana (Abecedarium Latinum)
-| +++<span lang="id">dahi</span>+++
+| #item+rem+i_ind+is_latn
+| +++dahi+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">پیشانی</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++پیشانی+++
 
-| Lingua Hungarica (Abecedarium Latinum)
-| +++<span lang="hu">homlok</span>+++
+| #item+rem+i_hun+is_latn
+| +++homlok+++
 
-| Lingua Vasconica (Abecedarium Latinum)
-| +++<span lang="eu">bekoki</span>+++
+| #item+rem+i_eus+is_latn
+| +++bekoki+++
 
-| Lingua Cambrica (Abecedarium Latinum)
-| +++<span lang="cy">talcen</span>+++
+| #item+rem+i_cym+is_latn
+| +++talcen+++
 
-| Lingua Gallaica (Abecedarium Latinum)
-| +++<span lang="gl">testa</span>+++
+| #item+rem+i_glg+is_latn
+| +++testa+++
 
-| Lingua Slovaca (Abecedarium Latinum)
-| +++<span lang="sk">čelo</span>+++
+| #item+rem+i_slk+is_latn
+| +++čelo+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">frunto</span>+++
+| #item+rem+i_epo+is_latn
+| +++frunto+++
 
-| Macrolingua Malayana (?)
-| +++<span lang="ms">dahi</span>+++
+| #item+rem+i_msa+is_zzzz
+| +++dahi+++
 
-| Macrolingua Estonica (Abecedarium Latinum)
-| +++<span lang="et">laup</span>+++
+| #item+rem+i_est+is_latn
+| +++laup+++
 
-| Lingua Croatica (Abecedarium Latinum)
-| +++<span lang="hr">čelo</span>+++
+| #item+rem+i_hrv+is_latn
+| +++čelo+++
 
 |===
 
@@ -800,50 +946,50 @@ link:https://archive.org/details/bub_gb_5Xby3nxU3XMC[1543 De humani corporis fab
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">occiput</span>+++
+| #item+rem+i_lat+is_latn
+| +++occiput+++
 
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">مؤخر الرأس</span>+++
+| #item+rem+i_ara+is_arab
+| +++مؤخر الرأس+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">occipício</span>+++
+| #item+rem+i_por+is_latn
+| +++occipício+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">occiput</span>+++
+| #item+rem+i_eng+is_latn
+| +++occiput+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">occiput</span>+++
+| #item+rem+i_fra+is_latn
+| +++occiput+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">occiput</span>+++
+| #item+rem+i_deu+is_latn
+| +++occiput+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">occipucio</span>+++
+| #item+rem+i_spa+is_latn
+| +++occipucio+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">occipite</span>+++
+| #item+rem+i_ita+is_latn
+| +++occipite+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">potylica</span>+++
+| #item+rem+i_pol+is_latn
+| +++potylica+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">takaraivo</span>+++
+| #item+rem+i_fin+is_latn
+| +++takaraivo+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">occípit</span>+++
+| #item+rem+i_cat+is_latn
+| +++occípit+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">後頭部</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++後頭部+++
 
-| /Nynorsk/ (Abecedarium Latinum)
-| +++<span lang="nn">bakhovud</span>+++
+| #item+rem+i_nno+is_latn
+| +++bakhovud+++
 
-| Lingua Vasconica (Abecedarium Latinum)
-| +++<span lang="eu">okzipuzio</span>+++
+| #item+rem+i_eus+is_latn
+| +++okzipuzio+++
 
-| Lingua Gallaica (Abecedarium Latinum)
-| +++<span lang="gl">occipicio</span>+++
+| #item+rem+i_glg+is_latn
+| +++occipicio+++
 
 |===
 
@@ -916,107 +1062,107 @@ link:https://archive.org/details/anatomyofhumanbo1918gray[Henry Vandyke Carter 1
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">truncus</span>+++
+| #item+rem+i_lat+is_latn
+| +++truncus+++
 
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">جذع</span>+++
+| #item+rem+i_ara+is_arab
+| +++جذع+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">туловище</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++туловище+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">tronco</span>+++
+| #item+rem+i_por+is_latn
+| +++tronco+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">torso</span>+++
+| #item+rem+i_eng+is_latn
+| +++torso+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">tronc</span>+++
+| #item+rem+i_fra+is_latn
+| +++tronc+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">romp</span>+++
+| #item+rem+i_nld+is_latn
+| +++romp+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">rumpf</span>+++
+| #item+rem+i_deu+is_latn
+| +++rumpf+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">tronco</span>+++
+| #item+rem+i_spa+is_latn
+| +++tronco+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">tronco</span>+++
+| #item+rem+i_ita+is_latn
+| +++tronco+++
 
-| Lingua Hibernica (Abecedarium Latinum)
-| +++<span lang="ga">tóracs</span>+++
+| #item+rem+i_gle+is_latn
+| +++tóracs+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">torso</span>+++
+| #item+rem+i_swe+is_latn
+| +++torso+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">tułów</span>+++
+| #item+rem+i_pol+is_latn
+| +++tułów+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">torso</span>+++
+| #item+rem+i_fin+is_latn
+| +++torso+++
 
-| Lingua Dacoromanica (Abecedarium Latinum)
-| +++<span lang="ro">trunchi</span>+++
+| #item+rem+i_ron+is_latn
+| +++trunchi+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">thân mình</span>+++
+| #item+rem+i_vie+is_latn
+| +++thân mình+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">tronc</span>+++
+| #item+rem+i_cat+is_latn
+| +++tronc+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">тулуб</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++тулуб+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">туловище</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++туловище+++
 
-| Lingua Slovena (Abecedarium Latinum)
-| +++<span lang="sl">torzo</span>+++
+| #item+rem+i_slv+is_latn
+| +++torzo+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">torso</span>+++
+| #item+rem+i_nob+is_latn
+| +++torso+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">trup</span>+++
+| #item+rem+i_ces+is_latn
+| +++trup+++
 
-| Lingua Danica (Abecedarium Latinum)
-| +++<span lang="da">torso</span>+++
+| #item+rem+i_dan+is_latn
+| +++torso+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">胴体</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++胴体+++
 
-| /Nynorsk/ (Abecedarium Latinum)
-| +++<span lang="nn">truncus</span>+++
+| #item+rem+i_nno+is_latn
+| +++truncus+++
 
-| Lingua Indonesiana (Abecedarium Latinum)
-| +++<span lang="id">trunkus</span>+++
+| #item+rem+i_ind+is_latn
+| +++trunkus+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">تنه</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++تنه+++
 
-| Lingua Hungarica (Abecedarium Latinum)
-| +++<span lang="hu">torzó</span>+++
+| #item+rem+i_hun+is_latn
+| +++torzó+++
 
-| Lingua Vasconica (Abecedarium Latinum)
-| +++<span lang="eu">gorputz-enbor</span>+++
+| #item+rem+i_eus+is_latn
+| +++gorputz-enbor+++
 
-| Lingua Gallaica (Abecedarium Latinum)
-| +++<span lang="gl">tronco</span>+++
+| #item+rem+i_glg+is_latn
+| +++tronco+++
 
-| Lingua Slovaca (Abecedarium Latinum)
-| +++<span lang="sk">trup</span>+++
+| #item+rem+i_slk+is_latn
+| +++trup+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">torso</span>+++
+| #item+rem+i_epo+is_latn
+| +++torso+++
 
-| Macrolingua Estonica (Abecedarium Latinum)
-| +++<span lang="et">kere</span>+++
+| #item+rem+i_est+is_latn
+| +++kere+++
 
-| Lingua Croatica (Abecedarium Latinum)
-| +++<span lang="hr">torzo</span>+++
+| #item+rem+i_hrv+is_latn
+| +++torzo+++
 
 |===
 
@@ -1064,119 +1210,119 @@ link:https://archive.org/details/anatomyofhumanbo1918gray[Henry Vandyke Carter 1
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">pectus</span>+++
+| #item+rem+i_lat+is_latn
+| +++pectus+++
 
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">صدر</span>+++
+| #item+rem+i_ara+is_arab
+| +++صدر+++
 
-| Lingua Bengali (?)
-| +++<span lang="bn">বক্ষ</span>+++
+| #item+rem+i_ben+is_beng
+| +++বক্ষ+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">торакс</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++торакс+++
 
-| Lingua Sanscrita
-| +++<span lang="sa">वक्षःस्थलम्</span>+++
+| #item+rem+i_san+is_zzzz
+| +++वक्षःस्थलम्+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">peito</span>+++
+| #item+rem+i_por+is_latn
+| +++peito+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">thorax</span>+++
+| #item+rem+i_eng+is_latn
+| +++thorax+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">torse</span>+++
+| #item+rem+i_fra+is_latn
+| +++torse+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">borstkas</span>+++
+| #item+rem+i_nld+is_latn
+| +++borstkas+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">brust</span>+++
+| #item+rem+i_deu+is_latn
+| +++brust+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">torso</span>+++
+| #item+rem+i_spa+is_latn
+| +++torso+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">petto</span>+++
+| #item+rem+i_ita+is_latn
+| +++petto+++
 
-| Lingua Hibernica (Abecedarium Latinum)
-| +++<span lang="ga">cliabhrach</span>+++
+| #item+rem+i_gle+is_latn
+| +++cliabhrach+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">bröst</span>+++
+| #item+rem+i_swe+is_latn
+| +++bröst+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">klatka piersiowa</span>+++
+| #item+rem+i_pol+is_latn
+| +++klatka piersiowa+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">rinta</span>+++
+| #item+rem+i_fin+is_latn
+| +++rinta+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">ngực</span>+++
+| #item+rem+i_vie+is_latn
+| +++ngực+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">tors</span>+++
+| #item+rem+i_cat+is_latn
+| +++tors+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">грудна клітка</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++грудна клітка+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">гръден кош</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++гръден кош+++
 
-| Lingua Slovena (Abecedarium Latinum)
-| +++<span lang="sl">prsni koš</span>+++
+| #item+rem+i_slv+is_latn
+| +++prsni koš+++
 
-| /Waray language/ (Abecedarium Latinum)
-| +++<span lang="war">dughán</span>+++
+| #item+rem+i_war+is_latn
+| +++dughán+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">bryst</span>+++
+| #item+rem+i_nob+is_latn
+| +++bryst+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">hrudník</span>+++
+| #item+rem+i_ces+is_latn
+| +++hrudník+++
 
-| Lingua Danica (Abecedarium Latinum)
-| +++<span lang="da">brystkasse</span>+++
+| #item+rem+i_dan+is_latn
+| +++brystkasse+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">胸</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++胸+++
 
-| /Nynorsk/ (Abecedarium Latinum)
-| +++<span lang="nn">bryst</span>+++
+| #item+rem+i_nno+is_latn
+| +++bryst+++
 
-| Lingua Indonesiana (Abecedarium Latinum)
-| +++<span lang="id">dada</span>+++
+| #item+rem+i_ind+is_latn
+| +++dada+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">سینه</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++سینه+++
 
-| Lingua Hungarica (Abecedarium Latinum)
-| +++<span lang="hu">mellkas</span>+++
+| #item+rem+i_hun+is_latn
+| +++mellkas+++
 
-| Lingua Vasconica (Abecedarium Latinum)
-| +++<span lang="eu">torax</span>+++
+| #item+rem+i_eus+is_latn
+| +++torax+++
 
-| Lingua Cambrica (Abecedarium Latinum)
-| +++<span lang="cy">thoracs</span>+++
+| #item+rem+i_cym+is_latn
+| +++thoracs+++
 
-| Lingua Gallaica (Abecedarium Latinum)
-| +++<span lang="gl">peito</span>+++
+| #item+rem+i_glg+is_latn
+| +++peito+++
 
-| Lingua Slovaca (Abecedarium Latinum)
-| +++<span lang="sk">hrudník</span>+++
+| #item+rem+i_slk+is_latn
+| +++hrudník+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">brusto</span>+++
+| #item+rem+i_epo+is_latn
+| +++brusto+++
 
-| Macrolingua Malayana (?)
-| +++<span lang="ms">dada</span>+++
+| #item+rem+i_msa+is_zzzz
+| +++dada+++
 
-| Macrolingua Estonica (Abecedarium Latinum)
-| +++<span lang="et">rind</span>+++
+| #item+rem+i_est+is_latn
+| +++rind+++
 
-| Lingua Croatica (Abecedarium Latinum)
-| +++<span lang="hr">prsni koš</span>+++
+| #item+rem+i_hrv+is_latn
+| +++prsni koš+++
 
 |===
 
@@ -1216,128 +1362,128 @@ link:https://archive.org/details/anatomyofhumanbo1918gray[Henry Vandyke Carter 1
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">abdomen</span>+++
+| #item+rem+i_lat+is_latn
+| +++abdomen+++
 
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">بطن</span>+++
+| #item+rem+i_ara+is_arab
+| +++بطن+++
 
-| Lingua Bengali (?)
-| +++<span lang="bn">উদর</span>+++
+| #item+rem+i_ben+is_beng
+| +++উদর+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">живот</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++живот+++
 
-| Lingua Sanscrita
-| +++<span lang="sa">नाभिः</span>+++
+| #item+rem+i_san+is_zzzz
+| +++नाभिः+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">abdómen</span>+++
+| #item+rem+i_por+is_latn
+| +++abdómen+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">abdomen</span>+++
+| #item+rem+i_eng+is_latn
+| +++abdomen+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">abdomen</span>+++
+| #item+rem+i_fra+is_latn
+| +++abdomen+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">buik</span>+++
+| #item+rem+i_nld+is_latn
+| +++buik+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">abdomen</span>+++
+| #item+rem+i_deu+is_latn
+| +++abdomen+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">abdomen</span>+++
+| #item+rem+i_spa+is_latn
+| +++abdomen+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">addome</span>+++
+| #item+rem+i_ita+is_latn
+| +++addome+++
 
-| Lingua Hibernica (Abecedarium Latinum)
-| +++<span lang="ga">abdóman</span>+++
+| #item+rem+i_gle+is_latn
+| +++abdóman+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">buken</span>+++
+| #item+rem+i_swe+is_latn
+| +++buken+++
 
-| Macrolingua Albanica (Abecedarium Latinum)
-| +++<span lang="sq">abdomeni</span>+++
+| #item+rem+i_sqi+is_latn
+| +++abdomeni+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">brzuch</span>+++
+| #item+rem+i_pol+is_latn
+| +++brzuch+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">vatsa</span>+++
+| #item+rem+i_fin+is_latn
+| +++vatsa+++
 
-| Lingua Dacoromanica (Abecedarium Latinum)
-| +++<span lang="ro">abdomen</span>+++
+| #item+rem+i_ron+is_latn
+| +++abdomen+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">bụng</span>+++
+| #item+rem+i_vie+is_latn
+| +++bụng+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">abdomen</span>+++
+| #item+rem+i_cat+is_latn
+| +++abdomen+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">живіт</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++живіт+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">корем</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++корем+++
 
-| Lingua Slovena (Abecedarium Latinum)
-| +++<span lang="sl">trebuh</span>+++
+| #item+rem+i_slv+is_latn
+| +++trebuh+++
 
-| /Waray language/ (Abecedarium Latinum)
-| +++<span lang="war">puson</span>+++
+| #item+rem+i_war+is_latn
+| +++puson+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">abdomen</span>+++
+| #item+rem+i_nob+is_latn
+| +++abdomen+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">břicho</span>+++
+| #item+rem+i_ces+is_latn
+| +++břicho+++
 
-| Lingua Danica (Abecedarium Latinum)
-| +++<span lang="da">bughule</span>+++
+| #item+rem+i_dan+is_latn
+| +++bughule+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">腹</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++腹+++
 
-| /Nynorsk/ (Abecedarium Latinum)
-| +++<span lang="nn">abdomen</span>+++
+| #item+rem+i_nno+is_latn
+| +++abdomen+++
 
-| Lingua Indonesiana (Abecedarium Latinum)
-| +++<span lang="id">abdomen</span>+++
+| #item+rem+i_ind+is_latn
+| +++abdomen+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">شکم</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++شکم+++
 
-| Lingua Hungarica (Abecedarium Latinum)
-| +++<span lang="hu">has</span>+++
+| #item+rem+i_hun+is_latn
+| +++has+++
 
-| Lingua Vasconica (Abecedarium Latinum)
-| +++<span lang="eu">abdomen</span>+++
+| #item+rem+i_eus+is_latn
+| +++abdomen+++
 
-| Lingua Cambrica (Abecedarium Latinum)
-| +++<span lang="cy">abdomen</span>+++
+| #item+rem+i_cym+is_latn
+| +++abdomen+++
 
-| Lingua Gallaica (Abecedarium Latinum)
-| +++<span lang="gl">abdome</span>+++
+| #item+rem+i_glg+is_latn
+| +++abdome+++
 
-| Lingua Slovaca (Abecedarium Latinum)
-| +++<span lang="sk">brucho (stavovce)</span>+++
+| #item+rem+i_slk+is_latn
+| +++brucho (stavovce)+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">ventro</span>+++
+| #item+rem+i_epo+is_latn
+| +++ventro+++
 
-| Macrolingua Malayana (?)
-| +++<span lang="ms">Abdomen</span>+++
+| #item+rem+i_msa+is_zzzz
+| +++Abdomen+++
 
-| Macrolingua Estonica (Abecedarium Latinum)
-| +++<span lang="et">kõht</span>+++
+| #item+rem+i_est+is_latn
+| +++kõht+++
 
-| Lingua Croatica (Abecedarium Latinum)
-| +++<span lang="hr">trbuh</span>+++
+| #item+rem+i_hrv+is_latn
+| +++trbuh+++
 
-| Interlingua (Abecedarium Latinum)
-| +++<span lang="ia">abdomine</span>+++
+| #item+rem+i_ina+is_latn
+| +++abdomine+++
 
 |===
 
@@ -1377,122 +1523,122 @@ link:https://archive.org/details/anatomyofhumanbo1918gray[Henry Vandyke Carter 1
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">pelvis</span>+++
+| #item+rem+i_lat+is_latn
+| +++pelvis+++
 
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">حوض</span>+++
+| #item+rem+i_ara+is_arab
+| +++حوض+++
 
-| Lingua Bengali (?)
-| +++<span lang="bn">শ্রোণিচক্র</span>+++
+| #item+rem+i_ben+is_beng
+| +++শ্রোণিচক্র+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">таз</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++таз+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">bacia</span>+++
+| #item+rem+i_por+is_latn
+| +++bacia+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">pelvis</span>+++
+| #item+rem+i_eng+is_latn
+| +++pelvis+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">bassin</span>+++
+| #item+rem+i_fra+is_latn
+| +++bassin+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">bekken</span>+++
+| #item+rem+i_nld+is_latn
+| +++bekken+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">becken</span>+++
+| #item+rem+i_deu+is_latn
+| +++becken+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">pelvis</span>+++
+| #item+rem+i_spa+is_latn
+| +++pelvis+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">bacino</span>+++
+| #item+rem+i_ita+is_latn
+| +++bacino+++
 
-| Lingua Hibernica (Abecedarium Latinum)
-| +++<span lang="ga">peilbheas</span>+++
+| #item+rem+i_gle+is_latn
+| +++peilbheas+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">bäcken</span>+++
+| #item+rem+i_swe+is_latn
+| +++bäcken+++
 
-| Macrolingua Albanica (Abecedarium Latinum)
-| +++<span lang="sq">legeni i njeriut</span>+++
+| #item+rem+i_sqi+is_latn
+| +++legeni i njeriut+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">kość miedniczna</span>+++
+| #item+rem+i_pol+is_latn
+| +++kość miedniczna+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">lantio</span>+++
+| #item+rem+i_fin+is_latn
+| +++lantio+++
 
-| Lingua Dacoromanica (Abecedarium Latinum)
-| +++<span lang="ro">pelvis</span>+++
+| #item+rem+i_ron+is_latn
+| +++pelvis+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">khung chậu</span>+++
+| #item+rem+i_vie+is_latn
+| +++khung chậu+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">pelvis</span>+++
+| #item+rem+i_cat+is_latn
+| +++pelvis+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">таз</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++таз+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">таз</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++таз+++
 
-| Lingua Slovena (Abecedarium Latinum)
-| +++<span lang="sl">medenica</span>+++
+| #item+rem+i_slv+is_latn
+| +++medenica+++
 
-| /Waray language/ (Abecedarium Latinum)
-| +++<span lang="war">pelvis</span>+++
+| #item+rem+i_war+is_latn
+| +++pelvis+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">bekken</span>+++
+| #item+rem+i_nob+is_latn
+| +++bekken+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">pánev</span>+++
+| #item+rem+i_ces+is_latn
+| +++pánev+++
 
-| Lingua Danica (Abecedarium Latinum)
-| +++<span lang="da">bækken</span>+++
+| #item+rem+i_dan+is_latn
+| +++bækken+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">骨盤</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++骨盤+++
 
-| /Nynorsk/ (Abecedarium Latinum)
-| +++<span lang="nn">bekken</span>+++
+| #item+rem+i_nno+is_latn
+| +++bekken+++
 
-| Lingua Indonesiana (Abecedarium Latinum)
-| +++<span lang="id">pelvis</span>+++
+| #item+rem+i_ind+is_latn
+| +++pelvis+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">لگن خاصره</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++لگن خاصره+++
 
-| Lingua Hungarica (Abecedarium Latinum)
-| +++<span lang="hu">csontos medence</span>+++
+| #item+rem+i_hun+is_latn
+| +++csontos medence+++
 
-| Lingua Vasconica (Abecedarium Latinum)
-| +++<span lang="eu">pelbis</span>+++
+| #item+rem+i_eus+is_latn
+| +++pelbis+++
 
-| Lingua Cambrica (Abecedarium Latinum)
-| +++<span lang="cy">pelfis</span>+++
+| #item+rem+i_cym+is_latn
+| +++pelfis+++
 
-| Lingua Gallaica (Abecedarium Latinum)
-| +++<span lang="gl">pelve</span>+++
+| #item+rem+i_glg+is_latn
+| +++pelve+++
 
-| Lingua Slovaca (Abecedarium Latinum)
-| +++<span lang="sk">panva</span>+++
+| #item+rem+i_slk+is_latn
+| +++panva+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">pelvo</span>+++
+| #item+rem+i_epo+is_latn
+| +++pelvo+++
 
-| Macrolingua Malayana (?)
-| +++<span lang="ms">Pelvis</span>+++
+| #item+rem+i_msa+is_zzzz
+| +++Pelvis+++
 
-| Macrolingua Estonica (Abecedarium Latinum)
-| +++<span lang="et">vaagen</span>+++
+| #item+rem+i_est+is_latn
+| +++vaagen+++
 
-| Lingua Croatica (Abecedarium Latinum)
-| +++<span lang="hr">zdjelica</span>+++
+| #item+rem+i_hrv+is_latn
+| +++zdjelica+++
 
 |===
 
@@ -1532,104 +1678,104 @@ link:https://archive.org/details/anatomyofhumanbo1918gray[Henry Vandyke Carter 1
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">dorsum</span>+++
+| #item+rem+i_lat+is_latn
+| +++dorsum+++
 
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">ظهر</span>+++
+| #item+rem+i_ara+is_arab
+| +++ظهر+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">спина</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++спина+++
 
-| Lingua Sanscrita
-| +++<span lang="sa">पृष्ठभागः</span>+++
+| #item+rem+i_san+is_zzzz
+| +++पृष्ठभागः+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">costas</span>+++
+| #item+rem+i_por+is_latn
+| +++costas+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">back</span>+++
+| #item+rem+i_eng+is_latn
+| +++back+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">dos</span>+++
+| #item+rem+i_fra+is_latn
+| +++dos+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">rug</span>+++
+| #item+rem+i_nld+is_latn
+| +++rug+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">rücken</span>+++
+| #item+rem+i_deu+is_latn
+| +++rücken+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">espalda</span>+++
+| #item+rem+i_spa+is_latn
+| +++espalda+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">schiena</span>+++
+| #item+rem+i_ita+is_latn
+| +++schiena+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">rygg</span>+++
+| #item+rem+i_swe+is_latn
+| +++rygg+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">plecy</span>+++
+| #item+rem+i_pol+is_latn
+| +++plecy+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">selkä</span>+++
+| #item+rem+i_fin+is_latn
+| +++selkä+++
 
-| Lingua Dacoromanica (Abecedarium Latinum)
-| +++<span lang="ro">spate</span>+++
+| #item+rem+i_ron+is_latn
+| +++spate+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">lưng người</span>+++
+| #item+rem+i_vie+is_latn
+| +++lưng người+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">esquena</span>+++
+| #item+rem+i_cat+is_latn
+| +++esquena+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">спина</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++спина+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">гръб</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++гръб+++
 
-| /Waray language/ (Abecedarium Latinum)
-| +++<span lang="war">bungkog</span>+++
+| #item+rem+i_war+is_latn
+| +++bungkog+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">rygg</span>+++
+| #item+rem+i_nob+is_latn
+| +++rygg+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">záda</span>+++
+| #item+rem+i_ces+is_latn
+| +++záda+++
 
-| Lingua Danica (Abecedarium Latinum)
-| +++<span lang="da">ryg</span>+++
+| #item+rem+i_dan+is_latn
+| +++ryg+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">背中</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++背中+++
 
-| /Nynorsk/ (Abecedarium Latinum)
-| +++<span lang="nn">rygg</span>+++
+| #item+rem+i_nno+is_latn
+| +++rygg+++
 
-| Lingua Indonesiana (Abecedarium Latinum)
-| +++<span lang="id">punggung</span>+++
+| #item+rem+i_ind+is_latn
+| +++punggung+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">پشت انسان</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++پشت انسان+++
 
-| Lingua Vasconica (Abecedarium Latinum)
-| +++<span lang="eu">bizkar</span>+++
+| #item+rem+i_eus+is_latn
+| +++bizkar+++
 
-| Lingua Cambrica (Abecedarium Latinum)
-| +++<span lang="cy">cefn</span>+++
+| #item+rem+i_cym+is_latn
+| +++cefn+++
 
-| Lingua Gallaica (Abecedarium Latinum)
-| +++<span lang="gl">costas</span>+++
+| #item+rem+i_glg+is_latn
+| +++costas+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">dorso</span>+++
+| #item+rem+i_epo+is_latn
+| +++dorso+++
 
-| Macrolingua Estonica (Abecedarium Latinum)
-| +++<span lang="et">selg</span>+++
+| #item+rem+i_est+is_latn
+| +++selg+++
 
-| Lingua Croatica (Abecedarium Latinum)
-| +++<span lang="hr">leđa</span>+++
+| #item+rem+i_hrv+is_latn
+| +++leđa+++
 
 |===
 

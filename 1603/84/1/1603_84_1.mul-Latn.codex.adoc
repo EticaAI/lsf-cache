@@ -83,22 +83,22 @@ Naturally, each book version gives extensive explanations for collaborators on h
 | Factum
 
 | scrīptor
-| 11
+| Multiplicēs scrīptōribus
 
-| /publisher/@eng-Latn
-| 11
+| //cōdex pūblicandī//
+| EticaAI
 
 | /publication date/@eng-Latn
-| 11
+| 2022-01-16
 
-| ix_wikip393
-| 2022-02-08T03:10:28
+| numerus editionis
+| 2022-02-08T06:07:21
 
 | /SPDX license ID/@eng-Latn
-| 11
+| CC0-1.0
 
 | /reference URL/@eng-Latn
-| 11
+| https://github.com/EticaAI/multilingual-lexicography/issues/8
 
 |===
 
@@ -120,7 +120,7 @@ This section explains the methodology of this book and it's machine readable for
 |===
 
 === Methodī ex dictiōnāriōrum corde
-NOTE: #@TODO this is a draft. Soon will be imple#
+NOTE: #`0_1603_1_7_2616_7535` ?#
 
 === Rēs dē factō in dictiōnāriīs
 
@@ -136,13 +136,13 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 
 | mul-Zyyy
 | 
-| 
+| https://iso639-3.sil.org/code/mul[mul]
 | 
 | Linguae multiplīs (Scrīptum incognitō)
 
 |===
 
-==== Rēs interlinguālibus: 5
+==== Rēs interlinguālibus: 6
 
 
 ===== 1603:1:7:2616:50 
@@ -169,10 +169,28 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 {
     "#item+conceptum+codicem": "2616_123",
     "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
-    "#item+rem+i_lat+is_latn": "/publisher/@eng-Latn",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "//cōdex pūblicandī//",
     "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
     "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
     "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:393 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
     "#status+conceptum+codicem": "60",
     "#status+conceptum+definitionem": "60"
 }
@@ -256,7 +274,7 @@ link:https://en.wikipedia.org/wiki/Dental_notation#/media/File:Comparison_of_den
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Quadrant codes - upper right permanent teeth/+++
 
 |===
@@ -502,7 +520,7 @@ link:https://en.wikipedia.org/wiki/Dental_notation#/media/File:Comparison_of_den
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Quadrant codes - upper left permanent teeth/+++
 
 |===
@@ -748,7 +766,7 @@ link:https://en.wikipedia.org/wiki/Dental_notation#/media/File:Comparison_of_den
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Quadrant codes - lower left permanent teeth/+++
 
 |===
@@ -994,7 +1012,7 @@ link:https://en.wikipedia.org/wiki/Dental_notation#/media/File:Comparison_of_den
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Quadrant codes - lower right permanent teeth/+++
 
 |===
@@ -1240,7 +1258,7 @@ link:https://en.wikipedia.org/wiki/Dental_notation#/media/File:Comparison_of_den
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Quadrant codes - upper right deciduous teeth/+++
 
 |===
@@ -1402,7 +1420,7 @@ link:https://en.wikipedia.org/wiki/Dental_notation#/media/File:Comparison_of_den
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Quadrant codes - upper left deciduous teeth/+++
 
 |===
@@ -1564,7 +1582,7 @@ link:https://en.wikipedia.org/wiki/Dental_notation#/media/File:Comparison_of_den
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Quadrant codes - lower left deciduous teeth/+++
 
 |===

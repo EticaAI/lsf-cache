@@ -82,8 +82,20 @@ Naturally, each book version gives extensive explanations for collaborators on h
 | Rēs interlinguālibus
 | Factum
 
-| ix_wikip393
-| 2022-02-08T03:10:22
+| scrīptor
+| Multiplicēs scrīptōribus
+
+| //cōdex pūblicandī//
+| EticaAI
+
+| /publication date/@eng-Latn
+| 2022-01-01
+
+| numerus editionis
+| 2022-02-08T06:07:18
+
+| /SPDX license ID/@eng-Latn
+| CC-PDDC
 
 |===
 
@@ -105,7 +117,7 @@ This section explains the methodology of this book and it's machine readable for
 |===
 
 === Methodī ex dictiōnāriōrum corde
-NOTE: #@TODO this is a draft. Soon will be imple#
+NOTE: #`0_1603_1_7_2616_7535` ?#
 
 === Methodī ex verbīs in dictiōnāriīs
 NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data],  which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
@@ -359,7 +371,7 @@ From the point of view of data conciliation, the following methodology is used t
 
 |===
 
-==== Rēs interlinguālibus: 1
+==== Rēs interlinguālibus: 6
 
 
 ===== 1603:1:7:1:91 
@@ -376,6 +388,93 @@ From the point of view of data conciliation, the following methodology is used t
     "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
     "#status+conceptum+codicem": "19",
     "#status+conceptum+definitionem": "50"
+}
+----
+
+===== 1603:1:7:2616:50 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_50",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
+    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
+    "#item+rem+i_lat+is_latn": "scrīptor",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:123 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_123",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "//cōdex pūblicandī//",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:393 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:577 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_577",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
+    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
+    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:2479 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_2479",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
+    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
+    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
 }
 ----
 
@@ -412,53 +511,53 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">شحوب الموت</span>+++
+| #item+rem+i_ara+is_arab
+| +++شحوب الموت+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">трупная бледность</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++трупная бледность+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">pallor mortis</span>+++
+| #item+rem+i_por+is_latn
+| +++pallor mortis+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">pallor mortis</span>+++
+| #item+rem+i_eng+is_latn
+| +++pallor mortis+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">pallor mortis</span>+++
+| #item+rem+i_fra+is_latn
+| +++pallor mortis+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">pallor mortis</span>+++
+| #item+rem+i_nld+is_latn
+| +++pallor mortis+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">pallor mortis</span>+++
+| #item+rem+i_deu+is_latn
+| +++pallor mortis+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">pallor mortis</span>+++
+| #item+rem+i_spa+is_latn
+| +++pallor mortis+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">pallor mortis</span>+++
+| #item+rem+i_ita+is_latn
+| +++pallor mortis+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">likblekhet</span>+++
+| #item+rem+i_swe+is_latn
+| +++likblekhet+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">bladość pośmiertna</span>+++
+| #item+rem+i_pol+is_latn
+| +++bladość pośmiertna+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">kuolonkalpeus</span>+++
+| #item+rem+i_fin+is_latn
+| +++kuolonkalpeus+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">tái nhạt tử thi</span>+++
+| #item+rem+i_vie+is_latn
+| +++tái nhạt tử thi+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">трупна бледост</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++трупна бледост+++
 
-| Lingua Slovena (Abecedarium Latinum)
-| +++<span lang="sl">mrliška bledica</span>+++
+| #item+rem+i_slv+is_latn
+| +++mrliška bledica+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">pallor mortis</span>+++
+| #item+rem+i_ces+is_latn
+| +++pallor mortis+++
 
 |===
 
@@ -495,56 +594,56 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">برودة الموت</span>+++
+| #item+rem+i_ara+is_arab
+| +++برودة الموت+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">посмертное охлаждение</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++посмертное охлаждение+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">algor mortis</span>+++
+| #item+rem+i_por+is_latn
+| +++algor mortis+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">algor mortis</span>+++
+| #item+rem+i_eng+is_latn
+| +++algor mortis+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">algor mortis</span>+++
+| #item+rem+i_fra+is_latn
+| +++algor mortis+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">algor mortis</span>+++
+| #item+rem+i_nld+is_latn
+| +++algor mortis+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">algor mortis</span>+++
+| #item+rem+i_deu+is_latn
+| +++algor mortis+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">algor mortis</span>+++
+| #item+rem+i_spa+is_latn
+| +++algor mortis+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">algor mortis</span>+++
+| #item+rem+i_ita+is_latn
+| +++algor mortis+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">likkyla</span>+++
+| #item+rem+i_swe+is_latn
+| +++likkyla+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">oziębienie pośmiertne</span>+++
+| #item+rem+i_pol+is_latn
+| +++oziębienie pośmiertne+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">kuolonkylmyys</span>+++
+| #item+rem+i_fin+is_latn
+| +++kuolonkylmyys+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">mát lạnh tử thi</span>+++
+| #item+rem+i_vie+is_latn
+| +++mát lạnh tử thi+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">трупно изстиване</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++трупно изстиване+++
 
-| Lingua Slovena (Abecedarium Latinum)
-| +++<span lang="sl">mrliška ohladitev</span>+++
+| #item+rem+i_slv+is_latn
+| +++mrliška ohladitev+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">algor mortis</span>+++
+| #item+rem+i_ces+is_latn
+| +++algor mortis+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">死冷</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++死冷+++
 
 |===
 
@@ -581,89 +680,89 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">تخشب موتي</span>+++
+| #item+rem+i_ara+is_arab
+| +++تخشب موتي+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">трупное окоченение</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++трупное окоченение+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">rigor mortis</span>+++
+| #item+rem+i_por+is_latn
+| +++rigor mortis+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">rigor mortis</span>+++
+| #item+rem+i_eng+is_latn
+| +++rigor mortis+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">rigidité cadavérique</span>+++
+| #item+rem+i_fra+is_latn
+| +++rigidité cadavérique+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">lijkstijfheid</span>+++
+| #item+rem+i_nld+is_latn
+| +++lijkstijfheid+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">totenstarre</span>+++
+| #item+rem+i_deu+is_latn
+| +++totenstarre+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">rigor mortis</span>+++
+| #item+rem+i_spa+is_latn
+| +++rigor mortis+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">rigor mortis</span>+++
+| #item+rem+i_ita+is_latn
+| +++rigor mortis+++
 
-| Lingua Hibernica (Abecedarium Latinum)
-| +++<span lang="ga">teannáil an bháis</span>+++
+| #item+rem+i_gle+is_latn
+| +++teannáil an bháis+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">likstelhet</span>+++
+| #item+rem+i_swe+is_latn
+| +++likstelhet+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">stężenie pośmiertne</span>+++
+| #item+rem+i_pol+is_latn
+| +++stężenie pośmiertne+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">kuolonkankeus</span>+++
+| #item+rem+i_fin+is_latn
+| +++kuolonkankeus+++
 
-| Lingua Dacoromanica (Abecedarium Latinum)
-| +++<span lang="ro">rigor mortis</span>+++
+| #item+rem+i_ron+is_latn
+| +++rigor mortis+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">co cứng tử thi</span>+++
+| #item+rem+i_vie+is_latn
+| +++co cứng tử thi+++
 
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">rigidesa cadavèrica</span>+++
+| #item+rem+i_cat+is_latn
+| +++rigidesa cadavèrica+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">трупне окоченіння</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++трупне окоченіння+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">трупно вкочаняване</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++трупно вкочаняване+++
 
-| Lingua Slovena (Abecedarium Latinum)
-| +++<span lang="sl">mrliška okorelost</span>+++
+| #item+rem+i_slv+is_latn
+| +++mrliška okorelost+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">dødsstivhet</span>+++
+| #item+rem+i_nob+is_latn
+| +++dødsstivhet+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">posmrtná ztuhlost</span>+++
+| #item+rem+i_ces+is_latn
+| +++posmrtná ztuhlost+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">死後硬直</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++死後硬直+++
 
-| Lingua Malabarica (/Malayalam script/)
-| +++<span lang="ml">മൃത്യുജകാഠിന്യം</span>+++
+| #item+rem+i_mal+is_mlym
+| +++മൃത്യുജകാഠിന്യം+++
 
-| Lingua Indonesiana (Abecedarium Latinum)
-| +++<span lang="id">kaku mayat</span>+++
+| #item+rem+i_ind+is_latn
+| +++kaku mayat+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">جمود نعشی</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++جمود نعشی+++
 
-| Lingua Hungarica (Abecedarium Latinum)
-| +++<span lang="hu">hullamerevség</span>+++
+| #item+rem+i_hun+is_latn
+| +++hullamerevség+++
 
-| Lingua Gallaica (Abecedarium Latinum)
-| +++<span lang="gl">rigor mortis</span>+++
+| #item+rem+i_glg+is_latn
+| +++rigor mortis+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">kadavra rigideco</span>+++
+| #item+rem+i_epo+is_latn
+| +++kadavra rigideco+++
 
 |===
 
@@ -700,68 +799,68 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">ازرقاق الجثة</span>+++
+| #item+rem+i_ara+is_arab
+| +++ازرقاق الجثة+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">трупные пятна</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++трупные пятна+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">livor mortis</span>+++
+| #item+rem+i_por+is_latn
+| +++livor mortis+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">livor mortis</span>+++
+| #item+rem+i_eng+is_latn
+| +++livor mortis+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">lividités cadavériques</span>+++
+| #item+rem+i_fra+is_latn
+| +++lividités cadavériques+++
 
-| Lingua Batavica (Abecedarium Latinum)
-| +++<span lang="nl">livor mortis</span>+++
+| #item+rem+i_nld+is_latn
+| +++livor mortis+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">totenfleck</span>+++
+| #item+rem+i_deu+is_latn
+| +++totenfleck+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">livor mortis</span>+++
+| #item+rem+i_spa+is_latn
+| +++livor mortis+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">livor mortis</span>+++
+| #item+rem+i_ita+is_latn
+| +++livor mortis+++
 
-| Lingua Suecica (Abecedarium Latinum)
-| +++<span lang="sv">likfläck</span>+++
+| #item+rem+i_swe+is_latn
+| +++likfläck+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">plamy pośmiertne</span>+++
+| #item+rem+i_pol+is_latn
+| +++plamy pośmiertne+++
 
-| Lingua Finnica (Abecedarium Latinum)
-| +++<span lang="fi">lautuma</span>+++
+| #item+rem+i_fin+is_latn
+| +++lautuma+++
 
-| Lingua Vietnamensis (Abecedarium Latinum)
-| +++<span lang="vi">hồ máu tử thi</span>+++
+| #item+rem+i_vie+is_latn
+| +++hồ máu tử thi+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">трупні плями</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++трупні плями+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">хипостаза</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++хипостаза+++
 
-| /Bokmål/ (Abecedarium Latinum)
-| +++<span lang="nb">dødsflekk</span>+++
+| #item+rem+i_nob+is_latn
+| +++dødsflekk+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">posmrtné skvrny</span>+++
+| #item+rem+i_ces+is_latn
+| +++posmrtné skvrny+++
 
-| Lingua Danica (Abecedarium Latinum)
-| +++<span lang="da">livores</span>+++
+| #item+rem+i_dan+is_latn
+| +++livores+++
 
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">死斑</span>+++
+| #item+rem+i_jpn+is_jpan
+| +++死斑+++
 
-| Lingua Indonesiana (Abecedarium Latinum)
-| +++<span lang="id">livor mortis</span>+++
+| #item+rem+i_ind+is_latn
+| +++livor mortis+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">livor mortis</span>+++
+| #item+rem+i_epo+is_latn
+| +++livor mortis+++
 
 |===
 
@@ -798,53 +897,53 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Macrolingua Arabica (Abecedarium Arabicum)
-| +++<span lang="ar">تعفن</span>+++
+| #item+rem+i_ara+is_arab
+| +++تعفن+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">гниение</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++гниение+++
 
-| Lingua Lusitana (Abecedarium Latinum)
-| +++<span lang="pt">putrefação</span>+++
+| #item+rem+i_por+is_latn
+| +++putrefação+++
 
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">putrefaction</span>+++
+| #item+rem+i_eng+is_latn
+| +++putrefaction+++
 
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">putréfaction</span>+++
+| #item+rem+i_fra+is_latn
+| +++putréfaction+++
 
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">putrefizierung</span>+++
+| #item+rem+i_deu+is_latn
+| +++putrefizierung+++
 
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">putrefacción</span>+++
+| #item+rem+i_spa+is_latn
+| +++putrefacción+++
 
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">putrefazione</span>+++
+| #item+rem+i_ita+is_latn
+| +++putrefazione+++
 
-| Lingua Polonica (Abecedarium Latinum)
-| +++<span lang="pl">rozpad gnilny</span>+++
+| #item+rem+i_pol+is_latn
+| +++rozpad gnilny+++
 
-| Lingua Dacoromanica (Abecedarium Latinum)
-| +++<span lang="ro">putrefacție</span>+++
+| #item+rem+i_ron+is_latn
+| +++putrefacție+++
 
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">гниття</span>+++
+| #item+rem+i_ukr+is_cyrl
+| +++гниття+++
 
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-| +++<span lang="bg">гниене</span>+++
+| #item+rem+i_bul+is_cyrl
+| +++гниене+++
 
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">hnití</span>+++
+| #item+rem+i_ces+is_latn
+| +++hnití+++
 
-| Macrolingua Persica (Abecedarium Arabicum)
-| +++<span lang="fa">گندیدگی</span>+++
+| #item+rem+i_fas+is_zzzz
+| +++گندیدگی+++
 
-| Lingua Esperantica (Abecedarium Latinum)
-| +++<span lang="eo">putrado</span>+++
+| #item+rem+i_epo+is_latn
+| +++putrado+++
 
-| Macrolingua Estonica (Abecedarium Latinum)
-| +++<span lang="et">roiskumine</span>+++
+| #item+rem+i_est+is_latn
+| +++roiskumine+++
 
 |===
 

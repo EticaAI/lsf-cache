@@ -82,8 +82,8 @@ Naturally, each book version gives extensive explanations for collaborators on h
 | Rēs interlinguālibus
 | Factum
 
-| ix_wikip393
-| 2022-02-08T03:09:35
+| numerus editionis
+| 2022-02-08T06:06:57
 
 |===
 
@@ -105,7 +105,7 @@ This section explains the methodology of this book and it's machine readable for
 |===
 
 === Methodī ex dictiōnāriōrum corde
-NOTE: #@TODO this is a draft. Soon will be imple#
+NOTE: #`0_1603_1_7_2616_7535` ?#
 
 === Rēs dē factō in dictiōnāriīs
 
@@ -121,13 +121,13 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 
 | mul-Zyyy
 | 
-| 
+| https://iso639-3.sil.org/code/mul[mul]
 | 
 | Linguae multiplīs (Scrīptum incognitō)
 
 |===
 
-==== Rēs interlinguālibus: 1
+==== Rēs interlinguālibus: 2
 
 
 ===== 1603:1:7:1:91 
@@ -144,6 +144,23 @@ NOTE: #@TODO this is a draft. Soon will be imple#
     "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
     "#status+conceptum+codicem": "19",
     "#status+conceptum+definitionem": "50"
+}
+----
+
+===== 1603:1:7:2616:393 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
 }
 ----
 
@@ -164,7 +181,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//abstractum data schēmae//@lat-Latn+++
 
 |===
@@ -186,7 +203,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//archīvum data typīs//@lat-Latn+++
 
 |===
@@ -218,7 +235,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/tabular data/@eng-Latn+++
 
 |===
@@ -250,7 +267,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/delimiter-separated values/+++
 
 |===
@@ -285,7 +302,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/comma-separated values (CSV)/+++
 
 |===
@@ -320,7 +337,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/tab-separated values (TSV)/+++
 
 |===
@@ -530,7 +547,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Numerordinatio on HXLTM container/+++
 
 |===
@@ -565,7 +582,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Numerordinatio on HXLTM container (expanded with terminology translations)/+++
 
 |===
@@ -600,7 +617,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Metadata about no1.tm.hxl.csv/+++
 
 |===
@@ -635,7 +652,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Metadata about tm.hxl.csv/+++
 
 |===
@@ -670,7 +687,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Metadata about annexes (local namespace)/+++
 
 |===

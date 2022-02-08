@@ -82,8 +82,20 @@ Naturally, each book version gives extensive explanations for collaborators on h
 | Rēs interlinguālibus
 | Factum
 
-| ix_wikip393
-| 2022-02-08T03:10:12
+| scrīptor
+| EticaAI
+
+| //cōdex pūblicandī//
+| EticaAI
+
+| /publication date/@eng-Latn
+| 2022-01-01
+
+| numerus editionis
+| 2022-02-08T06:07:17
+
+| /SPDX license ID/@eng-Latn
+| CC0-1.0
 
 |===
 
@@ -105,7 +117,7 @@ This section explains the methodology of this book and it's machine readable for
 |===
 
 === Methodī ex dictiōnāriōrum corde
-NOTE: #@TODO this is a draft. Soon will be imple#
+NOTE: #`0_1603_1_7_2616_7535` ?#
 
 === Methodī ex verbīs in dictiōnāriīs
 NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data],  which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
@@ -185,7 +197,7 @@ From the point of view of data conciliation, the following methodology is used t
 
 |===
 
-==== Rēs interlinguālibus: 2
+==== Rēs interlinguālibus: 7
 
 
 ===== 1603:1:7:1:91 
@@ -218,6 +230,93 @@ From the point of view of data conciliation, the following methodology is used t
     "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_hxl",
     "#status+conceptum+codicem": "19",
     "#status+conceptum+definitionem": "50"
+}
+----
+
+===== 1603:1:7:2616:50 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_50",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
+    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
+    "#item+rem+i_lat+is_latn": "scrīptor",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:123 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_123",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "//cōdex pūblicandī//",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:393 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:577 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_577",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
+    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
+    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:2479 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_2479",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
+    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
+    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
 }
 ----
 
@@ -344,8 +443,8 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">contact shot</span>+++
+| #item+rem+i_eng+is_latn
+| +++contact shot+++
 
 |===
 

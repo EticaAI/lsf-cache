@@ -85,14 +85,14 @@ Naturally, each book version gives extensive explanations for collaborators on h
 | scrīptor
 | EticaAI
 
-| /publisher/@eng-Latn
+| //cōdex pūblicandī//
 | EticaAI
 
 | /publication date/@eng-Latn
 | 2022-01-01
 
-| ix_wikip393
-| 2022-02-08T03:09:24
+| numerus editionis
+| 2022-02-08T06:06:44
 
 | /SPDX license ID/@eng-Latn
 | CC0-1.0
@@ -117,7 +117,7 @@ This section explains the methodology of this book and it's machine readable for
 |===
 
 === Methodī ex dictiōnāriōrum corde
-NOTE: #@TODO this is a draft. Soon will be imple#
+NOTE: #`0_1603_1_7_2616_7535` ?#
 
 === Rēs dē factō in dictiōnāriīs
 
@@ -133,7 +133,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 
 | mul-Zyyy
 | 
-| 
+| https://iso639-3.sil.org/code/mul[mul]
 | 
 | Linguae multiplīs (Scrīptum incognitō)
 
@@ -157,7 +157,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 
 |===
 
-==== Rēs interlinguālibus: 6
+==== Rēs interlinguālibus: 7
 
 
 ===== 1603:1:7:1:90 
@@ -217,10 +217,28 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 {
     "#item+conceptum+codicem": "2616_123",
     "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
-    "#item+rem+i_lat+is_latn": "/publisher/@eng-Latn",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "//cōdex pūblicandī//",
     "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
     "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
     "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+===== 1603:1:7:2616:393 
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
     "#status+conceptum+codicem": "60",
     "#status+conceptum+definitionem": "60"
 }
@@ -289,7 +307,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Meta dictiōnārium//+++
 
 |===
@@ -321,7 +339,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Numeroclatura Generālium ad MM ex Numerordĭnātĭo//@lat-Latn+++
 
 |===
@@ -353,11 +371,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Dictiōnāria de symbolī numerīs/+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">/Dictiōnāria de symbolī numerīs/</span>+++
+| #item+rem+i_lat+is_latn
+| +++/Dictiōnāria de symbolī numerīs/+++
 
 |===
 
@@ -388,11 +406,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Dictiōnāria de symbolī ab systemata scrīpta/+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">/Dictiōnāria de symbolī ab systemata scrīpta/</span>+++
+| #item+rem+i_lat+is_latn
+| +++/Dictiōnāria de symbolī ab systemata scrīpta/+++
 
 |===
 
@@ -423,11 +441,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Dictiōnāria de systemata scrīpta/+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">/Dictiōnāria de systemata scrīpta/</span>+++
+| #item+rem+i_lat+is_latn
+| +++/Dictiōnāria de systemata scrīpta/+++
 
 |===
 
@@ -458,7 +476,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Concept of language+++
 
 |===
@@ -490,7 +508,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Dictiōnāria de terminī typīs/+++
 
 |===
@@ -522,7 +540,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Dictiōnāria basibus de rēs interlinguīs//+++
 
 |===
@@ -554,7 +572,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//(Reserved namespace to document numeric suffixes)//+++
 
 |===
@@ -586,7 +604,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[13] 1603:13 HXL Normae+++
 
 |===
@@ -618,10 +636,10 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Pre-build list of all +v_* attributes on 1603//+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[22] V+++
 
 |===
@@ -653,10 +671,10 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Pre-build list of all +ix_* attributes on 1603//+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[24] X+++
 
 |===
@@ -688,7 +706,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Concept of number, prebuild tables+++
 
 |===
@@ -720,11 +738,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//+++
 
 |===
 
@@ -755,11 +773,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//+++
 
 |===
 
@@ -793,20 +811,20 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Commūnitās scientiae+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[2003] Wikipedia+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Commūnitās scientiae</span>+++
+| #item+rem+i_lat+is_latn
+| +++Commūnitās scientiae+++
 
 | #item+rem+i_arb+is_arab
 | +++بعلم المواطنين+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">Гражданская наука</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++Гражданская наука+++
 
 |===
 
@@ -840,14 +858,14 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Vicidata+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[2012] Wikidata+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Vicidata</span>+++
+| #item+rem+i_lat+is_latn
+| +++Vicidata+++
 
 |===
 
@@ -881,14 +899,14 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Speciālis collēctiōnī de Vicidata Proprietātī//+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[6] (16 - 10) P+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Speciālis collēctiōnī de Vicidata Proprietātī//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Speciālis collēctiōnī de Vicidata Proprietātī//+++
 
 |===
 
@@ -922,14 +940,14 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Vicidata Proprietātī+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[16] P+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Vicidata Proprietātī</span>+++
+| #item+rem+i_lat+is_latn
+| +++Vicidata Proprietātī+++
 
 |===
 
@@ -963,14 +981,14 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Vicidata rēs identitāte+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[17] Q+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Vicidata rēs identitāte</span>+++
+| #item+rem+i_lat+is_latn
+| +++Vicidata rēs identitāte+++
 
 |===
 
@@ -1001,7 +1019,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Communitary translations via Wikidata/+++
 
 |===
@@ -1077,17 +1095,17 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++HXL Normae+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[2013-12-01] HXL Standard+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium+ix_iri
 | +++https://www.elrha.org/wp-content/uploads/2017/05/hif-alnap-unocha-exchange-language-case-study-2016-1.pdf+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">HXL Normae</span>+++
+| #item+rem+i_lat+is_latn
+| +++HXL Normae+++
 
 |===
 
@@ -1118,7 +1136,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/HXL replacement maps to other namespaces/@eng-Latn+++
 
 |===
@@ -1150,7 +1168,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/HXL replacement maps to UN m49 from other namespaces/@eng-Latn+++
 
 |===
@@ -1185,26 +1203,26 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Medicina+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[1025] قانون در طب+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium+ix_iri
 | +++https://archive.org/details/AlQaawnoonFiTTwibb/Al-Qaawnoon%20fi-t-Twibb/mode/2up+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Mīlitāris scientiae</span>+++
+| #item+rem+i_lat+is_latn
+| +++Mīlitāris scientiae+++
 
 | #item+rem+i_arb+is_arab
 | +++علوم عسكرية+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">Военная наука</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++Военная наука+++
 
-| Lingua Bengali (?)
-| +++<span lang="bn">সামরিক বিজ্ঞান</span>+++
+| #item+rem+i_ben+is_beng
+| +++সামরিক বিজ্ঞান+++
 
 |===
 
@@ -1235,11 +1253,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//dictiōnāria de partes corporis humani//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">/dictiōnāria de partes corporis humani/</span>+++
+| #item+rem+i_lat+is_latn
+| +++/dictiōnāria de partes corporis humani/+++
 
 |===
 
@@ -1273,26 +1291,26 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Mīlitāris scientiae+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[142] (142 -100) 魏伯陽 +++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium+ix_iri
 | +++https://archive.org/search.php?query=title%3A%28%E6%AD%A6%E7%B6%93%E7%B8%BD%E8%A6%81%29+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Forēnsis scientiae</span>+++
+| #item+rem+i_lat+is_latn
+| +++Forēnsis scientiae+++
 
 | #item+rem+i_arb+is_arab
 | +++علم الأدلة الجنائية+++
 
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">Криминалистическая экспертиза</span>+++
+| #item+rem+i_rus+is_cyrl
+| +++Криминалистическая экспертиза+++
 
-| Lingua Bengali (?)
-| +++<span lang="bn">ফরেনসিক বিজ্ঞান</span>+++
+| #item+rem+i_ben+is_beng
+| +++ফরেনসিক বিজ্ঞান+++
 
 |===
 
@@ -1326,14 +1344,14 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Forēnsis scientiae+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[42] Antistius ex Caesar post mortī, circa 42-03-15 BC+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Normās interimperia</span>+++
+| #item+rem+i_lat+is_latn
+| +++Normās interimperia+++
 
 |===
 
@@ -1367,7 +1385,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//dictiōnāria de post mortis condici//+++
 
 |===
@@ -1399,10 +1417,10 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//dictiōnāria de vulnera ab arma ignifera//+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[142] 魏伯陽 +++
 
 |===
@@ -1434,14 +1452,14 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Normās interimperia+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[1945-10-24] Fundatio de Nationes Unitae+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">(Interimperia) Locus cōdicī</span>+++
+| #item+rem+i_lat+is_latn
+| +++(Interimperia) Locus cōdicī+++
 
 |===
 
@@ -1472,7 +1490,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//dictiōnāria de hūmānitātēs interimperia//+++
 
 |===
@@ -1507,13 +1525,13 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++(Interimperia) Locus cōdicī+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[16] P+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium+ix_iri
 | +++https://en.wikipedia.org/wiki/Common_Operational_Datasets#P-codes+++
 
 |===
@@ -1573,11 +1591,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//imperium territōrium//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//imperium territōrium//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//imperium territōrium//+++
 
 |===
 
@@ -1611,11 +1629,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Infraimperium territōria ōrdō 1//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Infraimperium territōria ōrdō 1//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Infraimperium territōria ōrdō 1//+++
 
 |===
 
@@ -1649,11 +1667,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Infraimperium territōria ōrdō 2//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Infraimperium territōria ōrdō 2//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Infraimperium territōria ōrdō 2//+++
 
 |===
 
@@ -1687,11 +1705,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Infraimperium territōria ōrdō 3//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Infraimperium territōria ōrdō 3//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Infraimperium territōria ōrdō 3//+++
 
 |===
 
@@ -1725,11 +1743,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Infraimperium territōria ōrdō 4//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Infraimperium territōria ōrdō 4//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Infraimperium territōria ōrdō 4//+++
 
 |===
 
@@ -1763,11 +1781,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Infraimperium territōria ōrdō 5//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Infraimperium territōria ōrdō 5//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Infraimperium territōria ōrdō 5//+++
 
 |===
 
@@ -1801,11 +1819,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Infraimperium territōria ōrdō 6//+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Infraimperium territōria ōrdō 6//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Infraimperium territōria ōrdō 6//+++
 
 |===
 
@@ -1839,14 +1857,14 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++(Interimperia) Locus cōdicī; exāctō (A1...A6)+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[21] (0 + 1 + 2 + 3 + 4 + 5 + 6)+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">(Interimperia) Locus cōdicī; exāctō (A1...A6)</span>+++
+| #item+rem+i_lat+is_latn
+| +++(Interimperia) Locus cōdicī; exāctō (A1...A6)+++
 
 |===
 
@@ -1877,7 +1895,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[private use] Entire world public P-Codes Adm 0 (>110)+++
 
 |===
@@ -1909,7 +1927,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[private use] Entire world public P-Codes A.1 (>2500)+++
 
 |===
@@ -1941,7 +1959,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[private use] Entire world public P-Codes A.2 (>33700)+++
 
 |===
@@ -1973,7 +1991,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[private use] Entire world public P-Codes A.3 (>130500)+++
 
 |===
@@ -2005,7 +2023,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[private use] Entire world public P-Codes A.4 (>265000)+++
 
 |===
@@ -2037,7 +2055,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[private use] Entire world public P-Codes A.5+++
 
 |===
@@ -2069,7 +2087,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[private use] Entire world public P-Codes A.6+++
 
 |===
@@ -2101,7 +2119,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[meta] UN OCHA P-Code *WITHOUT* ISO 3166-1 prefix+++
 
 |===
@@ -2133,10 +2151,10 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++[private use] Entire world public P-Codes A.0 + A1, +A.2 + A.3 + A.4 + A5 + A.6 (> 430000)+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[921] (0 + 1 + 2 + 3 + 4 + 5 + 6 + 900)+++
 
 |===
@@ -2168,17 +2186,17 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Imperia et regiōnēs territōria cōdicēs//+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[49] UN M49+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium+ix_iri
 | +++https://unstats.un.org/unsd/publication/SeriesM/Series_M49_(1970)_en-fr.pdf+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">//Imperia et regiōnēs territōria cōdicēs//</span>+++
+| #item+rem+i_lat+is_latn
+| +++//Imperia et regiōnēs territōria cōdicēs//+++
 
 |===
 
@@ -2212,14 +2230,14 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Normās interindustriās+++
 
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy+ix_trivium
 | +++[1947-02-23] ISO+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Normās interindustriās</span>+++
+| #item+rem+i_lat+is_latn
+| +++Normās interindustriās+++
 
 | #item+rem+i_arb+is_arab
 | +++/معايير دولية/+++
@@ -2253,11 +2271,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Dentālis scientiae+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Dentālis scientiae</span>+++
+| #item+rem+i_lat+is_latn
+| +++Dentālis scientiae+++
 
 | #item+rem+i_arb+is_arab
 | +++طب الأسنان+++
@@ -2294,11 +2312,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Dictiōnāria dentālium/+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">/Dictiōnāria dentālium/</span>+++
+| #item+rem+i_lat+is_latn
+| +++/Dictiōnāria dentālium/+++
 
 |===
 
@@ -2329,7 +2347,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Temporary public numeric namespace/+++
 
 |===
@@ -2361,7 +2379,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++//Personal name nomenclature//+++
 
 |===
@@ -2393,11 +2411,11 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++Data temporāriīs+++
 
-| Lingua Latina (Abecedarium Latinum)
-| +++<span lang="la">Data temporāriīs</span>+++
+| #item+rem+i_lat+is_latn
+| +++Data temporāriīs+++
 
 |===
 
@@ -2428,7 +2446,7 @@ NOTE: #@TODO this is a draft. Soon will be imple#
 |===
 | Lingua de verba
 | Verba de conceptiō
-| Linguae multiplīs (Scrīptum incognitō)
+| #item+rem+i_mul+is_zyyy
 | +++/Non data files (used for software which generate data)/+++
 
 |===
