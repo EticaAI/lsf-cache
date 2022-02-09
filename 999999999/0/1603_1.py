@@ -866,8 +866,13 @@ Naturally, each book version gives extensive explanations for collaborators on h
             if item_textum and len(item_textum) > 0:
                 clavem_i18n = clavem
                 self.usus_linguae.add(clavem)
+
+                clavem_norm = clavem.replace('#item+rem', '')
+                clavem_norm = clavem_norm.replace('+ix_signum', '')
+
                 item_text_i18n = item_textum
-                dlinguam = self.dictionaria_linguarum.quod(clavem)
+                dlinguam = self.dictionaria_linguarum.quod(clavem_norm)
+                # raise ValueError([clavem_norm, dlinguam])
                 # if dlinguam and dlinguam['#item+rem+i_lat+is_latn']:
                 #     clavem_i18n = '<span lang="la">' + \
                 #         dlinguam['#item+rem+i_lat+is_latn'] + '</span>'
@@ -971,8 +976,10 @@ Naturally, each book version gives extensive explanations for collaborators on h
                     ))
 
                 # resultatum_corpus.append("| +++{0}+++".format(clavem_i18n))
-                resultatum_corpus.append("| {0}".format(clavem_i18n))
-                resultatum_corpus.append("| {0}".format(item_text_i18n))
+                resultatum_corpus.append("|")
+                resultatum_corpus.append("{0}".format(clavem_i18n))
+                resultatum_corpus.append("|")
+                resultatum_corpus.append("{0}".format(item_text_i18n))
                 resultatum_corpus.append("")
                 resultatum_corpus_totale += 1
 
@@ -988,7 +995,7 @@ Naturally, each book version gives extensive explanations for collaborators on h
             # resultatum.append('[cols="1,1"]')
             # resultatum.append('[%autowidth]')
             # resultatum.append('[cols="25h,~"]')
-            resultatum.append('[%header,cols="25h,~"]')
+            resultatum.append('[%header,cols="25h,~a"]')
             resultatum.append('|===')
             # resultatum.append(
             #     "| +++<span lang='la'>Non lingua</span>+++ | "
@@ -997,9 +1004,11 @@ Naturally, each book version gives extensive explanations for collaborators on h
             # resultatum.append("| +++<span lang='la'>Non lingua</span>+++")
             # resultatum.append("| +++<span lang='la'>//Rēs interlinguālibus//</span>+++")
             # resultatum.append("| Non lingua")
-            resultatum.append("| Rēs interlinguālibus")
+            resultatum.append("|")
+            resultatum.append("Rēs interlinguālibus")
             # resultatum.append("| //Rēs interlinguālibus//")
-            resultatum.append("| Factum")
+            resultatum.append("|")
+            resultatum.append("Factum")
             resultatum.append("")
 
             resultatum.extend(resultatum_corpus)
@@ -1116,8 +1125,9 @@ Naturally, each book version gives extensive explanations for collaborators on h
             # paginae.append(str(scope_and_content))
             if scope_and_content and \
                     qhxl(scope_and_content, meta_langs) is not None:
+                term = qhxl(scope_and_content, meta_langs)
                 meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
-                    qhxl(scope_and_content, meta_langs)
+                    term.replace("\\n", "\n")
 
             # paginae.append("")
             # paginae.append(str(meta))
@@ -1861,6 +1871,8 @@ class DictionariaLinguarum:
 
         self.dictionaria_codex = self._init_dictionaria()
 
+        # print('oioioi', self.dictionaria_codex )
+
     def _init_dictionaria(self):
 
         datum = {}
@@ -1872,8 +1884,9 @@ class DictionariaLinguarum:
                 int_clavem = int(conceptum['#item+conceptum+codicem'])
                 datum[int_clavem] = {}
                 for clavem, rem in conceptum.items():
-                    if not clavem.startswith('#item+conceptum+codicem'):
-                        datum[int_clavem][clavem] = rem
+                    datum[int_clavem][clavem] = rem
+                    # if not clavem.startswith('#item+conceptum+codicem'):
+                    #     datum[int_clavem][clavem] = rem
         return datum
 
     def imprimere(self, linguam: list = None) -> list:
@@ -1984,18 +1997,26 @@ class DictionariaLinguarum:
              clavem: str = None):
         clavem_defallo = [
             '#item+rem+i_qcc+is_zxxx+ix_hxla',
+            # '#item+rem+i_qcc+is_zxxx+ix_hxla',
             '#item+rem+i_qcc+is_zxxx+ix_csvsffxm'
         ]
         _clavem = clavem_defallo if clavem is None else [clavem]
         # _clavem = clavem_defallo
 
+        # print(self.dictionaria_codex.items())
+        # raise ValueError('b')
+
         for item in _clavem:
             # print('item', item)
             for _k, linguam in self.dictionaria_codex.items():
-                # print('linguam', linguam)
+                if linguam['#item+conceptum+codicem'].startswith('0_'):
+                    continue
+                # print('linguam', terminum, item, linguam[item], linguam)
+                # print('')
                 if terminum.find(linguam[item]) > -1:
                     # return linguam[factum]
                     return linguam
+                    # raise ValueError([terminum, linguam])
 
         return None
 

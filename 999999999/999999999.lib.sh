@@ -462,6 +462,11 @@ neo_codex_de_numerordinatio_pdf() {
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.pdf"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.pdf"
+  ascidoctor_theme="${ROOTDIR}/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml"
+  ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto"
+
+  ASCIIDOCTOR_PDF_DIR=$(bundle exec gem contents asciidoctor-pdf --show-install-dir)
+  ascidoctor_font_dir_original="$ASCIIDOCTOR_PDF_DIR/data/fonts"
 
   # echo "$fontem_archivum"
 
@@ -480,7 +485,10 @@ neo_codex_de_numerordinatio_pdf() {
   echo "${FUNCNAME[0]} [$objectivum_archivum]"
   # return 0
 
-  bundle exec asciidoctor-pdf "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
+  bundle exec asciidoctor-pdf \
+    --attribute pdf-theme="$ascidoctor_theme" \
+    --attribute pdf-fontsdir="$ascidoctor_font_dir_neo,$ascidoctor_font_dir_original" \
+    "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
 
   if [ -f "$objectivum_archivum" ]; then
     rm "$objectivum_archivum"

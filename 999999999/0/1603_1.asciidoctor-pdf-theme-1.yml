@@ -1,0 +1,34 @@
+# SVG about families https://upload.wikimedia.org/wikipedia/commons/4/4f/IndoEuropeanTree.svg
+
+extends: default
+base:
+  align: left
+font:
+  catalog:
+    merge: true
+    # M+ 1p supports Latin, Latin-1 Supplement, Latin Extended, Greek, Cyrillic, Vietnamese, Japanese & an assortment of symbols
+    # It also provides arrows for ->, <-, => and <= replacements in case these glyphs are missing from font
+    M+ 1p Fallback: mplus1p-regular-fallback.ttf
+    Noto Emoji: notoemoji-subset.ttf
+    # Roboto:
+    #   normal: roboto-normal.ttf
+    #   italic: roboto-italic.ttf
+    #   bold: roboto-bold.ttf
+    #   bold_italic: roboto-bold_italic.ttf
+    NotoSansArabic:
+      bold: NotoSansArabic-Bold.ttf
+      normal: NotoSansArabic-Regular.ttf
+    # https://en.wikipedia.org/wiki/Sanskrit#Scripts
+    NotoSansBengali:
+      bold: NotoSansBengali-Bold.ttf
+      normal: NotoSansBengali-Regular.ttf
+    NotoSansBrahmi:
+      normal: NotoSansBrahmi-Regular.ttf
+    NotoSansDevanagari:
+      bold: NotoSansDevanagari-Bold.ttf
+      normal: NotoSansDevanagari-Regular.ttf
+    NotoSansMalayalam:
+      bold: NotoSansMalayalam-Bold.ttf
+      normal: NotoSansMalayalam-Regular.ttf
+  fallbacks: [NotoSansArabic, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansMalayalam, M+ 1p Fallback, Noto Emoji]
+  # fallbacks: [NotoSansArabic, NotoSansDevanagari, NotoSansMalayalam, M+ 1p Fallback, Noto Emoji]
