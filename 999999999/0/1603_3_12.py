@@ -180,6 +180,11 @@ class CS1603z3z12:
                 # print('conceptum', conceptum)
                 int_clavem = int(conceptum['#item+conceptum+codicem'])
                 datum[int_clavem] = {}
+                if conceptum['#item+conceptum+codicem'].startswith('0_'):
+                    continue
+                if not conceptum['#item+rem+i_qcc+is_zxxx+ix_wikilngm']:
+                    continue
+
                 for clavem, rem in conceptum.items():
                     if not clavem.startswith('#item+conceptum+codicem'):
                         datum[int_clavem][clavem] = rem
@@ -192,6 +197,9 @@ class CS1603z3z12:
         for clavem, rem in self.D1613_1_51.items():
             # for clavem, rem in enumerate(self.D1613_1_51):
             # print('clavem rem', clavem, rem)
+            if '#item+rem+i_qcc+is_zxxx+ix_wikilngm' not in rem or \
+                    '#item+rem+i_qcc+is_zxxx+ix_csvsffxm' not in rem:
+                continue
             resultatum.append([
                 rem['#item+rem+i_qcc+is_zxxx+ix_wikilngm'],
                 'item__rem' + rem['#item+rem+i_qcc+is_zxxx+ix_csvsffxm'],
@@ -241,7 +249,8 @@ class CS1603z3z12:
         # select = '?item ' + " ".join(self._query_linguam())
 
         # select = ['(?item AS ?item__conceptum__codicem)']
-        select = ['(STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem)']
+        select = [
+            '(STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem)']
         # select = [
         #     '(STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem)',
         #     '(STRAFTER(STR(?item), "entity/") AS ?item__rem__i_qcc__is_zxxx__ix_wikiq)'

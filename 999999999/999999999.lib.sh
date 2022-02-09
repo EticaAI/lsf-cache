@@ -553,11 +553,11 @@ file_translate_csv_de_numerordinatio_q() {
   objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
   objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
 
-  if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+  # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
 
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+  # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 
   echo "[ DOWNLOAD Wikidata ] ${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
 
