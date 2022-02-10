@@ -557,7 +557,7 @@ file_translate_csv_de_numerordinatio_q() {
 
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+  if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 
   echo "[ DOWNLOAD Wikidata ] ${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
 
