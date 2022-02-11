@@ -12,6 +12,8 @@
 :version-label: Versiō
 :appendix-caption: Appendix
 :source-highlighter: rouge
+:warning-caption: Hic sunt dracones
+:tip-caption: Commendātum
 
 
 
@@ -52,6 +54,7 @@ toc::[]
 Lingua de verba
 |
 Verba de conceptiō
+
 |
 Lingua Anglica (Abecedarium Latinum)
 |
@@ -87,7 +90,7 @@ Factum
 |
 numerus editionis
 |
-2022-02-11T10:29:10
+2022-02-11T15:40:38
 
 |===
 
@@ -101,6 +104,7 @@ numerus editionis
 Lingua de verba
 |
 Verba de conceptiō
+
 |
 Lingua Anglica (Abecedarium Latinum)
 |
@@ -112,10 +116,23 @@ This section explains the methodology of this book and it's machine readable for
 NOTE: #`0_1603_1_7_2616_7535` ?#
 
 === Rēs dē factō in dictiōnāriīs
-==== Rēs interlinguālibus: 2
+==== Rēs interlinguālibus: 3
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+
+|===
 
 
-===== 1603:1:7:1:92 
+**1603:1:7:1:92**
 
 [source,json]
 ----
@@ -132,7 +149,7 @@ NOTE: #`0_1603_1_7_2616_7535` ?#
 }
 ----
 
-===== 1603:1:7:2616:393 
+**1603:1:7:2616:393**
 
 [source,json]
 ----
@@ -149,27 +166,123 @@ NOTE: #`0_1603_1_7_2616_7535` ?#
 }
 ----
 
+**1603:1:7:2616:854**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_854",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
+    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
+    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
 <<<
 
 == Archīa
 
-=== Archīa prō dictiōnāriīs: 2
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+Every book comes with several files both for book format (with additional information) and machine-readable formats with documentation of how to process them. If you receive this file and cannot find the alternatives, ask the human who provide this file.
+
+|===
+
+=== Archīa prō dictiōnāriīs: 1
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: Is recommended to use the files on this section to  generate derived works.
+
+|===
+
+
 ==== 1603_3_12_6.no1.tm.hxl.csv
 
-* link:1603_3_12_6.no1.tm.hxl.csv[1603_3_12_6.no1.tm.hxl.csv]
+NOTE: link:1603_3_12_6.no1.tm.hxl.csv[1603_3_12_6.no1.tm.hxl.csv]
 
-==== 1603_3_12_6.no11.tm.hxl.csv
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
 
-* link:1603_3_12_6.no11.tm.hxl.csv[1603_3_12_6.no11.tm.hxl.csv]
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container/
+
+|===
+
 
 === Archīa prō cōdice: 2
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+WARNING: Unless you are working with a natural language you understand it's letters and symbols, it is strongly advised to use automation to generate derived works. Keep manual human steps at minimum: if something goes wrong at least one or more languages can be used to verify mistakes. It's not at all necessary _know all languages_, but working with writing systems you don't understand is risky: copy and paste strategy can cause _additional_ human errors and is unlikely to get human review as fast as you would need.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: The Asciidoctor (.adoc) is better at copy and pasting! It can be converted to other text formats.
+
+|===
+
+
 ==== 1603_3_12_6.mul-Latn.codex.adoc
 
-* link:1603_3_12_6.mul-Latn.codex.adoc[1603_3_12_6.mul-Latn.codex.adoc]
+NOTE: link:1603_3_12_6.mul-Latn.codex.adoc[1603_3_12_6.mul-Latn.codex.adoc]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://asciidoctor.org/docs/
+
+|===
+
 
 ==== 1603_3_12_6.mul-Latn.codex.pdf
 
-* link:1603_3_12_6.mul-Latn.codex.pdf[1603_3_12_6.mul-Latn.codex.pdf]
+NOTE: link:1603_3_12_6.mul-Latn.codex.pdf[1603_3_12_6.mul-Latn.codex.pdf]
 
 
 <<<
@@ -1528,21 +1641,3 @@ ix_hxlvoc
 
 
 
-
-<<<
-
-[appendix]
-= //Open issues on exported PDF format//@eng-Latn
-
-
-=== //Documentation about how to use the machine-readable dictionaries//@eng-Latn
-
-Is necessary to give a quick introduction (or at least mention) the files generated with this implementer documentation.
-
-=== //Missing fonts to render all term variants//@eng-Latn
-The generated PDF does not include all necessary fonts.
-Here potential strategy to fix it https://github.com/asciidoctor/asciidoctor-pdf/blob/main/docs/theming-guide.adoc#custom-fonts
-
-=== //Reliability statuses//@eng-Latn
-
-Currently, the reliability of numeric statuses are not well explained on PDF version.

@@ -330,6 +330,7 @@ def descriptio_tabulae_de_lingua(
     paginae.append("Lingua de verba")
     paginae.append("|")
     paginae.append("Verba de conceptiō")
+    paginae.append('')
 
     for item_lingua in lingua_textum:
         item_textum = rem_textum.pop(0)
@@ -534,54 +535,178 @@ class Codex:
             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
         numerum_archiva = \
             numerordinatio_neo_separatum(numerum_textum, '_')
-        total_codex = 2
-        total_dictionaria = 2
+        total_codex = 0
+        codex_part = []
+        total_dictionaria = 0
+        dictionaria_part = []
 
         resultatum.append('== Archīa')
         resultatum.append('')
+
+        resultatum.append('')
+        resultatum.extend(descriptio_tabulae_de_lingua(
+            ['Lingua Anglica (Abecedarium Latinum)'] * 1,
+            [
+                'Every book comes with several files both for book format '
+                '(with additional information) and machine-readable formats '
+                'with documentation of how to process them. If you receive '
+                'this file and cannot find the alternatives, ask the human '
+                'who provide this file.'
+            ]))
+        resultatum.append('')
+
+        if self.annexis.est_annexum(numerum_archiva + '.no1.tm.hxl.csv'):
+            dictionaria_part.append('')
+            dictionaria_part.append('==== {0}.no1.tm.hxl.csv'.format(
+                numerum_archiva
+            ))
+            dictionaria_part.append('')
+            dictionaria_part.append(
+                'NOTE: link:{0}.no1.tm.hxl.csv[{0}.no1.tm.hxl.csv]'.format(
+                    numerum_archiva
+                ))
+            # dictionaria_part.append('')
+            # meta_item = {
+            #     '#item+rem+i_qcc+is_zxxx+ix_wikip854':
+            #     'https://numerordinatio.etica.ai/'
+            # }
+            # dictionaria_part.extend(
+            #     self.conceptum_ad_tabula_codicibus(meta_item))
+            # dictionaria_part.append('')
+            dictionaria_part.append('')
+            dictionaria_part.extend(descriptio_tabulae_de_lingua(
+                ['Lingua Anglica (Abecedarium Latinum)'] * 1,
+                ["/Numerordinatio on HXLTM container/"]))
+
+            dictionaria_part.append('')
+            total_dictionaria += 1
+
+        if self.annexis.est_annexum(numerum_archiva + '.no11.tm.hxl.csv'):
+            dictionaria_part.append('')
+            dictionaria_part.append('==== {0}.no11.tm.hxl.csv'.format(
+                numerum_archiva
+            ))
+            dictionaria_part.append('')
+            dictionaria_part.append(
+                'NOTE: link:{0}.no11.tm.hxl.csv[{0}.no11.tm.hxl.csv]'.format(
+                    numerum_archiva
+                ))
+
+            dictionaria_part.append('')
+            dictionaria_part.extend(descriptio_tabulae_de_lingua(
+                ['Lingua Anglica (Abecedarium Latinum)'] * 1,
+                ["/Numerordinatio on HXLTM container (expanded with terminology translations)/"]))
+            dictionaria_part.append('')
+
+            total_dictionaria += 1
+
+        if self.annexis.est_annexum(numerum_archiva + '.wikiq.tm.hxl.csv'):
+            dictionaria_part.append('')
+            dictionaria_part.append('==== {0}.wikiq.tm.hxl.csv'.format(
+                numerum_archiva
+            ))
+            dictionaria_part.append('')
+            dictionaria_part.append(
+                'NOTE: link:{0}.wikiq.tm.hxl.csv[{0}.wikiq.tm.hxl.csv]'.format(
+                    numerum_archiva
+                ))
+            dictionaria_part.append('')
+            meta_item = {
+                '#item+rem+i_qcc+is_zxxx+ix_wikip854':
+                'https://hxltm.etica.ai/'
+            }
+            dictionaria_part.extend(
+                self.conceptum_ad_tabula_codicibus(meta_item))
+            dictionaria_part.append('')
+            dictionaria_part.extend(descriptio_tabulae_de_lingua(
+                ['Lingua Anglica (Abecedarium Latinum)'] * 1,
+                [
+                    "HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq "
+                    "means #item+conceptum+codicem are strictly "
+                    "Wikidata QIDs."]
+            ))
+            dictionaria_part.append('')
+
+            total_dictionaria += 1
+
+        if self.annexis.est_annexum(numerum_archiva + '.mul-Latn.codex.adoc'):
+            codex_part.append('')
+            codex_part.append('==== {0}.mul-Latn.codex.adoc'.format(
+                numerum_archiva
+            ))
+            codex_part.append('')
+            codex_part.append(
+                'NOTE: link:{0}.mul-Latn.codex.adoc[{0}.mul-Latn.codex.adoc]'.format(
+                    numerum_archiva
+                ))
+            codex_part.append('')
+            meta_item = {
+                '#item+rem+i_qcc+is_zxxx+ix_wikip854':
+                'https://asciidoctor.org/docs/'
+            }
+            codex_part.extend(
+                self.conceptum_ad_tabula_codicibus(meta_item))
+            codex_part.append('')
+
+            total_codex += 1
+
+        if self.annexis.est_annexum(numerum_archiva + '.mul-Latn.codex.pdf'):
+            codex_part.append('')
+            codex_part.append('==== {0}.mul-Latn.codex.pdf'.format(
+                numerum_archiva
+            ))
+            codex_part.append('')
+            codex_part.append(
+                'NOTE: link:{0}.mul-Latn.codex.pdf[{0}.mul-Latn.codex.pdf]'.format(
+                    numerum_archiva
+                ))
+            total_codex += 1
+
+        # Compile final result
         resultatum.append('=== Archīa prō dictiōnāriīs: {0}'.format(
             total_dictionaria
         ))
-        resultatum.append('==== {0}.no1.tm.hxl.csv'.format(
-            numerum_archiva
-        ))
         resultatum.append('')
-        resultatum.append(
-            '* link:{0}.no1.tm.hxl.csv[{0}.no1.tm.hxl.csv]'.format(
-                numerum_archiva
-            ))
+        resultatum.extend(descriptio_tabulae_de_lingua(
+            ['Lingua Anglica (Abecedarium Latinum)'] * 1,
+            [
+                'TIP: Is recommended to use the files on this section to '
+                ' generate derived works.',
+            ]))
         resultatum.append('')
-        resultatum.append('==== {0}.no11.tm.hxl.csv'.format(
-            numerum_archiva
-        ))
-        resultatum.append('')
-        resultatum.append(
-            '* link:{0}.no11.tm.hxl.csv[{0}.no11.tm.hxl.csv]'.format(
-                numerum_archiva
-            ))
+
+
+        resultatum.extend(dictionaria_part)
         resultatum.append('')
 
         resultatum.append('=== Archīa prō cōdice: {0}'.format(
             total_codex
         ))
-        resultatum.append('==== {0}.mul-Latn.codex.adoc'.format(
-            numerum_archiva
-        ))
+
         resultatum.append('')
-        resultatum.append(
-            '* link:{0}.mul-Latn.codex.adoc[{0}.mul-Latn.codex.adoc]'.format(
-                numerum_archiva
-            ))
+        resultatum.extend(descriptio_tabulae_de_lingua(
+            ['Lingua Anglica (Abecedarium Latinum)'] * 2,
+            [
+                'WARNING: Unless you are working with a natural language you '
+                'understand it\'s letters and symbols, it is strongly '
+                'advised to use automation to generate derived works. '
+                'Keep manual human steps at minimum: '
+                'if something goes wrong at least one or more languages can '
+                'be used to verify mistakes. '
+                'It\'s not at all necessary _know all languages_, '
+                'but working with writing systems you don\'t understand is '
+                'risky: '
+                'copy and paste strategy can cause '
+                '_additional_ human errors and is unlikely to get human '
+                'review as fast as you would need. ',
+                'TIP: The Asciidoctor (.adoc) is better at copy and pasting! '
+                'It can be converted to other text formats.',
+            ]))
         resultatum.append('')
-        resultatum.append('==== {0}.mul-Latn.codex.pdf'.format(
-            numerum_archiva
-        ))
+
+        resultatum.extend(codex_part)
         resultatum.append('')
-        resultatum.append(
-            '* link:{0}.mul-Latn.codex.pdf[{0}.mul-Latn.codex.pdf]'.format(
-                numerum_archiva
-            ))
-        resultatum.append('')
+
         return resultatum
 
     def codex_capiti(self) -> list:
@@ -634,6 +759,14 @@ class Codex:
         # https://en.wiktionary.org/wiki/appendix#Latin
         resultatum.append(":appendix-caption: Appendix")
         resultatum.append(":source-highlighter: rouge")
+        # resultatum.append(":tip-caption: 💡")
+        # resultatum.append(":note-caption: ℹ️")
+        # resultatum.append(":warning-caption: ⚠️")
+        resultatum.append(":warning-caption: Hic sunt dracones")
+
+        # commendandum, verb, verbal-nouns>supine>accusative
+        # https://en.wiktionary.org/wiki/commendo#Latin
+        resultatum.append(":tip-caption: Commendātum")
 
         resultatum.append("\n")
         resultatum.append("\n")
@@ -1122,7 +1255,7 @@ Naturally, each book version gives extensive explanations for collaborators on h
         codex_praefatio = self.codex_praefatio()
         # codex_indici = self.codex_indici()
         codex_corpori = self.codex_corpori()
-        codex_appendici = self.codex_appendici()
+        # codex_appendici = self.codex_appendici()
         # methodi_ex_codice = self.methodi_ex_codice()
 
         codex_archio = self.codex_archio()
@@ -1139,8 +1272,8 @@ Naturally, each book version gives extensive explanations for collaborators on h
         paginae.extend(codex_archio)
         paginae.extend(['', '<<<', ''])
         paginae.extend(codex_corpori)
-        paginae.extend(['', '<<<', ''])
-        paginae.extend(codex_appendici)
+        # paginae.extend(['', '<<<', ''])
+        # paginae.extend(codex_appendici)
 
         # paginae.extend(self.codex_indici())
         # paginae.extend(self.codex_praefatio())
@@ -1450,6 +1583,12 @@ class CodexAnnexis:
 
         return [radix, sarcinae]
 
+    def est_annexum(self, trivium: str) -> bool:
+        radix = numerordinatio_neo_separatum(self.de_codex, '/')
+        trivium_vero = radix + '/' + trivium
+        return os.path.exists(trivium_vero)
+        # return True
+
     def quod_archivum(self) -> List[Type['CodexAnnexo']]:
         """quod_archivum
 
@@ -1746,11 +1885,22 @@ class DictionariaInterlinguarum:
             resultatum.append("==== Rēs interlinguālibus: {0}".format(
                 resultatum_corpus_totale))
 
+
+            resultatum.extend(descriptio_tabulae_de_lingua(
+                'Lingua Anglica (Abecedarium Latinum)',
+                'The result of this section is a preview. '
+                'We\'re aware it is not well formatted for a book format. '
+                'Sorry for the temporary inconvenience.'
+            ))
+
             # import pprint
             resultatum.append("")
             for res in resultatum_corpus_obj:
                 resultatum.append("")
-                resultatum.append('===== {0} '.format(
+                # resultatum.append('===== {0} '.format(
+                #     res['#item+conceptum+numerordinatio'])
+                # )
+                resultatum.append('**{0}**'.format(
                     res['#item+conceptum+numerordinatio'])
                 )
                 resultatum.append("")

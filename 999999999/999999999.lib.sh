@@ -464,6 +464,7 @@ neo_codex_de_numerordinatio_pdf() {
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.pdf"
   ascidoctor_theme="${ROOTDIR}/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml"
   ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto"
+  ascidoctor_font_dir_repo="${ROOTDIR}/999999/1603/1/3/"
 
   ASCIIDOCTOR_PDF_DIR=$(bundle exec gem contents asciidoctor-pdf --show-install-dir)
   ascidoctor_font_dir_original="$ASCIIDOCTOR_PDF_DIR/data/fonts"
@@ -487,7 +488,7 @@ neo_codex_de_numerordinatio_pdf() {
 
   bundle exec asciidoctor-pdf \
     --attribute pdf-theme="$ascidoctor_theme" \
-    --attribute pdf-fontsdir="$ascidoctor_font_dir_neo,$ascidoctor_font_dir_original" \
+    --attribute pdf-fontsdir="$ascidoctor_font_dir_neo,$ascidoctor_font_dir_original,$ascidoctor_font_dir_repo" \
     "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
 
   if [ -f "$objectivum_archivum" ]; then
