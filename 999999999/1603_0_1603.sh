@@ -29,12 +29,16 @@ ROOTDIR="$(pwd)"
 
 # tutorial https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays
 PURGATORIA_CONCEPTUM=()
-PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" "tm.hxl.csv" "mul-Latn.codex.pdf" "mul-Latn.codex.adoc" )
+## Reset all files
+# PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" "tm.hxl.csv" "mul-Latn.codex.pdf" "mul-Latn.codex.adoc" )
+
+## Use cached files (avoid overload Google Sheets), but gives hint to re-generate translations
+PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" )
 
 # PURGATORIA_CONCEPTUM+=( "1603_1_1" )
 # PURGATORIA_CONCEPTUM+=( "1603_1_6" )
 # PURGATORIA_CONCEPTUM+=( "1603_1_7" )
-PURGATORIA_CONCEPTUM+=( "1603_1_51" )
+# PURGATORIA_CONCEPTUM+=( "1603_1_51" )
 # PURGATORIA_CONCEPTUM+=( "1603_1_101" )
 
 # PURGATORIA_CONCEPTUM+=( "1603_3_12_6" )
@@ -47,7 +51,6 @@ PURGATORIA_CONCEPTUM+=( "1603_45_1" )
 
 DE_FACTO="${DE_FACTO:-'0'}"
 # DRYRUM="0"
-
 
 
 #######################################

@@ -552,6 +552,11 @@ file_translate_csv_de_numerordinatio_q() {
   objectivum_archivum_temporarium_b="${ROOTDIR}/999999/0/$_nomen.q.txt"
   objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
   objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_1_3="${ROOTDIR}/999999/0/$_nomen~1.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_2_3="${ROOTDIR}/999999/0/$_nomen~2.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_3_3="${ROOTDIR}/999999/0/$_nomen~3.wikiq.tm.hxl.csv"
+
+  objectivum_archivum_temporarium_b_u_wiki_1m2="${ROOTDIR}/999999/0/$_nomen~1+2.wikiq.tm.hxl.csv"
 
   # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
 
@@ -580,21 +585,59 @@ file_translate_csv_de_numerordinatio_q() {
   # sort --version-sort --field-separator="Q" < "$objectivum_archivum_temporarium_b" > "$objectivum_archivum_temporarium_b_u"
   sort --version-sort --field-separator="Q" <"$objectivum_archivum_temporarium_b" | uniq >"$objectivum_archivum_temporarium_b_u"
 
-  "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --query <"$objectivum_archivum_temporarium_b_u" |
+  "${ROOTDIR}/999999999/0/1603_3_12.py" \
+    --actionem-sparql \
+    --lingua-divisioni=3 \
+    --lingua-paginae=1 \
+    --query <"$objectivum_archivum_temporarium_b_u" |
     ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
-      >"$objectivum_archivum_temporarium_b_u_wiki"
+      >"$objectivum_archivum_temporarium_b_u_wiki_1_3"
+
+  "${ROOTDIR}/999999999/0/1603_3_12.py" \
+    --actionem-sparql \
+    --lingua-divisioni=3 \
+    --lingua-paginae=2 \
+    --query <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+      >"$objectivum_archivum_temporarium_b_u_wiki_2_3"
+
+  "${ROOTDIR}/999999999/0/1603_3_12.py" \
+    --actionem-sparql \
+    --lingua-divisioni=3 \
+    --lingua-paginae=3 \
+    --query <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+      >"$objectivum_archivum_temporarium_b_u_wiki_3_3"
   # "$objectivum_archivum_temporarium_b_u"
+
+  hxlmerge --keys='#item+conceptum+codicem' \
+    --tags='#item+rem' \
+    --merge="$objectivum_archivum_temporarium_b_u_wiki_2_3" \
+    "$objectivum_archivum_temporarium_b_u_wiki_1_3" \
+    >"$objectivum_archivum_temporarium_b_u_wiki_1m2"
+
+  hxlmerge --keys='#item+conceptum+codicem' \
+    --tags='#item+rem' \
+    --merge="$objectivum_archivum_temporarium_b_u_wiki_3_3" \
+    "$objectivum_archivum_temporarium_b_u_wiki_1m2" \
+    >"$objectivum_archivum_temporarium_b_u_wiki"
 
   # TODO: implement check fo see if there is more than one Q columns, then use
   #       as baseline
 
   rm "$objectivum_archivum_temporarium"
   rm "$objectivum_archivum_temporarium_b"
-  # rm "$objectivum_archivum_temporarium_b_u"
+  rm "$objectivum_archivum_temporarium_b_u"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_1_3"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_2_3"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_3_3"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_1m2"
+
+  # cp "$objectivum_archivum_temporarium_b_u_wiki_1_3" "$objectivum_archivum_temporarium_b_u_wiki"
 
   # mv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
 
-  echo "debug objectivum_archivum_temporarium_b_u_wiki $objectivum_archivum_temporarium_b_u_wiki"
+  # echo "debug objectivum_archivum_temporarium_b_u_wiki $objectivum_archivum_temporarium_b_u_wiki"
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium_b_u_wiki" "$objectivum_archivum"
 

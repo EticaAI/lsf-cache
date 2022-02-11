@@ -63,7 +63,7 @@ from typing import (
     # Type,
     Union
 )
-
+import math
 import urllib.parse
 import requests
 
@@ -145,25 +145,18 @@ class CS1603z3z12:
 
     def __init__(self):
         self.D1613_1_51 = self._init_1613_1_51_datum()
-        self.D1613_1_51_langpair = self._query_linguam()
+
+        self.linguae_limitibus = 1000
+        self.linguae_paginarum_limitibus = 1
+        # langpair_full = self._query_linguam()
+        # self.D1613_1_51_langpair = self._query_linguam_limit(langpair_full)
+        self.D1613_1_51_langpair = []
         # self.scientia_de_scriptura = {}
         # self.scientia_de_scriptura = self.D1613_2_60
         # self.cifram_signaturae = 6  # TODO: make it flexible
         # self.codex_verbum_tabulae = []
         # self.verbum_limiti = 2
         self.resultatum_separato = "\t"
-
-        # TODO: make this accept options from command line
-        # self.qid = [
-        #     'Q1065',
-        #     'Q82151',
-        #     'Q125761',
-        #     'Q7809',
-        #     'Q386120',
-        #     'Q61923',
-        #     'Q7164',
-        #     # '...'
-        # ]
 
         self.qid = []
 
@@ -208,8 +201,56 @@ class CS1603z3z12:
         # print('resultatum', resultatum)
         return resultatum
 
+    def _query_linguam_limit(self, langpair_full: list):
+        # resultatum = []
+
+        if self.lingua_divisioni < 2:
+            return langpair_full
+
+        # @see https://stackoverflow.com/questions/312443
+        # /how-do-you-split-a-list-into-evenly-sized-chunks
+        # def chunks(lst, n):
+        #     """Yield successive n-sized chunks from lst."""
+        #     for i in range(0, len(lst), n):
+        #         yield lst[i:i + n]
+        # if langpair_full
+
+        # def chunks(lst, n):
+        #     """Yield successive n-sized chunks from lst."""
+        #     for i in range(0, len(lst), n):
+        #         yield lst[i:i + n]
+        # import math
+
+        divisio_numero = math.ceil(len(langpair_full) / self.lingua_divisioni)
+
+        def chunks(l, n):
+            n = max(1, n)
+            return (l[i:i+n] for i in range(0, len(l), n))
+
+        # limited = list(chunks(langpair_full, self.lingua_divisioni))
+        limited = list(chunks(langpair_full, divisio_numero))
+
+        limited_group = limited[self.lingua_paginae - 1]
+        # limited = chunks(langpair_full, self.linguae_limitibus)
+        # raise ValueError(limited_group)
+        # raise ValueError([limited_group, limited])
+        return limited_group
+
+        # # print('resultatum', resultatum)
+        # return resultatum
+
     def est_resultatum_separato(self, resultatum_separato: str):
         self.resultatum_separato = resultatum_separato
+        return self
+
+    def est_lingua_divisioni(
+            self, lingua_divisioni: Union[str, int]):
+        self.lingua_divisioni = int(lingua_divisioni)
+        return self
+
+    def est_lingua_paginae(
+            self, lingua_paginae: Union[str, int]):
+        self.lingua_paginae = int(lingua_paginae)
         return self
 
     def est_wikidata_q(self, wikidata_codicem: str):
@@ -245,6 +286,9 @@ class CS1603z3z12:
 # }
 
     def query(self):
+        langpair_full = self._query_linguam()
+        self.D1613_1_51_langpair = self._query_linguam_limit(langpair_full)
+
         qid = ['wd:' + x for x in self.qid if isinstance(x, str)]
         # select = '?item ' + " ".join(self._query_linguam())
 
@@ -403,162 +447,36 @@ class CLI_2600:
             nargs='?'
         )
 
-        # neo_codex.add_argument(
-        #     '--actionem-verbum-simplex',
-        #     help='Do not generate the codes. Just calculate the full matrix ' +
-        #     'of possible codes using the rules',
-        #     metavar='',
-        #     dest='verbum_simplex',
-        #     nargs='?'
-        # )
+        # linguae, f, pl, (Nominative) https://en.wiktionary.org/wiki/lingua
+        # pāginārum, f, pl, (Gengitive) https://en.wiktionary.org/wiki/pagina
+        # dīvīsiōnibus, f, pl, (Dative) https://en.wiktionary.org/wiki/divisio
+        # līmitibus, m, pl, (Dative) https://en.wiktionary.org/wiki/limes#Latin
+        # //linguae pāginārum līmitibus//
 
-        # neo_codex.add_argument(
-        #     '--verbum-limiti',
-        #     help='Codeword limit when when creating multiplication tables' +
-        #     'Most western codetables are between 2 and 4. ' +
-        #     'Defaults to 2',
-        #     metavar='verbum_limiti',
-        #     default="2",
-        #     nargs='?'
-        # )
+        # lingua, f, s, (Nominative) https://en.wiktionary.org/wiki/lingua#Latin
+        # pāginae, f, s, (Dative) https://en.wiktionary.org/wiki/lingua#Latin
+        # dīvīsiōnī, f, s, (Dative) https://en.wiktionary.org/wiki/lingua#Latin
+        neo_codex.add_argument(
+            '--lingua-divisioni',
+            help='For the languages on [1603:1:51], how many divisions ' +
+            '(or number of chunks) should be done. 1 means no division.' +
+            'If using more than 1, use --lingua-paginae do paginate the ' +
+            'Options. Default: 1',
+            dest='lingua_divisioni',
+            metavar='',
+            default="1",
+            nargs='?'
+        )
 
-        # neo_codex.add_argument(
-        #     '--codex-verbum-tabulae',
-        #     help='Multiplication table of the code words. ' +
-        #     'First character determine the spliter. ' +
-        #     'Example 1: " 0 1 2 3 4 5 6 7 8 9 a b c d e f ". '
-        #     'Example 2: ",a,e,i,o,u,"',
-        #     nargs='?'
-        # )
-
-        # neo_codex.add_argument(
-        #     '--resultatum-limiti',
-        #     help='Codeword limit when when creating multiplication tables' +
-        #     'Most western codetables are between 2 and 4. ' +
-        #     'Defaults to 2',
-        #     metavar='verbum_limiti',
-        #     default="2",
-        #     nargs='?'
-        # )
-
-        # neo_tabulam_numerae = parser.add_argument_group(
-        #     "neo-tabulam-numerae",
-        #     "Automated generation of numerical tables")
-
-        # neo_tabulam_numerae.add_argument(
-        #     '--actionem-tabulam-numerae',
-        #     help='Define mode to numetical tables',
-        #     metavar='',
-        #     dest='neo_tabulam_numerae',
-        #     const=True,
-        #     nargs='?'
-        # )
-
-        # neo_tabulam_numerae.add_argument(
-        #     '--tabulam-numerae-initiale',
-        #     help='Start number (default: 0)',
-        #     metavar='',
-        #     dest='tabulam_numerae_initiale',
-        #     default="0",
-        #     type=int,
-        #     nargs='?'
-        # )
-        # neo_tabulam_numerae.add_argument(
-        #     '--tabulam-numerae-finale',
-        #     help='Final number  (default: 9)',
-        #     metavar='',
-        #     dest='tabulam_numerae_finale',
-        #     default="9",
-        #     type=int,
-        #     nargs='?'
-        # )
-        # neo_tabulam_numerae.add_argument(
-        #     '--tabulam-numerae-gradus',
-        #     help='Step between numbers  (default: 1)',
-        #     metavar='',
-        #     dest='tabulam_numerae_gradus',
-        #     default="1",
-        #     type=int,
-        #     nargs='?'
-        # )
-
-        # neo_scripturam = parser.add_argument_group(
-        #     "neo-scripturam",
-        #     "(internal use) Operations related to associate new symbols " +
-        #     "to entire new writing systems without users needing to " +
-        #     "pre-translate to existing tables.")
-
-        # neo_scripturam.add_argument(
-        #     '--actionem-neo-scripturam',
-        #     help='(required) Define mode actionem-neo-scripturam',
-        #     metavar='',
-        #     dest='neo_scripturam',
-        #     const=True,
-        #     nargs='?'
-        # )
-
-        # # cifram, https://translate.google.com/?sl=la&tl=en&text=cifram&op=translate
-        # decifram = parser.add_argument_group(
-        #     "decifram",
-        #     "Decipher (e.g. the act of decode numeric codes)")
-
-        # decifram.add_argument(
-        #     '--actionem-decifram',
-        #     help='(required) Define mode decifram',
-        #     metavar='',
-        #     dest='actionem_decifram',
-        #     const=True,
-        #     nargs='?'
-        # )
-        # decifram = parser.add_argument_group(
-        #     "cifram",
-        #     "Cifram (e.g. the act of encode first column of data on B60)")
-
-        # decifram.add_argument(
-        #     '--actionem-cifram',
-        #     help='(required) Define mode decifram',
-        #     metavar='',
-        #     dest='actionem_cifram',
-        #     const=True,
-        #     nargs='?'
-        # )
-
-        # # https://stackoverflow.com/questions/59661738/argument-dependency-in-argparse
-        # # Scriptura cuneiformis
-        # # https://en.wikipedia.org/wiki/Cuneiform#Decipherment
-        # # https://la.wikipedia.org/wiki/Scriptura_cuneiformis
-        # neo_scripturam.add_argument(
-        #     '--neo-scripturam-tabulae-symbola',
-        #     help='(internal use) Inject reference table. ' +
-        #     'This requires entire list of the used base system ' +
-        #     ' (e.g. 60 items for base64 items.' +
-        #     'First character determine the spliter. ' +
-        #     'Example 1: ",0,1,(.....),8,9,"',
-        #     metavar='neo_scripturam_tabulae',
-        #     dest='neo_scripturam_tabulae',
-        #     # default="2",
-        #     nargs='?'
-        # )
-
-        # neo_scripturam.add_argument(
-        #     '--neo-scripturam-tabulae-hxl-nomini',
-        #     help='(internal use) Inject reference table. ' +
-        #     'An HXL Standard tag name.' +
-        #     'Default: #item+rem+i_mul+is_zsym+ix_ndt60+ix_neo',
-        #     dest='neo_scripturam_nomini',
-        #     default="#item+rem+i_mul+is_zsym+ix_ndt60+ix_neo",
-        #     nargs='?'
-        # )
-
-        # neo_scripturam.add_argument(
-        #     '--neo-scripturam-tabulae-hxl-selectum',
-        #     help='(internal use) Inject reference table. ' +
-        #     'When exporting, define some pattern tags must have' +
-        #     'Example: ix_neo',
-        #     dest='neo_scripturam_hxl_selectum',
-        #     default=None,
-        #     nargs='?'
-        # )
+        neo_codex.add_argument(
+            '--lingua-paginae',
+            help='If --lingua-divisioni different from 1, defines which page '
+            'of languages to return. Default 1.',
+            dest='lingua_paginae',
+            metavar='',
+            default="1",
+            nargs='?'
+        )
 
         parser.add_argument(
             '--verbose',
@@ -593,48 +511,9 @@ class CLI_2600:
 
         # cs1603_3_12.est_verbum_limiti(args.verbum_limiti)
         cs1603_3_12.est_resultatum_separato(args.resultatum_separato)
-
-        # if args.codex_verbum_tabulae:
-        #     cs1603_3_12.est_codex_verbum_tabulae(args.codex_verbum_tabulae)
-
-        # if args.neo_scripturam_tabulae:
-        #     cs1603_3_12.est_neo_scripturam_tabulae(
-        #         args.neo_scripturam_tabulae, args.neo_scripturam_nomini)
-
-# printf "abc\tABC\nefg\tEFG\n" | ./999999999/0/2600.py --actionem-cifram
-# cat 999999/1603/47/639/3/1603.47.639.3.tab | head | tail -n 4 | ./999999999/0/2600.py --actionem-cifram
-        # if self.pyargs.actionem_cifram:
-
-        #     if stdin.isatty():
-        #         print("ERROR. Please pipe data in. \nExample:\n"
-        #               "  cat data.tsv | {0} --actionem-cifram\n"
-        #               "  printf \"abc\\nefg\\n\" | {0} --actionem-cifram"
-        #               "".format(__file__))
-        #         return self.EXIT_ERROR
-
-        #     for line in sys.stdin:
-        #         codicem = line.replace('\n', ' ').replace('\r', '')
-        #         neo_lineam = cs1603_3_12.cifram_lineam(codicem)
-        #         sys.stdout.writelines("{0}\n".format(neo_lineam))
-        #     return self.EXIT_OK
-
-        # if self.pyargs.actionem_decifram:
-
-        #     if stdin.isatty():
-        #         print("ERROR. Please pipe data in. \nExample:\n"
-        #               "  cat data.txt | {0} --actionem-decifram\n"
-        #               "  printf \"1234\\n5678\\n\" | {0} --actionem-decifram"
-        #               "".format(__file__))
-        #         return self.EXIT_ERROR
-
-        #     for line in sys.stdin:
-        #         codicem = line.replace('\n', ' ').replace('\r', '')
-        #         fontem = cs1603_3_12.decifram_codicem_numerae(codicem)
-        #         sys.stdout.writelines(
-        #             "{0}{1}{2}\n".format(
-        #                 codicem, args.resultatum_separato, fontem)
-        #         )
-        #     return self.EXIT_OK
+        cs1603_3_12.est_lingua_divisioni(args.lingua_divisioni)
+        cs1603_3_12.est_lingua_paginae(
+            args.lingua_paginae)
 
         if self.pyargs.actionem_sparql:
             # print('oi')
