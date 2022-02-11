@@ -105,7 +105,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-02-11T15:42:12
+2022-02-11T17:02:17
 
 |
 /SPDX license ID/@eng-Latn
@@ -209,7 +209,7 @@ Lingua Anglica (Abecedarium Latinum)
 From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
 
 . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_45_1.no1.tm.hxl.csv`, may reference Wiki QID.
-. Every unique QID of  `1603_45_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works.
+. Every unique QID of  `1603_45_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
 .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
 . The query result, with all QIDs and term labels, is shared as `1603_45_1.wikiq.tm.hxl.csv`
 . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_45_1.wikiq.tm.hxl.csv`
@@ -218,682 +218,1352 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 
 === Rēs dē factō in dictiōnāriīs
+==== Concepta: 90
 
 ==== Rēs linguālibus: 111
 
-[%header,cols="~,~,~,~,~"]
+[%header,cols="15h,25a,~,15"]
 |===
-| Cōdex linguae
-| Glotto cōdicī
-| ISO 639-3
-| Wiki QID cōdicī
-| Nōmen Latīnum
-
-| mul-Zyyy
-| 
-| https://iso639-3.sil.org/code/mul[mul]
-| 
-| Linguae multiplīs (Scrīptum incognitō)
-
-| ara-Arab
-| https://glottolog.org/resource/languoid/id/arab1395[arab1395]
-| https://iso639-3.sil.org/code/ara[ara]
-| https://www.wikidata.org/wiki/Q13955[Q13955]
-| Macrolingua Arabica (/Abecedarium Arabicum/)
-
-| hye-Armn
-| https://glottolog.org/resource/languoid/id/nucl1235[nucl1235]
-| https://iso639-3.sil.org/code/hye[hye]
-| https://www.wikidata.org/wiki/Q8785[Q8785]
-| Lingua Armenia (Alphabetum Armenium)
-
-| ben-Beng
-| https://glottolog.org/resource/languoid/id/beng1280[beng1280]
-| https://iso639-3.sil.org/code/ben[ben]
-| https://www.wikidata.org/wiki/Q9610[Q9610]
-| Lingua Bengali (/Bengali script/)
-
-| rus-Cyrl
-| https://glottolog.org/resource/languoid/id/russ1263[russ1263]
-| https://iso639-3.sil.org/code/rus[rus]
-| https://www.wikidata.org/wiki/Q7737[Q7737]
-| Lingua Russica (Abecedarium Cyrillicum)
-
-| hin-Deva
-| https://glottolog.org/resource/languoid/id/hind1269[hind1269]
-| https://iso639-3.sil.org/code/hin[hin]
-| https://www.wikidata.org/wiki/Q1568[Q1568]
-| Lingua Hindica (Devanāgarī)
-
-| kan-Knda
-| https://glottolog.org/resource/languoid/id/nucl1305[nucl1305]
-| https://iso639-3.sil.org/code/kan[kan]
-| https://www.wikidata.org/wiki/Q33673[Q33673]
-| Lingua Cannadica (/ISO 15924 Knda/)
-
-| kor-Hang
-| https://glottolog.org/resource/languoid/id/kore1280[kore1280]
-| https://iso639-3.sil.org/code/kor[kor]
-| https://www.wikidata.org/wiki/Q9176[Q9176]
-| Lingua Coreana (Abecedarium Coreanum)
-
-| lzh-Hant
-| https://glottolog.org/resource/languoid/id/lite1248[lite1248]
-| https://iso639-3.sil.org/code/lzh[lzh]
-| https://www.wikidata.org/wiki/Q37041[Q37041]
-| Lingua Sinica classica (/ISO 15924 Hant/)
-
-| heb-Hebr
-| https://glottolog.org/resource/languoid/id/hebr1245[hebr1245]
-| https://iso639-3.sil.org/code/heb[heb]
-| https://www.wikidata.org/wiki/Q9288[Q9288]
-| Lingua Hebraica (Alphabetum Hebraicum)
-
-| lat-Latn
-| https://glottolog.org/resource/languoid/id/lati1261[lati1261]
-| https://iso639-3.sil.org/code/lat[lat]
-| https://www.wikidata.org/wiki/Q397[Q397]
-| Lingua Latina (Abecedarium Latinum)
-
-| tam-Taml
-| https://glottolog.org/resource/languoid/id/tami1289[tami1289]
-| https://iso639-3.sil.org/code/tam[tam]
-| https://www.wikidata.org/wiki/Q5885[Q5885]
-| Lingua Tamulica (/ISO 15924 Taml/)
-
-| tel-Telu
-| https://glottolog.org/resource/languoid/id/telu1262[telu1262]
-| https://iso639-3.sil.org/code/tel[tel]
-| https://www.wikidata.org/wiki/Q8097[Q8097]
-| Lingua Telingana (/ISO 15924 Telu/)
-
-| tha-Thai
-| https://glottolog.org/resource/languoid/id/thai1261[thai1261]
-| https://iso639-3.sil.org/code/tha[tha]
-| https://www.wikidata.org/wiki/Q9217[Q9217]
-| Lingua Thai (/ISO 15924 Thai/)
-
-| san-Zzzz
-| https://glottolog.org/resource/languoid/id/sans1269[sans1269]
-| https://iso639-3.sil.org/code/san[san]
-| https://www.wikidata.org/wiki/Q11059[Q11059]
-| Lingua Sanscrita  (?)
-
-| zho-Zzzz
-| https://glottolog.org/resource/languoid/id/sini1245[sini1245]
-| https://iso639-3.sil.org/code/zho[zho]
-| https://www.wikidata.org/wiki/Q7850[Q7850]
-| /Macrolingua Sinicae (?)/
-
-| por-Latn
-| https://glottolog.org/resource/languoid/id/port1283[port1283]
-| https://iso639-3.sil.org/code/por[por]
-| https://www.wikidata.org/wiki/Q5146[Q5146]
-| Lingua Lusitana (Abecedarium Latinum)
-
-| eng-Latn
-| https://glottolog.org/resource/languoid/id/stan1293[stan1293]
-| https://iso639-3.sil.org/code/eng[eng]
-| https://www.wikidata.org/wiki/Q1860[Q1860]
-| Lingua Anglica (Abecedarium Latinum)
-
-| fra-Latn
-| https://glottolog.org/resource/languoid/id/stan1290[stan1290]
-| https://iso639-3.sil.org/code/fra[fra]
-| https://www.wikidata.org/wiki/Q150[Q150]
-| Lingua Francogallica (Abecedarium Latinum)
-
-| nld-Latn
-| https://glottolog.org/resource/languoid/id/mode1257[mode1257]
-| https://iso639-3.sil.org/code/nld[nld]
-| https://www.wikidata.org/wiki/Q7411[Q7411]
-| Lingua Batavica (Abecedarium Latinum)
-
-| deu-Latn
-| https://glottolog.org/resource/languoid/id/stan1295[stan1295]
-| https://iso639-3.sil.org/code/deu[deu]
-| https://www.wikidata.org/wiki/Q188[Q188]
-| Lingua Germanica (Abecedarium Latinum)
-
-| spa-Latn
-| https://glottolog.org/resource/languoid/id/stan1288[stan1288]
-| https://iso639-3.sil.org/code/spa[spa]
-| https://www.wikidata.org/wiki/Q1321[Q1321]
-| Lingua Hispanica (Abecedarium Latinum)
-
-| ita-Latn
-| https://glottolog.org/resource/languoid/id/ital1282[ital1282]
-| https://iso639-3.sil.org/code/ita[ita]
-| https://www.wikidata.org/wiki/Q652[Q652]
-| Lingua Italiana (Abecedarium Latinum)
-
-| gle-Latn
-| https://glottolog.org/resource/languoid/id/iris1253[iris1253]
-| https://iso639-3.sil.org/code/gle[gle]
-| https://www.wikidata.org/wiki/Q9142[Q9142]
-| Lingua Hibernica (Abecedarium Latinum)
-
-| swe-Latn
-| https://glottolog.org/resource/languoid/id/swed1254[swed1254]
-| https://iso639-3.sil.org/code/swe[swe]
-| https://www.wikidata.org/wiki/Q9027[Q9027]
-| Lingua Suecica (Abecedarium Latinum)
-
-| ceb-Latn
-| https://glottolog.org/resource/languoid/id/cebu1242[cebu1242]
-| https://iso639-3.sil.org/code/ceb[ceb]
-| https://www.wikidata.org/wiki/Q33239[Q33239]
-| Lingua Caebuana (Abecedarium Latinum)
-
-| sqi-Latn
-| https://glottolog.org/resource/languoid/id/alba1267[alba1267]
-| https://iso639-3.sil.org/code/sqi[sqi]
-| https://www.wikidata.org/wiki/Q8748[Q8748]
-| Macrolingua Albanica (/Abecedarium Latinum/)
-
-| pol-Latn
-| https://glottolog.org/resource/languoid/id/poli1260[poli1260]
-| https://iso639-3.sil.org/code/pol[pol]
-| https://www.wikidata.org/wiki/Q809[Q809]
-| Lingua Polonica (Abecedarium Latinum)
-
-| fin-Latn
-| https://glottolog.org/resource/languoid/id/finn1318[finn1318]
-| https://iso639-3.sil.org/code/fin[fin]
-| https://www.wikidata.org/wiki/Q1412[Q1412]
-| Lingua Finnica (Abecedarium Latinum)
-
-| ron-Latn
-| https://glottolog.org/resource/languoid/id/roma1327[roma1327]
-| https://iso639-3.sil.org/code/ron[ron]
-| https://www.wikidata.org/wiki/Q7913[Q7913]
-| Lingua Dacoromanica (Abecedarium Latinum)
-
-| vie-Latn
-| https://glottolog.org/resource/languoid/id/viet1252[viet1252]
-| https://iso639-3.sil.org/code/vie[vie]
-| https://www.wikidata.org/wiki/Q9199[Q9199]
-| Lingua Vietnamensis (Abecedarium Latinum)
-
-| cat-Latn
-| https://glottolog.org/resource/languoid/id/stan1289[stan1289]
-| https://iso639-3.sil.org/code/cat[cat]
-| https://www.wikidata.org/wiki/Q7026[Q7026]
-| Lingua Catalana (Abecedarium Latinum)
-
-| ukr-Cyrl
-| https://glottolog.org/resource/languoid/id/ukra1253[ukra1253]
-| https://iso639-3.sil.org/code/ukr[ukr]
-| https://www.wikidata.org/wiki/Q8798[Q8798]
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-
-| bul-Cyrl
-| https://glottolog.org/resource/languoid/id/bulg1262[bulg1262]
-| https://iso639-3.sil.org/code/bul[bul]
-| https://www.wikidata.org/wiki/Q7918[Q7918]
-| Lingua Bulgarica (Abecedarium Cyrillicum)
-
-| slv-Latn
-| https://glottolog.org/resource/languoid/id/slov1268[slov1268]
-| https://iso639-3.sil.org/code/slv[slv]
-| https://www.wikidata.org/wiki/Q9063[Q9063]
-| Lingua Slovena (Abecedarium Latinum)
-
-| war-Latn
-| https://glottolog.org/resource/languoid/id/wara1300[wara1300]
-| https://iso639-3.sil.org/code/war[war]
-| https://www.wikidata.org/wiki/Q34279[Q34279]
-| /Waray language/ (Abecedarium Latinum)
-
-| nob-Latn
-| https://glottolog.org/resource/languoid/id/norw1259[norw1259]
-| https://iso639-3.sil.org/code/nob[nob]
-| https://www.wikidata.org/wiki/Q25167[Q25167]
-| /Bokmål/ (Abecedarium Latinum)
-
-| ces-Latn
-| https://glottolog.org/resource/languoid/id/czec1258[czec1258]
-| https://iso639-3.sil.org/code/ces[ces]
-| https://www.wikidata.org/wiki/Q9056[Q9056]
-| Lingua Bohemica (Abecedarium Latinum)
-
-| dan-Latn
-| https://glottolog.org/resource/languoid/id/dani1285[dani1285]
-| https://iso639-3.sil.org/code/dan[dan]
-| https://www.wikidata.org/wiki/Q9035[Q9035]
-| Lingua Danica (Abecedarium Latinum)
-
-| jpn-Jpan
-| https://glottolog.org/resource/languoid/id/nucl1643[nucl1643]
-| https://iso639-3.sil.org/code/jpn[jpn]
-| https://www.wikidata.org/wiki/Q5287[Q5287]
-| Lingua Iaponica (Scriptura Iaponica)
-
-| nno-Latn
-| https://glottolog.org/resource/languoid/id/norw1262[norw1262]
-| https://iso639-3.sil.org/code/nno[nno]
-| https://www.wikidata.org/wiki/Q25164[Q25164]
-| /Nynorsk/ (Abecedarium Latinum)
-
-| mal-Mlym
-| https://glottolog.org/resource/languoid/id/mala1464[mala1464]
-| https://iso639-3.sil.org/code/mal[mal]
-| https://www.wikidata.org/wiki/Q36236[Q36236]
-| Lingua Malabarica (/Malayalam script/)
-
-| ind-Latn
-| https://glottolog.org/resource/languoid/id/indo1316[indo1316]
-| https://iso639-3.sil.org/code/ind[ind]
-| https://www.wikidata.org/wiki/Q9240[Q9240]
-| Lingua Indonesiana (Abecedarium Latinum)
-
-| fas-Zzzz
-| 
-| https://iso639-3.sil.org/code/fas[fas]
-| https://www.wikidata.org/wiki/Q9168[Q9168]
-| Macrolingua Persica (//Abecedarium Arabicum//)
-
-| hun-Latn
-| https://glottolog.org/resource/languoid/id/hung1274[hung1274]
-| https://iso639-3.sil.org/code/hun[hun]
-| https://www.wikidata.org/wiki/Q9067[Q9067]
-| Lingua Hungarica (Abecedarium Latinum)
-
-| eus-Latn
-| https://glottolog.org/resource/languoid/id/basq1248[basq1248]
-| https://iso639-3.sil.org/code/eus[eus]
-| https://www.wikidata.org/wiki/Q8752[Q8752]
-| Lingua Vasconica (Abecedarium Latinum)
-
-| cym-Latn
-| https://glottolog.org/resource/languoid/id/wels1247[wels1247]
-| https://iso639-3.sil.org/code/cym[cym]
-| https://www.wikidata.org/wiki/Q9309[Q9309]
-| Lingua Cambrica (Abecedarium Latinum)
-
-| glg-Latn
-| https://glottolog.org/resource/languoid/id/gali1258[gali1258]
-| https://iso639-3.sil.org/code/glg[glg]
-| https://www.wikidata.org/wiki/Q9307[Q9307]
-| Lingua Gallaica (Abecedarium Latinum)
-
-| slk-Latn
-| https://glottolog.org/resource/languoid/id/slov1269[slov1269]
-| https://iso639-3.sil.org/code/slk[slk]
-| https://www.wikidata.org/wiki/Q9058[Q9058]
-| Lingua Slovaca (Abecedarium Latinum)
-
-| epo-Latn
-| https://glottolog.org/resource/languoid/id/espe1235[espe1235]
-| https://iso639-3.sil.org/code/epo[epo]
-| https://www.wikidata.org/wiki/Q143[Q143]
-| Lingua Esperantica (Abecedarium Latinum)
-
-| msa-Zzzz
-| 
-| https://iso639-3.sil.org/code/msa[msa]
-| https://www.wikidata.org/wiki/Q9237[Q9237]
-| Macrolingua Malayana (?)
-
-| est-Latn
-| 
-| https://iso639-3.sil.org/code/est[est]
-| https://www.wikidata.org/wiki/Q9072[Q9072]
-| Macrolingua Estonica (Abecedarium Latinum)
-
-| hrv-Latn
-| https://glottolog.org/resource/languoid/id/croa1245[croa1245]
-| https://iso639-3.sil.org/code/hrv[hrv]
-| https://www.wikidata.org/wiki/Q6654[Q6654]
-| Lingua Croatica (Abecedarium Latinum)
-
-| tur-Latn
-| https://glottolog.org/resource/languoid/id/nucl1301[nucl1301]
-| https://iso639-3.sil.org/code/tur[tur]
-| https://www.wikidata.org/wiki/Q256[Q256]
-| Lingua Turcica (Abecedarium Latinum)
-
-| nds-Latn
-| https://glottolog.org/resource/languoid/id/lowg1239[lowg1239]
-| https://iso639-3.sil.org/code/nds[nds]
-| https://www.wikidata.org/wiki/Q25433[Q25433]
-| Lingua Saxonica (Abecedarium Latinum)
-
-| oci-Latn
-| https://glottolog.org/resource/languoid/id/occi1239[occi1239]
-| https://iso639-3.sil.org/code/oci[oci]
-| https://www.wikidata.org/wiki/Q14185[Q14185]
-| Lingua Occitana (Abecedarium Latinum)
-
-| bre-Latn
-| https://glottolog.org/resource/languoid/id/bret1244[bret1244]
-| https://iso639-3.sil.org/code/bre[bre]
-| https://www.wikidata.org/wiki/Q12107[Q12107]
-| Lingua Britonica (Abecedarium Latinum)
-
-| arz-Latn
-| https://glottolog.org/resource/languoid/id/egyp1253[egyp1253]
-| https://iso639-3.sil.org/code/arz[arz]
-| https://www.wikidata.org/wiki/Q29919[Q29919]
-| /Egyptian Arabic/ (/Abecedarium Arabicum/)
-
-| afr-Latn
-| https://glottolog.org/resource/languoid/id/afri1274[afri1274]
-| https://iso639-3.sil.org/code/afr[afr]
-| https://www.wikidata.org/wiki/Q14196[Q14196]
-| Lingua Batava Capitensis (Abecedarium Latinum)
-
-| ltz-Latn
-| https://glottolog.org/resource/languoid/id/luxe1241[luxe1241]
-| https://iso639-3.sil.org/code/ltz[ltz]
-| https://www.wikidata.org/wiki/Q9051[Q9051]
-| Lingua Luxemburgensis (Abecedarium Latinum)
-
-| sco-Latn
-| https://glottolog.org/resource/languoid/id/scot1243[scot1243]
-| https://iso639-3.sil.org/code/sco[sco]
-| https://www.wikidata.org/wiki/Q14549[Q14549]
-| Lingua Scotica quae Teutonica (Abecedarium Latinum)
-
-| bar-Latn
-| https://glottolog.org/resource/languoid/id/bava1246[bava1246]
-| https://iso639-3.sil.org/code/bar[bar]
-| https://www.wikidata.org/wiki/Q29540[Q29540]
-| Lingua Bavarica (Abecedarium Latinum)
-
-| arg-Latn
-| https://glottolog.org/resource/languoid/id/arag1245[arag1245]
-| https://iso639-3.sil.org/code/arg[arg]
-| https://www.wikidata.org/wiki/Q8765[Q8765]
-| Lingua Aragonensis (Abecedarium Latinum)
-
-| zho-Hant
-| 
-| https://iso639-3.sil.org/code/zho[zho]
-| https://www.wikidata.org/wiki/Q18130932[Q18130932]
-| //Traditional Chinese// (/ISO 15924 Hant/)
-
-| pap-Latn
-| https://glottolog.org/resource/languoid/id/papi1253[papi1253]
-| https://iso639-3.sil.org/code/pap[pap]
-| https://www.wikidata.org/wiki/Q33856[Q33856]
-| /lingua Papiamentica/ (Abecedarium Latinum)
-
-| cos-Latn
-| https://glottolog.org/resource/languoid/id/cors1241[cors1241]
-| https://iso639-3.sil.org/code/cos[cos]
-| https://www.wikidata.org/wiki/Q33111[Q33111]
-| Lingua Corsica (Abecedarium Latinum)
-
-| gsw-Latn
-| https://glottolog.org/resource/languoid/id/swis1247[swis1247]
-| https://iso639-3.sil.org/code/gsw[gsw]
-| https://www.wikidata.org/wiki/Q131339[Q131339]
-| Dialecti Alemannicae (Abecedarium Latinum)
-
-| isl-Latn
-| https://glottolog.org/resource/languoid/id/icel1247[icel1247]
-| https://iso639-3.sil.org/code/isl[isl]
-| https://www.wikidata.org/wiki/Q294[Q294]
-| Lingua Islandica (Abecedarium Latinum)
-
-| min-Latn
-| https://glottolog.org/resource/languoid/id/mina1268[mina1268]
-| https://iso639-3.sil.org/code/min[min]
-| https://www.wikidata.org/wiki/Q13324[Q13324]
-| /Minangkabau language/ (Abecedarium Latinum)
-
-| roh-Latn
-| https://glottolog.org/resource/languoid/id/roma1326[roma1326]
-| https://iso639-3.sil.org/code/roh[roh]
-| https://www.wikidata.org/wiki/Q13199[Q13199]
-| Lingua Rhaetica (Abecedarium Latinum)
-
-| vec-Latn
-| https://glottolog.org/resource/languoid/id/vene1258[vene1258]
-| https://iso639-3.sil.org/code/vec[vec]
-| https://www.wikidata.org/wiki/Q32724[Q32724]
-| Lingua Veneta (Abecedarium Latinum)
-
-| pms-Latn
-| https://glottolog.org/resource/languoid/id/piem1238[piem1238]
-| https://iso639-3.sil.org/code/pms[pms]
-| https://www.wikidata.org/wiki/Q15085[Q15085]
-| Lingua Pedemontana (Abecedarium Latinum)
-
-| scn-Latn
-| https://glottolog.org/resource/languoid/id/sici1248[sici1248]
-| https://iso639-3.sil.org/code/scn[scn]
-| https://www.wikidata.org/wiki/Q33973[Q33973]
-| Lingua Sicula (Abecedarium Latinum)
-
-| srd-Latn
-| 
-| https://iso639-3.sil.org/code/srd[srd]
-| https://www.wikidata.org/wiki/Q33976[Q33976]
-| Macrolingua Sarda (Abecedarium Latinum)
-
-| gla-Latn
-| https://glottolog.org/resource/languoid/id/scot1245[scot1245]
-| https://iso639-3.sil.org/code/gla[gla]
-| https://www.wikidata.org/wiki/Q9314[Q9314]
-| Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
-
-| lim-Latn
-| https://glottolog.org/resource/languoid/id/limb1263[limb1263]
-| https://iso639-3.sil.org/code/lim[lim]
-| https://www.wikidata.org/wiki/Q102172[Q102172]
-| Lingua Limburgica (Abecedarium Latinum)
-
-| wln-Latn
-| https://glottolog.org/resource/languoid/id/wall1255[wall1255]
-| https://iso639-3.sil.org/code/wln[wln]
-| https://www.wikidata.org/wiki/Q34219[Q34219]
-| Lingua Vallonica
-
-| srp-Latn
-| https://glottolog.org/resource/languoid/id/serb1264[serb1264]
-| https://iso639-3.sil.org/code/srp[srp]
-| https://www.wikidata.org/wiki/Q21161949[Q21161949]
-| /Serbian/ (Abecedarium Latinum)
-
-| vls-Latn
-| https://glottolog.org/resource/languoid/id/vlaa1240[vlaa1240]
-| https://iso639-3.sil.org/code/vls[vls]
-| https://www.wikidata.org/wiki/Q100103[Q100103]
-| /West Flemish/ (Abecedarium Latinum)
-
-| nap-Latn
-| https://glottolog.org/resource/languoid/id/neap1235[neap1235]
-| https://iso639-3.sil.org/code/nap[nap]
-| https://www.wikidata.org/wiki/Q33845[Q33845]
-| Lingua Neapolitana (Abecedarium Latinum)
-
-| lij-Latn
-| https://glottolog.org/resource/languoid/id/ligu1248[ligu1248]
-| https://iso639-3.sil.org/code/lij[lij]
-| https://www.wikidata.org/wiki/Q36106[Q36106]
-| Lingua Ligustica (Abecedarium Latinum)
-
-| fur-Latn
-| https://glottolog.org/resource/languoid/id/friu1240[friu1240]
-| https://iso639-3.sil.org/code/fur[fur]
-| https://www.wikidata.org/wiki/Q33441[Q33441]
-| Lingua Foroiuliensis (Abecedarium Latinum)
-
-| pcd-Latn
-| https://glottolog.org/resource/languoid/id/pica1241[pica1241]
-| https://iso639-3.sil.org/code/pcd[pcd]
-| https://www.wikidata.org/wiki/Q34024[Q34024]
-| Lingua Picardica (Abecedarium Latinum)
-
-| wol-Latn
-| https://glottolog.org/resource/languoid/id/nucl1347[nucl1347]
-| https://iso639-3.sil.org/code/wol[wol]
-| https://www.wikidata.org/wiki/Q34257[Q34257]
-| /Wolof language/ (Abecedarium Latinum)
-
-| kon-Latn
-| 
-| https://iso639-3.sil.org/code/kon[kon]
-| https://www.wikidata.org/wiki/Q33702[Q33702]
-| /Kongo macrolanguage/ (Abecedarium Latinum)
-
-| frp-Latn
-| https://glottolog.org/resource/languoid/id/fran1260[fran1260]
-| https://iso639-3.sil.org/code/frp[frp]
-| https://www.wikidata.org/wiki/Q15087[Q15087]
-| Lingua Arpitanica
-
-| wuu-Zyyy
-| https://glottolog.org/resource/languoid/id/wuch1236[wuch1236]
-| https://iso639-3.sil.org/code/wuu[wuu]
-| https://www.wikidata.org/wiki/Q34290[Q34290]
-| //Macrolingua Wu// (/ISO 15924 Zyyy/)
-
-| srp-Cyrl
-| https://glottolog.org/resource/languoid/id/serb1264[serb1264]
-| https://iso639-3.sil.org/code/srp[srp]
-| https://www.wikidata.org/wiki/Q9299[Q9299]
-| Lingua Serbica (Abecedarium Cyrillicum)
-
-| urd-Arab
-| https://glottolog.org/resource/languoid/id/urdu1245[urdu1245]
-| https://iso639-3.sil.org/code/urd[urd]
-| https://www.wikidata.org/wiki/Q1617[Q1617]
-| Lingua Urdu (/Abecedarium Arabicum/)
-
-| gan-Zyyy
-| https://glottolog.org/resource/languoid/id/ganc1239[ganc1239]
-| https://iso639-3.sil.org/code/gan[gan]
-| https://www.wikidata.org/wiki/Q33475[Q33475]
-| Lingua Gan (/ISO 15924 Zyyy/)
-
-| lit-Latn
-| https://glottolog.org/resource/languoid/id/lith1251[lith1251]
-| https://iso639-3.sil.org/code/lit[lit]
-| https://www.wikidata.org/wiki/Q9083[Q9083]
-| Lingua Lithuanica (Abecedarium Latinum)
-
-| hbs-Latn
-| https://glottolog.org/resource/languoid/id/sout1528[sout1528]
-| https://iso639-3.sil.org/code/hbs[hbs]
-| https://www.wikidata.org/wiki/Q9301[Q9301]
-| Macrolingua Serbocroatica (Abecedarium Latinum)
-
-| lav-Latn
-| https://glottolog.org/resource/languoid/id/latv1249[latv1249]
-| https://iso639-3.sil.org/code/lav[lav]
-| https://www.wikidata.org/wiki/Q9078[Q9078]
-| Macrolingua Lettonica (Abecedarium Latinum)
-
-| bos-Latn
-| https://glottolog.org/resource/languoid/id/bosn1245[bosn1245]
-| https://iso639-3.sil.org/code/bos[bos]
-| https://www.wikidata.org/wiki/Q9303[Q9303]
-| Lingua Bosnica (Abecedarium Latinum)
-
-| azb-Arab
-| https://glottolog.org/resource/languoid/id/sout2697[sout2697]
-| https://iso639-3.sil.org/code/azb[azb]
-| https://www.wikidata.org/wiki/Q3449805[Q3449805]
-| /South Azerbaijani/ (/Abecedarium Arabicum/)
-
-| jav-Latn
-| https://glottolog.org/resource/languoid/id/java1254[java1254]
-| https://iso639-3.sil.org/code/jav[jav]
-| https://www.wikidata.org/wiki/Q33549[Q33549]
-| Lingua Iavanica (Abecedarium Latinum)
-
-| ell-Grek
-| https://glottolog.org/resource/languoid/id/mode1248[mode1248]
-| https://iso639-3.sil.org/code/ell[ell]
-| https://www.wikidata.org/wiki/Q36510[Q36510]
-| Lingua Neograeca (Alphabetum Graecum)
-
-| sun-Latn
-| https://glottolog.org/resource/languoid/id/sund1252[sund1252]
-| https://iso639-3.sil.org/code/sun[sun]
-| https://www.wikidata.org/wiki/Q34002[Q34002]
-| /Sundanese language/ (Abecedarium Latinum)
-
-| fry-Latn
-| https://glottolog.org/resource/languoid/id/west2354[west2354]
-| https://iso639-3.sil.org/code/fry[fry]
-| https://www.wikidata.org/wiki/Q27175[Q27175]
-| Lingua Frisice occidentalis (Abecedarium Latinum)
-
-| jam-Latn
-| https://glottolog.org/resource/languoid/id/jama1262[jama1262]
-| https://iso639-3.sil.org/code/jam[jam]
-| https://www.wikidata.org/wiki/Q35939[Q35939]
-| Lingua creola Iamaicana (Abecedarium Latinum)
-
-| che-Cyrl
-| https://glottolog.org/resource/languoid/id/chec1245[chec1245]
-| https://iso639-3.sil.org/code/che[che]
-| https://www.wikidata.org/wiki/Q33350[Q33350]
-| Lingua Tsetsenica (Abecedarium Cyrillicum)
-
-| bel-Cyrl
-| https://glottolog.org/resource/languoid/id/bela1254[bela1254]
-| https://iso639-3.sil.org/code/bel[bel]
-| https://www.wikidata.org/wiki/Q9091[Q9091]
-| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
-
-| kab-Latn
-| https://glottolog.org/resource/languoid/id/kaby1243[kaby1243]
-| https://iso639-3.sil.org/code/kab[kab]
-| https://www.wikidata.org/wiki/Q35853[Q35853]
-| /Kabyle language/ (Abecedarium Latinum)
-
-| fao-Latn
-| https://glottolog.org/resource/languoid/id/faro1244[faro1244]
-| https://iso639-3.sil.org/code/fao[fao]
-| https://www.wikidata.org/wiki/Q25258[Q25258]
-| Lingua Faeroensis (Abecedarium Latinum)
-
-| bam-Zzzz
-| https://glottolog.org/resource/languoid/id/bamb1269[bamb1269]
-| https://iso639-3.sil.org/code/bam[bam]
-| https://www.wikidata.org/wiki/Q33243[Q33243]
-| /Bambara language/ (?)
-
-| lmo-Latn
-| https://glottolog.org/resource/languoid/id/lomb1257[lomb1257]
-| https://iso639-3.sil.org/code/lmo[lmo]
-| https://www.wikidata.org/wiki/Q33754[Q33754]
-| Langobardus sermo (Abecedarium Latinum)
-
-| mar-Deva
-| https://glottolog.org/resource/languoid/id/mara1378[mara1378]
-| https://iso639-3.sil.org/code/mar[mar]
-| https://www.wikidata.org/wiki/Q1571[Q1571]
-| Lingua Marathica (Devanāgarī)
-
-| vol-Latn
-| https://glottolog.org/resource/languoid/id/vola1234[vola1234]
-| https://iso639-3.sil.org/code/vol[vol]
-| https://www.wikidata.org/wiki/Q36986[Q36986]
-| Volapük (Abecedarium Latinum)
-
-| ina-Latn
-| https://glottolog.org/resource/languoid/id/inte1239[inte1239]
-| https://iso639-3.sil.org/code/ina[ina]
-| https://www.wikidata.org/wiki/Q35934[Q35934]
-| Interlingua (Abecedarium Latinum)
-
-| ile-Latn
-| https://glottolog.org/resource/languoid/id/inte1260[inte1260]
-| https://iso639-3.sil.org/code/ile[ile]
-| https://www.wikidata.org/wiki/Q35850[Q35850]
-| Lingua Occidental (Abecedarium Latinum)
-
-| zul-Latn
-| https://glottolog.org/resource/languoid/id/zulu1248[zulu1248]
-| https://iso639-3.sil.org/code/zul[zul]
-| https://www.wikidata.org/wiki/Q10179[Q10179]
-| Lingua Zuluana (Abecedarium Latinum)
+|
+Cōdex linguae
+|
+Glotto cōdicī +++<br>+++ ISO 639-3 +++<br>+++ Wiki QID cōdicī
+|
+Nōmen Latīnum
+|
+Concepta
+
+|
+mul-Zyyy
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/mul[mul]
++++<br>+++ 
+|
+Linguae multiplīs (Scrīptum incognitō)
+|
+17
+
+|
+ara-Arab
+|
+https://glottolog.org/resource/languoid/id/arab1395[arab1395]
++++<br>+++
+https://iso639-3.sil.org/code/ara[ara]
++++<br>+++ https://www.wikidata.org/wiki/Q13955[Q13955]
+|
+Macrolingua Arabica (/Abecedarium Arabicum/)
+|
+50
+
+|
+hye-Armn
+|
+https://glottolog.org/resource/languoid/id/nucl1235[nucl1235]
++++<br>+++
+https://iso639-3.sil.org/code/hye[hye]
++++<br>+++ https://www.wikidata.org/wiki/Q8785[Q8785]
+|
+Lingua Armenia (Alphabetum Armenium)
+|
+36
+
+|
+ben-Beng
+|
+https://glottolog.org/resource/languoid/id/beng1280[beng1280]
++++<br>+++
+https://iso639-3.sil.org/code/ben[ben]
++++<br>+++ https://www.wikidata.org/wiki/Q9610[Q9610]
+|
+Lingua Bengali (/Bengali script/)
+|
+28
+
+|
+rus-Cyrl
+|
+https://glottolog.org/resource/languoid/id/russ1263[russ1263]
++++<br>+++
+https://iso639-3.sil.org/code/rus[rus]
++++<br>+++ https://www.wikidata.org/wiki/Q7737[Q7737]
+|
+Lingua Russica (Abecedarium Cyrillicum)
+|
+49
+
+|
+hin-Deva
+|
+https://glottolog.org/resource/languoid/id/hind1269[hind1269]
++++<br>+++
+https://iso639-3.sil.org/code/hin[hin]
++++<br>+++ https://www.wikidata.org/wiki/Q1568[Q1568]
+|
+Lingua Hindica (Devanāgarī)
+|
+37
+
+|
+kan-Knda
+|
+https://glottolog.org/resource/languoid/id/nucl1305[nucl1305]
++++<br>+++
+https://iso639-3.sil.org/code/kan[kan]
++++<br>+++ https://www.wikidata.org/wiki/Q33673[Q33673]
+|
+Lingua Cannadica (/ISO 15924 Knda/)
+|
+14
+
+|
+kor-Hang
+|
+https://glottolog.org/resource/languoid/id/kore1280[kore1280]
++++<br>+++
+https://iso639-3.sil.org/code/kor[kor]
++++<br>+++ https://www.wikidata.org/wiki/Q9176[Q9176]
+|
+Lingua Coreana (Abecedarium Coreanum)
+|
+43
+
+|
+lzh-Hant
+|
+https://glottolog.org/resource/languoid/id/lite1248[lite1248]
++++<br>+++
+https://iso639-3.sil.org/code/lzh[lzh]
++++<br>+++ https://www.wikidata.org/wiki/Q37041[Q37041]
+|
+Lingua Sinica classica (/ISO 15924 Hant/)
+|
+5
+
+|
+heb-Hebr
+|
+https://glottolog.org/resource/languoid/id/hebr1245[hebr1245]
++++<br>+++
+https://iso639-3.sil.org/code/heb[heb]
++++<br>+++ https://www.wikidata.org/wiki/Q9288[Q9288]
+|
+Lingua Hebraica (Alphabetum Hebraicum)
+|
+43
+
+|
+lat-Latn
+|
+https://glottolog.org/resource/languoid/id/lati1261[lati1261]
++++<br>+++
+https://iso639-3.sil.org/code/lat[lat]
++++<br>+++ https://www.wikidata.org/wiki/Q397[Q397]
+|
+Lingua Latina (Abecedarium Latinum)
+|
+27
+
+|
+tam-Taml
+|
+https://glottolog.org/resource/languoid/id/tami1289[tami1289]
++++<br>+++
+https://iso639-3.sil.org/code/tam[tam]
++++<br>+++ https://www.wikidata.org/wiki/Q5885[Q5885]
+|
+Lingua Tamulica (/ISO 15924 Taml/)
+|
+32
+
+|
+tel-Telu
+|
+https://glottolog.org/resource/languoid/id/telu1262[telu1262]
++++<br>+++
+https://iso639-3.sil.org/code/tel[tel]
++++<br>+++ https://www.wikidata.org/wiki/Q8097[Q8097]
+|
+Lingua Telingana (/ISO 15924 Telu/)
+|
+10
+
+|
+tha-Thai
+|
+https://glottolog.org/resource/languoid/id/thai1261[thai1261]
++++<br>+++
+https://iso639-3.sil.org/code/tha[tha]
++++<br>+++ https://www.wikidata.org/wiki/Q9217[Q9217]
+|
+Lingua Thai (/ISO 15924 Thai/)
+|
+34
+
+|
+san-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sans1269[sans1269]
++++<br>+++
+https://iso639-3.sil.org/code/san[san]
++++<br>+++ https://www.wikidata.org/wiki/Q11059[Q11059]
+|
+Lingua Sanscrita  (?)
+|
+5
+
+|
+zho-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sini1245[sini1245]
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q7850[Q7850]
+|
+/Macrolingua Sinicae (?)/
+|
+50
+
+|
+por-Latn
+|
+https://glottolog.org/resource/languoid/id/port1283[port1283]
++++<br>+++
+https://iso639-3.sil.org/code/por[por]
++++<br>+++ https://www.wikidata.org/wiki/Q5146[Q5146]
+|
+Lingua Lusitana (Abecedarium Latinum)
+|
+44
+
+|
+eng-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1293[stan1293]
++++<br>+++
+https://iso639-3.sil.org/code/eng[eng]
++++<br>+++ https://www.wikidata.org/wiki/Q1860[Q1860]
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+51
+
+|
+fra-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1290[stan1290]
++++<br>+++
+https://iso639-3.sil.org/code/fra[fra]
++++<br>+++ https://www.wikidata.org/wiki/Q150[Q150]
+|
+Lingua Francogallica (Abecedarium Latinum)
+|
+49
+
+|
+nld-Latn
+|
+https://glottolog.org/resource/languoid/id/mode1257[mode1257]
++++<br>+++
+https://iso639-3.sil.org/code/nld[nld]
++++<br>+++ https://www.wikidata.org/wiki/Q7411[Q7411]
+|
+Lingua Batavica (Abecedarium Latinum)
+|
+44
+
+|
+deu-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1295[stan1295]
++++<br>+++
+https://iso639-3.sil.org/code/deu[deu]
++++<br>+++ https://www.wikidata.org/wiki/Q188[Q188]
+|
+Lingua Germanica (Abecedarium Latinum)
+|
+48
+
+|
+spa-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1288[stan1288]
++++<br>+++
+https://iso639-3.sil.org/code/spa[spa]
++++<br>+++ https://www.wikidata.org/wiki/Q1321[Q1321]
+|
+Lingua Hispanica (Abecedarium Latinum)
+|
+49
+
+|
+ita-Latn
+|
+https://glottolog.org/resource/languoid/id/ital1282[ital1282]
++++<br>+++
+https://iso639-3.sil.org/code/ita[ita]
++++<br>+++ https://www.wikidata.org/wiki/Q652[Q652]
+|
+Lingua Italiana (Abecedarium Latinum)
+|
+47
+
+|
+gle-Latn
+|
+https://glottolog.org/resource/languoid/id/iris1253[iris1253]
++++<br>+++
+https://iso639-3.sil.org/code/gle[gle]
++++<br>+++ https://www.wikidata.org/wiki/Q9142[Q9142]
+|
+Lingua Hibernica (Abecedarium Latinum)
+|
+11
+
+|
+swe-Latn
+|
+https://glottolog.org/resource/languoid/id/swed1254[swed1254]
++++<br>+++
+https://iso639-3.sil.org/code/swe[swe]
++++<br>+++ https://www.wikidata.org/wiki/Q9027[Q9027]
+|
+Lingua Suecica (Abecedarium Latinum)
+|
+39
+
+|
+ceb-Latn
+|
+https://glottolog.org/resource/languoid/id/cebu1242[cebu1242]
++++<br>+++
+https://iso639-3.sil.org/code/ceb[ceb]
++++<br>+++ https://www.wikidata.org/wiki/Q33239[Q33239]
+|
+Lingua Caebuana (Abecedarium Latinum)
+|
+1
+
+|
+sqi-Latn
+|
+https://glottolog.org/resource/languoid/id/alba1267[alba1267]
++++<br>+++
+https://iso639-3.sil.org/code/sqi[sqi]
++++<br>+++ https://www.wikidata.org/wiki/Q8748[Q8748]
+|
+Macrolingua Albanica (/Abecedarium Latinum/)
+|
+23
+
+|
+pol-Latn
+|
+https://glottolog.org/resource/languoid/id/poli1260[poli1260]
++++<br>+++
+https://iso639-3.sil.org/code/pol[pol]
++++<br>+++ https://www.wikidata.org/wiki/Q809[Q809]
+|
+Lingua Polonica (Abecedarium Latinum)
+|
+42
+
+|
+fin-Latn
+|
+https://glottolog.org/resource/languoid/id/finn1318[finn1318]
++++<br>+++
+https://iso639-3.sil.org/code/fin[fin]
++++<br>+++ https://www.wikidata.org/wiki/Q1412[Q1412]
+|
+Lingua Finnica (Abecedarium Latinum)
+|
+39
+
+|
+ron-Latn
+|
+https://glottolog.org/resource/languoid/id/roma1327[roma1327]
++++<br>+++
+https://iso639-3.sil.org/code/ron[ron]
++++<br>+++ https://www.wikidata.org/wiki/Q7913[Q7913]
+|
+Lingua Dacoromanica (Abecedarium Latinum)
+|
+29
+
+|
+vie-Latn
+|
+https://glottolog.org/resource/languoid/id/viet1252[viet1252]
++++<br>+++
+https://iso639-3.sil.org/code/vie[vie]
++++<br>+++ https://www.wikidata.org/wiki/Q9199[Q9199]
+|
+Lingua Vietnamensis (Abecedarium Latinum)
+|
+42
+
+|
+cat-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1289[stan1289]
++++<br>+++
+https://iso639-3.sil.org/code/cat[cat]
++++<br>+++ https://www.wikidata.org/wiki/Q7026[Q7026]
+|
+Lingua Catalana (Abecedarium Latinum)
+|
+44
+
+|
+ukr-Cyrl
+|
+https://glottolog.org/resource/languoid/id/ukra1253[ukra1253]
++++<br>+++
+https://iso639-3.sil.org/code/ukr[ukr]
++++<br>+++ https://www.wikidata.org/wiki/Q8798[Q8798]
+|
+Lingua Ucrainica (Abecedarium Cyrillicum)
+|
+43
+
+|
+bul-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bulg1262[bulg1262]
++++<br>+++
+https://iso639-3.sil.org/code/bul[bul]
++++<br>+++ https://www.wikidata.org/wiki/Q7918[Q7918]
+|
+Lingua Bulgarica (Abecedarium Cyrillicum)
+|
+33
+
+|
+slv-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1268[slov1268]
++++<br>+++
+https://iso639-3.sil.org/code/slv[slv]
++++<br>+++ https://www.wikidata.org/wiki/Q9063[Q9063]
+|
+Lingua Slovena (Abecedarium Latinum)
+|
+24
+
+|
+war-Latn
+|
+https://glottolog.org/resource/languoid/id/wara1300[wara1300]
++++<br>+++
+https://iso639-3.sil.org/code/war[war]
++++<br>+++ https://www.wikidata.org/wiki/Q34279[Q34279]
+|
+/Waray language/ (Abecedarium Latinum)
+|
+6
+
+|
+nob-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1259[norw1259]
++++<br>+++
+https://iso639-3.sil.org/code/nob[nob]
++++<br>+++ https://www.wikidata.org/wiki/Q25167[Q25167]
+|
+/Bokmål/ (Abecedarium Latinum)
+|
+42
+
+|
+ces-Latn
+|
+https://glottolog.org/resource/languoid/id/czec1258[czec1258]
++++<br>+++
+https://iso639-3.sil.org/code/ces[ces]
++++<br>+++ https://www.wikidata.org/wiki/Q9056[Q9056]
+|
+Lingua Bohemica (Abecedarium Latinum)
+|
+37
+
+|
+dan-Latn
+|
+https://glottolog.org/resource/languoid/id/dani1285[dani1285]
++++<br>+++
+https://iso639-3.sil.org/code/dan[dan]
++++<br>+++ https://www.wikidata.org/wiki/Q9035[Q9035]
+|
+Lingua Danica (Abecedarium Latinum)
+|
+34
+
+|
+jpn-Jpan
+|
+https://glottolog.org/resource/languoid/id/nucl1643[nucl1643]
++++<br>+++
+https://iso639-3.sil.org/code/jpn[jpn]
++++<br>+++ https://www.wikidata.org/wiki/Q5287[Q5287]
+|
+Lingua Iaponica (Scriptura Iaponica)
+|
+49
+
+|
+nno-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1262[norw1262]
++++<br>+++
+https://iso639-3.sil.org/code/nno[nno]
++++<br>+++ https://www.wikidata.org/wiki/Q25164[Q25164]
+|
+/Nynorsk/ (Abecedarium Latinum)
+|
+26
+
+|
+mal-Mlym
+|
+https://glottolog.org/resource/languoid/id/mala1464[mala1464]
++++<br>+++
+https://iso639-3.sil.org/code/mal[mal]
++++<br>+++ https://www.wikidata.org/wiki/Q36236[Q36236]
+|
+Lingua Malabarica (/Malayalam script/)
+|
+26
+
+|
+ind-Latn
+|
+https://glottolog.org/resource/languoid/id/indo1316[indo1316]
++++<br>+++
+https://iso639-3.sil.org/code/ind[ind]
++++<br>+++ https://www.wikidata.org/wiki/Q9240[Q9240]
+|
+Lingua Indonesiana (Abecedarium Latinum)
+|
+41
+
+|
+fas-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/fas[fas]
++++<br>+++ https://www.wikidata.org/wiki/Q9168[Q9168]
+|
+Macrolingua Persica (//Abecedarium Arabicum//)
+|
+39
+
+|
+hun-Latn
+|
+https://glottolog.org/resource/languoid/id/hung1274[hung1274]
++++<br>+++
+https://iso639-3.sil.org/code/hun[hun]
++++<br>+++ https://www.wikidata.org/wiki/Q9067[Q9067]
+|
+Lingua Hungarica (Abecedarium Latinum)
+|
+29
+
+|
+eus-Latn
+|
+https://glottolog.org/resource/languoid/id/basq1248[basq1248]
++++<br>+++
+https://iso639-3.sil.org/code/eus[eus]
++++<br>+++ https://www.wikidata.org/wiki/Q8752[Q8752]
+|
+Lingua Vasconica (Abecedarium Latinum)
+|
+28
+
+|
+cym-Latn
+|
+https://glottolog.org/resource/languoid/id/wels1247[wels1247]
++++<br>+++
+https://iso639-3.sil.org/code/cym[cym]
++++<br>+++ https://www.wikidata.org/wiki/Q9309[Q9309]
+|
+Lingua Cambrica (Abecedarium Latinum)
+|
+18
+
+|
+glg-Latn
+|
+https://glottolog.org/resource/languoid/id/gali1258[gali1258]
++++<br>+++
+https://iso639-3.sil.org/code/glg[glg]
++++<br>+++ https://www.wikidata.org/wiki/Q9307[Q9307]
+|
+Lingua Gallaica (Abecedarium Latinum)
+|
+23
+
+|
+slk-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1269[slov1269]
++++<br>+++
+https://iso639-3.sil.org/code/slk[slk]
++++<br>+++ https://www.wikidata.org/wiki/Q9058[Q9058]
+|
+Lingua Slovaca (Abecedarium Latinum)
+|
+29
+
+|
+epo-Latn
+|
+https://glottolog.org/resource/languoid/id/espe1235[espe1235]
++++<br>+++
+https://iso639-3.sil.org/code/epo[epo]
++++<br>+++ https://www.wikidata.org/wiki/Q143[Q143]
+|
+Lingua Esperantica (Abecedarium Latinum)
+|
+36
+
+|
+msa-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/msa[msa]
++++<br>+++ https://www.wikidata.org/wiki/Q9237[Q9237]
+|
+Macrolingua Malayana (?)
+|
+36
+
+|
+est-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/est[est]
++++<br>+++ https://www.wikidata.org/wiki/Q9072[Q9072]
+|
+Macrolingua Estonica (Abecedarium Latinum)
+|
+31
+
+|
+hrv-Latn
+|
+https://glottolog.org/resource/languoid/id/croa1245[croa1245]
++++<br>+++
+https://iso639-3.sil.org/code/hrv[hrv]
++++<br>+++ https://www.wikidata.org/wiki/Q6654[Q6654]
+|
+Lingua Croatica (Abecedarium Latinum)
+|
+28
+
+|
+tur-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1301[nucl1301]
++++<br>+++
+https://iso639-3.sil.org/code/tur[tur]
++++<br>+++ https://www.wikidata.org/wiki/Q256[Q256]
+|
+Lingua Turcica (Abecedarium Latinum)
+|
+38
+
+|
+nds-Latn
+|
+https://glottolog.org/resource/languoid/id/lowg1239[lowg1239]
++++<br>+++
+https://iso639-3.sil.org/code/nds[nds]
++++<br>+++ https://www.wikidata.org/wiki/Q25433[Q25433]
+|
+Lingua Saxonica (Abecedarium Latinum)
+|
+10
+
+|
+oci-Latn
+|
+https://glottolog.org/resource/languoid/id/occi1239[occi1239]
++++<br>+++
+https://iso639-3.sil.org/code/oci[oci]
++++<br>+++ https://www.wikidata.org/wiki/Q14185[Q14185]
+|
+Lingua Occitana (Abecedarium Latinum)
+|
+14
+
+|
+bre-Latn
+|
+https://glottolog.org/resource/languoid/id/bret1244[bret1244]
++++<br>+++
+https://iso639-3.sil.org/code/bre[bre]
++++<br>+++ https://www.wikidata.org/wiki/Q12107[Q12107]
+|
+Lingua Britonica (Abecedarium Latinum)
+|
+12
+
+|
+arz-Latn
+|
+https://glottolog.org/resource/languoid/id/egyp1253[egyp1253]
++++<br>+++
+https://iso639-3.sil.org/code/arz[arz]
++++<br>+++ https://www.wikidata.org/wiki/Q29919[Q29919]
+|
+/Egyptian Arabic/ (/Abecedarium Arabicum/)
+|
+15
+
+|
+afr-Latn
+|
+https://glottolog.org/resource/languoid/id/afri1274[afri1274]
++++<br>+++
+https://iso639-3.sil.org/code/afr[afr]
++++<br>+++ https://www.wikidata.org/wiki/Q14196[Q14196]
+|
+Lingua Batava Capitensis (Abecedarium Latinum)
+|
+11
+
+|
+ltz-Latn
+|
+https://glottolog.org/resource/languoid/id/luxe1241[luxe1241]
++++<br>+++
+https://iso639-3.sil.org/code/ltz[ltz]
++++<br>+++ https://www.wikidata.org/wiki/Q9051[Q9051]
+|
+Lingua Luxemburgensis (Abecedarium Latinum)
+|
+13
+
+|
+sco-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1243[scot1243]
++++<br>+++
+https://iso639-3.sil.org/code/sco[sco]
++++<br>+++ https://www.wikidata.org/wiki/Q14549[Q14549]
+|
+Lingua Scotica quae Teutonica (Abecedarium Latinum)
+|
+9
+
+|
+bar-Latn
+|
+https://glottolog.org/resource/languoid/id/bava1246[bava1246]
++++<br>+++
+https://iso639-3.sil.org/code/bar[bar]
++++<br>+++ https://www.wikidata.org/wiki/Q29540[Q29540]
+|
+Lingua Bavarica (Abecedarium Latinum)
+|
+3
+
+|
+arg-Latn
+|
+https://glottolog.org/resource/languoid/id/arag1245[arag1245]
++++<br>+++
+https://iso639-3.sil.org/code/arg[arg]
++++<br>+++ https://www.wikidata.org/wiki/Q8765[Q8765]
+|
+Lingua Aragonensis (Abecedarium Latinum)
+|
+7
+
+|
+zho-Hant
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q18130932[Q18130932]
+|
+//Traditional Chinese// (/ISO 15924 Hant/)
+|
+36
+
+|
+pap-Latn
+|
+https://glottolog.org/resource/languoid/id/papi1253[papi1253]
++++<br>+++
+https://iso639-3.sil.org/code/pap[pap]
++++<br>+++ https://www.wikidata.org/wiki/Q33856[Q33856]
+|
+/lingua Papiamentica/ (Abecedarium Latinum)
+|
+3
+
+|
+cos-Latn
+|
+https://glottolog.org/resource/languoid/id/cors1241[cors1241]
++++<br>+++
+https://iso639-3.sil.org/code/cos[cos]
++++<br>+++ https://www.wikidata.org/wiki/Q33111[Q33111]
+|
+Lingua Corsica (Abecedarium Latinum)
+|
+1
+
+|
+gsw-Latn
+|
+https://glottolog.org/resource/languoid/id/swis1247[swis1247]
++++<br>+++
+https://iso639-3.sil.org/code/gsw[gsw]
++++<br>+++ https://www.wikidata.org/wiki/Q131339[Q131339]
+|
+Dialecti Alemannicae (Abecedarium Latinum)
+|
+11
+
+|
+isl-Latn
+|
+https://glottolog.org/resource/languoid/id/icel1247[icel1247]
++++<br>+++
+https://iso639-3.sil.org/code/isl[isl]
++++<br>+++ https://www.wikidata.org/wiki/Q294[Q294]
+|
+Lingua Islandica (Abecedarium Latinum)
+|
+32
+
+|
+min-Latn
+|
+https://glottolog.org/resource/languoid/id/mina1268[mina1268]
++++<br>+++
+https://iso639-3.sil.org/code/min[min]
++++<br>+++ https://www.wikidata.org/wiki/Q13324[Q13324]
+|
+/Minangkabau language/ (Abecedarium Latinum)
+|
+6
+
+|
+roh-Latn
+|
+https://glottolog.org/resource/languoid/id/roma1326[roma1326]
++++<br>+++
+https://iso639-3.sil.org/code/roh[roh]
++++<br>+++ https://www.wikidata.org/wiki/Q13199[Q13199]
+|
+Lingua Rhaetica (Abecedarium Latinum)
+|
+5
+
+|
+vec-Latn
+|
+https://glottolog.org/resource/languoid/id/vene1258[vene1258]
++++<br>+++
+https://iso639-3.sil.org/code/vec[vec]
++++<br>+++ https://www.wikidata.org/wiki/Q32724[Q32724]
+|
+Lingua Veneta (Abecedarium Latinum)
+|
+28
+
+|
+pms-Latn
+|
+https://glottolog.org/resource/languoid/id/piem1238[piem1238]
++++<br>+++
+https://iso639-3.sil.org/code/pms[pms]
++++<br>+++ https://www.wikidata.org/wiki/Q15085[Q15085]
+|
+Lingua Pedemontana (Abecedarium Latinum)
+|
+9
+
+|
+scn-Latn
+|
+https://glottolog.org/resource/languoid/id/sici1248[sici1248]
++++<br>+++
+https://iso639-3.sil.org/code/scn[scn]
++++<br>+++ https://www.wikidata.org/wiki/Q33973[Q33973]
+|
+Lingua Sicula (Abecedarium Latinum)
+|
+6
+
+|
+srd-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/srd[srd]
++++<br>+++ https://www.wikidata.org/wiki/Q33976[Q33976]
+|
+Macrolingua Sarda (Abecedarium Latinum)
+|
+5
+
+|
+gla-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1245[scot1245]
++++<br>+++
+https://iso639-3.sil.org/code/gla[gla]
++++<br>+++ https://www.wikidata.org/wiki/Q9314[Q9314]
+|
+Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+|
+2
+
+|
+lim-Latn
+|
+https://glottolog.org/resource/languoid/id/limb1263[limb1263]
++++<br>+++
+https://iso639-3.sil.org/code/lim[lim]
++++<br>+++ https://www.wikidata.org/wiki/Q102172[Q102172]
+|
+Lingua Limburgica (Abecedarium Latinum)
+|
+6
+
+|
+wln-Latn
+|
+https://glottolog.org/resource/languoid/id/wall1255[wall1255]
++++<br>+++
+https://iso639-3.sil.org/code/wln[wln]
++++<br>+++ https://www.wikidata.org/wiki/Q34219[Q34219]
+|
+Lingua Vallonica
+|
+4
+
+|
+srp-Latn
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q21161949[Q21161949]
+|
+/Serbian/ (Abecedarium Latinum)
+|
+23
+
+|
+vls-Latn
+|
+https://glottolog.org/resource/languoid/id/vlaa1240[vlaa1240]
++++<br>+++
+https://iso639-3.sil.org/code/vls[vls]
++++<br>+++ https://www.wikidata.org/wiki/Q100103[Q100103]
+|
+/West Flemish/ (Abecedarium Latinum)
+|
+2
+
+|
+nap-Latn
+|
+https://glottolog.org/resource/languoid/id/neap1235[neap1235]
++++<br>+++
+https://iso639-3.sil.org/code/nap[nap]
++++<br>+++ https://www.wikidata.org/wiki/Q33845[Q33845]
+|
+Lingua Neapolitana (Abecedarium Latinum)
+|
+4
+
+|
+lij-Latn
+|
+https://glottolog.org/resource/languoid/id/ligu1248[ligu1248]
++++<br>+++
+https://iso639-3.sil.org/code/lij[lij]
++++<br>+++ https://www.wikidata.org/wiki/Q36106[Q36106]
+|
+Lingua Ligustica (Abecedarium Latinum)
+|
+3
+
+|
+fur-Latn
+|
+https://glottolog.org/resource/languoid/id/friu1240[friu1240]
++++<br>+++
+https://iso639-3.sil.org/code/fur[fur]
++++<br>+++ https://www.wikidata.org/wiki/Q33441[Q33441]
+|
+Lingua Foroiuliensis (Abecedarium Latinum)
+|
+4
+
+|
+pcd-Latn
+|
+https://glottolog.org/resource/languoid/id/pica1241[pica1241]
++++<br>+++
+https://iso639-3.sil.org/code/pcd[pcd]
++++<br>+++ https://www.wikidata.org/wiki/Q34024[Q34024]
+|
+Lingua Picardica (Abecedarium Latinum)
+|
+1
+
+|
+wol-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1347[nucl1347]
++++<br>+++
+https://iso639-3.sil.org/code/wol[wol]
++++<br>+++ https://www.wikidata.org/wiki/Q34257[Q34257]
+|
+/Wolof language/ (Abecedarium Latinum)
+|
+2
+
+|
+kon-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/kon[kon]
++++<br>+++ https://www.wikidata.org/wiki/Q33702[Q33702]
+|
+/Kongo macrolanguage/ (Abecedarium Latinum)
+|
+1
+
+|
+frp-Latn
+|
+https://glottolog.org/resource/languoid/id/fran1260[fran1260]
++++<br>+++
+https://iso639-3.sil.org/code/frp[frp]
++++<br>+++ https://www.wikidata.org/wiki/Q15087[Q15087]
+|
+Lingua Arpitanica
+|
+10
+
+|
+wuu-Zyyy
+|
+https://glottolog.org/resource/languoid/id/wuch1236[wuch1236]
++++<br>+++
+https://iso639-3.sil.org/code/wuu[wuu]
++++<br>+++ https://www.wikidata.org/wiki/Q34290[Q34290]
+|
+//Macrolingua Wu// (/ISO 15924 Zyyy/)
+|
+24
+
+|
+srp-Cyrl
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q9299[Q9299]
+|
+Lingua Serbica (Abecedarium Cyrillicum)
+|
+36
+
+|
+urd-Arab
+|
+https://glottolog.org/resource/languoid/id/urdu1245[urdu1245]
++++<br>+++
+https://iso639-3.sil.org/code/urd[urd]
++++<br>+++ https://www.wikidata.org/wiki/Q1617[Q1617]
+|
+Lingua Urdu (/Abecedarium Arabicum/)
+|
+28
+
+|
+gan-Zyyy
+|
+https://glottolog.org/resource/languoid/id/ganc1239[ganc1239]
++++<br>+++
+https://iso639-3.sil.org/code/gan[gan]
++++<br>+++ https://www.wikidata.org/wiki/Q33475[Q33475]
+|
+Lingua Gan (/ISO 15924 Zyyy/)
+|
+1
+
+|
+lit-Latn
+|
+https://glottolog.org/resource/languoid/id/lith1251[lith1251]
++++<br>+++
+https://iso639-3.sil.org/code/lit[lit]
++++<br>+++ https://www.wikidata.org/wiki/Q9083[Q9083]
+|
+Lingua Lithuanica (Abecedarium Latinum)
+|
+22
+
+|
+hbs-Latn
+|
+https://glottolog.org/resource/languoid/id/sout1528[sout1528]
++++<br>+++
+https://iso639-3.sil.org/code/hbs[hbs]
++++<br>+++ https://www.wikidata.org/wiki/Q9301[Q9301]
+|
+Macrolingua Serbocroatica (Abecedarium Latinum)
+|
+28
+
+|
+lav-Latn
+|
+https://glottolog.org/resource/languoid/id/latv1249[latv1249]
++++<br>+++
+https://iso639-3.sil.org/code/lav[lav]
++++<br>+++ https://www.wikidata.org/wiki/Q9078[Q9078]
+|
+Macrolingua Lettonica (Abecedarium Latinum)
+|
+23
+
+|
+bos-Latn
+|
+https://glottolog.org/resource/languoid/id/bosn1245[bosn1245]
++++<br>+++
+https://iso639-3.sil.org/code/bos[bos]
++++<br>+++ https://www.wikidata.org/wiki/Q9303[Q9303]
+|
+Lingua Bosnica (Abecedarium Latinum)
+|
+23
+
+|
+azb-Arab
+|
+https://glottolog.org/resource/languoid/id/sout2697[sout2697]
++++<br>+++
+https://iso639-3.sil.org/code/azb[azb]
++++<br>+++ https://www.wikidata.org/wiki/Q3449805[Q3449805]
+|
+/South Azerbaijani/ (/Abecedarium Arabicum/)
+|
+8
+
+|
+jav-Latn
+|
+https://glottolog.org/resource/languoid/id/java1254[java1254]
++++<br>+++
+https://iso639-3.sil.org/code/jav[jav]
++++<br>+++ https://www.wikidata.org/wiki/Q33549[Q33549]
+|
+Lingua Iavanica (Abecedarium Latinum)
+|
+25
+
+|
+ell-Grek
+|
+https://glottolog.org/resource/languoid/id/mode1248[mode1248]
++++<br>+++
+https://iso639-3.sil.org/code/ell[ell]
++++<br>+++ https://www.wikidata.org/wiki/Q36510[Q36510]
+|
+Lingua Neograeca (Alphabetum Graecum)
+|
+28
+
+|
+sun-Latn
+|
+https://glottolog.org/resource/languoid/id/sund1252[sund1252]
++++<br>+++
+https://iso639-3.sil.org/code/sun[sun]
++++<br>+++ https://www.wikidata.org/wiki/Q34002[Q34002]
+|
+/Sundanese language/ (Abecedarium Latinum)
+|
+7
+
+|
+fry-Latn
+|
+https://glottolog.org/resource/languoid/id/west2354[west2354]
++++<br>+++
+https://iso639-3.sil.org/code/fry[fry]
++++<br>+++ https://www.wikidata.org/wiki/Q27175[Q27175]
+|
+Lingua Frisice occidentalis (Abecedarium Latinum)
+|
+7
+
+|
+jam-Latn
+|
+https://glottolog.org/resource/languoid/id/jama1262[jama1262]
++++<br>+++
+https://iso639-3.sil.org/code/jam[jam]
++++<br>+++ https://www.wikidata.org/wiki/Q35939[Q35939]
+|
+Lingua creola Iamaicana (Abecedarium Latinum)
+|
+3
+
+|
+che-Cyrl
+|
+https://glottolog.org/resource/languoid/id/chec1245[chec1245]
++++<br>+++
+https://iso639-3.sil.org/code/che[che]
++++<br>+++ https://www.wikidata.org/wiki/Q33350[Q33350]
+|
+Lingua Tsetsenica (Abecedarium Cyrillicum)
+|
+6
+
+|
+bel-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bela1254[bela1254]
++++<br>+++
+https://iso639-3.sil.org/code/bel[bel]
++++<br>+++ https://www.wikidata.org/wiki/Q9091[Q9091]
+|
+Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+|
+26
+
+|
+kab-Latn
+|
+https://glottolog.org/resource/languoid/id/kaby1243[kaby1243]
++++<br>+++
+https://iso639-3.sil.org/code/kab[kab]
++++<br>+++ https://www.wikidata.org/wiki/Q35853[Q35853]
+|
+/Kabyle language/ (Abecedarium Latinum)
+|
+7
+
+|
+fao-Latn
+|
+https://glottolog.org/resource/languoid/id/faro1244[faro1244]
++++<br>+++
+https://iso639-3.sil.org/code/fao[fao]
++++<br>+++ https://www.wikidata.org/wiki/Q25258[Q25258]
+|
+Lingua Faeroensis (Abecedarium Latinum)
+|
+14
+
+|
+bam-Zzzz
+|
+https://glottolog.org/resource/languoid/id/bamb1269[bamb1269]
++++<br>+++
+https://iso639-3.sil.org/code/bam[bam]
++++<br>+++ https://www.wikidata.org/wiki/Q33243[Q33243]
+|
+/Bambara language/ (?)
+|
+3
+
+|
+lmo-Latn
+|
+https://glottolog.org/resource/languoid/id/lomb1257[lomb1257]
++++<br>+++
+https://iso639-3.sil.org/code/lmo[lmo]
++++<br>+++ https://www.wikidata.org/wiki/Q33754[Q33754]
+|
+Langobardus sermo (Abecedarium Latinum)
+|
+3
+
+|
+mar-Deva
+|
+https://glottolog.org/resource/languoid/id/mara1378[mara1378]
++++<br>+++
+https://iso639-3.sil.org/code/mar[mar]
++++<br>+++ https://www.wikidata.org/wiki/Q1571[Q1571]
+|
+Lingua Marathica (Devanāgarī)
+|
+16
+
+|
+vol-Latn
+|
+https://glottolog.org/resource/languoid/id/vola1234[vola1234]
++++<br>+++
+https://iso639-3.sil.org/code/vol[vol]
++++<br>+++ https://www.wikidata.org/wiki/Q36986[Q36986]
+|
+Volapük (Abecedarium Latinum)
+|
+2
+
+|
+ina-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1239[inte1239]
++++<br>+++
+https://iso639-3.sil.org/code/ina[ina]
++++<br>+++ https://www.wikidata.org/wiki/Q35934[Q35934]
+|
+Interlingua (Abecedarium Latinum)
+|
+10
+
+|
+ile-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1260[inte1260]
++++<br>+++
+https://iso639-3.sil.org/code/ile[ile]
++++<br>+++ https://www.wikidata.org/wiki/Q35850[Q35850]
+|
+Lingua Occidental (Abecedarium Latinum)
+|
+5
+
+|
+zul-Latn
+|
+https://glottolog.org/resource/languoid/id/zulu1248[zulu1248]
++++<br>+++
+https://iso639-3.sil.org/code/zul[zul]
++++<br>+++ https://www.wikidata.org/wiki/Q10179[Q10179]
+|
+Lingua Zuluana (Abecedarium Latinum)
+|
+3
 
 |===
 

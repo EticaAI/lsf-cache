@@ -363,6 +363,17 @@ def qhxl(rem: dict, query: Union[str, list]):
                 return rem_item
     return None
 
+def qhxl_attr_2_bcp47(hxlatt: str):
+    resultatum = ''
+    tempus1 = hxlatt.replace('+i_', '')
+    tempus1 = tempus1.split('+is_')
+    resultatum = tempus1[0] + '-' + tempus1[1].capitalize()
+    # @TODO: test better cases with +ix_
+    resultatum = resultatum.replace('+ix_', '-x-')
+
+    return resultatum
+
+
 # About github ASCIDoctor
 #  - https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74
 
@@ -417,7 +428,9 @@ class Codex:
         self.sarcinarum = CodexSarcinarumAdnexis(self.de_codex)
         self.extero = CodexExtero(self)
         self.usus_linguae = set()
+        self.usus_linguae_concepta = {}
         self.usus_ix_qcc = set()
+        self.summis_concepta = 0
 
     def _init_1603_1_1(self):
         numerordinatio_neo_codex = numerordinatio_neo_separatum(
@@ -674,7 +687,6 @@ class Codex:
                 ' generate derived works.',
             ]))
         resultatum.append('')
-
 
         resultatum.extend(dictionaria_part)
         resultatum.append('')
@@ -994,6 +1006,8 @@ Naturally, each book version gives extensive explanations for collaborators on h
             if codicem_loci.find('0_1603') == 0:
                 continue
 
+            self.summis_concepta += 1
+
             nomen = numerordinatio_nomen(item)
             codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
             codicem_ordo = numerordinatio_ordo(codicem_loci)
@@ -1075,10 +1089,17 @@ Naturally, each book version gives extensive explanations for collaborators on h
 
             if item_textum and len(item_textum) > 0:
                 clavem_i18n = clavem
+                clavem_norm = clavem.replace('#item+rem', '')
+                clavem_norm_bcp47 = qhxl_attr_2_bcp47(clavem_norm)
+                clavem_norm = clavem_norm.replace('+ix_signum', '')
+                clavem_norm = clavem_norm.replace('+ix_trivium', '')
+                clavem_norm = clavem_norm.replace('+ix_iri', '')
+
                 self.usus_linguae.add(clavem)
 
-                clavem_norm = clavem.replace('#item+rem', '')
-                clavem_norm = clavem_norm.replace('+ix_signum', '')
+                if clavem_norm_bcp47 not in self.usus_linguae_concepta:
+                    self.usus_linguae_concepta[clavem_norm_bcp47] = 0
+                self.usus_linguae_concepta[clavem_norm_bcp47] += 1
 
                 item_text_i18n = item_textum
                 dlinguam = self.dictionaria_linguarum.quod(clavem_norm)
@@ -1409,7 +1430,7 @@ It is still possible to have strict translation level errors. But even if we poi
 From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
 
 . The main handcrafted lexicographical table (explained on previous topic), also provided on `{0}.no1.tm.hxl.csv`, may reference Wiki QID.
-. Every unique QID of  `{0}.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works.
+. Every unique QID of  `{0}.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
 .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
 . The query result, with all QIDs and term labels, is shared as `{0}.wikiq.tm.hxl.csv`
 . The community reviewed translations of each singular QID is pre-compiled on an individual file `{0}.wikiq.tm.hxl.csv`
@@ -1434,10 +1455,13 @@ From the point of view of data conciliation, the following methodology is used t
 
         paginae.append("=== Rēs dē factō in dictiōnāriīs")
 
+        # concepta, f, pl, Nominative, https://en.wiktionary.org/wiki/conceptus
+        paginae.append("==== Concepta: {0}".format(self.summis_concepta))
+
         if len(self.usus_linguae):
             # paginae.append("==== Rēs linguālibus")
             paginae.extend(self.dictionaria_linguarum.imprimere(
-                list(self.usus_linguae)))
+                list(self.usus_linguae), self))
 
         # https://en.wiktionary.org/wiki/translatio#Latin
 
@@ -1885,7 +1909,6 @@ class DictionariaInterlinguarum:
             resultatum.append("==== Rēs interlinguālibus: {0}".format(
                 resultatum_corpus_totale))
 
-
             resultatum.extend(descriptio_tabulae_de_lingua(
                 'Lingua Anglica (Abecedarium Latinum)',
                 'The result of this section is a preview. '
@@ -2099,6 +2122,7 @@ class DictionariaLinguarum:
             self.D1613_1_51_fontem = NUMERORDINATIO_BASIM + \
                 "/1603/1/51/1603_1_51.no1.tm.hxl.csv"
 
+        # self.codex = codex
         self.dictionaria_codex = self._init_dictionaria()
 
         # print('oioioi', self.dictionaria_codex )
@@ -2119,7 +2143,8 @@ class DictionariaLinguarum:
                     #     datum[int_clavem][clavem] = rem
         return datum
 
-    def imprimere(self, linguam: list = None) -> list:
+    def imprimere(
+            self, linguam: list = None, codex: Type['Codex'] = None) -> list:
         """imprimere /print/@eng-Latn
 
         Trivia:
@@ -2133,6 +2158,11 @@ class DictionariaLinguarum:
         resultatum = []
         resultatum_corpus = []
         resultatum_corpus_totale = 0
+
+        # resultatum.append('')
+        # resultatum.append(str(codex.usus_linguae_concepta))
+        # resultatum.append('')
+
         linguam_clavem = []
         if linguam:
             for item in linguam:
@@ -2153,6 +2183,10 @@ class DictionariaLinguarum:
             ix_glottocode = lineam['#item+rem+i_qcc+is_zxxx+ix_glottocode']
             ix_iso639p3a3 = lineam['#item+rem+i_qcc+is_zxxx+ix_iso639p3a3']
             ix_wikiq = lineam['#item+rem+i_qcc+is_zxxx+ix_wikiq+ix_linguam']
+            usus = 0
+            if clavem_i18n in codex.usus_linguae_concepta:
+                usus = codex.usus_linguae_concepta[clavem_i18n]
+
             if len(ix_glottocode):
                 ix_glottocode = \
                     "https://glottolog.org/resource/languoid/id/{0}[{0}]".format(
@@ -2170,11 +2204,21 @@ class DictionariaLinguarum:
             # resultatum_corpus.append(linguam)
             # resultatum_corpus.append(
             #     "| {0} | {1} | {2} | {3} | {4} |".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
-            resultatum_corpus.append("| {0}".format(clavem_i18n))
-            resultatum_corpus.append("| {0}".format(ix_glottocode))
-            resultatum_corpus.append("| {0}".format(ix_iso639p3a3))
-            resultatum_corpus.append("| {0}".format(ix_wikiq))
-            resultatum_corpus.append("| {0}".format(item_text_i18n))
+            # resultatum_corpus.append("| {0}".format(clavem_i18n))
+            resultatum_corpus.append("|")
+            resultatum_corpus.append("{0}".format(clavem_i18n))
+            # resultatum_corpus.append("a| {0} ++<br>++ {1} ++<br>++ {2}".format(ix_glottocode, ix_iso639p3a3, item_text_i18n))
+            resultatum_corpus.append("|")
+            resultatum_corpus.append(
+                "{0}\n+++<br>+++\n{1}\n+++<br>+++ {2}".format(ix_glottocode, ix_iso639p3a3, ix_wikiq))
+            # resultatum_corpus.append("| {0}".format(ix_glottocode))
+            # resultatum_corpus.append("| {0}".format(ix_iso639p3a3))
+            # resultatum_corpus.append("| {0}".format(ix_wikiq))
+            # resultatum_corpus.append("| {0}".format(item_text_i18n))
+            resultatum_corpus.append("|")
+            resultatum_corpus.append("{0}".format(item_text_i18n))
+            resultatum_corpus.append("|")
+            resultatum_corpus.append("{0}".format(usus))
             # resultatum_corpus.append("| {0}".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
             # resultatum_corpus.append("| {0}".format(clavem_i18n, ix_glottocode, ix_iso639p3a3, ix_wikiq, item_text_i18n))
             resultatum_corpus.append('')
@@ -2196,7 +2240,7 @@ class DictionariaLinguarum:
             #         resultatum_corpus_totale))
             resultatum.append("")
 
-            resultatum.append('[%header,cols="~,~,~,~,~"]')
+            resultatum.append('[%header,cols="15h,25a,~,15"]')
             resultatum.append('|===')
             # https://en.wiktionary.org/wiki/latinus#Latin
             # nōmina, n, pl, (Nominative)
@@ -2210,15 +2254,26 @@ class DictionariaLinguarum:
             #     "<span lang='la'>Wiki QID<br>cōdicī</span> | "
             #     "<span lang='la'>Nōmen Latīnum</span> |")
             # resultatum.append("| --- | --- | --- | --- | --- |")
-            resultatum.append("| Cōdex linguae")
-            resultatum.append("| Glotto cōdicī")
-            resultatum.append("| ISO 639-3")
-            resultatum.append("| Wiki QID cōdicī")
-            resultatum.append("| Nōmen Latīnum")
+            # resultatum.append("| Cōdex linguae")
+            resultatum.append("|")
+            resultatum.append("Cōdex linguae")
+            # resultatum.append("a| Glotto cōdicī ++<br>++ ISO 639-3 ++<br>++ Wiki QID cōdicī")
+            resultatum.append("|")
+            resultatum.append(
+                "Glotto cōdicī +++<br>+++ ISO 639-3 +++<br>+++ Wiki QID cōdicī")
+            # resultatum.append("| ISO 639-3")
+            # resultatum.append("| Wiki QID cōdicī")
+            resultatum.append("|")
+            resultatum.append("Nōmen Latīnum")
+            resultatum.append("|")
+            resultatum.append("Concepta")
             resultatum.append('')
             resultatum.extend(resultatum_corpus)
             resultatum.append('|===')
             resultatum.append("")
+
+            # concepta, f, pl, Nominative,
+            #    https://en.wiktionary.org/wiki/conceptus
 
         return resultatum
 
