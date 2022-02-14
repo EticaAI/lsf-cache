@@ -105,7 +105,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-02-11T17:00:49
+2022-02-14T18:21:17
 
 |
 /SPDX license ID/@eng-Latn
@@ -209,7 +209,7 @@ Lingua Anglica (Abecedarium Latinum)
 From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
 
 . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_25_1.no1.tm.hxl.csv`, may reference Wiki QID.
-. Every unique QID of  `1603_25_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works.
+. Every unique QID of  `1603_25_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
 .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
 . The query result, with all QIDs and term labels, is shared as `1603_25_1.wikiq.tm.hxl.csv`
 . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_25_1.wikiq.tm.hxl.csv`

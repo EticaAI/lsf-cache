@@ -1,0 +1,6147 @@
+= Cōdex [1603:45:31]: Dictiōnāria de calamitātibus
+:doctype: book
+:title: Cōdex [1603:45:31]: Dictiōnāria de calamitātibus
+:lang: la
+:toc:
+:toclevels: 4
+:toc-title: Tabula contentorum
+:table-caption: Tabula
+:figure-caption: Pictūra
+:example-caption: Exemplum
+:last-update-label: Renovatio
+:version-label: Versiō
+:appendix-caption: Appendix
+:source-highlighter: rouge
+:warning-caption: Hic sunt dracones
+:tip-caption: Commendātum
+
+
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[quote]
+/_**Public domain means that each major common issue only needs to be resolved once**_/@eng-Latn
+
+<<<
+toc::[]
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+_**"Cōdex [1603:45:31]"**_ is the book format of the machine-readable dictionaries _**"[1603:45:31] Dictiōnāria de calamitātibus"**_,
+which are distributed for implementers on external applications.
+This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+
+Practical lexicography is the art or craft of compiling, writing and editing dictionaries.
+The basics are not far different than a millennia ago:
+it is still a very humane, creative work.
+It is necessary to be humble:
+most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws.
+Making sure of a source idea of what a concept represents,
+even if it means rewrite and make simpler, annex pictures,
+show examples, do whatever to make it be understood,
+makes even non-professional translators that care about their own language deliver better results than any alternative.
+In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+
+The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use.
+All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares.
+Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
+
+|===
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+scrīptor
+|
+EticaAI
+
+|
+/cōdex pūblicandī/
+|
+EticaAI
+
+|
+/publication date/@eng-Latn
+|
+2022-04-14
+
+|
+numerus editionis
+|
+2022-02-14T18:22:54
+
+|
+/SPDX license ID/@eng-Latn
+|
+CC0-1.0
+
+|===
+
+
+<<<
+
+== Methodī ex cōdice
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations.
+
+|===
+
+=== Methodī ex dictiōnāriōrum corde
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/scope and content/@eng-Latn
+|
+TODO: explain 1603_45_31
+
+|===
+
+
+=== Methodī ex verbīs in dictiōnāriīs
+NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data],  which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+
+==== Methodī ex verbīs in Vicidata (Q modō)
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The ***[1603:45:31] Dictiōnāria de calamitātibus*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+
+This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**How reliable are the community translations (Wikidata source)?**
+
+The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+
+As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests.
+This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+
+However, even when the result is correct,
+the current version needs improved differentiation, at minimum, acronym and long form.
+For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**Major reasons for "wrong translations" are not translators fault**
+
+TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+
+NOTE: Both at concept level and (as general statistics) book level, is planned to have indication concept likelihood of being well understood for very stricter translations initiatives.
+
+The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+
+It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+
+. The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_45_31.no1.tm.hxl.csv`, may reference Wiki QID.
+. Every unique QID of  `1603_45_31.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
+.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+. The query result, with all QIDs and term labels, is shared as `1603_45_31.wikiq.tm.hxl.csv`
+. The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_45_31.wikiq.tm.hxl.csv`
+. `1603_45_31.no1.tm.hxl.csv` plus `1603_45_31.wikiq.tm.hxl.csv` created `1603_45_31.no11.tm.hxl.csv`
+
+|===
+
+=== Rēs dē factō in dictiōnāriīs
+==== Concepta: 21
+
+==== Rēs linguālibus: 110
+
+[%header,cols="15h,25a,~,15"]
+|===
+|
+Cōdex linguae
+|
+Glotto cōdicī +++<br>+++ ISO 639-3 +++<br>+++ Wiki QID cōdicī
+|
+Nōmen Latīnum
+|
+Concepta
+
+|
+ara-Arab
+|
+https://glottolog.org/resource/languoid/id/arab1395[arab1395]
++++<br>+++
+https://iso639-3.sil.org/code/ara[ara]
++++<br>+++ https://www.wikidata.org/wiki/Q13955[Q13955]
+|
+Macrolingua Arabica (/Abecedarium Arabicum/)
+|
+18
+
+|
+hye-Armn
+|
+https://glottolog.org/resource/languoid/id/nucl1235[nucl1235]
++++<br>+++
+https://iso639-3.sil.org/code/hye[hye]
++++<br>+++ https://www.wikidata.org/wiki/Q8785[Q8785]
+|
+Lingua Armenia (Alphabetum Armenium)
+|
+13
+
+|
+ben-Beng
+|
+https://glottolog.org/resource/languoid/id/beng1280[beng1280]
++++<br>+++
+https://iso639-3.sil.org/code/ben[ben]
++++<br>+++ https://www.wikidata.org/wiki/Q9610[Q9610]
+|
+Lingua Bengali (/Bengali script/)
+|
+15
+
+|
+rus-Cyrl
+|
+https://glottolog.org/resource/languoid/id/russ1263[russ1263]
++++<br>+++
+https://iso639-3.sil.org/code/rus[rus]
++++<br>+++ https://www.wikidata.org/wiki/Q7737[Q7737]
+|
+Lingua Russica (Abecedarium Cyrillicum)
+|
+19
+
+|
+hin-Deva
+|
+https://glottolog.org/resource/languoid/id/hind1269[hind1269]
++++<br>+++
+https://iso639-3.sil.org/code/hin[hin]
++++<br>+++ https://www.wikidata.org/wiki/Q1568[Q1568]
+|
+Lingua Hindica (Devanāgarī)
+|
+15
+
+|
+kan-Knda
+|
+https://glottolog.org/resource/languoid/id/nucl1305[nucl1305]
++++<br>+++
+https://iso639-3.sil.org/code/kan[kan]
++++<br>+++ https://www.wikidata.org/wiki/Q33673[Q33673]
+|
+Lingua Cannadica (/ISO 15924 Knda/)
+|
+10
+
+|
+kor-Hang
+|
+https://glottolog.org/resource/languoid/id/kore1280[kore1280]
++++<br>+++
+https://iso639-3.sil.org/code/kor[kor]
++++<br>+++ https://www.wikidata.org/wiki/Q9176[Q9176]
+|
+Lingua Coreana (Abecedarium Coreanum)
+|
+18
+
+|
+lzh-Hant
+|
+https://glottolog.org/resource/languoid/id/lite1248[lite1248]
++++<br>+++
+https://iso639-3.sil.org/code/lzh[lzh]
++++<br>+++ https://www.wikidata.org/wiki/Q37041[Q37041]
+|
+Lingua Sinica classica (/ISO 15924 Hant/)
+|
+8
+
+|
+heb-Hebr
+|
+https://glottolog.org/resource/languoid/id/hebr1245[hebr1245]
++++<br>+++
+https://iso639-3.sil.org/code/heb[heb]
++++<br>+++ https://www.wikidata.org/wiki/Q9288[Q9288]
+|
+Lingua Hebraica (Alphabetum Hebraicum)
+|
+17
+
+|
+lat-Latn
+|
+https://glottolog.org/resource/languoid/id/lati1261[lati1261]
++++<br>+++
+https://iso639-3.sil.org/code/lat[lat]
++++<br>+++ https://www.wikidata.org/wiki/Q397[Q397]
+|
+Lingua Latina (Abecedarium Latinum)
+|
+9
+
+|
+tam-Taml
+|
+https://glottolog.org/resource/languoid/id/tami1289[tami1289]
++++<br>+++
+https://iso639-3.sil.org/code/tam[tam]
++++<br>+++ https://www.wikidata.org/wiki/Q5885[Q5885]
+|
+Lingua Tamulica (/ISO 15924 Taml/)
+|
+13
+
+|
+tel-Telu
+|
+https://glottolog.org/resource/languoid/id/telu1262[telu1262]
++++<br>+++
+https://iso639-3.sil.org/code/tel[tel]
++++<br>+++ https://www.wikidata.org/wiki/Q8097[Q8097]
+|
+Lingua Telingana (/ISO 15924 Telu/)
+|
+8
+
+|
+tha-Thai
+|
+https://glottolog.org/resource/languoid/id/thai1261[thai1261]
++++<br>+++
+https://iso639-3.sil.org/code/tha[tha]
++++<br>+++ https://www.wikidata.org/wiki/Q9217[Q9217]
+|
+Lingua Thai (/ISO 15924 Thai/)
+|
+12
+
+|
+san-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sans1269[sans1269]
++++<br>+++
+https://iso639-3.sil.org/code/san[san]
++++<br>+++ https://www.wikidata.org/wiki/Q11059[Q11059]
+|
+Lingua Sanscrita  (?)
+|
+8
+
+|
+zho-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sini1245[sini1245]
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q7850[Q7850]
+|
+/Macrolingua Sinicae (?)/
+|
+20
+
+|
+por-Latn
+|
+https://glottolog.org/resource/languoid/id/port1283[port1283]
++++<br>+++
+https://iso639-3.sil.org/code/por[por]
++++<br>+++ https://www.wikidata.org/wiki/Q5146[Q5146]
+|
+Lingua Lusitana (Abecedarium Latinum)
+|
+18
+
+|
+eng-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1293[stan1293]
++++<br>+++
+https://iso639-3.sil.org/code/eng[eng]
++++<br>+++ https://www.wikidata.org/wiki/Q1860[Q1860]
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+20
+
+|
+fra-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1290[stan1290]
++++<br>+++
+https://iso639-3.sil.org/code/fra[fra]
++++<br>+++ https://www.wikidata.org/wiki/Q150[Q150]
+|
+Lingua Francogallica (Abecedarium Latinum)
+|
+20
+
+|
+nld-Latn
+|
+https://glottolog.org/resource/languoid/id/mode1257[mode1257]
++++<br>+++
+https://iso639-3.sil.org/code/nld[nld]
++++<br>+++ https://www.wikidata.org/wiki/Q7411[Q7411]
+|
+Lingua Batavica (Abecedarium Latinum)
+|
+20
+
+|
+deu-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1295[stan1295]
++++<br>+++
+https://iso639-3.sil.org/code/deu[deu]
++++<br>+++ https://www.wikidata.org/wiki/Q188[Q188]
+|
+Lingua Germanica (Abecedarium Latinum)
+|
+19
+
+|
+spa-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1288[stan1288]
++++<br>+++
+https://iso639-3.sil.org/code/spa[spa]
++++<br>+++ https://www.wikidata.org/wiki/Q1321[Q1321]
+|
+Lingua Hispanica (Abecedarium Latinum)
+|
+20
+
+|
+ita-Latn
+|
+https://glottolog.org/resource/languoid/id/ital1282[ital1282]
++++<br>+++
+https://iso639-3.sil.org/code/ita[ita]
++++<br>+++ https://www.wikidata.org/wiki/Q652[Q652]
+|
+Lingua Italiana (Abecedarium Latinum)
+|
+19
+
+|
+gle-Latn
+|
+https://glottolog.org/resource/languoid/id/iris1253[iris1253]
++++<br>+++
+https://iso639-3.sil.org/code/gle[gle]
++++<br>+++ https://www.wikidata.org/wiki/Q9142[Q9142]
+|
+Lingua Hibernica (Abecedarium Latinum)
+|
+14
+
+|
+swe-Latn
+|
+https://glottolog.org/resource/languoid/id/swed1254[swed1254]
++++<br>+++
+https://iso639-3.sil.org/code/swe[swe]
++++<br>+++ https://www.wikidata.org/wiki/Q9027[Q9027]
+|
+Lingua Suecica (Abecedarium Latinum)
+|
+18
+
+|
+ceb-Latn
+|
+https://glottolog.org/resource/languoid/id/cebu1242[cebu1242]
++++<br>+++
+https://iso639-3.sil.org/code/ceb[ceb]
++++<br>+++ https://www.wikidata.org/wiki/Q33239[Q33239]
+|
+Lingua Caebuana (Abecedarium Latinum)
+|
+2
+
+|
+sqi-Latn
+|
+https://glottolog.org/resource/languoid/id/alba1267[alba1267]
++++<br>+++
+https://iso639-3.sil.org/code/sqi[sqi]
++++<br>+++ https://www.wikidata.org/wiki/Q8748[Q8748]
+|
+Macrolingua Albanica (/Abecedarium Latinum/)
+|
+4
+
+|
+pol-Latn
+|
+https://glottolog.org/resource/languoid/id/poli1260[poli1260]
++++<br>+++
+https://iso639-3.sil.org/code/pol[pol]
++++<br>+++ https://www.wikidata.org/wiki/Q809[Q809]
+|
+Lingua Polonica (Abecedarium Latinum)
+|
+18
+
+|
+fin-Latn
+|
+https://glottolog.org/resource/languoid/id/finn1318[finn1318]
++++<br>+++
+https://iso639-3.sil.org/code/fin[fin]
++++<br>+++ https://www.wikidata.org/wiki/Q1412[Q1412]
+|
+Lingua Finnica (Abecedarium Latinum)
+|
+15
+
+|
+ron-Latn
+|
+https://glottolog.org/resource/languoid/id/roma1327[roma1327]
++++<br>+++
+https://iso639-3.sil.org/code/ron[ron]
++++<br>+++ https://www.wikidata.org/wiki/Q7913[Q7913]
+|
+Lingua Dacoromanica (Abecedarium Latinum)
+|
+18
+
+|
+vie-Latn
+|
+https://glottolog.org/resource/languoid/id/viet1252[viet1252]
++++<br>+++
+https://iso639-3.sil.org/code/vie[vie]
++++<br>+++ https://www.wikidata.org/wiki/Q9199[Q9199]
+|
+Lingua Vietnamensis (Abecedarium Latinum)
+|
+18
+
+|
+cat-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1289[stan1289]
++++<br>+++
+https://iso639-3.sil.org/code/cat[cat]
++++<br>+++ https://www.wikidata.org/wiki/Q7026[Q7026]
+|
+Lingua Catalana (Abecedarium Latinum)
+|
+20
+
+|
+ukr-Cyrl
+|
+https://glottolog.org/resource/languoid/id/ukra1253[ukra1253]
++++<br>+++
+https://iso639-3.sil.org/code/ukr[ukr]
++++<br>+++ https://www.wikidata.org/wiki/Q8798[Q8798]
+|
+Lingua Ucrainica (Abecedarium Cyrillicum)
+|
+19
+
+|
+bul-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bulg1262[bulg1262]
++++<br>+++
+https://iso639-3.sil.org/code/bul[bul]
++++<br>+++ https://www.wikidata.org/wiki/Q7918[Q7918]
+|
+Lingua Bulgarica (Abecedarium Cyrillicum)
+|
+13
+
+|
+slv-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1268[slov1268]
++++<br>+++
+https://iso639-3.sil.org/code/slv[slv]
++++<br>+++ https://www.wikidata.org/wiki/Q9063[Q9063]
+|
+Lingua Slovena (Abecedarium Latinum)
+|
+15
+
+|
+war-Latn
+|
+https://glottolog.org/resource/languoid/id/wara1300[wara1300]
++++<br>+++
+https://iso639-3.sil.org/code/war[war]
++++<br>+++ https://www.wikidata.org/wiki/Q34279[Q34279]
+|
+/Waray language/ (Abecedarium Latinum)
+|
+8
+
+|
+nob-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1259[norw1259]
++++<br>+++
+https://iso639-3.sil.org/code/nob[nob]
++++<br>+++ https://www.wikidata.org/wiki/Q25167[Q25167]
+|
+/Bokmål/ (Abecedarium Latinum)
+|
+18
+
+|
+ces-Latn
+|
+https://glottolog.org/resource/languoid/id/czec1258[czec1258]
++++<br>+++
+https://iso639-3.sil.org/code/ces[ces]
++++<br>+++ https://www.wikidata.org/wiki/Q9056[Q9056]
+|
+Lingua Bohemica (Abecedarium Latinum)
+|
+17
+
+|
+dan-Latn
+|
+https://glottolog.org/resource/languoid/id/dani1285[dani1285]
++++<br>+++
+https://iso639-3.sil.org/code/dan[dan]
++++<br>+++ https://www.wikidata.org/wiki/Q9035[Q9035]
+|
+Lingua Danica (Abecedarium Latinum)
+|
+15
+
+|
+jpn-Jpan
+|
+https://glottolog.org/resource/languoid/id/nucl1643[nucl1643]
++++<br>+++
+https://iso639-3.sil.org/code/jpn[jpn]
++++<br>+++ https://www.wikidata.org/wiki/Q5287[Q5287]
+|
+Lingua Iaponica (Scriptura Iaponica)
+|
+20
+
+|
+nno-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1262[norw1262]
++++<br>+++
+https://iso639-3.sil.org/code/nno[nno]
++++<br>+++ https://www.wikidata.org/wiki/Q25164[Q25164]
+|
+/Nynorsk/ (Abecedarium Latinum)
+|
+15
+
+|
+mal-Mlym
+|
+https://glottolog.org/resource/languoid/id/mala1464[mala1464]
++++<br>+++
+https://iso639-3.sil.org/code/mal[mal]
++++<br>+++ https://www.wikidata.org/wiki/Q36236[Q36236]
+|
+Lingua Malabarica (/Malayalam script/)
+|
+13
+
+|
+ind-Latn
+|
+https://glottolog.org/resource/languoid/id/indo1316[indo1316]
++++<br>+++
+https://iso639-3.sil.org/code/ind[ind]
++++<br>+++ https://www.wikidata.org/wiki/Q9240[Q9240]
+|
+Lingua Indonesiana (Abecedarium Latinum)
+|
+20
+
+|
+fas-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/fas[fas]
++++<br>+++ https://www.wikidata.org/wiki/Q9168[Q9168]
+|
+Macrolingua Persica (//Abecedarium Arabicum//)
+|
+16
+
+|
+hun-Latn
+|
+https://glottolog.org/resource/languoid/id/hung1274[hung1274]
++++<br>+++
+https://iso639-3.sil.org/code/hun[hun]
++++<br>+++ https://www.wikidata.org/wiki/Q9067[Q9067]
+|
+Lingua Hungarica (Abecedarium Latinum)
+|
+16
+
+|
+eus-Latn
+|
+https://glottolog.org/resource/languoid/id/basq1248[basq1248]
++++<br>+++
+https://iso639-3.sil.org/code/eus[eus]
++++<br>+++ https://www.wikidata.org/wiki/Q8752[Q8752]
+|
+Lingua Vasconica (Abecedarium Latinum)
+|
+15
+
+|
+cym-Latn
+|
+https://glottolog.org/resource/languoid/id/wels1247[wels1247]
++++<br>+++
+https://iso639-3.sil.org/code/cym[cym]
++++<br>+++ https://www.wikidata.org/wiki/Q9309[Q9309]
+|
+Lingua Cambrica (Abecedarium Latinum)
+|
+13
+
+|
+glg-Latn
+|
+https://glottolog.org/resource/languoid/id/gali1258[gali1258]
++++<br>+++
+https://iso639-3.sil.org/code/glg[glg]
++++<br>+++ https://www.wikidata.org/wiki/Q9307[Q9307]
+|
+Lingua Gallaica (Abecedarium Latinum)
+|
+14
+
+|
+slk-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1269[slov1269]
++++<br>+++
+https://iso639-3.sil.org/code/slk[slk]
++++<br>+++ https://www.wikidata.org/wiki/Q9058[Q9058]
+|
+Lingua Slovaca (Abecedarium Latinum)
+|
+12
+
+|
+epo-Latn
+|
+https://glottolog.org/resource/languoid/id/espe1235[espe1235]
++++<br>+++
+https://iso639-3.sil.org/code/epo[epo]
++++<br>+++ https://www.wikidata.org/wiki/Q143[Q143]
+|
+Lingua Esperantica (Abecedarium Latinum)
+|
+19
+
+|
+msa-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/msa[msa]
++++<br>+++ https://www.wikidata.org/wiki/Q9237[Q9237]
+|
+Macrolingua Malayana (?)
+|
+16
+
+|
+est-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/est[est]
++++<br>+++ https://www.wikidata.org/wiki/Q9072[Q9072]
+|
+Macrolingua Estonica (Abecedarium Latinum)
+|
+15
+
+|
+hrv-Latn
+|
+https://glottolog.org/resource/languoid/id/croa1245[croa1245]
++++<br>+++
+https://iso639-3.sil.org/code/hrv[hrv]
++++<br>+++ https://www.wikidata.org/wiki/Q6654[Q6654]
+|
+Lingua Croatica (Abecedarium Latinum)
+|
+15
+
+|
+tur-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1301[nucl1301]
++++<br>+++
+https://iso639-3.sil.org/code/tur[tur]
++++<br>+++ https://www.wikidata.org/wiki/Q256[Q256]
+|
+Lingua Turcica (Abecedarium Latinum)
+|
+15
+
+|
+nds-Latn
+|
+https://glottolog.org/resource/languoid/id/lowg1239[lowg1239]
++++<br>+++
+https://iso639-3.sil.org/code/nds[nds]
++++<br>+++ https://www.wikidata.org/wiki/Q25433[Q25433]
+|
+Lingua Saxonica (Abecedarium Latinum)
+|
+8
+
+|
+oci-Latn
+|
+https://glottolog.org/resource/languoid/id/occi1239[occi1239]
++++<br>+++
+https://iso639-3.sil.org/code/oci[oci]
++++<br>+++ https://www.wikidata.org/wiki/Q14185[Q14185]
+|
+Lingua Occitana (Abecedarium Latinum)
+|
+11
+
+|
+bre-Latn
+|
+https://glottolog.org/resource/languoid/id/bret1244[bret1244]
++++<br>+++
+https://iso639-3.sil.org/code/bre[bre]
++++<br>+++ https://www.wikidata.org/wiki/Q12107[Q12107]
+|
+Lingua Britonica (Abecedarium Latinum)
+|
+4
+
+|
+afr-Latn
+|
+https://glottolog.org/resource/languoid/id/afri1274[afri1274]
++++<br>+++
+https://iso639-3.sil.org/code/afr[afr]
++++<br>+++ https://www.wikidata.org/wiki/Q14196[Q14196]
+|
+Lingua Batava Capitensis (Abecedarium Latinum)
+|
+11
+
+|
+ltz-Latn
+|
+https://glottolog.org/resource/languoid/id/luxe1241[luxe1241]
++++<br>+++
+https://iso639-3.sil.org/code/ltz[ltz]
++++<br>+++ https://www.wikidata.org/wiki/Q9051[Q9051]
+|
+Lingua Luxemburgensis (Abecedarium Latinum)
+|
+5
+
+|
+sco-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1243[scot1243]
++++<br>+++
+https://iso639-3.sil.org/code/sco[sco]
++++<br>+++ https://www.wikidata.org/wiki/Q14549[Q14549]
+|
+Lingua Scotica quae Teutonica (Abecedarium Latinum)
+|
+7
+
+|
+bar-Latn
+|
+https://glottolog.org/resource/languoid/id/bava1246[bava1246]
++++<br>+++
+https://iso639-3.sil.org/code/bar[bar]
++++<br>+++ https://www.wikidata.org/wiki/Q29540[Q29540]
+|
+Lingua Bavarica (Abecedarium Latinum)
+|
+8
+
+|
+arg-Latn
+|
+https://glottolog.org/resource/languoid/id/arag1245[arag1245]
++++<br>+++
+https://iso639-3.sil.org/code/arg[arg]
++++<br>+++ https://www.wikidata.org/wiki/Q8765[Q8765]
+|
+Lingua Aragonensis (Abecedarium Latinum)
+|
+10
+
+|
+zho-Hant
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q18130932[Q18130932]
+|
+//Traditional Chinese// (/ISO 15924 Hant/)
+|
+15
+
+|
+pap-Latn
+|
+https://glottolog.org/resource/languoid/id/papi1253[papi1253]
++++<br>+++
+https://iso639-3.sil.org/code/pap[pap]
++++<br>+++ https://www.wikidata.org/wiki/Q33856[Q33856]
+|
+/lingua Papiamentica/ (Abecedarium Latinum)
+|
+4
+
+|
+cos-Latn
+|
+https://glottolog.org/resource/languoid/id/cors1241[cors1241]
++++<br>+++
+https://iso639-3.sil.org/code/cos[cos]
++++<br>+++ https://www.wikidata.org/wiki/Q33111[Q33111]
+|
+Lingua Corsica (Abecedarium Latinum)
+|
+2
+
+|
+gsw-Latn
+|
+https://glottolog.org/resource/languoid/id/swis1247[swis1247]
++++<br>+++
+https://iso639-3.sil.org/code/gsw[gsw]
++++<br>+++ https://www.wikidata.org/wiki/Q131339[Q131339]
+|
+Dialecti Alemannicae (Abecedarium Latinum)
+|
+9
+
+|
+isl-Latn
+|
+https://glottolog.org/resource/languoid/id/icel1247[icel1247]
++++<br>+++
+https://iso639-3.sil.org/code/isl[isl]
++++<br>+++ https://www.wikidata.org/wiki/Q294[Q294]
+|
+Lingua Islandica (Abecedarium Latinum)
+|
+11
+
+|
+min-Latn
+|
+https://glottolog.org/resource/languoid/id/mina1268[mina1268]
++++<br>+++
+https://iso639-3.sil.org/code/min[min]
++++<br>+++ https://www.wikidata.org/wiki/Q13324[Q13324]
+|
+/Minangkabau language/ (Abecedarium Latinum)
+|
+2
+
+|
+roh-Latn
+|
+https://glottolog.org/resource/languoid/id/roma1326[roma1326]
++++<br>+++
+https://iso639-3.sil.org/code/roh[roh]
++++<br>+++ https://www.wikidata.org/wiki/Q13199[Q13199]
+|
+Lingua Rhaetica (Abecedarium Latinum)
+|
+2
+
+|
+vec-Latn
+|
+https://glottolog.org/resource/languoid/id/vene1258[vene1258]
++++<br>+++
+https://iso639-3.sil.org/code/vec[vec]
++++<br>+++ https://www.wikidata.org/wiki/Q32724[Q32724]
+|
+Lingua Veneta (Abecedarium Latinum)
+|
+9
+
+|
+pms-Latn
+|
+https://glottolog.org/resource/languoid/id/piem1238[piem1238]
++++<br>+++
+https://iso639-3.sil.org/code/pms[pms]
++++<br>+++ https://www.wikidata.org/wiki/Q15085[Q15085]
+|
+Lingua Pedemontana (Abecedarium Latinum)
+|
+1
+
+|
+scn-Latn
+|
+https://glottolog.org/resource/languoid/id/sici1248[sici1248]
++++<br>+++
+https://iso639-3.sil.org/code/scn[scn]
++++<br>+++ https://www.wikidata.org/wiki/Q33973[Q33973]
+|
+Lingua Sicula (Abecedarium Latinum)
+|
+11
+
+|
+srd-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/srd[srd]
++++<br>+++ https://www.wikidata.org/wiki/Q33976[Q33976]
+|
+Macrolingua Sarda (Abecedarium Latinum)
+|
+2
+
+|
+gla-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1245[scot1245]
++++<br>+++
+https://iso639-3.sil.org/code/gla[gla]
++++<br>+++ https://www.wikidata.org/wiki/Q9314[Q9314]
+|
+Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+|
+5
+
+|
+lim-Latn
+|
+https://glottolog.org/resource/languoid/id/limb1263[limb1263]
++++<br>+++
+https://iso639-3.sil.org/code/lim[lim]
++++<br>+++ https://www.wikidata.org/wiki/Q102172[Q102172]
+|
+Lingua Limburgica (Abecedarium Latinum)
+|
+8
+
+|
+wln-Latn
+|
+https://glottolog.org/resource/languoid/id/wall1255[wall1255]
++++<br>+++
+https://iso639-3.sil.org/code/wln[wln]
++++<br>+++ https://www.wikidata.org/wiki/Q34219[Q34219]
+|
+Lingua Vallonica
+|
+6
+
+|
+srp-Latn
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q21161949[Q21161949]
+|
+/Serbian/ (Abecedarium Latinum)
+|
+9
+
+|
+vls-Latn
+|
+https://glottolog.org/resource/languoid/id/vlaa1240[vlaa1240]
++++<br>+++
+https://iso639-3.sil.org/code/vls[vls]
++++<br>+++ https://www.wikidata.org/wiki/Q100103[Q100103]
+|
+/West Flemish/ (Abecedarium Latinum)
+|
+2
+
+|
+nap-Latn
+|
+https://glottolog.org/resource/languoid/id/neap1235[neap1235]
++++<br>+++
+https://iso639-3.sil.org/code/nap[nap]
++++<br>+++ https://www.wikidata.org/wiki/Q33845[Q33845]
+|
+Lingua Neapolitana (Abecedarium Latinum)
+|
+3
+
+|
+lij-Latn
+|
+https://glottolog.org/resource/languoid/id/ligu1248[ligu1248]
++++<br>+++
+https://iso639-3.sil.org/code/lij[lij]
++++<br>+++ https://www.wikidata.org/wiki/Q36106[Q36106]
+|
+Lingua Ligustica (Abecedarium Latinum)
+|
+1
+
+|
+fur-Latn
+|
+https://glottolog.org/resource/languoid/id/friu1240[friu1240]
++++<br>+++
+https://iso639-3.sil.org/code/fur[fur]
++++<br>+++ https://www.wikidata.org/wiki/Q33441[Q33441]
+|
+Lingua Foroiuliensis (Abecedarium Latinum)
+|
+2
+
+|
+pcd-Latn
+|
+https://glottolog.org/resource/languoid/id/pica1241[pica1241]
++++<br>+++
+https://iso639-3.sil.org/code/pcd[pcd]
++++<br>+++ https://www.wikidata.org/wiki/Q34024[Q34024]
+|
+Lingua Picardica (Abecedarium Latinum)
+|
+2
+
+|
+wol-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1347[nucl1347]
++++<br>+++
+https://iso639-3.sil.org/code/wol[wol]
++++<br>+++ https://www.wikidata.org/wiki/Q34257[Q34257]
+|
+/Wolof language/ (Abecedarium Latinum)
+|
+1
+
+|
+kon-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/kon[kon]
++++<br>+++ https://www.wikidata.org/wiki/Q33702[Q33702]
+|
+/Kongo macrolanguage/ (Abecedarium Latinum)
+|
+1
+
+|
+frp-Latn
+|
+https://glottolog.org/resource/languoid/id/fran1260[fran1260]
++++<br>+++
+https://iso639-3.sil.org/code/frp[frp]
++++<br>+++ https://www.wikidata.org/wiki/Q15087[Q15087]
+|
+Lingua Arpitanica
+|
+2
+
+|
+wuu-Zyyy
+|
+https://glottolog.org/resource/languoid/id/wuch1236[wuch1236]
++++<br>+++
+https://iso639-3.sil.org/code/wuu[wuu]
++++<br>+++ https://www.wikidata.org/wiki/Q34290[Q34290]
+|
+//Macrolingua Wu// (/ISO 15924 Zyyy/)
+|
+12
+
+|
+srp-Cyrl
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q9299[Q9299]
+|
+Lingua Serbica (Abecedarium Cyrillicum)
+|
+19
+
+|
+urd-Arab
+|
+https://glottolog.org/resource/languoid/id/urdu1245[urdu1245]
++++<br>+++
+https://iso639-3.sil.org/code/urd[urd]
++++<br>+++ https://www.wikidata.org/wiki/Q1617[Q1617]
+|
+Lingua Urdu (/Abecedarium Arabicum/)
+|
+11
+
+|
+gan-Zyyy
+|
+https://glottolog.org/resource/languoid/id/ganc1239[ganc1239]
++++<br>+++
+https://iso639-3.sil.org/code/gan[gan]
++++<br>+++ https://www.wikidata.org/wiki/Q33475[Q33475]
+|
+Lingua Gan (/ISO 15924 Zyyy/)
+|
+3
+
+|
+lit-Latn
+|
+https://glottolog.org/resource/languoid/id/lith1251[lith1251]
++++<br>+++
+https://iso639-3.sil.org/code/lit[lit]
++++<br>+++ https://www.wikidata.org/wiki/Q9083[Q9083]
+|
+Lingua Lithuanica (Abecedarium Latinum)
+|
+14
+
+|
+hbs-Latn
+|
+https://glottolog.org/resource/languoid/id/sout1528[sout1528]
++++<br>+++
+https://iso639-3.sil.org/code/hbs[hbs]
++++<br>+++ https://www.wikidata.org/wiki/Q9301[Q9301]
+|
+Macrolingua Serbocroatica (Abecedarium Latinum)
+|
+14
+
+|
+lav-Latn
+|
+https://glottolog.org/resource/languoid/id/latv1249[latv1249]
++++<br>+++
+https://iso639-3.sil.org/code/lav[lav]
++++<br>+++ https://www.wikidata.org/wiki/Q9078[Q9078]
+|
+Macrolingua Lettonica (Abecedarium Latinum)
+|
+14
+
+|
+bos-Latn
+|
+https://glottolog.org/resource/languoid/id/bosn1245[bosn1245]
++++<br>+++
+https://iso639-3.sil.org/code/bos[bos]
++++<br>+++ https://www.wikidata.org/wiki/Q9303[Q9303]
+|
+Lingua Bosnica (Abecedarium Latinum)
+|
+11
+
+|
+srn-Latn
+|
+https://glottolog.org/resource/languoid/id/sran1240[sran1240]
++++<br>+++
+https://iso639-3.sil.org/code/srn[srn]
++++<br>+++ https://www.wikidata.org/wiki/Q33989[Q33989]
+|
+/Sranan Tongo/ (Abecedarium Latinum)
+|
+1
+
+|
+azb-Arab
+|
+https://glottolog.org/resource/languoid/id/sout2697[sout2697]
++++<br>+++
+https://iso639-3.sil.org/code/azb[azb]
++++<br>+++ https://www.wikidata.org/wiki/Q3449805[Q3449805]
+|
+/South Azerbaijani/ (/Abecedarium Arabicum/)
+|
+5
+
+|
+jav-Latn
+|
+https://glottolog.org/resource/languoid/id/java1254[java1254]
++++<br>+++
+https://iso639-3.sil.org/code/jav[jav]
++++<br>+++ https://www.wikidata.org/wiki/Q33549[Q33549]
+|
+Lingua Iavanica (Abecedarium Latinum)
+|
+5
+
+|
+ell-Grek
+|
+https://glottolog.org/resource/languoid/id/mode1248[mode1248]
++++<br>+++
+https://iso639-3.sil.org/code/ell[ell]
++++<br>+++ https://www.wikidata.org/wiki/Q36510[Q36510]
+|
+Lingua Neograeca (Alphabetum Graecum)
+|
+16
+
+|
+sun-Latn
+|
+https://glottolog.org/resource/languoid/id/sund1252[sund1252]
++++<br>+++
+https://iso639-3.sil.org/code/sun[sun]
++++<br>+++ https://www.wikidata.org/wiki/Q34002[Q34002]
+|
+/Sundanese language/ (Abecedarium Latinum)
+|
+5
+
+|
+fry-Latn
+|
+https://glottolog.org/resource/languoid/id/west2354[west2354]
++++<br>+++
+https://iso639-3.sil.org/code/fry[fry]
++++<br>+++ https://www.wikidata.org/wiki/Q27175[Q27175]
+|
+Lingua Frisice occidentalis (Abecedarium Latinum)
+|
+10
+
+|
+ace-Latn
+|
+https://glottolog.org/resource/languoid/id/achi1257[achi1257]
++++<br>+++
+https://iso639-3.sil.org/code/ace[ace]
++++<br>+++ https://www.wikidata.org/wiki/Q27683[Q27683]
+|
+/Acehnese language/ (Abecedarium Latinum)
+|
+1
+
+|
+jam-Latn
+|
+https://glottolog.org/resource/languoid/id/jama1262[jama1262]
++++<br>+++
+https://iso639-3.sil.org/code/jam[jam]
++++<br>+++ https://www.wikidata.org/wiki/Q35939[Q35939]
+|
+Lingua creola Iamaicana (Abecedarium Latinum)
+|
+4
+
+|
+che-Cyrl
+|
+https://glottolog.org/resource/languoid/id/chec1245[chec1245]
++++<br>+++
+https://iso639-3.sil.org/code/che[che]
++++<br>+++ https://www.wikidata.org/wiki/Q33350[Q33350]
+|
+Lingua Tsetsenica (Abecedarium Cyrillicum)
+|
+1
+
+|
+bel-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bela1254[bela1254]
++++<br>+++
+https://iso639-3.sil.org/code/bel[bel]
++++<br>+++ https://www.wikidata.org/wiki/Q9091[Q9091]
+|
+Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+|
+12
+
+|
+kab-Latn
+|
+https://glottolog.org/resource/languoid/id/kaby1243[kaby1243]
++++<br>+++
+https://iso639-3.sil.org/code/kab[kab]
++++<br>+++ https://www.wikidata.org/wiki/Q35853[Q35853]
+|
+/Kabyle language/ (Abecedarium Latinum)
+|
+1
+
+|
+fao-Latn
+|
+https://glottolog.org/resource/languoid/id/faro1244[faro1244]
++++<br>+++
+https://iso639-3.sil.org/code/fao[fao]
++++<br>+++ https://www.wikidata.org/wiki/Q25258[Q25258]
+|
+Lingua Faeroensis (Abecedarium Latinum)
+|
+5
+
+|
+lmo-Latn
+|
+https://glottolog.org/resource/languoid/id/lomb1257[lomb1257]
++++<br>+++
+https://iso639-3.sil.org/code/lmo[lmo]
++++<br>+++ https://www.wikidata.org/wiki/Q33754[Q33754]
+|
+Langobardus sermo (Abecedarium Latinum)
+|
+3
+
+|
+mar-Deva
+|
+https://glottolog.org/resource/languoid/id/mara1378[mara1378]
++++<br>+++
+https://iso639-3.sil.org/code/mar[mar]
++++<br>+++ https://www.wikidata.org/wiki/Q1571[Q1571]
+|
+Lingua Marathica (Devanāgarī)
+|
+10
+
+|
+vol-Latn
+|
+https://glottolog.org/resource/languoid/id/vola1234[vola1234]
++++<br>+++
+https://iso639-3.sil.org/code/vol[vol]
++++<br>+++ https://www.wikidata.org/wiki/Q36986[Q36986]
+|
+Volapük (Abecedarium Latinum)
+|
+1
+
+|
+ina-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1239[inte1239]
++++<br>+++
+https://iso639-3.sil.org/code/ina[ina]
++++<br>+++ https://www.wikidata.org/wiki/Q35934[Q35934]
+|
+Interlingua (Abecedarium Latinum)
+|
+8
+
+|
+ile-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1260[inte1260]
++++<br>+++
+https://iso639-3.sil.org/code/ile[ile]
++++<br>+++ https://www.wikidata.org/wiki/Q35850[Q35850]
+|
+Lingua Occidental (Abecedarium Latinum)
+|
+1
+
+|
+zul-Latn
+|
+https://glottolog.org/resource/languoid/id/zulu1248[zulu1248]
++++<br>+++
+https://iso639-3.sil.org/code/zul[zul]
++++<br>+++ https://www.wikidata.org/wiki/Q10179[Q10179]
+|
+Lingua Zuluana (Abecedarium Latinum)
+|
+1
+
+|===
+
+==== Rēs interlinguālibus: 8
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+
+|===
+
+
+**1603:1:7:1:91**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "1_91",
+    "#item+conceptum+numerordinatio": "1603:1:7:1:91",
+    "#item+rem+definitionem+i_eng+is_latn": "QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter \"Q\" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.",
+    "#item+rem+i_lat+is_latn": "/Wiki QID/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikiq",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_q",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
+    "#status+conceptum+codicem": "19",
+    "#status+conceptum+definitionem": "50"
+}
+----
+
+**1603:1:7:2616:50**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_50",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
+    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
+    "#item+rem+i_lat+is_latn": "scrīptor",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:123**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_123",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "/cōdex pūblicandī/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:393**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:577**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_577",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
+    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
+    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:854**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_854",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
+    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
+    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:2479**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_2479",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
+    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
+    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:7535**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_7535",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:7535",
+    "#item+rem+definitionem+i_eng+is_latn": "a summary statement providing an overview of the archival collection",
+    "#item+rem+i_lat+is_latn": "/scope and content/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip7535",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_7535",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P7535",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+<<<
+
+== Archīa
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+Every book comes with several files both for book format (with additional information) and machine-readable formats with documentation of how to process them. If you receive this file and cannot find the alternatives, ask the human who provide this file.
+
+|===
+
+=== Archīa prō dictiōnāriīs: 3
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: Is recommended to use the files on this section to  generate derived works.
+
+|===
+
+
+==== 1603_45_31.no1.tm.hxl.csv
+
+NOTE: link:1603_45_31.no1.tm.hxl.csv[1603_45_31.no1.tm.hxl.csv]
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container/
+
+|===
+
+
+==== 1603_45_31.no11.tm.hxl.csv
+
+NOTE: link:1603_45_31.no11.tm.hxl.csv[1603_45_31.no11.tm.hxl.csv]
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container (expanded with terminology translations)/
+
+|===
+
+
+==== 1603_45_31.wikiq.tm.hxl.csv
+
+NOTE: link:1603_45_31.wikiq.tm.hxl.csv[1603_45_31.wikiq.tm.hxl.csv]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://hxltm.etica.ai/
+
+|===
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codicem are strictly Wikidata QIDs.
+
+|===
+
+
+=== Archīa prō cōdice: 2
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+WARNING: Unless you are working with a natural language you understand it's letters and symbols, it is strongly advised to use automation to generate derived works. Keep manual human steps at minimum: if something goes wrong at least one or more languages can be used to verify mistakes. It's not at all necessary _know all languages_, but working with writing systems you don't understand is risky: copy and paste strategy can cause _additional_ human errors and is unlikely to get human review as fast as you would need.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: The Asciidoctor (.adoc) is better at copy and pasting! It can be converted to other text formats.
+
+|===
+
+
+==== 1603_45_31.mul-Latn.codex.adoc
+
+NOTE: link:1603_45_31.mul-Latn.codex.adoc[1603_45_31.mul-Latn.codex.adoc]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://asciidoctor.org/docs/
+
+|===
+
+
+==== 1603_45_31.mul-Latn.codex.pdf
+
+NOTE: link:1603_45_31.mul-Latn.codex.pdf[1603_45_31.mul-Latn.codex.pdf]
+
+
+<<<
+
+== Dictiōnāria de calamitātibus
+[id='3839081']
+=== [`3839081`] Calamitas
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q3839081
+
+|
+ix_hxlix
+|
+/disaster/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">كارثة</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">աղետ</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">দুর্যোগ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">катастрофа</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">आपदा</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ವಿಪತ್ತು</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">재난</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">אסון</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Calamitas</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ภัยพิบัติ</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">Chanakya</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">灾害</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">desastre</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">disaster</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">catastrophe</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">ramp</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Katastrophe</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">desastre</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">disastro</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">tubaiste</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">katastrof</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">katastrofa</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">onnettomuus</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Dezastru</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">thảm họa</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">desastre</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">катастрофа</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">бедствие</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Desastre</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">katastrofe</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">katastrofa</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">katastrofe</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">災害</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">katastrofe</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ദുരന്തം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">bencana</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">فاجعه</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">baleset</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">hondamen</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">trychineb</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">desastre</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Katastrofa</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">katastrofo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">bencana</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Katastroof</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">katastrofa</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">afet</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Desastre</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">desastre</span>+++
+
+| Lingua Britonica (Abecedarium Latinum)
+| +++<span lang="br">desastre</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">desastre</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Desastre</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">disaster</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Katastrophen</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">desastre</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">災害</span>+++
+
+| Lingua Corsica (Abecedarium Latinum)
+| +++<span lang="co">desastre</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Katastrophe</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Desastre</span>+++
+
+| /Minangkabau language/ (Abecedarium Latinum)
+| +++<span lang="min">Desastre</span>+++
+
+| Lingua Rhaetica (Abecedarium Latinum)
+| +++<span lang="rm">Desastre</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">Desastre</span>+++
+
+| Lingua Pedemontana (Abecedarium Latinum)
+| +++<span lang="pms">Desastre</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Desastre</span>+++
+
+| Macrolingua Sarda (Abecedarium Latinum)
+| +++<span lang="sc">Desastre</span>+++
+
+| Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+| +++<span lang="gd">desastre</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Desastre</span>+++
+
+| Lingua Vallonica
+| +++<span lang="wa">Desastre</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">katastrofa</span>+++
+
+| /West Flemish/ (Abecedarium Latinum)
+| +++<span lang="vls">Desastre</span>+++
+
+| Lingua Neapolitana (Abecedarium Latinum)
+| +++<span lang="nap">Desastre</span>+++
+
+| Lingua Ligustica (Abecedarium Latinum)
+| +++<span lang="lij">Desastre</span>+++
+
+| Lingua Foroiuliensis (Abecedarium Latinum)
+| +++<span lang="fur">desastre</span>+++
+
+| Lingua Picardica (Abecedarium Latinum)
+| +++<span lang="pcd">Desastre</span>+++
+
+| /Wolof language/ (Abecedarium Latinum)
+| +++<span lang="wo">Desastre</span>+++
+
+| /Kongo macrolanguage/ (Abecedarium Latinum)
+| +++<span lang="kg">Desastre</span>+++
+
+| Lingua Arpitanica
+| +++<span lang="frp">desastre</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">灾害</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">катастрофа</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">disaster and there types</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Katastrofa</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">katastrofa</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">katastrofa</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">katastrofa</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">καταστροφή</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Ramp</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">катастрофа</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">अपघात</span>+++
+
+| Volapük (Abecedarium Latinum)
+| +++<span lang="vo">Desastre</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">calamitate</span>+++
+
+| Lingua Occidental (Abecedarium Latinum)
+| +++<span lang="ie">Desastre</span>+++
+
+| Lingua Zuluana (Abecedarium Latinum)
+| +++<span lang="zu">Desastre</span>+++
+
+|===
+
+
+
+
+[id='8065']
+=== [`8065`] calamitas naturalis
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q8065
+
+|
+ix_hxlix
+|
+/natural disaster/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">كارثة طبيعية</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Տարերային աղետներ</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">প্রাকৃতিক দুর্যোগ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">стихийное бедствие</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">प्राकृतिक आपदjhjjn</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ನೈಸರ್ಗಿಕ ವಿಕೋಪ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">자연재해</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">אסון טבע</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">calamitas naturalis</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">இயற்கைப் பேரழிவு</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">ప్రకృతి వైపరీత్యాలు</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ภัยธรรมชาติ</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">प्राकृतिकी आपद्</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">自然灾害</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">desastre natural</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">natural disaster</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">catastrophe naturelle</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">natuurramp</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Naturkatastrophe</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">desastre natural</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">disastro naturale</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">tubaiste nádúrtha</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">naturkatastrof</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">klęska żywiołowa</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">luonnonkatastrofi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">catastrofă naturală</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">thiên tai</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">catàstrofe natural</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">стихійне лихо</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Природно бедствие</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">naravna katastrofa</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">desastre natural</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">naturkatastrofe</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">živelná pohroma</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">naturkatastrofe</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">自然災害</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">naturkatastrofe</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">പ്രകൃതിക്ഷോഭം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">bencana alam</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">بلایای طبیعی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">természeti katasztrófa</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Hondamen natural</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">trychineb naturiol</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">catástrofe natural</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">živelná pohroma</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">naturkatastrofo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">bencana alam</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">loodusõnnetus</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">prirodna katastrofa</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">doğal afet</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Naturkatastroof</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">catastròfa naturala</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">natuurramp</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">naitural disaster</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Natuakatastrophn</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">desastre naturalu</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">自然災害</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Naturkatastrophe</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">náttúruhamfarir</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">dezastro naturałe</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">disastru</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Netuurramp</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">天灾</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">природна катастрофа</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">قدرتی آفت</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">stichinė nelaimė</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">prirodna katastrofa</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">dabas katastrofa</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">prirodna katastrofa</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">φυσική καταστροφή</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Natoerramp</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">стыхійнае бедства</span>+++
+
+| Lingua Faeroensis (Abecedarium Latinum)
+| +++<span lang="fo">náttúruvanlukka</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">नैसर्गिक संकट</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">Disastro natural</span>+++
+
+|===
+
+
+
+
+[id='8065_7935']
+==== [`8065_7935`] Labina nivis
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q7935
+
+|
+ix_hxlix
+|
+/avalanche/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">انهيار جليدي</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">ձնահյուս</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">হিমধস</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">лавина</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">हिमप्रपात</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">눈사태</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מפולת שלגים</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Labina nivis</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">பனிச்சரிவு</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">హిమ సంపాతం</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">หิมะถล่ม</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">हिमप्रपात</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">雪崩</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">avalancha</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">avalanche</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">avalanche</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">sneeuwlawine</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Lawine</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">alud</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">valanga</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Maidhm shléibhe</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">lavin</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Reshpja</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">lawina</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">lumivyöry</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">avalanșă</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Tuyết lở</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">allau</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Лавина</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Лавина</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Plaz</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Pagkatimpág</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">snøskred</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">lavina</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">lavine</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">雪崩</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">snøras</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ഹിമാനീപതനം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Longsor salju</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">بهمن</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Lavina</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Elur-jausi</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Eirlithriad</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Avalancha</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Lavína</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">lavango</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Runtuhan salji</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">laviin</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Snježna lavina</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">çığ</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Lawine</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Avalanca</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Sneeustorting</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Laan</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">Lurte</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Lawine</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Snjóflóð</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">Vałanga</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Lavanca</span>+++
+
+| Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+| +++<span lang="gd">Maoim-sneachda</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Lwien</span>+++
+
+| Lingua Arpitanica
+| +++<span lang="frp">Lavenche</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">雪崩</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">снежна лавина</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">برفشار</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Lavina</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Lavina</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">lavīna</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Lavina</span>+++
+
+| /South Azerbaijani/ (/Abecedarium Arabicum/)
+| +++<span lang="azb">چیغ</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Χιονοστιβάδα</span>+++
+
+| Lingua Tsetsenica (Abecedarium Cyrillicum)
+| +++<span lang="ce">Лайн хьаьтт</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Лавіна</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">हिमस्खलन</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">Avalanche</span>+++
+
+|===
+
+
+
+
+[id='8065_7944']
+==== [`8065_7944`] Terrae motus
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q7944
+
+|
+ix_hxlix
+|
+/earthquake/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">زلزال</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">երկրաշարժ</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">ভূমিকম্প</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Землетрясение</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">भूकंप</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಭೂಕಂಪ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">지진</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">地震</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">רעידת אדמה</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Terrae motus</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நிலநடுக்கம்</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">భూకంపం</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">แผ่นดินไหว</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">भूकंप</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">地震</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">sismo</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">earthquake</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">séisme</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">aardbeving</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Erdbeben</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">terremoto</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">terremoto</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Crith talún</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">jordbävning</span>+++
+
+| Lingua Caebuana (Abecedarium Latinum)
+| +++<span lang="ceb">Linog</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Tërmeti</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">trzęsienie ziemi</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">maanjäristys</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Cutremur</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Động đất</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">terratrèmol</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">землетрус</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Земетресение</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Potres</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Linog</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">jordskjelv</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">zemětřesení</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Jordskælv</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">地震</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">jordskjelv</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ഭൂകമ്പം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Gempa bumi</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">زمینلرزه</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">földrengés</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">lurrikara</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Daeargryn</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">terremoto</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">zemetrasenie</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">tertremo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">gempa bumi</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Maavärin</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Potres</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Deprem</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Eerdbeven</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Tèrratrem</span>+++
+
+| Lingua Britonica (Abecedarium Latinum)
+| +++<span lang="br">Kren-douar</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Aardbewing</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Äerdbiewen</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">yirdquauk</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Eadbebm</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">Tierratremo</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">地震</span>+++
+
+| /lingua Papiamentica/ (Abecedarium Latinum)
+| +++<span lang="pap">Terremoto</span>+++
+
+| Lingua Corsica (Abecedarium Latinum)
+| +++<span lang="co">Terramotu</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Erdbäbe</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Jarðskjálfti</span>+++
+
+| Lingua Rhaetica (Abecedarium Latinum)
+| +++<span lang="rm">Terratrembel</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">teramoto</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Tirrimotu</span>+++
+
+| Macrolingua Sarda (Abecedarium Latinum)
+| +++<span lang="sc">Terremotu</span>+++
+
+| Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+| +++<span lang="gd">Crith-thalmhainn</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Eerdsjók</span>+++
+
+| Lingua Vallonica
+| +++<span lang="wa">Tronnmint d' tere</span>+++
+
+| /West Flemish/ (Abecedarium Latinum)
+| +++<span lang="vls">Eirdbevienge</span>+++
+
+| Lingua Neapolitana (Abecedarium Latinum)
+| +++<span lang="nap">Tarramut</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">地震</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">земљотрес</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">زلزلہ</span>+++
+
+| Lingua Gan (/ISO 15924 Zyyy/)
+| +++<span lang="gan">地震</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Žemės drebėjimas</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">potres</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">zemestrīce</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Potres</span>+++
+
+| /Sranan Tongo/ (Abecedarium Latinum)
+| +++<span lang="srn">Grontapubeyfi</span>+++
+
+| /South Azerbaijani/ (/Abecedarium Arabicum/)
+| +++<span lang="azb">زلزله</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">Lindhu</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">σεισμός</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Lini</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Ierdskodding</span>+++
+
+| Lingua creola Iamaicana (Abecedarium Latinum)
+| +++<span lang="jam">Oertkwiek</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Землетрасенне</span>+++
+
+| Lingua Faeroensis (Abecedarium Latinum)
+| +++<span lang="fo">Jarðskjálvti</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">भूकंप</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">Seismo</span>+++
+
+|===
+
+
+
+
+[id='8065_8068']
+==== [`8065_8068`] Inundatio
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q8068
+
+|
+ix_hxlix
+|
+/flood/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">فيضان</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Ջրհեղեղ</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">বন্যা</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">наводнение</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">बाढ़</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಪ್ರವಾಹ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">홍수</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">水災</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">שיטפון</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Inundatio</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">வெள்ளம்</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">వరద</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">น้ำท่วม</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">प्लावन</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">洪灾</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">inundação</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">flood</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">inondation</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">overstroming</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Hochwasser</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">inundación</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">inondazione</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Tuile</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">översvämning</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">powódź</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">tulva</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Inundație</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">lụt</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">inundació</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">повідь</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">наводнение</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Poplava</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Bahâ</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">flom</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">povodeň</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">oversvømmelse</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">洪水</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">flaum</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">വെള്ളപ്പൊക്കം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Banjir</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">سیل</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">árvíz</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">uholde</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Llifogydd</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Inundación</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Povodeň</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">inundo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">banjir</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">üleujutus</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Poplava</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Sel</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Hoogwater</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Inondacion</span>+++
+
+| Lingua Britonica (Abecedarium Latinum)
+| +++<span lang="br">Dour-beuz</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Oorstroming</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">fluid</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Fluad</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">Inundación</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">洪災</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Hochwasser</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">flóð</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">inondasion</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Allavinamentu</span>+++
+
+| Lingua Vallonica
+| +++<span lang="wa">grossès aiwes</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">poplava</span>+++
+
+| Lingua Neapolitana (Abecedarium Latinum)
+| +++<span lang="nap">Alluvione</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">洪水</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">поплава</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">سیلاب</span>+++
+
+| Lingua Gan (/ISO 15924 Zyyy/)
+| +++<span lang="gan">水澇</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Potvynis</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">poplava</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">plūdi</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Poplava</span>+++
+
+| /South Azerbaijani/ (/Abecedarium Arabicum/)
+| +++<span lang="azb">داشقین</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">Banjir</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">πλημμύρα</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Caah</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Oerstreaming</span>+++
+
+| Lingua creola Iamaicana (Abecedarium Latinum)
+| +++<span lang="jam">Flod</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">паводка</span>+++
+
+| Lingua Faeroensis (Abecedarium Latinum)
+| +++<span lang="fo">flóð</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">पूर</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">Inundation</span>+++
+
+|===
+
+
+
+
+[id='8065_8070']
+==== [`8065_8070`] Megacyma
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q8070
+
+|
+ix_hxlix
+|
+/tsunami/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">تسونامي</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">ցունամի</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">সুনামি</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Цунами</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">सूनामी</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಸುನಾಮಿ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">지진해일</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">海溢</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">צונאמי</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Megacyma</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">ஆழிப்பேரலை</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">సునామి</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">คลื่นสึนามิ</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">त्सुनामी</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">海啸</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">tsunami</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">tsunami</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">tsunami</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">tsunami</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Tsunami</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">tsunami</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">maremoto</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Súnámaí</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">tsunami</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Cunami</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">tsunami</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Tsunami</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Tsunami</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">sóng thần</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">tsunami</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">цунамі</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Цунами</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Cunami</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Tsunami</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">tsunami</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">tsunami</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">tsunami</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">津波</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">flodbølgje</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">സുനാമി</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">tsunami</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">سونامی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Cunami</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">tsunami</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Tsunami</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Tsunami</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Cunami</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">cunamo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">tsunami</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Tsunami</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Cunami</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">tsunami</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Tsunami</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Tsunami</span>+++
+
+| Lingua Britonica (Abecedarium Latinum)
+| +++<span lang="br">Tsunami</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Tsoenami</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Tsunami</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">tsunami</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Tsunami</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">Tsunami</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">海嘯</span>+++
+
+| /lingua Papiamentica/ (Abecedarium Latinum)
+| +++<span lang="pap">Tsunami</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Tsunami</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Flóðbylgja</span>+++
+
+| /Minangkabau language/ (Abecedarium Latinum)
+| +++<span lang="min">Tsunami</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">Tsunami</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Tsunami</span>+++
+
+| Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+| +++<span lang="gd">Tsunami</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Tsunami</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">海啸</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">цунами</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">جنوبی ايشيا ميں سونامی</span>+++
+
+| Lingua Gan (/ISO 15924 Zyyy/)
+| +++<span lang="gan">海嘯</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Cunamis</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Tsunami</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">cunami</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Cunami</span>+++
+
+| /South Azerbaijani/ (/Abecedarium Arabicum/)
+| +++<span lang="azb">تسونامی</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">Tsunami</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Τσουνάμι</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Sunami</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Tsûnamy</span>+++
+
+| /Acehnese language/ (Abecedarium Latinum)
+| +++<span lang="ace">Ië beuna</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Цунамі</span>+++
+
+| /Kabyle language/ (Abecedarium Latinum)
+| +++<span lang="kab">Tsunami</span>+++
+
+| Lingua Faeroensis (Abecedarium Latinum)
+| +++<span lang="fo">Flóðaldur</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">त्सुनामी</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">Tsunami</span>+++
+
+|===
+
+
+
+
+[id='8065_8081']
+==== [`8065_8081`] Turbo
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q8081
+
+|
+ix_hxlix
+|
+/tornado/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">إعصار قمعي</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">տորնադո</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">টর্নেডো</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">смерч</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">बवंडर</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಟಾರ್ನೆಡೋಗಳು</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">토네이도</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">龍捲風</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">טורנדו</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Turbo</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">சுழல் காற்று</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">తుఫాను</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ทอร์นาโด</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">चक्रवातः</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">龍捲風</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">tornado</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">tornado</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">tornade</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">tornado</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Tornado</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">tornado</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">tromba d'aria</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">spéirlinn</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">tromb</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">tornadoja</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">tornado</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">trombi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">tornadă</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">lốc xoáy</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">tornado</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">смерч</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">торнадо</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">tornado</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">buhawi</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">tornado</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">tornádo</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">tornado</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">竜巻</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">tornado</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ടൊർണേഡോ</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">tornado</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">پیچند</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">tornádó</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">tornado</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">trowynt</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">tornado</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">tornádo</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">tornado</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">puting beliung</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">tromb</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">tornado</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">hortum</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Warvelwind</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">tornada</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">tornado</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Tornado</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Windhosn</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">tornado</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">龍捲風</span>+++
+
+| /lingua Papiamentica/ (Abecedarium Latinum)
+| +++<span lang="pap">warwaru</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Tornado</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">skýstrokkur</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">tornado</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">turnatu</span>+++
+
+| Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+| +++<span lang="gd">cuairt-ghaoth</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Tornado</span>+++
+
+| Lingua Vallonica
+| +++<span lang="wa">sidårniyon d' timpesse</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">tornado</span>+++
+
+| Lingua Picardica (Abecedarium Latinum)
+| +++<span lang="pcd">tornade</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">龙卷风</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">торнадо</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">طوفان گرد و باد</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">viesulas</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">tornado</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">virpuļviesulis</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">tornado</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">tornado</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">σίφωνας</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Tornado</span>+++
+
+| Lingua creola Iamaicana (Abecedarium Latinum)
+| +++<span lang="jam">taaniedo</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">тарнада</span>+++
+
+| Langobardus sermo (Abecedarium Latinum)
+| +++<span lang="lmo">borineri</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">चक्रीवादळ</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">tornado</span>+++
+
+|===
+
+
+
+
+[id='8065_8092']
+==== [`8065_8092`] Typhon marinus
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q8092
+
+|
+ix_hxlix
+|
+/tropical cyclone/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">إعصار استوائي</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Արևադարձային ցիկլոն</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">ক্রান্তীয় ঘূর্ণিঝড়</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">тропический циклон</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">उष्णकटिबंधीय चक्रवात</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಚಂಡಮಾರುತ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">열대 저기압</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">熱帶氣旋</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">סופה טרופית</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Typhon marinus</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">வெப்ப மண்டலச் சூறாவளி</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">พายุหมุนเขตร้อน</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">प्रभञ्जन</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">熱帶氣旋</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">ciclone tropical</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">tropical cyclone</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">cyclone tropical</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">tropische cycloon</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">tropischer Wirbelsturm</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">ciclón tropical</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">ciclone tropicale</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">cioclón trópaiceach</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">tropisk cyklon</span>+++
+
+| Lingua Caebuana (Abecedarium Latinum)
+| +++<span lang="ceb">Bagyo</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">cyklon tropikalny</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">trooppinen hirmumyrsky</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">ciclon tropical</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">xoáy thuận nhiệt đới</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">cicló tropical</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">тропічний циклон</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">тропически циклон</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">tropski ciklon</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">bagyo</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">tropisk syklon</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">tropická cyklóna</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">tropisk cyklon</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">熱帯低気圧</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">tropisk syklon</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ചുഴലിക്കാറ്റ്</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">siklon tropis</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">توفند</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">trópusi ciklon</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">zikloi tropikal</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Corwynt</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">ciclón tropical</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Tropická cyklóna</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">tropika ciklono</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">siklon tropika</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">troopiline tsüklon</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">tropska oluja</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Kasırga</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">ciclon tropical</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">tropiese sikloon</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">tropesche Wierbelstuerm</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">tropischa Wiabeschtuam</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">ciclón tropical</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">熱帶氣旋</span>+++
+
+| /lingua Papiamentica/ (Abecedarium Latinum)
+| +++<span lang="pap">tormenta tropikal</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">tropischer Wirbelsturm</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">fellibylur</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">siclon tropegałe</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">cicluni tropicali</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">热带气旋</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">тропски циклон</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">طوفان</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">tropische cyclone</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">tropski ciklon</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">viesuļvētra</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">tropski ciklon</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">siklon tropis</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Τροπικός κυκλώνας</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Siklon Tropis</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">tropyske stoarm</span>+++
+
+| Lingua creola Iamaicana (Abecedarium Latinum)
+| +++<span lang="jam">Chrapikal saikluon</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">трапічны цыклон</span>+++
+
+| Lingua Faeroensis (Abecedarium Latinum)
+| +++<span lang="fo">Ódnir</span>+++
+
+| Langobardus sermo (Abecedarium Latinum)
+| +++<span lang="lmo">Uragan</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">हरिकेन</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">cyclon tropic</span>+++
+
+|===
+
+
+
+
+[id='8065_167903']
+==== [`8065_167903`] /landslide/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q167903
+
+|
+ix_hxlix
+|
+/landslide/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">انهيار</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Սողանքներ</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">ভূমিধস</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">оползень</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">भूस्खलन</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಭೂಕುಸಿತ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">산사태</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">山崩</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מפולת</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நிலச்சரிவு</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">山崩</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">deslizamento de terra</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">landslide</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">glissement de terrain</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">aardverschuiving</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Erdrutsch</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">deslizamiento de tierra</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">frana</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Sciorradh talún</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">jordskred</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Osuwisko</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">maanvyöry</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Alunecare de teren</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Đất trượt</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">esllavissada</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">зсув ґрунту</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Свлачище</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Zemeljski plaz</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Pagparik</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">jordskred</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">sesuv</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">jordskred</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">地滑り</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">jordras</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">മണ്ണിടിച്ചിൽ</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">tanah longsor</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">سنگریزش</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">földcsuszamlás</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Luizi</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">tirlithriad</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Zosuv svahu</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">terglito</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">tanah runtuh</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">maalihe</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Klizište</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">heyelan</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">Torrocata</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">山崩</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Berghlaup</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">odron</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">山体滑坡</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">одрон</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">ہبوط ارض</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Nuošliauža</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Klizište</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">zemes nogruvums</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Klizište</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">κατολίσθηση</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Urug</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Ierdferskowing</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">апоўзень</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">भूस्खलन</span>+++
+
+|===
+
+
+
+
+[id='8065_169950']
+==== [`8065_169950`] /wildfire/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q169950
+
+|
+ix_hxlix
+|
+/wildfire/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">حرائق الغابات</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Անտառային հրդեհներ</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">দাবানল</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">лесной пожар</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">दावानल</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಕಾಳ್ಗಿಚ್ಚು</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">산불</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">שריפת יער</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">காட்டுத்தீ</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">దావానలం</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ไฟป่า</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">山火</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">incêndio florestal</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">wildfire</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">feu de forêt</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">natuurbrand</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Lauffeuer</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">incendio forestal</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">incendio boschivo</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Falscaí</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">brand i terräng</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">pożar lasu</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">maastopalo</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Incendiu de pădure</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">cháy rừng</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">incendi forestal</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">лісова пожежа</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Горски пожар</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Požar v naravi</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">skogbrann</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">lesní požár</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">skovbrand</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">山火事</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">skogbrann</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">കാട്ടുതീ</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Kebakaran liar</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">آتشسوزی جنگل</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">bozóttűz</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Baso-sute</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">tân gwyllt</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Incendio forestal</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">arbara incendio</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Kebakaran liar</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">maastiku·põleng</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Šumski požar</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Orman yangını</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">encendi de bòsc</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">Wildfire</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">山火</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Villieldur</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">inséndio forestałe</span>+++
+
+| Lingua Vallonica
+| +++<span lang="wa">Såvadje feu</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">Šumski požar</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">山火</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">шумски пожар</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">جنگلی آگ</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Miško gaisras</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Šumski požar</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">meža ugunsgrēks</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Šumski požar</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">δασική πυρκαγιά</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Natoerbrân</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Лясны пажар</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">वणवा</span>+++
+
+|===
+
+
+
+
+[id='8065_215864']
+==== [`8065_215864`] /heat wave/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q215864
+
+|
+ix_hxlix
+|
+/heat wave/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">موجة حر</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">তাপদাহ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">жара</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">ग्रीष्म लहर</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">폭염</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">גל חום</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">热浪</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">onda de calor</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">heat wave</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">canicule</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">hittegolf</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Hitzewelle</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">ola de calor</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">ondata di caldo</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Tonn teasa</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">värmebölja</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">upał</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">lämpöaalto</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Caniculă</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Sóng nhiệt</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">onada de calor</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Спека</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">hetebølge</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">vlna veder</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">hedebølge</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">熱波</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">Hetebølgje</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ഉഷ്ണതരംഗം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Gelombang panas</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">موج گرما</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">kánikula</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Bero bolada</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Vaga de calor</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">varmondo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Gelombang haba</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Kuumalaine</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Toplinski val</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Canicula</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">熱浪</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Hitzewelle</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Suli liuni</span>+++
+
+| Lingua Vallonica
+| +++<span lang="wa">Waernu</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">热浪</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">топлотни талас</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">گرمی کی لہر</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Kaitra</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Karstuma vilnis</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Καύσωνας</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">hjittenswelle</span>+++
+
+|===
+
+
+
+
+[id='8065_925246']
+==== [`8065_925246`] /limnic eruption/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q925246
+
+|
+ix_hxlix
+|
+/limnic eruption/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Լիմնոլոգիական աղետ</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">লিমনিক উদগিরণ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Лимнологическая катастрофа</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">התפרצות מימית</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">湖底噴發</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">erupção límnica</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">limnic eruption</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">éruption limnique</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">limnische uitbarsting</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">erupción límnica</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">eruzione di tipo limnico</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">limniskt utbrott</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Erupcja limniczna</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Erupție limnică</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Phun trào CO2</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">erupció límnica</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Лімнологічна катастрофа</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">limnisk utbrudd</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">湖水爆発</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Letusan limnik</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Limnikus kitörés</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Erupción límnica</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">subita eligo de gaso el lago</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Limniese uitbarsting</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Лимничка ерупција</span>+++
+
+|===
+
+
+
+
+[id='8065_205418']
+==== [`8065_205418`] Blizzard
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q205418
+
+|
+ix_hxlix
+|
+/blizzard/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">دمق</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Բուք</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">প্রবল তুষারঝড়</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Метель</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">ब्लिज़र्ड</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">블리자드</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">雱</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">ויסקול</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Blizzard</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">பனிப்புயல்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">雪暴</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">nevão</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">blizzard</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">blizzard</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">blizzard</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Blizzard</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">nevasca</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">blizzard</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Síobadh sneachta</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">blizzard</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">zawieja</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Viscol</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Bão tuyết lớn</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">torb</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Заметіль</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Виелица</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Blizzard</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">snøstorm</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">blizard</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">snestorm</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">吹雪</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">snøstorm</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Badai salju</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">طوفانبرف</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Hóvihar</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Bisuts</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Lluwchwynt</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Xistra</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Blizard</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Neĝoŝtormo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Ribut salji</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Tuisk</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Mećava</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Kar fırtınası</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Sneestörm</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Blizzard</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">Turbera (meteorolochía)</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">雪暴</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">Blizard</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">雪暴</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">близард</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Pūga</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Mećava</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">sniegputenis</span>+++
+
+| /South Azerbaijani/ (/Abecedarium Arabicum/)
+| +++<span lang="azb">کولک</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Χιονοθύελλα</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Завіруха</span>+++
+
+|===
+
+
+
+
+[id='8065_7692360']
+==== [`8065_7692360`] /volcanic eruption/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q7692360
+
+|
+ix_hxlix
+|
+/volcanic eruption/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">أنواع الثورات البركانية</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">հրաբխի ժայթքում</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">আগ্নেয়গিরির অগ্ন্যুৎপাতের প্রকারভেদ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">извержение вулкана</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">ज्वालामुखी विस्फोटों के प्रकार</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">분화</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">התפרצות געשית</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">எரிமலை வெடிப்பு</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">అగ్నిపర్వత విస్ఫోటనం</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">火山噴發類型</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">erupção vulcânica</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">volcanic eruption</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">éruption volcanique</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">eruptie</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Vulkanausbruch</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">erupción volcánica</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">eruzione vulcanica</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Catagóir:Brúchtaí bolcánacha</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">vulkanutbrott</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">erupcja wulkanu</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">tulivuorenpurkaus</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Erupție vulcanică</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">erupció volcànica</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">виверження вулкана</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Tipi vulkanskih izbruhov</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">vulkanutbrudd</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">sopečná erupce</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">vulkanudbrud</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">噴火</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">vulkanutbrot</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Gunung meletus</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">فوران آتشفشانی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">vulkánkitörés</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Sumendi-erupzio</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">echdoriad folcanig</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Erupción volcánica</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Vulkánska erupcia</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">vulkana erupcio</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">letusan gunung berapi</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">vulkaanipurse</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Vulkanska erupcija</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Volkanik Püskürme Şekilleri</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Erupcion volcanica</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">火山噴發類型</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Eldgos</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Eruzzioni</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Vulkaansoetbersing</span>+++
+
+| Lingua Foroiuliensis (Abecedarium Latinum)
+| +++<span lang="fur">Eruzion</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">вулканска ерупција</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Vulkanska erupcija</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">vulkāna izvirdums</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">ηφαιστειακή έκρηξη</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">вывяржэнне вулкана</span>+++
+
+|===
+
+
+
+
+[id='8065_11120024']
+==== [`8065_11120024`] /Freezing rain/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q11120024
+
+|
+ix_hxlix
+|
+/freezing rain/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مطر متجمد</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">ледяной дождь</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">우빙</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">雨冰</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">rain water good and bad</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ฝนเยือกแข็ง</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">冻雨</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">chuva congelada</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Freezing rain</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Pluie verglaçante</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">ijzel</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">gefrierender Regen</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">lluvia engelante</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">pioggia sopraffusa</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">frysande regn</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">deszcz marznący</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">jäätävä sade</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">ploaie înghețată</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Băng mưa</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">pluja gelant</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">крижана буря</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">леден дъжд</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">poledica</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">underkjølt regn</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">isslag</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">雨氷</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">underkjølt regn</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">pembekuan hujan</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">باران منجمد</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">ónos eső</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">euri izoztu</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">frostiĝanta pluvo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">hujan beku</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Jäävihm</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Ledena kiša</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">vriesreën</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Iezel</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Ledena kiša</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">lijundra</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Ledena kiša</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">atkala</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Παγωμένη βροχή</span>+++
+
+|===
+
+
+
+
+[id='8065_15120872']
+==== [`8065_15120872`] /lightning strike/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q15120872
+
+|
+ix_hxlix
+|
+/lightning strike/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">صاعقة</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">удар молнии</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">낙뢰</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מכת ברק</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ฟ้าผ่า</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">落雷</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">relâmpago</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">lightning strike</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">foudroiement</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">blikseminslag</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Blitzeinschlag</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">relámpago</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">caduta di fulmine</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">buille tintrí</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">blixtnedslag</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">uderzenie pioruna</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Trăsnet</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">llampec</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">удар блискавки</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">lynnedslag</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">úder blesku</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">落雷</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Serangan petir</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">برخورد صاعقه</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Relampo</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">fulmobato</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Fùrmini</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">удар грома</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">αστραπή</span>+++
+
+| Langobardus sermo (Abecedarium Latinum)
+| +++<span lang="lmo">Stralusc</span>+++
+
+|===
+
+
+
+
+[id='2920615']
+=== [`2920615`] /anthropogenic hazard/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q2920615
+
+|
+ix_hxlix
+|
+/anthropogenic hazards/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">Anthropogenic hazard</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">人为灾害</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">anthropogenic hazard</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">danger de cause humaine</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">antropogene ramp</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">menschengemachte Katastrophe</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">desastre provocado por el hombre</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Thảm họa nhân tạo</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">perill antropogènic</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">人為的危険</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">manushya nirmidha apkadangal</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Antropogenik</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">home kaŭzita danĝero</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">人為災害</span>+++
+
+|===
+
+
+
+
+[id='2920615_854975']
+==== [`2920615_854975`] /bioterrorism/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q854975
+
+|
+ix_hxlix
+|
+/bioterrorism/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">إرهاب بيولوجي</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">জৈবসন্ত্রাস</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Биотерроризм</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಜೈವಿಕ ಭಯೋತ್ಪಾದನೆ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">바이오테러리즘</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">טרור ביולוגי</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">生物恐怖主義</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">bioterrorismo</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">bioterrorism</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">bioterrorisme</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">bioterrorisme</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Bioterrorismus</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">bioterrorismo</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">bioterrorismo</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">bioterrorism</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">bioterroryzm</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">bioterrorismi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">bioterorism</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Khủng bố sinh học</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">bioterrorisme</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Біотероризм</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">biološki terorizem</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">bioterrorisme</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">bioterorismus</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">生物兵器テロリズム</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">bioterrorisme</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Bioterorisme</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">بیوتروریسم</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">bioterorismo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">biokeganasan</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">bioterrorism</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Biyoterör</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">生物恐怖主義</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">bioterorizam</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Биотероризам</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">bioterorizmas</span>+++
+
+|===
+
+
+
+
+[id='2920615_686984']
+==== [`2920615_686984`] /civil disorder/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q686984
+
+|
+ix_hxlix
+|
+/civil unrest/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">اضطراب مدني</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">массовые беспорядки</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">민중봉기</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מהומה</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">การก่อความไม่สงบ</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">骚乱</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">civil disorder</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">désordre civil</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">volksopstand</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Widerstand gegen die Staatsgewalt</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">desorden civil</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">disordine civile</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">oroligheter</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">bất ổn xã hội</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">desordre civil</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Масові заворушення</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Масови безредици</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Civilni nered</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">veřejné nepokoje</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">市民暴動</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Penyakit masyarakat</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">aflonyddwch sifil</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">pergolakan sivil</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">sivil itaatsizlik</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">ceevil disorder</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">騷亂</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">građanski nemir</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">грађански немир</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">πολιτική αναταραχή</span>+++
+
+|===
+
+
+
+
+[id='2920615_1620824']
+==== [`2920615_1620824`] /nuclear accident/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q1620824
+
+|
+ix_hxlix
+|
+/nuclear accident/
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">حوادث نووية وإشعاعية</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Радиационная авария</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">नाभिकीय एवं विकिरण दुर्घटनाएँ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">원자력 사고</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">அணுவுலை விபத்துகள்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">核辐射事故</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">acidente nuclear</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">nuclear accident</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">accident nucléaire</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">kernongeval</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Strahlenunfall</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">accidente nuclear</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">incidente nucleare</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">wypadek jądrowy</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">ydinonnettomuus</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">accident nuclear</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Tai nạn hạt nhân và phóng xạ</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">accident nuclear</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Радіаційна аварія</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">kjernekraftulykke</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">jaderná havárie</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">kernekraftulykke</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">原子力事故</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">nuclearleakage</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Kecelakaan dan insiden nuklir</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">nukleáris katasztrófa</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Istripu nuklear</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">jadrová havária</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">nuklea aŭ radiada akcidento</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">nuklearna nesreća</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">nükleer kaza</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">nuklearna nesreća</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">нуклеарна несрећа</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">nuklearni incident</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">nuklearna nesreća</span>+++
+
+|===
+
+
+
+
+[id='2920615_9999991']
+==== [`2920615_9999991`] 
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+ix_hxlix
+|
+/Hazardous material spills/
+
+|===
+
+
+
+
+
+

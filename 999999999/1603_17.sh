@@ -34,12 +34,15 @@ DATA_1603_1_7="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NR
 DATA_1603_3_12_6="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1281616178"
 DATA_1603_25_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=966182339"
 DATA_1603_45_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1894917893"
+DATA_1603_45_31="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1610303107"
+DATA_1603_45_95="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1391701984"
 # DATA_1603_994_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1366500643"
 DATA_1603_84_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1366500643"
 DATA_1603_44_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1333477190"
 DATA_1603_44_142="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=455141043"
 DATA_1603_1_51="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=272891124"
 DATA_1603_1_101="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1902379960"
+DATA_1603_64_604="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1016692458"
 
 ROOTDIR="$(pwd)"
 
@@ -154,12 +157,33 @@ file_convert_numerordinatio_de_hxltm "1603_84_1" "1" "0"
 neo_codex_de_numerordinatio "1603_84_1" "0" "0"
 neo_codex_de_numerordinatio_pdf "1603_84_1" "0" "0"
 
+file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
+file_convert_numerordinatio_de_hxltm "1603_45_31" "1" "0"
+file_translate_csv_de_numerordinatio_q "1603_45_31" "0" "0"
+file_merge_numerordinatio_de_wiki_q "1603_45_31" "0" "0"
+neo_codex_de_numerordinatio "1603_45_31" "0" "0"
+neo_codex_de_numerordinatio_pdf "1603_45_31" "0" "0"
+
+file_download_if_necessary "$DATA_1603_45_95" "1603_45_95" "csv" "tm.hxl.csv" "hxltmcli" "1"
+file_convert_numerordinatio_de_hxltm "1603_45_95" "1" "0"
+file_translate_csv_de_numerordinatio_q "1603_45_95" "0" "0"
+file_merge_numerordinatio_de_wiki_q "1603_45_95" "0" "0"
+neo_codex_de_numerordinatio "1603_45_95" "0" "0"
+neo_codex_de_numerordinatio_pdf "1603_45_95" "0" "0"
+
 file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_45_1" "1" "0"
 file_translate_csv_de_numerordinatio_q "1603_45_1" "0" "0"
 file_merge_numerordinatio_de_wiki_q "1603_45_1" "0" "0"
 neo_codex_de_numerordinatio "1603_45_1" "0" "0"
 neo_codex_de_numerordinatio_pdf "1603_45_1" "0" "0"
+
+file_download_if_necessary "$DATA_1603_64_604" "1603_64_604" "csv" "tm.hxl.csv" "hxltmcli" "1"
+file_convert_numerordinatio_de_hxltm "1603_64_604" "1" "0"
+file_translate_csv_de_numerordinatio_q "1603_64_604" "0" "0"
+file_merge_numerordinatio_de_wiki_q "1603_64_604" "0" "0"
+neo_codex_de_numerordinatio "1603_64_604" "0" "0"
+neo_codex_de_numerordinatio_pdf "1603_64_604" "0" "0"
 
 # TODO: convert this to an function
 ./999999999/0/1603_1.py --punctum-separato-de-resultatum=',' --de-archivum 1603/84/1/1603_84_1.no1.tm.hxl.csv > 1603/84/1/1603_84_1.meta.no1.tm.hxl.csv

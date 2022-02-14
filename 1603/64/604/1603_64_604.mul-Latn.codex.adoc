@@ -1,0 +1,5364 @@
+= Cōdex [1603:64:604]: //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+:doctype: book
+:title: Cōdex [1603:64:604]: //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+:lang: la
+:toc:
+:toclevels: 4
+:toc-title: Tabula contentorum
+:table-caption: Tabula
+:figure-caption: Pictūra
+:example-caption: Exemplum
+:last-update-label: Renovatio
+:version-label: Versiō
+:appendix-caption: Appendix
+:source-highlighter: rouge
+:warning-caption: Hic sunt dracones
+:tip-caption: Commendātum
+
+
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[quote]
+/_**Public domain means that each major common issue only needs to be resolved once**_/@eng-Latn
+
+<<<
+toc::[]
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+_**"Cōdex [1603:64:604]"**_ is the book format of the machine-readable dictionaries _**"[1603:64:604] //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//"**_,
+which are distributed for implementers on external applications.
+This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+
+Practical lexicography is the art or craft of compiling, writing and editing dictionaries.
+The basics are not far different than a millennia ago:
+it is still a very humane, creative work.
+It is necessary to be humble:
+most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws.
+Making sure of a source idea of what a concept represents,
+even if it means rewrite and make simpler, annex pictures,
+show examples, do whatever to make it be understood,
+makes even non-professional translators that care about their own language deliver better results than any alternative.
+In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+
+The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use.
+All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares.
+Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
+
+|===
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+scrīptor
+|
+EticaAI
+
+|
+/cōdex pūblicandī/
+|
+EticaAI
+
+|
+/publication date/@eng-Latn
+|
+2022-04-14
+
+|
+numerus editionis
+|
+2022-02-14T18:28:41
+
+|
+/SPDX license ID/@eng-Latn
+|
+CC0-1.0
+
+|===
+
+
+<<<
+
+== Methodī ex cōdice
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations.
+
+|===
+
+=== Methodī ex dictiōnāriōrum corde
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/scope and content/@eng-Latn
+|
+TODO: explain 1603_64_604
+
+|===
+
+
+=== Methodī ex verbīs in dictiōnāriīs
+NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data],  which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+
+==== Methodī ex verbīs in Vicidata (Q modō)
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The ***[1603:64:604] //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+
+This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**How reliable are the community translations (Wikidata source)?**
+
+The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+
+As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests.
+This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+
+However, even when the result is correct,
+the current version needs improved differentiation, at minimum, acronym and long form.
+For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**Major reasons for "wrong translations" are not translators fault**
+
+TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+
+NOTE: Both at concept level and (as general statistics) book level, is planned to have indication concept likelihood of being well understood for very stricter translations initiatives.
+
+The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+
+It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+
+. The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_64_604.no1.tm.hxl.csv`, may reference Wiki QID.
+. Every unique QID of  `1603_64_604.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
+.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+. The query result, with all QIDs and term labels, is shared as `1603_64_604.wikiq.tm.hxl.csv`
+. The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_64_604.wikiq.tm.hxl.csv`
+. `1603_64_604.no1.tm.hxl.csv` plus `1603_64_604.wikiq.tm.hxl.csv` created `1603_64_604.no11.tm.hxl.csv`
+
+|===
+
+=== Rēs dē factō in dictiōnāriīs
+==== Concepta: 28
+
+==== Rēs linguālibus: 111
+
+[%header,cols="15h,25a,~,15"]
+|===
+|
+Cōdex linguae
+|
+Glotto cōdicī +++<br>+++ ISO 639-3 +++<br>+++ Wiki QID cōdicī
+|
+Nōmen Latīnum
+|
+Concepta
+
+|
+mul-Zyyy
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/mul[mul]
++++<br>+++ 
+|
+Linguae multiplīs (Scrīptum incognitō)
+|
+27
+
+|
+ara-Arab
+|
+https://glottolog.org/resource/languoid/id/arab1395[arab1395]
++++<br>+++
+https://iso639-3.sil.org/code/ara[ara]
++++<br>+++ https://www.wikidata.org/wiki/Q13955[Q13955]
+|
+Macrolingua Arabica (/Abecedarium Arabicum/)
+|
+22
+
+|
+hye-Armn
+|
+https://glottolog.org/resource/languoid/id/nucl1235[nucl1235]
++++<br>+++
+https://iso639-3.sil.org/code/hye[hye]
++++<br>+++ https://www.wikidata.org/wiki/Q8785[Q8785]
+|
+Lingua Armenia (Alphabetum Armenium)
+|
+8
+
+|
+ben-Beng
+|
+https://glottolog.org/resource/languoid/id/beng1280[beng1280]
++++<br>+++
+https://iso639-3.sil.org/code/ben[ben]
++++<br>+++ https://www.wikidata.org/wiki/Q9610[Q9610]
+|
+Lingua Bengali (/Bengali script/)
+|
+14
+
+|
+rus-Cyrl
+|
+https://glottolog.org/resource/languoid/id/russ1263[russ1263]
++++<br>+++
+https://iso639-3.sil.org/code/rus[rus]
++++<br>+++ https://www.wikidata.org/wiki/Q7737[Q7737]
+|
+Lingua Russica (Abecedarium Cyrillicum)
+|
+17
+
+|
+hin-Deva
+|
+https://glottolog.org/resource/languoid/id/hind1269[hind1269]
++++<br>+++
+https://iso639-3.sil.org/code/hin[hin]
++++<br>+++ https://www.wikidata.org/wiki/Q1568[Q1568]
+|
+Lingua Hindica (Devanāgarī)
+|
+14
+
+|
+kan-Knda
+|
+https://glottolog.org/resource/languoid/id/nucl1305[nucl1305]
++++<br>+++
+https://iso639-3.sil.org/code/kan[kan]
++++<br>+++ https://www.wikidata.org/wiki/Q33673[Q33673]
+|
+Lingua Cannadica (/ISO 15924 Knda/)
+|
+7
+
+|
+kor-Hang
+|
+https://glottolog.org/resource/languoid/id/kore1280[kore1280]
++++<br>+++
+https://iso639-3.sil.org/code/kor[kor]
++++<br>+++ https://www.wikidata.org/wiki/Q9176[Q9176]
+|
+Lingua Coreana (Abecedarium Coreanum)
+|
+14
+
+|
+lzh-Hant
+|
+https://glottolog.org/resource/languoid/id/lite1248[lite1248]
++++<br>+++
+https://iso639-3.sil.org/code/lzh[lzh]
++++<br>+++ https://www.wikidata.org/wiki/Q37041[Q37041]
+|
+Lingua Sinica classica (/ISO 15924 Hant/)
+|
+1
+
+|
+heb-Hebr
+|
+https://glottolog.org/resource/languoid/id/hebr1245[hebr1245]
++++<br>+++
+https://iso639-3.sil.org/code/heb[heb]
++++<br>+++ https://www.wikidata.org/wiki/Q9288[Q9288]
+|
+Lingua Hebraica (Alphabetum Hebraicum)
+|
+13
+
+|
+lat-Latn
+|
+https://glottolog.org/resource/languoid/id/lati1261[lati1261]
++++<br>+++
+https://iso639-3.sil.org/code/lat[lat]
++++<br>+++ https://www.wikidata.org/wiki/Q397[Q397]
+|
+Lingua Latina (Abecedarium Latinum)
+|
+4
+
+|
+tam-Taml
+|
+https://glottolog.org/resource/languoid/id/tami1289[tami1289]
++++<br>+++
+https://iso639-3.sil.org/code/tam[tam]
++++<br>+++ https://www.wikidata.org/wiki/Q5885[Q5885]
+|
+Lingua Tamulica (/ISO 15924 Taml/)
+|
+15
+
+|
+tel-Telu
+|
+https://glottolog.org/resource/languoid/id/telu1262[telu1262]
++++<br>+++
+https://iso639-3.sil.org/code/tel[tel]
++++<br>+++ https://www.wikidata.org/wiki/Q8097[Q8097]
+|
+Lingua Telingana (/ISO 15924 Telu/)
+|
+9
+
+|
+tha-Thai
+|
+https://glottolog.org/resource/languoid/id/thai1261[thai1261]
++++<br>+++
+https://iso639-3.sil.org/code/tha[tha]
++++<br>+++ https://www.wikidata.org/wiki/Q9217[Q9217]
+|
+Lingua Thai (/ISO 15924 Thai/)
+|
+8
+
+|
+san-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sans1269[sans1269]
++++<br>+++
+https://iso639-3.sil.org/code/san[san]
++++<br>+++ https://www.wikidata.org/wiki/Q11059[Q11059]
+|
+Lingua Sanscrita  (?)
+|
+2
+
+|
+zho-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sini1245[sini1245]
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q7850[Q7850]
+|
+/Macrolingua Sinicae (?)/
+|
+24
+
+|
+por-Latn
+|
+https://glottolog.org/resource/languoid/id/port1283[port1283]
++++<br>+++
+https://iso639-3.sil.org/code/por[por]
++++<br>+++ https://www.wikidata.org/wiki/Q5146[Q5146]
+|
+Lingua Lusitana (Abecedarium Latinum)
+|
+17
+
+|
+eng-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1293[stan1293]
++++<br>+++
+https://iso639-3.sil.org/code/eng[eng]
++++<br>+++ https://www.wikidata.org/wiki/Q1860[Q1860]
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+26
+
+|
+fra-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1290[stan1290]
++++<br>+++
+https://iso639-3.sil.org/code/fra[fra]
++++<br>+++ https://www.wikidata.org/wiki/Q150[Q150]
+|
+Lingua Francogallica (Abecedarium Latinum)
+|
+22
+
+|
+nld-Latn
+|
+https://glottolog.org/resource/languoid/id/mode1257[mode1257]
++++<br>+++
+https://iso639-3.sil.org/code/nld[nld]
++++<br>+++ https://www.wikidata.org/wiki/Q7411[Q7411]
+|
+Lingua Batavica (Abecedarium Latinum)
+|
+18
+
+|
+deu-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1295[stan1295]
++++<br>+++
+https://iso639-3.sil.org/code/deu[deu]
++++<br>+++ https://www.wikidata.org/wiki/Q188[Q188]
+|
+Lingua Germanica (Abecedarium Latinum)
+|
+19
+
+|
+spa-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1288[stan1288]
++++<br>+++
+https://iso639-3.sil.org/code/spa[spa]
++++<br>+++ https://www.wikidata.org/wiki/Q1321[Q1321]
+|
+Lingua Hispanica (Abecedarium Latinum)
+|
+21
+
+|
+ita-Latn
+|
+https://glottolog.org/resource/languoid/id/ital1282[ital1282]
++++<br>+++
+https://iso639-3.sil.org/code/ita[ita]
++++<br>+++ https://www.wikidata.org/wiki/Q652[Q652]
+|
+Lingua Italiana (Abecedarium Latinum)
+|
+14
+
+|
+gle-Latn
+|
+https://glottolog.org/resource/languoid/id/iris1253[iris1253]
++++<br>+++
+https://iso639-3.sil.org/code/gle[gle]
++++<br>+++ https://www.wikidata.org/wiki/Q9142[Q9142]
+|
+Lingua Hibernica (Abecedarium Latinum)
+|
+4
+
+|
+swe-Latn
+|
+https://glottolog.org/resource/languoid/id/swed1254[swed1254]
++++<br>+++
+https://iso639-3.sil.org/code/swe[swe]
++++<br>+++ https://www.wikidata.org/wiki/Q9027[Q9027]
+|
+Lingua Suecica (Abecedarium Latinum)
+|
+16
+
+|
+ceb-Latn
+|
+https://glottolog.org/resource/languoid/id/cebu1242[cebu1242]
++++<br>+++
+https://iso639-3.sil.org/code/ceb[ceb]
++++<br>+++ https://www.wikidata.org/wiki/Q33239[Q33239]
+|
+Lingua Caebuana (Abecedarium Latinum)
+|
+1
+
+|
+sqi-Latn
+|
+https://glottolog.org/resource/languoid/id/alba1267[alba1267]
++++<br>+++
+https://iso639-3.sil.org/code/sqi[sqi]
++++<br>+++ https://www.wikidata.org/wiki/Q8748[Q8748]
+|
+Macrolingua Albanica (/Abecedarium Latinum/)
+|
+5
+
+|
+pol-Latn
+|
+https://glottolog.org/resource/languoid/id/poli1260[poli1260]
++++<br>+++
+https://iso639-3.sil.org/code/pol[pol]
++++<br>+++ https://www.wikidata.org/wiki/Q809[Q809]
+|
+Lingua Polonica (Abecedarium Latinum)
+|
+14
+
+|
+fin-Latn
+|
+https://glottolog.org/resource/languoid/id/finn1318[finn1318]
++++<br>+++
+https://iso639-3.sil.org/code/fin[fin]
++++<br>+++ https://www.wikidata.org/wiki/Q1412[Q1412]
+|
+Lingua Finnica (Abecedarium Latinum)
+|
+14
+
+|
+ron-Latn
+|
+https://glottolog.org/resource/languoid/id/roma1327[roma1327]
++++<br>+++
+https://iso639-3.sil.org/code/ron[ron]
++++<br>+++ https://www.wikidata.org/wiki/Q7913[Q7913]
+|
+Lingua Dacoromanica (Abecedarium Latinum)
+|
+10
+
+|
+vie-Latn
+|
+https://glottolog.org/resource/languoid/id/viet1252[viet1252]
++++<br>+++
+https://iso639-3.sil.org/code/vie[vie]
++++<br>+++ https://www.wikidata.org/wiki/Q9199[Q9199]
+|
+Lingua Vietnamensis (Abecedarium Latinum)
+|
+14
+
+|
+cat-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1289[stan1289]
++++<br>+++
+https://iso639-3.sil.org/code/cat[cat]
++++<br>+++ https://www.wikidata.org/wiki/Q7026[Q7026]
+|
+Lingua Catalana (Abecedarium Latinum)
+|
+16
+
+|
+ukr-Cyrl
+|
+https://glottolog.org/resource/languoid/id/ukra1253[ukra1253]
++++<br>+++
+https://iso639-3.sil.org/code/ukr[ukr]
++++<br>+++ https://www.wikidata.org/wiki/Q8798[Q8798]
+|
+Lingua Ucrainica (Abecedarium Cyrillicum)
+|
+15
+
+|
+bul-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bulg1262[bulg1262]
++++<br>+++
+https://iso639-3.sil.org/code/bul[bul]
++++<br>+++ https://www.wikidata.org/wiki/Q7918[Q7918]
+|
+Lingua Bulgarica (Abecedarium Cyrillicum)
+|
+8
+
+|
+slv-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1268[slov1268]
++++<br>+++
+https://iso639-3.sil.org/code/slv[slv]
++++<br>+++ https://www.wikidata.org/wiki/Q9063[Q9063]
+|
+Lingua Slovena (Abecedarium Latinum)
+|
+8
+
+|
+war-Latn
+|
+https://glottolog.org/resource/languoid/id/wara1300[wara1300]
++++<br>+++
+https://iso639-3.sil.org/code/war[war]
++++<br>+++ https://www.wikidata.org/wiki/Q34279[Q34279]
+|
+/Waray language/ (Abecedarium Latinum)
+|
+4
+
+|
+nob-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1259[norw1259]
++++<br>+++
+https://iso639-3.sil.org/code/nob[nob]
++++<br>+++ https://www.wikidata.org/wiki/Q25167[Q25167]
+|
+/Bokmål/ (Abecedarium Latinum)
+|
+13
+
+|
+ces-Latn
+|
+https://glottolog.org/resource/languoid/id/czec1258[czec1258]
++++<br>+++
+https://iso639-3.sil.org/code/ces[ces]
++++<br>+++ https://www.wikidata.org/wiki/Q9056[Q9056]
+|
+Lingua Bohemica (Abecedarium Latinum)
+|
+13
+
+|
+dan-Latn
+|
+https://glottolog.org/resource/languoid/id/dani1285[dani1285]
++++<br>+++
+https://iso639-3.sil.org/code/dan[dan]
++++<br>+++ https://www.wikidata.org/wiki/Q9035[Q9035]
+|
+Lingua Danica (Abecedarium Latinum)
+|
+11
+
+|
+jpn-Jpan
+|
+https://glottolog.org/resource/languoid/id/nucl1643[nucl1643]
++++<br>+++
+https://iso639-3.sil.org/code/jpn[jpn]
++++<br>+++ https://www.wikidata.org/wiki/Q5287[Q5287]
+|
+Lingua Iaponica (Scriptura Iaponica)
+|
+20
+
+|
+nno-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1262[norw1262]
++++<br>+++
+https://iso639-3.sil.org/code/nno[nno]
++++<br>+++ https://www.wikidata.org/wiki/Q25164[Q25164]
+|
+/Nynorsk/ (Abecedarium Latinum)
+|
+10
+
+|
+mal-Mlym
+|
+https://glottolog.org/resource/languoid/id/mala1464[mala1464]
++++<br>+++
+https://iso639-3.sil.org/code/mal[mal]
++++<br>+++ https://www.wikidata.org/wiki/Q36236[Q36236]
+|
+Lingua Malabarica (/Malayalam script/)
+|
+10
+
+|
+ind-Latn
+|
+https://glottolog.org/resource/languoid/id/indo1316[indo1316]
++++<br>+++
+https://iso639-3.sil.org/code/ind[ind]
++++<br>+++ https://www.wikidata.org/wiki/Q9240[Q9240]
+|
+Lingua Indonesiana (Abecedarium Latinum)
+|
+18
+
+|
+fas-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/fas[fas]
++++<br>+++ https://www.wikidata.org/wiki/Q9168[Q9168]
+|
+Macrolingua Persica (//Abecedarium Arabicum//)
+|
+16
+
+|
+hun-Latn
+|
+https://glottolog.org/resource/languoid/id/hung1274[hung1274]
++++<br>+++
+https://iso639-3.sil.org/code/hun[hun]
++++<br>+++ https://www.wikidata.org/wiki/Q9067[Q9067]
+|
+Lingua Hungarica (Abecedarium Latinum)
+|
+10
+
+|
+eus-Latn
+|
+https://glottolog.org/resource/languoid/id/basq1248[basq1248]
++++<br>+++
+https://iso639-3.sil.org/code/eus[eus]
++++<br>+++ https://www.wikidata.org/wiki/Q8752[Q8752]
+|
+Lingua Vasconica (Abecedarium Latinum)
+|
+12
+
+|
+cym-Latn
+|
+https://glottolog.org/resource/languoid/id/wels1247[wels1247]
++++<br>+++
+https://iso639-3.sil.org/code/cym[cym]
++++<br>+++ https://www.wikidata.org/wiki/Q9309[Q9309]
+|
+Lingua Cambrica (Abecedarium Latinum)
+|
+5
+
+|
+glg-Latn
+|
+https://glottolog.org/resource/languoid/id/gali1258[gali1258]
++++<br>+++
+https://iso639-3.sil.org/code/glg[glg]
++++<br>+++ https://www.wikidata.org/wiki/Q9307[Q9307]
+|
+Lingua Gallaica (Abecedarium Latinum)
+|
+8
+
+|
+slk-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1269[slov1269]
++++<br>+++
+https://iso639-3.sil.org/code/slk[slk]
++++<br>+++ https://www.wikidata.org/wiki/Q9058[Q9058]
+|
+Lingua Slovaca (Abecedarium Latinum)
+|
+7
+
+|
+epo-Latn
+|
+https://glottolog.org/resource/languoid/id/espe1235[espe1235]
++++<br>+++
+https://iso639-3.sil.org/code/epo[epo]
++++<br>+++ https://www.wikidata.org/wiki/Q143[Q143]
+|
+Lingua Esperantica (Abecedarium Latinum)
+|
+14
+
+|
+msa-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/msa[msa]
++++<br>+++ https://www.wikidata.org/wiki/Q9237[Q9237]
+|
+Macrolingua Malayana (?)
+|
+10
+
+|
+est-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/est[est]
++++<br>+++ https://www.wikidata.org/wiki/Q9072[Q9072]
+|
+Macrolingua Estonica (Abecedarium Latinum)
+|
+11
+
+|
+hrv-Latn
+|
+https://glottolog.org/resource/languoid/id/croa1245[croa1245]
++++<br>+++
+https://iso639-3.sil.org/code/hrv[hrv]
++++<br>+++ https://www.wikidata.org/wiki/Q6654[Q6654]
+|
+Lingua Croatica (Abecedarium Latinum)
+|
+8
+
+|
+tur-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1301[nucl1301]
++++<br>+++
+https://iso639-3.sil.org/code/tur[tur]
++++<br>+++ https://www.wikidata.org/wiki/Q256[Q256]
+|
+Lingua Turcica (Abecedarium Latinum)
+|
+14
+
+|
+nds-Latn
+|
+https://glottolog.org/resource/languoid/id/lowg1239[lowg1239]
++++<br>+++
+https://iso639-3.sil.org/code/nds[nds]
++++<br>+++ https://www.wikidata.org/wiki/Q25433[Q25433]
+|
+Lingua Saxonica (Abecedarium Latinum)
+|
+4
+
+|
+oci-Latn
+|
+https://glottolog.org/resource/languoid/id/occi1239[occi1239]
++++<br>+++
+https://iso639-3.sil.org/code/oci[oci]
++++<br>+++ https://www.wikidata.org/wiki/Q14185[Q14185]
+|
+Lingua Occitana (Abecedarium Latinum)
+|
+6
+
+|
+bre-Latn
+|
+https://glottolog.org/resource/languoid/id/bret1244[bret1244]
++++<br>+++
+https://iso639-3.sil.org/code/bre[bre]
++++<br>+++ https://www.wikidata.org/wiki/Q12107[Q12107]
+|
+Lingua Britonica (Abecedarium Latinum)
+|
+3
+
+|
+arz-Latn
+|
+https://glottolog.org/resource/languoid/id/egyp1253[egyp1253]
++++<br>+++
+https://iso639-3.sil.org/code/arz[arz]
++++<br>+++ https://www.wikidata.org/wiki/Q29919[Q29919]
+|
+/Egyptian Arabic/ (/Abecedarium Arabicum/)
+|
+2
+
+|
+afr-Latn
+|
+https://glottolog.org/resource/languoid/id/afri1274[afri1274]
++++<br>+++
+https://iso639-3.sil.org/code/afr[afr]
++++<br>+++ https://www.wikidata.org/wiki/Q14196[Q14196]
+|
+Lingua Batava Capitensis (Abecedarium Latinum)
+|
+7
+
+|
+ltz-Latn
+|
+https://glottolog.org/resource/languoid/id/luxe1241[luxe1241]
++++<br>+++
+https://iso639-3.sil.org/code/ltz[ltz]
++++<br>+++ https://www.wikidata.org/wiki/Q9051[Q9051]
+|
+Lingua Luxemburgensis (Abecedarium Latinum)
+|
+5
+
+|
+sco-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1243[scot1243]
++++<br>+++
+https://iso639-3.sil.org/code/sco[sco]
++++<br>+++ https://www.wikidata.org/wiki/Q14549[Q14549]
+|
+Lingua Scotica quae Teutonica (Abecedarium Latinum)
+|
+4
+
+|
+bar-Latn
+|
+https://glottolog.org/resource/languoid/id/bava1246[bava1246]
++++<br>+++
+https://iso639-3.sil.org/code/bar[bar]
++++<br>+++ https://www.wikidata.org/wiki/Q29540[Q29540]
+|
+Lingua Bavarica (Abecedarium Latinum)
+|
+3
+
+|
+arg-Latn
+|
+https://glottolog.org/resource/languoid/id/arag1245[arag1245]
++++<br>+++
+https://iso639-3.sil.org/code/arg[arg]
++++<br>+++ https://www.wikidata.org/wiki/Q8765[Q8765]
+|
+Lingua Aragonensis (Abecedarium Latinum)
+|
+2
+
+|
+zho-Hant
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q18130932[Q18130932]
+|
+//Traditional Chinese// (/ISO 15924 Hant/)
+|
+16
+
+|
+pap-Latn
+|
+https://glottolog.org/resource/languoid/id/papi1253[papi1253]
++++<br>+++
+https://iso639-3.sil.org/code/pap[pap]
++++<br>+++ https://www.wikidata.org/wiki/Q33856[Q33856]
+|
+/lingua Papiamentica/ (Abecedarium Latinum)
+|
+1
+
+|
+cos-Latn
+|
+https://glottolog.org/resource/languoid/id/cors1241[cors1241]
++++<br>+++
+https://iso639-3.sil.org/code/cos[cos]
++++<br>+++ https://www.wikidata.org/wiki/Q33111[Q33111]
+|
+Lingua Corsica (Abecedarium Latinum)
+|
+1
+
+|
+gsw-Latn
+|
+https://glottolog.org/resource/languoid/id/swis1247[swis1247]
++++<br>+++
+https://iso639-3.sil.org/code/gsw[gsw]
++++<br>+++ https://www.wikidata.org/wiki/Q131339[Q131339]
+|
+Dialecti Alemannicae (Abecedarium Latinum)
+|
+2
+
+|
+isl-Latn
+|
+https://glottolog.org/resource/languoid/id/icel1247[icel1247]
++++<br>+++
+https://iso639-3.sil.org/code/isl[isl]
++++<br>+++ https://www.wikidata.org/wiki/Q294[Q294]
+|
+Lingua Islandica (Abecedarium Latinum)
+|
+8
+
+|
+min-Latn
+|
+https://glottolog.org/resource/languoid/id/mina1268[mina1268]
++++<br>+++
+https://iso639-3.sil.org/code/min[min]
++++<br>+++ https://www.wikidata.org/wiki/Q13324[Q13324]
+|
+/Minangkabau language/ (Abecedarium Latinum)
+|
+1
+
+|
+vec-Latn
+|
+https://glottolog.org/resource/languoid/id/vene1258[vene1258]
++++<br>+++
+https://iso639-3.sil.org/code/vec[vec]
++++<br>+++ https://www.wikidata.org/wiki/Q32724[Q32724]
+|
+Lingua Veneta (Abecedarium Latinum)
+|
+3
+
+|
+pms-Latn
+|
+https://glottolog.org/resource/languoid/id/piem1238[piem1238]
++++<br>+++
+https://iso639-3.sil.org/code/pms[pms]
++++<br>+++ https://www.wikidata.org/wiki/Q15085[Q15085]
+|
+Lingua Pedemontana (Abecedarium Latinum)
+|
+1
+
+|
+scn-Latn
+|
+https://glottolog.org/resource/languoid/id/sici1248[sici1248]
++++<br>+++
+https://iso639-3.sil.org/code/scn[scn]
++++<br>+++ https://www.wikidata.org/wiki/Q33973[Q33973]
+|
+Lingua Sicula (Abecedarium Latinum)
+|
+3
+
+|
+srd-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/srd[srd]
++++<br>+++ https://www.wikidata.org/wiki/Q33976[Q33976]
+|
+Macrolingua Sarda (Abecedarium Latinum)
+|
+3
+
+|
+gla-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1245[scot1245]
++++<br>+++
+https://iso639-3.sil.org/code/gla[gla]
++++<br>+++ https://www.wikidata.org/wiki/Q9314[Q9314]
+|
+Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+|
+2
+
+|
+lim-Latn
+|
+https://glottolog.org/resource/languoid/id/limb1263[limb1263]
++++<br>+++
+https://iso639-3.sil.org/code/lim[lim]
++++<br>+++ https://www.wikidata.org/wiki/Q102172[Q102172]
+|
+Lingua Limburgica (Abecedarium Latinum)
+|
+2
+
+|
+wln-Latn
+|
+https://glottolog.org/resource/languoid/id/wall1255[wall1255]
++++<br>+++
+https://iso639-3.sil.org/code/wln[wln]
++++<br>+++ https://www.wikidata.org/wiki/Q34219[Q34219]
+|
+Lingua Vallonica
+|
+2
+
+|
+srp-Latn
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q21161949[Q21161949]
+|
+/Serbian/ (Abecedarium Latinum)
+|
+1
+
+|
+vls-Latn
+|
+https://glottolog.org/resource/languoid/id/vlaa1240[vlaa1240]
++++<br>+++
+https://iso639-3.sil.org/code/vls[vls]
++++<br>+++ https://www.wikidata.org/wiki/Q100103[Q100103]
+|
+/West Flemish/ (Abecedarium Latinum)
+|
+1
+
+|
+nap-Latn
+|
+https://glottolog.org/resource/languoid/id/neap1235[neap1235]
++++<br>+++
+https://iso639-3.sil.org/code/nap[nap]
++++<br>+++ https://www.wikidata.org/wiki/Q33845[Q33845]
+|
+Lingua Neapolitana (Abecedarium Latinum)
+|
+1
+
+|
+lij-Latn
+|
+https://glottolog.org/resource/languoid/id/ligu1248[ligu1248]
++++<br>+++
+https://iso639-3.sil.org/code/lij[lij]
++++<br>+++ https://www.wikidata.org/wiki/Q36106[Q36106]
+|
+Lingua Ligustica (Abecedarium Latinum)
+|
+1
+
+|
+fur-Latn
+|
+https://glottolog.org/resource/languoid/id/friu1240[friu1240]
++++<br>+++
+https://iso639-3.sil.org/code/fur[fur]
++++<br>+++ https://www.wikidata.org/wiki/Q33441[Q33441]
+|
+Lingua Foroiuliensis (Abecedarium Latinum)
+|
+1
+
+|
+pcd-Latn
+|
+https://glottolog.org/resource/languoid/id/pica1241[pica1241]
++++<br>+++
+https://iso639-3.sil.org/code/pcd[pcd]
++++<br>+++ https://www.wikidata.org/wiki/Q34024[Q34024]
+|
+Lingua Picardica (Abecedarium Latinum)
+|
+1
+
+|
+wol-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1347[nucl1347]
++++<br>+++
+https://iso639-3.sil.org/code/wol[wol]
++++<br>+++ https://www.wikidata.org/wiki/Q34257[Q34257]
+|
+/Wolof language/ (Abecedarium Latinum)
+|
+1
+
+|
+kon-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/kon[kon]
++++<br>+++ https://www.wikidata.org/wiki/Q33702[Q33702]
+|
+/Kongo macrolanguage/ (Abecedarium Latinum)
+|
+1
+
+|
+frp-Latn
+|
+https://glottolog.org/resource/languoid/id/fran1260[fran1260]
++++<br>+++
+https://iso639-3.sil.org/code/frp[frp]
++++<br>+++ https://www.wikidata.org/wiki/Q15087[Q15087]
+|
+Lingua Arpitanica
+|
+1
+
+|
+wuu-Zyyy
+|
+https://glottolog.org/resource/languoid/id/wuch1236[wuch1236]
++++<br>+++
+https://iso639-3.sil.org/code/wuu[wuu]
++++<br>+++ https://www.wikidata.org/wiki/Q34290[Q34290]
+|
+//Macrolingua Wu// (/ISO 15924 Zyyy/)
+|
+7
+
+|
+srp-Cyrl
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q9299[Q9299]
+|
+Lingua Serbica (Abecedarium Cyrillicum)
+|
+13
+
+|
+urd-Arab
+|
+https://glottolog.org/resource/languoid/id/urdu1245[urdu1245]
++++<br>+++
+https://iso639-3.sil.org/code/urd[urd]
++++<br>+++ https://www.wikidata.org/wiki/Q1617[Q1617]
+|
+Lingua Urdu (/Abecedarium Arabicum/)
+|
+3
+
+|
+gan-Zyyy
+|
+https://glottolog.org/resource/languoid/id/ganc1239[ganc1239]
++++<br>+++
+https://iso639-3.sil.org/code/gan[gan]
++++<br>+++ https://www.wikidata.org/wiki/Q33475[Q33475]
+|
+Lingua Gan (/ISO 15924 Zyyy/)
+|
+2
+
+|
+lit-Latn
+|
+https://glottolog.org/resource/languoid/id/lith1251[lith1251]
++++<br>+++
+https://iso639-3.sil.org/code/lit[lit]
++++<br>+++ https://www.wikidata.org/wiki/Q9083[Q9083]
+|
+Lingua Lithuanica (Abecedarium Latinum)
+|
+5
+
+|
+hbs-Latn
+|
+https://glottolog.org/resource/languoid/id/sout1528[sout1528]
++++<br>+++
+https://iso639-3.sil.org/code/hbs[hbs]
++++<br>+++ https://www.wikidata.org/wiki/Q9301[Q9301]
+|
+Macrolingua Serbocroatica (Abecedarium Latinum)
+|
+9
+
+|
+lav-Latn
+|
+https://glottolog.org/resource/languoid/id/latv1249[latv1249]
++++<br>+++
+https://iso639-3.sil.org/code/lav[lav]
++++<br>+++ https://www.wikidata.org/wiki/Q9078[Q9078]
+|
+Macrolingua Lettonica (Abecedarium Latinum)
+|
+8
+
+|
+bos-Latn
+|
+https://glottolog.org/resource/languoid/id/bosn1245[bosn1245]
++++<br>+++
+https://iso639-3.sil.org/code/bos[bos]
++++<br>+++ https://www.wikidata.org/wiki/Q9303[Q9303]
+|
+Lingua Bosnica (Abecedarium Latinum)
+|
+5
+
+|
+azb-Arab
+|
+https://glottolog.org/resource/languoid/id/sout2697[sout2697]
++++<br>+++
+https://iso639-3.sil.org/code/azb[azb]
++++<br>+++ https://www.wikidata.org/wiki/Q3449805[Q3449805]
+|
+/South Azerbaijani/ (/Abecedarium Arabicum/)
+|
+2
+
+|
+jav-Latn
+|
+https://glottolog.org/resource/languoid/id/java1254[java1254]
++++<br>+++
+https://iso639-3.sil.org/code/jav[jav]
++++<br>+++ https://www.wikidata.org/wiki/Q33549[Q33549]
+|
+Lingua Iavanica (Abecedarium Latinum)
+|
+4
+
+|
+ell-Grek
+|
+https://glottolog.org/resource/languoid/id/mode1248[mode1248]
++++<br>+++
+https://iso639-3.sil.org/code/ell[ell]
++++<br>+++ https://www.wikidata.org/wiki/Q36510[Q36510]
+|
+Lingua Neograeca (Alphabetum Graecum)
+|
+10
+
+|
+sun-Latn
+|
+https://glottolog.org/resource/languoid/id/sund1252[sund1252]
++++<br>+++
+https://iso639-3.sil.org/code/sun[sun]
++++<br>+++ https://www.wikidata.org/wiki/Q34002[Q34002]
+|
+/Sundanese language/ (Abecedarium Latinum)
+|
+3
+
+|
+fry-Latn
+|
+https://glottolog.org/resource/languoid/id/west2354[west2354]
++++<br>+++
+https://iso639-3.sil.org/code/fry[fry]
++++<br>+++ https://www.wikidata.org/wiki/Q27175[Q27175]
+|
+Lingua Frisice occidentalis (Abecedarium Latinum)
+|
+4
+
+|
+ace-Latn
+|
+https://glottolog.org/resource/languoid/id/achi1257[achi1257]
++++<br>+++
+https://iso639-3.sil.org/code/ace[ace]
++++<br>+++ https://www.wikidata.org/wiki/Q27683[Q27683]
+|
+/Acehnese language/ (Abecedarium Latinum)
+|
+1
+
+|
+jam-Latn
+|
+https://glottolog.org/resource/languoid/id/jama1262[jama1262]
++++<br>+++
+https://iso639-3.sil.org/code/jam[jam]
++++<br>+++ https://www.wikidata.org/wiki/Q35939[Q35939]
+|
+Lingua creola Iamaicana (Abecedarium Latinum)
+|
+2
+
+|
+che-Cyrl
+|
+https://glottolog.org/resource/languoid/id/chec1245[chec1245]
++++<br>+++
+https://iso639-3.sil.org/code/che[che]
++++<br>+++ https://www.wikidata.org/wiki/Q33350[Q33350]
+|
+Lingua Tsetsenica (Abecedarium Cyrillicum)
+|
+2
+
+|
+bel-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bela1254[bela1254]
++++<br>+++
+https://iso639-3.sil.org/code/bel[bel]
++++<br>+++ https://www.wikidata.org/wiki/Q9091[Q9091]
+|
+Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+|
+6
+
+|
+kab-Latn
+|
+https://glottolog.org/resource/languoid/id/kaby1243[kaby1243]
++++<br>+++
+https://iso639-3.sil.org/code/kab[kab]
++++<br>+++ https://www.wikidata.org/wiki/Q35853[Q35853]
+|
+/Kabyle language/ (Abecedarium Latinum)
+|
+1
+
+|
+fao-Latn
+|
+https://glottolog.org/resource/languoid/id/faro1244[faro1244]
++++<br>+++
+https://iso639-3.sil.org/code/fao[fao]
++++<br>+++ https://www.wikidata.org/wiki/Q25258[Q25258]
+|
+Lingua Faeroensis (Abecedarium Latinum)
+|
+1
+
+|
+bam-Zzzz
+|
+https://glottolog.org/resource/languoid/id/bamb1269[bamb1269]
++++<br>+++
+https://iso639-3.sil.org/code/bam[bam]
++++<br>+++ https://www.wikidata.org/wiki/Q33243[Q33243]
+|
+/Bambara language/ (?)
+|
+1
+
+|
+lmo-Latn
+|
+https://glottolog.org/resource/languoid/id/lomb1257[lomb1257]
++++<br>+++
+https://iso639-3.sil.org/code/lmo[lmo]
++++<br>+++ https://www.wikidata.org/wiki/Q33754[Q33754]
+|
+Langobardus sermo (Abecedarium Latinum)
+|
+2
+
+|
+mar-Deva
+|
+https://glottolog.org/resource/languoid/id/mara1378[mara1378]
++++<br>+++
+https://iso639-3.sil.org/code/mar[mar]
++++<br>+++ https://www.wikidata.org/wiki/Q1571[Q1571]
+|
+Lingua Marathica (Devanāgarī)
+|
+9
+
+|
+vol-Latn
+|
+https://glottolog.org/resource/languoid/id/vola1234[vola1234]
++++<br>+++
+https://iso639-3.sil.org/code/vol[vol]
++++<br>+++ https://www.wikidata.org/wiki/Q36986[Q36986]
+|
+Volapük (Abecedarium Latinum)
+|
+1
+
+|
+ina-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1239[inte1239]
++++<br>+++
+https://iso639-3.sil.org/code/ina[ina]
++++<br>+++ https://www.wikidata.org/wiki/Q35934[Q35934]
+|
+Interlingua (Abecedarium Latinum)
+|
+1
+
+|
+ile-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1260[inte1260]
++++<br>+++
+https://iso639-3.sil.org/code/ile[ile]
++++<br>+++ https://www.wikidata.org/wiki/Q35850[Q35850]
+|
+Lingua Occidental (Abecedarium Latinum)
+|
+1
+
+|
+zul-Latn
+|
+https://glottolog.org/resource/languoid/id/zulu1248[zulu1248]
++++<br>+++
+https://iso639-3.sil.org/code/zul[zul]
++++<br>+++ https://www.wikidata.org/wiki/Q10179[Q10179]
+|
+Lingua Zuluana (Abecedarium Latinum)
+|
+1
+
+|===
+
+==== Rēs interlinguālibus: 8
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+
+|===
+
+
+**1603:1:7:1:91**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "1_91",
+    "#item+conceptum+numerordinatio": "1603:1:7:1:91",
+    "#item+rem+definitionem+i_eng+is_latn": "QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter \"Q\" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.",
+    "#item+rem+i_lat+is_latn": "/Wiki QID/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikiq",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_q",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
+    "#status+conceptum+codicem": "19",
+    "#status+conceptum+definitionem": "50"
+}
+----
+
+**1603:1:7:2616:50**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_50",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
+    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
+    "#item+rem+i_lat+is_latn": "scrīptor",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:123**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_123",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "/cōdex pūblicandī/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:393**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:577**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_577",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
+    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
+    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:854**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_854",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
+    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
+    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:2479**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_2479",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
+    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
+    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:7535**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_7535",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:7535",
+    "#item+rem+definitionem+i_eng+is_latn": "a summary statement providing an overview of the archival collection",
+    "#item+rem+i_lat+is_latn": "/scope and content/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip7535",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_7535",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P7535",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+<<<
+
+== Archīa
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+Every book comes with several files both for book format (with additional information) and machine-readable formats with documentation of how to process them. If you receive this file and cannot find the alternatives, ask the human who provide this file.
+
+|===
+
+=== Archīa prō dictiōnāriīs: 3
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: Is recommended to use the files on this section to  generate derived works.
+
+|===
+
+
+==== 1603_64_604.no1.tm.hxl.csv
+
+NOTE: link:1603_64_604.no1.tm.hxl.csv[1603_64_604.no1.tm.hxl.csv]
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container/
+
+|===
+
+
+==== 1603_64_604.no11.tm.hxl.csv
+
+NOTE: link:1603_64_604.no11.tm.hxl.csv[1603_64_604.no11.tm.hxl.csv]
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container (expanded with terminology translations)/
+
+|===
+
+
+==== 1603_64_604.wikiq.tm.hxl.csv
+
+NOTE: link:1603_64_604.wikiq.tm.hxl.csv[1603_64_604.wikiq.tm.hxl.csv]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://hxltm.etica.ai/
+
+|===
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codicem are strictly Wikidata QIDs.
+
+|===
+
+
+=== Archīa prō cōdice: 1
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+WARNING: Unless you are working with a natural language you understand it's letters and symbols, it is strongly advised to use automation to generate derived works. Keep manual human steps at minimum: if something goes wrong at least one or more languages can be used to verify mistakes. It's not at all necessary _know all languages_, but working with writing systems you don't understand is risky: copy and paste strategy can cause _additional_ human errors and is unlikely to get human review as fast as you would need.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: The Asciidoctor (.adoc) is better at copy and pasting! It can be converted to other text formats.
+
+|===
+
+
+==== 1603_64_604.mul-Latn.codex.adoc
+
+NOTE: link:1603_64_604.mul-Latn.codex.adoc[1603_64_604.mul-Latn.codex.adoc]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://asciidoctor.org/docs/
+
+|===
+
+
+
+<<<
+
+== //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+[id='1']
+=== [`1`] 
+
+
+
+
+
+
+
+
+
+
+[id='1_283']
+==== [`1_283`] aqua
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q283
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/water/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ماء</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">ջուր</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">পানি</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">вода</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">जल</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ನೀರು</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">물</span>+++
+
+| Lingua Sinica classica (/ISO 15924 Hant/)
+| +++<span lang="lzh">水</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מים</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">aqua</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நீர்</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">నీరు</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">น้ำ</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">जलम्</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">水</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">água</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">water</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">eau</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">water</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Wasser</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">agua</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">acqua</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">uisce</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">vatten</span>+++
+
+| Lingua Caebuana (Abecedarium Latinum)
+| +++<span lang="ceb">tubig</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">uji</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">woda</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">vesi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">apă</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">nước</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">aigua</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">вода</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">вода</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">voda</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">tubig</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">vann</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">voda</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">vand</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">vatn</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ജലം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">air</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">آب</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">víz</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">ura</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">dŵr</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">auga</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">voda</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">akvo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">air</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">vesi</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">voda</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">su</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Water</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">aiga</span>+++
+
+| Lingua Britonica (Abecedarium Latinum)
+| +++<span lang="br">dour</span>+++
+
+| /Egyptian Arabic/ (/Abecedarium Arabicum/)
+| +++<span lang="arz">ميه</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">water</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Waasser</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">watter</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Wossa</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">augua</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">水</span>+++
+
+| /lingua Papiamentica/ (Abecedarium Latinum)
+| +++<span lang="pap">awa</span>+++
+
+| Lingua Corsica (Abecedarium Latinum)
+| +++<span lang="co">acqua</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Wasser</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">vatn</span>+++
+
+| /Minangkabau language/ (Abecedarium Latinum)
+| +++<span lang="min">aia</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">àcua</span>+++
+
+| Lingua Pedemontana (Abecedarium Latinum)
+| +++<span lang="pms">eva</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">acqua</span>+++
+
+| Macrolingua Sarda (Abecedarium Latinum)
+| +++<span lang="sc">aba</span>+++
+
+| Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+| +++<span lang="gd">uisge</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">water</span>+++
+
+| /West Flemish/ (Abecedarium Latinum)
+| +++<span lang="vls">woater</span>+++
+
+| Lingua Neapolitana (Abecedarium Latinum)
+| +++<span lang="nap">acqua</span>+++
+
+| Lingua Ligustica (Abecedarium Latinum)
+| +++<span lang="lij">ægoa</span>+++
+
+| Lingua Foroiuliensis (Abecedarium Latinum)
+| +++<span lang="fur">aghe</span>+++
+
+| Lingua Picardica (Abecedarium Latinum)
+| +++<span lang="pcd">Ieu</span>+++
+
+| /Wolof language/ (Abecedarium Latinum)
+| +++<span lang="wo">ndox</span>+++
+
+| /Kongo macrolanguage/ (Abecedarium Latinum)
+| +++<span lang="kg">maza</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">水</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">вода</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">پانی</span>+++
+
+| Lingua Gan (/ISO 15924 Zyyy/)
+| +++<span lang="gan">水</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">vanduo</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">voda</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">ūdens</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">voda</span>+++
+
+| /South Azerbaijani/ (/Abecedarium Arabicum/)
+| +++<span lang="azb">سو</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">banyu</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">νερό</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">cai</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">wetter</span>+++
+
+| /Acehnese language/ (Abecedarium Latinum)
+| +++<span lang="ace">ie</span>+++
+
+| Lingua creola Iamaicana (Abecedarium Latinum)
+| +++<span lang="jam">waata</span>+++
+
+| Lingua Tsetsenica (Abecedarium Cyrillicum)
+| +++<span lang="ce">хи</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">вада</span>+++
+
+| /Kabyle language/ (Abecedarium Latinum)
+| +++<span lang="kab">aman</span>+++
+
+| Lingua Faeroensis (Abecedarium Latinum)
+| +++<span lang="fo">vatn</span>+++
+
+| /Bambara language/ (?)
+| +++<span lang="bm">Ji</span>+++
+
+| Langobardus sermo (Abecedarium Latinum)
+| +++<span lang="lmo">aqua</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">पाणी</span>+++
+
+| Volapük (Abecedarium Latinum)
+| +++<span lang="vo">vat</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">aqua</span>+++
+
+| Lingua Occidental (Abecedarium Latinum)
+| +++<span lang="ie">aqua</span>+++
+
+| Lingua Zuluana (Abecedarium Latinum)
+| +++<span lang="zu">amanzi</span>+++
+
+|===
+
+
+
+
+[id='1_7892']
+==== [`1_7892`] /drinking water/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q7892
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/drinking water/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ماء الشرب</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Խմելու ջուր</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">পানীয় জল</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">питьевая вода</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">पीने का पानी</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಕುಡಿಯುವ ನೀರು</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">식수</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מי שתייה</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">குடி நீர்</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">తాగునీరు</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">น้ำดื่ม</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">饮用水</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">água potável</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">drinking water</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">eau potable</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">drinkwater</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Trinkwasser</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">agua potable</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">acqua potabile</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">dricksvatten</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Uji i Pijshëm</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">woda pitna</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">juomavesi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Apă potabilă</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">nước uống</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">aigua potable</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">питна вода</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Питейна вода</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Pitna voda</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Irimnon nga tubig</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">drikkevann</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">pitná voda</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">drikkevand</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">飲料水</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">drikkevatn</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">കുടിവെള്ളം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">air minum</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">آب آشامیدنی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">ivóvíz</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Edateko ur</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">auga potable</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Pitná voda</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">trinkakvo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">air minuman</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">joogivesi</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Pitka voda</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">İçme suyu</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Drinkwater</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Aiga potabla</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Drinkwater</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Drénkwaasser</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Neysluvatn</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">acqua pi bìviri</span>+++
+
+| Macrolingua Sarda (Abecedarium Latinum)
+| +++<span lang="sc">Aba potàbile</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">饮用水</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">пијаћа вода</span>+++
+
+| Lingua Gan (/ISO 15924 Zyyy/)
+| +++<span lang="gan">白開水</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">pitka voda</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">dzeramais ūdens</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Vodovod</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Πόσιμο νερό</span>+++
+
+| Lingua creola Iamaicana (Abecedarium Latinum)
+| +++<span lang="jam">Jingkin waata</span>+++
+
+| Lingua Tsetsenica (Abecedarium Cyrillicum)
+| +++<span lang="ce">молу хи</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">піццёвая вада</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">पिण्याचे पाणी</span>+++
+
+|===
+
+
+
+
+[id='1_15324']
+==== [`1_15324`] Corpus aquae
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q15324
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/body of water/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مسطح مائي</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">ջրային օբյեկտ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">водный объект</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">जल निकाय</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">수역</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">גוף מים</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Corpus aquae</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நீர்நிலைகள்</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">నీటి రాశి</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">แหล่งน้ำ</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">水體</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">corpo de água</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">body of water</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">étendue d'eau</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">waterlichaam</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Gewässer</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">cuerpo de agua</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">massa d'acqua</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">limistéar uisce</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">vattensamling</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">trup ujor</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">akwen</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">vesimuodostuma</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">întindere de apă</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">vùng nước</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">cos d'aigua</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">водний об'єкт</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Воден басейн</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Vodno telo</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">vannmasse</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">vodstvo</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">vandområde</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水域</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">vassførekomst</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ജലാശയം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">perairan</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">بدنه آبی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">felszíni víz</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">ur gorputza</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">corff o ddŵr</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">corpo de auga</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">akvejo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">jasad air</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">veekogu</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">vodena površina</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">su kütlesi</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">espandida d'aiga</span>+++
+
+| Lingua Britonica (Abecedarium Latinum)
+| +++<span lang="br">Ledennad dour</span>+++
+
+| /Egyptian Arabic/ (/Abecedarium Arabicum/)
+| +++<span lang="arz">مسطح مائى</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Gewässer</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">body o watter</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">水體</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Gewässer</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Vatnshlot</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">corpo de àcua</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">corpu ìdricu</span>+++
+
+| Lingua Vallonica
+| +++<span lang="wa">Aiwe</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">vodena površina</span>+++
+
+| Lingua Arpitanica
+| +++<span lang="frp">ètendua d’égoua</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">水体</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">водена површина</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">جسم آب</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Vandens telkinys</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">vodena masa</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">ūdenstilpe</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">υδάτινο σώμα</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">водны аб’ект</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">जलसाठा</span>+++
+
+|===
+
+
+
+
+[id='1_81041']
+==== [`1_81041`] Circulus aquae
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q81041
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/earth water cycle/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">دورة الماء</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Ջրի շրջապտույտը բնության մեջ</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">পানিচক্র</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Круговорот воды в природе</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">जल चक्र</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಜಲ ಚಕ್ರ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">물의 순환</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מחזור המים</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Circulus aquae</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நீர் சுழற்சி</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">జలచక్రం</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">วัฏจักรของน้ำ</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">水循环</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">ciclo hidrológico</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Earth water cycle</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">cycle de l'eau</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">waterkringloop</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Wasserkreislauf</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">ciclo hidrológico</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">ciclo dell'acqua</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">vattnets kretslopp</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Cikli i Ujit</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">cykl hydrologiczny</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Veden kiertokulku</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Circuitul apei în natură</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Vòng tuần hoàn nước</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">cicle hidrològic</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">кругообіг води</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Кръговрат на водата</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Kroženje vode</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">vannets kretsløp</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">koloběh vody</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Vandets kredsløb</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水循環</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">Vasskrinslaupet</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ജലചംക്രമണം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Siklus air</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">چرخه آب</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Vízkörforgás</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Uraren zikloa</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">cylchred ddŵr y Ddaear</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Ciclo hidrolóxico</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Kolobeh vody</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">akva ciklo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Kitaran air</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">veeringe</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Hidrološki ciklus</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Su döngüsü</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Cicle de l'aiga</span>+++
+
+| Lingua Britonica (Abecedarium Latinum)
+| +++<span lang="br">Kelc'hiad an dour</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Waterkringloop</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">watter cycle</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">Ciclo hidrolochico</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Hringrás vatns</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Waterkringloup</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">水循环</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">хидролошки циклус</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">آبی چکر</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Hidrologinis ciklas</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Hidrološki ciklus</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Ūdens cikls</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">hidrološki ciklus</span>+++
+
+| /South Azerbaijani/ (/Abecedarium Arabicum/)
+| +++<span lang="azb">سو دؤورانی</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">κύκλος του νερού</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Daur cai</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Кругазварот вады</span>+++
+
+| Langobardus sermo (Abecedarium Latinum)
+| +++<span lang="lmo">Ciclo de l'acqua</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">जलचक्र</span>+++
+
+|===
+
+
+
+
+[id='1_102192']
+==== [`1_102192`] Aqua dulcis
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q102192
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/fresh water/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ماء عذب</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">স্বাদু পানি</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">пресная вода</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">मीठा जल</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">민물</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מים מתוקים</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Aqua dulcis</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நன்னீர்</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">น้ำจืด</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">淡水</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">água doce</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">fresh water</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">eau douce</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">zoet water</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Süßwasser</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">agua dulce</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">acqua dolce</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Fionnuisce</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">sötvatten</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Woda słodka</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Makea vesi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Apă dulce</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">nước ngọt</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">aigua dolça</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">прісна вода</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Прясна вода</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Tab-áng</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">ferskvann</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">sladká voda</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Ferskvand</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">淡水</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">ferskvatn</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">air tawar</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">آب شیرین</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">édesvíz</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Ur geza</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Auga doce</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">sladká voda</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">nesala akvo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Air tawar</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Magevesi</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Slatka voda</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">tatlı su</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Söötwater</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Aiga doça</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Varswater</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Séisswaasser</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">Fresh watter</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">淡水</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Ferskvatn</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">àcua dolse</span>+++
+
+| Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
+| +++<span lang="gd">fìor-uisge</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">淡水</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Свјежа вода</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Slatka voda</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Saldūdens</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Slatka voda</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">Banyu tawa</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Cai tawar</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Swietwetter</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Прэсная вада</span>+++
+
+|===
+
+
+
+
+[id='1_183129']
+==== [`1_183129`] /water pollution/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q183129
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/water pollution/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">تلوث المياه</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Ջրի աղտոտում</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">পানি দূষণ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">загрязнение пресных вод</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">जल प्रदूषण</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಜಲ ಮಾಲಿನ್ಯ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">수질 오염</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">זיהום מים</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நீர் மாசுபாடு</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">నీటి కాలుష్యం</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">มลพิษทางน้ำ</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">जलमालिन्यम्</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">水污染</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">poluição da água</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">water pollution</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">pollution de l'eau</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">watervervuiling</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Gewässerverschmutzung</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">contaminación hídrica</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">inquinamento idrico</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">vattenförorening</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Ndotja e ujit</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">zanieczyszczenia wody</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Vesien saastuminen</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Poluarea apei</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">ô nhiễm nước</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">contaminació de l'aigua</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Забруднення прісних вод</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">замърсяване на водите</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Onesnaženje voda</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">vannforurensning</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">znečištění vody</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Vandforurening</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水質汚染</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">vassureining</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">river pollution</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">pencemaran air</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">آلودگی آب</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Vízszennyezés</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Uraren kutsadura</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Contaminación do medio hídrico</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">akvopoluado</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Pencemaran air in tamil</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Veereostus</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">su kirliliği</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Waterbesoedeling</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">水污染</span>+++
+
+| Lingua Vallonica
+| +++<span lang="wa">Mannixhance di l' aiwe</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">水污染</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">загађење воде</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Zagađenje vode</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Ūdens piesārņojums</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Ρύπανση των υδάτων</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">जल प्रदूषण</span>+++
+
+|===
+
+
+
+
+[id='1_336191']
+==== [`1_336191`] /wastewater/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q336191
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/wastewater/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مياه صرف</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Կեղտաջրեր</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">сточные воды</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">अपजल</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ತ್ಯಾಜ್ಯ ನೀರು</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">폐수</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">שפכים</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">கழிவு நீர்</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">น้ำเสีย</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">污水</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">águas residuais</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">wastewater</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">eaux usées</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">afvalwater</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Abwasser</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">aguas residuales</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">acque reflue</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">avloppsvatten</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">ścieki</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">jätevesi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Ape uzate</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Nước thải</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">aigües residuals</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Стічні води</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Отходни води</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Odpadne vode</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">avløpsvann</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">odpadní voda</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">spildevand</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">廃水</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">avløpsvatn</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">air limbah</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">پساب</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Szennyvíz</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Ur zikin</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Augas residuais</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">odpadová voda</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">uzita akvo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Air kumbahan</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">reovesi</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Aigassas</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Ofwaasser</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Obwossa</span>+++
+
+| Macrolingua Sarda (Abecedarium Latinum)
+| +++<span lang="sc">Abas residuales</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">oтпадне воде</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Nuotekos</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Otpadne vode</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Otpadna voda</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Offalwetter</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Сцёкавыя воды</span>+++
+
+|===
+
+
+
+
+[id='1_506004']
+==== [`1_506004`] /tap water/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q506004
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/tap water/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ماء الصنبور</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">টেপ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">водопроводная вода</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">상수도</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מי ברז</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">குழாய் நீர்</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">น้ำประปา</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">自来水</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">água encanada</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">tap water</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">eau du robinet</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">leidingwater</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Leitungswasser</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">agua de tubería</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Uisce buacaire</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">kranvatten</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">vesijohtovesi</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Nước máy</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">aigua corrent</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Водопровідна вода</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">kranvann</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Postevand</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水道水</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">springvatn</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Air keran</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">آب شیر</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Txorrotako ur</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Aweddwr</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">entuba akvo</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">kraanivesi</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Musluk suyu</span>+++
+
+| Lingua Saxonica (Abecedarium Latinum)
+| +++<span lang="nds">Tappwater</span>+++
+
+| Lingua Bavarica (Abecedarium Latinum)
+| +++<span lang="bar">Ganslwein</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">自來水</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Kranavatn</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">自来水</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">information on rainwater comes and stored likes lakes,rivers,etc.</span>+++
+
+|===
+
+
+
+
+[id='1_625376']
+==== [`1_625376`] /water quality/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q625376
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/water quality/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">جودة المياه</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">পানির গুণমান</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Качество воды</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">수질</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நீர்த் தரம்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">水質</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">qualidade da água</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">water quality</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">qualité de l'eau</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">waterkwaliteit</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Gewässergüteklasse</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">calidad del agua</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">vattenkvalitet</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">klasyfikacja jakości wód</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">vedenlaatu</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Calitatea apei</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Chất lượng nước</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">qualitat de l'aigua</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Якість води</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">vannkvalitet</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">vandkvalitet</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水質</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">vasskvalitet</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ജലഗുണനിലവാരം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Kualitas air</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">کیفیت آب</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Vízminőség</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">akva kvalito</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">vee kvaliteet</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Kakvoća vode</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Su kalitesi</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">水質</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">квалитет воде</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Kvaliteta vode</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Ποιότητα του νερού</span>+++
+
+|===
+
+
+
+
+[id='1_1138853']
+==== [`1_1138853`] /human right to water and sanitation (HRWS)/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q1138853
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/human right to water and sanitation (HRWS)/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">حق المياه</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">הזכות למים ולהיגיינה</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">人类饮水及卫生设施权力</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Human right to water and sanitation</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Droit à l'eau</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Recht auf Zugang zu sauberem Wasser</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Derecho al agua y al saneamiento</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Diritto all'acqua</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Hak atas air</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">حق بشری دسترسی به آب و پسابزدایی</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Yr hawl ddynol i ddŵr a glanweithdra</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">人類飲水及衛生設施權力</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">पाण्याचा अधिकार</span>+++
+
+|===
+
+
+
+
+[id='1_1463025']
+==== [`1_1463025`] /water purification/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q1463025
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/water purification/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">تنقية المياه</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">পানি পরিশোধন</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Водоочистка</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">ओएअइउफऱखथचट</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಜಲಶುದ್ಧೀಕರಣ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">정수</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">טיהור מים</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">நீர் தூய்மையாக்கம்</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">నీటి శుద్ధీకరణ</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">水淨化</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Purificação de água</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">water purification</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">purification de l'eau</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">waterzuivering</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Wasseraufbereitung</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">tratamiento de agua potable</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">potabilizzazione dell'acqua</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Vattenrening</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Uzdatnianie wody</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Purificarea apei potabile</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Lọc sạch nước</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">potabilització</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Очищення природної води</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Пречистване на водата</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Prečiščevanje vode</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">Vannrensing</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">čištění vody</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">浄水器</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ജലശുദ്ധീകരണം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Air bersih</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">تصفیه آب</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Víztisztítás</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Ur arazte</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">purigo de akvo</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Pročišćavanje vode</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Su arıtma</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Watersuiwering</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">水淨化</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Prеčišćavanje vode</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Vandens gerinimas</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Pročišćavanje vode</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Ūdens attīrīšana</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">पाणी शुद्धीकरण</span>+++
+
+|===
+
+
+
+
+[id='1_5376358']
+==== [`1_5376358`] /water scarcity/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q5376358
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/water scarcity/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ندرة المياه</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Ջրի սակավություն</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">পানি ঘাটতি</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">дефицит водных ресурсов</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">Water scarcity</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">물 부족</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">thani pangam</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">anu</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">水荒</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">escassez de água</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">water scarcity</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">stress hydrique (écologie)</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">waterschaarste</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Wasserknappheit</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">escasez de agua</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">mancanza d'acqua</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">vattenbrist</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">niedobór wody</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">vesipula</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Tình trạng thiếu nước (Water scarcity)</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">escassetat d'aigua</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">дефіцит водних ресурсів</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">vannmangel</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">nedostatek vody</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水不足</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">തലക്കുറി നൽകുക</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Kelangkaan air</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">کمبود آب</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">malabundo de akvo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Kekurangan air</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Su sorunu</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Water Skaarsheid</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Несташица воде</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">έλλειψη νερού</span>+++
+
+|===
+
+
+
+
+[id='1_6269285']
+==== [`1_6269285`] /Joint Monitoring Programme for Water Supply and Sanitation/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q6269285
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Joint Monitoring Programme for Water Supply and Sanitation/+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">供水及廁所衞生聯合監察報告</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Joint Monitoring Programme for Water Supply and Sanitation</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水供給と衛生のための共同監視プログラム</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">供水與衛生聯合監控方案</span>+++
+
+|===
+
+
+
+
+[id='1_20127660']
+==== [`1_20127660`] /wastewater treatment/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q20127660
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/wastewater treatment/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">معالجة المياه العادمة</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">বর্জ্যপানি শোধন</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">கழிவு நீர் மேலாண்மை</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">水污染控制</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">tratamento de águas residuais</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">wastewater treatment</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">traitement des eaux usées</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">rioolwaterzuivering</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Abwasseraufbereitung</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">tratamiento de aguas residuales</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">trattamento delle acque reflue</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">oczyszczanie ścieków</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">tractament d'aigües residuals</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">廃水処理</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Pengolahan air limbah</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Hondakin-uren tratamendu</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Depuración de augas residuais</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">reoveekäitlus</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Пречишћавање отпадних вода</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">notekūdeņu attīrīšana</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Επεξεργασία λυμάτων</span>+++
+
+|===
+
+
+
+
+[id='1_48741129']
+==== [`1_48741129`] /Sustainable Development Goal 6 - clean water and sanitation for all/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q48741129
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Sustainable Development Goal 6 - clean water and sanitation for all/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">الهدف السادس من أهداف التنمية المستدامة</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Цель 6 - Чистая вода и санитария</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">הבטחת זמינות וניהול בר-קיימא של מים ותברואה לכול</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">目标 6 - 清洁饮用 和环境卫生</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Objetivo de Desenvolvimento Sustentável 6</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Sustainable Development Goal 6</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Objectif de développement durable no 6 : eau propre et assainissement</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">duurzaam ontwikkelingsdoel 6</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Ziel 6 für nachhaltige Entwicklung - Sauberes Wasser und Sanitärversorgung</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Objetivo de Desarrollo Sostenible 6</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Globalt mål 6 - Rent vatten och sanitet</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">Objectiu de Desenvolupament Sostenible 6</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Garapen Jasangarrirako 6. helburua: ur garbia eta saneamendua</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">可持續發展目標6</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Στόχος Βιώσιμης Ανάπτυξης 6</span>+++
+
+|===
+
+
+
+
+[id='3491872']
+=== [`3491872`] /Improved water source/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q3491872
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Improved water source/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مياه الشرب المحسنة</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">মানসম্মত পানির উৎস</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">中国改良饮用水源</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Improved water source</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">source d'eau améliorée</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Fuente de agua mejorada</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水源改善</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">中國改良飲用水源</span>+++
+
+|===
+
+
+
+
+[id='3491872_1049049']
+==== [`3491872_1049049`] /Bottled water/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q1049049
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Bottled water/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مياه معبأة</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">бутилированная вода</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">बोतलबंद पानी</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">병입수</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">புட்டித் தண்ணீர்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">瓶裝水</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Água engarrafada</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">bottled water</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">eau en bouteille</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">flessenwater</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Flaschenwasser</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">agua embotellada</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">acqua in bottiglia</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">flaskvatten</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">woda butelkowana</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Pullovesi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">apă plată</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Nước uống đóng chai</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">aigua embotellada</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">бутельована вода</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">flaskevann</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">balená pitná voda</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">flaskevand</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">ボトルウォーター</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">കുപ്പിവെള്ളം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Air botol</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">آب بستهبندیشده</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">palackozott víz</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Botilako ur</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">enbotela akvo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Air botol</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Şişelenmiş su</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">瓶裝水</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Flöskuvatn</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">Banyu gendul</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">εμφιαλωμένο νερό</span>+++
+
+|===
+
+
+
+
+[id='3491872_2137507']
+==== [`3491872_2137507`] /rainwater harvesting/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q2137507
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/rainwater harvesting/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">نظام الحصاد المائي</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">বৃষ্টির পানি সংগ্রহ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Сбор дождевого стока</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">वर्षा जल संचयन</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಮಳೆನೀರು ಕೊಯ್ಲು</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">빗물 집수</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">மழைநீர் சேகரிப்பு</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">jala samrakshana</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">雨水撲滿</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">rainwater harvesting</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Récupération de l'eau de pluie</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Regenput</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Regenwassernutzung</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">sistema de captación de agua de lluvias</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Regnvatteninsamling</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">Sistema de captació d'aigua de pluges</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">sběr dešťové vody</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">雨水収穫</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">മഴവെള്ളസംഭരണം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">pengumpulan air hujan</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">استحصال آب</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Penuaian air hujan</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">kišovodna žetva?</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Yağmur suyu hasadı</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">прикупљање кишнице</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Reinwettersbak</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">रेन वॉटर हार्वेस्टिंग</span>+++
+
+|===
+
+
+
+
+[id='6007834']
+=== [`6007834`] /Improved sanitation/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q6007834
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Improved sanitation/+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">মানসম্মত পয়ঃনিষ্কাশন</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">उन्नत स्वच्छता</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">已改善的衛生設施</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Improved sanitation</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Saneamiento mejorado</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">現代化廁所裝置</span>+++
+
+|===
+
+
+
+
+[id='6007834_268534']
+==== [`6007834_268534`] /Flush toilet/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q268534
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Flush toilet/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مرحاض مزود بنظام شطف</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Զուգարանակոնք</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">ফ্লাশ টয়লেট</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">унитаз</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">प्रधावन शौचालय</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">수세식 변소</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">מושב אסלה</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">ఫ్లష్ టాయిలెట్</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">抽水馬桶</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">autoclismo</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">flush toilet</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">rinçage des toilettes</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">spoeltoilet</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Spültoilette</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">cisterna de inodoro</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">water</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">vattenklosett</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">muszla klozetowa</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">WC</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Bồn cầu</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">vàter</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Унітаз</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">WC</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Dibuhos nga inidoro</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">Vannklosett</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">splachovací záchod</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">水洗式便所</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">vassklosett</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">kloset siram</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">سیفون توالت</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">splachovací záchod</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">akvopelilo</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Vesiklosett</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Alafranga tuvalet</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">WC шоља</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">WC sentor</span>+++
+
+|===
+
+
+
+
+[id='6007834_30894822']
+==== [`6007834_30894822`] /Ventilated improved pit latrine/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q30894822
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Ventilated improved pit latrine/+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Люфт-клозет</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Ventilated improved pit</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Люфт-клозет</span>+++
+
+|===
+
+
+
+
+[id='6007834_178496']
+==== [`6007834_178496`] /Composting toilet/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q178496
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Composting toilet/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مرحاض سمادي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Биотуалет</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">कम्पोस्टकारी शौचालय</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">שירותים אקולוגיים</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">உரப்படுத்தல் மலசலகூடம்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">堆肥式廁所</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">banheiro seco</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">composting toilet</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Toilettes sèches</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">composttoilet</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Komposttoilette</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Baño seco ecológico</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">toilette compostante</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Torrtoalett</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Toaleta kompostująca</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Kompostikäymälä</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Біотуалет</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Kompostovací toaleta</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Multtoilet</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">バイオトイレ</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Toilet kompos</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">توالت کودساز</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Kompostovací záchod</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Kompoŝtiga necesejo</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Kompost tuvalet</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Þurrsalerni</span>+++
+
+|===
+
+
+
+
+[id='7649692']
+=== [`7649692`] /Sustainable sanitation/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q7649692
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Sustainable sanitation/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">استدامة الصرف الصحي</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">可持续卫生设施</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Saneamento sustentável</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Sustainable sanitation</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Assainissement durable</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">可持續衛生設施</span>+++
+
+|===
+
+
+
+
+[id='9999999']
+=== [`9999999`] //unimproved sanitation//
+
+
+
+
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++//unimproved sanitation//+++
+
+|===
+
+
+
+
+[id='9999999_5893646']
+==== [`9999999_5893646`] /Bucket toilet/ (@TODO: disambiguate QID from Honey bucket)
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q5893646
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Bucket toilet/ (@TODO: disambiguate QID from Honey bucket)+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">دلو لقضاء الحاجة</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">桶式馬桶</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Honey bucket</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Goldeimer</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">肥溜め</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">桶式廁所</span>+++
+
+|===
+
+
+
+
+[id='9999999_3530438']
+==== [`9999999_3530438`] /Flying toilet/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q3530438
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Flying toilet/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">المرحاض الطائر</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">flying toilet</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">toilettes volantes</span>+++
+
+|===
+
+
+
+
+[id='9999999_17072861']
+==== [`9999999_17072861`] /Open defecation/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q17072861
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Open defecation/+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">隨地便溺</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">open defecation</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Défécation en plein air</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">wildpoepen</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Defecación al aire libre</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Julkinen ulostaminen</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Đại tiện ngoài trời</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">屋外排泄</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Buang air besar sembarangan</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">室外排洩</span>+++
+
+|===
+
+
+
+

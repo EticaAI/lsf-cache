@@ -30,10 +30,10 @@ ROOTDIR="$(pwd)"
 # tutorial https://opensource.com/article/18/5/you-dont-know-bash-intro-bash-arrays
 PURGATORIA_CONCEPTUM=()
 ## Reset all files
-# PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" "tm.hxl.csv" "mul-Latn.codex.pdf" "mul-Latn.codex.adoc" )
+PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" "tm.hxl.csv" "mul-Latn.codex.pdf" "mul-Latn.codex.adoc" )
 
 ## Use cached files (avoid overload Google Sheets), but gives hint to re-generate translations
-PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" )
+# PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" )
 
 # PURGATORIA_CONCEPTUM+=( "1603_1_1" )
 # PURGATORIA_CONCEPTUM+=( "1603_1_6" )
@@ -47,7 +47,10 @@ PURGATORIA_EXTENSIONEM=( "no1.tm.hxl.csv" "wikiq.tm.hxl.csv" "no11.tm.hxl.csv" )
 # PURGATORIA_CONCEPTUM+=( "1603_84_1" )
 # PURGATORIA_CONCEPTUM+=( "1603_44_1" )
 # PURGATORIA_CONCEPTUM+=( "1603_44_142" )
-PURGATORIA_CONCEPTUM+=( "1603_45_1" )
+# PURGATORIA_CONCEPTUM+=( "1603_45_1" )
+# PURGATORIA_CONCEPTUM+=( "1603_45_31" )
+# PURGATORIA_CONCEPTUM+=( "1603_45_95" )
+PURGATORIA_CONCEPTUM+=( "1603_64_604" )
 
 DE_FACTO="${DE_FACTO:-'0'}"
 # DRYRUM="0"
