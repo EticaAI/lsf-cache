@@ -34,3 +34,8 @@
 - arma ignifera, https://latin.stackexchange.com/questions/509/why-is-there-no-word-meaning-firearm-in-contemporary-latin
 - arma ignifera, https://la.wikipedia.org/wiki/Arma_ignifera
 - //dictiōnāria de vulnera ab arma ignifera//
+
+
+<!--
+https://s3.amazonaws.com/PHR_Reports/istanbul-protocol_opt.pdf
+-->

@@ -58,7 +58,7 @@
 - scrīpta, n, plural, https://en.wiktionary.org/wiki/scriptum#Latin
 - scrīpta, n, plural, https://en.wiktionary.org/wiki/scriptus#Latin
 
-## [`1603:1:5`] //
+## [`1603:1:5`] /Concept of language/
 
 ## [`1603:1:6`] /Dictiōnāria de terminī typīs/
 - https://github.com/EticaAI/multilingual-lexicography/issues/16
@@ -102,6 +102,21 @@
   - http://micmap.org/dicfro/search/gaffiot/lingua
   - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=lingua
 - ...Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo
+
+## [`1603:1:99`] /Nōtitiae temporāriōrum circā librārium/
+- Temporaria nuntia
+- temporārius, --, --, -- https://en.wiktionary.org/wiki/temporarius#Latin
+- nōtitiae, f, pl, nominativus, https://en.wiktionary.org/wiki/notitia#Latin
+- temporāriōrum, f, pl, genetīvus, https://en.wiktionary.org/wiki/temporarius#Latin
+- ad (+ accūsātīvus), https://en.wiktionary.org/wiki/ad#Latin
+- circā (+ accūsātīvus) https://en.wiktionary.org/wiki/circa#Latin
+- librārium, n, s, accūsātīvus, https://en.wiktionary.org/wiki/librarium#Latin
+- ...Nōtitiae temporāriōrum circā librārium
+
+<!--
+- https://en.wikipedia.org/wiki/Notitia_Dignitatum
+- https://en.wikipedia.org/wiki/Notitia_Galliarum
+-->
 
 ## [`1603:1:101`] //Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//@lat-Latn
 - dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
