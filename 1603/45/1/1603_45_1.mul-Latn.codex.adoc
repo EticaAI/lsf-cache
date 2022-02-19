@@ -92,7 +92,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-02-17T16:49:48
+2022-02-19T15:57:17
 
 |
 /SPDX license ID/@eng-Latn
@@ -131,16 +131,29 @@ Factum
 |
 /scope and content/@eng-Latn
 |
-This Numerodinatio table contains terminologies related to humanitarian organizations, mostly what is called UN System and Red Cross and International Red Cross and Red Crescent Movement. The initial version was a mixed result of https://www.un.org/en/about-us/un-system and additional organizations which do exist on Wikidata/Wikipedia (including at Global level) with official websites on UN (see https://www.wikidata.org/w/index.php?search=United+Nations&search=United+Nations).
+The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
 
-All work on the main concept tables is manually compiled and reviewed by EticaAI. The goal is to increase multilingualism. For the sake of disambiguation, names, abbreviations and definitions (when they're found) are used from official UN sources as 2022-01.
+**UN System**
+The dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).
 
-Authoritative status: this work is not authoritative. The main goal is to compile and share community translations and be good enough to be usable.
+**National Red Cross and Red Crescent**
+The dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.
 
-**Caveats**:
+**Subnational Red Cross and Red Crescent**
+The dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:
 
-. The current version is incomplete. Neither the Wikimedia ecosystem nor the UN system (as admitted on their reference) are complete. A reviewed version of both can still be incomplete or have additional errors. Worst case scenario: label an single organization to wrong Wiki QID (lexicography compilation error). Typical scenario: some organization missing and you (aware of this) don't ping us to add it.
-. The community translations are not official. This doesn't mean they're necessarily wrong: with up to 200 potential language translations it would be hard for any organization to have human resources to validate.
+. National Red Cross of Brazil
+.. Code: 63_76
+... Numerodinatio: 1603:45:1:63:76
+. Subnational; Minas Gerais, Brazil
+.. UN P Code: BR33
+... Code: 63_76_33
+... Numerodinatio: 1603:45:1:63:76:33
+
+Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
+
+**Other humanitarian organizations are missing**
+These dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.
 
 |===
 
@@ -1825,7 +1838,7 @@ HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codice
 |===
 
 
-=== Archīa prō cōdice: 2
+=== Archīa prō cōdice: 1
 
 [%header,cols="25h,~a"]
 |===
@@ -1866,10 +1879,6 @@ https://asciidoctor.org/docs/
 
 |===
 
-
-==== 1603_45_1.mul-Latn.codex.pdf
-
-NOTE: link:1603_45_1.mul-Latn.codex.pdf[1603_45_1.mul-Latn.codex.pdf]
 
 
 <<<
