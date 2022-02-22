@@ -1379,8 +1379,10 @@ class Codex:
             if scope_and_content and \
                     qhxl(scope_and_content, meta_langs) is not None:
                 term = qhxl(scope_and_content, meta_langs)
-                meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
-                    term.replace("\\n", "\n")
+                term2 = self.notitiae.translatio(term)
+                meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = term2
+                # meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
+                #     term.replace("\\n", "\n")
 
             # paginae.append("")
             # paginae.append(str(meta))
@@ -1718,14 +1720,16 @@ class CodexExtero:
 
         paginae = []
 
-        # methodi_ex_codice_intro = """This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations."""
-        methodi_ex_codice_intro = \
-            self.codex.notitiae.translatio('{% _🗣️ 1603_1_99_10_10 🗣️_ %}')
+        # We're temporary not using this (2022-04-19)
 
-        paginae.extend(descriptio_tabulae_de_lingua(
-            'Lingua Anglica (Abecedarium Latinum)',
-            methodi_ex_codice_intro
-        ))
+        # methodi_ex_codice_intro = """This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations."""
+        # methodi_ex_codice_intro = \
+        #     self.codex.notitiae.translatio('{% _🗣️ 1603_1_99_10_10 🗣️_ %}')
+
+        # paginae.extend(descriptio_tabulae_de_lingua(
+        #     'Lingua Anglica (Abecedarium Latinum)',
+        #     methodi_ex_codice_intro
+        # ))
         return paginae
 
     def cavere(self):

@@ -6,6 +6,7 @@ base:
 font:
   catalog:
     merge: true
+    # merge: false
     # M+ 1p supports Latin, Latin-1 Supplement, Latin Extended, Greek, Cyrillic, Vietnamese, Japanese & an assortment of symbols
     # It also provides arrows for ->, <-, => and <= replacements in case these glyphs are missing from font
     M+ 1p Fallback: mplus1p-regular-fallback.ttf
@@ -15,32 +16,88 @@ font:
     #   italic: roboto-italic.ttf
     #   bold: roboto-bold.ttf
     #   bold_italic: roboto-bold_italic.ttf
+    NotoSans:
+      normal: NotoSans-Regular.ttf
+      italic: NotoSans-Italic.ttf
+      bold: NotoSans-Bold.ttf
+      bold_italic: NotoSans-BoldItalic.ttf
     NotoSansArabic:
       bold: NotoSansArabic-Bold.ttf
       normal: NotoSansArabic-Regular.ttf
       italic: NotoSansArabic-Regular.ttf # No italic for arabic
+    NotoSansArmenian: NotoSansArmenian-Regular.ttf
     # https://en.wikipedia.org/wiki/Sanskrit#Scripts
+
+    ### India et al ------------------------------------------------------------
+    # NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansGujarati, NotoSansGrantha, NotoSansKannada, NotoSansKaithi, NotoSansTelugu
+    # @ https://en.wikipedia.org/wiki/Sanskrit#Writing_system
     NotoSansBengali: NotoSansBengali-Regular.ttf
-    # NotoSansBengali:
-    #   bold: NotoSansBengali-Bold.ttf
-    #   normal: NotoSansBengali-Regular.ttf
-    # NotoSansBrahmi:
-    #   normal: NotoSansBrahmi-Regular.ttf
     NotoSansBrahmi: NotoSansBrahmi-Regular.ttf
     NotoSansDevanagari: NotoSansDevanagari-Regular.ttf
-    # NotoSansDevanagari:
-    #   bold: NotoSansDevanagari-Bold.ttf
-    #   normal: NotoSansDevanagari-Regular.ttf
+    NotoSansGujarati: NotoSansGujarati-Regular.ttf
+    # https://en.wikipedia.org/wiki/Grantha_script
+    NotoSansGrantha: NotoSansGrantha-Regular.ttf
+    # https://en.wikipedia.org/wiki/Kannada_alphabet
+    NotoSansKannada: NotoSansKannada-Regular.ttf
+    # https://en.wikipedia.org/wiki/Gujarati_script
+    # https://en.wikipedia.org/wiki/Kaithi
+    NotoSansKaithi: NotoSansKaithi-Regular.ttf
+    # @TODO: BUG here! NotoSansTelugu
+    # https://en.wikipedia.org/wiki/Telugu_script
+    NotoSansTelugu: NotoSansTelugu-Regular.ttf
+    ### India et al ------------------------------------------------------------
+
+    NotoSansHebrew: NotoSansHebrew-Regular.ttf
+
     NotoSansMalayalam:
       bold: NotoSansMalayalam-Bold.ttf
       normal: NotoSansMalayalam-Regular.ttf
       italic: NotoSansMalayalam-Regular.ttf # No italic for Malayalam
+    NotoSansThai: NotoSansThai-Regular.ttf
+    NotoSansTamil: NotoSansTamil-Regular.ttf
+
+    ## Manual download to 999999/1603/1/3/
+    # - https://fonts.google.com/noto/specimen/Noto+Sans+HK
+    #   - NotoSansHK-Medium.otf
+    # - https://fonts.google.com/noto/specimen/Noto+Sans+JP
+    #   - NotoSansJP-Medium.otf
+    # - https://fonts.google.com/noto/specimen/Noto+Sans+KR
+    #   - NotoSansKR-Medium.otf
+    # - https://fonts.google.com/noto/specimen/Noto+Sans+SC
+    #   - NotoSansSC-Medium.otf
+    # - https://fonts.google.com/noto/specimen/Noto+Sans+TC
+    #   - NotoSansTC-Medium.otf
+    NotoSansHK: NotoSansHK-Medium.otf
+    NotoSansJP: NotoSansJP-Medium.otf
+    NotoSansKR: NotoSansKR-Medium.otf
+    NotoSansSC: NotoSansSC-Medium.otf
+    NotoSansTC: NotoSansTC-Medium.otf
     NotoColorEmoji: NotoColorEmoji.ttf
     LastResort-Regular: LastResort-Regular.ttf
     # LastResortHE-Regular: LastResortHE-Regular.ttf
-  # fallbacks: [NotoSansArabic, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansMalayalam, M+ 1p Fallback, Noto Emoji]
-  fallbacks: [NotoSansArabic, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansMalayalam, Noto Emoji, LastResort-Regular]
-  # fallbacks: [NotoSansArabic, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansMalayalam, Noto Emoji, LastResortHE-Regular]
-  # fallbacks: [NotoSansArabic, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansMalayalam, M+ 1p Fallback, NotoColorEmoji]
-  # fallbacks: [NotoSansArabic, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansMalayalam, M+ 1p Fallback]
-  # fallbacks: [NotoSansArabic, NotoSansDevanagari, NotoSansMalayalam, M+ 1p Fallback, Noto Emoji]
+
+  ### "Somewhat safe (no empty PDF lines, but several will LastResort-Regular)"
+  fallbacks: [NotoSansArabic, NotoSansArmenian, NotoSansHebrew, NotoSansMalayalam, NotoSansThai, NotoSansTamil, NotoSans, Noto Emoji, LastResort-Regular]
+
+  # + India scripts, partial
+  # fallbacks: [NotoSansArabic, NotoSansArmenian, NotoSansHebrew, NotoSansMalayalam, NotoSansThai, NotoSansTamil, NotoSansGujarati, NotoSansGrantha, NotoSansKannada, NotoSansKaithi, NotoSansTelugu, NotoSans, Noto Emoji, LastResort-Regular]
+  # + India scripts, full
+  # fallbacks: [NotoSansArabic, NotoSansArmenian, NotoSansHebrew, NotoSansMalayalam, NotoSansThai, NotoSansTamil, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansGujarati, NotoSansGrantha, NotoSansKannada, NotoSansKaithi, NotoSansTelugu, NotoSans, Noto Emoji, LastResort-Regular]
+  # fallbacks: [LastResort-Regular]
+
+  ## Complete CJK
+  # fallbacks: [NotoSansArabic, NotoSansArmenian, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansHebrew, NotoSansKannada, NotoSansMalayalam, NotoSansThai, NotoSansTamil, NotoSans, NotoSansHK, NotoSansJP, NotoSansKR, NotoSansSC, NotoSansTC, Noto Emoji, LastResort-Regular]
+  ### CJK tests
+  # fallbacks: [NotoSansArabic, NotoSansArmenian, NotoSansBengali, NotoSansBrahmi, NotoSansDevanagari, NotoSansHebrew, NotoSansKannada, NotoSansMalayalam, NotoSansThai, NotoSansTamil, NotoSans, NotoSansSC, NotoSansTC, Noto Emoji, LastResort-Regular]
+
+
+
+# For ALPHABETICAL LIST OF SCRIPTS NOT YET ENCODED on Unicode Standard, see
+# - https://linguistics.berkeley.edu/sei/scripts-not-encoded.html
+
+
+# sudo apt install fontforge
+
+# https://unix.stackexchange.com/questions/358673/convert-in-command-line-an-sfd-file-fontforge-to-ttf-otf-woff-svg
+# fontforge -c 'Open($1); Generate($2)' foo.sfd foo.ttf
+# fontforge -c 'Open($1); Generate($2)' /usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc 999999/1603/1/3/NotoSansCJK-Regular.ttf

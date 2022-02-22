@@ -359,6 +359,90 @@ file_convert_numerordinatio_de_hxltm() {
 }
 
 #######################################
+# Convert a "full" .no11.tm.hxl.csv to .no11.xml
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+file_convert_xml_de_numerordinatio11() {
+  numerordinatio="$1"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  _basim_fontem="${ROOTDIR}"
+  _basim_objectivum="${ROOTDIR}"
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.xml"
+  # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+
+  echo "${FUNCNAME[0]}: hxltmcli --objectivum-XML [$fontem_archivum]"
+  hxltmcli --objectivum-XML "$fontem_archivum" "$objectivum_archivum"
+}
+
+#######################################
+# Convert a "full" .no11.tm.hxl.csv to .no11.tbx
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+file_convert_tbx_de_numerordinatio11() {
+  numerordinatio="$1"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  _basim_fontem="${ROOTDIR}"
+  _basim_objectivum="${ROOTDIR}"
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.tbx"
+  # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+
+  echo "${FUNCNAME[0]}: hxltmcli --objectivum-TBX-Basim [$fontem_archivum]"
+  hxltmcli --objectivum-TBX-Basim "$fontem_archivum" "$objectivum_archivum"
+}
+
+#######################################
+# Convert a "full" .no11.tm.hxl.csv to .no11.tmx
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+file_convert_tmx_de_numerordinatio11() {
+  numerordinatio="$1"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  _basim_fontem="${ROOTDIR}"
+  _basim_objectivum="${ROOTDIR}"
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.tmx"
+  # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+
+  echo "${FUNCNAME[0]}: hxltmcli --objectivum-TMX [$fontem_archivum]"
+  hxltmcli --objectivum-TMX "$fontem_archivum" "$objectivum_archivum"
+}
+
+#######################################
 # Create a codex (documentation) from an Numerordinatio standard file
 #
 # Globals:
@@ -463,7 +547,7 @@ neo_codex_de_numerordinatio_pdf() {
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.pdf"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.pdf"
   ascidoctor_theme="${ROOTDIR}/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml"
-  ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto"
+  ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto,/usr/share/fonts/opentype/noto"
   ascidoctor_font_dir_repo="${ROOTDIR}/999999/1603/1/3/"
 
   ASCIIDOCTOR_PDF_DIR=$(bundle exec gem contents asciidoctor-pdf --show-install-dir)

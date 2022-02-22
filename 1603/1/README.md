@@ -91,6 +91,8 @@
 - basibus, f, pl, (dative) https://en.wiktionary.org/wiki/basis#Latin
 - ...dictiōnāria basibus de rēs interlinguīs
 
+- Literal translation of _//Dictiōnāria basibus de rēs interlinguīs//@lat-Latn_: _Basic dictionaries about interlingual things_
+
 
 ## [`1603:1:20`] //
 ## [`1603:1:51`] //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//@lat-Latn

@@ -1,0 +1,1660 @@
+= Cōdex [1603:63:1]: //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//
+:doctype: book
+:title: Cōdex [1603:63:1]: //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//
+:lang: la
+:toc:
+:toclevels: 4
+:toc-title: Tabula contentorum
+:table-caption: Tabula
+:figure-caption: Pictūra
+:example-caption: Exemplum
+:last-update-label: Renovatio
+:version-label: Versiō
+:appendix-caption: Appendix
+:source-highlighter: rouge
+:warning-caption: Hic sunt dracones
+:tip-caption: Commendātum
+
+
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[quote]
+/**Public domain means that each major common issue only needs to be resolved once**/@eng-Latn
+
+<<<
+toc::[]
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+_**Cōdex [1603:63:1]**_ is the book format of the machine-readable dictionaries _**[1603:63:1] //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+
+Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+
+The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
+
+|===
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+scrīptor
+|
+EticaAI
+
+|
+/cōdex pūblicandī/
+|
+EticaAI
+
+|
+/publication date/@eng-Latn
+|
+2022-04-20
+
+|
+numerus editionis
+|
+2022-02-21T23:11:55
+
+|
+/SPDX license ID/@eng-Latn
+|
+CC0-1.0
+
+|===
+
+
+<<<
+
+== Methodī ex cōdice
+=== Methodī ex dictiōnāriōrum corde
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/scope and content/@eng-Latn
+|
+This group contains concepts related to humanitarian relief when done by individuais. It is REQUIRED that the individual is from an organization, either as volunteer or as part of the job, which has a code or conduct compatible with Red Cross and Red Crescent Movement. This is the more generic type of what is considered _humanitarian_, but still an _strict_ type of humanitarian. This differentiation is likely to be more clear as more dictionaries for individuais are created.
+
+|===
+
+
+=== Methodī ex verbīs in dictiōnāriīs
+NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+
+==== Methodī ex verbīs in Vicidata (Q modō)
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The ***[1603:63:1] //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+
+This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**How reliable are the community translations (Wikidata source)?**
+
+The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+
+As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+
+However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**Major reasons for "wrong translations" are not translators fault**
+
+TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+
+NOTE: Both at concept level and (as general statistics) book level, is planned to have indication concept likelihood of being well understood for very stricter translations initiatives.
+
+The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+
+It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+
+. The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_63_1.no1.tm.hxl.csv`, may reference Wiki QID.
+. Every unique QID of  `1603_63_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
+.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+. The query result, with all QIDs and term labels, is shared as `1603_63_1.wikiq.tm.hxl.csv`
+. The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_63_1.wikiq.tm.hxl.csv`
+. `1603_63_1.no1.tm.hxl.csv` plus `1603_63_1.wikiq.tm.hxl.csv` created `1603_63_1.no11.tm.hxl.csv`
+
+|===
+
+=== Rēs dē factō in dictiōnāriīs
+==== Concepta: 4
+
+==== Rēs linguālibus: 53
+
+[%header,cols="15h,25a,~,15"]
+|===
+|
+Cōdex linguae
+|
+Glotto cōdicī +++<br>+++ ISO 639-3 +++<br>+++ Wiki QID cōdicī
+|
+Nōmen Latīnum
+|
+Concepta
+
+|
+mul-Zyyy
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/mul[mul]
++++<br>+++ 
+|
+Linguae multiplīs (Scrīptum incognitō)
+|
+4
+
+|
+ara-Arab
+|
+https://glottolog.org/resource/languoid/id/arab1395[arab1395]
++++<br>+++
+https://iso639-3.sil.org/code/ara[ara]
++++<br>+++ https://www.wikidata.org/wiki/Q13955[Q13955]
+|
+Macrolingua Arabica (/Abecedarium Arabicum/)
+|
+3
+
+|
+hye-Armn
+|
+https://glottolog.org/resource/languoid/id/nucl1235[nucl1235]
++++<br>+++
+https://iso639-3.sil.org/code/hye[hye]
++++<br>+++ https://www.wikidata.org/wiki/Q8785[Q8785]
+|
+Lingua Armenia (Alphabetum Armenium)
+|
+2
+
+|
+ben-Beng
+|
+https://glottolog.org/resource/languoid/id/beng1280[beng1280]
++++<br>+++
+https://iso639-3.sil.org/code/ben[ben]
++++<br>+++ https://www.wikidata.org/wiki/Q9610[Q9610]
+|
+Lingua Bengali (/Bengali script/)
+|
+3
+
+|
+rus-Cyrl
+|
+https://glottolog.org/resource/languoid/id/russ1263[russ1263]
++++<br>+++
+https://iso639-3.sil.org/code/rus[rus]
++++<br>+++ https://www.wikidata.org/wiki/Q7737[Q7737]
+|
+Lingua Russica (Abecedarium Cyrillicum)
+|
+2
+
+|
+hin-Deva
+|
+https://glottolog.org/resource/languoid/id/hind1269[hind1269]
++++<br>+++
+https://iso639-3.sil.org/code/hin[hin]
++++<br>+++ https://www.wikidata.org/wiki/Q1568[Q1568]
+|
+Lingua Hindica (Devanāgarī)
+|
+1
+
+|
+kor-Hang
+|
+https://glottolog.org/resource/languoid/id/kore1280[kore1280]
++++<br>+++
+https://iso639-3.sil.org/code/kor[kor]
++++<br>+++ https://www.wikidata.org/wiki/Q9176[Q9176]
+|
+Lingua Coreana (Abecedarium Coreanum)
+|
+3
+
+|
+heb-Hebr
+|
+https://glottolog.org/resource/languoid/id/hebr1245[hebr1245]
++++<br>+++
+https://iso639-3.sil.org/code/heb[heb]
++++<br>+++ https://www.wikidata.org/wiki/Q9288[Q9288]
+|
+Lingua Hebraica (Alphabetum Hebraicum)
+|
+3
+
+|
+lat-Latn
+|
+https://glottolog.org/resource/languoid/id/lati1261[lati1261]
++++<br>+++
+https://iso639-3.sil.org/code/lat[lat]
++++<br>+++ https://www.wikidata.org/wiki/Q397[Q397]
+|
+Lingua Latina (Abecedarium Latinum)
+|
+3
+
+|
+tam-Taml
+|
+https://glottolog.org/resource/languoid/id/tami1289[tami1289]
++++<br>+++
+https://iso639-3.sil.org/code/tam[tam]
++++<br>+++ https://www.wikidata.org/wiki/Q5885[Q5885]
+|
+Lingua Tamulica (/ISO 15924 Taml/)
+|
+1
+
+|
+tha-Thai
+|
+https://glottolog.org/resource/languoid/id/thai1261[thai1261]
++++<br>+++
+https://iso639-3.sil.org/code/tha[tha]
++++<br>+++ https://www.wikidata.org/wiki/Q9217[Q9217]
+|
+Lingua Thai (/ISO 15924 Thai/)
+|
+2
+
+|
+zho-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sini1245[sini1245]
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q7850[Q7850]
+|
+/Macrolingua Sinicae (?)/
+|
+3
+
+|
+por-Latn
+|
+https://glottolog.org/resource/languoid/id/port1283[port1283]
++++<br>+++
+https://iso639-3.sil.org/code/por[por]
++++<br>+++ https://www.wikidata.org/wiki/Q5146[Q5146]
+|
+Lingua Lusitana (Abecedarium Latinum)
+|
+3
+
+|
+eng-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1293[stan1293]
++++<br>+++
+https://iso639-3.sil.org/code/eng[eng]
++++<br>+++ https://www.wikidata.org/wiki/Q1860[Q1860]
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+3
+
+|
+fra-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1290[stan1290]
++++<br>+++
+https://iso639-3.sil.org/code/fra[fra]
++++<br>+++ https://www.wikidata.org/wiki/Q150[Q150]
+|
+Lingua Francogallica (Abecedarium Latinum)
+|
+3
+
+|
+nld-Latn
+|
+https://glottolog.org/resource/languoid/id/mode1257[mode1257]
++++<br>+++
+https://iso639-3.sil.org/code/nld[nld]
++++<br>+++ https://www.wikidata.org/wiki/Q7411[Q7411]
+|
+Lingua Batavica (Abecedarium Latinum)
+|
+3
+
+|
+deu-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1295[stan1295]
++++<br>+++
+https://iso639-3.sil.org/code/deu[deu]
++++<br>+++ https://www.wikidata.org/wiki/Q188[Q188]
+|
+Lingua Germanica (Abecedarium Latinum)
+|
+3
+
+|
+spa-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1288[stan1288]
++++<br>+++
+https://iso639-3.sil.org/code/spa[spa]
++++<br>+++ https://www.wikidata.org/wiki/Q1321[Q1321]
+|
+Lingua Hispanica (Abecedarium Latinum)
+|
+3
+
+|
+ita-Latn
+|
+https://glottolog.org/resource/languoid/id/ital1282[ital1282]
++++<br>+++
+https://iso639-3.sil.org/code/ita[ita]
++++<br>+++ https://www.wikidata.org/wiki/Q652[Q652]
+|
+Lingua Italiana (Abecedarium Latinum)
+|
+3
+
+|
+swe-Latn
+|
+https://glottolog.org/resource/languoid/id/swed1254[swed1254]
++++<br>+++
+https://iso639-3.sil.org/code/swe[swe]
++++<br>+++ https://www.wikidata.org/wiki/Q9027[Q9027]
+|
+Lingua Suecica (Abecedarium Latinum)
+|
+2
+
+|
+sqi-Latn
+|
+https://glottolog.org/resource/languoid/id/alba1267[alba1267]
++++<br>+++
+https://iso639-3.sil.org/code/sqi[sqi]
++++<br>+++ https://www.wikidata.org/wiki/Q8748[Q8748]
+|
+Macrolingua Albanica (/Abecedarium Latinum/)
+|
+3
+
+|
+pol-Latn
+|
+https://glottolog.org/resource/languoid/id/poli1260[poli1260]
++++<br>+++
+https://iso639-3.sil.org/code/pol[pol]
++++<br>+++ https://www.wikidata.org/wiki/Q809[Q809]
+|
+Lingua Polonica (Abecedarium Latinum)
+|
+3
+
+|
+fin-Latn
+|
+https://glottolog.org/resource/languoid/id/finn1318[finn1318]
++++<br>+++
+https://iso639-3.sil.org/code/fin[fin]
++++<br>+++ https://www.wikidata.org/wiki/Q1412[Q1412]
+|
+Lingua Finnica (Abecedarium Latinum)
+|
+2
+
+|
+ron-Latn
+|
+https://glottolog.org/resource/languoid/id/roma1327[roma1327]
++++<br>+++
+https://iso639-3.sil.org/code/ron[ron]
++++<br>+++ https://www.wikidata.org/wiki/Q7913[Q7913]
+|
+Lingua Dacoromanica (Abecedarium Latinum)
+|
+3
+
+|
+vie-Latn
+|
+https://glottolog.org/resource/languoid/id/viet1252[viet1252]
++++<br>+++
+https://iso639-3.sil.org/code/vie[vie]
++++<br>+++ https://www.wikidata.org/wiki/Q9199[Q9199]
+|
+Lingua Vietnamensis (Abecedarium Latinum)
+|
+3
+
+|
+cat-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1289[stan1289]
++++<br>+++
+https://iso639-3.sil.org/code/cat[cat]
++++<br>+++ https://www.wikidata.org/wiki/Q7026[Q7026]
+|
+Lingua Catalana (Abecedarium Latinum)
+|
+3
+
+|
+ukr-Cyrl
+|
+https://glottolog.org/resource/languoid/id/ukra1253[ukra1253]
++++<br>+++
+https://iso639-3.sil.org/code/ukr[ukr]
++++<br>+++ https://www.wikidata.org/wiki/Q8798[Q8798]
+|
+Lingua Ucrainica (Abecedarium Cyrillicum)
+|
+2
+
+|
+bul-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bulg1262[bulg1262]
++++<br>+++
+https://iso639-3.sil.org/code/bul[bul]
++++<br>+++ https://www.wikidata.org/wiki/Q7918[Q7918]
+|
+Lingua Bulgarica (Abecedarium Cyrillicum)
+|
+3
+
+|
+nob-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1259[norw1259]
++++<br>+++
+https://iso639-3.sil.org/code/nob[nob]
++++<br>+++ https://www.wikidata.org/wiki/Q25167[Q25167]
+|
+/Bokmål/ (Abecedarium Latinum)
+|
+2
+
+|
+ces-Latn
+|
+https://glottolog.org/resource/languoid/id/czec1258[czec1258]
++++<br>+++
+https://iso639-3.sil.org/code/ces[ces]
++++<br>+++ https://www.wikidata.org/wiki/Q9056[Q9056]
+|
+Lingua Bohemica (Abecedarium Latinum)
+|
+2
+
+|
+dan-Latn
+|
+https://glottolog.org/resource/languoid/id/dani1285[dani1285]
++++<br>+++
+https://iso639-3.sil.org/code/dan[dan]
++++<br>+++ https://www.wikidata.org/wiki/Q9035[Q9035]
+|
+Lingua Danica (Abecedarium Latinum)
+|
+3
+
+|
+jpn-Jpan
+|
+https://glottolog.org/resource/languoid/id/nucl1643[nucl1643]
++++<br>+++
+https://iso639-3.sil.org/code/jpn[jpn]
++++<br>+++ https://www.wikidata.org/wiki/Q5287[Q5287]
+|
+Lingua Iaponica (Scriptura Iaponica)
+|
+3
+
+|
+ind-Latn
+|
+https://glottolog.org/resource/languoid/id/indo1316[indo1316]
++++<br>+++
+https://iso639-3.sil.org/code/ind[ind]
++++<br>+++ https://www.wikidata.org/wiki/Q9240[Q9240]
+|
+Lingua Indonesiana (Abecedarium Latinum)
+|
+3
+
+|
+fas-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/fas[fas]
++++<br>+++ https://www.wikidata.org/wiki/Q9168[Q9168]
+|
+Macrolingua Persica (//Abecedarium Arabicum//)
+|
+3
+
+|
+eus-Latn
+|
+https://glottolog.org/resource/languoid/id/basq1248[basq1248]
++++<br>+++
+https://iso639-3.sil.org/code/eus[eus]
++++<br>+++ https://www.wikidata.org/wiki/Q8752[Q8752]
+|
+Lingua Vasconica (Abecedarium Latinum)
+|
+2
+
+|
+epo-Latn
+|
+https://glottolog.org/resource/languoid/id/espe1235[espe1235]
++++<br>+++
+https://iso639-3.sil.org/code/epo[epo]
++++<br>+++ https://www.wikidata.org/wiki/Q143[Q143]
+|
+Lingua Esperantica (Abecedarium Latinum)
+|
+3
+
+|
+msa-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/msa[msa]
++++<br>+++ https://www.wikidata.org/wiki/Q9237[Q9237]
+|
+Macrolingua Malayana (?)
+|
+3
+
+|
+est-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/est[est]
++++<br>+++ https://www.wikidata.org/wiki/Q9072[Q9072]
+|
+Macrolingua Estonica (Abecedarium Latinum)
+|
+2
+
+|
+hrv-Latn
+|
+https://glottolog.org/resource/languoid/id/croa1245[croa1245]
++++<br>+++
+https://iso639-3.sil.org/code/hrv[hrv]
++++<br>+++ https://www.wikidata.org/wiki/Q6654[Q6654]
+|
+Lingua Croatica (Abecedarium Latinum)
+|
+2
+
+|
+tur-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1301[nucl1301]
++++<br>+++
+https://iso639-3.sil.org/code/tur[tur]
++++<br>+++ https://www.wikidata.org/wiki/Q256[Q256]
+|
+Lingua Turcica (Abecedarium Latinum)
+|
+1
+
+|
+ltz-Latn
+|
+https://glottolog.org/resource/languoid/id/luxe1241[luxe1241]
++++<br>+++
+https://iso639-3.sil.org/code/ltz[ltz]
++++<br>+++ https://www.wikidata.org/wiki/Q9051[Q9051]
+|
+Lingua Luxemburgensis (Abecedarium Latinum)
+|
+2
+
+|
+zho-Hant
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q18130932[Q18130932]
+|
+//Traditional Chinese// (/ISO 15924 Hant/)
+|
+2
+
+|
+vec-Latn
+|
+https://glottolog.org/resource/languoid/id/vene1258[vene1258]
++++<br>+++
+https://iso639-3.sil.org/code/vec[vec]
++++<br>+++ https://www.wikidata.org/wiki/Q32724[Q32724]
+|
+Lingua Veneta (Abecedarium Latinum)
+|
+2
+
+|
+srp-Latn
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q21161949[Q21161949]
+|
+/Serbian/ (Abecedarium Latinum)
+|
+2
+
+|
+wuu-Zyyy
+|
+https://glottolog.org/resource/languoid/id/wuch1236[wuch1236]
++++<br>+++
+https://iso639-3.sil.org/code/wuu[wuu]
++++<br>+++ https://www.wikidata.org/wiki/Q34290[Q34290]
+|
+//Macrolingua Wu// (/ISO 15924 Zyyy/)
+|
+1
+
+|
+srp-Cyrl
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q9299[Q9299]
+|
+Lingua Serbica (Abecedarium Cyrillicum)
+|
+3
+
+|
+lit-Latn
+|
+https://glottolog.org/resource/languoid/id/lith1251[lith1251]
++++<br>+++
+https://iso639-3.sil.org/code/lit[lit]
++++<br>+++ https://www.wikidata.org/wiki/Q9083[Q9083]
+|
+Lingua Lithuanica (Abecedarium Latinum)
+|
+3
+
+|
+hbs-Latn
+|
+https://glottolog.org/resource/languoid/id/sout1528[sout1528]
++++<br>+++
+https://iso639-3.sil.org/code/hbs[hbs]
++++<br>+++ https://www.wikidata.org/wiki/Q9301[Q9301]
+|
+Macrolingua Serbocroatica (Abecedarium Latinum)
+|
+2
+
+|
+lav-Latn
+|
+https://glottolog.org/resource/languoid/id/latv1249[latv1249]
++++<br>+++
+https://iso639-3.sil.org/code/lav[lav]
++++<br>+++ https://www.wikidata.org/wiki/Q9078[Q9078]
+|
+Macrolingua Lettonica (Abecedarium Latinum)
+|
+2
+
+|
+bos-Latn
+|
+https://glottolog.org/resource/languoid/id/bosn1245[bosn1245]
++++<br>+++
+https://iso639-3.sil.org/code/bos[bos]
++++<br>+++ https://www.wikidata.org/wiki/Q9303[Q9303]
+|
+Lingua Bosnica (Abecedarium Latinum)
+|
+2
+
+|
+ell-Grek
+|
+https://glottolog.org/resource/languoid/id/mode1248[mode1248]
++++<br>+++
+https://iso639-3.sil.org/code/ell[ell]
++++<br>+++ https://www.wikidata.org/wiki/Q36510[Q36510]
+|
+Lingua Neograeca (Alphabetum Graecum)
+|
+3
+
+|
+bel-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bela1254[bela1254]
++++<br>+++
+https://iso639-3.sil.org/code/bel[bel]
++++<br>+++ https://www.wikidata.org/wiki/Q9091[Q9091]
+|
+Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+|
+1
+
+|
+ina-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1239[inte1239]
++++<br>+++
+https://iso639-3.sil.org/code/ina[ina]
++++<br>+++ https://www.wikidata.org/wiki/Q35934[Q35934]
+|
+Interlingua (Abecedarium Latinum)
+|
+2
+
+|===
+
+==== Rēs interlinguālibus: 8
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+
+|===
+
+
+**1603:1:7:1:91**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "1_91",
+    "#item+conceptum+numerordinatio": "1603:1:7:1:91",
+    "#item+rem+definitionem+i_eng+is_latn": "QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter \"Q\" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.",
+    "#item+rem+i_lat+is_latn": "/Wiki QID/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikiq",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_q",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
+    "#status+conceptum+codicem": "19",
+    "#status+conceptum+definitionem": "50"
+}
+----
+
+**1603:1:7:2616:50**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_50",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
+    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
+    "#item+rem+i_lat+is_latn": "scrīptor",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:123**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_123",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "/cōdex pūblicandī/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:393**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:577**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_577",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
+    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
+    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:854**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_854",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
+    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
+    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:2479**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_2479",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
+    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
+    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:7535**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_7535",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:7535",
+    "#item+rem+definitionem+i_eng+is_latn": "a summary statement providing an overview of the archival collection",
+    "#item+rem+i_lat+is_latn": "/scope and content/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip7535",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_7535",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P7535",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+<<<
+
+== Archīa
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+Every book comes with several files both for book format (with (Abecedarium additional information) and machine-readable formats with Latinum) documentation of how to process them. If you receive this file and cannot find the alternatives, ask the human who provide this file.
+
+|===
+
+=== Archīa prō dictiōnāriīs: 3
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: Is recommended to use the files on this section to  generate derived works.
+
+|===
+
+
+==== 1603_63_1.no1.tm.hxl.csv
+
+NOTE: link:1603_63_1.no1.tm.hxl.csv[1603_63_1.no1.tm.hxl.csv]
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container/
+
+|===
+
+
+==== 1603_63_1.no11.tm.hxl.csv
+
+NOTE: link:1603_63_1.no11.tm.hxl.csv[1603_63_1.no11.tm.hxl.csv]
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container (expanded with terminology translations)/
+
+|===
+
+
+==== 1603_63_1.wikiq.tm.hxl.csv
+
+NOTE: link:1603_63_1.wikiq.tm.hxl.csv[1603_63_1.wikiq.tm.hxl.csv]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://hxltm.etica.ai/
+
+|===
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codicem are strictly Wikidata QIDs.
+
+|===
+
+
+=== Archīa prō cōdice: 2
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+WARNING: Unless you are working with a natural language you understand it\'s letters and symbols, it is strongly advised to use automation to generate derived works. Keep manual human steps at minimum: if something goes wrong at least one or more languages can be used to verify mistakes. It's not at all necessary _know all languages_, but working with writing systems you don't understand is risky: copy and paste strategy can cause _additional_ human errors and is unlikely to get human review as fast as you would need.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: The Asciidoctor (.adoc) is better at copy and pasting! It can be converted to other text formats.
+
+|===
+
+
+==== 1603_63_1.mul-Latn.codex.adoc
+
+NOTE: link:1603_63_1.mul-Latn.codex.adoc[1603_63_1.mul-Latn.codex.adoc]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://asciidoctor.org/docs/
+
+|===
+
+
+==== 1603_63_1.mul-Latn.codex.pdf
+
+NOTE: link:1603_63_1.mul-Latn.codex.pdf[1603_63_1.mul-Latn.codex.pdf]
+
+
+<<<
+
+== //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//
+[id='1']
+=== [`1`] Auxilium humanitarium
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q826745
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++fiat lux, 1603_63_1!+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مساعدات إنسانية</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">հումանիտար օգնություն</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">মানবহিতৈষী সাহায্য</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">гуманитарная помощь</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">인도주의적 지원</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">סיוע הומניטרי</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Auxilium humanitarium</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ความช่วยเหลือด้านมนุษยธรรม</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">人道援助</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">ajuda humanitária</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">humanitarian aid</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">aide humanitaire</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">noodhulp</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">humanitäre Hilfe</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">ayuda humanitaria</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">aiuto umanitario</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">humanitärt bistånd</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Ndihma humanitare</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">pomoc humanitarna</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">humanitaarinen apu</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">ajutor umanitar</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Viện trợ nhân đạo</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">ajuda humanitària</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">гуманітарна допомога</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Хуманитарна помощ</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">hjelpearbeid</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">humanitární pomoc</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">nødhjælp</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">人道援助</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Bantuan kemanusiaan</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">کمکهای بشردوستانه</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Gizaldeko laguntza</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Humanitara helpo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">bantuan kemanusiaan</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Humanitaarabi</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Humanitarna pomoć</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Humanitär Hëllef</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">人道援助</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">juto umanitàrio</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">humanitarna pomoć</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">хуманитарна помоћ</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Humanitarinė pagalba</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Humanitarna pomoć</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">humānā palīdzība</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Humanitarna pomoć</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">ανθρωπιστική βοήθεια</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">adjuta humanitari</span>+++
+
+|===
+
+
+
+
+[id='17']
+=== [`17`] /Wikidata QIDs/
+
+
+
+
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Wikidata QIDs/+++
+
+|===
+
+
+
+
+[id='17_775858']
+==== [`17_775858`] Humanitarismus
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q775858
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/humanitarianism/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">أعمال خيرية</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">মানবহিতৈষণা</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">मानवतावाद</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">인도주의</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">הומניטרית</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Humanitarismus</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">மனித நேயம்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">人道主义</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">humanitarismo</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">humanitarianism</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">humanitarisme</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">humanitarisme</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Humanitarismus</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">humanitarismo</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">umanitarismo</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Humanitarizmi</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Humanitaryzm</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">umanitarism</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">chủ nghĩa nhân đạo</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">humanitarisme</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Хуманитаризъм</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">humanitarianisme</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">人道主義</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Humanitarianisme</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">بشردوستی</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Humanitarismo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">faham kemanusiaan</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Hümaniteryenizm</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">人道主义</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Хуманитарност</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Humanitarizmas</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Ανθρωπισμός</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">гуманітарызм</span>+++
+
+|===
+
+
+
+
+[id='17_826745']
+==== [`17_826745`] Auxilium humanitarium
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q826745
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/humanitarian aid/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مساعدات إنسانية</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">հումանիտար օգնություն</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">মানবহিতৈষী সাহায্য</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">гуманитарная помощь</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">인도주의적 지원</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">סיוע הומניטרי</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Auxilium humanitarium</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ความช่วยเหลือด้านมนุษยธรรม</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">人道援助</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">ajuda humanitária</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">humanitarian aid</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">aide humanitaire</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">noodhulp</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">humanitäre Hilfe</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">ayuda humanitaria</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">aiuto umanitario</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">humanitärt bistånd</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Ndihma humanitare</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">pomoc humanitarna</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">humanitaarinen apu</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">ajutor umanitar</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Viện trợ nhân đạo</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">ajuda humanitària</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">гуманітарна допомога</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Хуманитарна помощ</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">hjelpearbeid</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">humanitární pomoc</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">nødhjælp</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">人道援助</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Bantuan kemanusiaan</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">کمکهای بشردوستانه</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Gizaldeko laguntza</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Humanitara helpo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">bantuan kemanusiaan</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Humanitaarabi</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Humanitarna pomoć</span>+++
+
+| Lingua Luxemburgensis (Abecedarium Latinum)
+| +++<span lang="lb">Humanitär Hëllef</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">人道援助</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">juto umanitàrio</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">humanitarna pomoć</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">хуманитарна помоћ</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Humanitarinė pagalba</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Humanitarna pomoć</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">humānā palīdzība</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Humanitarna pomoć</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">ανθρωπιστική βοήθεια</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">adjuta humanitari</span>+++
+
+|===
+
+
+
+
+
+<<<
+

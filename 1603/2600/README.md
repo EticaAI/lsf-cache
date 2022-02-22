@@ -1,4 +1,7 @@
 # [`1613:2600`]
+
+> **TODO: remove or rename 2600 to 26**
+
 - https://www.historyofinformation.com/detail.php?id=1359
 - http://uruk-warka.dk/mathematics/ER6%20tables.pdf
 - "The History of Mathematical Tables: FROM SUMER TO SPREADSHEETS"

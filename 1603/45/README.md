@@ -115,6 +115,16 @@
 - civis, https://en.wiktionary.org/wiki/civis#Latin
 --->
 
+### [`1603:45:994`] //Dictiōnāria dē Development aid//
+
+> - https://en.m.wikipedia.org/wiki/Development_aid
+
+
+- dictiōnāria, n, pl, nōminātīvus, https://en.wiktionary.org/wiki/dictionarium#Latin
+- dē (+ ablātīvus), n, pl, nōminātīvus, https://en.wiktionary.org/wiki/de#Latin
+
+
+<!--
 ### [`1603:45:991`] /Dictiōnāria dē interimperiīs datīs in praeparātiōnēs contrā calamitātēs/
 - Refs
   - https://reliefweb.int/sites/reliefweb.int/files/resources/A126E188F0B88383C1257834004858BB-Full_Report.pdf
@@ -145,6 +155,7 @@
   - https://docs.google.com/spreadsheets/d/12nKxos71U6lkttpyYTfwI2bDq9yeN1J7jplHocN96_0/edit#gid=797752596
   - (organization types)
 
+-->
 
 ### TODOs
 30315193			Q30315193				/Minnesota Protocol/ https://www.ohchr.org/Documents/Publications/MinnesotaProtocol.pdf

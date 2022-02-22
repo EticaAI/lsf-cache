@@ -92,7 +92,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-02-19T15:57:17
+2022-02-21T23:14:59
 
 |
 /SPDX license ID/@eng-Latn
@@ -105,20 +105,6 @@ CC0-1.0
 <<<
 
 == Methodī ex cōdice
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations.
-
-|===
-
 === Methodī ex dictiōnāriōrum corde
 
 [%header,cols="25h,~a"]
@@ -131,29 +117,7 @@ Factum
 |
 /scope and content/@eng-Latn
 |
-The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
-
-**UN System**
-The dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).
-
-**National Red Cross and Red Crescent**
-The dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.
-
-**Subnational Red Cross and Red Crescent**
-The dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:
-
-. National Red Cross of Brazil
-.. Code: 63_76
-... Numerodinatio: 1603:45:1:63:76
-. Subnational; Minas Gerais, Brazil
-.. UN P Code: BR33
-... Code: 63_76_33
-... Numerodinatio: 1603:45:1:63:76:33
-
-Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
-
-**Other humanitarian organizations are missing**
-These dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.
+The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.\n\n**UN System**\nThe dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).\n\n**National Red Cross and Red Crescent**\nThe dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.\n\n**Subnational Red Cross and Red Crescent**\nThe dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:\n\n. National Red Cross of Brazil\n.. Code: 63_76\n... Numerodinatio: 1603:45:1:63:76\n. Subnational; Minas Gerais, Brazil\n.. UN P Code: BR33\n... Code: 63_76_33\n... Numerodinatio: 1603:45:1:63:76:33\n\nSome organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.\n\n**Other humanitarian organizations are missing**\nThese dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.
 
 |===
 
@@ -1838,7 +1802,7 @@ HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codice
 |===
 
 
-=== Archīa prō cōdice: 1
+=== Archīa prō cōdice: 2
 
 [%header,cols="25h,~a"]
 |===
@@ -1879,6 +1843,10 @@ https://asciidoctor.org/docs/
 
 |===
 
+
+==== 1603_45_1.mul-Latn.codex.pdf
+
+NOTE: link:1603_45_1.mul-Latn.codex.pdf[1603_45_1.mul-Latn.codex.pdf]
 
 
 <<<
