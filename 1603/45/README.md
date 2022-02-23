@@ -83,6 +83,10 @@
 - ...dictiōnāria de calamitātibus
 - Trivia: `1603:45:31` -> "[31] 1931年江淮水灾"
 
+- Wikipedia page: https://pt.wikipedia.org/wiki/GLIDE_number
+- Elemento Wikidata: https://www.wikidata.org/wiki/Q110990619
+- https://www.adrc.asia/publications/TDRM2003Dec/19_MR.%20SATORU%20NISHIKAWA.pdf
+
 ### [`1603:45:49`] //Imperia et regiōnēs territōria cōdicēs//
 (...)
 
@@ -114,6 +118,16 @@
 - violatio, https://en.wiktionary.org/wiki/violatio#Latin
 - civis, https://en.wiktionary.org/wiki/civis#Latin
 --->
+
+### [`1603:45:901`] //Dictiōnāria dē ...//
+
+> - https://en.wikipedia.org/wiki/List_of_building_types
+
+
+- dictiōnāria, n, pl, nōminātīvus, https://en.wiktionary.org/wiki/dictionarium#Latin
+- dē (+ ablātīvus), n, pl, nōminātīvus, https://en.wiktionary.org/wiki/de#Latin
+- generibus, n, pl, dativus, https://en.wiktionary.org/wiki/genus#Latin
+- locī, m, pl, nōminātīvus, https://en.wiktionary.org/wiki/locus#Latin
 
 ### [`1603:45:994`] //Dictiōnāria dē Development aid//
 
