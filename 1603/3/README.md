@@ -186,6 +186,11 @@ Multiple languages of same item
 
 -->
 
+<!--
+Tool for bulk import:
+- https://www.wikidata.org/wiki/Help:QuickStatements
+-->
+
 ### Self notes
 
 - Help:Wikimedia language codes/lists/all

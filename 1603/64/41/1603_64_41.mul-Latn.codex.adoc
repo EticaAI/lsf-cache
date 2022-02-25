@@ -1,0 +1,6936 @@
+= Cōdex [1603:64:41]: //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
+:doctype: book
+:title: Cōdex [1603:64:41]: //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
+:lang: la
+:toc:
+:toclevels: 4
+:toc-title: Tabula contentorum
+:table-caption: Tabula
+:figure-caption: Pictūra
+:example-caption: Exemplum
+:last-update-label: Renovatio
+:version-label: Versiō
+:appendix-caption: Appendix
+:source-highlighter: rouge
+:warning-caption: Hic sunt dracones
+:tip-caption: Commendātum
+
+
+
+
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+[quote]
+/**Public domain means that each major common issue only needs to be resolved once**/@eng-Latn
+
+<<<
+toc::[]
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+_**Cōdex [1603:64:41]**_ is the book format of the machine-readable dictionaries _**[1603:64:41] //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+
+Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+
+The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
+
+|===
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+scrīptor
+|
+EticaAI
+
+|
+/cōdex pūblicandī/
+|
+EticaAI
+
+|
+/publication date/@eng-Latn
+|
+2022-04-25
+
+|
+numerus editionis
+|
+2022-02-25T01:31:07
+
+|
+/SPDX license ID/@eng-Latn
+|
+CC0-1.0
+
+|===
+
+
+<<<
+
+== Methodī ex cōdice
+=== Methodī ex dictiōnāriōrum corde
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/scope and content/@eng-Latn
+|
+1603_64_41 //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
+
+|===
+
+
+=== Methodī ex verbīs in dictiōnāriīs
+NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+
+==== Methodī ex verbīs in Vicidata (Q modō)
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The ***[1603:64:41] //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+
+This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**How reliable are the community translations (Wikidata source)?**
+
+The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+
+As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+
+However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+**Major reasons for "wrong translations" are not translators fault**
+
+TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+
+NOTE: Both at concept level and (as general statistics) book level, is planned to have indication concept likelihood of being well understood for very stricter translations initiatives.
+
+The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+
+It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+
+. The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_64_41.no1.tm.hxl.csv`, may reference Wiki QID.
+. Every unique QID of  `1603_64_41.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
+.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+. The query result, with all QIDs and term labels, is shared as `1603_64_41.wikiq.tm.hxl.csv`
+. The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_64_41.wikiq.tm.hxl.csv`
+. `1603_64_41.no1.tm.hxl.csv` plus `1603_64_41.wikiq.tm.hxl.csv` created `1603_64_41.no11.tm.hxl.csv`
+
+|===
+
+=== Rēs dē factō in dictiōnāriīs
+==== Concepta: 56
+
+==== Rēs linguālibus: 85
+
+[%header,cols="15h,25a,~,15"]
+|===
+|
+Cōdex linguae
+|
+Glotto cōdicī +++<br>+++ ISO 639-3 +++<br>+++ Wiki QID cōdicī
+|
+Nōmen Latīnum
+|
+Concepta
+
+|
+mul-Zyyy
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/mul[mul]
++++<br>+++ 
+|
+Linguae multiplīs (Scrīptum incognitō)
+|
+56
+
+|
+ara-Arab
+|
+https://glottolog.org/resource/languoid/id/arab1395[arab1395]
++++<br>+++
+https://iso639-3.sil.org/code/ara[ara]
++++<br>+++ https://www.wikidata.org/wiki/Q13955[Q13955]
+|
+Macrolingua Arabica (/Abecedarium Arabicum/)
+|
+37
+
+|
+hye-Armn
+|
+https://glottolog.org/resource/languoid/id/nucl1235[nucl1235]
++++<br>+++
+https://iso639-3.sil.org/code/hye[hye]
++++<br>+++ https://www.wikidata.org/wiki/Q8785[Q8785]
+|
+Lingua Armenia (Alphabetum Armenium)
+|
+8
+
+|
+ben-Beng
+|
+https://glottolog.org/resource/languoid/id/beng1280[beng1280]
++++<br>+++
+https://iso639-3.sil.org/code/ben[ben]
++++<br>+++ https://www.wikidata.org/wiki/Q9610[Q9610]
+|
+Lingua Bengali (/Bengali script/)
+|
+4
+
+|
+rus-Cyrl
+|
+https://glottolog.org/resource/languoid/id/russ1263[russ1263]
++++<br>+++
+https://iso639-3.sil.org/code/rus[rus]
++++<br>+++ https://www.wikidata.org/wiki/Q7737[Q7737]
+|
+Lingua Russica (Abecedarium Cyrillicum)
+|
+38
+
+|
+hin-Deva
+|
+https://glottolog.org/resource/languoid/id/hind1269[hind1269]
++++<br>+++
+https://iso639-3.sil.org/code/hin[hin]
++++<br>+++ https://www.wikidata.org/wiki/Q1568[Q1568]
+|
+Lingua Hindica (Devanāgarī)
+|
+12
+
+|
+kan-Knda
+|
+https://glottolog.org/resource/languoid/id/nucl1305[nucl1305]
++++<br>+++
+https://iso639-3.sil.org/code/kan[kan]
++++<br>+++ https://www.wikidata.org/wiki/Q33673[Q33673]
+|
+Lingua Cannadica (/ISO 15924 Knda/)
+|
+3
+
+|
+kor-Hang
+|
+https://glottolog.org/resource/languoid/id/kore1280[kore1280]
++++<br>+++
+https://iso639-3.sil.org/code/kor[kor]
++++<br>+++ https://www.wikidata.org/wiki/Q9176[Q9176]
+|
+Lingua Coreana (Abecedarium Coreanum)
+|
+24
+
+|
+heb-Hebr
+|
+https://glottolog.org/resource/languoid/id/hebr1245[hebr1245]
++++<br>+++
+https://iso639-3.sil.org/code/heb[heb]
++++<br>+++ https://www.wikidata.org/wiki/Q9288[Q9288]
+|
+Lingua Hebraica (Alphabetum Hebraicum)
+|
+27
+
+|
+lat-Latn
+|
+https://glottolog.org/resource/languoid/id/lati1261[lati1261]
++++<br>+++
+https://iso639-3.sil.org/code/lat[lat]
++++<br>+++ https://www.wikidata.org/wiki/Q397[Q397]
+|
+Lingua Latina (Abecedarium Latinum)
+|
+8
+
+|
+tam-Taml
+|
+https://glottolog.org/resource/languoid/id/tami1289[tami1289]
++++<br>+++
+https://iso639-3.sil.org/code/tam[tam]
++++<br>+++ https://www.wikidata.org/wiki/Q5885[Q5885]
+|
+Lingua Tamulica (/ISO 15924 Taml/)
+|
+12
+
+|
+tel-Telu
+|
+https://glottolog.org/resource/languoid/id/telu1262[telu1262]
++++<br>+++
+https://iso639-3.sil.org/code/tel[tel]
++++<br>+++ https://www.wikidata.org/wiki/Q8097[Q8097]
+|
+Lingua Telingana (/ISO 15924 Telu/)
+|
+2
+
+|
+tha-Thai
+|
+https://glottolog.org/resource/languoid/id/thai1261[thai1261]
++++<br>+++
+https://iso639-3.sil.org/code/tha[tha]
++++<br>+++ https://www.wikidata.org/wiki/Q9217[Q9217]
+|
+Lingua Thai (/ISO 15924 Thai/)
+|
+7
+
+|
+san-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sans1269[sans1269]
++++<br>+++
+https://iso639-3.sil.org/code/san[san]
++++<br>+++ https://www.wikidata.org/wiki/Q11059[Q11059]
+|
+Lingua Sanscrita  (?)
+|
+1
+
+|
+zho-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sini1245[sini1245]
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q7850[Q7850]
+|
+/Macrolingua Sinicae (?)/
+|
+41
+
+|
+por-Latn
+|
+https://glottolog.org/resource/languoid/id/port1283[port1283]
++++<br>+++
+https://iso639-3.sil.org/code/por[por]
++++<br>+++ https://www.wikidata.org/wiki/Q5146[Q5146]
+|
+Lingua Lusitana (Abecedarium Latinum)
+|
+29
+
+|
+eng-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1293[stan1293]
++++<br>+++
+https://iso639-3.sil.org/code/eng[eng]
++++<br>+++ https://www.wikidata.org/wiki/Q1860[Q1860]
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+55
+
+|
+fra-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1290[stan1290]
++++<br>+++
+https://iso639-3.sil.org/code/fra[fra]
++++<br>+++ https://www.wikidata.org/wiki/Q150[Q150]
+|
+Lingua Francogallica (Abecedarium Latinum)
+|
+42
+
+|
+nld-Latn
+|
+https://glottolog.org/resource/languoid/id/mode1257[mode1257]
++++<br>+++
+https://iso639-3.sil.org/code/nld[nld]
++++<br>+++ https://www.wikidata.org/wiki/Q7411[Q7411]
+|
+Lingua Batavica (Abecedarium Latinum)
+|
+23
+
+|
+deu-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1295[stan1295]
++++<br>+++
+https://iso639-3.sil.org/code/deu[deu]
++++<br>+++ https://www.wikidata.org/wiki/Q188[Q188]
+|
+Lingua Germanica (Abecedarium Latinum)
+|
+38
+
+|
+spa-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1288[stan1288]
++++<br>+++
+https://iso639-3.sil.org/code/spa[spa]
++++<br>+++ https://www.wikidata.org/wiki/Q1321[Q1321]
+|
+Lingua Hispanica (Abecedarium Latinum)
+|
+44
+
+|
+ita-Latn
+|
+https://glottolog.org/resource/languoid/id/ital1282[ital1282]
++++<br>+++
+https://iso639-3.sil.org/code/ita[ita]
++++<br>+++ https://www.wikidata.org/wiki/Q652[Q652]
+|
+Lingua Italiana (Abecedarium Latinum)
+|
+34
+
+|
+gle-Latn
+|
+https://glottolog.org/resource/languoid/id/iris1253[iris1253]
++++<br>+++
+https://iso639-3.sil.org/code/gle[gle]
++++<br>+++ https://www.wikidata.org/wiki/Q9142[Q9142]
+|
+Lingua Hibernica (Abecedarium Latinum)
+|
+4
+
+|
+swe-Latn
+|
+https://glottolog.org/resource/languoid/id/swed1254[swed1254]
++++<br>+++
+https://iso639-3.sil.org/code/swe[swe]
++++<br>+++ https://www.wikidata.org/wiki/Q9027[Q9027]
+|
+Lingua Suecica (Abecedarium Latinum)
+|
+20
+
+|
+sqi-Latn
+|
+https://glottolog.org/resource/languoid/id/alba1267[alba1267]
++++<br>+++
+https://iso639-3.sil.org/code/sqi[sqi]
++++<br>+++ https://www.wikidata.org/wiki/Q8748[Q8748]
+|
+Macrolingua Albanica (/Abecedarium Latinum/)
+|
+6
+
+|
+pol-Latn
+|
+https://glottolog.org/resource/languoid/id/poli1260[poli1260]
++++<br>+++
+https://iso639-3.sil.org/code/pol[pol]
++++<br>+++ https://www.wikidata.org/wiki/Q809[Q809]
+|
+Lingua Polonica (Abecedarium Latinum)
+|
+24
+
+|
+fin-Latn
+|
+https://glottolog.org/resource/languoid/id/finn1318[finn1318]
++++<br>+++
+https://iso639-3.sil.org/code/fin[fin]
++++<br>+++ https://www.wikidata.org/wiki/Q1412[Q1412]
+|
+Lingua Finnica (Abecedarium Latinum)
+|
+17
+
+|
+ron-Latn
+|
+https://glottolog.org/resource/languoid/id/roma1327[roma1327]
++++<br>+++
+https://iso639-3.sil.org/code/ron[ron]
++++<br>+++ https://www.wikidata.org/wiki/Q7913[Q7913]
+|
+Lingua Dacoromanica (Abecedarium Latinum)
+|
+18
+
+|
+vie-Latn
+|
+https://glottolog.org/resource/languoid/id/viet1252[viet1252]
++++<br>+++
+https://iso639-3.sil.org/code/vie[vie]
++++<br>+++ https://www.wikidata.org/wiki/Q9199[Q9199]
+|
+Lingua Vietnamensis (Abecedarium Latinum)
+|
+17
+
+|
+cat-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1289[stan1289]
++++<br>+++
+https://iso639-3.sil.org/code/cat[cat]
++++<br>+++ https://www.wikidata.org/wiki/Q7026[Q7026]
+|
+Lingua Catalana (Abecedarium Latinum)
+|
+26
+
+|
+ukr-Cyrl
+|
+https://glottolog.org/resource/languoid/id/ukra1253[ukra1253]
++++<br>+++
+https://iso639-3.sil.org/code/ukr[ukr]
++++<br>+++ https://www.wikidata.org/wiki/Q8798[Q8798]
+|
+Lingua Ucrainica (Abecedarium Cyrillicum)
+|
+37
+
+|
+bul-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bulg1262[bulg1262]
++++<br>+++
+https://iso639-3.sil.org/code/bul[bul]
++++<br>+++ https://www.wikidata.org/wiki/Q7918[Q7918]
+|
+Lingua Bulgarica (Abecedarium Cyrillicum)
+|
+16
+
+|
+slv-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1268[slov1268]
++++<br>+++
+https://iso639-3.sil.org/code/slv[slv]
++++<br>+++ https://www.wikidata.org/wiki/Q9063[Q9063]
+|
+Lingua Slovena (Abecedarium Latinum)
+|
+9
+
+|
+war-Latn
+|
+https://glottolog.org/resource/languoid/id/wara1300[wara1300]
++++<br>+++
+https://iso639-3.sil.org/code/war[war]
++++<br>+++ https://www.wikidata.org/wiki/Q34279[Q34279]
+|
+/Waray language/ (Abecedarium Latinum)
+|
+1
+
+|
+nob-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1259[norw1259]
++++<br>+++
+https://iso639-3.sil.org/code/nob[nob]
++++<br>+++ https://www.wikidata.org/wiki/Q25167[Q25167]
+|
+/Bokmål/ (Abecedarium Latinum)
+|
+16
+
+|
+ces-Latn
+|
+https://glottolog.org/resource/languoid/id/czec1258[czec1258]
++++<br>+++
+https://iso639-3.sil.org/code/ces[ces]
++++<br>+++ https://www.wikidata.org/wiki/Q9056[Q9056]
+|
+Lingua Bohemica (Abecedarium Latinum)
+|
+23
+
+|
+dan-Latn
+|
+https://glottolog.org/resource/languoid/id/dani1285[dani1285]
++++<br>+++
+https://iso639-3.sil.org/code/dan[dan]
++++<br>+++ https://www.wikidata.org/wiki/Q9035[Q9035]
+|
+Lingua Danica (Abecedarium Latinum)
+|
+12
+
+|
+jpn-Jpan
+|
+https://glottolog.org/resource/languoid/id/nucl1643[nucl1643]
++++<br>+++
+https://iso639-3.sil.org/code/jpn[jpn]
++++<br>+++ https://www.wikidata.org/wiki/Q5287[Q5287]
+|
+Lingua Iaponica (Scriptura Iaponica)
+|
+39
+
+|
+nno-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1262[norw1262]
++++<br>+++
+https://iso639-3.sil.org/code/nno[nno]
++++<br>+++ https://www.wikidata.org/wiki/Q25164[Q25164]
+|
+/Nynorsk/ (Abecedarium Latinum)
+|
+9
+
+|
+mal-Mlym
+|
+https://glottolog.org/resource/languoid/id/mala1464[mala1464]
++++<br>+++
+https://iso639-3.sil.org/code/mal[mal]
++++<br>+++ https://www.wikidata.org/wiki/Q36236[Q36236]
+|
+Lingua Malabarica (/Malayalam script/)
+|
+7
+
+|
+ind-Latn
+|
+https://glottolog.org/resource/languoid/id/indo1316[indo1316]
++++<br>+++
+https://iso639-3.sil.org/code/ind[ind]
++++<br>+++ https://www.wikidata.org/wiki/Q9240[Q9240]
+|
+Lingua Indonesiana (Abecedarium Latinum)
+|
+21
+
+|
+fas-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/fas[fas]
++++<br>+++ https://www.wikidata.org/wiki/Q9168[Q9168]
+|
+Macrolingua Persica (//Abecedarium Arabicum//)
+|
+35
+
+|
+hun-Latn
+|
+https://glottolog.org/resource/languoid/id/hung1274[hung1274]
++++<br>+++
+https://iso639-3.sil.org/code/hun[hun]
++++<br>+++ https://www.wikidata.org/wiki/Q9067[Q9067]
+|
+Lingua Hungarica (Abecedarium Latinum)
+|
+13
+
+|
+eus-Latn
+|
+https://glottolog.org/resource/languoid/id/basq1248[basq1248]
++++<br>+++
+https://iso639-3.sil.org/code/eus[eus]
++++<br>+++ https://www.wikidata.org/wiki/Q8752[Q8752]
+|
+Lingua Vasconica (Abecedarium Latinum)
+|
+11
+
+|
+cym-Latn
+|
+https://glottolog.org/resource/languoid/id/wels1247[wels1247]
++++<br>+++
+https://iso639-3.sil.org/code/cym[cym]
++++<br>+++ https://www.wikidata.org/wiki/Q9309[Q9309]
+|
+Lingua Cambrica (Abecedarium Latinum)
+|
+1
+
+|
+glg-Latn
+|
+https://glottolog.org/resource/languoid/id/gali1258[gali1258]
++++<br>+++
+https://iso639-3.sil.org/code/glg[glg]
++++<br>+++ https://www.wikidata.org/wiki/Q9307[Q9307]
+|
+Lingua Gallaica (Abecedarium Latinum)
+|
+11
+
+|
+slk-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1269[slov1269]
++++<br>+++
+https://iso639-3.sil.org/code/slk[slk]
++++<br>+++ https://www.wikidata.org/wiki/Q9058[Q9058]
+|
+Lingua Slovaca (Abecedarium Latinum)
+|
+10
+
+|
+epo-Latn
+|
+https://glottolog.org/resource/languoid/id/espe1235[espe1235]
++++<br>+++
+https://iso639-3.sil.org/code/epo[epo]
++++<br>+++ https://www.wikidata.org/wiki/Q143[Q143]
+|
+Lingua Esperantica (Abecedarium Latinum)
+|
+21
+
+|
+msa-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/msa[msa]
++++<br>+++ https://www.wikidata.org/wiki/Q9237[Q9237]
+|
+Macrolingua Malayana (?)
+|
+10
+
+|
+est-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/est[est]
++++<br>+++ https://www.wikidata.org/wiki/Q9072[Q9072]
+|
+Macrolingua Estonica (Abecedarium Latinum)
+|
+13
+
+|
+hrv-Latn
+|
+https://glottolog.org/resource/languoid/id/croa1245[croa1245]
++++<br>+++
+https://iso639-3.sil.org/code/hrv[hrv]
++++<br>+++ https://www.wikidata.org/wiki/Q6654[Q6654]
+|
+Lingua Croatica (Abecedarium Latinum)
+|
+12
+
+|
+tur-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1301[nucl1301]
++++<br>+++
+https://iso639-3.sil.org/code/tur[tur]
++++<br>+++ https://www.wikidata.org/wiki/Q256[Q256]
+|
+Lingua Turcica (Abecedarium Latinum)
+|
+20
+
+|
+oci-Latn
+|
+https://glottolog.org/resource/languoid/id/occi1239[occi1239]
++++<br>+++
+https://iso639-3.sil.org/code/oci[oci]
++++<br>+++ https://www.wikidata.org/wiki/Q14185[Q14185]
+|
+Lingua Occitana (Abecedarium Latinum)
+|
+3
+
+|
+arz-Latn
+|
+https://glottolog.org/resource/languoid/id/egyp1253[egyp1253]
++++<br>+++
+https://iso639-3.sil.org/code/arz[arz]
++++<br>+++ https://www.wikidata.org/wiki/Q29919[Q29919]
+|
+/Egyptian Arabic/ (/Abecedarium Arabicum/)
+|
+1
+
+|
+afr-Latn
+|
+https://glottolog.org/resource/languoid/id/afri1274[afri1274]
++++<br>+++
+https://iso639-3.sil.org/code/afr[afr]
++++<br>+++ https://www.wikidata.org/wiki/Q14196[Q14196]
+|
+Lingua Batava Capitensis (Abecedarium Latinum)
+|
+4
+
+|
+sco-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1243[scot1243]
++++<br>+++
+https://iso639-3.sil.org/code/sco[sco]
++++<br>+++ https://www.wikidata.org/wiki/Q14549[Q14549]
+|
+Lingua Scotica quae Teutonica (Abecedarium Latinum)
+|
+2
+
+|
+arg-Latn
+|
+https://glottolog.org/resource/languoid/id/arag1245[arag1245]
++++<br>+++
+https://iso639-3.sil.org/code/arg[arg]
++++<br>+++ https://www.wikidata.org/wiki/Q8765[Q8765]
+|
+Lingua Aragonensis (Abecedarium Latinum)
+|
+1
+
+|
+zho-Hant
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q18130932[Q18130932]
+|
+//Traditional Chinese// (/ISO 15924 Hant/)
+|
+27
+
+|
+gsw-Latn
+|
+https://glottolog.org/resource/languoid/id/swis1247[swis1247]
++++<br>+++
+https://iso639-3.sil.org/code/gsw[gsw]
++++<br>+++ https://www.wikidata.org/wiki/Q131339[Q131339]
+|
+Dialecti Alemannicae (Abecedarium Latinum)
+|
+4
+
+|
+isl-Latn
+|
+https://glottolog.org/resource/languoid/id/icel1247[icel1247]
++++<br>+++
+https://iso639-3.sil.org/code/isl[isl]
++++<br>+++ https://www.wikidata.org/wiki/Q294[Q294]
+|
+Lingua Islandica (Abecedarium Latinum)
+|
+5
+
+|
+min-Latn
+|
+https://glottolog.org/resource/languoid/id/mina1268[mina1268]
++++<br>+++
+https://iso639-3.sil.org/code/min[min]
++++<br>+++ https://www.wikidata.org/wiki/Q13324[Q13324]
+|
+/Minangkabau language/ (Abecedarium Latinum)
+|
+1
+
+|
+vec-Latn
+|
+https://glottolog.org/resource/languoid/id/vene1258[vene1258]
++++<br>+++
+https://iso639-3.sil.org/code/vec[vec]
++++<br>+++ https://www.wikidata.org/wiki/Q32724[Q32724]
+|
+Lingua Veneta (Abecedarium Latinum)
+|
+5
+
+|
+scn-Latn
+|
+https://glottolog.org/resource/languoid/id/sici1248[sici1248]
++++<br>+++
+https://iso639-3.sil.org/code/scn[scn]
++++<br>+++ https://www.wikidata.org/wiki/Q33973[Q33973]
+|
+Lingua Sicula (Abecedarium Latinum)
+|
+1
+
+|
+lim-Latn
+|
+https://glottolog.org/resource/languoid/id/limb1263[limb1263]
++++<br>+++
+https://iso639-3.sil.org/code/lim[lim]
++++<br>+++ https://www.wikidata.org/wiki/Q102172[Q102172]
+|
+Lingua Limburgica (Abecedarium Latinum)
+|
+1
+
+|
+srp-Latn
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q21161949[Q21161949]
+|
+/Serbian/ (Abecedarium Latinum)
+|
+8
+
+|
+vls-Latn
+|
+https://glottolog.org/resource/languoid/id/vlaa1240[vlaa1240]
++++<br>+++
+https://iso639-3.sil.org/code/vls[vls]
++++<br>+++ https://www.wikidata.org/wiki/Q100103[Q100103]
+|
+/West Flemish/ (Abecedarium Latinum)
+|
+1
+
+|
+fur-Latn
+|
+https://glottolog.org/resource/languoid/id/friu1240[friu1240]
++++<br>+++
+https://iso639-3.sil.org/code/fur[fur]
++++<br>+++ https://www.wikidata.org/wiki/Q33441[Q33441]
+|
+Lingua Foroiuliensis (Abecedarium Latinum)
+|
+1
+
+|
+wuu-Zyyy
+|
+https://glottolog.org/resource/languoid/id/wuch1236[wuch1236]
++++<br>+++
+https://iso639-3.sil.org/code/wuu[wuu]
++++<br>+++ https://www.wikidata.org/wiki/Q34290[Q34290]
+|
+//Macrolingua Wu// (/ISO 15924 Zyyy/)
+|
+5
+
+|
+srp-Cyrl
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q9299[Q9299]
+|
+Lingua Serbica (Abecedarium Cyrillicum)
+|
+22
+
+|
+urd-Arab
+|
+https://glottolog.org/resource/languoid/id/urdu1245[urdu1245]
++++<br>+++
+https://iso639-3.sil.org/code/urd[urd]
++++<br>+++ https://www.wikidata.org/wiki/Q1617[Q1617]
+|
+Lingua Urdu (/Abecedarium Arabicum/)
+|
+3
+
+|
+gan-Zyyy
+|
+https://glottolog.org/resource/languoid/id/ganc1239[ganc1239]
++++<br>+++
+https://iso639-3.sil.org/code/gan[gan]
++++<br>+++ https://www.wikidata.org/wiki/Q33475[Q33475]
+|
+Lingua Gan (/ISO 15924 Zyyy/)
+|
+1
+
+|
+lit-Latn
+|
+https://glottolog.org/resource/languoid/id/lith1251[lith1251]
++++<br>+++
+https://iso639-3.sil.org/code/lit[lit]
++++<br>+++ https://www.wikidata.org/wiki/Q9083[Q9083]
+|
+Lingua Lithuanica (Abecedarium Latinum)
+|
+8
+
+|
+hbs-Latn
+|
+https://glottolog.org/resource/languoid/id/sout1528[sout1528]
++++<br>+++
+https://iso639-3.sil.org/code/hbs[hbs]
++++<br>+++ https://www.wikidata.org/wiki/Q9301[Q9301]
+|
+Macrolingua Serbocroatica (Abecedarium Latinum)
+|
+10
+
+|
+lav-Latn
+|
+https://glottolog.org/resource/languoid/id/latv1249[latv1249]
++++<br>+++
+https://iso639-3.sil.org/code/lav[lav]
++++<br>+++ https://www.wikidata.org/wiki/Q9078[Q9078]
+|
+Macrolingua Lettonica (Abecedarium Latinum)
+|
+8
+
+|
+bos-Latn
+|
+https://glottolog.org/resource/languoid/id/bosn1245[bosn1245]
++++<br>+++
+https://iso639-3.sil.org/code/bos[bos]
++++<br>+++ https://www.wikidata.org/wiki/Q9303[Q9303]
+|
+Lingua Bosnica (Abecedarium Latinum)
+|
+6
+
+|
+jav-Latn
+|
+https://glottolog.org/resource/languoid/id/java1254[java1254]
++++<br>+++
+https://iso639-3.sil.org/code/jav[jav]
++++<br>+++ https://www.wikidata.org/wiki/Q33549[Q33549]
+|
+Lingua Iavanica (Abecedarium Latinum)
+|
+2
+
+|
+ell-Grek
+|
+https://glottolog.org/resource/languoid/id/mode1248[mode1248]
++++<br>+++
+https://iso639-3.sil.org/code/ell[ell]
++++<br>+++ https://www.wikidata.org/wiki/Q36510[Q36510]
+|
+Lingua Neograeca (Alphabetum Graecum)
+|
+19
+
+|
+sun-Latn
+|
+https://glottolog.org/resource/languoid/id/sund1252[sund1252]
++++<br>+++
+https://iso639-3.sil.org/code/sun[sun]
++++<br>+++ https://www.wikidata.org/wiki/Q34002[Q34002]
+|
+/Sundanese language/ (Abecedarium Latinum)
+|
+2
+
+|
+fry-Latn
+|
+https://glottolog.org/resource/languoid/id/west2354[west2354]
++++<br>+++
+https://iso639-3.sil.org/code/fry[fry]
++++<br>+++ https://www.wikidata.org/wiki/Q27175[Q27175]
+|
+Lingua Frisice occidentalis (Abecedarium Latinum)
+|
+1
+
+|
+jam-Latn
+|
+https://glottolog.org/resource/languoid/id/jama1262[jama1262]
++++<br>+++
+https://iso639-3.sil.org/code/jam[jam]
++++<br>+++ https://www.wikidata.org/wiki/Q35939[Q35939]
+|
+Lingua creola Iamaicana (Abecedarium Latinum)
+|
+1
+
+|
+bel-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bela1254[bela1254]
++++<br>+++
+https://iso639-3.sil.org/code/bel[bel]
++++<br>+++ https://www.wikidata.org/wiki/Q9091[Q9091]
+|
+Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+|
+6
+
+|
+lmo-Latn
+|
+https://glottolog.org/resource/languoid/id/lomb1257[lomb1257]
++++<br>+++
+https://iso639-3.sil.org/code/lmo[lmo]
++++<br>+++ https://www.wikidata.org/wiki/Q33754[Q33754]
+|
+Langobardus sermo (Abecedarium Latinum)
+|
+1
+
+|
+mar-Deva
+|
+https://glottolog.org/resource/languoid/id/mara1378[mara1378]
++++<br>+++
+https://iso639-3.sil.org/code/mar[mar]
++++<br>+++ https://www.wikidata.org/wiki/Q1571[Q1571]
+|
+Lingua Marathica (Devanāgarī)
+|
+3
+
+|
+ina-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1239[inte1239]
++++<br>+++
+https://iso639-3.sil.org/code/ina[ina]
++++<br>+++ https://www.wikidata.org/wiki/Q35934[Q35934]
+|
+Interlingua (Abecedarium Latinum)
+|
+3
+
+|
+ile-Latn
+|
+https://glottolog.org/resource/languoid/id/inte1260[inte1260]
++++<br>+++
+https://iso639-3.sil.org/code/ile[ile]
++++<br>+++ https://www.wikidata.org/wiki/Q35850[Q35850]
+|
+Lingua Occidental (Abecedarium Latinum)
+|
+1
+
+|===
+
+==== Rēs interlinguālibus: 8
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+
+|===
+
+
+**1603:1:7:1:91**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "1_91",
+    "#item+conceptum+numerordinatio": "1603:1:7:1:91",
+    "#item+rem+definitionem+i_eng+is_latn": "QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter \"Q\" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.",
+    "#item+rem+i_lat+is_latn": "/Wiki QID/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikiq",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_q",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
+    "#status+conceptum+codicem": "19",
+    "#status+conceptum+definitionem": "50"
+}
+----
+
+**1603:1:7:2616:50**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_50",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
+    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
+    "#item+rem+i_lat+is_latn": "scrīptor",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:123**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_123",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
+    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
+    "#item+rem+i_lat+is_latn": "/cōdex pūblicandī/",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:393**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_393",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
+    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
+    "#item+rem+i_lat+is_latn": "numerus editionis",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:577**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_577",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
+    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
+    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:854**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_854",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
+    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
+    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:2479**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_2479",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
+    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
+    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
+    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+**1603:1:7:2616:7535**
+
+[source,json]
+----
+{
+    "#item+conceptum+codicem": "2616_7535",
+    "#item+conceptum+numerordinatio": "1603:1:7:2616:7535",
+    "#item+rem+definitionem+i_eng+is_latn": "a summary statement providing an overview of the archival collection",
+    "#item+rem+i_lat+is_latn": "/scope and content/@eng-Latn",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip7535",
+    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_7535",
+    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P7535",
+    "#status+conceptum+codicem": "60",
+    "#status+conceptum+definitionem": "60"
+}
+----
+
+<<<
+
+== Archīa
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+Every book comes with several files both for book format (with (Abecedarium additional information) and machine-readable formats with Latinum) documentation of how to process them. If you receive this file and cannot find the alternatives, ask the human who provide this file.
+
+|===
+
+=== Archīa prō dictiōnāriīs: 3
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: Is recommended to use the files on this section to  generate derived works.
+
+|===
+
+
+==== 1603_64_41.no1.tm.hxl.csv
+
+NOTE: link:1603_64_41.no1.tm.hxl.csv[1603_64_41.no1.tm.hxl.csv]
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container/
+
+|===
+
+
+==== 1603_64_41.no11.tm.hxl.csv
+
+NOTE: link:1603_64_41.no11.tm.hxl.csv[1603_64_41.no11.tm.hxl.csv]
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+/Numerordinatio on HXLTM container (expanded with terminology translations)/
+
+|===
+
+
+==== 1603_64_41.wikiq.tm.hxl.csv
+
+NOTE: link:1603_64_41.wikiq.tm.hxl.csv[1603_64_41.wikiq.tm.hxl.csv]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://hxltm.etica.ai/
+
+|===
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codicem are strictly Wikidata QIDs.
+
+|===
+
+
+=== Archīa prō cōdice: 1
+
+[%header,cols="25h,~a"]
+|===
+|
+Lingua de verba
+|
+Verba de conceptiō
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+WARNING: Unless you are working with a natural language you understand it\'s letters and symbols, it is strongly advised to use automation to generate derived works. Keep manual human steps at minimum: if something goes wrong at least one or more languages can be used to verify mistakes. It's not at all necessary _know all languages_, but working with writing systems you don't understand is risky: copy and paste strategy can cause _additional_ human errors and is unlikely to get human review as fast as you would need.
+
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+TIP: The Asciidoctor (.adoc) is better at copy and pasting! It can be converted to other text formats.
+
+|===
+
+
+==== 1603_64_41.mul-Latn.codex.adoc
+
+NOTE: link:1603_64_41.mul-Latn.codex.adoc[1603_64_41.mul-Latn.codex.adoc]
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/reference URL/@eng-Latn
+|
+https://asciidoctor.org/docs/
+
+|===
+
+
+
+<<<
+
+== //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
+[id='17']
+=== [`17`] /Wikidata QIDs/
+
+
+
+
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Wikidata QIDs/+++
+
+|===
+
+
+
+
+[id='17_11660']
+==== [`17_11660`] Intellegentia artificialis
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q11660
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/artificial intelligence - field of computer science and engineering practices for intelligence demonstrated by machines and intelligent agents/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ذكاء اصطناعي</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">արհեստական բանականություն</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">কৃত্রিম বুদ্ধিমত্তা</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">искусственный интеллект</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">कृत्रिम बुद्धिमत्ता</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">인공지능</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">בינה מלאכותית</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Intellegentia artificialis</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">செயற்கை அறிவுத்திறன்</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">కృత్రిమ మేధస్సు</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ปัญญาประดิษฐ์</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">人工智能</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">inteligência artificial</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">artificial intelligence</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">intelligence artificielle</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">kunstmatige intelligentie</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">künstliche Intelligenz</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">inteligencia artificial</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">intelligenza artificiale</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">intleacht shaorga</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">artificiell intelligens</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Inteligjenca artificiale</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">sztuczna inteligencja</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">tekoäly</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">inteligență artificială</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">trí tuệ nhân tạo</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">intel·ligència artificial</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">штучний інтелект</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Изкуствен интелект</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">umetna inteligenca</span>+++
+
+| /Waray language/ (Abecedarium Latinum)
+| +++<span lang="war">Artipisyal nga intelihensya</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">Kunstig intelligens</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">umělá inteligence</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">kunstig intelligens</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">人工知能</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">kunstig intelligens</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">കൃത്രിമബുദ്ധി</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">kecerdasan buatan</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">هوش مصنوعی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">mesterséges intelligencia</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">adimen artifizial</span>+++
+
+| Lingua Cambrica (Abecedarium Latinum)
+| +++<span lang="cy">Deallusrwydd artiffisial</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">intelixencia artificial</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Umelá inteligencia</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">artefarita inteligenteco</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">kecerdasan buatan</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">tehisintellekt</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">umjetna inteligencija</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">yapay zekâ</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Intelligéncia artificiala</span>+++
+
+| /Egyptian Arabic/ (/Abecedarium Arabicum/)
+| +++<span lang="arz">ذكاء صناعى</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Kunsmatige intelligensie</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">airtifeecial intelligence</span>+++
+
+| Lingua Aragonensis (Abecedarium Latinum)
+| +++<span lang="an">Intelichencia artificial</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">人工智能</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Künstliche Intelligenz</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Gervigreind</span>+++
+
+| /Minangkabau language/ (Abecedarium Latinum)
+| +++<span lang="min">Kecerdasan buatan</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">Inteligensa artificial</span>+++
+
+| Lingua Limburgica (Abecedarium Latinum)
+| +++<span lang="li">Kónsmaesige intelligentie</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">vještačka inteligencija</span>+++
+
+| Lingua Foroiuliensis (Abecedarium Latinum)
+| +++<span lang="fur">Inteligjence artificiâl</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">人工智能</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">вјештачка интелигенција</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">مصنوعی ذہانت</span>+++
+
+| Lingua Gan (/ISO 15924 Zyyy/)
+| +++<span lang="gan">人工智能</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Dirbtinis intelektas</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Umjetna inteligencija</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">mākslīgais intelekts</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">vještačka inteligencija</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">Kacerdhasan gawéyan</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Τεχνητή νοημοσύνη</span>+++
+
+| Lingua creola Iamaicana (Abecedarium Latinum)
+| +++<span lang="jam">Aatifishal intelijens</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Штучны інтэлект</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">कृत्रिम बुद्धिमत्ता</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">Intelligentia artificial</span>+++
+
+| Lingua Occidental (Abecedarium Latinum)
+| +++<span lang="ie">Inteligentie artificial</span>+++
+
+|===
+
+
+
+
+[id='17_94702']
+==== [`17_94702`] /collaborative filtering - algorithm/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q94702
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/collaborative filtering - algorithm/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">تصفية تشاركية</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Կոլլաբորատիվ ֆիլտրացիա</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Коллаборативная фильтрация</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">협업 필터링</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">סינון שיתופי</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">協同過濾</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">filtragem colaborativa</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">collaborative filtering</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">filtrage collaboratif</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Collaborative filtering</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Kollaboratives Filtern</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Filtrado colaborativo</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Collaborative filtering</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">kollaborativ filtrering</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">filtre col·laboratiu</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Коллаборативна фільтрація</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">協調フィルタリング</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">پالایش گروهی</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">İşbirlikçi filtreleme</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">協同過濾</span>+++
+
+|===
+
+
+
+
+[id='17_161410']
+==== [`17_161410`] /peer-to-peer - type of decentralized and distributed network architecture/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q161410
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/peer-to-peer - type of decentralized and distributed network architecture/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">الند للند</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">পিয়ার-টু-পিয়ার</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">одноранговая сеть</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">सहकर्मी-से-सहकर्मी</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">P2P</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">עמית לעמית</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">சகா-சகா</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">เพียร์ทูเพียร์</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">點對點技術</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">peer-to-peer</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">peer-to-peer</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">pair à pair</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">peer-to-peer</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Peer-to-Peer</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">peer-to-peer</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">peer-to-peer</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">P2P-nätverk</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Peer-to-peer</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">peer-to-peer</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">vertaisverkko</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Peer-to-peer</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Mạng ngang hàng</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">d'igual a igual</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Peer-to-peer</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">P2P</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">like-til-like</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Peer-to-peer</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Peer-to-peer</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">Peer to Peer</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">likemannsnettverk</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">പിയർ-റ്റു-പിയർ നെറ്റ്വർക്ക്</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">P2P</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">همتا به همتا</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">peer-to-peer</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">P2P</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Peer-to-peer</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Sieť so vzájomným sprístupňovaním</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">samtavola ŝutado</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Rakan-ke-rakan</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">P2P-võrgustik</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Peer to peer</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Peer-to-peer</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Eweknienetwerk</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">點對點技術</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">P2P</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">P2P мрежа</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">点对点网络</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">P2P мрежа</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">ہمتا بہ ہمتا</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">P2P</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Peer to peer</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Vienādranga tīkls</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">δίκτυο ομότιμων κόμβων</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Peer to Peer</span>+++
+
+| Langobardus sermo (Abecedarium Latinum)
+| +++<span lang="lmo">Peer-to-peer</span>+++
+
+|===
+
+
+
+
+[id='17_167323']
+==== [`17_167323`] Altruismus
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q167323
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/altruism - principle or practice of concern for the welfare of others/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">إيثار</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">այլասիրություն</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">альтруизм</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">पर्यायवाद</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ಪರಹಿತ ಚಿಂತನೆ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">이타주의</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">זולתנות</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Altruismus</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">ஒப்புரவாண்மை</span>+++
+
+| Lingua Sanscrita  (?)
+| +++<span lang="sa">परोपकारः</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">利他主义</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">altruísmo</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">altruism</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">altruisme</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">altruïsme</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Altruismus</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">altruismo</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">altruismo</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">altruism</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Altruizmi</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">altruizm</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Altruismi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Altruism</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Chủ nghĩa vị tha</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">altruisme</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">альтруїзм</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">алтруизъм</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Altruizem</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">altruisme</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Altruismus</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">altruisme</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">奉仕</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">altruisme</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">പരോപകാരകാംക്ഷ</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">altruisme</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">ایثار</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Altruizmus</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Altruismo</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Altruísmo</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Altruizmus</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">altruismo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Altruisme</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Altruism</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Altruizam</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">diğerkâmlık</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Altruisme</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Altruïsme</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">利他主義</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Altruismus</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Ósérplægni</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">Altruizam</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">利他主义</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">алтруизам</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Altruizmas</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Altruizam</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">altruisms</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Altruizam</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">αλτρουισμός</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">альтруізм</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">निःस्वार्थीपणा</span>+++
+
+|===
+
+
+
+
+[id='17_180634']
+==== [`17_180634`] /distributed computing - system whose components are located on different networked computers/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q180634
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/distributed computing - system whose components are located on different networked computers/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">حوسبة موزعة</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">распределённые вычисления</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">분산 컴퓨팅</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">חישוב מבוזר</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">விரவல் கணினி செய்முறை</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">分布式计算</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">computação distribuída</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">distributed computing</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">calcul distribué</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">distributed computing</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Verteiltes Rechnen</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">computación distribuida</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">calcolo distribuito</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">distributed computing</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">obliczenia rozproszone</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Hajautetut järjestelmät</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">vcalcul distribuit</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Điện toán phân tán</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">aplicació distribuïda</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">розподілені обчислення</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Разпределени изчислителни системи</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Porazdeljeno računalništvo</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">Distribuert databehandling</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">distribuovaný výpočet</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">distribuerede beregninger</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">分散コンピューティング</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">distribuert datahandsaming</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">ഡിസ്ട്രിബൂട്ടഡ് കംപ്യൂട്ടിംഗ്</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Komputasi terdistribusi</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">رایانش توزیعشده</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">elosztott számítások</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">konputazio banatu</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Distribuovaný výpočet</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">disa komputado</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Pengkomputeran teragih</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Hajusarvutus</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Dağıtık hesaplama</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">分布式計算</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Расподељено израчунавање</span>+++
+
+| Lingua Urdu (/Abecedarium Arabicum/)
+| +++<span lang="ur">منقسم شمارندکاری</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Paskirstytasis skaičiavimas</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Izkliedētā skaitļošana</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Distribuirano računarstvo</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Παράλληλα και κατανεμημένα συστήματα</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Размеркаваныя вылічэнні</span>+++
+
+|===
+
+
+
+
+[id='17_182985']
+==== [`17_182985`] /electoral system - method by which voters make a choice between options/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q182985
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/electoral system - method by which voters make a choice between options/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">نظام انتخابي</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">নির্বাচনী ব্যবস্থা</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">избирательная система</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">निर्वाचन प्रणालियाँ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">선거 제도</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">שיטת בחירות</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">வாக்களிப்பு முறைகள்</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ระบบการลงคะแนน</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">投票制度</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">sistema de votação</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">electoral system</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">système électoral</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">kiessysteem</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Wahlsystem</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">sistema electoral</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">sistema elettorale</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">valsystem</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Sistemi zgjedhor</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">ordynacja wyborcza</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">vaalitapa</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Sistem de vot</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Hệ thống đầu phiếu</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">sistema electoral</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">виборча система</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">избирателна система</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">valgordning</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">volební systém</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">valgsystem</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">選挙方法</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">نظام انتخاباتی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">választási rendszer</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Hauteskunde sistema</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">sistema electoral</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Volebný systém</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">balotsistemo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Sistem pilihan raya</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">valimissüsteem</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Izborni sustav</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Seçim sistemi</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">投票制度</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Kosningakerfi</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">Sistema de votasion</span>+++
+
+| Lingua Sicula (Abecedarium Latinum)
+| +++<span lang="scn">Sistema di vutazzioni</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">izborni sistem</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">изборни систем</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Rinkimų sistema</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Izborni sistem</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Balsošanas sistēma</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Εκλογικό σύστημα</span>+++
+
+| Lingua Marathica (Devanāgarī)
+| +++<span lang="mr">मतदान प्रणाली</span>+++
+
+|===
+
+
+
+
+[id='17_186368']
+==== [`17_186368`] Mutualismus
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q186368
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/mutualism - organism relationship in which each individual benefits from the activity of the other/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">تقايض</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Մուտուալիզմ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Мутуализм</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">पारस्परण</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">상리 공생</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">הדדיות</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Mutualismus</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">互利共生</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">mutualismo</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">mutualism</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">mutualisme</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">mutualisme</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Mutualismus</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">mutualismo</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">mutualismo</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Comharaíocht</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">mutualism</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">mutualizm</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">mutualismi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">mutualism</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Thuyết hỗ sinh</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">mutualisme</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Мутуалізм</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Мутуализъм</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Mutualizem</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">mutualisme</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">mutualismus</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Mutualisme</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">相利共生</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">mutualisme</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">സഹോപകാരിത</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">mutualisme</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">همزیستی دوسویه</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Mutualizmus (biológia)</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">mutualismo</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">mutualismo</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">mutualismo</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Kesalingan</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">mutualism</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">mutualizam</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">mutualizm</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">互利共生</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">Mutualizam</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Мутуализам</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">mutualizmas</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Mutualizam</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Mutualizam</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Мутуалізм</span>+++
+
+|===
+
+
+
+
+[id='17_188577']
+==== [`17_188577`] /consensus decision-making -  Collective decision-making processes in which participants develop and decide on proposals with the aim, or requirement, of acceptance by all/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q188577
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/consensus decision-making -  Collective decision-making processes in which participants develop and decide on proposals with the aim, or requirement, of acceptance by all/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">قرار بالإجماع</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Принятие решения методом консенсуса</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">합의 의사결정</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">קבלת החלטות בקונצנזוס</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">共识决策法</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">decisão por consenso</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">consensus decision-making</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">méthode du consensus</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Konsensprinzip</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">decisión por consenso</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">metodo del consenso</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">podejmowanie decyzji w drodze konsensusu</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">decisió per consens</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Знаходження консенсусу</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">合意形成</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Musyawarah</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">تصمیم گیری اجماعی</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Grupno odlučivanje</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">共識決策法</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Konsenzus</span>+++
+
+| Lingua Iavanica (Abecedarium Latinum)
+| +++<span lang="jv">Musyawarah</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Συναινετική λήψη αποφάσεων</span>+++
+
+|===
+
+
+
+
+[id='17_188961']
+==== [`17_188961`] Decentralizatio
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q188961
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/decentralization - process of redistributing or dispersing functions, powers, people or things away from a central location or authority/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">لامركزية</span>+++
+
+| Lingua Bengali (/Bengali script/)
+| +++<span lang="bn">বিকেন্দ্রীকরণ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">децентрализация</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">विकेंद्रीकरण</span>+++
+
+| Lingua Cannadica (/ISO 15924 Knda/)
+| +++<span lang="kn">ವಿಕೇಂದ್ರೀಕರಣ</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">분권화</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">ביזור</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Decentralizatio</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">பரவலாக்கம்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">地方分权</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">descentralização</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">decentralization</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">décentralisation</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">decentralisatie</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Dezentralität</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">descentralización</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">decentramento</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Dílárú</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">decentralisering</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Decentralizimi</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">decentralizacja</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Desentralisaatio</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Descentralizare</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Phi tập trung hóa</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">descentralització</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">децентралізація</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Децентрализация</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">desentralisering</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">decentralizace</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">decentralisering</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">地方分権</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">desentralisering</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Desentralisasi</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">تمرکززدایی</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Deszentralizazio</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Descentralización</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">decentralizácia</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Malcentralizado</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">decentralizacija</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Adem-i merkeziyetçilik</span>+++
+
+| Lingua Occitana (Abecedarium Latinum)
+| +++<span lang="oc">Descentralizacion</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">Decentralizacija</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">децентрализација</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Decentralizacija</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Decentralizacija</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Decentralizacija</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Διοικητική αποκέντρωση</span>+++
+
+| Lingua Frisice occidentalis (Abecedarium Latinum)
+| +++<span lang="fy">Desintralisaasje</span>+++
+
+|===
+
+
+
+
+[id='17_191934']
+==== [`17_191934`] Commensalismus
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q191934
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/commensalism - an interaction between two organisms living together in more or less intimate association in a relationship in which one benefits and the other is unaffected./+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">معايشة</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Կոմենսալիզմ</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Комменсализм</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">सहभोज</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">편리 공생</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">קומנסליזם</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Commensalismus</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">கூட்டு வாழ்க்கை</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">偏利共生</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">comensalismo</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">commensalism</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">commensalisme</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">commensalisme</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Kommensalismus</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">comensalismo</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">commensalismo</span>+++
+
+| Lingua Hibernica (Abecedarium Latinum)
+| +++<span lang="ga">Comhthíosachas</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Komensalizm</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Kommensalismi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Comensalism</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Hội sinh</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">comensalisme</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Коменсалізм</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Коменсализъм</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Priskledništvo</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">kommensialisme</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Komenzálismus</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Kommensalisme</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">片利共生</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">kommensialisme</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">സഹഭോജിത</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">komensalisme</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">همسفرگی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Kommenzalizmus</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Komentsalismo</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Comensalismo</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Kunmanĝado</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Komensalisme</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Kommensalism</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Komenzalizam</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Kommensalizm</span>+++
+
+| Lingua Scotica quae Teutonica (Abecedarium Latinum)
+| +++<span lang="sco">commensalism</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">偏利共生</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Gistilíf</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">Komensalizam</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">偏利共生</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Коменсализам</span>+++
+
+| Lingua Lithuanica (Abecedarium Latinum)
+| +++<span lang="lt">Komensalizmas</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Komenzalizam</span>+++
+
+| Lingua Bosnica (Abecedarium Latinum)
+| +++<span lang="bs">Komensalizam</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Каменсалізм</span>+++
+
+|===
+
+
+
+
+[id='17_215028']
+==== [`17_215028`] /peer review - evaluation of work by one or more people of similar competence to the producers of the work/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q215028
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/peer review - evaluation of work by one or more people of similar competence to the producers of the work/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مراجعة الأقران</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">рецензирование</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">동료평가</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">ביקורת עמיתים</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">சக மதிப்பாய்வு</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">พิชญพิจารณ์</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">同行評審</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">revisão por pares</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">peer review</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">évaluation par les pairs</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">collegiale toetsing</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Peer-Review</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">revisión por pares</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">revisione paritaria</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">referentgranskning</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">recenzja naukowa</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">vertaisarviointi</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Comitet de referenți</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Bình duyệt</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">avaluació d'experts</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">рецензування</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Рецензиране</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Strokovna recenzija</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">Fagfellevurdering</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Peer review</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">fagfællebedømmelse</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">査読</span>+++
+
+| Lingua Malabarica (/Malayalam script/)
+| +++<span lang="ml">വിദഗ്ദ്ധ നിരൂപണം</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">penelaahan sejawat</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">داوری همتا</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">kollegiális lektorálás</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Berdinen Ikuskapena</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Revisión por pares</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Peer review</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">kolega reviziado</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">kajian semula setara</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Peer review</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">akran denetimi</span>+++
+
+| Lingua Batava Capitensis (Abecedarium Latinum)
+| +++<span lang="af">Kollegiale toetsing</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">同行評審</span>+++
+
+| Lingua Islandica (Abecedarium Latinum)
+| +++<span lang="is">Ritrýni</span>+++
+
+| //Macrolingua Wu// (/ISO 15924 Zyyy/)
+| +++<span lang="wuu">同行評審</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">стручна рецензија</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Recenzija</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Ομότιμη αναθεώρηση</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">Revision per pares</span>+++
+
+|===
+
+
+
+
+[id='17_290036']
+==== [`17_290036`] /network simulation - simulating computer networks/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q290036
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/network simulation - simulating computer networks/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">محاكاة شبكات الحاسب</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Network simulation</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Simulation réseau</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Мережна симуляція</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">ネットワークシミュレーション</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">شبیهسازی شبکه</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Симулација мреже</span>+++
+
+|===
+
+
+
+
+[id='17_304922']
+==== [`17_304922`] /social dynamics - study of behavior of groups/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q304922
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/social dynamics - study of behavior of groups/+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Социальная динамика</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Social dynamics</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Dynamique sociale</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Soziodynamik</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Dinámica social</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Dynamika społeczna</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Соціальна динаміка</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Dinamika sosial</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">پویایی اجتماعی</span>+++
+
+|===
+
+
+
+
+[id='17_388791']
+==== [`17_388791`] /group decision-making - situation faced when individuals collectively make a choice/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q388791
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/group decision-making - situation faced when individuals collectively make a choice/+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">集体决策</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">group decision-making</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">prise de décision collective</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Entscheidungsverfahren</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">toma de decisiones colaborativa</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">kollektivt beslutsfattande</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">presa de decisió en grup</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">集団決定</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">pengambilan keputusan kelompok</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">集體決策</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Entscheidigsverfahre</span>+++
+
+|===
+
+
+
+
+[id='17_430880']
+==== [`17_430880`] /collective consciousness - shared beliefs and ideas in society/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q430880
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/collective consciousness - shared beliefs and ideas in society/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ضمير جمعي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">массовое сознание</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">集體意識</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">consciência coletiva</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">collective consciousness</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">conscience collective</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">collectief bewustzijn</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Kollektivbewusstsein</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">consciencia colectiva</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">coscienza collettiva</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">zbiorowa świadomość</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Kollektiivinen tietoisuus</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Масова свідомість</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">集合意識</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Kesadaran bersama</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">آگاهی جمعی</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">kollektív tudat</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Spoločenské vedomie</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">kolektiva konscio</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">Kesedaran kolektif</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Kolektif bilinç</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">集體意識</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">cosiensa cołetiva</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">колективна свест</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Συλλογική συνείδηση</span>+++
+
+|===
+
+
+
+
+[id='17_432197']
+==== [`17_432197`] /collective intelligence - group intelligence that emerges from collective efforts/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q432197
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/collective intelligence - group intelligence that emerges from collective efforts/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ذكاء جمعي</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Կոլեկտիվ բանականություն</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Коллективный интеллект</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">집단 지성</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">אינטליגנציה קולקטיבית</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">கூட்டு மதிநுட்பம்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">集體智慧</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">inteligência coletiva</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">collective intelligence</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">intelligence collective</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">collectieve intelligentie</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">kollektive Intelligenz</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">inteligencia colectiva</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">intelligenza collettiva</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Kollektiv intelligens</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Inteligencja zbiorowa</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Kollektiivinen älykkyys</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Trí tuệ tập thể</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">intel·ligència col·lectiva</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Колективний розум</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Kolektivní inteligence</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">kollektiv intelligens</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">集団的知性</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">هوش جمعی</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Kolektiva inteligento</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Kolektivna inteligencija</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Toplu zekâ</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Колективна интелигенција</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Συλλογική ευφυία</span>+++
+
+| Interlingua (Abecedarium Latinum)
+| +++<span lang="ia">Intelligentia collective</span>+++
+
+|===
+
+
+
+
+[id='17_460851']
+==== [`17_460851`] /ant colony optimization algorithms/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q460851
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/ant colony optimization algorithms/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">خوارزمية قرية النمل</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">муравьиный алгоритм</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">אופטימיזציית קן הנמלים</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">蚁群算法</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Colônia de formigas (otimização)</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">ant colony optimization algorithms</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">algorithme de colonies de fourmis</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Ant colony optimization algorithms</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Ameisenalgorithmus</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Algoritmo de la colonia de hormigas</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Algoritmo delle colonie di formiche</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Algorytm mrówkowy</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">algoritmii coloniilor de furnici</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">Algorisme de la colònia de formigues</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">мурашиний алгоритм</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Алгоритъм за оптимизация по метода на мравките</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Optimalizace mravenčí kolonií</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">蟻コロニー最適化</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Algoritma semut</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">روش بهینه سازی گروه مورچه ها</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Karınca kolonisi optimizasyon algoritmasi</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Мрављи алгоритам</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Αλγόριθμοι βελτιστοποίησης αποικιών των μυρμηγκιών</span>+++
+
+| /Sundanese language/ (Abecedarium Latinum)
+| +++<span lang="su">Algoritma sireum</span>+++
+
+|===
+
+
+
+
+[id='17_465266']
+==== [`17_465266`] /crowd simulation - model of movement/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q465266
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/crowd simulation - model of movement/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">محاكاة الحشد</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">סימולציית קהל</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">crowd simulation</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">simulation de foule</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Gruppensimulation</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">simulación de multitudes</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">crowd simulation</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Моделювання типу скупчення</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">fodgængerdynamik</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">群衆シミュレーション</span>+++
+
+|===
+
+
+
+
+[id='17_529909']
+==== [`17_529909`] /multi-agent system/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q529909
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/multi-agent system/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">نظام متعدد الوكلاء</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Многоагентная система</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">多智能体系统</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">sistema multiagente</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">multi-agent system</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">système multi-agents</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">multi-agentsysteem</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Multiagentensystem</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">sistema multi-agente</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">sistema multiagente</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">System wieloagentowy</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Sistem multi-agent</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Багатоагентна система</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Multiagentní systém</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">マルチエージェントシステム</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">سامانه چندعامله</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Πολυπρακτορικά Συστήματα</span>+++
+
+|===
+
+
+
+
+[id='17_559688']
+==== [`17_559688`] /network emulation - controlled environment simulating real-world network scenarios in order to validate realistic performance of products/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q559688
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/network emulation - controlled environment simulating real-world network scenarios in order to validate realistic performance of products/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">محاكاة الشبكة</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">network emulation</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">nettverksemulering</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">nettverksemulering</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">شبیهساز شبکه</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Емулација мреже</span>+++
+
+|===
+
+
+
+
+[id='17_574814']
+==== [`17_574814`] /discrete event simulation - type of simulation/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q574814
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/discrete event simulation - type of simulation/+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Дискретно-событийное моделирование</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">离散事件仿真</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Simulação de eventos discretos</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Discrete event simulation</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Simulation à événements discrets</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Ereignisorientierte Simulation</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Simulación por eventos discretos</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Materia:Sistemi a eventi discreti</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Symulacja zdarzeń dyskretnych</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Дискретно-подійне моделювання</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Diskrétní simulace</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">ディスクリート・イベント、またはプロセスセントリック</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">شبیهسازی رویداد گسسته</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Diskreetne sündmuspõhine simulatsioon</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Kesikli olay simülasyonu</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">離散事件仿真</span>+++
+
+|===
+
+
+
+
+[id='17_609408']
+==== [`17_609408`] /self-organization - process of creating order by local interactions/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q609408
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/self-organization - process of creating order by local interactions/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">تنظيم ذاتي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">самоорганизация</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">स्वसंगठन</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">자기조직화</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">ארגון עצמי</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">การจัดการตนเอง</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">自我組織</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">auto-organização</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">self-organization</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">auto-organisation</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Zelforganisatie</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Selbstorganisation</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Autoorganización</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Auto-organizzazione</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Samoorganizacja</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Itseorganisoituminen</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">autoorganització</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Самоорганізація</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">samoorganizace</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">自己組織化</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">swaorganisasi</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">خودسازماندهی</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">autoorganización</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">sinorganzado</span>+++
+
+| Macrolingua Malayana (?)
+| +++<span lang="ms">swaorganisasi</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Iseorganiseeruvus</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">自我組織</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">самоорганизација</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">pašsakārtošanās</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Αυτο-οργάνωση</span>+++
+
+|===
+
+
+
+
+[id='17_729672']
+==== [`17_729672`] /noosphere - sphere of human thought/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q729672
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/noosphere - sphere of human thought/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">مجال نو</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Նոոսֆերա</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">ноосфера</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">정신권</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">נואוספירה</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">சிந்தனைக் கோளம்</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">智力圈</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">noosfera</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">noosphere</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">noosphère</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Noosphäre</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">noosfera</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">noosfera</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">noosfera</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">noosfera</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">ноосфера</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Ноосфера</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Noosféra</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">ノウアスフィア</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">Nooszféra</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Noosfera</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Noosféra</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Noosfero</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Noosfäär</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Noosfera</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Noosfer</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Ноосфера</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">noosfēra</span>+++
+
+| Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+| +++<span lang="be">Наасфера</span>+++
+
+|===
+
+
+
+
+[id='17_753694']
+==== [`17_753694`] Eusocialitas
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q753694
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/eusociality - highest level of animal sociality a species can attain/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">اجتماعية عليا</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Эусоциальность</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">सामाजिक कीट</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">사회성 곤충</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">איסוציאליות</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Eusocialitas</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">真社會性</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Eusocialidade</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Eusociality</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Eusocialité</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Eusocialiteit</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Eusozialität</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Eusocialidad</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Eusocialità</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">eusocialitet</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Eusocjalność</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Aitososiaalisuus</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Eusocialitate</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Eusociality</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">eusocialitat</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Еусоціальність</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Evsocialnost</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">Eusosialitet</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">eusocialita</span>+++
+
+| Lingua Danica (Abecedarium Latinum)
+| +++<span lang="da">Eusocialitet</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">真社会性</span>+++
+
+| /Nynorsk/ (Abecedarium Latinum)
+| +++<span lang="nn">Eusosialitet</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Eusosialitas</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Eusozialitate</span>+++
+
+| Lingua Gallaica (Abecedarium Latinum)
+| +++<span lang="gl">Eusocialidade</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Bonsociemo</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Eusocijalnost</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Gerçek sosyal yaşam</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">真社會性</span>+++
+
+| Dialecti Alemannicae (Abecedarium Latinum)
+| +++<span lang="gsw">Eusozialität</span>+++
+
+| /West Flemish/ (Abecedarium Latinum)
+| +++<span lang="vls">Eusosjalieteit</span>+++
+
+|===
+
+
+
+
+[id='17_780716']
+==== [`17_780716`] /Social Exchange Theory - generalization theory/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q780716
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/Social Exchange Theory - generalization theory/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">نظرية التبادل الاجتماعي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Теория социального обмена</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">사회적 교환이론</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">社会交换论</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Social Exchange Theory</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Théorie de l'échange social</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Sociale ruil</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Austauschtheorie</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Teoría de intercambio social</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Teoria dello scambio sociale</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Teoria wymiany</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">teoria de l'intercanvi social</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">теорія соціального обміну</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Teorie sociální směny</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">社会的交換理論</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Teori pertukaran sosial</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">نظریه مبادله اجتماعی</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">社會交換論</span>+++
+
+|===
+
+
+
+
+[id='17_839578']
+==== [`17_839578`] /group dynamics - system of behaviors and psychological processes occurring within a social group or between social groups/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q839578
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/group dynamics - system of behaviors and psychological processes occurring within a social group or between social groups/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">دينامية الجماعة</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Групповая динамика</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">समूह गतिकी</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">집단역학</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">דינמיקה קבוצתית</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">พลวัตกลุ่ม</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">群体动力学</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">dinâmica de grupo</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">group dynamics</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">dynamique de groupe</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">groepsdynamiek</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Gruppendynamik</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">dinámica de grupo</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">psicologia dei gruppi</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Grupprocess</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">grupi i dinamikave</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">ryhmädynamiikka</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">dinàmica de grup</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Групова динаміка</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Skupinska dinamika</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Skupinová dynamika</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">集団力学</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Dinamika kelompok</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">پویایی گروه</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">csoportdinamika</span>+++
+
+| Lingua Vasconica (Abecedarium Latinum)
+| +++<span lang="eu">Talde-dinamika</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Skupinová dynamika</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">Grupdinamiko</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Grupidünaamika</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Grup dinamiği</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">群體動力學</span>+++
+
+| /Serbian/ (Abecedarium Latinum)
+| +++<span lang="sr-el">Grupna dinamika</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">групна динамика</span>+++
+
+| Macrolingua Lettonica (Abecedarium Latinum)
+| +++<span lang="lv">Kurta lewina skola</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">δυναμική των ομάδων</span>+++
+
+|===
+
+
+
+
+[id='17_863960']
+==== [`17_863960`] Intellegentia examinis
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q863960
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/swarm intelligence - collective behavior of decentralized, self-organized systems/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ذكاء السرب</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Роевой интеллект</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">떼 지능</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">אינטליגנציית הנחיל</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Intellegentia examinis</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">மந்தை புத்தி</span>+++
+
+| Lingua Thai (/ISO 15924 Thai/)
+| +++<span lang="th">ความฉลาดแบบกลุ่ม</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">群体智能</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Swarm intelligence</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">swarm intelligence</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">intelligence distribuée</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Zwermintelligentie</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Schwarmintelligenz</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Inteligencia de enjambre</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">swarm intelligence</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">svärmintelligens</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">inteligencja rozproszona</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">Parviäly</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Inteligență „roi”</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">intel·ligència d'eixam</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">колективний інтелект</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Inteligence hejna</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">群知能</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Computational Swarm Intelligence</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">هوش گروهی</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Tark parv</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">群體智能</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Νοημοσύνη σμήνους</span>+++
+
+|===
+
+
+
+
+[id='17_905036']
+==== [`17_905036`] /computational sociology - branch of sociology that uses computational methods to study social phenomena/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q905036
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/computational sociology - branch of sociology that uses computational methods to study social phenomena/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">علم اجتماع حاسوبي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">вычислительная социология</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">전산사회학</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">計算社會學</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">computational sociology</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">sociologie informatique</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Sociología informática</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">sociologia computazionale</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Datorunderstödd sociologi</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Обчислювальна соціологія</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">計算社会学</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Sosiologi komputasional</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">komputa sociologio</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">İşlemsel sosyoloji</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">計算社會學</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Рачунарска социологија</span>+++
+
+|===
+
+
+
+
+[id='17_1471594']
+==== [`17_1471594`] /collective action - action taken together by a group of people whose goal is to enhance their status and achieve a common objective/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q1471594
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/collective action - action taken together by a group of people whose goal is to enhance their status and achieve a common objective/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">عمل جماعي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Коллективные действия (социология)</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">집단 행위</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">פעולה קולקטיבית</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">集體行動</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">ação coletiva</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">collective action</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">action collective</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">collectieve actie</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Kollektives Handeln</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">acción colectiva</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Kollektivt handlande</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">acció col·lectiva</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">kollektiv handling</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Kolektivní jednání</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">kolektiva agado</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">колективна акција</span>+++
+
+|===
+
+
+
+
+[id='17_1753943']
+==== [`17_1753943`] /wisdom of the crowd - collective perception of a group of people/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q1753943
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/wisdom of the crowd - collective perception of a group of people/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">حكمة الجمهور</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">חוכמת ההמונים</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">群体的智慧</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Sabedoria das Multidões</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">wisdom of the crowd</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">La Sagesse des foules</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Wijsheid van de massa</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Die Weisheit der Vielen</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Sabiduría de los grupos</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Saggezza della folla</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Massans visdom</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Mądrość tłumu</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">joukkoäly</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Trí khôn của đám đông</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Мъдростта на тълпите</span>+++
+
+| Lingua Slovena (Abecedarium Latinum)
+| +++<span lang="sl">Modrost množic</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">群衆の叡智</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">خرد جمعی</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">群體的智慧</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Мудрост гомиле</span>+++
+
+| Macrolingua Serbocroatica (Abecedarium Latinum)
+| +++<span lang="sh">Mudrost gomile</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Σοφία του πλήθους</span>+++
+
+|===
+
+
+
+
+[id='17_2052203']
+==== [`17_2052203`] /multi-objective optimization - area of multiple criteria decision making, that is concerned with mathematical optimization problems involving more than one objective function to be optimized simultaneously/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q2052203
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/multi-objective optimization - area of multiple criteria decision making, that is concerned with mathematical optimization problems involving more than one objective function to be optimized simultaneously/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">الامثلة متعددة الاهداف</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Многокритериальная оптимизация</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">multiobjective optim</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">אופטימיזציה וקטורית</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">多目標最佳控制</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">multi-objective optimization</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">optimisation multiobjectif</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Pareto-Optimierung</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Optimización multiobjetivo</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">optimizare multiobiectiv</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Багатокритеріальна оптимізація</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Vícekriteriální programování</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">多目的最適化</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">Optimisasi multiobjektif</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">pareto</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Вишекритеријумска оптимизација</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Βελτιστοποίηση με πολλαπλά κριτήρια</span>+++
+
+|===
+
+
+
+
+[id='17_2072794']
+==== [`17_2072794`] /particle swarm optimization - optimization method that tries a set of candidate solutions (“particles“) moving around in the search-space, guided toward the best known positions as better positions are found by other particles/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q2072794
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/particle swarm optimization - optimization method that tries a set of candidate solutions (“particles“) moving around in the search-space, guided toward the best known positions as better positions are found by other particles/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">استمثال عناصر السرب</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Метод роя частиц</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">कण दल इष्टतमीकरण</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">אופטימיזצית הנחיל</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">粒子群优化</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Optimização por enxame de partículas</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">particle swarm optimization</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Optimisation par essaims particulaires</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Partikelschwarmoptimierung</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Optimización por enjambre de partículas</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Particle Swarm Optimization</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Tối ưu bầy đàn</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Метод рою часток</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Optimalizace hejnem částic</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">粒子群最適化</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">روش بهینهسازی ازدحام ذرات</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">optimumigo per partiklaro</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">粒子群優化</span>+++
+
+|===
+
+
+
+
+[id='17_2446723']
+==== [`17_2446723`] /swarm robotics - coordination of multiple robots as a system/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q2446723
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/swarm robotics - coordination of multiple robots as a system/+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Групповая робототехника</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">群機器人</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">robótica de enxame</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">swarm robotics</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">robotique en essaim</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">robótica de enjambres</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">robotica degli sciami</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">robotyka ławicy</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Robot học bầy đàn</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">robòtica d'eixam</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Групова робототехніка</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Групова роботехника</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">群ロボット工学</span>+++
+
+|===
+
+
+
+
+[id='17_2548752']
+==== [`17_2548752`] /collective behavior - /social processes and events which do not reflect existing social structure, but which emerge in a spontaneous way/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q2548752
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/collective behavior - /social processes and events which do not reflect existing social structure, but which emerge in a spontaneous way/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">السلوك الجماعي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">коллективное поведение</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">집단행동</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">集合行为</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">collective behavior</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">comportement collectif</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">collectief gedrag</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Kollektives Verhalten</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">comportamiento colectivo</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">comportamento collettivo</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">колективна поведінка</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">集団態度</span>+++
+
+| Lingua Indonesiana (Abecedarium Latinum)
+| +++<span lang="id">collective behavior teory</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">رفتار جمعی</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">amasa konduto</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">集合行為</span>+++
+
+|===
+
+
+
+
+[id='17_2631895']
+==== [`17_2631895`] /automated planning and scheduling - branch of artificial intelligence that concerns the realization of strategies or action sequences/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q2631895
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/automated planning and scheduling - branch of artificial intelligence that concerns the realization of strategies or action sequences/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">التخطيط الآلي والجدولة</span>+++
+
+| Lingua Armenia (Alphabetum Armenium)
+| +++<span lang="hy">Ավտոմատացված պլանավորում</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Автоматическое планирование и диспетчеризация</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">תכנון אוטומטי</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">自動規劃</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Planejamento automatizado</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">automated planning and scheduling</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Planification</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Planificación automática</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">pianificazione automatica</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">automatisk planering</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">planificare automată</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Автоматизоване планування та диспетчеризація</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">自動計画</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">برنامهریزی خودکار</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">自動規劃和排程</span>+++
+
+|===
+
+
+
+
+[id='17_2835898']
+==== [`17_2835898`] /distributed algorithm - algorithm designed to run on computer hardware constructed from interconnected processors/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q2835898
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/distributed algorithm - algorithm designed to run on computer hardware constructed from interconnected processors/+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">распределённый алгоритм</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">분산 알고리즘</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">分散式演算法</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">distributed algorithm</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">algorithme réparti</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">algoritmo distribuido</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Thuật toán phân tán</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">розподілений алгоритм</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">分散アルゴリズム</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">elosztott algoritmus</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">disa algoritmo</span>+++
+
+|===
+
+
+
+
+[id='17_3153007']
+==== [`17_3153007`] /distributed artificial intelligence/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q3153007
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/distributed artificial intelligence/+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Inteligência artificial distribuída</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">distributed artificial intelligence</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Intelligence artificielle distribuée</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Verteilte künstliche Intelligenz</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Inteligencia artificial distribuida</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">intelligenza artificiale distribuita</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Trí tuệ nhân tạo phân tán</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">Intel·ligència distribuïda</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">هوش مصنوعی توزیع شده</span>+++
+
+| Lingua Veneta (Abecedarium Latinum)
+| +++<span lang="vec">intełizensa artifisałe distribuia</span>+++
+
+|===
+
+
+
+
+[id='17_3497720']
+==== [`17_3497720`] /bees algorithm/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q3497720
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/bees algorithm/+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Пчелиный алгоритм</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">蜜蜂算法</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Bees algorithm</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Бджолиний алгоритм</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Алгоритъм на пчелите</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Optimalizace včelím rojem</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">الگوریتم زنبور عسل</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">蜜蜂演算法</span>+++
+
+| Lingua Serbica (Abecedarium Cyrillicum)
+| +++<span lang="sr">Pčelinji algoritam</span>+++
+
+|===
+
+
+
+
+[id='17_4801057']
+==== [`17_4801057`] /artificial bee colony algorithm - /optimization algorithm based on the intelligent foraging behaviour of honey bee swarm
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q4801057
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/artificial bee colony algorithm - /optimization algorithm based on the intelligent foraging behaviour of honey bee swarm+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">خوارزمية مجتمع النحل الاصطناعي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">алгоритм пчелиной колонии</span>+++
+
+| Lingua Telingana (/ISO 15924 Telu/)
+| +++<span lang="te">ఆర్టిఫిషియల్ బీ కాలనీ (ఎబిసి)</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">artificial bee colony algorithm</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">algoritmo colonia de abejas artificiales</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Штучний бджолиний рій</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">алгоритъм на изкуствените пчелни семейства</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">人工蜂コロニーアルゴリズム</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">الگوریتم کلونی زنبور عسل</span>+++
+
+|===
+
+
+
+
+[id='17_5130575']
+==== [`17_5130575`] Symbiosis purgatoria
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q5130575
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/cleaning symbiosis - m[utually beneficial association between individuals of two species/+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">סימביוזת ניקוי</span>+++
+
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">Symbiosis purgatoria</span>+++
+
+| Lingua Tamulica (/ISO 15924 Taml/)
+| +++<span lang="ta">துப்பரவாக்கும் ஒன்றியவாழி</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">清除共生</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Cleaning symbiosis</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">nettoyage symbiotique</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Putzsymbiose</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Simbiosis de limpieza</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Simbiosi di pulizia</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Cleaning symbiosis</span>+++
+
+| Lingua Vietnamensis (Abecedarium Latinum)
+| +++<span lang="vi">Cộng sinh làm sạch</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">simbiosi de neteja</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Συμβίωση καθάρισης</span>+++
+
+|===
+
+
+
+
+[id='17_5162845']
+==== [`17_5162845`] /consensus dynamics/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q5162845
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/consensus dynamics/+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">共識動力學</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Consensus dynamics</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">دینامیک اجماع</span>+++
+
+|===
+
+
+
+
+[id='17_5167913']
+==== [`17_5167913`] /cooperative distributed problem solving/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q5167913
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/cooperative distributed problem solving/+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Cooperative distributed problem solving</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Розподільне кооперативне вирішення проблем</span>+++
+
+|===
+
+
+
+
+[id='17_5249081']
+==== [`17_5249081`] /decentralized computing - concept in where a computer system can have many parts or nodes and still function fully if one of the parts or nodes fail/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q5249081
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/decentralized computing - concept in where a computer system can have many parts or nodes and still function fully if one of the parts or nodes fail/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">الحوسبة غير الممركزة</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">децентрализованные вычисления</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">去中心化计算</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">decentralized computing</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Architecture distribuée</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Dezentrales Netzwerk</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">computación descentralizada</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">arquitectura distribuïda</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">desentralisert nettverk</span>+++
+
+| Lingua Esperantica (Abecedarium Latinum)
+| +++<span lang="eo">malcentra komputado</span>+++
+
+| Macrolingua Estonica (Abecedarium Latinum)
+| +++<span lang="et">Detsentraliseeritud andmetöötlusplatform</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">去中心化計算</span>+++
+
+|===
+
+
+
+
+[id='17_6839259']
+==== [`17_6839259`] /microbial cooperation/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q6839259
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/microbial cooperation/+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Microbial cooperation</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Cooperación microbiana</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Кооперація мікроорганізмів</span>+++
+
+|===
+
+
+
+
+[id='17_6839260']
+==== [`17_6839260`] /microbial intelligence -adaptive behavior among bacteria and protists/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q6839260
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/microbial intelligence -adaptive behavior among bacteria and protists/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">ذكاء ميكروبي</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Микробный интеллект</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Microbial intelligence</span>+++
+
+| Lingua Hungarica (Abecedarium Latinum)
+| +++<span lang="hu">mikrobiális intelligencia</span>+++
+
+|===
+
+
+
+
+[id='17_6934423']
+==== [`17_6934423`] /multi-agent planning/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q6934423
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/multi-agent planning/+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Multi-agent planning</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Multi-agent planning</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Multi-Agenten-Ressourcen-Allokation</span>+++
+
+|===
+
+
+
+
+[id='17_6934508']
+==== [`17_6934508`] /multi-swarm optimization/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q6934508
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/multi-swarm optimization/+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Multi-swarm optimization</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Optimización multi-enjambre</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">マルチスウォーム最適化</span>+++
+
+|===
+
+
+
+
+[id='17_6935067']
+==== [`17_6935067`] /multiscale decision-making/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q6935067
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/multiscale decision-making/+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Multiscale decision-making</span>+++
+
+|===
+
+
+
+
+[id='17_14915018']
+==== [`17_14915018`] /swarm behaviour - collective behaviour of a large number of (usually) self-propelled entities of similar size/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q14915018
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/swarm behaviour - collective behaviour of a large number of (usually) self-propelled entities of similar size/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">سلوك السرب</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">ройное поведение</span>+++
+
+| Lingua Hindica (Devanāgarī)
+| +++<span lang="hi">झुंड व्यवहार</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">התקהלות</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">群行行為</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">swarm behaviour</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Schwarmverhalten</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">comportamiento de enjambre</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Formazione a sciame</span>+++
+
+| Lingua Suecica (Abecedarium Latinum)
+| +++<span lang="sv">Svärmning</span>+++
+
+| Lingua Finnica (Abecedarium Latinum)
+| +++<span lang="fi">parveilu</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">roire</span>+++
+
+| Lingua Bulgarica (Abecedarium Cyrillicum)
+| +++<span lang="bg">Пасаж</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">群行動</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">رفتار ازدحامی</span>+++
+
+| Lingua Turcica (Abecedarium Latinum)
+| +++<span lang="tr">Sürü davranışı</span>+++
+
+|===
+
+
+
+
+[id='17_18204722']
+==== [`17_18204722`] /decentralized autonomous organization - computer network organization model/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q18204722
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/decentralized autonomous organization - computer network organization model/+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Децентрализованная автономная организация</span>+++
+
+| Lingua Coreana (Abecedarium Coreanum)
+| +++<span lang="ko">탈중앙화된 자율조직</span>+++
+
+| Lingua Hebraica (Alphabetum Hebraicum)
+| +++<span lang="he">ארגון אוטונומי מבוזר</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">分布式自治组织</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">organização autônoma descentralizada</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">decentralized autonomous organization</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">organisation autonome décentralisée</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Decentralized autonomous organization</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Dezentralisierte Autonome Organisation</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">organización autónoma descentralizada</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Decentralized autonomous organization</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Organizație Autonomă Descentralizată</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">Organització autònoma descentralitzada</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">Desentralisert autonom organisasjon</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">分散型自律組織</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">سازمان نامتمرکز خودگردان</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">去中心化自主組織</span>+++
+
+|===
+
+
+
+
+[id='17_21281178']
+==== [`17_21281178`] /distributed constrained optimisation problem/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q21281178
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/distributed constrained optimisation problem/+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">分佈式約束推理</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">distributed constrained optimisation problem</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">optimisation distribuée sous contrainte</span>+++
+
+| //Traditional Chinese// (/ISO 15924 Hant/)
+| +++<span lang="zh-hant">分散式約束推理</span>+++
+
+|===
+
+
+
+
+[id='17_28324877']
+==== [`17_28324877`] /fish School Search/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q28324877
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/fish School Search/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">Fish School Search</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Fish School Search</span>+++
+
+|===
+
+
+
+
+[id='17_50818671']
+==== [`17_50818671`] /federated learning - method for artificial intelligence/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q50818671
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/federated learning - method for artificial intelligence/+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">التعليم الموحد</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">聯邦學習</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">federated learning</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">apprentissage fédéré</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Föderales Lernen</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Aprendizaje federado</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Apprendimento federato</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">føderert læring</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">連合学習</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">یادگیری فدرال</span>+++
+
+|===
+
+
+
+
+[id='17_55080113']
+==== [`17_55080113`] /decentralized application - type of computer application/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q55080113
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/decentralized application - type of computer application/+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Децентрализованное приложение</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">分散式應用程式</span>+++
+
+| Lingua Lusitana (Abecedarium Latinum)
+| +++<span lang="pt">Aplicativo descentralizado</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Decentralized application</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">DApp</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">Aplicación descentralizada</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Zdecentralizowana aplikacja</span>+++
+
+| Lingua Dacoromanica (Abecedarium Latinum)
+| +++<span lang="ro">Aplicație descentralizată</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Децентралізований додаток</span>+++
+
+| /Bokmål/ (Abecedarium Latinum)
+| +++<span lang="nb">Desentralisert applikasjon</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">分散型アプリケーション</span>+++
+
+| Macrolingua Persica (//Abecedarium Arabicum//)
+| +++<span lang="fa">اپلیکیشن غیرمتمرکز در بستر بلاکچین یا Dapp</span>+++
+
+| Lingua Neograeca (Alphabetum Graecum)
+| +++<span lang="el">Αποκεντρωμένη εφαρμογή</span>+++
+
+|===
+
+
+
+
+[id='17_55080175']
+==== [`17_55080175`] /dispersive flies optimisation/
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+Q55080175
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Linguae multiplīs (Scrīptum incognitō)
+| +++/dispersive flies optimisation/+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Dispersive flies optimisation</span>+++
+
+|===
+
+
+
+
+
+<<<
+

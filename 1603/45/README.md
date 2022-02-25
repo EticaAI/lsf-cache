@@ -119,15 +119,17 @@
 - civis, https://en.wiktionary.org/wiki/civis#Latin
 --->
 
-### [`1603:45:901`] //Dictiōnāria dē ...//
+### [`1603:45:19`] //Dictiōnāria dē locī generibus//
 
 > - https://en.wikipedia.org/wiki/List_of_building_types
-
 
 - dictiōnāria, n, pl, nōminātīvus, https://en.wiktionary.org/wiki/dictionarium#Latin
 - dē (+ ablātīvus), n, pl, nōminātīvus, https://en.wiktionary.org/wiki/de#Latin
 - generibus, n, pl, dativus, https://en.wiktionary.org/wiki/genus#Latin
 - locī, m, pl, nōminātīvus, https://en.wiktionary.org/wiki/locus#Latin
+- ...Dictiōnāria dē locī generibus
+
+- [19] L=12 + G=7 ... 19
 
 ### [`1603:45:994`] //Dictiōnāria dē Development aid//
 
