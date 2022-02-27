@@ -507,6 +507,86 @@ neo_codex_de_numerordinatio() {
 }
 
 #######################################
+# From an .codex.adoc, create an epub file
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (default "0", from real namespace)
+#   est_objectivum_linguam
+#   est_auxilium_linguam
+# Outputs:
+#   Create documentation
+#######################################
+neo_codex_de_numerordinatio_epub() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+  # est_objectivum_linguam="${4:-"mul-Zyyy"}"
+  est_objectivum_linguam="${4:-"mul-Latn"}"
+  est_auxilium_linguam="${5:-"lat-Latn,por-Latn,eng-Latn"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.epub"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.epub"
+  # ascidoctor_theme="${ROOTDIR}/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml"
+  # ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto,/usr/share/fonts/opentype/noto"
+  # ascidoctor_font_dir_repo="${ROOTDIR}/999999/1603/1/3/"
+
+  # ASCIIDOCTOR_PDF_DIR=$(bundle exec gem contents asciidoctor-pdf --show-install-dir)
+  # ascidoctor_font_dir_original="$ASCIIDOCTOR_PDF_DIR/data/fonts"
+
+  # echo "$fontem_archivum"
+
+  # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
+  # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
+
+  # if [ ! -e "$objectivum_archivum" ]; then
+  #   echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
+  # elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
+  #   # echo "${FUNCNAME[0]} objective exist, sources not changed recently"
+  #   return 0
+  # else
+  #   echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
+  # fi
+
+  echo "${FUNCNAME[0]} [$objectivum_archivum]"
+  # return 0
+
+  # @see TODO no custom font https://github.com/asciidoctor/asciidoctor-epub3/issues/62
+
+  # bundle exec asciidoctor-pdf \
+  # bundle exec asciidoctor-epub3 -a ebook-format=kf8 \
+  bundle exec asciidoctor-epub3 \
+    "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
+
+  if [ -f "$objectivum_archivum" ]; then
+    rm "$objectivum_archivum"
+  fi
+  # bundle exec hexapdf optimize "$objectivum_archivum_temporarium" "$objectivum_archivum"
+  mv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+
+  # rm "$objectivum_archivum_temporarium"
+}
+
+#######################################
 # From an .codex.adoc, create an PDF file
 #
 # Globals:

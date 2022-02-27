@@ -77,27 +77,27 @@ Factum
 |
 scrīptor
 |
-EticaAI
+https://www.wikidata.org/wiki/Property:EticaAI[EticaAI]
 
 |
 /cōdex pūblicandī/
 |
-EticaAI
+https://www.wikidata.org/wiki/Property:EticaAI[EticaAI]
 
 |
 /publication date/@eng-Latn
 |
-2022-04-14
+https://www.wikidata.org/wiki/Property:2022-04-14[2022-04-14]
 
 |
 numerus editionis
 |
-2022-02-22T23:20:23
+https://www.wikidata.org/wiki/Property:2022-02-26T23:39:28[2022-02-26T23:39:28]
 
 |
 /SPDX license ID/@eng-Latn
 |
-CC0-1.0
+https://www.wikidata.org/wiki/Property:CC0-1.0[CC0-1.0]
 
 |===
 
@@ -117,7 +117,27 @@ Factum
 |
 /scope and content/@eng-Latn
 |
-The decision making behind these dictionaries are general terminology related to water and improving human health through cleanliness.\n\nIn English, in the humanitarian sector the typical term used is WaSH: Water, Sanitation and Hygiene. The Latin term we use is not a direct literal translation from the English term, but the idea behind the concept. Add to this that /sanitation/@lat-Latn is somewhat redundant with /hygiene/@fra-Latn, which would generate a nonsensical Latin term in this context.\n\nAnother relevant topic which these dictionaries would contain terminology is the Sustainable Development Goal 6 (SDG 6 or Global Goal 6) about _clean water and sanitation for all_ (which is a concept much newer than the idea of WaSH on humanitarian sector). In English _hygiene_ is mentioned, but not as part of title or short descriptions.\n\n**How complete are these dictionaries?**\nThe concepts here are incomplete and the current state is more focused on available translations we can compile. The ideal would be to prepare the definitions and start to add them on Wikipedia, which in turn would allow us to start having very well defined QIDs to scale translations.\n\n**Know issues**\nAs 2022-04-19 the concept Q5893646 is an example of generating wrong translations. /Bucket toilet/@eng-Latn is linked to /Goldeimer/@deu-Latn (use of human excrementa exchanged for money). Ideally **before** asking for translation Initiatives we should review /Bucket toilet/@eng-Latn for a term easier to translate, not just create literal translations for other languages.
+https://www.wikidata.org/wiki/Property:The decision making behind these dictionaries are general terminology related to water and improving human health through cleanliness.
+
+In English, in the humanitarian sector the typical term used is WaSH: Water, Sanitation and Hygiene. The Latin term we use is not a direct literal translation from the English term, but the idea behind the concept. Add to this that /sanitation/@lat-Latn is somewhat redundant with /hygiene/@fra-Latn, which would generate a nonsensical Latin term in this context.
+
+Another relevant topic which these dictionaries would contain terminology is the Sustainable Development Goal 6 (SDG 6 or Global Goal 6) about _clean water and sanitation for all_ (which is a concept much newer than the idea of WaSH on humanitarian sector). In English _hygiene_ is mentioned, but not as part of title or short descriptions.
+
+**How complete are these dictionaries?**
+The concepts here are incomplete and the current state is more focused on available translations we can compile. The ideal would be to prepare the definitions and start to add them on Wikipedia, which in turn would allow us to start having very well defined QIDs to scale translations.
+
+**Know issues**
+As 2022-04-19 the concept Q5893646 is an example of generating wrong translations. /Bucket toilet/@eng-Latn is linked to /Goldeimer/@deu-Latn (use of human excrementa exchanged for money). Ideally **before** asking for translation Initiatives we should review /Bucket toilet/@eng-Latn for a term easier to translate, not just create literal translations for other languages.[The decision making behind these dictionaries are general terminology related to water and improving human health through cleanliness.
+
+In English, in the humanitarian sector the typical term used is WaSH: Water, Sanitation and Hygiene. The Latin term we use is not a direct literal translation from the English term, but the idea behind the concept. Add to this that /sanitation/@lat-Latn is somewhat redundant with /hygiene/@fra-Latn, which would generate a nonsensical Latin term in this context.
+
+Another relevant topic which these dictionaries would contain terminology is the Sustainable Development Goal 6 (SDG 6 or Global Goal 6) about _clean water and sanitation for all_ (which is a concept much newer than the idea of WaSH on humanitarian sector). In English _hygiene_ is mentioned, but not as part of title or short descriptions.
+
+**How complete are these dictionaries?**
+The concepts here are incomplete and the current state is more focused on available translations we can compile. The ideal would be to prepare the definitions and start to add them on Wikipedia, which in turn would allow us to start having very well defined QIDs to scale translations.
+
+**Know issues**
+As 2022-04-19 the concept Q5893646 is an example of generating wrong translations. /Bucket toilet/@eng-Latn is linked to /Goldeimer/@deu-Latn (use of human excrementa exchanged for money). Ideally **before** asking for translation Initiatives we should review /Bucket toilet/@eng-Latn for a term easier to translate, not just create literal translations for other languages.]
 
 |===
 
@@ -1544,143 +1564,71 @@ The result of this section is a preview. We're aware it is not well formatted fo
 |===
 
 
-**1603:1:7:1:91**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "1_91",
-    "#item+conceptum+numerordinatio": "1603:1:7:1:91",
-    "#item+rem+definitionem+i_eng+is_latn": "QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter \"Q\" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.",
-    "#item+rem+i_lat+is_latn": "/Wiki QID/",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikiq",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_q",
-    "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
-    "#status+conceptum+codicem": "19",
-    "#status+conceptum+definitionem": "50"
-}
-----
+/Wiki QID/::
+#item+rem+i_lat+is_latn::: /Wiki QID/
+#item+rem+i_qcc+is_zxxx+ix_regulam::: Q[1-9]\d*
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q
+#item+rem+definitionem+i_eng+is_latn::: QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
 
-**1603:1:7:2616:50**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_50",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
-    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
-    "#item+rem+i_lat+is_latn": "scrīptor",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+scrīptor::
+#item+rem+i_lat+is_latn::: scrīptor
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P50
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip50
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_50
+#item+rem+definitionem+i_eng+is_latn::: Main creator(s) of a written work (use on works, not humans)
 
-**1603:1:7:2616:123**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_123",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
-    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
-    "#item+rem+i_lat+is_latn": "/cōdex pūblicandī/",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/cōdex pūblicandī/::
+#item+rem+i_lat+is_latn::: /cōdex pūblicandī/
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P123
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip123
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_123
+#item+rem+definitionem+i_eng+is_latn::: organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software
 
-**1603:1:7:2616:393**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_393",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
-    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
-    "#item+rem+i_lat+is_latn": "numerus editionis",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+numerus editionis::
+#item+rem+i_lat+is_latn::: numerus editionis
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P393
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip393
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_393
+#item+rem+definitionem+i_eng+is_latn::: number of an edition (first, second, ... as 1, 2, ...) or event
 
-**1603:1:7:2616:577**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_577",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
-    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
-    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/publication date/@eng-Latn::
+#item+rem+i_lat+is_latn::: /publication date/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P577
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip577
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_577
+#item+rem+definitionem+i_eng+is_latn::: Date or point in time when a work was first published or released
 
-**1603:1:7:2616:854**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_854",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
-    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
-    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/reference URL/@eng-Latn::
+#item+rem+i_lat+is_latn::: /reference URL/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P854
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip854
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_854
+#item+rem+definitionem+i_eng+is_latn::: should be used for Internet URLs as references
 
-**1603:1:7:2616:2479**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_2479",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
-    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
-    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
-    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/SPDX license ID/@eng-Latn::
+#item+rem+i_lat+is_latn::: /SPDX license ID/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P2479
+#item+rem+i_qcc+is_zxxx+ix_regulam::: [0-9A-Za-z\.\-]{3,36}[+]?
+#item+rem+i_qcc+is_zxxx+ix_wikip1630::: https://spdx.org/licenses/$1.html
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip2479
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_2479
+#item+rem+definitionem+i_eng+is_latn::: SPDX license identifier
 
-**1603:1:7:2616:7535**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_7535",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:7535",
-    "#item+rem+definitionem+i_eng+is_latn": "a summary statement providing an overview of the archival collection",
-    "#item+rem+i_lat+is_latn": "/scope and content/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip7535",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_7535",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P7535",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/scope and content/@eng-Latn::
+#item+rem+i_lat+is_latn::: /scope and content/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P7535
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip7535
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_7535
+#item+rem+definitionem+i_eng+is_latn::: a summary statement providing an overview of the archival collection
 
 <<<
 
@@ -1771,7 +1719,7 @@ Factum
 |
 /reference URL/@eng-Latn
 |
-https://hxltm.etica.ai/
+https://www.wikidata.org/wiki/Property:https://hxltm.etica.ai/[https://hxltm.etica.ai/]
 
 |===
 
@@ -1827,7 +1775,7 @@ Factum
 |
 /reference URL/@eng-Latn
 |
-https://asciidoctor.org/docs/
+https://www.wikidata.org/wiki/Property:https://asciidoctor.org/docs/[https://asciidoctor.org/docs/]
 
 |===
 
@@ -1869,7 +1817,7 @@ Factum
 |
 /Wiki QID/
 |
-Q283
+https://www.wikidata.org/wiki/Q283[Q283]
 
 |===
 
@@ -2226,7 +2174,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7892
+https://www.wikidata.org/wiki/Q7892[Q7892]
 
 |===
 
@@ -2457,7 +2405,7 @@ Factum
 |
 /Wiki QID/
 |
-Q15324
+https://www.wikidata.org/wiki/Q15324[Q15324]
 
 |===
 
@@ -2697,7 +2645,7 @@ Factum
 |
 /Wiki QID/
 |
-Q81041
+https://www.wikidata.org/wiki/Q81041[Q81041]
 
 |===
 
@@ -2937,7 +2885,7 @@ Factum
 |
 /Wiki QID/
 |
-Q102192
+https://www.wikidata.org/wiki/Q102192[Q102192]
 
 |===
 
@@ -3156,7 +3104,7 @@ Factum
 |
 /Wiki QID/
 |
-Q183129
+https://www.wikidata.org/wiki/Q183129[Q183129]
 
 |===
 
@@ -3354,7 +3302,7 @@ Factum
 |
 /Wiki QID/
 |
-Q336191
+https://www.wikidata.org/wiki/Q336191[Q336191]
 
 |===
 
@@ -3540,7 +3488,7 @@ Factum
 |
 /Wiki QID/
 |
-Q506004
+https://www.wikidata.org/wiki/Q506004[Q506004]
 
 |===
 
@@ -3687,7 +3635,7 @@ Factum
 |
 /Wiki QID/
 |
-Q625376
+https://www.wikidata.org/wiki/Q625376[Q625376]
 
 |===
 
@@ -3828,7 +3776,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1138853
+https://www.wikidata.org/wiki/Q1138853[Q1138853]
 
 |===
 
@@ -3903,7 +3851,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1463025
+https://www.wikidata.org/wiki/Q1463025[Q1463025]
 
 |===
 
@@ -4068,7 +4016,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5376358
+https://www.wikidata.org/wiki/Q5376358[Q5376358]
 
 |===
 
@@ -4206,7 +4154,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6269285
+https://www.wikidata.org/wiki/Q6269285[Q6269285]
 
 |===
 
@@ -4254,7 +4202,7 @@ Factum
 |
 /Wiki QID/
 |
-Q20127660
+https://www.wikidata.org/wiki/Q20127660[Q20127660]
 
 |===
 
@@ -4353,7 +4301,7 @@ Factum
 |
 /Wiki QID/
 |
-Q48741129
+https://www.wikidata.org/wiki/Q48741129[Q48741129]
 
 |===
 
@@ -4434,7 +4382,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3491872
+https://www.wikidata.org/wiki/Q3491872[Q3491872]
 
 |===
 
@@ -4494,7 +4442,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1049049
+https://www.wikidata.org/wiki/Q1049049[Q1049049]
 
 |===
 
@@ -4638,7 +4586,7 @@ Factum
 |
 /Wiki QID/
 |
-Q2137507
+https://www.wikidata.org/wiki/Q2137507[Q2137507]
 
 |===
 
@@ -4755,7 +4703,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6007834
+https://www.wikidata.org/wiki/Q6007834[Q6007834]
 
 |===
 
@@ -4809,7 +4757,7 @@ Factum
 |
 /Wiki QID/
 |
-Q268534
+https://www.wikidata.org/wiki/Q268534[Q268534]
 
 |===
 
@@ -4953,7 +4901,7 @@ Factum
 |
 /Wiki QID/
 |
-Q30894822
+https://www.wikidata.org/wiki/Q30894822[Q30894822]
 
 |===
 
@@ -4998,7 +4946,7 @@ Factum
 |
 /Wiki QID/
 |
-Q178496
+https://www.wikidata.org/wiki/Q178496[Q178496]
 
 |===
 
@@ -5112,7 +5060,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7649692
+https://www.wikidata.org/wiki/Q7649692[Q7649692]
 
 |===
 
@@ -5188,7 +5136,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5893646
+https://www.wikidata.org/wiki/Q5893646[Q5893646]
 
 |===
 
@@ -5242,7 +5190,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3530438
+https://www.wikidata.org/wiki/Q3530438[Q3530438]
 
 |===
 
@@ -5287,7 +5235,7 @@ Factum
 |
 /Wiki QID/
 |
-Q17072861
+https://www.wikidata.org/wiki/Q17072861[Q17072861]
 
 |===
 

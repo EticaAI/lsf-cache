@@ -63,3 +63,6 @@ gem 'hexapdf'
 # https://docs.asciidoctor.org/epub3-converter/latest/#notable-features
 
 #  ./999999999/0/1603_1.py --codex-de 1603_25_1 > 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-epub3 1603/25/1/1603_25_1.mul-Latn.codex.adoc ; evince 1603/25/1/1603_25_1.mul-Latn.codex.pdf
+
+# bundle exec asciidoctor-epub3 1603/25/1/1603_25_1.mul-Latn.codex.adoc
+# bundle exec asciidoctor-epub3 1603/64/41/1603_64_41.mul-Latn.codex.adoc

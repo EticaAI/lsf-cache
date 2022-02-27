@@ -46,6 +46,7 @@
 
 from multiprocessing.sharedctypes import Value
 import os
+from ossaudiodev import control_names
 import sys
 import argparse
 # from pathlib import Path
@@ -877,7 +878,7 @@ class Codex:
 
 # The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use.
 # All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares.
-# Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release. 
+# Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
 #         """.format(  # noqa
 #             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
 #             self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
@@ -1397,6 +1398,22 @@ class Codex:
                 )
             paginae.append('')
 
+            caveat_lector = self.quod_res('0_1603_1_7_2617_9289584')
+            # paginae.append(str(scope_and_content))
+            if caveat_lector and \
+                    qhxl(caveat_lector, meta_langs) is not None:
+                term = qhxl(caveat_lector, meta_langs)
+                term2 = self.notitiae.translatio(term)
+                meta2 = {}
+                meta2['#item+rem+i_qcc+is_zxxx+ix_wikiq9289584'] = term2
+
+                paginae.append('==== Caveat lector')
+                meta_tabulae = self.conceptum_ad_tabula_codicibus(meta2)
+                paginae.extend(meta_tabulae)
+                paginae.append("")
+                # meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
+                #     term.replace("\\n", "\n")
+
         if 'no11' in self.archiva:
             paginae.append('=== Methodī ex verbīs in dictiōnāriīs')
 
@@ -1424,7 +1441,8 @@ class Codex:
 #                 self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
 #             )
             # raise ValueError(str(self.m1603_1_1__de_codex))
-            textum_II = self.notitiae.translatio('{% _🗣️ 1603_1_99_10_6 🗣️_ %}')
+            textum_II = self.notitiae.translatio(
+                '{% _🗣️ 1603_1_99_10_6 🗣️_ %}')
             vicidata_q_modo_1 = textum_II.format(
                 self.de_codex,
                 self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
@@ -1444,7 +1462,8 @@ class Codex:
 # For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
 #             """.format(self.de_codex)
 
-            textum_III = self.notitiae.translatio('{% _🗣️ 1603_1_99_10_7 🗣️_ %}')
+            textum_III = self.notitiae.translatio(
+                '{% _🗣️ 1603_1_99_10_7 🗣️_ %}')
             vicidata_q_modo_11 = textum_III.format(self.de_codex)
 
 #             vicidata_q_modo = """
@@ -1459,7 +1478,8 @@ class Codex:
 # It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
 #             """.format(self.de_codex)
 
-            textum_IV = self.notitiae.translatio('{% _🗣️ 1603_1_99_10_8 🗣️_ %}')
+            textum_IV = self.notitiae.translatio(
+                '{% _🗣️ 1603_1_99_10_8 🗣️_ %}')
             vicidata_q_modo = textum_IV.format(self.de_codex)
 
 #             vicidata_q_modo2 = """
@@ -1905,8 +1925,10 @@ class DictionariaInterlinguarum:
             auxilium_linguam: list = None
     ) -> str:
         # fōrmātum, f, s, (Nominative) https://en.wiktionary.org/wiki/formatus
-
-        return res[clavem]
+        # TODO: this still need improvement
+        # return res[clavem]
+        return res_interlingualibus_formata(res, clavem)
+        # return res[clavem] + '[' + clavem + ']'
 
     def imprimere(self, linguam: list = None) -> list:
         """imprimere /print/@eng-Latn
@@ -1960,6 +1982,13 @@ class DictionariaInterlinguarum:
                 'Sorry for the temporary inconvenience.'
             ))
 
+            # About description lists
+
+            # Two columns here (requires some changes on CSS)
+            #  https://github.com/asciidoctor/asciidoctor-pdf/issues/327
+            #  https://github.com/Mogztter/asciidoctor-web-pdf/tree/main
+            #  /examples/cheat-sheet
+
             # import pprint
             resultatum.append("")
             for res in resultatum_corpus_obj:
@@ -1967,15 +1996,34 @@ class DictionariaInterlinguarum:
                 # resultatum.append('===== {0} '.format(
                 #     res['#item+conceptum+numerordinatio'])
                 # )
-                resultatum.append('**{0}**'.format(
-                    res['#item+conceptum+numerordinatio'])
-                )
+                # resultatum.append('**{0}**'.format(
+                #     res['#item+conceptum+numerordinatio'])
+                # )
                 resultatum.append("")
-                resultatum.append("[source,json]")
-                resultatum.append("----")
-                resultatum.append(json.dumps(
-                    res, indent=4, sort_keys=True, ensure_ascii=False))
-                resultatum.append("----")
+                resultatum.append("{0}::".format(
+                    res['#item+rem+i_lat+is_latn']))
+
+                for clavem, rem_textum in res.items():
+                    if clavem in [
+                        '#item+conceptum+numerordinatio',
+                        '#item+conceptum+codicem',
+                        '#status+conceptum+definitionem',
+                        '#status+conceptum+codicem',
+                    ]:
+                        continue
+
+                    if len(rem_textum) < 1:
+                        continue
+
+                    resultatum.append("{0}::: {1}".format(clavem, rem_textum))
+                    # datum[int_clavem][clavem] = rem
+
+                # resultatum.append("")
+                # resultatum.append("[source,json]")
+                # resultatum.append("----")
+                # resultatum.append(json.dumps(
+                #     res, indent=4, sort_keys=True, ensure_ascii=False))
+                # resultatum.append("----")
                 # resultatum.append(pprint.pprint(res))
 
         return resultatum
@@ -2351,7 +2399,7 @@ class DictionariaNotitiae:
         """
         if not textum or \
                 (textum.find('{% _🗣️') == -1 or textum.find('🗣️_ %}') == -1):
-            return textum
+            return textum.replace("\\n", "\n")
 
         regula = r"{%\s_🗣️\s(.*?)\s🗣️_\s%}"
 

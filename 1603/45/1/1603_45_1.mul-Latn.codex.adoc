@@ -77,27 +77,27 @@ Factum
 |
 scrīptor
 |
-Multiplicēs scrīptōribus
+https://www.wikidata.org/wiki/Property:Multiplicēs scrīptōribus[Multiplicēs scrīptōribus]
 
 |
 /cōdex pūblicandī/
 |
-EticaAI
+https://www.wikidata.org/wiki/Property:EticaAI[EticaAI]
 
 |
 /publication date/@eng-Latn
 |
-2022-01-01
+https://www.wikidata.org/wiki/Property:2022-01-01[2022-01-01]
 
 |
 numerus editionis
 |
-2022-02-22T23:17:06
+https://www.wikidata.org/wiki/Property:2022-02-26T23:36:22[2022-02-26T23:36:22]
 
 |
 /SPDX license ID/@eng-Latn
 |
-CC0-1.0
+https://www.wikidata.org/wiki/Property:CC0-1.0[CC0-1.0]
 
 |===
 
@@ -117,7 +117,51 @@ Factum
 |
 /scope and content/@eng-Latn
 |
-The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.\n\n**UN System**\nThe dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).\n\n**National Red Cross and Red Crescent**\nThe dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.\n\n**Subnational Red Cross and Red Crescent**\nThe dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:\n\n. National Red Cross of Brazil\n.. Code: 63_76\n... Numerodinatio: 1603:45:1:63:76\n. Subnational; Minas Gerais, Brazil\n.. UN P Code: BR33\n... Code: 63_76_33\n... Numerodinatio: 1603:45:1:63:76:33\n\nSome organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.\n\n**Other humanitarian organizations are missing**\nThese dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.
+https://www.wikidata.org/wiki/Property:The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
+
+**UN System**
+The dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).
+
+**National Red Cross and Red Crescent**
+The dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.
+
+**Subnational Red Cross and Red Crescent**
+The dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:
+
+. National Red Cross of Brazil
+.. Code: 63_76
+... Numerodinatio: 1603:45:1:63:76
+. Subnational; Minas Gerais, Brazil
+.. UN P Code: BR33
+... Code: 63_76_33
+... Numerodinatio: 1603:45:1:63:76:33
+
+Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
+
+**Other humanitarian organizations are missing**
+These dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.[The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
+
+**UN System**
+The dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).
+
+**National Red Cross and Red Crescent**
+The dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.
+
+**Subnational Red Cross and Red Crescent**
+The dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:
+
+. National Red Cross of Brazil
+.. Code: 63_76
+... Numerodinatio: 1603:45:1:63:76
+. Subnational; Minas Gerais, Brazil
+.. UN P Code: BR33
+... Code: 63_76_33
+... Numerodinatio: 1603:45:1:63:76:33
+
+Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
+
+**Other humanitarian organizations are missing**
+These dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.]
 
 |===
 
@@ -1556,143 +1600,71 @@ The result of this section is a preview. We're aware it is not well formatted fo
 |===
 
 
-**1603:1:7:1:91**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "1_91",
-    "#item+conceptum+numerordinatio": "1603:1:7:1:91",
-    "#item+rem+definitionem+i_eng+is_latn": "QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter \"Q\" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.",
-    "#item+rem+i_lat+is_latn": "/Wiki QID/",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikiq",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_q",
-    "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
-    "#status+conceptum+codicem": "19",
-    "#status+conceptum+definitionem": "50"
-}
-----
+/Wiki QID/::
+#item+rem+i_lat+is_latn::: /Wiki QID/
+#item+rem+i_qcc+is_zxxx+ix_regulam::: Q[1-9]\d*
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q
+#item+rem+definitionem+i_eng+is_latn::: QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
 
-**1603:1:7:2616:50**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_50",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
-    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
-    "#item+rem+i_lat+is_latn": "scrīptor",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+scrīptor::
+#item+rem+i_lat+is_latn::: scrīptor
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P50
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip50
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_50
+#item+rem+definitionem+i_eng+is_latn::: Main creator(s) of a written work (use on works, not humans)
 
-**1603:1:7:2616:123**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_123",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
-    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
-    "#item+rem+i_lat+is_latn": "/cōdex pūblicandī/",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/cōdex pūblicandī/::
+#item+rem+i_lat+is_latn::: /cōdex pūblicandī/
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P123
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip123
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_123
+#item+rem+definitionem+i_eng+is_latn::: organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software
 
-**1603:1:7:2616:393**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_393",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
-    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
-    "#item+rem+i_lat+is_latn": "numerus editionis",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+numerus editionis::
+#item+rem+i_lat+is_latn::: numerus editionis
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P393
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip393
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_393
+#item+rem+definitionem+i_eng+is_latn::: number of an edition (first, second, ... as 1, 2, ...) or event
 
-**1603:1:7:2616:577**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_577",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
-    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
-    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/publication date/@eng-Latn::
+#item+rem+i_lat+is_latn::: /publication date/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P577
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip577
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_577
+#item+rem+definitionem+i_eng+is_latn::: Date or point in time when a work was first published or released
 
-**1603:1:7:2616:854**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_854",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
-    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
-    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/reference URL/@eng-Latn::
+#item+rem+i_lat+is_latn::: /reference URL/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P854
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip854
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_854
+#item+rem+definitionem+i_eng+is_latn::: should be used for Internet URLs as references
 
-**1603:1:7:2616:2479**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_2479",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
-    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
-    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
-    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/SPDX license ID/@eng-Latn::
+#item+rem+i_lat+is_latn::: /SPDX license ID/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P2479
+#item+rem+i_qcc+is_zxxx+ix_regulam::: [0-9A-Za-z\.\-]{3,36}[+]?
+#item+rem+i_qcc+is_zxxx+ix_wikip1630::: https://spdx.org/licenses/$1.html
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip2479
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_2479
+#item+rem+definitionem+i_eng+is_latn::: SPDX license identifier
 
-**1603:1:7:2616:7535**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_7535",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:7535",
-    "#item+rem+definitionem+i_eng+is_latn": "a summary statement providing an overview of the archival collection",
-    "#item+rem+i_lat+is_latn": "/scope and content/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip7535",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_7535",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P7535",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/scope and content/@eng-Latn::
+#item+rem+i_lat+is_latn::: /scope and content/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P7535
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip7535
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_7535
+#item+rem+definitionem+i_eng+is_latn::: a summary statement providing an overview of the archival collection
 
 <<<
 
@@ -1783,7 +1755,7 @@ Factum
 |
 /reference URL/@eng-Latn
 |
-https://hxltm.etica.ai/
+https://www.wikidata.org/wiki/Property:https://hxltm.etica.ai/[https://hxltm.etica.ai/]
 
 |===
 
@@ -1839,7 +1811,7 @@ Factum
 |
 /reference URL/@eng-Latn
 |
-https://asciidoctor.org/docs/
+https://www.wikidata.org/wiki/Property:https://asciidoctor.org/docs/[https://asciidoctor.org/docs/]
 
 |===
 
@@ -1891,7 +1863,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1065
+https://www.wikidata.org/wiki/Q1065[Q1065]
 
 |===
 
@@ -2245,7 +2217,7 @@ Factum
 |
 /Wiki QID/
 |
-Q15925165
+https://www.wikidata.org/wiki/Q15925165[Q15925165]
 
 |===
 
@@ -2362,7 +2334,7 @@ Factum
 |
 /Wiki QID/
 |
-Q82151
+https://www.wikidata.org/wiki/Q82151[Q82151]
 
 |===
 
@@ -2602,7 +2574,7 @@ Factum
 |
 /Wiki QID/
 |
-Q125761
+https://www.wikidata.org/wiki/Q125761[Q125761]
 
 |===
 
@@ -2839,7 +2811,7 @@ Factum
 |
 /Wiki QID/
 |
-Q689859
+https://www.wikidata.org/wiki/Q689859[Q689859]
 
 |===
 
@@ -2995,7 +2967,7 @@ Factum
 |
 /Wiki QID/
 |
-Q54129
+https://www.wikidata.org/wiki/Q54129[Q54129]
 
 |===
 
@@ -3226,7 +3198,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7804
+https://www.wikidata.org/wiki/Q7804[Q7804]
 
 |===
 
@@ -3514,7 +3486,7 @@ Factum
 |
 /Wiki QID/
 |
-Q201054
+https://www.wikidata.org/wiki/Q201054[Q201054]
 
 |===
 
@@ -3709,7 +3681,7 @@ Factum
 |
 /Wiki QID/
 |
-Q376150
+https://www.wikidata.org/wiki/Q376150[Q376150]
 
 |===
 
@@ -3943,7 +3915,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7809
+https://www.wikidata.org/wiki/Q7809[Q7809]
 
 |===
 
@@ -4264,7 +4236,7 @@ Factum
 |
 /Wiki QID/
 |
-Q386120
+https://www.wikidata.org/wiki/Q386120[Q386120]
 
 |===
 
@@ -4426,7 +4398,7 @@ Factum
 |
 /Wiki QID/
 |
-Q61923
+https://www.wikidata.org/wiki/Q61923[Q61923]
 
 |===
 
@@ -4624,7 +4596,7 @@ Factum
 |
 /Wiki QID/
 |
-Q17495
+https://www.wikidata.org/wiki/Q17495[Q17495]
 
 |===
 
@@ -4837,7 +4809,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7817
+https://www.wikidata.org/wiki/Q7817[Q7817]
 
 |===
 
@@ -5152,7 +5124,7 @@ Factum
 |
 /Wiki QID/
 |
-Q177773
+https://www.wikidata.org/wiki/Q177773[Q177773]
 
 |===
 
@@ -5350,7 +5322,7 @@ Factum
 |
 /Wiki QID/
 |
-Q170424
+https://www.wikidata.org/wiki/Q170424[Q170424]
 
 |===
 
@@ -5566,7 +5538,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7164
+https://www.wikidata.org/wiki/Q7164[Q7164]
 
 |===
 
@@ -5867,7 +5839,7 @@ Factum
 |
 /Wiki QID/
 |
-Q161718
+https://www.wikidata.org/wiki/Q161718[Q161718]
 
 |===
 
@@ -6083,7 +6055,7 @@ Factum
 |
 /Wiki QID/
 |
-Q182016
+https://www.wikidata.org/wiki/Q182016[Q182016]
 
 |===
 
@@ -6260,7 +6232,7 @@ Factum
 |
 /Wiki QID/
 |
-Q623036
+https://www.wikidata.org/wiki/Q623036[Q623036]
 
 |===
 
@@ -6410,7 +6382,7 @@ Factum
 |
 /Wiki QID/
 |
-Q487883
+https://www.wikidata.org/wiki/Q487883[Q487883]
 
 |===
 
@@ -6545,7 +6517,7 @@ Factum
 |
 /Wiki QID/
 |
-Q740308
+https://www.wikidata.org/wiki/Q740308[Q740308]
 
 |===
 
@@ -6869,7 +6841,7 @@ Factum
 |
 /Wiki QID/
 |
-Q204344
+https://www.wikidata.org/wiki/Q204344[Q204344]
 
 |===
 
@@ -7104,7 +7076,7 @@ Factum
 |
 /Wiki QID/
 |
-Q588982
+https://www.wikidata.org/wiki/Q588982[Q588982]
 
 |===
 
@@ -7233,7 +7205,7 @@ Factum
 |
 /Wiki QID/
 |
-Q132551
+https://www.wikidata.org/wiki/Q132551[Q132551]
 
 |===
 
@@ -7455,7 +7427,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3152150
+https://www.wikidata.org/wiki/Q3152150[Q3152150]
 
 |===
 
@@ -7536,7 +7508,7 @@ Factum
 |
 /Wiki QID/
 |
-Q131878
+https://www.wikidata.org/wiki/Q131878[Q131878]
 
 |===
 
@@ -7629,7 +7601,7 @@ Factum
 |
 /Wiki QID/
 |
-Q2531088
+https://www.wikidata.org/wiki/Q2531088[Q2531088]
 
 |===
 
@@ -7716,7 +7688,7 @@ Factum
 |
 /Wiki QID/
 |
-Q846656
+https://www.wikidata.org/wiki/Q846656[Q846656]
 
 |===
 
@@ -7860,7 +7832,7 @@ Factum
 |
 /Wiki QID/
 |
-Q16959083
+https://www.wikidata.org/wiki/Q16959083[Q16959083]
 
 |===
 
@@ -7917,7 +7889,7 @@ Factum
 |
 /Wiki QID/
 |
-Q492442
+https://www.wikidata.org/wiki/Q492442[Q492442]
 
 |===
 
@@ -8070,7 +8042,7 @@ Factum
 |
 /Wiki QID/
 |
-Q641576
+https://www.wikidata.org/wiki/Q641576[Q641576]
 
 |===
 
@@ -8254,7 +8226,7 @@ Factum
 |
 /Wiki QID/
 |
-Q356694
+https://www.wikidata.org/wiki/Q356694[Q356694]
 
 |===
 
@@ -8341,7 +8313,7 @@ Factum
 |
 /Wiki QID/
 |
-Q41984
+https://www.wikidata.org/wiki/Q41984[Q41984]
 
 |===
 
@@ -8590,7 +8562,7 @@ Factum
 |
 /Wiki QID/
 |
-Q472311
+https://www.wikidata.org/wiki/Q472311[Q472311]
 
 |===
 
@@ -8755,7 +8727,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1184878
+https://www.wikidata.org/wiki/Q1184878[Q1184878]
 
 |===
 
@@ -8854,7 +8826,7 @@ Factum
 |
 /Wiki QID/
 |
-Q842490
+https://www.wikidata.org/wiki/Q842490[Q842490]
 
 |===
 
@@ -9076,7 +9048,7 @@ Factum
 |
 /Wiki QID/
 |
-Q104150918
+https://www.wikidata.org/wiki/Q104150918[Q104150918]
 
 |===
 
@@ -9124,7 +9096,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7825
+https://www.wikidata.org/wiki/Q7825[Q7825]
 
 |===
 
@@ -9740,7 +9712,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1065854
+https://www.wikidata.org/wiki/Q1065854[Q1065854]
 
 |===
 
@@ -9928,7 +9900,7 @@ Factum
 |
 /Wiki QID/
 |
-Q656812
+https://www.wikidata.org/wiki/Q656812[Q656812]
 
 |===
 
@@ -10283,7 +10255,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7888446
+https://www.wikidata.org/wiki/Q7888446[Q7888446]
 
 |===
 
@@ -10364,7 +10336,7 @@ Factum
 |
 /Wiki QID/
 |
-Q636107
+https://www.wikidata.org/wiki/Q636107[Q636107]
 
 |===
 
@@ -10527,7 +10499,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7888481
+https://www.wikidata.org/wiki/Q7888481[Q7888481]
 
 |===
 
@@ -10699,7 +10671,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1577943
+https://www.wikidata.org/wiki/Q1577943[Q1577943]
 
 |===
 
@@ -10771,7 +10743,7 @@ Factum
 |
 /Wiki QID/
 |
-Q962612
+https://www.wikidata.org/wiki/Q962612[Q962612]
 
 |===
 
@@ -10858,7 +10830,7 @@ Factum
 |
 /Wiki QID/
 |
-Q37470
+https://www.wikidata.org/wiki/Q37470[Q37470]
 
 |===
 
@@ -11125,7 +11097,7 @@ Factum
 |
 /Wiki QID/
 |
-Q47423
+https://www.wikidata.org/wiki/Q47423[Q47423]
 
 |===
 
@@ -11374,7 +11346,7 @@ Factum
 |
 /Wiki QID/
 |
-Q170075
+https://www.wikidata.org/wiki/Q170075[Q170075]
 
 |===
 
@@ -11590,7 +11562,7 @@ Factum
 |
 /Wiki QID/
 |
-Q220563
+https://www.wikidata.org/wiki/Q220563[Q220563]
 
 |===
 
@@ -11822,7 +11794,7 @@ Factum
 |
 /Wiki QID/
 |
-Q219693
+https://www.wikidata.org/wiki/Q219693[Q219693]
 
 |===
 
@@ -12074,7 +12046,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7178
+https://www.wikidata.org/wiki/Q7178[Q7178]
 
 |===
 
@@ -12353,7 +12325,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5987345
+https://www.wikidata.org/wiki/Q5987345[Q5987345]
 
 |===
 
@@ -12560,7 +12532,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3338590
+https://www.wikidata.org/wiki/Q3338590[Q3338590]
 
 |===
 
@@ -12695,7 +12667,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3697999
+https://www.wikidata.org/wiki/Q3697999[Q3697999]
 
 |===
 
@@ -12764,7 +12736,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698001
+https://www.wikidata.org/wiki/Q3698001[Q3698001]
 
 |===
 
@@ -12852,7 +12824,7 @@ Factum
 |
 /Wiki QID/
 |
-Q23806133
+https://www.wikidata.org/wiki/Q23806133[Q23806133]
 
 |===
 
@@ -12927,7 +12899,7 @@ Factum
 |
 /Wiki QID/
 |
-Q47070765
+https://www.wikidata.org/wiki/Q47070765[Q47070765]
 
 |===
 
@@ -12984,7 +12956,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4824610
+https://www.wikidata.org/wiki/Q4824610[Q4824610]
 
 |===
 
@@ -13056,7 +13028,7 @@ Factum
 |
 /Wiki QID/
 |
-Q168276
+https://www.wikidata.org/wiki/Q168276[Q168276]
 
 |===
 
@@ -13147,7 +13119,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4842756
+https://www.wikidata.org/wiki/Q4842756[Q4842756]
 
 |===
 
@@ -13210,7 +13182,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4855370
+https://www.wikidata.org/wiki/Q4855370[Q4855370]
 
 |===
 
@@ -13273,7 +13245,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4793221
+https://www.wikidata.org/wiki/Q4793221[Q4793221]
 
 |===
 
@@ -13333,7 +13305,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4858618
+https://www.wikidata.org/wiki/Q4858618[Q4858618]
 
 |===
 
@@ -13384,7 +13356,7 @@ Factum
 |
 /Wiki QID/
 |
-Q2537361
+https://www.wikidata.org/wiki/Q2537361[Q2537361]
 
 |===
 
@@ -13500,7 +13472,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4939585
+https://www.wikidata.org/wiki/Q4939585[Q4939585]
 
 |===
 
@@ -13560,7 +13532,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7303962
+https://www.wikidata.org/wiki/Q7303962[Q7303962]
 
 |===
 
@@ -13611,7 +13583,7 @@ Factum
 |
 /Wiki QID/
 |
-Q592646
+https://www.wikidata.org/wiki/Q592646[Q592646]
 
 |===
 
@@ -13693,7 +13665,7 @@ Factum
 |
 /Wiki QID/
 |
-Q47072433
+https://www.wikidata.org/wiki/Q47072433[Q47072433]
 
 |===
 
@@ -13753,7 +13725,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4882979
+https://www.wikidata.org/wiki/Q4882979[Q4882979]
 
 |===
 
@@ -13867,7 +13839,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4978914
+https://www.wikidata.org/wiki/Q4978914[Q4978914]
 
 |===
 
@@ -13930,7 +13902,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4996223
+https://www.wikidata.org/wiki/Q4996223[Q4996223]
 
 |===
 
@@ -13996,7 +13968,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6946772
+https://www.wikidata.org/wiki/Q6946772[Q6946772]
 
 |===
 
@@ -14041,7 +14013,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698010
+https://www.wikidata.org/wiki/Q3698010[Q3698010]
 
 |===
 
@@ -14104,7 +14076,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6468414
+https://www.wikidata.org/wiki/Q6468414[Q6468414]
 
 |===
 
@@ -14167,7 +14139,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5025173
+https://www.wikidata.org/wiki/Q5025173[Q5025173]
 
 |===
 
@@ -14230,7 +14202,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698003
+https://www.wikidata.org/wiki/Q3698003[Q3698003]
 
 |===
 
@@ -14287,7 +14259,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5030521
+https://www.wikidata.org/wiki/Q5030521[Q5030521]
 
 |===
 
@@ -14353,7 +14325,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698034
+https://www.wikidata.org/wiki/Q3698034[Q3698034]
 
 |===
 
@@ -14432,7 +14404,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698005
+https://www.wikidata.org/wiki/Q3698005[Q3698005]
 
 |===
 
@@ -14508,7 +14480,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698011
+https://www.wikidata.org/wiki/Q3698011[Q3698011]
 
 |===
 
@@ -14590,7 +14562,7 @@ Factum
 |
 /Wiki QID/
 |
-Q908277
+https://www.wikidata.org/wiki/Q908277[Q908277]
 
 |===
 
@@ -14731,7 +14703,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5147946
+https://www.wikidata.org/wiki/Q5147946[Q5147946]
 
 |===
 
@@ -14785,7 +14757,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3855841
+https://www.wikidata.org/wiki/Q3855841[Q3855841]
 
 |===
 
@@ -14886,7 +14858,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698029
+https://www.wikidata.org/wiki/Q3698029[Q3698029]
 
 |===
 
@@ -14981,7 +14953,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5187150
+https://www.wikidata.org/wiki/Q5187150[Q5187150]
 
 |===
 
@@ -15035,7 +15007,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1483344
+https://www.wikidata.org/wiki/Q1483344[Q1483344]
 
 |===
 
@@ -15113,7 +15085,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698036
+https://www.wikidata.org/wiki/Q3698036[Q3698036]
 
 |===
 
@@ -15189,7 +15161,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698009
+https://www.wikidata.org/wiki/Q3698009[Q3698009]
 
 |===
 
@@ -15271,7 +15243,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5290699
+https://www.wikidata.org/wiki/Q5290699[Q5290699]
 
 |===
 
@@ -15322,7 +15294,7 @@ Factum
 |
 /Wiki QID/
 |
-Q56289825
+https://www.wikidata.org/wiki/Q56289825[Q56289825]
 
 |===
 
@@ -15433,7 +15405,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698039
+https://www.wikidata.org/wiki/Q3698039[Q3698039]
 
 |===
 
@@ -15625,7 +15597,7 @@ Factum
 |
 /Wiki QID/
 |
-Q409603
+https://www.wikidata.org/wiki/Q409603[Q409603]
 
 |===
 
@@ -15700,7 +15672,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3003244
+https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 |===
 
@@ -15938,7 +15910,7 @@ Factum
 |
 /Wiki QID/
 |
-Q2917392
+https://www.wikidata.org/wiki/Q2917392[Q2917392]
 
 |===
 
@@ -16073,7 +16045,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6415104
+https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 |===
 
@@ -16363,7 +16335,7 @@ Factum
 |
 /Wiki QID/
 |
-Q16553811
+https://www.wikidata.org/wiki/Q16553811[Q16553811]
 
 |===
 
@@ -16411,7 +16383,7 @@ Factum
 |
 /Wiki QID/
 |
-Q840469
+https://www.wikidata.org/wiki/Q840469[Q840469]
 
 |===
 
@@ -16490,7 +16462,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5985772
+https://www.wikidata.org/wiki/Q5985772[Q5985772]
 
 |===
 
@@ -16547,7 +16519,7 @@ Factum
 |
 /Wiki QID/
 |
-Q16237727
+https://www.wikidata.org/wiki/Q16237727[Q16237727]
 
 |===
 
@@ -16613,7 +16585,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3003251
+https://www.wikidata.org/wiki/Q3003251[Q3003251]
 
 |===
 
@@ -16688,7 +16660,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7303956
+https://www.wikidata.org/wiki/Q7303956[Q7303956]
 
 |===
 
@@ -16769,7 +16741,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6068065
+https://www.wikidata.org/wiki/Q6068065[Q6068065]
 
 |===
 
@@ -16838,7 +16810,7 @@ Factum
 |
 /Wiki QID/
 |
-Q11282482
+https://www.wikidata.org/wiki/Q11282482[Q11282482]
 
 |===
 
@@ -16895,7 +16867,7 @@ Factum
 |
 /Wiki QID/
 |
-Q577902
+https://www.wikidata.org/wiki/Q577902[Q577902]
 
 |===
 
@@ -17012,7 +16984,7 @@ Factum
 |
 /Wiki QID/
 |
-Q913903
+https://www.wikidata.org/wiki/Q913903[Q913903]
 
 |===
 
@@ -17118,7 +17090,7 @@ Factum
 |
 /Wiki QID/
 |
-Q99543779
+https://www.wikidata.org/wiki/Q99543779[Q99543779]
 
 |===
 
@@ -17166,7 +17138,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4538440
+https://www.wikidata.org/wiki/Q4538440[Q4538440]
 
 |===
 
@@ -17300,7 +17272,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698016
+https://www.wikidata.org/wiki/Q3698016[Q3698016]
 
 |===
 
@@ -17369,7 +17341,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698023
+https://www.wikidata.org/wiki/Q3698023[Q3698023]
 
 |===
 
@@ -17429,7 +17401,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7314493
+https://www.wikidata.org/wiki/Q7314493[Q7314493]
 
 |===
 
@@ -17504,7 +17476,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6448872
+https://www.wikidata.org/wiki/Q6448872[Q6448872]
 
 |===
 
@@ -17577,7 +17549,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6487795
+https://www.wikidata.org/wiki/Q6487795[Q6487795]
 
 |===
 
@@ -17628,7 +17600,7 @@ Factum
 |
 /Wiki QID/
 |
-Q12189470
+https://www.wikidata.org/wiki/Q12189470[Q12189470]
 
 |===
 
@@ -17716,7 +17688,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4254881
+https://www.wikidata.org/wiki/Q4254881[Q4254881]
 
 |===
 
@@ -17848,7 +17820,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6648412
+https://www.wikidata.org/wiki/Q6648412[Q6648412]
 
 |===
 
@@ -17905,7 +17877,7 @@ Factum
 |
 /Wiki QID/
 |
-Q13102234
+https://www.wikidata.org/wiki/Q13102234[Q13102234]
 
 |===
 
@@ -17959,7 +17931,7 @@ Factum
 |
 /Wiki QID/
 |
-Q20063812
+https://www.wikidata.org/wiki/Q20063812[Q20063812]
 
 |===
 
@@ -18051,7 +18023,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6742015
+https://www.wikidata.org/wiki/Q6742015[Q6742015]
 
 |===
 
@@ -18114,7 +18086,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6742837
+https://www.wikidata.org/wiki/Q6742837[Q6742837]
 
 |===
 
@@ -18165,7 +18137,7 @@ Factum
 |
 /Wiki QID/
 |
-Q963785
+https://www.wikidata.org/wiki/Q963785[Q963785]
 
 |===
 
@@ -18313,7 +18285,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5792387
+https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 |===
 
@@ -18552,7 +18524,7 @@ Factum
 |
 /Wiki QID/
 |
-Q260961
+https://www.wikidata.org/wiki/Q260961[Q260961]
 
 |===
 
@@ -18631,7 +18603,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6994401
+https://www.wikidata.org/wiki/Q6994401[Q6994401]
 
 |===
 
@@ -18679,7 +18651,7 @@ Factum
 |
 /Wiki QID/
 |
-Q16238073
+https://www.wikidata.org/wiki/Q16238073[Q16238073]
 
 |===
 
@@ -18852,7 +18824,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7915237
+https://www.wikidata.org/wiki/Q7915237[Q7915237]
 
 |===
 
@@ -18900,7 +18872,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7015611
+https://www.wikidata.org/wiki/Q7015611[Q7015611]
 
 |===
 
@@ -18957,7 +18929,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7024453
+https://www.wikidata.org/wiki/Q7024453[Q7024453]
 
 |===
 
@@ -19005,7 +18977,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698021
+https://www.wikidata.org/wiki/Q3698021[Q3698021]
 
 |===
 
@@ -19056,7 +19028,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698044
+https://www.wikidata.org/wiki/Q3698044[Q3698044]
 
 |===
 
@@ -19160,7 +19132,7 @@ Factum
 |
 /Wiki QID/
 |
-Q927391
+https://www.wikidata.org/wiki/Q927391[Q927391]
 
 |===
 
@@ -19316,7 +19288,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7126862
+https://www.wikidata.org/wiki/Q7126862[Q7126862]
 
 |===
 
@@ -19364,7 +19336,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7125686
+https://www.wikidata.org/wiki/Q7125686[Q7125686]
 
 |===
 
@@ -19443,7 +19415,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7133163
+https://www.wikidata.org/wiki/Q7133163[Q7133163]
 
 |===
 
@@ -19541,7 +19513,7 @@ Factum
 |
 /Wiki QID/
 |
-Q14472988
+https://www.wikidata.org/wiki/Q14472988[Q14472988]
 
 |===
 
@@ -19629,7 +19601,7 @@ Factum
 |
 /Wiki QID/
 |
-Q6127600
+https://www.wikidata.org/wiki/Q6127600[Q6127600]
 
 |===
 
@@ -19792,7 +19764,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7267117
+https://www.wikidata.org/wiki/Q7267117[Q7267117]
 
 |===
 
@@ -19874,7 +19846,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7362571
+https://www.wikidata.org/wiki/Q7362571[Q7362571]
 
 |===
 
@@ -19931,7 +19903,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4398040
+https://www.wikidata.org/wiki/Q4398040[Q4398040]
 
 |===
 
@@ -20000,7 +19972,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3698045
+https://www.wikidata.org/wiki/Q3698045[Q3698045]
 
 |===
 
@@ -20095,7 +20067,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7401605
+https://www.wikidata.org/wiki/Q7401605[Q7401605]
 
 |===
 
@@ -20165,7 +20137,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7401698
+https://www.wikidata.org/wiki/Q7401698[Q7401698]
 
 |===
 
@@ -20301,7 +20273,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7665722
+https://www.wikidata.org/wiki/Q7665722[Q7665722]
 
 |===
 
@@ -20352,7 +20324,7 @@ Factum
 |
 /Wiki QID/
 |
-Q2080022
+https://www.wikidata.org/wiki/Q2080022[Q2080022]
 
 |===
 
@@ -20418,7 +20390,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3003248
+https://www.wikidata.org/wiki/Q3003248[Q3003248]
 
 |===
 
@@ -20478,7 +20450,7 @@ Factum
 |
 /Wiki QID/
 |
-Q20011251
+https://www.wikidata.org/wiki/Q20011251[Q20011251]
 
 |===
 
@@ -20563,7 +20535,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7511423
+https://www.wikidata.org/wiki/Q7511423[Q7511423]
 
 |===
 
@@ -20614,7 +20586,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7523102
+https://www.wikidata.org/wiki/Q7523102[Q7523102]
 
 |===
 
@@ -20693,7 +20665,7 @@ Factum
 |
 /Wiki QID/
 |
-Q10772254
+https://www.wikidata.org/wiki/Q10772254[Q10772254]
 
 |===
 
@@ -20753,7 +20725,7 @@ Factum
 |
 /Wiki QID/
 |
-Q12800001
+https://www.wikidata.org/wiki/Q12800001[Q12800001]
 
 |===
 
@@ -20813,7 +20785,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7559151
+https://www.wikidata.org/wiki/Q7559151[Q7559151]
 
 |===
 
@@ -20892,7 +20864,7 @@ Factum
 |
 /Wiki QID/
 |
-Q8072007
+https://www.wikidata.org/wiki/Q8072007[Q8072007]
 
 |===
 
@@ -20949,7 +20921,7 @@ Factum
 |
 /Wiki QID/
 |
-Q5792382
+https://www.wikidata.org/wiki/Q5792382[Q5792382]
 
 |===
 
@@ -21040,7 +21012,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7633372
+https://www.wikidata.org/wiki/Q7633372[Q7633372]
 
 |===
 
@@ -21182,7 +21154,7 @@ Factum
 |
 /Wiki QID/
 |
-Q18333444
+https://www.wikidata.org/wiki/Q18333444[Q18333444]
 
 |===
 
@@ -21254,7 +21226,7 @@ Factum
 |
 /Wiki QID/
 |
-Q456988
+https://www.wikidata.org/wiki/Q456988[Q456988]
 
 |===
 
@@ -21338,7 +21310,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7663208
+https://www.wikidata.org/wiki/Q7663208[Q7663208]
 
 |===
 
@@ -21401,7 +21373,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1483344
+https://www.wikidata.org/wiki/Q1483344[Q1483344]
 
 |===
 
@@ -21479,7 +21451,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4922087
+https://www.wikidata.org/wiki/Q4922087[Q4922087]
 
 |===
 
@@ -21563,7 +21535,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7813206
+https://www.wikidata.org/wiki/Q7813206[Q7813206]
 
 |===
 
@@ -21630,7 +21602,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7820968
+https://www.wikidata.org/wiki/Q7820968[Q7820968]
 
 |===
 
@@ -21678,7 +21650,7 @@ Factum
 |
 /Wiki QID/
 |
-Q16238476
+https://www.wikidata.org/wiki/Q16238476[Q16238476]
 
 |===
 
@@ -21723,7 +21695,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7303955
+https://www.wikidata.org/wiki/Q7303955[Q7303955]
 
 |===
 
@@ -21795,7 +21767,7 @@ Factum
 |
 /Wiki QID/
 |
-Q12194677
+https://www.wikidata.org/wiki/Q12194677[Q12194677]
 
 |===
 
@@ -21852,7 +21824,7 @@ Factum
 |
 /Wiki QID/
 |
-Q1059602
+https://www.wikidata.org/wiki/Q1059602[Q1059602]
 
 |===
 
@@ -21945,7 +21917,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7303954
+https://www.wikidata.org/wiki/Q7303954[Q7303954]
 
 |===
 
@@ -22043,7 +22015,7 @@ Factum
 |
 /Wiki QID/
 |
-Q2473903
+https://www.wikidata.org/wiki/Q2473903[Q2473903]
 
 |===
 
@@ -22100,7 +22072,7 @@ Factum
 |
 /Wiki QID/
 |
-Q9364596
+https://www.wikidata.org/wiki/Q9364596[Q9364596]
 
 |===
 
@@ -22207,7 +22179,7 @@ Factum
 |
 /Wiki QID/
 |
-Q4970966
+https://www.wikidata.org/wiki/Q4970966[Q4970966]
 
 |===
 
@@ -22376,7 +22348,7 @@ Factum
 |
 /Wiki QID/
 |
-Q470110
+https://www.wikidata.org/wiki/Q470110[Q470110]
 
 |===
 
@@ -22499,7 +22471,7 @@ Factum
 |
 /Wiki QID/
 |
-Q3697997
+https://www.wikidata.org/wiki/Q3697997[Q3697997]
 
 |===
 
@@ -22647,7 +22619,7 @@ Factum
 |
 /Wiki QID/
 |
-Q7409910
+https://www.wikidata.org/wiki/Q7409910[Q7409910]
 
 |===
 
@@ -22695,7 +22667,7 @@ Factum
 |
 /Wiki QID/
 |
-Q85816683
+https://www.wikidata.org/wiki/Q85816683[Q85816683]
 
 |===
 
@@ -22746,7 +22718,7 @@ Factum
 |
 /Wiki QID/
 |
-Q8065682
+https://www.wikidata.org/wiki/Q8065682[Q8065682]
 
 |===
 

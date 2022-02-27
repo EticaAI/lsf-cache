@@ -77,27 +77,27 @@ Factum
 |
 scrīptor
 |
-EticaAI
+https://www.wikidata.org/wiki/Property:EticaAI[EticaAI]
 
 |
 /cōdex pūblicandī/
 |
-EticaAI
+https://www.wikidata.org/wiki/Property:EticaAI[EticaAI]
 
 |
 /publication date/@eng-Latn
 |
-2022-01-01
+https://www.wikidata.org/wiki/Property:2022-01-01[2022-01-01]
 
 |
 numerus editionis
 |
-2022-02-22T23:11:39
+https://www.wikidata.org/wiki/Property:2022-02-26T23:29:16[2022-02-26T23:29:16]
 
 |
 /SPDX license ID/@eng-Latn
 |
-CC0-1.0
+https://www.wikidata.org/wiki/Property:CC0-1.0[CC0-1.0]
 
 |===
 
@@ -117,13 +117,17 @@ Factum
 |
 /scope and content/@eng-Latn
 |
-This Numerodinatio namespace contains dictionaries related to bare minimum interlingual concepts used to understand Numerodinatio tables.\n\nThe decision making is mostly based on what is very essential to explain other tables.
+https://www.wikidata.org/wiki/Property:This Numerodinatio namespace contains dictionaries related to bare minimum interlingual concepts used to understand Numerodinatio tables.
+
+The decision making is mostly based on what is very essential to explain other tables.[This Numerodinatio namespace contains dictionaries related to bare minimum interlingual concepts used to understand Numerodinatio tables.
+
+The decision making is mostly based on what is very essential to explain other tables.]
 
 |===
 
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 33
+==== Concepta: 35
 
 ==== Rēs linguālibus: 1
 
@@ -148,7 +152,7 @@ https://iso639-3.sil.org/code/lat[lat]
 |
 Lingua Latina (Abecedarium Latinum)
 |
-33
+35
 
 |===
 
@@ -168,193 +172,94 @@ The result of this section is a preview. We're aware it is not well formatted fo
 |===
 
 
-**1603:1:7:1:91**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "1_91",
-    "#item+conceptum+numerordinatio": "1603:1:7:1:91",
-    "#item+rem+definitionem+i_eng+is_latn": "QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter \"Q\" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.",
-    "#item+rem+i_lat+is_latn": "/Wiki QID/",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikiq",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_q",
-    "#item+rem+i_qcc+is_zxxx+ix_regulam": "Q[1-9]\\d*",
-    "#status+conceptum+codicem": "19",
-    "#status+conceptum+definitionem": "50"
-}
-----
+/Wiki QID/::
+#item+rem+i_lat+is_latn::: /Wiki QID/
+#item+rem+i_qcc+is_zxxx+ix_regulam::: Q[1-9]\d*
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q
+#item+rem+definitionem+i_eng+is_latn::: QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
 
-**1603:1:7:1:92**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "1_92",
-    "#item+conceptum+numerordinatio": "1603:1:7:1:92",
-    "#item+rem+definitionem+i_eng+is_latn": "Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example \"color\" for the data value \"blue\". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.",
-    "#item+rem+i_lat+is_latn": "/Wiki P/",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p",
-    "#item+rem+i_qcc+is_zxxx+ix_regulam": "P[1-9]\\d*",
-    "#status+conceptum+codicem": "19",
-    "#status+conceptum+definitionem": "50"
-}
-----
+/Wiki P/::
+#item+rem+i_lat+is_latn::: /Wiki P/
+#item+rem+i_qcc+is_zxxx+ix_regulam::: P[1-9]\d*
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p
+#item+rem+definitionem+i_eng+is_latn::: Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.
 
-**1603:1:7:1:95**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "1_95",
-    "#item+conceptum+numerordinatio": "1603:1:7:1:95",
-    "#item+rem+i_lat+is_latn": "/rēgulam/",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_regulam",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_regex",
-    "#item+rem+i_qcc+is_zxxx+ix_wikiq": "Q185612",
-    "#status+conceptum+codicem": "19",
-    "#status+conceptum+definitionem": "11"
-}
-----
+/rēgulam/::
+#item+rem+i_lat+is_latn::: /rēgulam/
+#item+rem+i_qcc+is_zxxx+ix_wikiq::: Q185612
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_regulam
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_regex
 
-**1603:1:7:2616:50**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_50",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:50",
-    "#item+rem+definitionem+i_eng+is_latn": "Main creator(s) of a written work (use on works, not humans)",
-    "#item+rem+i_lat+is_latn": "scrīptor",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip50",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_50",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P50",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+scrīptor::
+#item+rem+i_lat+is_latn::: scrīptor
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P50
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip50
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_50
+#item+rem+definitionem+i_eng+is_latn::: Main creator(s) of a written work (use on works, not humans)
 
-**1603:1:7:2616:123**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_123",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:123",
-    "#item+rem+definitionem+i_eng+is_latn": "organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software",
-    "#item+rem+i_lat+is_latn": "/cōdex pūblicandī/",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip123",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_123",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P123",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/cōdex pūblicandī/::
+#item+rem+i_lat+is_latn::: /cōdex pūblicandī/
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P123
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip123
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_123
+#item+rem+definitionem+i_eng+is_latn::: organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software
 
-**1603:1:7:2616:393**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_393",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:393",
-    "#item+rem+definitionem+i_eng+is_latn": "number of an edition (first, second, ... as 1, 2, ...) or event",
-    "#item+rem+i_lat+is_latn": "numerus editionis",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip393",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_393",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P393",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+numerus editionis::
+#item+rem+i_lat+is_latn::: numerus editionis
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P393
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip393
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_393
+#item+rem+definitionem+i_eng+is_latn::: number of an edition (first, second, ... as 1, 2, ...) or event
 
-**1603:1:7:2616:577**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_577",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:577",
-    "#item+rem+definitionem+i_eng+is_latn": "Date or point in time when a work was first published or released",
-    "#item+rem+i_lat+is_latn": "/publication date/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip577",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_577",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P577",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/publication date/@eng-Latn::
+#item+rem+i_lat+is_latn::: /publication date/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P577
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip577
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_577
+#item+rem+definitionem+i_eng+is_latn::: Date or point in time when a work was first published or released
 
-**1603:1:7:2616:854**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_854",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:854",
-    "#item+rem+definitionem+i_eng+is_latn": "should be used for Internet URLs as references",
-    "#item+rem+i_lat+is_latn": "/reference URL/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip854",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_854",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P854",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/reference URL/@eng-Latn::
+#item+rem+i_lat+is_latn::: /reference URL/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P854
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip854
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_854
+#item+rem+definitionem+i_eng+is_latn::: should be used for Internet URLs as references
 
-**1603:1:7:2616:1630**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_1630",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:1630",
-    "#item+rem+definitionem+i_eng+is_latn": "web page URL; URI template from which \"$1\" can be automatically replaced with the effective property value on items. If the site goes offline, set it to deprecated rank. If the formatter url changes, add a new statement with preferred rank.",
-    "#item+rem+i_lat+is_latn": "/formatter URL/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip1630",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_1630",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P1630",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/formatter URL/@eng-Latn::
+#item+rem+i_lat+is_latn::: /formatter URL/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P1630
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip1630
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_1630
+#item+rem+definitionem+i_eng+is_latn::: web page URL; URI template from which "$1" can be automatically replaced with the effective property value on items. If the site goes offline, set it to deprecated rank. If the formatter url changes, add a new statement with preferred rank.
 
-**1603:1:7:2616:2479**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_2479",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:2479",
-    "#item+rem+definitionem+i_eng+is_latn": "SPDX license identifier",
-    "#item+rem+i_lat+is_latn": "/SPDX license ID/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip2479",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_2479",
-    "#item+rem+i_qcc+is_zxxx+ix_regulam": "[0-9A-Za-z\\.\\-]{3,36}[+]?",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P2479",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip1630": "https://spdx.org/licenses/$1.html",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/SPDX license ID/@eng-Latn::
+#item+rem+i_lat+is_latn::: /SPDX license ID/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P2479
+#item+rem+i_qcc+is_zxxx+ix_regulam::: [0-9A-Za-z\.\-]{3,36}[+]?
+#item+rem+i_qcc+is_zxxx+ix_wikip1630::: https://spdx.org/licenses/$1.html
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip2479
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_2479
+#item+rem+definitionem+i_eng+is_latn::: SPDX license identifier
 
-**1603:1:7:2616:7535**
 
-[source,json]
-----
-{
-    "#item+conceptum+codicem": "2616_7535",
-    "#item+conceptum+numerordinatio": "1603:1:7:2616:7535",
-    "#item+rem+definitionem+i_eng+is_latn": "a summary statement providing an overview of the archival collection",
-    "#item+rem+i_lat+is_latn": "/scope and content/@eng-Latn",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlix": "ix_wikip7535",
-    "#item+rem+i_qcc+is_zxxx+ix_hxlvoc": "v_wiki_p_7535",
-    "#item+rem+i_qcc+is_zxxx+ix_wikip": "P7535",
-    "#status+conceptum+codicem": "60",
-    "#status+conceptum+definitionem": "60"
-}
-----
+/scope and content/@eng-Latn::
+#item+rem+i_lat+is_latn::: /scope and content/@eng-Latn
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P7535
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip7535
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_7535
+#item+rem+definitionem+i_eng+is_latn::: a summary statement providing an overview of the archival collection
 
 <<<
 
@@ -448,7 +353,7 @@ Factum
 |
 /reference URL/@eng-Latn
 |
-https://asciidoctor.org/docs/
+https://www.wikidata.org/wiki/Property:https://asciidoctor.org/docs/[https://asciidoctor.org/docs/]
 
 |===
 
@@ -723,7 +628,7 @@ Factum
 |
 /Wiki QID/
 |
-Q185612
+https://www.wikidata.org/wiki/Q185612[Q185612]
 
 |
 ix_hxlix
@@ -1179,7 +1084,7 @@ Factum
 |
 /Wiki P/
 |
-P50
+https://www.wikidata.org/wiki/Property:P50[P50]
 
 |
 ix_hxlix
@@ -1228,7 +1133,7 @@ Factum
 |
 /Wiki P/
 |
-P110
+https://www.wikidata.org/wiki/Property:P110[P110]
 
 |
 ix_hxlix
@@ -1277,7 +1182,7 @@ Factum
 |
 /Wiki P/
 |
-P123
+https://www.wikidata.org/wiki/Property:P123[P123]
 
 |
 ix_hxlix
@@ -1326,7 +1231,7 @@ Factum
 |
 /Wiki P/
 |
-P393
+https://www.wikidata.org/wiki/Property:P393[P393]
 
 |
 ix_hxlix
@@ -1375,7 +1280,7 @@ Factum
 |
 /Wiki P/
 |
-P577
+https://www.wikidata.org/wiki/Property:P577[P577]
 
 |
 ix_hxlix
@@ -1424,7 +1329,7 @@ Factum
 |
 /Wiki P/
 |
-P854
+https://www.wikidata.org/wiki/Property:P854[P854]
 
 |
 ix_hxlix
@@ -1473,7 +1378,7 @@ Factum
 |
 /Wiki P/
 |
-P856
+https://www.wikidata.org/wiki/Property:P856[P856]
 
 |
 ix_hxlix
@@ -1522,7 +1427,7 @@ Factum
 |
 /Wiki P/
 |
-P1476
+https://www.wikidata.org/wiki/Property:P1476[P1476]
 
 |
 ix_hxlix
@@ -1571,7 +1476,7 @@ Factum
 |
 /Wiki P/
 |
-P1323
+https://www.wikidata.org/wiki/Property:P1323[P1323]
 
 |
 /rēgulam/
@@ -1581,7 +1486,7 @@ A\d{2}\.\d\.\d{2}\.\d{3}[FM]?
 |
 /formatter URL/@eng-Latn
 |
-https://wikidata-externalid-url.toolforge.org/?p=1323&url_prefix=https:%2F%2Fwww.unifr.ch%2Fifaa%2FPublic%2FEntryPage%2FTA98%20Tree%2FEntity%20TA98%20EN%2F&url_suffix=%20Entity%20TA98%20EN.htm&id=$1
+https://www.wikidata.org/wiki/Property:https://wikidata-externalid-url.toolforge.org/?p=1323&url_prefix=https:%2F%2Fwww.unifr.ch%2Fifaa%2FPublic%2FEntryPage%2FTA98%20Tree%2FEntity%20TA98%20EN%2F&url_suffix=%20Entity%20TA98%20EN.htm&id=$1[https://wikidata-externalid-url.toolforge.org/?p=1323&url_prefix=https:%2F%2Fwww.unifr.ch%2Fifaa%2FPublic%2FEntryPage%2FTA98%20Tree%2FEntity%20TA98%20EN%2F&url_suffix=%20Entity%20TA98%20EN.htm&id=$1]
 
 |
 ix_hxlix
@@ -1630,7 +1535,7 @@ Factum
 |
 /Wiki P/
 |
-P1630
+https://www.wikidata.org/wiki/Property:P1630[P1630]
 
 |
 ix_hxlix
@@ -1679,7 +1584,7 @@ Factum
 |
 /Wiki P/
 |
-P2479
+https://www.wikidata.org/wiki/Property:P2479[P2479]
 
 |
 /rēgulam/
@@ -1689,7 +1594,7 @@ P2479
 |
 /formatter URL/@eng-Latn
 |
-https://spdx.org/licenses/$1.html
+https://www.wikidata.org/wiki/Property:https://spdx.org/licenses/$1.html[https://spdx.org/licenses/$1.html]
 
 |
 ix_hxlix
@@ -1738,7 +1643,7 @@ Factum
 |
 /Wiki P/
 |
-P2699
+https://www.wikidata.org/wiki/Property:P2699[P2699]
 
 |
 ix_hxlix
@@ -1787,7 +1692,7 @@ Factum
 |
 /Wiki P/
 |
-P3916
+https://www.wikidata.org/wiki/Property:P3916[P3916]
 
 |
 /rēgulam/
@@ -1797,7 +1702,7 @@ concept[1-9]\d*
 |
 /formatter URL/@eng-Latn
 |
-http://vocabularies.unesco.org/thesaurus/$1
+https://www.wikidata.org/wiki/Property:http://vocabularies.unesco.org/thesaurus/$1[http://vocabularies.unesco.org/thesaurus/$1]
 
 |
 ix_hxlix
@@ -1846,7 +1751,7 @@ Factum
 |
 /Wiki P/
 |
-P3982
+https://www.wikidata.org/wiki/Property:P3982[P3982]
 
 |
 ix_hxlix
@@ -1895,7 +1800,7 @@ Factum
 |
 /Wiki P/
 |
-P4354
+https://www.wikidata.org/wiki/Property:P4354[P4354]
 
 |
 ix_hxlix
@@ -1944,7 +1849,7 @@ Factum
 |
 /Wiki P/
 |
-P7535
+https://www.wikidata.org/wiki/Property:P7535[P7535]
 
 |
 ix_hxlix
@@ -1970,6 +1875,67 @@ v_wiki_p_7535
 
 | Lingua Anglica (Abecedarium Latinum)
 | +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+|===
+
+
+
+
+[id='2617']
+=== [`2617`] /Wikidata Q local numeric namespace/
+
+
+
+
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">/Wikidata Q local numeric namespace/</span>+++
+
+|===
+
+
+
+
+[id='2617_9289584']
+==== [`2617_9289584`] caveat lector
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+https://www.wikidata.org/wiki/Q9289584[Q9289584]
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Latina (Abecedarium Latinum)
+| +++<span lang="la">caveat lector</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Caveat lector is a Latin phrase meaning "let the reader beware"</span>+++
 
 |===
 
