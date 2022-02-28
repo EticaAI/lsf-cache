@@ -60,3 +60,13 @@ strictae, f, s, dativushttps://en.wiktionary.org/wiki/strictus#Latin
 - vītālēs, m/f, pl, accūsātīvus, https://en.wiktionary.org/wiki/vitalis#Latin
 - vītālibus, m/f/n, pl, dative, https://en.wiktionary.org/wiki/vitalis#Latin
 - ...Dictiōnāria basibus dē rēbus vītālibus necessāriīs
+
+#### 1603:63:101:500 ...
+
+- https://pt.wikipedia.org/wiki/Cesta_b%C3%A1sica
+- https://www.canada.ca/en/health-canada/services/food-nutrition/food-nutrition-surveillance/national-nutritious-food-basket/contents.html
+- https://en.wikipedia.org/wiki/Food_group
+- https://www.wfp.org/wfp-food-basket
+- https://en.wikipedia.org/wiki/Table_of_food_nutrients
+- https://en.wikipedia.org/wiki/Table_of_food_nutrients
+- https://github.com/mapaction/ocha-humanitarian-icons-for-gis/tree/master/humanitarian-icons-v2-1-png

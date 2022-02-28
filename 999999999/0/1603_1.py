@@ -295,15 +295,15 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
         return "{0} +++<sup><em>(1-100)</em></sup>+++".format(
             rem[query])
 
-    if query.find('+ix_wikiq') > -1:
+    if query.find('+ix_wikiq') > -1 and query.endswith('+ix_wikiq'):
         return "https://www.wikidata.org/wiki/{0}[{0}]".format(
             rem[query])
 
-    if query.find('+ix_wikip') > -1:
+    if query.find('+ix_wikip') > -1 and query.endswith('+ix_wikip'):
         return "https://www.wikidata.org/wiki/Property:{0}[{0}]".format(
             rem[query])
 
-    if query.find('+ix_ta98') > -1:
+    if query.find('+ix_ta98') > -1 and query.endswith('+ix_ta98'):
         term = rem[query].replace('A', '')
         resultatum = (
             'link:++https://ifaa.unifr.ch/Public/EntryPage/'
@@ -1015,6 +1015,11 @@ class Codex:
             nomen = numerordinatio_nomen(item)
             codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
             codicem_ordo = numerordinatio_ordo(codicem_loci)
+
+            if codicem_ordo == 1:
+                resultatum.append("<<<")
+                resultatum.append('')
+
             # resultatum.append(
             #     ('#' * (codicem_ordo + 1)) +
             #     ' [`' + codicem_loci + '`] ' + nomen + "\n"
@@ -1295,6 +1300,8 @@ class Codex:
         paginae.extend(methodi_ex_codice)
         paginae.extend(['', '<<<', ''])
         paginae.extend(codex_archio)
+        paginae.extend(['', '<<<', ''])
+        paginae.extend(["[.text-center]\n", 'Dictiōnāria initiīs'])
         paginae.extend(['', '<<<', ''])
         paginae.extend(codex_corpori)
         paginae.extend(['', '<<<', ''])
@@ -2009,6 +2016,7 @@ class DictionariaInterlinguarum:
                         '#item+conceptum+codicem',
                         '#status+conceptum+definitionem',
                         '#status+conceptum+codicem',
+                        '#item+rem+i_lat+is_latn',
                     ]:
                         continue
 
