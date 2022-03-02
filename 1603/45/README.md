@@ -87,6 +87,14 @@
 - Elemento Wikidata: https://www.wikidata.org/wiki/Q110990619
 - https://www.adrc.asia/publications/TDRM2003Dec/19_MR.%20SATORU%20NISHIKAWA.pdf
 
+
+#### /Notes about concepts for content/@eng-latn
+- https://reliefweb.int/taxonomy-descriptions#disastertype
+- https://en.wikipedia.org/wiki/METAR
+- https://reliefweb.int/sites/reliefweb.int/files/resources/20200626%20-%20Anticipatory%20Action%20Framework%20-%20Bangladesh%20Flood.pdf
+- https://www.weather.gov/media/wrh/mesowest/metar_decode_key.pdf
+  - VA volcanic ash
+
 ### [`1603:45:49`] //Imperia et regiōnēs territōria cōdicēs//
 (...)
 

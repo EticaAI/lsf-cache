@@ -4,6 +4,7 @@
 #          FILE:  1603_17.sh
 #
 #         USAGE:  ./999999999/1603_17.sh
+#                 VELOX=1 ./999999999/1603_17.sh
 #                 FORCE_REDOWNLOAD=1 ./999999999/1603_17.sh
 #                 FORCE_CHANGED=1 ./999999999/1603_17.sh
 #                 FORCE_REDOWNLOAD_REM="1603_1_51" ./999999999/1603_17.sh
@@ -47,6 +48,7 @@ DATA_1603_44_142="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ
 DATA_1603_1_51="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=272891124"
 DATA_1603_1_101="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1902379960"
 DATA_1603_63_1="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=80558354"
+DATA_1603_63_101="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1462297555"
 DATA_1603_64_604="https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=1016692458"
 
 ROOTDIR="$(pwd)"
@@ -183,6 +185,13 @@ file_translate_csv_de_numerordinatio_q "1603_63_1" "0" "0"
 file_merge_numerordinatio_de_wiki_q "1603_63_1" "0" "0"
 neo_codex_de_numerordinatio "1603_63_1" "0" "0"
 neo_codex_de_numerordinatio_pdf "1603_63_1" "0" "0"
+
+file_download_if_necessary "$DATA_1603_63_101" "1603_63_101" "csv" "tm.hxl.csv" "hxltmcli" "1"
+file_convert_numerordinatio_de_hxltm "1603_63_101" "1" "0"
+file_translate_csv_de_numerordinatio_q "1603_63_101" "0" "0"
+file_merge_numerordinatio_de_wiki_q "1603_63_101" "0" "0"
+neo_codex_de_numerordinatio "1603_63_101" "0" "0"
+neo_codex_de_numerordinatio_pdf "1603_63_101" "0" "0"
 
 file_download_if_necessary "$DATA_1603_84_1" "1603_84_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_84_1" "1" "0"

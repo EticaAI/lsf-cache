@@ -55,9 +55,10 @@ from typing import (
     Union,
     List
 )
+from copy import copy
 import re
 import fnmatch
-import json
+# import json
 import datetime
 
 # from itertools import permutations
@@ -211,17 +212,53 @@ def numerordinatio_nomen(
         rem: dict, objectivum_linguam: str = None,
         auxilium_linguam: list = None) -> str:
 
+    resultatum = ''
+
     # TODO: this obviously is hardcoded; Implement full inferences
     # if '#item+rem+i_lat+is_latn' in rem and rem['#item+rem+i_lat+is_latn']:
     #     return '/' + rem['#item+rem+i_lat+is_latn'] + '/@lat-Latn'
     if '#item+rem+i_lat+is_latn' in rem and rem['#item+rem+i_lat+is_latn']:
-        return rem['#item+rem+i_lat+is_latn']
-    if '#item+rem+i_mul+is_zyyy' in rem and rem['#item+rem+i_mul+is_zyyy']:
-        return rem['#item+rem+i_mul+is_zyyy']
-    if '#item+rem+i_eng+is_latn' in rem and rem['#item+rem+i_eng+is_latn']:
-        return '/' + rem['#item+rem+i_eng+is_latn'] + '/@eng-Latn'
+        resultatum = rem['#item+rem+i_lat+is_latn']
+    elif '#item+rem+i_mul+is_zyyy' in rem and rem['#item+rem+i_mul+is_zyyy']:
+        resultatum = rem['#item+rem+i_mul+is_zyyy']
+    elif '#item+rem+i_eng+is_latn' in rem and rem['#item+rem+i_eng+is_latn']:
+        resultatum = '/' + rem['#item+rem+i_eng+is_latn'] + '/@eng-Latn'
+
+    # TODO: temporary (2022-03-01) hacky on 1603:45:1
+    elif '#item+rem+i_eng+is_latn+ix_completum' in rem and rem['#item+rem+i_eng+is_latn+ix_completum']:
+        return '/' + rem['#item+rem+i_eng+is_latn+ix_completum'] + '/@eng-Latn'
+
+    if len(resultatum):
+        return _brevis(resultatum)
 
     return ''
+
+
+def _brevis(rem: str) -> str:
+    linguam = ''
+    pseudo_ipa = ''
+    if rem.find('///'):
+        rem = rem.replace('///', '//')
+
+    if not rem.find('||'):
+        return rem
+
+    if rem.find('/@'):
+        linguam = rem.split('/@')[-1]
+    if rem.startswith('//'):
+        pseudo_ipa = '//'
+    elif rem.startswith('/'):
+        pseudo_ipa = '/'
+
+    nomen = ''
+    temp = rem.split('||')
+    nomen = temp[0].strip()
+    if len(pseudo_ipa) > 0:
+        nomen = nomen + pseudo_ipa
+        if len(linguam) > 0:
+            nomen = nomen + '@' + linguam
+
+    return nomen
 
 
 def numerordinatio_trivium_sarcina(
@@ -297,6 +334,11 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
 
     if query.find('+ix_wikiq') > -1 and query.endswith('+ix_wikiq'):
         return "https://www.wikidata.org/wiki/{0}[{0}]".format(
+            rem[query])
+
+    if query.find('+ix_wikip3916') > -1 and query.endswith('+ix_wikip3916'):
+        # No https?
+        return "http://vocabularies.unesco.org/thesaurus/{0}[{0}]".format(
             rem[query])
 
     if query.find('+ix_wikip') > -1 and query.endswith('+ix_wikip'):
@@ -484,7 +526,8 @@ class Codex:
 
         Trivia:
         - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
-        - appendicī, f, s, (Dative), https://en.wiktionary.org/wiki/appendix#Latin
+        #Latin
+        - appendicī, f, s, (Dative), https://en.wiktionary.org/wiki/appendix
 
         Returns:
             [list]:
@@ -689,13 +732,13 @@ class Codex:
             total_dictionaria
         ))
         resultatum.append('')
-        resultatum.extend(descriptio_tabulae_de_lingua(
-            ['Lingua Anglica (Abecedarium Latinum)'] * 1,
-            [
-                'TIP: Is recommended to use the files on this section to '
-                ' generate derived works.',
-            ]))
-        resultatum.append('')
+        # resultatum.extend(descriptio_tabulae_de_lingua(
+        #     ['Lingua Anglica (Abecedarium Latinum)'] * 1,
+        #     [
+        #         'TIP: Is recommended to use the files on this section to '
+        #         ' generate derived works.',
+        #     ]))
+        # resultatum.append('')
 
         resultatum.extend(dictionaria_part)
         resultatum.append('')
@@ -704,32 +747,32 @@ class Codex:
             total_codex
         ))
 
-        textum_II = self.notitiae.translatio('{% _🗣️ 1603_1_99_10_3 🗣️_ %}')
-        textum_III = self.notitiae.translatio('{% _🗣️ 1603_1_99_10_4 🗣️_ %}')
+        # textum_II = self.notitiae.translatio('{% _🗣️ 1603_1_99_10_3 🗣️_ %}')
+        # textum_III = self.notitiae.translatio('{% _🗣️ 1603_1_99_10_4 🗣️_ %}')
 
-        resultatum.append('')
-        resultatum.extend(descriptio_tabulae_de_lingua(
-            ['Lingua Anglica (Abecedarium Latinum)'] * 2,
-            # [
-            #     'WARNING: Unless you are working with a natural language you '
-            #     'understand it\'s letters and symbols, it is strongly '
-            #     'advised to use automation to generate derived works. '
-            #     'Keep manual human steps at minimum: '
-            #     'if something goes wrong at least one or more languages can '
-            #     'be used to verify mistakes. '
-            #     'It\'s not at all necessary _know all languages_, '
-            #     'but working with writing systems you don\'t understand is '
-            #     'risky: '
-            #     'copy and paste strategy can cause '
-            #     '_additional_ human errors and is unlikely to get human '
-            #     'review as fast as you would need. ',
-            #     'TIP: The Asciidoctor (.adoc) is better at copy and pasting! '
-            #     'It can be converted to other text formats.',
-            # ]))
-            [
-                textum_II,
-                textum_III
-            ]))
+        # resultatum.append('')
+        # resultatum.extend(descriptio_tabulae_de_lingua(
+        #     ['Lingua Anglica (Abecedarium Latinum)'] * 2,
+        #     # [
+        #     #     'WARNING: Unless you are working with a natural language you '
+        #     #     'understand it\'s letters and symbols, it is strongly '
+        #     #     'advised to use automation to generate derived works. '
+        #     #     'Keep manual human steps at minimum: '
+        #     #     'if something goes wrong at least one or more languages can '
+        #     #     'be used to verify mistakes. '
+        #     #     'It\'s not at all necessary _know all languages_, '
+        #     #     'but working with writing systems you don\'t understand is '
+        #     #     'risky: '
+        #     #     'copy and paste strategy can cause '
+        #     #     '_additional_ human errors and is unlikely to get human '
+        #     #     'review as fast as you would need. ',
+        #     #     'TIP: The Asciidoctor (.adoc) is better at copy and pasting! '
+        #     #     'It can be converted to other text formats.',
+        #     # ]))
+        #     [
+        #         textum_II,
+        #         textum_III
+        #     ]))
         resultatum.append('')
 
         resultatum.extend(codex_part)
@@ -966,6 +1009,10 @@ class Codex:
             self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
         ))
 
+        # Here the first page of the book, For now is complete empty
+
+        # 0_1603_1_7_2616_7535_1
+
         picturae = self.annexis.quod_picturae(numerordinatio_locali='0')
         if picturae:
             codicem_ordo = 2
@@ -990,14 +1037,15 @@ class Codex:
             for item in picturae:
 
                 trivium = item.quod_temp_rel_pic()
-                titulum = item.quod_temp_titulum()
-                link = item.quod_temp_link()
+                titulum = item.quod_titulum()
+                # link = item.quod_temp_link()
+                link = item.quod_link()
                 # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
                 resultatum.append(
-                    'image::{1}[title="{0}"]\n'.format(titulum, trivium))
+                    'image::{1}[title="++{0}++"]\n'.format(titulum, trivium))
                 if link:
                     resultatum.append(
-                        'link:{1}[{0}]\n'.format(titulum, link))
+                        'link:++{1}++[++{0}++]\n'.format(titulum, link))
                 else:
                     resultatum.append('{0}\n'.format(titulum))
 
@@ -1010,11 +1058,68 @@ class Codex:
             if codicem_loci.find('0_1603') == 0:
                 continue
 
-            self.summis_concepta += 1
-
             nomen = numerordinatio_nomen(item)
             codicem_normale = numerordinatio_neo_separatum(codicem_loci, '_')
             codicem_ordo = numerordinatio_ordo(codicem_loci)
+
+            # TODO: test here if
+            # scope_and_content = self.quod_res('0_1603_1_7_2616_7535')
+            # # paginae.append(str(scope_and_content))
+
+            # TODO: make metadata about each image individual. For now
+            #       Is just considering the last line of the PDF
+            #       but the path it got rigth
+
+            meta_langs = [
+                '#item+rem+i_qcc+is_zxxx+ix_codexfacto'
+            ]
+            speciale_note = self.quod_res(
+                '0_1603_1_7_2616_7535_' + codicem_normale)
+
+            if speciale_note and \
+                    qhxl(speciale_note, meta_langs) is not None:
+                term = qhxl(speciale_note, meta_langs)
+                term2 = self.notitiae.translatio(term)
+                meta = {}
+                meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = term2
+                meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
+
+                resultatum.append("<<<")
+
+                picturae = self.annexis.quod_picturae(
+                    numerordinatio_locali=codicem_normale)
+                if picturae:
+                    for item in picturae:
+                        trivium = item.quod_temp_rel_pic()
+                        titulum = item.quod_titulum()
+                        # link = item.quod_temp_link()
+                        # link = item.quod_link()
+                        resultatum.append(
+                            'image::{1}[title="++{0}++"]\n'.format(titulum, trivium))
+                        # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
+                        # if link:
+                        #     resultatum.append(
+                        #         'link:++{1}++[++{0}++]\n'.format(titulum, link))
+                resultatum.append("")
+
+                resultatum.append("[id='{0}']".format(codicem_normale))
+                resultatum.append(
+                    ('=' * (codicem_ordo + 2)) +
+                    ' [`' + codicem_loci + '`] ' + nomen + "\n"
+                )
+                resultatum.append("")
+
+                resultatum.extend(meta_tabulae)
+                resultatum.append("")
+                resultatum.append("<<<")
+                resultatum.append("")
+                continue
+
+            # resultatum.append("<<<")
+            # resultatum.append("test")
+            # resultatum.append("<<<")
+
+            self.summis_concepta += 1
 
             if codicem_ordo == 1:
                 resultatum.append("<<<")
@@ -1056,14 +1161,15 @@ class Codex:
                 )
                 for item in picturae:
                     trivium = item.quod_temp_rel_pic()
-                    titulum = item.quod_temp_titulum()
-                    link = item.quod_temp_link()
+                    titulum = item.quod_titulum()
+                    # link = item.quod_temp_link()
+                    link = item.quod_link()
                     resultatum.append(
-                        'image::{1}[title="{0}"]\n'.format(titulum, trivium))
+                        'image::{1}[title="++{0}++"]\n'.format(titulum, trivium))
                     # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
                     if link:
                         resultatum.append(
-                            'link:{1}[{0}]\n'.format(titulum, link))
+                            'link:++{1}++[++{0}++]\n'.format(titulum, link))
                     # else:
                     #     resultatum.append('{0}\n'.format(titulum))
 
@@ -1127,6 +1233,7 @@ class Codex:
                     )
                 # resultatum_corpus.append(
                 #     "| {0} | {1} |".format(clavem_i18n, item_text_i18n))
+                item_text_i18n = item_text_i18n.replace('||', '\|\|')
                 resultatum_corpus.append("| {0}".format(clavem_i18n))
                 resultatum_corpus.append("| +++{0}+++".format(item_text_i18n))
                 resultatum_corpus.append("")
@@ -1576,6 +1683,7 @@ class CodexAnnexo:
         self.codex = codex
         # self.de_codex = codex.de_codex
         self.trivium = trivium
+        self.nomen = self.quod_temp_filename(trivium)
         self.sarcina = numerordinatio_trivium_sarcina(
             trivium, self.codex.de_codex)
 
@@ -1584,6 +1692,11 @@ class CodexAnnexo:
             self.codex.de_codex, '/')
         neo_trivium = self.trivium.replace(self.radix_codex + '/', '')
         return neo_trivium
+
+    def quod_temp_filename(self, trivum) -> str:
+        # return os.path.basename(trivum)
+        from pathlib import Path
+        return Path(trivum).stem
 
     def quod_temp_titulum(self):
         _sarcina = self.codex.sarcinarum.quod_sarcinarum(self.sarcina)
@@ -1598,6 +1711,24 @@ class CodexAnnexo:
 
         return titulum
 
+    def quod_titulum(self):
+        _sarcina = self.codex.sarcinarum.quod_sarcinarum(self.sarcina)
+        titulum = 'Sine nomine'
+
+        if not _sarcina or not self.nomen in _sarcina['_meta'] or \
+                not _sarcina['_meta'][self.nomen]['titulum']:
+            # return str(_sarcina)
+            return titulum
+
+        # if _sarcina and 'titulum' in _sarcina['meta'] and \
+        #         _sarcina['meta']['titulum']:
+        #     # titulum = '🖼️ ' + _sarcina['meta']['titulum']
+        #     titulum = _sarcina['meta']['titulum']
+        # else:
+        #     titulum = 'Sine nomine'
+
+        return _sarcina['_meta'][self.nomen]['titulum']
+
     def quod_temp_link(self):
         _sarcina = self.codex.sarcinarum.quod_sarcinarum(self.sarcina)
         link = ''
@@ -1605,6 +1736,19 @@ class CodexAnnexo:
         if _sarcina and 'ix_wikip854' in _sarcina['meta'] and \
                 _sarcina['meta']['ix_wikip854']:
             link = _sarcina['meta']['ix_wikip854']
+
+        return link
+
+    def quod_link(self):
+        _sarcina = self.codex.sarcinarum.quod_sarcinarum(self.sarcina)
+        link = ''
+
+        if not _sarcina or not self.nomen in _sarcina['_meta']:
+            # return str(_sarcina)
+            return ''
+
+        if _sarcina['_meta'][self.nomen]['ix_wikip854']:
+            link = _sarcina['_meta'][self.nomen]['ix_wikip854']
 
         return link
 
@@ -1815,6 +1959,8 @@ class CodexSarcinarumAdnexis:
                     'sarcina': item,
                     # @TODO: make this not as hardcoded as it is now
                     'meta': self._quod_meta(
+                        root + '/' + item + '/0.nnx.tm.hxl.csv'),
+                    '_meta': self._quod_meta_rem(
                         root + '/' + item + '/0.nnx.tm.hxl.csv')
                 })
                 # self.sarcina_index.append(index)
@@ -1847,6 +1993,40 @@ class CodexSarcinarumAdnexis:
 
         meta['titulum'] = self._quod_meta_titulum(meta)
         return meta
+
+    def _quod_meta_rem(self, trivum):
+        resultatum = {}
+        meta = {
+            'ix_wikip2479': None,  # license
+            'ix_wikiq': None,
+            'ix_wikip577': None,  # /publication date/
+            'ix_wikip1476': None,  # /title of published work.../
+            'ix_wikip110': None,  # /illustrator/
+            'ix_wikip50': None,   # /author/
+            'ix_wikip854': None,  # /reference URL/
+            # '__': [],
+        }
+        # @TODO: allow have more detailed metadata per individual item
+        #        for now we're just using global values
+
+        if not os.path.exists(trivum):
+            return meta
+
+        with open(trivum) as csvfile:
+            reader = csv.DictReader(csvfile)
+            for lineam in reader:
+
+                est_meta = copy(meta)
+                for clavem in meta.keys():
+                    ix_item = qhxl(lineam, clavem)
+                    if ix_item:
+                        est_meta[clavem] = ix_item
+                est_meta['titulum'] = self._quod_meta_titulum(est_meta)
+                if '#item+conceptum+codicem' in lineam:
+                    resultatum[str(
+                        lineam['#item+conceptum+codicem'])] = est_meta
+
+        return resultatum
 
     def _quod_meta_titulum(self, meta):
         nomen = ''
@@ -1982,6 +2162,7 @@ class DictionariaInterlinguarum:
             resultatum.append("==== Rēs interlinguālibus: {0}".format(
                 resultatum_corpus_totale))
 
+            # @TODO: 1603_1_99_10_11; {0} = code complete for this book
             resultatum.extend(descriptio_tabulae_de_lingua(
                 'Lingua Anglica (Abecedarium Latinum)',
                 'The result of this section is a preview. '

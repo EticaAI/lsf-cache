@@ -591,6 +591,7 @@ neo_codex_de_numerordinatio_epub() {
 #
 # Globals:
 #   ROOTDIR
+#   VELOX  (if =1, ignore fonts)
 # Arguments:
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
@@ -633,6 +634,12 @@ neo_codex_de_numerordinatio_pdf() {
   ASCIIDOCTOR_PDF_DIR=$(bundle exec gem contents asciidoctor-pdf --show-install-dir)
   ascidoctor_font_dir_original="$ASCIIDOCTOR_PDF_DIR/data/fonts"
 
+  # if [ "$VELOX" -eq "1" ]; then
+  #   _ascidoctor_fonts="$ascidoctor_font_dir_original"
+  # else
+  #   _ascidoctor_fonts="$ascidoctor_font_dir_neo,$ascidoctor_font_dir_original,$ascidoctor_font_dir_repo"
+  # fi
+
   # echo "$fontem_archivum"
 
   # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
@@ -650,10 +657,16 @@ neo_codex_de_numerordinatio_pdf() {
   echo "${FUNCNAME[0]} [$objectivum_archivum]"
   # return 0
 
-  bundle exec asciidoctor-pdf \
-    --attribute pdf-theme="$ascidoctor_theme" \
-    --attribute pdf-fontsdir="$ascidoctor_font_dir_neo,$ascidoctor_font_dir_original,$ascidoctor_font_dir_repo" \
-    "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
+  if [ "$VELOX" = "1" ]; then
+    echo "VELOX"
+    bundle exec asciidoctor-pdf \
+      "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
+  else
+    bundle exec asciidoctor-pdf \
+      --attribute pdf-theme="$ascidoctor_theme" \
+      --attribute pdf-fontsdir="$ascidoctor_font_dir_neo,$ascidoctor_font_dir_original,$ascidoctor_font_dir_repo" \
+      "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
+  fi
 
   if [ -f "$objectivum_archivum" ]; then
     rm "$objectivum_archivum"

@@ -77,27 +77,27 @@ Factum
 |
 scrīptor
 |
-https://www.wikidata.org/wiki/Property:Multiplicēs scrīptōribus[Multiplicēs scrīptōribus]
+Multiplicēs scrīptōribus
 
 |
 /cōdex pūblicandī/
 |
-https://www.wikidata.org/wiki/Property:EticaAI[EticaAI]
+EticaAI
 
 |
 /publication date/@eng-Latn
 |
-https://www.wikidata.org/wiki/Property:2022-01-01[2022-01-01]
+2022-01-01
 
 |
 numerus editionis
 |
-https://www.wikidata.org/wiki/Property:2022-02-26T23:36:22[2022-02-26T23:36:22]
+2022-03-01T23:45:35
 
 |
 /SPDX license ID/@eng-Latn
 |
-https://www.wikidata.org/wiki/Property:CC0-1.0[CC0-1.0]
+CC0-1.0
 
 |===
 
@@ -117,7 +117,7 @@ Factum
 |
 /scope and content/@eng-Latn
 |
-https://www.wikidata.org/wiki/Property:The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
+The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
 
 **UN System**
 The dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).
@@ -139,29 +139,7 @@ The dictionaries here do not list subnational organizations. However, we do have
 Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
 
 **Other humanitarian organizations are missing**
-These dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.[The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
-
-**UN System**
-The dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).
-
-**National Red Cross and Red Crescent**
-The dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.
-
-**Subnational Red Cross and Red Crescent**
-The dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:
-
-. National Red Cross of Brazil
-.. Code: 63_76
-... Numerodinatio: 1603:45:1:63:76
-. Subnational; Minas Gerais, Brazil
-.. UN P Code: BR33
-... Code: 63_76_33
-... Numerodinatio: 1603:45:1:63:76:33
-
-Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
-
-**Other humanitarian organizations are missing**
-These dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.]
+These dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.
 
 |===
 
@@ -201,8 +179,6 @@ Lingua Anglica (Abecedarium Latinum)
 **Major reasons for "wrong translations" are not translators fault**
 
 TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
-
-NOTE: Both at concept level and (as general statistics) book level, is planned to have indication concept likelihood of being well understood for very stricter translations initiatives.
 
 The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
 
@@ -1602,7 +1578,6 @@ The result of this section is a preview. We're aware it is not well formatted fo
 
 
 /Wiki QID/::
-#item+rem+i_lat+is_latn::: /Wiki QID/
 #item+rem+i_qcc+is_zxxx+ix_regulam::: Q[1-9]\d*
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q
@@ -1610,7 +1585,6 @@ The result of this section is a preview. We're aware it is not well formatted fo
 
 
 scrīptor::
-#item+rem+i_lat+is_latn::: scrīptor
 #item+rem+i_qcc+is_zxxx+ix_wikip::: P50
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip50
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_50
@@ -1618,7 +1592,6 @@ scrīptor::
 
 
 /cōdex pūblicandī/::
-#item+rem+i_lat+is_latn::: /cōdex pūblicandī/
 #item+rem+i_qcc+is_zxxx+ix_wikip::: P123
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip123
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_123
@@ -1626,7 +1599,6 @@ scrīptor::
 
 
 numerus editionis::
-#item+rem+i_lat+is_latn::: numerus editionis
 #item+rem+i_qcc+is_zxxx+ix_wikip::: P393
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip393
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_393
@@ -1634,7 +1606,6 @@ numerus editionis::
 
 
 /publication date/@eng-Latn::
-#item+rem+i_lat+is_latn::: /publication date/@eng-Latn
 #item+rem+i_qcc+is_zxxx+ix_wikip::: P577
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip577
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_577
@@ -1642,7 +1613,6 @@ numerus editionis::
 
 
 /reference URL/@eng-Latn::
-#item+rem+i_lat+is_latn::: /reference URL/@eng-Latn
 #item+rem+i_qcc+is_zxxx+ix_wikip::: P854
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip854
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_854
@@ -1650,7 +1620,6 @@ numerus editionis::
 
 
 /SPDX license ID/@eng-Latn::
-#item+rem+i_lat+is_latn::: /SPDX license ID/@eng-Latn
 #item+rem+i_qcc+is_zxxx+ix_wikip::: P2479
 #item+rem+i_qcc+is_zxxx+ix_regulam::: [0-9A-Za-z\.\-]{3,36}[+]?
 #item+rem+i_qcc+is_zxxx+ix_wikip1630::: https://spdx.org/licenses/$1.html
@@ -1660,7 +1629,6 @@ numerus editionis::
 
 
 /scope and content/@eng-Latn::
-#item+rem+i_lat+is_latn::: /scope and content/@eng-Latn
 #item+rem+i_qcc+is_zxxx+ix_wikip::: P7535
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip7535
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_7535
@@ -1681,25 +1649,13 @@ Verba de conceptiō
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-Every book comes with several files both for book format (with (Abecedarium additional information) and machine-readable formats with Latinum) documentation of how to process them. If you receive this file and cannot find the alternatives, ask the human who provide this file.
+**Context information**: ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis, not _just_ an static work), then the actual groundbreaking difference on the workflow used to generate every dictionaries on Cōdex such as this one are the following fact: **we provide well machine readable formats even when the equivalents on _international languages_, such as English, don't have for areas such as humanitarian aid, development aid and human rights**. The closest to such multilingualism (outside Wikimedia) are European Union SEMICeu (up to 24 languages), but even then have issues while sharing translations on all languages. United Nations translations (up to 6 languages, rarely more) are not available by humanitarian agencies to help with terminology translations.
+
+**Practical implication**: machine-readable formats on _Archīa prō dictiōnāriīs_ (literal English translation: Files for dictionaries) are the focus and recommended for derived works and intended for mitigating additional human errors. We can even create new formats by request. The text documents on _Archīa prō cōdice_ (literal English translation: Files for book) are alternatives to this book format.
 
 |===
 
 === Archīa prō dictiōnāriīs: 3
-
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-TIP: Is recommended to use the files on this section to  generate derived works.
-
-|===
 
 
 ==== 1603_45_1.no1.tm.hxl.csv
@@ -1755,7 +1711,7 @@ Factum
 |
 /reference URL/@eng-Latn
 |
-https://www.wikidata.org/wiki/Property:https://hxltm.etica.ai/[https://hxltm.etica.ai/]
+https://hxltm.etica.ai/
 
 |===
 
@@ -1776,25 +1732,6 @@ HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codice
 
 === Archīa prō cōdice: 2
 
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-WARNING: Unless you are working with a natural language you understand it\'s letters and symbols, it is strongly advised to use automation to generate derived works. Keep manual human steps at minimum: if something goes wrong at least one or more languages can be used to verify mistakes. It's not at all necessary _know all languages_, but working with writing systems you don't understand is risky: copy and paste strategy can cause _additional_ human errors and is unlikely to get human review as fast as you would need.
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-TIP: The Asciidoctor (.adoc) is better at copy and pasting! It can be converted to other text formats.
-
-|===
-
 
 ==== 1603_45_1.mul-Latn.codex.adoc
 
@@ -1811,7 +1748,7 @@ Factum
 |
 /reference URL/@eng-Latn
 |
-https://www.wikidata.org/wiki/Property:https://asciidoctor.org/docs/[https://asciidoctor.org/docs/]
+https://asciidoctor.org/docs/
 
 |===
 
@@ -1823,7 +1760,15 @@ NOTE: link:1603_45_1.mul-Latn.codex.pdf[1603_45_1.mul-Latn.codex.pdf]
 
 <<<
 
+[.text-center]
+
+Dictiōnāria initiīs
+
+<<<
+
 == //dictiōnāria de hūmānitātēs interimperia//
+<<<
+
 [id='1']
 === [`1`] Base namespace: UN itself (dedicated namespace)
 
@@ -1843,6 +1788,14 @@ NOTE: link:1603_45_1.mul-Latn.codex.pdf[1603_45_1.mul-Latn.codex.pdf]
 
 |===
 
+
+[discrete]
+==== Annexa
+[discrete]
+===== Pictūrae
+image::1603_45_1.~1/1~1.jpg[title="++League to Enforce Peace 1918-12-25  [CC-PDDC]++"]
+
+link:++https://commons.wikimedia.org/wiki/File:Gabriel_Nicolet_-_Portrait_of_a_Nurse_from_the_Red_Cross.jpg++[++League to Enforce Peace 1918-12-25  [CC-PDDC]++]
 
 
 
@@ -2199,6 +2152,8 @@ https://www.wikidata.org/wiki/Q1065[Q1065]
 
 
 
+
+<<<
 
 [id='2']
 === [`2`] Base namespace: UN Specialized Agencies
@@ -2558,7 +2513,7 @@ https://www.wikidata.org/wiki/Q82151[Q82151]
 
 
 [id='2_3']
-==== [`2_3`] /International Civil Aviation Organization/@eng-Latn
+==== [`2_3`] /International Civil Aviation Organization/@eng-Latn/@eng-Latn
 
 
 
@@ -2795,7 +2750,7 @@ https://www.wikidata.org/wiki/Q125761[Q125761]
 
 
 [id='2_4']
-==== [`2_4`] /International Fund for Agricultural Development/@eng-Latn
+==== [`2_4`] /International Fund for Agricultural Development/@eng-Latn/@eng-Latn
 
 
 
@@ -3470,7 +3425,7 @@ https://www.wikidata.org/wiki/Q7804[Q7804]
 
 
 [id='2_7']
-==== [`2_7`] /International Maritime Organization/@eng-Latn
+==== [`2_7`] /International Maritime Organization/@eng-Latn/@eng-Latn
 
 
 
@@ -4220,7 +4175,7 @@ https://www.wikidata.org/wiki/Q7809[Q7809]
 
 
 [id='2_10']
-==== [`2_10`] /United Nations Industrial Development Organization/@eng-Latn
+==== [`2_10`] /United Nations Industrial Development Organization/@eng-Latn/@eng-Latn
 
 
 
@@ -4382,7 +4337,7 @@ https://www.wikidata.org/wiki/Q386120[Q386120]
 
 
 [id='2_11']
-==== [`2_11`] /World Tourism Organization/@eng-Latn
+==== [`2_11`] /World Tourism Organization/@eng-Latn/@eng-Latn
 
 
 
@@ -5108,7 +5063,7 @@ https://www.wikidata.org/wiki/Q7817[Q7817]
 
 
 [id='2_14']
-==== [`2_14`] /World Intellectual Property Organization/@eng-Latn
+==== [`2_14`] /World Intellectual Property Organization/@eng-Latn/@eng-Latn
 
 
 
@@ -5800,6 +5755,8 @@ https://www.wikidata.org/wiki/Q7164[Q7164]
 
 
 
+<<<
+
 [id='3']
 === [`3`] Base namespace: UN Funds and Programmes
 
@@ -6216,7 +6173,7 @@ https://www.wikidata.org/wiki/Q182016[Q182016]
 
 
 [id='3_19']
-==== [`3_19`] /United Nations Population Fund/@eng-Latn
+==== [`3_19`] /United Nations Population Fund/@eng-Latn/@eng-Latn
 
 
 
@@ -6366,7 +6323,7 @@ https://www.wikidata.org/wiki/Q623036[Q623036]
 
 
 [id='3_20']
-==== [`3_20`] /United Nations Human Settlements Programme (UN-Habitat)/@eng-Latn
+==== [`3_20`] /United Nations Human Settlements Programme (UN-Habitat)/@eng-Latn/@eng-Latn
 
 
 
@@ -7037,6 +6994,8 @@ https://www.wikidata.org/wiki/Q204344[Q204344]
 
 
 
+<<<
+
 [id='4']
 === [`4`] Base namespace: Other Entities and Bodies direct related to UN
 
@@ -7060,7 +7019,7 @@ https://www.wikidata.org/wiki/Q204344[Q204344]
 
 
 [id='4_23']
-==== [`4_23`] /Joint United Nations Programme on HIV/AIDS/@eng-Latn
+==== [`4_23`] /Joint United Nations Programme on HIV/AIDS/@eng-Latn/@eng-Latn
 
 
 
@@ -7411,7 +7370,7 @@ https://www.wikidata.org/wiki/Q132551[Q132551]
 
 
 [id='4_25']
-==== [`4_25`] /United Nations Institute for Disarmament Research/@eng-Latn
+==== [`4_25`] /United Nations Institute for Disarmament Research/@eng-Latn/@eng-Latn
 
 
 
@@ -7492,7 +7451,7 @@ https://www.wikidata.org/wiki/Q3152150[Q3152150]
 
 
 [id='4_26']
-==== [`4_26`] /United Nations Institute for Training and Research/@eng-Latn
+==== [`4_26`] /United Nations Institute for Training and Research/@eng-Latn/@eng-Latn
 
 
 
@@ -7585,7 +7544,7 @@ https://www.wikidata.org/wiki/Q131878[Q131878]
 
 
 [id='4_27']
-==== [`4_27`] /United Nations Office for Project Services/@eng-Latn
+==== [`4_27`] /United Nations Office for Project Services/@eng-Latn/@eng-Latn
 
 
 
@@ -7816,7 +7775,7 @@ https://www.wikidata.org/wiki/Q846656[Q846656]
 
 
 [id='4_29']
-==== [`4_29`] /United Nations System Staff College/@eng-Latn
+==== [`4_29`] /United Nations System Staff College/@eng-Latn/@eng-Latn
 
 
 
@@ -7873,7 +7832,7 @@ https://www.wikidata.org/wiki/Q16959083[Q16959083]
 
 
 [id='4_30']
-==== [`4_30`] /United Nations University/@eng-Latn
+==== [`4_30`] /United Nations University/@eng-Latn/@eng-Latn
 
 
 
@@ -8184,6 +8143,8 @@ https://www.wikidata.org/wiki/Q641576[Q641576]
 
 
 
+<<<
+
 [id='5']
 === [`5`] Base namespace: Related Organizations direct related to UN
 
@@ -8210,7 +8171,7 @@ https://www.wikidata.org/wiki/Q641576[Q641576]
 
 
 [id='5_32']
-==== [`5_32`] /Comprehensive Nuclear-Test-Ban Treaty Organization/@eng-Latn
+==== [`5_32`] /Comprehensive Nuclear-Test-Ban Treaty Organization/@eng-Latn/@eng-Latn
 
 
 
@@ -8711,7 +8672,7 @@ https://www.wikidata.org/wiki/Q472311[Q472311]
 
 
 [id='5_35']
-==== [`5_35`] /International Trade Centre/@eng-Latn
+==== [`5_35`] /International Trade Centre/@eng-Latn/@eng-Latn
 
 
 
@@ -9032,7 +8993,7 @@ https://www.wikidata.org/wiki/Q842490[Q842490]
 
 
 [id='5_37']
-==== [`5_37`] /UNFCCC secretariat/@eng-Latn
+==== [`5_37`] /UNFCCC secretariat/@eng-Latn/@eng-Latn
 
 
 
@@ -9379,6 +9340,8 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 
+<<<
+
 [id='6']
 === [`6`] Base namespace: Departments and Offices of UN Secretariat
 
@@ -9405,7 +9368,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_39']
-==== [`6_39`] 
+==== [`6_39`] /Ethics Office/@eng-Latn
 
 
 
@@ -9427,7 +9390,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_40']
-==== [`6_40`] 
+==== [`6_40`] /United Nations Ombudsman and Mediation Services/@eng-Latn
 
 
 
@@ -9449,7 +9412,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_41']
-==== [`6_41`] 
+==== [`6_41`] /Office of Administration of Justice/@eng-Latn
 
 
 
@@ -9471,7 +9434,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_42']
-==== [`6_42`] 
+==== [`6_42`] /Development Coordination Office/@eng-Latn
 
 
 
@@ -9496,7 +9459,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_43']
-==== [`6_43`] 
+==== [`6_43`] /Department of Economic and Social Affairs/@eng-Latn
 
 
 
@@ -9521,7 +9484,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_44']
-==== [`6_44`] 
+==== [`6_44`] /Department for General Assembly and Conference Management/@eng-Latn
 
 
 
@@ -9546,7 +9509,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_45']
-==== [`6_45`] 
+==== [`6_45`] /Department of Global Communications/@eng-Latn
 
 
 
@@ -9571,7 +9534,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_46']
-==== [`6_46`] 
+==== [`6_46`] /Department of Management Strategy, Policy and Compliance/@eng-Latn
 
 
 
@@ -9596,7 +9559,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_47']
-==== [`6_47`] 
+==== [`6_47`] /Department of Operational Support/@eng-Latn
 
 
 
@@ -9621,7 +9584,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_48']
-==== [`6_48`] 
+==== [`6_48`] /Department of Peace Operations/@eng-Latn
 
 
 
@@ -9646,7 +9609,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_49']
-==== [`6_49`] 
+==== [`6_49`] /Department of Political and Peacebuilding Affairs/@eng-Latn
 
 
 
@@ -9671,7 +9634,7 @@ https://www.wikidata.org/wiki/Q7825[Q7825]
 
 
 [id='6_50']
-==== [`6_50`] 
+==== [`6_50`] /Department of Safety and Security/@eng-Latn
 
 
 
@@ -9834,7 +9797,7 @@ https://www.wikidata.org/wiki/Q1065854[Q1065854]
 
 
 [id='6_52']
-==== [`6_52`] 
+==== [`6_52`] /Office of Counter-Terrorism/@eng-Latn
 
 
 
@@ -9859,7 +9822,7 @@ https://www.wikidata.org/wiki/Q1065854[Q1065854]
 
 
 [id='6_53']
-==== [`6_53`] 
+==== [`6_53`] /Office for Disarmament Affairs/@eng-Latn
 
 
 
@@ -10064,7 +10027,7 @@ https://www.wikidata.org/wiki/Q656812[Q656812]
 
 
 [id='6_55']
-==== [`6_55`] 
+==== [`6_55`] /Office of Internal Oversight Services/@eng-Latn
 
 
 
@@ -10089,7 +10052,7 @@ https://www.wikidata.org/wiki/Q656812[Q656812]
 
 
 [id='6_56']
-==== [`6_56`] 
+==== [`6_56`] /Office of Legal Affairs/@eng-Latn
 
 
 
@@ -10114,7 +10077,7 @@ https://www.wikidata.org/wiki/Q656812[Q656812]
 
 
 [id='6_57']
-==== [`6_57`] 
+==== [`6_57`] /Office for Outer Space Affairs/@eng-Latn
 
 
 
@@ -10139,7 +10102,7 @@ https://www.wikidata.org/wiki/Q656812[Q656812]
 
 
 [id='6_58']
-==== [`6_58`] 
+==== [`6_58`] /Office of the Special Adviser on Africa/@eng-Latn
 
 
 
@@ -10164,7 +10127,7 @@ https://www.wikidata.org/wiki/Q656812[Q656812]
 
 
 [id='6_59']
-==== [`6_59`] 
+==== [`6_59`] /Office of the Special Representative of the SecretaryGeneral for Children and Armed Conflict/@eng-Latn
 
 
 
@@ -10189,7 +10152,7 @@ https://www.wikidata.org/wiki/Q656812[Q656812]
 
 
 [id='6_60']
-==== [`6_60`] 
+==== [`6_60`] /Office of the Special Representative of the SecretaryGeneral on Sexual Violence in Conflict/@eng-Latn
 
 
 
@@ -10214,7 +10177,7 @@ https://www.wikidata.org/wiki/Q656812[Q656812]
 
 
 [id='6_61']
-==== [`6_61`] 
+==== [`6_61`] /Office of the Special Representative of the SecretaryGeneral on Violence Against Children/@eng-Latn
 
 
 
@@ -10239,7 +10202,7 @@ https://www.wikidata.org/wiki/Q656812[Q656812]
 
 
 [id='6_62']
-==== [`6_62`] /United Nations Office for Disaster Risk Reduction/@eng-Latn
+==== [`6_62`] /United Nations Office for Disaster Risk Reduction/@eng-Latn/@eng-Latn
 
 
 
@@ -10458,7 +10421,7 @@ https://www.wikidata.org/wiki/Q636107[Q636107]
 
 
 [id='6_64']
-==== [`6_64`] 
+==== [`6_64`] /United Nations Office at Geneva/@eng-Latn
 
 
 
@@ -10483,7 +10446,7 @@ https://www.wikidata.org/wiki/Q636107[Q636107]
 
 
 [id='6_65']
-==== [`6_65`] /United Nations Office of the High Representative for the Least Developed Countries, Landlocked Developing Countries and Small Island Developing States/@eng-Latn
+==== [`6_65`] /United Nations Office of the High Representative for the Least Developed Countries, Landlocked Developing Countries and Small Island Developing States/@eng-Latn/@eng-Latn
 
 
 
@@ -10555,7 +10518,7 @@ https://www.wikidata.org/wiki/Q7888481[Q7888481]
 
 
 [id='6_66']
-==== [`6_66`] 
+==== [`6_66`] /United Nations Office at Nairobi/@eng-Latn
 
 
 
@@ -10580,7 +10543,7 @@ https://www.wikidata.org/wiki/Q7888481[Q7888481]
 
 
 [id='6_67']
-==== [`6_67`] 
+==== [`6_67`] /United Nations Office for Partnerships/@eng-Latn
 
 
 
@@ -10605,7 +10568,7 @@ https://www.wikidata.org/wiki/Q7888481[Q7888481]
 
 
 [id='6_68']
-==== [`6_68`] 
+==== [`6_68`] /United Nations Office at Vienna/@eng-Latn
 
 
 
@@ -10628,6 +10591,8 @@ https://www.wikidata.org/wiki/Q7888481[Q7888481]
 
 
 
+
+<<<
 
 [id='9']
 === [`9`] Base namespace: private use namespace
@@ -11960,6 +11925,8 @@ https://www.wikidata.org/wiki/Q219693[Q219693]
 
 
 
+<<<
+
 [id='10']
 === [`10`] Base namespace: UN official member states
 
@@ -11986,7 +11953,7 @@ https://www.wikidata.org/wiki/Q219693[Q219693]
 
 
 [id='10_4']
-==== [`10_4`] 
+==== [`10_4`] //Afghanistan//@eng-Latn
 
 
 
@@ -12008,7 +11975,7 @@ https://www.wikidata.org/wiki/Q219693[Q219693]
 
 
 [id='10_894']
-==== [`10_894`] 
+==== [`10_894`] //Zambia//@eng-Latn
 
 
 
@@ -12028,6 +11995,8 @@ https://www.wikidata.org/wiki/Q219693[Q219693]
 
 
 
+
+<<<
 
 [id='63']
 === [`63`] Internationalis Crucis Rubrae Falcisque Rubrae Motus
@@ -12306,6 +12275,14 @@ https://www.wikidata.org/wiki/Q7178[Q7178]
 |===
 
 
+[discrete]
+==== Annexa
+[discrete]
+===== Pictūrae
+image::1603_45_1.~1/63~1.jpg[title="++Gabriel Émile Édouard Nicolet 1915  [CC-PDDC]++"]
+
+link:++https://commons.wikimedia.org/wiki/File:Gabriel_Nicolet_-_Portrait_of_a_Nurse_from_the_Red_Cross.jpg++[++Gabriel Émile Édouard Nicolet 1915  [CC-PDDC]++]
+
 
 
 [id='63_1']
@@ -12516,7 +12493,7 @@ https://www.wikidata.org/wiki/Q5987345[Q5987345]
 
 
 [id='63_8']
-==== [`63_8`] /Albanian Red Cross/@eng-Latn
+==== [`63_8`] /Albanian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -12585,7 +12562,7 @@ https://www.wikidata.org/wiki/Q3338590[Q3338590]
 
 
 [id='63_10']
-==== [`63_10`] 
+==== [`63_10`] ///Red Cross and Red Crescent of Antarctica///@eng-Latn
 
 
 
@@ -12607,7 +12584,7 @@ https://www.wikidata.org/wiki/Q3338590[Q3338590]
 
 
 [id='63_12']
-==== [`63_12`] 
+==== [`63_12`] ///Red Cross and Red Crescent of Algeria///@eng-Latn
 
 
 
@@ -12629,7 +12606,7 @@ https://www.wikidata.org/wiki/Q3338590[Q3338590]
 
 
 [id='63_16']
-==== [`63_16`] 
+==== [`63_16`] ///Red Cross and Red Crescent of American Samoa///@eng-Latn
 
 
 
@@ -12651,7 +12628,7 @@ https://www.wikidata.org/wiki/Q3338590[Q3338590]
 
 
 [id='63_20']
-==== [`63_20`] /Andorra Red Cross/@eng-Latn
+==== [`63_20`] /Andorra Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -12720,7 +12697,7 @@ https://www.wikidata.org/wiki/Q3697999[Q3697999]
 
 
 [id='63_24']
-==== [`63_24`] /Angola Red Cross/@eng-Latn
+==== [`63_24`] /Angola Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -12786,7 +12763,7 @@ https://www.wikidata.org/wiki/Q3698001[Q3698001]
 
 
 [id='63_28']
-==== [`63_28`] 
+==== [`63_28`] ///Red Cross and Red Crescent of Antigua and Barbuda///@eng-Latn
 
 
 
@@ -12808,7 +12785,7 @@ https://www.wikidata.org/wiki/Q3698001[Q3698001]
 
 
 [id='63_31']
-==== [`63_31`] /Azerbaijan Red Crescent Society/@eng-Latn
+==== [`63_31`] /Azerbaijan Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -12883,7 +12860,7 @@ https://www.wikidata.org/wiki/Q23806133[Q23806133]
 
 
 [id='63_32']
-==== [`63_32`] /Argentine Red Cross/@eng-Latn
+==== [`63_32`] /Argentine Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -12940,7 +12917,7 @@ https://www.wikidata.org/wiki/Q47070765[Q47070765]
 
 
 [id='63_36']
-==== [`63_36`] /Australian Red Cross/@eng-Latn
+==== [`63_36`] /Australian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -13012,7 +12989,7 @@ https://www.wikidata.org/wiki/Q4824610[Q4824610]
 
 
 [id='63_40']
-==== [`63_40`] /Austrian Red Cross/@eng-Latn
+==== [`63_40`] /Austrian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -13081,7 +13058,7 @@ https://www.wikidata.org/wiki/Q168276[Q168276]
 
 
 [id='63_44']
-==== [`63_44`] 
+==== [`63_44`] ///Red Cross and Red Crescent of Bahamas///@eng-Latn
 
 
 
@@ -13103,7 +13080,7 @@ https://www.wikidata.org/wiki/Q168276[Q168276]
 
 
 [id='63_48']
-==== [`63_48`] /Bahrain Red Crescent Society/@eng-Latn
+==== [`63_48`] /Bahrain Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -13166,7 +13143,7 @@ https://www.wikidata.org/wiki/Q4842756[Q4842756]
 
 
 [id='63_50']
-==== [`63_50`] /Bangladesh Red Crescent Society/@eng-Latn
+==== [`63_50`] /Bangladesh Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -13229,7 +13206,7 @@ https://www.wikidata.org/wiki/Q4855370[Q4855370]
 
 
 [id='63_51']
-==== [`63_51`] /Armenian Red Cross Society/@eng-Latn
+==== [`63_51`] /Armenian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -13289,7 +13266,7 @@ https://www.wikidata.org/wiki/Q4793221[Q4793221]
 
 
 [id='63_52']
-==== [`63_52`] /Barbados Red Cross Society/@eng-Latn
+==== [`63_52`] /Barbados Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -13340,7 +13317,7 @@ https://www.wikidata.org/wiki/Q4858618[Q4858618]
 
 
 [id='63_56']
-==== [`63_56`] /Belgian Red Cross/@eng-Latn
+==== [`63_56`] /Belgian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -13412,7 +13389,7 @@ https://www.wikidata.org/wiki/Q2537361[Q2537361]
 
 
 [id='63_60']
-==== [`63_60`] 
+==== [`63_60`] ///Red Cross and Red Crescent of Bermuda///@eng-Latn
 
 
 
@@ -13434,7 +13411,7 @@ https://www.wikidata.org/wiki/Q2537361[Q2537361]
 
 
 [id='63_64']
-==== [`63_64`] 
+==== [`63_64`] ///Red Cross and Red Crescent of Bhutan///@eng-Latn
 
 
 
@@ -13456,7 +13433,7 @@ https://www.wikidata.org/wiki/Q2537361[Q2537361]
 
 
 [id='63_68']
-==== [`63_68`] /Bolivian Red Cross/@eng-Latn
+==== [`63_68`] /Bolivian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -13516,7 +13493,7 @@ https://www.wikidata.org/wiki/Q4939585[Q4939585]
 
 
 [id='63_70']
-==== [`63_70`] /Red Cross Society of Bosnia and Herzegovina/@eng-Latn
+==== [`63_70`] /Red Cross Society of Bosnia and Herzegovina/@eng-Latn/@eng-Latn
 
 
 
@@ -13567,7 +13544,7 @@ https://www.wikidata.org/wiki/Q7303962[Q7303962]
 
 
 [id='63_72']
-==== [`63_72`] /Botswana Red Cross Society/@eng-Latn
+==== [`63_72`] /Botswana Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -13627,7 +13604,7 @@ https://www.wikidata.org/wiki/Q592646[Q592646]
 
 
 [id='63_74']
-==== [`63_74`] 
+==== [`63_74`] ///Red Cross and Red Crescent of Bouvet Island///@eng-Latn
 
 
 
@@ -13649,7 +13626,7 @@ https://www.wikidata.org/wiki/Q592646[Q592646]
 
 
 [id='63_76']
-==== [`63_76`] /Brazilian Red Cross/@eng-Latn
+==== [`63_76`] /Brazilian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -13709,7 +13686,7 @@ https://www.wikidata.org/wiki/Q47072433[Q47072433]
 
 
 [id='63_84']
-==== [`63_84`] /Belize Red Cross Society/@eng-Latn
+==== [`63_84`] /Belize Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -13757,7 +13734,7 @@ https://www.wikidata.org/wiki/Q4882979[Q4882979]
 
 
 [id='63_86']
-==== [`63_86`] 
+==== [`63_86`] ///Red Cross and Red Crescent of British Indian Ocean Territory///@eng-Latn
 
 
 
@@ -13779,7 +13756,7 @@ https://www.wikidata.org/wiki/Q4882979[Q4882979]
 
 
 [id='63_90']
-==== [`63_90`] 
+==== [`63_90`] ///Red Cross and Red Crescent of Solomon Islands///@eng-Latn
 
 
 
@@ -13801,7 +13778,7 @@ https://www.wikidata.org/wiki/Q4882979[Q4882979]
 
 
 [id='63_92']
-==== [`63_92`] 
+==== [`63_92`] ///Red Cross and Red Crescent of British Virgin Islands///@eng-Latn
 
 
 
@@ -13823,7 +13800,7 @@ https://www.wikidata.org/wiki/Q4882979[Q4882979]
 
 
 [id='63_96']
-==== [`63_96`] /Brunei Darussalam Red Crescent Society/@eng-Latn
+==== [`63_96`] /Brunei Darussalam Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -13886,7 +13863,7 @@ https://www.wikidata.org/wiki/Q4978914[Q4978914]
 
 
 [id='63_100']
-==== [`63_100`] /Bulgarian Red Cross/@eng-Latn
+==== [`63_100`] /Bulgarian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -13952,7 +13929,7 @@ https://www.wikidata.org/wiki/Q4996223[Q4996223]
 
 
 [id='63_104']
-==== [`63_104`] /Myanmar Red Cross Society/@eng-Latn
+==== [`63_104`] /Myanmar Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -13997,7 +13974,7 @@ https://www.wikidata.org/wiki/Q6946772[Q6946772]
 
 
 [id='63_108']
-==== [`63_108`] /Burundi Red Cross/@eng-Latn
+==== [`63_108`] /Burundi Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -14060,7 +14037,7 @@ https://www.wikidata.org/wiki/Q3698010[Q3698010]
 
 
 [id='63_112']
-==== [`63_112`] /Belarus Red Cross/@eng-Latn
+==== [`63_112`] /Belarus Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -14123,7 +14100,7 @@ https://www.wikidata.org/wiki/Q6468414[Q6468414]
 
 
 [id='63_116']
-==== [`63_116`] /Cambodian Red Cross/@eng-Latn
+==== [`63_116`] /Cambodian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -14186,7 +14163,7 @@ https://www.wikidata.org/wiki/Q5025173[Q5025173]
 
 
 [id='63_120']
-==== [`63_120`] /Cameroon Red Cross Society/@eng-Latn
+==== [`63_120`] /Cameroon Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -14243,7 +14220,7 @@ https://www.wikidata.org/wiki/Q3698003[Q3698003]
 
 
 [id='63_124']
-==== [`63_124`] /Canadian Red Cross/@eng-Latn
+==== [`63_124`] /Canadian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -14309,7 +14286,7 @@ https://www.wikidata.org/wiki/Q5030521[Q5030521]
 
 
 [id='63_132']
-==== [`63_132`] /Red Cross of Cape Verde/@eng-Latn
+==== [`63_132`] /Red Cross of Cape Verde/@eng-Latn/@eng-Latn
 
 
 
@@ -14366,7 +14343,7 @@ https://www.wikidata.org/wiki/Q3698034[Q3698034]
 
 
 [id='63_136']
-==== [`63_136`] 
+==== [`63_136`] ///Red Cross and Red Crescent of Cayman Islands///@eng-Latn
 
 
 
@@ -14388,7 +14365,7 @@ https://www.wikidata.org/wiki/Q3698034[Q3698034]
 
 
 [id='63_140']
-==== [`63_140`] /Central African Red Cross Society/@eng-Latn
+==== [`63_140`] /Central African Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -14442,7 +14419,7 @@ https://www.wikidata.org/wiki/Q3698005[Q3698005]
 
 
 [id='63_144']
-==== [`63_144`] 
+==== [`63_144`] ///Red Cross and Red Crescent of Sri Lanka///@eng-Latn
 
 
 
@@ -14464,7 +14441,7 @@ https://www.wikidata.org/wiki/Q3698005[Q3698005]
 
 
 [id='63_148']
-==== [`63_148`] /Red Cross of Chad/@eng-Latn
+==== [`63_148`] /Red Cross of Chad/@eng-Latn/@eng-Latn
 
 
 
@@ -14524,7 +14501,7 @@ https://www.wikidata.org/wiki/Q3698011[Q3698011]
 
 
 [id='63_152']
-==== [`63_152`] 
+==== [`63_152`] ///Red Cross and Red Crescent of Chile///@eng-Latn
 
 
 
@@ -14546,7 +14523,7 @@ https://www.wikidata.org/wiki/Q3698011[Q3698011]
 
 
 [id='63_156']
-==== [`63_156`] /Red Cross Society of China/@eng-Latn
+==== [`63_156`] /Red Cross Society of China/@eng-Latn/@eng-Latn
 
 
 
@@ -14621,7 +14598,7 @@ https://www.wikidata.org/wiki/Q908277[Q908277]
 
 
 [id='63_158']
-==== [`63_158`] 
+==== [`63_158`] ///Red Cross and Red Crescent of Taiwan (Province of China)///@eng-Latn
 
 
 
@@ -14643,7 +14620,7 @@ https://www.wikidata.org/wiki/Q908277[Q908277]
 
 
 [id='63_162']
-==== [`63_162`] 
+==== [`63_162`] ///Red Cross and Red Crescent of Christmas Island///@eng-Latn
 
 
 
@@ -14665,7 +14642,7 @@ https://www.wikidata.org/wiki/Q908277[Q908277]
 
 
 [id='63_166']
-==== [`63_166`] 
+==== [`63_166`] ///Red Cross and Red Crescent of Cocos (Keeling) Islands///@eng-Latn
 
 
 
@@ -14687,7 +14664,7 @@ https://www.wikidata.org/wiki/Q908277[Q908277]
 
 
 [id='63_170']
-==== [`63_170`] /Colombian Red Cross Society/@eng-Latn
+==== [`63_170`] /Colombian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -14741,7 +14718,7 @@ https://www.wikidata.org/wiki/Q5147946[Q5147946]
 
 
 [id='63_174']
-==== [`63_174`] /Comoros Red Crescent/@eng-Latn
+==== [`63_174`] /Comoros Red Crescent/@eng-Latn/@eng-Latn
 
 
 
@@ -14798,7 +14775,7 @@ https://www.wikidata.org/wiki/Q3855841[Q3855841]
 
 
 [id='63_175']
-==== [`63_175`] 
+==== [`63_175`] ///Red Cross and Red Crescent of Mayotte///@eng-Latn
 
 
 
@@ -14820,7 +14797,7 @@ https://www.wikidata.org/wiki/Q3855841[Q3855841]
 
 
 [id='63_178']
-==== [`63_178`] 
+==== [`63_178`] ///Red Cross and Red Crescent of Congo///@eng-Latn
 
 
 
@@ -14842,7 +14819,7 @@ https://www.wikidata.org/wiki/Q3855841[Q3855841]
 
 
 [id='63_180']
-==== [`63_180`] /Red Cross of the Democratic Republic of Congo/@eng-Latn
+==== [`63_180`] /Red Cross of the Democratic Republic of Congo/@eng-Latn/@eng-Latn
 
 
 
@@ -14893,7 +14870,7 @@ https://www.wikidata.org/wiki/Q3698029[Q3698029]
 
 
 [id='63_184']
-==== [`63_184`] 
+==== [`63_184`] ///Red Cross and Red Crescent of Cook Islands///@eng-Latn
 
 
 
@@ -14915,7 +14892,7 @@ https://www.wikidata.org/wiki/Q3698029[Q3698029]
 
 
 [id='63_188']
-==== [`63_188`] 
+==== [`63_188`] ///Red Cross and Red Crescent of Costa Rica///@eng-Latn
 
 
 
@@ -14937,7 +14914,7 @@ https://www.wikidata.org/wiki/Q3698029[Q3698029]
 
 
 [id='63_191']
-==== [`63_191`] /Croatian Red Cross/@eng-Latn
+==== [`63_191`] /Croatian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -14991,7 +14968,7 @@ https://www.wikidata.org/wiki/Q5187150[Q5187150]
 
 
 [id='63_192']
-==== [`63_192`] /list of Red Cross and Red Crescent Societies/@eng-Latn
+==== [`63_192`] /list of Red Cross and Red Crescent Societies/@eng-Latn/@eng-Latn
 
 
 
@@ -15069,7 +15046,7 @@ https://www.wikidata.org/wiki/Q1483344[Q1483344]
 
 
 [id='63_196']
-==== [`63_196`] /Cyprus Red Cross/@eng-Latn
+==== [`63_196`] /Cyprus Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -15123,7 +15100,7 @@ https://www.wikidata.org/wiki/Q3698036[Q3698036]
 
 
 [id='63_203']
-==== [`63_203`] 
+==== [`63_203`] ///Red Cross and Red Crescent of Czechia///@eng-Latn
 
 
 
@@ -15145,7 +15122,7 @@ https://www.wikidata.org/wiki/Q3698036[Q3698036]
 
 
 [id='63_204']
-==== [`63_204`] /Red Cross of Benin/@eng-Latn
+==== [`63_204`] /Red Cross of Benin/@eng-Latn/@eng-Latn
 
 
 
@@ -15205,7 +15182,7 @@ https://www.wikidata.org/wiki/Q3698009[Q3698009]
 
 
 [id='63_208']
-==== [`63_208`] 
+==== [`63_208`] ///Red Cross and Red Crescent of Denmark///@eng-Latn
 
 
 
@@ -15227,7 +15204,7 @@ https://www.wikidata.org/wiki/Q3698009[Q3698009]
 
 
 [id='63_212']
-==== [`63_212`] /Dominica Red Cross Society/@eng-Latn
+==== [`63_212`] /Dominica Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -15278,7 +15255,7 @@ https://www.wikidata.org/wiki/Q5290699[Q5290699]
 
 
 [id='63_214']
-==== [`63_214`] /Dominican Red Cross/@eng-Latn
+==== [`63_214`] /Dominican Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -15323,7 +15300,7 @@ https://www.wikidata.org/wiki/Q56289825[Q56289825]
 
 
 [id='63_218']
-==== [`63_218`] 
+==== [`63_218`] ///Red Cross and Red Crescent of Ecuador///@eng-Latn
 
 
 
@@ -15345,7 +15322,7 @@ https://www.wikidata.org/wiki/Q56289825[Q56289825]
 
 
 [id='63_222']
-==== [`63_222`] 
+==== [`63_222`] ///Red Cross and Red Crescent of El Salvador///@eng-Latn
 
 
 
@@ -15367,7 +15344,7 @@ https://www.wikidata.org/wiki/Q56289825[Q56289825]
 
 
 [id='63_226']
-==== [`63_226`] 
+==== [`63_226`] ///Red Cross and Red Crescent of Equatorial Guinea///@eng-Latn
 
 
 
@@ -15389,7 +15366,7 @@ https://www.wikidata.org/wiki/Q56289825[Q56289825]
 
 
 [id='63_231']
-==== [`63_231`] /Ethiopian Red Cross Society/@eng-Latn
+==== [`63_231`] /Ethiopian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -15449,7 +15426,7 @@ https://www.wikidata.org/wiki/Q3698039[Q3698039]
 
 
 [id='63_232']
-==== [`63_232`] 
+==== [`63_232`] ///Red Cross and Red Crescent of Eritrea///@eng-Latn
 
 
 
@@ -15471,7 +15448,7 @@ https://www.wikidata.org/wiki/Q3698039[Q3698039]
 
 
 [id='63_233']
-==== [`63_233`] 
+==== [`63_233`] ///Red Cross and Red Crescent of Estonia///@eng-Latn
 
 
 
@@ -15493,7 +15470,7 @@ https://www.wikidata.org/wiki/Q3698039[Q3698039]
 
 
 [id='63_234']
-==== [`63_234`] 
+==== [`63_234`] ///Red Cross and Red Crescent of Faroe Islands///@eng-Latn
 
 
 
@@ -15515,7 +15492,7 @@ https://www.wikidata.org/wiki/Q3698039[Q3698039]
 
 
 [id='63_238']
-==== [`63_238`] 
+==== [`63_238`] ///Red Cross and Red Crescent of Falkland Islands (Malvinas)///@eng-Latn
 
 
 
@@ -15537,7 +15514,7 @@ https://www.wikidata.org/wiki/Q3698039[Q3698039]
 
 
 [id='63_239']
-==== [`63_239`] 
+==== [`63_239`] ///Red Cross and Red Crescent of South Georgia and the South Sandwich Islands///@eng-Latn
 
 
 
@@ -15559,7 +15536,7 @@ https://www.wikidata.org/wiki/Q3698039[Q3698039]
 
 
 [id='63_242']
-==== [`63_242`] 
+==== [`63_242`] ///Red Cross and Red Crescent of Fiji///@eng-Latn
 
 
 
@@ -15581,7 +15558,7 @@ https://www.wikidata.org/wiki/Q3698039[Q3698039]
 
 
 [id='63_246']
-==== [`63_246`] /Finnish Red Cross/@eng-Latn
+==== [`63_246`] /Finnish Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -15656,7 +15633,7 @@ https://www.wikidata.org/wiki/Q409603[Q409603]
 
 
 [id='63_250']
-==== [`63_250`] /French Red Cross/@eng-Latn
+==== [`63_250`] /French Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -15740,7 +15717,7 @@ https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 
 [id='63_254']
-==== [`63_254`] 
+==== [`63_254`] ///Red Cross and Red Crescent of French Guiana///@eng-Latn
 
 
 
@@ -15762,7 +15739,7 @@ https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 
 [id='63_258']
-==== [`63_258`] 
+==== [`63_258`] ///Red Cross and Red Crescent of French Polynesia///@eng-Latn
 
 
 
@@ -15784,7 +15761,7 @@ https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 
 [id='63_260']
-==== [`63_260`] 
+==== [`63_260`] ///Red Cross and Red Crescent of French Southern and Antarctic Territories///@eng-Latn
 
 
 
@@ -15806,7 +15783,7 @@ https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 
 [id='63_262']
-==== [`63_262`] 
+==== [`63_262`] ///Red Cross and Red Crescent of Djibouti///@eng-Latn
 
 
 
@@ -15828,7 +15805,7 @@ https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 
 [id='63_266']
-==== [`63_266`] 
+==== [`63_266`] ///Red Cross and Red Crescent of Gabon///@eng-Latn
 
 
 
@@ -15850,7 +15827,7 @@ https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 
 [id='63_268']
-==== [`63_268`] 
+==== [`63_268`] ///Red Cross and Red Crescent of Georgia///@eng-Latn
 
 
 
@@ -15872,7 +15849,7 @@ https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 
 [id='63_270']
-==== [`63_270`] 
+==== [`63_270`] ///Red Cross and Red Crescent of Gambia///@eng-Latn
 
 
 
@@ -15894,7 +15871,7 @@ https://www.wikidata.org/wiki/Q3003244[Q3003244]
 
 
 [id='63_275']
-==== [`63_275`] /Palestine Red Crescent Society/@eng-Latn
+==== [`63_275`] /Palestine Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -15963,7 +15940,7 @@ https://www.wikidata.org/wiki/Q2917392[Q2917392]
 
 
 [id='63_276']
-==== [`63_276`] 
+==== [`63_276`] ///Red Cross and Red Crescent of Germany///@eng-Latn
 
 
 
@@ -15985,7 +15962,7 @@ https://www.wikidata.org/wiki/Q2917392[Q2917392]
 
 
 [id='63_288']
-==== [`63_288`] 
+==== [`63_288`] ///Red Cross and Red Crescent of Ghana///@eng-Latn
 
 
 
@@ -16007,7 +15984,7 @@ https://www.wikidata.org/wiki/Q2917392[Q2917392]
 
 
 [id='63_292']
-==== [`63_292`] 
+==== [`63_292`] ///Red Cross and Red Crescent of Gibraltar///@eng-Latn
 
 
 
@@ -16029,7 +16006,7 @@ https://www.wikidata.org/wiki/Q2917392[Q2917392]
 
 
 [id='63_296']
-==== [`63_296`] /Kiribati Red Cross Society/@eng-Latn
+==== [`63_296`] /Kiribati Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -16077,7 +16054,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_300']
-==== [`63_300`] 
+==== [`63_300`] ///Red Cross and Red Crescent of Greece///@eng-Latn
 
 
 
@@ -16099,7 +16076,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_304']
-==== [`63_304`] 
+==== [`63_304`] ///Red Cross and Red Crescent of Greenland///@eng-Latn
 
 
 
@@ -16121,7 +16098,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_308']
-==== [`63_308`] 
+==== [`63_308`] ///Red Cross and Red Crescent of Grenada///@eng-Latn
 
 
 
@@ -16143,7 +16120,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_312']
-==== [`63_312`] 
+==== [`63_312`] ///Red Cross and Red Crescent of Guadeloupe///@eng-Latn
 
 
 
@@ -16165,7 +16142,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_316']
-==== [`63_316`] 
+==== [`63_316`] ///Red Cross and Red Crescent of Guam///@eng-Latn
 
 
 
@@ -16187,7 +16164,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_320']
-==== [`63_320`] 
+==== [`63_320`] ///Red Cross and Red Crescent of Guatemala///@eng-Latn
 
 
 
@@ -16209,7 +16186,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_324']
-==== [`63_324`] 
+==== [`63_324`] ///Red Cross and Red Crescent of Guinea///@eng-Latn
 
 
 
@@ -16231,7 +16208,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_328']
-==== [`63_328`] 
+==== [`63_328`] ///Red Cross and Red Crescent of Guyana///@eng-Latn
 
 
 
@@ -16253,7 +16230,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_332']
-==== [`63_332`] 
+==== [`63_332`] ///Red Cross and Red Crescent of Haiti///@eng-Latn
 
 
 
@@ -16275,7 +16252,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_334']
-==== [`63_334`] 
+==== [`63_334`] ///Red Cross and Red Crescent of Heard Island and McDonald Islands///@eng-Latn
 
 
 
@@ -16297,7 +16274,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_336']
-==== [`63_336`] 
+==== [`63_336`] ///Red Cross and Red Crescent of Holy See///@eng-Latn
 
 
 
@@ -16319,7 +16296,7 @@ https://www.wikidata.org/wiki/Q6415104[Q6415104]
 
 
 [id='63_340']
-==== [`63_340`] /Honduran Red Cross/@eng-Latn
+==== [`63_340`] /Honduran Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -16367,7 +16344,7 @@ https://www.wikidata.org/wiki/Q16553811[Q16553811]
 
 
 [id='63_344']
-==== [`63_344`] /Hong Kong Red Cross/@eng-Latn
+==== [`63_344`] /Hong Kong Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -16424,7 +16401,7 @@ https://www.wikidata.org/wiki/Q840469[Q840469]
 
 
 [id='63_348']
-==== [`63_348`] 
+==== [`63_348`] ///Red Cross and Red Crescent of Hungary///@eng-Latn
 
 
 
@@ -16446,7 +16423,7 @@ https://www.wikidata.org/wiki/Q840469[Q840469]
 
 
 [id='63_352']
-==== [`63_352`] /Icelandic Red Cross/@eng-Latn
+==== [`63_352`] /Icelandic Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -16503,7 +16480,7 @@ https://www.wikidata.org/wiki/Q5985772[Q5985772]
 
 
 [id='63_356']
-==== [`63_356`] /Indian Red Cross Society/@eng-Latn
+==== [`63_356`] /Indian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -16569,7 +16546,7 @@ https://www.wikidata.org/wiki/Q16237727[Q16237727]
 
 
 [id='63_360']
-==== [`63_360`] /Indonesian Red Cross Society/@eng-Latn
+==== [`63_360`] /Indonesian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -16644,7 +16621,7 @@ https://www.wikidata.org/wiki/Q3003251[Q3003251]
 
 
 [id='63_364']
-==== [`63_364`] /Red Crescent Society of the Islamic Republic of Iran/@eng-Latn
+==== [`63_364`] /Red Crescent Society of the Islamic Republic of Iran/@eng-Latn/@eng-Latn
 
 
 
@@ -16725,7 +16702,7 @@ https://www.wikidata.org/wiki/Q7303956[Q7303956]
 
 
 [id='63_368']
-==== [`63_368`] /Iraqi Red Crescent Society/@eng-Latn
+==== [`63_368`] /Iraqi Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -16794,7 +16771,7 @@ https://www.wikidata.org/wiki/Q6068065[Q6068065]
 
 
 [id='63_372']
-==== [`63_372`] /Irish Red Cross/@eng-Latn
+==== [`63_372`] /Irish Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -16851,7 +16828,7 @@ https://www.wikidata.org/wiki/Q11282482[Q11282482]
 
 
 [id='63_376']
-==== [`63_376`] /Magen David Adom/@eng-Latn
+==== [`63_376`] /Magen David Adom/@eng-Latn/@eng-Latn
 
 
 
@@ -16968,7 +16945,7 @@ https://www.wikidata.org/wiki/Q577902[Q577902]
 
 
 [id='63_380']
-==== [`63_380`] /Italian Red Cross/@eng-Latn
+==== [`63_380`] /Italian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -17052,7 +17029,7 @@ https://www.wikidata.org/wiki/Q913903[Q913903]
 
 
 [id='63_384']
-==== [`63_384`] 
+==== [`63_384`] ///Red Cross and Red Crescent of Côte d'Ivoire///@eng-Latn
 
 
 
@@ -17074,7 +17051,7 @@ https://www.wikidata.org/wiki/Q913903[Q913903]
 
 
 [id='63_388']
-==== [`63_388`] /Jamaica Red Cross/@eng-Latn
+==== [`63_388`] /Jamaica Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -17122,7 +17099,7 @@ https://www.wikidata.org/wiki/Q99543779[Q99543779]
 
 
 [id='63_392']
-==== [`63_392`] /Japanese Red Cross Society/@eng-Latn
+==== [`63_392`] /Japanese Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -17212,7 +17189,7 @@ https://www.wikidata.org/wiki/Q4538440[Q4538440]
 
 
 [id='63_398']
-==== [`63_398`] 
+==== [`63_398`] ///Red Cross and Red Crescent of Kazakhstan///@eng-Latn
 
 
 
@@ -17234,7 +17211,7 @@ https://www.wikidata.org/wiki/Q4538440[Q4538440]
 
 
 [id='63_400']
-==== [`63_400`] 
+==== [`63_400`] ///Red Cross and Red Crescent of Jordan///@eng-Latn
 
 
 
@@ -17256,7 +17233,7 @@ https://www.wikidata.org/wiki/Q4538440[Q4538440]
 
 
 [id='63_404']
-==== [`63_404`] /Kenya Red Cross Society/@eng-Latn
+==== [`63_404`] /Kenya Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -17325,7 +17302,7 @@ https://www.wikidata.org/wiki/Q3698016[Q3698016]
 
 
 [id='63_408']
-==== [`63_408`] /Red Cross Society of the Democratic People's Republic of Korea/@eng-Latn
+==== [`63_408`] /Red Cross Society of the Democratic People's Republic of Korea/@eng-Latn/@eng-Latn
 
 
 
@@ -17385,7 +17362,7 @@ https://www.wikidata.org/wiki/Q3698023[Q3698023]
 
 
 [id='63_410']
-==== [`63_410`] /Republic of Korea National Red Cross/@eng-Latn
+==== [`63_410`] /Republic of Korea National Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -17460,7 +17437,7 @@ https://www.wikidata.org/wiki/Q7314493[Q7314493]
 
 
 [id='63_414']
-==== [`63_414`] /Kuwait Red Crescent Society/@eng-Latn
+==== [`63_414`] /Kuwait Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -17511,7 +17488,7 @@ https://www.wikidata.org/wiki/Q6448872[Q6448872]
 
 
 [id='63_417']
-==== [`63_417`] 
+==== [`63_417`] ///Red Cross and Red Crescent of Kyrgyzstan///@eng-Latn
 
 
 
@@ -17533,7 +17510,7 @@ https://www.wikidata.org/wiki/Q6448872[Q6448872]
 
 
 [id='63_418']
-==== [`63_418`] /Lao Red Cross Society/@eng-Latn
+==== [`63_418`] /Lao Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -17584,7 +17561,7 @@ https://www.wikidata.org/wiki/Q6487795[Q6487795]
 
 
 [id='63_422']
-==== [`63_422`] /Lebanese Red Cross/@eng-Latn
+==== [`63_422`] /Lebanese Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -17650,7 +17627,7 @@ https://www.wikidata.org/wiki/Q12189470[Q12189470]
 
 
 [id='63_426']
-==== [`63_426`] 
+==== [`63_426`] ///Red Cross and Red Crescent of Lesotho///@eng-Latn
 
 
 
@@ -17672,7 +17649,7 @@ https://www.wikidata.org/wiki/Q12189470[Q12189470]
 
 
 [id='63_428']
-==== [`63_428`] /Latvian Red Cross/@eng-Latn
+==== [`63_428`] /Latvian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -17738,7 +17715,7 @@ https://www.wikidata.org/wiki/Q4254881[Q4254881]
 
 
 [id='63_430']
-==== [`63_430`] 
+==== [`63_430`] ///Red Cross and Red Crescent of Liberia///@eng-Latn
 
 
 
@@ -17760,7 +17737,7 @@ https://www.wikidata.org/wiki/Q4254881[Q4254881]
 
 
 [id='63_434']
-==== [`63_434`] 
+==== [`63_434`] ///Red Cross and Red Crescent of Libya///@eng-Latn
 
 
 
@@ -17782,7 +17759,7 @@ https://www.wikidata.org/wiki/Q4254881[Q4254881]
 
 
 [id='63_438']
-==== [`63_438`] 
+==== [`63_438`] ///Red Cross and Red Crescent of Liechtenstein///@eng-Latn
 
 
 
@@ -17804,7 +17781,7 @@ https://www.wikidata.org/wiki/Q4254881[Q4254881]
 
 
 [id='63_440']
-==== [`63_440`] /Lithuanian Red Cross Society/@eng-Latn
+==== [`63_440`] /Lithuanian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -17861,7 +17838,7 @@ https://www.wikidata.org/wiki/Q6648412[Q6648412]
 
 
 [id='63_442']
-==== [`63_442`] /Luxembourg Red Cross/@eng-Latn
+==== [`63_442`] /Luxembourg Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -17915,7 +17892,7 @@ https://www.wikidata.org/wiki/Q13102234[Q13102234]
 
 
 [id='63_446']
-==== [`63_446`] /Macau Red Cross/@eng-Latn
+==== [`63_446`] /Macau Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -17963,7 +17940,7 @@ https://www.wikidata.org/wiki/Q20063812[Q20063812]
 
 
 [id='63_450']
-==== [`63_450`] 
+==== [`63_450`] ///Red Cross and Red Crescent of Madagascar///@eng-Latn
 
 
 
@@ -17985,7 +17962,7 @@ https://www.wikidata.org/wiki/Q20063812[Q20063812]
 
 
 [id='63_454']
-==== [`63_454`] 
+==== [`63_454`] ///Red Cross and Red Crescent of Malawi///@eng-Latn
 
 
 
@@ -18007,7 +17984,7 @@ https://www.wikidata.org/wiki/Q20063812[Q20063812]
 
 
 [id='63_458']
-==== [`63_458`] /Malaysian Red Crescent Society/@eng-Latn
+==== [`63_458`] /Malaysian Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -18070,7 +18047,7 @@ https://www.wikidata.org/wiki/Q6742015[Q6742015]
 
 
 [id='63_462']
-==== [`63_462`] /Maldivian Red Crescent/@eng-Latn
+==== [`63_462`] /Maldivian Red Crescent/@eng-Latn/@eng-Latn
 
 
 
@@ -18121,7 +18098,7 @@ https://www.wikidata.org/wiki/Q6742837[Q6742837]
 
 
 [id='63_466']
-==== [`63_466`] /Mali Red Cross/@eng-Latn
+==== [`63_466`] /Mali Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -18181,7 +18158,7 @@ https://www.wikidata.org/wiki/Q963785[Q963785]
 
 
 [id='63_470']
-==== [`63_470`] 
+==== [`63_470`] ///Red Cross and Red Crescent of Malta///@eng-Latn
 
 
 
@@ -18203,7 +18180,7 @@ https://www.wikidata.org/wiki/Q963785[Q963785]
 
 
 [id='63_474']
-==== [`63_474`] 
+==== [`63_474`] ///Red Cross and Red Crescent of Martinique///@eng-Latn
 
 
 
@@ -18225,7 +18202,7 @@ https://www.wikidata.org/wiki/Q963785[Q963785]
 
 
 [id='63_478']
-==== [`63_478`] 
+==== [`63_478`] ///Red Cross and Red Crescent of Mauritania///@eng-Latn
 
 
 
@@ -18247,7 +18224,7 @@ https://www.wikidata.org/wiki/Q963785[Q963785]
 
 
 [id='63_480']
-==== [`63_480`] 
+==== [`63_480`] ///Red Cross and Red Crescent of Mauritius///@eng-Latn
 
 
 
@@ -18269,7 +18246,7 @@ https://www.wikidata.org/wiki/Q963785[Q963785]
 
 
 [id='63_484']
-==== [`63_484`] /Mexican Red Cross/@eng-Latn
+==== [`63_484`] /Mexican Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -18332,7 +18309,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_492']
-==== [`63_492`] 
+==== [`63_492`] ///Red Cross and Red Crescent of Monaco///@eng-Latn
 
 
 
@@ -18354,7 +18331,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_496']
-==== [`63_496`] 
+==== [`63_496`] ///Red Cross and Red Crescent of Mongolia///@eng-Latn
 
 
 
@@ -18376,7 +18353,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_498']
-==== [`63_498`] 
+==== [`63_498`] ///Red Cross and Red Crescent of Republic of Moldova///@eng-Latn
 
 
 
@@ -18398,7 +18375,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_499']
-==== [`63_499`] 
+==== [`63_499`] ///Red Cross and Red Crescent of Montenegro///@eng-Latn
 
 
 
@@ -18420,7 +18397,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_500']
-==== [`63_500`] 
+==== [`63_500`] ///Red Cross and Red Crescent of Montserrat///@eng-Latn
 
 
 
@@ -18442,7 +18419,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_504']
-==== [`63_504`] 
+==== [`63_504`] ///Red Cross and Red Crescent of Morocco///@eng-Latn
 
 
 
@@ -18464,7 +18441,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_508']
-==== [`63_508`] 
+==== [`63_508`] ///Red Cross and Red Crescent of Mozambique///@eng-Latn
 
 
 
@@ -18486,7 +18463,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_512']
-==== [`63_512`] 
+==== [`63_512`] ///Red Cross and Red Crescent of Oman///@eng-Latn
 
 
 
@@ -18508,7 +18485,7 @@ https://www.wikidata.org/wiki/Q5792387[Q5792387]
 
 
 [id='63_516']
-==== [`63_516`] /Namibia Red Cross Society/@eng-Latn
+==== [`63_516`] /Namibia Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -18565,7 +18542,7 @@ https://www.wikidata.org/wiki/Q260961[Q260961]
 
 
 [id='63_520']
-==== [`63_520`] 
+==== [`63_520`] ///Red Cross and Red Crescent of Nauru///@eng-Latn
 
 
 
@@ -18587,7 +18564,7 @@ https://www.wikidata.org/wiki/Q260961[Q260961]
 
 
 [id='63_524']
-==== [`63_524`] /Nepal Red Cross Society/@eng-Latn
+==== [`63_524`] /Nepal Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -18635,7 +18612,7 @@ https://www.wikidata.org/wiki/Q6994401[Q6994401]
 
 
 [id='63_528']
-==== [`63_528`] /The Netherlands Red Cross/@eng-Latn
+==== [`63_528`] /The Netherlands Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -18698,7 +18675,7 @@ https://www.wikidata.org/wiki/Q16238073[Q16238073]
 
 
 [id='63_531']
-==== [`63_531`] 
+==== [`63_531`] ///Red Cross and Red Crescent of Curaçao///@eng-Latn
 
 
 
@@ -18720,7 +18697,7 @@ https://www.wikidata.org/wiki/Q16238073[Q16238073]
 
 
 [id='63_533']
-==== [`63_533`] 
+==== [`63_533`] ///Red Cross and Red Crescent of Aruba///@eng-Latn
 
 
 
@@ -18742,7 +18719,7 @@ https://www.wikidata.org/wiki/Q16238073[Q16238073]
 
 
 [id='63_534']
-==== [`63_534`] 
+==== [`63_534`] ///Red Cross and Red Crescent of Sint Maarten (Dutch part)///@eng-Latn
 
 
 
@@ -18764,7 +18741,7 @@ https://www.wikidata.org/wiki/Q16238073[Q16238073]
 
 
 [id='63_535']
-==== [`63_535`] 
+==== [`63_535`] ///Red Cross and Red Crescent of Bonaire, Sint Eustatius and Saba///@eng-Latn
 
 
 
@@ -18786,7 +18763,7 @@ https://www.wikidata.org/wiki/Q16238073[Q16238073]
 
 
 [id='63_540']
-==== [`63_540`] 
+==== [`63_540`] ///Red Cross and Red Crescent of New Caledonia///@eng-Latn
 
 
 
@@ -18808,7 +18785,7 @@ https://www.wikidata.org/wiki/Q16238073[Q16238073]
 
 
 [id='63_548']
-==== [`63_548`] /Vanuatu Red Cross Society/@eng-Latn
+==== [`63_548`] /Vanuatu Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -18856,7 +18833,7 @@ https://www.wikidata.org/wiki/Q7915237[Q7915237]
 
 
 [id='63_554']
-==== [`63_554`] /New Zealand Red Cross/@eng-Latn
+==== [`63_554`] /New Zealand Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -18913,7 +18890,7 @@ https://www.wikidata.org/wiki/Q7015611[Q7015611]
 
 
 [id='63_558']
-==== [`63_558`] /Nicaraguan Red Cross/@eng-Latn
+==== [`63_558`] /Nicaraguan Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -18961,7 +18938,7 @@ https://www.wikidata.org/wiki/Q7024453[Q7024453]
 
 
 [id='63_562']
-==== [`63_562`] /Red Cross Society of Niger/@eng-Latn
+==== [`63_562`] /Red Cross Society of Niger/@eng-Latn/@eng-Latn
 
 
 
@@ -19012,7 +18989,7 @@ https://www.wikidata.org/wiki/Q3698021[Q3698021]
 
 
 [id='63_566']
-==== [`63_566`] /Nigerian Red Cross Society/@eng-Latn
+==== [`63_566`] /Nigerian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -19072,7 +19049,7 @@ https://www.wikidata.org/wiki/Q3698044[Q3698044]
 
 
 [id='63_570']
-==== [`63_570`] 
+==== [`63_570`] ///Red Cross and Red Crescent of Niue///@eng-Latn
 
 
 
@@ -19094,7 +19071,7 @@ https://www.wikidata.org/wiki/Q3698044[Q3698044]
 
 
 [id='63_574']
-==== [`63_574`] 
+==== [`63_574`] ///Red Cross and Red Crescent of Norfolk Island///@eng-Latn
 
 
 
@@ -19116,7 +19093,7 @@ https://www.wikidata.org/wiki/Q3698044[Q3698044]
 
 
 [id='63_578']
-==== [`63_578`] /Norwegian Red Cross/@eng-Latn
+==== [`63_578`] /Norwegian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -19206,7 +19183,7 @@ https://www.wikidata.org/wiki/Q927391[Q927391]
 
 
 [id='63_581']
-==== [`63_581`] 
+==== [`63_581`] ///Red Cross and Red Crescent of United States Minor Outlying Islands (the)///@eng-Latn
 
 
 
@@ -19228,7 +19205,7 @@ https://www.wikidata.org/wiki/Q927391[Q927391]
 
 
 [id='63_583']
-==== [`63_583`] 
+==== [`63_583`] ///Red Cross and Red Crescent of Micronesia (Federated States of)///@eng-Latn
 
 
 
@@ -19250,7 +19227,7 @@ https://www.wikidata.org/wiki/Q927391[Q927391]
 
 
 [id='63_584']
-==== [`63_584`] 
+==== [`63_584`] ///Red Cross and Red Crescent of Marshall Islands///@eng-Latn
 
 
 
@@ -19272,7 +19249,7 @@ https://www.wikidata.org/wiki/Q927391[Q927391]
 
 
 [id='63_585']
-==== [`63_585`] /Palau Red Cross Society/@eng-Latn
+==== [`63_585`] /Palau Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -19320,7 +19297,7 @@ https://www.wikidata.org/wiki/Q7126862[Q7126862]
 
 
 [id='63_586']
-==== [`63_586`] /Pakistan Red Crescent Society/@eng-Latn
+==== [`63_586`] /Pakistan Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -19377,7 +19354,7 @@ https://www.wikidata.org/wiki/Q7125686[Q7125686]
 
 
 [id='63_591']
-==== [`63_591`] 
+==== [`63_591`] ///Red Cross and Red Crescent of Panama///@eng-Latn
 
 
 
@@ -19399,7 +19376,7 @@ https://www.wikidata.org/wiki/Q7125686[Q7125686]
 
 
 [id='63_598']
-==== [`63_598`] /Papua New Guinea Red Cross Society/@eng-Latn
+==== [`63_598`] /Papua New Guinea Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -19453,7 +19430,7 @@ https://www.wikidata.org/wiki/Q7133163[Q7133163]
 
 
 [id='63_600']
-==== [`63_600`] 
+==== [`63_600`] ///Red Cross and Red Crescent of Paraguay///@eng-Latn
 
 
 
@@ -19475,7 +19452,7 @@ https://www.wikidata.org/wiki/Q7133163[Q7133163]
 
 
 [id='63_604']
-==== [`63_604`] 
+==== [`63_604`] ///Red Cross and Red Crescent of Peru///@eng-Latn
 
 
 
@@ -19497,7 +19474,7 @@ https://www.wikidata.org/wiki/Q7133163[Q7133163]
 
 
 [id='63_608']
-==== [`63_608`] /Philippine Red Cross/@eng-Latn
+==== [`63_608`] /Philippine Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -19563,7 +19540,7 @@ https://www.wikidata.org/wiki/Q14472988[Q14472988]
 
 
 [id='63_612']
-==== [`63_612`] 
+==== [`63_612`] ///Red Cross and Red Crescent of Pitcairn///@eng-Latn
 
 
 
@@ -19585,7 +19562,7 @@ https://www.wikidata.org/wiki/Q14472988[Q14472988]
 
 
 [id='63_616']
-==== [`63_616`] /Polish Red Cross/@eng-Latn
+==== [`63_616`] /Polish Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -19660,7 +19637,7 @@ https://www.wikidata.org/wiki/Q6127600[Q6127600]
 
 
 [id='63_620']
-==== [`63_620`] 
+==== [`63_620`] ///Red Cross and Red Crescent of Portugal///@eng-Latn
 
 
 
@@ -19682,7 +19659,7 @@ https://www.wikidata.org/wiki/Q6127600[Q6127600]
 
 
 [id='63_624']
-==== [`63_624`] 
+==== [`63_624`] ///Red Cross and Red Crescent of Guinea-Bissau///@eng-Latn
 
 
 
@@ -19704,7 +19681,7 @@ https://www.wikidata.org/wiki/Q6127600[Q6127600]
 
 
 [id='63_626']
-==== [`63_626`] 
+==== [`63_626`] ///Red Cross and Red Crescent of Timor-Leste///@eng-Latn
 
 
 
@@ -19726,7 +19703,7 @@ https://www.wikidata.org/wiki/Q6127600[Q6127600]
 
 
 [id='63_630']
-==== [`63_630`] 
+==== [`63_630`] ///Red Cross and Red Crescent of Puerto Rico///@eng-Latn
 
 
 
@@ -19748,7 +19725,7 @@ https://www.wikidata.org/wiki/Q6127600[Q6127600]
 
 
 [id='63_634']
-==== [`63_634`] /Qatar Red Crescent Society/@eng-Latn
+==== [`63_634`] /Qatar Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -19808,7 +19785,7 @@ https://www.wikidata.org/wiki/Q7267117[Q7267117]
 
 
 [id='63_638']
-==== [`63_638`] 
+==== [`63_638`] ///Red Cross and Red Crescent of Réunion///@eng-Latn
 
 
 
@@ -19830,7 +19807,7 @@ https://www.wikidata.org/wiki/Q7267117[Q7267117]
 
 
 [id='63_642']
-==== [`63_642`] /Romanian Red Cross/@eng-Latn
+==== [`63_642`] /Romanian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -19887,7 +19864,7 @@ https://www.wikidata.org/wiki/Q7362571[Q7362571]
 
 
 [id='63_643']
-==== [`63_643`] /Russian Red Cross Society/@eng-Latn
+==== [`63_643`] /Russian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -19956,7 +19933,7 @@ https://www.wikidata.org/wiki/Q4398040[Q4398040]
 
 
 [id='63_646']
-==== [`63_646`] /Rwandan Red Cross/@eng-Latn
+==== [`63_646`] /Rwandan Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -20007,7 +19984,7 @@ https://www.wikidata.org/wiki/Q3698045[Q3698045]
 
 
 [id='63_652']
-==== [`63_652`] 
+==== [`63_652`] ///Red Cross and Red Crescent of Saint Barthélemy///@eng-Latn
 
 
 
@@ -20029,7 +20006,7 @@ https://www.wikidata.org/wiki/Q3698045[Q3698045]
 
 
 [id='63_654']
-==== [`63_654`] 
+==== [`63_654`] ///Red Cross and Red Crescent of Saint Helena///@eng-Latn
 
 
 
@@ -20051,7 +20028,7 @@ https://www.wikidata.org/wiki/Q3698045[Q3698045]
 
 
 [id='63_659']
-==== [`63_659`] /Saint Kitts and Nevis Red Cross Society/@eng-Latn
+==== [`63_659`] /Saint Kitts and Nevis Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -20099,7 +20076,7 @@ https://www.wikidata.org/wiki/Q7401605[Q7401605]
 
 
 [id='63_660']
-==== [`63_660`] 
+==== [`63_660`] ///Red Cross and Red Crescent of Anguilla///@eng-Latn
 
 
 
@@ -20121,7 +20098,7 @@ https://www.wikidata.org/wiki/Q7401605[Q7401605]
 
 
 [id='63_662']
-==== [`63_662`] /Saint Lucia Red Cross/@eng-Latn
+==== [`63_662`] /Saint Lucia Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -20169,7 +20146,7 @@ https://www.wikidata.org/wiki/Q7401698[Q7401698]
 
 
 [id='63_663']
-==== [`63_663`] 
+==== [`63_663`] ///Red Cross and Red Crescent of Saint Martin (French part)///@eng-Latn
 
 
 
@@ -20191,7 +20168,7 @@ https://www.wikidata.org/wiki/Q7401698[Q7401698]
 
 
 [id='63_666']
-==== [`63_666`] 
+==== [`63_666`] ///Red Cross and Red Crescent of Saint Pierre and Miquelon///@eng-Latn
 
 
 
@@ -20213,7 +20190,7 @@ https://www.wikidata.org/wiki/Q7401698[Q7401698]
 
 
 [id='63_670']
-==== [`63_670`] 
+==== [`63_670`] ///Red Cross and Red Crescent of Saint Vincent and The Grenadines///@eng-Latn
 
 
 
@@ -20235,7 +20212,7 @@ https://www.wikidata.org/wiki/Q7401698[Q7401698]
 
 
 [id='63_674']
-==== [`63_674`] 
+==== [`63_674`] ///Red Cross and Red Crescent of San Marino///@eng-Latn
 
 
 
@@ -20257,7 +20234,7 @@ https://www.wikidata.org/wiki/Q7401698[Q7401698]
 
 
 [id='63_678']
-==== [`63_678`] /São Tomé and Príncipe Red Cross/@eng-Latn
+==== [`63_678`] /São Tomé and Príncipe Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -20308,7 +20285,7 @@ https://www.wikidata.org/wiki/Q7665722[Q7665722]
 
 
 [id='63_682']
-==== [`63_682`] /Saudi Red Crescent Authority/@eng-Latn
+==== [`63_682`] /Saudi Red Crescent Authority/@eng-Latn/@eng-Latn
 
 
 
@@ -20374,7 +20351,7 @@ https://www.wikidata.org/wiki/Q2080022[Q2080022]
 
 
 [id='63_686']
-==== [`63_686`] /Senegalese Red Cross Society/@eng-Latn
+==== [`63_686`] /Senegalese Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -20434,7 +20411,7 @@ https://www.wikidata.org/wiki/Q3003248[Q3003248]
 
 
 [id='63_688']
-==== [`63_688`] /Red Cross of Serbia/@eng-Latn
+==== [`63_688`] /Red Cross of Serbia/@eng-Latn/@eng-Latn
 
 
 
@@ -20497,7 +20474,7 @@ https://www.wikidata.org/wiki/Q20011251[Q20011251]
 
 
 [id='63_690']
-==== [`63_690`] 
+==== [`63_690`] ///Red Cross and Red Crescent of Seychelles///@eng-Latn
 
 
 
@@ -20519,7 +20496,7 @@ https://www.wikidata.org/wiki/Q20011251[Q20011251]
 
 
 [id='63_694']
-==== [`63_694`] /Sierra Leone Red Cross Society/@eng-Latn
+==== [`63_694`] /Sierra Leone Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -20570,7 +20547,7 @@ https://www.wikidata.org/wiki/Q7511423[Q7511423]
 
 
 [id='63_702']
-==== [`63_702`] /Singapore Red Cross/@eng-Latn
+==== [`63_702`] /Singapore Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -20627,7 +20604,7 @@ https://www.wikidata.org/wiki/Q7523102[Q7523102]
 
 
 [id='63_703']
-==== [`63_703`] 
+==== [`63_703`] ///Red Cross and Red Crescent of Slovakia///@eng-Latn
 
 
 
@@ -20649,7 +20626,7 @@ https://www.wikidata.org/wiki/Q7523102[Q7523102]
 
 
 [id='63_704']
-==== [`63_704`] /Red Cross of Viet Nam/@eng-Latn
+==== [`63_704`] /Red Cross of Viet Nam/@eng-Latn/@eng-Latn
 
 
 
@@ -20709,7 +20686,7 @@ https://www.wikidata.org/wiki/Q10772254[Q10772254]
 
 
 [id='63_705']
-==== [`63_705`] /Slovenian Red Cross/@eng-Latn
+==== [`63_705`] /Slovenian Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -20769,7 +20746,7 @@ https://www.wikidata.org/wiki/Q12800001[Q12800001]
 
 
 [id='63_706']
-==== [`63_706`] /Somali Red Crescent Society/@eng-Latn
+==== [`63_706`] /Somali Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -20826,7 +20803,7 @@ https://www.wikidata.org/wiki/Q7559151[Q7559151]
 
 
 [id='63_710']
-==== [`63_710`] 
+==== [`63_710`] ///Red Cross and Red Crescent of South Africa///@eng-Latn
 
 
 
@@ -20848,7 +20825,7 @@ https://www.wikidata.org/wiki/Q7559151[Q7559151]
 
 
 [id='63_716']
-==== [`63_716`] /Zimbabwe Red Cross Society/@eng-Latn
+==== [`63_716`] /Zimbabwe Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -20905,7 +20882,7 @@ https://www.wikidata.org/wiki/Q8072007[Q8072007]
 
 
 [id='63_724']
-==== [`63_724`] /Spanish Red Cross/@eng-Latn
+==== [`63_724`] /Spanish Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -20974,7 +20951,7 @@ https://www.wikidata.org/wiki/Q5792382[Q5792382]
 
 
 [id='63_728']
-==== [`63_728`] 
+==== [`63_728`] ///Red Cross and Red Crescent of South Sudan///@eng-Latn
 
 
 
@@ -20996,7 +20973,7 @@ https://www.wikidata.org/wiki/Q5792382[Q5792382]
 
 
 [id='63_729']
-==== [`63_729`] /Sudanese Red Crescent Society/@eng-Latn
+==== [`63_729`] /Sudanese Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -21050,7 +21027,7 @@ https://www.wikidata.org/wiki/Q7633372[Q7633372]
 
 
 [id='63_732']
-==== [`63_732`] 
+==== [`63_732`] ///Red Cross and Red Crescent of Western Sahara///@eng-Latn
 
 
 
@@ -21072,7 +21049,7 @@ https://www.wikidata.org/wiki/Q7633372[Q7633372]
 
 
 [id='63_740']
-==== [`63_740`] 
+==== [`63_740`] ///Red Cross and Red Crescent of Suriname///@eng-Latn
 
 
 
@@ -21094,7 +21071,7 @@ https://www.wikidata.org/wiki/Q7633372[Q7633372]
 
 
 [id='63_744']
-==== [`63_744`] 
+==== [`63_744`] ///Red Cross and Red Crescent of Svalbard and Jan Mayen Islands///@eng-Latn
 
 
 
@@ -21116,7 +21093,7 @@ https://www.wikidata.org/wiki/Q7633372[Q7633372]
 
 
 [id='63_748']
-==== [`63_748`] 
+==== [`63_748`] ///Red Cross and Red Crescent of Kingdom of Eswatini///@eng-Latn
 
 
 
@@ -21138,7 +21115,7 @@ https://www.wikidata.org/wiki/Q7633372[Q7633372]
 
 
 [id='63_752']
-==== [`63_752`] /Swedish Red Cross/@eng-Latn
+==== [`63_752`] /Swedish Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -21210,7 +21187,7 @@ https://www.wikidata.org/wiki/Q18333444[Q18333444]
 
 
 [id='63_756']
-==== [`63_756`] /Swiss Red Cross/@eng-Latn
+==== [`63_756`] /Swiss Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -21294,7 +21271,7 @@ https://www.wikidata.org/wiki/Q456988[Q456988]
 
 
 [id='63_760']
-==== [`63_760`] /Syrian Arab Red Crescent/@eng-Latn
+==== [`63_760`] /Syrian Arab Red Crescent/@eng-Latn/@eng-Latn
 
 
 
@@ -21357,7 +21334,7 @@ https://www.wikidata.org/wiki/Q7663208[Q7663208]
 
 
 [id='63_762']
-==== [`63_762`] /list of Red Cross and Red Crescent Societies/@eng-Latn
+==== [`63_762`] /list of Red Cross and Red Crescent Societies/@eng-Latn/@eng-Latn
 
 
 
@@ -21435,7 +21412,7 @@ https://www.wikidata.org/wiki/Q1483344[Q1483344]
 
 
 [id='63_764']
-==== [`63_764`] /Thai Red Cross Society/@eng-Latn
+==== [`63_764`] /Thai Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -21519,7 +21496,7 @@ https://www.wikidata.org/wiki/Q4922087[Q4922087]
 
 
 [id='63_768']
-==== [`63_768`] /Togolese Red Cross/@eng-Latn
+==== [`63_768`] /Togolese Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -21564,7 +21541,7 @@ https://www.wikidata.org/wiki/Q7813206[Q7813206]
 
 
 [id='63_772']
-==== [`63_772`] 
+==== [`63_772`] ///Red Cross and Red Crescent of Tokelau///@eng-Latn
 
 
 
@@ -21586,7 +21563,7 @@ https://www.wikidata.org/wiki/Q7813206[Q7813206]
 
 
 [id='63_776']
-==== [`63_776`] /Tonga Red Cross Society/@eng-Latn
+==== [`63_776`] /Tonga Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -21634,7 +21611,7 @@ https://www.wikidata.org/wiki/Q7820968[Q7820968]
 
 
 [id='63_780']
-==== [`63_780`] /Trinidad and Tobago Red Cross Society/@eng-Latn
+==== [`63_780`] /Trinidad and Tobago Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -21679,7 +21656,7 @@ https://www.wikidata.org/wiki/Q16238476[Q16238476]
 
 
 [id='63_784']
-==== [`63_784`] /Emirates Red Crescent/@eng-Latn
+==== [`63_784`] /Emirates Red Crescent/@eng-Latn/@eng-Latn
 
 
 
@@ -21751,7 +21728,7 @@ https://www.wikidata.org/wiki/Q7303955[Q7303955]
 
 
 [id='63_788']
-==== [`63_788`] /Tunisian Red Crescent/@eng-Latn
+==== [`63_788`] /Tunisian Red Crescent/@eng-Latn/@eng-Latn
 
 
 
@@ -21808,7 +21785,7 @@ https://www.wikidata.org/wiki/Q12194677[Q12194677]
 
 
 [id='63_792']
-==== [`63_792`] /Turkish Red Crescent/@eng-Latn
+==== [`63_792`] /Turkish Red Crescent/@eng-Latn/@eng-Latn
 
 
 
@@ -21901,7 +21878,7 @@ https://www.wikidata.org/wiki/Q1059602[Q1059602]
 
 
 [id='63_795']
-==== [`63_795`] /Red Crescent Society of Turkmenistan/@eng-Latn
+==== [`63_795`] /Red Crescent Society of Turkmenistan/@eng-Latn/@eng-Latn
 
 
 
@@ -21955,7 +21932,7 @@ https://www.wikidata.org/wiki/Q7303954[Q7303954]
 
 
 [id='63_796']
-==== [`63_796`] 
+==== [`63_796`] ///Red Cross and Red Crescent of Turks and Caicos Islands///@eng-Latn
 
 
 
@@ -21977,7 +21954,7 @@ https://www.wikidata.org/wiki/Q7303954[Q7303954]
 
 
 [id='63_798']
-==== [`63_798`] 
+==== [`63_798`] ///Red Cross and Red Crescent of Tuvalu///@eng-Latn
 
 
 
@@ -21999,7 +21976,7 @@ https://www.wikidata.org/wiki/Q7303954[Q7303954]
 
 
 [id='63_800']
-==== [`63_800`] /Uganda Red Cross Society/@eng-Latn
+==== [`63_800`] /Uganda Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -22056,7 +22033,7 @@ https://www.wikidata.org/wiki/Q2473903[Q2473903]
 
 
 [id='63_804']
-==== [`63_804`] /Ukrainian Red Cross Society/@eng-Latn
+==== [`63_804`] /Ukrainian Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -22119,7 +22096,7 @@ https://www.wikidata.org/wiki/Q9364596[Q9364596]
 
 
 [id='63_807']
-==== [`63_807`] 
+==== [`63_807`] ///Red Cross and Red Crescent of Republic of North Macedonia///@eng-Latn
 
 
 
@@ -22141,7 +22118,7 @@ https://www.wikidata.org/wiki/Q9364596[Q9364596]
 
 
 [id='63_818']
-==== [`63_818`] 
+==== [`63_818`] ///Red Cross and Red Crescent of Egypt///@eng-Latn
 
 
 
@@ -22163,7 +22140,7 @@ https://www.wikidata.org/wiki/Q9364596[Q9364596]
 
 
 [id='63_826']
-==== [`63_826`] /British Red Cross/@eng-Latn
+==== [`63_826`] /British Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -22244,7 +22221,7 @@ https://www.wikidata.org/wiki/Q4970966[Q4970966]
 
 
 [id='63_831']
-==== [`63_831`] 
+==== [`63_831`] ///Red Cross and Red Crescent of Guernsey///@eng-Latn
 
 
 
@@ -22266,7 +22243,7 @@ https://www.wikidata.org/wiki/Q4970966[Q4970966]
 
 
 [id='63_832']
-==== [`63_832`] 
+==== [`63_832`] ///Red Cross and Red Crescent of Jersey///@eng-Latn
 
 
 
@@ -22288,7 +22265,7 @@ https://www.wikidata.org/wiki/Q4970966[Q4970966]
 
 
 [id='63_833']
-==== [`63_833`] 
+==== [`63_833`] ///Red Cross and Red Crescent of Isle of Man///@eng-Latn
 
 
 
@@ -22310,7 +22287,7 @@ https://www.wikidata.org/wiki/Q4970966[Q4970966]
 
 
 [id='63_834']
-==== [`63_834`] 
+==== [`63_834`] ///Red Cross and Red Crescent of United Republic of Tanzania///@eng-Latn
 
 
 
@@ -22332,7 +22309,7 @@ https://www.wikidata.org/wiki/Q4970966[Q4970966]
 
 
 [id='63_840']
-==== [`63_840`] /American Red Cross/@eng-Latn
+==== [`63_840`] /American Red Cross/@eng-Latn/@eng-Latn
 
 
 
@@ -22455,7 +22432,7 @@ https://www.wikidata.org/wiki/Q470110[Q470110]
 
 
 [id='63_854']
-==== [`63_854`] /Burkinabé Red Cross Society/@eng-Latn
+==== [`63_854`] /Burkinabé Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -22515,7 +22492,7 @@ https://www.wikidata.org/wiki/Q3697997[Q3697997]
 
 
 [id='63_858']
-==== [`63_858`] 
+==== [`63_858`] ///Red Cross and Red Crescent of Uruguay///@eng-Latn
 
 
 
@@ -22537,7 +22514,7 @@ https://www.wikidata.org/wiki/Q3697997[Q3697997]
 
 
 [id='63_860']
-==== [`63_860`] 
+==== [`63_860`] ///Red Cross and Red Crescent of Uzbekistan///@eng-Latn
 
 
 
@@ -22559,7 +22536,7 @@ https://www.wikidata.org/wiki/Q3697997[Q3697997]
 
 
 [id='63_862']
-==== [`63_862`] 
+==== [`63_862`] ///Red Cross and Red Crescent of Venezuela (Bolivarian Republic of)///@eng-Latn
 
 
 
@@ -22581,7 +22558,7 @@ https://www.wikidata.org/wiki/Q3697997[Q3697997]
 
 
 [id='63_876']
-==== [`63_876`] 
+==== [`63_876`] ///Red Cross and Red Crescent of Wallis and Futuna Islands///@eng-Latn
 
 
 
@@ -22603,7 +22580,7 @@ https://www.wikidata.org/wiki/Q3697997[Q3697997]
 
 
 [id='63_882']
-==== [`63_882`] /Samoa Red Cross Society/@eng-Latn
+==== [`63_882`] /Samoa Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
@@ -22651,7 +22628,7 @@ https://www.wikidata.org/wiki/Q7409910[Q7409910]
 
 
 [id='63_887']
-==== [`63_887`] /Yemen Red Crescent Society/@eng-Latn
+==== [`63_887`] /Yemen Red Crescent Society/@eng-Latn/@eng-Latn
 
 
 
@@ -22702,7 +22679,7 @@ https://www.wikidata.org/wiki/Q85816683[Q85816683]
 
 
 [id='63_894']
-==== [`63_894`] /Zambia Red Cross Society/@eng-Latn
+==== [`63_894`] /Zambia Red Cross Society/@eng-Latn/@eng-Latn
 
 
 
