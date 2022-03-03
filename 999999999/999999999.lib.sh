@@ -377,13 +377,14 @@ file_convert_xml_de_numerordinatio11() {
 
   _basim_fontem="${ROOTDIR}"
   _basim_objectivum="${ROOTDIR}"
+  tmeta="${ROOTDIR}/999999999/0/hxltm-exemplum.tmeta.yml"
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.xml"
   # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
 
-  echo "${FUNCNAME[0]}: hxltmcli --objectivum-XML [$fontem_archivum]"
-  hxltmcli --objectivum-XML "$fontem_archivum" "$objectivum_archivum"
+  echo "${FUNCNAME[0]}: hxltmcli --tmeta-archivum $tmeta --objectivum-XML [$fontem_archivum]"
+  hxltmcli --tmeta-archivum "$tmeta" --objectivum-XML "$fontem_archivum" "$objectivum_archivum"
 }
 
 #######################################
@@ -408,10 +409,11 @@ file_convert_tbx_de_numerordinatio11() {
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tbx"
+  tmeta="${ROOTDIR}/999999999/0/hxltm-exemplum.tmeta.yml"
   # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
 
-  echo "${FUNCNAME[0]}: hxltmcli --objectivum-TBX-Basim [$fontem_archivum]"
-  hxltmcli --objectivum-TBX-Basim "$fontem_archivum" "$objectivum_archivum"
+  echo "${FUNCNAME[0]}: hxltmcli --tmeta-archivum $tmeta --objectivum-TBX-Basim $fontem_archivum $objectivum_archivum"
+  hxltmcli --tmeta-archivum "$tmeta" --objectivum-TBX-Basim "$fontem_archivum" "$objectivum_archivum"
 }
 
 #######################################
@@ -437,9 +439,10 @@ file_convert_tmx_de_numerordinatio11() {
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tmx"
   # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+  tmeta="${ROOTDIR}/999999999/0/hxltm-exemplum.tmeta.yml"
 
-  echo "${FUNCNAME[0]}: hxltmcli --objectivum-TMX [$fontem_archivum]"
-  hxltmcli --objectivum-TMX "$fontem_archivum" "$objectivum_archivum"
+  echo "${FUNCNAME[0]}: hxltmcli --tmeta-archivum $tmeta --objectivum-TMX [$fontem_archivum]"
+  hxltmcli --tmeta-archivum "$tmeta" --objectivum-TMX "$fontem_archivum" "$objectivum_archivum"
 }
 
 #######################################

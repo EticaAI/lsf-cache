@@ -226,7 +226,8 @@ def numerordinatio_nomen(
 
     # TODO: temporary (2022-03-01) hacky on 1603:45:1
     elif '#item+rem+i_eng+is_latn+ix_completum' in rem and rem['#item+rem+i_eng+is_latn+ix_completum']:
-        resultatum = '/' + rem['#item+rem+i_eng+is_latn+ix_completum'] + '/@eng-Latn'
+        resultatum = '/' + \
+            rem['#item+rem+i_eng+is_latn+ix_completum'] + '/@eng-Latn'
 
     if len(resultatum):
         return _brevis(resultatum)
@@ -534,6 +535,25 @@ class Codex:
                 codex_lineam.append(lineam)
 
         return codex_lineam
+
+    def _referencia(self, rem: dict, index: int = 1) -> list:
+        paginae = []
+        iri = ''
+        comment = ''
+        if '#item+rem+i_qcc+is_zxxx+ix_codexfacto' in rem and \
+                rem['#item+rem+i_qcc+is_zxxx+ix_codexfacto']:
+            parts = rem['#item+rem+i_qcc+is_zxxx+ix_codexfacto'].split('||')
+            iri = parts[0]
+            comment = parts[1]
+            paginae.append(
+                "Referēns {0}::".format(index))
+            paginae.append(
+                "  /reference URL/@eng-Latn:::\n    link:{0}[]".format(iri))
+            paginae.append(
+                "  Linguae multiplīs (Scrīptum incognitō):::\n{0}".format(_pad(comment, 4)))
+            # paginae.append()
+
+        return paginae
 
     def codex_appendici(self) -> list:
         """cōdex appendicī /book appendix/@eng-Latn
@@ -1680,6 +1700,22 @@ class Codex:
                 paginae.append("")
                 # meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
                 #     term.replace("\\n", "\n")
+
+        referentia = []
+        for index, item in enumerate(range(20)):
+            referentia_textum = self.quod_res(
+                '0_1603_1_7_2616_854_' + str(item))
+            if referentia_textum and len(referentia_textum) > 0:
+                referentia.extend(self._referencia(referentia_textum, index))
+
+        if len(referentia) > 0:
+            paginae.append('=== Referentia')
+            # paginae.append('')
+            # paginae.append('----')
+            # paginae.append(str(referentia))
+            paginae.extend(referentia)
+            # paginae.append('----')
+            paginae.append('')
 
         if 'no11' in self.archiva:
             paginae.append('=== Methodī ex verbīs in dictiōnāriīs')

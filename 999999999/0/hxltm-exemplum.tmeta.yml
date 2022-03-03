@@ -1,0 +1,19 @@
+# hxltm-exemplum-linguam.tmeta.yml
+# HXLTM Datum: hxltm-exemplum-linguam.tm.hxl.csv
+
+# _[eng-Latn]
+# "_" is a language and script neutral variable used for global variables
+#
+# On reference hxltm implementation, values here will be exported as _global_
+# So {{ ____.glossarium_fontem }} = "Nōmenclātūra multilinguae",
+# {{ ____.glossarium_fontem }} = "Etica.AI", ...
+#  [eng-Latn]_
+____:
+  glossarium_titulum: Nōmenclātūra multilinguae
+  # glossarium_fontem: Etica.AI
+  glossarium_fontem: Multiplicēs scrīptōribus
+  glossarium_annotationem: |
+    NOTE: The language for de facto linguistic content is explained on
+    [1603:1:51]. The interlinguistic (mostly standards and conventions for
+    codes on data exchange) use BCP47 syntax and specific semantics
+    are explained on [1603:1:7].
