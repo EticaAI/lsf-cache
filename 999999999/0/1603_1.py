@@ -226,7 +226,7 @@ def numerordinatio_nomen(
 
     # TODO: temporary (2022-03-01) hacky on 1603:45:1
     elif '#item+rem+i_eng+is_latn+ix_completum' in rem and rem['#item+rem+i_eng+is_latn+ix_completum']:
-        return '/' + rem['#item+rem+i_eng+is_latn+ix_completum'] + '/@eng-Latn'
+        resultatum = '/' + rem['#item+rem+i_eng+is_latn+ix_completum'] + '/@eng-Latn'
 
     if len(resultatum):
         return _brevis(resultatum)
@@ -237,28 +237,42 @@ def numerordinatio_nomen(
 def _brevis(rem: str) -> str:
     linguam = ''
     pseudo_ipa = ''
-    if rem.find('///'):
+    # rem = 'oi' + rem
+    if rem.find('///') > -1:
         rem = rem.replace('///', '//')
 
-    if not rem.find('||'):
+    if rem.find('||') == -1:
         return rem
 
-    if rem.find('/@'):
+    if rem.find('/@') > -1:
         linguam = rem.split('/@')[-1]
+
     if rem.startswith('//'):
         pseudo_ipa = '//'
+
     elif rem.startswith('/'):
         pseudo_ipa = '/'
 
     nomen = ''
     temp = rem.split('||')
     nomen = temp[0].strip()
-    if len(pseudo_ipa) > 0:
+
+    if len(pseudo_ipa) > -1:
+        if nomen.find('/@'):
+            nomen = nomen.split('/@')[0]
         nomen = nomen + pseudo_ipa
         if len(linguam) > 0:
             nomen = nomen + '@' + linguam
 
     return nomen
+
+
+def _pad(textum: str, pad: int) -> str:
+    lineam = textum.splitlines()
+    resultatum = ''
+    for rem in lineam:
+        resultatum += (' ' * pad) + rem + "\n"
+    return resultatum
 
 
 def numerordinatio_trivium_sarcina(
@@ -621,110 +635,182 @@ class Codex:
         resultatum.append('')
 
         if self.annexis.est_annexum(numerum_archiva + '.no1.tm.hxl.csv'):
-            dictionaria_part.append('')
-            dictionaria_part.append('==== {0}.no1.tm.hxl.csv'.format(
-                numerum_archiva
-            ))
-            dictionaria_part.append('')
-            dictionaria_part.append(
-                'NOTE: link:{0}.no1.tm.hxl.csv[{0}.no1.tm.hxl.csv]'.format(
-                    numerum_archiva
-                ))
-            # dictionaria_part.append('')
-            # meta_item = {
-            #     '#item+rem+i_qcc+is_zxxx+ix_wikip854':
-            #     'https://numerordinatio.etica.ai/'
-            # }
-            # dictionaria_part.extend(
-            #     self.conceptum_ad_tabula_codicibus(meta_item))
-            # dictionaria_part.append('')
-            dictionaria_part.append('')
-            dictionaria_part.extend(descriptio_tabulae_de_lingua(
-                ['Lingua Anglica (Abecedarium Latinum)'] * 1,
-                ["/Numerordinatio on HXLTM container/"]))
 
-            dictionaria_part.append('')
+            dictionaria_part.append(
+                "\n==== {0}.no1.tm.hxl.csv\n\n"
+                "{1}::\n  {2}::: {3}\n"
+                "{4}::\n  {5}:::\n{6}\n".format(
+                    numerum_archiva,  # 0
+                    'Rēs interlinguālibus',  # 1
+                    '/download link/@eng-Latn',  # 2
+                    'link:{0}.no1.tm.hxl.csv[{0}.no1.tm.hxl.csv]'.format(  # 3
+                        numerum_archiva
+                    ),
+                    'Rēs linguālibus',  # 4
+                    'Lingua Anglica (Abecedarium Latinum)',  # 5
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_1 🗣️_ %}'), 4)  # 6
+                ))
+
             total_dictionaria += 1
 
         if self.annexis.est_annexum(numerum_archiva + '.no11.tm.hxl.csv'):
-            dictionaria_part.append('')
-            dictionaria_part.append('==== {0}.no11.tm.hxl.csv'.format(
-                numerum_archiva
-            ))
-            dictionaria_part.append('')
-            dictionaria_part.append(
-                'NOTE: link:{0}.no11.tm.hxl.csv[{0}.no11.tm.hxl.csv]'.format(
-                    numerum_archiva
-                ))
 
-            dictionaria_part.append('')
-            dictionaria_part.extend(descriptio_tabulae_de_lingua(
-                ['Lingua Anglica (Abecedarium Latinum)'] * 1,
-                ["/Numerordinatio on HXLTM container (expanded with terminology translations)/"]))
-            dictionaria_part.append('')
+            dictionaria_part.append(
+                "\n==== {0}.no11.tm.hxl.csv\n\n"
+                "{1}::\n  {2}::: {3}\n"
+                "{4}::\n  {5}:::\n{6}\n".format(
+                    numerum_archiva,  # 0
+                    'Rēs interlinguālibus',  # 1
+                    '/download link/@eng-Latn',  # 2
+                    'link:{0}.no11.tm.hxl.csv[{0}.no11.tm.hxl.csv]'.format(  # 3
+                        numerum_archiva
+                    ),
+                    'Rēs linguālibus',  # 4
+                    'Lingua Anglica (Abecedarium Latinum)',  # 5
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_2 🗣️_ %}'), 4)  # 6
+                ))
 
             total_dictionaria += 1
 
         if self.annexis.est_annexum(numerum_archiva + '.wikiq.tm.hxl.csv'):
-            dictionaria_part.append('')
-            dictionaria_part.append('==== {0}.wikiq.tm.hxl.csv'.format(
-                numerum_archiva
-            ))
-            dictionaria_part.append('')
+
+            # save url, reference url, description
             dictionaria_part.append(
-                'NOTE: link:{0}.wikiq.tm.hxl.csv[{0}.wikiq.tm.hxl.csv]'.format(
-                    numerum_archiva
+                "\n==== {0}.wikiq.tm.hxl.csv\n\n"
+                "{1}::\n  {2}::: {3}\n  {7}:::\n{8}\n"
+                "{4}::\n  {5}:::\n{6}\n".format(
+                    numerum_archiva,  # 0
+                    'Rēs interlinguālibus',  # 1
+                    '/download link/@eng-Latn',  # 2
+                    'link:{0}.wikiq.tm.hxl.csv[{0}.wikiq.tm.hxl.csv]'.format(
+                        numerum_archiva
+                    ),
+                    'Rēs linguālibus',  # 4
+                    'Lingua Anglica (Abecedarium Latinum)',  # 5
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_6 🗣️_ %}'), 4),  # 6
+                    '/reference URL/@eng-Latn',  # 7
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_6_854 🗣️_ %}'), 4)  # 8
                 ))
-            dictionaria_part.append('')
-            meta_item = {
-                '#item+rem+i_qcc+is_zxxx+ix_wikip854':
-                'https://hxltm.etica.ai/'
-            }
-            dictionaria_part.extend(
-                self.conceptum_ad_tabula_codicibus(meta_item))
-            dictionaria_part.append('')
-            dictionaria_part.extend(descriptio_tabulae_de_lingua(
-                ['Lingua Anglica (Abecedarium Latinum)'] * 1,
-                [
-                    "HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq "
-                    "means #item+conceptum+codicem are strictly "
-                    "Wikidata QIDs."]
-            ))
-            dictionaria_part.append('')
+
+            total_dictionaria += 1
+
+        if self.annexis.est_annexum(numerum_archiva + '.no11.xml'):
+
+            # save url, reference url, description
+            dictionaria_part.append(
+                "\n==== {0}.no11.xml\n\n"
+                "{1}::\n  {2}::: {3}\n  {7}:::\n{8}\n"
+                "{4}::\n  {5}:::\n{6}\n".format(
+                    numerum_archiva,  # 0
+                    'Rēs interlinguālibus',  # 1
+                    '/download link/@eng-Latn',  # 2
+                    'link:{0}.no11.xml[{0}.no11.xml]'.format(
+                        numerum_archiva
+                    ),
+                    'Rēs linguālibus',  # 4
+                    'Lingua Anglica (Abecedarium Latinum)',  # 5
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_7 🗣️_ %}'), 4),  # 6
+                    '/reference URL/@eng-Latn',  # 7
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_7_854 🗣️_ %}'), 4)  # 8
+                ))
+
+        if self.annexis.est_annexum(numerum_archiva + '.no11.tbx'):
+
+            # save url, reference url, description
+            dictionaria_part.append(
+                "\n==== {0}.no11.tbx\n\n"
+                "{1}::\n  {2}::: {3}\n  {7}:::\n{8}\n"
+                "{4}::\n  {5}:::\n{6}\n".format(
+                    numerum_archiva,  # 0
+                    'Rēs interlinguālibus',  # 1
+                    '/download link/@eng-Latn',  # 2
+                    'link:{0}.no11.tbx[{0}.no11.tbx]'.format(
+                        numerum_archiva
+                    ),
+                    'Rēs linguālibus',  # 4
+                    'Lingua Anglica (Abecedarium Latinum)',  # 5
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_8 🗣️_ %}'), 4),  # 6
+                    '/reference URL/@eng-Latn',  # 7
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_8_854 🗣️_ %}'), 4)  # 8
+                ))
+
+        if self.annexis.est_annexum(numerum_archiva + '.no11.tmx'):
+
+            # save url, reference url, description
+            dictionaria_part.append(
+                "\n==== {0}.no11.tmx\n\n"
+                "{1}::\n  {2}::: {3}\n  {7}:::\n{8}\n"
+                "{4}::\n  {5}:::\n{6}\n".format(
+                    numerum_archiva,  # 0
+                    'Rēs interlinguālibus',  # 1
+                    '/download link/@eng-Latn',  # 2
+                    'link:{0}.no11.tmx[{0}.no11.tmx]'.format(
+                        numerum_archiva
+                    ),
+                    'Rēs linguālibus',  # 4
+                    'Lingua Anglica (Abecedarium Latinum)',  # 5
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_9 🗣️_ %}'), 4),  # 6
+                    '/reference URL/@eng-Latn',  # 7
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_9_854 🗣️_ %}'), 4)  # 8
+                ))
 
             total_dictionaria += 1
 
         if self.annexis.est_annexum(numerum_archiva + '.mul-Latn.codex.adoc'):
-            codex_part.append('')
-            codex_part.append('==== {0}.mul-Latn.codex.adoc'.format(
-                numerum_archiva
-            ))
-            codex_part.append('')
+
+            # save url, reference url, description
             codex_part.append(
-                'NOTE: link:{0}.mul-Latn.codex.adoc[{0}.mul-Latn.codex.adoc]'.format(
-                    numerum_archiva
+                "\n==== {0}.mul-Latn.codex.adoc\n\n"
+                "{1}::\n  {2}::: {3}\n  {7}:::\n{8}\n"
+                "{4}::\n  {5}:::\n{6}\n".format(
+                    numerum_archiva,  # 0
+                    'Rēs interlinguālibus',  # 1
+                    '/download link/@eng-Latn',  # 2
+                    'link:{0}.mul-Latn.codex.adoc[{0}.mul-Latn.codex.adoc]'.format(
+                        numerum_archiva
+                    ),
+                    'Rēs linguālibus',  # 4
+                    'Lingua Anglica (Abecedarium Latinum)',  # 5
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_10 🗣️_ %}'), 4),  # 6
+                    '/reference URL/@eng-Latn',  # 7
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_10_854 🗣️_ %}'), 4)  # 8
                 ))
-            codex_part.append('')
-            meta_item = {
-                '#item+rem+i_qcc+is_zxxx+ix_wikip854':
-                'https://asciidoctor.org/docs/'
-            }
-            codex_part.extend(
-                self.conceptum_ad_tabula_codicibus(meta_item))
-            codex_part.append('')
 
             total_codex += 1
 
         if self.annexis.est_annexum(numerum_archiva + '.mul-Latn.codex.pdf'):
-            codex_part.append('')
-            codex_part.append('==== {0}.mul-Latn.codex.pdf'.format(
-                numerum_archiva
-            ))
-            codex_part.append('')
+
             codex_part.append(
-                'NOTE: link:{0}.mul-Latn.codex.pdf[{0}.mul-Latn.codex.pdf]'.format(
-                    numerum_archiva
+                "\n==== {0}.mul-Latn.codex.pdf\n\n"
+                "{1}::\n  {2}::: {3}\n  {7}:::\n{8}\n"
+                "{4}::\n  {5}:::\n{6}\n".format(
+                    numerum_archiva,  # 0
+                    'Rēs interlinguālibus',  # 1
+                    '/download link/@eng-Latn',  # 2
+                    'link:{0}.mul-Latn.codex.pdf[{0}.mul-Latn.codex.pdf]'.format(
+                        numerum_archiva
+                    ),
+                    'Rēs linguālibus',  # 4
+                    'Lingua Anglica (Abecedarium Latinum)',  # 5
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_11 🗣️_ %}'), 4),  # 6
+                    '/reference URL/@eng-Latn',  # 7
+                    _pad(self.notitiae.translatio(
+                        '{% _🗣️ 1603_1_99_101_11_854 🗣️_ %}'), 4)  # 8
                 ))
+
             total_codex += 1
 
         # Compile final result
@@ -1005,6 +1091,7 @@ class Codex:
         #     self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
         #     self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
         # ))
+        # Book title (after all introduction)
         resultatum.append("== {0}".format(
             self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
         ))
@@ -1024,16 +1111,16 @@ class Codex:
             #     ('#' * (codicem_ordo + 3)) + ' ' +
             #     '<span lang="la">Pictūrae</span>'
             # )
-            resultatum.append('[discrete]')
-            resultatum.append(
-                ('=' * (codicem_ordo + 2)) + ' ' +
-                'Annexa'
-            )
-            resultatum.append('[discrete]')
-            resultatum.append(
-                ('=' * (codicem_ordo + 3)) + ' ' +
-                'Pictūrae'
-            )
+            # resultatum.append('[discrete]')
+            # resultatum.append(
+            #     ('=' * (codicem_ordo + 2)) + ' ' +
+            #     'Annexa'
+            # )
+            # resultatum.append('[discrete]')
+            # resultatum.append(
+            #     ('=' * (codicem_ordo + 3)) + ' ' +
+            #     'Pictūrae'
+            # )
             for item in picturae:
 
                 trivium = item.quod_temp_rel_pic()
@@ -1095,11 +1182,9 @@ class Codex:
                         # link = item.quod_temp_link()
                         # link = item.quod_link()
                         resultatum.append(
-                            'image::{1}[title="++{0}++"]\n'.format(titulum, trivium))
-                        # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
-                        # if link:
-                        #     resultatum.append(
-                        #         'link:++{1}++[++{0}++]\n'.format(titulum, link))
+                            'image::{1}[title="++{0}++"]\n'.format(
+                                titulum, trivium))
+
                 resultatum.append("")
 
                 resultatum.append("[id='{0}']".format(codicem_normale))
@@ -1134,8 +1219,6 @@ class Codex:
                 ('=' * (codicem_ordo + 2)) +
                 ' [`' + codicem_loci + '`] ' + nomen + "\n"
             )
-            # resultatum.append(
-            #     "+++<a id='{0}' href='#{0}'>§ {0}</a>+++".format(codicem_normale))
 
             resultatum.append("\n")
             resultatum.append(numerordinatio_summary(item))
@@ -1165,8 +1248,9 @@ class Codex:
                     # link = item.quod_temp_link()
                     link = item.quod_link()
                     resultatum.append(
-                        'image::{1}[title="++{0}++"]\n'.format(titulum, trivium))
-                    # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
+                        'image::{1}[title="++{0}++"]\n'.format(
+                            titulum, trivium))
+
                     if link:
                         resultatum.append(
                             'link:++{1}++[++{0}++]\n'.format(titulum, link))
@@ -1177,6 +1261,72 @@ class Codex:
             resultatum.append("\n")
 
         return resultatum
+
+    def codex_nota_bene(self) -> list:
+        """cōdex notā bene
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - notā bene, ---, https://en.wiktionary.org/wiki/nota_bene#Latin
+
+        Returns:
+            [list]:
+        """
+        paginae = []
+
+        # TODO: somewhat hardcoded. Could be improved, but not immediate
+        #       priority
+
+        # resultatum.append("[id=0_999_1603_1]")
+        paginae.append("== Notā bene")
+        # paginae.append("=== {0}".format(
+        #     self.notitiae.translatio('{% _🗣️ 1603_1_99_100_1 🗣️_ %}')
+        # ))
+        paginae.append("\n=== {0}\n\n{1}::\n  {2}:::\n{3}".format(
+            self.notitiae.translatio('{% _🗣️ 1603_1_99_100_1 🗣️_ %}'),
+            'Rēs linguālibus',
+            'Lingua Anglica (Abecedarium Latinum)',
+            _pad(self.notitiae.translatio(
+                '{% _🗣️ 1603_1_99_100_1_1 🗣️_ %}'), 4)
+        ))
+
+        paginae.append("\n=== {0}\n\n{1}::\n  {2}:::\n{3}".format(
+            self.notitiae.translatio('{% _🗣️ 1603_1_99_100_2 🗣️_ %}'),
+            'Rēs linguālibus',
+            'Lingua Anglica (Abecedarium Latinum)',
+            _pad(self.notitiae.translatio(
+                '{% _🗣️ 1603_1_99_100_2_1 🗣️_ %}'), 4)
+        ))
+
+        paginae.append("\n=== {0}\n\n{1}::\n  {2}:::\n{3}".format(
+            self.notitiae.translatio('{% _🗣️ 1603_1_99_100_3 🗣️_ %}'),
+            'Rēs linguālibus',
+            'Lingua Anglica (Abecedarium Latinum)',
+            _pad(self.notitiae.translatio(
+                '{% _🗣️ 1603_1_99_100_3_1 🗣️_ %}'), 4)
+        ))
+
+        paginae.append("\n=== {0}\n\n{1}::\n  {2}:::\n{3}".format(
+            self.notitiae.translatio('{% _🗣️ 1603_1_99_100_4 🗣️_ %}'),
+            'Rēs linguālibus',
+            'Lingua Anglica (Abecedarium Latinum)',
+            _pad(self.notitiae.translatio(
+                '{% _🗣️ 1603_1_99_100_4_1 🗣️_ %}'), 4)
+        ))
+
+        # quote_textum = self.notitiae.translatio('{% _🗣️ 1603_1_99_50_1 🗣️_ %}')
+        # paginae.append("[quote]")
+
+        # nb100_1 = self.notitiae.translatio('{% _🗣️ 1603_1_99_100_1 🗣️_ %}')
+        # nb100_1_1 = self.notitiae.translatio('{% _🗣️ 1603_1_99_100_1 🗣️_ %}')
+        # paginae.append("[quote]")
+        # # resultatum.append(
+        # #     "/_**Public domain means that each major common issue "
+        # #     "only needs to be resolved once**_/@eng-Latn")
+        # paginae.append(quote_textum)
+        # paginae.append("")
+
+        return paginae
 
     def conceptum_ad_tabula_verbis(self, rem: dict) -> list:
         """conceptum ad tabula verbīs
@@ -1395,6 +1545,7 @@ class Codex:
         # codex_appendici = self.codex_appendici()
         # methodi_ex_codice = self.methodi_ex_codice()
 
+        codex_nota_bene = self.codex_nota_bene()
         codex_archio = self.codex_archio()
         # Compute methodi_ex_codice last (to receive statistics of others)
         methodi_ex_codice = self.methodi_ex_codice()
@@ -1411,6 +1562,8 @@ class Codex:
         paginae.extend(["[.text-center]\n", 'Dictiōnāria initiīs'])
         paginae.extend(['', '<<<', ''])
         paginae.extend(codex_corpori)
+        paginae.extend(['', '<<<', ''])
+        paginae.extend(codex_nota_bene)
         paginae.extend(['', '<<<', ''])
         # exemplum = [
         #     '== /Test/',

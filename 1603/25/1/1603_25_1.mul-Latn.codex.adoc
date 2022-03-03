@@ -92,7 +92,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-02-28T22:34:10
+2022-03-03T01:37:47
 
 |
 /SPDX license ID/@eng-Latn
@@ -166,8 +166,6 @@ Lingua Anglica (Abecedarium Latinum)
 **Major reasons for "wrong translations" are not translators fault**
 
 TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
-
-NOTE: Both at concept level and (as general statistics) book level, is planned to have indication concept likelihood of being well understood for very stricter translations initiatives.
 
 The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
 
@@ -807,144 +805,76 @@ Verba de conceptiō
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-Every book comes with several files both for book format (with (Abecedarium additional information) and machine-readable formats with Latinum) documentation of how to process them. If you receive this file and cannot find the alternatives, ask the human who provide this file.
+**Context information**: ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis, not _just_ an static work), then the actual groundbreaking difference on the workflow used to generate every dictionaries on Cōdex such as this one are the following fact: **we provide well machine readable formats even when the equivalents on _international languages_, such as English, don't have for areas such as humanitarian aid, development aid and human rights**. The closest to such multilingualism (outside Wikimedia) are European Union SEMICeu (up to 24 languages), but even then have issues while sharing translations on all languages. United Nations translations (up to 6 languages, rarely more) are not available by humanitarian agencies to help with terminology translations.
+
+**Practical implication**: machine-readable formats on _Archīa prō dictiōnāriīs_ (literal English translation: Files for dictionaries) are the focus and recommended for derived works and intended for mitigating additional human errors. We can even create new formats by request. The text documents on _Archīa prō cōdice_ (literal English translation: Files for book) are alternatives to this book format.
 
 |===
 
 === Archīa prō dictiōnāriīs: 3
 
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-TIP: Is recommended to use the files on this section to  generate derived works.
-
-|===
-
 
 ==== 1603_25_1.no1.tm.hxl.csv
 
-NOTE: link:1603_25_1.no1.tm.hxl.csv[1603_25_1.no1.tm.hxl.csv]
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_25_1.no1.tm.hxl.csv[1603_25_1.no1.tm.hxl.csv]
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    /Numerordinatio on HXLTM container/
 
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-/Numerordinatio on HXLTM container/
-
-|===
 
 
 ==== 1603_25_1.no11.tm.hxl.csv
 
-NOTE: link:1603_25_1.no11.tm.hxl.csv[1603_25_1.no11.tm.hxl.csv]
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_25_1.no11.tm.hxl.csv[1603_25_1.no11.tm.hxl.csv]
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    /Numerordinatio on HXLTM container (expanded with terminology translations)/
 
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-/Numerordinatio on HXLTM container (expanded with terminology translations)/
-
-|===
 
 
 ==== 1603_25_1.wikiq.tm.hxl.csv
 
-NOTE: link:1603_25_1.wikiq.tm.hxl.csv[1603_25_1.wikiq.tm.hxl.csv]
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_25_1.wikiq.tm.hxl.csv[1603_25_1.wikiq.tm.hxl.csv]
+  /reference URL/@eng-Latn:::
+    https://hxltm.etica.ai/
 
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codicem are strictly Wikidata QIDs.
 
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/reference URL/@eng-Latn
-|
-https://hxltm.etica.ai/
-
-|===
-
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codicem are strictly Wikidata QIDs.
-
-|===
 
 
 === Archīa prō cōdice: 2
 
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-WARNING: Unless you are working with a natural language you understand it\'s letters and symbols, it is strongly advised to use automation to generate derived works. Keep manual human steps at minimum: if something goes wrong at least one or more languages can be used to verify mistakes. It's not at all necessary _know all languages_, but working with writing systems you don't understand is risky: copy and paste strategy can cause _additional_ human errors and is unlikely to get human review as fast as you would need.
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-TIP: The Asciidoctor (.adoc) is better at copy and pasting! It can be converted to other text formats.
-
-|===
-
 
 ==== 1603_25_1.mul-Latn.codex.adoc
 
-NOTE: link:1603_25_1.mul-Latn.codex.adoc[1603_25_1.mul-Latn.codex.adoc]
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_25_1.mul-Latn.codex.adoc[1603_25_1.mul-Latn.codex.adoc]
+  /reference URL/@eng-Latn:::
+    https://docs.asciidoctor.org/
 
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    AsciiDoc is a plain text authoring format (i.e., lightweight markup language) for writing technical content such as documentation, articles, and books.
 
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/reference URL/@eng-Latn
-|
-https://asciidoctor.org/docs/
-
-|===
 
 
 ==== 1603_25_1.mul-Latn.codex.pdf
 
-NOTE: link:1603_25_1.mul-Latn.codex.pdf[1603_25_1.mul-Latn.codex.pdf]
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_25_1.mul-Latn.codex.pdf[1603_25_1.mul-Latn.codex.pdf]
+  /reference URL/@eng-Latn:::
+    https://en.wikipedia.org/wiki/PDF
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Portable Document Format (PDF), standardized as ISO 32000, is a file format developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems.
+
+
 
 
 <<<
@@ -956,10 +886,6 @@ Dictiōnāria initiīs
 <<<
 
 == //dictiōnāria de partes corporis humani//
-[discrete]
-==== Annexa
-[discrete]
-===== Pictūrae
 image::1603_25_1.~2/0~2.png[title="++Sine nomine++"]
 
 Sine nomine
@@ -2245,6 +2171,42 @@ v_n1603_25_1_extremitates
 
 
 
+
+
+<<<
+
+== Notā bene
+
+=== [HELP WANTED] Generated PDF don't have right fonts for all languages
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    First, sorry if this affects your loved language. We're working on this, but we are still not perfected.
+    If you have fonts installed on your computer, you very likely can still copy and paste from the eBook version.
+    Please note that all formats intended for machine processing will work fine.
+
+
+=== [Book with Wikidata Q] I want to help! Some translation is missing or is wrong! How to change it?
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Most (but not all) concepts are using Wikidata Q. In fact, most of the time we improve Wikidata while preparing the dictionaries. Please check if the exact concept you want have a Q ID then click. There you can add translations.
+    The next release (likely weekly) will have your submissions without need to contact us directly.
+
+
+=== [Book with Wikidata Q] I can find the Wikidata concept, but I'm unable to edit!
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    While Wikidata is more flexible than Wikipedia's (for example, it allows concepts without need to create Wikipedia pages) even Wikidata can have concepts which require creating an account and don't allow anonymous editing. Creating such an account and confirming email is faster than asking someone else's do it for you.
+    However, while vandalism on Wikidata is rare, very few concepts will require an account with more contributions and not created very recently. If this is your case, help with the ones you can do alone and the rest ask someone else to add to you.
+
+
+=== I heard there is an interest in having Cōdex beyond Latin language! How to do it?!
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Please contact us. This book uses Latin (sometimes _dog Latin_) to document all other languages, but we obviously can automated generation of books for others using other writing systems and some reference language.
 
 
 <<<

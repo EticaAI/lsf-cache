@@ -72,6 +72,8 @@ file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxl
 file_convert_numerordinatio_de_hxltm "1603_45_1" "1" "0"
 file_translate_csv_de_numerordinatio_q "1603_45_1" "0" "0"
 file_merge_numerordinatio_de_wiki_q "1603_45_1" "0" "0"
+file_convert_tmx_de_numerordinatio11 "1603_45_1"
+file_convert_tbx_de_numerordinatio11 "1603_45_1"
 neo_codex_de_numerordinatio "1603_45_1" "0" "0"
 neo_codex_de_numerordinatio_pdf "1603_45_1" "0" "0"
 
@@ -85,6 +87,8 @@ neo_codex_de_numerordinatio_pdf "1603_45_1" "0" "0"
 # file_convert_numerordinatio_de_hxltm "1603_45_31" "1" "0"
 # file_translate_csv_de_numerordinatio_q "1603_45_31" "0" "0"
 # file_merge_numerordinatio_de_wiki_q "1603_45_31" "0" "0"
+# file_convert_tmx_de_numerordinatio11 "1603_45_31"
+# file_convert_tbx_de_numerordinatio11 "1603_45_31"
 # neo_codex_de_numerordinatio "1603_45_31" "0" "0"
 # neo_codex_de_numerordinatio_pdf "1603_45_31" "0" "0"
 

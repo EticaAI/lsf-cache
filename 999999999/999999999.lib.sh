@@ -379,7 +379,7 @@ file_convert_xml_de_numerordinatio11() {
   _basim_objectivum="${ROOTDIR}"
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
-  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.xml"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.xml"
   # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
 
   echo "${FUNCNAME[0]}: hxltmcli --objectivum-XML [$fontem_archivum]"
@@ -407,7 +407,7 @@ file_convert_tbx_de_numerordinatio11() {
   _basim_objectivum="${ROOTDIR}"
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
-  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.tbx"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tbx"
   # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
 
   echo "${FUNCNAME[0]}: hxltmcli --objectivum-TBX-Basim [$fontem_archivum]"
@@ -435,7 +435,7 @@ file_convert_tmx_de_numerordinatio11() {
   _basim_objectivum="${ROOTDIR}"
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
-  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.tmx"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tmx"
   # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
 
   echo "${FUNCNAME[0]}: hxltmcli --objectivum-TMX [$fontem_archivum]"
