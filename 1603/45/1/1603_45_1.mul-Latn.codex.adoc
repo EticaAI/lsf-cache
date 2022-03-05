@@ -92,7 +92,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-03T03:56:36
+2022-03-05T01:15:13
 
 |
 /SPDX license ID/@eng-Latn
@@ -121,7 +121,7 @@ The decision making behind the concept dictionaries was lingual terminology tran
 
 **UN System**
 
-The dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).
+The dictionary contains an incomplete list of concepts of the UN System. 
 
 **National Red Cross and Red Crescent Societies**
 
@@ -142,7 +142,7 @@ The dictionaries here do not list subnational organizations. However, we do have
 Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
 
 **Other humanitarian organizations are missing**
-These dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups.
+We're still adding organizations which are neither UN or Red Cross. However, we're likely to keep this focused on humanitarian aid and have development aid. Human rights and humanitarian relief organizations will not be added here
 
 |===
 
@@ -163,7 +163,7 @@ Factum
 
 |===
 
-=== Referentia
+==== Referentia
 Referēns 1::
   /reference URL/@eng-Latn:::
     link:https://www.un.org/en/about-us/un-system[]
@@ -193,6 +193,18 @@ Referēns 5::
     link:https://www.wikidata.org/wiki/Wikidata:WikiProject_Humanitarian_Wikidata[]
   Linguae multiplīs (Scrīptum incognitō):::
     Wikidata:WikiProject Humanitarian Wikidata. More volunteers are welcome!
+
+Referēns 6::
+  /reference URL/@eng-Latn:::
+    link:https://www.wikidata.org/w/index.php?search=M%C3%A9decins+Sans+Fronti%C3%A8res[]
+  Linguae multiplīs (Scrīptum incognitō):::
+    /To do: get more MSFs from Wikidata (several are not on Wikipedia, BUT are on Wikidata)/@eng-Latn
+
+Referēns 7::
+  /reference URL/@eng-Latn:::
+    link:https://reliefweb.int/organizations[]
+  Linguae multiplīs (Scrīptum incognitō):::
+    /To do: review this list for more organizations/@eng-Latn
 
 
 === Methodī ex verbīs in dictiōnāriīs
@@ -250,7 +262,7 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 344
+==== Concepta: 346
 
 ==== Rēs linguālibus: 112
 
@@ -287,7 +299,7 @@ https://iso639-3.sil.org/code/ara[ara]
 |
 Macrolingua Arabica (/Abecedarium Arabicum/)
 |
-121
+120
 
 |
 hye-Armn
@@ -323,7 +335,7 @@ https://iso639-3.sil.org/code/rus[rus]
 |
 Lingua Russica (Abecedarium Cyrillicum)
 |
-75
+74
 
 |
 hin-Deva
@@ -455,7 +467,7 @@ https://iso639-3.sil.org/code/zho[zho]
 |
 /Macrolingua Sinicae (?)/
 |
-96
+95
 
 |
 por-Latn
@@ -479,7 +491,7 @@ https://iso639-3.sil.org/code/eng[eng]
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-182
+185
 
 |
 fra-Latn
@@ -503,7 +515,7 @@ https://iso639-3.sil.org/code/nld[nld]
 |
 Lingua Batavica (Abecedarium Latinum)
 |
-61
+62
 
 |
 deu-Latn
@@ -527,7 +539,7 @@ https://iso639-3.sil.org/code/spa[spa]
 |
 Lingua Hispanica (Abecedarium Latinum)
 |
-178
+177
 
 |
 ita-Latn
@@ -539,7 +551,7 @@ https://iso639-3.sil.org/code/ita[ita]
 |
 Lingua Italiana (Abecedarium Latinum)
 |
-111
+110
 
 |
 gle-Latn
@@ -587,7 +599,7 @@ https://iso639-3.sil.org/code/sqi[sqi]
 |
 Macrolingua Albanica (/Abecedarium Latinum/)
 |
-32
+31
 
 |
 pol-Latn
@@ -599,7 +611,7 @@ https://iso639-3.sil.org/code/pol[pol]
 |
 Lingua Polonica (Abecedarium Latinum)
 |
-56
+57
 
 |
 fin-Latn
@@ -659,7 +671,7 @@ https://iso639-3.sil.org/code/ukr[ukr]
 |
 Lingua Ucrainica (Abecedarium Cyrillicum)
 |
-59
+58
 
 |
 bul-Cyrl
@@ -743,7 +755,7 @@ https://iso639-3.sil.org/code/jpn[jpn]
 |
 Lingua Iaponica (Scriptura Iaponica)
 |
-139
+138
 
 |
 nno-Latn
@@ -851,7 +863,7 @@ https://iso639-3.sil.org/code/slk[slk]
 |
 Lingua Slovaca (Abecedarium Latinum)
 |
-35
+36
 
 |
 epo-Latn
@@ -899,7 +911,7 @@ https://iso639-3.sil.org/code/hrv[hrv]
 |
 Lingua Croatica (Abecedarium Latinum)
 |
-38
+39
 
 |
 tur-Latn
@@ -959,7 +971,7 @@ https://iso639-3.sil.org/code/arz[arz]
 |
 /Egyptian Arabic/ (/Abecedarium Arabicum/)
 |
-114
+113
 
 |
 afr-Latn
@@ -1705,9 +1717,9 @@ Verba de conceptiō
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-**Context information**: ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis, not _just_ an static work), then the actual groundbreaking difference on the workflow used to generate every dictionaries on Cōdex such as this one are the following fact: **we provide well machine readable formats even when the equivalents on _international languages_, such as English, don't have for areas such as humanitarian aid, development aid and human rights**. The closest to such multilingualism (outside Wikimedia) are European Union SEMICeu (up to 24 languages), but even then have issues while sharing translations on all languages. United Nations translations (up to 6 languages, rarely more) are not available by humanitarian agencies to help with terminology translations.
+**Context information**: ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis, not _just_ an static work), then the actual groundbreaking difference on the workflow used to generate every dictionaries on Cōdex such as this one are the following fact: **we provide machine readable formats even when the equivalents on _international languages_, such as English, don't have for areas such as humanitarian aid, development aid and human rights**. The closest to such multilingualism (outside Wikimedia) are European Union SEMICeu (up to 24 languages), but even then have issues while sharing translations on all languages. United Nations translations (up to 6 languages, rarely more) are not available by humanitarian agencies to help with terminology translations.
 
-**Practical implication**: machine-readable formats on _Archīa prō dictiōnāriīs_ (literal English translation: Files for dictionaries) are the focus and recommended for derived works and intended for mitigating additional human errors. We can even create new formats by request. The text documents on _Archīa prō cōdice_ (literal English translation: Files for book) are alternatives to this book format.
+**Practical implication**: the text documents on _Archīa prō cōdice_ (literal _English translation: _File for book_) are alternatives to this book format which are heavily automated using only the data format. However, the machine-readable formats on _Archīa prō dictiōnāriīs_ (literal English translation: _Files for dictionaries_) are the focus and recommended for derived works and intended for mitigating additional human errors. We can even create new formats by request! The goal here is both to allow terminology translators and production usage where it makes an impact.
 
 |===
 
@@ -7832,7 +7844,7 @@ https://www.wikidata.org/wiki/Q204344[Q204344]
 <<<
 
 [id='4']
-=== [`4`] /@eng-LatnBase namespace: Other Entities and Bodies direct related to UN/@eng-Latn
+=== [`4`] /Base namespace: Other Entities and Bodies directly related to UN/@eng-Latn
 
 
 
@@ -7846,7 +7858,7 @@ https://www.wikidata.org/wiki/Q204344[Q204344]
 | Lingua de verba
 | Verba de conceptiō
 | Linguae multiplīs (Scrīptum incognitō)
-| +++/@eng-LatnBase namespace: Other Entities and Bodies direct related to UN/@eng-Latn+++
+| +++/Base namespace: Other Entities and Bodies directly related to UN/@eng-Latn+++
 
 |===
 
@@ -11258,31 +11270,6 @@ https://www.wikidata.org/wiki/Q636107[Q636107]
 
 
 
-[id='6_64']
-==== [`6_64`] /United Nations Office at Geneva/@eng-Latn
-
-
-
-
-
-
-
-
-[%header,cols="~,~"]
-|===
-| Lingua de verba
-| Verba de conceptiō
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">UNOG</span>+++
-
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">United Nations Office at Geneva</span>+++
-
-|===
-
-
-
-
 [id='6_65']
 ==== [`6_65`] /United Nations Office of the High Representative for the Least Developed Countries, Landlocked Developing Countries and Small Island Developing States/@eng-Latn
 
@@ -11355,31 +11342,6 @@ https://www.wikidata.org/wiki/Q7888481[Q7888481]
 
 
 
-[id='6_66']
-==== [`6_66`] /United Nations Office at Nairobi/@eng-Latn
-
-
-
-
-
-
-
-
-[%header,cols="~,~"]
-|===
-| Lingua de verba
-| Verba de conceptiō
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">UNON</span>+++
-
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">United Nations Office at Nairobi</span>+++
-
-|===
-
-
-
-
 [id='6_67']
 ==== [`6_67`] /United Nations Office for Partnerships/@eng-Latn
 
@@ -11399,31 +11361,6 @@ https://www.wikidata.org/wiki/Q7888481[Q7888481]
 
 | Lingua Anglica (Abecedarium Latinum)
 | +++<span lang="en">United Nations Office for Partnerships</span>+++
-
-|===
-
-
-
-
-[id='6_68']
-==== [`6_68`] /United Nations Office at Vienna/@eng-Latn
-
-
-
-
-
-
-
-
-[%header,cols="~,~"]
-|===
-| Lingua de verba
-| Verba de conceptiō
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">UNOV</span>+++
-
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">United Nations Office at Vienna</span>+++
 
 |===
 
@@ -12745,7 +12682,7 @@ https://www.wikidata.org/wiki/Q219693[Q219693]
 <<<
 
 [id='10']
-=== [`10`] /Base namespace: UN official member states (maybe remove later)/@eng-Latn
+=== [`10`] /Base namespace: UN official member states (maybe remove later?)/@eng-Latn
 
 
 
@@ -12759,7 +12696,7 @@ https://www.wikidata.org/wiki/Q219693[Q219693]
 | Lingua de verba
 | Verba de conceptiō
 | Linguae multiplīs (Scrīptum incognitō)
-| +++/Base namespace: UN official member states (maybe remove later)/@eng-Latn+++
+| +++/Base namespace: UN official member states (maybe remove later?)/@eng-Latn+++
 
 | Lingua Anglica (Abecedarium Latinum)
 | +++<span lang="en">Subnamespaces for 10 are by UN m49 numeric key. See https://en.wikipedia.org/wiki/UN_M49. The table show only examples: 4, the first UN m49, means Afghanistan; 894, the last UN m49, means Zambia. Caveat: //tern name// and local code generated from UN m49; some values here are non-applicable such as reference to regions which are not independent countries.</span>+++
@@ -15785,25 +15722,11 @@ https://www.wikidata.org/wiki/Q5187150[Q5187150]
 
 
 [id='63_192']
-==== [`63_192`] /list of Red Cross and Red Crescent Societies/@eng-Latn
+==== [`63_192`] //Red Cross and Red Crescent of Cuba//@eng-Latn
 
 
 
 
-
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/Wiki QID/
-|
-https://www.wikidata.org/wiki/Q1483344[Q1483344]
-
-|===
 
 
 
@@ -15814,48 +15737,6 @@ https://www.wikidata.org/wiki/Q1483344[Q1483344]
 | Verba de conceptiō
 | Lingua Anglica (Abecedarium Latinum)
 | +++<span lang="en">//Red Cross and Red Crescent of Cuba//</span>+++
-
-| Macrolingua Arabica (/Abecedarium Arabicum/)
-| +++<span lang="ar">قائمة جمعيات الهلال الأحمر والصليب الأحمر</span>+++
-
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">Список национальных обществ Красного Креста и Красного Полумесяца</span>+++
-
-| /Macrolingua Sinicae (?)/
-| +++<span lang="zh">紅十字會與紅新月會列表</span>+++
-
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">list of Red Cross and Red Crescent Societies</span>+++
-
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">liste des associations des Croix-Rouges et des Croissants-Rouges</span>+++
-
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">Liste der nationalen Rotkreuz- und Rothalbmond-Gesellschaften</span>+++
-
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">lista de Sociedades Nacionales de la Cruz Roja y la Media Luna Roja</span>+++
-
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">Società di Croce Rossa e Mezzaluna Rossa Internazionale</span>+++
-
-| Macrolingua Albanica (/Abecedarium Latinum/)
-| +++<span lang="sq">Lista e Shoqërive të Kryqit të Kuq</span>+++
-
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">Societats Nacionals de la Creu Roja i la Mitja Lluna Roja</span>+++
-
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">Список національних товариств Червоного Хреста та Червоного Півмісяця</span>+++
-
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">Seznam národních společností Červeného kříže a Červeného půlměsíce</span>+++
-
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">国際赤十字赤新月組織一覧</span>+++
-
-| /Egyptian Arabic/ (/Abecedarium Arabicum/)
-| +++<span lang="arz">ليستة جمعيات الصليب الاحمر و الهلال الاحمر</span>+++
 
 |===
 
@@ -22160,25 +22041,11 @@ https://www.wikidata.org/wiki/Q7663208[Q7663208]
 
 
 [id='63_762']
-==== [`63_762`] /list of Red Cross and Red Crescent Societies/@eng-Latn
+==== [`63_762`] //Red Cross and Red Crescent of Tajikistan//@eng-Latn
 
 
 
 
-
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/Wiki QID/
-|
-https://www.wikidata.org/wiki/Q1483344[Q1483344]
-
-|===
 
 
 
@@ -22189,48 +22056,6 @@ https://www.wikidata.org/wiki/Q1483344[Q1483344]
 | Verba de conceptiō
 | Lingua Anglica (Abecedarium Latinum)
 | +++<span lang="en">//Red Cross and Red Crescent of Tajikistan//</span>+++
-
-| Macrolingua Arabica (/Abecedarium Arabicum/)
-| +++<span lang="ar">قائمة جمعيات الهلال الأحمر والصليب الأحمر</span>+++
-
-| Lingua Russica (Abecedarium Cyrillicum)
-| +++<span lang="ru">Список национальных обществ Красного Креста и Красного Полумесяца</span>+++
-
-| /Macrolingua Sinicae (?)/
-| +++<span lang="zh">紅十字會與紅新月會列表</span>+++
-
-| Lingua Anglica (Abecedarium Latinum)
-| +++<span lang="en">list of Red Cross and Red Crescent Societies</span>+++
-
-| Lingua Francogallica (Abecedarium Latinum)
-| +++<span lang="fr">liste des associations des Croix-Rouges et des Croissants-Rouges</span>+++
-
-| Lingua Germanica (Abecedarium Latinum)
-| +++<span lang="de">Liste der nationalen Rotkreuz- und Rothalbmond-Gesellschaften</span>+++
-
-| Lingua Hispanica (Abecedarium Latinum)
-| +++<span lang="es">lista de Sociedades Nacionales de la Cruz Roja y la Media Luna Roja</span>+++
-
-| Lingua Italiana (Abecedarium Latinum)
-| +++<span lang="it">Società di Croce Rossa e Mezzaluna Rossa Internazionale</span>+++
-
-| Macrolingua Albanica (/Abecedarium Latinum/)
-| +++<span lang="sq">Lista e Shoqërive të Kryqit të Kuq</span>+++
-
-| Lingua Catalana (Abecedarium Latinum)
-| +++<span lang="ca">Societats Nacionals de la Creu Roja i la Mitja Lluna Roja</span>+++
-
-| Lingua Ucrainica (Abecedarium Cyrillicum)
-| +++<span lang="uk">Список національних товариств Червоного Хреста та Червоного Півмісяця</span>+++
-
-| Lingua Bohemica (Abecedarium Latinum)
-| +++<span lang="cs">Seznam národních společností Červeného kříže a Červeného půlměsíce</span>+++
-
-| Lingua Iaponica (Scriptura Iaponica)
-| +++<span lang="ja">国際赤十字赤新月組織一覧</span>+++
-
-| /Egyptian Arabic/ (/Abecedarium Arabicum/)
-| +++<span lang="arz">ليستة جمعيات الصليب الاحمر و الهلال الاحمر</span>+++
 
 |===
 
@@ -23558,6 +23383,84 @@ https://www.wikidata.org/wiki/Q8065682[Q8065682]
 
 
 
+[id='63_999']
+==== [`63_999`] /list of Red Cross and Red Crescent Societies/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+https://www.wikidata.org/wiki/Q1483344[Q1483344]
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">/list of Red Cross and Red Crescent Societies/@eng-Latn</span>+++
+
+| Macrolingua Arabica (/Abecedarium Arabicum/)
+| +++<span lang="ar">قائمة جمعيات الهلال الأحمر والصليب الأحمر</span>+++
+
+| Lingua Russica (Abecedarium Cyrillicum)
+| +++<span lang="ru">Список национальных обществ Красного Креста и Красного Полумесяца</span>+++
+
+| /Macrolingua Sinicae (?)/
+| +++<span lang="zh">紅十字會與紅新月會列表</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">list of Red Cross and Red Crescent Societies</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">liste des associations des Croix-Rouges et des Croissants-Rouges</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Liste der nationalen Rotkreuz- und Rothalbmond-Gesellschaften</span>+++
+
+| Lingua Hispanica (Abecedarium Latinum)
+| +++<span lang="es">lista de Sociedades Nacionales de la Cruz Roja y la Media Luna Roja</span>+++
+
+| Lingua Italiana (Abecedarium Latinum)
+| +++<span lang="it">Società di Croce Rossa e Mezzaluna Rossa Internazionale</span>+++
+
+| Macrolingua Albanica (/Abecedarium Latinum/)
+| +++<span lang="sq">Lista e Shoqërive të Kryqit të Kuq</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">Societats Nacionals de la Creu Roja i la Mitja Lluna Roja</span>+++
+
+| Lingua Ucrainica (Abecedarium Cyrillicum)
+| +++<span lang="uk">Список національних товариств Червоного Хреста та Червоного Півмісяця</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Seznam národních společností Červeného kříže a Červeného půlměsíce</span>+++
+
+| Lingua Iaponica (Scriptura Iaponica)
+| +++<span lang="ja">国際赤十字赤新月組織一覧</span>+++
+
+| /Egyptian Arabic/ (/Abecedarium Arabicum/)
+| +++<span lang="arz">ليستة جمعيات الصليب الاحمر و الهلال الاحمر</span>+++
+
+|===
+
+
+
+
 <<<
 
 [id='71']
@@ -23927,6 +23830,186 @@ https://www.wikidata.org/wiki/Q256538[Q256538]
 
 
 
+[id='80_56']
+==== [`80_56`] /Médecins Sans Frontières/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+https://www.wikidata.org/wiki/Q50356735[Q50356735]
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">//Médecins Sans Frontières de Belgique//@fra-Latn</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Médecins Sans Frontières</span>+++
+
+| Lingua Batavica (Abecedarium Latinum)
+| +++<span lang="nl">Artsen Zonder Grenzen</span>+++
+
+|===
+
+
+
+
+[id='80_276']
+==== [`80_276`] /Ärzte ohne Grenzen/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+https://www.wikidata.org/wiki/Q68487687[Q68487687]
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">//Ärzte ohne Grenzen//@ger-Latn</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Ärzte ohne Grenzen</span>+++
+
+| Lingua Francogallica (Abecedarium Latinum)
+| +++<span lang="fr">Ärzte ohne Grenzen</span>+++
+
+| Lingua Germanica (Abecedarium Latinum)
+| +++<span lang="de">Ärzte ohne Grenzen</span>+++
+
+| Lingua Polonica (Abecedarium Latinum)
+| +++<span lang="pl">Ärzte ohne Grenzen</span>+++
+
+| Lingua Catalana (Abecedarium Latinum)
+| +++<span lang="ca">Ärzte ohne Grenzen</span>+++
+
+| Lingua Bohemica (Abecedarium Latinum)
+| +++<span lang="cs">Ärzte ohne Grenzen</span>+++
+
+| Lingua Slovaca (Abecedarium Latinum)
+| +++<span lang="sk">Ärzte ohne Grenzen</span>+++
+
+| Lingua Croatica (Abecedarium Latinum)
+| +++<span lang="hr">Ärzte ohne Grenzen</span>+++
+
+|===
+
+
+
+
+[id='80_710']
+==== [`80_710`] /Doctors Without Borders/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+https://www.wikidata.org/wiki/Q50356736[Q50356736]
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">//Doctors Without Borders of South Africa//@eng-Latn</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Doctors Without Borders</span>+++
+
+|===
+
+
+
+
+[id='80_800']
+==== [`80_800`] /Médecins Sans Frontières/@eng-Latn
+
+
+
+
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+/Wiki QID/
+|
+https://www.wikidata.org/wiki/Q50036601[Q50036601]
+
+|===
+
+
+
+
+[%header,cols="~,~"]
+|===
+| Lingua de verba
+| Verba de conceptiō
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">//Médecins Sans Frontières de Ouganda//@fra-Latn</span>+++
+
+| Lingua Anglica (Abecedarium Latinum)
+| +++<span lang="en">Médecins Sans Frontières</span>+++
+
+|===
+
+
+
+
 <<<
 
 [id='93']
@@ -24043,7 +24126,7 @@ https://www.wikidata.org/wiki/Q3110900[Q3110900]
 
 == Notā bene
 
-=== [HELP WANTED] Generated PDF don't have right fonts for all languages
+=== /[HELP WANTED] Generated PDF don't have right fonts for all languages/@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
@@ -24052,7 +24135,7 @@ Rēs linguālibus::
     Please note that all formats intended for machine processing will work fine.
 
 
-=== [Book with Wikidata Q] I want to help! Some translation is missing or is wrong! How to change it?
+=== /[Book with Wikidata Q] I want to help! Some translation is missing or is wrong! How to change it?/@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
@@ -24060,7 +24143,7 @@ Rēs linguālibus::
     The next release (likely weekly) will have your submissions without need to contact us directly.
 
 
-=== [Book with Wikidata Q] I can find the Wikidata concept, but I'm unable to edit!
+=== /[Book with Wikidata Q] I can find the Wikidata concept, but I'm unable to edit!/@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
@@ -24068,11 +24151,11 @@ Rēs linguālibus::
     However, while vandalism on Wikidata is rare, very few concepts will require an account with more contributions and not created very recently. If this is your case, help with the ones you can do alone and the rest ask someone else to add to you.
 
 
-=== I heard there is an interest in having Cōdex beyond Latin language! How to do it?!
+=== /I heard there is an interest in having Cōdex beyond Latin language! How to do it?!/@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
-    Please contact us. This book uses Latin (sometimes _dog Latin_) to document all other languages, but we obviously can automated generation of books for others using other writing systems and some reference language.
+    Please contact us. This book uses Latin (sometimes _dog Latin_) to document all other languages, but we obviously can automated generation of books for others using other writing systems and some reference language. We need special help with writing systems such as Bengali, Devanagari and Tamil. For Right to Left scripts, despite being able to render the text, the book printing will require a different template. Only replacing Latin will not work, so we're open to ideas to make a great user experience!
 
 
 <<<

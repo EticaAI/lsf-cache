@@ -13,7 +13,9 @@
 1603:45:1:0:1603:1:7:2616:854:3,0_1603_1_7_2616_854_3,,,,,,,,"https://data.ifrc.org/fdrs/national-societies||/Authorative reference for Red Cross National Societies. (We sincronize using Wikidata, not this site)/@eng-Latn"
 1603:45:1:0:1603:1:7:2616:854:4,0_1603_1_7_2616_854_4,,,,,,,,https://www.wikidata.org/wiki/Wikidata:WikiProject_IFRC||Wikidata:WikiProject IFRC. More volunteers are welcome!
 1603:45:1:0:1603:1:7:2616:854:5,0_1603_1_7_2616_854_5,,,,,,,,https://www.wikidata.org/wiki/Wikidata:WikiProject_Humanitarian_Wikidata||Wikidata:WikiProject Humanitarian Wikidata. More volunteers are welcome!
-1603:45:1:0:1603:1:7:2616:7535,0_1603_1_7_2616_7535,,,,,,,,"The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.\n\n**UN System**\n\nThe dictionary contains an incomplete list of concepts of the UN System. Eventually it may be relevant to move this to another dedicated dictionary (because not all organizations on UN Systems are strictly humanitarian).\n\n**National Red Cross and Red Crescent Societies**\n\nThe dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.\n\n**Subnational Red Cross and Red Crescent Societies**\n\nThe dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:\n\n. National Red Cross of Brazil\n.. Code: 63_76\n... Numerodinatio: 1603:45:1:63:76\n. Subnational; Minas Gerais, Brazil\n.. UN P Code: BR33\n... Code: 63_76_33\n... Numerodinatio: 1603:45:1:63:76:33\n\nSome organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.\n\n**Other humanitarian organizations are missing**\nThese dictionaries could still have other relevant actors known to have international relevante but cannot be classified as a subdivision of previous groups."
+1603:45:1:0:1603:1:7:2616:854:6,0_1603_1_7_2616_854_6,,,,,,,,"https://www.wikidata.org/w/index.php?search=M%C3%A9decins+Sans+Fronti%C3%A8res||/To do: get more MSFs from Wikidata (several are not on Wikipedia, BUT are on Wikidata)/@eng-Latn"
+1603:45:1:0:1603:1:7:2616:854:7,0_1603_1_7_2616_854_7,,,,,,,,https://reliefweb.int/organizations||/To do: review this list for more organizations/@eng-Latn
+1603:45:1:0:1603:1:7:2616:7535,0_1603_1_7_2616_7535,,,,,,,,"The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.\n\n**UN System**\n\nThe dictionary contains an incomplete list of concepts of the UN System. \n\n**National Red Cross and Red Crescent Societies**\n\nThe dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.\n\n**Subnational Red Cross and Red Crescent Societies**\n\nThe dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:\n\n. National Red Cross of Brazil\n.. Code: 63_76\n... Numerodinatio: 1603:45:1:63:76\n. Subnational; Minas Gerais, Brazil\n.. UN P Code: BR33\n... Code: 63_76_33\n... Numerodinatio: 1603:45:1:63:76:33\n\nSome organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.\n\n**Other humanitarian organizations are missing**\nWe're still adding organizations which are neither UN or Red Cross. However, we're likely to keep this focused on humanitarian aid and have development aid. Human rights and humanitarian relief organizations will not be added here"
 1603:45:1:0:1603:1:7:2617:9289584,0_1603_1_7_2617_9289584,,,,,,,,"**Do not use [1603:45:1] to automate import on Wikidata**. Volunteers can use this as reference for what is missing, but all work is already done via the Wikidata site, reviewing item by item."
 1603:45:1:1,1,,,/Base namespace: UN itself (dedicated namespace)/@eng-Latn,,,,,
 1603:45:1:1:1,1_1,,,,Q38130,,League of Nations,,
@@ -45,7 +47,7 @@
 1603:45:1:3:20,3_20,,,,Q487883,UN-HABITAT,United Nations Human Settlements Programme,The mission of the United Nations Human Settlements Programme (UN-HABITAT) is to promote socially and environmentally sustainable human settlements development and the achievement of adequate shelter for all.,
 1603:45:1:3:21,3_21,,,,Q740308,UNICEF,United Nations Children's Fund,"The United Nations Children's Fund (UNICEF) works in 190 countries and territories to save children’s lives, to defend their rights, and to help them fulfil their potential, from early childhood through adolescence.",
 1603:45:1:3:22,3_22,,,,Q204344,WFP,World Food Programme,"The World Food Programme aims to eradicate hunger and malnutrition. The world’s largest humanitarian agency, WFP helps almost 100 million people in approximately 88 countries with assistance every year through food or cash distributions and more. The World Food Programme was awarded the Nobel Peace Prize in 2020. ",
-1603:45:1:4,4,,,/@eng-LatnBase namespace: Other Entities and Bodies direct related to UN/@eng-Latn,,,,,
+1603:45:1:4,4,,,/Base namespace: Other Entities and Bodies directly related to UN/@eng-Latn,,,,,
 1603:45:1:4:23,4_23,,,,Q588982,UNAIDS,Joint United Nations Programme on HIV/AIDS,"The Joint United Nations Programme on HIV/AIDS (UNAIDS) leads and inspires the world to achieve its shared vision of zero new HIV infections, zero discrimination and zero AIDS-related deaths. UNAIDS unites the efforts of 11 UN organizations—UNHCR, UNICEF, WFP, UNDP, UNFPA, UNODC, UN Women, ILO, UNESCO, WHO and the World Bank—and works closely with global and national partners towards ending the AIDS epidemic by 2030 as part of the Sustainable Development Goals.",
 1603:45:1:4:24,4_24,,,,Q132551,UNHCR,United Nations High Commissioner for Refugees,The United Nations High Commissioner for Refugees – UNHCR protects refugees worldwide and facilitates their return home or resettlement.,
 1603:45:1:4:25,4_25,,,,Q3152150,UNIDIR,United Nations Institute for Disarmament Research,"The United Nations Institute for Disarmament Research is a voluntarily funded autonomous institute within the United Nations. An impartial actor, the Institute generates ideas and promotes action on disarmament and security. UNIDIR brings together states, international organizations, civil society, the private sector and academia to work together—internationally, regionally and locally—to build and implement creative solutions that will benefit all states and peoples.",
@@ -89,11 +91,8 @@
 1603:45:1:6:61,6_61,,,,,SRSG/VAC,Office of the Special Representative of the SecretaryGeneral on Violence Against Children,,
 1603:45:1:6:62,6_62,,,,Q7888446,UNDRR,United Nations Office for Disaster Risk Reduction,,
 1603:45:1:6:63,6_63,,,,Q636107,UNODC,United Nations Office on Drugs and Crime,,
-1603:45:1:6:64,6_64,,,,,UNOG,United Nations Office at Geneva,,
 1603:45:1:6:65,6_65,,,,Q7888481,UN-OHRLLS,"Office of the High Representative for the Least Developed Countries, Landlocked Developing Countries and Small Island Developing States",,
-1603:45:1:6:66,6_66,,,,,UNON,United Nations Office at Nairobi,,
 1603:45:1:6:67,6_67,,,,,UNOP,United Nations Office for Partnerships,,
-1603:45:1:6:68,6_68,,,,,UNOV,United Nations Office at Vienna,,
 1603:45:1:9,9,,,/Base namespace: private use namespace/@eng-Latn,,,,No restriction on reuse of numbers exist on this private namespace. (currently is used as draft for agencies without number),
 1603:45:1:9:1,9_1,,,,Q1577943,,United Nations Postal Administration,,
 1603:45:1:9:2,9_2,,,,Q962612,,United Nations Research Institute For Social Development,,
@@ -103,7 +102,7 @@
 1603:45:1:9:6,9_6,,,,Q220563,,United Nations Secretariat,,
 1603:45:1:9:7,9_7,,,,,,International Court of Justice,,
 1603:45:1:9:8,9_8,,,,Q219693,,United Nations Trusteeship Council,,
-1603:45:1:10,10,,,/Base namespace: UN official member states (maybe remove later)/@eng-Latn,,,,"Subnamespaces for 10 are by UN m49 numeric key. See https://en.wikipedia.org/wiki/UN_M49. The table show only examples: 4, the first UN m49, means Afghanistan; 894, the last UN m49, means Zambia. Caveat: //tern name// and local code generated from UN m49; some values here are non-applicable such as reference to regions which are not independent countries.",
+1603:45:1:10,10,,,/Base namespace: UN official member states (maybe remove later?)/@eng-Latn,,,,"Subnamespaces for 10 are by UN m49 numeric key. See https://en.wikipedia.org/wiki/UN_M49. The table show only examples: 4, the first UN m49, means Afghanistan; 894, the last UN m49, means Zambia. Caveat: //tern name// and local code generated from UN m49; some values here are non-applicable such as reference to regions which are not independent countries.",
 1603:45:1:10:4,10_4,,,,,,/Afghanistan/,,
 1603:45:1:10:894,10_894,,,,,,/Zambia/,,
 1603:45:1:63,63,,,/Base namespace: Red Cross and Red Crescent Movement/@eng-Latn,Q7178,,Caveat: //tern name// and local code generated from UN m49; some values here are non-applicable such as reference to regions which are not independent countries.,"Subnamespaces for 63 are by UN m49 numeric key. See https://en.wikipedia.org/wiki/UN_M49. 1 means world (so ICRC); 4, the first UN m49, means Afghanistan; 894, the last UN m49, means Zambia.",
@@ -162,7 +161,7 @@
 1603:45:1:63:184,63_184,,,,,,//Red Cross and Red Crescent of Cook Islands//,,
 1603:45:1:63:188,63_188,,,,,,//Red Cross and Red Crescent of Costa Rica//,,
 1603:45:1:63:191,63_191,,,,Q5187150,,//Red Cross and Red Crescent of Croatia//,,
-1603:45:1:63:192,63_192,,,,Q1483344,,//Red Cross and Red Crescent of Cuba//,,
+1603:45:1:63:192,63_192,,,,,,//Red Cross and Red Crescent of Cuba//,,
 1603:45:1:63:196,63_196,,,,Q3698036,,//Red Cross and Red Crescent of Cyprus//,,
 1603:45:1:63:203,63_203,,,,,,//Red Cross and Red Crescent of Czechia//,,
 1603:45:1:63:204,63_204,,,,Q3698009,,//Red Cross and Red Crescent of Benin//,,
@@ -323,7 +322,7 @@
 1603:45:1:63:752,63_752,,,,Q18333444,,//Red Cross and Red Crescent of Sweden//,,
 1603:45:1:63:756,63_756,,,,Q456988,,//Red Cross and Red Crescent of Switzerland//,,
 1603:45:1:63:760,63_760,,,,Q7663208,,//Red Cross and Red Crescent of Syrian Arab Republic//,,
-1603:45:1:63:762,63_762,,,,Q1483344,,//Red Cross and Red Crescent of Tajikistan//,,
+1603:45:1:63:762,63_762,,,,,,//Red Cross and Red Crescent of Tajikistan//,,
 1603:45:1:63:764,63_764,,,,Q4922087,,//Red Cross and Red Crescent of Thailand//,,
 1603:45:1:63:768,63_768,,,,Q7813206,,//Red Cross and Red Crescent of Togo//,,
 1603:45:1:63:772,63_772,,,,,,//Red Cross and Red Crescent of Tokelau//,,
@@ -353,9 +352,14 @@
 1603:45:1:63:882,63_882,,,,Q7409910,,//Red Cross and Red Crescent of Samoa//,,
 1603:45:1:63:887,63_887,,,,Q85816683,,//Red Cross and Red Crescent of Yemen//,,
 1603:45:1:63:894,63_894,,,,Q8065682,,//Red Cross and Red Crescent of Zambia//,,
+1603:45:1:63:999,63_999,,,,Q1483344,,/list of Red Cross and Red Crescent Societies/@eng-Latn,,
 1603:45:1:71,71,,,/espace de noms de base de Médecins Sans Frontières/@fra-Latn,,,,,
 1603:45:1:71:1,71_1,,,,Q49330,MSF,/Médecins Sans Frontières/@fra-Latn,,
 1603:45:1:80,80,,,/espace de noms de base de Médecins du Monde/@fra-Latn,,,,,
 1603:45:1:80:1,80_1,,,,Q256538,MdM,/Médecins du Monde/@fra-Latn,,
+1603:45:1:80:56,80_56,,,,Q50356735,,//Médecins Sans Frontières de Belgique//@fra-Latn,,
+1603:45:1:80:276,80_276,,,,Q68487687,,//Ärzte ohne Grenzen//@ger-Latn,,
+1603:45:1:80:710,80_710,,,,Q50356736,,//Doctors Without Borders of South Africa//@eng-Latn,,
+1603:45:1:80:800,80_800,,,,Q50036601,,//Médecins Sans Frontières de Ouganda//@fra-Latn,,
 1603:45:1:93,93,,,/espace de noms de base de Traducteurs Sans Frontières/@fra-Latn,,,,,
 1603:45:1:93:1,93_1,,,,Q3110900,TWB,/Translators without Borders/@eng-Latn,,
