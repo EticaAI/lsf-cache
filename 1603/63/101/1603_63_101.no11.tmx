@@ -15,9 +15,6 @@
     <tu tuid="0_1603_1_7_2616_98">
     </tu>
 
-    <tu tuid="0_1603_1_7_2616_123">
-    </tu>
-
     <tu tuid="0_1603_1_7_2616_2479">
     </tu>
 
@@ -2497,6 +2494,9 @@
       <tuv xml:lang="tur">
         <seg>Düşük tansiyon</seg>
       </tuv>
+      <tuv xml:lang="ltz">
+        <seg>arteriell Hypotonie</seg>
+      </tuv>
       <tuv xml:lang="zho">
         <seg>低血壓</seg>
       </tuv>
@@ -3531,6 +3531,60 @@
       </tuv>
     </tu>
 
+    <tu tuid="3_9">
+      <tuv xml:lang="mul">
+        <seg>/chronic condition (temporary; needs to be categorized)/@eng-Latn</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="3_9_1">
+      <tuv xml:lang="qcc">
+        <seg>Q475510</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/intestinal parasite infection || infections of the intestines with parasites/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="ara">
+        <seg>طفيلي معوي</seg>
+      </tuv>
+      <tuv xml:lang="heb">
+        <seg>טפילי מעי</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>腸道寄生蟲</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>intestinal parasite infection</seg>
+      </tuv>
+      <tuv xml:lang="fra">
+        <seg>parasitose intestinale</seg>
+      </tuv>
+      <tuv xml:lang="deu">
+        <seg>Darmparasitose</seg>
+      </tuv>
+      <tuv xml:lang="spa">
+        <seg>infección intestinal por parásitos</seg>
+      </tuv>
+      <tuv xml:lang="ita">
+        <seg>Infezione da parassita intestinale</seg>
+      </tuv>
+      <tuv xml:lang="cat">
+        <seg>parasitosi intestinal</seg>
+      </tuv>
+      <tuv xml:lang="nno">
+        <seg>innvolsmakk</seg>
+      </tuv>
+      <tuv xml:lang="mal">
+        <seg>കുടൽ പരാദബാധ</seg>
+      </tuv>
+      <tuv xml:lang="epo">
+        <seg>Intesta parazito</seg>
+      </tuv>
+      <tuv xml:lang="msa">
+        <seg>Parasit usus</seg>
+      </tuv>
+    </tu>
+
     <tu tuid="4">
       <tuv xml:lang="mul">
         <seg>/Relevant conditions related to food or medicine/@eng-Latn</seg>
@@ -3753,7 +3807,7 @@
       </tuv>
     </tu>
 
-    <tu tuid="4_2">
+    <tu tuid="4_1_1">
       <tuv xml:lang="qcc">
         <seg>Q769815</seg>
       </tuv>
@@ -3897,7 +3951,7 @@
       </tuv>
     </tu>
 
-    <tu tuid="4_3">
+    <tu tuid="4_1_1_1">
       <tuv xml:lang="qcc">
         <seg>Q576179</seg>
       </tuv>
@@ -11556,6 +11610,378 @@
       </tuv>
     </tu>
 
+    <tu tuid="500_9">
+      <tuv xml:lang="mul">
+        <seg>/human nutrition (temporary; needs to be categorized)/@eng-Latn</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="500_9_1">
+      <tuv xml:lang="qcc">
+        <seg>Q332807</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/emergency ration || food and drink that a person stores and relies on in case of an emergency/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="kor">
+        <seg>비상식량</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>应急口粮</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>emergency ration</seg>
+      </tuv>
+      <tuv xml:lang="nld">
+        <seg>noodrantsoen</seg>
+      </tuv>
+      <tuv xml:lang="deu">
+        <seg>Überlebensration</seg>
+      </tuv>
+      <tuv xml:lang="spa">
+        <seg>ración de emergencia</seg>
+      </tuv>
+      <tuv xml:lang="jpn">
+        <seg>非常食</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>應急口糧</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="500_9_2">
+      <tuv xml:lang="qcc">
+        <seg>Q1699821</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/energy bar || nutritional snack bar/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="ara">
+        <seg>لوح الطاقة</seg>
+      </tuv>
+      <tuv xml:lang="kor">
+        <seg>에너지 바</seg>
+      </tuv>
+      <tuv xml:lang="heb">
+        <seg>חטיף אנרגיה</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>能量棒</seg>
+      </tuv>
+      <tuv xml:lang="por">
+        <seg>Barra energética</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>energy bar</seg>
+      </tuv>
+      <tuv xml:lang="fra">
+        <seg>barre énergétique</seg>
+      </tuv>
+      <tuv xml:lang="deu">
+        <seg>Power-Snack</seg>
+      </tuv>
+      <tuv xml:lang="spa">
+        <seg>barrita energética</seg>
+      </tuv>
+      <tuv xml:lang="fin">
+        <seg>energiapatukka</seg>
+      </tuv>
+      <tuv xml:lang="cat">
+        <seg>barreta energètica</seg>
+      </tuv>
+      <tuv xml:lang="tur">
+        <seg>Enerji macunu</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="500_9_3">
+      <tuv xml:lang="qcc">
+        <seg>Q7251457</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/protein bar/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="ara">
+        <seg>لوح بروتين</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>protein bar</seg>
+      </tuv>
+      <tuv xml:lang="ukr">
+        <seg>Протеїновий батончик</seg>
+      </tuv>
+      <tuv xml:lang="ces">
+        <seg>Proteinová tyčinka</seg>
+      </tuv>
+      <tuv xml:lang="dan">
+        <seg>Proteinbar</seg>
+      </tuv>
+      <tuv xml:lang="tur">
+        <seg>Protein macunu</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="500_9_4">
+      <tuv xml:lang="qcc">
+        <seg>Q17097831</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/list of dried foods/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="ara">
+        <seg>قائمة الأطعمة المجففة</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>list of dried foods</seg>
+      </tuv>
+      <tuv xml:lang="fra">
+        <seg>liste d'aliments déshydratés</seg>
+      </tuv>
+      <tuv xml:lang="msa">
+        <seg>senarai makanan kering</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="500_9_4_1">
+      <tuv xml:lang="qcc">
+        <seg>Q234901</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/dried fruit || fruit from which the majority of the original water content has been removed/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="ara">
+        <seg>فواكه جافة</seg>
+      </tuv>
+      <tuv xml:lang="hye">
+        <seg>Չրեր</seg>
+      </tuv>
+      <tuv xml:lang="rus">
+        <seg>сухофрукты</seg>
+      </tuv>
+      <tuv xml:lang="hin">
+        <seg>मेवा</seg>
+      </tuv>
+      <tuv xml:lang="kan">
+        <seg>ಒಣಗಿಸಿದ ಹಣ್ಣು</seg>
+      </tuv>
+      <tuv xml:lang="kor">
+        <seg>건과</seg>
+      </tuv>
+      <tuv xml:lang="heb">
+        <seg>פירות יבשים</seg>
+      </tuv>
+      <tuv xml:lang="tel">
+        <seg>ఎండిన పండు</seg>
+      </tuv>
+      <tuv xml:lang="san">
+        <seg>शुष्कफलानि</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>乾果</seg>
+      </tuv>
+      <tuv xml:lang="por">
+        <seg>fruta seca</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>dried fruit</seg>
+      </tuv>
+      <tuv xml:lang="fra">
+        <seg>fruit séché</seg>
+      </tuv>
+      <tuv xml:lang="nld">
+        <seg>gedroogd fruit</seg>
+      </tuv>
+      <tuv xml:lang="deu">
+        <seg>Trockenobst</seg>
+      </tuv>
+      <tuv xml:lang="spa">
+        <seg>fruta seca</seg>
+      </tuv>
+      <tuv xml:lang="ita">
+        <seg>frutta essiccata</seg>
+      </tuv>
+      <tuv xml:lang="gle">
+        <seg>Torthaí triomaithe</seg>
+      </tuv>
+      <tuv xml:lang="swe">
+        <seg>torkad frukt</seg>
+      </tuv>
+      <tuv xml:lang="ceb">
+        <seg>Lubi</seg>
+      </tuv>
+      <tuv xml:lang="pol">
+        <seg>bakalie</seg>
+      </tuv>
+      <tuv xml:lang="fin">
+        <seg>kuivahedelmä</seg>
+      </tuv>
+      <tuv xml:lang="ron">
+        <seg>fruct uscat</seg>
+      </tuv>
+      <tuv xml:lang="vie">
+        <seg>hoa quả khô</seg>
+      </tuv>
+      <tuv xml:lang="cat">
+        <seg>fruita dessecada</seg>
+      </tuv>
+      <tuv xml:lang="ukr">
+        <seg>сухофрукти</seg>
+      </tuv>
+      <tuv xml:lang="nob">
+        <seg>tørket frukt</seg>
+      </tuv>
+      <tuv xml:lang="ces">
+        <seg>sušené ovoce</seg>
+      </tuv>
+      <tuv xml:lang="dan">
+        <seg>tørret frugt</seg>
+      </tuv>
+      <tuv xml:lang="jpn">
+        <seg>干し果物</seg>
+      </tuv>
+      <tuv xml:lang="nno">
+        <seg>Tørka frukt</seg>
+      </tuv>
+      <tuv xml:lang="ind">
+        <seg>Buah kering</seg>
+      </tuv>
+      <tuv xml:lang="fas">
+        <seg>خشکبار</seg>
+      </tuv>
+      <tuv xml:lang="hun">
+        <seg>Aszalás</seg>
+      </tuv>
+      <tuv xml:lang="eus">
+        <seg>Fruitu lehortu</seg>
+      </tuv>
+      <tuv xml:lang="glg">
+        <seg>Froita seca</seg>
+      </tuv>
+      <tuv xml:lang="slk">
+        <seg>sušené ovocie</seg>
+      </tuv>
+      <tuv xml:lang="epo">
+        <seg>seka frukto</seg>
+      </tuv>
+      <tuv xml:lang="msa">
+        <seg>buah kering</seg>
+      </tuv>
+      <tuv xml:lang="tur">
+        <seg>kuru yemiş</seg>
+      </tuv>
+      <tuv xml:lang="oci">
+        <seg>Fruch sec</seg>
+      </tuv>
+      <tuv xml:lang="arz">
+        <seg>ياميش</seg>
+      </tuv>
+      <tuv xml:lang="afr">
+        <seg>gedroogde vrug</seg>
+      </tuv>
+      <tuv xml:lang="bar">
+        <seg>Kletze</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>乾果</seg>
+      </tuv>
+      <tuv xml:lang="vec">
+        <seg>fruta seca</seg>
+      </tuv>
+      <tuv xml:lang="scn">
+        <seg>Scacciu</seg>
+      </tuv>
+      <tuv xml:lang="lim">
+        <seg>Aofte</seg>
+      </tuv>
+      <tuv xml:lang="srp">
+        <seg>sušeno voće</seg>
+      </tuv>
+      <tuv xml:lang="srp">
+        <seg>сушено воће</seg>
+      </tuv>
+      <tuv xml:lang="lit">
+        <seg>Džiovinti vaisiai</seg>
+      </tuv>
+      <tuv xml:lang="bos">
+        <seg>Suho voće</seg>
+      </tuv>
+      <tuv xml:lang="jav">
+        <seg>Woh garing</seg>
+      </tuv>
+      <tuv xml:lang="ell">
+        <seg>αποξηραμένο φρούτο</seg>
+      </tuv>
+      <tuv xml:lang="bel">
+        <seg>сухафрукты</seg>
+      </tuv>
+      <tuv xml:lang="mar">
+        <seg>सुकामेवा</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="500_9_4_2">
+      <tuv xml:lang="qcc">
+        <seg>Q1753272</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/dried meat || meat that has been dehydrated/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="rus">
+        <seg>сушёное мясо</seg>
+      </tuv>
+      <tuv xml:lang="kor">
+        <seg>마른고기</seg>
+      </tuv>
+      <tuv xml:lang="heb">
+        <seg>בשר מיובש</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>風乾的肉</seg>
+      </tuv>
+      <tuv xml:lang="por">
+        <seg>carne-seca</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>dried meat</seg>
+      </tuv>
+      <tuv xml:lang="fra">
+        <seg>viande séchée</seg>
+      </tuv>
+      <tuv xml:lang="nld">
+        <seg>gedroogd vlees</seg>
+      </tuv>
+      <tuv xml:lang="deu">
+        <seg>Trockenfleisch</seg>
+      </tuv>
+      <tuv xml:lang="spa">
+        <seg>Carne seca</seg>
+      </tuv>
+      <tuv xml:lang="ita">
+        <seg>carne secca</seg>
+      </tuv>
+      <tuv xml:lang="cat">
+        <seg>Carn deshidratada</seg>
+      </tuv>
+      <tuv xml:lang="ces">
+        <seg>Sušené maso</seg>
+      </tuv>
+      <tuv xml:lang="epo">
+        <seg>sekigita viando</seg>
+      </tuv>
+      <tuv xml:lang="tur">
+        <seg>Kurutulmuş et</seg>
+      </tuv>
+      <tuv xml:lang="vec">
+        <seg>carne seca</seg>
+      </tuv>
+      <tuv xml:lang="jav">
+        <seg>Daging garing</seg>
+      </tuv>
+      <tuv xml:lang="ell">
+        <seg>αποξηραμένο κρέας</seg>
+      </tuv>
+    </tu>
+
     <tu tuid="510">
       <tuv xml:lang="qcc">
         <seg>Q5113</seg>
@@ -16830,6 +17256,570 @@
       </tuv>
       <tuv xml:lang="ina">
         <seg>Calceatura</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="1100">
+      <tuv xml:lang="qcc">
+        <seg>Q8142</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/currency || generally accepted medium of exchange for goods or services/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="ara">
+        <seg>عملة</seg>
+      </tuv>
+      <tuv xml:lang="hye">
+        <seg>Տարադրամ</seg>
+      </tuv>
+      <tuv xml:lang="ben">
+        <seg>মুদ্রা</seg>
+      </tuv>
+      <tuv xml:lang="rus">
+        <seg>валюта</seg>
+      </tuv>
+      <tuv xml:lang="hin">
+        <seg>मुद्रा</seg>
+      </tuv>
+      <tuv xml:lang="kan">
+        <seg>ನಗದು</seg>
+      </tuv>
+      <tuv xml:lang="kor">
+        <seg>통화</seg>
+      </tuv>
+      <tuv xml:lang="heb">
+        <seg>מטבע</seg>
+      </tuv>
+      <tuv xml:lang="lat">
+        <seg>Moneta</seg>
+      </tuv>
+      <tuv xml:lang="tam">
+        <seg>நாணயம்</seg>
+      </tuv>
+      <tuv xml:lang="tel">
+        <seg>ద్రవ్యం</seg>
+      </tuv>
+      <tuv xml:lang="tha">
+        <seg>เงินตรา</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>通貨</seg>
+      </tuv>
+      <tuv xml:lang="por">
+        <seg>padrão monetário</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>currency</seg>
+      </tuv>
+      <tuv xml:lang="fra">
+        <seg>monnaie</seg>
+      </tuv>
+      <tuv xml:lang="nld">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="deu">
+        <seg>Währung</seg>
+      </tuv>
+      <tuv xml:lang="spa">
+        <seg>moneda</seg>
+      </tuv>
+      <tuv xml:lang="ita">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="gle">
+        <seg>airgeadra</seg>
+      </tuv>
+      <tuv xml:lang="swe">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="sqi">
+        <seg>Deviza</seg>
+      </tuv>
+      <tuv xml:lang="pol">
+        <seg>waluta</seg>
+      </tuv>
+      <tuv xml:lang="fin">
+        <seg>valuutta</seg>
+      </tuv>
+      <tuv xml:lang="ron">
+        <seg>valută</seg>
+      </tuv>
+      <tuv xml:lang="vie">
+        <seg>tiền tệ</seg>
+      </tuv>
+      <tuv xml:lang="cat">
+        <seg>moneda</seg>
+      </tuv>
+      <tuv xml:lang="ukr">
+        <seg>валюта</seg>
+      </tuv>
+      <tuv xml:lang="bul">
+        <seg>валута</seg>
+      </tuv>
+      <tuv xml:lang="slv">
+        <seg>Valuta</seg>
+      </tuv>
+      <tuv xml:lang="war">
+        <seg>Pananalapi</seg>
+      </tuv>
+      <tuv xml:lang="nob">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="ces">
+        <seg>měna</seg>
+      </tuv>
+      <tuv xml:lang="dan">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="jpn">
+        <seg>通貨</seg>
+      </tuv>
+      <tuv xml:lang="nno">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="mal">
+        <seg>നാണയം</seg>
+      </tuv>
+      <tuv xml:lang="ind">
+        <seg>mata uang</seg>
+      </tuv>
+      <tuv xml:lang="fas">
+        <seg>یکای پول</seg>
+      </tuv>
+      <tuv xml:lang="hun">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="eus">
+        <seg>dibisa</seg>
+      </tuv>
+      <tuv xml:lang="cym">
+        <seg>arian cyfred</seg>
+      </tuv>
+      <tuv xml:lang="glg">
+        <seg>moeda</seg>
+      </tuv>
+      <tuv xml:lang="slk">
+        <seg>mena</seg>
+      </tuv>
+      <tuv xml:lang="epo">
+        <seg>valuto</seg>
+      </tuv>
+      <tuv xml:lang="msa">
+        <seg>mata wang</seg>
+      </tuv>
+      <tuv xml:lang="est">
+        <seg>valuuta</seg>
+      </tuv>
+      <tuv xml:lang="hrv">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="tur">
+        <seg>Para Birimi</seg>
+      </tuv>
+      <tuv xml:lang="nds">
+        <seg>Geldsoort</seg>
+      </tuv>
+      <tuv xml:lang="oci">
+        <seg>devisa</seg>
+      </tuv>
+      <tuv xml:lang="bre">
+        <seg>Moneiz</seg>
+      </tuv>
+      <tuv xml:lang="arz">
+        <seg>عمله</seg>
+      </tuv>
+      <tuv xml:lang="afr">
+        <seg>geldeenheid</seg>
+      </tuv>
+      <tuv xml:lang="ltz">
+        <seg>Wärung</seg>
+      </tuv>
+      <tuv xml:lang="bar">
+        <seg>Wearung</seg>
+      </tuv>
+      <tuv xml:lang="arg">
+        <seg>Divisa</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>通貨</seg>
+      </tuv>
+      <tuv xml:lang="pap">
+        <seg>moneda</seg>
+      </tuv>
+      <tuv xml:lang="gsw">
+        <seg>Währig</seg>
+      </tuv>
+      <tuv xml:lang="isl">
+        <seg>Gjaldmiðill</seg>
+      </tuv>
+      <tuv xml:lang="min">
+        <seg>mato uang</seg>
+      </tuv>
+      <tuv xml:lang="roh">
+        <seg>Valuta</seg>
+      </tuv>
+      <tuv xml:lang="vec">
+        <seg>Vałuta</seg>
+      </tuv>
+      <tuv xml:lang="pms">
+        <seg>Valuta</seg>
+      </tuv>
+      <tuv xml:lang="scn">
+        <seg>munita</seg>
+      </tuv>
+      <tuv xml:lang="gla">
+        <seg>Ruith-airgid</seg>
+      </tuv>
+      <tuv xml:lang="lim">
+        <seg>Munt (einheid)</seg>
+      </tuv>
+      <tuv xml:lang="wln">
+        <seg>Manoye</seg>
+      </tuv>
+      <tuv xml:lang="srp">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="wuu">
+        <seg>通货</seg>
+      </tuv>
+      <tuv xml:lang="srp">
+        <seg>валута</seg>
+      </tuv>
+      <tuv xml:lang="urd">
+        <seg>فلس</seg>
+      </tuv>
+      <tuv xml:lang="lit">
+        <seg>Valiuta</seg>
+      </tuv>
+      <tuv xml:lang="hbs">
+        <seg>valuta</seg>
+      </tuv>
+      <tuv xml:lang="lav">
+        <seg>valūta</seg>
+      </tuv>
+      <tuv xml:lang="bos">
+        <seg>Valuta</seg>
+      </tuv>
+      <tuv xml:lang="azb">
+        <seg>پول بیریمی</seg>
+      </tuv>
+      <tuv xml:lang="jav">
+        <seg>Valuta</seg>
+      </tuv>
+      <tuv xml:lang="ell">
+        <seg>νομισματική μονάδα</seg>
+      </tuv>
+      <tuv xml:lang="sun">
+        <seg>Mata uang</seg>
+      </tuv>
+      <tuv xml:lang="fry">
+        <seg>Munt</seg>
+      </tuv>
+      <tuv xml:lang="che">
+        <seg>Валюта</seg>
+      </tuv>
+      <tuv xml:lang="bel">
+        <seg>валюта</seg>
+      </tuv>
+      <tuv xml:lang="kab">
+        <seg>Adrim</seg>
+      </tuv>
+      <tuv xml:lang="fao">
+        <seg>Gjaldoyra</seg>
+      </tuv>
+      <tuv xml:lang="lmo">
+        <seg>Valuda</seg>
+      </tuv>
+      <tuv xml:lang="mar">
+        <seg>चलन</seg>
+      </tuv>
+      <tuv xml:lang="ina">
+        <seg>numerario</seg>
+      </tuv>
+    </tu>
+
+    <tu tuid="1100_1">
+      <tuv xml:lang="qcc">
+        <seg>Q1368</seg>
+      </tuv>
+      <tuv xml:lang="mul">
+        <seg>/money || physical or virtual object or record accepted as payment/@eng-Latn</seg>
+      </tuv>
+      <tuv xml:lang="ara">
+        <seg>مال</seg>
+      </tuv>
+      <tuv xml:lang="hye">
+        <seg>Փող</seg>
+      </tuv>
+      <tuv xml:lang="ben">
+        <seg>অর্থ</seg>
+      </tuv>
+      <tuv xml:lang="rus">
+        <seg>деньги</seg>
+      </tuv>
+      <tuv xml:lang="hin">
+        <seg>पैसा</seg>
+      </tuv>
+      <tuv xml:lang="kan">
+        <seg>ಹಣ</seg>
+      </tuv>
+      <tuv xml:lang="kor">
+        <seg>돈</seg>
+      </tuv>
+      <tuv xml:lang="lzh">
+        <seg>泉幣</seg>
+      </tuv>
+      <tuv xml:lang="heb">
+        <seg>כסף</seg>
+      </tuv>
+      <tuv xml:lang="lat">
+        <seg>pecunia</seg>
+      </tuv>
+      <tuv xml:lang="tam">
+        <seg>பணம்</seg>
+      </tuv>
+      <tuv xml:lang="tel">
+        <seg>ధనం</seg>
+      </tuv>
+      <tuv xml:lang="tha">
+        <seg>เงิน</seg>
+      </tuv>
+      <tuv xml:lang="san">
+        <seg>धनम्</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>貨幣</seg>
+      </tuv>
+      <tuv xml:lang="por">
+        <seg>dinheiro</seg>
+      </tuv>
+      <tuv xml:lang="eng">
+        <seg>money</seg>
+      </tuv>
+      <tuv xml:lang="fra">
+        <seg>argent</seg>
+      </tuv>
+      <tuv xml:lang="nld">
+        <seg>geld</seg>
+      </tuv>
+      <tuv xml:lang="deu">
+        <seg>Geld</seg>
+      </tuv>
+      <tuv xml:lang="spa">
+        <seg>dinero</seg>
+      </tuv>
+      <tuv xml:lang="ita">
+        <seg>denaro</seg>
+      </tuv>
+      <tuv xml:lang="gle">
+        <seg>airgead</seg>
+      </tuv>
+      <tuv xml:lang="swe">
+        <seg>pengar</seg>
+      </tuv>
+      <tuv xml:lang="ceb">
+        <seg>Kwarta</seg>
+      </tuv>
+      <tuv xml:lang="sqi">
+        <seg>Paraja</seg>
+      </tuv>
+      <tuv xml:lang="pol">
+        <seg>pieniądz</seg>
+      </tuv>
+      <tuv xml:lang="fin">
+        <seg>raha</seg>
+      </tuv>
+      <tuv xml:lang="ron">
+        <seg>Ban</seg>
+      </tuv>
+      <tuv xml:lang="vie">
+        <seg>tiền</seg>
+      </tuv>
+      <tuv xml:lang="cat">
+        <seg>diner</seg>
+      </tuv>
+      <tuv xml:lang="ukr">
+        <seg>гроші</seg>
+      </tuv>
+      <tuv xml:lang="bul">
+        <seg>Пари</seg>
+      </tuv>
+      <tuv xml:lang="slv">
+        <seg>denar</seg>
+      </tuv>
+      <tuv xml:lang="war">
+        <seg>Kwarta</seg>
+      </tuv>
+      <tuv xml:lang="nob">
+        <seg>penger</seg>
+      </tuv>
+      <tuv xml:lang="ces">
+        <seg>peníze</seg>
+      </tuv>
+      <tuv xml:lang="dan">
+        <seg>penge</seg>
+      </tuv>
+      <tuv xml:lang="jpn">
+        <seg>貨幣</seg>
+      </tuv>
+      <tuv xml:lang="nno">
+        <seg>pengar</seg>
+      </tuv>
+      <tuv xml:lang="mal">
+        <seg>പണം</seg>
+      </tuv>
+      <tuv xml:lang="ind">
+        <seg>uang</seg>
+      </tuv>
+      <tuv xml:lang="fas">
+        <seg>پول</seg>
+      </tuv>
+      <tuv xml:lang="hun">
+        <seg>pénz</seg>
+      </tuv>
+      <tuv xml:lang="eus">
+        <seg>Diru</seg>
+      </tuv>
+      <tuv xml:lang="cym">
+        <seg>Arian</seg>
+      </tuv>
+      <tuv xml:lang="glg">
+        <seg>diñeiro</seg>
+      </tuv>
+      <tuv xml:lang="slk">
+        <seg>peniaze</seg>
+      </tuv>
+      <tuv xml:lang="epo">
+        <seg>mono</seg>
+      </tuv>
+      <tuv xml:lang="msa">
+        <seg>wang</seg>
+      </tuv>
+      <tuv xml:lang="est">
+        <seg>Raha</seg>
+      </tuv>
+      <tuv xml:lang="hrv">
+        <seg>novac</seg>
+      </tuv>
+      <tuv xml:lang="tur">
+        <seg>para</seg>
+      </tuv>
+      <tuv xml:lang="nds">
+        <seg>Geld</seg>
+      </tuv>
+      <tuv xml:lang="oci">
+        <seg>Moneda</seg>
+      </tuv>
+      <tuv xml:lang="bre">
+        <seg>Arc'hant</seg>
+      </tuv>
+      <tuv xml:lang="arz">
+        <seg>فلوس</seg>
+      </tuv>
+      <tuv xml:lang="afr">
+        <seg>Geld</seg>
+      </tuv>
+      <tuv xml:lang="ltz">
+        <seg>Geld</seg>
+      </tuv>
+      <tuv xml:lang="sco">
+        <seg>siller</seg>
+      </tuv>
+      <tuv xml:lang="bar">
+        <seg>Gejd</seg>
+      </tuv>
+      <tuv xml:lang="arg">
+        <seg>Diners</seg>
+      </tuv>
+      <tuv xml:lang="zho">
+        <seg>貨幣</seg>
+      </tuv>
+      <tuv xml:lang="gsw">
+        <seg>Gäld</seg>
+      </tuv>
+      <tuv xml:lang="isl">
+        <seg>Peningar</seg>
+      </tuv>
+      <tuv xml:lang="min">
+        <seg>Pitih</seg>
+      </tuv>
+      <tuv xml:lang="vec">
+        <seg>Schei</seg>
+      </tuv>
+      <tuv xml:lang="pms">
+        <seg>Moneda</seg>
+      </tuv>
+      <tuv xml:lang="scn">
+        <seg>Dinaru</seg>
+      </tuv>
+      <tuv xml:lang="lim">
+        <seg>Geldj</seg>
+      </tuv>
+      <tuv xml:lang="wln">
+        <seg>Cwårs</seg>
+      </tuv>
+      <tuv xml:lang="lij">
+        <seg>Monæa</seg>
+      </tuv>
+      <tuv xml:lang="wol">
+        <seg>Koppar</seg>
+      </tuv>
+      <tuv xml:lang="wuu">
+        <seg>钞票</seg>
+      </tuv>
+      <tuv xml:lang="srp">
+        <seg>новац</seg>
+      </tuv>
+      <tuv xml:lang="urd">
+        <seg>زر</seg>
+      </tuv>
+      <tuv xml:lang="gan">
+        <seg>錢</seg>
+      </tuv>
+      <tuv xml:lang="lit">
+        <seg>Pinigai</seg>
+      </tuv>
+      <tuv xml:lang="hbs">
+        <seg>novac</seg>
+      </tuv>
+      <tuv xml:lang="lav">
+        <seg>nauda</seg>
+      </tuv>
+      <tuv xml:lang="bos">
+        <seg>Novac</seg>
+      </tuv>
+      <tuv xml:lang="azb">
+        <seg>پول</seg>
+      </tuv>
+      <tuv xml:lang="jav">
+        <seg>Dhuwit</seg>
+      </tuv>
+      <tuv xml:lang="ell">
+        <seg>χρήμα</seg>
+      </tuv>
+      <tuv xml:lang="sun">
+        <seg>Duit</seg>
+      </tuv>
+      <tuv xml:lang="fry">
+        <seg>Jild</seg>
+      </tuv>
+      <tuv xml:lang="jam">
+        <seg>Moni</seg>
+      </tuv>
+      <tuv xml:lang="che">
+        <seg>Ахча</seg>
+      </tuv>
+      <tuv xml:lang="bel">
+        <seg>грошы</seg>
+      </tuv>
+      <tuv xml:lang="lmo">
+        <seg>Danee</seg>
+      </tuv>
+      <tuv xml:lang="ina">
+        <seg>Moneta</seg>
+      </tuv>
+      <tuv xml:lang="zul">
+        <seg>Imali</seg>
       </tuv>
     </tu>
 
