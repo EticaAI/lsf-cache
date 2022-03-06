@@ -268,6 +268,12 @@ def _brevis(rem: str) -> str:
     return nomen
 
 
+def _pre_pad(textum: str) -> str:
+    if not textum:
+        return textum
+
+    return textum.replace("\n\n", "\n+++<br><br>+++\n")
+
 def _pad(textum: str, pad: int) -> str:
     lineam = textum.splitlines()
     resultatum = ''
@@ -1189,7 +1195,7 @@ class Codex:
                 term2 = self.notitiae.translatio(term)
                 meta = {}
                 meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = term2
-                meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
+                # meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
 
                 resultatum.append("<<<")
 
@@ -1214,10 +1220,12 @@ class Codex:
                 )
                 resultatum.append("")
 
-                resultatum.extend(meta_tabulae)
-                resultatum.append("")
+                # resultatum.extend(meta_tabulae)
+                # resultatum.append("\nres_explanationibus\n")
+                resultatum.extend(self.res_explanationibus(meta))
+                # resultatum.append("")
                 resultatum.append("<<<")
-                resultatum.append("")
+                # resultatum.append("")
                 continue
 
             # resultatum.append("<<<")
@@ -1240,15 +1248,16 @@ class Codex:
                 ' [`' + codicem_loci + '`] ' + nomen + "\n"
             )
 
-            resultatum.append("\n")
-            resultatum.append(numerordinatio_summary(item))
-            resultatum.extend(self.conceptum_ad_tabula_codicibus(item))
-            resultatum.append("\n")
-            resultatum.extend(self.conceptum_ad_tabula_verbis(item))
-            resultatum.append("\n")
+            # resultatum.append("\n")
+            # resultatum.append(numerordinatio_summary(item))
+            # resultatum.extend(self.conceptum_ad_tabula_codicibus(item))
+            # resultatum.append("\n")
+            # Verba already working
+            # resultatum.extend(self.conceptum_ad_tabula_verbis(item))
+            # resultatum.append("\n")
 
             # TODO res_explanationibus
-            resultatum.append("\nres_explanationibus\n")
+            # resultatum.append("\nres_explanationibus\n")
             resultatum.extend(self.res_explanationibus(item))
             resultatum.append("\n")
 
@@ -1821,7 +1830,6 @@ class Codex:
     def res_explanationibus(self, res: dict) -> list:
         """rēs explānātiōnibus
 
-        _extended_summary_
         Trivia:
         - rēs, f, s, nom., https://en.wiktionary.org/wiki/res#Latin
         - explānātiōnibus, f, pl, dativus,
@@ -1837,13 +1845,15 @@ class Codex:
         linguae_totale = 0
 
         for clavem, item_textum in res.items():
-            if not clavem.startswith('#item+rem+i_qcc'):
+            # if not clavem.startswith('#item+rem+i_qcc'):
+            if not clavem.startswith('#item+rem+i_qcc+is_zxxx'):
                 continue
 
             dinterlinguam = self.dictionaria_interlinguarum.formatum_nomen(
                 clavem)
             clavem_i18n = dinterlinguam
 
+            # if item_textum and len(item_textum) > 0:
             if item_textum:
                 clavem_i18n = clavem if clavem_i18n is None else clavem_i18n
                 item_text_i18n = item_textum
@@ -1856,16 +1866,21 @@ class Codex:
                     ))
 
                 interlinguae.append([clavem_i18n, item_text_i18n])
+                # interlinguae.append([clavem_i18n, item_textum])
                 interlinguae_totale += 1
+            # else:
+            #     interlinguae.append(['Error: ' + clavem_i18n, item_textum])
+            #     interlinguae_totale += 1
 
-        if interlinguae_totale > 1:
+        # if interlinguae_totale > 1:
+        if len(interlinguae) > 0:
 
             paginae.append("Rēs interlinguālibus::")
 
             for interlingua in interlinguae:
                 paginae.append("  {0}:::\n{1}".format(
                     interlingua[0],
-                    _pad(interlingua[1], 4)
+                    _pad(_pre_pad(interlingua[1]), 4)
                 ))
 
         for clavem, item_textum in res.items():
@@ -1910,7 +1925,7 @@ class Codex:
                 # linguae.append("")
                 linguae_totale += 1
 
-        if linguae_totale > 1:
+        if linguae_totale > 0:
 
             paginae.append("Rēs linguālibus::")
 
