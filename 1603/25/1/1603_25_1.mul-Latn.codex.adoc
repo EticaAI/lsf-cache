@@ -2,7 +2,7 @@
 :doctype: book
 :title: Cōdex [1603:25:1]: //dictiōnāria de partes corporis humani//
 :lang: la
-:toc:
+:toc: macro
 :toclevels: 4
 :toc-title: Tabula contentorum
 :table-caption: Tabula
@@ -23,49 +23,14 @@
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
 [quote]
 /**Public domain means that each major common issue only needs to be resolved once**/@eng-Latn
 
-<<<
-toc::[]
-
-
-[id=0_999_1603_1]
-== Praefātiō 
-
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-_**Cōdex [1603:25:1]**_ is the book format of the machine-readable dictionaries _**[1603:25:1] //dictiōnāria de partes corporis humani//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
-
-Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
-
-The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
-
-|===
-
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
 
 [%header,cols="25h,~a"]
 |===
@@ -92,7 +57,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-05T22:24:49
+2022-03-06T00:43:31
 
 |
 /SPDX license ID/@eng-Latn
@@ -106,29 +71,35 @@ https://github.com/EticaAI/multilingual-lexicography/issues/11
 
 |===
 
+<<<
+toc::[]
+<<<
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    _**Cōdex [1603:25:1]**_ is the book format of the machine-readable dictionaries _**[1603:25:1] //dictiōnāria de partes corporis humani//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+    +++<br><br>+++
+    Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+    +++<br><br>+++
+    The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
+
 
 <<<
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
+Rēs interlinguālibus::
+  /scope and content/@eng-Latn:::
+    This Numerodinatio namespace contains dictionaries related to general human body parts. Latin (while a natural language) actually is used as interlingual code. It's mostly based on Basle Nomina Anatomica 1895 ("BNA1895") and, if any difference, archaic terms are replaced with Terminologia Anatomica 95 ("TA95").
+    +++<br><br>+++
+    Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to external body parts.
+    +++<br><br>+++
+    All work on the main concept tables is manually compiled and reviewed by EticaAI.
 
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/scope and content/@eng-Latn
-|
-This Numerodinatio namespace contains dictionaries related to general human body parts. Latin (while a natural language) actually is used as interlingual code. It's mostly based on Basle Nomina Anatomica 1895 ("BNA1895") and, if any difference, archaic terms are replaced with Terminologia Anatomica 95 ("TA95").
-
-Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to external body parts.
-
-All work on the main concept tables is manually compiled and reviewed by EticaAI.
-
-|===
 
 
 === Methodī ex verbīs in dictiōnāriīs
@@ -283,7 +254,7 @@ https://iso639-3.sil.org/code/eng[eng]
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-8
+9
 
 |
 fra-Latn

@@ -274,6 +274,7 @@ def _pre_pad(textum: str) -> str:
 
     return textum.replace("\n\n", "\n+++<br><br>+++\n")
 
+
 def _pad(textum: str, pad: int) -> str:
     lineam = textum.splitlines()
     resultatum = ''
@@ -922,7 +923,8 @@ class Codex:
             self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
         ))
         resultatum.append(":lang: la")
-        resultatum.append(":toc:")
+        # resultatum.append(":toc:")
+        resultatum.append(":toc: macro")
         resultatum.append(":toclevels: 4")
         # resultatum.append(":orgname: Etica.AI")
         # resultatum.append(":version: 1.2.3")
@@ -957,8 +959,69 @@ class Codex:
         dominium_publicum = self.codex_dominium_publicum()
 
         resultatum.extend(dominium_publicum)
+        resultatum.extend((["{nbsp} +"] * 5))
+        # resultatum.append("<<<")
+
+        meta = {}
+        meta_langs = [
+            '#item+rem+i_qcc+is_zxxx+ix_codexfacto'
+        ]
+
+        scrīptor = self.quod_res('0_1603_1_7_2616_50')
+        if scrīptor and qhxl(scrīptor, meta_langs) is not None:
+            meta['#item+rem+i_qcc+is_zxxx+ix_wikip50'] = \
+                qhxl(scrīptor, meta_langs)
+
+        translator = self.quod_res('0_1603_1_7_2616_655')
+        if translator and qhxl(translator, meta_langs) is not None:
+            meta['#item+rem+i_qcc+is_zxxx+ix_wikip655'] = \
+                qhxl(translator, meta_langs)
+
+        dictiōnārium_ēditōrī = self.quod_res('0_1603_1_7_2616_98')
+        if dictiōnārium_ēditōrī and \
+                qhxl(dictiōnārium_ēditōrī, meta_langs) is not None:
+            meta['#item+rem+i_qcc+is_zxxx+ix_wikip98'] = \
+                qhxl(dictiōnārium_ēditōrī, meta_langs)
+
+        publisher = self.quod_res('0_1603_1_7_2616_123')
+        if publisher and qhxl(publisher, meta_langs) is not None:
+            meta['#item+rem+i_qcc+is_zxxx+ix_wikip123'] = \
+                qhxl(publisher, meta_langs)
+
+        publication_date = self.quod_res('0_1603_1_7_2616_577')
+        if publication_date and qhxl(publication_date, meta_langs) is not None:
+            meta['#item+rem+i_qcc+is_zxxx+ix_wikip577'] = \
+                qhxl(publication_date, meta_langs)
+
+        meta['#item+rem+i_qcc+is_zxxx+ix_wikip393'] = \
+            datetime.datetime.now().replace(microsecond=0).isoformat()
+
+        spdx_licentiam = self.quod_res('0_1603_1_7_2616_2479')
+        if spdx_licentiam and qhxl(spdx_licentiam, meta_langs) is not None:
+            meta['#item+rem+i_qcc+is_zxxx+ix_wikip2479'] = \
+                qhxl(spdx_licentiam, meta_langs)
+
+        reference_url = self.quod_res('0_1603_1_7_2616_854')
+        if reference_url and qhxl(reference_url, meta_langs) is not None:
+            meta['#item+rem+i_qcc+is_zxxx+ix_wikip854'] = \
+                qhxl(reference_url, meta_langs)
+
+        spōnsor = self.quod_res('0_1603_1_7_2616_859')
+        if spōnsor and qhxl(spōnsor, meta_langs) is not None:
+            meta['#item+rem+i_qcc+is_zxxx+ix_wikip859'] = \
+                qhxl(spōnsor, meta_langs)
+
+        # paginae.append("")
+        # paginae.append(str(meta))
+        # paginae.append("")
+        if len(meta.keys()) > 0:
+            meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
+            resultatum.extend(meta_tabulae)
+            resultatum.append("")
+
         resultatum.append("<<<")
         resultatum.append("toc::[]")
+        resultatum.append("<<<")
         resultatum.append("\n")
 
         # TODO: potential list of images
@@ -981,7 +1044,7 @@ class Codex:
         # resultatum.append("[id=0_999_1603_1]")
         # resultatum.append("== [0] /Praefātiō/@lat-Latn \n")
         # resultatum.append("== Praefātiō \n")
-        resultatum.extend((["{nbsp} +"] * 20))
+        resultatum.extend((["{nbsp} +"] * 5))
 
         # resultatum.append("[.text-rigth]")
         # resultatum.append("[.lead]")
@@ -1013,88 +1076,70 @@ class Codex:
         # resultatum.append("== [0] /Praefātiō/@lat-Latn \n")
         paginae.append("== Praefātiō \n")
 
-# WARNING: This book, like other /**Cōdex**/@eng-Latn, is auto-generated in a standard way for every namespace of community curated dictionaries. These books intentionally do not have brands
-
-#         codex_praefatio_textum = """
-# _**"Cōdex [{0}]"**_ is the book format of the machine-readable dictionaries _**"[{0}] {1}"**_,
-# which are distributed for implementers on external applications.
-# This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
-
-# Practical lexicography is the art or craft of compiling, writing and editing dictionaries.
-# The basics are not far different than a millennia ago:
-# it is still a very humane, creative work.
-# It is necessary to be humble:
-# most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws.
-# Making sure of a source idea of what a concept represents,
-# even if it means rewrite and make simpler, annex pictures,
-# show examples, do whatever to make it be understood,
-# makes even non-professional translators that care about their own language deliver better results than any alternative.
-# In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
-
-# The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use.
-# All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares.
-# Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
-#         """.format(  # noqa
-#             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
-#             self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
-#         )
-
         textum_2 = self.notitiae.translatio('{% _🗣️ 1603_1_99_10_1 🗣️_ %}')
         codex_praefatio_textum = textum_2.format(  # noqa
             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
             self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
         )
 
-        paginae.extend(descriptio_tabulae_de_lingua(
-            'Lingua Anglica (Abecedarium Latinum)',
-            codex_praefatio_textum
-            # ("".join(lineam) + '+' + "\n")
-        ))
-
         meta = {}
+        meta['#item+rem+i_eng+is_latn'] = codex_praefatio_textum
+        # meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
+
+        # resultatum.extend(meta_tabulae)
+        # resultatum.append("\nres_explanationibus\n")
+        paginae.extend(self.res_explanationibus(meta))
+
+        # paginae.extend(descriptio_tabulae_de_lingua(
+        #     'Lingua Anglica (Abecedarium Latinum)',
+        #     codex_praefatio_textum
+        #     # ("".join(lineam) + '+' + "\n")
+        # ))
+
+        # meta = {}
+        # # meta_langs = [
+        # #     '#item+rem+i_mul+is_zyyy',
+        # #     '#item+rem+i_lat+is_latn'
+        # # ]
         # meta_langs = [
-        #     '#item+rem+i_mul+is_zyyy',
-        #     '#item+rem+i_lat+is_latn'
+        #     '#item+rem+i_qcc+is_zxxx+ix_codexfacto'
         # ]
-        meta_langs = [
-            '#item+rem+i_qcc+is_zxxx+ix_codexfacto'
-        ]
 
-        scrīptor = self.quod_res('0_1603_1_7_2616_50')
-        if scrīptor and qhxl(scrīptor, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip50'] = \
-                qhxl(scrīptor, meta_langs)
+        # scrīptor = self.quod_res('0_1603_1_7_2616_50')
+        # if scrīptor and qhxl(scrīptor, meta_langs) is not None:
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip50'] = \
+        #         qhxl(scrīptor, meta_langs)
 
-        publisher = self.quod_res('0_1603_1_7_2616_123')
-        if publisher and qhxl(publisher, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip123'] = \
-                qhxl(publisher, meta_langs)
+        # publisher = self.quod_res('0_1603_1_7_2616_123')
+        # if publisher and qhxl(publisher, meta_langs) is not None:
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip123'] = \
+        #         qhxl(publisher, meta_langs)
 
-        publication_date = self.quod_res('0_1603_1_7_2616_577')
-        if publication_date and qhxl(publication_date, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip577'] = \
-                qhxl(publication_date, meta_langs)
+        # publication_date = self.quod_res('0_1603_1_7_2616_577')
+        # if publication_date and qhxl(publication_date, meta_langs) is not None:
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip577'] = \
+        #         qhxl(publication_date, meta_langs)
 
-        meta['#item+rem+i_qcc+is_zxxx+ix_wikip393'] = \
-            datetime.datetime.now().replace(microsecond=0).isoformat()
+        # meta['#item+rem+i_qcc+is_zxxx+ix_wikip393'] = \
+        #     datetime.datetime.now().replace(microsecond=0).isoformat()
 
-        spdx_licentiam = self.quod_res('0_1603_1_7_2616_2479')
-        if spdx_licentiam and qhxl(spdx_licentiam, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip2479'] = \
-                qhxl(spdx_licentiam, meta_langs)
+        # spdx_licentiam = self.quod_res('0_1603_1_7_2616_2479')
+        # if spdx_licentiam and qhxl(spdx_licentiam, meta_langs) is not None:
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip2479'] = \
+        #         qhxl(spdx_licentiam, meta_langs)
 
-        reference_url = self.quod_res('0_1603_1_7_2616_854')
-        if reference_url and qhxl(reference_url, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip854'] = \
-                qhxl(reference_url, meta_langs)
+        # reference_url = self.quod_res('0_1603_1_7_2616_854')
+        # if reference_url and qhxl(reference_url, meta_langs) is not None:
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip854'] = \
+        #         qhxl(reference_url, meta_langs)
 
+        # # paginae.append("")
+        # # paginae.append(str(meta))
         # paginae.append("")
-        # paginae.append(str(meta))
-        paginae.append("")
-        if len(meta.keys()) > 0:
-            meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
-            paginae.extend(meta_tabulae)
-            paginae.append("")
+        # if len(meta.keys()) > 0:
+        #     meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
+        #     paginae.extend(meta_tabulae)
+        #     paginae.append("")
 
         return paginae
         # return resultatum
@@ -1260,7 +1305,6 @@ class Codex:
             # resultatum.append("\nres_explanationibus\n")
             resultatum.extend(self.res_explanationibus(item))
             resultatum.append("\n")
-
 
             # resultatum.append(numerordinatio_lineam_hxml5_details(item))
 
@@ -1694,8 +1738,10 @@ class Codex:
             # paginae.append(str(meta))
             # paginae.append("")
             if len(meta.keys()) > 0 and meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535']:
-                meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
-                paginae.extend(meta_tabulae)
+
+                paginae.extend(self.res_explanationibus(meta))
+                # meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
+                # paginae.extend(meta_tabulae)
                 paginae.append("")
             else:
                 paginae.append(
@@ -1713,8 +1759,9 @@ class Codex:
                 meta2['#item+rem+i_qcc+is_zxxx+ix_wikiq9289584'] = term2
 
                 paginae.append('==== Caveat lector')
-                meta_tabulae = self.conceptum_ad_tabula_codicibus(meta2)
-                paginae.extend(meta_tabulae)
+                # meta_tabulae = self.conceptum_ad_tabula_codicibus(meta2)
+                # paginae.extend(meta_tabulae)
+                paginae.extend(self.res_explanationibus(meta2))
                 paginae.append("")
                 # meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
                 #     term.replace("\\n", "\n")
@@ -1758,11 +1805,9 @@ class Codex:
                 self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
             )
 
-
             textum_III = self.notitiae.translatio(
                 '{% _🗣️ 1603_1_99_10_7 🗣️_ %}')
             vicidata_q_modo_11 = textum_III.format(self.de_codex)
-
 
             textum_IV = self.notitiae.translatio(
                 '{% _🗣️ 1603_1_99_10_8 🗣️_ %}')
@@ -1912,10 +1957,15 @@ class Codex:
                         dlinguam['#item+rem+i_lat+is_latn'] + ''
 
                 if dlinguam and dlinguam['#item+rem+i_qcc+is_zxxx+ix_wikilngm']:
-                    item_text_i18n = '+++<span lang="{1}">{0}</span>+++'.format(
-                        item_textum,
-                        dlinguam['#item+rem+i_qcc+is_zxxx+ix_wikilngm']
-                    )
+                    # We're assuming if content have line breaks, it is complex
+                    # and we will not give hint about language.
+                    # This can be reviewed on the future
+                    if item_text_i18n.find("\n") == -1:
+
+                        item_text_i18n = '+++<span lang="{1}">{0}</span>+++'.format(
+                            item_textum,
+                            dlinguam['#item+rem+i_qcc+is_zxxx+ix_wikilngm']
+                        )
                 # resultatum_corpus.append(
                 #     "| {0} | {1} |".format(clavem_i18n, item_text_i18n))
                 # item_text_i18n = item_text_i18n.replace('||', '\|\|')
@@ -1932,7 +1982,7 @@ class Codex:
             for lingua in linguae:
                 paginae.append("  {0}:::\n{1}".format(
                     lingua[0],
-                    _pad(lingua[1], 4)
+                    _pad(_pre_pad(lingua[1]), 4)
                 ))
 
         return paginae

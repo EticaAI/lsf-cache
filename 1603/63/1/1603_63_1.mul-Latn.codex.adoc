@@ -2,7 +2,7 @@
 :doctype: book
 :title: Cōdex [1603:63:1]: //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//
 :lang: la
-:toc:
+:toc: macro
 :toclevels: 4
 :toc-title: Tabula contentorum
 :table-caption: Tabula
@@ -23,49 +23,14 @@
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
 [quote]
 /**Public domain means that each major common issue only needs to be resolved once**/@eng-Latn
 
-<<<
-toc::[]
-
-
-[id=0_999_1603_1]
-== Praefātiō 
-
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-_**Cōdex [1603:63:1]**_ is the book format of the machine-readable dictionaries _**[1603:63:1] //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
-
-Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
-
-The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
-
-|===
-
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
 
 [%header,cols="25h,~a"]
 |===
@@ -92,7 +57,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-05T22:25:57
+2022-03-06T00:44:52
 
 |
 /SPDX license ID/@eng-Latn
@@ -101,25 +66,31 @@ CC0-1.0
 
 |===
 
+<<<
+toc::[]
+<<<
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    _**Cōdex [1603:63:1]**_ is the book format of the machine-readable dictionaries _**[1603:63:1] //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+    +++<br><br>+++
+    Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+    +++<br><br>+++
+    The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
+
 
 <<<
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
+Rēs interlinguālibus::
+  /scope and content/@eng-Latn:::
+    This group contains concepts related to humanitarian relief when done by individuais. It is REQUIRED that the individual is from an organization, either as volunteer or as part of the job, which has a code or conduct compatible with Red Cross and Red Crescent Movement. This is the more generic type of what is considered _humanitarian_, but still an _strict_ type of humanitarian. This differentiation is likely to be more clear as more dictionaries for individuais are created.
 
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/scope and content/@eng-Latn
-|
-This group contains concepts related to humanitarian relief when done by individuais. It is REQUIRED that the individual is from an organization, either as volunteer or as part of the job, which has a code or conduct compatible with Red Cross and Red Crescent Movement. This is the more generic type of what is considered _humanitarian_, but still an _strict_ type of humanitarian. This differentiation is likely to be more clear as more dictionaries for individuais are created.
-
-|===
 
 
 === Methodī ex verbīs in dictiōnāriīs
@@ -358,7 +329,7 @@ https://iso639-3.sil.org/code/eng[eng]
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-3
+4
 
 |
 fra-Latn

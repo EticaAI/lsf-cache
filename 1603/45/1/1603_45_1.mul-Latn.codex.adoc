@@ -2,7 +2,7 @@
 :doctype: book
 :title: Cōdex [1603:45:1]: //dictiōnāria de hūmānitātēs interimperia//
 :lang: la
-:toc:
+:toc: macro
 :toclevels: 4
 :toc-title: Tabula contentorum
 :table-caption: Tabula
@@ -23,49 +23,14 @@
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
 [quote]
 /**Public domain means that each major common issue only needs to be resolved once**/@eng-Latn
 
-<<<
-toc::[]
-
-
-[id=0_999_1603_1]
-== Praefātiō 
-
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-_**Cōdex [1603:45:1]**_ is the book format of the machine-readable dictionaries _**[1603:45:1] //dictiōnāria de hūmānitātēs interimperia//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
-
-Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
-
-The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
-
-|===
-
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
 
 [%header,cols="25h,~a"]
 |===
@@ -80,6 +45,11 @@ scrīptor
 Multiplicēs scrīptōribus
 
 |
+/translator/@eng-Latn
+|
+Vicidata
+
+|
 /cōdex pūblicandī/
 |
 EticaAI
@@ -92,76 +62,77 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-05T22:34:38
+2022-03-06T00:52:30
 
 |
 /SPDX license ID/@eng-Latn
 |
 CC0-1.0
 
+|
+spōnsor
+|
+pro bonō publicō
+
 |===
+
+<<<
+toc::[]
+<<<
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    _**Cōdex [1603:45:1]**_ is the book format of the machine-readable dictionaries _**[1603:45:1] //dictiōnāria de hūmānitātēs interimperia//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+    +++<br><br>+++
+    Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+    +++<br><br>+++
+    The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
 
 
 <<<
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
+Rēs interlinguālibus::
+  /scope and content/@eng-Latn:::
+    The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
+    +++<br><br>+++
+    **UN System**
+    +++<br><br>+++
+    The dictionary contains an incomplete list of concepts of the UN System. 
+    +++<br><br>+++
+    **National Red Cross and Red Crescent Societies**
+    +++<br><br>+++
+    The dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.
+    +++<br><br>+++
+    **Subnational Red Cross and Red Crescent Societies**
+    +++<br><br>+++
+    The dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:
+    +++<br><br>+++
+    . National Red Cross of Brazil
+    .. Code: 63_76
+    ... Numerodinatio: 1603:45:1:63:76
+    . Subnational; Minas Gerais, Brazil
+    .. UN P Code: BR33
+    ... Code: 63_76_33
+    ... Numerodinatio: 1603:45:1:63:76:33
+    +++<br><br>+++
+    Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
+    +++<br><br>+++
+    **Other humanitarian organizations are missing**
+    We're still adding organizations which are neither UN or Red Cross. However, we're likely to keep this focused on humanitarian aid and have development aid. Human rights and humanitarian relief organizations will not be added here
 
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/scope and content/@eng-Latn
-|
-The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
-
-**UN System**
-
-The dictionary contains an incomplete list of concepts of the UN System. 
-
-**National Red Cross and Red Crescent Societies**
-
-The dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.
-
-**Subnational Red Cross and Red Crescent Societies**
-
-The dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:
-
-. National Red Cross of Brazil
-.. Code: 63_76
-... Numerodinatio: 1603:45:1:63:76
-. Subnational; Minas Gerais, Brazil
-.. UN P Code: BR33
-... Code: 63_76_33
-... Numerodinatio: 1603:45:1:63:76:33
-
-Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
-
-**Other humanitarian organizations are missing**
-We're still adding organizations which are neither UN or Red Cross. However, we're likely to keep this focused on humanitarian aid and have development aid. Human rights and humanitarian relief organizations will not be added here
-
-|===
 
 
 ==== Caveat lector
+Rēs interlinguālibus::
+  /Wikidata Q local numeric namespace/@eng-Latn:::
+    **Do not use [1603:45:1] to automate import on Wikidata**. Volunteers can use this as reference for what is missing, but all work is already done via the Wikidata site, reviewing item by item.
 
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/Wikidata Q local numeric namespace/
-|
-**Do not use [1603:45:1] to automate import on Wikidata**. Volunteers can use this as reference for what is missing, but all work is already done via the Wikidata site, reviewing item by item.
-
-|===
 
 ==== Referentia
 Referēns 1::
@@ -262,7 +233,7 @@ From the point of view of data conciliation, the following methodology is used t
 |===
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 346
+==== Concepta: 347
 
 ==== Rēs linguālibus: 112
 
@@ -299,7 +270,7 @@ https://iso639-3.sil.org/code/ara[ara]
 |
 Macrolingua Arabica (/Abecedarium Arabicum/)
 |
-120
+121
 
 |
 hye-Armn
@@ -419,7 +390,7 @@ https://iso639-3.sil.org/code/tam[tam]
 |
 Lingua Tamulica (/ISO 15924 Taml/)
 |
-42
+43
 
 |
 tel-Telu
@@ -467,7 +438,7 @@ https://iso639-3.sil.org/code/zho[zho]
 |
 /Macrolingua Sinicae (?)/
 |
-95
+96
 
 |
 por-Latn
@@ -491,7 +462,7 @@ https://iso639-3.sil.org/code/eng[eng]
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-185
+187
 
 |
 fra-Latn
@@ -503,7 +474,7 @@ https://iso639-3.sil.org/code/fra[fra]
 |
 Lingua Francogallica (Abecedarium Latinum)
 |
-178
+179
 
 |
 nld-Latn
@@ -527,7 +498,7 @@ https://iso639-3.sil.org/code/deu[deu]
 |
 Lingua Germanica (Abecedarium Latinum)
 |
-95
+96
 
 |
 spa-Latn
@@ -539,7 +510,7 @@ https://iso639-3.sil.org/code/spa[spa]
 |
 Lingua Hispanica (Abecedarium Latinum)
 |
-177
+178
 
 |
 ita-Latn
@@ -755,7 +726,7 @@ https://iso639-3.sil.org/code/jpn[jpn]
 |
 Lingua Iaponica (Scriptura Iaponica)
 |
-138
+139
 
 |
 nno-Latn
@@ -1043,7 +1014,7 @@ https://iso639-3.sil.org/code/zho[zho]
 |
 //Traditional Chinese// (/ISO 15924 Hant/)
 |
-58
+59
 
 |
 pap-Latn
@@ -1623,7 +1594,7 @@ Lingua Zuluana (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 9
+==== Rēs interlinguālibus: 11
 [%header,cols="25h,~a"]
 |===
 |
@@ -1675,6 +1646,20 @@ numerus editionis::
 #item+rem+definitionem+i_eng+is_latn::: Date or point in time when a work was first published or released
 
 
+/translator/@eng-Latn::
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P655
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip655
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_655
+#item+rem+definitionem+i_eng+is_latn::: agent who adapts any kind of written text from one language to another
+
+
+spōnsor::
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P859
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip859
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_859
+#item+rem+definitionem+i_eng+is_latn::: organization or individual that sponsors this item
+
+
 /SPDX license ID/@eng-Latn::
 #item+rem+i_qcc+is_zxxx+ix_wikip::: P2479
 #item+rem+i_qcc+is_zxxx+ix_regulam::: [0-9A-Za-z\.\-]{3,36}[+]?
@@ -1691,7 +1676,7 @@ numerus editionis::
 #item+rem+definitionem+i_eng+is_latn::: a summary statement providing an overview of the archival collection
 
 
-/Wikidata Q local numeric namespace/::
+/Wikidata Q local numeric namespace/@eng-Latn::
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq9289584
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q_9289584
 
@@ -1798,7 +1783,7 @@ Rēs linguālibus::
 
 
 
-=== Archīa prō cōdice: 2
+=== Archīa prō cōdice: 1
 
 
 ==== 1603_45_1.mul-Latn.codex.adoc
@@ -1811,19 +1796,6 @@ Rēs interlinguālibus::
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     AsciiDoc is a plain text authoring format (i.e., lightweight markup language) for writing technical content such as documentation, articles, and books.
-
-
-
-==== 1603_45_1.mul-Latn.codex.pdf
-
-Rēs interlinguālibus::
-  /download link/@eng-Latn::: link:1603_45_1.mul-Latn.codex.pdf[1603_45_1.mul-Latn.codex.pdf]
-  /reference URL/@eng-Latn:::
-    https://en.wikipedia.org/wiki/PDF
-
-Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
-    Portable Document Format (PDF), standardized as ISO 32000, is a file format developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems.
 
 
 
@@ -11179,6 +11151,51 @@ Rēs linguālibus::
 
   Lingua Neograeca (Alphabetum Graecum):::
     +++<span lang="el">Συμβούλιο Κηδεμονιών</span>+++
+
+
+
+
+
+[id='9_9']
+==== [`9_9`] /United Nations Humanitarian Air Service/@eng-Latn
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q1437488[Q1437488]
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">UNHAS</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">United Nations Humanitarian Air Service</span>+++
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">الخدمة الجوية الإنسانية للأمم المتحدة</span>+++
+
+  Lingua Tamulica (/ISO 15924 Taml/):::
+    +++<span lang="ta">ஐக்கிய நாடுகளின் மனிதாபிமான விமானச் சேவை</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">聯合國人權組織航空服務</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">United Nations Humanitarian Air Service</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">Service aérien d’aide humanitaire des Nations Unies</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">Humanitärer Flugdienst der Vereinten Nationen</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">Servicio Humanitario Aéreo de las Naciones Unidas</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">国連人道支援航空サービス</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">聯合國人道支援航空</span>+++
 
 
 

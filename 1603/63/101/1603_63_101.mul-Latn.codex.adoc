@@ -2,7 +2,7 @@
 :doctype: book
 :title: Cōdex [1603:63:101]: //Dictiōnāria basibus dē rēbus vītālibus necessāriīs//
 :lang: la
-:toc:
+:toc: macro
 :toclevels: 4
 :toc-title: Tabula contentorum
 :table-caption: Tabula
@@ -23,49 +23,14 @@
 {nbsp} +
 {nbsp} +
 {nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
 [quote]
 /**Public domain means that each major common issue only needs to be resolved once**/@eng-Latn
 
-<<<
-toc::[]
-
-
-[id=0_999_1603_1]
-== Praefātiō 
-
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-_**Cōdex [1603:63:101]**_ is the book format of the machine-readable dictionaries _**[1603:63:101] //Dictiōnāria basibus dē rēbus vītālibus necessāriīs//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
-
-Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
-
-The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
-
-|===
-
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
+{nbsp} +
 
 [%header,cols="25h,~a"]
 |===
@@ -75,77 +40,78 @@ Rēs interlinguālibus
 Factum
 
 |
-scrīptor
+/translator/@eng-Latn
 |
-EticaAI
+Vicidata
 
 |
-/cōdex pūblicandī/
+/dictiōnārium ēditōrī/
 |
 EticaAI
 
 |
 /publication date/@eng-Latn
 |
-2022-04-26
+2022-03-26
 
 |
 numerus editionis
 |
-2022-03-05T22:26:30
+2022-03-06T00:46:00
 
 |
 /SPDX license ID/@eng-Latn
 |
 CC0-1.0
 
+|
+spōnsor
+|
+pro bonō publicō
+
 |===
+
+<<<
+toc::[]
+<<<
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    _**Cōdex [1603:63:101]**_ is the book format of the machine-readable dictionaries _**[1603:63:101] //Dictiōnāria basibus dē rēbus vītālibus necessāriīs//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+    +++<br><br>+++
+    Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+    +++<br><br>+++
+    The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
 
 
 <<<
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
+Rēs interlinguālibus::
+  /scope and content/@eng-Latn:::
+    `+//Dictiōnāria basibus dē rēbus vītālibus necessāriīs//+` (literal translation: basic dictionaries about necessary vital things) focus on concepts for things a person can give to another in distress while both don't know each other's languages. It doesn't cover procedures (example of what is not here: how to recover someone from which need cardiac resuscitation) and do not list all options for some areas (but may suggest very well common drugs for some needs, as people may not know what is an _analgesic_, but could known that is Aspirin). 
+    +++<br><br>+++
+    Section 1 to 10 contain concepts which are _not things_ but are relevant you may need to know support terms.
 
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/scope and content/@eng-Latn
-|
-`+//Dictiōnāria basibus dē rēbus vītālibus necessāriīs//+` (literal translation: basic dictionaries about necessary vital things) focus on concepts for things a person can give to another in distress while both don't know each other's languages. It doesn't cover procedures (example of what is not here: how to recover someone from which need cardiac resuscitation) and do not list all options for some areas (but may suggest very well common drugs for some needs, as people may not know what is an _analgesic_, but could known that is Aspirin). 
-
-Section 1 to 10 contain concepts which are _not things_ but are relevant you may need to know support terms.
-
-|===
 
 
 ==== Caveat lector
+Rēs interlinguālibus::
+  /Wikidata Q local numeric namespace/@eng-Latn:::
+    This can be used as a multilingual glossary (mitigate language barrier), but NOT as an instruction manual on how to use these concepts (mitigate the reader lack of what to do). Unless you have minimal training (just need dictionaries) or use such content on derived reviewed works which add more explanations, you're likely to make mistakes. It is still likely better than to not help at all, but take the opportunity to educate yourself.
+    +++<br><br>+++
+    **Some common pitfalls**:
+    +++<br><br>+++
+    . Your perceived sex or gender will affect whilling to someone else's admit a need which would be a taboo. Girls and women are likely to prefer to talk with someone perceived as gender female.
+    . Someone which faced sexual abuse very likely would need to talk in privacy to a point of avoid ask help at all. Undesired pregnancy and, which is not biological sex specific, sexual transmissible diseases, need further attention as soon as possible. Be aware that people in distress are more likely to be abused and feel ashamed.
+    . Multilingual dictionaries cannot be used as medical advice. Knowing translations of something such as paracetamol and the fact we grouped it under analgesic is still insufficient. Even such extra hints would take too much translations we can't scale up.
+    . In case of people who are _on the run_ (without too much spare space on backpacks) one strategy if you have spare items is just leave at least the most basic items on some table and allow people to do some self-servicing. Ready-to-use kits are okay, but it is common people need individual selection when they have to consider extra height. It's still relevant to have humans for additional needs, but this at least helps typical issues with _taboo_ topics.
 
-[%header,cols="25h,~a"]
-|===
-|
-Rēs interlinguālibus
-|
-Factum
-
-|
-/Wikidata Q local numeric namespace/
-|
-This can be used as a multilingual glossary (mitigate language barrier), but NOT as an instruction manual on how to use these concepts (mitigate the reader lack of what to do). Unless you have minimal training (just need dictionaries) or use such content on derived reviewed works which add more explanations, you're likely to make mistakes. It is still likely better than to not help at all, but take the opportunity to educate yourself.
-
-**Some common pitfalls**:
-
-. Your perceived sex or gender will affect whilling to someone else's admit a need which would be a taboo. Girls and women are likely to prefer to talk with someone perceived as gender female.
-. Someone which faced sexual abuse very likely would need to talk in privacy to a point of avoid ask help at all. Undesired pregnancy and, which is not biological sex specific, sexual transmissible diseases, need further attention as soon as possible. Be aware that people in distress are more likely to be abused and feel ashamed.
-. Multilingual dictionaries cannot be used as medical advice. Knowing translations of something such as paracetamol and the fact we grouped it under analgesic is still insufficient. Even such extra hints would take too much translations we can't scale up.
-. In case of people who are _on the run_ (without too much spare space on backpacks) one strategy if you have spare items is just leave at least the most basic items on some table and allow people to do some self-servicing. Ready-to-use kits are okay, but it is common people need individual selection when they have to consider extra height. It's still relevant to have humans for additional needs, but this at least helps typical issues with _taboo_ topics.
-
-|===
 
 === Methodī ex verbīs in dictiōnāriīs
 NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
@@ -443,7 +409,7 @@ https://iso639-3.sil.org/code/eng[eng]
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-111
+112
 
 |
 fra-Latn
@@ -1587,7 +1553,7 @@ Lingua Zuluana (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 9
+==== Rēs interlinguālibus: 10
 [%header,cols="25h,~a"]
 |===
 |
@@ -1611,18 +1577,11 @@ The result of this section is a preview. We're aware it is not well formatted fo
 #item+rem+definitionem+i_eng+is_latn::: QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
 
 
-scrīptor::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P50
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip50
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_50
-#item+rem+definitionem+i_eng+is_latn::: Main creator(s) of a written work (use on works, not humans)
-
-
-/cōdex pūblicandī/::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P123
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip123
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_123
-#item+rem+definitionem+i_eng+is_latn::: organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software
+/dictiōnārium ēditōrī/::
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P98
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip98
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_98
+#item+rem+definitionem+i_eng+is_latn::: editor of a compiled work such as a book or a periodical (newspaper or an academic journal)
 
 
 numerus editionis::
@@ -1637,6 +1596,20 @@ numerus editionis::
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip577
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_577
 #item+rem+definitionem+i_eng+is_latn::: Date or point in time when a work was first published or released
+
+
+/translator/@eng-Latn::
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P655
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip655
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_655
+#item+rem+definitionem+i_eng+is_latn::: agent who adapts any kind of written text from one language to another
+
+
+spōnsor::
+#item+rem+i_qcc+is_zxxx+ix_wikip::: P859
+#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip859
+#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_859
+#item+rem+definitionem+i_eng+is_latn::: organization or individual that sponsors this item
 
 
 /SPDX license ID/@eng-Latn::
@@ -1655,7 +1628,7 @@ numerus editionis::
 #item+rem+definitionem+i_eng+is_latn::: a summary statement providing an overview of the archival collection
 
 
-/Wikidata Q local numeric namespace/::
+/Wikidata Q local numeric namespace/@eng-Latn::
 #item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq9289584
 #item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q_9289584
 
@@ -1749,7 +1722,7 @@ Rēs linguālibus::
 
 
 
-=== Archīa prō cōdice: 2
+=== Archīa prō cōdice: 1
 
 
 ==== 1603_63_101.mul-Latn.codex.adoc
@@ -1762,19 +1735,6 @@ Rēs interlinguālibus::
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     AsciiDoc is a plain text authoring format (i.e., lightweight markup language) for writing technical content such as documentation, articles, and books.
-
-
-
-==== 1603_63_101.mul-Latn.codex.pdf
-
-Rēs interlinguālibus::
-  /download link/@eng-Latn::: link:1603_63_101.mul-Latn.codex.pdf[1603_63_101.mul-Latn.codex.pdf]
-  /reference URL/@eng-Latn:::
-    https://en.wikipedia.org/wiki/PDF
-
-Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
-    Portable Document Format (PDF), standardized as ISO 32000, is a file format developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems.
 
 
 
@@ -6545,7 +6505,7 @@ Rēs linguālibus::
 
 
 [id='5_4']
-==== [`5_4`] /pollotarianism/
+==== [`5_4`] /pollotarianism/@eng-Latn
 
 Rēs interlinguālibus::
   /Wiki QID/:::
@@ -6553,7 +6513,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
-    /pollotarianism/
+    /pollotarianism/@eng-Latn
 
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Поллотарианство</span>+++
@@ -6572,7 +6532,7 @@ Rēs linguālibus::
 
 
 [id='5_5']
-==== [`5_5`] /pescetarianism/
+==== [`5_5`] /pescetarianism/@eng-Latn
 
 Rēs interlinguālibus::
   /Wiki QID/:::
@@ -6580,7 +6540,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
-    /pescetarianism/
+    /pescetarianism/@eng-Latn
 
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">نباتيو الأسماك</span>+++
@@ -6668,7 +6628,7 @@ Rēs linguālibus::
 
 
 [id='5_6']
-==== [`5_6`] /lacto-ovo vegetarianism/
+==== [`5_6`] /lacto-ovo vegetarianism/@eng-Latn
 
 Rēs interlinguālibus::
   /Wiki QID/:::
@@ -6676,7 +6636,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
-    /lacto-ovo vegetarianism/
+    /lacto-ovo vegetarianism/@eng-Latn
 
   /Macrolingua Sinicae (?)/:::
     +++<span lang="zh">蛋奶素主義</span>+++
@@ -6689,7 +6649,7 @@ Rēs linguālibus::
 
 
 [id='5_7']
-==== [`5_7`] /lacto vegetarianism/
+==== [`5_7`] /lacto vegetarianism/@eng-Latn
 
 Rēs interlinguālibus::
   /Wiki QID/:::
@@ -6697,7 +6657,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
-    /lacto vegetarianism/
+    /lacto vegetarianism/@eng-Latn
 
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">نباتيو الألبان</span>+++
