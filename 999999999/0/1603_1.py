@@ -1315,12 +1315,12 @@ class Codex:
                 resultatum.append('[discrete]')
                 resultatum.append(
                     ('=' * (codicem_ordo + 3)) + ' ' +
-                    'Annexa'
+                    'Annexa' + "\n"
                 )
                 resultatum.append('[discrete]')
                 resultatum.append(
                     ('=' * (codicem_ordo + 4)) + ' ' +
-                    'Pictūrae'
+                    'Pictūrae' + "\n"
                 )
                 for item in picturae:
                     trivium = item.quod_temp_rel_pic()
