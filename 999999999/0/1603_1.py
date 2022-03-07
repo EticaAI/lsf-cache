@@ -925,7 +925,7 @@ class Codex:
         resultatum.append(":lang: la")
         # resultatum.append(":toc:")
         resultatum.append(":toc: macro")
-        resultatum.append(":toclevels: 4")
+        resultatum.append(":toclevels: 5")
         # resultatum.append(":orgname: Etica.AI")
         # resultatum.append(":version: 1.2.3")
 
