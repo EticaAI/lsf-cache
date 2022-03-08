@@ -953,6 +953,27 @@ class Codex:
         # https://en.wiktionary.org/wiki/commendo#Latin
         resultatum.append(":tip-caption: Commendātum")
 
+        # @see https://github.com/asciidoctor/asciidoctor-pdf/blob/main/docs
+        #      /theming-guide.adoc#theme-related-document-attributes
+        _codex_numerum = numerordinatio_neo_separatum(
+            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'])
+        _basepath = numerordinatio_neo_separatum(_codex_numerum, '/')
+        # _codex_cover = "{0}.mul-Latn.codex.png".format(
+        #     _codex_numerum
+        # )
+        _codex_cover = "{0}.mul-Latn.codex.svg".format(
+            _codex_numerum
+        )
+
+        # basepath = basepath + '/' + \
+        #     numerordinatio_neo_separatum(self.de_codex, '_')
+        if os.path.exists(_basepath + '/' + _codex_cover):
+            resultatum.append(":front-cover-image: image:{0}[\"Cōdex [{1}]: {2}\",1050,1600]".format(
+                _codex_cover,
+                _codex_numerum,
+                self.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+            ))
+
         resultatum.append("\n")
         resultatum.append("\n")
 
@@ -1019,9 +1040,16 @@ class Codex:
             resultatum.extend(meta_tabulae)
             resultatum.append("")
 
+        resultatum.append("")
+        # resultatum.append("ifndef::backend-epub")
+        resultatum.append("ifndef::backend-epub3[]")
+        # resultatum.append("ifndef::ebook-format-kf8")
+        # resultatum.append("ifdef::ebook-format-kf8")
         resultatum.append("<<<")
         resultatum.append("toc::[]")
         resultatum.append("<<<")
+        resultatum.append("endif::[]")
+        # resultatum.append("endifndef::[]")
         resultatum.append("\n")
 
         # TODO: potential list of images
@@ -1957,7 +1985,8 @@ class Codex:
 
                 nomen = '**' + pictura.quod_id() + '**'
                 if link and len(link):
-                    nomen = '**{2}** (link:++{1}++[fōns {2} 🔗])'.format(titulum, link, pictura.quod_id())
+                    nomen = '**{2}** (link:++{1}++[fōns {2} 🔗])'.format(
+                        titulum, link, pictura.quod_id())
 
                 # paginae.append('  {0}:::'.format(pictura.quod_id()))
                 paginae.append(

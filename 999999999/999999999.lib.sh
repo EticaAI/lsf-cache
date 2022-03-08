@@ -510,7 +510,10 @@ neo_codex_de_numerordinatio() {
 }
 
 #######################################
-# From an .codex.adoc, create an epub file
+# Create a book cover from a numerordinatio
+# Trivia:
+# - cōdex, s, m, Nom., https://en.wiktionary.org/wiki/codex#Latin
+# - copertae, s, f, dativus, https://en.wiktionary.org/wiki/coperta#Latin
 #
 # Globals:
 #   ROOTDIR
@@ -523,7 +526,7 @@ neo_codex_de_numerordinatio() {
 # Outputs:
 #   Create documentation
 #######################################
-neo_codex_de_numerordinatio_cover() {
+neo_codex_copertae_de_numerordinatio() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
   est_temporarium_objectivum="${3:-"0"}"
@@ -540,13 +543,34 @@ neo_codex_de_numerordinatio_cover() {
   # https://ebookflightdeck.com/handbook/coverimage
   # https://kdp.amazon.com/en_US/help/topic/G200645690
   # https://kdp.amazon.com/en_US/cover-templates
+  # https://stackoverflow.com/questions/26971169/add-cover-page-with-asciidoctor
 
   ## Specific online guides
   # https://www.youtube.com/watch?v=zcK_tl8mLCo
   # https://blog.reedsy.com/book-cover-dimensions/
 
+  fontem_archivum="${ROOTDIR}/999999999/0/codex_copertae.svg"
+  objectivum_archivum="${ROOTDIR}/$_path/$_nomen.$est_objectivum_linguam.codex.svg"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.svg"
+
+  if [ -f "$objectivum_archivum" ]; then
+    rm "$objectivum_archivum"
+  fi
+
+  cp "$fontem_archivum" "$objectivum_archivum_temporarium"
+
+  sed -i "s|{{codex_numero}}|${_prefix}|" "$objectivum_archivum_temporarium"
+
+  # TODO: replace at least the name name the book
+
+  mv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+
+  # rm "$objectivum_archivum_temporarium"
+
   echo "${FUNCNAME[0]} [$objectivum_archivum]"
-  echo "@TODO this is a draft"
+  # echo "@TODO this is a draft"
+
+
 
   # rm "$objectivum_archivum_temporarium"
 }
