@@ -523,6 +523,48 @@ neo_codex_de_numerordinatio() {
 # Outputs:
 #   Create documentation
 #######################################
+neo_codex_de_numerordinatio_cover() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+  # est_objectivum_linguam="${4:-"mul-Zyyy"}"
+  est_objectivum_linguam="${4:-"mul-Latn"}"
+  est_auxilium_linguam="${5:-"lat-Latn,por-Latn,eng-Latn"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+  # https://kindlegen.s3.amazonaws.com/AmazonKindlePublishingGuidelines.pdf
+
+  ## Specific vendors
+  # https://ebookflightdeck.com/handbook/coverimage
+  # https://kdp.amazon.com/en_US/help/topic/G200645690
+  # https://kdp.amazon.com/en_US/cover-templates
+
+  ## Specific online guides
+  # https://www.youtube.com/watch?v=zcK_tl8mLCo
+  # https://blog.reedsy.com/book-cover-dimensions/
+
+  echo "${FUNCNAME[0]} [$objectivum_archivum]"
+  echo "@TODO this is a draft"
+
+  # rm "$objectivum_archivum_temporarium"
+}
+
+#######################################
+# From an .codex.adoc, create an epub file
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (default "0", from real namespace)
+#   est_objectivum_linguam
+#   est_auxilium_linguam
+# Outputs:
+#   Create documentation
+#######################################
 neo_codex_de_numerordinatio_epub() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
