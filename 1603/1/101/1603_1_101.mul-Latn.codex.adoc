@@ -3,7 +3,7 @@
 :title: Cōdex [1603:1:101]: //Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//
 :lang: la
 :toc: macro
-:toclevels: 4
+:toclevels: 5
 :toc-title: Tabula contentorum
 :table-caption: Tabula
 :figure-caption: Pictūra
@@ -42,7 +42,7 @@ Factum
 |
 numerus editionis
 |
-2022-03-06T00:42:19
+2022-03-08T09:43:55
 
 |===
 
@@ -111,35 +111,44 @@ Lingua Anglica (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 2
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
+==== Rēs interlinguālibus: 3
+Rēs::
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
 
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+      ix_hxlix;;
+        ix_wikiq
 
-|===
+      ix_hxlvoc;;
+        v_wiki_q
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
 
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
-/Wiki QID/::
-#item+rem+i_qcc+is_zxxx+ix_regulam::: Q[1-9]\d*
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q
-#item+rem+definitionem+i_eng+is_latn::: QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
 
+      ix_hxlix;;
+        ix_wikip393
 
-numerus editionis::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P393
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip393
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_393
-#item+rem+definitionem+i_eng+is_latn::: number of an edition (first, second, ... as 1, 2, ...) or event
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
 
 <<<
 

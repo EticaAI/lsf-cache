@@ -3,7 +3,7 @@
 :title: Cōdex [1603:1:7]: //Dictiōnāria basibus dē rēs interlinguīs//
 :lang: la
 :toc: macro
-:toclevels: 4
+:toclevels: 5
 :toc-title: Tabula contentorum
 :table-caption: Tabula
 :figure-caption: Pictūra
@@ -57,7 +57,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-06T00:42:15
+2022-03-08T09:43:51
 
 |
 /SPDX license ID/@eng-Latn
@@ -142,99 +142,209 @@ Lingua Anglica (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 11
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
+==== Rēs interlinguālibus: 13
+Rēs::
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
 
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+      ix_hxlix;;
+        ix_wikiq
 
-|===
+      ix_hxlvoc;;
+        v_wiki_q
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
 
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
-/Wiki QID/::
-#item+rem+i_qcc+is_zxxx+ix_regulam::: Q[1-9]\d*
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q
-#item+rem+definitionem+i_eng+is_latn::: QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
+  /Wiki P/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        P[1-9]\d*
 
+      ix_hxlix;;
+        ix_wikip
 
-/Wiki P/::
-#item+rem+i_qcc+is_zxxx+ix_regulam::: P[1-9]\d*
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p
-#item+rem+definitionem+i_eng+is_latn::: Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.
+      ix_hxlvoc;;
+        v_wiki_p
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki P/</span>+++
 
-/rēgulam/::
-#item+rem+i_qcc+is_zxxx+ix_wikiq::: Q185612
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_regulam
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_regex
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.</span>+++
 
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
 
-/dictiōnārium ēditōrī/::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P98
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip98
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_98
-#item+rem+definitionem+i_eng+is_latn::: editor of a compiled work such as a book or a periodical (newspaper or an academic journal)
+      ix_hxlix;;
+        ix_wikip577
 
+      ix_hxlvoc;;
+        v_wiki_p_577
 
-/cōdex pūblicandī/::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P123
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip123
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_123
-#item+rem+definitionem+i_eng+is_latn::: organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
 
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
 
-numerus editionis::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P393
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip393
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_393
-#item+rem+definitionem+i_eng+is_latn::: number of an edition (first, second, ... as 1, 2, ...) or event
+  /SPDX license ID/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
 
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
 
-/publication date/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P577
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip577
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_577
-#item+rem+definitionem+i_eng+is_latn::: Date or point in time when a work was first published or released
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
 
+      ix_hxlix;;
+        ix_wikip2479
 
-spōnsor::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P859
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip859
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_859
-#item+rem+definitionem+i_eng+is_latn::: organization or individual that sponsors this item
+      ix_hxlvoc;;
+        v_wiki_p_2479
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
 
-/formatter URL/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P1630
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip1630
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_1630
-#item+rem+definitionem+i_eng+is_latn::: web page URL; URI template from which "$1" can be automatically replaced with the effective property value on items. If the site goes offline, set it to deprecated rank. If the formatter url changes, add a new statement with preferred rank.
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">SPDX license identifier</span>+++
 
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
 
-/SPDX license ID/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P2479
-#item+rem+i_qcc+is_zxxx+ix_regulam::: [0-9A-Za-z\.\-]{3,36}[+]?
-#item+rem+i_qcc+is_zxxx+ix_wikip1630::: https://spdx.org/licenses/$1.html
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip2479
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_2479
-#item+rem+definitionem+i_eng+is_latn::: SPDX license identifier
+      ix_hxlix;;
+        ix_wikip393
 
+      ix_hxlvoc;;
+        v_wiki_p_393
 
-/scope and content/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P7535
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip7535
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_7535
-#item+rem+definitionem+i_eng+is_latn::: a summary statement providing an overview of the archival collection
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
+  /formatter URL/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P1630[P1630]
+
+      ix_hxlix;;
+        ix_wikip1630
+
+      ix_hxlvoc;;
+        v_wiki_p_1630
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/formatter URL/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">web page URL; URI template from which "$1" can be automatically replaced with the effective property value on items. If the site goes offline, set it to deprecated rank. If the formatter url changes, add a new statement with preferred rank.</span>+++
+
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+  spōnsor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P859[P859]
+
+      ix_hxlix;;
+        ix_wikip859
+
+      ix_hxlvoc;;
+        v_wiki_p_859
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">spōnsor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
+
+  /rēgulam/:::
+    Rēs interlinguālibus::::
+      /Wiki QID/;;
+        https://www.wikidata.org/wiki/Q185612[Q185612]
+
+      ix_hxlix;;
+        ix_regulam
+
+      ix_hxlvoc;;
+        v_regex
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/rēgulam/</span>+++
+
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
+
+      ix_hxlix;;
+        ix_wikip123
+
+      ix_hxlvoc;;
+        v_wiki_p_123
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+  /dictiōnārium ēditōrī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P98[P98]
+
+      ix_hxlix;;
+        ix_wikip98
+
+      ix_hxlvoc;;
+        v_wiki_p_98
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
+
 
 <<<
 
@@ -270,7 +380,7 @@ Rēs linguālibus::
 
 
 
-=== Archīa prō cōdice: 1
+=== Archīa prō cōdice: 2
 
 
 ==== 1603_1_7.mul-Latn.codex.adoc
@@ -283,6 +393,19 @@ Rēs interlinguālibus::
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     AsciiDoc is a plain text authoring format (i.e., lightweight markup language) for writing technical content such as documentation, articles, and books.
+
+
+
+==== 1603_1_7.mul-Latn.codex.pdf
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_1_7.mul-Latn.codex.pdf[1603_1_7.mul-Latn.codex.pdf]
+  /reference URL/@eng-Latn:::
+    https://en.wikipedia.org/wiki/PDF
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Portable Document Format (PDF), standardized as ISO 32000, is a file format developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems.
 
 
 

@@ -1311,32 +1311,32 @@ class Codex:
 
             # resultatum.append(numerordinatio_lineam_hxml5_details(item))
 
-            if picturae:
+            # if picturae:
 
-                resultatum.append('[discrete]')
-                resultatum.append(
-                    ('=' * (codicem_ordo + 3)) + ' ' +
-                    'Annexa' + "\n"
-                )
-                resultatum.append('[discrete]')
-                resultatum.append(
-                    ('=' * (codicem_ordo + 4)) + ' ' +
-                    'Pictūrae' + "\n"
-                )
-                for item in picturae:
-                    trivium = item.quod_temp_rel_pic()
-                    titulum = item.quod_titulum()
-                    # link = item.quod_temp_link()
-                    link = item.quod_link()
-                    resultatum.append(
-                        'image::{1}[title="++{0}++"]\n'.format(
-                            titulum, trivium))
+            #     resultatum.append('[discrete]')
+            #     resultatum.append(
+            #         ('=' * (codicem_ordo + 3)) + ' ' +
+            #         'Annexa' + "\n"
+            #     )
+            #     resultatum.append('[discrete]')
+            #     resultatum.append(
+            #         ('=' * (codicem_ordo + 4)) + ' ' +
+            #         'Pictūrae' + "\n"
+            #     )
+            #     for item in picturae:
+            #         trivium = item.quod_temp_rel_pic()
+            #         titulum = item.quod_titulum()
+            #         # link = item.quod_temp_link()
+            #         link = item.quod_link()
+            #         resultatum.append(
+            #             'image::{1}[title="++{0}++"]\n'.format(
+            #                 titulum, trivium))
 
-                    if link:
-                        resultatum.append(
-                            'link:++{1}++[++{0}++]\n'.format(titulum, link))
-                    # else:
-                    #     resultatum.append('{0}\n'.format(titulum))
+            #         if link:
+            #             resultatum.append(
+            #                 'link:++{1}++[++{0}++]\n'.format(titulum, link))
+            #         # else:
+            #         #     resultatum.append('{0}\n'.format(titulum))
 
             # resultatum.append("<!-- " + str(item) + " -->")
             resultatum.append("\n")
@@ -1857,7 +1857,14 @@ class Codex:
                 #     str(self.dictionaria_interlinguarum.quod(item))
                 # ))
                 interlingua = self.dictionaria_interlinguarum.quod(item)
-                nomen = interlingua['#item+rem+i_lat+is_latn']
+                if not interlingua:
+                    # TODO: check values such as ix_regex not defined
+                    # raise ValueError(item)
+                    continue
+                if '#item+rem+i_lat+is_latn' in interlingua:
+                    nomen = interlingua['#item+rem+i_lat+is_latn']
+                else:
+                    nomen = item
                 paginae.extend(
                     self.res_explanationibus_meta(interlingua, nomen))
                 # paginae.append("")
@@ -1876,7 +1883,7 @@ class Codex:
         return None
 
     def res_explanationibus(
-        self, res: dict, picturae: List[Type['CodexAnnexo']] = None) -> list:
+            self, res: dict, picturae: List[Type['CodexAnnexo']] = None) -> list:
         """rēs explānātiōnibus
 
         Trivia:
@@ -1936,34 +1943,28 @@ class Codex:
         # picturae...
         if picturae is not None and len(picturae) > 0:
             paginae.append("Rēs pictūrīs::")
+            # CAUTION: AsciiDoctor (tested with 2.0.17) is not very intuitive
+            #          to render image:: macros inside of description lists
+            #          (which use ::, :::, ::::, ;;). Thats why we're using
+            #          unordered list here to force render images.
+            #          This approach should eventually be removed
+            #          (EmericusPetro, 2022-04-08)
             for pictura in picturae:
                 trivium = pictura.quod_temp_rel_pic()
                 titulum = pictura.quod_titulum()
                 # link = item.quod_temp_link()
                 link = pictura.quod_link()
-                # paginae.append('  image')
-                # paginae.append('  +')
-                # paginae.append('  --')
-                paginae.append('  +++<img src="{1}" alt="{0}" style="max-width: 100%;">+++'.format(
-                        titulum, trivium))
 
+                nomen = '**' + pictura.quod_id() + '**'
+                if link and len(link):
+                    nomen = '**{2}** (link:++{1}++[fōns {2} 🔗])'.format(titulum, link, pictura.quod_id())
 
-                # paginae.append('')
-                # paginae.append(
-                #     '  . image::{1}[title="++{0}++"]\n'.format(
-                #         titulum, trivium))
+                # paginae.append('  {0}:::'.format(pictura.quod_id()))
                 paginae.append(
-                    '  image::{1}[title="++{0}++"]'.format(
-                        titulum, trivium))
-                # paginae.append('  --')
-                # paginae.append('')
-                # if link:
-                #     paginae.append(
-                #         '  link:++{1}++[++{0}++]\n'.format(titulum, link))
-                # paginae.append("  {0}:::\n{1}".format(
-                #     lingua[0],
-                #     _pad(_pre_pad(lingua[1]), 4)
-                # ))
+                    '* {2}\n+\nimage::{1}[title="++{0}++"]'.format(
+                        titulum, trivium, nomen))
+
+            paginae.append("")
 
         # ...picturae
         # linguae...
@@ -2230,6 +2231,9 @@ class CodexAnnexo:
             link = _sarcina['_meta'][self.nomen]['ix_wikip854']
 
         return link
+
+    def quod_id(self):
+        return self.nomen
 
 
 class CodexAnnexis:

@@ -57,7 +57,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-08T08:02:52
+2022-03-08T09:46:59
 
 |
 /SPDX license ID/@eng-Latn
@@ -1555,23 +1555,23 @@ Lingua Zuluana (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 9
 Rēs::
-  spōnsor:::
+  /translator/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
+        https://www.wikidata.org/wiki/Property:P655[P655]
 
       ix_hxlix;;
-        ix_wikip859
+        ix_wikip655
 
       ix_hxlvoc;;
-        v_wiki_p_859
+        v_wiki_p_655
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
+        +++<span lang="la">/translator/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
+        +++<span lang="en">agent who adapts any kind of written text from one language to another</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -1615,6 +1615,24 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Date or point in time when a work was first published or released</span>+++
 
+  /dictiōnārium ēditōrī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P98[P98]
+
+      ix_hxlix;;
+        ix_wikip98
+
+      ix_hxlvoc;;
+        v_wiki_p_98
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
+
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -1651,23 +1669,35 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
-  /dictiōnārium ēditōrī/:::
+  spōnsor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P98[P98]
+        https://www.wikidata.org/wiki/Property:P859[P859]
 
       ix_hxlix;;
-        ix_wikip98
+        ix_wikip859
 
       ix_hxlvoc;;
-        v_wiki_p_98
+        v_wiki_p_859
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
+        +++<span lang="la">spōnsor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
+
+  /Wikidata Q local numeric namespace/@eng-Latn:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_wikiq9289584
+
+      ix_hxlvoc;;
+        v_wiki_q_9289584
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wikidata Q local numeric namespace/@eng-Latn</span>+++
 
   numerus editionis:::
     Rēs interlinguālibus::::
@@ -1686,36 +1716,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
-
-  /Wikidata Q local numeric namespace/@eng-Latn:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_wikiq9289584
-
-      ix_hxlvoc;;
-        v_wiki_q_9289584
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wikidata Q local numeric namespace/@eng-Latn</span>+++
-
-  /translator/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P655[P655]
-
-      ix_hxlix;;
-        ix_wikip655
-
-      ix_hxlvoc;;
-        v_wiki_p_655
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/translator/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">agent who adapts any kind of written text from one language to another</span>+++
 
 
 <<<
@@ -6134,8 +6134,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q2349446[Q2349446]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/5~1.jpg" alt="Brooke Lark 2017  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/5~1.jpg[title="++Brooke Lark 2017  [CC0]++"]
+* **5~1** (link:++https://unsplash.com/photos/jUPOXXRNdcA++[fōns 5~1 🔗])
++
+image::1603_63_101.~1/5~1.jpg[title="++Brooke Lark 2017  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /hūmānae diaetīs/
@@ -6159,16 +6161,6 @@ Rēs linguālibus::
     +++<span lang="ja">食餌療法</span>+++
 
 
-
-[discrete]
-==== Annexa
-
-[discrete]
-===== Pictūrae
-
-image::1603_63_101.~1/5~1.jpg[title="++Brooke Lark 2017  [CC0]++"]
-
-link:++https://unsplash.com/photos/jUPOXXRNdcA++[++Brooke Lark 2017  [CC0]++]
 
 
 
@@ -6390,8 +6382,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q181138[Q181138]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/5_2~1.jpg" alt="Nadine Primeau 2018  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/5_2~1.jpg[title="++Nadine Primeau 2018  [CC0]++"]
+* **5_2~1** (link:++https://unsplash.com/photos/-ftWfohtjNw++[fōns 5_2~1 🔗])
++
+image::1603_63_101.~1/5_2~1.jpg[title="++Nadine Primeau 2018  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /veganism || philosophy that rejects the use of animals/@eng-Latn
@@ -6583,16 +6577,6 @@ Rēs linguālibus::
     +++<span lang="ia">Veganismo</span>+++
 
 
-
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/5_2~1.jpg[title="++Nadine Primeau 2018  [CC0]++"]
-
-link:++https://unsplash.com/photos/-ftWfohtjNw++[++Nadine Primeau 2018  [CC0]++]
 
 
 
@@ -7042,8 +7026,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q815867[Q815867]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/101_1~1.jpg" alt="Red Cross  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/101_1~1.jpg[title="++Red Cross  [CC0]++"]
+* **101_1~1** (link:++https://en.wikipedia.org/wiki/File:FEMA_-_37173_-_Red_Cross_%22ready_to_go%22_preparedness_kit.jpg++[fōns 101_1~1 🔗])
++
+image::1603_63_101.~1/101_1~1.jpg[title="++Red Cross  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /first aid kit || Collection of supplies and equipment that is used to give medical treatment/@eng-Latn
@@ -7149,16 +7135,6 @@ Rēs linguālibus::
 
 
 
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/101_1~1.jpg[title="++Red Cross  [CC0]++"]
-
-link:++https://en.wikipedia.org/wiki/File:FEMA_-_37173_-_Red_Cross_%22ready_to_go%22_preparedness_kit.jpg++[++Red Cross  [CC0]++]
-
 
 
 [id='101_2']
@@ -7169,8 +7145,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q520181[Q520181]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/101_2~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/101_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **101_2~1**
++
+image::1603_63_101.~1/101_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /hand sanitizer || liquid, gel or foam generally used to kill many viruses/bacteria/microorganisms on the hands/@eng-Latn
@@ -7284,14 +7262,6 @@ Rēs linguālibus::
     +++<span lang="mr">हँड सॅनिटायजर</span>+++
 
 
-
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/101_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -8979,12 +8949,16 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q53467[Q53467]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/102~3.svg" alt="YassineMrabet 2009  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/102~3.svg[title="++YassineMrabet 2009  [CC0]++"]
-  +++<img src="1603_63_101.~1/102~1.svg" alt="Unknown author 2013  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/102~1.svg[title="++Unknown author 2013  [CC0]++"]
-  +++<img src="1603_63_101.~1/102~2.svg" alt="InvictaHOG~commonswiki 2006  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/102~2.svg[title="++InvictaHOG~commonswiki 2006  [CC0]++"]
+* **102~3** (link:++https://commons.wikimedia.org/wiki/File:ABO_system_codominance.svg++[fōns 102~3 🔗])
++
+image::1603_63_101.~1/102~3.svg[title="++YassineMrabet 2009  [CC0]++"]
+* **102~1** (link:++https://commons.wikimedia.org/wiki/File:Blood_donation_pictogram.svg++[fōns 102~1 🔗])
++
+image::1603_63_101.~1/102~1.svg[title="++Unknown author 2013  [CC0]++"]
+* **102~2** (link:++https://commons.wikimedia.org/wiki/File:ABO_blood_type.svg++[fōns 102~2 🔗])
++
+image::1603_63_101.~1/102~2.svg[title="++InvictaHOG~commonswiki 2006  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /blood donation || occurs when a person or other mammal voluntarily has blood drawn/@eng-Latn
@@ -9143,24 +9117,6 @@ Rēs linguālibus::
     +++<span lang="ia">donation de sanguine</span>+++
 
 
-
-[discrete]
-==== Annexa
-
-[discrete]
-===== Pictūrae
-
-image::1603_63_101.~1/102~3.svg[title="++YassineMrabet 2009  [CC0]++"]
-
-link:++https://commons.wikimedia.org/wiki/File:ABO_system_codominance.svg++[++YassineMrabet 2009  [CC0]++]
-
-image::1603_63_101.~1/102~1.svg[title="++Unknown author 2013  [CC0]++"]
-
-link:++https://commons.wikimedia.org/wiki/File:Blood_donation_pictogram.svg++[++Unknown author 2013  [CC0]++]
-
-image::1603_63_101.~1/102~2.svg[title="++InvictaHOG~commonswiki 2006  [CC0]++"]
-
-link:++https://commons.wikimedia.org/wiki/File:ABO_blood_type.svg++[++InvictaHOG~commonswiki 2006  [CC0]++]
 
 
 
@@ -10893,8 +10849,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q34396[Q34396]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/200_1~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/200_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **200_1~1**
++
+image::1603_63_101.~1/200_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /soap || salt of fatty acids (long-chain carboxylic acids), used for washing and cleaning/@eng-Latn
@@ -11131,14 +11089,6 @@ Rēs linguālibus::
     +++<span lang="ia">Sapon</span>+++
 
 
-
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/200_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -11383,8 +11333,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q35855[Q35855]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/205_1~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/205_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **205_1~1**
++
+image::1603_63_101.~1/205_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /toothpaste || paste or gel dentifrice used to clean and maintain the health of teeth/@eng-Latn
@@ -11565,14 +11517,6 @@ Rēs linguālibus::
 
 
 
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/205_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-
 
 
 [id='205_2']
@@ -11583,8 +11527,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q134205[Q134205]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/205_2~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/205_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **205_2~1**
++
+image::1603_63_101.~1/205_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /toothbrush || oral hygiene instrument used to clean the teeth, gums, and tongue/@eng-Latn
@@ -11776,14 +11722,6 @@ Rēs linguālibus::
     +++<span lang="kab">Tasrenka n tuɣmas</span>+++
 
 
-
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/205_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -13245,8 +13183,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q235693[Q235693]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/220_1~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/220_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **220_1~1**
++
+image::1603_63_101.~1/220_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /sanitary napkin || absorbent item worn in the underwear by women who are menstruating, bleeding after giving birth or similar/@eng-Latn
@@ -13400,14 +13340,6 @@ Rēs linguālibus::
 
 
 
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/220_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-
 
 
 [id='220_2']
@@ -13418,8 +13350,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q976338[Q976338]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/220_2~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/220_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **220_2~1**
++
+image::1603_63_101.~1/220_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /tampon || mass of absorbent material, primarily used as a feminine hygiene product/@eng-Latn
@@ -13536,14 +13470,6 @@ Rēs linguālibus::
     +++<span lang="el">Ταμπόν</span>+++
 
 
-
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/220_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -13883,10 +13809,13 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q55454739[Q55454739]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/230_1_1~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/230_1_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-  +++<img src="1603_63_101.~1/230_1_1~2.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/230_1_1~2.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **230_1_1~1**
++
+image::1603_63_101.~1/230_1_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **230_1_1~2**
++
+image::1603_63_101.~1/230_1_1~2.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /disposable diaper || single-use diaper/@eng-Latn
@@ -13898,16 +13827,6 @@ Rēs linguālibus::
     +++<span lang="ja">使い捨ておむつ</span>+++
 
 
-
-[discrete]
-====== Annexa
-
-[discrete]
-======= Pictūrae
-
-image::1603_63_101.~1/230_1_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-
-image::1603_63_101.~1/230_1_1~2.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -14618,8 +14537,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q2287198[Q2287198]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/500_10_9_1~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/500_10_9_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **500_10_9_1~1**
++
+image::1603_63_101.~1/500_10_9_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /infant formula || manufactured food designed and marketed for feeding of infants/@eng-Latn
@@ -14703,14 +14624,6 @@ Rēs linguālibus::
     +++<span lang="jv">Susu formula</span>+++
 
 
-
-[discrete]
-======= Annexa
-
-[discrete]
-======== Pictūrae
-
-image::1603_63_101.~1/500_10_9_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -15455,8 +15368,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q864693[Q864693]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/510_1~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/510_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **510_1~1**
++
+image::1603_63_101.~1/510_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /chicken meat || meat of a chicken/@eng-Latn
@@ -15654,14 +15569,6 @@ Rēs linguālibus::
     +++<span lang="vo">gokamit</span>+++
 
 
-
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/510_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -15987,8 +15894,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q192628[Q192628]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/511_1~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/511_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **511_1~1**
++
+image::1603_63_101.~1/511_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /beef || meat from cattle/@eng-Latn
@@ -16190,14 +16099,6 @@ Rēs linguālibus::
 
 
 
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/511_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-
 
 
 [id='511_2']
@@ -16388,10 +16289,13 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q191768[Q191768]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/511_3~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/511_3~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-  +++<img src="1603_63_101.~1/511_3~2.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/511_3~2.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **511_3~1**
++
+image::1603_63_101.~1/511_3~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **511_3~2**
++
+image::1603_63_101.~1/511_3~2.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /pork meat || meat from a pig/@eng-Latn
@@ -16577,16 +16481,6 @@ Rēs linguālibus::
     +++<span lang="be">Свініна</span>+++
 
 
-
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/511_3~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-
-image::1603_63_101.~1/511_3~2.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -17473,8 +17367,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q13616188[Q13616188]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/512_1_2~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/512_1_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **512_1_2~1**
++
+image::1603_63_101.~1/512_1_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /UHT milk || milk sterilized via Ultra-high temperature processing (UHT)/@eng-Latn
@@ -17498,14 +17394,6 @@ Rēs linguālibus::
     +++<span lang="cs">trvanlivé mléko</span>+++
 
 
-
-[discrete]
-====== Annexa
-
-[discrete]
-======= Pictūrae
-
-image::1603_63_101.~1/512_1_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -17748,8 +17636,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q496696[Q496696]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/512_4~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/512_4~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **512_4~1**
++
+image::1603_63_101.~1/512_4~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /milk powder || dairy product made by evaporating milk to dryness (not the same as infant formula Q2287198)/@eng-Latn
@@ -17891,14 +17781,6 @@ Rēs linguālibus::
 
 
 
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/512_4~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-
 
 
 [id='512_50']
@@ -17909,8 +17791,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q34172[Q34172]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/512_50~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/512_50~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **512_50~1**
++
+image::1603_63_101.~1/512_50~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /butter || dairy product made from the fat and protein components of churned cream and is a semi-solid emulsion at room temperature/@eng-Latn
@@ -18208,14 +18092,6 @@ Rēs linguālibus::
 
 
 
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/512_50~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-
 
 
 [id='512_100']
@@ -18304,8 +18180,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q13317[Q13317]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/512_100_1~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/512_100_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **512_100_1~1**
++
+image::1603_63_101.~1/512_100_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /yogurt || food produced by bacterial fermentation of milk/@eng-Latn
@@ -18531,14 +18409,6 @@ Rēs linguālibus::
 
 
 
-[discrete]
-====== Annexa
-
-[discrete]
-======= Pictūrae
-
-image::1603_63_101.~1/512_100_1~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
-
 
 
 [id='512_100_2']
@@ -18549,8 +18419,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q10943[Q10943]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/512_100_2~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/512_100_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **512_100_2~1**
++
+image::1603_63_101.~1/512_100_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /cheese || dairy product produced in wide ranges of flavors, textures and forms by coagulation of the milk protein casein/@eng-Latn
@@ -18874,14 +18746,6 @@ Rēs linguālibus::
     +++<span lang="zu">ushizi</span>+++
 
 
-
-[discrete]
-====== Annexa
-
-[discrete]
-======= Pictūrae
-
-image::1603_63_101.~1/512_100_2~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 
@@ -20619,8 +20483,10 @@ Rēs interlinguālibus::
     https://www.wikidata.org/wiki/Q10998[Q10998]
 
 Rēs pictūrīs::
-  +++<img src="1603_63_101.~1/555_4~1.jpg" alt="EmericusPetro@EticaAI 2022  [CC0]" style="max-width: 100%;">+++
-  image::1603_63_101.~1/555_4~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+* **555_4~1**
++
+image::1603_63_101.~1/555_4~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /Solanum tuberosum || starchy tuber of the plant Solanum tuberosum and is a root vegetable native to the Americas/@eng-Latn
@@ -20938,14 +20804,6 @@ Rēs linguālibus::
     +++<span lang="zu">Izambane</span>+++
 
 
-
-[discrete]
-===== Annexa
-
-[discrete]
-====== Pictūrae
-
-image::1603_63_101.~1/555_4~1.jpg[title="++EmericusPetro@EticaAI 2022  [CC0]++"]
 
 
 

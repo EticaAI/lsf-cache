@@ -3,7 +3,7 @@
 :title: Cōdex [1603:45:1]: //dictiōnāria de hūmānitātēs interimperia//
 :lang: la
 :toc: macro
-:toclevels: 4
+:toclevels: 5
 :toc-title: Tabula contentorum
 :table-caption: Tabula
 :figure-caption: Pictūra
@@ -62,7 +62,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-06T00:52:30
+2022-03-08T09:53:27
 
 |
 /SPDX license ID/@eng-Latn
@@ -1594,98 +1594,188 @@ Lingua Zuluana (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 11
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
+==== Rēs interlinguālibus: 10
+Rēs::
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
 
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+      ix_hxlix;;
+        ix_wikiq
 
-|===
+      ix_hxlvoc;;
+        v_wiki_q
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
 
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
-/Wiki QID/::
-#item+rem+i_qcc+is_zxxx+ix_regulam::: Q[1-9]\d*
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q
-#item+rem+definitionem+i_eng+is_latn::: QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
 
+      ix_hxlix;;
+        ix_wikip123
 
-scrīptor::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P50
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip50
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_50
-#item+rem+definitionem+i_eng+is_latn::: Main creator(s) of a written work (use on works, not humans)
+      ix_hxlvoc;;
+        v_wiki_p_123
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
 
-/cōdex pūblicandī/::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P123
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip123
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_123
-#item+rem+definitionem+i_eng+is_latn::: organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
 
+  /Wikidata Q local numeric namespace/@eng-Latn:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_wikiq9289584
 
-numerus editionis::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P393
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip393
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_393
-#item+rem+definitionem+i_eng+is_latn::: number of an edition (first, second, ... as 1, 2, ...) or event
+      ix_hxlvoc;;
+        v_wiki_q_9289584
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wikidata Q local numeric namespace/@eng-Latn</span>+++
 
-/publication date/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P577
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip577
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_577
-#item+rem+definitionem+i_eng+is_latn::: Date or point in time when a work was first published or released
+  /SPDX license ID/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
 
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
 
-/translator/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P655
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip655
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_655
-#item+rem+definitionem+i_eng+is_latn::: agent who adapts any kind of written text from one language to another
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
 
+      ix_hxlix;;
+        ix_wikip2479
 
-spōnsor::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P859
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip859
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_859
-#item+rem+definitionem+i_eng+is_latn::: organization or individual that sponsors this item
+      ix_hxlvoc;;
+        v_wiki_p_2479
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
 
-/SPDX license ID/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P2479
-#item+rem+i_qcc+is_zxxx+ix_regulam::: [0-9A-Za-z\.\-]{3,36}[+]?
-#item+rem+i_qcc+is_zxxx+ix_wikip1630::: https://spdx.org/licenses/$1.html
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip2479
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_2479
-#item+rem+definitionem+i_eng+is_latn::: SPDX license identifier
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">SPDX license identifier</span>+++
 
+  scrīptor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P50[P50]
 
-/scope and content/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P7535
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip7535
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_7535
-#item+rem+definitionem+i_eng+is_latn::: a summary statement providing an overview of the archival collection
+      ix_hxlix;;
+        ix_wikip50
 
+      ix_hxlvoc;;
+        v_wiki_p_50
 
-/Wikidata Q local numeric namespace/@eng-Latn::
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq9289584
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q_9289584
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">scrīptor</span>+++
 
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
 
-caveat lector::
-#item+rem+i_qcc+is_zxxx+ix_wikiq::: Q9289584
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikiq9289584
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_q_9289584
-#item+rem+definitionem+i_eng+is_latn::: Caveat lector is a Latin phrase meaning "let the reader beware"
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+  spōnsor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P859[P859]
+
+      ix_hxlix;;
+        ix_wikip859
+
+      ix_hxlvoc;;
+        v_wiki_p_859
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">spōnsor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
+
+  /translator/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P655[P655]
+
+      ix_hxlix;;
+        ix_wikip655
+
+      ix_hxlvoc;;
+        v_wiki_p_655
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/translator/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">agent who adapts any kind of written text from one language to another</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
 
 <<<
 
@@ -1783,7 +1873,7 @@ Rēs linguālibus::
 
 
 
-=== Archīa prō cōdice: 1
+=== Archīa prō cōdice: 2
 
 
 ==== 1603_45_1.mul-Latn.codex.adoc
@@ -1796,6 +1886,19 @@ Rēs interlinguālibus::
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     AsciiDoc is a plain text authoring format (i.e., lightweight markup language) for writing technical content such as documentation, articles, and books.
+
+
+
+==== 1603_45_1.mul-Latn.codex.pdf
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_45_1.mul-Latn.codex.pdf[1603_45_1.mul-Latn.codex.pdf]
+  /reference URL/@eng-Latn:::
+    https://en.wikipedia.org/wiki/PDF
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Portable Document Format (PDF), standardized as ISO 32000, is a file format developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems.
 
 
 
@@ -1814,19 +1917,16 @@ Dictiōnāria initiīs
 [id='1']
 === [`1`] /Base namespace: UN itself (dedicated namespace)/@eng-Latn
 
+Rēs pictūrīs::
+* **1~1** (link:++https://archive.org/details/in.ernet.dli.2015.206441++[fōns 1~1 🔗])
++
+image::1603_45_1.~1/1~1.jpg[title="++Book Cover 1935  [CC-PDDC]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /Base namespace: UN itself (dedicated namespace)/@eng-Latn
 
 
-
-[discrete]
-==== Annexa
-[discrete]
-===== Pictūrae
-image::1603_45_1.~1/1~1.jpg[title="++Book Cover 1935  [CC-PDDC]++"]
-
-link:++https://archive.org/details/in.ernet.dli.2015.206441++[++Book Cover 1935  [CC-PDDC]++]
 
 
 
@@ -2925,6 +3025,14 @@ Rēs interlinguālibus::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q82151[Q82151]
 
+Rēs pictūrīs::
+* **2_2~2** (link:++https://www.fao.org/3/CA1176EN/ca1176en.pdf++[fōns 2_2~2 🔗])
++
+image::1603_45_1.~1/2_2~2.png[title="++Book Cover 2018  [CC-PDDC]++"]
+* **2_2~1** (link:++https://www.lebensmittelbuch.at/++[fōns 2_2~1 🔗])
++
+image::1603_45_1.~1/2_2~1.jpg[title="++Book Cover 1911  [CC-PDDC]++"]
+
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">FAO</span>+++
@@ -3137,18 +3245,6 @@ Rēs linguālibus::
     +++<span lang="mr">खाद्य व कृषी संस्था</span>+++
 
 
-
-[discrete]
-===== Annexa
-[discrete]
-====== Pictūrae
-image::1603_45_1.~1/2_2~2.png[title="++Book Cover 2018  [CC-PDDC]++"]
-
-link:++https://www.fao.org/3/CA1176EN/ca1176en.pdf++[++Book Cover 2018  [CC-PDDC]++]
-
-image::1603_45_1.~1/2_2~1.jpg[title="++Book Cover 1911  [CC-PDDC]++"]
-
-link:++https://www.lebensmittelbuch.at/++[++Book Cover 1911  [CC-PDDC]++]
 
 
 
@@ -11248,6 +11344,11 @@ Rēs interlinguālibus::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7178[Q7178]
 
+Rēs pictūrīs::
+* **63~1** (link:++https://commons.wikimedia.org/wiki/File:Gabriel_Nicolet_-_Portrait_of_a_Nurse_from_the_Red_Cross.jpg++[fōns 63~1 🔗])
++
+image::1603_45_1.~1/63~1.jpg[title="++Gabriel Émile Édouard Nicolet 1915  [CC-PDDC]++"]
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /Base namespace: Red Cross and Red Crescent Movement/@eng-Latn
@@ -11496,14 +11597,6 @@ Rēs linguālibus::
     +++<span lang="ia">Movimento International del Cruce Rubie e del Crescente Rubie</span>+++
 
 
-
-[discrete]
-==== Annexa
-[discrete]
-===== Pictūrae
-image::1603_45_1.~1/63~1.jpg[title="++Gabriel Émile Édouard Nicolet 1915  [CC-PDDC]++"]
-
-link:++https://commons.wikimedia.org/wiki/File:Gabriel_Nicolet_-_Portrait_of_a_Nurse_from_the_Red_Cross.jpg++[++Gabriel Émile Édouard Nicolet 1915  [CC-PDDC]++]
 
 
 

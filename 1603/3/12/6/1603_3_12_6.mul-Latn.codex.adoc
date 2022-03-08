@@ -3,7 +3,7 @@
 :title: Cōdex [1603:3:12:6]: //Speciālis collēctiōnī de Vicidata Proprietātī//
 :lang: la
 :toc: macro
-:toclevels: 4
+:toclevels: 5
 :toc-title: Tabula contentorum
 :table-caption: Tabula
 :figure-caption: Pictūra
@@ -42,7 +42,7 @@ Factum
 |
 numerus editionis
 |
-2022-03-06T00:42:29
+2022-03-08T09:44:08
 
 |===
 
@@ -99,35 +99,44 @@ Lingua Anglica (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 2
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
+==== Rēs interlinguālibus: 4
+Rēs::
+  /Wiki P/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        P[1-9]\d*
 
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-The result of this section is a preview. We're aware it is not well formatted for a book format. Sorry for the temporary inconvenience.
+      ix_hxlix;;
+        ix_wikip
 
-|===
+      ix_hxlvoc;;
+        v_wiki_p
 
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki P/</span>+++
 
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.</span>+++
 
-/Wiki P/::
-#item+rem+i_qcc+is_zxxx+ix_regulam::: P[1-9]\d*
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p
-#item+rem+definitionem+i_eng+is_latn::: Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
 
+      ix_hxlix;;
+        ix_wikip393
 
-numerus editionis::
-#item+rem+i_qcc+is_zxxx+ix_wikip::: P393
-#item+rem+i_qcc+is_zxxx+ix_hxlix::: ix_wikip393
-#item+rem+i_qcc+is_zxxx+ix_hxlvoc::: v_wiki_p_393
-#item+rem+definitionem+i_eng+is_latn::: number of an edition (first, second, ... as 1, 2, ...) or event
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
 
 <<<
 
