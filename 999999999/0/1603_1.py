@@ -1941,10 +1941,22 @@ class Codex:
                 titulum = pictura.quod_titulum()
                 # link = item.quod_temp_link()
                 link = pictura.quod_link()
-                paginae.append(
-                    '  image::{1}[title="++{0}++"]\n'.format(
+                # paginae.append('  image')
+                # paginae.append('  +')
+                # paginae.append('  --')
+                paginae.append('  +++<img src="{1}" alt="{0}" style="max-width: 100%;">+++'.format(
                         titulum, trivium))
 
+
+                # paginae.append('')
+                # paginae.append(
+                #     '  . image::{1}[title="++{0}++"]\n'.format(
+                #         titulum, trivium))
+                paginae.append(
+                    '  image::{1}[title="++{0}++"]'.format(
+                        titulum, trivium))
+                # paginae.append('  --')
+                # paginae.append('')
                 # if link:
                 #     paginae.append(
                 #         '  link:++{1}++[++{0}++]\n'.format(titulum, link))
