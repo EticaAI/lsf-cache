@@ -1,0 +1,3057 @@
+= Cōdex [1603:44:101]: //Dictiōnāria basibus de Scielus contra humanus//
+:doctype: book
+:title: Cōdex [1603:44:101]: //Dictiōnāria basibus de Scielus contra humanus//
+:lang: la
+:toc: macro
+:toclevels: 5
+:toc-title: Tabula contentorum
+:table-caption: Tabula
+:figure-caption: Pictūra
+:example-caption: Exemplum
+:last-update-label: Renovatio
+:version-label: Versiō
+:appendix-caption: Appendix
+:source-highlighter: rouge
+:warning-caption: Hic sunt dracones
+:tip-caption: Commendātum
+:front-cover-image: image:1603_44_101.mul-Latn.codex.svg["Cōdex [1603_44_101]: //Dictiōnāria basibus de Scielus contra humanus//",1050,1600]
+
+
+
+
+{nbsp} +
+{nbsp} +
+[quote]
+/**Public domain means that each major common issue only needs to be resolved once**/@eng-Latn
+
+'''
+
+[%header,cols="25h,~a"]
+|===
+|
+Rēs interlinguālibus
+|
+Factum
+
+|
+scrīptor
+|
+EticaAI
+
+|
+/cōdex pūblicandī/
+|
+EticaAI
+
+|
+/publication date/@eng-Latn
+|
+2022-03-12
+
+|
+numerus editionis
+|
+2022-03-12T21:56:38
+
+|
+/SPDX license ID/@eng-Latn
+|
+CC0-1.0
+
+|===
+
+
+ifndef::backend-epub3[]
+<<<
+toc::[]
+<<<
+endif::[]
+
+
+[id=0_999_1603_1]
+== Praefātiō 
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    _**Cōdex [1603:44:101]**_ is the book format of the machine-readable dictionaries _**[1603:44:101] //Dictiōnāria basibus de Scielus contra humanus//**_, which are distributed for implementers on external applications. This book is intended as an advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies. It can, however, be used as an ad hoc dictionary if there is not derived work focused on your specific needs.
+    +++<br><br>+++
+    **ABOUT LEXICOGRAPHY**
+    +++<br><br>+++
+    Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not the translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+    +++<br><br>+++
+    **ABOUT TYPES OF DICTIONARIES WE'RE COMPILING**
+    +++<br><br>+++
+    We're concerned with a group of ideas (we call it a group of dictionaries of concepts) which can be broken into smaller parts, reviewed for inconsistencies, improved for definitions, and then be translated by volunteers. Interlingual codes, such as what could be used on actual data exchange, are also added to each concept. Both glossaries, user interfaces (such as labels on data collection) and in some cases even standard codes for what would go on a data field could be compiled this way.
+    +++<br><br>+++
+    Since the full list of prototypal-dictionaries and dictionaries is huge, one way cited by objective audiences is the following:
+    +++<br><br>+++
+    ....
+    1. Humanitarian aid
+    2. Development aid
+    3. Human rights
+    4. Military relief (or conflict and conflict-resolution related concepts)
+    ....
+    +++<br><br>+++
+    The itens 1, 2 and 4 https://en.m.wikipedia.org/wiki/Humanitarian-Development_Nexus[are sometimes referred as _nexus_] and are often found helping _humanitarian crisis_. Since most contributors whose ideas and valid criticism are volunteers, then 3 (human rights, as in International Amnesty) to differentiate from humanitarianism (such as Red Cross Movement is reference).
+    +++<br><br>+++
+    Note that **dictionaries are not usage guides**. Instructions, when they exist, are mostly dedicated to lexicographers and translators.
+    +++<br><br>+++
+    **/PRO BONŌ PUBLICŌ/@lat-Latn**
+    +++<br><br>+++
+    The lexicographers of this work are both volunteers, doing it for free, pro bonō publicō, and don't accept donations for the sake of everyone's reusable dictionaries. Existing previous work often is based on old public domain books. Most terminology translators already would be volunteers because they believe in a cause. The best way to inspire collaboration is to be examples ourselves.
+    +++<br><br>+++
+    There's a non-moralistic aspect, fairly simple to understand: how expensive would it be to pay for everyone's work considering it is feasible over 200 languages? The logistics to decide who should be paid, then worldwide cash transfer (may include people from embargoed countries), then traditional auditing mechanisms to check misuse donors expect, exist? In special terminology (dictionary terms themselves) and so many languages, neither sufficient money nor humans interested in being coordinators exist.
+
+
+<<<
+
+== Methodī ex cōdice
+=== Methodī ex dictiōnāriōrum corde
+Rēs interlinguālibus::
+  /scope and content/@eng-Latn:::
+    TODO: explain 1603_44_101
+
+
+
+=== Methodī ex verbīs in dictiōnāriīs
+NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+
+==== Methodī ex verbīs in Vicidata (Q modō)
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    The ***[1603:44:101] //Dictiōnāria basibus de Scielus contra humanus//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    +++<br><br>+++
+    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    +++<br><br>+++
+    **How reliable are the community translations (Wikidata source)?**
+    +++<br><br>+++
+    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    +++<br><br>+++
+    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    +++<br><br>+++
+    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    +++<br><br>+++
+    **Major reasons for "wrong translations" are not translators fault**
+    +++<br><br>+++
+    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    +++<br><br>+++
+    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    +++<br><br>+++
+    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    +++<br><br>+++
+    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    +++<br><br>+++
+    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_44_101.no1.tm.hxl.csv`, may reference Wiki QID.
+    . Every unique QID of  `1603_44_101.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
+    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+    . The query result, with all QIDs and term labels, is shared as `1603_44_101.wikiq.tm.hxl.csv`
+    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_44_101.wikiq.tm.hxl.csv`
+    . `1603_44_101.no1.tm.hxl.csv` plus `1603_44_101.wikiq.tm.hxl.csv` created `1603_44_101.no11.tm.hxl.csv`
+
+
+=== Rēs dē factō in dictiōnāriīs
+==== Concepta: 23
+
+==== Rēs linguālibus: 77
+
+[%header,cols="15h,25a,~,15"]
+|===
+|
+Cōdex linguae
+|
+Glotto cōdicī +++<br>+++ ISO 639-3 +++<br>+++ Wiki QID cōdicī
+|
+Nōmen Latīnum
+|
+Concepta
+
+|
+mul-Zyyy
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/mul[mul]
++++<br>+++ 
+|
+Linguae multiplīs (Scrīptum incognitō)
+|
+23
+
+|
+ara-Arab
+|
+https://glottolog.org/resource/languoid/id/arab1395[arab1395]
++++<br>+++
+https://iso639-3.sil.org/code/ara[ara]
++++<br>+++ https://www.wikidata.org/wiki/Q13955[Q13955]
+|
+Macrolingua Arabica (/Abecedarium Arabicum/)
+|
+19
+
+|
+hye-Armn
+|
+https://glottolog.org/resource/languoid/id/nucl1235[nucl1235]
++++<br>+++
+https://iso639-3.sil.org/code/hye[hye]
++++<br>+++ https://www.wikidata.org/wiki/Q8785[Q8785]
+|
+Lingua Armenia (Alphabetum Armenium)
+|
+3
+
+|
+ben-Beng
+|
+https://glottolog.org/resource/languoid/id/beng1280[beng1280]
++++<br>+++
+https://iso639-3.sil.org/code/ben[ben]
++++<br>+++ https://www.wikidata.org/wiki/Q9610[Q9610]
+|
+Lingua Bengali (/Bengali script/)
+|
+8
+
+|
+rus-Cyrl
+|
+https://glottolog.org/resource/languoid/id/russ1263[russ1263]
++++<br>+++
+https://iso639-3.sil.org/code/rus[rus]
++++<br>+++ https://www.wikidata.org/wiki/Q7737[Q7737]
+|
+Lingua Russica (Abecedarium Cyrillicum)
+|
+11
+
+|
+hin-Deva
+|
+https://glottolog.org/resource/languoid/id/hind1269[hind1269]
++++<br>+++
+https://iso639-3.sil.org/code/hin[hin]
++++<br>+++ https://www.wikidata.org/wiki/Q1568[Q1568]
+|
+Lingua Hindica (Devanāgarī)
+|
+4
+
+|
+kan-Knda
+|
+https://glottolog.org/resource/languoid/id/nucl1305[nucl1305]
++++<br>+++
+https://iso639-3.sil.org/code/kan[kan]
++++<br>+++ https://www.wikidata.org/wiki/Q33673[Q33673]
+|
+Lingua Cannadica (/ISO 15924 Knda/)
+|
+5
+
+|
+kor-Hang
+|
+https://glottolog.org/resource/languoid/id/kore1280[kore1280]
++++<br>+++
+https://iso639-3.sil.org/code/kor[kor]
++++<br>+++ https://www.wikidata.org/wiki/Q9176[Q9176]
+|
+Lingua Coreana (Abecedarium Coreanum)
+|
+8
+
+|
+heb-Hebr
+|
+https://glottolog.org/resource/languoid/id/hebr1245[hebr1245]
++++<br>+++
+https://iso639-3.sil.org/code/heb[heb]
++++<br>+++ https://www.wikidata.org/wiki/Q9288[Q9288]
+|
+Lingua Hebraica (Alphabetum Hebraicum)
+|
+12
+
+|
+lat-Latn
+|
+https://glottolog.org/resource/languoid/id/lati1261[lati1261]
++++<br>+++
+https://iso639-3.sil.org/code/lat[lat]
++++<br>+++ https://www.wikidata.org/wiki/Q397[Q397]
+|
+Lingua Latina (Abecedarium Latinum)
+|
+2
+
+|
+tam-Taml
+|
+https://glottolog.org/resource/languoid/id/tami1289[tami1289]
++++<br>+++
+https://iso639-3.sil.org/code/tam[tam]
++++<br>+++ https://www.wikidata.org/wiki/Q5885[Q5885]
+|
+Lingua Tamulica (/ISO 15924 Taml/)
+|
+5
+
+|
+tel-Telu
+|
+https://glottolog.org/resource/languoid/id/telu1262[telu1262]
++++<br>+++
+https://iso639-3.sil.org/code/tel[tel]
++++<br>+++ https://www.wikidata.org/wiki/Q8097[Q8097]
+|
+Lingua Telingana (/ISO 15924 Telu/)
+|
+1
+
+|
+tha-Thai
+|
+https://glottolog.org/resource/languoid/id/thai1261[thai1261]
++++<br>+++
+https://iso639-3.sil.org/code/tha[tha]
++++<br>+++ https://www.wikidata.org/wiki/Q9217[Q9217]
+|
+Lingua Thai (/ISO 15924 Thai/)
+|
+4
+
+|
+zho-Zzzz
+|
+https://glottolog.org/resource/languoid/id/sini1245[sini1245]
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q7850[Q7850]
+|
+/Macrolingua Sinicae (?)/
+|
+16
+
+|
+por-Latn
+|
+https://glottolog.org/resource/languoid/id/port1283[port1283]
++++<br>+++
+https://iso639-3.sil.org/code/por[por]
++++<br>+++ https://www.wikidata.org/wiki/Q5146[Q5146]
+|
+Lingua Lusitana (Abecedarium Latinum)
+|
+8
+
+|
+eng-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1293[stan1293]
++++<br>+++
+https://iso639-3.sil.org/code/eng[eng]
++++<br>+++ https://www.wikidata.org/wiki/Q1860[Q1860]
+|
+Lingua Anglica (Abecedarium Latinum)
+|
+24
+
+|
+fra-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1290[stan1290]
++++<br>+++
+https://iso639-3.sil.org/code/fra[fra]
++++<br>+++ https://www.wikidata.org/wiki/Q150[Q150]
+|
+Lingua Francogallica (Abecedarium Latinum)
+|
+13
+
+|
+nld-Latn
+|
+https://glottolog.org/resource/languoid/id/mode1257[mode1257]
++++<br>+++
+https://iso639-3.sil.org/code/nld[nld]
++++<br>+++ https://www.wikidata.org/wiki/Q7411[Q7411]
+|
+Lingua Batavica (Abecedarium Latinum)
+|
+11
+
+|
+deu-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1295[stan1295]
++++<br>+++
+https://iso639-3.sil.org/code/deu[deu]
++++<br>+++ https://www.wikidata.org/wiki/Q188[Q188]
+|
+Lingua Germanica (Abecedarium Latinum)
+|
+11
+
+|
+spa-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1288[stan1288]
++++<br>+++
+https://iso639-3.sil.org/code/spa[spa]
++++<br>+++ https://www.wikidata.org/wiki/Q1321[Q1321]
+|
+Lingua Hispanica (Abecedarium Latinum)
+|
+16
+
+|
+ita-Latn
+|
+https://glottolog.org/resource/languoid/id/ital1282[ital1282]
++++<br>+++
+https://iso639-3.sil.org/code/ita[ita]
++++<br>+++ https://www.wikidata.org/wiki/Q652[Q652]
+|
+Lingua Italiana (Abecedarium Latinum)
+|
+6
+
+|
+gle-Latn
+|
+https://glottolog.org/resource/languoid/id/iris1253[iris1253]
++++<br>+++
+https://iso639-3.sil.org/code/gle[gle]
++++<br>+++ https://www.wikidata.org/wiki/Q9142[Q9142]
+|
+Lingua Hibernica (Abecedarium Latinum)
+|
+2
+
+|
+swe-Latn
+|
+https://glottolog.org/resource/languoid/id/swed1254[swed1254]
++++<br>+++
+https://iso639-3.sil.org/code/swe[swe]
++++<br>+++ https://www.wikidata.org/wiki/Q9027[Q9027]
+|
+Lingua Suecica (Abecedarium Latinum)
+|
+6
+
+|
+sqi-Latn
+|
+https://glottolog.org/resource/languoid/id/alba1267[alba1267]
++++<br>+++
+https://iso639-3.sil.org/code/sqi[sqi]
++++<br>+++ https://www.wikidata.org/wiki/Q8748[Q8748]
+|
+Macrolingua Albanica (/Abecedarium Latinum/)
+|
+1
+
+|
+pol-Latn
+|
+https://glottolog.org/resource/languoid/id/poli1260[poli1260]
++++<br>+++
+https://iso639-3.sil.org/code/pol[pol]
++++<br>+++ https://www.wikidata.org/wiki/Q809[Q809]
+|
+Lingua Polonica (Abecedarium Latinum)
+|
+7
+
+|
+fin-Latn
+|
+https://glottolog.org/resource/languoid/id/finn1318[finn1318]
++++<br>+++
+https://iso639-3.sil.org/code/fin[fin]
++++<br>+++ https://www.wikidata.org/wiki/Q1412[Q1412]
+|
+Lingua Finnica (Abecedarium Latinum)
+|
+6
+
+|
+ron-Latn
+|
+https://glottolog.org/resource/languoid/id/roma1327[roma1327]
++++<br>+++
+https://iso639-3.sil.org/code/ron[ron]
++++<br>+++ https://www.wikidata.org/wiki/Q7913[Q7913]
+|
+Lingua Dacoromanica (Abecedarium Latinum)
+|
+6
+
+|
+vie-Latn
+|
+https://glottolog.org/resource/languoid/id/viet1252[viet1252]
++++<br>+++
+https://iso639-3.sil.org/code/vie[vie]
++++<br>+++ https://www.wikidata.org/wiki/Q9199[Q9199]
+|
+Lingua Vietnamensis (Abecedarium Latinum)
+|
+7
+
+|
+cat-Latn
+|
+https://glottolog.org/resource/languoid/id/stan1289[stan1289]
++++<br>+++
+https://iso639-3.sil.org/code/cat[cat]
++++<br>+++ https://www.wikidata.org/wiki/Q7026[Q7026]
+|
+Lingua Catalana (Abecedarium Latinum)
+|
+12
+
+|
+ukr-Cyrl
+|
+https://glottolog.org/resource/languoid/id/ukra1253[ukra1253]
++++<br>+++
+https://iso639-3.sil.org/code/ukr[ukr]
++++<br>+++ https://www.wikidata.org/wiki/Q8798[Q8798]
+|
+Lingua Ucrainica (Abecedarium Cyrillicum)
+|
+13
+
+|
+bul-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bulg1262[bulg1262]
++++<br>+++
+https://iso639-3.sil.org/code/bul[bul]
++++<br>+++ https://www.wikidata.org/wiki/Q7918[Q7918]
+|
+Lingua Bulgarica (Abecedarium Cyrillicum)
+|
+6
+
+|
+slv-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1268[slov1268]
++++<br>+++
+https://iso639-3.sil.org/code/slv[slv]
++++<br>+++ https://www.wikidata.org/wiki/Q9063[Q9063]
+|
+Lingua Slovena (Abecedarium Latinum)
+|
+3
+
+|
+nob-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1259[norw1259]
++++<br>+++
+https://iso639-3.sil.org/code/nob[nob]
++++<br>+++ https://www.wikidata.org/wiki/Q25167[Q25167]
+|
+/Bokmål/ (Abecedarium Latinum)
+|
+7
+
+|
+ces-Latn
+|
+https://glottolog.org/resource/languoid/id/czec1258[czec1258]
++++<br>+++
+https://iso639-3.sil.org/code/ces[ces]
++++<br>+++ https://www.wikidata.org/wiki/Q9056[Q9056]
+|
+Lingua Bohemica (Abecedarium Latinum)
+|
+7
+
+|
+dan-Latn
+|
+https://glottolog.org/resource/languoid/id/dani1285[dani1285]
++++<br>+++
+https://iso639-3.sil.org/code/dan[dan]
++++<br>+++ https://www.wikidata.org/wiki/Q9035[Q9035]
+|
+Lingua Danica (Abecedarium Latinum)
+|
+6
+
+|
+jpn-Jpan
+|
+https://glottolog.org/resource/languoid/id/nucl1643[nucl1643]
++++<br>+++
+https://iso639-3.sil.org/code/jpn[jpn]
++++<br>+++ https://www.wikidata.org/wiki/Q5287[Q5287]
+|
+Lingua Iaponica (Scriptura Iaponica)
+|
+8
+
+|
+nno-Latn
+|
+https://glottolog.org/resource/languoid/id/norw1262[norw1262]
++++<br>+++
+https://iso639-3.sil.org/code/nno[nno]
++++<br>+++ https://www.wikidata.org/wiki/Q25164[Q25164]
+|
+/Nynorsk/ (Abecedarium Latinum)
+|
+2
+
+|
+mal-Mlym
+|
+https://glottolog.org/resource/languoid/id/mala1464[mala1464]
++++<br>+++
+https://iso639-3.sil.org/code/mal[mal]
++++<br>+++ https://www.wikidata.org/wiki/Q36236[Q36236]
+|
+Lingua Malabarica (/Malayalam script/)
+|
+1
+
+|
+ind-Latn
+|
+https://glottolog.org/resource/languoid/id/indo1316[indo1316]
++++<br>+++
+https://iso639-3.sil.org/code/ind[ind]
++++<br>+++ https://www.wikidata.org/wiki/Q9240[Q9240]
+|
+Lingua Indonesiana (Abecedarium Latinum)
+|
+10
+
+|
+fas-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/fas[fas]
++++<br>+++ https://www.wikidata.org/wiki/Q9168[Q9168]
+|
+Macrolingua Persica (//Abecedarium Arabicum//)
+|
+8
+
+|
+hun-Latn
+|
+https://glottolog.org/resource/languoid/id/hung1274[hung1274]
++++<br>+++
+https://iso639-3.sil.org/code/hun[hun]
++++<br>+++ https://www.wikidata.org/wiki/Q9067[Q9067]
+|
+Lingua Hungarica (Abecedarium Latinum)
+|
+7
+
+|
+eus-Latn
+|
+https://glottolog.org/resource/languoid/id/basq1248[basq1248]
++++<br>+++
+https://iso639-3.sil.org/code/eus[eus]
++++<br>+++ https://www.wikidata.org/wiki/Q8752[Q8752]
+|
+Lingua Vasconica (Abecedarium Latinum)
+|
+5
+
+|
+cym-Latn
+|
+https://glottolog.org/resource/languoid/id/wels1247[wels1247]
++++<br>+++
+https://iso639-3.sil.org/code/cym[cym]
++++<br>+++ https://www.wikidata.org/wiki/Q9309[Q9309]
+|
+Lingua Cambrica (Abecedarium Latinum)
+|
+2
+
+|
+glg-Latn
+|
+https://glottolog.org/resource/languoid/id/gali1258[gali1258]
++++<br>+++
+https://iso639-3.sil.org/code/glg[glg]
++++<br>+++ https://www.wikidata.org/wiki/Q9307[Q9307]
+|
+Lingua Gallaica (Abecedarium Latinum)
+|
+7
+
+|
+slk-Latn
+|
+https://glottolog.org/resource/languoid/id/slov1269[slov1269]
++++<br>+++
+https://iso639-3.sil.org/code/slk[slk]
++++<br>+++ https://www.wikidata.org/wiki/Q9058[Q9058]
+|
+Lingua Slovaca (Abecedarium Latinum)
+|
+2
+
+|
+epo-Latn
+|
+https://glottolog.org/resource/languoid/id/espe1235[espe1235]
++++<br>+++
+https://iso639-3.sil.org/code/epo[epo]
++++<br>+++ https://www.wikidata.org/wiki/Q143[Q143]
+|
+Lingua Esperantica (Abecedarium Latinum)
+|
+6
+
+|
+msa-Zzzz
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/msa[msa]
++++<br>+++ https://www.wikidata.org/wiki/Q9237[Q9237]
+|
+Macrolingua Malayana (?)
+|
+8
+
+|
+est-Latn
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/est[est]
++++<br>+++ https://www.wikidata.org/wiki/Q9072[Q9072]
+|
+Macrolingua Estonica (Abecedarium Latinum)
+|
+4
+
+|
+hrv-Latn
+|
+https://glottolog.org/resource/languoid/id/croa1245[croa1245]
++++<br>+++
+https://iso639-3.sil.org/code/hrv[hrv]
++++<br>+++ https://www.wikidata.org/wiki/Q6654[Q6654]
+|
+Lingua Croatica (Abecedarium Latinum)
+|
+3
+
+|
+tur-Latn
+|
+https://glottolog.org/resource/languoid/id/nucl1301[nucl1301]
++++<br>+++
+https://iso639-3.sil.org/code/tur[tur]
++++<br>+++ https://www.wikidata.org/wiki/Q256[Q256]
+|
+Lingua Turcica (Abecedarium Latinum)
+|
+9
+
+|
+oci-Latn
+|
+https://glottolog.org/resource/languoid/id/occi1239[occi1239]
++++<br>+++
+https://iso639-3.sil.org/code/oci[oci]
++++<br>+++ https://www.wikidata.org/wiki/Q14185[Q14185]
+|
+Lingua Occitana (Abecedarium Latinum)
+|
+3
+
+|
+bre-Latn
+|
+https://glottolog.org/resource/languoid/id/bret1244[bret1244]
++++<br>+++
+https://iso639-3.sil.org/code/bre[bre]
++++<br>+++ https://www.wikidata.org/wiki/Q12107[Q12107]
+|
+Lingua Britonica (Abecedarium Latinum)
+|
+2
+
+|
+arz-Latn
+|
+https://glottolog.org/resource/languoid/id/egyp1253[egyp1253]
++++<br>+++
+https://iso639-3.sil.org/code/arz[arz]
++++<br>+++ https://www.wikidata.org/wiki/Q29919[Q29919]
+|
+/Egyptian Arabic/ (/Abecedarium Arabicum/)
+|
+2
+
+|
+afr-Latn
+|
+https://glottolog.org/resource/languoid/id/afri1274[afri1274]
++++<br>+++
+https://iso639-3.sil.org/code/afr[afr]
++++<br>+++ https://www.wikidata.org/wiki/Q14196[Q14196]
+|
+Lingua Batava Capitensis (Abecedarium Latinum)
+|
+1
+
+|
+ltz-Latn
+|
+https://glottolog.org/resource/languoid/id/luxe1241[luxe1241]
++++<br>+++
+https://iso639-3.sil.org/code/ltz[ltz]
++++<br>+++ https://www.wikidata.org/wiki/Q9051[Q9051]
+|
+Lingua Luxemburgensis (Abecedarium Latinum)
+|
+1
+
+|
+sco-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1243[scot1243]
++++<br>+++
+https://iso639-3.sil.org/code/sco[sco]
++++<br>+++ https://www.wikidata.org/wiki/Q14549[Q14549]
+|
+Lingua Scotica quae Teutonica (Abecedarium Latinum)
+|
+1
+
+|
+zho-Hant
+|
+
++++<br>+++
+https://iso639-3.sil.org/code/zho[zho]
++++<br>+++ https://www.wikidata.org/wiki/Q18130932[Q18130932]
+|
+//Traditional Chinese// (/ISO 15924 Hant/)
+|
+10
+
+|
+gsw-Latn
+|
+https://glottolog.org/resource/languoid/id/swis1247[swis1247]
++++<br>+++
+https://iso639-3.sil.org/code/gsw[gsw]
++++<br>+++ https://www.wikidata.org/wiki/Q131339[Q131339]
+|
+Dialecti Alemannicae (Abecedarium Latinum)
+|
+1
+
+|
+isl-Latn
+|
+https://glottolog.org/resource/languoid/id/icel1247[icel1247]
++++<br>+++
+https://iso639-3.sil.org/code/isl[isl]
++++<br>+++ https://www.wikidata.org/wiki/Q294[Q294]
+|
+Lingua Islandica (Abecedarium Latinum)
+|
+4
+
+|
+lim-Latn
+|
+https://glottolog.org/resource/languoid/id/limb1263[limb1263]
++++<br>+++
+https://iso639-3.sil.org/code/lim[lim]
++++<br>+++ https://www.wikidata.org/wiki/Q102172[Q102172]
+|
+Lingua Limburgica (Abecedarium Latinum)
+|
+1
+
+|
+srp-Latn
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q21161949[Q21161949]
+|
+/Serbian/ (Abecedarium Latinum)
+|
+3
+
+|
+vls-Latn
+|
+https://glottolog.org/resource/languoid/id/vlaa1240[vlaa1240]
++++<br>+++
+https://iso639-3.sil.org/code/vls[vls]
++++<br>+++ https://www.wikidata.org/wiki/Q100103[Q100103]
+|
+/West Flemish/ (Abecedarium Latinum)
+|
+1
+
+|
+frp-Latn
+|
+https://glottolog.org/resource/languoid/id/fran1260[fran1260]
++++<br>+++
+https://iso639-3.sil.org/code/frp[frp]
++++<br>+++ https://www.wikidata.org/wiki/Q15087[Q15087]
+|
+Lingua Arpitanica
+|
+1
+
+|
+wuu-Zyyy
+|
+https://glottolog.org/resource/languoid/id/wuch1236[wuch1236]
++++<br>+++
+https://iso639-3.sil.org/code/wuu[wuu]
++++<br>+++ https://www.wikidata.org/wiki/Q34290[Q34290]
+|
+//Macrolingua Wu// (/ISO 15924 Zyyy/)
+|
+2
+
+|
+srp-Cyrl
+|
+https://glottolog.org/resource/languoid/id/serb1264[serb1264]
++++<br>+++
+https://iso639-3.sil.org/code/srp[srp]
++++<br>+++ https://www.wikidata.org/wiki/Q9299[Q9299]
+|
+Lingua Serbica (Abecedarium Cyrillicum)
+|
+8
+
+|
+urd-Arab
+|
+https://glottolog.org/resource/languoid/id/urdu1245[urdu1245]
++++<br>+++
+https://iso639-3.sil.org/code/urd[urd]
++++<br>+++ https://www.wikidata.org/wiki/Q1617[Q1617]
+|
+Lingua Urdu (/Abecedarium Arabicum/)
+|
+6
+
+|
+lit-Latn
+|
+https://glottolog.org/resource/languoid/id/lith1251[lith1251]
++++<br>+++
+https://iso639-3.sil.org/code/lit[lit]
++++<br>+++ https://www.wikidata.org/wiki/Q9083[Q9083]
+|
+Lingua Lithuanica (Abecedarium Latinum)
+|
+4
+
+|
+hbs-Latn
+|
+https://glottolog.org/resource/languoid/id/sout1528[sout1528]
++++<br>+++
+https://iso639-3.sil.org/code/hbs[hbs]
++++<br>+++ https://www.wikidata.org/wiki/Q9301[Q9301]
+|
+Macrolingua Serbocroatica (Abecedarium Latinum)
+|
+4
+
+|
+lav-Latn
+|
+https://glottolog.org/resource/languoid/id/latv1249[latv1249]
++++<br>+++
+https://iso639-3.sil.org/code/lav[lav]
++++<br>+++ https://www.wikidata.org/wiki/Q9078[Q9078]
+|
+Macrolingua Lettonica (Abecedarium Latinum)
+|
+3
+
+|
+bos-Latn
+|
+https://glottolog.org/resource/languoid/id/bosn1245[bosn1245]
++++<br>+++
+https://iso639-3.sil.org/code/bos[bos]
++++<br>+++ https://www.wikidata.org/wiki/Q9303[Q9303]
+|
+Lingua Bosnica (Abecedarium Latinum)
+|
+3
+
+|
+jav-Latn
+|
+https://glottolog.org/resource/languoid/id/java1254[java1254]
++++<br>+++
+https://iso639-3.sil.org/code/jav[jav]
++++<br>+++ https://www.wikidata.org/wiki/Q33549[Q33549]
+|
+Lingua Iavanica (Abecedarium Latinum)
+|
+2
+
+|
+ell-Grek
+|
+https://glottolog.org/resource/languoid/id/mode1248[mode1248]
++++<br>+++
+https://iso639-3.sil.org/code/ell[ell]
++++<br>+++ https://www.wikidata.org/wiki/Q36510[Q36510]
+|
+Lingua Neograeca (Alphabetum Graecum)
+|
+7
+
+|
+fry-Latn
+|
+https://glottolog.org/resource/languoid/id/west2354[west2354]
++++<br>+++
+https://iso639-3.sil.org/code/fry[fry]
++++<br>+++ https://www.wikidata.org/wiki/Q27175[Q27175]
+|
+Lingua Frisice occidentalis (Abecedarium Latinum)
+|
+7
+
+|
+jam-Latn
+|
+https://glottolog.org/resource/languoid/id/jama1262[jama1262]
++++<br>+++
+https://iso639-3.sil.org/code/jam[jam]
++++<br>+++ https://www.wikidata.org/wiki/Q35939[Q35939]
+|
+Lingua creola Iamaicana (Abecedarium Latinum)
+|
+1
+
+|
+bel-Cyrl
+|
+https://glottolog.org/resource/languoid/id/bela1254[bela1254]
++++<br>+++
+https://iso639-3.sil.org/code/bel[bel]
++++<br>+++ https://www.wikidata.org/wiki/Q9091[Q9091]
+|
+Lingua Ruthenica Alba (Abecedarium Cyrillicum)
+|
+3
+
+|
+mar-Deva
+|
+https://glottolog.org/resource/languoid/id/mara1378[mara1378]
++++<br>+++
+https://iso639-3.sil.org/code/mar[mar]
++++<br>+++ https://www.wikidata.org/wiki/Q1571[Q1571]
+|
+Lingua Marathica (Devanāgarī)
+|
+2
+
+|
+zul-Latn
+|
+https://glottolog.org/resource/languoid/id/zulu1248[zulu1248]
++++<br>+++
+https://iso639-3.sil.org/code/zul[zul]
++++<br>+++ https://www.wikidata.org/wiki/Q10179[Q10179]
+|
+Lingua Zuluana (Abecedarium Latinum)
+|
+1
+
+|===
+
+==== Rēs interlinguālibus: 7
+Rēs::
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
+
+      ix_hxlix;;
+        ix_wikip123
+
+      ix_hxlvoc;;
+        v_wiki_p_123
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+  /SPDX license ID/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
+
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
+
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
+
+      ix_hxlix;;
+        ix_wikip2479
+
+      ix_hxlvoc;;
+        v_wiki_p_2479
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">SPDX license identifier</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
+  scrīptor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P50[P50]
+
+      ix_hxlix;;
+        ix_wikip50
+
+      ix_hxlvoc;;
+        v_wiki_p_50
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">scrīptor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+
+
+<<<
+
+== Archīa
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    **Context information**: ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis, not _just_ an static work), then the actual groundbreaking difference on the workflow used to generate every dictionaries on Cōdex such as this one are the following fact: **we provide machine readable formats even when the equivalents on _international languages_, such as English, don't have for areas such as humanitarian aid, development aid and human rights**. The closest to such multilingualism (outside Wikimedia) are European Union SEMICeu (up to 24 languages), but even then have issues while sharing translations on all languages. United Nations translations (up to 6 languages, rarely more) are not available by humanitarian agencies to help with terminology translations.
+    +++<br><br>+++
+    **Practical implication**: the text documents on _Archīa prō cōdice_ (literal English translation: _File for book_) are alternatives to this book format which are heavily automated using only the data format. However, the machine-readable formats on _Archīa prō dictiōnāriīs_ (literal English translation: _Files for dictionaries_) are the focus and recommended for derived works and intended for mitigating additional human errors. We can even create new formats by request! The goal here is both to allow terminology translators and production usage where it makes an impact.
+
+
+=== Archīa prō dictiōnāriīs: 4
+
+
+==== 1603_44_101.no1.tm.hxl.csv
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_44_101.no1.tm.hxl.csv[1603_44_101.no1.tm.hxl.csv]
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    /Numerordinatio on HXLTM container/
+
+
+
+==== 1603_44_101.no11.tm.hxl.csv
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_44_101.no11.tm.hxl.csv[1603_44_101.no11.tm.hxl.csv]
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    /Numerordinatio on HXLTM container (expanded with terminology translations)/
+
+
+
+==== 1603_44_101.wikiq.tm.hxl.csv
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_44_101.wikiq.tm.hxl.csv[1603_44_101.wikiq.tm.hxl.csv]
+  /reference URL/@eng-Latn:::
+    https://hxltm.etica.ai/
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codicem are strictly Wikidata QIDs.
+
+
+
+==== 1603_44_101.no11.tbx
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_44_101.no11.tbx[1603_44_101.no11.tbx]
+  /reference URL/@eng-Latn:::
+    http://www.terminorgs.net/downloads/TBX_Basic_Version_3.1.pdf
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    TBX-Basic is a terminological markup language (TML) that is a lighter version of TBX-Default, the TML that is defined in ISO 30042. TBX-Basic is designed for the localization industry and is based on information from surveys and studies that were conducted by the LISA Term SIG about the types of terminology data that the localization industry requires.
+
+
+
+==== 1603_44_101.no11.tmx
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_44_101.no11.tmx[1603_44_101.no11.tmx]
+  /reference URL/@eng-Latn:::
+    https://www.gala-global.org/tmx-14b
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    The purpose of the Translation Memory eXchange format (TMX) format is to provide a standard method to describe translation memory data that is being exchanged among tools and/or translation vendors, while introducing little or no loss of critical data during the process
+
+
+
+=== Archīa prō cōdice: 2
+
+
+==== 1603_44_101.mul-Latn.codex.adoc
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_44_101.mul-Latn.codex.adoc[1603_44_101.mul-Latn.codex.adoc]
+  /reference URL/@eng-Latn:::
+    https://docs.asciidoctor.org/
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    AsciiDoc is a plain text authoring format (i.e., lightweight markup language) for writing technical content such as documentation, articles, and books.
+
+
+
+==== 1603_44_101.mul-Latn.codex.pdf
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_44_101.mul-Latn.codex.pdf[1603_44_101.mul-Latn.codex.pdf]
+  /reference URL/@eng-Latn:::
+    https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Portable Document Format (PDF), standardized as ISO 32000, is a file format developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems.
+
+
+
+
+<<<
+
+[.text-center]
+
+Dictiōnāria initiīs
+
+<<<
+
+== //Dictiōnāria basibus de Scielus contra humanus//
+<<<
+
+[id='6875295']
+=== [`6875295`] /misconduct/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q6875295[Q6875295]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /misconduct/
+
+  Lingua Cannadica (/ISO 15924 Knda/):::
+    +++<span lang="kn">ದುರಾಚಾರ</span>+++
+
+  Lingua Coreana (Abecedarium Coreanum):::
+    +++<span lang="ko">비행 (활동)</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">不当行为</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">misconduct</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">inconduite</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">wangedrag</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">inconducta</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">Неправомірна поведінка</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">非行</span>+++
+
+  Lingua Esperantica (Abecedarium Latinum):::
+    +++<span lang="eo">miskonduto</span>+++
+
+
+
+
+
+<<<
+
+[id='169207']
+=== [`169207`] Discriminatio
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q169207[Q169207]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /discrimination/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">ميز</span>+++
+
+  Lingua Armenia (Alphabetum Armenium):::
+    +++<span lang="hy">խտրականություն</span>+++
+
+  Lingua Bengali (/Bengali script/):::
+    +++<span lang="bn">বৈষম্য</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">дискриминация</span>+++
+
+  Lingua Hindica (Devanāgarī):::
+    +++<span lang="hi">भेदभाव</span>+++
+
+  Lingua Cannadica (/ISO 15924 Knda/):::
+    +++<span lang="kn">ತಾರತಮ್ಯ</span>+++
+
+  Lingua Coreana (Abecedarium Coreanum):::
+    +++<span lang="ko">차별</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">אפליה</span>+++
+
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Discriminatio</span>+++
+
+  Lingua Tamulica (/ISO 15924 Taml/):::
+    +++<span lang="ta">பாகுபாடு</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">歧視</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">discriminação</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">discrimination</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">discrimination</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">discriminatie</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">Diskriminierung</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">discriminación</span>+++
+
+  Lingua Italiana (Abecedarium Latinum):::
+    +++<span lang="it">discriminazione</span>+++
+
+  Lingua Suecica (Abecedarium Latinum):::
+    +++<span lang="sv">diskriminering</span>+++
+
+  Macrolingua Albanica (/Abecedarium Latinum/):::
+    +++<span lang="sq">diskriminim</span>+++
+
+  Lingua Polonica (Abecedarium Latinum):::
+    +++<span lang="pl">dyskryminacja</span>+++
+
+  Lingua Finnica (Abecedarium Latinum):::
+    +++<span lang="fi">syrjintä</span>+++
+
+  Lingua Dacoromanica (Abecedarium Latinum):::
+    +++<span lang="ro">discriminare</span>+++
+
+  Lingua Vietnamensis (Abecedarium Latinum):::
+    +++<span lang="vi">phân biệt đối xử</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">discriminació</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">дискримінація</span>+++
+
+  Lingua Bulgarica (Abecedarium Cyrillicum):::
+    +++<span lang="bg">дискриминация</span>+++
+
+  Lingua Slovena (Abecedarium Latinum):::
+    +++<span lang="sl">Diskriminacija</span>+++
+
+  /Bokmål/ (Abecedarium Latinum):::
+    +++<span lang="nb">forskjellsbehandling</span>+++
+
+  Lingua Bohemica (Abecedarium Latinum):::
+    +++<span lang="cs">diskriminace</span>+++
+
+  Lingua Danica (Abecedarium Latinum):::
+    +++<span lang="da">diskrimination</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">差別</span>+++
+
+  /Nynorsk/ (Abecedarium Latinum):::
+    +++<span lang="nn">ulik behandling</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">Diskriminasi</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">تبعیض</span>+++
+
+  Lingua Hungarica (Abecedarium Latinum):::
+    +++<span lang="hu">diszkrimináció</span>+++
+
+  Lingua Vasconica (Abecedarium Latinum):::
+    +++<span lang="eu">Diskriminazio</span>+++
+
+  Lingua Cambrica (Abecedarium Latinum):::
+    +++<span lang="cy">gwahaniaethu</span>+++
+
+  Lingua Gallaica (Abecedarium Latinum):::
+    +++<span lang="gl">Discriminación</span>+++
+
+  Lingua Slovaca (Abecedarium Latinum):::
+    +++<span lang="sk">Diskriminácia</span>+++
+
+  Lingua Esperantica (Abecedarium Latinum):::
+    +++<span lang="eo">diskriminacio</span>+++
+
+  Macrolingua Malayana (?):::
+    +++<span lang="ms">diskriminasi</span>+++
+
+  Macrolingua Estonica (Abecedarium Latinum):::
+    +++<span lang="et">diskrimineerimine</span>+++
+
+  Lingua Croatica (Abecedarium Latinum):::
+    +++<span lang="hr">Diskriminacija</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">Ayrımcılık</span>+++
+
+  Lingua Occitana (Abecedarium Latinum):::
+    +++<span lang="oc">Discriminacion</span>+++
+
+  Lingua Britonica (Abecedarium Latinum):::
+    +++<span lang="br">Droukziforc'h</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">歧視</span>+++
+
+  Dialecti Alemannicae (Abecedarium Latinum):::
+    +++<span lang="gsw">Diskriminierig</span>+++
+
+  Lingua Islandica (Abecedarium Latinum):::
+    +++<span lang="is">Mismunun</span>+++
+
+  /Serbian/ (Abecedarium Latinum):::
+    +++<span lang="sr-el">diskriminacija</span>+++
+
+  /West Flemish/ (Abecedarium Latinum):::
+    +++<span lang="vls">Discriminoatie</span>+++
+
+  //Macrolingua Wu// (/ISO 15924 Zyyy/):::
+    +++<span lang="wuu">歧视</span>+++
+
+  Lingua Serbica (Abecedarium Cyrillicum):::
+    +++<span lang="sr">дискриминација</span>+++
+
+  Lingua Urdu (/Abecedarium Arabicum/):::
+    +++<span lang="ur">امتیاز</span>+++
+
+  Lingua Lithuanica (Abecedarium Latinum):::
+    +++<span lang="lt">Diskriminacija</span>+++
+
+  Macrolingua Serbocroatica (Abecedarium Latinum):::
+    +++<span lang="sh">Diskriminacija</span>+++
+
+  Macrolingua Lettonica (Abecedarium Latinum):::
+    +++<span lang="lv">diskriminācija</span>+++
+
+  Lingua Bosnica (Abecedarium Latinum):::
+    +++<span lang="bs">Diskriminacija</span>+++
+
+  Lingua Neograeca (Alphabetum Graecum):::
+    +++<span lang="el">διάκριση</span>+++
+
+  Lingua Frisice occidentalis (Abecedarium Latinum):::
+    +++<span lang="fy">diskriminaasje</span>+++
+
+  Lingua creola Iamaicana (Abecedarium Latinum):::
+    +++<span lang="jam">Diskriminieshan</span>+++
+
+  Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
+    +++<span lang="be">Дыскрымінацыя</span>+++
+
+
+
+
+
+<<<
+
+[id='751722']
+=== [`751722`] /sexual harassment/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q751722[Q751722]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /sexual harassment/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">تحرش جنسي</span>+++
+
+  Lingua Bengali (/Bengali script/):::
+    +++<span lang="bn">যৌন হয়রানি</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">сексуальное домогательство</span>+++
+
+  Lingua Hindica (Devanāgarī):::
+    +++<span lang="hi">यौन उत्पीड़न</span>+++
+
+  Lingua Coreana (Abecedarium Coreanum):::
+    +++<span lang="ko">성희롱</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">הטרדה מינית</span>+++
+
+  Lingua Tamulica (/ISO 15924 Taml/):::
+    +++<span lang="ta">பாலியல் துன்புறுத்தல்</span>+++
+
+  Lingua Thai (/ISO 15924 Thai/):::
+    +++<span lang="th">การคุกคามทางเพศ</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">性骚扰</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">assédio sexual</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">sexual harassment</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">harcèlement sexuel</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">seksuele intimidatie</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">sexuelle Belästigung</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">acoso sexual</span>+++
+
+  Lingua Italiana (Abecedarium Latinum):::
+    +++<span lang="it">molestie sessuali</span>+++
+
+  Lingua Suecica (Abecedarium Latinum):::
+    +++<span lang="sv">sexuella trakasserier</span>+++
+
+  Lingua Polonica (Abecedarium Latinum):::
+    +++<span lang="pl">Molestowanie seksualne</span>+++
+
+  Lingua Finnica (Abecedarium Latinum):::
+    +++<span lang="fi">seksuaalinen häirintä</span>+++
+
+  Lingua Dacoromanica (Abecedarium Latinum):::
+    +++<span lang="ro">Hărțuire sexuală</span>+++
+
+  Lingua Vietnamensis (Abecedarium Latinum):::
+    +++<span lang="vi">Quấy rối tình dục</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">assetjament sexual</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">Сексуальне домагання</span>+++
+
+  Lingua Bulgarica (Abecedarium Cyrillicum):::
+    +++<span lang="bg">Сексуален тормоз</span>+++
+
+  /Bokmål/ (Abecedarium Latinum):::
+    +++<span lang="nb">seksuell trakassering</span>+++
+
+  Lingua Bohemica (Abecedarium Latinum):::
+    +++<span lang="cs">Sexuální obtěžování</span>+++
+
+  Lingua Danica (Abecedarium Latinum):::
+    +++<span lang="da">sexchikane</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">セクシャルハラスメント</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">Pelecehan seksual</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">آزار جنسی</span>+++
+
+  Lingua Hungarica (Abecedarium Latinum):::
+    +++<span lang="hu">szexuális zaklatás</span>+++
+
+  Lingua Vasconica (Abecedarium Latinum):::
+    +++<span lang="eu">Sexu jazarpen</span>+++
+
+  Lingua Gallaica (Abecedarium Latinum):::
+    +++<span lang="gl">Acoso sexual</span>+++
+
+  Lingua Esperantica (Abecedarium Latinum):::
+    +++<span lang="eo">seksa molestado</span>+++
+
+  Macrolingua Malayana (?):::
+    +++<span lang="ms">Gangguan seksual</span>+++
+
+  Macrolingua Estonica (Abecedarium Latinum):::
+    +++<span lang="et">seksuaalne ahistamine</span>+++
+
+  Lingua Croatica (Abecedarium Latinum):::
+    +++<span lang="hr">Seksualno uznemiravanje</span>+++
+
+  Lingua Occitana (Abecedarium Latinum):::
+    +++<span lang="oc">Secutament sexual</span>+++
+
+  /Egyptian Arabic/ (/Abecedarium Arabicum/):::
+    +++<span lang="arz">تحرش جنسى</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">性騷擾</span>+++
+
+  Lingua Islandica (Abecedarium Latinum):::
+    +++<span lang="is">Kynferðisleg áreitni</span>+++
+
+  Lingua Serbica (Abecedarium Cyrillicum):::
+    +++<span lang="sr">Сексуално узнемиравање</span>+++
+
+  Lingua Urdu (/Abecedarium Arabicum/):::
+    +++<span lang="ur">جنسی ہراسانی</span>+++
+
+  Lingua Lithuanica (Abecedarium Latinum):::
+    +++<span lang="lt">Seksualinis priekabiavimas</span>+++
+
+  Macrolingua Lettonica (Abecedarium Latinum):::
+    +++<span lang="lv">seksuāla uzmākšanās</span>+++
+
+  Lingua Iavanica (Abecedarium Latinum):::
+    +++<span lang="jv">Pelécéhan sèksual</span>+++
+
+  Lingua Neograeca (Alphabetum Graecum):::
+    +++<span lang="el">Σεξουαλική παρενόχληση</span>+++
+
+  Lingua Frisice occidentalis (Abecedarium Latinum):::
+    +++<span lang="fy">Seksuele yntimidaasje</span>+++
+
+  Lingua Marathica (Devanāgarī):::
+    +++<span lang="mr">लैंगिक छळ</span>+++
+
+
+
+
+
+[id='751722_1975478']
+==== [`751722_1975478`] /abuse of authority/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q1975478[Q1975478]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /abuse of authority/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">إساءة إستخدام السلطة</span>+++
+
+  Lingua Bengali (/Bengali script/):::
+    +++<span lang="bn">ক্ষমতার অপব্যবহার</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">злоупотребление властью</span>+++
+
+  Lingua Coreana (Abecedarium Coreanum):::
+    +++<span lang="ko">직권남용</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">שימוש לרעה בסמכות</span>+++
+
+  Lingua Tamulica (/ISO 15924 Taml/):::
+    +++<span lang="ta">அதிகார வன்முறை</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">濫權</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">abuso de poder</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">abuse of power</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">abus de pouvoir</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">machtsmisbruik</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">Machtmissbrauch</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">abuso de poder</span>+++
+
+  Lingua Italiana (Abecedarium Latinum):::
+    +++<span lang="it">abuso d'ufficio</span>+++
+
+  Lingua Suecica (Abecedarium Latinum):::
+    +++<span lang="sv">maktmissbruk</span>+++
+
+  Lingua Finnica (Abecedarium Latinum):::
+    +++<span lang="fi">vallan väärinkäyttö</span>+++
+
+  Lingua Dacoromanica (Abecedarium Latinum):::
+    +++<span lang="ro">abuz de putere</span>+++
+
+  Lingua Vietnamensis (Abecedarium Latinum):::
+    +++<span lang="vi">lạm quyền</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">abús de poder</span>+++
+
+  Lingua Bulgarica (Abecedarium Cyrillicum):::
+    +++<span lang="bg">злоупотреба с власт</span>+++
+
+  Lingua Slovena (Abecedarium Latinum):::
+    +++<span lang="sl">zloraba položaja</span>+++
+
+  Lingua Bohemica (Abecedarium Latinum):::
+    +++<span lang="cs">zneužití pravomoci</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">penyalahgunaan kekuasaan</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">سوء استفاده از قدرت</span>+++
+
+  Lingua Hungarica (Abecedarium Latinum):::
+    +++<span lang="hu">hatalommal való visszaélés</span>+++
+
+  Macrolingua Malayana (?):::
+    +++<span lang="ms">salah guna kuasa</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">gücün kötüye kullanımı</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">濫用職權罪</span>+++
+
+  Lingua Neograeca (Alphabetum Graecum):::
+    +++<span lang="el">κατάχρηση εξουσίας</span>+++
+
+
+
+
+
+<<<
+
+[id='3240539']
+=== [`3240539`] /harassment/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q3240539[Q3240539]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /harassment/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">تحرش</span>+++
+
+  Lingua Bengali (/Bengali script/):::
+    +++<span lang="bn">হয়রানি</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">Домогательство</span>+++
+
+  Lingua Cannadica (/ISO 15924 Knda/):::
+    +++<span lang="kn">harassment</span>+++
+
+  Lingua Coreana (Abecedarium Coreanum):::
+    +++<span lang="ko">괴롭힘</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">הטרדה</span>+++
+
+  Lingua Thai (/ISO 15924 Thai/):::
+    +++<span lang="th">การคุกคาม</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">騷擾</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">assédio</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">harassment</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">harcèlement</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">lastig vallen</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">Belästigung</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">hostigamiento</span>+++
+
+  Lingua Italiana (Abecedarium Latinum):::
+    +++<span lang="it">molestia</span>+++
+
+  Lingua Suecica (Abecedarium Latinum):::
+    +++<span lang="sv">trakasserier</span>+++
+
+  Lingua Polonica (Abecedarium Latinum):::
+    +++<span lang="pl">molestowanie</span>+++
+
+  Lingua Dacoromanica (Abecedarium Latinum):::
+    +++<span lang="ro">Hărțuire</span>+++
+
+  Lingua Vietnamensis (Abecedarium Latinum):::
+    +++<span lang="vi">quấy rối</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">fustigació</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">домагання</span>+++
+
+  /Bokmål/ (Abecedarium Latinum):::
+    +++<span lang="nb">trakassering</span>+++
+
+  Lingua Danica (Abecedarium Latinum):::
+    +++<span lang="da">chikane (samfund)</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">嫌がらせ</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">Pelecehan</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">آزار</span>+++
+
+  Lingua Hungarica (Abecedarium Latinum):::
+    +++<span lang="hu">zaklatás a magyar jog szerint</span>+++
+
+  Lingua Esperantica (Abecedarium Latinum):::
+    +++<span lang="eo">molestado</span>+++
+
+  Macrolingua Malayana (?):::
+    +++<span lang="ms">gangguan</span>+++
+
+  Macrolingua Estonica (Abecedarium Latinum):::
+    +++<span lang="et">ahistamine</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">Taciz</span>+++
+
+  Lingua Serbica (Abecedarium Cyrillicum):::
+    +++<span lang="sr">малтретирања</span>+++
+
+  Lingua Neograeca (Alphabetum Graecum):::
+    +++<span lang="el">Παρενόχληση</span>+++
+
+
+
+
+
+<<<
+
+[id='7458798']
+=== [`7458798`] /sexual misconduct/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q7458798[Q7458798]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /sexual misconduct/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">سوء السلوك الجنسي</span>+++
+
+  Lingua Bengali (/Bengali script/):::
+    +++<span lang="bn">যৌন অসদাচরণ</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">התנהגות מינית פסולה</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">性行为不端</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">sexual misconduct</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">inconduite sexuelle</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">seksueel grensoverschrijdend gedrag</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">inconducta sexual</span>+++
+
+  Lingua Finnica (Abecedarium Latinum):::
+    +++<span lang="fi">seksuaalirikos</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">mala conducta sexual</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">Сексуальні проступки</span>+++
+
+  Lingua Hungarica (Abecedarium Latinum):::
+    +++<span lang="hu">szexuális magatartás</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">性行為不端</span>+++
+
+  Lingua Urdu (/Abecedarium Arabicum/):::
+    +++<span lang="ur">جنسی بد سلوکی</span>+++
+
+  Lingua Frisice occidentalis (Abecedarium Latinum):::
+    +++<span lang="fy">Seksueel oer de grins geand hâlden en dragen</span>+++
+
+
+
+
+
+[id='7458798_47092']
+==== [`7458798_47092`] Stuprum
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q47092[Q47092]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /rape/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">اغتصاب</span>+++
+
+  Lingua Armenia (Alphabetum Armenium):::
+    +++<span lang="hy">Բռնաբարություն</span>+++
+
+  Lingua Bengali (/Bengali script/):::
+    +++<span lang="bn">ধর্ষণ</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">изнасилование</span>+++
+
+  Lingua Hindica (Devanāgarī):::
+    +++<span lang="hi">बलात्कार</span>+++
+
+  Lingua Cannadica (/ISO 15924 Knda/):::
+    +++<span lang="kn">ಬಲಾತ್ಕಾರದ ಸಂಭೋಗ</span>+++
+
+  Lingua Coreana (Abecedarium Coreanum):::
+    +++<span lang="ko">강간</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">אונס</span>+++
+
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Stuprum</span>+++
+
+  Lingua Tamulica (/ISO 15924 Taml/):::
+    +++<span lang="ta">வன்கலவி</span>+++
+
+  Lingua Telingana (/ISO 15924 Telu/):::
+    +++<span lang="te">మానభంగం</span>+++
+
+  Lingua Thai (/ISO 15924 Thai/):::
+    +++<span lang="th">การข่มขืนกระทำชำเรา</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">强奸</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">violação</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">rape</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">viol</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">verkrachting</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">Vergewaltigung</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">violación</span>+++
+
+  Lingua Italiana (Abecedarium Latinum):::
+    +++<span lang="it">violenza sessuale</span>+++
+
+  Lingua Hibernica (Abecedarium Latinum):::
+    +++<span lang="ga">éigniú</span>+++
+
+  Lingua Suecica (Abecedarium Latinum):::
+    +++<span lang="sv">våldtäkt</span>+++
+
+  Lingua Polonica (Abecedarium Latinum):::
+    +++<span lang="pl">zgwałcenie</span>+++
+
+  Lingua Finnica (Abecedarium Latinum):::
+    +++<span lang="fi">raiskaus</span>+++
+
+  Lingua Dacoromanica (Abecedarium Latinum):::
+    +++<span lang="ro">viol</span>+++
+
+  Lingua Vietnamensis (Abecedarium Latinum):::
+    +++<span lang="vi">hiếp dâm</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">violació</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">зґвалтування</span>+++
+
+  Lingua Bulgarica (Abecedarium Cyrillicum):::
+    +++<span lang="bg">Изнасилване</span>+++
+
+  Lingua Slovena (Abecedarium Latinum):::
+    +++<span lang="sl">Posilstvo</span>+++
+
+  /Bokmål/ (Abecedarium Latinum):::
+    +++<span lang="nb">voldtekt</span>+++
+
+  Lingua Bohemica (Abecedarium Latinum):::
+    +++<span lang="cs">znásilnění</span>+++
+
+  Lingua Danica (Abecedarium Latinum):::
+    +++<span lang="da">voldtægt</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">強姦</span>+++
+
+  /Nynorsk/ (Abecedarium Latinum):::
+    +++<span lang="nn">valdtekt</span>+++
+
+  Lingua Malabarica (/Malayalam script/):::
+    +++<span lang="ml">ബലാത്സംഗം</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">pemerkosaan</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">تجاوز جنسی</span>+++
+
+  Lingua Hungarica (Abecedarium Latinum):::
+    +++<span lang="hu">nemi erőszak</span>+++
+
+  Lingua Vasconica (Abecedarium Latinum):::
+    +++<span lang="eu">Bortxaketa</span>+++
+
+  Lingua Cambrica (Abecedarium Latinum):::
+    +++<span lang="cy">Trais rhywiol</span>+++
+
+  Lingua Gallaica (Abecedarium Latinum):::
+    +++<span lang="gl">Violación</span>+++
+
+  Lingua Slovaca (Abecedarium Latinum):::
+    +++<span lang="sk">Znásilnenie</span>+++
+
+  Lingua Esperantica (Abecedarium Latinum):::
+    +++<span lang="eo">seksatenco</span>+++
+
+  Macrolingua Malayana (?):::
+    +++<span lang="ms">Rogol</span>+++
+
+  Macrolingua Estonica (Abecedarium Latinum):::
+    +++<span lang="et">vägistamine</span>+++
+
+  Lingua Croatica (Abecedarium Latinum):::
+    +++<span lang="hr">Silovanje</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">ırza geçme</span>+++
+
+  Lingua Occitana (Abecedarium Latinum):::
+    +++<span lang="oc">Viòl</span>+++
+
+  Lingua Britonica (Abecedarium Latinum):::
+    +++<span lang="br">Gwallerezh</span>+++
+
+  /Egyptian Arabic/ (/Abecedarium Arabicum/):::
+    +++<span lang="arz">اغتصاب</span>+++
+
+  Lingua Batava Capitensis (Abecedarium Latinum):::
+    +++<span lang="af">verkragting</span>+++
+
+  Lingua Luxemburgensis (Abecedarium Latinum):::
+    +++<span lang="lb">Vergewaltegung</span>+++
+
+  Lingua Scotica quae Teutonica (Abecedarium Latinum):::
+    +++<span lang="sco">rape</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">強姦</span>+++
+
+  Lingua Islandica (Abecedarium Latinum):::
+    +++<span lang="is">Nauðgun</span>+++
+
+  Lingua Limburgica (Abecedarium Latinum):::
+    +++<span lang="li">Verkrachting</span>+++
+
+  Lingua Arpitanica:::
+    +++<span lang="frp">Viol</span>+++
+
+  //Macrolingua Wu// (/ISO 15924 Zyyy/):::
+    +++<span lang="wuu">强奸</span>+++
+
+  Lingua Serbica (Abecedarium Cyrillicum):::
+    +++<span lang="sr">силовање</span>+++
+
+  Lingua Urdu (/Abecedarium Arabicum/):::
+    +++<span lang="ur">عصمت دری</span>+++
+
+  Lingua Lithuanica (Abecedarium Latinum):::
+    +++<span lang="lt">Išprievartavimas</span>+++
+
+  Macrolingua Serbocroatica (Abecedarium Latinum):::
+    +++<span lang="sh">Silovanje</span>+++
+
+  Macrolingua Lettonica (Abecedarium Latinum):::
+    +++<span lang="lv">Izvarošana</span>+++
+
+  Lingua Bosnica (Abecedarium Latinum):::
+    +++<span lang="bs">Silovanje</span>+++
+
+  Lingua Iavanica (Abecedarium Latinum):::
+    +++<span lang="jv">Ruda peksa</span>+++
+
+  Lingua Neograeca (Alphabetum Graecum):::
+    +++<span lang="el">βιασμός</span>+++
+
+  Lingua Frisice occidentalis (Abecedarium Latinum):::
+    +++<span lang="fy">ferkrêfting</span>+++
+
+  Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
+    +++<span lang="be">Згвалтаванне</span>+++
+
+  Lingua Marathica (Devanāgarī):::
+    +++<span lang="mr">बलात्कार</span>+++
+
+  Lingua Zuluana (Abecedarium Latinum):::
+    +++<span lang="zu">Ukudlwengula</span>+++
+
+
+
+
+
+[id='7458798_47092_1968926']
+===== [`7458798_47092_1968926`] /statutory rape/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q1968926[Q1968926]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /statutory rape/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">اغتصاب قانوني</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">растление</span>+++
+
+  Lingua Coreana (Abecedarium Coreanum):::
+    +++<span lang="ko">의제강간</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">אונס סטטוטורי</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">法定强奸</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">statutory rape</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">atteinte sexuelle sur mineur</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">sexueller Missbrauch von Jugendlichen</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">estupro</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">estupre</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">розбещення</span>+++
+
+  /Bokmål/ (Abecedarium Latinum):::
+    +++<span lang="nb">seksuell omgang med midreårige</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">法定強姦</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">Pemerkosaan statutori</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">تجاوز قانونی</span>+++
+
+  Macrolingua Malayana (?):::
+    +++<span lang="ms">Rogol statutori</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">Hukuken tecavüz</span>+++
+
+  Lingua Lithuanica (Abecedarium Latinum):::
+    +++<span lang="lt">Išžaginimas</span>+++
+
+  Macrolingua Serbocroatica (Abecedarium Latinum):::
+    +++<span lang="sh">Silovanje po slovu zakona</span>+++
+
+  Lingua Frisice occidentalis (Abecedarium Latinum):::
+    +++<span lang="fy">Statutory rape</span>+++
+
+
+
+
+
+[id='7458798_47092_1968926_1147070']
+====== [`7458798_47092_1968926_1147070`] /child grooming/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q1147070[Q1147070]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /child grooming/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">استمالة الأطفال</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">Груминг детей</span>+++
+
+  Lingua Thai (/ISO 15924 Thai/):::
+    +++<span lang="th">การเตรียมเด็กเพื่อทารุณกรรมทางเพศ</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">兒童性誘拐</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">corrupção de menores</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">child grooming</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">Sollicitation d’enfants à des fins sexuelles</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">grooming</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">child grooming</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">grooming</span>+++
+
+  Lingua Suecica (Abecedarium Latinum):::
+    +++<span lang="sv">gromning</span>+++
+
+  Lingua Polonica (Abecedarium Latinum):::
+    +++<span lang="pl">Child grooming</span>+++
+
+  Lingua Finnica (Abecedarium Latinum):::
+    +++<span lang="fi">grooming</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">ciberassetjament pedòfil</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">Грумінг</span>+++
+
+  Lingua Bulgarica (Abecedarium Cyrillicum):::
+    +++<span lang="bg">Грууминг</span>+++
+
+  Lingua Bohemica (Abecedarium Latinum):::
+    +++<span lang="cs">Grooming</span>+++
+
+  Lingua Danica (Abecedarium Latinum):::
+    +++<span lang="da">grooming</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">Perawatan anak</span>+++
+
+  Lingua Vasconica (Abecedarium Latinum):::
+    +++<span lang="eu">Grooming</span>+++
+
+  Lingua Gallaica (Abecedarium Latinum):::
+    +++<span lang="gl">Grooming</span>+++
+
+  Macrolingua Malayana (?):::
+    +++<span lang="ms">Antun kanak-kanak</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">兒童性誘拐</span>+++
+
+  Lingua Serbica (Abecedarium Cyrillicum):::
+    +++<span lang="sr">Педофилско зближавање</span>+++
+
+  Lingua Bosnica (Abecedarium Latinum):::
+    +++<span lang="bs">Pedofilsko zbližavanje</span>+++
+
+  Lingua Frisice occidentalis (Abecedarium Latinum):::
+    +++<span lang="fy">Child grooming</span>+++
+
+
+
+
+
+[id='7458798_47092_7293885']
+===== [`7458798_47092_7293885`] /rape by deception/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q7293885[Q7293885]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /rape by deception/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">الاغتصاب عن طريق الخداع</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">rape by deception</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">Fraude sexual</span>+++
+
+  Lingua Esperantica (Abecedarium Latinum):::
+    +++<span lang="eo">seksatenco per trompo</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">Kandırarak tecavüz</span>+++
+
+
+
+
+
+[id='7458798_47092_23807951']
+===== [`7458798_47092_23807951`] /unacknowledged rape/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q23807951[Q23807951]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /unacknowledged rape/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">اغتصاب غير ملحوظ</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">Unacknowledged rape</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">Pemerkosaan yang tak diakui</span>+++
+
+
+
+
+
+[id='7458798_47092_26267537']
+===== [`7458798_47092_26267537`] /serial rapist/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q26267537[Q26267537]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /serial rapist/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">مغتصب متسلسل</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">серийный насильник</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">אונס סדרתי</span>+++
+
+  Lingua Tamulica (/ISO 15924 Taml/):::
+    +++<span lang="ta">தொடர் வல்லுறவாளர்</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">连环强奸犯</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">serial rapist</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">violeur en série</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">serieverkrachter</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">Serienvergewaltiger</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">violador en serie</span>+++
+
+  Lingua Vietnamensis (Abecedarium Latinum):::
+    +++<span lang="vi">Kẻ hiếp dâm hàng loạt</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">violador en sèrie</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">серійний ґвалтівник</span>+++
+
+  /Bokmål/ (Abecedarium Latinum):::
+    +++<span lang="nb">serievoldtektsforbryter</span>+++
+
+  Lingua Bohemica (Abecedarium Latinum):::
+    +++<span lang="cs">sériový pachatel znásilnění</span>+++
+
+  Lingua Danica (Abecedarium Latinum):::
+    +++<span lang="da">serievoldtægtsforbryder</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">Pemerkosa berantai</span>+++
+
+  Lingua Gallaica (Abecedarium Latinum):::
+    +++<span lang="gl">violador en serie</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">連環強姦犯</span>+++
+
+
+
+
+
+[id='7458798_673281']
+==== [`7458798_673281`] /sexual assault/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q673281[Q673281]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /sexual assault/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">اعتداء جنسي</span>+++
+
+  Lingua Armenia (Alphabetum Armenium):::
+    +++<span lang="hy">Սեռական հանցագործություններ</span>+++
+
+  Lingua Bengali (/Bengali script/):::
+    +++<span lang="bn">যৌন নিপীড়ন</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">Половые преступления</span>+++
+
+  Lingua Hindica (Devanāgarī):::
+    +++<span lang="hi">यौन हमला</span>+++
+
+  Lingua Coreana (Abecedarium Coreanum):::
+    +++<span lang="ko">성폭행</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">תקיפה מינית</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">性侵犯</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">agressão sexual</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">sexual assault</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">agression sexuelle</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">aanranding</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">sexuelle Nötigung</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">agresión sexual</span>+++
+
+  Lingua Italiana (Abecedarium Latinum):::
+    +++<span lang="it">aggressione sessuale</span>+++
+
+  Lingua Hibernica (Abecedarium Latinum):::
+    +++<span lang="ga">ionsaí gnéasach</span>+++
+
+  Lingua Polonica (Abecedarium Latinum):::
+    +++<span lang="pl">napaść seksualna</span>+++
+
+  Lingua Dacoromanica (Abecedarium Latinum):::
+    +++<span lang="ro">Abuzuri sexuale</span>+++
+
+  Lingua Vietnamensis (Abecedarium Latinum):::
+    +++<span lang="vi">Tấn công tình dục</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">agressió sexual</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">статеві злочини</span>+++
+
+  Lingua Bohemica (Abecedarium Latinum):::
+    +++<span lang="cs">sexuální útok</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">性的暴行</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">تعرض جنسی</span>+++
+
+  Lingua Hungarica (Abecedarium Latinum):::
+    +++<span lang="hu">szexuális erőszak</span>+++
+
+  Lingua Vasconica (Abecedarium Latinum):::
+    +++<span lang="eu">Sexu eraso</span>+++
+
+  Lingua Gallaica (Abecedarium Latinum):::
+    +++<span lang="gl">Agresión sexual</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">cinsel saldırı</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">性侵犯</span>+++
+
+  Lingua Islandica (Abecedarium Latinum):::
+    +++<span lang="is">Kynferðislegt ofbeldi</span>+++
+
+  Lingua Serbica (Abecedarium Cyrillicum):::
+    +++<span lang="sr">сексуални напад</span>+++
+
+  Lingua Urdu (/Abecedarium Arabicum/):::
+    +++<span lang="ur">جنسی حملہ</span>+++
+
+  Lingua Neograeca (Alphabetum Graecum):::
+    +++<span lang="el">σεξουαλική επίθεση</span>+++
+
+  Lingua Frisice occidentalis (Abecedarium Latinum):::
+    +++<span lang="fy">Seksuële oantaasting</span>+++
+
+  Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
+    +++<span lang="be">Палавыя злачынствы</span>+++
+
+
+
+
+
+[id='7458798_5347294']
+==== [`7458798_5347294`] /effects and aftermath of rape/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q5347294[Q5347294]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /effects and aftermath of rape/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">آثار وتداعيات الاغتصاب</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">effects and aftermath of rape</span>+++
+
+
+
+
+
+[id='7458798_5347294_1017877']
+===== [`7458798_5347294_1017877`] /rape trauma syndrome (RTS)/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q1017877[Q1017877]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /rape trauma syndrome (RTS)/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">متلازمة صدمة الاغتصاب</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">תסמונת טראומה בעקבות אונס</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">強暴創傷症候群</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">rape trauma syndrome</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">trouble de stress post-traumatique après un viol</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">Vergewaltigungstraumasyndrom</span>+++
+
+  /Bokmål/ (Abecedarium Latinum):::
+    +++<span lang="nb">voldtekt traumasyndrom</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">強暴創傷症候群</span>+++
+
+  /Serbian/ (Abecedarium Latinum):::
+    +++<span lang="sr-el">Sindrom traume silovanja</span>+++
+
+  Lingua Serbica (Abecedarium Cyrillicum):::
+    +++<span lang="sr">Синдром трауме силовања</span>+++
+
+
+
+
+
+[id='7458798_5347294_7239891']
+===== [`7458798_5347294_7239891`] /pregnancy from rape/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q7239891[Q7239891]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /pregnancy from rape/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">حمل من الاغتصاب</span>+++
+
+  Lingua Bengali (/Bengali script/):::
+    +++<span lang="bn">ধর্ষণ থেকে গর্ভধারণ</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">Беременность в результате изнасилования</span>+++
+
+  Lingua Cannadica (/ISO 15924 Knda/):::
+    +++<span lang="kn">ಅತ್ಯಾಚಾರದಿಂದ ಗರ್ಭಧಾರಣೆ</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">因強姦而懷孕</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">Pregnancy from rape</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">Вагітність від згвалтування</span>+++
+
+  Lingua Indonesiana (Abecedarium Latinum):::
+    +++<span lang="id">Kehamilan dari pemerkosaan</span>+++
+
+  Macrolingua Malayana (?):::
+    +++<span lang="ms">Kehamilan dari pemerkosaan</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">Tecavüz hamileliği</span>+++
+
+  //Traditional Chinese// (/ISO 15924 Hant/):::
+    +++<span lang="zh-hant">強姦致孕</span>+++
+
+  Lingua Urdu (/Abecedarium Arabicum/):::
+    +++<span lang="ur">عصمت دری سے حمل</span>+++
+
+
+
+
+
+[id='7458798_5347294_28134940']
+===== [`7458798_5347294_28134940`] /post-assault treatment of sexual assault victims/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q28134940[Q28134940]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /post-assault treatment of sexual assault victims/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">معاملة ضحايا الاعتداء الجنسي</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">טיפול בנפגעי תקיפה מינית</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">性侵犯受害者的性侵後治療</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">Post-assault treatment of sexual assault victims</span>+++
+
+  Lingua Neograeca (Alphabetum Graecum):::
+    +++<span lang="el">Μεταχείριση μετά την επίθεση των θυμάτων σεξουαλικής επίθεσης</span>+++
+
+
+
+
+
+[id='7458798_42965351']
+==== [`7458798_42965351`] /Weinstein effect/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q42965351[Q42965351]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /Weinstein effect/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">تأثير وينشتاين</span>+++
+
+  Lingua Russica (Abecedarium Cyrillicum):::
+    +++<span lang="ru">Эффект Вайнштейна</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">溫斯坦效應</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">Efeito Weinstein</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">Weinstein effect</span>+++
+
+  Lingua Francogallica (Abecedarium Latinum):::
+    +++<span lang="fr">effet Weinstein</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">Efecto Weinstein</span>+++
+
+  Lingua Polonica (Abecedarium Latinum):::
+    +++<span lang="pl">Efekt Weinsteina</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">Efecte Weinstein</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">Ефект Вайнштейна</span>+++
+
+  Lingua Bulgarica (Abecedarium Cyrillicum):::
+    +++<span lang="bg">Ефектът Уайнстийн</span>+++
+
+  Lingua Iaponica (Scriptura Iaponica):::
+    +++<span lang="ja">ワインスタイン効果</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">اثر واینستین</span>+++
+
+  Lingua Gallaica (Abecedarium Latinum):::
+    +++<span lang="gl">Efecto Weinstein</span>+++
+
+
+
+
+
+<<<
+
+[id='9999999']
+=== [`9999999`] /financial misconduct/
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /financial misconduct/
+
+
+
+
+
+<<<
+
+[id='99999999']
+=== [`99999999`] //other//
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    //other//
+
+
+
+
+
+[id='99999999_5097924']
+==== [`99999999_5097924`] /Child sexual abuse by UN peacekeepers/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q5097924[Q5097924]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /Child sexual abuse by UN peacekeepers/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">الاعتداء الجنسي على الأطفال من قبل قوات حفظ السلام التابعة للأمم المتحدة</span>+++
+
+  /Macrolingua Sinicae (?)/:::
+    +++<span lang="zh">联合国维和部队的儿童性虐待行径</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">Child sexual abuse by UN peacekeepers</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">Casos de abusos sexuales cometidos por el personal de la ONU</span>+++
+
+  Lingua Catalana (Abecedarium Latinum):::
+    +++<span lang="ca">Casos d'abusos sexuals comesos pel personal de l'Organització de les Nacions Unides</span>+++
+
+
+
+
+
+<<<
+
+[id='30315193']
+=== [`30315193`] /Minnesota Protocol/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q30315193[Q30315193]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /Minnesota Protocol/
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">Minnesota Protocol</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">Protocolo de Minnesota</span>+++
+
+
+
+
+
+<<<
+
+[id='2120363']
+=== [`2120363`] /Istanbul Protocol/
+
+Rēs interlinguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q2120363[Q2120363]
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /Istanbul Protocol/
+
+  Macrolingua Arabica (/Abecedarium Arabicum/):::
+    +++<span lang="ar">بروتوكول إسطنبول</span>+++
+
+  Lingua Hebraica (Alphabetum Hebraicum):::
+    +++<span lang="he">פרוטוקול איסטנבול</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">Istanbul Protocol</span>+++
+
+  Lingua Batavica (Abecedarium Latinum):::
+    +++<span lang="nl">Istanboel-protocol</span>+++
+
+  Lingua Germanica (Abecedarium Latinum):::
+    +++<span lang="de">Istanbul-Protokoll</span>+++
+
+  Lingua Hispanica (Abecedarium Latinum):::
+    +++<span lang="es">Protocolo de Estambul</span>+++
+
+  Lingua Ucrainica (Abecedarium Cyrillicum):::
+    +++<span lang="uk">Стамбульський протокол</span>+++
+
+  Lingua Turcica (Abecedarium Latinum):::
+    +++<span lang="tr">İstanbul Protokolü</span>+++
+
+  /Serbian/ (Abecedarium Latinum):::
+    +++<span lang="sr-el">Istanbulski protokol</span>+++
+
+  Lingua Serbica (Abecedarium Cyrillicum):::
+    +++<span lang="sr">Istanbulski protokol</span>+++
+
+  Macrolingua Serbocroatica (Abecedarium Latinum):::
+    +++<span lang="sh">Istanbulski protokol</span>+++
+
+
+
+
+
+
+<<<
+
+[.text-center]
+
+Dictiōnāria fīnālī
+
+<<<
+
+== Notā bene
+
+=== /[HELP WANTED] Generated PDF don't have right fonts for all languages/@eng-Latn
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    First, sorry if this affects your loved language. We're working on this, but we are still not perfected.
+    If you have fonts installed on your computer, you very likely can still copy and paste from the eBook version.
+    Please note that all formats intended for machine processing will work fine.
+
+
+=== /[Book with Wikidata Q] I want to help! Some translation is missing or is wrong! How to change it?/@eng-Latn
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Most (but not all) concepts are using Wikidata Q. In fact, most of the time we improve Wikidata while preparing the dictionaries. Please check if the exact concept you want have a Q ID then click. There you can add translations.
+    The next release (likely weekly) will have your submissions without need to contact us directly.
+
+
+=== /[Book with Wikidata Q] I can find the Wikidata concept, but I'm unable to edit!/@eng-Latn
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    While Wikidata is more flexible than Wikipedia's (for example, it allows concepts without need to create Wikipedia pages) even Wikidata can have concepts which require creating an account and don't allow anonymous editing. Creating such an account and confirming email is faster than asking someone else's do it for you.
+    However, while vandalism on Wikidata is rare, very few concepts will require an account with more contributions and not created very recently. If this is your case, help with the ones you can do alone and the rest ask someone else to add to you.
+
+
+=== /I heard there is an interest in having Cōdex beyond Latin language! How to do it?!/@eng-Latn
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Please contact us. This book uses Latin (sometimes _dog Latin_) to document all other languages, but we obviously can automated generation of books for others using other writing systems and some reference language. We need special help with writing systems such as Bengali, Devanagari and Tamil. For Right to Left scripts, despite being able to render the text, the book printing will require a different template. Only replacing Latin will not work, so we're open to ideas to make a great user experience!
+
+
+<<<
+
