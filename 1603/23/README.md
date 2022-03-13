@@ -7,7 +7,6 @@ strictae, f, s, dativushttps://en.wiktionary.org/wiki/strictus#Latin
 -->
 
 
-
 ![Reform text of Urukagina, king of Lagash. Terracotta clay tablet. From Girsu, Iraq. 24th century BCE. Ancient Orient Museum, Istanbul, Turkey](https://upload.wikimedia.org/wikipedia/commons/2/2f/Reform_text_of_Urukagina%2C_king_of_Lagash._Terracotta_clay_tablet._From_Girsu%2C_Iraq._24th_century_BCE._Ancient_Orient_Museum%2C_Istanbul%2C_Turkey.jpg)
 
 - Trivia [`1603:23`]?

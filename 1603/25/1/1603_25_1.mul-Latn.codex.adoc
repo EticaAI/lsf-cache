@@ -20,17 +20,10 @@
 
 {nbsp} +
 {nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
 [quote]
 /**Public domain means that each major common issue only needs to be resolved once**/@eng-Latn
 
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
-{nbsp} +
+'''
 
 [%header,cols="25h,~a"]
 |===
@@ -57,7 +50,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-08T09:45:16
+2022-03-12T21:05:07
 
 |
 /SPDX license ID/@eng-Latn
@@ -71,9 +64,12 @@ https://github.com/EticaAI/multilingual-lexicography/issues/11
 
 |===
 
+
+ifndef::backend-epub3[]
 <<<
 toc::[]
 <<<
+endif::[]
 
 
 [id=0_999_1603_1]
@@ -81,11 +77,34 @@ toc::[]
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
-    _**Cōdex [1603:25:1]**_ is the book format of the machine-readable dictionaries _**[1603:25:1] //dictiōnāria de partes corporis humani//**_, which are distributed for implementers on external applications. This book is intended as advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies.
+    _**Cōdex [1603:25:1]**_ is the book format of the machine-readable dictionaries _**[1603:25:1] //dictiōnāria de partes corporis humani//**_, which are distributed for implementers on external applications. This book is intended as an advanced resource for other lexicographers and terminology translators, including detect and report inconsistencies. It can, however, be used as an ad hoc dictionary if there is not derived work focused on your specific needs.
     +++<br><br>+++
-    Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+    **ABOUT LEXICOGRAPHY**
     +++<br><br>+++
-    The initiative behind this compilation is also doing other dictionaries and accepts new suggestions of relevant topics on data exchange for humanitarian use. All have in common the fact that both have human translations and (if any) external interlingual codes related to each concept while making the end result explicitly already ready to be usable on average softwares. Naturally, each book version gives extensive explanations for collaborators on how to correct itself which become part of the next weekly release.
+    Practical lexicography is the art or craft of compiling, writing and editing dictionaries. The basics are not far different than a millennia ago: it is still a very humane, creative work. It is necessary to be humble: most of the translator's mistakes are, in fact, not the translator's fault, but methodological flaws. Making sure of a source idea of what a concept represents, even if it means rewrite and make simpler, annex pictures, show examples, do whatever to make it be understood, makes even non-professional translators that care about their own language deliver better results than any alternative. In other words: even the so-called industry best practices of paying professional translators and reviewers cannot overcome already poorly explained source terms.
+    +++<br><br>+++
+    **ABOUT TYPES OF DICTIONARIES WE'RE COMPILING**
+    +++<br><br>+++
+    We're concerned with a group of ideas (we call it a group of dictionaries of concepts) which can be broken into smaller parts, reviewed for inconsistencies, improved for definitions, and then be translated by volunteers. Interlingual codes, such as what could be used on actual data exchange, are also added to each concept. Both glossaries, user interfaces (such as labels on data collection) and in some cases even standard codes for what would go on a data field could be compiled this way.
+    +++<br><br>+++
+    Since the full list of prototypal-dictionaries and dictionaries is huge, one way cited by objective audiences is the following:
+    +++<br><br>+++
+    ....
+    1. Humanitarian aid
+    2. Development aid
+    3. Human rights
+    4. Military relief (or conflict and conflict-resolution related concepts)
+    ....
+    +++<br><br>+++
+    The itens 1, 2 and 4 https://en.m.wikipedia.org/wiki/Humanitarian-Development_Nexus[are sometimes referred as _nexus_] and are often found helping _humanitarian crisis_. Since most contributors whose ideas and valid criticism are volunteers, then 3 (human rights, as in International Amnesty) to differentiate from humanitarianism (such as Red Cross Movement is reference).
+    +++<br><br>+++
+    Note that **dictionaries are not usage guides**. Instructions, when they exist, are mostly dedicated to lexicographers and translators.
+    +++<br><br>+++
+    **/PRO BONŌ PUBLICŌ/@lat-Latn**
+    +++<br><br>+++
+    The lexicographers of this work are both volunteers, doing it for free, pro bonō publicō, and don't accept donations for the sake of everyone's reusable dictionaries. Existing previous work often is based on old public domain books. Most terminology translators already would be volunteers because they believe in a cause. The best way to inspire collaboration is to be examples ourselves.
+    +++<br><br>+++
+    There's a non-moralistic aspect, fairly simple to understand: how expensive would it be to pay for everyone's work considering it is feasible over 200 languages? The logistics to decide who should be paid, then worldwide cash transfer (may include people from embargoed countries), then traditional auditing mechanisms to check misuse donors expect, exist? In special terminology (dictionary terms themselves) and so many languages, neither sufficient money nor humans interested in being coordinators exist.
 
 
 <<<
@@ -106,55 +125,37 @@ Rēs interlinguālibus::
 NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
 
 ==== Methodī ex verbīs in Vicidata (Q modō)
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    The ***[1603:25:1] //dictiōnāria de partes corporis humani//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    +++<br><br>+++
+    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    +++<br><br>+++
+    **How reliable are the community translations (Wikidata source)?**
+    +++<br><br>+++
+    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    +++<br><br>+++
+    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    +++<br><br>+++
+    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    +++<br><br>+++
+    **Major reasons for "wrong translations" are not translators fault**
+    +++<br><br>+++
+    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    +++<br><br>+++
+    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    +++<br><br>+++
+    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    +++<br><br>+++
+    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    +++<br><br>+++
+    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_25_1.no1.tm.hxl.csv`, may reference Wiki QID.
+    . Every unique QID of  `1603_25_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
+    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+    . The query result, with all QIDs and term labels, is shared as `1603_25_1.wikiq.tm.hxl.csv`
+    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_25_1.wikiq.tm.hxl.csv`
+    . `1603_25_1.no1.tm.hxl.csv` plus `1603_25_1.wikiq.tm.hxl.csv` created `1603_25_1.no11.tm.hxl.csv`
 
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-The ***[1603:25:1] //dictiōnāria de partes corporis humani//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
-
-This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-**How reliable are the community translations (Wikidata source)?**
-
-The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
-
-As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
-
-However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-**Major reasons for "wrong translations" are not translators fault**
-
-TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
-
-The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
-
-It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
-
-. The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_25_1.no1.tm.hxl.csv`, may reference Wiki QID.
-. Every unique QID of  `1603_25_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
-.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
-. The query result, with all QIDs and term labels, is shared as `1603_25_1.wikiq.tm.hxl.csv`
-. The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_25_1.wikiq.tm.hxl.csv`
-. `1603_25_1.no1.tm.hxl.csv` plus `1603_25_1.wikiq.tm.hxl.csv` created `1603_25_1.no11.tm.hxl.csv`
-
-|===
 
 === Rēs dē factō in dictiōnāriīs
 ==== Concepta: 10
@@ -254,7 +255,7 @@ https://iso639-3.sil.org/code/eng[eng]
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-9
+11
 
 |
 fra-Latn
@@ -680,23 +681,29 @@ Interlingua (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 11
 Rēs::
-  numerus editionis:::
+  Terminologia Anatomica 98 ID:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
+        https://www.wikidata.org/wiki/Property:P1323[P1323]
+
+      /rēgulam/;;
+        A\d{2}\.\d\.\d{2}\.\d{3}[FM]?
+
+      /formatter URL/@eng-Latn;;
+        https://wikidata-externalid-url.toolforge.org/?p=1323&url_prefix=https:%2F%2Fwww.unifr.ch%2Fifaa%2FPublic%2FEntryPage%2FTA98%20Tree%2FEntity%20TA98%20EN%2F&url_suffix=%20Entity%20TA98%20EN.htm&id=$1
 
       ix_hxlix;;
-        ix_wikip393
+        ix_wikip1323
 
       ix_hxlvoc;;
-        v_wiki_p_393
+        v_wiki_p_1323
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
+        +++<span lang="la">Terminologia Anatomica 98 ID</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+        +++<span lang="en">Terminologia Anatomica (1998 edition) human anatomical terminology identifier</span>+++
 
   /reference URL/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -715,6 +722,42 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">should be used for Internet URLs as references</span>+++
+
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
+
+      ix_hxlix;;
+        ix_wikip123
+
+      ix_hxlvoc;;
+        v_wiki_p_123
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -740,6 +783,24 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">SPDX license identifier</span>+++
 
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -757,48 +818,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Date or point in time when a work was first published or released</span>+++
-
-  Terminologia Anatomica 98 ID:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P1323[P1323]
-
-      /rēgulam/;;
-        A\d{2}\.\d\.\d{2}\.\d{3}[FM]?
-
-      /formatter URL/@eng-Latn;;
-        https://wikidata-externalid-url.toolforge.org/?p=1323&url_prefix=https:%2F%2Fwww.unifr.ch%2Fifaa%2FPublic%2FEntryPage%2FTA98%20Tree%2FEntity%20TA98%20EN%2F&url_suffix=%20Entity%20TA98%20EN.htm&id=$1
-
-      ix_hxlix;;
-        ix_wikip1323
-
-      ix_hxlvoc;;
-        v_wiki_p_1323
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">Terminologia Anatomica 98 ID</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Terminologia Anatomica (1998 edition) human anatomical terminology identifier</span>+++
-
-  scrīptor:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P50[P50]
-
-      ix_hxlix;;
-        ix_wikip50
-
-      ix_hxlvoc;;
-        v_wiki_p_50
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">scrīptor</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
 
   /Wiki QID/:::
     Rēs interlinguālibus::::
@@ -818,63 +837,35 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
-  /cōdex pūblicandī/:::
+  scrīptor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
+        https://www.wikidata.org/wiki/Property:P50[P50]
 
       ix_hxlix;;
-        ix_wikip123
+        ix_wikip50
 
       ix_hxlvoc;;
-        v_wiki_p_123
+        v_wiki_p_50
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
+        +++<span lang="la">scrīptor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
-
-  /scope and content/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
-
-      ix_hxlix;;
-        ix_wikip7535
-
-      ix_hxlvoc;;
-        v_wiki_p_7535
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
 
 
 <<<
 
 == Archīa
 
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    **Context information**: ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis, not _just_ an static work), then the actual groundbreaking difference on the workflow used to generate every dictionaries on Cōdex such as this one are the following fact: **we provide machine readable formats even when the equivalents on _international languages_, such as English, don't have for areas such as humanitarian aid, development aid and human rights**. The closest to such multilingualism (outside Wikimedia) are European Union SEMICeu (up to 24 languages), but even then have issues while sharing translations on all languages. United Nations translations (up to 6 languages, rarely more) are not available by humanitarian agencies to help with terminology translations.
+    +++<br><br>+++
+    **Practical implication**: the text documents on _Archīa prō cōdice_ (literal English translation: _File for book_) are alternatives to this book format which are heavily automated using only the data format. However, the machine-readable formats on _Archīa prō dictiōnāriīs_ (literal English translation: _Files for dictionaries_) are the focus and recommended for derived works and intended for mitigating additional human errors. We can even create new formats by request! The goal here is both to allow terminology translators and production usage where it makes an impact.
 
-[%header,cols="25h,~a"]
-|===
-|
-Lingua de verba
-|
-Verba de conceptiō
-
-|
-Lingua Anglica (Abecedarium Latinum)
-|
-**Context information**: ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis, not _just_ an static work), then the actual groundbreaking difference on the workflow used to generate every dictionaries on Cōdex such as this one are the following fact: **we provide machine readable formats even when the equivalents on _international languages_, such as English, don't have for areas such as humanitarian aid, development aid and human rights**. The closest to such multilingualism (outside Wikimedia) are European Union SEMICeu (up to 24 languages), but even then have issues while sharing translations on all languages. United Nations translations (up to 6 languages, rarely more) are not available by humanitarian agencies to help with terminology translations.
-
-**Practical implication**: the text documents on _Archīa prō cōdice_ (literal _English translation: _File for book_) are alternatives to this book format which are heavily automated using only the data format. However, the machine-readable formats on _Archīa prō dictiōnāriīs_ (literal English translation: _Files for dictionaries_) are the focus and recommended for derived works and intended for mitigating additional human errors. We can even create new formats by request! The goal here is both to allow terminology translators and production usage where it makes an impact.
-
-|===
 
 === Archīa prō dictiōnāriīs: 3
 
@@ -933,7 +924,7 @@ Rēs linguālibus::
 Rēs interlinguālibus::
   /download link/@eng-Latn::: link:1603_25_1.mul-Latn.codex.pdf[1603_25_1.mul-Latn.codex.pdf]
   /reference URL/@eng-Latn:::
-    https://en.wikipedia.org/wiki/PDF
+    https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::

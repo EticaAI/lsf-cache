@@ -557,20 +557,27 @@ neo_codex_copertae_de_numerordinatio() {
     rm "$objectivum_archivum"
   fi
 
-  cp "$fontem_archivum" "$objectivum_archivum_temporarium"
+  # cp "$fontem_archivum" "$objectivum_archivum_temporarium"
 
-  sed -i "s|{{codex_numero}}|${_prefix}|" "$objectivum_archivum_temporarium"
+  # sed -i "s|{{codex_numero}}|${_prefix}|" "$objectivum_archivum_temporarium"
 
-  # TODO: replace at least the name name the book
+  # # TODO: replace at least the name name the book
 
-  mv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+  # mv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 
   # rm "$objectivum_archivum_temporarium"
 
-  echo "${FUNCNAME[0]} [$objectivum_archivum]"
+  # "${ROOTDIR}/999999999/0/1603_1.py" --codex-de 1603_25_1 --codex-copertae
+
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --objectivum-linguam="$est_objectivum_linguam" \
+    --auxilium-linguam="$est_auxilium_linguam" \
+    --codex-de "$_nomen" \
+    --codex-copertae \
+    >"$objectivum_archivum"
+
+  # echo "${FUNCNAME[0]} [$objectivum_archivum]"
   # echo "@TODO this is a draft"
-
-
 
   # rm "$objectivum_archivum_temporarium"
 }
@@ -615,6 +622,7 @@ neo_codex_de_numerordinatio_epub() {
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.epub"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.epub"
+  # ascidoctor_custom_library="${ROOTDIR}/999999999/0/custom_pdf_converter.rb"
   # ascidoctor_theme="${ROOTDIR}/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml"
   # ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto,/usr/share/fonts/opentype/noto"
   # ascidoctor_font_dir_repo="${ROOTDIR}/999999/1603/1/3/"
@@ -699,6 +707,7 @@ neo_codex_de_numerordinatio_pdf() {
   ascidoctor_theme="${ROOTDIR}/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml"
   ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto,/usr/share/fonts/opentype/noto"
   ascidoctor_font_dir_repo="${ROOTDIR}/999999/1603/1/3/"
+  ascidoctor_custom_library="${ROOTDIR}/999999999/0/custom_pdf_converter.rb"
 
   ASCIIDOCTOR_PDF_DIR=$(bundle exec gem contents asciidoctor-pdf --show-install-dir)
   ascidoctor_font_dir_original="$ASCIIDOCTOR_PDF_DIR/data/fonts"
@@ -734,6 +743,7 @@ neo_codex_de_numerordinatio_pdf() {
     bundle exec asciidoctor-pdf \
       --attribute pdf-theme="$ascidoctor_theme" \
       --attribute pdf-fontsdir="$ascidoctor_font_dir_neo,$ascidoctor_font_dir_original,$ascidoctor_font_dir_repo" \
+      --require "$ascidoctor_custom_library" \
       "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
   fi
 
@@ -831,6 +841,15 @@ file_translate_csv_de_numerordinatio_q() {
   # sort --version-sort < "$objectivum_archivum_temporarium_b" > "$objectivum_archivum_temporarium_b_u"
   # sort --version-sort --field-separator="Q" < "$objectivum_archivum_temporarium_b" > "$objectivum_archivum_temporarium_b_u"
   sort --version-sort --field-separator="Q" <"$objectivum_archivum_temporarium_b" | uniq >"$objectivum_archivum_temporarium_b_u"
+
+  # echo "$objectivum_archivum_temporarium_b_u"
+  # echo "${ROOTDIR}/999999999/0/1603_3_12.py" \
+  #   --actionem-sparql \
+  #   --lingua-divisioni=3 \
+  #   --lingua-paginae=1 \
+  #   --query <"$objectivum_archivum_temporarium_b_u"
+
+  # exit 1
 
   "${ROOTDIR}/999999999/0/1603_3_12.py" \
     --actionem-sparql \
