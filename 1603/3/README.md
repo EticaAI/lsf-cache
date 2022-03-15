@@ -191,6 +191,24 @@ Tool for bulk import:
 - https://www.wikidata.org/wiki/Help:QuickStatements
 -->
 
+### Query - all languages of an article
+
+1. Va em https://docs.google.com/spreadsheets/d/1ih3ouvx_n8W5ntNcYBqoyZ2NRMdaA0LRg5F9mGriZm4/edit#gid=272891124
+2. Cole a coluna em R27 em diante
+3. Formula em S27 `=SORT(if(COUNTIF(J27:J,R27:R)=0,R27:R,))`
+
+
+```
+SELECT DISTINCT ?lang ?name WHERE {
+  ?article schema:about wd:Q1065 ;
+              schema:inLanguage ?lang ;
+              schema:name ?name ;
+              schema:isPartOf [ wikibase:wikiGroup "wikipedia" ] .
+  #FILTER(?lang in ('en', 'uz', 'ru', 'ko')) .
+  FILTER (!CONTAINS(?name, ':')) .
+} ORDER BY ASC (?lang)
+```
+
 ### Self notes
 
 - Help:Wikimedia language codes/lists/all

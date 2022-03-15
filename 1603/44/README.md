@@ -29,19 +29,83 @@
 
 - Very temporary: //dictiōnāria de post mortis condicio//
 
-## [1603:44:101] //Dictiōnāria basibus de Scielus contra humanus//
-- //Dictiōnāria basibus de Scielus contra humanus//
+## [1603:44:86] //Dictiōnāria basibus dē tortūrīs modīs//
+- //Dictiōnāria basibus dē tortūrīs modīs//
+  - Literal English Translation: Basic dictionaries about methods of tortures 
+- dictiōnāria, n, pl, nōminātīvus, https://en.wiktionary.org/wiki/dictionarium#Latin
+- basibus, f, pl, (dativus) https://en.wiktionary.org/wiki/basis#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=basis
+- dē (+ ablātīvus), n, pl, nōminātīvus, https://en.wiktionary.org/wiki/de#Latin
+- tortūrīs, f, pl, ablātīvus, https://en.wiktionary.org/wiki/tortura#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=tortura
+  - http://ducange.enc.sorbonne.fr/TORTURA
+- methodīs, f, pl, dativus/ablātīvus fhttps://en.wiktionary.org/wiki/methodus#Latin
+- modīs, m, pl, dativus/ablātīvus https://en.wiktionary.org/wiki/modus#Latin
+
+
+## [1603:44:101] /Dictiōnāria basibus dē sceleribus contrā persōnam/
+- //Dictiōnāria basibus de sceleribus contra humanus//
   - Literal English Translation: Basic dictionaries about crimes against humans
 
-> This group of dictionaries contains basic (id est, not fully detailed) concepts about crimes against humans at mostly at individual level and crimes against group of humans without intent of exterminate entire community (which have e dedicated dictionaries) for non political reasons.
+> `+//Dictiōnāria basibus dē sceleribus contrā persōnam//+` (literal English translation: _Basic dictionaries about crimes against person_; person on singular) contains basic (id est, not fully detailed) concepts about crimes against humans at mostly at individual level and crimes against group of humans without intent of exterminate entire community (which have e dedicated dictionaries) for non-political reasons.
 
-## [1603:44:111] //Dictiōnāria basibus de Scielus contra communitae//
-- //Dictiōnāria basibus de Scielus contra communitae//
-  - Literal English Translation: Basic dictionaries about crimes against communities
+- dictiōnāria, n, pl, nōminātīvus, https://en.wiktionary.org/wiki/dictionarium#Latin
+- basibus, f, pl, (dativus) https://en.wiktionary.org/wiki/basis#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=basis
+- dē (+ ablātīvus), n, pl, nōminātīvus, https://en.wiktionary.org/wiki/de#Latin
+- sceleribus, n, pl, ablātīvus, https://en.wiktionary.org/wiki/scelus#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=scelus
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0060:entry=scelus
+  - http://micmap.org/dicfro/search/gaffiot/scelus
+- contrā (+ accūsātīvus) (https://en.wiktionary.org/wiki/contra#Latin
+- persōnam, f, s, accūsātīvus, https://en.wiktionary.org/wiki/persona#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=persona
+  - http://ducange.enc.sorbonne.fr/PERSONA
 
-> `+//Dictiōnāria basibus de scielus contra communitae//+` (literal English translation: _Basic dictionaries about crimes against communities_) contains basic (id est, not fully detailed) concepts about crimes against collectives of humans because of their membership (de facto or perceived) to be part of the collective. Another term for this is _Crimes against humanity_.
 
-focus on concepts for things (not procedures, neither full guides) that can be given to other humans which either are in distress themselves or a helping others and language is a barrier for communication with you. While this could be used for people organizing a small camp from internally displaced people (issues with common dialect) or ad hoc refugee camp near a neighbor country border, espontaneos coordinators are likely to be more efficient with money [[1100]] or your offer your contact information and willing to do donation of services [[1200]] to help with logistics than in kind donations for items which are not immediately necessary.\n\nNearly all concepts have Wikidata Q Items, which if clicked (and you have internet) allow you to access Wikidata (and then Wikipedia). However, this book at least will have labels. (And yes, errors or missing translations to your loved language can be submitted to Wikidata!).\n\nSome items will have example images with credit for authors. The photos taken by the lexicographers specially for this work will not have external links (at least until we upload to Wikicommons on higher resolution) and we do this ourselves to make sure even annexes are also public domain.\n\n**INTRODUCTION SECTIONS**\nThe local codes from 1 to 9 actually do not have things to give to others, but concepts which likely would be very important in decision making of what is necessary.\n\n**NOT OPTIMIZED FOR MONOLINGUAL**\nThis group of dictionaries is unlikely to be useful for cases where everyone speaks the same language. You can explore por references or look for guides in your language to be more efficient.\n\nWhat this guide _could_ be useful is derived works where you intentionally automated some reference in your language (such as data collection of needs of other persons) and then the machine readable files of these dictionaries can be used to translate the terms to other languages. In practice it is not as trivial, both for lack of translations for every language and also because you may use resources only available in your region (something very common for types of foods).\n\n**OPEN TO SUGGESTIONS**\nWe're open to suggestions of groups of concepts to add and even creation of more dedicated dictionaries. However, dictionaries such as this one are not intended to be usage guides, which are harder to scale up translations and not trivial to make more internationalized approaches.
+## [1603:44:111] /Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/
+- /Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/
+  - Literal English Translation: Basic dictionaries about crimes against one community by rulers
+
+> `+/Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/+` (literal English translation: _Basic dictionaries about crimes against one community by rulers_) contains basic (id est, not fully detailed) concepts about crimes against **one** community of humans because of their membership (de facto or perceived) to be part of the community by rulers (which are supposed to protect a reign which that community is part of). \n\nA more well known term to describe the concepts here could be _Crimes against humanity_, however both [[1603:44:101]] and [[1603:44:111]] intentionally avoid terminology in Latin based on the root term _human_ to avoid confusion while having freedom to be stricter.
+
+- dictiōnāria, n, pl, nōminātīvus, https://en.wiktionary.org/wiki/dictionarium#Latin
+- basibus, f, pl, (dativus) https://en.wiktionary.org/wiki/basis#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=basis
+- dē (+ ablātīvus), n, pl, nōminātīvus, https://en.wiktionary.org/wiki/de#Latin
+- sceleribus, n, pl, ablātīvus, https://en.wiktionary.org/wiki/scelus#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=scelus
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0060:entry=scelus
+  - http://micmap.org/dicfro/search/gaffiot/scelus
+- contrā (+ accūsātīvus) (https://en.wiktionary.org/wiki/contra#Latin
+- ūnam, f, s, accūsātīvus, https://en.wiktionary.org/wiki/unus
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=unus
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Dunus1
+- commūnitātem, f, s, accūsātīvus, https://en.wiktionary.org/wiki/communitas#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=communitas
+  - http://ducange.enc.sorbonne.fr/COMMUNITAS
+- ab (+ ablātīvus) https://en.wiktionary.org/wiki/ab#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=ab
+  - http://micmap.org/dicfro/search/gaffiot/ab
+- rēgibus, m, pl, ablātīvus, https://en.wiktionary.org/wiki/rex#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059%3Aentry%3Drex1
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0060%3Aentry%3Drex
+  - http://ducange.enc.sorbonne.fr/REX
+  - http://micmap.org/dicfro/search/gaffiot/rex
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0062:entry=rex-harpers
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0063:entry=rex-cn
+- rēctōribus, m, pl, ablātīvus, https://en.wiktionary.org/wiki/rector#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=rector
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0060:entry=rector
+  - http://ducange.enc.sorbonne.fr/RECTOR
+
+### //commūnitātēs generibus || different types of communities (inside the dictionary)//
+- commūnitātēs, f, pl, nōminātīvus, https://en.wiktionary.org/wiki/communitas#Latin
+- generibus, n, pl, dativus, https://en.wiktionary.org/wiki/genus#Latin
+
+### //rēctōrēs generibus || different types of rules (inside the dictionary)//
+- rēctōrēs, f, pl, nōminātīvus, https://en.wiktionary.org/wiki/rector#Latin
+- generibus, n, pl, dativus, https://en.wiktionary.org/wiki/genus#Latin
 
 ## [1603:44:142] //arma ignifera// (needs review)
 - https://en.wiktionary.org/wiki/vulnus#Latin

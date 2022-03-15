@@ -55,7 +55,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-12T21:14:28
+2022-03-15T01:47:50
 
 |
 /SPDX license ID/@eng-Latn
@@ -236,9 +236,9 @@ Rēs linguālibus::
 === Rēs dē factō in dictiōnāriīs
 ==== Concepta: 347
 
-==== Rēs linguālibus: 112
+==== Rēs linguālibus: 107
 
-[%header,cols="15h,25a,~,15"]
+[%header,cols="15h,25a,~,17"]
 |===
 |
 Cōdex linguae
@@ -416,30 +416,6 @@ https://iso639-3.sil.org/code/tha[tha]
 Lingua Thai (/ISO 15924 Thai/)
 |
 41
-
-|
-san-Zzzz
-|
-https://glottolog.org/resource/languoid/id/sans1269[sans1269]
-+++<br>+++
-https://iso639-3.sil.org/code/san[san]
-+++<br>+++ https://www.wikidata.org/wiki/Q11059[Q11059]
-|
-Lingua Sanscrita  (?)
-|
-6
-
-|
-zho-Zzzz
-|
-https://glottolog.org/resource/languoid/id/sini1245[sini1245]
-+++<br>+++
-https://iso639-3.sil.org/code/zho[zho]
-+++<br>+++ https://www.wikidata.org/wiki/Q7850[Q7850]
-|
-/Macrolingua Sinicae (?)/
-|
-96
 
 |
 por-Latn
@@ -766,18 +742,6 @@ Lingua Indonesiana (Abecedarium Latinum)
 69
 
 |
-fas-Zzzz
-|
-
-+++<br>+++
-https://iso639-3.sil.org/code/fas[fas]
-+++<br>+++ https://www.wikidata.org/wiki/Q9168[Q9168]
-|
-Macrolingua Persica (//Abecedarium Arabicum//)
-|
-73
-
-|
 hun-Latn
 |
 https://glottolog.org/resource/languoid/id/hung1274[hung1274]
@@ -848,18 +812,6 @@ https://iso639-3.sil.org/code/epo[epo]
 Lingua Esperantica (Abecedarium Latinum)
 |
 113
-
-|
-msa-Zzzz
-|
-
-+++<br>+++
-https://iso639-3.sil.org/code/msa[msa]
-+++<br>+++ https://www.wikidata.org/wiki/Q9237[Q9237]
-|
-Macrolingua Malayana (?)
-|
-47
 
 |
 est-Latn
@@ -1510,18 +1462,6 @@ Lingua Faeroensis (Abecedarium Latinum)
 15
 
 |
-bam-Zzzz
-|
-https://glottolog.org/resource/languoid/id/bamb1269[bamb1269]
-+++<br>+++
-https://iso639-3.sil.org/code/bam[bam]
-+++<br>+++ https://www.wikidata.org/wiki/Q33243[Q33243]
-|
-/Bambara language/ (?)
-|
-3
-
-|
 lmo-Latn
 |
 https://glottolog.org/resource/languoid/id/lomb1257[lomb1257]
@@ -1597,53 +1537,29 @@ Lingua Zuluana (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 10
 Rēs::
-  /Wikidata Q local numeric namespace/@eng-Latn:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_wikiq9289584
-
-      ix_hxlvoc;;
-        v_wiki_q_9289584
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wikidata Q local numeric namespace/@eng-Latn</span>+++
-
-  /scope and content/@eng-Latn:::
+  /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
+
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
+
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
 
       ix_hxlix;;
-        ix_wikip7535
+        ix_wikip2479
 
       ix_hxlvoc;;
-        v_wiki_p_7535
+        v_wiki_p_2479
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
-
-  /translator/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P655[P655]
-
-      ix_hxlix;;
-        ix_wikip655
-
-      ix_hxlvoc;;
-        v_wiki_p_655
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/translator/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">agent who adapts any kind of written text from one language to another</span>+++
+        +++<span lang="en">SPDX license identifier</span>+++
 
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -1663,23 +1579,23 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Date or point in time when a work was first published or released</span>+++
 
-  spōnsor:::
+  /Wiki QID/:::
     Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
+      /rēgulam/;;
+        Q[1-9]\d*
 
       ix_hxlix;;
-        ix_wikip859
+        ix_wikiq
 
       ix_hxlvoc;;
-        v_wiki_p_859
+        v_wiki_q
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
+        +++<span lang="la">/Wiki QID/</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
   scrīptor:::
     Rēs interlinguālibus::::
@@ -1717,6 +1633,54 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
 
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+  spōnsor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P859[P859]
+
+      ix_hxlix;;
+        ix_wikip859
+
+      ix_hxlvoc;;
+        v_wiki_p_859
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">spōnsor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
+
+  /Wikidata Q local numeric namespace/@eng-Latn:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_wikiq9289584
+
+      ix_hxlvoc;;
+        v_wiki_q_9289584
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wikidata Q local numeric namespace/@eng-Latn</span>+++
+
   numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -1735,47 +1699,23 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
-  /SPDX license ID/@eng-Latn:::
+  /translator/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P2479[P2479]
-
-      /rēgulam/;;
-        [0-9A-Za-z\.\-]{3,36}[+]?
-
-      /formatter URL/@eng-Latn;;
-        https://spdx.org/licenses/$1.html
+        https://www.wikidata.org/wiki/Property:P655[P655]
 
       ix_hxlix;;
-        ix_wikip2479
+        ix_wikip655
 
       ix_hxlvoc;;
-        v_wiki_p_2479
+        v_wiki_p_655
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
+        +++<span lang="la">/translator/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">SPDX license identifier</span>+++
-
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+        +++<span lang="en">agent who adapts any kind of written text from one language to another</span>+++
 
 
 <<<
@@ -1968,8 +1908,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สันนิบาตชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">國際聯盟</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    國際聯盟
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Sociedade das Nações</span>+++
@@ -2046,8 +1986,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Liga Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جامعه ملل</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جامعه ملل
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetek Szövetsége</span>+++
@@ -2067,8 +2007,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Ligo de Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Liga Bangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Liga Bangsa
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvasteliit</span>+++
@@ -2190,8 +2130,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">ஐக்கிய நாடுகள் ஜெனீவா அலுவலகம்</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国日内瓦办事处</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国日内瓦办事处
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Escritório das Nações Unidas em Genebra</span>+++
@@ -2235,8 +2175,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Kantor Perserikatan Bangsa-Bangsa di Jenewa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">دفتر سازمان ملل متحد در ژنو</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    دفتر سازمان ملل متحد در ژنو
 
   Lingua Croatica (Abecedarium Latinum):::
     +++<span lang="hr">Ured Ujedinjenih naroda u Ženevi</span>+++
@@ -2307,11 +2247,11 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สหประชาชาติ</span>+++
 
-  Lingua Sanscrita  (?):::
-    +++<span lang="sa">संयुक्तराष्ट्रसंघः</span>+++
+  #item+rem+i_san+is_zzzz:::
+    संयुक्तराष्ट्रसंघः
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização das Nações Unidas</span>+++
@@ -2394,8 +2334,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان ملل متحد
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Egyesült Nemzetek Szervezete</span>+++
@@ -2415,8 +2355,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Unuiĝintaj Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Ühinenud Rahvaste Organisatsioon</span>+++
@@ -2625,8 +2565,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สำนักงานใหญ่สหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国总部大楼</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国总部大楼
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Sede da Organização das Nações Unidas</span>+++
@@ -2691,8 +2631,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Markas Besar Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">مقر سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    مقر سازمان ملل متحد
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">ENSZ-székház</span>+++
@@ -2706,8 +2646,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Sidejo de UN</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Ibu pejabat Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Ibu pejabat Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO peakorter</span>+++
@@ -2775,8 +2715,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">ஐக்கிய நாடுகள் ஜெனீவா அலுவலகம்</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国日内瓦办事处</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国日内瓦办事处
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Escritório das Nações Unidas em Genebra</span>+++
@@ -2820,8 +2760,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Kantor Perserikatan Bangsa-Bangsa di Jenewa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">دفتر سازمان ملل متحد در ژنو</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    دفتر سازمان ملل متحد در ژنو
 
   Lingua Croatica (Abecedarium Latinum):::
     +++<span lang="hr">Ured Ujedinjenih naroda u Ženevi</span>+++
@@ -2865,8 +2805,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">ஐக்கிய நாடுகள் நைரோபி அலுவலகம்</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国内罗毕办事处</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国内罗毕办事处
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Escritório das Nações Unidas em Nairóbi</span>+++
@@ -2939,8 +2879,8 @@ Rēs linguālibus::
   Lingua Coreana (Abecedarium Coreanum):::
     +++<span lang="ko">유엔의 기구</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國專門機構</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國專門機構
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">specialized agency of the United Nations</span>+++
@@ -3070,8 +3010,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การอาหารและการเกษตรแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国粮食及农业组织</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国粮食及农业组织
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização das Nações Unidas para Agricultura e Alimentação</span>+++
@@ -3148,8 +3088,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Pangan dan Pertanian</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">فائو</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    فائو
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">ENSZ Élelmezésügyi és Mezőgazdasági Szervezete</span>+++
@@ -3166,8 +3106,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Organizaĵo pri Nutrado kaj Agrikulturo</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Makanan dan Pertanian</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Makanan dan Pertanian
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO Toidu- ja Põllumajandusorganisatsioon</span>+++
@@ -3286,8 +3226,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การการบินพลเรือนระหว่างประเทศ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">国际民用航空组织</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    国际民用航空组织
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização da Aviação Civil Internacional</span>+++
@@ -3358,8 +3298,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Penerbangan Sipil Internasional</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">ایکائو</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    ایکائو
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetközi Polgári Repülési Szervezet</span>+++
@@ -3376,8 +3316,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Internacia Civila Aviada Organizo</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Penerbangan Awam Antarabangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Penerbangan Awam Antarabangsa
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvusvaheline Tsiviillennunduse Organisatsioon</span>+++
@@ -3490,8 +3430,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">הקרן הבינלאומית לפיתוח חקלאי</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">國際農業發展基金</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    國際農業發展基金
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Fundo Internacional de Desenvolvimento Agrícola</span>+++
@@ -3553,8 +3493,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Dana Internasional untuk Pengembangan Pertanian</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صندوق بینالمللی توسعه کشاورزی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صندوق بینالمللی توسعه کشاورزی
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Internacia Fonduso por Agrikultura Disvolviĝo</span>+++
@@ -3643,8 +3583,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การแรงงานระหว่างประเทศ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">國際勞工組織</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    國際勞工組織
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização Internacional do Trabalho</span>+++
@@ -3718,8 +3658,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Buruh Internasional</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان بینالمللی کار</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان بینالمللی کار
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetközi Munkaügyi Szervezet</span>+++
@@ -3736,8 +3676,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Internacia Organizaĵo de Laboro</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Buruh Antarabangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Buruh Antarabangsa
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvusvaheline Tööorganisatsioon</span>+++
@@ -3853,8 +3793,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">กองทุนการเงินระหว่างประเทศ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">國際貨幣基金組織</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    國際貨幣基金組織
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Fundo Monetário Internacional</span>+++
@@ -3934,8 +3874,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Dana Moneter Internasional</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صندوق بینالمللی پول</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صندوق بینالمللی پول
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetközi Valutaalap</span>+++
@@ -3955,8 +3895,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Internacia Monunua Fonduso</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Tabung Kewangan Antarabangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Tabung Kewangan Antarabangsa
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvusvaheline Valuutafond</span>+++
@@ -4054,8 +3994,8 @@ Rēs linguālibus::
   Lingua Faeroensis (Abecedarium Latinum):::
     +++<span lang="fo">Altjóða Gjaldoyragrunnurin</span>+++
 
-  /Bambara language/ (?):::
-    +++<span lang="bm">Jɛnselekenaani Wariko Kondo</span>+++
+  #item+rem+i_bam+is_zzzz:::
+    Jɛnselekenaani Wariko Kondo
 
   Lingua Marathica (Devanāgarī):::
     +++<span lang="mr">आंतरराष्ट्रीय नाणेनिधी</span>+++
@@ -4105,8 +4045,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">பன்னாட்டு கடல்சார் அமைப்பு</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">國際海事組織</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    國際海事組織
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização Marítima Internacional</span>+++
@@ -4177,8 +4117,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Maritim Internasional</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان بینالمللی دریانوردی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان بینالمللی دریانوردی
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetközi Tengerészeti Szervezet</span>+++
@@ -4198,8 +4138,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Internacia Mara Organizo</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Maritim Antarabangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Maritim Antarabangsa
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvusvaheline Mereorganisatsioon</span>+++
@@ -4288,8 +4228,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สหภาพโทรคมนาคมระหว่างประเทศ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">國際電信聯盟</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    國際電信聯盟
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">União Internacional de Telecomunicações</span>+++
@@ -4366,8 +4306,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Uni Telekomunikasi Internasional</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">اتحادیه بینالمللی مخابرات</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    اتحادیه بینالمللی مخابرات
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetközi Távközlési Egyesület</span>+++
@@ -4384,8 +4324,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Internacia Telekomunika Unio</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Kesatuan Telekomunikasi Antarabangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Kesatuan Telekomunikasi Antarabangsa
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvusvaheline Telekommunikatsiooni Liit</span>+++
@@ -4507,11 +4447,11 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การการศึกษา วิทยาศาสตร์ และวัฒนธรรมแห่งสหประชาชาติ</span>+++
 
-  Lingua Sanscrita  (?):::
-    +++<span lang="sa">विश्व संस्थानस्य शैक्षणिक, वैज्ञानिक, सांस्कृतिक संस्थानम्</span>+++
+  #item+rem+i_san+is_zzzz:::
+    विश्व संस्थानस्य शैक्षणिक, वैज्ञानिक, सांस्कृतिक संस्थानम्
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國教育、科學與文化組織</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國教育、科學與文化組織
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">UNESCO</span>+++
@@ -4591,8 +4531,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Pendidikan, Keilmuan, dan Kebudayaan PBB</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">یونسکو</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    یونسکو
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">UNESCO</span>+++
@@ -4612,8 +4552,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Unesko</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Pelajaran, Sains, dan Kebudayaan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Pelajaran, Sains, dan Kebudayaan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Ühinenud Rahvaste Hariduse, Teaduse ja Kultuuri Organisatsioon</span>+++
@@ -4795,8 +4735,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การพัฒนาอุตสาหกรรมแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国工业发展组织</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国工业发展组织
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização das Nações Unidas para o Desenvolvimento Industrial</span>+++
@@ -4858,8 +4798,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Pengembangan Industri Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">یونیدو</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    یونیدو
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Az ENSZ Iparfejlesztési Szervezete</span>+++
@@ -4933,8 +4873,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">ארגון התיירות העולמי</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">世界旅游组织</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    世界旅游组织
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização Mundial de Turismo</span>+++
@@ -5002,8 +4942,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Pariwisata Dunia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان جهانی گردشگری</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان جهانی گردشگری
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Turisztikai Világszervezet</span>+++
@@ -5020,8 +4960,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Monda Organizaĵo pri Turismo</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Pelancongan Dunia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Pelancongan Dunia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Maailma Turismiorganisatsioon</span>+++
@@ -5119,8 +5059,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สหภาพไปรษณีย์สากล</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">萬國郵政聯盟</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    萬國郵政聯盟
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">União Postal Universal</span>+++
@@ -5188,8 +5128,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Kesatuan Pos Sedunia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">اتحادیه جهانی پست</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    اتحادیه جهانی پست
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Egyetemes Postaegyesület</span>+++
@@ -5203,8 +5143,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Universala Poŝta Unio</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Kesatuan Pos Sedunia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Kesatuan Pos Sedunia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Ülemaailmne Postiliit</span>+++
@@ -5320,11 +5260,11 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การอนามัยโลก</span>+++
 
-  Lingua Sanscrita  (?):::
-    +++<span lang="sa">विश्वस्वास्थ्यसंस्था</span>+++
+  #item+rem+i_san+is_zzzz:::
+    विश्वस्वास्थ्यसंस्था
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">世界衛生組織</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    世界衛生組織
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização Mundial de Saúde</span>+++
@@ -5404,8 +5344,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Kesehatan Dunia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان بهداشت جهانی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان بهداشت جهانی
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Egészségügyi Világszervezet</span>+++
@@ -5425,8 +5365,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Monda Organizaĵo pri Sano</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Kesihatan Sedunia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Kesihatan Sedunia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Maailma Terviseorganisatsioon</span>+++
@@ -5599,8 +5539,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การทรัพย์สินทางปัญญาแห่งโลก</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">世界知识产权组织</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    世界知识产权组织
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização Mundial da Propriedade Intelectual</span>+++
@@ -5671,8 +5611,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Hak atas Kekayaan Intelektual Dunia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان جهانی مالکیت فکری</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان جهانی مالکیت فکری
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Szellemi Tulajdon Világszervezete</span>+++
@@ -5689,8 +5629,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Monda Organizaĵo de Intelekta Propraĵo</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Harta Intelek Sedunia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Harta Intelek Sedunia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Maailma Intellektuaalse Omandi Organisatsioon</span>+++
@@ -5785,8 +5725,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การอุตุนิยมวิทยาโลก</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">世界气象组织</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    世界气象组织
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização Meteorológica Mundial</span>+++
@@ -5854,8 +5794,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Meteorologi Dunia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان جهانی هواشناسی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان جهانی هواشناسی
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Meteorológiai Világszervezet</span>+++
@@ -5872,8 +5812,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Monda Organizaĵo pri Meteologio</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Meteorologi Sedunia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Meteorologi Sedunia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Maailma Meteoroloogiaorganisatsioon</span>+++
@@ -5983,8 +5923,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">ธนาคารโลก</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">世界銀行</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    世界銀行
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Banco Mundial</span>+++
@@ -6061,8 +6001,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Bank Dunia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">بانک جهانی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    بانک جهانی
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Világbank</span>+++
@@ -6082,8 +6022,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Monda Banko</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Bank Dunia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Bank Dunia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Maailmapank</span>+++
@@ -6175,8 +6115,8 @@ Rēs linguālibus::
   Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
     +++<span lang="be">Сусветны банк</span>+++
 
-  /Bambara language/ (?):::
-    +++<span lang="bm">Dunia Wariso</span>+++
+  #item+rem+i_bam+is_zzzz:::
+    Dunia Wariso
 
   Lingua Marathica (Devanāgarī):::
     +++<span lang="mr">जागतिक बँक</span>+++
@@ -6248,8 +6188,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สำนักงานโครงการพัฒนาแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国开发计划署</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国开发计划署
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Programa das Nações Unidas para o Desenvolvimento</span>+++
@@ -6314,8 +6254,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Program Pembangunan Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">برنامه عمران ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    برنامه عمران ملل متحد
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Az ENSZ Fejlesztési Programja</span>+++
@@ -6332,8 +6272,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Programo de la Unuiĝintaj Nacioj pri Disvolvado</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Program Pembangunan Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Program Pembangunan Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO Arenguprogramm</span>+++
@@ -6440,8 +6380,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">โครงการสิ่งแวดล้อมแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国环境署</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国环境署
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Programa das Nações Unidas para o Meio Ambiente</span>+++
@@ -6506,8 +6446,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Program Lingkungan Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">برنامه محیط زیست ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    برنامه محیط زیست ملل متحد
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Az ENSZ Környezetvédelmi Programja</span>+++
@@ -6521,8 +6461,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Mediprogramo de Unuiĝintaj Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Program Alam Sekitar Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Program Alam Sekitar Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO Keskkonnaprogramm</span>+++
@@ -6590,8 +6530,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">กองทุนประชากรแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國人口基金會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國人口基金會
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Fundo de População das Nações Unidas</span>+++
@@ -6656,14 +6596,14 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Dana Penduduk Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صندوق جمعیت سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صندوق جمعیت سازمان ملل متحد
 
   Lingua Slovaca (Abecedarium Latinum):::
     +++<span lang="sk">Populačný fond Spojených národov</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Tabung Kependudukan Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Tabung Kependudukan Pertubuhan Bangsa-Bangsa Bersatu
 
   Lingua Turcica (Abecedarium Latinum):::
     +++<span lang="tr">Birleşmiş Milletler Nüfus Fonu</span>+++
@@ -6719,8 +6659,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">ஐக்கிய நாடுகளின் குடிசார் அமைப்பு</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國人居署</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國人居署
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Programa das Nações Unidas para os Assentamentos Humanos</span>+++
@@ -6773,8 +6713,8 @@ Rēs linguālibus::
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">UN-HABITAT</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Program Penempatan Manusia Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Program Penempatan Manusia Pertubuhan Bangsa-Bangsa Bersatu
 
   Lingua Turcica (Abecedarium Latinum):::
     +++<span lang="tr">Birleşmiş Milletler İnsan Yerleşimleri Programı</span>+++
@@ -6842,8 +6782,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">กองทุนเพื่อเด็กแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國兒童基金會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國兒童基金會
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Fundo das Nações Unidas para a Infância</span>+++
@@ -6920,8 +6860,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Dana Anak-anak Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">یونیسف</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    یونیسف
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">UNICEF</span>+++
@@ -6941,8 +6881,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">UNICEF</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Tabung Kanak-kanak Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Tabung Kanak-kanak Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">UNICEF</span>+++
@@ -7145,8 +7085,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">โครงการอาหารโลก</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">世界糧食計劃署</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    世界糧食計劃署
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Programa Alimentar Mundial</span>+++
@@ -7217,8 +7157,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Program Pangan Dunia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">برنامه جهانی غذا</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    برنامه جهانی غذا
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Világélelmezési Program</span>+++
@@ -7226,8 +7166,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Monda Nutraĵa Programo</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Program Makanan Sedunia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Program Makanan Sedunia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Maailma Toiduprogramm</span>+++
@@ -7332,8 +7272,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">איידס</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国艾滋病规划署</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国艾滋病规划署
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">UNAIDS</span>+++
@@ -7395,8 +7335,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">UNAIDS</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">برنامه مشترک ملل متحد در زمینه ایدز</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    برنامه مشترک ملل متحد در زمینه ایدز
 
   Lingua Slovaca (Abecedarium Latinum):::
     +++<span lang="sk">UNAIDS</span>+++
@@ -7458,8 +7398,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">ข้าหลวงใหญ่ผู้ลี้ภัยแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国难民署</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国难民署
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Alto Comissariado das Nações Unidas para os Refugiados</span>+++
@@ -7533,8 +7473,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Komisioner Tinggi PBB untuk Pengungsi</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">کمیساریای عالی سازمان ملل برای پناهندگان</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    کمیساریای عالی سازمان ملل برای پناهندگان
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Az ENSZ Menekültügyi Főbiztosa</span>+++
@@ -7551,8 +7491,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Oficejo de Supera komisaro de UN por rifuĝintoj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pesuruhjaya Tinggi Pertubuhan Bangsa-Bangsa Bersatu untuk Pelarian</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pesuruhjaya Tinggi Pertubuhan Bangsa-Bangsa Bersatu untuk Pelarian
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO pagulaste ülemvoliniku amet</span>+++
@@ -7599,8 +7539,8 @@ Rēs linguālibus::
   Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
     +++<span lang="be">Упраўленне Вярхоўнага камісара Арганізацыі Аб'яднаных Нацый па справах бежанцаў</span>+++
 
-  /Bambara language/ (?):::
-    +++<span lang="bm">Djamana dékourou sanfe bada bon ka fada dogona</span>+++
+  #item+rem+i_bam+is_zzzz:::
+    Djamana dékourou sanfe bada bon ka fada dogona
 
   Lingua Marathica (Devanāgarī):::
     +++<span lang="mr">संयुक्त राष्ट्रे निर्वासित उच्चायुक्त</span>+++
@@ -7638,8 +7578,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สถาบันวิจัยเพื่อการลดอาวุธแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國裁軍研究所</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國裁軍研究所
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">United Nations Institute for Disarmament Research</span>+++
@@ -7665,8 +7605,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">国連軍縮研究所</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">نهاد سازمان ملل متحد برای پژوهش خلع سلاح</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    نهاد سازمان ملل متحد برای پژوهش خلع سلاح
 
 
 
@@ -7698,8 +7638,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">מכון האומות המאוחדות להדרכה ולמחקר</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國訓練與研究機構</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國訓練與研究機構
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Instituto das Nações Unidas para Formação e Pesquisa</span>+++
@@ -7776,8 +7716,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">ஐக்கிய நாடுகளின் திட்ட அமுலாக்க அலுவலகம்</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國專案事務廳</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國專案事務廳
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Escritório das Nações Unidas de Serviços para Projetos</span>+++
@@ -7848,8 +7788,8 @@ Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">Procuratio Auxilii Operumque pro Profugis Palaestinis in Oriente Propinquo Consociationis Nationum</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國救濟暨工程處</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國救濟暨工程處
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Agência das Nações Unidas de Assistência aos Refugiados da Palestina no Próximo Oriente</span>+++
@@ -7905,8 +7845,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">United Nations Relief and Works Agency for Palestine Refugees in the Near East</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">آژانس امداد و اقدام سازمان ملل متحد برای آوارگان فلسطینی در خاور نزدیک</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    آژانس امداد و اقدام سازمان ملل متحد برای آوارگان فلسطینی در خاور نزدیک
 
   Lingua Vasconica (Abecedarium Latinum):::
     +++<span lang="eu">Ekialde Hurbileko Palestinar Iheslariei Laguntzeko Nazio Batuen Agentzia</span>+++
@@ -7917,8 +7857,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Agentejo de la Unuiĝintaj Nacioj por la Palestinaj Rifuĝintoj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">UNRWA</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    UNRWA
 
   Lingua Turcica (Abecedarium Latinum):::
     +++<span lang="tr">Birleşmiş Milletler Yakındoğu Filistin Mültecilerine Yardım Ajansı</span>+++
@@ -7953,8 +7893,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">كلية موظفي منظومة الأمم المتحدة</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國職員學院</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國職員學院
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Colégio de Pessoal do Sistema das Nações Unidas</span>+++
@@ -8013,11 +7953,11 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">มหาวิทยาลัยสหประชาชาติ</span>+++
 
-  Lingua Sanscrita  (?):::
-    +++<span lang="sa">उनितेद् नतिओन्स् विश्वविद्यालय</span>+++
+  #item+rem+i_san+is_zzzz:::
+    उनितेद् नतिओन्स् विश्वविद्यालय
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国大学</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国大学
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Universidade das Nações Unidas</span>+++
@@ -8064,8 +8004,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Universitas Perserikatan Bangsa Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">دانشگاه سازمان ملل</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    دانشگاه سازمان ملل
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">ENSZ Egyetem</span>+++
@@ -8073,8 +8013,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Universitato de la Unuiĝintaj Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Universiti Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Universiti Pertubuhan Bangsa-Bangsa Bersatu
 
   Lingua Croatica (Abecedarium Latinum):::
     +++<span lang="hr">Sveučilište Ujedinjenih naroda</span>+++
@@ -8148,8 +8088,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การเพื่อสตรีแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国妇女权能署</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国妇女权能署
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">ONU Mulheres</span>+++
@@ -8208,8 +8148,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">UN Women</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">زنان سازمان ملل</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    زنان سازمان ملل
 
   Lingua Cambrica (Abecedarium Latinum):::
     +++<span lang="cy">'UN Women'</span>+++
@@ -8281,8 +8221,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">ארגון האמנה לאיסור ניסויים גרעיניים</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">全面禁止核子試爆條約組織</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    全面禁止核子試爆條約組織
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Comprehensive Nuclear-Test-Ban Treaty Organization</span>+++
@@ -8311,8 +8251,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Comprehensive Nuclear-Test-Ban Treaty Organization</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Perjanjian Larangan Ujian Nuklear Menyeluruh</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Perjanjian Larangan Ujian Nuklear Menyeluruh
 
   Lingua Veneta (Abecedarium Latinum):::
     +++<span lang="vec">Organizasion del Tratà de Proibision Totałe dei Test Nucleari</span>+++
@@ -8374,11 +8314,11 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">ทบวงการพลังงานปรมาณูระหว่างประเทศ</span>+++
 
-  Lingua Sanscrita  (?):::
-    +++<span lang="sa">अन्ताराष्ट्रिय-अणु-ऊर्जा-परिषत्</span>+++
+  #item+rem+i_san+is_zzzz:::
+    अन्ताराष्ट्रिय-अणु-ऊर्जा-परिषत्
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">国际原子能机构</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    国际原子能机构
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Agência Internacional de Energia Atómica</span>+++
@@ -8452,8 +8392,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Badan Tenaga Atom Internasional</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">آژانس بینالمللی انرژی اتمی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    آژانس بینالمللی انرژی اتمی
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetközi Atomenergia-ügynökség</span>+++
@@ -8473,8 +8413,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Internacia Atomenergia Organizo</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Agensi Tenaga Atom Antarabangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Agensi Tenaga Atom Antarabangsa
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvusvaheline Aatomienergia Agentuur</span>+++
@@ -8590,8 +8530,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การระหว่างประเทศเพื่อการโยกย้ายถิ่นฐาน</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">國際移民組織</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    國際移民組織
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização Internacional para as Migrações</span>+++
@@ -8653,8 +8593,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Internasional untuk Migrasi</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان بینالمللی مهاجرت</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان بینالمللی مهاجرت
 
   Lingua Slovaca (Abecedarium Latinum):::
     +++<span lang="sk">Medzinárodná organizácia pre migráciu</span>+++
@@ -8722,8 +8662,8 @@ Rēs linguālibus::
   Lingua Coreana (Abecedarium Coreanum):::
     +++<span lang="ko">국제 무역 센터</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">国际贸易中心</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    国际贸易中心
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">International Trade Centre</span>+++
@@ -8758,8 +8698,8 @@ Rēs linguālibus::
   Lingua Vasconica (Abecedarium Latinum):::
     +++<span lang="eu">Nazioarteko Merkataritza Zentroa</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pusat Perdagangan Antarabangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pusat Perdagangan Antarabangsa
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">مركز التجاره الدولى</span>+++
@@ -8821,8 +8761,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การห้ามอาวุธเคมี</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">禁止化學武器組織</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    禁止化學武器組織
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização para a Proibição de Armas Químicas</span>+++
@@ -8890,8 +8830,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Pelarangan Senjata Kimia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان بازدارندگی از بهکارگیری جنگافزارهای شیمیایی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان بازدارندگی از بهکارگیری جنگافزارهای شیمیایی
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Vegyifegyver-tilalmi Szervezet</span>+++
@@ -8905,8 +8845,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Organizaĵo por la Malpermeso de Kemiaj Armiloj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Larangan Senjata Kimia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Larangan Senjata Kimia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Keemiarelvade Keelustamise Organisatsioon</span>+++
@@ -9052,8 +8992,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การการค้าโลก</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">世界贸易组织</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    世界贸易组织
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Organização Mundial do Comércio</span>+++
@@ -9133,8 +9073,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Organisasi Perdagangan Dunia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">سازمان تجارت جهانی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    سازمان تجارت جهانی
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Kereskedelmi Világszervezet</span>+++
@@ -9154,8 +9094,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Monda Organizaĵo pri Komerco</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pertubuhan Perdagangan Sedunia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pertubuhan Perdagangan Sedunia
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Maailma Kaubandusorganisatsioon</span>+++
@@ -9494,8 +9434,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สำนักงานเพื่อการประสานงานด้านมนุษยธรรมแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國人道事務協調廳</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國人道事務協調廳
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Escritório das Nações Unidas para a Coordenação de Assuntos Humanitários</span>+++
@@ -9642,8 +9582,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สำนักงานข้าหลวงใหญ่สิทธิมนุษยชนแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國人權事務高級專員辦事處</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國人權事務高級專員辦事處
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Escritório do Alto Comissário das Nações Unidas para os Direitos Humanos</span>+++
@@ -9711,8 +9651,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Kantor Komisaris Tinggi PBB untuk Hak Asasi Manusia</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">کمیساریای عالی حقوق بشر در سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    کمیساریای عالی حقوق بشر در سازمان ملل متحد
 
   Lingua Vasconica (Abecedarium Latinum):::
     +++<span lang="eu">Nazio Batuen Giza Eskubideetarako Goi Mandatariaren Bulegoa</span>+++
@@ -9723,8 +9663,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Alta Komisaro de la Unuiĝintaj Nacioj pri Homaj Rajtoj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pesuruhjaya Tinggi Hak Asasi Manusia Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pesuruhjaya Tinggi Hak Asasi Manusia Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO Inimõiguste Ülemvoliniku Amet</span>+++
@@ -9884,8 +9824,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">משרד האו"ם להפחתת סיכונים באסון</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國減少災害風險辦公室</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國減少災害風險辦公室
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Estratégia Internacional das Nações Unidas para a Redução de Desastres</span>+++
@@ -9956,8 +9896,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สำนักงานว่าด้วยยาเสพติดและอาชญากรรมแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國毒品和犯罪問題辦公室</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國毒品和犯罪問題辦公室
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Escritório das Nações Unidas sobre Drogas e Crime</span>+++
@@ -10010,14 +9950,14 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Kantor PBB Urusan Narkoba dan Kejahatan</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">دفتر مقابله با مواد مخدر و جرم سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    دفتر مقابله با مواد مخدر و جرم سازمان ملل متحد
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Oficejo de Unuiĝintaj Nacioj pri Narkotaĵoj kaj Krimo</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pejabat Pertubuhan Bangsa-Bangsa Bersatu mengenai Dadah dan Jenayah</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pejabat Pertubuhan Bangsa-Bangsa Bersatu mengenai Dadah dan Jenayah
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO Uimastite ja Kuritegevuse Büroo</span>+++
@@ -10055,8 +9995,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">КВПНРМ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國最不發達國家、內陸發展中國家和小島嶼發展中國家高級代表辦公室</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國最不發達國家、內陸發展中國家和小島嶼發展中國家高級代表辦公室
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">United Nations Office of the High Representative for the Least Developed Countries, Landlocked Developing Countries and Small Island Developing States</span>+++
@@ -10076,8 +10016,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">国際連合後発開発途上国、内陸開発途上国、小島嶼国開発途上国担当上級代表事務所</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">دفتر نماینده عالی سازمان ملل متحد برای کشورهای توسعهنیافته، کشورهای در حال توسعه محصور در خشکی و کشورهای جزیرهای کوچک در حال توسعه</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    دفتر نماینده عالی سازمان ملل متحد برای کشورهای توسعهنیافته، کشورهای در حال توسعه محصور در خشکی و کشورهای جزیرهای کوچک در حال توسعه
 
   //Traditional Chinese// (/ISO 15924 Hant/):::
     +++<span lang="zh-hant">聯合國最不已開發國家、內陸發展中國家和小島嶼發展中國家高階代表辦事處</span>+++
@@ -10133,8 +10073,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Почтовая администрация ООН</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國郵政管理處</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國郵政管理處
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">United Nations Postal Administration</span>+++
@@ -10157,8 +10097,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">国際連合郵便</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Pentadbiran Pos Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Pentadbiran Pos Pertubuhan Bangsa-Bangsa Bersatu
 
 
 
@@ -10181,8 +10121,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Научно-исследовательский институт социального развития ООН</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國社會發展研究所</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國社會發展研究所
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Instituto de Pesquisa das Nações Unidas para o Desenvolvimento Social</span>+++
@@ -10277,8 +10217,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">คณะมนตรีความมั่นคงแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国安全理事会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国安全理事会
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Conselho de Segurança das Nações Unidas</span>+++
@@ -10355,8 +10295,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Dewan Keamanan Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">شورای امنیت سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    شورای امنیت سازمان ملل متحد
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Egyesült Nemzetek Szervezete Biztonsági Tanácsa</span>+++
@@ -10376,8 +10316,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Konsilio de Sekureco de Unuiĝintaj Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Majlis Keselamatan Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Majlis Keselamatan Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO Julgeolekunõukogu</span>+++
@@ -10514,8 +10454,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สมัชชาใหญ่แห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國大會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國大會
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Assembleia Geral das Nações Unidas</span>+++
@@ -10589,8 +10529,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Majelis Umum Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">مجمع عمومی سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    مجمع عمومی سازمان ملل متحد
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Az Egyesült Nemzetek Szervezete Közgyűlése</span>+++
@@ -10610,8 +10550,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Ĝenerala Asembleo de Unuiĝintaj Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Perhimpunan Agung Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Perhimpunan Agung Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Ühinenud Rahvaste Organisatsiooni Peaassamblee</span>+++
@@ -10736,8 +10676,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">คณะมนตรีเศรษฐกิจและสังคมแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國經濟及社會理事會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國經濟及社會理事會
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Conselho Económico e Social das Nações Unidas</span>+++
@@ -10805,8 +10745,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Dewan Ekonomi dan Sosial Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">شورای اقتصادی و اجتماعی سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    شورای اقتصادی و اجتماعی سازمان ملل متحد
 
   Lingua Vasconica (Abecedarium Latinum):::
     +++<span lang="eu">Ekonomia eta Gizarte Kontseilua</span>+++
@@ -10820,8 +10760,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Ekonomia kaj Socia Konsilio de Unuiĝintaj Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Majlis Ekonomi dan Sosial Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Majlis Ekonomi dan Sosial Pertubuhan Bangsa-Bangsa Bersatu
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">ÜRO Majandus- ja Sotsiaalnõukogu</span>+++
@@ -10925,8 +10865,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สำนักเลขาธิการสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">联合国秘书处</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    联合国秘书处
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Secretariado das Nações Unidas</span>+++
@@ -10994,8 +10934,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Sekretariat Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">دبیرخانه سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    دبیرخانه سازمان ملل متحد
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Az ENSZ Titkársága</span>+++
@@ -11012,8 +10952,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Sekretariejo de la Unuiĝintaj Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Sekretariat Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Sekretariat Pertubuhan Bangsa-Bangsa Bersatu
 
   Lingua Croatica (Abecedarium Latinum):::
     +++<span lang="hr">Tajništvo Ujedinjenih naroda</span>+++
@@ -11119,8 +11059,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">คณะมนตรีภาวะทรัสตีแห่งสหประชาชาติ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國託管理事會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國託管理事會
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Conselho de Administração Fiduciária das Nações Unidas</span>+++
@@ -11185,8 +11125,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Dewan Perwalian Perserikatan Bangsa-Bangsa</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">شورای قیمومت سازمان ملل متحد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    شورای قیمومت سازمان ملل متحد
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Egyesült Nemzetek Szervezete Gyámsági Tanácsa</span>+++
@@ -11200,8 +11140,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Konsilio de Kuratorado de la Unuiĝintaj Nacioj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Majlis Peramanahan Pertubuhan Bangsa-Bangsa Bersatu</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Majlis Peramanahan Pertubuhan Bangsa-Bangsa Bersatu
 
   Lingua Turcica (Abecedarium Latinum):::
     +++<span lang="tr">Birleşmiş Milletler Vesayet Konseyi</span>+++
@@ -11263,8 +11203,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">ஐக்கிய நாடுகளின் மனிதாபிமான விமானச் சேவை</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">聯合國人權組織航空服務</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    聯合國人權組織航空服務
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">United Nations Humanitarian Air Service</span>+++
@@ -11383,11 +11323,11 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">กาชาด</span>+++
 
-  Lingua Sanscrita  (?):::
-    +++<span lang="sa">विश्व रेड्क्रास दिनम्</span>+++
+  #item+rem+i_san+is_zzzz:::
+    विश्व रेड्क्रास दिनम्
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">國際紅十字與紅新月運動</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    國際紅十字與紅新月運動
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Movimento Internacional da Cruz Vermelha e do Crescente Vermelho</span>+++
@@ -11464,8 +11404,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Gerakan Internasional Palang Merah dan Bulan Sabit Merah</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">نهضت بینالمللی صلیب سرخ و هلال احمر</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    نهضت بینالمللی صلیب سرخ و هلال احمر
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetközi Vöröskereszt</span>+++
@@ -11485,8 +11425,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Ruĝa Kruco</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Gerakan Palang Merah dan Bulan Sabit Merah Antarabangsa</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Gerakan Palang Merah dan Bulan Sabit Merah Antarabangsa
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvusvaheline Punane Rist</span>+++
@@ -11635,8 +11575,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">คณะกรรมการกาชาดระหว่างประเทศ</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">红十字国际委员会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    红十字国际委员会
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Comitê Internacional da Cruz Vermelha</span>+++
@@ -11707,8 +11647,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Komite Internasional Palang Merah</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">کمیته بینالمللی صلیب سرخ</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    کمیته بینالمللی صلیب سرخ
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Nemzetközi Vöröskereszt</span>+++
@@ -11722,8 +11662,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Internacia Komitato de la Ruĝa Kruco</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Jawatankuasa Antarabangsa Palang Merah</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Jawatankuasa Antarabangsa Palang Merah
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Rahvusvaheline Punase Risti Komitee</span>+++
@@ -11812,8 +11752,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Palang Merah Albania</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ آلبانی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ آلبانی
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Albana Ruĝa Kruco</span>+++
@@ -11893,8 +11833,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">アンドラ赤十字</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ آندورا</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ آندورا
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Andora Ruĝa Kruco</span>+++
@@ -11938,8 +11878,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">アンゴラ赤十字</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ آنگولا</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ آنگولا
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Angola Ruĝa Kruco</span>+++
@@ -11997,8 +11937,8 @@ Rēs linguālibus::
   /Nynorsk/ (Abecedarium Latinum):::
     +++<span lang="nn">Azərbaycan Qızıl Aypara Cəmiyyəti</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جمعیت هلال احمر آذربایجان</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جمعیت هلال احمر آذربایجان
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Azerbajĝana Ruĝa Krescento</span>+++
@@ -12066,8 +12006,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">الصليب الأحمر الأسترالي</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">澳大利亞紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    澳大利亞紅十字會
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Cruz Vermelha Australiana</span>+++
@@ -12275,8 +12215,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">アルメニア赤十字社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ ارمنستان</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ ارمنستان
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Armenia Ruĝa Kruco</span>+++
@@ -12353,8 +12293,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">ベルギー赤十字</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ بلژیک</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ بلژیک
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Belgia Ruĝa Kruco</span>+++
@@ -12414,8 +12354,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">ボリビア赤十字</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ بولیوی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ بولیوی
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Bolivia Ruĝa Kruco</span>+++
@@ -12486,8 +12426,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">ボツワナ赤十字社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ بوتسوانا</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ بوتسوانا
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Bocvana Ruĝa Kruco</span>+++
@@ -12632,14 +12572,14 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">ブルネイ・ダルサラーム赤新月社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جمعیت هلال احمر برونئی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جمعیت هلال احمر برونئی
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Bruneja Ruĝa Krescento</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Persatuan Bulan Sabit Merah Negara Brunei Darussalam</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Persatuan Bulan Sabit Merah Negara Brunei Darussalam
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">جمعية الهلال الاحمر فى برناوى</span>+++
@@ -12746,8 +12686,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">ブルンディ赤十字</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ بوروندی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ بوروندی
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Burunda Ruĝa Kruco</span>+++
@@ -12776,8 +12716,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Белорусский Красный Крест</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">白俄羅斯紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    白俄羅斯紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Belarus Red Cross</span>+++
@@ -12890,8 +12830,8 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">//Red Cross and Red Crescent of Canada//</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">加拿大紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    加拿大紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Canadian Red Cross</span>+++
@@ -13044,8 +12984,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">チャド赤十字</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ چاد</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ چاد
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">الصليب الاحمر فى تشاد</span>+++
@@ -13085,8 +13025,8 @@ Rēs linguālibus::
   Lingua Coreana (Abecedarium Coreanum):::
     +++<span lang="ko">중국 적십자사</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">中国红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    中国红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Red Cross Society of China</span>+++
@@ -13412,8 +13352,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">ベナン赤十字</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ بنین</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ بنین
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Benina Ruĝa Kruco</span>+++
@@ -13549,8 +13489,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">エチオピア赤十字社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ اتیوپی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ اتیوپی
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">جمعية الصليب الاحمر الاثيوبيه</span>+++
@@ -13639,8 +13579,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Финский Красный Крест</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">芬兰红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    芬兰红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Finnish Red Cross</span>+++
@@ -13836,8 +13776,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">הסהר האדום הפלסטיני</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">巴勒斯坦红新月会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    巴勒斯坦红新月会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Palestine Red Crescent Society</span>+++
@@ -13854,14 +13794,14 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Perhimpunan Bulan Sabit Merah Palestina</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جمعیت هلال احمر فلسطین</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جمعیت هلال احمر فلسطین
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Palestina Ruĝa Krescento</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Persatuan Bulan Sabit Merah Palestin</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Persatuan Bulan Sabit Merah Palestin
 
   Lingua Iavanica (Abecedarium Latinum):::
     +++<span lang="jv">Rembulan Sabit Abang Palèstina</span>+++
@@ -14095,8 +14035,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">กาชาดฮ่องกง</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">香港紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    香港紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Hong Kong Red Cross</span>+++
@@ -14175,8 +14115,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">இந்திய செஞ்சிலுவைச் சங்கம்</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">印度紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    印度紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Indian Red Cross Society</span>+++
@@ -14220,8 +14160,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">جمعية الصليب الأحمر الإندونيسية</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">印尼红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    印尼红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Indonesian Red Cross Society</span>+++
@@ -14277,8 +14217,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Общество Красного Полумесяца Исламской Республики Иран</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">伊朗紅新月會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    伊朗紅新月會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Red Crescent Society of the Islamic Republic of Iran</span>+++
@@ -14298,8 +14238,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Masyarakat Bulan Sabit Merah Iran</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جمعیت هلال احمر جمهوری اسلامی ایران</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جمعیت هلال احمر جمهوری اسلامی ایران
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Irana Ruĝa Krescento</span>+++
@@ -14334,8 +14274,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">جمعية الهلال الأحمر العراقي</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">伊拉克紅新月會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    伊拉克紅新月會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Iraqi Red Crescent Society</span>+++
@@ -14352,8 +14292,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">イラク赤新月社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جمعیت هلال احمر عراق</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جمعیت هلال احمر عراق
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Iraka Ruĝa Krescento</span>+++
@@ -14424,8 +14364,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">מגן דוד אדום</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">以色列红大卫盾会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    以色列红大卫盾会
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Magen David Adom</span>+++
@@ -14469,8 +14409,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Magen David Adom</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">ستاره داوود سرخ</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    ستاره داوود سرخ
 
   Lingua Slovaca (Abecedarium Latinum):::
     +++<span lang="sk">Magen David Adom</span>+++
@@ -14517,8 +14457,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">الصليب الأحمر الإيطالي</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">意大利红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    意大利红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Italian Red Cross</span>+++
@@ -14624,8 +14564,8 @@ Rēs linguālibus::
   Lingua Coreana (Abecedarium Coreanum):::
     +++<span lang="ko">일본 적십자사</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">日本赤十字社</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    日本赤十字社
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Japanese Red Cross Society</span>+++
@@ -14648,8 +14588,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">日本赤十字社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">انجمن صلیب سرخ ژاپن</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    انجمن صلیب سرخ ژاپن
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Japán Vöröskereszt</span>+++
@@ -14660,8 +14600,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Japania Ruĝa Kruco</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Persatuan Palang Merah Jepun</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Persatuan Palang Merah Jepun
 
   Lingua Turcica (Abecedarium Latinum):::
     +++<span lang="tr">Japon Kızılhaçı</span>+++
@@ -14709,8 +14649,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">الصليب الأحمر الكيني</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">肯亞紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    肯亞紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Kenya Red Cross Society</span>+++
@@ -14733,8 +14673,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Kenja Ruĝa Kruco</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Persatuan Palang Merah Kenya</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Persatuan Palang Merah Kenya
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">الصليب الاحمر الكينى</span>+++
@@ -14757,8 +14697,8 @@ Rēs linguālibus::
   Lingua Coreana (Abecedarium Coreanum):::
     +++<span lang="ko">조선민주주의인민공화국적십자회</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">朝鲜民主主义人民共和国红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    朝鲜民主主义人民共和国红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Red Cross Society of the Democratic People's Republic of Korea</span>+++
@@ -14799,8 +14739,8 @@ Rēs linguālibus::
   Lingua Coreana (Abecedarium Coreanum):::
     +++<span lang="ko">대한적십자사</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">大韓紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    大韓紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Republic of Korea National Red Cross</span>+++
@@ -15055,8 +14995,8 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">//Red Cross and Red Crescent of Lithuania//</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">立陶宛紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    立陶宛紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Lithuanian Red Cross Society</span>+++
@@ -15124,8 +15064,8 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">//Red Cross and Red Crescent of China, Macao Special Administrative Region//</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">澳門紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    澳門紅十字會
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Cruz Vermelha de Macau</span>+++
@@ -15176,8 +15116,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">جمعية الهلال الأحمر الماليزي</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">馬來西亞紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    馬來西亞紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Malaysian Red Crescent Society</span>+++
@@ -15194,8 +15134,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Malajzia Ruĝa Krescento</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Persatuan Bulan Sabit Merah Malaysia</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Persatuan Bulan Sabit Merah Malaysia
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">جمعية الهلال الاحمر الماليزى</span>+++
@@ -15263,8 +15203,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">マリ赤十字</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ مالی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ مالی
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">الصليب الاحمر المالى</span>+++
@@ -15328,8 +15268,8 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">//Red Cross and Red Crescent of Mexico//</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">墨西哥红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    墨西哥红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Mexican Red Cross</span>+++
@@ -15816,8 +15756,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Норвежский Красный Крест</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">挪威红十字</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    挪威红十字
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Norwegian Red Cross</span>+++
@@ -16001,8 +15941,8 @@ Rēs linguālibus::
   Lingua Italiana (Abecedarium Latinum):::
     +++<span lang="it">Società della Croce Rossa di Papua Nuova Guinea</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ پاپوآ گینه نو</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ پاپوآ گینه نو
 
 
 
@@ -16041,8 +15981,8 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">//Red Cross and Red Crescent of Philippines//</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">菲律宾红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    菲律宾红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Philippine Red Cross</span>+++
@@ -16100,8 +16040,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Польский Красный Крест</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">波兰红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    波兰红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Polish Red Cross</span>+++
@@ -16198,8 +16138,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">جمعية الهلال الأحمر القطري</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">卡塔爾紅新月會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    卡塔爾紅新月會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Qatar Red Crescent Society</span>+++
@@ -16541,8 +16481,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">サウジ赤新月社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جمعیت هلال احمر عربستان سعودی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جمعیت هلال احمر عربستان سعودی
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Ruĝa Krescento de Sauda Arabio</span>+++
@@ -16580,8 +16520,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">セネガル赤十字社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ سنگال</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ سنگال
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Senegala Ruĝa Kruco</span>+++
@@ -16687,8 +16627,8 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">//Red Cross and Red Crescent of Singapore//</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">新加坡紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    新加坡紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Singapore Red Cross</span>+++
@@ -16737,8 +16677,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">الصليب الأحمر الفيتنامي</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">越南𧹼十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    越南𧹼十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Red Cross of Viet Nam</span>+++
@@ -16874,8 +16814,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">ジンバブエ赤十字社</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ زیمبابوه</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ زیمبابوه
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">جمعية الصليب الاحمر فى زيمبابوى</span>+++
@@ -17031,8 +16971,8 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">//Red Cross and Red Crescent of Sweden//</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">瑞典红十字</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    瑞典红十字
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Swedish Red Cross</span>+++
@@ -17166,8 +17106,8 @@ Rēs linguālibus::
   Lingua Catalana (Abecedarium Latinum):::
     +++<span lang="ca">Mitja lluna roja siriana</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جمعیت هلال احمر سوریه</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جمعیت هلال احمر سوریه
 
   /Egyptian Arabic/ (/Abecedarium Arabicum/):::
     +++<span lang="arz">الهلال الاحمر العربى السورى</span>+++
@@ -17204,8 +17144,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">สภากาชาดไทย</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">泰国红十字会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    泰国红十字会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Thai Red Cross Society</span>+++
@@ -17350,8 +17290,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">الهلال الأحمر الإماراتي</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">阿联酋红新月会</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    阿联酋红新月会
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Emirates Red Crescent</span>+++
@@ -17371,8 +17311,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Bulan Sabit Merah Uni Emirat Arab</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">جمعیت هلال احمر امارات متحده عربی</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    جمعیت هلال احمر امارات متحده عربی
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Ruĝa Krescento de la Unuiĝintaj Arabaj Emirlandoj</span>+++
@@ -17446,8 +17386,8 @@ Rēs linguālibus::
   Lingua Coreana (Abecedarium Coreanum):::
     +++<span lang="ko">터키 적신월</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">土耳其紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    土耳其紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Turkish Red Crescent</span>+++
@@ -17603,8 +17543,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Общество Красного Креста Украины</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">烏克蘭紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    烏克蘭紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Ukrainian Red Cross Society</span>+++
@@ -17670,8 +17610,8 @@ Rēs linguālibus::
   Macrolingua Arabica (/Abecedarium Arabicum/):::
     +++<span lang="ar">الصليب الأحمر البريطاني</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">英國紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    英國紅十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">British Red Cross</span>+++
@@ -17786,8 +17726,8 @@ Rēs linguālibus::
   Lingua Hebraica (Alphabetum Hebraicum):::
     +++<span lang="he">ארגון הצלב האדום האמריקאי</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">美國紅十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    美國紅十字會
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Cruz Vermelha Americana</span>+++
@@ -17834,8 +17774,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Palang Merah Amerika Serikat</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">صلیب سرخ آمریکا</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    صلیب سرخ آمریکا
 
   Lingua Cambrica (Abecedarium Latinum):::
     +++<span lang="cy">Croes Goch America</span>+++
@@ -17843,8 +17783,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Usona Ruĝa Kruco</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Palang Merah Amerika</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Palang Merah Amerika
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Ameerika Punane Rist</span>+++
@@ -17873,8 +17813,8 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">//Red Cross and Red Crescent of Burkina Faso//</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">布基納法索红十字會</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    布基納法索红十字會
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Burkinabé Red Cross Society</span>+++
@@ -18046,8 +17986,8 @@ Rēs linguālibus::
   Lingua Russica (Abecedarium Cyrillicum):::
     +++<span lang="ru">Список национальных обществ Красного Креста и Красного Полумесяца</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">紅十字會與紅新月會列表</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    紅十字會與紅新月會列表
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">list of Red Cross and Red Crescent Societies</span>+++
@@ -18143,8 +18083,8 @@ Rēs linguālibus::
   Lingua Thai (/ISO 15924 Thai/):::
     +++<span lang="th">องค์การแพทย์ไร้พรมแดน</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">無國界醫生</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    無國界醫生
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Médicos sem Fronteiras</span>+++
@@ -18218,8 +18158,8 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Dokter Lintas Batas</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">پزشکان بدون مرز</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    پزشکان بدون مرز
 
   Lingua Hungarica (Abecedarium Latinum):::
     +++<span lang="hu">Orvosok Határok Nélkül</span>+++
@@ -18239,8 +18179,8 @@ Rēs linguālibus::
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Kuracistoj sen landlimoj</span>+++
 
-  Macrolingua Malayana (?):::
-    +++<span lang="ms">Doktor Tanpa Sempadan</span>+++
+  #item+rem+i_msa+is_zzzz:::
+    Doktor Tanpa Sempadan
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">Piirideta Arstid</span>+++
@@ -18520,8 +18460,8 @@ Rēs linguālibus::
   Lingua Tamulica (/ISO 15924 Taml/):::
     +++<span lang="ta">எல்லைகளற்ற மொழிபெயர்ப்பாளர்கள்</span>+++
 
-  /Macrolingua Sinicae (?)/:::
-    +++<span lang="zh">無國界譯者</span>+++
+  #item+rem+i_zho+is_zzzz:::
+    無國界譯者
 
   Lingua Lusitana (Abecedarium Latinum):::
     +++<span lang="pt">Translators Without Borders</span>+++
@@ -18550,8 +18490,8 @@ Rēs linguālibus::
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">国境なき翻訳者団</span>+++
 
-  Macrolingua Persica (//Abecedarium Arabicum//):::
-    +++<span lang="fa">مترجمان بدون مرز</span>+++
+  #item+rem+i_fas+is_zzzz:::
+    مترجمان بدون مرز
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">Tradukistoj sen landlimoj</span>+++
