@@ -50,7 +50,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-15T01:53:49
+2022-03-15T06:01:26
 
 |
 /SPDX license ID/@eng-Latn
@@ -114,7 +114,7 @@ Rēs linguālibus::
 NOTE: #`0_1603_1_7_2616_7535` ?#
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 140
+==== Concepta: 200
 
 ==== Rēs linguālibus: 2
 
@@ -139,7 +139,7 @@ https://iso639-3.sil.org/code/lat[lat]
 |
 Lingua Latina (Abecedarium Latinum)
 |
-140
+200
 
 |
 eng-Latn
@@ -157,23 +157,38 @@ Lingua Anglica (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 14
 Rēs::
-  scrīptor:::
+  /cōdex pūblicandī/:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P50[P50]
+        https://www.wikidata.org/wiki/Property:P123[P123]
 
       ix_hxlix;;
-        ix_wikip50
+        ix_wikip123
 
       ix_hxlvoc;;
-        v_wiki_p_50
+        v_wiki_p_123
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">scrīptor</span>+++
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+  /HXL Standard, attributes only/:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_hxla
+
+      ix_hxlvoc;;
+        v_hxl_a
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/HXL Standard, attributes only/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">/HXL Standard, attributes only/</span>+++
 
   /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
     Rēs interlinguālibus::::
@@ -189,24 +204,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">/Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/</span>+++
-
-  numerus editionis:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
-
-      ix_hxlix;;
-        ix_wikip393
-
-      ix_hxlvoc;;
-        v_wiki_p_393
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -225,57 +222,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Date or point in time when a work was first published or released</span>+++
-
-  /reference URL/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P854[P854]
-
-      ix_hxlix;;
-        ix_wikip854
-
-      ix_hxlvoc;;
-        v_wiki_p_854
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/reference URL/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">should be used for Internet URLs as references</span>+++
-
-  /HXL Standard, attributes only/:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_hxla
-
-      ix_hxlvoc;;
-        v_hxl_a
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/HXL Standard, attributes only/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">/HXL Standard, attributes only/</span>+++
-
-  /cōdex pūblicandī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
-
-      ix_hxlix;;
-        ix_wikip123
-
-      ix_hxlvoc;;
-        v_wiki_p_123
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -300,6 +246,60 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">SPDX license identifier</span>+++
+
+  scrīptor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P50[P50]
+
+      ix_hxlix;;
+        ix_wikip50
+
+      ix_hxlvoc;;
+        v_wiki_p_50
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">scrīptor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+
+  /reference URL/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P854[P854]
+
+      ix_hxlix;;
+        ix_wikip854
+
+      ix_hxlvoc;;
+        v_wiki_p_854
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/reference URL/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">should be used for Internet URLs as references</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
 
 <<<
@@ -326,7 +326,7 @@ Rēs linguālibus::
 
 
 
-=== Archīa prō cōdice: 1
+=== Archīa prō cōdice: 2
 
 
 ==== 1603_1_51.mul-Latn.codex.adoc
@@ -339,6 +339,19 @@ Rēs interlinguālibus::
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     AsciiDoc is a plain text authoring format (i.e., lightweight markup language) for writing technical content such as documentation, articles, and books.
+
+
+
+==== 1603_1_51.mul-Latn.codex.pdf
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_1_51.mul-Latn.codex.pdf[1603_1_51.mul-Latn.codex.pdf]
+  /reference URL/@eng-Latn:::
+    https://www.adobe.com/content/dam/acom/en/devnet/pdf/pdfs/PDF32000_2008.pdf
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    Portable Document Format (PDF), standardized as ISO 32000, is a file format developed by Adobe in 1992 to present documents, including text formatting and images, in a manner independent of application software, hardware, and operating systems.
 
 
 
@@ -404,7 +417,7 @@ Rēs linguālibus::
 <<<
 
 [id='11']
-=== [`11`] Macrolingua Arabica (/Abecedarium Arabicum/)
+=== [`11`] Macrolingua Arabica (Abecedarium Arabicum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -433,7 +446,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">Macrolingua Arabica (/Abecedarium Arabicum/)</span>+++
+    +++<span lang="la">Macrolingua Arabica (Abecedarium Arabicum)</span>+++
 
 
 
@@ -594,7 +607,45 @@ Rēs linguālibus::
 <<<
 
 [id='16']
-=== [`16`] Lingua Graeca antiqua (Alphabetum Graecum)
+=== [`16`] Lingua Mingrelica (Abecedarium Georgianum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    xmf-Geor
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_xmf__is_geor
+
+  /HXL Standard, attributes only/:::
+    +i_xmf+is_geor
+
+  ix_wikiq+ix_linguam:::
+    Q13359
+
+  ix_wikiq+ix_scriptum:::
+    Q161428
+
+  ix_wikilngm:::
+    xmf
+
+  ix_glottocode:::
+    ming1252
+
+  ix_iso639p3a3:::
+    xmf
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Mingrelica (Abecedarium Georgianum)</span>+++
+
+
+
+
+
+<<<
+
+[id='17']
+=== [`17`] Lingua Graeca antiqua (Alphabetum Graecum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -631,8 +682,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='17']
-=== [`17`] Lingua Cannadica (/ISO 15924 Knda/)
+[id='18']
+=== [`18`] Lingua Cannadica (/ISO 15924 Knda/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -669,8 +720,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='18']
-=== [`18`] Lingua Coreana (Abecedarium Coreanum)
+[id='19']
+=== [`19`] Lingua Coreana (Abecedarium Coreanum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -707,8 +758,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='19']
-=== [`19`] Lingua Sinica classica (/ISO 15924 Hant/)
+[id='20']
+=== [`20`] Lingua Sinica classica (/ISO 15924 Hant/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -745,8 +796,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='20']
-=== [`20`] Lingua Hebraica (Alphabetum Hebraicum)
+[id='21']
+=== [`21`] Lingua Hebraica (Alphabetum Hebraicum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -783,8 +834,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='21']
-=== [`21`] Lingua Latina (Abecedarium Latinum)
+[id='22']
+=== [`22`] Lingua Latina (Abecedarium Latinum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -821,8 +872,160 @@ Rēs linguālibus::
 
 <<<
 
-[id='22']
-=== [`22`] Lingua Tamulica (/ISO 15924 Taml/)
+[id='23']
+=== [`23`] Lingua Meitei (/ISO 15924 Mtei/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    mni-Mtei
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_mni__is_mtei
+
+  /HXL Standard, attributes only/:::
+    +i_mni+is_mtei
+
+  ix_wikiq+ix_linguam:::
+    Q33868
+
+  ix_wikiq+ix_scriptum:::
+    Q2981413
+
+  ix_wikilngm:::
+    mni
+
+  ix_glottocode:::
+    mani1292
+
+  ix_iso639p3a3:::
+    mni
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Meitei (/ISO 15924 Mtei/)</span>+++
+
+
+
+
+
+<<<
+
+[id='24']
+=== [`24`] /Mon language/ (/ISO 15924 Mymr/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    mnw-Mymr
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_mnw__is_mymr
+
+  /HXL Standard, attributes only/:::
+    +i_mnw+is_mymr
+
+  ix_wikiq+ix_linguam:::
+    Q13349
+
+  ix_wikiq+ix_scriptum:::
+    Q43887939
+
+  ix_wikilngm:::
+    mnw
+
+  ix_glottocode:::
+    monn1252
+
+  ix_iso639p3a3:::
+    mnw
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Mon language/ (/ISO 15924 Mymr/)</span>+++
+
+
+
+
+
+<<<
+
+[id='25']
+=== [`25`] /N'Ko/ (/ISO 15924 Nkoo/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    nqo-Nkoo
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_nqo__is_nkoo
+
+  /HXL Standard, attributes only/:::
+    +i_nqo+is_nkoo
+
+  ix_wikiq+ix_linguam:::
+    Q18546266
+
+  ix_wikiq+ix_scriptum:::
+    Q1062587
+
+  ix_wikilngm:::
+    nqo
+
+  ix_glottocode:::
+    nkoa1234
+
+  ix_iso639p3a3:::
+    nqo
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/N'Ko/ (/ISO 15924 Nkoo/)</span>+++
+
+
+
+
+
+<<<
+
+[id='26']
+=== [`26`] Lingua Santali (/ISO 15924 Olck/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    sat-Olck
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_sat__is_olck
+
+  /HXL Standard, attributes only/:::
+    +i_sat+is_olck
+
+  ix_wikiq+ix_linguam:::
+    Q33965
+
+  ix_wikiq+ix_scriptum:::
+    Q201688
+
+  ix_wikilngm:::
+    sat
+
+  ix_glottocode:::
+    sant1410
+
+  ix_iso639p3a3:::
+    sat
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Santali (/ISO 15924 Olck/)</span>+++
+
+
+
+
+
+<<<
+
+[id='27']
+=== [`27`] Lingua Tamulica (/ISO 15924 Taml/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -859,8 +1062,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='23']
-=== [`23`] Lingua Telingana (/ISO 15924 Telu/)
+[id='28']
+=== [`28`] Lingua Telingana (/ISO 15924 Telu/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -897,8 +1100,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='24']
-=== [`24`] Lingua Thai (/ISO 15924 Thai/)
+[id='29']
+=== [`29`] Lingua Thai (/ISO 15924 Thai/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -935,8 +1138,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='25']
-=== [`25`] Lingua Sanscrita  (?)
+[id='30']
+=== [`30`] Lingua Sanscrita (/ISO 15924 Zyyy/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -962,7 +1165,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">Lingua Sanscrita  (?)</span>+++
+    +++<span lang="la">Lingua Sanscrita (/ISO 15924 Zyyy/)</span>+++
 
 
 
@@ -970,8 +1173,8 @@ Rēs linguālibus::
 
 <<<
 
-[id='26']
-=== [`26`] /Macrolingua Sinicae (?)/
+[id='31']
+=== [`31`] /Macrolingua Sinicae (/ISO 15924 Zyyy/)/
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -997,7 +1200,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Macrolingua Sinicae (?)/</span>+++
+    +++<span lang="la">/Macrolingua Sinicae (/ISO 15924 Zyyy/)/</span>+++
 
 
 
@@ -2292,7 +2495,7 @@ Rēs linguālibus::
 <<<
 
 [id='134']
-=== [`134`] Macrolingua Malayana (?)
+=== [`134`] Macrolingua Malayana (/ISO 15924 Zyyy/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -2315,7 +2518,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">Macrolingua Malayana (?)</span>+++
+    +++<span lang="la">Macrolingua Malayana (/ISO 15924 Zyyy/)</span>+++
 
 
 
@@ -2581,7 +2784,7 @@ Rēs linguālibus::
 <<<
 
 [id='142']
-=== [`142`] /Egyptian Arabic/ (/Abecedarium Arabicum/)
+=== [`142`] /Egyptian Arabic/ (Abecedarium Arabicum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -2610,7 +2813,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Egyptian Arabic/ (/Abecedarium Arabicum/)</span>+++
+    +++<span lang="la">/Egyptian Arabic/ (Abecedarium Arabicum)</span>+++
 
 
 
@@ -3294,7 +3497,7 @@ Rēs linguālibus::
 <<<
 
 [id='165']
-=== [`165`] Lingua Vallonica
+=== [`165`] Lingua Vallonica (Abecedarium Latinum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -3323,7 +3526,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">Lingua Vallonica</span>+++
+    +++<span lang="la">Lingua Vallonica (Abecedarium Latinum)</span>+++
 
 
 
@@ -3633,7 +3836,7 @@ Rēs linguālibus::
 <<<
 
 [id='174']
-=== [`174`] Lingua Arpitanica
+=== [`174`] Lingua Arpitanica (Abecedarium Latinum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -3662,7 +3865,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">Lingua Arpitanica</span>+++
+    +++<span lang="la">Lingua Arpitanica (Abecedarium Latinum)</span>+++
 
 
 
@@ -3744,7 +3947,7 @@ Rēs linguālibus::
 <<<
 
 [id='179']
-=== [`179`] Lingua Urdu (/Abecedarium Arabicum/)
+=== [`179`] Lingua Urdu (Abecedarium Arabicum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -3773,7 +3976,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">Lingua Urdu (/Abecedarium Arabicum/)</span>+++
+    +++<span lang="la">Lingua Urdu (Abecedarium Arabicum)</span>+++
 
 
 
@@ -4042,7 +4245,7 @@ Rēs linguālibus::
 <<<
 
 [id='188']
-=== [`188`] /South Azerbaijani/ (/Abecedarium Arabicum/)
+=== [`188`] /South Azerbaijani/ (Abecedarium Arabicum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -4071,7 +4274,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/South Azerbaijani/ (/Abecedarium Arabicum/)</span>+++
+    +++<span lang="la">/South Azerbaijani/ (Abecedarium Arabicum)</span>+++
 
 
 
@@ -4498,7 +4701,7 @@ Rēs linguālibus::
 <<<
 
 [id='200']
-=== [`200`] /Bambara language/ (?)
+=== [`200`] /Bambara language/ (/ISO 15924 Zyyy/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -4524,7 +4727,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Bambara language/ (?)</span>+++
+    +++<span lang="la">/Bambara language/ (/ISO 15924 Zyyy/)</span>+++
 
 
 
@@ -4723,7 +4926,7 @@ Rēs linguālibus::
 <<<
 
 [id='206']
-=== [`206`] /Moroccan Arabic/ (/Abecedarium Arabicum/)
+=== [`206`] /Moroccan Arabic/ (Abecedarium Arabicum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -4752,7 +4955,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Moroccan Arabic/ (/Abecedarium Arabicum/)</span>+++
+    +++<span lang="la">/Moroccan Arabic/ (Abecedarium Arabicum)</span>+++
 
 
 
@@ -5027,7 +5230,7 @@ Rēs linguālibus::
 <<<
 
 [id='214']
-=== [`214`] /Min Dong Chinese/ (?)
+=== [`214`] /Min Dong Chinese/ (/ISO 15924 Zyyy/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -5053,7 +5256,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Min Dong Chinese/ (?)</span>+++
+    +++<span lang="la">/Min Dong Chinese/ (/ISO 15924 Zyyy/)</span>+++
 
 
 
@@ -5062,7 +5265,7 @@ Rēs linguālibus::
 <<<
 
 [id='215']
-=== [`215`] /Central Kurdish/ (/Abecedarium Arabicum/)
+=== [`215`] /Central Kurdish/ (Abecedarium Arabicum)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -5091,7 +5294,7 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Central Kurdish/ (/Abecedarium Arabicum/)</span>+++
+    +++<span lang="la">/Central Kurdish/ (Abecedarium Arabicum)</span>+++
 
 
 
@@ -5290,7 +5493,7 @@ Rēs linguālibus::
 <<<
 
 [id='221']
-=== [`221`] /Goan Konkani/ (?)
+=== [`221`] /Goan Konkani/ (/ISO 15924 Zyyy/)
 
 Rēs interlinguālibus::
   ix_uid:::
@@ -5316,7 +5519,1985 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Goan Konkani/ (?)</span>+++
+    +++<span lang="la">/Goan Konkani/ (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='222']
+=== [`222`] /Northern Frisian/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    frr-latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_frr__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_frr+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q28224
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    frr
+
+  ix_glottocode:::
+    nort2626
+
+  ix_iso639p3a3:::
+    frr
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Northern Frisian/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='223']
+=== [`223`] /Hakka Chinese/ (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    hak-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_hak__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_hak+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q33375
+
+  ix_wikilngm:::
+    hak
+
+  ix_glottocode:::
+    hakk1236
+
+  ix_iso639p3a3:::
+    hak
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Hakka Chinese/ (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='224']
+=== [`224`] Lingua Hindi Vitiensis (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    hif-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_hif__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_hif+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q46728
+
+  ix_wikilngm:::
+    hif
+
+  ix_glottocode:::
+    fiji1242
+
+  ix_iso639p3a3:::
+    hif
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Hindi Vitiensis (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='225']
+=== [`225`] /Upper Sorbian/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    hsb-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_hsb__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_hsb+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q13248
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    hsb
+
+  ix_glottocode:::
+    uppe1395
+
+  ix_iso639p3a3:::
+    hsb
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Upper Sorbian/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='226']
+=== [`226`] /Western Armenian/ (Alphabetum Armenium)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    hyw-Armn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_hyw__is_armn
+
+  /HXL Standard, attributes only/:::
+    +i_hyw+is_armn
+
+  ix_wikiq+ix_linguam:::
+    Q180945
+
+  ix_wikiq+ix_scriptum:::
+    Q11932
+
+  ix_wikilngm:::
+    hyw
+
+  ix_glottocode:::
+    homs1234
+
+  ix_iso639p3a3:::
+    hyw
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Western Armenian/ (Alphabetum Armenium)</span>+++
+
+
+
+
+
+<<<
+
+[id='227']
+=== [`227`] Lingua Ilocana (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    ilo-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_ilo__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_ilo+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q35936
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    ilo
+
+  ix_glottocode:::
+    ilok1237
+
+  ix_iso639p3a3:::
+    ilo
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Ilocana (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='228']
+=== [`228`] Lingua Ingussica (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    inh-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_inh__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_inh+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q33509
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    inh
+
+  ix_glottocode:::
+    ingu1240
+
+  ix_iso639p3a3:::
+    inh
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Ingussica (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='229']
+=== [`229`] Lingua Karakalpakensis (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    kaa-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_kaa__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_kaa+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q33541
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    kaa
+
+  ix_glottocode:::
+    kara1467
+
+  ix_iso639p3a3:::
+    kaa
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Karakalpakensis (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='230']
+=== [`230`] Lingua Cabardino-Circassica (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    kbd-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_kbd__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_kbd+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q33522
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    kbd
+
+  ix_glottocode:::
+    kaba1278
+
+  ix_iso639p3a3:::
+    kbd
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Cabardino-Circassica (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='231']
+=== [`231`] /Kabiye language/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    kbp-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_kbp__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_kbp+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q35475
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    kbp
+
+  ix_glottocode:::
+    kabi1261
+
+  ix_iso639p3a3:::
+    kbp
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Kabiye language/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='232']
+=== [`232`] Lingua Maithili (Devanāgarī)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    mai-Deva
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_mai__is_deva
+
+  /HXL Standard, attributes only/:::
+    +i_mai+is_deva
+
+  ix_wikiq+ix_linguam:::
+    Q36109
+
+  ix_wikiq+ix_scriptum:::
+    Q38592
+
+  ix_wikilngm:::
+    mai
+
+  ix_glottocode:::
+    mait1250
+
+  ix_iso639p3a3:::
+    mai
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Maithili (Devanāgarī)</span>+++
+
+
+
+
+
+<<<
+
+[id='233']
+=== [`233`] Lingua Mari pratensis (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    mhr-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_mhr__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_mhr+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q3906614
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    mhr
+
+  ix_glottocode:::
+    east2328
+
+  ix_iso639p3a3:::
+    mhr
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Mari pratensis (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='234']
+=== [`234`] Lingua Mirandica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    mwl-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_mwl__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_mwl+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q13330
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    mwl
+
+  ix_glottocode:::
+    mira1251
+
+  ix_iso639p3a3:::
+    mwl
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Mirandica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='235']
+=== [`235`] /Mazanderani language/ (Abecedarium Arabicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    mzn-Arab
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_mzn__is_arab
+
+  /HXL Standard, attributes only/:::
+    +i_mzn+is_arab
+
+  ix_wikiq+ix_linguam:::
+    Q13356
+
+  ix_wikiq+ix_scriptum:::
+    Q8196
+
+  ix_wikilngm:::
+    mzn
+
+  ix_glottocode:::
+    maza1291
+
+  ix_iso639p3a3:::
+    mzn
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Mazanderani language/ (Abecedarium Arabicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='236']
+=== [`236`] Lingua Navatlaca (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    nah-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_nah__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_nah+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q13300
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    nah
+
+  ix_iso639p3a3:::
+    nah
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Navatlaca (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='237']
+=== [`237`] /Min Nan Chinese/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    nan-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_nan__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_nan+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q36495
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    nan
+
+  ix_glottocode:::
+    minn1241
+
+  ix_iso639p3a3:::
+    nan
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Min Nan Chinese/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='238']
+=== [`238`] Lingua Newari (Devanāgarī)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    new-Deva
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_new__is_deva
+
+  /HXL Standard, attributes only/:::
+    +i_new+is_deva
+
+  ix_wikiq+ix_linguam:::
+    Q33979
+
+  ix_wikiq+ix_scriptum:::
+    Q38592
+
+  ix_wikilngm:::
+    new
+
+  ix_glottocode:::
+    newa1246
+
+  ix_iso639p3a3:::
+    new
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Newari (Devanāgarī)</span>+++
+
+
+
+
+
+<<<
+
+[id='239']
+=== [`239`] /Kapampangan language/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    pam-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_pam__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_pam+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q36121
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    pam
+
+  ix_glottocode:::
+    pamp1243
+
+  ix_iso639p3a3:::
+    pam
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Kapampangan language/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='240']
+=== [`240`] /Palatine German language/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    pfl-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_pfl__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_pfl+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q23014
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    pfl
+
+  ix_glottocode:::
+    pala1330
+
+  ix_iso639p3a3:::
+    pfl
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Palatine German language/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='241']
+=== [`241`] Lingua Paniabica occidentalis (Abecedarium Arabicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    pnb-Arab
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_pnb__is_arab
+
+  /HXL Standard, attributes only/:::
+    +i_pnb+is_arab
+
+  ix_wikiq+ix_linguam:::
+    Q1389492
+
+  ix_wikiq+ix_scriptum:::
+    Q8196
+
+  ix_wikilngm:::
+    pnb
+
+  ix_glottocode:::
+    west2386
+
+  ix_iso639p3a3:::
+    pnb
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Paniabica occidentalis (Abecedarium Arabicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='242']
+=== [`242`] Lingua Rusinica (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    rue-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_rue__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_rue+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q26245
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    rue
+
+  ix_glottocode:::
+    rusy1239
+
+  ix_iso639p3a3:::
+    rue
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Rusinica (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='243']
+=== [`243`] Lingua aromanian (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    rup-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_rup__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_rup+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q29316
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    rup
+
+  ix_glottocode:::
+    arom1237
+
+  ix_iso639p3a3:::
+    rup
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua aromanian (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='244']
+=== [`244`] Lingua Iacutica (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    sah-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_sah__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_sah+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q34299
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    sah
+
+  ix_glottocode:::
+    yaku1245
+
+  ix_iso639p3a3:::
+    sah
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Iacutica (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='245']
+=== [`245`] Lingua Samogitica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    sgs-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_sgs__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_sgs+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q213434
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    sgs
+
+  ix_glottocode:::
+    samo1265
+
+  ix_iso639p3a3:::
+    sgs
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Samogitica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='246']
+=== [`246`] Shilha language (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    shi-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_shi__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_shi+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q34152
+
+  ix_wikilngm:::
+    shi
+
+  ix_glottocode:::
+    tach1250
+
+  ix_iso639p3a3:::
+    shi
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Shilha language (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='247']
+=== [`247`] Lingua Shan (/ISO 15924 Mymr/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    shn-Mymr
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_shn__is_mymr
+
+  /HXL Standard, attributes only/:::
+    +i_shn+is_mymr
+
+  ix_wikiq+ix_linguam:::
+    Q56482
+
+  ix_wikiq+ix_scriptum:::
+    Q43887939
+
+  ix_wikilngm:::
+    shn
+
+  ix_glottocode:::
+    shan1277
+
+  ix_iso639p3a3:::
+    shn
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Shan (/ISO 15924 Mymr/)</span>+++
+
+
+
+
+
+<<<
+
+[id='248']
+=== [`248`] /Inari Sami/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    smn-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_smn__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_smn+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q33462
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    smn
+
+  ix_glottocode:::
+    inar1241
+
+  ix_iso639p3a3:::
+    smn
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Inari Sami/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='249']
+=== [`249`] /Saterland Frisian language/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    stq-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_stq__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_stq+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q27154
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    stq
+
+  ix_glottocode:::
+    sate1242
+
+  ix_iso639p3a3:::
+    stq
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Saterland Frisian language/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='250']
+=== [`250`] Lingua Silesica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    szl-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_szl__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_szl+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q30319
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    szl
+
+  ix_glottocode:::
+    sile1253
+
+  ix_iso639p3a3:::
+    szl
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Silesica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='251']
+=== [`251`] Lingua Tuluva (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    tcy-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_tcy__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_tcy+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q34251
+
+  ix_wikilngm:::
+    tcy
+
+  ix_glottocode:::
+    tulu1258
+
+  ix_iso639p3a3:::
+    tcy
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Tuluva (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='252']
+=== [`252`] Lingua Udmurtica (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    udm-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_udm__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_udm+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q13238
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    udm
+
+  ix_glottocode:::
+    udmu1245
+
+  ix_iso639p3a3:::
+    udm
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Udmurtica (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='253']
+=== [`253`] Lingua Vepsica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    vep-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_vep__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_vep+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q32747
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    vep
+
+  ix_glottocode:::
+    veps1250
+
+  ix_iso639p3a3:::
+    vep
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Vepsica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='254']
+=== [`254`] Lingua Voruvica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    vro-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_vro__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_vro+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q32762
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    vro
+
+  ix_glottocode:::
+    sout2679
+
+  ix_iso639p3a3:::
+    vro
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Voruvica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='255']
+=== [`255`] Lingua Yue (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    yue-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_yue__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_yue+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q7033959
+
+  ix_wikilngm:::
+    yue
+
+  ix_glottocode:::
+    yuec1235
+
+  ix_iso639p3a3:::
+    yue
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Yue (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='256']
+=== [`256`] Lingua Tatarica Crimensis (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    crh-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_crh__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_crh+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q107557485
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    crh-latn
+
+  ix_glottocode:::
+    crim1257
+
+  ix_iso639p3a3:::
+    crh
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Tatarica Crimensis (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='257']
+=== [`257`] Lingua Tatarica Crimensis (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    crh-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_crh__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_crh+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q107557467
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    crh-cyrl
+
+  ix_glottocode:::
+    crim1257
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Tatarica Crimensis (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='258']
+=== [`258`] Lingua Iudaeo-Hispanica (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    lad-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_lad__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_lad+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q36196
+
+  ix_wikilngm:::
+    lad
+
+  ix_glottocode:::
+    ladi1251
+
+  ix_iso639p3a3:::
+    lad
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Iudaeo-Hispanica (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='259']
+=== [`259`] Lingua Lesghica (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    lez-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_lez__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_lez+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q31746
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    lez
+
+  ix_glottocode:::
+    lezg1247
+
+  ix_iso639p3a3:::
+    lez
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Lesghica (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='260']
+=== [`260`] Macrolingua Suahelica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    swa-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_swa__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_swa+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q7838
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    sw
+
+  ix_iso639p3a3:::
+    swa
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Macrolingua Suahelica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='261']
+=== [`261`] /Zhuang languages/ (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    zha-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_zha__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_zha+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q13216
+
+  ix_wikilngm:::
+    za
+
+  ix_glottocode:::
+    nort3180
+
+  ix_iso639p3a3:::
+    zha
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Zhuang languages/ (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='262']
+=== [`262`] Lingua yoruba (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    yor-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_yor__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_yor+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q34311
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    yo
+
+  ix_glottocode:::
+    yoru1245
+
+  ix_iso639p3a3:::
+    yor
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua yoruba (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='263']
+=== [`263`] Macrolingua Iudaeo-Germanica (Alphabetum Hebraicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    yid-Hebr
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_yid__is_hebr
+
+  /HXL Standard, attributes only/:::
+    +i_yid+is_hebr
+
+  ix_wikiq+ix_linguam:::
+    Q8641
+
+  ix_wikiq+ix_scriptum:::
+    Q33513
+
+  ix_wikilngm:::
+    yi
+
+  ix_glottocode:::
+    yidd1255
+
+  ix_iso639p3a3:::
+    yid
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Macrolingua Iudaeo-Germanica (Alphabetum Hebraicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='264']
+=== [`264`] Lingua Xosana (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    xho-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_xho__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_xho+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q13218
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    xh
+
+  ix_glottocode:::
+    xhos1239
+
+  ix_iso639p3a3:::
+    xho
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Xosana (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='265']
+=== [`265`] Macrolingua Uzbecica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    uzb-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_uzb__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_uzb+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q9264
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    uz
+
+  ix_glottocode:::
+    uzbe1247
+
+  ix_iso639p3a3:::
+    uzb
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Macrolingua Uzbecica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='266']
+=== [`266`] Lingua Uigurica (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    uig-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_uig__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_uig+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q13263
+
+  ix_wikilngm:::
+    ug
+
+  ix_glottocode:::
+    uigh1240
+
+  ix_iso639p3a3:::
+    uig
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Uigurica (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='267']
+=== [`267`] Lingua Uigurica (Abecedarium Arabicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    uig-Arab
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_uig__is_arab
+
+  /HXL Standard, attributes only/:::
+    +i_uig+is_arab
+
+  ix_wikiq+ix_linguam:::
+    Q22338135
+
+  ix_wikiq+ix_scriptum:::
+    Q8196
+
+  ix_wikilngm:::
+    ug-arab
+
+  ix_glottocode:::
+    uigh1240
+
+  ix_iso639p3a3:::
+    uig
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Uigurica (Abecedarium Arabicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='268']
+=== [`268`] Lingua Uigurica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    uig-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_uig__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_uig+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q22338145
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    ug-latn
+
+  ix_glottocode:::
+    uigh1240
+
+  ix_iso639p3a3:::
+    uig
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Uigurica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='269']
+=== [`269`] Lingua Tatarica (/ISO 15924 Zyyy/)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    tat-Zyyy
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_tat__is_zyyy
+
+  /HXL Standard, attributes only/:::
+    +i_tat+is_zyyy
+
+  ix_wikiq+ix_linguam:::
+    Q25285
+
+  ix_wikilngm:::
+    tt
+
+  ix_glottocode:::
+    tata1255
+
+  ix_iso639p3a3:::
+    tat
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Tatarica (/ISO 15924 Zyyy/)</span>+++
+
+
+
+
+
+<<<
+
+[id='270']
+=== [`270`] Lingua Tatarica (Abecedarium Cyrillicum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    tat-Cyrl
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_tat__is_cyrl
+
+  /HXL Standard, attributes only/:::
+    +i_tat+is_cyrl
+
+  ix_wikiq+ix_linguam:::
+    Q39132549
+
+  ix_wikiq+ix_scriptum:::
+    Q8209
+
+  ix_wikilngm:::
+    tt-cyrl
+
+  ix_glottocode:::
+    tata1255
+
+  ix_iso639p3a3:::
+    tat
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Tatarica (Abecedarium Cyrillicum)</span>+++
+
+
+
+
+
+<<<
+
+[id='271']
+=== [`271`] Lingua Tatarica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    tat-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_tat__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_tat+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q39134544
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    tt-latn
+
+  ix_glottocode:::
+    tata1255
+
+  ix_iso639p3a3:::
+    tat
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Tatarica (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='272']
+=== [`272`] /Tsonga language/ (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    tso-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_tso__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_tso+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q34327
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    ts
+
+  ix_glottocode:::
+    tson1249
+
+  ix_iso639p3a3:::
+    tso
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/Tsonga language/ (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='273']
+=== [`273`] Lingua Tagalog (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    tgl-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_tgl__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_tgl+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q34057
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    tl
+
+  ix_glottocode:::
+    taga1270
+
+  ix_iso639p3a3:::
+    tgl
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Tagalog (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='274']
+=== [`274`] Lingua Turcomannica (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    tuk-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_tuk__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_tuk+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q9267
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    tk
+
+  ix_glottocode:::
+    turk1304
+
+  ix_iso639p3a3:::
+    tuk
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Turcomannica (Abecedarium Latinum)</span>+++
 
 
 
@@ -5431,6 +7612,82 @@ Rēs interlinguālibus::
 Rēs linguālibus::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">Lingua Occidental (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='303']
+=== [`303`] Lojban (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    jbo-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_jbo__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_jbo+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q36350
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    jbo
+
+  ix_glottocode:::
+    lojb1234
+
+  ix_iso639p3a3:::
+    jbo
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lojban (Abecedarium Latinum)</span>+++
+
+
+
+
+
+<<<
+
+[id='304']
+=== [`304`] Lingua Novial (Abecedarium Latinum)
+
+Rēs interlinguālibus::
+  ix_uid:::
+    nov-Latn
+
+  /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/:::
+    __i_nov__is_latn
+
+  /HXL Standard, attributes only/:::
+    +i_nov+is_latn
+
+  ix_wikiq+ix_linguam:::
+    Q36738
+
+  ix_wikiq+ix_scriptum:::
+    Q8229
+
+  ix_wikilngm:::
+    nov
+
+  ix_glottocode:::
+    novi1234
+
+  ix_iso639p3a3:::
+    nov
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">Lingua Novial (Abecedarium Latinum)</span>+++
 
 
 
