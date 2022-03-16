@@ -809,11 +809,16 @@ file_translate_csv_de_numerordinatio_q() {
   objectivum_archivum_temporarium_b="${ROOTDIR}/999999/0/$_nomen.q.txt"
   objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
   objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
-  objectivum_archivum_temporarium_b_u_wiki_1_3="${ROOTDIR}/999999/0/$_nomen~1.wikiq.tm.hxl.csv"
-  objectivum_archivum_temporarium_b_u_wiki_2_3="${ROOTDIR}/999999/0/$_nomen~2.wikiq.tm.hxl.csv"
-  objectivum_archivum_temporarium_b_u_wiki_3_3="${ROOTDIR}/999999/0/$_nomen~3.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_1_5="${ROOTDIR}/999999/0/$_nomen~1.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_2_5="${ROOTDIR}/999999/0/$_nomen~2.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_3_5="${ROOTDIR}/999999/0/$_nomen~3.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_4_5="${ROOTDIR}/999999/0/$_nomen~4.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_5_5="${ROOTDIR}/999999/0/$_nomen~5.wikiq.tm.hxl.csv"
 
   objectivum_archivum_temporarium_b_u_wiki_1m2="${ROOTDIR}/999999/0/$_nomen~1+2.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_1m2m3="${ROOTDIR}/999999/0/$_nomen~1+2+3.wikiq.tm.hxl.csv"
+  objectivum_archivum_temporarium_b_u_wiki_1m2m3m4="${ROOTDIR}/999999/0/$_nomen~1+2+3+4.wikiq.tm.hxl.csv"
+  # objectivum_archivum_temporarium_b_u_wiki_1m2m3m4m5="${ROOTDIR}/999999/0/$_nomen~1+2+3+4+5.wikiq.tm.hxl.csv"
 
   # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
 
@@ -851,42 +856,91 @@ file_translate_csv_de_numerordinatio_q() {
 
   # exit 1
 
+  echo "1/5"
   "${ROOTDIR}/999999999/0/1603_3_12.py" \
     --actionem-sparql \
-    --lingua-divisioni=3 \
+    --lingua-divisioni=5 \
     --lingua-paginae=1 \
     --query <"$objectivum_archivum_temporarium_b_u" |
     ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
-      >"$objectivum_archivum_temporarium_b_u_wiki_1_3"
+      >"$objectivum_archivum_temporarium_b_u_wiki_1_5"
 
+  echo "2/5"
   "${ROOTDIR}/999999999/0/1603_3_12.py" \
     --actionem-sparql \
-    --lingua-divisioni=3 \
+    --lingua-divisioni=5 \
     --lingua-paginae=2 \
     --query <"$objectivum_archivum_temporarium_b_u" |
     ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
-      >"$objectivum_archivum_temporarium_b_u_wiki_2_3"
+      >"$objectivum_archivum_temporarium_b_u_wiki_2_5"
 
+  echo "3/5"
   "${ROOTDIR}/999999999/0/1603_3_12.py" \
     --actionem-sparql \
-    --lingua-divisioni=3 \
+    --lingua-divisioni=5 \
     --lingua-paginae=3 \
     --query <"$objectivum_archivum_temporarium_b_u" |
     ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
-      >"$objectivum_archivum_temporarium_b_u_wiki_3_3"
-  # "$objectivum_archivum_temporarium_b_u"
+      >"$objectivum_archivum_temporarium_b_u_wiki_3_5"
+
+  echo "4/5"
+  "${ROOTDIR}/999999999/0/1603_3_12.py" \
+    --actionem-sparql \
+    --lingua-divisioni=5 \
+    --lingua-paginae=4 \
+    --query <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+      >"$objectivum_archivum_temporarium_b_u_wiki_4_5"
+
+  echo "5/5"
+  "${ROOTDIR}/999999999/0/1603_3_12.py" \
+    --actionem-sparql \
+    --lingua-divisioni=5 \
+    --lingua-paginae=5 \
+    --query <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+      >"$objectivum_archivum_temporarium_b_u_wiki_5_5"
+
+  # Merging now...
+  echo "Merging now..."
 
   hxlmerge --keys='#item+conceptum+codicem' \
     --tags='#item+rem' \
-    --merge="$objectivum_archivum_temporarium_b_u_wiki_2_3" \
-    "$objectivum_archivum_temporarium_b_u_wiki_1_3" \
+    --merge="$objectivum_archivum_temporarium_b_u_wiki_2_5" \
+    "$objectivum_archivum_temporarium_b_u_wiki_1_5" \
     >"$objectivum_archivum_temporarium_b_u_wiki_1m2"
 
   hxlmerge --keys='#item+conceptum+codicem' \
     --tags='#item+rem' \
-    --merge="$objectivum_archivum_temporarium_b_u_wiki_3_3" \
+    --merge="$objectivum_archivum_temporarium_b_u_wiki_3_5" \
     "$objectivum_archivum_temporarium_b_u_wiki_1m2" \
+    >"$objectivum_archivum_temporarium_b_u_wiki_1m2m3"
+
+  hxlmerge --keys='#item+conceptum+codicem' \
+    --tags='#item+rem' \
+    --merge="$objectivum_archivum_temporarium_b_u_wiki_4_5" \
+    "$objectivum_archivum_temporarium_b_u_wiki_1m2m3" \
+    >"$objectivum_archivum_temporarium_b_u_wiki_1m2m3m4"
+
+  hxlmerge --keys='#item+conceptum+codicem' \
+    --tags='#item+rem' \
+    --merge="$objectivum_archivum_temporarium_b_u_wiki_5_5" \
+    "$objectivum_archivum_temporarium_b_u_wiki_1m2m3m4" \
     >"$objectivum_archivum_temporarium_b_u_wiki"
+
+  # Merging done!
+
+  # hxlmerge --keys='#item+conceptum+codicem' \
+  #   --tags='#item+rem' \
+  #   --merge="$objectivum_archivum_temporarium_b_u_wiki_2_3" \
+  #   "$objectivum_archivum_temporarium_b_u_wiki_1_3" \
+  #   >"$objectivum_archivum_temporarium_b_u_wiki_1m2"
+
+  # hxlmerge --keys='#item+conceptum+codicem' \
+  #   --tags='#item+rem' \
+  #   --merge="$objectivum_archivum_temporarium_b_u_wiki_3_3" \
+  #   "$objectivum_archivum_temporarium_b_u_wiki_1m2" \
+  #   >"$objectivum_archivum_temporarium_b_u_wiki"
 
   # TODO: implement check fo see if there is more than one Q columns, then use
   #       as baseline
@@ -894,10 +948,14 @@ file_translate_csv_de_numerordinatio_q() {
   rm "$objectivum_archivum_temporarium"
   rm "$objectivum_archivum_temporarium_b"
   rm "$objectivum_archivum_temporarium_b_u"
-  rm "$objectivum_archivum_temporarium_b_u_wiki_1_3"
-  rm "$objectivum_archivum_temporarium_b_u_wiki_2_3"
-  rm "$objectivum_archivum_temporarium_b_u_wiki_3_3"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_1_5"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_2_5"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_3_5"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_4_5"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_5_5"
   rm "$objectivum_archivum_temporarium_b_u_wiki_1m2"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_1m2m3"
+  rm "$objectivum_archivum_temporarium_b_u_wiki_1m2m3m4"
 
   # cp "$objectivum_archivum_temporarium_b_u_wiki_1_3" "$objectivum_archivum_temporarium_b_u_wiki"
 

@@ -46,6 +46,11 @@
 # @TODO: https://docs.asciidoctor.org/asciidoc/latest/sections/parts/
 #         https://docs.asciidoctor.org/asciidoc/latest/sections
 #         /part-numbers-and-signifier/
+
+# @TODO: implement this tabular format (uses a type of JSON)
+#        https://www.mediawiki.org/wiki
+#        /Help:Tabular_Data?rdfrom=commons:Help:Tabular_Data
+
 import sys
 import os
 import argparse
