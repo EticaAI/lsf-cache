@@ -856,6 +856,13 @@ file_translate_csv_de_numerordinatio_q() {
 
   # exit 1
 
+  # TODO: implement check if return result on 1603_45_1~5.wikiq.tm.hxl.csv
+  #       is something such as 
+  #  ----
+  #  #Service load too high,# please come back later
+  #  
+  #
+  #  -----
   echo "1/5"
   "${ROOTDIR}/999999999/0/1603_3_12.py" \
     --actionem-sparql \
@@ -910,11 +917,15 @@ file_translate_csv_de_numerordinatio_q() {
     "$objectivum_archivum_temporarium_b_u_wiki_1_5" \
     >"$objectivum_archivum_temporarium_b_u_wiki_1m2"
 
+  sed -i '1d' "${objectivum_archivum_temporarium_b_u_wiki_1m2}"
+
   hxlmerge --keys='#item+conceptum+codicem' \
     --tags='#item+rem' \
     --merge="$objectivum_archivum_temporarium_b_u_wiki_3_5" \
     "$objectivum_archivum_temporarium_b_u_wiki_1m2" \
     >"$objectivum_archivum_temporarium_b_u_wiki_1m2m3"
+
+  sed -i '1d' "${objectivum_archivum_temporarium_b_u_wiki_1m2m3}"
 
   hxlmerge --keys='#item+conceptum+codicem' \
     --tags='#item+rem' \
@@ -922,11 +933,15 @@ file_translate_csv_de_numerordinatio_q() {
     "$objectivum_archivum_temporarium_b_u_wiki_1m2m3" \
     >"$objectivum_archivum_temporarium_b_u_wiki_1m2m3m4"
 
+  sed -i '1d' "${objectivum_archivum_temporarium_b_u_wiki_1m2m3m4}"
+
   hxlmerge --keys='#item+conceptum+codicem' \
     --tags='#item+rem' \
     --merge="$objectivum_archivum_temporarium_b_u_wiki_5_5" \
     "$objectivum_archivum_temporarium_b_u_wiki_1m2m3m4" \
     >"$objectivum_archivum_temporarium_b_u_wiki"
+
+  sed -i '1d' "${objectivum_archivum_temporarium_b_u_wiki}"
 
   # Merging done!
 

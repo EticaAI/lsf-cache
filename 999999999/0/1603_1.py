@@ -85,6 +85,8 @@ Exemplōrum gratiā:
 
     {0} --codex-de 1603_25_1 --codex-copertae
 
+    {0} --codex-de 1603_25_1 --codex-in-tabulam-json
+
 """.format(__file__)
 
 NUMERORDINATIO_BASIM = os.getenv('NUMERORDINATIO_BASIM', os.getcwd())
@@ -1763,6 +1765,8 @@ class Codex:
     def imprimere(self) -> list:
         """imprimere /print/@eng-Latn
 
+        /print book (AsciiDoc format)/@eng-Latn
+
         Trivia:
         - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
         - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
@@ -1836,6 +1840,8 @@ class Codex:
     def imprimere_codex_copertae(self) -> list:
         """imprimere /print/@eng-Latn
 
+        /print book cover (SVG format)/@eng-Latn
+
         Trivia:
         - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
         - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
@@ -1863,6 +1869,36 @@ class Codex:
         paginae.append(codex_copertae)
 
         return paginae
+
+    def imprimere_codex_in_tabulam_json(self) -> list:
+        """imprimere /print/@eng-Latn
+
+        /print book cover (SVG format)/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
+        - in (+ ablative), in (+ accusative)
+          https://en.wiktionary.org/wiki/in#Latin
+          - (+ accusative) into, to
+        - tabulam, f, s, /accusative/,
+          https://en.wiktionary.org/wiki/tabula#Latin
+        - json, ---,
+          - https://www.json.org/
+          - https://www.mediawiki.org/wiki/Help:Tabular_Data
+
+        Returns:
+            [list]:
+        """
+        # We simulate book press without actually storing the result
+        self.imprimere()
+        from pathlib import Path
+        # @TODO
+        # paginae = ['{"TODO": 1}']
+
+        tabulam = CodexInTabulamJson(self)
+
+        return [tabulam.imprimere_textum()]
 
     def methodi_ex_codice(self) -> list:
         """Methodī ex cōdice
@@ -2596,6 +2632,269 @@ class CodexExtero:
         # https://en.wiktionary.org/wiki/caveo#Latin
         # methodīs, f, pl, (Dative) https://en.wiktionary.org/wiki/methodus#Latin
         return "TODO CodexExtero methodis"
+
+
+class CodexInTabulamJson:
+    """Codex Sarcinarum Adnexīs
+
+    //Packages of attachments from Codex//
+
+    Trivia:
+    - cōdex, m, s, (Nominative) https://en.wiktionary.org/wiki/codex#Latin
+    - adnexīs, m/f/n, pl (Dative) https://en.wiktionary.org/wiki/adnexus#Latin
+    - annexīs, m/f/n, pl (Dative) https://en.wiktionary.org/wiki/annexus#Latin
+    - sarcinārum, f, pl, (Gengitive) https://en.wiktionary.org/wiki/sarcina
+
+    /print book cover (SVG format)/@eng-Latn
+
+    Trivia:
+    - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+    - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
+    - in (+ ablative), in (+ accusative)
+        https://en.wiktionary.org/wiki/in#Latin
+        - (+ accusative) into, to
+    - tabulam, f, s, /accusative/,
+        https://en.wiktionary.org/wiki/tabula#Latin
+    - json, ---,
+        - https://www.json.org/
+        - https://www.mediawiki.org/wiki/Help:Tabular_Data
+    """
+
+    # sarcinae = ['todo']
+    # completum = []
+    # sarcina_index = []
+    linguae = {}
+
+    def __init__(
+        self,
+        codex: Type['Codex']
+    ):
+        self.codex = codex
+
+        self.initiari()
+
+    def initiari(self):
+        """initiarī
+
+        Trivia:
+        - initiārī, https://en.wiktionary.org/wiki/initio#Latin
+        """
+        # self.linguae['#item+rem+i_lat+is_latn'] = 'la'
+        # self.linguae['#item+rem+i_eng+is_latn'] = 'en'
+        # self.linguae['#item+rem+i_por+is_latn'] = 'pt'
+
+        for _clavem, item in self.codex.dictionaria_linguarum.dictionaria_codex.items():
+            # raise ValueError(str(item))
+            if '#item+rem+i_qcc+is_zxxx+ix_wikilngm' in item and \
+                    item['#item+rem+i_qcc+is_zxxx+ix_wikilngm']:
+                hashtag = '#item+rem' + item['#item+rem+i_qcc+is_zxxx+ix_hxla']
+                self.linguae[hashtag] = \
+                    item['#item+rem+i_qcc+is_zxxx+ix_wikilngm']
+
+        # raise ValueError(str(self.linguae))
+
+    def _columnae(self) -> list:
+        """_columnae /Column fields of the tabular format/@eng-Latn
+
+        Trivia:
+        - columnae, f, pl, /Nominative/, https://en.wiktionary.org/wiki/columna
+
+        Returns:
+            list: _description_
+        """
+        res = []
+        res.append({'name': 'codicem', 'type': 'string',
+                    'title': {
+                        'la': 'Codicem',
+                        'en': 'Numerordinatio local Code',
+                    }})
+        res.append(
+            {'name': 'ix_wikiq', 'type': 'string',
+             'title': {
+                 'la': 'Vicidata QID',
+                 'en': 'Wikidata QID'
+             }})
+        res.append(
+            {'name': 'rem__i_mul__is_zyyy', 'type': 'string',
+             'title': {
+                 'la': 'Linguae multiplīs (Scrīptum incognitō)',
+                 'en': 'Multiple languages (unknown writing system)'
+             }})
+
+        clavem = self.codex.codex[0].keys()
+        # for item in clavem:
+        #     pass
+        # res.append(
+        #     {'name': 'item__rem__terminum', 'type': 'localized',
+        #      'title': {
+        #          'la': 'Lingua Latina (Abecedarium Latinum)',
+        #          'en': 'Lingua Anglica (Abecedarium Latinum)',
+        #          'pt': 'Lingua Lusitana (Abecedarium Latinum)',
+        #      }})
+        res.append(
+            {'name': 'rem__terminum', 'type': 'localized',
+             'title': {
+                 'la': 'Rēs linguālibus',
+                 'en': 'Lingual thing',
+                 #  'en': 'Lingua Anglica (Abecedarium Latinum)',
+                 #  'pt': 'Lingua Lusitana (Abecedarium Latinum)',
+             }})
+
+        return res
+
+    def _linguae_ex_re(self, res) -> list:
+        """linguae ex rē /Languages of the thing/@eng-Latn
+
+        Trivia:
+        - rēs, f, s, /Nominative/, https://en.wiktionary.org/wiki/res#Latin
+        - linguīs, f, pl, /Nominative/, https://en.wiktionary.org/wiki/columna
+        - linguae, f, pl, /Nominative/,
+        - ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+        - rē, f, s, /Ablative)
+
+        Returns:
+            list: _description_
+        """
+        resultatum = {}
+        for clavem, item in res.items():
+            if clavem in self.linguae and item:
+                resultatum[self.linguae[clavem]] = item
+
+        return resultatum if resultatum else None
+
+    def dicitionaria_rebus(self) -> list:
+        """_columnae /Column fields of the tabular format/@eng-Latn
+
+        Trivia:
+        - rēbus, f, pl, /Dative/, https://en.wiktionary.org/wiki/res#Latin
+        - dictiōnāria, n, pl, /Nominative/
+          https://en.wiktionary.org/wiki/dictionarium#Latin
+
+        Returns:
+            list: _description_
+        """
+        res = []
+
+        # res.append([
+        #     '1',
+        #     'Q1',
+        #     '/salvi mundi!/@lat-Latn',
+        #     {
+        #         'la': 'testum est',
+        #         'en': 'testing testing',
+        #         'pt': 'teste teste',
+        #     }
+        # ])
+        # res.append([
+        #     '2',
+        #     'Q2',
+        #     '/test/@lat-Latn',
+        #     None
+        # ])
+        # res.append([
+        #     '2_3',
+        #     'Q345',
+        #     '/test test test/@lat-Latn',
+        #     {
+        #         'pt': 'teste teste',
+        #     }
+        # ])
+        # res.append([
+        #     '33',
+        #     'Q33',
+        #     '/teste em espanhol/@por-Latn',
+        #     {
+        #         'es': 'teste en espanol',
+        #     }
+        # ])
+
+        for item in self.codex.codex:
+            codicem_loci = item['#item+conceptum+codicem']
+
+            if codicem_loci.find('0_999') == 0:
+                continue
+
+            if codicem_loci.find('0_1603') == 0:
+                continue
+
+            if '#item+rem+i_mul+is_zyyy' in item \
+                    and item['#item+rem+i_mul+is_zyyy']:
+                item_rem_mul = item['#item+rem+i_mul+is_zyyy']
+            elif '#item+rem+i_lat+is_latn' in item \
+                    and item['#item+rem+i_lat+is_latn']:
+                item_rem_mul = item['#item+rem+i_lat+is_latn']
+            else:
+                item_rem_mul = None
+
+            if '#item+rem+i_qcc+is_zxxx+ix_wikiq' in item \
+                    and item['#item+rem+i_qcc+is_zxxx+ix_wikiq']:
+                qcodicem = item['#item+rem+i_qcc+is_zxxx+ix_wikiq']
+            else:
+                qcodicem = None
+
+            # item_data =
+            res.append([
+                item['#item+conceptum+codicem'],
+                qcodicem,
+                item_rem_mul,
+                self._linguae_ex_re(item)
+            ])
+            # item_data.append(item['#item+conceptum+codicem'])
+
+        return res
+
+    def imprimere_textum(self) -> list:
+        """imprimere /print/@eng-Latn
+
+        Trivia:
+        - cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex#Latin
+        - imprimere, v, s, (), https://en.wiktionary.org/wiki/imprimo#Latin
+
+        Returns:
+            [list]:
+        """
+        # numerum = self.codex.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
+        # nomen = self.codex.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        descriptionem = '[{0}] {1}'.format(
+            self.codex.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
+            self.codex.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        )
+
+        scope_and_content = self.codex.quod_res('0_1603_1_7_2616_7535')
+        if scope_and_content:
+            codexfacto = qhxl(scope_and_content, [
+                              '#item+rem+i_qcc+is_zxxx+ix_codexfacto'])
+            if codexfacto:
+                import textwrap
+                codexfacto = codexfacto.replace(
+                    '\\n', '').replace('\\t', '').strip()
+                # Wikimedia Data Preview wants very short descriptions
+                codexfacto = textwrap.shorten(codexfacto, 350)
+                # if len(codexfacto) > 400:
+                #     codexfacto = codexfacto[:400] + '...'
+
+                descriptionem = '{0}. {1}'.format(
+                    descriptionem, codexfacto)
+
+        # 0_1603_1_7_2616_7535
+
+        resultatum = {
+            'license': "CC0-1.0",
+            'sources': "https://github.com/EticaAI/multilingual-lexicography "
+            "+ https://www.wikidata.org/wiki/Help:Multilingual",
+            'description': {
+                'la': descriptionem
+            },
+            'schema': {
+                'fields': self._columnae()
+            },
+            'data': self.dicitionaria_rebus()
+        }
+        # paginae = ['{"TODO": 11}']
+        import json
+
+        return json.dumps(
+            resultatum, indent=4, ensure_ascii=False, sort_keys=False)
 
 
 class CodexSarcinarumAdnexis:
@@ -3885,12 +4184,24 @@ class CLI_2600:
             type=lambda x: x.split(',')
         )
 
-        archivum.add_argument(
+        codex.add_argument(
             '--codex-copertae',
             help='Pre-calculate the codex, but only generate '
             'Codex cover (SVG)',
             # metavar='',
             dest='codex_copertae',
+            # const=True,
+            action='store_true',
+            # nargs='?'
+        )
+
+        codex.add_argument(
+            '--codex-in-tabulam-json',
+            help='Pre-calculate the codex, but only generate '
+            'Tabular Data (MediaWiki syntax 1) (JSON). '
+            'See https://www.mediawiki.org/wiki/Help:Tabular_Data',
+            # metavar='',
+            dest='codex_in_tabulam_json',
             # const=True,
             action='store_true',
             # nargs='?'
@@ -3980,10 +4291,16 @@ class CLI_2600:
                 # codex_copertae=self.pyargs.codex_copertae
             )
             # data = ['TODO']
-            if not self.pyargs.codex_copertae:
+            # codex_in_tabulam_json
+            if not self.pyargs.codex_copertae and \
+                    not self.pyargs.codex_in_tabulam_json:
                 return self.output(codex.imprimere())
-            else:
+            elif self.pyargs.codex_in_tabulam_json:
+                return self.output(codex.imprimere_codex_in_tabulam_json())
+            elif self.pyargs.codex_copertae:
                 return self.output(codex.imprimere_codex_copertae())
+            else:
+                raise ValueError('ERROR: unknown codex option')
 
         if self.pyargs.dictionaria_numerordinatio:
             dictionaria_numerordinatio = DictionariaNumerordinatio()

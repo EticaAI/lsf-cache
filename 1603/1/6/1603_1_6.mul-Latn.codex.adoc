@@ -50,7 +50,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-12T21:03:43
+2022-03-16T07:43:10
 
 |
 /SPDX license ID/@eng-Latn
@@ -118,7 +118,7 @@ NOTE: #`0_1603_1_7_2616_7535` ?#
 
 ==== Rēs linguālibus: 2
 
-[%header,cols="15h,25a,~,15"]
+[%header,cols="15h,25a,~,17"]
 |===
 |
 Cōdex linguae
@@ -157,53 +157,77 @@ Lingua Anglica (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 8
 Rēs::
-  /SPDX license ID/@eng-Latn:::
+  /Wiki QID/:::
     Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P2479[P2479]
-
       /rēgulam/;;
-        [0-9A-Za-z\.\-]{3,36}[+]?
-
-      /formatter URL/@eng-Latn;;
-        https://spdx.org/licenses/$1.html
+        Q[1-9]\d*
 
       ix_hxlix;;
-        ix_wikip2479
+        ix_wikiq
 
       ix_hxlvoc;;
-        v_wiki_p_2479
+        v_wiki_q
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
+        +++<span lang="la">/Wiki QID/</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">SPDX license identifier</span>+++
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
-  UNESCO thēsaurus:::
+  /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P3916[P3916]
-
-      /rēgulam/;;
-        concept[1-9]\d*
-
-      /formatter URL/@eng-Latn;;
-        http://vocabularies.unesco.org/thesaurus/$1
+        https://www.wikidata.org/wiki/Property:P577[P577]
 
       ix_hxlix;;
-        ix_wikip3916
+        ix_wikip577
 
       ix_hxlvoc;;
-        v_wiki_p_3916
+        v_wiki_p_577
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">UNESCO thēsaurus</span>+++
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">The UNESCO Thesaurus is a controlled and structured list of terms used in subject analysis and retrieval of documents and publications in the fields of education, culture, natural sciences, social and human sciences, communication and information. Continuously enriched and updated, its multidisciplinary terminology reflects the evolution of UNESCO's programmes and activities.</span>+++
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
+  /reference URL/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P854[P854]
+
+      ix_hxlix;;
+        ix_wikip854
+
+      ix_hxlvoc;;
+        v_wiki_p_854
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/reference URL/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">should be used for Internet URLs as references</span>+++
 
   scrīptor:::
     Rēs interlinguālibus::::
@@ -241,77 +265,53 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
 
-  /Wiki QID/:::
+  UNESCO thēsaurus:::
     Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P3916[P3916]
+
       /rēgulam/;;
-        Q[1-9]\d*
+        concept[1-9]\d*
+
+      /formatter URL/@eng-Latn;;
+        http://vocabularies.unesco.org/thesaurus/$1
 
       ix_hxlix;;
-        ix_wikiq
+        ix_wikip3916
 
       ix_hxlvoc;;
-        v_wiki_q
+        v_wiki_p_3916
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
+        +++<span lang="la">UNESCO thēsaurus</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+        +++<span lang="en">The UNESCO Thesaurus is a controlled and structured list of terms used in subject analysis and retrieval of documents and publications in the fields of education, culture, natural sciences, social and human sciences, communication and information. Continuously enriched and updated, its multidisciplinary terminology reflects the evolution of UNESCO's programmes and activities.</span>+++
 
-  /reference URL/@eng-Latn:::
+  /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P854[P854]
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
+
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
+
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
 
       ix_hxlix;;
-        ix_wikip854
+        ix_wikip2479
 
       ix_hxlvoc;;
-        v_wiki_p_854
+        v_wiki_p_2479
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/reference URL/@eng-Latn</span>+++
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">should be used for Internet URLs as references</span>+++
-
-  numerus editionis:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
-
-      ix_hxlix;;
-        ix_wikip393
-
-      ix_hxlvoc;;
-        v_wiki_p_393
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
-
-  /publication date/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
-
-      ix_hxlix;;
-        ix_wikip577
-
-      ix_hxlvoc;;
-        v_wiki_p_577
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+        +++<span lang="en">SPDX license identifier</span>+++
 
 
 <<<

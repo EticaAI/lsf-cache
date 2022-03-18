@@ -81,7 +81,7 @@ NUMERORDINATIO_BASIM = os.getenv('NUMERORDINATIO_BASIM', os.getcwd())
 NUMERORDINATIO_DEFALLO = int(os.getenv('NUMERORDINATIO_DEFALLO', '60'))  # �
 NUMERORDINATIO_MISSING = "�"
 DESCRIPTION = """
-2600.60 is (...)
+1603_3_12.py is (...)
 """
 
 # In Python2, sys.stdin is a byte stream; in Python3, it's a text stream
@@ -597,8 +597,8 @@ class CLI_2600:
                 headers['Api-User-Agent'] = USER_AGENT
 
                 payload_query = "".join(full_query)
-                # Lets put an sleep, 2 seconds, just in case
-                sleep(2)
+                # Lets put an sleep, 3 seconds, just in case
+                sleep(3)
                 r = requests.post(sparql_backend, headers=headers, data={
                     'query': payload_query
                 })
