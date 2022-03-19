@@ -7,6 +7,7 @@
 #                 FORCE_REDOWNLOAD=1 ./999999999/999999_17.sh
 #                 FORCE_CHANGED=1 ./999999999/999999_17.sh
 #                 FORCE_REDOWNLOAD_REM="1603_1_51" ./999999999/999999_17.sh
+#                 time ./999999999/999999_17.sh
 #   DESCRIPTION:  ---
 #
 #       OPTIONS:  ---
@@ -104,21 +105,21 @@ file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
 # neo_codex_de_numerordinatio "1603_45_1" "0" "0"
 # neo_codex_de_numerordinatio_pdf "1603_45_1" "0" "0"
 
+# file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# actiones_completis_publicis "1603_45_1"
+# upload_cdn "1603_45_1"
+temp_save_status "1603_45_1"
+temp_save_status "1603_63_101"
+temp_save_status "1603_45_31"
+
 # file_download_if_necessary "$DATA_1603_1_7" "1603_1_7" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # file_convert_numerordinatio_de_hxltm "1603_1_7" "1" "0"
 # # file_merge_numerordinatio_de_wiki_q "1603_1_7" "0" "0"
 # neo_codex_de_numerordinatio "1603_1_7" "0" "0"
 # neo_codex_de_numerordinatio_pdf "1603_1_7" "0" "0"
 
-file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_45_31" "1" "0"
-file_translate_csv_de_numerordinatio_q "1603_45_31" "0" "0"
-file_merge_numerordinatio_de_wiki_q "1603_45_31" "0" "0"
-file_convert_tmx_de_numerordinatio11 "1603_45_31"
-file_convert_tbx_de_numerordinatio11 "1603_45_31"
-neo_codex_de_numerordinatio "1603_45_31" "0" "0"
-neo_codex_de_numerordinatio_epub "1603_45_31" "0" "0"
-neo_codex_de_numerordinatio_pdf "1603_45_31" "0" "0"
+# file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# actiones_completis_publicis "1603_45_31"
 
 # file_download_if_necessary "$DATA_1603_23_21" "1603_23_21" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # file_convert_numerordinatio_de_hxltm "1603_23_21" "1" "0"

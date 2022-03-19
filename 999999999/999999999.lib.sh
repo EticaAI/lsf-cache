@@ -11,6 +11,9 @@
 #       OPTIONS:  ---
 #
 #  REQUIREMENTS:  - Bash shell (or better)
+#                 - python3 (call scripts from 999999999/0/)
+#                 - s3cmd (https://github.com/s3tools/s3cmd)
+#                   - pip3 install s3cmd
 #
 #          BUGS:  ---
 #         NOTES:  ---
@@ -28,6 +31,8 @@
 #   ./999999999/999999999.lib.sh
 
 ROOTDIR="$(pwd)"
+_S3CFG="$HOME/.config/s3cfg/s3cfg-lsf1603.ini"
+S3CFG="${S3CFG:-${_S3CFG}}"
 
 # If columns are defined (and not empty), we may remove some numbers before publishing
 NUMERORDINATIO_STATUS_CONCEPTUM_MINIMAM="${NUMERORDINATIO_STATUS_CONCEPTUM_MINIMAM:-10}"
@@ -1445,6 +1450,118 @@ __numerordinatio_scientiam_initiale() {
   # return 0
 }
 
+#######################################
+# Basic tests to check of synchronization
+#
+# CDN (If using Wasabi as CND + Cloudflare as frontend):
+# - Check this documentations:
+#   - https://wasabi-support.zendesk.com/hc/en-us/articles
+#     /360000016712-How-do-I-set-up-Wasabi-for-user-access-separation-
+#   - https://wasabi-support.zendesk.com/hc/en-us/articles
+#     /360018526192-How-do-I-use-Cloudflare-with-Wasabi-?source=search
+#
+# - Bucket name:
+#   - lsf-cdn.etica.ai
+# - DNS Configuration (on CloudFlare frontend, if using eu-central-1)
+#   > lsf-cdn CNAME s3.eu-central-1.wasabisys.com
+#
+# Example
+#   upload_cdn_test 1603_1_51
+#
+# Globals:
+#   ROOTDIR
+#   S3CFG
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Show results of test
+#######################################
+upload_cdn_test() {
+  numerordinatio="$1"
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+  # _path_clean="${$_path/aa/bb}"
+  # _path_clean=${_path/1603\//''}
+
+  _basim_fontem="${ROOTDIR}/$_path/"
+  _basim_objectivum="s3://lsf-cdn.etica.ai/$_path/"
+
+  # echo "_path_clean [$_path]"
+  # echo "_basim_objectivum [$_basim_objectivum]"
+
+  set -x
+  s3cmd ls "$_basim_objectivum" --list-md5 --config "$S3CFG"
+  s3cmd du "$_basim_objectivum" --config "$S3CFG"
+  s3cmd info "s3://lsf1603.etica.ai" --config "$S3CFG"
+  set +x
+
+}
+
+#######################################
+# Synchronization of files by numerordinatio
+#
+# Requires:
+#   pip3 install s3cmd
+#
+# Example
+#   upload_cdn 1603_1_51
+#
+# Globals:
+#   ROOTDIR
+#   S3CFG
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+upload_cdn() {
+  numerordinatio="$1"
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+  # _path_clean="${$_path/aa/bb}"
+  # _path_clean=${_path/1603\//''}
+
+  _basim_fontem="${ROOTDIR}/$_path/"
+  _basim_objectivum="s3://lsf-cdn.etica.ai/$_path/"
+
+  # echo "_path_clean [$_path_clean]"
+  # echo "_basim_objectivum [$_basim_objectivum]"
+  # blue=$(tput setaf 4)
+  # normal=$(tput sgr0)
+  # printf "%40s\n" "${blue}${FUNCNAME[0]} [$numerordinatio]${normal}"
+  echo "${FUNCNAME[0]} [$numerordinatio]"
+
+  # NOTE: we could implement explicit file patterns to (not) syncronize.
+  #       However, as long as local disk already have excatly what we need
+  #       Leave strict syncronization tend to be better
+
+  # NOTE: the current approach, if current directory does not have
+  #       all files re-generated, will delete files on the CDN. This is the
+  #       expected behavior (but means only syncronize really at the end
+  #       of operations)
+
+  # TODO: check some way to set content always utf-8, such as
+  #       > Content-Type: text/html; charset=utf-8.
+  #       This file https://lsf-cdn.etica.ai/1603/45/1/1603_45_1.no11.xml
+  #       is returning 'content-type: text/plain' without utf-8 on preview
+
+  # set -x
+  s3cmd sync "$_basim_fontem" "$_basim_objectivum" \
+    --recursive --delete-removed --acl-public \
+    --no-progress --stats \
+    --add-header= \
+    --config "$S3CFG"
+  # set +x
+}
+
+################################################################################
+##### AFTER HERE, POTENTIALY DEPRECATED. Eventually remove it ##################
+# Most logit here was replaced with high level python, but parts may still be  #
+# in use. Not really a issue remove then, just a matter of test before remove  #
+################################################################################
+
 # DEPRECATED! Use 0/2600.60.py
 __numerordinatio_codicem_lineam() {
   lineam="$1"
@@ -1487,6 +1604,7 @@ __numerordinatio_translatio_numerum_pariae() {
   # echo "Debug: input $codeword_purum: Sum: $total; parity; ${total: -1}"
   echo "${total: -1}"
 }
+
 
 # __numerordinatio_translatio_numerum_pariae 123
 # __numerordinatio_translatio_numerum_pariae 456
@@ -1788,3 +1906,75 @@ fi
 #### wikidata tests
 # @see https://github.com/maxlath/wikibase-cli
 # npm install -g wikibase-cli
+
+################################################################################
+##### BEFORE HERE, POTENTIALY DEPRECATED. Eventually remove it #################
+# The last part of this helper is just catch-all functions to abstract other   #
+# boring calls.                                                                #
+################################################################################
+
+#######################################
+# TODO...
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+temp_save_status() {
+  numerordinatio="$1"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  status_archivum_codex="${ROOTDIR}/$_path/$_nomen.statum.yml"
+  status_archivum_librario="${ROOTDIR}/1603/1603.statum.yml"
+
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --codex-de "$_nomen" --status-quo \
+    > "$status_archivum_codex"
+
+  echo "$status_archivum_librario status_archivum_librario "
+
+  set -x
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --codex-de "$_nomen" --status-quo --ex-librario \
+    > "$status_archivum_librario"
+  set +x
+  # yq -yi '.authentication.anonymous.enabled |= true' 1603/1603.statum.yml
+
+}
+
+#######################################
+# āctiōnēs complētīs pūblicīs, complete actions (and publish online)
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+actiones_completis_publicis() {
+  numerordinatio="$1"
+
+  blue=$(tput setaf 4)
+  normal=$(tput sgr0)
+  printf "%40s\n" "${blue}${FUNCNAME[0]} [$numerordinatio]${normal}"
+
+  # @TODO: implement the download
+  # file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
+  file_convert_numerordinatio_de_hxltm "$numerordinatio" "1" "0"
+  file_translate_csv_de_numerordinatio_q "$numerordinatio" "0" "0"
+  file_merge_numerordinatio_de_wiki_q "$numerordinatio" "0" "0"
+  file_convert_tmx_de_numerordinatio11 "$numerordinatio"
+  file_convert_tbx_de_numerordinatio11 "$numerordinatio"
+  neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
+  neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
+  neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
+  temp_save_status "$numerordinatio"
+  upload_cdn "$numerordinatio"
+}

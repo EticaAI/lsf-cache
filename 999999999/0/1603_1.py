@@ -12,6 +12,7 @@
 #       OPTIONS:  ---
 #
 #  REQUIREMENTS:  - python3
+#                   - pip3 install pyyaml
 #          BUGS:  ---
 #         NOTES:  ---
 #       AUTHORS:  Emerson Rocha <rocha[at]ieee.org>
@@ -71,6 +72,8 @@ import datetime
 # valueee = list(itertools.permutations([1, 2, 3]))
 import csv
 
+import yaml
+
 __EPILOGUM__ = """
 Exemplōrum gratiā:
     printf "#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_wikiq" | \
@@ -86,6 +89,10 @@ Exemplōrum gratiā:
     {0} --codex-de 1603_25_1 --codex-copertae
 
     {0} --codex-de 1603_25_1 --codex-in-tabulam-json
+
+    {0} --codex-de 1603_25_1 --status-quo
+
+    {0} --codex-de 1603_25_1 --status-quo --ex-librario
 
 """.format(__file__)
 
@@ -146,7 +153,6 @@ EXTENSIONES_PICTURIS = [
 EXTENSIONES_IGNORATIS = [
 
 ]
-
 
 def numerordinatio_neo_separatum(
         numerordinatio: str, separatum: str = "_") -> str:
@@ -2634,6 +2640,177 @@ class CodexExtero:
         return "TODO CodexExtero methodis"
 
 
+class LibrariaStatusQuo:
+    """Librāria status quo
+
+    _[eng-Latn]
+    Temporary class to bridge some metadata; needs refactoring later
+    [eng-Latn]_
+
+    Trivia:
+    - librāria, n, s, (Nominative), https://en.wiktionary.org/wiki/librarium#Latin
+    - Status quo, ---, https://en.wikipedia.org/wiki/Status_quo
+    - Cōdex, m, s, (Nominative), https://en.wiktionary.org/wiki/codex
+    - https://latin.stackexchange.com/questions/2102
+      /most-accurate-latin-word-for-book-in-this-context
+    - exterō, m, s, (Dative) https://en.wiktionary.org/wiki/exter#Latin
+    """
+
+    linguae = {}
+    archivum = {}
+    cdn = {
+        'codex': [],
+        'dictionaria': [],
+        'annexis': [],
+    }
+
+    _cdn_archivum_suffix = (
+        '.mul-Latn.codex.epub',
+        '.mul-Latn.codex.pdf',
+        '.mul-Latn.codex.adoc',
+        '.no1.tm.hxl.csv',
+        '.no11.tm.hxl.csv',
+        '.wikiq.tm.hxl.csv',
+        '.nnx.tm.hxl.csv'  # 0.nnx.tm.hxl.csv, anexes index
+    )
+    _suffix_codex = (
+        '.mul-Latn.codex.epub',
+        '.mul-Latn.codex.pdf',
+        '.mul-Latn.codex.adoc',
+    )
+    _suffix_dictionaria = (
+        '.no1.tm.hxl.csv',
+        '.no11.tm.hxl.csv',
+        '.wikiq.tm.hxl.csv',
+        '.no1.tmx',
+        '.no11.tmx',
+        '.no1.tbx',
+        '.no11.tbx',
+        # ...
+    )
+    _suffix_annexis = (
+        '.nnx.tm.hxl.csv',
+    )
+
+    # No 1603 prefix
+    cdn_prefix: str = 'https://lsf-cdn.etica.ai/'
+
+    def __init__(
+        self,
+        codex: Type['Codex'],
+        ex_librario: bool = False
+    ):
+        self.codex = codex
+        self.ex_librario = ex_librario
+
+        self.initiari()
+
+    def initiari(self):
+        """initiarī
+
+        Trivia:
+        - initiārī, https://en.wiktionary.org/wiki/initio#Latin
+        """
+        # self.linguae['#item+rem+i_lat+is_latn'] = 'la'
+        # self.linguae['#item+rem+i_eng+is_latn'] = 'en'
+        # self.linguae['#item+rem+i_por+is_latn'] = 'pt'
+
+        # We simulate book press without actually storing the result
+        self.codex.imprimere()
+
+        for _clavem, item in self.codex.dictionaria_linguarum.dictionaria_codex.items():
+            # raise ValueError(str(item))
+            if '#item+rem+i_qcc+is_zxxx+ix_wikilngm' in item and \
+                    item['#item+rem+i_qcc+is_zxxx+ix_wikilngm']:
+                hashtag = '#item+rem' + item['#item+rem+i_qcc+is_zxxx+ix_hxla']
+                self.linguae[hashtag] = \
+                    item['#item+rem+i_qcc+is_zxxx+ix_wikilngm']
+
+        self.archivum = self.codex.annexis.completum
+        _cdn_temp = []
+        for item in self.archivum:
+            if item.endswith(self._suffix_codex):
+                self.cdn['codex'].append(self.cdn_prefix + item)
+            if item.endswith(self._suffix_dictionaria):
+                self.cdn['dictionaria'].append(self.cdn_prefix + item)
+            if item.endswith(self._suffix_annexis):
+                self.cdn['annexis'].append(self.cdn_prefix + item)
+
+        #     if item.endswith(self._cdn_archivum_suffix):
+        #         _cdn_temp.append(self.cdn_prefix + item)
+        # self.cdn = _cdn_temp
+
+        # TODO: order the result
+        # if len(_cdn_temp) > 0:
+        #     for refs in self._cdn_archivum_suffix:
+        #         for item in _cdn_temp:
+
+        # for _clavem, item in self.codex.annexis.dictionaria_codex.items():
+        #     # raise ValueError(str(item))
+        #     if '#item+rem+i_qcc+is_zxxx+ix_wikilngm' in item and \
+        #             item['#item+rem+i_qcc+is_zxxx+ix_wikilngm']:
+        #         hashtag = '#item+rem' + item['#item+rem+i_qcc+is_zxxx+ix_hxla']
+        #         self.linguae[hashtag] = \
+        #             item['#item+rem+i_qcc+is_zxxx+ix_wikilngm']
+
+        # raise ValueError(str(self.linguae))
+
+    def ex_codice(self):
+        nomen = self.codex.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
+        summis_concepta = self.codex.summis_concepta
+        usus_linguae = len(self.codex.usus_linguae)
+        usus_ix_qcc = len(self.codex.usus_ix_qcc)
+
+        resultatum = {
+            'meta': {
+                'nomen': nomen
+            },
+            'cdn': self.cdn,
+            'status': {
+                'concepta': summis_concepta,
+                'res_lingualibus': usus_linguae,
+                'res_interlingualibus': usus_ix_qcc,
+            }
+        }
+
+        return resultatum
+
+    def status_librario(self):
+        librario_status = NUMERORDINATIO_BASIM + '/1603/1603.statum.yml'
+
+        try:
+            with open(librario_status) as _file:
+                # fruits_list = yaml.load(_file, Loader=yaml.FullLoader)
+                resultatum = yaml.load(_file, Loader=yaml.FullLoader)
+                # if not resultatum or 'librarium' not in resultatum:
+                #     resultatum = {'librarium': {}}
+                if resultatum is None or 'librarium' not in resultatum:
+                    resultatum = {'librarium': {}}
+                return resultatum
+        except OSError:
+            vacuum = {'librarium': {}}
+            return vacuum
+
+    def imprimere(self):
+
+        resultatum = self.ex_codice()
+
+        if self.ex_librario:
+            ex_codice = self.ex_codice()
+            ex_librario = self.status_librario()
+            ex_librario['librarium'][self.codex.de_codex] = ex_codice
+
+            return [yaml.dump(ex_librario, allow_unicode=True)]
+        else:
+            return [yaml.dump(self.ex_codice(), allow_unicode=True)]
+
+        # https://en.wiktionary.org/wiki/caveo#Latin
+        # methodīs, f, pl, (Dative) https://en.wiktionary.org/wiki/methodus#Latin
+        # return [yaml.dump([self.linguae, self.archivum, self.cdn])]
+        # return [yaml.dump([self.linguae, self.cdn])]
+        
+
+
 class CodexInTabulamJson:
     """Codex Sarcinarum Adnexīs
 
@@ -4207,6 +4384,35 @@ class CLI_2600:
             # nargs='?'
         )
 
+        # https://en.wikipedia.org/wiki/Status_quo
+        # https://en.wiktionary.org/wiki/status_quo#English
+        status_quo = parser.add_argument_group(
+            "Status quō",
+            "Calculate current situation. Used to take other actions")
+
+        status_quo.add_argument(
+            '--status-quo',
+            help='Compute the status quo, using a codex as initial reference',
+            # metavar='',
+            dest='status_quo',
+            # const=True,
+            action='store_true',
+            # nargs='?'
+        )
+
+        # - ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+        # - librāriō, n, s, /Ablative/,
+        #     https://en.wiktionary.org/wiki/librarium#Latin
+        status_quo.add_argument(
+            '--ex-librario',
+            help='Status novō. New state. Persist changes if necessary',
+            # metavar='',
+            dest='ex_librario',
+            # const=True,
+            action='store_true',
+            # nargs='?'
+        )
+
         # # --agendum-linguam is a draft. Not 100% implemented
         # parser.add_argument(
         #     '--agendum-linguam', '-AL',
@@ -4292,6 +4498,10 @@ class CLI_2600:
             )
             # data = ['TODO']
             # codex_in_tabulam_json
+            if self.pyargs.status_quo:
+                libraria = LibrariaStatusQuo(codex, self.pyargs.ex_librario)
+
+                return self.output(libraria.imprimere())
             if not self.pyargs.codex_copertae and \
                     not self.pyargs.codex_in_tabulam_json:
                 return self.output(codex.imprimere())

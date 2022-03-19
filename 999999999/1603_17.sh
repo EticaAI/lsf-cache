@@ -79,7 +79,6 @@ ROOTDIR="$(pwd)"
 
 # bundle exec asciidoctor-pdf --attribute pdf-theme=/workspace/git/EticaAI/multilingual-lexicography-automation/officinam/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml --attribute pdf-fontsdir=/usr/share/fonts/truetype/noto,/workspace/git/EticaAI/multilingual-lexicography-automation/officinam/vendor/bundle/ruby/2.7.0/gems/asciidoctor-pdf-1.6.2/data/fonts /workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/45/1/1603_45_1.mul-Latn.codex.adoc --out-file /workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/45/1/1603_45_1.mul-Latn.codex.pdf
 
-
 # exit 0
 
 ### Really boostrapping downloads, start _______________________________________
@@ -253,6 +252,7 @@ file_translate_csv_de_numerordinatio_q "1603_45_31" "0" "0"
 file_merge_numerordinatio_de_wiki_q "1603_45_31" "0" "0"
 file_convert_tmx_de_numerordinatio11 "1603_45_31"
 file_convert_tbx_de_numerordinatio11 "1603_45_31"
+neo_codex_copertae_de_numerordinatio "1603_45_31" "0" "0"
 neo_codex_de_numerordinatio "1603_45_31" "0" "0"
 neo_codex_de_numerordinatio_epub "1603_45_31" "0" "0"
 neo_codex_de_numerordinatio_pdf "1603_45_31" "0" "0"
@@ -271,6 +271,7 @@ file_merge_numerordinatio_de_wiki_q "1603_45_1" "0" "0"
 file_convert_xml_de_numerordinatio11 "1603_45_1"
 file_convert_tmx_de_numerordinatio11 "1603_45_1"
 file_convert_tbx_de_numerordinatio11 "1603_45_1"
+neo_codex_copertae_de_numerordinatio "1603_45_1" "0" "0"
 neo_codex_de_numerordinatio "1603_45_1" "0" "0"
 neo_codex_de_numerordinatio_pdf "1603_45_1" "0" "0"
 

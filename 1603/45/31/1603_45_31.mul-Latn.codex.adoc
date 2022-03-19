@@ -50,7 +50,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-18T04:49:13
+2022-03-19T08:54:19
 
 |
 /SPDX license ID/@eng-Latn
@@ -2714,23 +2714,23 @@ Lingua Franca Nova (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 9
 Rēs::
-  /Wiki QID/:::
+  numerus editionis:::
     Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
 
       ix_hxlix;;
-        ix_wikiq
+        ix_wikip393
 
       ix_hxlvoc;;
-        v_wiki_q
+        v_wiki_p_393
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
+        +++<span lang="la">numerus editionis</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
   scrīptor:::
     Rēs interlinguālibus::::
@@ -2749,57 +2749,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
-
-  UNESCO thēsaurus:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P3916[P3916]
-
-      /rēgulam/;;
-        concept[1-9]\d*
-
-      /formatter URL/@eng-Latn;;
-        http://vocabularies.unesco.org/thesaurus/$1
-
-      ix_hxlix;;
-        ix_wikip3916
-
-      ix_hxlvoc;;
-        v_wiki_p_3916
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">UNESCO thēsaurus</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">The UNESCO Thesaurus is a controlled and structured list of terms used in subject analysis and retrieval of documents and publications in the fields of education, culture, natural sciences, social and human sciences, communication and information. Continuously enriched and updated, its multidisciplinary terminology reflects the evolution of UNESCO's programmes and activities.</span>+++
-
-  /scope and content/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
-
-      ix_hxlix;;
-        ix_wikip7535
-
-      ix_hxlvoc;;
-        v_wiki_p_7535
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
-
-  /GLIDE hazard code/:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_glidehc
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/GLIDE hazard code/</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2843,6 +2792,75 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Date or point in time when a work was first published or released</span>+++
 
+  /GLIDE hazard code/:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_glidehc
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/GLIDE hazard code/</span>+++
+
+  UNESCO thēsaurus:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P3916[P3916]
+
+      /rēgulam/;;
+        concept[1-9]\d*
+
+      /formatter URL/@eng-Latn;;
+        http://vocabularies.unesco.org/thesaurus/$1
+
+      ix_hxlix;;
+        ix_wikip3916
+
+      ix_hxlvoc;;
+        v_wiki_p_3916
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">UNESCO thēsaurus</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">The UNESCO Thesaurus is a controlled and structured list of terms used in subject analysis and retrieval of documents and publications in the fields of education, culture, natural sciences, social and human sciences, communication and information. Continuously enriched and updated, its multidisciplinary terminology reflects the evolution of UNESCO's programmes and activities.</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
   /cōdex pūblicandī/:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2860,24 +2878,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
-
-  numerus editionis:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
-
-      ix_hxlix;;
-        ix_wikip393
-
-      ix_hxlvoc;;
-        v_wiki_p_393
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
 
 <<<
