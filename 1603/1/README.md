@@ -24,6 +24,16 @@
 - "Nōmenclātūrae Generālium" (literal: /Calling by numbers/ + /generic/)
   - "Numeroclatura Generālium"
 
+
+<!--
+- https://en.wiktionary.org/wiki/worksheet#English
+  - https://en.wiktionary.org/wiki/work#English
+    - https://en.wiktionary.org/wiki/opus
+  - https://en.wiktionary.org/wiki/sheet#English
+    - https://en.wiktionary.org/wiki/papyrus#Latin
+  - //opus papȳrō//
+-->
+
 ## [`1603:1:2`] //dictiōnāria de symbolī numerīs//
 
 ### Latinas viva, etymologia

@@ -67,6 +67,9 @@ import fnmatch
 # import json
 import datetime
 
+from zlib import crc32
+
+
 # from itertools import permutations
 # from itertools import product
 # valueee = list(itertools.permutations([1, 2, 3]))
@@ -84,15 +87,17 @@ Exemplōrum gratiā:
 
     {0} --dictionaria-numerordinatio
 
-    {0} --codex-de 1603_25_1
+    {0} --codex-de 1603_63_101
 
-    {0} --codex-de 1603_25_1 --codex-copertae
+    {0} --codex-de 1603_63_101 --codex-copertae
 
-    {0} --codex-de 1603_25_1 --codex-in-tabulam-json
+    {0} --codex-de 1603_63_101 --codex-in-tabulam-json
 
-    {0} --codex-de 1603_25_1 --status-quo
+    {0} --codex-de 1603_63_101 --status-quo
 
-    {0} --codex-de 1603_25_1 --status-quo --ex-librario
+    {0} --codex-de 1603_63_101 --status-quo --ex-librario
+
+    {0} --codex-de 1603_63_101 --status-quo --ex-librario --status-in-markdown
 
 """.format(__file__)
 
@@ -153,6 +158,7 @@ EXTENSIONES_PICTURIS = [
 EXTENSIONES_IGNORATIS = [
 
 ]
+
 
 def numerordinatio_neo_separatum(
         numerordinatio: str, separatum: str = "_") -> str:
@@ -510,6 +516,7 @@ class Codex:
         self.dictionaria_linguarum = DictionariaLinguarum()
         self.dictionaria_interlinguarum = DictionariaInterlinguarum()
         self.codex = self._init_codex()
+        self.n1603ia = self._init_ix_n1603ia()
         # self.annexa = self._init_annexa()
 
         self.annexis = CodexAnnexis(self, self.de_codex)
@@ -567,6 +574,29 @@ class Codex:
                 codex_lineam.append(lineam)
 
         return codex_lineam
+
+    def _init_ix_n1603ia(self) -> dict:
+        resultatum = {}
+        if '#item+rem+i_qcc+is_zxxx+ix_n1603ia' not in self.m1603_1_1__de_codex:
+            return resultatum
+        ix_n1603ia_crudum = \
+            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603ia']
+        if not ix_n1603ia_crudum or len(ix_n1603ia_crudum.strip()) == 0:
+            return resultatum
+
+        crudum = map(str.strip, ix_n1603ia_crudum.split('|'))
+        for item in crudum:
+            parts = item.split('-')
+            try:
+
+                resultatum[parts[0]] = int(parts[1])
+            except IndexError:
+                raise ValueError('[1603:1:1] xi_n1603ia <[{0}] [{1}]>'.format(
+                    self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
+                    str(ix_n1603ia_crudum)
+                ))
+
+        return resultatum
 
     def _referencia(self, rem: dict, index: int = 1) -> list:
         paginae = []
@@ -2702,6 +2732,7 @@ class LibrariaStatusQuo:
     ):
         self.codex = codex
         self.ex_librario = ex_librario
+        # self.status_in_markdown = status_in_markdown
 
         self.initiari()
 
@@ -2755,6 +2786,9 @@ class LibrariaStatusQuo:
 
         # raise ValueError(str(self.linguae))
 
+    def crc(self, res: Union[set, list]) -> str:
+        return crc32(b'TODO')
+
     def ex_codice(self):
         nomen = self.codex.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
         summis_concepta = self.codex.summis_concepta
@@ -2762,18 +2796,37 @@ class LibrariaStatusQuo:
         usus_ix_qcc = len(self.codex.usus_ix_qcc)
 
         resultatum = {
+            'annotationes_internalibus': self.codex.n1603ia,
             'meta': {
                 'nomen': nomen
             },
             'cdn': self.cdn,
-            'status': {
-                'concepta': summis_concepta,
-                'res_lingualibus': usus_linguae,
-                'res_interlingualibus': usus_ix_qcc,
+            'status_quo': {
+                'crc': {
+                    'concepta': None,
+                    'res_lingualibus': self.crc(self.codex.usus_linguae),
+                    'res_interlingualibus': self.crc(self.codex.usus_ix_qcc),
+                },
+                'summa': {
+                    'concepta': summis_concepta,
+                    'res_lingualibus': usus_linguae,
+                    'res_interlingualibus': usus_ix_qcc,
+                }
             }
         }
 
         return resultatum
+
+    def librarium_vacuum(self) -> dict:
+        return {
+            'librarium': {},
+            'status_quo': {
+                'summa': {
+                    'codex': 0,
+                    'concepta': 0,
+                }
+            }
+        }
 
     def status_librario(self):
         librario_status = NUMERORDINATIO_BASIM + '/1603/1603.statum.yml'
@@ -2785,30 +2838,66 @@ class LibrariaStatusQuo:
                 # if not resultatum or 'librarium' not in resultatum:
                 #     resultatum = {'librarium': {}}
                 if resultatum is None or 'librarium' not in resultatum:
-                    resultatum = {'librarium': {}}
-                return resultatum
+                    resultatum = self.librarium_vacuum()
+            return resultatum
         except OSError:
-            vacuum = {'librarium': {}}
+            vacuum = {'codex': [], 'librarium': {}}
             return vacuum
 
+    def status_librario_ex_codex(self):
+        ex_codice = self.ex_codice()
+        ex_librario = self.status_librario()
+        ex_librario['librarium'][self.codex.de_codex] = ex_codice
+
+        ex_librario['status_quo'] = {
+            'summa': {
+                'codex': 0,
+                'concepta_non_unicum': 0,
+            }
+        }
+
+        for _codex, item in ex_librario['librarium'].items():
+            ex_librario['status_quo']['summa']['codex'] += 1
+            ex_librario['status_quo']['summa']['concepta_non_unicum'] += \
+                item['status_quo']['summa']['concepta']
+
+        return ex_librario
+
     def imprimere(self):
-
-        resultatum = self.ex_codice()
-
         if self.ex_librario:
-            ex_codice = self.ex_codice()
-            ex_librario = self.status_librario()
-            ex_librario['librarium'][self.codex.de_codex] = ex_codice
-
-            return [yaml.dump(ex_librario, allow_unicode=True)]
+            return [yaml.dump(
+                self.status_librario_ex_codex(), allow_unicode=True)]
         else:
             return [yaml.dump(self.ex_codice(), allow_unicode=True)]
 
-        # https://en.wiktionary.org/wiki/caveo#Latin
-        # methodīs, f, pl, (Dative) https://en.wiktionary.org/wiki/methodus#Latin
-        # return [yaml.dump([self.linguae, self.archivum, self.cdn])]
-        # return [yaml.dump([self.linguae, self.cdn])]
-        
+    def imprimere_in_markdown(self):
+        if not self.ex_librario:
+            raise NotImplementedError(
+                '--status-in-markdown requires --ex-librario')
+        paginae = []
+        status = self.status_librario_ex_codex()
+        paginae.append('# 1603 Librārium')
+        paginae.append('- status_quo')
+        paginae.append('  - summa')
+        paginae.append('    - codex: {0}'.format(
+            status['status_quo']['summa']['codex']))
+        paginae.append('    - concepta_non_unicum: {0}'.format(
+            status['status_quo']['summa']['concepta_non_unicum']))
+        for codex, item in status['librarium'].items():
+            paginae.append('## {0} {1}'.format(codex, item['meta']['nomen']))
+            paginae.append('- status_quo')
+            paginae.append(
+                '  - concepta: {0}'.format(item['status_quo']['summa']['concepta']))
+            paginae.append(
+                '  - res_interlingualibus: {0}'.format(
+                    item['status_quo']['summa']['res_interlingualibus']))
+            paginae.append(
+                '  - res_lingualibus: {0}'.format(
+                    item['status_quo']['summa']['res_lingualibus']))
+
+        # return [yaml.dump(
+        #     status, allow_unicode=True)]
+        return paginae
 
 
 class CodexInTabulamJson:
@@ -4388,13 +4477,25 @@ class CLI_2600:
         # https://en.wiktionary.org/wiki/status_quo#English
         status_quo = parser.add_argument_group(
             "Status quō",
-            "Calculate current situation. Used to take other actions")
+            "Calculate current situation. Used to take other actions. "
+            "Requires --codex-de 1603_NN_NN"
+        )
 
         status_quo.add_argument(
             '--status-quo',
             help='Compute the status quo, using a codex as initial reference',
             # metavar='',
             dest='status_quo',
+            # const=True,
+            action='store_true',
+            # nargs='?'
+        )
+
+        status_quo.add_argument(
+            '--status-in-markdown',
+            help='Return status in Markdown (instead of YAML)',
+            # metavar='',
+            dest='status_in_markdown',
             # const=True,
             action='store_true',
             # nargs='?'
@@ -4499,9 +4600,14 @@ class CLI_2600:
             # data = ['TODO']
             # codex_in_tabulam_json
             if self.pyargs.status_quo:
-                libraria = LibrariaStatusQuo(codex, self.pyargs.ex_librario)
+                libraria = LibrariaStatusQuo(
+                    codex,
+                    self.pyargs.ex_librario)
 
+                if self.pyargs.status_in_markdown:
+                    return self.output(libraria.imprimere_in_markdown())
                 return self.output(libraria.imprimere())
+
             if not self.pyargs.codex_copertae and \
                     not self.pyargs.codex_in_tabulam_json:
                 return self.output(codex.imprimere())
