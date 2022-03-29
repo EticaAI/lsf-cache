@@ -293,7 +293,11 @@ def _pre_pad(textum: str) -> str:
     if not textum:
         return textum
 
-    return textum.replace("\n\n", "\n+++<br><br>+++\n")
+    textum = textum.replace("\n\n", '\n+++<br><br>+++\n')
+    textum = textum.replace("\\n\\n", '\n+++<br><br>+++\n')
+
+    return textum
+    # return 'bbb' + textum
 
 
 def _pad(textum: str, pad: int) -> str:
@@ -525,6 +529,7 @@ class Codex:
         self.usus_linguae = set()
         self.usus_linguae_concepta = {}
         self.usus_ix_qcc = set()
+        self.usus_picturae = set()
         self.summis_concepta = 0
 
     def _init_1603_1_1(self):
@@ -1056,6 +1061,8 @@ class Codex:
         # @see https://docs.asciidoctor.org/asciidoc/latest/sections/appendix/
         # https://en.wiktionary.org/wiki/appendix#Latin
         resultatum.append(":appendix-caption: Appendix")
+        # resultatum.append(":sectnums:")
+        # resultatum.append(":partnums:")
         resultatum.append(":source-highlighter: rouge")
         # resultatum.append(":tip-caption: 💡")
         # resultatum.append(":note-caption: ℹ️")
@@ -1359,6 +1366,8 @@ class Codex:
                 # link = item.quod_temp_link()
                 link = item.quod_link()
                 # resultatum.append('![{0}]({1})\n'.format(titulum, trivium))
+
+                self.usus_picturae.add(trivium)
                 resultatum.append(
                     'image::{1}[title="++{0}++"]\n'.format(titulum, trivium))
                 if link:
@@ -1394,12 +1403,15 @@ class Codex:
             speciale_note = self.quod_res(
                 '0_1603_1_7_2616_7535_' + codicem_normale)
 
+            # @DEPRECATED: reconsider if we keep or remove it. For now
+            #              we're using #meta+rem+i_qcc+is_zxxx+ix_wikip7535
+            #              as one additional column
             if speciale_note and \
                     qhxl(speciale_note, meta_langs) is not None:
                 term = qhxl(speciale_note, meta_langs)
                 term2 = self.notitiae.translatio(term)
                 meta = {}
-                meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = term2
+                meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = _pre_pad(term2)
                 # meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
 
                 resultatum.append("<<<")
@@ -1412,6 +1424,7 @@ class Codex:
                         titulum = item.quod_titulum()
                         # link = item.quod_temp_link()
                         # link = item.quod_link()
+                        self.usus_picturae.add(trivium)
                         resultatum.append(
                             'image::{1}[title="++{0}++"]\n'.format(
                                 titulum, trivium))
@@ -1901,6 +1914,8 @@ class Codex:
             '{{res_lingualibus}}', str(len(self.usus_linguae)))
         codex_copertae = codex_copertae.replace(
             '{{res_interlingualibus}}', str(len(self.usus_ix_qcc)))
+        codex_copertae = codex_copertae.replace(
+            '{{picturae}}', str(len(self.usus_picturae)))
         paginae = []
         paginae.append(codex_copertae)
 
@@ -2091,11 +2106,11 @@ class Codex:
             #         vicidata_q_modo2
             #     ]))
 
-            vicidata_textum = "\n\n".join([
-                vicidata_q_modo_1,
-                vicidata_q_modo_11,
-                vicidata_q_modo,
-                vicidata_q_modo2
+            vicidata_textum = "\n+++<br><br>+++\n".join([
+                _pre_pad(vicidata_q_modo_1),
+                _pre_pad(vicidata_q_modo_11),
+                _pre_pad(vicidata_q_modo),
+                _pre_pad(vicidata_q_modo2)
             ])
 
             paginae.extend(self.res_explanationibus({
@@ -2226,6 +2241,8 @@ class Codex:
                 titulum = pictura.quod_titulum()
                 # link = item.quod_temp_link()
                 link = pictura.quod_link()
+
+                self.usus_picturae.add(trivium)
 
                 nomen = '**' + pictura.quod_id() + '**'
                 if link and len(link):

@@ -173,6 +173,8 @@ neo_codex_de_numerordinatio "1603_63_101" "0" "0"
 neo_codex_de_numerordinatio_epub "1603_63_101" "0" "0"
 neo_codex_de_numerordinatio_pdf "1603_63_101" "0" "0"
 
+# upload_cdn "1603_63_101"
+
 # file_download_if_necessary "$DATA_1603_64_41" "1603_64_41" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # file_convert_numerordinatio_de_hxltm "1603_64_41" "1" "0"
 # file_translate_csv_de_numerordinatio_q "1603_64_41" "0" "0"

@@ -686,6 +686,8 @@ neo_codex_copertae_de_numerordinatio() {
   # https://www.youtube.com/watch?v=zcK_tl8mLCo
   # https://blog.reedsy.com/book-cover-dimensions/
 
+  echo "${FUNCNAME[0]} [$numerordinatio]"
+
   fontem_archivum="${ROOTDIR}/999999999/0/codex_copertae.svg"
   objectivum_archivum="${ROOTDIR}/$_path/$_nomen.$est_objectivum_linguam.codex.svg"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.svg"
