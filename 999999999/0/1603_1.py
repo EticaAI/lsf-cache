@@ -3166,10 +3166,10 @@ class LibrariaStatusQuo:
             # paginae.append('```json')
             # paginae.append('```json')
             paginae.append('<pre>')
-            paginae.append('')
+            # paginae.append('')
             paginae.append(json.dumps(
                 item, indent=4, ensure_ascii=False, sort_keys=False))
-            paginae.append('')
+            # paginae.append('')
             # paginae.append('```')
             paginae.append('</pre>')
             paginae.append('')

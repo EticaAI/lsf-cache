@@ -9,7 +9,6 @@
 <details><summary>🔎🗄️1603_1_1🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "internale": 100,
@@ -38,8 +37,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 1360035871,
-            "res_interlingualibus": 2978036902,
+            "res_lingualibus": 372888044,
+            "res_interlingualibus": 197870840,
             "res_picturae": null
         },
         "summa": {
@@ -49,11 +48,10 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:32:06"
+            "opus": "2022-04-17T20:32:32"
         }
     }
 }
-
 </pre>
 
 </details>
@@ -69,7 +67,6 @@
 <details><summary>🔎🗄️1603_1_101🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "experimentum": 50,
@@ -114,7 +111,6 @@
         }
     }
 }
-
 </pre>
 
 </details>
@@ -130,7 +126,6 @@
 <details><summary>🔎🗄️1603_1_51🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "internale": 90,
@@ -174,7 +169,6 @@
         }
     }
 }
-
 </pre>
 
 </details>
@@ -190,7 +184,6 @@
 <details><summary>🔎🗄️1603_1_6🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "internale": 20,
@@ -238,7 +231,6 @@
         }
     }
 }
-
 </pre>
 
 </details>
@@ -254,7 +246,6 @@
 <details><summary>🔎🗄️1603_1_7🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "internale": 90,
@@ -298,7 +289,6 @@
         }
     }
 }
-
 </pre>
 
 </details>
@@ -320,7 +310,6 @@ The decision making is mostly based on what is very essential to explain other t
 <details><summary>🔎🗄️1603_1_99🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "internale": 20,
@@ -364,7 +353,6 @@ The decision making is mostly based on what is very essential to explain other t
         }
     }
 }
-
 </pre>
 
 </details>
@@ -384,7 +372,6 @@ TODO: explain 1603_1_99
 <details><summary>🔎🗄️1603_25_1🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "publicum": 30
@@ -434,7 +421,6 @@ TODO: explain 1603_1_99
         }
     }
 }
-
 </pre>
 
 </details>
@@ -458,7 +444,6 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 <details><summary>🔎🗄️1603_44_101🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "publicum": 30,
@@ -506,7 +491,6 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
         }
     }
 }
-
 </pre>
 
 </details>
@@ -526,7 +510,6 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 <details><summary>🔎🗄️1603_44_111🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "publicum": 30,
@@ -566,7 +549,6 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
         }
     }
 }
-
 </pre>
 
 </details>
@@ -582,7 +564,6 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 <details><summary>🔎🗄️1603_45_1🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "emphasis": 50,
@@ -633,7 +614,6 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
         }
     }
 }
-
 </pre>
 
 </details>
@@ -682,7 +662,6 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
 <details><summary>🔎🗄️1603_45_19🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "publicum": 30,
@@ -722,7 +701,6 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
         }
     }
 }
-
 </pre>
 
 </details>
@@ -738,7 +716,6 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
 <details><summary>🔎🗄️1603_45_31🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "emphasis": 50,
@@ -789,7 +766,6 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
         }
     }
 }
-
 </pre>
 
 </details>
@@ -811,7 +787,6 @@ The terminology translations are extracted from Wikidata, which means this recom
 <details><summary>🔎🗄️1603_63_101🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "emphasis": 50,
@@ -864,7 +839,6 @@ The terminology translations are extracted from Wikidata, which means this recom
         }
     }
 }
-
 </pre>
 
 </details>
@@ -890,7 +864,6 @@ Traditional paper dictionaries already are not complete enough to explain how th
 <details><summary>🔎🗄️1603_64_41🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "publicum": 30,
@@ -938,7 +911,6 @@ Traditional paper dictionaries already are not complete enough to explain how th
         }
     }
 }
-
 </pre>
 
 </details>
@@ -958,7 +930,6 @@ Traditional paper dictionaries already are not complete enough to explain how th
 <details><summary>🔎🗄️1603_64_604🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "publicum": 30,
@@ -998,7 +969,6 @@ Traditional paper dictionaries already are not complete enough to explain how th
         }
     }
 }
-
 </pre>
 
 </details>
@@ -1014,7 +984,6 @@ Traditional paper dictionaries already are not complete enough to explain how th
 <details><summary>🔎🗄️1603_84_1🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "publicum": 30,
@@ -1065,7 +1034,6 @@ Traditional paper dictionaries already are not complete enough to explain how th
         }
     }
 }
-
 </pre>
 
 </details>
@@ -1081,7 +1049,6 @@ Traditional paper dictionaries already are not complete enough to explain how th
 <details><summary>🔎🗄️1603_99_987🗄️🔍</summary>
 
 <pre>
-
 {
     "annotationes_internalibus": {
         "experimentum": 90
@@ -1124,7 +1091,6 @@ Traditional paper dictionaries already are not complete enough to explain how th
         }
     }
 }
-
 </pre>
 
 </details>
