@@ -3150,12 +3150,14 @@ class LibrariaStatusQuo:
         paginae.append('    - concepta_non_unicum: {0}'.format(
             status['status_quo']['summa']['concepta_non_unicum']))
         paginae.append('')
+
         for codex, item in status['librarium'].items():
 
             caveat_lector = self.imprimere_res_caveat_lector(item)
             corde = self.imprimere_res_methodi_ex_dictionariorum_corde(item)
 
-            paginae.append('## {0} {1}'.format(codex, item['meta']['nomen']))
+            paginae.append(
+                '## {0} {1}'.format(codex, item['meta']['nomen']))
 
             paginae.append('')
             paginae.append(
@@ -3182,17 +3184,17 @@ class LibrariaStatusQuo:
                     item['status_quo']['summa']['res_lingualibus']))
 
             if corde:
-                paginae.append('### Methodī ex dictiōnāriōrum corde')
+                paginae.append(
+                    '### {0} Methodī ex dictiōnāriōrum corde'.format(codex))
                 paginae.append('')
                 paginae.append(corde)
                 paginae.append('')
 
             if caveat_lector:
-                paginae.append('### Caveat_lector')
+                paginae.append('### {0} Caveat_lector'.format(codex))
                 paginae.append('')
                 paginae.append(caveat_lector)
                 paginae.append('')
-
 
             paginae.append('')
 

@@ -2148,10 +2148,11 @@ temp_save_status() {
 #######################################
 actiones_completis_publicis() {
   numerordinatio="$1"
+  echo ""
 
   blue=$(tput setaf 4)
   normal=$(tput sgr0)
-  printf "%40s\n" "${blue}${FUNCNAME[0]} [$numerordinatio]${normal}"
+  printf "\t%40s\n" "${blue}${FUNCNAME[0]} [$numerordinatio]${normal}"
 
   # @TODO: implement the download
   # file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
