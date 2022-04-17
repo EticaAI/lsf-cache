@@ -163,8 +163,8 @@ file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
 # quaero__ix_n1603ia__victionarium_q "1603_99_987" && echo "1603_99_987"
 # actiones_completis_publicis "1603_45_31"
 # actiones_completis_publicis "1603_63_101"
-opus_temporibus_cdn
-# deploy_0_9_markdown
+# opus_temporibus_cdn
+deploy_0_9_markdown
 
 # quaero__ix_n1603ia__victionarium_q "1603_63_101" && echo "1603_63_101"
 # quaero__ix_n1603ia__victionarium_q "1603_1_1" && echo "1603_1_1"

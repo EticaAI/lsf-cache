@@ -1,8 +1,365 @@
 # 1603 Librārium
 - status_quo
   - summa
-    - codex: 11
-    - concepta_non_unicum: 1064
+    - codex: 17
+    - concepta_non_unicum: 1449
+
+## 1603_1_1 //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//@lat-Latn
+
+<details><summary>🔎🗄️1603_1_1🗄️🔍</summary>
+
+```json
+{
+    "annotationes_internalibus": {
+        "internale": 100,
+        "publicum": 10
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": null
+        },
+        "nomen": "//Numeroclatura Generālium ad MM ex Numerordĭnātĭo//@lat-Latn"
+    },
+    "cdn": {
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.no1.tm.hxl.csv"
+        ],
+        "annexis": []
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_lingualibus": 212531701,
+            "res_interlingualibus": 1842614770,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 81,
+            "res_lingualibus": 9,
+            "res_interlingualibus": 15,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-17T20:11:49"
+        }
+    }
+}
+```
+
+</details>
+
+- status_quo
+  - concepta: 81
+  - res_interlingualibus: 15
+  - res_lingualibus: 9
+
+## 1603_1_101 //Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//
+
+<details><summary>🔎🗄️1603_1_101🗄️🔍</summary>
+
+```json
+{
+    "annotationes_internalibus": {
+        "experimentum": 50,
+        "internale": 20,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": null
+        },
+        "nomen": "//Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 2214457338,
+            "res_lingualibus": 2166079574,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 19,
+            "res_interlingualibus": 7,
+            "res_lingualibus": 4,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-17T20:01:15"
+        }
+    }
+}
+```
+
+</details>
+
+- status_quo
+  - concepta: 19
+  - res_interlingualibus: 7
+  - res_lingualibus: 4
+
+## 1603_1_51 //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//
+
+<details><summary>🔎🗄️1603_1_51🗄️🔍</summary>
+
+```json
+{
+    "annotationes_internalibus": {
+        "internale": 90,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.adoc",
+            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.pdf"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": null
+        },
+        "nomen": "//Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 2688171698,
+            "res_lingualibus": 2740235922,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 265,
+            "res_interlingualibus": 19,
+            "res_lingualibus": 3,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-17T19:59:59"
+        }
+    }
+}
+```
+
+</details>
+
+- status_quo
+  - concepta: 265
+  - res_interlingualibus: 19
+  - res_lingualibus: 3
+
+## 1603_1_6 /Dictiōnāria de terminī typīs/
+
+<details><summary>🔎🗄️1603_1_6🗄️🔍</summary>
+
+```json
+{
+    "annotationes_internalibus": {
+        "internale": 20,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.no1.tm.hxl.csv",
+            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.no11.tm.hxl.csv",
+            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.wikiq.tm.hxl.csv",
+            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.no11.tbx",
+            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.no11.tmx"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": null
+        },
+        "nomen": "/Dictiōnāria de terminī typīs/"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 176732105,
+            "res_lingualibus": 3231568448,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 3,
+            "res_interlingualibus": 13,
+            "res_lingualibus": 116,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-17T20:01:57"
+        }
+    }
+}
+```
+
+</details>
+
+- status_quo
+  - concepta: 3
+  - res_interlingualibus: 13
+  - res_lingualibus: 116
+
+## 1603_1_7 //Dictiōnāria basibus dē rēs interlinguīs//
+
+<details><summary>🔎🗄️1603_1_7🗄️🔍</summary>
+
+```json
+{
+    "annotationes_internalibus": {
+        "internale": 90,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/7/1603_1_7.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/1/7/1603_1_7.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/7/1603_1_7.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/7/1603_1_7.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "This Numerodinatio namespace contains dictionaries related to bare minimum interlingual concepts used to understand Numerodinatio tables.\n\nThe decision making is mostly based on what is very essential to explain other tables."
+        },
+        "nomen": "//Dictiōnāria basibus dē rēs interlinguīs//"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 156654071,
+            "res_lingualibus": 2066142768,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 47,
+            "res_interlingualibus": 13,
+            "res_lingualibus": 3,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-17T20:01:05"
+        }
+    }
+}
+```
+
+</details>
+
+- status_quo
+  - concepta: 47
+  - res_interlingualibus: 13
+  - res_lingualibus: 3
+### 1603_1_7 Methodī ex dictiōnāriōrum corde
+
+This Numerodinatio namespace contains dictionaries related to bare minimum interlingual concepts used to understand Numerodinatio tables.
+
+The decision making is mostly based on what is very essential to explain other tables.
+
+
+## 1603_1_99 Nōtitiae temporāriōrum circā librārium
+
+<details><summary>🔎🗄️1603_1_99🗄️🔍</summary>
+
+```json
+{
+    "annotationes_internalibus": {
+        "internale": 20,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/99/1603_1_99.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/1/99/1603_1_99.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/99/1603_1_99.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/99/1603_1_99.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "TODO: explain 1603_1_99"
+        },
+        "nomen": "Nōtitiae temporāriōrum circā librārium"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 3975126116,
+            "res_lingualibus": 3541867647,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 51,
+            "res_interlingualibus": 11,
+            "res_lingualibus": 3,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-17T20:06:39"
+        }
+    }
+}
+```
+
+</details>
+
+- status_quo
+  - concepta: 51
+  - res_interlingualibus: 11
+  - res_lingualibus: 3
+### 1603_1_99 Methodī ex dictiōnāriōrum corde
+
+TODO: explain 1603_1_99
+
 
 ## 1603_25_1 //dictiōnāria de partes corporis humani//
 
@@ -112,8 +469,8 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 4006538259,
-            "res_lingualibus": 2804024903,
+            "res_interlingualibus": 3182640614,
+            "res_lingualibus": 4066600542,
             "res_picturae": null
         },
         "summa": {
@@ -123,7 +480,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T19:35:15"
+            "opus": "2022-04-17T20:05:04"
         }
     }
 }
@@ -515,21 +872,29 @@ Traditional paper dictionaries already are not complete enough to explain how th
         ]
     },
     "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "1603_64_41 //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//"
+        },
         "nomen": "//Dictiōnāria basibus dē perītiae per susurrōs vītālēs//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1822120724,
-            "res_lingualibus": 1822120724
+            "res_interlingualibus": 97486010,
+            "res_lingualibus": 352291638,
+            "res_picturae": null
         },
         "summa": {
             "concepta": 56,
             "res_interlingualibus": 12,
-            "res_lingualibus": 150
+            "res_lingualibus": 150,
+            "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T00:16:44.455775"
+            "opus": "2022-04-17T20:09:15"
         }
     }
 }
@@ -541,6 +906,10 @@ Traditional paper dictionaries already are not complete enough to explain how th
   - concepta: 56
   - res_interlingualibus: 12
   - res_lingualibus: 150
+### 1603_64_41 Methodī ex dictiōnāriōrum corde
+
+1603_64_41 //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
+
 
 ## 1603_64_604 //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
 
@@ -659,15 +1028,25 @@ Traditional paper dictionaries already are not complete enough to explain how th
   - res_interlingualibus: 12
   - res_lingualibus: 4
 
-## 1603_1_1 //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//@lat-Latn
+## 1603_99_987 //Personal name nomenclature//
 
-<details><summary>🔎🗄️1603_1_1🗄️🔍</summary>
+<details><summary>🔎🗄️1603_99_987🗄️🔍</summary>
 
 ```json
 {
     "annotationes_internalibus": {
-        "internale": 100,
-        "publicum": 10
+        "experimentum": 90
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/99/987/1603_99_987.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/99/987/1603_99_987.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/99/987/1603_99_987.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/99/987/1603_99_987.no1.tm.hxl.csv"
+        ]
     },
     "meta": {
         "caveat_lector": {
@@ -676,30 +1055,23 @@ Traditional paper dictionaries already are not complete enough to explain how th
         "methodi_ex_dictionariorum_corde": {
             "mul-Zyyy": null
         },
-        "nomen": "//Numeroclatura Generālium ad MM ex Numerordĭnātĭo//@lat-Latn"
-    },
-    "cdn": {
-        "codex": [],
-        "dictionaria": [
-            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.no1.tm.hxl.csv"
-        ],
-        "annexis": []
+        "nomen": "//Personal name nomenclature//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 466094944,
-            "res_interlingualibus": 2440884952,
+            "res_interlingualibus": 2920449265,
+            "res_lingualibus": 393291787,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 81,
-            "res_lingualibus": 9,
-            "res_interlingualibus": 15,
+            "concepta": 0,
+            "res_interlingualibus": 4,
+            "res_lingualibus": 3,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T19:35:16"
+            "opus": "2022-04-17T20:00:52"
         }
     }
 }
@@ -708,7 +1080,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
 </details>
 
 - status_quo
-  - concepta: 81
-  - res_interlingualibus: 15
-  - res_lingualibus: 9
+  - concepta: 0
+  - res_interlingualibus: 4
+  - res_lingualibus: 3
 
