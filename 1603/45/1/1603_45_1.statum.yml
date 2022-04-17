@@ -16,16 +16,45 @@ cdn:
   - https://lsf-cdn.etica.ai/1603/45/1/1603_45_1.no1.tm.hxl.csv
   - https://lsf-cdn.etica.ai/1603/45/1/1603_45_1.no11.tm.hxl.csv
 meta:
+  caveat_lector:
+    mul-Zyyy: '**Do not use [1603:45:1] to automate import on Wikidata**. Volunteers
+      can use this as reference for what is missing, but all work is already done
+      via the Wikidata site, reviewing item by item.'
+  methodi_ex_dictionariorum_corde:
+    mul-Zyyy: "The decision making behind the concept dictionaries was lingual terminology\
+      \ translations and interlingual codes for organizations which often are mentioned\
+      \ in humanitarian areas.\n\n**UN System**\n\nThe dictionary contains an incomplete\
+      \ list of concepts of the UN System. \n\n**National Red Cross and Red Crescent\
+      \ Societies**\n\nThe dictionaries contain National Red Cross and Red Crescent\
+      \ concepts. It uses UN m49 as key, which can actually contain concepts that\
+      \ do not have valid national organizations because they are not strictly a country.\
+      \ The concepts which do are a country and have translations may also not be\
+      \ at a given moment be acknowledged by the International Red Cross and Red Crescent.\n\
+      \n**Subnational Red Cross and Red Crescent Societies**\n\nThe dictionaries here\
+      \ do not list subnational organizations. However, we do have standardized suggestions\
+      \ on how to decide a code for then: use the UN P-Code without the ISO 3166-1\
+      \ letter prefix, but organize the subnational under the UN m49. Example:\n\n\
+      . National Red Cross of Brazil\n.. Code: 63_76\n... Numerodinatio: 1603:45:1:63:76\n\
+      . Subnational; Minas Gerais, Brazil\n.. UN P Code: BR33\n... Code: 63_76_33\n\
+      ... Numerodinatio: 1603:45:1:63:76:33\n\nSome organizations which are not valid\
+      \ national Red Cross and Red Crescent (because they are not strictly independent\
+      \ counties) can encode them with this strategy.\n\n**Other humanitarian organizations\
+      \ are missing**\nWe're still adding organizations which are neither UN or Red\
+      \ Cross. However, we're likely to keep this focused on humanitarian aid and\
+      \ have development aid. Human rights and humanitarian relief organizations will\
+      \ not be added here"
   nomen: //dictiōnāria de hūmānitātēs interimperia//
 status_quo:
   crc:
     concepta: null
-    res_interlingualibus: 1822120724
-    res_lingualibus: 1822120724
+    res_interlingualibus: 791548006
+    res_lingualibus: 1545539636
+    res_picturae: null
   summa:
     concepta: 347
     res_interlingualibus: 15
     res_lingualibus: 245
+    res_picturae: null
   tempus:
-    opus: '2022-04-17T13:58:47'
+    opus: '2022-04-17T19:33:11'
 

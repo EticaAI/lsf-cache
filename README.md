@@ -101,21 +101,29 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
         ]
     },
     "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "`+//Dictiōnāria basibus de scielus contrā persōnam//+` (literal English translation: _Basic dictionaries about crimes against person_; person on singular) contains basic (id est, not fully detailed) concepts about crimes against humans at mostly at individual level and crimes against group of humans without intent of exterminate entire community (which have e dedicated dictionaries) for non-political reasons."
+        },
         "nomen": "/Dictiōnāria basibus dē sceleribus contrā persōnam/"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1822120724,
-            "res_lingualibus": 1822120724
+            "res_interlingualibus": 4006538259,
+            "res_lingualibus": 2804024903,
+            "res_picturae": null
         },
         "summa": {
             "concepta": 22,
             "res_interlingualibus": 14,
-            "res_lingualibus": 162
+            "res_lingualibus": 162,
+            "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T13:03:52"
+            "opus": "2022-04-17T19:35:15"
         }
     }
 }
@@ -127,6 +135,10 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
   - concepta: 22
   - res_interlingualibus: 14
   - res_lingualibus: 162
+### 1603_44_101 Methodī ex dictiōnāriōrum corde
+
+`+//Dictiōnāria basibus de scielus contrā persōnam//+` (literal English translation: _Basic dictionaries about crimes against person_; person on singular) contains basic (id est, not fully detailed) concepts about crimes against humans at mostly at individual level and crimes against group of humans without intent of exterminate entire community (which have e dedicated dictionaries) for non-political reasons.
+
 
 ## 1603_44_111 /Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/
 
@@ -210,21 +222,29 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
         ]
     },
     "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": "**Do not use [1603:45:1] to automate import on Wikidata**. Volunteers can use this as reference for what is missing, but all work is already done via the Wikidata site, reviewing item by item."
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.\n\n**UN System**\n\nThe dictionary contains an incomplete list of concepts of the UN System. \n\n**National Red Cross and Red Crescent Societies**\n\nThe dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.\n\n**Subnational Red Cross and Red Crescent Societies**\n\nThe dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:\n\n. National Red Cross of Brazil\n.. Code: 63_76\n... Numerodinatio: 1603:45:1:63:76\n. Subnational; Minas Gerais, Brazil\n.. UN P Code: BR33\n... Code: 63_76_33\n... Numerodinatio: 1603:45:1:63:76:33\n\nSome organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.\n\n**Other humanitarian organizations are missing**\nWe're still adding organizations which are neither UN or Red Cross. However, we're likely to keep this focused on humanitarian aid and have development aid. Human rights and humanitarian relief organizations will not be added here"
+        },
         "nomen": "//dictiōnāria de hūmānitātēs interimperia//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1822120724,
-            "res_lingualibus": 1822120724
+            "res_interlingualibus": 3979726985,
+            "res_lingualibus": 2078375149,
+            "res_picturae": null
         },
         "summa": {
             "concepta": 347,
             "res_interlingualibus": 15,
-            "res_lingualibus": 245
+            "res_lingualibus": 245,
+            "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T13:58:47"
+            "opus": "2022-04-17T19:33:12"
         }
     }
 }
@@ -236,6 +256,39 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
   - concepta: 347
   - res_interlingualibus: 15
   - res_lingualibus: 245
+### 1603_45_1 Methodī ex dictiōnāriōrum corde
+
+The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
+
+**UN System**
+
+The dictionary contains an incomplete list of concepts of the UN System. 
+
+**National Red Cross and Red Crescent Societies**
+
+The dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.
+
+**Subnational Red Cross and Red Crescent Societies**
+
+The dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:
+
+. National Red Cross of Brazil
+.. Code: 63_76
+... Numerodinatio: 1603:45:1:63:76
+. Subnational; Minas Gerais, Brazil
+.. UN P Code: BR33
+... Code: 63_76_33
+... Numerodinatio: 1603:45:1:63:76:33
+
+Some organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.
+
+**Other humanitarian organizations are missing**
+We're still adding organizations which are neither UN or Red Cross. However, we're likely to keep this focused on humanitarian aid and have development aid. Human rights and humanitarian relief organizations will not be added here
+
+### 1603_45_1 Caveat_lector
+
+**Do not use [1603:45:1] to automate import on Wikidata**. Volunteers can use this as reference for what is missing, but all work is already done via the Wikidata site, reviewing item by item.
+
 
 ## 1603_45_19 Dictiōnāria dē locī generibus
 
@@ -635,8 +688,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 3475380778,
-            "res_interlingualibus": 619678332,
+            "res_lingualibus": 466094944,
+            "res_interlingualibus": 2440884952,
             "res_picturae": null
         },
         "summa": {
@@ -646,7 +699,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T19:05:25"
+            "opus": "2022-04-17T19:35:16"
         }
     }
 }
