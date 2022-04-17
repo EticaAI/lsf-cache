@@ -3149,6 +3149,7 @@ class LibrariaStatusQuo:
             status['status_quo']['summa']['codex']))
         paginae.append('    - concepta_non_unicum: {0}'.format(
             status['status_quo']['summa']['concepta_non_unicum']))
+        paginae.append('')
         for codex, item in status['librarium'].items():
             paginae.append('## {0} {1}'.format(codex, item['meta']['nomen']))
             paginae.append('- status_quo')
@@ -3160,6 +3161,18 @@ class LibrariaStatusQuo:
             paginae.append(
                 '  - res_lingualibus: {0}'.format(
                     item['status_quo']['summa']['res_lingualibus']))
+            paginae.append('')
+            paginae.append('<details><summary>details</summary>')
+            paginae.append('')
+            paginae.append('```json')
+            # paginae.append('')
+            paginae.append(json.dumps(
+                item, indent=4, ensure_ascii=False, sort_keys=False))
+            # paginae.append('')
+            paginae.append('```')
+            paginae.append('')
+            paginae.append('</details>')
+            paginae.append('')
             paginae.append('')
 
         # return [yaml.dump(
