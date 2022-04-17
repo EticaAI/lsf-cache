@@ -3160,6 +3160,7 @@ class LibrariaStatusQuo:
             paginae.append(
                 '  - res_lingualibus: {0}'.format(
                     item['status_quo']['summa']['res_lingualibus']))
+            paginae.append('')
 
         # return [yaml.dump(
         #     status, allow_unicode=True)]
