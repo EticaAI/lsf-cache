@@ -61,6 +61,8 @@ from typing import (
     Union,
     List
 )
+import random
+
 from copy import copy
 import re
 import fnmatch
@@ -69,6 +71,7 @@ import datetime
 # from datetime import datetime
 
 
+import json
 from zlib import crc32
 
 
@@ -2187,6 +2190,9 @@ class Codex:
             ]
             scope_and_content = self.quod_res('0_1603_1_7_2616_7535')
             # paginae.append(str(scope_and_content))
+
+            # @TODO: use self.quod_res_methodi_ex_dictionariorum_corde() instead
+            #        of this block
             if scope_and_content and \
                     qhxl(scope_and_content, meta_langs) is not None:
                 term = qhxl(scope_and_content, meta_langs)
@@ -2349,6 +2355,32 @@ class Codex:
                     res['#item+conceptum+codicem'], '_')
             if res_codicem == codicem:
                 return res
+
+        return None
+
+    def quod_res_caveat_lector(self) -> str:
+        meta_langs = [
+            '#item+rem+i_qcc+is_zxxx+ix_codexfacto'
+        ]
+        caveat_lector = self.quod_res('0_1603_1_7_2617_9289584')
+        if caveat_lector and \
+                qhxl(caveat_lector, meta_langs) is not None:
+            term = qhxl(caveat_lector, meta_langs)
+            term2 = self.notitiae.translatio(term)
+            return term2
+
+        return None
+
+    def quod_res_methodi_ex_dictionariorum_corde(self) -> str:
+        meta_langs = [
+            '#item+rem+i_qcc+is_zxxx+ix_codexfacto'
+        ]
+        scope_and_content = self.quod_res('0_1603_1_7_2616_7535')
+        if scope_and_content and \
+                qhxl(scope_and_content, meta_langs) is not None:
+            term = qhxl(scope_and_content, meta_langs)
+            term2 = self.notitiae.translatio(term)
+            return term2
 
         return None
 
@@ -2990,7 +3022,11 @@ class LibrariaStatusQuo:
         # raise ValueError(str(self.linguae))
 
     def crc(self, res: Union[set, list]) -> str:
-        return crc32(b'TODO')
+        if isinstance(res, set):
+            res = list(res)
+        json_text = json.dumps(res)
+        # return crc32(b'TODO')
+        return crc32(json_text.encode())
 
     def ex_codice(self):
         nomen = self.codex.m1603_1_1__de_codex['#item+rem+i_mul+is_zyyy']
@@ -2998,12 +3034,26 @@ class LibrariaStatusQuo:
         usus_linguae = len(self.codex.usus_linguae)
         usus_ix_qcc = len(self.codex.usus_ix_qcc)
 
-        time_expected = datetime.datetime.now()
-        tempus_opus = datetime.datetime.now()
+        # time_expected = datetime.datetime.now().replace(microsecond=0)
+        # tempus_opus = datetime.datetime.now()
+        tempus_opus = datetime.datetime.now().replace(microsecond=0)
+
+        methodi_ex_dictionariorum_corde = \
+            self.codex.quod_res_methodi_ex_dictionariorum_corde()
+        caveat_lector = \
+            self.codex.quod_res_caveat_lector()
 
         resultatum = {
             'annotationes_internalibus': self.codex.n1603ia,
             'meta': {
+                # Caveat lector
+                'caveat_lector': {
+                    'mul-Zyyy': caveat_lector
+                },
+                # Methodī ex dictiōnāriōrum corde
+                'methodi_ex_dictionariorum_corde': {
+                    'mul-Zyyy': methodi_ex_dictionariorum_corde
+                },
                 'nomen': nomen
             },
             'cdn': self.cdn,
@@ -3012,11 +3062,13 @@ class LibrariaStatusQuo:
                     'concepta': None,
                     'res_lingualibus': self.crc(self.codex.usus_linguae),
                     'res_interlingualibus': self.crc(self.codex.usus_ix_qcc),
+                    'res_picturae': None,
                 },
                 'summa': {
                     'concepta': summis_concepta,
                     'res_lingualibus': usus_linguae,
                     'res_interlingualibus': usus_ix_qcc,
+                    'res_picturae': None,
                 },
                 'tempus': {
                     'opus': tempus_opus.isoformat()
@@ -3024,9 +3076,6 @@ class LibrariaStatusQuo:
                 }
             }
         }
-        # time_expected = datetime.datetime.now()
-        # time_actual = datetime.datetime.fromisoformat(time_expected.isoformat())
-        # assert time_actual == time_expected
 
         return resultatum
 
@@ -4516,16 +4565,36 @@ class OpusTemporibus:
     libraria_status_quo: Type['LibrariaStatusQuo']
     codex_opus: list = []
     opus: list = []
+    in_limitem: int = 0
+    in_ordinem: str = None
+    quaero_numerordinatio: list = []
 
     def __init__(
         self,
         ex_opere_temporibus: str,
         # ex_librario: str = '',
-        quaero_ix_n1603ia: str = ''
+        quaero_ix_n1603ia: str = '',
+        in_limitem: Union[str, int] = '',
+        in_ordinem: str = None,
+        quaero_numerordinatio: Union[list, str] = None,
     ):
         self.ex_opere_temporibus = ex_opere_temporibus
         # self.ex_librario = ex_librario
         self.quaero_ix_n1603ia = quaero_ix_n1603ia
+
+        if in_limitem:
+            self.in_limitem = int(in_limitem)
+
+        if in_ordinem:
+            self.in_ordinem = in_ordinem
+
+        if quaero_numerordinatio and len(quaero_numerordinatio) > 0:
+            if not isinstance(quaero_numerordinatio, list):
+                quaero_numerordinatio = quaero_numerordinatio.split(',')
+
+            for item in quaero_numerordinatio:
+                self.quaero_numerordinatio.append(
+                    numerordinatio_neo_separatum(item, '_'))
 
         self.initiari()
         # self.dictionaria_codex = dictionaria_codex
@@ -4583,6 +4652,22 @@ class OpusTemporibus:
         # resultatum.extend(str(self.codex.m1603_1_1))
         # resultatum.extend(self.codex_opus)
         resultatum.extend(self.opus)
+
+        if self.in_ordinem == 'chaos':
+            random.shuffle(resultatum)
+
+        # print('oi', self.quaero_numerordinatio)
+
+        if len(self.quaero_numerordinatio) > 0:
+            _resultatum = []
+            for item in resultatum:
+                if item[0] in self.quaero_numerordinatio:
+                    _resultatum.append(item)
+            resultatum = _resultatum
+
+        if self.in_limitem > 0 and len(resultatum) > self.in_limitem:
+            resultatum = resultatum[:self.in_limitem]
+
         return resultatum
 
 
@@ -4841,6 +4926,45 @@ class CLI_2600:
             # action='store_true',
             nargs='?'
         )
+        opus_temporibus.add_argument(
+            '--quaero-numerordinatio',
+            help='Query Numerordĭnātĭo. Additional filter list for focused '
+            ' base of dictionaries. Ideal to check if some groups meet '
+            'other filters. '
+            'Example: if result return empty and other queries are to check '
+            'if need to fetch again from Wikidata Q, then you assume no '
+            'new fetch is necessary',
+            # metavar='',
+            dest='quaero_numerordinatio',
+            # const='',
+            # action='store_true',
+            nargs='?'
+        )
+
+        # in (+ ablative), in (+ accusative);;
+        #   (+ accusative) toward, towards, against, at
+        # https://en.wiktionary.org/wiki/in#Latin
+        # https://en.wiktionary.org/wiki/limes#Latin
+        opus_temporibus.add_argument(
+            '--in-limitem',
+            help='/Against the limit of/. Limit maximum number of cron jobs '
+            'to show. ',
+            dest='in_limitem',
+            nargs='?'
+        )
+
+        # https://en.wiktionary.org/wiki/ordo#Latin
+        # https://en.wiktionary.org/wiki/chaos#Latin
+        opus_temporibus.add_argument(
+            '--in-ordinem',
+            help='/Against arrangement (ordering) of/. Sort result list to '
+            'this rule. Options: '
+            'numerordinatio=natural order; chaos=random order',
+            dest='in_ordinem',
+            nargs='?',
+            choices=['numerordinatio', 'chaos'],
+            default='numerordinatio'
+        )
 
         # # --agendum-linguam is a draft. Not 100% implemented
         # parser.add_argument(
@@ -4914,10 +5038,13 @@ class CLI_2600:
         if self.pyargs.ex_opere_temporibus and \
                 len(self.pyargs.ex_opere_temporibus) > 0:
 
-            # print(self.pyargs.quaero_ix_n1603ia)
+            # print(self.pyargs.quaero_numerordinatio)
             opus_temporibus = OpusTemporibus(
                 self.pyargs.ex_opere_temporibus,
-                self.pyargs.quaero_ix_n1603ia
+                self.pyargs.quaero_ix_n1603ia,
+                in_limitem=self.pyargs.in_limitem,
+                in_ordinem=self.pyargs.in_ordinem,
+                quaero_numerordinatio=self.pyargs.quaero_numerordinatio,
             )
             return self.output(opus_temporibus.imprimere())
 
