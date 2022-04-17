@@ -3163,12 +3163,15 @@ class LibrariaStatusQuo:
             paginae.append(
                 '<details><summary>🔎🗄️{0}🗄️🔍</summary>'.format(codex))
             paginae.append('')
+            # paginae.append('```json')
             paginae.append('```json')
-            # paginae.append('')
+            # paginae.append('<pre>')
+            paginae.append('')
             paginae.append(json.dumps(
                 item, indent=4, ensure_ascii=False, sort_keys=False))
-            # paginae.append('')
+            paginae.append('')
             paginae.append('```')
+            # paginae.append('</pre>')
             paginae.append('')
             paginae.append('</details>')
             paginae.append('')
