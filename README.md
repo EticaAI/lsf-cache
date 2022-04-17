@@ -8,7 +8,7 @@
 
 <details><summary>🔎🗄️1603_1_1🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -38,8 +38,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 3524470467,
-            "res_interlingualibus": 826909268,
+            "res_lingualibus": 1360035871,
+            "res_interlingualibus": 2978036902,
             "res_picturae": null
         },
         "summa": {
@@ -49,12 +49,12 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:20:41"
+            "opus": "2022-04-17T20:32:06"
         }
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -63,11 +63,12 @@
   - res_interlingualibus: 15
   - res_lingualibus: 9
 
+
 ## 1603_1_101 //Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//
 
 <details><summary>🔎🗄️1603_1_101🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -114,7 +115,7 @@
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -123,11 +124,12 @@
   - res_interlingualibus: 7
   - res_lingualibus: 4
 
+
 ## 1603_1_51 //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//
 
 <details><summary>🔎🗄️1603_1_51🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -173,7 +175,7 @@
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -182,11 +184,12 @@
   - res_interlingualibus: 19
   - res_lingualibus: 3
 
+
 ## 1603_1_6 /Dictiōnāria de terminī typīs/
 
 <details><summary>🔎🗄️1603_1_6🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -236,7 +239,7 @@
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -245,11 +248,12 @@
   - res_interlingualibus: 13
   - res_lingualibus: 116
 
+
 ## 1603_1_7 //Dictiōnāria basibus dē rēs interlinguīs//
 
 <details><summary>🔎🗄️1603_1_7🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -295,7 +299,7 @@
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -303,6 +307,7 @@
   - concepta: 47
   - res_interlingualibus: 13
   - res_lingualibus: 3
+
 ### 1603_1_7 Methodī ex dictiōnāriōrum corde
 
 This Numerodinatio namespace contains dictionaries related to bare minimum interlingual concepts used to understand Numerodinatio tables.
@@ -314,7 +319,7 @@ The decision making is mostly based on what is very essential to explain other t
 
 <details><summary>🔎🗄️1603_1_99🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -360,7 +365,7 @@ The decision making is mostly based on what is very essential to explain other t
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -368,6 +373,7 @@ The decision making is mostly based on what is very essential to explain other t
   - concepta: 51
   - res_interlingualibus: 11
   - res_lingualibus: 3
+
 ### 1603_1_99 Methodī ex dictiōnāriōrum corde
 
 TODO: explain 1603_1_99
@@ -377,7 +383,7 @@ TODO: explain 1603_1_99
 
 <details><summary>🔎🗄️1603_25_1🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -429,7 +435,7 @@ TODO: explain 1603_1_99
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -437,6 +443,7 @@ TODO: explain 1603_1_99
   - concepta: 10
   - res_interlingualibus: 14
   - res_lingualibus: 148
+
 ### 1603_25_1 Methodī ex dictiōnāriōrum corde
 
 This Numerodinatio namespace contains dictionaries related to general human body parts. Latin (while a natural language) actually is used as interlingual code. It's mostly based on Basle Nomina Anatomica 1895 ("BNA1895") and, if any difference, archaic terms are replaced with Terminologia Anatomica 95 ("TA95").
@@ -450,7 +457,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 
 <details><summary>🔎🗄️1603_44_101🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -500,7 +507,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -508,6 +515,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
   - concepta: 22
   - res_interlingualibus: 14
   - res_lingualibus: 162
+
 ### 1603_44_101 Methodī ex dictiōnāriōrum corde
 
 `+//Dictiōnāria basibus de scielus contrā persōnam//+` (literal English translation: _Basic dictionaries about crimes against person_; person on singular) contains basic (id est, not fully detailed) concepts about crimes against humans at mostly at individual level and crimes against group of humans without intent of exterminate entire community (which have e dedicated dictionaries) for non-political reasons.
@@ -517,7 +525,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 
 <details><summary>🔎🗄️1603_44_111🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -559,7 +567,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -568,11 +576,12 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
   - res_interlingualibus: 16
   - res_lingualibus: 226
 
+
 ## 1603_45_1 //dictiōnāria de hūmānitātēs interimperia//
 
 <details><summary>🔎🗄️1603_45_1🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -625,7 +634,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -633,6 +642,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
   - concepta: 347
   - res_interlingualibus: 15
   - res_lingualibus: 245
+
 ### 1603_45_1 Methodī ex dictiōnāriōrum corde
 
 The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.
@@ -671,7 +681,7 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
 
 <details><summary>🔎🗄️1603_45_19🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -713,7 +723,7 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -722,11 +732,12 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
   - res_interlingualibus: 12
   - res_lingualibus: 241
 
+
 ## 1603_45_31 Dictiōnāria de calamitātibus
 
 <details><summary>🔎🗄️1603_45_31🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -779,7 +790,7 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -787,6 +798,7 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
   - concepta: 25
   - res_interlingualibus: 14
   - res_lingualibus: 211
+
 ### 1603_45_31 Methodī ex dictiōnāriōrum corde
 
 The decision making behind the concepts of the dictionaries is based mostly on calamities (disasters) commonly cited on emergency response in humanitarian areas. When this is the case, the interlingual external codes will also be added to the concept.
@@ -798,7 +810,7 @@ The terminology translations are extracted from Wikidata, which means this recom
 
 <details><summary>🔎🗄️1603_63_101🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -853,7 +865,7 @@ The terminology translations are extracted from Wikidata, which means this recom
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -861,6 +873,7 @@ The terminology translations are extracted from Wikidata, which means this recom
   - concepta: 332
   - res_interlingualibus: 14
   - res_lingualibus: 249
+
 ### 1603_63_101 Methodī ex dictiōnāriōrum corde
 
 `+//Dictiōnāria basibus dē rēbus vītālibus necessāriīs//+` (literal English translation: _basic dictionaries about necessary vital things_) is a **superficial** compilation of concepts for things (not procedures, nor full implementing guides) which could be _given_ to aid other humans or to whom or what give aid to other humans.
@@ -876,7 +889,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
 
 <details><summary>🔎🗄️1603_64_41🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -926,7 +939,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -934,6 +947,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
   - concepta: 56
   - res_interlingualibus: 12
   - res_lingualibus: 150
+
 ### 1603_64_41 Methodī ex dictiōnāriōrum corde
 
 1603_64_41 //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
@@ -943,7 +957,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
 
 <details><summary>🔎🗄️1603_64_604🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -985,7 +999,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -994,11 +1008,12 @@ Traditional paper dictionaries already are not complete enough to explain how th
   - res_interlingualibus: 12
   - res_lingualibus: 227
 
+
 ## 1603_84_1 /Dictiōnāria dentālium/
 
 <details><summary>🔎🗄️1603_84_1🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -1051,7 +1066,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -1060,11 +1075,12 @@ Traditional paper dictionaries already are not complete enough to explain how th
   - res_interlingualibus: 12
   - res_lingualibus: 4
 
+
 ## 1603_99_987 //Personal name nomenclature//
 
 <details><summary>🔎🗄️1603_99_987🗄️🔍</summary>
 
-```json
+<pre>
 
 {
     "annotationes_internalibus": {
@@ -1109,7 +1125,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
     }
 }
 
-```
+</pre>
 
 </details>
 
@@ -1117,4 +1133,5 @@ Traditional paper dictionaries already are not complete enough to explain how th
   - concepta: 0
   - res_interlingualibus: 4
   - res_lingualibus: 3
+
 
