@@ -2174,7 +2174,8 @@ actiones_completis_publicis() {
 
 # TODO: document...
 deploy_0_9_markdown() {
-  objectivum_archivum="${ROOTDIR}/1603/README.md"
+  # ROOTDIR assumed to be on officinam
+  objectivum_archivum="${ROOTDIR}/README.md"
   echo "${FUNCNAME[0]} [$objectivum_archivum]..."
 
   "${ROOTDIR}/999999999/0/1603_1.py" \
