@@ -3160,21 +3160,6 @@ class LibrariaStatusQuo:
                 '## {0} {1}'.format(codex, item['meta']['nomen']))
 
             paginae.append('')
-            paginae.append(
-                '<details><summary>🔎🗄️{0}🗄️🔍</summary>'.format(codex))
-            paginae.append('')
-            # paginae.append('```json')
-            # paginae.append('```json')
-            paginae.append('<pre>')
-            # paginae.append('')
-            paginae.append(json.dumps(
-                item, indent=4, ensure_ascii=False, sort_keys=False))
-            # paginae.append('')
-            # paginae.append('```')
-            paginae.append('</pre>')
-            paginae.append('')
-            paginae.append('</details>')
-            paginae.append('')
 
             paginae.append('- status_quo')
             paginae.append(
@@ -3200,6 +3185,21 @@ class LibrariaStatusQuo:
                 paginae.append(caveat_lector)
                 paginae.append('')
 
+            paginae.append('')
+            paginae.append(
+                '<details><summary>🔎🗄️{0}🗄️🔍</summary>'.format(codex))
+            paginae.append('')
+            # paginae.append('```json')
+            # paginae.append('```json')
+            paginae.append('<pre>')
+            # paginae.append('')
+            paginae.append(json.dumps(
+                item, indent=4, ensure_ascii=False, sort_keys=False))
+            # paginae.append('')
+            # paginae.append('```')
+            paginae.append('</pre>')
+            paginae.append('')
+            paginae.append('</details>')
             paginae.append('')
 
         # return [yaml.dump(
