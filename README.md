@@ -5,12 +5,8 @@
     - concepta_non_unicum: 1064
 
 ## 1603_25_1 //dictiōnāria de partes corporis humani//
-- status_quo
-  - concepta: 10
-  - res_interlingualibus: 14
-  - res_lingualibus: 148
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_25_1🗄️🔍</summary>
 
 ```json
 {
@@ -47,8 +43,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3076867935,
-            "res_lingualibus": 1458830522,
+            "res_interlingualibus": 823561084,
+            "res_lingualibus": 3848275165,
             "res_picturae": null
         },
         "summa": {
@@ -58,7 +54,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T14:42:41"
+            "opus": "2022-04-17T18:47:57"
         }
     }
 }
@@ -66,14 +62,22 @@
 
 </details>
 
+- status_quo
+  - concepta: 10
+  - res_interlingualibus: 14
+  - res_lingualibus: 148
+### Methodī ex dictiōnāriōrum corde
+
+This Numerodinatio namespace contains dictionaries related to general human body parts. Latin (while a natural language) actually is used as interlingual code. It's mostly based on Basle Nomina Anatomica 1895 ("BNA1895") and, if any difference, archaic terms are replaced with Terminologia Anatomica 95 ("TA95").
+
+Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to external body parts.
+
+All work on the main concept tables is manually compiled and reviewed by EticaAI.
+
 
 ## 1603_44_101 /Dictiōnāria basibus dē sceleribus contrā persōnam/
-- status_quo
-  - concepta: 22
-  - res_interlingualibus: 14
-  - res_lingualibus: 162
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_44_101🗄️🔍</summary>
 
 ```json
 {
@@ -119,14 +123,14 @@
 
 </details>
 
+- status_quo
+  - concepta: 22
+  - res_interlingualibus: 14
+  - res_lingualibus: 162
 
 ## 1603_44_111 /Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/
-- status_quo
-  - concepta: 36
-  - res_interlingualibus: 16
-  - res_lingualibus: 226
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_44_111🗄️🔍</summary>
 
 ```json
 {
@@ -172,14 +176,14 @@
 
 </details>
 
+- status_quo
+  - concepta: 36
+  - res_interlingualibus: 16
+  - res_lingualibus: 226
 
 ## 1603_45_1 //dictiōnāria de hūmānitātēs interimperia//
-- status_quo
-  - concepta: 347
-  - res_interlingualibus: 15
-  - res_lingualibus: 245
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_45_1🗄️🔍</summary>
 
 ```json
 {
@@ -228,14 +232,14 @@
 
 </details>
 
+- status_quo
+  - concepta: 347
+  - res_interlingualibus: 15
+  - res_lingualibus: 245
 
 ## 1603_45_19 Dictiōnāria dē locī generibus
-- status_quo
-  - concepta: 67
-  - res_interlingualibus: 12
-  - res_lingualibus: 241
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_45_19🗄️🔍</summary>
 
 ```json
 {
@@ -281,14 +285,14 @@
 
 </details>
 
+- status_quo
+  - concepta: 67
+  - res_interlingualibus: 12
+  - res_lingualibus: 241
 
 ## 1603_45_31 Dictiōnāria de calamitātibus
-- status_quo
-  - concepta: 25
-  - res_interlingualibus: 14
-  - res_lingualibus: 211
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_45_31🗄️🔍</summary>
 
 ```json
 {
@@ -315,21 +319,29 @@
         ]
     },
     "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "The decision making behind the concepts of the dictionaries is based mostly on calamities (disasters) commonly cited on emergency response in humanitarian areas. When this is the case, the interlingual external codes will also be added to the concept.\n\nThe terminology translations are extracted from Wikidata, which means this recommended derived works periodically check for updates."
+        },
         "nomen": "Dictiōnāria de calamitātibus"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1822120724,
-            "res_lingualibus": 1822120724
+            "res_interlingualibus": 3379006722,
+            "res_lingualibus": 1648089254,
+            "res_picturae": null
         },
         "summa": {
             "concepta": 25,
             "res_interlingualibus": 14,
-            "res_lingualibus": 211
+            "res_lingualibus": 211,
+            "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T00:08:00.634899"
+            "opus": "2022-04-17T18:46:14"
         }
     }
 }
@@ -337,14 +349,20 @@
 
 </details>
 
+- status_quo
+  - concepta: 25
+  - res_interlingualibus: 14
+  - res_lingualibus: 211
+### Methodī ex dictiōnāriōrum corde
+
+The decision making behind the concepts of the dictionaries is based mostly on calamities (disasters) commonly cited on emergency response in humanitarian areas. When this is the case, the interlingual external codes will also be added to the concept.
+
+The terminology translations are extracted from Wikidata, which means this recommended derived works periodically check for updates.
+
 
 ## 1603_63_101 //Dictiōnāria basibus dē rēbus vītālibus necessāriīs//
-- status_quo
-  - concepta: 332
-  - res_interlingualibus: 14
-  - res_lingualibus: 249
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_63_101🗄️🔍</summary>
 
 ```json
 {
@@ -395,14 +413,14 @@
 
 </details>
 
+- status_quo
+  - concepta: 332
+  - res_interlingualibus: 14
+  - res_lingualibus: 249
 
 ## 1603_64_41 //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
-- status_quo
-  - concepta: 56
-  - res_interlingualibus: 12
-  - res_lingualibus: 150
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_64_41🗄️🔍</summary>
 
 ```json
 {
@@ -448,14 +466,14 @@
 
 </details>
 
+- status_quo
+  - concepta: 56
+  - res_interlingualibus: 12
+  - res_lingualibus: 150
 
 ## 1603_64_604 //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
-- status_quo
-  - concepta: 28
-  - res_interlingualibus: 12
-  - res_lingualibus: 227
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_64_604🗄️🔍</summary>
 
 ```json
 {
@@ -501,14 +519,14 @@
 
 </details>
 
+- status_quo
+  - concepta: 28
+  - res_interlingualibus: 12
+  - res_lingualibus: 227
 
 ## 1603_84_1 /Dictiōnāria dentālium/
-- status_quo
-  - concepta: 60
-  - res_interlingualibus: 12
-  - res_lingualibus: 4
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_84_1🗄️🔍</summary>
 
 ```json
 {
@@ -565,14 +583,14 @@
 
 </details>
 
+- status_quo
+  - concepta: 60
+  - res_interlingualibus: 12
+  - res_lingualibus: 4
 
 ## 1603_1_1 //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//@lat-Latn
-- status_quo
-  - concepta: 81
-  - res_interlingualibus: 15
-  - res_lingualibus: 9
 
-<details><summary>details</summary>
+<details><summary>🔎🗄️1603_1_1🗄️🔍</summary>
 
 ```json
 {
@@ -599,8 +617,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 3598764198,
-            "res_interlingualibus": 3384666531,
+            "res_lingualibus": 3957127636,
+            "res_interlingualibus": 102481556,
             "res_picturae": null
         },
         "summa": {
@@ -610,7 +628,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T18:20:52"
+            "opus": "2022-04-17T18:47:57"
         }
     }
 }
@@ -618,4 +636,8 @@
 
 </details>
 
+- status_quo
+  - concepta: 81
+  - res_interlingualibus: 15
+  - res_lingualibus: 9
 

@@ -3151,18 +3151,15 @@ class LibrariaStatusQuo:
             status['status_quo']['summa']['concepta_non_unicum']))
         paginae.append('')
         for codex, item in status['librarium'].items():
+
+            caveat_lector = self.imprimere_res_caveat_lector(item)
+            corde = self.imprimere_res_methodi_ex_dictionariorum_corde(item)
+
             paginae.append('## {0} {1}'.format(codex, item['meta']['nomen']))
-            paginae.append('- status_quo')
-            paginae.append(
-                '  - concepta: {0}'.format(item['status_quo']['summa']['concepta']))
-            paginae.append(
-                '  - res_interlingualibus: {0}'.format(
-                    item['status_quo']['summa']['res_interlingualibus']))
-            paginae.append(
-                '  - res_lingualibus: {0}'.format(
-                    item['status_quo']['summa']['res_lingualibus']))
+
             paginae.append('')
-            paginae.append('<details><summary>details</summary>')
+            paginae.append(
+                '<details><summary>🔎🗄️{0}🗄️🔍</summary>'.format(codex))
             paginae.append('')
             paginae.append('```json')
             # paginae.append('')
@@ -3173,11 +3170,49 @@ class LibrariaStatusQuo:
             paginae.append('')
             paginae.append('</details>')
             paginae.append('')
+
+            paginae.append('- status_quo')
+            paginae.append(
+                '  - concepta: {0}'.format(item['status_quo']['summa']['concepta']))
+            paginae.append(
+                '  - res_interlingualibus: {0}'.format(
+                    item['status_quo']['summa']['res_interlingualibus']))
+            paginae.append(
+                '  - res_lingualibus: {0}'.format(
+                    item['status_quo']['summa']['res_lingualibus']))
+
+            if corde:
+                paginae.append('### Methodī ex dictiōnāriōrum corde')
+                paginae.append('')
+                paginae.append(corde)
+                paginae.append('')
+
+            if caveat_lector:
+                paginae.append('### Caveat_lector')
+                paginae.append('')
+                paginae.append(caveat_lector)
+                paginae.append('')
+
+
             paginae.append('')
 
         # return [yaml.dump(
         #     status, allow_unicode=True)]
         return paginae
+
+    def imprimere_res_caveat_lector(self, item):
+        if item and 'meta' in item and \
+            'caveat_lector' in item['meta'] and \
+                'mul-Zyyy' in item['meta']['caveat_lector']:
+            return item['meta']['caveat_lector']['mul-Zyyy']
+        return None
+
+    def imprimere_res_methodi_ex_dictionariorum_corde(self, item):
+        if item and 'meta' in item and \
+            'methodi_ex_dictionariorum_corde' in item['meta'] and \
+                'mul-Zyyy' in item['meta']['methodi_ex_dictionariorum_corde']:
+            return item['meta']['methodi_ex_dictionariorum_corde']['mul-Zyyy']
+        return None
 
 
 class CodexInTabulamJson:
