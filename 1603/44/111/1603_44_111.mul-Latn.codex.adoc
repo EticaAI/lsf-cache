@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-16T07:48:44
+2022-04-16T23:57:34
 
 |
 /SPDX license ID/@eng-Latn
@@ -90,12 +90,10 @@ Rēs linguālibus::
     +++<br><br>+++
     Since the full list of prototypal-dictionaries and dictionaries is huge, one way cited by objective audiences is the following:
     +++<br><br>+++
-    ....
-    1. Humanitarian aid
-    2. Development aid
-    3. Human rights
-    4. Military relief (or conflict and conflict-resolution related concepts)
-    ....
+    . Humanitarian aid
+    . Development aid
+    . Human rights
+    . Military relief (or conflict and conflict-resolution related concepts)
     +++<br><br>+++
     The itens 1, 2 and 4 https://en.m.wikipedia.org/wiki/Humanitarian-Development_Nexus[are sometimes referred as _nexus_] and are often found helping _humanitarian crisis_. Since most contributors whose ideas and valid criticism are volunteers, then 3 (human rights, as in International Amnesty) to differentiate from humanitarianism (such as Red Cross Movement is reference).
     +++<br><br>+++
@@ -2882,8 +2880,20 @@ Lingua Franca Nova (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 9
+==== Rēs interlinguālibus: 11
 Rēs::
+  //Cōdex annotātiōnibus internālibus//:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603ia
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
+
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2907,21 +2917,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">SPDX license identifier</span>+++
-
-  Numerordĭnātĭo:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_n1603
-
-      ix_hxlvoc;;
-        v_n1603
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">Numerordĭnātĭo</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
 
   /translator/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2959,23 +2954,23 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
 
-  /Wiki QID/:::
+  /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
 
       ix_hxlix;;
-        ix_wikiq
+        ix_wikip7535
 
       ix_hxlvoc;;
-        v_wiki_q
+        v_wiki_p_7535
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
 
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2995,23 +2990,56 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Date or point in time when a work was first published or released</span>+++
 
-  /scope and content/@eng-Latn:::
+  spōnsor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
+        https://www.wikidata.org/wiki/Property:P859[P859]
 
       ix_hxlix;;
-        ix_wikip7535
+        ix_wikip859
 
       ix_hxlvoc;;
-        v_wiki_p_7535
+        v_wiki_p_859
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+        +++<span lang="la">spōnsor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+  Numerordĭnātĭo:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603
+
+      ix_hxlvoc;;
+        v_n1603
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">Numerordĭnātĭo</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
 
   numerus editionis:::
     Rēs interlinguālibus::::
@@ -3030,24 +3058,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
-
-  spōnsor:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
-
-      ix_hxlix;;
-        ix_wikip859
-
-      ix_hxlvoc;;
-        v_wiki_p_859
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
 
 
 <<<
@@ -3159,6 +3169,12 @@ Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:44:101
 
+  //Cōdex annotātiōnibus internālibus//:::
+    publicum-30|victionarium_q-50
+
+  ix_n1603op:::
+    23
+
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /Dictiōnāria basibus dē sceleribus contrā persōnam/
@@ -3168,6 +3184,9 @@ Rēs linguālibus::
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:44:86
+
+  ix_n1603op:::
+    22
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q132781[Q132781]

@@ -1681,13 +1681,14 @@ upload_cdn() {
   #       This file https://lsf-cdn.etica.ai/1603/45/1/1603_45_1.no11.xml
   #       is returning 'content-type: text/plain' without utf-8 on preview
 
-  # set -x
+  set -x
   s3cmd sync "$_basim_fontem" "$_basim_objectivum" \
     --recursive --delete-removed --acl-public \
     --no-progress --stats \
-    --add-header= \
     --config "$S3CFG"
-  # set +x
+  set +x
+
+  temp_save_status "$numerordinatio" "cdn"
 }
 
 ################################################################################
@@ -2047,6 +2048,40 @@ fi
 ################################################################################
 
 #######################################
+# Opus temporibus
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+opus_temporibus_cdn() {
+  # ...
+  echo "TODO..."
+  blue=$(tput setaf 4)
+  normal=$(tput sgr0)
+  printf "%40s\n" "${blue}${FUNCNAME[0]}${normal}"
+
+  opus_temporibus_temporarium="${ROOTDIR}/999999/0/1603.cdn.statum.tsv"
+
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --ex-opere-temporibus='cdn' --quaero-ix_n1603ia='({publicum}>=11)' \
+    > "$opus_temporibus_temporarium"
+
+  while IFS=$'\t' read -r -a line; do
+    echo "${line[0]}"
+
+    actiones_completis_publicis "${line[0]}"
+    # echo "${line[1]}"
+    # echo "${line[2]}"
+  done <"${opus_temporibus_temporarium}"
+
+  # ./999999999/0/1603_1.py --ex-opere-temporibus='cdn' --quaero-ix_n1603ia='({publicum}>=1)'
+}
+
+#######################################
 # TODO...
 #
 # Globals:
@@ -2058,13 +2093,15 @@ fi
 #######################################
 temp_save_status() {
   numerordinatio="$1"
+  ex_librario="$2"
 
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
   _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+  _ex_librario="$ex_librario"
 
   status_archivum_codex="${ROOTDIR}/$_path/$_nomen.statum.yml"
-  status_archivum_librario="${ROOTDIR}/1603/1603.statum.yml"
+  status_archivum_librario="${ROOTDIR}/1603/1603.$_ex_librario.statum.yml"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603+$_nomen.statum.yml"
 
   "${ROOTDIR}/999999999/0/1603_1.py" \
@@ -2075,7 +2112,7 @@ temp_save_status() {
 
   set -x
   "${ROOTDIR}/999999999/0/1603_1.py" \
-    --codex-de "$_nomen" --status-quo --ex-librario \
+    --codex-de "$_nomen" --status-quo --ex-librario="$_ex_librario" \
     >"$objectivum_archivum_temporarium"
   set +x
 
@@ -2116,6 +2153,7 @@ actiones_completis_publicis() {
   neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
-  temp_save_status "$numerordinatio"
+  # temp_save_status "$numerordinatio" "locale"
   upload_cdn "$numerordinatio"
 }
+

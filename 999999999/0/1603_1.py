@@ -66,6 +66,8 @@ import re
 import fnmatch
 # import json
 import datetime
+# from datetime import datetime
+
 
 from zlib import crc32
 
@@ -95,9 +97,15 @@ Exemplōrum gratiā:
 
     {0} --codex-de 1603_63_101 --status-quo
 
-    {0} --codex-de 1603_63_101 --status-quo --ex-librario
+    {0} --codex-de 1603_63_101 --status-quo --ex-librario="cdn"
 
-    {0} --codex-de 1603_63_101 --status-quo --ex-librario --status-in-markdown
+    {0} --codex-de 1603_63_101 --status-quo --ex-librario="locale" \
+--status-in-markdown
+
+    {0} --codex-de 1603_63_101 --ex-opere-temporibus='cdn'
+
+    {0} --ex-opere-temporibus='cdn' \
+--quaero-ix_n1603ia='({{publicum}}>=9)&&({{victionarium_q}}>9)'
 
 """.format(__file__)
 
@@ -467,6 +475,176 @@ def qhxl_attr_2_bcp47(hxlatt: str):
     return resultatum
 
 
+def mathematica(quero: str, meta: str = '') -> bool:
+    """mathematica
+
+    Rudimentar mathematical operations (boolean result)
+
+    Args:
+        quero (_type_, optional): _description_. Defaults to str.
+
+    Returns:
+        bool: True if evaluate to True.
+    """
+    # neo_quero = quero.replace(' ', '').replace('(', '').replace(')', '')
+    neo_quero = quero.replace(' ', '')
+
+    if quero == 'True':
+        return True
+
+    if quero == 'False':
+        return False
+
+    if neo_quero.find('&&') > -1:
+        parts = neo_quero.split('&&')
+        # print(parts)
+        # return bool(parts[0]) and bool(parts[1])
+        return logicum(parts[0]) and logicum(parts[1])
+
+    if neo_quero.find('||') > -1:
+        parts = neo_quero.split('||')
+        # return bool(parts[0]) or bool(parts[1])
+        return logicum(parts[0]) or logicum(parts[1])
+
+    # regula = r"(\d*)(.{1,2})(\d*)"
+    regula = r"(?P<n1>(\d*))(?P<op>(\D{1,2}))(?P<n2>(\d*))"
+
+    r1 = re.match(regula, neo_quero)
+    if r1.group('op') == '==':
+        return int(r1.group('n1')) == int(r1.group('n2'))
+
+    if r1.group('op') == '!=':
+        return int(r1.group('n1')) != int(r1.group('n2'))
+
+    if r1.group('op') == '<=':
+        return int(r1.group('n1')) <= int(r1.group('n2'))
+
+    if r1.group('op') == '>=':
+        return int(r1.group('n1')) >= int(r1.group('n2'))
+
+    if r1.group('op') == '<':
+        return int(r1.group('n1')) < int(r1.group('n2'))
+
+    if r1.group('op') == '>':
+        return int(r1.group('n1')) > int(r1.group('n2'))
+
+    raise ValueError(
+        'mathematica: <quaero> [{1}] <op>? [{0}]'.format(str(quero), meta))
+
+
+def logicum(quero: str) -> bool:
+    neo_quero = quero.replace(' ', '')
+    # neo_quero = quero
+
+    if neo_quero == 'True':
+        return True
+
+    if neo_quero == 'False':
+        return False
+
+    regula = r"\((.*?)\)"
+
+    r1 = re.match(regula, neo_quero)
+    # TODO: This is obviously hardcoded. Implement some way to do as many as
+    #       necessary on a loop or something.
+
+    if r1:
+        neo_quero = neo_quero.replace(r1[0], str(logicum(r1[1])))
+
+    r1 = re.match(regula, neo_quero)
+    if r1:
+        neo_quero = neo_quero.replace(r1[0], str(logicum(r1[1])))
+
+    r1 = re.match(regula, neo_quero)
+    if r1:
+        neo_quero = neo_quero.replace(r1[0], str(logicum(r1[1])))
+
+    r1 = re.match(regula, neo_quero)
+    if r1:
+        neo_quero = neo_quero.replace(r1[0], str(logicum(r1[1])))
+
+    if neo_quero == True or neo_quero == False:
+        return neo_quero
+
+    # if quero.find('||'):
+
+    return mathematica(neo_quero, quero)
+    # return logicum(neo_quero)
+
+
+def ix_n1603ia(ix_n1603ia: str, de_codex: str = '1603:?:?') -> dict:
+    resultatum = {}
+
+    if not ix_n1603ia or len(ix_n1603ia.strip()) == 0:
+        return resultatum
+
+    crudum = map(str.strip, ix_n1603ia.split('|'))
+    for item in crudum:
+        parts = item.split('-')
+        try:
+            resultatum[parts[0]] = int(parts[1])
+        except IndexError:
+            raise ValueError('[1603:1:1] xi_n1603ia <[{0}] [{1}]>'.format(
+                de_codex,
+                str(ix_n1603ia)
+            ))
+
+    return resultatum
+
+
+def ix_n1603ia_quaero(n1603ia: dict, quaero: str = '') -> bool:
+    """ix_n1603ia_quaero _summary_
+
+    Example
+
+    Args:
+        n1603ia (dict): _description_
+        quaero (str, optional): _description_. Defaults to ''.
+
+    Example:
+      {publicum}>10 && {internale}<1
+
+    Returns:
+        bool: _description_
+    """
+    resultatum = False
+    neo_quaero = quaero
+    if not quaero or len(quaero) < 1:
+        return None
+
+    regula = r"{(.*?)}"
+
+    r1 = re.findall(regula, quaero)
+    if r1:
+        for clavem in r1:
+            if clavem in n1603ia:
+                neo_quaero = neo_quaero.replace(
+                    '{' + clavem + '}', str(n1603ia[clavem]))
+            else:
+                neo_quaero = neo_quaero.replace('{' + clavem + '}', '0')
+            # print(codicem)
+
+    resultatum_logicum = logicum(neo_quaero)
+
+    # raise ValueError(str([quaero, neo_quaero, resultatum_logicum, n1603ia]))
+    return resultatum_logicum
+
+    # if not ix_n1603ia or len(ix_n1603ia.strip()) == 0:
+    #     return resultatum
+
+    # crudum = map(str.strip, ix_n1603ia.split('|'))
+    # for item in crudum:
+    #     parts = item.split('-')
+    #     try:
+    #         resultatum[parts[0]] = int(parts[1])
+    #     except IndexError:
+    #         raise ValueError('[1603:1:1] xi_n1603ia <[{0}] [{1}]>'.format(
+    #             de_codex,
+    #             str(ix_n1603ia)
+    #         ))
+
+    return resultatum
+
 # About github ASCIDoctor
 #  - https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74
 
@@ -584,24 +762,29 @@ class Codex:
         resultatum = {}
         if '#item+rem+i_qcc+is_zxxx+ix_n1603ia' not in self.m1603_1_1__de_codex:
             return resultatum
-        ix_n1603ia_crudum = \
-            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603ia']
-        if not ix_n1603ia_crudum or len(ix_n1603ia_crudum.strip()) == 0:
-            return resultatum
+        # ix_n1603ia_crudum = \
+        #     self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603ia']
+        # if not ix_n1603ia_crudum or len(ix_n1603ia_crudum.strip()) == 0:
+        #     return resultatum
 
-        crudum = map(str.strip, ix_n1603ia_crudum.split('|'))
-        for item in crudum:
-            parts = item.split('-')
-            try:
+        return ix_n1603ia(
+            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603ia'],
+            self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603']
+        )
 
-                resultatum[parts[0]] = int(parts[1])
-            except IndexError:
-                raise ValueError('[1603:1:1] xi_n1603ia <[{0}] [{1}]>'.format(
-                    self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
-                    str(ix_n1603ia_crudum)
-                ))
+        # crudum = map(str.strip, ix_n1603ia_crudum.split('|'))
+        # for item in crudum:
+        #     parts = item.split('-')
+        #     try:
 
-        return resultatum
+        #         resultatum[parts[0]] = int(parts[1])
+        #     except IndexError:
+        #         raise ValueError('[1603:1:1] xi_n1603ia <[{0}] [{1}]>'.format(
+        #             self.m1603_1_1__de_codex['#item+rem+i_qcc+is_zxxx+ix_n1603'],
+        #             str(ix_n1603ia_crudum)
+        #         ))
+
+        # return resultatum
 
     def _referencia(self, rem: dict, index: int = 1) -> list:
         paginae = []
@@ -2745,8 +2928,11 @@ class LibrariaStatusQuo:
     def __init__(
         self,
         codex: Type['Codex'],
-        ex_librario: bool = False
+        ex_librario: str = ''
     ):
+        # TODO: implement a way to not re-calculate the status quo (feature
+        #       required by crontab/crojob)
+
         self.codex = codex
         self.ex_librario = ex_librario
         # self.status_in_markdown = status_in_markdown
@@ -2812,6 +2998,9 @@ class LibrariaStatusQuo:
         usus_linguae = len(self.codex.usus_linguae)
         usus_ix_qcc = len(self.codex.usus_ix_qcc)
 
+        time_expected = datetime.datetime.now()
+        tempus_opus = datetime.datetime.now()
+
         resultatum = {
             'annotationes_internalibus': self.codex.n1603ia,
             'meta': {
@@ -2828,9 +3017,16 @@ class LibrariaStatusQuo:
                     'concepta': summis_concepta,
                     'res_lingualibus': usus_linguae,
                     'res_interlingualibus': usus_ix_qcc,
+                },
+                'tempus': {
+                    'opus': tempus_opus.isoformat()
+                    # TODO: add success, fail, and other times
                 }
             }
         }
+        # time_expected = datetime.datetime.now()
+        # time_actual = datetime.datetime.fromisoformat(time_expected.isoformat())
+        # assert time_actual == time_expected
 
         return resultatum
 
@@ -2846,7 +3042,11 @@ class LibrariaStatusQuo:
         }
 
     def status_librario(self):
-        librario_status = NUMERORDINATIO_BASIM + '/1603/1603.statum.yml'
+        # librario_status = NUMERORDINATIO_BASIM + '/1603/1603.statum.yml'
+        librario_status = NUMERORDINATIO_BASIM + \
+            '/1603/1603.{0}.statum.yml'.format(
+                self.ex_librario
+            )
 
         try:
             with open(librario_status) as _file:
@@ -2881,7 +3081,7 @@ class LibrariaStatusQuo:
         return ex_librario
 
     def imprimere(self):
-        if self.ex_librario:
+        if self.ex_librario and len(self.ex_librario) > 0:
             return [yaml.dump(
                 self.status_librario_ex_codex(), allow_unicode=True)]
         else:
@@ -2890,7 +3090,7 @@ class LibrariaStatusQuo:
     def imprimere_in_markdown(self):
         if not self.ex_librario:
             raise NotImplementedError(
-                '--status-in-markdown requires --ex-librario')
+                '--status-in-markdown requires --ex-librario="locale"')
         paginae = []
         status = self.status_librario_ex_codex()
         paginae.append('# 1603 Librārium')
@@ -4305,6 +4505,87 @@ class A1603z1:
         return resultatum
 
 
+class OpusTemporibus:
+    """Numerordĭnātĭo item
+
+    Trivia:
+    - opus, s, n, Nom., https://en.wiktionary.org/wiki/opus#Latin
+    - temporibus, pl, n, Dativus, https://en.wiktionary.org/wiki/tempus#Latin
+    """
+
+    libraria_status_quo: Type['LibrariaStatusQuo']
+    codex_opus: list = []
+    opus: list = []
+
+    def __init__(
+        self,
+        ex_opere_temporibus: str,
+        # ex_librario: str = '',
+        quaero_ix_n1603ia: str = ''
+    ):
+        self.ex_opere_temporibus = ex_opere_temporibus
+        # self.ex_librario = ex_librario
+        self.quaero_ix_n1603ia = quaero_ix_n1603ia
+
+        self.initiari()
+        # self.dictionaria_codex = dictionaria_codex
+
+    def initiari(self):
+        """initiarī
+
+        Trivia:
+        - initiārī, https://en.wiktionary.org/wiki/initio#Latin
+        """
+        # self.linguae['#item+rem+i_lat+is_latn'] = 'la'
+        # self.linguae['#item+rem+i_eng+is_latn'] = 'en'
+        # self.linguae['#item+rem+i_por+is_latn'] = 'pt'
+
+        self.codex = Codex('1603_1_1')
+
+        self.libraria_status_quo = LibrariaStatusQuo(
+            self.codex, self.ex_opere_temporibus)
+        _status_libraria = self.libraria_status_quo.status_librario_ex_codex()
+        for clavem, item in self.codex.m1603_1_1.items():
+            # #item +rem +i_qcc +is_zxxx +ix_n1603ia
+
+            neo_clavem = numerordinatio_neo_separatum(clavem, '_')
+            if len(item['#item+rem+i_qcc+is_zxxx+ix_n1603ia']) > 0:
+                self.codex_opus.append(clavem)
+                ix_n1603ia_item = ix_n1603ia(
+                    item['#item+rem+i_qcc+is_zxxx+ix_n1603ia'])
+
+                status_quo_ex_codice = {}
+
+                _status_quo_ex_codice = _status_libraria['librarium']
+
+                # print(_status_quo_ex_codice)
+                if neo_clavem in _status_quo_ex_codice and \
+                        'status_quo' in _status_quo_ex_codice[neo_clavem]:
+                    status_quo_ex_codice = \
+                        _status_quo_ex_codice[neo_clavem]['status_quo']
+                else:
+                    status_quo_ex_codice = {}
+
+                if self.quaero_ix_n1603ia and len(self.quaero_ix_n1603ia) > 0:
+                    if not ix_n1603ia_quaero(
+                            ix_n1603ia_item, self.quaero_ix_n1603ia):
+                        continue
+
+                # self.opus.append(
+                #     [clavem, item['#item+rem+i_qcc+is_zxxx+ix_n1603ia']])
+                self.opus.append(
+                    [neo_clavem, ix_n1603ia_item, status_quo_ex_codice])
+
+    def imprimere(self):
+        resultatum = []
+        # resultatum.append('TODO OpusTemporibus')
+        # resultatum.extend(self.codex.imprimere())
+        # resultatum.extend(str(self.codex.m1603_1_1))
+        # resultatum.extend(self.codex_opus)
+        resultatum.extend(self.opus)
+        return resultatum
+
+
 class NumerordinatioItem:
     """Numerordĭnātĭo item
 
@@ -4526,9 +4807,39 @@ class CLI_2600:
             help='Status novō. New state. Persist changes if necessary',
             # metavar='',
             dest='ex_librario',
-            # const=True,
-            action='store_true',
-            # nargs='?'
+            const='',
+            # action='store_true',
+            nargs='?'
+        )
+
+        # https://en.wikipedia.org/wiki/Status_quo
+        # https://en.wiktionary.org/wiki/status_quo#English
+        opus_temporibus = parser.add_argument_group(
+            "Opus temporibus",
+            "Crontab/cronjob information "
+            # "Requires --codex-de 1603_NN_NN"
+        )
+
+        # # ex opere temporibus
+        opus_temporibus.add_argument(
+            '--ex-opere-temporibus',
+            help='ex opere temporibus. Out of work times (crontab)',
+            # metavar='',
+            dest='ex_opere_temporibus',
+            # const='',
+            # action='store_true',
+            nargs='?'
+        )
+        opus_temporibus.add_argument(
+            '--quaero-ix_n1603ia',
+            help='Query ix_n1603ia. Rudimentar && (AND) and || (OR). '
+            'Use var<1 to test 0 or undefined. '
+            'Query ix_n1603ia. Filter. Ex. "{publicum}>10 && {internale}<1"',
+            # metavar='',
+            dest='quaero_ix_n1603ia',
+            # const='',
+            # action='store_true',
+            nargs='?'
         )
 
         # # --agendum-linguam is a draft. Not 100% implemented
@@ -4598,6 +4909,17 @@ class CLI_2600:
         # cs1603_1.est_verbum_limiti(args.verbum_limiti)
         a1603z1.est_resultatum_separato(args.resultatum_separato)
         a1603z1.est_fontem_separato(args.fontem_separato)
+
+        # if self.pyargs.actionem_sparql:
+        if self.pyargs.ex_opere_temporibus and \
+                len(self.pyargs.ex_opere_temporibus) > 0:
+
+            # print(self.pyargs.quaero_ix_n1603ia)
+            opus_temporibus = OpusTemporibus(
+                self.pyargs.ex_opere_temporibus,
+                self.pyargs.quaero_ix_n1603ia
+            )
+            return self.output(opus_temporibus.imprimere())
 
         # if self.pyargs.actionem_sparql:
         if self.pyargs.codex_de:

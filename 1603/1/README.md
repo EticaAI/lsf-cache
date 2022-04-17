@@ -142,6 +142,22 @@
 - ...Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo
 
 
+
+
+## [`1603:1:1111`] //Opus temporibus//@lat-Latn
+> **This is just a reference to cronjob / crontab. Not a real dictionary**
+
+- https://en.wiktionary.org/wiki/crontab
+- https://en.wiktionary.org/wiki/cronjob
+- /time of work/@eng-Latn
+  - //tempus laboris//@lat-Latn
+  - //tempus opus//@lat-Latn
+- /work time/@eng-Latn
+  - //opus tempus//@lat-Latn
+- opus, s, n, Nom., https://en.wiktionary.org/wiki/opus#Latin
+- temporibus, pl, n, Dativus, https://en.wiktionary.org/wiki/tempus#Latin
+- ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+
 <!--
 - statūs, https://en.wiktionary.org/wiki/status#Latin
   - http://www.perseus.tufts.edu/hopper/resolveform?type=exact&lookup=status&lang=latin

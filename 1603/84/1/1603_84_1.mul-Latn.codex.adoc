@@ -50,7 +50,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-03-16T07:56:16
+2022-04-17T00:19:31
 
 |
 /SPDX license ID/@eng-Latn
@@ -89,12 +89,10 @@ Rēs linguālibus::
     +++<br><br>+++
     Since the full list of prototypal-dictionaries and dictionaries is huge, one way cited by objective audiences is the following:
     +++<br><br>+++
-    ....
-    1. Humanitarian aid
-    2. Development aid
-    3. Human rights
-    4. Military relief (or conflict and conflict-resolution related concepts)
-    ....
+    . Humanitarian aid
+    . Development aid
+    . Human rights
+    . Military relief (or conflict and conflict-resolution related concepts)
     +++<br><br>+++
     The itens 1, 2 and 4 https://en.m.wikipedia.org/wiki/Humanitarian-Development_Nexus[are sometimes referred as _nexus_] and are often found helping _humanitarian crisis_. Since most contributors whose ideas and valid criticism are volunteers, then 3 (human rights, as in International Amnesty) to differentiate from humanitarianism (such as Red Cross Movement is reference).
     +++<br><br>+++
@@ -112,6 +110,42 @@ Rēs linguālibus::
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
 NOTE: #`0_1603_1_7_2616_7535` ?#
+
+=== Methodī ex verbīs in dictiōnāriīs
+NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+
+==== Methodī ex verbīs in Vicidata (Q modō)
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    The ***[1603:84:1] /Dictiōnāria dentālium/*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    +++<br><br>+++
+    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    +++<br><br>+++
+    **How reliable are the community translations (Wikidata source)?**
+    +++<br><br>+++
+    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    +++<br><br>+++
+    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    +++<br><br>+++
+    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    +++<br><br>+++
+    **Major reasons for "wrong translations" are not translators fault**
+    +++<br><br>+++
+    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    +++<br><br>+++
+    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    +++<br><br>+++
+    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    +++<br><br>+++
+    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    +++<br><br>+++
+    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_84_1.no1.tm.hxl.csv`, may reference Wiki QID.
+    . Every unique QID of  `1603_84_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
+    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
+    . The query result, with all QIDs and term labels, is shared as `1603_84_1.wikiq.tm.hxl.csv`
+    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_84_1.wikiq.tm.hxl.csv`
+    . `1603_84_1.no1.tm.hxl.csv` plus `1603_84_1.wikiq.tm.hxl.csv` created `1603_84_1.no11.tm.hxl.csv`
+
 
 === Rēs dē factō in dictiōnāriīs
 ==== Concepta: 60
@@ -151,7 +185,7 @@ https://iso639-3.sil.org/code/eng[eng]
 |
 Lingua Anglica (Abecedarium Latinum)
 |
-2
+3
 
 |===
 
@@ -175,23 +209,23 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
 
-  /publication date/@eng-Latn:::
+  /cōdex pūblicandī/:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
+        https://www.wikidata.org/wiki/Property:P123[P123]
 
       ix_hxlix;;
-        ix_wikip577
+        ix_wikip123
 
       ix_hxlvoc;;
-        v_wiki_p_577
+        v_wiki_p_123
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -235,6 +269,24 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">should be used for Internet URLs as references</span>+++
 
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
   numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -253,24 +305,6 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
-  /cōdex pūblicandī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
-
-      ix_hxlix;;
-        ix_wikip123
-
-      ix_hxlvoc;;
-        v_wiki_p_123
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
-
 
 <<<
 
@@ -283,7 +317,7 @@ Rēs linguālibus::
     **Practical implication**: the text documents on _Archīa prō cōdice_ (literal English translation: _File for book_) are alternatives to this book format which are heavily automated using only the data format. However, the machine-readable formats on _Archīa prō dictiōnāriīs_ (literal English translation: _Files for dictionaries_) are the focus and recommended for derived works and intended for mitigating additional human errors. We can even create new formats by request! The goal here is both to allow terminology translators and production usage where it makes an impact.
 
 
-=== Archīa prō dictiōnāriīs: 1
+=== Archīa prō dictiōnāriīs: 4
 
 
 ==== 1603_84_1.no1.tm.hxl.csv
@@ -293,6 +327,55 @@ Rēs interlinguālibus::
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     /Numerordinatio on HXLTM container/
+
+
+
+==== 1603_84_1.no11.tm.hxl.csv
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_84_1.no11.tm.hxl.csv[1603_84_1.no11.tm.hxl.csv]
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    /Numerordinatio on HXLTM container (expanded with terminology translations)/
+
+
+
+==== 1603_84_1.wikiq.tm.hxl.csv
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_84_1.wikiq.tm.hxl.csv[1603_84_1.wikiq.tm.hxl.csv]
+  /reference URL/@eng-Latn:::
+    https://hxltm.etica.ai/
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    HXLTM dialect of HXLStandard on CSV RFC 4180. wikiq means #item+conceptum+codicem are strictly Wikidata QIDs.
+
+
+
+==== 1603_84_1.no11.tbx
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_84_1.no11.tbx[1603_84_1.no11.tbx]
+  /reference URL/@eng-Latn:::
+    http://www.terminorgs.net/downloads/TBX_Basic_Version_3.1.pdf
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    TBX-Basic is a terminological markup language (TML) that is a lighter version of TBX-Default, the TML that is defined in ISO 30042. TBX-Basic is designed for the localization industry and is based on information from surveys and studies that were conducted by the LISA Term SIG about the types of terminology data that the localization industry requires.
+
+
+
+==== 1603_84_1.no11.tmx
+
+Rēs interlinguālibus::
+  /download link/@eng-Latn::: link:1603_84_1.no11.tmx[1603_84_1.no11.tmx]
+  /reference URL/@eng-Latn:::
+    https://www.gala-global.org/tmx-14b
+
+Rēs linguālibus::
+  Lingua Anglica (Abecedarium Latinum):::
+    The purpose of the Translation Memory eXchange format (TMX) format is to provide a standard method to describe translation memory data that is being exchanged among tools and/or translation vendors, while introducing little or no loss of critical data during the process
 
 
 
