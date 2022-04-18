@@ -293,7 +293,7 @@ file_download_if_necessary() {
 #   Writes .xlsx
 #######################################
 file_download_1603_xlsx() {
-  est_temporarium="${6:-"1"}"
+  est_temporarium="${1:-"1"}"
   iri="$DATA_1603"
 
   if [ "$est_temporarium" -eq "1" ]; then
@@ -378,13 +378,13 @@ file_convert_csv_de_downloaded_xlsx() {
   objectivum_archivum_temporarium_csv="${ROOTDIR}/999999/0/$_nomen.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.tm.hxl.csv"
 
-  # set -x
+  set -x
   # hxltmcli --sheet "$opus_papyro" "$fontem_archivum" "$objectivum_archivum_temporarium"
   # hxlclean --sheet "$opus_papyro" "$fontem_archivum" "$objectivum_archivum_temporarium"
   # in2csv --format xlsx --no-inference --skip-lines 17 --sheet "$_nomen" "$fontem_archivum" > "${objectivum_archivum_temporarium_csv}"
   in2csv --format xlsx --no-inference --skip-lines 17 --sheet "$_nomen" "$fontem_archivum" >"${objectivum_archivum_temporarium_csv}"
   # issue: in2csv is adding ".0" to #item+conceptum+codicem for integers. even with --no-inference
-  # set +x
+  set +x
 
   hxlselect --query="#item+conceptum+codicem>0" "${objectivum_archivum_temporarium_csv}" "$objectivum_archivum_temporarium"
 
@@ -407,7 +407,7 @@ file_convert_csv_de_downloaded_xlsx() {
   # HOTFIX (MAY CANSE ISSUES):
   #      replace ".0," (maximum one per line) with "," as temporary hotfix for
   #      type inference. We need better long term solution for this.
-  sed -i 's/.0,/,/' "$objectivum_archivum_temporarium"
+  # sed -i 's/.0,/,/' "$objectivum_archivum_temporarium"
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
@@ -2111,6 +2111,13 @@ opus_temporibus_cdn() {
 
   opus_temporibus_temporarium="${ROOTDIR}/999999/0/1603.cdn.statum.tsv"
 
+  ### Dependencies, start -----------------------------------
+  ## officinam/999999/1603/1603.xlsx: download all sheets to temp
+  # file_download_1603_xlsx "1"
+  # Post dependencies (per sheet)
+  # file_convert_csv_de_downloaded_xlsx
+  ### Dependencies, end -------------------------------------
+
   # "${ROOTDIR}/999999999/0/1603_1.py" \
   #   --ex-opere-temporibus='cdn' \
   #   --quaero-ix_n1603ia='({publicum}>=10)' \
@@ -2199,8 +2206,7 @@ actiones_completis_publicis() {
   normal=$(tput sgr0)
   printf "\t%40s\n" "${blue}${FUNCNAME[0]} [$numerordinatio]${normal}"
 
-  # @TODO: implement the download
-  # file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
+  file_convert_csv_de_downloaded_xlsx "$numerordinatio" "1" "1"
   file_convert_numerordinatio_de_hxltm "$numerordinatio" "1" "0"
 
   # @TODO: implement decent check if need download Wikidata Q again

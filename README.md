@@ -67,8 +67,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 2019189373,
-            "res_interlingualibus": 3591081723,
+            "res_lingualibus": 2329679862,
+            "res_interlingualibus": 369625284,
             "res_picturae": null
         },
         "summa": {
@@ -78,7 +78,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-18T14:25:58"
+            "opus": "2022-04-18T16:03:46"
         }
     }
 }
@@ -218,7 +218,7 @@ The decision making is mostly based on what is very essential to explain other t
 
 </details>
 
-## 1603_1_51 //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//
+## 1603_1_51 //Dictiōnāria Linguārum//
 
 
 <a href="#1603_1_51" id="1603_1_51">§ 1603_1_51</a>
@@ -255,13 +255,13 @@ The decision making is mostly based on what is very essential to explain other t
         "methodi_ex_dictionariorum_corde": {
             "mul-Zyyy": null
         },
-        "nomen": "//Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//"
+        "nomen": "//Dictiōnāria Linguārum//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2688171698,
-            "res_lingualibus": 2740235922,
+            "res_interlingualibus": 1177726241,
+            "res_lingualibus": 2066142768,
             "res_picturae": null
         },
         "summa": {
@@ -271,7 +271,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T19:59:59"
+            "opus": "2022-04-18T16:03:46"
         }
     }
 }
@@ -998,6 +998,20 @@ Traditional paper dictionaries already are not complete enough to explain how th
   - res_interlingualibus: 12
   - res_lingualibus: 227
 
+### 1603_64_604 Methodī ex dictiōnāriōrum corde
+
+The decision making behind these dictionaries are general terminology related to water and improving human health through cleanliness.
+
+In English, in the humanitarian sector the typical term used is WaSH: Water, Sanitation and Hygiene. The Latin term we use is not a direct literal translation from the English term, but the idea behind the concept. Add to this that /sanitation/@lat-Latn is somewhat redundant with /hygiene/@fra-Latn, which would generate a nonsensical Latin term in this context.
+
+Another relevant topic which these dictionaries would contain terminology is the Sustainable Development Goal 6 (SDG 6 or Global Goal 6) about _clean water and sanitation for all_ (which is a concept much newer than the idea of WaSH on humanitarian sector). In English _hygiene_ is mentioned, but not as part of title or short descriptions.
+
+**How complete are these dictionaries?**
+The concepts here are incomplete and the current state is more focused on available translations we can compile. The ideal would be to prepare the definitions and start to add them on Wikipedia, which in turn would allow us to start having very well defined QIDs to scale translations.
+
+**Know issues**
+As 2022-04-19 the concept Q5893646 is an example of generating wrong translations. /Bucket toilet/@eng-Latn is linked to /Goldeimer/@deu-Latn (use of human excrementa exchanged for money). Ideally **before** asking for translation Initiatives we should review /Bucket toilet/@eng-Latn for a term easier to translate, not just create literal translations for other languages.
+
 
 <details><summary>🔎🗄️1603_64_604🗄️🔍</summary>
 
@@ -1023,21 +1037,29 @@ Traditional paper dictionaries already are not complete enough to explain how th
         ]
     },
     "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "The decision making behind these dictionaries are general terminology related to water and improving human health through cleanliness.\n\nIn English, in the humanitarian sector the typical term used is WaSH: Water, Sanitation and Hygiene. The Latin term we use is not a direct literal translation from the English term, but the idea behind the concept. Add to this that /sanitation/@lat-Latn is somewhat redundant with /hygiene/@fra-Latn, which would generate a nonsensical Latin term in this context.\n\nAnother relevant topic which these dictionaries would contain terminology is the Sustainable Development Goal 6 (SDG 6 or Global Goal 6) about _clean water and sanitation for all_ (which is a concept much newer than the idea of WaSH on humanitarian sector). In English _hygiene_ is mentioned, but not as part of title or short descriptions.\n\n**How complete are these dictionaries?**\nThe concepts here are incomplete and the current state is more focused on available translations we can compile. The ideal would be to prepare the definitions and start to add them on Wikipedia, which in turn would allow us to start having very well defined QIDs to scale translations.\n\n**Know issues**\nAs 2022-04-19 the concept Q5893646 is an example of generating wrong translations. /Bucket toilet/@eng-Latn is linked to /Goldeimer/@deu-Latn (use of human excrementa exchanged for money). Ideally **before** asking for translation Initiatives we should review /Bucket toilet/@eng-Latn for a term easier to translate, not just create literal translations for other languages."
+        },
         "nomen": "//Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1822120724,
-            "res_lingualibus": 1822120724
+            "res_interlingualibus": 387907216,
+            "res_lingualibus": 1398198766,
+            "res_picturae": null
         },
         "summa": {
             "concepta": 28,
             "res_interlingualibus": 12,
-            "res_lingualibus": 227
+            "res_lingualibus": 227,
+            "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T14:00:53"
+            "opus": "2022-04-18T16:03:25"
         }
     }
 }

@@ -81,8 +81,8 @@ file_convert_numerordinatio_de_hxltm "1603_1_1" "1" "0"
 file_download_if_necessary "$DATA_1603_1_99" "1603_1_99" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_1_99" "1" "0"
 
-file_download_if_necessary "$DATA_1603_1_6" "1603_1_6" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_1_6" "1" "0"
+# file_download_if_necessary "$DATA_1603_1_6" "1603_1_6" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# file_convert_numerordinatio_de_hxltm "1603_1_6" "1" "0"
 
 file_download_if_necessary "$DATA_1603_1_7" "1603_1_7" "csv" "tm.hxl.csv" "hxltmcli" "1"
 file_convert_numerordinatio_de_hxltm "1603_1_7" "1" "0"
@@ -92,11 +92,11 @@ file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
 ### Really boostrapping downloads, end _________________________________________
 
 # # FORCE_REDOWNLOAD_REM="1603_1_51"
-file_download_if_necessary "$DATA_1603_1_51" "1603_1_51" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
-# # file_merge_numerordinatio_de_wiki_q "1603_1_51" "0" "0"
-neo_codex_de_numerordinatio "1603_1_51" "0" "0"
-neo_codex_de_numerordinatio_pdf "1603_1_51" "0" "0"
+# file_download_if_necessary "$DATA_1603_1_51" "1603_1_51" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
+# # # file_merge_numerordinatio_de_wiki_q "1603_1_51" "0" "0"
+# neo_codex_de_numerordinatio "1603_1_51" "0" "0"
+# neo_codex_de_numerordinatio_pdf "1603_1_51" "0" "0"
 
 # exit 
 # file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
@@ -112,7 +112,7 @@ neo_codex_de_numerordinatio_pdf "1603_1_51" "0" "0"
 # actiones_completis_publicis "1603_45_1"
 # upload_cdn "1603_45_1"
 
-# file_download_1603_xlsx "0"
+# file_download_1603_xlsx "1"
 # file_convert_csv_de_downloaded_xlsx "1603_45_1"
 
 # @TODO create a loop on all items from 1603_1_1 with ix_n1603op with flats to
@@ -122,11 +122,11 @@ neo_codex_de_numerordinatio_pdf "1603_1_51" "0" "0"
 # temp_save_status "1603_63_101"
 # temp_save_status "1603_45_31"
 
-file_download_if_necessary "$DATA_1603_1_7" "1603_1_7" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_1_7" "1" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_1_7" "0" "0"
-neo_codex_de_numerordinatio "1603_1_7" "0" "0"
-neo_codex_de_numerordinatio_pdf "1603_1_7" "0" "0"
+# file_download_if_necessary "$DATA_1603_1_7" "1603_1_7" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# file_convert_numerordinatio_de_hxltm "1603_1_7" "1" "0"
+# # file_merge_numerordinatio_de_wiki_q "1603_1_7" "0" "0"
+# neo_codex_de_numerordinatio "1603_1_7" "0" "0"
+# neo_codex_de_numerordinatio_pdf "1603_1_7" "0" "0"
 
 # file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # actiones_completis_publicis "1603_45_31"
@@ -163,7 +163,8 @@ neo_codex_de_numerordinatio_pdf "1603_1_7" "0" "0"
 # quaero__ix_n1603ia__victionarium_q "1603_99_987" && echo "1603_99_987"
 # actiones_completis_publicis "1603_45_31"
 # actiones_completis_publicis "1603_63_101"
-# opus_temporibus_cdn
+# file_download_1603_xlsx "0"
+opus_temporibus_cdn
 deploy_0_9_markdown
 
 # quaero__ix_n1603ia__victionarium_q "1603_63_101" && echo "1603_63_101"
