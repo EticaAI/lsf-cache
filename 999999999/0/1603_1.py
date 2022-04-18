@@ -3185,6 +3185,10 @@ class LibrariaStatusQuo:
         # items_sorted = items_sorted.sort(key=sort_numerodinatio_clavem)
         items_sorted = sorted(items_sorted, key=sort_numerodinatio_clavem)
 
+        paginae.extend(self.imprimere_in_markdown_tabula_contentorum(
+            items_sorted
+        ))
+
         # for codex, item in status['librarium'].items():
         for codex, item in items_sorted:
 
@@ -3253,6 +3257,23 @@ class LibrariaStatusQuo:
 
         # return [yaml.dump(
         #     status, allow_unicode=True)]
+        return paginae
+
+    def imprimere_in_markdown_tabula_contentorum(self, items_sorted):
+        paginae = []
+        paginae.append('----')
+        paginae.append('Tabula contentorum')
+        for codex, item in items_sorted:
+            paginae.append(
+                '- <a href="#{0}">{0}</a> '
+                '<sup>C.{1}</sup> <sub>r.IL.{2}</sub>  <sub>r.L.{3}</sub>'.format(
+                codex,
+                item['status_quo']['summa']['concepta'],
+                item['status_quo']['summa']['res_interlingualibus'],
+                item['status_quo']['summa']['res_lingualibus'],
+            ))
+
+        paginae.append('----')
         return paginae
 
     def imprimere_res_caveat_lector(self, item):

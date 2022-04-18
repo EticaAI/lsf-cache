@@ -4,6 +4,26 @@
     - codex: 17
     - concepta_non_unicum: 1449
 
+----
+Tabula contentorum
+- <a href="#1603_1_1">1603_1_1</a> <sup>C.81</sup> <sub>r.IL.15</sub>  <sub>r.L.9</sub>
+- <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.IL.13</sub>  <sub>r.L.116</sub>
+- <a href="#1603_1_7">1603_1_7</a> <sup>C.47</sup> <sub>r.IL.13</sub>  <sub>r.L.3</sub>
+- <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.IL.19</sub>  <sub>r.L.3</sub>
+- <a href="#1603_1_99">1603_1_99</a> <sup>C.51</sup> <sub>r.IL.11</sub>  <sub>r.L.3</sub>
+- <a href="#1603_1_101">1603_1_101</a> <sup>C.19</sup> <sub>r.IL.7</sub>  <sub>r.L.4</sub>
+- <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.IL.14</sub>  <sub>r.L.148</sub>
+- <a href="#1603_44_101">1603_44_101</a> <sup>C.22</sup> <sub>r.IL.14</sub>  <sub>r.L.162</sub>
+- <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.IL.16</sub>  <sub>r.L.226</sub>
+- <a href="#1603_45_1">1603_45_1</a> <sup>C.347</sup> <sub>r.IL.15</sub>  <sub>r.L.245</sub>
+- <a href="#1603_45_19">1603_45_19</a> <sup>C.67</sup> <sub>r.IL.12</sub>  <sub>r.L.241</sub>
+- <a href="#1603_45_31">1603_45_31</a> <sup>C.25</sup> <sub>r.IL.14</sub>  <sub>r.L.211</sub>
+- <a href="#1603_63_101">1603_63_101</a> <sup>C.332</sup> <sub>r.IL.14</sub>  <sub>r.L.249</sub>
+- <a href="#1603_64_41">1603_64_41</a> <sup>C.56</sup> <sub>r.IL.12</sub>  <sub>r.L.150</sub>
+- <a href="#1603_64_604">1603_64_604</a> <sup>C.28</sup> <sub>r.IL.12</sub>  <sub>r.L.227</sub>
+- <a href="#1603_84_1">1603_84_1</a> <sup>C.60</sup> <sub>r.IL.12</sub>  <sub>r.L.4</sub>
+- <a href="#1603_99_987">1603_99_987</a> <sup>C.0</sup> <sub>r.IL.4</sub>  <sub>r.L.3</sub>
+----
 ## 1603_1_1 //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//@lat-Latn
 
 
@@ -46,8 +66,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 3331768947,
-            "res_interlingualibus": 3953839863,
+            "res_lingualibus": 1025141232,
+            "res_interlingualibus": 1734267239,
             "res_picturae": null
         },
         "summa": {
@@ -57,7 +77,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T22:07:21"
+            "opus": "2022-04-17T22:17:35"
         }
     }
 }
