@@ -6,6 +6,9 @@
 
 ## 1603_1_1 //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//@lat-Latn
 
+
+<a href="#1603_1_1" id="1603_1_1">§ 1603_1_1</a>
+
 - status_quo
   - concepta: 81
   - res_interlingualibus: 15
@@ -43,8 +46,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 1986950768,
-            "res_interlingualibus": 3722808579,
+            "res_lingualibus": 3331768947,
+            "res_interlingualibus": 3953839863,
             "res_picturae": null
         },
         "summa": {
@@ -54,124 +57,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:33:46"
-        }
-    }
-}
-</pre>
-
-</details>
-
-## 1603_1_101 //Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//
-
-- status_quo
-  - concepta: 19
-  - res_interlingualibus: 7
-  - res_lingualibus: 4
-
-
-<details><summary>🔎🗄️1603_1_101🗄️🔍</summary>
-
-<pre>
-{
-    "annotationes_internalibus": {
-        "experimentum": 50,
-        "internale": 20,
-        "publicum": 10
-    },
-    "cdn": {
-        "annexis": [],
-        "codex": [
-            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.pdf",
-            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.epub",
-            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.adoc"
-        ],
-        "dictionaria": [
-            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.no1.tm.hxl.csv"
-        ]
-    },
-    "meta": {
-        "caveat_lector": {
-            "mul-Zyyy": null
-        },
-        "methodi_ex_dictionariorum_corde": {
-            "mul-Zyyy": null
-        },
-        "nomen": "//Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//"
-    },
-    "status_quo": {
-        "crc": {
-            "concepta": null,
-            "res_interlingualibus": 2214457338,
-            "res_lingualibus": 2166079574,
-            "res_picturae": null
-        },
-        "summa": {
-            "concepta": 19,
-            "res_interlingualibus": 7,
-            "res_lingualibus": 4,
-            "res_picturae": null
-        },
-        "tempus": {
-            "opus": "2022-04-17T20:01:15"
-        }
-    }
-}
-</pre>
-
-</details>
-
-## 1603_1_51 //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//
-
-- status_quo
-  - concepta: 265
-  - res_interlingualibus: 19
-  - res_lingualibus: 3
-
-
-<details><summary>🔎🗄️1603_1_51🗄️🔍</summary>
-
-<pre>
-{
-    "annotationes_internalibus": {
-        "internale": 90,
-        "publicum": 10
-    },
-    "cdn": {
-        "annexis": [],
-        "codex": [
-            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.epub",
-            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.adoc",
-            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.pdf"
-        ],
-        "dictionaria": [
-            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.no1.tm.hxl.csv"
-        ]
-    },
-    "meta": {
-        "caveat_lector": {
-            "mul-Zyyy": null
-        },
-        "methodi_ex_dictionariorum_corde": {
-            "mul-Zyyy": null
-        },
-        "nomen": "//Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//"
-    },
-    "status_quo": {
-        "crc": {
-            "concepta": null,
-            "res_interlingualibus": 2688171698,
-            "res_lingualibus": 2740235922,
-            "res_picturae": null
-        },
-        "summa": {
-            "concepta": 265,
-            "res_interlingualibus": 19,
-            "res_lingualibus": 3,
-            "res_picturae": null
-        },
-        "tempus": {
-            "opus": "2022-04-17T19:59:59"
+            "opus": "2022-04-17T22:07:21"
         }
     }
 }
@@ -180,6 +66,9 @@
 </details>
 
 ## 1603_1_6 /Dictiōnāria de terminī typīs/
+
+
+<a href="#1603_1_6" id="1603_1_6">§ 1603_1_6</a>
 
 - status_quo
   - concepta: 3
@@ -243,6 +132,9 @@
 
 ## 1603_1_7 //Dictiōnāria basibus dē rēs interlinguīs//
 
+
+<a href="#1603_1_7" id="1603_1_7">§ 1603_1_7</a>
+
 - status_quo
   - concepta: 47
   - res_interlingualibus: 13
@@ -305,7 +197,71 @@ The decision making is mostly based on what is very essential to explain other t
 
 </details>
 
+## 1603_1_51 //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//
+
+
+<a href="#1603_1_51" id="1603_1_51">§ 1603_1_51</a>
+
+- status_quo
+  - concepta: 265
+  - res_interlingualibus: 19
+  - res_lingualibus: 3
+
+
+<details><summary>🔎🗄️1603_1_51🗄️🔍</summary>
+
+<pre>
+{
+    "annotationes_internalibus": {
+        "internale": 90,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.adoc",
+            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.mul-Latn.codex.pdf"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/51/1603_1_51.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": null
+        },
+        "nomen": "//Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 2688171698,
+            "res_lingualibus": 2740235922,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 265,
+            "res_interlingualibus": 19,
+            "res_lingualibus": 3,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-17T19:59:59"
+        }
+    }
+}
+</pre>
+
+</details>
+
 ## 1603_1_99 Nōtitiae temporāriōrum circā librārium
+
+
+<a href="#1603_1_99" id="1603_1_99">§ 1603_1_99</a>
 
 - status_quo
   - concepta: 51
@@ -367,7 +323,72 @@ TODO: explain 1603_1_99
 
 </details>
 
+## 1603_1_101 //Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//
+
+
+<a href="#1603_1_101" id="1603_1_101">§ 1603_1_101</a>
+
+- status_quo
+  - concepta: 19
+  - res_interlingualibus: 7
+  - res_lingualibus: 4
+
+
+<details><summary>🔎🗄️1603_1_101🗄️🔍</summary>
+
+<pre>
+{
+    "annotationes_internalibus": {
+        "experimentum": 50,
+        "internale": 20,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/101/1603_1_101.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": null
+        },
+        "nomen": "//Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 2214457338,
+            "res_lingualibus": 2166079574,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 19,
+            "res_interlingualibus": 7,
+            "res_lingualibus": 4,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-17T20:01:15"
+        }
+    }
+}
+</pre>
+
+</details>
+
 ## 1603_25_1 //dictiōnāria de partes corporis humani//
+
+
+<a href="#1603_25_1" id="1603_25_1">§ 1603_25_1</a>
 
 - status_quo
   - concepta: 10
@@ -441,6 +462,9 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 
 ## 1603_44_101 /Dictiōnāria basibus dē sceleribus contrā persōnam/
 
+
+<a href="#1603_44_101" id="1603_44_101">§ 1603_44_101</a>
+
 - status_quo
   - concepta: 22
   - res_interlingualibus: 14
@@ -507,6 +531,9 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 
 ## 1603_44_111 /Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/
 
+
+<a href="#1603_44_111" id="1603_44_111">§ 1603_44_111</a>
+
 - status_quo
   - concepta: 36
   - res_interlingualibus: 16
@@ -560,6 +587,9 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 </details>
 
 ## 1603_45_1 //dictiōnāria de hūmānitātēs interimperia//
+
+
+<a href="#1603_45_1" id="1603_45_1">§ 1603_45_1</a>
 
 - status_quo
   - concepta: 347
@@ -659,6 +689,9 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
 
 ## 1603_45_19 Dictiōnāria dē locī generibus
 
+
+<a href="#1603_45_19" id="1603_45_19">§ 1603_45_19</a>
+
 - status_quo
   - concepta: 67
   - res_interlingualibus: 12
@@ -712,6 +745,9 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
 </details>
 
 ## 1603_45_31 Dictiōnāria de calamitātibus
+
+
+<a href="#1603_45_31" id="1603_45_31">§ 1603_45_31</a>
 
 - status_quo
   - concepta: 25
@@ -783,6 +819,9 @@ The terminology translations are extracted from Wikidata, which means this recom
 </details>
 
 ## 1603_63_101 //Dictiōnāria basibus dē rēbus vītālibus necessāriīs//
+
+
+<a href="#1603_63_101" id="1603_63_101">§ 1603_63_101</a>
 
 - status_quo
   - concepta: 332
@@ -861,6 +900,9 @@ Traditional paper dictionaries already are not complete enough to explain how th
 
 ## 1603_64_41 //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
 
+
+<a href="#1603_64_41" id="1603_64_41">§ 1603_64_41</a>
+
 - status_quo
   - concepta: 56
   - res_interlingualibus: 12
@@ -927,6 +969,9 @@ Traditional paper dictionaries already are not complete enough to explain how th
 
 ## 1603_64_604 //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
 
+
+<a href="#1603_64_604" id="1603_64_604">§ 1603_64_604</a>
+
 - status_quo
   - concepta: 28
   - res_interlingualibus: 12
@@ -980,6 +1025,9 @@ Traditional paper dictionaries already are not complete enough to explain how th
 </details>
 
 ## 1603_84_1 /Dictiōnāria dentālium/
+
+
+<a href="#1603_84_1" id="1603_84_1">§ 1603_84_1</a>
 
 - status_quo
   - concepta: 60
@@ -1045,6 +1093,9 @@ Traditional paper dictionaries already are not complete enough to explain how th
 </details>
 
 ## 1603_99_987 //Personal name nomenclature//
+
+
+<a href="#1603_99_987" id="1603_99_987">§ 1603_99_987</a>
 
 - status_quo
   - concepta: 0
