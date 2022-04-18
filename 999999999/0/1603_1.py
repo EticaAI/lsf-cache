@@ -3261,19 +3261,22 @@ class LibrariaStatusQuo:
 
     def imprimere_in_markdown_tabula_contentorum(self, items_sorted):
         paginae = []
+        paginae.append('')
         paginae.append('----')
-        paginae.append('Tabula contentorum')
+        paginae.append('**Tabula contentorum**')
         for codex, item in items_sorted:
             paginae.append(
                 '- <a href="#{0}">{0}</a> '
-                '<sup>C.{1}</sup> <sub>r.IL.{2}</sub>  <sub>r.L.{3}</sub>'.format(
+                '<sup>C.{1}</sup> <sub>r.I.{2}</sub>  <sub>r.L.{3}</sub>'.format(
                 codex,
                 item['status_quo']['summa']['concepta'],
                 item['status_quo']['summa']['res_interlingualibus'],
                 item['status_quo']['summa']['res_lingualibus'],
             ))
 
+        paginae.append('')
         paginae.append('----')
+        paginae.append('')
         return paginae
 
     def imprimere_res_caveat_lector(self, item):

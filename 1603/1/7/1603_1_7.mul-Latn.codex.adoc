@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-17T20:00:53
+2022-04-18T14:25:53
 
 |
 /SPDX license ID/@eng-Latn
@@ -119,7 +119,7 @@ Rēs interlinguālibus::
 
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 47
+==== Concepta: 48
 
 ==== Rēs linguālibus: 2
 
@@ -144,7 +144,7 @@ https://iso639-3.sil.org/code/lat[lat]
 |
 Lingua Latina (Abecedarium Latinum)
 |
-47
+48
 
 |
 eng-Latn
@@ -162,23 +162,47 @@ Lingua Anglica (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 13
 Rēs::
-  spōnsor:::
+  /dictiōnārium ēditōrī/:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
+        https://www.wikidata.org/wiki/Property:P98[P98]
 
       ix_hxlix;;
-        ix_wikip859
+        ix_wikip98
 
       ix_hxlvoc;;
-        v_wiki_p_859
+        v_wiki_p_98
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
+        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
+        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
+
+  /SPDX license ID/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
+
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
+
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
+
+      ix_hxlix;;
+        ix_wikip2479
+
+      ix_hxlvoc;;
+        v_wiki_p_2479
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">SPDX license identifier</span>+++
 
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -234,59 +258,20 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
 
-  /Wiki QID/:::
+  /rēgulam/:::
     Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
+      /Wiki QID/;;
+        https://www.wikidata.org/wiki/Q185612[Q185612]
 
       ix_hxlix;;
-        ix_wikiq
+        ix_regulam
 
       ix_hxlvoc;;
-        v_wiki_q
+        v_regex
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-  /formatter URL/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P1630[P1630]
-
-      ix_hxlix;;
-        ix_wikip1630
-
-      ix_hxlvoc;;
-        v_wiki_p_1630
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/formatter URL/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">web page URL; URI template from which "$1" can be automatically replaced with the effective property value on items. If the site goes offline, set it to deprecated rank. If the formatter url changes, add a new statement with preferred rank.</span>+++
-
-  /dictiōnārium ēditōrī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P98[P98]
-
-      ix_hxlix;;
-        ix_wikip98
-
-      ix_hxlvoc;;
-        v_wiki_p_98
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
+        +++<span lang="la">/rēgulam/</span>+++
 
   /Wiki P/:::
     Rēs interlinguālibus::::
@@ -306,20 +291,23 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.</span>+++
 
-  /rēgulam/:::
+  /formatter URL/@eng-Latn:::
     Rēs interlinguālibus::::
-      /Wiki QID/;;
-        https://www.wikidata.org/wiki/Q185612[Q185612]
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P1630[P1630]
 
       ix_hxlix;;
-        ix_regulam
+        ix_wikip1630
 
       ix_hxlvoc;;
-        v_regex
+        v_wiki_p_1630
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/rēgulam/</span>+++
+        +++<span lang="la">/formatter URL/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">web page URL; URI template from which "$1" can be automatically replaced with the effective property value on items. If the site goes offline, set it to deprecated rank. If the formatter url changes, add a new statement with preferred rank.</span>+++
 
   numerus editionis:::
     Rēs interlinguālibus::::
@@ -339,29 +327,41 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
-  /SPDX license ID/@eng-Latn:::
+  spōnsor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P2479[P2479]
-
-      /rēgulam/;;
-        [0-9A-Za-z\.\-]{3,36}[+]?
-
-      /formatter URL/@eng-Latn;;
-        https://spdx.org/licenses/$1.html
+        https://www.wikidata.org/wiki/Property:P859[P859]
 
       ix_hxlix;;
-        ix_wikip2479
+        ix_wikip859
 
       ix_hxlvoc;;
-        v_wiki_p_2479
+        v_wiki_p_859
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
+        +++<span lang="la">spōnsor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">SPDX license identifier</span>+++
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
 
 <<<
@@ -601,6 +601,24 @@ Rēs linguālibus::
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
+
+
+
+
+
+[id='1_97']
+==== [`1_97`] //opus papȳrō ex 1603//
+
+Rēs interlinguālibus::
+  ix_hxlix:::
+    ix_n1603op
+
+Rēs linguālibus::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">//opus papȳrō ex 1603//</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">Workfsheet index Used on 1603_1_1 as undocumented feature to manage where the main table should be extracted</span>+++
 
 
 
