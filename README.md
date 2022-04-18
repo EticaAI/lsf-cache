@@ -67,8 +67,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 2329679862,
-            "res_interlingualibus": 369625284,
+            "res_lingualibus": 4014223324,
+            "res_interlingualibus": 149449049,
             "res_picturae": null
         },
         "summa": {
@@ -78,7 +78,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-18T16:03:46"
+            "opus": "2022-04-18T19:44:16"
         }
     }
 }
@@ -820,8 +820,8 @@ The terminology translations are extracted from Wikidata, which means this recom
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3379006722,
-            "res_lingualibus": 1648089254,
+            "res_interlingualibus": 3565144678,
+            "res_lingualibus": 1556857217,
             "res_picturae": null
         },
         "summa": {
@@ -831,7 +831,7 @@ The terminology translations are extracted from Wikidata, which means this recom
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T18:46:14"
+            "opus": "2022-04-18T19:36:27"
         }
     }
 }
@@ -900,8 +900,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1944666498,
-            "res_lingualibus": 849167894,
+            "res_interlingualibus": 3097932498,
+            "res_lingualibus": 2544076959,
             "res_picturae": null
         },
         "summa": {
@@ -911,7 +911,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T19:04:27"
+            "opus": "2022-04-18T19:44:15"
         }
     }
 }

@@ -99,7 +99,10 @@ stale_archive() {
   path_or_file="$1"
   maximum_time="${2:-86400}"
   if [ -e "$path_or_file" ]; then
+    # set +x
     changes=$(find "$path_or_file" -mmin +"$maximum_time")
+    # echo find "$path_or_file" -mmin +"$maximum_time"
+    # set -x
     if [ -z "$changes" ]; then
       return 0
     fi
@@ -128,6 +131,8 @@ file_update_if_necessary() {
   # echo "fontem_archivum $fontem_archivum"
   # echo "objectivum_archivum $objectivum_archivum"
 
+  echo "${FUNCNAME[0]} ..."
+
   case "${formatum_archivum}" in
   csv)
     is_valid=$(csvclean --dry-run "$fontem_archivum")
@@ -150,12 +155,12 @@ file_update_if_necessary() {
 
     # if [ -s "$objectivum_archivum" ] && [ "$(cmp "$fontem_archivum" "$objectivum_archivum")" = "" ]; then
     if [ -s "$objectivum_archivum" ] && [ "$(cmp --silent "$fontem_archivum" "$objectivum_archivum")" = "" ]; then
-      # echo "INFO: already equal. Temporary will be discarted"
+      echo "INFO: already equal. Temporary will be discarted"
       # echo "      [$fontem_archivum]"
       # echo "      [$objectivum_archivum]"
       rm "$fontem_archivum"
     else
-      # echo "Not equal. Temporary will replace target file"
+      echo "Not equal. Temporary will replace target file"
       rm "$objectivum_archivum"
       mv "$fontem_archivum" "$objectivum_archivum"
     fi
@@ -283,6 +288,7 @@ file_download_if_necessary() {
 
 #######################################
 # Download Google sheets to local cache
+# Default stale time: 10min
 #
 # Globals:
 #   ROOTDIR
@@ -305,13 +311,14 @@ file_download_1603_xlsx() {
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
 
-  echo "${FUNCNAME[0]} ..."
-
   objectivum_archivum="${_basim}/1603/1603.xlsx"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603.xlsx"
 
+  echo "${FUNCNAME[0]}: 10min tolerance; [$iri] -> [$objectivum_archivum]"
+
   if [ -f "$objectivum_archivum" ]; then
-    is_stale=$(stale_archive "$objectivum_archivum" "360")
+    # is_stale=$(stale_archive "$objectivum_archivum" "360")
+    is_stale=$(stale_archive "$objectivum_archivum" "10")
     if [ "$is_stale" = "1" ]; then
       echo "Cache exist, but more than 5min old, Downloading again"
     else
@@ -360,8 +367,6 @@ file_convert_csv_de_downloaded_xlsx() {
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
   _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
 
-  echo "${FUNCNAME[0]} ...[$numerordinatio]"
-
   if [ "$est_temporarium_fontem" -eq "1" ]; then
     _basim_fontem="${ROOTDIR}/999999"
   else
@@ -378,13 +383,15 @@ file_convert_csv_de_downloaded_xlsx() {
   objectivum_archivum_temporarium_csv="${ROOTDIR}/999999/0/$_nomen.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.tm.hxl.csv"
 
-  set -x
+  echo "${FUNCNAME[0]}: [$numerordinatio]; [$fontem_archivum] --> [$objectivum_archivum]"
+
+  # set -x
   # hxltmcli --sheet "$opus_papyro" "$fontem_archivum" "$objectivum_archivum_temporarium"
   # hxlclean --sheet "$opus_papyro" "$fontem_archivum" "$objectivum_archivum_temporarium"
   # in2csv --format xlsx --no-inference --skip-lines 17 --sheet "$_nomen" "$fontem_archivum" > "${objectivum_archivum_temporarium_csv}"
   in2csv --format xlsx --no-inference --skip-lines 17 --sheet "$_nomen" "$fontem_archivum" >"${objectivum_archivum_temporarium_csv}"
   # issue: in2csv is adding ".0" to #item+conceptum+codicem for integers. even with --no-inference
-  set +x
+  # set +x
 
   hxlselect --query="#item+conceptum+codicem>0" "${objectivum_archivum_temporarium_csv}" "$objectivum_archivum_temporarium"
 
@@ -2189,7 +2196,8 @@ temp_save_status() {
 }
 
 #######################################
-# āctiōnēs complētīs pūblicīs, complete actions (and publish online)
+# āctiōnēs complētīs locālī, complete actions (except download references and
+# publish online)
 #
 # Globals:
 #   ROOTDIR
@@ -2198,7 +2206,7 @@ temp_save_status() {
 # Outputs:
 #   Convert files
 #######################################
-actiones_completis_publicis() {
+actiones_completis_locali() {
   numerordinatio="$1"
   echo ""
 
@@ -2228,6 +2236,28 @@ actiones_completis_publicis() {
   neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
   # temp_save_status "$numerordinatio" "locale"
+
+}
+
+#######################################
+# āctiōnēs complētīs pūblicīs, complete actions (and publish online)
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+actiones_completis_publicis() {
+  numerordinatio="$1"
+  echo ""
+
+  blue=$(tput setaf 4)
+  normal=$(tput sgr0)
+  printf "\t%40s\n" "${blue}${FUNCNAME[0]} [$numerordinatio]${normal}"
+
+  actiones_completis_locali  "$numerordinatio"
   upload_cdn "$numerordinatio"
 }
 

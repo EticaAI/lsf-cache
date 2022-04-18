@@ -75,186 +75,31 @@ ROOTDIR="$(pwd)"
 . "$ROOTDIR"/999999999/999999999.lib.sh
 
 ### Really boostrapping downloads, start _______________________________________
-file_download_if_necessary "$DATA_1603_1_1" "1603_1_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_1_1" "1" "0"
+# file_download_if_necessary "$DATA_1603_1_1" "1603_1_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# file_convert_numerordinatio_de_hxltm "1603_1_1" "1" "0"
 
-file_download_if_necessary "$DATA_1603_1_99" "1603_1_99" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_1_99" "1" "0"
+# file_download_if_necessary "$DATA_1603_1_99" "1603_1_99" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# file_convert_numerordinatio_de_hxltm "1603_1_99" "1" "0"
 
 # file_download_if_necessary "$DATA_1603_1_6" "1603_1_6" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # file_convert_numerordinatio_de_hxltm "1603_1_6" "1" "0"
 
-file_download_if_necessary "$DATA_1603_1_7" "1603_1_7" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_1_7" "1" "0"
-
-file_download_if_necessary "$DATA_1603_1_51" "1603_1_51" "csv" "tm.hxl.csv" "hxltmcli" "1"
-file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
-### Really boostrapping downloads, end _________________________________________
-
-# # FORCE_REDOWNLOAD_REM="1603_1_51"
-# file_download_if_necessary "$DATA_1603_1_51" "1603_1_51" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
-# # # file_merge_numerordinatio_de_wiki_q "1603_1_51" "0" "0"
-# neo_codex_de_numerordinatio "1603_1_51" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_1_51" "0" "0"
-
-# exit 
-# file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_45_1" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_45_1" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_45_1" "0" "0"
-# file_convert_tmx_de_numerordinatio11 "1603_45_1"
-# file_convert_tbx_de_numerordinatio11 "1603_45_1"
-# neo_codex_de_numerordinatio "1603_45_1" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_45_1" "0" "0"
-
-# file_download_if_necessary "$DATA_1603_45_1" "1603_45_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# actiones_completis_publicis "1603_45_1"
-# upload_cdn "1603_45_1"
-
-# file_download_1603_xlsx "1"
-# file_convert_csv_de_downloaded_xlsx "1603_45_1"
-
-# @TODO create a loop on all items from 1603_1_1 with ix_n1603op with flats to
-#       allow automation. Then do it.
-
-# temp_save_status "1603_45_1"
-# temp_save_status "1603_63_101"
-# temp_save_status "1603_45_31"
-
 # file_download_if_necessary "$DATA_1603_1_7" "1603_1_7" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # file_convert_numerordinatio_de_hxltm "1603_1_7" "1" "0"
-# # file_merge_numerordinatio_de_wiki_q "1603_1_7" "0" "0"
-# neo_codex_de_numerordinatio "1603_1_7" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_1_7" "0" "0"
 
-# file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# actiones_completis_publicis "1603_45_31"
+# file_download_if_necessary "$DATA_1603_1_51" "1603_1_51" "csv" "tm.hxl.csv" "hxltmcli" "1"
+# file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
+### Really boostrapping downloads, end _________________________________________
 
-# file_download_if_necessary "$DATA_1603_23_21" "1603_23_21" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_23_21" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_23_21" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_23_21" "0" "0"
-# file_convert_xml_de_numerordinatio11 "1603_23_21"
-# file_convert_tmx_de_numerordinatio11 "1603_23_21"
-# file_convert_tbx_de_numerordinatio11 "1603_23_21"
-# neo_codex_de_numerordinatio "1603_23_21" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_23_21" "0" "0"
+#### Manual action, TEST locally, one per time, START --------------------------
+# Download entire XLSX to local temp
+file_download_1603_xlsx "1"
+actiones_completis_locali "1603_1_1"
+# actiones_completis_locali "1603_1_51"
+# actiones_completis_locali "1603_99_876"
 
-# file_download_if_necessary "$DATA_1603_45_31" "1603_45_31" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_45_31" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_45_31" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_45_31" "0" "0"
-# file_convert_xml_de_numerordinatio11 "1603_45_31"
-# file_convert_tmx_de_numerordinatio11 "1603_45_31"
-# file_convert_tbx_de_numerordinatio11 "1603_45_31"
-# neo_codex_de_numerordinatio "1603_45_31" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_45_31" "0" "0"
+#### Manual action, TEST locally, one per time, END ----------------------------
 
-# upload_cdn "1603_45_31"
-
-# temp_save_status "1603_45_31"
-
-# FORCE_REDOWNLOAD=1 file_download_if_necessary "$DATA_1603_1_1" "1603_1_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# quaero__ix_n1603ia__victionarium_q "1603_1_101" && echo "1603_1_101"
-# quaero__ix_n1603ia__victionarium_q "1603_1_101" || echo "1603_1_101"
-# quaero__ix_n1603ia__victionarium_q "1603_1_51" && echo "1603_1_51"
-# quaero__ix_n1603ia__victionarium_q "1603_45_31" && echo "1603_45_31"
-# quaero__ix_n1603ia__victionarium_q "1603_99_987" && echo "1603_99_987"
-# actiones_completis_publicis "1603_45_31"
-# actiones_completis_publicis "1603_63_101"
-# file_download_1603_xlsx "0"
-opus_temporibus_cdn
-deploy_0_9_markdown
-
-# quaero__ix_n1603ia__victionarium_q "1603_63_101" && echo "1603_63_101"
-# quaero__ix_n1603ia__victionarium_q "1603_1_1" && echo "1603_1_1"
-
-# file_download_if_necessary "$DATA_1603_23_36" "1603_23_36" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_23_36" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_23_36" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_23_36" "0" "0"
-# neo_codex_de_numerordinatio "1603_23_36" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_23_36" "0" "0"
-
-# file_download_if_necessary "$DATA_1603_63_1" "1603_63_1" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_63_1" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_63_1" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_63_1" "0" "0"
-# neo_codex_de_numerordinatio "1603_63_1" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_63_1" "0" "0"
-
-# file_download_if_necessary "$DATA_1603_45_19" "1603_45_19" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_45_19" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_45_19" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_45_19" "0" "0"
-# neo_codex_de_numerordinatio "1603_45_19" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_45_19" "0" "0"
-
-# file_download_if_necessary "$DATA_1603_63_101" "1603_63_101" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_63_101" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_63_101" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_63_101" "0" "0"
-# file_convert_tmx_de_numerordinatio11 "1603_63_101"
-# file_convert_tbx_de_numerordinatio11 "1603_63_101"
-# neo_codex_copertae_de_numerordinatio "1603_63_101" "0" "0"
-# neo_codex_de_numerordinatio "1603_63_101" "0" "0"
-# neo_codex_de_numerordinatio_epub "1603_63_101" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_63_101" "0" "0"
-
-# upload_cdn "1603_63_101"
-
-# file_download_if_necessary "$DATA_1603_64_41" "1603_64_41" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_64_41" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_64_41" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_64_41" "0" "0"
-# neo_codex_de_numerordinatio "1603_64_41" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_64_41" "0" "0"
-# neo_codex_de_numerordinatio_epub "1603_64_41" "0" "0"
-
-# file_download_if_necessary "$DATA_1603_44_86" "1603_44_86" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_44_86" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_44_86" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_44_86" "0" "0"
-# file_convert_tmx_de_numerordinatio11 "1603_44_86"
-# file_convert_tbx_de_numerordinatio11 "1603_44_86"
-# neo_codex_copertae_de_numerordinatio "1603_44_86" "0" "0"
-# neo_codex_de_numerordinatio "1603_44_86" "0" "0"
-# neo_codex_de_numerordinatio_epub "1603_44_86" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_44_86" "0" "0"
-
-# file_download_if_necessary "$DATA_1603_44_101" "1603_44_101" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_44_101" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_44_101" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_44_101" "0" "0"
-# file_convert_tmx_de_numerordinatio11 "1603_44_101"
-# file_convert_tbx_de_numerordinatio11 "1603_44_101"
-# neo_codex_copertae_de_numerordinatio "1603_44_101" "0" "0"
-# neo_codex_de_numerordinatio "1603_44_101" "0" "0"
-# neo_codex_de_numerordinatio_epub "1603_44_101" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_44_101" "0" "0"
-
-# file_download_if_necessary "$DATA_1603_44_111" "1603_44_111" "csv" "tm.hxl.csv" "hxltmcli" "1"
-# file_convert_numerordinatio_de_hxltm "1603_44_111" "1" "0"
-# file_translate_csv_de_numerordinatio_q "1603_44_111" "0" "0"
-# file_merge_numerordinatio_de_wiki_q "1603_44_111" "0" "0"
-# file_convert_tmx_de_numerordinatio11 "1603_44_111"
-# file_convert_tbx_de_numerordinatio11 "1603_44_111"
-# neo_codex_copertae_de_numerordinatio "1603_44_111" "0" "0"
-# neo_codex_de_numerordinatio "1603_44_111" "0" "0"
-# neo_codex_de_numerordinatio_epub "1603_44_111" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_44_111" "0" "0"
-
-# neo_codex_de_numerordinatio "1603_1_6" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_1_6" "0" "0"
-# neo_codex_de_numerordinatio_epub "1603_1_6" "0" "0"
-
-# neo_codex_de_numerordinatio "1603_1_7" "0" "0"
-# neo_codex_copertae_de_numerordinatio "1603_1_7" "0" "0"
-# neo_codex_de_numerordinatio_pdf "1603_1_7" "0" "0"
-# neo_codex_de_numerordinatio_epub "1603_1_7" "0" "0"
-
-# hxltmcli --objectivum-TMX 1603/1/7/1603_1_7.no1.tm.hxl.csv 1603/1/7/1603_1_7.tmx
-# hxltmcli --objectivum-TBX-Basim 1603/1/7/1603_1_7.no1.tm.hxl.csv 1603/1/7/1603_1_7.tbx
-#
-# hxltmcli --objectivum-TBX-Basim 1603/45/1/1603_45_1.no11.tm.hxl.csv 1603/45/1/1603_45_1.tbx
+## Full drill (remote, randon publish few at time)
+# opus_temporibus_cdn
+# deploy_0_9_markdown
