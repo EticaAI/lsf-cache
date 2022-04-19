@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-18T20:19:09
+2022-04-19T20:32:11
 
 |
 /SPDX license ID/@eng-Latn
@@ -108,7 +108,7 @@ Rēs linguālibus::
 NOTE: #`0_1603_1_7_2616_7535` ?#
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 81
+==== Concepta: 82
 
 ==== Rēs linguālibus: 5
 
@@ -133,7 +133,7 @@ https://iso639-3.sil.org/code/mul[mul]
 |
 Linguae multiplīs (Scrīptum incognitō)
 |
-77
+78
 
 |
 ben-Beng
@@ -199,23 +199,65 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
 
-  scrīptor:::
+  /cōdex pūblicandī/:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P50[P50]
+        https://www.wikidata.org/wiki/Property:P123[P123]
 
       ix_hxlix;;
-        ix_wikip50
+        ix_wikip123
 
       ix_hxlvoc;;
-        v_wiki_p_50
+        v_wiki_p_123
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">scrīptor</span>+++
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+  /SPDX license ID/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
+
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
+
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
+
+      ix_hxlix;;
+        ix_wikip2479
+
+      ix_hxlvoc;;
+        v_wiki_p_2479
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">SPDX license identifier</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
   Numerordĭnātĭo:::
     Rēs interlinguālibus::::
@@ -268,6 +310,24 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
+  scrīptor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P50[P50]
+
+      ix_hxlix;;
+        ix_wikip50
+
+      ix_hxlvoc;;
+        v_wiki_p_50
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">scrīptor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+
   //opus papȳrō ex 1603//:::
     Rēs interlinguālibus::::
       ix_hxlix;;
@@ -279,66 +339,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Workfsheet index Used on 1603_1_1 as undocumented feature to manage where the main table should be extracted</span>+++
-
-  /cōdex pūblicandī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
-
-      ix_hxlix;;
-        ix_wikip123
-
-      ix_hxlvoc;;
-        v_wiki_p_123
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
-
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-  /SPDX license ID/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P2479[P2479]
-
-      /rēgulam/;;
-        [0-9A-Za-z\.\-]{3,36}[+]?
-
-      /formatter URL/@eng-Latn;;
-        https://spdx.org/licenses/$1.html
-
-      ix_hxlix;;
-        ix_wikip2479
-
-      ix_hxlvoc;;
-        v_wiki_p_2479
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">SPDX license identifier</span>+++
 
 
 <<<
@@ -1962,6 +1962,24 @@ Rēs interlinguālibus::
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /Temporary public numeric namespace/
+
+
+
+
+
+[id='99_876']
+==== [`99_876`] //Human sexuality (meta dictionaries)//
+
+Rēs interlinguālibus::
+  Numerordĭnātĭo:::
+    1603:99:876
+
+  //opus papȳrō ex 1603//:::
+    35
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    //Human sexuality (meta dictionaries)//
 
 
 

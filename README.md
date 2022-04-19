@@ -2,13 +2,13 @@
 - status_quo
   - summa
     - codex: 17
-    - concepta_non_unicum: 1449
+    - concepta_non_unicum: 1450
 
 
 ----
 **Tabula contentorum**
-- <a href="#1603_1_1">1603_1_1</a> <sup>C.81</sup> <sub>r.I.15</sub>  <sub>r.L.9</sub>
-- <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.13</sub>  <sub>r.L.116</sub>
+- <a href="#1603_1_1">1603_1_1</a> <sup>C.82</sup> <sub>r.I.15</sub>  <sub>r.L.9</sub>
+- <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.14</sub>  <sub>r.L.5</sub>
 - <a href="#1603_1_7">1603_1_7</a> <sup>C.47</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.I.19</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_99">1603_1_99</a> <sup>C.51</sup> <sub>r.I.11</sub>  <sub>r.L.3</sub>
@@ -33,7 +33,7 @@
 <a href="#1603_1_1" id="1603_1_1">§ 1603_1_1</a>
 
 - status_quo
-  - concepta: 81
+  - concepta: 82
   - res_interlingualibus: 15
   - res_lingualibus: 9
 
@@ -57,7 +57,9 @@
     },
     "cdn": {
         "codex": [
-            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.mul-Latn.codex.epub"
+            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.mul-Latn.codex.adoc"
         ],
         "dictionaria": [
             "https://lsf-cdn.etica.ai/1603/1/1/1603_1_1.no1.tm.hxl.csv"
@@ -67,18 +69,18 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 4014223324,
-            "res_interlingualibus": 149449049,
+            "res_lingualibus": 890261692,
+            "res_interlingualibus": 178749286,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 81,
+            "concepta": 82,
             "res_lingualibus": 9,
             "res_interlingualibus": 15,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-18T19:44:16"
+            "opus": "2022-04-19T20:46:46"
         }
     }
 }
@@ -93,8 +95,8 @@
 
 - status_quo
   - concepta: 3
-  - res_interlingualibus: 13
-  - res_lingualibus: 116
+  - res_interlingualibus: 14
+  - res_lingualibus: 5
 
 
 <details><summary>🔎🗄️1603_1_6🗄️🔍</summary>
@@ -114,8 +116,6 @@
         ],
         "dictionaria": [
             "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.no1.tm.hxl.csv",
-            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.no11.tm.hxl.csv",
-            "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.wikiq.tm.hxl.csv",
             "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.no11.tbx",
             "https://lsf-cdn.etica.ai/1603/1/6/1603_1_6.no11.tmx"
         ]
@@ -132,18 +132,18 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 176732105,
-            "res_lingualibus": 3231568448,
+            "res_interlingualibus": 975527707,
+            "res_lingualibus": 1891199616,
             "res_picturae": null
         },
         "summa": {
             "concepta": 3,
-            "res_interlingualibus": 13,
-            "res_lingualibus": 116,
+            "res_interlingualibus": 14,
+            "res_lingualibus": 5,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:01:57"
+            "opus": "2022-04-19T20:46:45"
         }
     }
 }
@@ -260,8 +260,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1177726241,
-            "res_lingualibus": 2066142768,
+            "res_interlingualibus": 3091854262,
+            "res_lingualibus": 3541867647,
             "res_picturae": null
         },
         "summa": {
@@ -271,7 +271,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-18T16:03:46"
+            "opus": "2022-04-19T20:46:32"
         }
     }
 }
@@ -820,8 +820,8 @@ The terminology translations are extracted from Wikidata, which means this recom
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3565144678,
-            "res_lingualibus": 1556857217,
+            "res_interlingualibus": 4056498319,
+            "res_lingualibus": 1516952250,
             "res_picturae": null
         },
         "summa": {
@@ -831,7 +831,7 @@ The terminology translations are extracted from Wikidata, which means this recom
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-18T19:36:27"
+            "opus": "2022-04-18T19:53:36"
         }
     }
 }
