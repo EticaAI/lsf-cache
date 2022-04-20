@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-16T23:57:34
+2022-04-19T22:08:37
 
 |
 /SPDX license ID/@eng-Latn
@@ -860,7 +860,7 @@ https://iso639-3.sil.org/code/fas[fas]
 |
 Macrolingua Persica (//Abecedarium Arabicum//)
 |
-23
+24
 
 |
 hun-Latn
@@ -1244,7 +1244,7 @@ https://iso639-3.sil.org/code/lim[lim]
 |
 Lingua Limburgica (Abecedarium Latinum)
 |
-8
+9
 
 |
 wln-Latn
@@ -1832,7 +1832,7 @@ https://iso639-3.sil.org/code/kaa[kaa]
 |
 Lingua Karakalpakensis (Abecedarium Latinum)
 |
-2
+3
 
 |
 kbp-Latn
@@ -2000,7 +2000,7 @@ https://iso639-3.sil.org/code/sah[sah]
 |
 Lingua Iacutica (Abecedarium Cyrillicum)
 |
-3
+4
 
 |
 sgs-Latn
@@ -2372,7 +2372,7 @@ https://iso639-3.sil.org/code/glv[glv]
 |
 Lingua Monensis (Abecedarium Latinum)
 |
-3
+4
 
 |
 hau-Latn
@@ -2882,17 +2882,23 @@ Lingua Franca Nova (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 11
 Rēs::
-  //Cōdex annotātiōnibus internālibus//:::
+  spōnsor:::
     Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P859[P859]
+
       ix_hxlix;;
-        ix_n1603ia
+        ix_wikip859
+
+      ix_hxlvoc;;
+        v_wiki_p_859
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
+        +++<span lang="la">spōnsor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2918,23 +2924,38 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">SPDX license identifier</span>+++
 
-  /translator/@eng-Latn:::
+  numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P655[P655]
+        https://www.wikidata.org/wiki/Property:P393[P393]
 
       ix_hxlix;;
-        ix_wikip655
+        ix_wikip393
 
       ix_hxlvoc;;
-        v_wiki_p_655
+        v_wiki_p_393
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/translator/@eng-Latn</span>+++
+        +++<span lang="la">numerus editionis</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">agent who adapts any kind of written text from one language to another</span>+++
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
+  Numerordĭnātĭo:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603
+
+      ix_hxlvoc;;
+        v_n1603
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">Numerordĭnātĭo</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
 
   /dictiōnārium ēditōrī/:::
     Rēs interlinguālibus::::
@@ -2954,6 +2975,24 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
 
+  /translator/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P655[P655]
+
+      ix_hxlix;;
+        ix_wikip655
+
+      ix_hxlvoc;;
+        v_wiki_p_655
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/translator/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">agent who adapts any kind of written text from one language to another</span>+++
+
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2971,42 +3010,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
-
-  /publication date/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
-
-      ix_hxlix;;
-        ix_wikip577
-
-      ix_hxlvoc;;
-        v_wiki_p_577
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
-
-  spōnsor:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
-
-      ix_hxlix;;
-        ix_wikip859
-
-      ix_hxlvoc;;
-        v_wiki_p_859
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
 
   /Wiki QID/:::
     Rēs interlinguālibus::::
@@ -3026,38 +3029,47 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
-  Numerordĭnātĭo:::
+  //opus papȳrō ex 1603//:::
     Rēs interlinguālibus::::
       ix_hxlix;;
-        ix_n1603
-
-      ix_hxlvoc;;
-        v_n1603
+        ix_n1603op
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">Numerordĭnātĭo</span>+++
+        +++<span lang="la">//opus papȳrō ex 1603//</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
+        +++<span lang="en">Workfsheet index Used on 1603_1_1 as undocumented feature to manage where the main table should be extracted</span>+++
 
-  numerus editionis:::
+  /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
+        https://www.wikidata.org/wiki/Property:P577[P577]
 
       ix_hxlix;;
-        ix_wikip393
+        ix_wikip577
 
       ix_hxlvoc;;
-        v_wiki_p_393
+        v_wiki_p_577
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+  //Cōdex annotātiōnibus internālibus//:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603ia
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
 
 
 <<<
@@ -3172,7 +3184,7 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
 
-  ix_n1603op:::
+  //opus papȳrō ex 1603//:::
     23
 
 Rēs linguālibus::
@@ -3185,7 +3197,7 @@ Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:44:86
 
-  ix_n1603op:::
+  //opus papȳrō ex 1603//:::
     22
 
   /Wiki QID/:::
@@ -5885,6 +5897,9 @@ Rēs linguālibus::
   Lingua Ilocana (Abecedarium Latinum):::
     +++<span lang="ilo">Presidente</span>+++
 
+  Lingua Karakalpakensis (Abecedarium Latinum):::
+    +++<span lang="kaa">Prezident</span>+++
+
   Lingua Mari pratensis (Abecedarium Cyrillicum):::
     +++<span lang="mhr">президент</span>+++
 
@@ -5950,6 +5965,9 @@ Rēs linguālibus::
 
   Macrolingua Guaranica (Abecedarium Latinum):::
     +++<span lang="gn">tendota</span>+++
+
+  Lingua Monensis (Abecedarium Latinum):::
+    +++<span lang="gv">Eaghtyrane</span>+++
 
   Lingua Haussana (Abecedarium Latinum):::
     +++<span lang="ha">shugaba</span>+++
@@ -6618,6 +6636,9 @@ Rēs linguālibus::
 
   Lingua Veneta (Abecedarium Latinum):::
     +++<span lang="vec">tratà internasionałe</span>+++
+
+  Lingua Limburgica (Abecedarium Latinum):::
+    +++<span lang="li">Verdraag</span>+++
 
   Lingua Vallonica (Abecedarium Latinum):::
     +++<span lang="wa">Cossina</span>+++
@@ -7351,6 +7372,9 @@ Rēs linguālibus::
   Lingua Indonesiana (Abecedarium Latinum):::
     +++<span lang="id">Konvensi Genosida</span>+++
 
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">کنوانسیون نسلکشی</span>+++
+
   Lingua Gallaica (Abecedarium Latinum):::
     +++<span lang="gl">Convención para a Prevención e a Sanción do Delito de Xenocidio</span>+++
 
@@ -7640,7 +7664,7 @@ Rēs linguālibus::
     +++<span lang="pt">Convenção Internacional sobre a Eliminação de todas as Formas de Discriminação Racial</span>+++
 
   Lingua Anglica (Abecedarium Latinum):::
-    +++<span lang="en">Convention on the Elimination of All Forms of Racial Discrimination</span>+++
+    +++<span lang="en">International Convention on the Elimination of All Forms of Racial Discrimination</span>+++
 
   Lingua Francogallica (Abecedarium Latinum):::
     +++<span lang="fr">Convention internationale sur l'élimination de toutes les formes de discrimination raciale</span>+++
@@ -8648,6 +8672,9 @@ Rēs linguālibus::
 
   Lingua Rusinica (Abecedarium Cyrillicum):::
     +++<span lang="rue">Ґеноцід</span>+++
+
+  Lingua Iacutica (Abecedarium Cyrillicum):::
+    +++<span lang="sah">Гэноцид</span>+++
 
   /Inari Sami/ (Abecedarium Latinum):::
     +++<span lang="smn">aalmugmorhe</span>+++

@@ -2,22 +2,22 @@
 - status_quo
   - summa
     - codex: 17
-    - concepta_non_unicum: 1450
+    - concepta_non_unicum: 1455
 
 
 ----
 **Tabula contentorum**
-- <a href="#1603_1_1">1603_1_1</a> <sup>C.82</sup> <sub>r.I.15</sub>  <sub>r.L.9</sub>
-- <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.14</sub>  <sub>r.L.5</sub>
-- <a href="#1603_1_7">1603_1_7</a> <sup>C.47</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
-- <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.I.19</sub>  <sub>r.L.3</sub>
+- <a href="#1603_1_1">1603_1_1</a> <sup>C.82</sup> <sub>r.I.17</sub>  <sub>r.L.9</sub>
+- <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.16</sub>  <sub>r.L.5</sub>
+- <a href="#1603_1_7">1603_1_7</a> <sup>C.48</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
+- <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.I.21</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_99">1603_1_99</a> <sup>C.51</sup> <sub>r.I.11</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_101">1603_1_101</a> <sup>C.19</sup> <sub>r.I.7</sub>  <sub>r.L.4</sub>
 - <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.I.14</sub>  <sub>r.L.148</sub>
 - <a href="#1603_44_101">1603_44_101</a> <sup>C.22</sup> <sub>r.I.14</sub>  <sub>r.L.162</sub>
 - <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.16</sub>  <sub>r.L.226</sub>
 - <a href="#1603_45_1">1603_45_1</a> <sup>C.347</sup> <sub>r.I.15</sub>  <sub>r.L.245</sub>
-- <a href="#1603_45_19">1603_45_19</a> <sup>C.67</sup> <sub>r.I.12</sub>  <sub>r.L.241</sub>
+- <a href="#1603_45_19">1603_45_19</a> <sup>C.71</sup> <sub>r.I.12</sub>  <sub>r.L.241</sub>
 - <a href="#1603_45_31">1603_45_31</a> <sup>C.25</sup> <sub>r.I.14</sub>  <sub>r.L.211</sub>
 - <a href="#1603_63_101">1603_63_101</a> <sup>C.332</sup> <sub>r.I.14</sub>  <sub>r.L.249</sub>
 - <a href="#1603_64_41">1603_64_41</a> <sup>C.56</sup> <sub>r.I.12</sub>  <sub>r.L.150</sub>
@@ -34,8 +34,12 @@
 
 - status_quo
   - concepta: 82
-  - res_interlingualibus: 15
+  - res_interlingualibus: 17
   - res_lingualibus: 9
+
+### 1603_1_1 Methodī ex dictiōnāriōrum corde
+
+/The global indexof every entry point of group of dictionaries./@eng-Latn
 
 
 <details><summary>🔎🗄️1603_1_1🗄️🔍</summary>
@@ -51,7 +55,7 @@
             "mul-Zyyy": null
         },
         "methodi_ex_dictionariorum_corde": {
-            "mul-Zyyy": null
+            "mul-Zyyy": "/The global indexof every entry point of group of dictionaries./@eng-Latn"
         },
         "nomen": "//Numeroclatura Generālium ad MM ex Numerordĭnātĭo//"
     },
@@ -69,18 +73,18 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 890261692,
-            "res_interlingualibus": 178749286,
+            "res_lingualibus": 2092449691,
+            "res_interlingualibus": 721938050,
             "res_picturae": null
         },
         "summa": {
             "concepta": 82,
             "res_lingualibus": 9,
-            "res_interlingualibus": 15,
+            "res_interlingualibus": 17,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T20:46:46"
+            "opus": "2022-04-19T22:11:24"
         }
     }
 }
@@ -95,8 +99,12 @@
 
 - status_quo
   - concepta: 3
-  - res_interlingualibus: 14
+  - res_interlingualibus: 16
   - res_lingualibus: 5
+
+### 1603_1_6 Methodī ex dictiōnāriōrum corde
+
+/Dictionaries of types of terms/@eng-Latn
 
 
 <details><summary>🔎🗄️1603_1_6🗄️🔍</summary>
@@ -125,25 +133,25 @@
             "mul-Zyyy": null
         },
         "methodi_ex_dictionariorum_corde": {
-            "mul-Zyyy": null
+            "mul-Zyyy": "/Dictionaries of types of terms/@eng-Latn"
         },
         "nomen": "/Dictiōnāria de terminī typīs/"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 975527707,
-            "res_lingualibus": 1891199616,
+            "res_interlingualibus": 1251932193,
+            "res_lingualibus": 3668290901,
             "res_picturae": null
         },
         "summa": {
             "concepta": 3,
-            "res_interlingualibus": 14,
+            "res_interlingualibus": 16,
             "res_lingualibus": 5,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T20:46:45"
+            "opus": "2022-04-19T22:03:37"
         }
     }
 }
@@ -157,7 +165,7 @@
 <a href="#1603_1_7" id="1603_1_7">§ 1603_1_7</a>
 
 - status_quo
-  - concepta: 47
+  - concepta: 48
   - res_interlingualibus: 13
   - res_lingualibus: 3
 
@@ -199,18 +207,18 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 156654071,
-            "res_lingualibus": 2066142768,
+            "res_interlingualibus": 1738156009,
+            "res_lingualibus": 393291787,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 47,
+            "concepta": 48,
             "res_interlingualibus": 13,
             "res_lingualibus": 3,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:01:05"
+            "opus": "2022-04-19T21:38:48"
         }
     }
 }
@@ -225,8 +233,12 @@ The decision making is mostly based on what is very essential to explain other t
 
 - status_quo
   - concepta: 265
-  - res_interlingualibus: 19
+  - res_interlingualibus: 21
   - res_lingualibus: 3
+
+### 1603_1_51 Methodī ex dictiōnāriōrum corde
+
+/Dictionaries of languages in 2022 from Numerodinatio library/@eng-Latn
 
 
 <details><summary>🔎🗄️1603_1_51🗄️🔍</summary>
@@ -253,25 +265,25 @@ The decision making is mostly based on what is very essential to explain other t
             "mul-Zyyy": null
         },
         "methodi_ex_dictionariorum_corde": {
-            "mul-Zyyy": null
+            "mul-Zyyy": "/Dictionaries of languages in 2022 from Numerodinatio library/@eng-Latn"
         },
         "nomen": "//Dictiōnāria Linguārum//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3091854262,
+            "res_interlingualibus": 3406186794,
             "res_lingualibus": 3541867647,
             "res_picturae": null
         },
         "summa": {
             "concepta": 265,
-            "res_interlingualibus": 19,
+            "res_interlingualibus": 21,
             "res_lingualibus": 3,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T20:46:32"
+            "opus": "2022-04-19T22:01:15"
         }
     }
 }
@@ -291,7 +303,7 @@ The decision making is mostly based on what is very essential to explain other t
 
 ### 1603_1_99 Methodī ex dictiōnāriōrum corde
 
-TODO: explain 1603_1_99
+/Temporary information about the library. Used to store on spreadsheets (not on code) messages not translated yet on dedicated dictionaries. Not intented for external use/@eng-Latn
 
 
 <details><summary>🔎🗄️1603_1_99🗄️🔍</summary>
@@ -318,15 +330,15 @@ TODO: explain 1603_1_99
             "mul-Zyyy": null
         },
         "methodi_ex_dictionariorum_corde": {
-            "mul-Zyyy": "TODO: explain 1603_1_99"
+            "mul-Zyyy": "/Temporary information about the library. Used to store on spreadsheets (not on code) messages not translated yet on dedicated dictionaries. Not intented for external use/@eng-Latn"
         },
         "nomen": "Nōtitiae temporāriōrum circā librārium"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3975126116,
-            "res_lingualibus": 3541867647,
+            "res_interlingualibus": 2668193629,
+            "res_lingualibus": 2066142768,
             "res_picturae": null
         },
         "summa": {
@@ -336,7 +348,7 @@ TODO: explain 1603_1_99
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:06:39"
+            "opus": "2022-04-19T21:53:29"
         }
     }
 }
@@ -462,8 +474,8 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 823561084,
-            "res_lingualibus": 3848275165,
+            "res_interlingualibus": 305772768,
+            "res_lingualibus": 329860312,
             "res_picturae": null
         },
         "summa": {
@@ -473,7 +485,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T18:47:57"
+            "opus": "2022-04-19T22:11:24"
         }
     }
 }
@@ -531,8 +543,8 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3182640614,
-            "res_lingualibus": 4066600542,
+            "res_interlingualibus": 544789656,
+            "res_lingualibus": 1706534120,
             "res_picturae": null
         },
         "summa": {
@@ -542,7 +554,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:05:04"
+            "opus": "2022-04-19T21:42:34"
         }
     }
 }
@@ -559,6 +571,12 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
   - concepta: 36
   - res_interlingualibus: 16
   - res_lingualibus: 226
+
+### 1603_44_111 Methodī ex dictiōnāriōrum corde
+
+`+/Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/+` (literal English translation: _Basic dictionaries about crimes against one community by rulers_) contains basic (id est, not fully detailed) concepts about crimes against **one** community of humans because of their membership (de facto or perceived) to be part of the community by rulers (which are supposed to protect a reign which that community is part of). 
+
+A more well known term to describe the concepts here could be _Crimes against humanity_, however both [[1603:44:101]] and [[1603:44:111]] intentionally avoid terminology in Latin based on the root term _human_ to avoid confusion while having freedom to be stricter.
 
 
 <details><summary>🔎🗄️1603_44_111🗄️🔍</summary>
@@ -585,21 +603,29 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
         ]
     },
     "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "`+/Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/+` (literal English translation: _Basic dictionaries about crimes against one community by rulers_) contains basic (id est, not fully detailed) concepts about crimes against **one** community of humans because of their membership (de facto or perceived) to be part of the community by rulers (which are supposed to protect a reign which that community is part of). \n\nA more well known term to describe the concepts here could be _Crimes against humanity_, however both [[1603:44:101]] and [[1603:44:111]] intentionally avoid terminology in Latin based on the root term _human_ to avoid confusion while having freedom to be stricter."
+        },
         "nomen": "/Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1822120724,
-            "res_lingualibus": 1822120724
+            "res_interlingualibus": 1186341435,
+            "res_lingualibus": 266000941,
+            "res_picturae": null
         },
         "summa": {
             "concepta": 36,
             "res_interlingualibus": 16,
-            "res_lingualibus": 226
+            "res_lingualibus": 226,
+            "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-16T23:59:24.584846"
+            "opus": "2022-04-19T22:10:32"
         }
     }
 }
@@ -689,8 +715,8 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3979726985,
-            "res_lingualibus": 2078375149,
+            "res_interlingualibus": 2501344794,
+            "res_lingualibus": 2037865541,
             "res_picturae": null
         },
         "summa": {
@@ -700,7 +726,7 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T19:33:12"
+            "opus": "2022-04-19T22:00:51"
         }
     }
 }
@@ -714,9 +740,19 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
 <a href="#1603_45_19" id="1603_45_19">§ 1603_45_19</a>
 
 - status_quo
-  - concepta: 67
+  - concepta: 71
   - res_interlingualibus: 12
   - res_lingualibus: 241
+
+### 1603_45_19 Methodī ex dictiōnāriōrum corde
+
+//Dictionaries of places (generic, superficial, non-specialized)//
+
+
+TODO: continue from https://en.wikipedia.org/wiki/List_of_building_types
+
+
+https://en.wikipedia.org/wiki/Nonbuilding_structure
 
 
 <details><summary>🔎🗄️1603_45_19🗄️🔍</summary>
@@ -743,21 +779,29 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
         ]
     },
     "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "//Dictionaries of places (generic, superficial, non-specialized)//\n\n\nTODO: continue from https://en.wikipedia.org/wiki/List_of_building_types\n\n\nhttps://en.wikipedia.org/wiki/Nonbuilding_structure"
+        },
         "nomen": "Dictiōnāria dē locī generibus"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1822120724,
-            "res_lingualibus": 1822120724
+            "res_interlingualibus": 3441900202,
+            "res_lingualibus": 822122147,
+            "res_picturae": null
         },
         "summa": {
-            "concepta": 67,
+            "concepta": 71,
             "res_interlingualibus": 12,
-            "res_lingualibus": 241
+            "res_lingualibus": 241,
+            "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T00:06:08.652023"
+            "opus": "2022-04-19T22:07:39"
         }
     }
 }
@@ -820,8 +864,8 @@ The terminology translations are extracted from Wikidata, which means this recom
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 4056498319,
-            "res_lingualibus": 1516952250,
+            "res_interlingualibus": 2580769531,
+            "res_lingualibus": 203663639,
             "res_picturae": null
         },
         "summa": {
@@ -831,7 +875,7 @@ The terminology translations are extracted from Wikidata, which means this recom
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-18T19:53:36"
+            "opus": "2022-04-19T21:52:46"
         }
     }
 }
@@ -900,8 +944,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3097932498,
-            "res_lingualibus": 2544076959,
+            "res_interlingualibus": 1814580957,
+            "res_lingualibus": 4098124632,
             "res_picturae": null
         },
         "summa": {
@@ -911,7 +955,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-18T19:44:15"
+            "opus": "2022-04-19T21:50:04"
         }
     }
 }
@@ -969,8 +1013,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 97486010,
-            "res_lingualibus": 352291638,
+            "res_interlingualibus": 3031925027,
+            "res_lingualibus": 766472181,
             "res_picturae": null
         },
         "summa": {
@@ -980,7 +1024,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:09:15"
+            "opus": "2022-04-19T21:56:03"
         }
     }
 }
@@ -1048,8 +1092,8 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 387907216,
-            "res_lingualibus": 1398198766,
+            "res_interlingualibus": 230662595,
+            "res_lingualibus": 1298536769,
             "res_picturae": null
         },
         "summa": {
@@ -1059,7 +1103,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-18T16:03:25"
+            "opus": "2022-04-19T22:03:23"
         }
     }
 }
@@ -1116,8 +1160,8 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2286177647,
-            "res_lingualibus": 1410003966,
+            "res_interlingualibus": 2518404053,
+            "res_lingualibus": 2846010781,
             "res_picturae": null
         },
         "summa": {
@@ -1127,7 +1171,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T19:05:25"
+            "opus": "2022-04-19T21:39:47"
         }
     }
 }

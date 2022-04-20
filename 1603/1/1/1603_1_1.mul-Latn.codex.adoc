@@ -51,12 +51,17 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-19T20:32:11
+2022-04-19T21:39:49
 
 |
 /SPDX license ID/@eng-Latn
 |
 CC0-1.0
+
+|
+spōnsor
+|
+pro bonō publicō
 
 |===
 
@@ -105,7 +110,11 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-NOTE: #`0_1603_1_7_2616_7535` ?#
+Rēs interlinguālibus::
+  /scope and content/@eng-Latn:::
+    /The global indexof every entry point of group of dictionaries./@eng-Latn
+
+
 
 === Rēs dē factō in dictiōnāriīs
 ==== Concepta: 82
@@ -185,19 +194,19 @@ Lingua Anglica (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 10
+==== Rēs interlinguālibus: 12
 Rēs::
-  //Cōdex annotātiōnibus internālibus//:::
+  //opus papȳrō ex 1603//:::
     Rēs interlinguālibus::::
       ix_hxlix;;
-        ix_n1603ia
+        ix_n1603op
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
+        +++<span lang="la">//opus papȳrō ex 1603//</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
+        +++<span lang="en">Workfsheet index Used on 1603_1_1 as undocumented feature to manage where the main table should be extracted</span>+++
 
   /cōdex pūblicandī/:::
     Rēs interlinguālibus::::
@@ -216,6 +225,24 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+  spōnsor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P859[P859]
+
+      ix_hxlix;;
+        ix_wikip859
+
+      ix_hxlvoc;;
+        v_wiki_p_859
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">spōnsor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -241,6 +268,18 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">SPDX license identifier</span>+++
 
+  //Cōdex annotātiōnibus internālibus//:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603ia
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
+
   /Wiki QID/:::
     Rēs interlinguālibus::::
       /rēgulam/;;
@@ -258,57 +297,6 @@ Rēs::
 
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-  Numerordĭnātĭo:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_n1603
-
-      ix_hxlvoc;;
-        v_n1603
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">Numerordĭnātĭo</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
-
-  /publication date/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
-
-      ix_hxlix;;
-        ix_wikip577
-
-      ix_hxlvoc;;
-        v_wiki_p_577
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
-
-  numerus editionis:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
-
-      ix_hxlix;;
-        ix_wikip393
-
-      ix_hxlvoc;;
-        v_wiki_p_393
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
   scrīptor:::
     Rēs interlinguālibus::::
@@ -328,17 +316,74 @@ Rēs::
       Lingua Anglica (Abecedarium Latinum);;
         +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
 
-  //opus papȳrō ex 1603//:::
+  /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
       ix_hxlix;;
-        ix_n1603op
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">//opus papȳrō ex 1603//</span>+++
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Workfsheet index Used on 1603_1_1 as undocumented feature to manage where the main table should be extracted</span>+++
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+  Numerordĭnātĭo:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603
+
+      ix_hxlvoc;;
+        v_n1603
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">Numerordĭnātĭo</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
 
 
 <<<
@@ -1974,6 +2019,9 @@ Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:99:876
 
+  //Cōdex annotātiōnibus internālibus//:::
+    experimentum-90|publicum-10
+
   //opus papȳrō ex 1603//:::
     35
 
@@ -1993,7 +2041,7 @@ Rēs interlinguālibus::
     1603:99:987
 
   //Cōdex annotātiōnibus internālibus//:::
-    experimentum-90
+    experimentum-90|publicum-10
 
   //opus papȳrō ex 1603//:::
     36
