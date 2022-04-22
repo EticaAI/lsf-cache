@@ -1,29 +1,31 @@
 # 1603 Librārium
 - status_quo
   - summa
-    - codex: 17
-    - concepta_non_unicum: 1455
+    - codex: 19
+    - concepta_non_unicum: 1481
 
 
 ----
 **Tabula contentorum**
-- <a href="#1603_1_1">1603_1_1</a> <sup>C.82</sup> <sub>r.I.17</sub>  <sub>r.L.9</sub>
+- <a href="#1603_1_1">1603_1_1</a> <sup>C.83</sup> <sub>r.I.17</sub>  <sub>r.L.9</sub>
 - <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.16</sub>  <sub>r.L.5</sub>
 - <a href="#1603_1_7">1603_1_7</a> <sup>C.48</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.I.21</sub>  <sub>r.L.3</sub>
-- <a href="#1603_1_99">1603_1_99</a> <sup>C.51</sup> <sub>r.I.11</sub>  <sub>r.L.3</sub>
+- <a href="#1603_1_99">1603_1_99</a> <sup>C.51</sup> <sub>r.I.11</sub>  <sub>r.L.6</sub>
 - <a href="#1603_1_101">1603_1_101</a> <sup>C.19</sup> <sub>r.I.7</sub>  <sub>r.L.4</sub>
-- <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.I.14</sub>  <sub>r.L.148</sub>
-- <a href="#1603_44_101">1603_44_101</a> <sup>C.22</sup> <sub>r.I.14</sub>  <sub>r.L.162</sub>
-- <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.16</sub>  <sub>r.L.226</sub>
-- <a href="#1603_45_1">1603_45_1</a> <sup>C.347</sup> <sub>r.I.15</sub>  <sub>r.L.245</sub>
-- <a href="#1603_45_19">1603_45_19</a> <sup>C.71</sup> <sub>r.I.12</sub>  <sub>r.L.241</sub>
-- <a href="#1603_45_31">1603_45_31</a> <sup>C.25</sup> <sub>r.I.14</sub>  <sub>r.L.211</sub>
-- <a href="#1603_63_101">1603_63_101</a> <sup>C.332</sup> <sub>r.I.14</sub>  <sub>r.L.249</sub>
-- <a href="#1603_64_41">1603_64_41</a> <sup>C.56</sup> <sub>r.I.12</sub>  <sub>r.L.150</sub>
-- <a href="#1603_64_604">1603_64_604</a> <sup>C.28</sup> <sub>r.I.12</sub>  <sub>r.L.227</sub>
-- <a href="#1603_84_1">1603_84_1</a> <sup>C.60</sup> <sub>r.I.12</sub>  <sub>r.L.4</sub>
-- <a href="#1603_99_987">1603_99_987</a> <sup>C.0</sup> <sub>r.I.4</sub>  <sub>r.L.3</sub>
+- <a href="#1603_1_2020">1603_1_2020</a> <sup>C.16</sup> <sub>r.I.11</sub>  <sub>r.L.5</sub>
+- <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.I.14</sub>  <sub>r.L.149</sub>
+- <a href="#1603_44_101">1603_44_101</a> <sup>C.22</sup> <sub>r.I.14</sub>  <sub>r.L.163</sub>
+- <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.16</sub>  <sub>r.L.227</sub>
+- <a href="#1603_45_1">1603_45_1</a> <sup>C.347</sup> <sub>r.I.15</sub>  <sub>r.L.246</sub>
+- <a href="#1603_45_19">1603_45_19</a> <sup>C.71</sup> <sub>r.I.12</sub>  <sub>r.L.242</sub>
+- <a href="#1603_45_31">1603_45_31</a> <sup>C.25</sup> <sub>r.I.14</sub>  <sub>r.L.212</sub>
+- <a href="#1603_63_101">1603_63_101</a> <sup>C.332</sup> <sub>r.I.14</sub>  <sub>r.L.250</sub>
+- <a href="#1603_64_41">1603_64_41</a> <sup>C.56</sup> <sub>r.I.12</sub>  <sub>r.L.151</sub>
+- <a href="#1603_64_604">1603_64_604</a> <sup>C.28</sup> <sub>r.I.12</sub>  <sub>r.L.228</sub>
+- <a href="#1603_84_1">1603_84_1</a> <sup>C.60</sup> <sub>r.I.12</sub>  <sub>r.L.5</sub>
+- <a href="#1603_99_876">1603_99_876</a> <sup>C.9</sup> <sub>r.I.10</sub>  <sub>r.L.4</sub>
+- <a href="#1603_99_987">1603_99_987</a> <sup>C.0</sup> <sub>r.I.5</sub>  <sub>r.L.3</sub>
 
 ----
 
@@ -33,7 +35,7 @@
 <a href="#1603_1_1" id="1603_1_1">§ 1603_1_1</a>
 
 - status_quo
-  - concepta: 82
+  - concepta: 83
   - res_interlingualibus: 17
   - res_lingualibus: 9
 
@@ -73,18 +75,18 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 2092449691,
-            "res_interlingualibus": 721938050,
+            "res_lingualibus": 4260973897,
+            "res_interlingualibus": 691990026,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 82,
+            "concepta": 83,
             "res_lingualibus": 9,
             "res_interlingualibus": 17,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T22:11:24"
+            "opus": "2022-04-21T23:33:34"
         }
     }
 }
@@ -140,8 +142,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1251932193,
-            "res_lingualibus": 3668290901,
+            "res_interlingualibus": 1095345129,
+            "res_lingualibus": 3271841031,
             "res_picturae": null
         },
         "summa": {
@@ -151,7 +153,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T22:03:37"
+            "opus": "2022-04-21T23:33:34"
         }
     }
 }
@@ -207,8 +209,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1738156009,
-            "res_lingualibus": 393291787,
+            "res_interlingualibus": 3314397489,
+            "res_lingualibus": 1924471636,
             "res_picturae": null
         },
         "summa": {
@@ -218,7 +220,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T21:38:48"
+            "opus": "2022-04-21T23:13:13"
         }
     }
 }
@@ -272,8 +274,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3406186794,
-            "res_lingualibus": 3541867647,
+            "res_interlingualibus": 2360457057,
+            "res_lingualibus": 3335796304,
             "res_picturae": null
         },
         "summa": {
@@ -283,7 +285,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T22:01:15"
+            "opus": "2022-04-21T23:07:42"
         }
     }
 }
@@ -299,7 +301,7 @@ The decision making is mostly based on what is very essential to explain other t
 - status_quo
   - concepta: 51
   - res_interlingualibus: 11
-  - res_lingualibus: 3
+  - res_lingualibus: 6
 
 ### 1603_1_99 Methodī ex dictiōnāriōrum corde
 
@@ -312,7 +314,7 @@ The decision making is mostly based on what is very essential to explain other t
 {
     "annotationes_internalibus": {
         "internale": 20,
-        "publicum": 10
+        "publicum": 1
     },
     "cdn": {
         "annexis": [],
@@ -337,18 +339,18 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2668193629,
-            "res_lingualibus": 2066142768,
+            "res_interlingualibus": 990334683,
+            "res_lingualibus": 2913012419,
             "res_picturae": null
         },
         "summa": {
             "concepta": 51,
             "res_interlingualibus": 11,
-            "res_lingualibus": 3,
+            "res_lingualibus": 6,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T21:53:29"
+            "opus": "2022-04-21T22:56:54"
         }
     }
 }
@@ -418,6 +420,71 @@ The decision making is mostly based on what is very essential to explain other t
 
 </details>
 
+## 1603_1_2020 //Guia rápido de lexicografia para colaboradores//@por-Latn
+
+
+<a href="#1603_1_2020" id="1603_1_2020">§ 1603_1_2020</a>
+
+- status_quo
+  - concepta: 16
+  - res_interlingualibus: 11
+  - res_lingualibus: 5
+
+### 1603_1_2020 Methodī ex dictiōnāriōrum corde
+
+//Guia rápido de lexicografia para colaboradores//@por-Latn
+
+
+<details><summary>🔎🗄️1603_1_2020🗄️🔍</summary>
+
+<pre>
+{
+    "annotationes_internalibus": {
+        "internale": 100,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/2020/1603_1_2020.mul-Latn.codex.adoc",
+            "https://lsf-cdn.etica.ai/1603/1/2020/1603_1_2020.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/2020/1603_1_2020.mul-Latn.codex.pdf"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/2020/1603_1_2020.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "//Guia rápido de lexicografia para colaboradores//@por-Latn"
+        },
+        "nomen": "//Guia rápido de lexicografia para colaboradores//@por-Latn"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 123661179,
+            "res_lingualibus": 2864037185,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 16,
+            "res_interlingualibus": 11,
+            "res_lingualibus": 5,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-21T23:12:59"
+        }
+    }
+}
+</pre>
+
+</details>
+
 ## 1603_25_1 //dictiōnāria de partes corporis humani//
 
 
@@ -426,7 +493,7 @@ The decision making is mostly based on what is very essential to explain other t
 - status_quo
   - concepta: 10
   - res_interlingualibus: 14
-  - res_lingualibus: 148
+  - res_lingualibus: 149
 
 ### 1603_25_1 Methodī ex dictiōnāriōrum corde
 
@@ -474,18 +541,18 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 305772768,
-            "res_lingualibus": 329860312,
+            "res_interlingualibus": 1869904458,
+            "res_lingualibus": 170159209,
             "res_picturae": null
         },
         "summa": {
             "concepta": 10,
             "res_interlingualibus": 14,
-            "res_lingualibus": 148,
+            "res_lingualibus": 149,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T22:11:24"
+            "opus": "2022-04-21T23:13:58"
         }
     }
 }
@@ -501,7 +568,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 - status_quo
   - concepta: 22
   - res_interlingualibus: 14
-  - res_lingualibus: 162
+  - res_lingualibus: 163
 
 ### 1603_44_101 Methodī ex dictiōnāriōrum corde
 
@@ -543,18 +610,18 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 544789656,
-            "res_lingualibus": 1706534120,
+            "res_interlingualibus": 4131722456,
+            "res_lingualibus": 3993241841,
             "res_picturae": null
         },
         "summa": {
             "concepta": 22,
             "res_interlingualibus": 14,
-            "res_lingualibus": 162,
+            "res_lingualibus": 163,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T21:42:34"
+            "opus": "2022-04-21T23:12:47"
         }
     }
 }
@@ -570,7 +637,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 - status_quo
   - concepta: 36
   - res_interlingualibus: 16
-  - res_lingualibus: 226
+  - res_lingualibus: 227
 
 ### 1603_44_111 Methodī ex dictiōnāriōrum corde
 
@@ -614,18 +681,18 @@ A more well known term to describe the concepts here could be _Crimes against hu
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1186341435,
-            "res_lingualibus": 266000941,
+            "res_interlingualibus": 982546927,
+            "res_lingualibus": 2039493664,
             "res_picturae": null
         },
         "summa": {
             "concepta": 36,
             "res_interlingualibus": 16,
-            "res_lingualibus": 226,
+            "res_lingualibus": 227,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T22:10:32"
+            "opus": "2022-04-21T23:16:57"
         }
     }
 }
@@ -641,7 +708,7 @@ A more well known term to describe the concepts here could be _Crimes against hu
 - status_quo
   - concepta: 347
   - res_interlingualibus: 15
-  - res_lingualibus: 245
+  - res_lingualibus: 246
 
 ### 1603_45_1 Methodī ex dictiōnāriōrum corde
 
@@ -715,18 +782,18 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2501344794,
-            "res_lingualibus": 2037865541,
+            "res_interlingualibus": 3284032452,
+            "res_lingualibus": 3286508650,
             "res_picturae": null
         },
         "summa": {
             "concepta": 347,
             "res_interlingualibus": 15,
-            "res_lingualibus": 245,
+            "res_lingualibus": 246,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T22:00:51"
+            "opus": "2022-04-21T23:24:41"
         }
     }
 }
@@ -742,7 +809,7 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
 - status_quo
   - concepta: 71
   - res_interlingualibus: 12
-  - res_lingualibus: 241
+  - res_lingualibus: 242
 
 ### 1603_45_19 Methodī ex dictiōnāriōrum corde
 
@@ -790,18 +857,18 @@ https://en.wikipedia.org/wiki/Nonbuilding_structure
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3441900202,
-            "res_lingualibus": 822122147,
+            "res_interlingualibus": 866865499,
+            "res_lingualibus": 2390140697,
             "res_picturae": null
         },
         "summa": {
             "concepta": 71,
             "res_interlingualibus": 12,
-            "res_lingualibus": 241,
+            "res_lingualibus": 242,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T22:07:39"
+            "opus": "2022-04-21T23:03:58"
         }
     }
 }
@@ -817,7 +884,7 @@ https://en.wikipedia.org/wiki/Nonbuilding_structure
 - status_quo
   - concepta: 25
   - res_interlingualibus: 14
-  - res_lingualibus: 211
+  - res_lingualibus: 212
 
 ### 1603_45_31 Methodī ex dictiōnāriōrum corde
 
@@ -864,18 +931,18 @@ The terminology translations are extracted from Wikidata, which means this recom
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2580769531,
-            "res_lingualibus": 203663639,
+            "res_interlingualibus": 1981483380,
+            "res_lingualibus": 4048263107,
             "res_picturae": null
         },
         "summa": {
             "concepta": 25,
             "res_interlingualibus": 14,
-            "res_lingualibus": 211,
+            "res_lingualibus": 212,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T21:52:46"
+            "opus": "2022-04-21T23:07:05"
         }
     }
 }
@@ -891,7 +958,7 @@ The terminology translations are extracted from Wikidata, which means this recom
 - status_quo
   - concepta: 332
   - res_interlingualibus: 14
-  - res_lingualibus: 249
+  - res_lingualibus: 250
 
 ### 1603_63_101 Methodī ex dictiōnāriōrum corde
 
@@ -944,18 +1011,18 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1814580957,
-            "res_lingualibus": 4098124632,
+            "res_interlingualibus": 2625866251,
+            "res_lingualibus": 3452996931,
             "res_picturae": null
         },
         "summa": {
             "concepta": 332,
             "res_interlingualibus": 14,
-            "res_lingualibus": 249,
+            "res_lingualibus": 250,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T21:50:04"
+            "opus": "2022-04-21T23:33:22"
         }
     }
 }
@@ -971,7 +1038,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
 - status_quo
   - concepta: 56
   - res_interlingualibus: 12
-  - res_lingualibus: 150
+  - res_lingualibus: 151
 
 ### 1603_64_41 Methodī ex dictiōnāriōrum corde
 
@@ -1013,18 +1080,18 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3031925027,
-            "res_lingualibus": 766472181,
+            "res_interlingualibus": 984725319,
+            "res_lingualibus": 3032582214,
             "res_picturae": null
         },
         "summa": {
             "concepta": 56,
             "res_interlingualibus": 12,
-            "res_lingualibus": 150,
+            "res_lingualibus": 151,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T21:56:03"
+            "opus": "2022-04-21T23:10:39"
         }
     }
 }
@@ -1040,7 +1107,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
 - status_quo
   - concepta: 28
   - res_interlingualibus: 12
-  - res_lingualibus: 227
+  - res_lingualibus: 228
 
 ### 1603_64_604 Methodī ex dictiōnāriōrum corde
 
@@ -1092,18 +1159,18 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 230662595,
-            "res_lingualibus": 1298536769,
+            "res_interlingualibus": 1503896082,
+            "res_lingualibus": 3026113299,
             "res_picturae": null
         },
         "summa": {
             "concepta": 28,
             "res_interlingualibus": 12,
-            "res_lingualibus": 227,
+            "res_lingualibus": 228,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T22:03:23"
+            "opus": "2022-04-21T22:59:19"
         }
     }
 }
@@ -1119,7 +1186,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
 - status_quo
   - concepta: 60
   - res_interlingualibus: 12
-  - res_lingualibus: 4
+  - res_lingualibus: 5
 
 
 <details><summary>🔎🗄️1603_84_1🗄️🔍</summary>
@@ -1160,18 +1227,83 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2518404053,
-            "res_lingualibus": 2846010781,
+            "res_interlingualibus": 2860921652,
+            "res_lingualibus": 1003817925,
             "res_picturae": null
         },
         "summa": {
             "concepta": 60,
             "res_interlingualibus": 12,
+            "res_lingualibus": 5,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-21T23:18:43"
+        }
+    }
+}
+</pre>
+
+</details>
+
+## 1603_99_876 //Human sexuality (meta dictionaries)//
+
+
+<a href="#1603_99_876" id="1603_99_876">§ 1603_99_876</a>
+
+- status_quo
+  - concepta: 9
+  - res_interlingualibus: 10
+  - res_lingualibus: 4
+
+### 1603_99_876 Methodī ex dictiōnāriōrum corde
+
+//Human sexuality (meta dictionaries). TODO: 1603_99_ is temporary prefix; this need to be moved from here later//@eng-Latn
+
+
+<details><summary>🔎🗄️1603_99_876🗄️🔍</summary>
+
+<pre>
+{
+    "annotationes_internalibus": {
+        "experimentum": 90,
+        "publicum": 10
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/99/876/1603_99_876.mul-Latn.codex.adoc",
+            "https://lsf-cdn.etica.ai/1603/99/876/1603_99_876.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/99/876/1603_99_876.mul-Latn.codex.epub"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/99/876/1603_99_876.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "//Human sexuality (meta dictionaries). TODO: 1603_99_ is temporary prefix; this need to be moved from here later//@eng-Latn"
+        },
+        "nomen": "//Human sexuality (meta dictionaries)//"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 2672382230,
+            "res_lingualibus": 4062161470,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 9,
+            "res_interlingualibus": 10,
             "res_lingualibus": 4,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-19T21:39:47"
+            "opus": "2022-04-21T23:07:18"
         }
     }
 }
@@ -1186,8 +1318,12 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
 
 - status_quo
   - concepta: 0
-  - res_interlingualibus: 4
+  - res_interlingualibus: 5
   - res_lingualibus: 3
+
+### 1603_99_987 Methodī ex dictiōnāriōrum corde
+
+(draft) Personal name nomenclature. TODO: 1603_99_ is temporary prefix; this need to be moved from here later
 
 
 <details><summary>🔎🗄️1603_99_987🗄️🔍</summary>
@@ -1195,7 +1331,8 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
 <pre>
 {
     "annotationes_internalibus": {
-        "experimentum": 90
+        "experimentum": 90,
+        "publicum": 10
     },
     "cdn": {
         "annexis": [],
@@ -1213,25 +1350,25 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "mul-Zyyy": null
         },
         "methodi_ex_dictionariorum_corde": {
-            "mul-Zyyy": null
+            "mul-Zyyy": "(draft) Personal name nomenclature. TODO: 1603_99_ is temporary prefix; this need to be moved from here later"
         },
         "nomen": "//Personal name nomenclature//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2920449265,
-            "res_lingualibus": 393291787,
+            "res_interlingualibus": 4215873839,
+            "res_lingualibus": 1437291990,
             "res_picturae": null
         },
         "summa": {
             "concepta": 0,
-            "res_interlingualibus": 4,
+            "res_interlingualibus": 5,
             "res_lingualibus": 3,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-17T20:00:52"
+            "opus": "2022-04-21T22:57:06"
         }
     }
 }

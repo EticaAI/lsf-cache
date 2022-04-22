@@ -677,11 +677,13 @@ neo_codex_de_numerordinatio() {
 
   echo "${FUNCNAME[0]} [$objectivum_archivum]"
 
+  # set -x
   "${ROOTDIR}/999999999/0/1603_1.py" \
     --objectivum-linguam="$est_objectivum_linguam" \
     --auxilium-linguam="$est_auxilium_linguam" \
     --codex-de "$_nomen" \
     >"$objectivum_archivum"
+  # set +x
 }
 
 #######################################
@@ -917,11 +919,13 @@ neo_codex_de_numerordinatio_pdf() {
     bundle exec asciidoctor-pdf \
       "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
   else
+    # set +x
     bundle exec asciidoctor-pdf \
       --attribute pdf-theme="$ascidoctor_theme" \
       --attribute pdf-fontsdir="$ascidoctor_font_dir_neo,$ascidoctor_font_dir_original,$ascidoctor_font_dir_repo" \
       --require "$ascidoctor_custom_library" \
       "$fontem_archivum" --out-file "$objectivum_archivum_temporarium"
+    # set -x
   fi
 
   if [ -f "$objectivum_archivum" ]; then
