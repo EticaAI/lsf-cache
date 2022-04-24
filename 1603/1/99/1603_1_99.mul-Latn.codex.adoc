@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T22:56:13
+2022-04-24T04:40:14
 
 |
 /SPDX license ID/@eng-Latn
@@ -149,7 +149,7 @@ https://iso639-3.sil.org/code/por[por]
 |
 Lingua Lusitana (Abecedarium Latinum)
 |
-23
+31
 
 |
 eng-Latn
@@ -194,26 +194,26 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
-  numerus editionis:::
+  /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
+        https://www.wikidata.org/wiki/Property:P577[P577]
 
       ix_hxlix;;
-        ix_wikip393
+        ix_wikip577
 
       ix_hxlvoc;;
-        v_wiki_p_393
+        v_wiki_p_577
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
+        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
 
   scrīptor:::
     Rēs interlinguālibus::::
@@ -278,26 +278,26 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
 
-  /publication date/@eng-Latn:::
+  numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
+        https://www.wikidata.org/wiki/Property:P393[P393]
 
       ix_hxlix;;
-        ix_wikip577
+        ix_wikip393
 
       ix_hxlvoc;;
-        v_wiki_p_577
+        v_wiki_p_393
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
+        +++<span lang="la">numerus editionis</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
+        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
 
 
 <<<
@@ -575,100 +575,142 @@ Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn</span>+++
 
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">NOTE: /No momento, não há fluxo de trabalho para usar https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], que na verdade poderia ser usado como armazenamento para nomenclatura mais rigorosa. As implementações atuais usam apenas conceitos do Wikidata, os Q-items./@eng-Latn</span>+++
+
 
 
 
 
 [id='10_6']
-==== [`10_6`] /The ***[{1}] {2}*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.\n\nThis means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations./@eng-Latn
+==== [`10_6`] /The ***[{1}] {2}*** uses Wikidata as one strategy to conciliate language terms for one or more of its concepts.\n\nThis means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up-to-date translations./@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
-    +++<span lang="en">The ***[{1}] {2}*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    +++<span lang="en">The ***[{1}] {2}*** uses Wikidata as one strategy to conciliate language terms for one or more of its concepts.
     +++<br><br>+++
-    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.</span>+++
+    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up-to-date translations.</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">O ***[{1}] {2}*** usa o Wikidata como uma estratégia para conciliar termos linguísticos para um ou mais de seus conceitos.
+    +++<br><br>+++
+    Isso significa que este livro e os arquivos de dados de dicionários relacionados requerem atualizações periódicas para , no mínimo, sincronize e compartilhe novamente as traduções atualizadas.</span>+++
 
 
 
 
 
 [id='10_7']
-==== [`10_7`] /**How reliable are the community translations (Wikidata source)?**\n\nThe short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.\n\nAs reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).\n\nHowever, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset./@eng-Latn
+==== [`10_7`] /**How reliable are the community translations (Wikidata source)?**\n\nThe short, default answer is: **they are reliable**, even in cases of no official translations for each subject.\n\nAs reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).\n\nHowever, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset./@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">**How reliable are the community translations (Wikidata source)?**
     +++<br><br>+++
-    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    The short, default answer is: **they are reliable**, even in cases of no official translations for each subject.
     +++<br><br>+++
     As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
     +++<br><br>+++
     However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">**Qual a confiabilidade das traduções da comunidade (fonte Wikidata)?**
+    +++<br><br>+++
+    A resposta curta padrão é: **elas são confiáveis**, mesmo nos casos de não haver traduções oficiais para cada assunto.
+    +++<br><br>+++
+    Como referência, é provável que um tradutor profissional (sem acesso à Wikipedia ou bases de terminologia interna das organizações de controle) forneça resultados de qualidade inferior se você fizer testes cegos. Isso é possível porque não apenas o público médio, mas também terminólogos e tradutores profissionais ajudam a Wikipédia (e implicitamente o Wikidata).
+    +++<br><br>+++
+    No entanto, mesmo quando o resultado está correto, a versão atual precisa de diferenciação aprimorada, no mínimo, sigla e forma longa . Para grandes organizações, existem recursos como __P1813 nomes curtos__, mas ainda não foram compilados com o conjunto de dados atual.</span>+++
 
 
 
 
 
 [id='10_8']
-==== [`10_8`] /**Major reasons for "wrong translations" are not translators fault**\n\nTIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.\n\nThe main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.\n\nIt is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high./@eng-Latn
+==== [`10_8`] /**Major reasons for "wrong translations" are not translators fault**\n\nTIP: As a rule of thumb, for already very defined concepts where you, as a human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.\n\nThe main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.\n\nIt is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high./@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">**Major reasons for "wrong translations" are not translators fault**
     +++<br><br>+++
-    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    TIP: As a rule of thumb, for already very defined concepts where you, as a human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
     +++<br><br>+++
     The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
     +++<br><br>+++
     It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">**Os principais motivos para "traduções erradas" não são culpa dos tradutores**
+    +++<br><br>+++
+    DICA: Como regra geral, para conceitos já muito definidos em que você, como humano, pode verificar manualmente um ou mais termos traduzidos como um resultado decente, as outras traduções provavelmente serão aceitáveis. Dicionários com casos extremos (como nomes de territórios em disputa) teriam mais explicações.
+    +++<br><br>+++
+    A principal razão para "traduções erradas" são conceitos mal definidos usados ​​para explicar aos tradutores da comunidade como gerar traduções de terminologia. Isso tornaria as traduções existentes do Wikidata (usadas não apenas por nós) inconsistentes. A segunda razão é se os dicionários usam traduções para conceitos sem uma correspondência estrita; em outras palavras, se fizermos definições mais estritas do que significa conceito, mas reutilizarmos termos menos exatos da Wikidada. Também há problemas quando idiomas inteiros são codificados com códigos errados. Observe que todos esses casos **traduções erradas NÃO são estritamente culpa do tradutor, mas sim da lexicografia**.
+    +++<br><br>+++
+    Ainda é possível ter erros estritos no nível de tradução. Mas mesmo que indiquemos aos usuários como corrigir o Wikidata/Wikipedia (com base na melhor explicação contextual de um conceito, como este livro), os requisitos para dizer que o termo anterior foi objetivamente um erro de tradução humana errado (se seguir nossa seriedade na construção de dicionário) são muito elevados.</span>+++
 
 
 
 
 
 [id='10_9']
-==== [`10_9`] /From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.\n\n. The main handcrafted lexicographical table (explained on previous topic), also provided on `{0}.no1.tm.hxl.csv`, may reference Wiki QID.\n. Every unique QID of  `{0}.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!\n.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.\n. The query result, with all QIDs and term labels, is shared as `{0}.wikiq.tm.hxl.csv`\n. The community reviewed translations of each singular QID is pre-compiled on an individual file `{0}.wikiq.tm.hxl.csv`\n. `{0}.no1.tm.hxl.csv` plus `{0}.wikiq.tm.hxl.csv` created `{0}.no11.tm.hxl.csv`/@eng-Latn
+==== [`10_9`] /From the point of view of data conciliation, the following methodology is used to publish the terminology translations with the main concept table.\n\n. The main handcrafted lexicographical table (explained on previous topic), also provided on `{0}.no1.tm.hxl.csv`, may reference Wiki QID.\n. Every unique QID of  `{0}.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!\n.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares than for general use.\n. The query result, with all QIDs and term labels, is shared as `{0}.wikiq.tm.hxl.csv`\n. The community reviewed translations of each singular QID is pre-compiled on an individual file `{0}.wikiq.tm.hxl.csv`\n. `{0}.no1.tm.hxl.csv` plus `{0}.wikiq.tm.hxl.csv` created `{0}.no11.tm.hxl.csv`/@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
-    +++<span lang="en">From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    +++<span lang="en">From the point of view of data conciliation, the following methodology is used to publish the terminology translations with the main concept table.
     +++<br><br>+++
-    . The main handcrafted lexicographical table (explained on previous topic), also provided on `{0}.no1.tm.hxl.csv`, may reference Wiki QID.\n. Every unique QID of  `{0}.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!\n.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.\n. The query result, with all QIDs and term labels, is shared as `{0}.wikiq.tm.hxl.csv`\n. The community reviewed translations of each singular QID is pre-compiled on an individual file `{0}.wikiq.tm.hxl.csv`\n. `{0}.no1.tm.hxl.csv` plus `{0}.wikiq.tm.hxl.csv` created `{0}.no11.tm.hxl.csv`</span>+++
+    . The main handcrafted lexicographical table (explained on previous topic), also provided on `{0}.no1.tm.hxl.csv`, may reference Wiki QID.\n. Every unique QID of  `{0}.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!\n.. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares than for general use.\n. The query result, with all QIDs and term labels, is shared as `{0}.wikiq.tm.hxl.csv`\n. The community reviewed translations of each singular QID is pre-compiled on an individual file `{0}.wikiq.tm.hxl.csv`\n. `{0}.no1.tm.hxl.csv` plus `{0}.wikiq.tm.hxl.csv` created `{0}.no11.tm.hxl.csv`</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">Do ponto de vista da conciliação de dados, a seguinte metodologia é utilizada para publicar as traduções da terminologia com a tabela de conceitos principais.
+    +++<br><br>+++
+    . A principal tabela lexicográfica artesanal (explicada no tópico anterior), também fornecida em `{0}.no1.tm.hxl.csv`, pode fazer referência ao Wiki QID.\n. Cada QID exclusivo de `{0}.no1.tm.hxl.csv`, juntamente com códigos de idioma de [`1603:1:51`] (que requer conhecimento de idiomas humanos), é usado para preparar uma consulta SPARQL otimizada para execução em https://query.wikidata.org/[Wikidata Query Service]. A consulta é tão grande que não é viável para links "Try it" (URL longo), como https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[como o que você encontraria nos Tutoriais Wikidata ], ***mas*** funciona!\n.. Note que o conhecimento é gratuito, as traduções estão lá, mas as necessidades humanitárias multilíngues podem faltar pessoas para preparar os arquivos e compartilhar do que para uso geral.\n. O resultado da consulta, com todos os QIDs e rótulos de termos, é compartilhado como `{0}.wikiq.tm.hxl.csv`\n. As traduções revisadas pela comunidade de cada QID singular são pré-compiladas em um arquivo individual `{0}.wikiq.tm.hxl.csv`\n. `{0}.no1.tm.hxl.csv` mais `{0}.wikiq.tm.hxl.csv` criado `{0}.no11.tm.hxl.csv`</span>+++
 
 
 
 
 
 [id='10_10']
-==== [`10_10`] /This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations./@eng-Latn
+==== [`10_10`] /This section explains the methodology of this book, and its machine-readable structured data formats. For your convenience, the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine-readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations./@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
-    +++<span lang="en">This section explains the methodology of this book and it's machine readable formats. For your convenience the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations.</span>+++
+    +++<span lang="en">This section explains the methodology of this book, and its machine-readable structured data formats. For your convenience, the information used to explain the concepts (such as natural language and interlingual codes) which appears in this book are also summarized here. This approach is done both for reviews not needing to open other books (or deal with machine-readable files) and also to spot errors on other dictionaries. +++<br><br>+++ About how the book and the dictionaries are compiled, a division of "baseline concept table" and (when relevant for a codex) "translations conciliation" is given different methodologies. +++<br><br>+++ Every book contains at minimum the baseline concept table and explanation of the used fields. This approach helps to release dictionaries faster while ensuring both humans and machines can know what to expect even when they are not ready to receive translations.</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">Esta seção explica a metodologia deste livro e seus formatos de dados estruturados legíveis por máquina. Para sua conveniência, as informações usadas para explicar os conceitos (como linguagem natural e códigos interlinguais) que aparecem neste livro também estão resumidas aqui. Essa abordagem é feita tanto para revisões que não precisam abrir outros livros (ou lidar com arquivos legíveis por máquina) quanto para detectar erros em outros dicionários. +++<br><br>+++ Sobre como o livro e os dicionários são compilados, uma divisão de "quadro de conceitos básicos" e (quando relevante para um códice) "conciliação de traduções" é dada por diferentes metodologias. +++<br><br>+++ Todo livro contém no mínimo a tabela de conceitos básicos e a explicação dos campos usados. Essa abordagem ajuda a liberar dicionários mais rapidamente, garantindo que humanos e máquinas saibam o que esperar, mesmo quando não estiverem prontos para receber traduções.</span>+++
 
 
 
 
 
 [id='10_11']
-==== [`10_11`] /While the previous section presented the linguistic information (e.g. natural languages list) from [[1603:1:51]] restricted to what this book edition de facto has, this section gives a quick summary of Interlinguistic Information of [[1603:1:7]]. By Interlinguistic, it can be either true, language neutral codes (such as numbers) or computer codes which actually are mnemonics using some non neutral writing system. Interlinguistic, in the worst case, means some sort of _external identifier_ likely to be usable as a machine readable identifier.\n\nThe next section, **Archīa** (literal English translation: Files) will only show [[{0}]] direct related files. But the complete [[1603:1:51]] and [[1603:1:7]] are available and licensed under public domain which makes them very friendly to derived works while mitigating implementers _additional_ errors./@eng-Latn
+==== [`10_11`] /While the previous section presented the linguistic information (e.g. natural languages list) from [[1603:1:51]] restricted to what this book edition de facto has, this section gives a quick summary of Interlinguistic Information of [[1603:1:7]]. By Interlinguistic, it can be either true, language neutral codes (such as numbers) or computer codes which actually are mnemonics using some non-neutral writing system. Interlinguistic, in the worst case, means some sort of _external identifier_ likely to be usable as a machine-readable identifier.\n\nThe next section, **Archīa** (literal English translation: Files) will only show [[{0}]] direct related files. But the complete [[1603:1:51]] and [[1603:1:7]] are available and licensed under public domain, which makes them very friendly to derived works while mitigating implementers _additional_ errors./@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
-    +++<span lang="en">While the previous section presented the linguistic information (e.g. natural languages list) from [[1603:1:51]] restricted to what this book edition de facto has, this section gives a quick summary of Interlinguistic Information of [[1603:1:7]]. By Interlinguistic, it can be either true, language neutral codes (such as numbers) or computer codes which actually are mnemonics using some non neutral writing system. Interlinguistic, in the worst case, means some sort of _external identifier_ likely to be usable as a machine readable identifier.
+    +++<span lang="en">While the previous section presented the linguistic information (e.g. natural languages list) from [[1603:1:51]] restricted to what this book edition de facto has, this section gives a quick summary of Interlinguistic Information of [[1603:1:7]]. By Interlinguistic, it can be either true, language neutral codes (such as numbers) or computer codes which actually are mnemonics using some non-neutral writing system. Interlinguistic, in the worst case, means some sort of _external identifier_ likely to be usable as a machine-readable identifier.
     +++<br><br>+++
-    The next section, **Archīa** (literal English translation: Files) will only show [[{0}]] direct related files. But the complete [[1603:1:51]] and [[1603:1:7]] are available and licensed under public domain which makes them very friendly to derived works while mitigating implementers _additional_ errors.</span>+++
+    The next section, **Archīa** (literal English translation: Files) will only show [[{0}]] direct related files. But the complete [[1603:1:51]] and [[1603:1:7]] are available and licensed under public domain, which makes them very friendly to derived works while mitigating implementers _additional_ errors.</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">Enquanto a seção anterior apresentou a informação linguística (por exemplo, lista de línguas naturais) de [[1603:1:51]] restrita ao que esta edição do livro de fato tem, esta seção fornece um rápido resumo da Informação Interlinguística de [[1603:1:7]]. Por interlinguística, pode ser verdadeiro, códigos neutros de linguagem (como números) ou códigos de computador que na verdade são mnemônicos usando algum sistema de escrita não neutro. Interlinguístico, na pior das hipóteses, significa algum tipo de _identificador externo_ provavelmente utilizável como um identificador legível por máquina.
+    +++<br><br>+++
+    A próxima seção, **Archīa** (tradução literal em inglês: Arquivos) mostrará apenas [[{0 }]] arquivos relacionados diretos. Mas os [[1603:1:51]] e [[1603:1:7]] completos estão disponíveis e licenciados sob domínio público, o que os torna muito amigáveis para trabalhos derivados enquanto mitiga erros _adicionais_ dos implementadores.</span>+++
 
 
 
 
 
 [id='10_12']
-==== [`10_12`] /Ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis), then the actual groundbreaking difference every dictionaries on Cōdex such as this one are the following fact: **we provide well documented machine readable formats** even when the equivalents in English don't have./@eng-Latn
+==== [`10_12`] /Ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis), then the actual groundbreaking difference to every dictionary on Cōdex such as this one is the following fact: **we provide well documented machine-readable formats** even when the equivalents in English don't have./@eng-Latn
 
 Rēs linguālibus::
   Lingua Anglica (Abecedarium Latinum):::
-    +++<span lang="en">Ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis), then the actual groundbreaking difference every dictionaries on Cōdex such as this one are the following fact: **we provide well documented machine readable formats** even when the equivalents in English don't have.</span>+++
+    +++<span lang="en">Ignoring for a moment the fact of having several translations (and optimized to receive contributions on a regular basis), then the actual groundbreaking difference to every dictionary on Cōdex such as this one is the following fact: **we provide well documented machine-readable formats** even when the equivalents in English don't have.</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">Ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente), então a verdadeira diferença inovadora para cada dicionário no Cōdex como este é o seguinte fato: **fornecemos documentos legíveis por máquina bem documentados formatos** mesmo quando os equivalentes em inglês não possuem.</span>+++
 
 
 
@@ -1148,7 +1190,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -1157,7 +1199,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -1165,7 +1207,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -1173,7 +1215,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 

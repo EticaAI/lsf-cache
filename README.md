@@ -1,19 +1,20 @@
 # 1603 Librārium
 - status_quo
   - summa
-    - codex: 19
-    - concepta_non_unicum: 1481
+    - codex: 20
+    - concepta_non_unicum: 1499
 
 
 ----
 **Tabula contentorum**
-- <a href="#1603_1_1">1603_1_1</a> <sup>C.83</sup> <sub>r.I.17</sub>  <sub>r.L.9</sub>
+- <a href="#1603_1_1">1603_1_1</a> <sup>C.84</sup> <sub>r.I.16</sub>  <sub>r.L.9</sub>
 - <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.16</sub>  <sub>r.L.5</sub>
 - <a href="#1603_1_7">1603_1_7</a> <sup>C.48</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.I.21</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_99">1603_1_99</a> <sup>C.51</sup> <sub>r.I.11</sub>  <sub>r.L.6</sub>
 - <a href="#1603_1_101">1603_1_101</a> <sup>C.19</sup> <sub>r.I.7</sub>  <sub>r.L.4</sub>
 - <a href="#1603_1_2020">1603_1_2020</a> <sup>C.16</sup> <sub>r.I.11</sub>  <sub>r.L.5</sub>
+- <a href="#1603_1_8000">1603_1_8000</a> <sup>C.17</sup> <sub>r.I.13</sub>  <sub>r.L.4</sub>
 - <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.I.14</sub>  <sub>r.L.149</sub>
 - <a href="#1603_44_101">1603_44_101</a> <sup>C.22</sup> <sub>r.I.14</sub>  <sub>r.L.163</sub>
 - <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.16</sub>  <sub>r.L.227</sub>
@@ -35,8 +36,8 @@
 <a href="#1603_1_1" id="1603_1_1">§ 1603_1_1</a>
 
 - status_quo
-  - concepta: 83
-  - res_interlingualibus: 17
+  - concepta: 84
+  - res_interlingualibus: 16
   - res_lingualibus: 9
 
 ### 1603_1_1 Methodī ex dictiōnāriōrum corde
@@ -75,18 +76,18 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 4260973897,
-            "res_interlingualibus": 691990026,
+            "res_lingualibus": 471785228,
+            "res_interlingualibus": 1275091073,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 83,
+            "concepta": 84,
             "res_lingualibus": 9,
-            "res_interlingualibus": 17,
+            "res_interlingualibus": 16,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:33:34"
+            "opus": "2022-04-24T04:46:07"
         }
     }
 }
@@ -478,6 +479,71 @@ The decision making is mostly based on what is very essential to explain other t
         },
         "tempus": {
             "opus": "2022-04-21T23:12:59"
+        }
+    }
+}
+</pre>
+
+</details>
+
+## 1603_1_8000 //Dicionários de lista de potenciais futuros dicionários//@por-Latn
+
+
+<a href="#1603_1_8000" id="1603_1_8000">§ 1603_1_8000</a>
+
+- status_quo
+  - concepta: 17
+  - res_interlingualibus: 13
+  - res_lingualibus: 4
+
+### 1603_1_8000 Methodī ex dictiōnāriōrum corde
+
+//Dicionários de lista de potenciais futuros dicionários//@por-Latn
+
+
+<details><summary>🔎🗄️1603_1_8000🗄️🔍</summary>
+
+<pre>
+{
+    "annotationes_internalibus": {
+        "internale": 50,
+        "publicum": 30
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/1/8000/1603_1_8000.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/1/8000/1603_1_8000.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/1/8000/1603_1_8000.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/1/8000/1603_1_8000.no1.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "//Dicionários de lista de potenciais futuros dicionários//@por-Latn"
+        },
+        "nomen": "//Dicionários de lista de potenciais futuros dicionários//@por-Latn"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 3184039263,
+            "res_lingualibus": 947517059,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 17,
+            "res_interlingualibus": 13,
+            "res_lingualibus": 4,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-24T04:46:07"
         }
     }
 }

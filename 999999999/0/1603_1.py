@@ -2280,7 +2280,8 @@ class Codex:
         paginae.append("\n=== {0}\n\n{1}::\n  {2}:::\n{3}".format(
             self.notitiae.translatio('{% _🗣️ 1603_1_99_100_1 🗣️_ %}'),
             'Rēs linguālibus',
-            'Lingua Anglica (Abecedarium Latinum)',
+            # 'Lingua Anglica (Abecedarium Latinum)',
+            'Lingua Lusitana (Abecedarium Latinum)',
             _pad(self.notitiae.translatio(
                 '{% _🗣️ 1603_1_99_100_1_1 🗣️_ %}'), 4)
         ))
@@ -2288,7 +2289,8 @@ class Codex:
         paginae.append("\n=== {0}\n\n{1}::\n  {2}:::\n{3}".format(
             self.notitiae.translatio('{% _🗣️ 1603_1_99_100_2 🗣️_ %}'),
             'Rēs linguālibus',
-            'Lingua Anglica (Abecedarium Latinum)',
+            # 'Lingua Anglica (Abecedarium Latinum)',
+            'Lingua Lusitana (Abecedarium Latinum)',
             _pad(self.notitiae.translatio(
                 '{% _🗣️ 1603_1_99_100_2_1 🗣️_ %}'), 4)
         ))
@@ -2296,7 +2298,8 @@ class Codex:
         paginae.append("\n=== {0}\n\n{1}::\n  {2}:::\n{3}".format(
             self.notitiae.translatio('{% _🗣️ 1603_1_99_100_3 🗣️_ %}'),
             'Rēs linguālibus',
-            'Lingua Anglica (Abecedarium Latinum)',
+            # 'Lingua Anglica (Abecedarium Latinum)',
+            'Lingua Lusitana (Abecedarium Latinum)',
             _pad(self.notitiae.translatio(
                 '{% _🗣️ 1603_1_99_100_3_1 🗣️_ %}'), 4)
         ))
@@ -2304,21 +2307,12 @@ class Codex:
         paginae.append("\n=== {0}\n\n{1}::\n  {2}:::\n{3}".format(
             self.notitiae.translatio('{% _🗣️ 1603_1_99_100_4 🗣️_ %}'),
             'Rēs linguālibus',
-            'Lingua Anglica (Abecedarium Latinum)',
+            # 'Lingua Anglica (Abecedarium Latinum)',
+            'Lingua Lusitana (Abecedarium Latinum)',
             _pad(self.notitiae.translatio(
                 '{% _🗣️ 1603_1_99_100_4_1 🗣️_ %}'), 4)
         ))
 
-        # quote_textum = self.notitiae.translatio('{% _🗣️ 1603_1_99_50_1 🗣️_ %}')
-        # paginae.append("[quote]")
-
-        # nb100_1 = self.notitiae.translatio('{% _🗣️ 1603_1_99_100_1 🗣️_ %}')
-        # nb100_1_1 = self.notitiae.translatio('{% _🗣️ 1603_1_99_100_1 🗣️_ %}')
-        # paginae.append("[quote]")
-        # # resultatum.append(
-        # #     "/_**Public domain means that each major common issue "
-        # #     "only needs to be resolved once**_/@eng-Latn")
-        # paginae.append(quote_textum)
         # paginae.append("")
 
         return paginae

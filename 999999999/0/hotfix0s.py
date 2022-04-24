@@ -41,6 +41,7 @@ LIKELY_NUMERIC = [
     '#item+conceptum+codicem',
     '#status+conceptum',
     '#item+rem+i_qcc+is_zxxx+ix_n1603',
+    '#item+rem+i_qcc+is_zxxx+ix_iso5218',
 ]
 
 # ./999999999/0/hotfix0s.py 999999/0/1603_1_1--old.csv 999999/0/1603_1_1--new.csv

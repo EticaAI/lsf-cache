@@ -71,11 +71,16 @@ file_download_1603_xlsx "1"
 # actiones_completis_locali "1603_1_2020"
 # actiones_completis_locali "1603_45_31"
 # actiones_completis_locali "1603_99_876"
+# actiones_completis_locali "1603_1_8000"
 
 #### Manual action, TEST locally, one per time, END ----------------------------
 
-## Full drill (remote, randon publish few at time)
-opus_temporibus_cdn
+## Full drill (remote, specific item)
+actiones_completis_publicis "1603_1_8000"
 deploy_0_9_markdown
+
+## Full drill (remote, randon publish few at time)
+# opus_temporibus_cdn
+# deploy_0_9_markdown
 
 # @TODO: maybe check ssdiff (diff spreadsheets) to our uses. 

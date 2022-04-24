@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T23:17:01
+2022-04-24T04:39:40
 
 |
 /SPDX license ID/@eng-Latn
@@ -117,7 +117,7 @@ Rēs interlinguālibus::
 
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 83
+==== Concepta: 84
 
 ==== Rēs linguālibus: 5
 
@@ -142,7 +142,7 @@ https://iso639-3.sil.org/code/mul[mul]
 |
 Linguae multiplīs (Scrīptum incognitō)
 |
-79
+80
 
 |
 ben-Beng
@@ -194,82 +194,28 @@ Lingua Anglica (Abecedarium Latinum)
 
 |===
 
-==== Rēs interlinguālibus: 12
+==== Rēs interlinguālibus: 11
 Rēs::
-  Numerordĭnātĭo:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_n1603
-
-      ix_hxlvoc;;
-        v_n1603
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">Numerordĭnātĭo</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma estratégia genérica de organizar os números de maneira explícita como taxonomia</span>+++
-
-  scrīptor:::
+  /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P50[P50]
+        https://www.wikidata.org/wiki/Property:P577[P577]
 
       ix_hxlix;;
-        ix_wikip50
+        ix_wikip577
 
       ix_hxlvoc;;
-        v_wiki_p_50
+        v_wiki_p_577
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">scrīptor</span>+++
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
-
-  spōnsor:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
-
-      ix_hxlix;;
-        ix_wikip859
-
-      ix_hxlvoc;;
-        v_wiki_p_859
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
-
-  //Cōdex annotātiōnibus internālibus//:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_n1603ia
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Anotações internas de um códice. Lista de itens. Usado em 1603_1_1 como tags não documentadas para gerenciar como os dicionários são exportados</span>+++
+        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
 
   /Wiki QID/:::
     Rēs interlinguālibus::::
@@ -313,20 +259,26 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
 
-  //opus papȳrō ex 1603//:::
+  scrīptor:::
     Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P50[P50]
+
       ix_hxlix;;
-        ix_n1603op
+        ix_wikip50
+
+      ix_hxlvoc;;
+        v_wiki_p_50
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">//opus papȳrō ex 1603//</span>+++
+        +++<span lang="la">scrīptor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Worksheet index used on 1603_1_1 as undocumented feature to manage where the main table should be extracted</span>+++
+        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Índice de planilha usado em 1603_1_1 como recurso não documentado para gerenciar onde a tabela principal deve ser extraída</span>+++
+        +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
 
   numerus editionis:::
     Rēs interlinguālibus::::
@@ -348,6 +300,21 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
+
+  //Cōdex annotātiōnibus internālibus//:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603ia
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Anotações internas de um códice. Lista de itens. Usado em 1603_1_1 como tags não documentadas para gerenciar como os dicionários são exportados</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -376,26 +343,26 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
-  /publication date/@eng-Latn:::
+  spōnsor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
+        https://www.wikidata.org/wiki/Property:P859[P859]
 
       ix_hxlix;;
-        ix_wikip577
+        ix_wikip859
 
       ix_hxlvoc;;
-        v_wiki_p_577
+        v_wiki_p_859
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
+        +++<span lang="la">spōnsor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
+        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
 
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -417,6 +384,24 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
+
+  Numerordĭnātĭo:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603
+
+      ix_hxlvoc;;
+        v_n1603
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">Numerordĭnātĭo</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">uma estratégia genérica de organizar os números de maneira explícita como taxonomia</span>+++
 
 
 <<<
@@ -509,9 +494,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     internale-100|publicum-10
 
-  //opus papȳrō ex 1603//:::
-    10
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//
@@ -599,9 +581,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     internale-20|publicum-10
 
-  //opus papȳrō ex 1603//:::
-    11
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /Dictiōnāria de terminī typīs/
@@ -619,9 +598,6 @@ Rēs interlinguālibus::
 
   //Cōdex annotātiōnibus internālibus//:::
     internale-90|publicum-10
-
-  //opus papȳrō ex 1603//:::
-    12
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -722,9 +698,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     internale-90|publicum-10
 
-  //opus papȳrō ex 1603//:::
-    13
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria Linguārum//
@@ -746,9 +719,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     internale-20|publicum-1
 
-  //opus papȳrō ex 1603//:::
-    15
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     Nōtitiae temporāriōrum circā librārium
@@ -766,9 +736,6 @@ Rēs interlinguālibus::
 
   //Cōdex annotātiōnibus internālibus//:::
     experimentum-50|internale-20
-
-  //opus papȳrō ex 1603//:::
-    16
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -791,12 +758,27 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     internale-100|publicum-10
 
-  //opus papȳrō ex 1603//:::
-    17
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     //Guia rápido de lexicografia para colaboradores//@por-Latn
+
+
+
+
+
+[id='1_8000']
+==== [`1_8000`] //Dicionários de lista de potenciais futuros dicionários//@por-Latn
+
+Rēs interlinguālibus::
+  Numerordĭnātĭo:::
+    1603:1:8000
+
+  //Cōdex annotātiōnibus internālibus//:::
+    internale-50|publicum-30
+
+Rēs linguālibus::
+  Linguae multiplīs (Scrīptum incognitō):::
+    //Dicionários de lista de potenciais futuros dicionários//@por-Latn
 
 
 
@@ -864,9 +846,6 @@ Rēs linguālibus::
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:3:12:6
-
-  //opus papȳrō ex 1603//:::
-    18
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q18616576[Q18616576]
@@ -1085,9 +1064,6 @@ Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:23:21
 
-  //opus papȳrō ex 1603//:::
-    19
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria dē Iurum humanorum defensor//
@@ -1102,9 +1078,6 @@ Rēs linguālibus::
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:23:36
-
-  //opus papȳrō ex 1603//:::
-    20
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -1162,9 +1135,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30
 
-  //opus papȳrō ex 1603//:::
-    21
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     //dictiōnāria de partes corporis humani//
@@ -1184,6 +1154,9 @@ Rēs linguālibus::
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:32
+
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q134550[Q134550]
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -1264,9 +1237,6 @@ Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:44:1
 
-  //opus papȳrō ex 1603//:::
-    22
-
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q99312209[Q99312209]
 
@@ -1284,9 +1254,6 @@ Rēs linguālibus::
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:44:86
-
-  //opus papȳrō ex 1603//:::
-    23
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q132781[Q132781]
@@ -1309,9 +1276,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
 
-  //opus papȳrō ex 1603//:::
-    24
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /Dictiōnāria basibus dē sceleribus contrā persōnam/
@@ -1330,9 +1294,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
 
-  //opus papȳrō ex 1603//:::
-    25
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     /Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/
@@ -1347,9 +1308,6 @@ Rēs linguālibus::
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:44:142
-
-  //opus papȳrō ex 1603//:::
-    26
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -1394,9 +1352,6 @@ Rēs interlinguālibus::
 
   //Cōdex annotātiōnibus internālibus//:::
     emphasis-50|publicum-70|victionarium_q-50
-
-  //opus papȳrō ex 1603//:::
-    27
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -1763,9 +1718,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
 
-  //opus papȳrō ex 1603//:::
-    28
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     Dictiōnāria dē locī generibus
@@ -1783,9 +1735,6 @@ Rēs interlinguālibus::
 
   //Cōdex annotātiōnibus internālibus//:::
     emphasis-50|publicum-70|victionarium_q-50
-
-  //opus papȳrō ex 1603//:::
-    29
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -1825,9 +1774,6 @@ Rēs linguālibus::
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:45:95
-
-  //opus papȳrō ex 1603//:::
-    30
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -1905,9 +1851,6 @@ Rēs interlinguālibus::
   Numerordĭnātĭo:::
     1603:63:1
 
-  //opus papȳrō ex 1603//:::
-    31
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//
@@ -1925,9 +1868,6 @@ Rēs interlinguālibus::
 
   //Cōdex annotātiōnibus internālibus//:::
     emphasis-50|publicum-70|victionarium_q-50
-
-  //opus papȳrō ex 1603//:::
-    32
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -1964,9 +1904,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
 
-  //opus papȳrō ex 1603//:::
-    33
-
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
@@ -1984,9 +1921,6 @@ Rēs interlinguālibus::
 
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
-
-  //opus papȳrō ex 1603//:::
-    34
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2552246[Q2552246]
@@ -2032,9 +1966,6 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
 
-  //opus papȳrō ex 1603//:::
-    35
-
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q10627714[Q10627714]
 
@@ -2052,7 +1983,7 @@ Rēs linguālibus::
 <<<
 
 [id='99']
-=== [`99`] /Temporary public numeric namespace/
+=== [`99`] /Temporary public numeric namespace/@eng-Latn
 
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
@@ -2060,14 +1991,14 @@ Rēs interlinguālibus::
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
-    /Temporary public numeric namespace/
+    /Temporary public numeric namespace/@eng-Latn
 
 
 
 
 
 [id='99_876']
-==== [`99_876`] //Human sexuality (meta dictionaries)//
+==== [`99_876`] //Human sexuality (meta dictionaries)//@eng-Latn
 
 Rēs interlinguālibus::
   Numerordĭnātĭo:::
@@ -2076,12 +2007,12 @@ Rēs interlinguālibus::
   //Cōdex annotātiōnibus internālibus//:::
     experimentum-90|publicum-10
 
-  //opus papȳrō ex 1603//:::
-    36
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q154136[Q154136]
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
-    //Human sexuality (meta dictionaries)//
+    //Human sexuality (meta dictionaries)//@eng-Latn
 
 
 
@@ -2096,9 +2027,6 @@ Rēs interlinguālibus::
 
   //Cōdex annotātiōnibus internālibus//:::
     experimentum-90|publicum-10
-
-  //opus papȳrō ex 1603//:::
-    37
 
 Rēs linguālibus::
   Linguae multiplīs (Scrīptum incognitō):::
@@ -2159,7 +2087,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -2168,7 +2096,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -2176,7 +2104,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -2184,7 +2112,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 
