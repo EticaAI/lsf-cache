@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T23:11:31
+2022-04-24T11:02:56
 
 |
 /SPDX license ID/@eng-Latn
@@ -71,7 +71,7 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     _**Cōdex [1603:44:101]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:44:101] /Dictiōnāria basibus dē sceleribus contrā persōnam/**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
@@ -105,7 +105,7 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     `+//Dictiōnāria basibus de scielus contrā persōnam//+` (literal English translation: _Basic dictionaries about crimes against person_; person on singular) contains basic (id est, not fully detailed) concepts about crimes against humans at mostly at individual level and crimes against group of humans without intent of exterminate entire community (which have e dedicated dictionaries) for non-political reasons.
 
@@ -126,39 +126,39 @@ Referēns 2::
 
 
 === Methodī ex verbīs in dictiōnāriīs
-NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+NOTE: /No momento, não há fluxo de trabalho para usar https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], que na verdade poderia ser usado como armazenamento para nomenclatura mais rigorosa. As implementações atuais usam apenas conceitos do Wikidata, os Q-items./@eng-Latn
 
 ==== Methodī ex verbīs in Vicidata (Q modō)
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
-    The ***[1603:44:101] /Dictiōnāria basibus dē sceleribus contrā persōnam/*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    O ***[1603:44:101] /Dictiōnāria basibus dē sceleribus contrā persōnam/*** usa o Wikidata como uma estratégia para conciliar termos linguísticos para um ou mais de seus conceitos.
     +++<br><br>+++
-    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    Isso significa que este livro e os arquivos de dados de dicionários relacionados requerem atualizações periódicas para , no mínimo, sincronize e compartilhe novamente as traduções atualizadas.
     +++<br><br>+++
-    **How reliable are the community translations (Wikidata source)?**
+    **Qual a confiabilidade das traduções da comunidade (fonte Wikidata)?**
     +++<br><br>+++
-    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    A resposta curta padrão é: **elas são confiáveis**, mesmo nos casos de não haver traduções oficiais para cada assunto.
     +++<br><br>+++
-    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    Como referência, é provável que um tradutor profissional (sem acesso à Wikipedia ou bases de terminologia interna das organizações de controle) forneça resultados de qualidade inferior se você fizer testes cegos. Isso é possível porque não apenas o público médio, mas também terminólogos e tradutores profissionais ajudam a Wikipédia (e implicitamente o Wikidata).
     +++<br><br>+++
-    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    No entanto, mesmo quando o resultado está correto, a versão atual precisa de diferenciação aprimorada, no mínimo, sigla e forma longa . Para grandes organizações, existem recursos como __P1813 nomes curtos__, mas ainda não foram compilados com o conjunto de dados atual.
     +++<br><br>+++
-    **Major reasons for "wrong translations" are not translators fault**
+    **Os principais motivos para "traduções erradas" não são culpa dos tradutores**
     +++<br><br>+++
-    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    DICA: Como regra geral, para conceitos já muito definidos em que você, como humano, pode verificar manualmente um ou mais termos traduzidos como um resultado decente, as outras traduções provavelmente serão aceitáveis. Dicionários com casos extremos (como nomes de territórios em disputa) teriam mais explicações.
     +++<br><br>+++
-    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    A principal razão para "traduções erradas" são conceitos mal definidos usados ​​para explicar aos tradutores da comunidade como gerar traduções de terminologia. Isso tornaria as traduções existentes do Wikidata (usadas não apenas por nós) inconsistentes. A segunda razão é se os dicionários usam traduções para conceitos sem uma correspondência estrita; em outras palavras, se fizermos definições mais estritas do que significa conceito, mas reutilizarmos termos menos exatos da Wikidada. Também há problemas quando idiomas inteiros são codificados com códigos errados. Observe que todos esses casos **traduções erradas NÃO são estritamente culpa do tradutor, mas sim da lexicografia**.
     +++<br><br>+++
-    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    Ainda é possível ter erros estritos no nível de tradução. Mas mesmo que indiquemos aos usuários como corrigir o Wikidata/Wikipedia (com base na melhor explicação contextual de um conceito, como este livro), os requisitos para dizer que o termo anterior foi objetivamente um erro de tradução humana errado (se seguir nossa seriedade na construção de dicionário) são muito elevados.
     +++<br><br>+++
-    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    Do ponto de vista da conciliação de dados, a seguinte metodologia é utilizada para publicar as traduções da terminologia com a tabela de conceitos principais.
     +++<br><br>+++
-    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_44_101.no1.tm.hxl.csv`, may reference Wiki QID.
-    . Every unique QID of  `1603_44_101.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
-    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
-    . The query result, with all QIDs and term labels, is shared as `1603_44_101.wikiq.tm.hxl.csv`
-    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_44_101.wikiq.tm.hxl.csv`
-    . `1603_44_101.no1.tm.hxl.csv` plus `1603_44_101.wikiq.tm.hxl.csv` created `1603_44_101.no11.tm.hxl.csv`
+    . A principal tabela lexicográfica artesanal (explicada no tópico anterior), também fornecida em `1603_44_101.no1.tm.hxl.csv`, pode fazer referência ao Wiki QID.
+    . Cada QID exclusivo de `1603_44_101.no1.tm.hxl.csv`, juntamente com códigos de idioma de [`1603:1:51`] (que requer conhecimento de idiomas humanos), é usado para preparar uma consulta SPARQL otimizada para execução em https://query.wikidata.org/[Wikidata Query Service]. A consulta é tão grande que não é viável para links "Try it" (URL longo), como https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[como o que você encontraria nos Tutoriais Wikidata ], ***mas*** funciona!
+    .. Note que o conhecimento é gratuito, as traduções estão lá, mas as necessidades humanitárias multilíngues podem faltar pessoas para preparar os arquivos e compartilhar do que para uso geral.
+    . O resultado da consulta, com todos os QIDs e rótulos de termos, é compartilhado como `1603_44_101.wikiq.tm.hxl.csv`
+    . As traduções revisadas pela comunidade de cada QID singular são pré-compiladas em um arquivo individual `1603_44_101.wikiq.tm.hxl.csv`
+    . `1603_44_101.no1.tm.hxl.csv` mais `1603_44_101.wikiq.tm.hxl.csv` criado `1603_44_101.no11.tm.hxl.csv`
 
 
 === Rēs dē factō in dictiōnāriīs
@@ -2113,27 +2113,6 @@ Lingua Franca Nova (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 9
 Rēs::
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
-
   numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2155,26 +2134,26 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
 
-  /cōdex pūblicandī/:::
+  scrīptor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
+        https://www.wikidata.org/wiki/Property:P50[P50]
 
       ix_hxlix;;
-        ix_wikip123
+        ix_wikip50
 
       ix_hxlvoc;;
-        v_wiki_p_123
+        v_wiki_p_50
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
+        +++<span lang="la">scrīptor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
+        +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2203,6 +2182,48 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
+
+      ix_hxlix;;
+        ix_wikip123
+
+      ix_hxlvoc;;
+        v_wiki_p_123
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
+
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2224,41 +2245,23 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
 
-  //opus papȳrō ex 1603//:::
+  Numerordĭnātĭo:::
     Rēs interlinguālibus::::
       ix_hxlix;;
-        ix_n1603op
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">//opus papȳrō ex 1603//</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Worksheet index used on 1603_1_1 as undocumented feature to manage where the main table should be extracted</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Índice de planilha usado em 1603_1_1 como recurso não documentado para gerenciar onde a tabela principal deve ser extraída</span>+++
-
-  scrīptor:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P50[P50]
-
-      ix_hxlix;;
-        ix_wikip50
+        ix_n1603
 
       ix_hxlvoc;;
-        v_wiki_p_50
+        v_n1603
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">scrīptor</span>+++
+        +++<span lang="la">Numerordĭnātĭo</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
+        +++<span lang="pt">uma estratégia genérica de organizar os números de maneira explícita como taxonomia</span>+++
 
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2281,30 +2284,27 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
 
-  Numerordĭnātĭo:::
+  //Cōdex annotātiōnibus internālibus//:::
     Rēs interlinguālibus::::
       ix_hxlix;;
-        ix_n1603
-
-      ix_hxlvoc;;
-        v_n1603
+        ix_n1603ia
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">Numerordĭnātĭo</span>+++
+        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
+        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma estratégia genérica de organizar os números de maneira explícita como taxonomia</span>+++
+        +++<span lang="pt">Anotações internas de um códice. Lista de itens. Usado em 1603_1_1 como tags não documentadas para gerenciar como os dicionários são exportados</span>+++
 
 
 <<<
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -2405,17 +2405,17 @@ Rēs linguālibus::
 == Externīs
 === Dictiōnāria necessitātibus
 ==== [1603:44:86] //Dictiōnāria basibus dē tortūrīs//
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   Numerordĭnātĭo:::
     1603:44:86
 
-  //opus papȳrō ex 1603//:::
-    23
+  //Cōdex annotātiōnibus internālibus//:::
+    experimentum-50|publicum-30|victionarium_q-50
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q132781[Q132781]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria basibus dē tortūrīs//
 
@@ -2439,7 +2439,7 @@ Dictiōnāria initiīs
 [id='100']
 === [`100`] /psychological, generic/@eng-Latn
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /psychological, generic/@eng-Latn
 
@@ -2450,11 +2450,11 @@ Rēs linguālibus::
 [id='100_1']
 ==== [`100_1`] /blackmail/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q34284[Q34284]
 
-Rēs linguālibus::
+Rēs linguālibus (47)::
   Linguae multiplīs (Scrīptum incognitō):::
     /blackmail || coercion based on threat of revealing information/@eng-Latn
 
@@ -2605,11 +2605,11 @@ Rēs linguālibus::
 [id='300']
 === [`300`] Mercatus hominum
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q181784[Q181784]
 
-Rēs linguālibus::
+Rēs linguālibus (72)::
   Linguae multiplīs (Scrīptum incognitō):::
     /human trafficking || trade of humans for the purpose of forced labor, sexual slavery, or commercial sexual exploitation for the trafficker or others/@eng-Latn
 
@@ -2835,11 +2835,11 @@ Rēs linguālibus::
 [id='400']
 === [`400`] mors voluntaria
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q10737[Q10737]
 
-Rēs linguālibus::
+Rēs linguālibus (142)::
   Linguae multiplīs (Scrīptum incognitō):::
     /suicide || intentional act of causing one's own death/@eng-Latn
 
@@ -3275,14 +3275,14 @@ Rēs linguālibus::
 [id='500']
 === [`500`] Homicidium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q149086[Q149086]
 
   /scope and content/@eng-Latn:::
     /#TODO get more itens from https://en.wikipedia.org/wiki/Template:Homicide#/@eng-Latn
 
-Rēs linguālibus::
+Rēs linguālibus (96)::
   Linguae multiplīs (Scrīptum incognitō):::
     /homicide (generic) || killing of a human being by another human being/@eng-Latn
 
@@ -3578,11 +3578,11 @@ Rēs linguālibus::
 [id='500_1']
 ==== [`500_1`] Caedes
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q132821[Q132821]
 
-Rēs linguālibus::
+Rēs linguālibus (103)::
   Linguae multiplīs (Scrīptum incognitō):::
     /murder || unlawful killing of a human with malice aforethought/@eng-Latn
 
@@ -3899,14 +3899,14 @@ Rēs linguālibus::
 [id='500_2']
 ==== [`500_2`] /manslaughter/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3882220[Q3882220]
 
   /scope and content/@eng-Latn:::
     /#TODO some languages use _negligent homicide_ and _manslaughter_ as synonymous. Not ideal#/@eng-Latn
 
-Rēs linguālibus::
+Rēs linguālibus (34)::
   Linguae multiplīs (Scrīptum incognitō):::
     /manslaughter || crime of killing of a human being by another human being, less serious than murder/@eng-Latn
 
@@ -4016,11 +4016,11 @@ Rēs linguālibus::
 [id='500_2_1']
 ===== [`500_2_1`] /voluntary manslaughter/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1295558[Q1295558]
 
-Rēs linguālibus::
+Rēs linguālibus (16)::
   Linguae multiplīs (Scrīptum incognitō):::
     /voluntary manslaughter || homicide where the offender had no prior intent to kill and acted during "the heat of passion"/@eng-Latn
 
@@ -4076,11 +4076,11 @@ Rēs linguālibus::
 [id='500_2_2']
 ===== [`500_2_2`] /involuntary manslaughter/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q118322[Q118322]
 
-Rēs linguālibus::
+Rēs linguālibus (29)::
   Linguae multiplīs (Scrīptum incognitō):::
     /involuntary manslaughter || unlawful killing of another human with no intent to kill/@eng-Latn
 
@@ -4175,14 +4175,14 @@ Rēs linguālibus::
 [id='500_3']
 ==== [`500_3`] /negligent homicide/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q641449[Q641449]
 
   /scope and content/@eng-Latn:::
     /#TODO some languages use _negligent homicide_ and _manslaughter_ as synonymous. Not ideal#/@eng-Latn
 
-Rēs linguālibus::
+Rēs linguālibus (23)::
   Linguae multiplīs (Scrīptum incognitō):::
     /negligent homicide || homicide caused by the negligence of another/@eng-Latn
 
@@ -4261,11 +4261,11 @@ Rēs linguālibus::
 [id='501']
 === [`501`] /homicide (killing of family)/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     /#TODO extract more concepts from https://en.wikipedia.org/wiki/List_of_types_of_killing#/@eng-Latn
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /homicide (killing of family)/@eng-Latn
 
@@ -4276,11 +4276,11 @@ Rēs linguālibus::
 [id='501_1']
 ==== [`501_1`] Homicidium honorabile
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2691275[Q2691275]
 
-Rēs linguālibus::
+Rēs linguālibus (52)::
   Linguae multiplīs (Scrīptum incognitō):::
     /honor killing || homicide of a member of a family or social group by other members, due to the belief that the victim has brought dishonor upon the family or community/@eng-Latn
 
@@ -4446,11 +4446,11 @@ Rēs linguālibus::
 [id='503']
 === [`503`] /extra-judicial killing/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2717573[Q2717573]
 
-Rēs linguālibus::
+Rēs linguālibus (29)::
   Linguae multiplīs (Scrīptum incognitō):::
     /extra-judicial killing || intentional and unlawful killings of individuals by state actors without judicial process/@eng-Latn
 
@@ -4545,11 +4545,11 @@ Rēs linguālibus::
 [id='503_1']
 ==== [`503_1`] /targeted killing/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1642263[Q1642263]
 
-Rēs linguālibus::
+Rēs linguālibus (21)::
   Linguae multiplīs (Scrīptum incognitō):::
     /targeted killing || form of assassination carried by governments against their perceived enemies/@eng-Latn
 
@@ -4622,7 +4622,7 @@ Rēs linguālibus::
 [id='700']
 === [`700`] /sexual and gender-based violence (except killing)/@eng-Latn
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /sexual and gender-based violence (except killing)/@eng-Latn
 
@@ -4633,11 +4633,11 @@ Rēs linguālibus::
 [id='700_1']
 ==== [`700_1`] /sexual violence/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q558075[Q558075]
 
-Rēs linguālibus::
+Rēs linguālibus (51)::
   Linguae multiplīs (Scrīptum incognitō):::
     /sexual violence/@eng-Latn
 
@@ -4798,14 +4798,14 @@ Rēs linguālibus::
 [id='700_10']
 ==== [`700_10`] Stuprum
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q47092[Q47092]
 
   /scope and content/@eng-Latn:::
     /#TODO extract more concepts from https://en.wikipedia.org/wiki/Types_of_rape#/@eng-Latn
 
-Rēs linguālibus::
+Rēs linguālibus (95)::
   Linguae multiplīs (Scrīptum incognitō):::
     /rape/@eng-Latn
 
@@ -5098,11 +5098,11 @@ Rēs linguālibus::
 [id='700_10_1']
 ===== [`700_10_1`] /statutory rape/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1968926[Q1968926]
 
-Rēs linguālibus::
+Rēs linguālibus (22)::
   Linguae multiplīs (Scrīptum incognitō):::
     /statutory rape/@eng-Latn
 
@@ -5176,11 +5176,11 @@ Rēs linguālibus::
 [id='700_10_1_1']
 ====== [`700_10_1_1`] /child grooming/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1147070[Q1147070]
 
-Rēs linguālibus::
+Rēs linguālibus (30)::
   Linguae multiplīs (Scrīptum incognitō):::
     /child grooming/@eng-Latn
 
@@ -5278,11 +5278,11 @@ Rēs linguālibus::
 [id='700_10_2']
 ===== [`700_10_2`] /unacknowledged rape/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q23807951[Q23807951]
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     /unacknowledged rape/@eng-Latn
 
@@ -5302,11 +5302,11 @@ Rēs linguālibus::
 [id='700_10_4']
 ===== [`700_10_4`] /corrective rape/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1135287[Q1135287]
 
-Rēs linguālibus::
+Rēs linguālibus (29)::
   Linguae multiplīs (Scrīptum incognitō):::
     /corrective rape || hate crime in which a person is raped because of their perceived sexual or gender orientation/@eng-Latn
 
@@ -5401,11 +5401,11 @@ Rēs linguālibus::
 [id='700_10_10']
 ===== [`700_10_10`] /gang rape/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q8192354[Q8192354]
 
-Rēs linguālibus::
+Rēs linguālibus (33)::
   Linguae multiplīs (Scrīptum incognitō):::
     /gang rape/@eng-Latn
 
@@ -5523,7 +5523,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -5532,7 +5532,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -5540,7 +5540,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -5548,7 +5548,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 

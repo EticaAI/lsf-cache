@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T23:08:37
+2022-04-24T10:51:46
 
 |
 /SPDX license ID/@eng-Latn
@@ -71,7 +71,7 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     _**Cōdex [1603:64:41]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:64:41] //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
@@ -105,46 +105,46 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     1603_64_41 //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
 
 
 
 === Methodī ex verbīs in dictiōnāriīs
-NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+NOTE: /No momento, não há fluxo de trabalho para usar https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], que na verdade poderia ser usado como armazenamento para nomenclatura mais rigorosa. As implementações atuais usam apenas conceitos do Wikidata, os Q-items./@eng-Latn
 
 ==== Methodī ex verbīs in Vicidata (Q modō)
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
-    The ***[1603:64:41] //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    O ***[1603:64:41] //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//*** usa o Wikidata como uma estratégia para conciliar termos linguísticos para um ou mais de seus conceitos.
     +++<br><br>+++
-    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    Isso significa que este livro e os arquivos de dados de dicionários relacionados requerem atualizações periódicas para , no mínimo, sincronize e compartilhe novamente as traduções atualizadas.
     +++<br><br>+++
-    **How reliable are the community translations (Wikidata source)?**
+    **Qual a confiabilidade das traduções da comunidade (fonte Wikidata)?**
     +++<br><br>+++
-    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    A resposta curta padrão é: **elas são confiáveis**, mesmo nos casos de não haver traduções oficiais para cada assunto.
     +++<br><br>+++
-    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    Como referência, é provável que um tradutor profissional (sem acesso à Wikipedia ou bases de terminologia interna das organizações de controle) forneça resultados de qualidade inferior se você fizer testes cegos. Isso é possível porque não apenas o público médio, mas também terminólogos e tradutores profissionais ajudam a Wikipédia (e implicitamente o Wikidata).
     +++<br><br>+++
-    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    No entanto, mesmo quando o resultado está correto, a versão atual precisa de diferenciação aprimorada, no mínimo, sigla e forma longa . Para grandes organizações, existem recursos como __P1813 nomes curtos__, mas ainda não foram compilados com o conjunto de dados atual.
     +++<br><br>+++
-    **Major reasons for "wrong translations" are not translators fault**
+    **Os principais motivos para "traduções erradas" não são culpa dos tradutores**
     +++<br><br>+++
-    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    DICA: Como regra geral, para conceitos já muito definidos em que você, como humano, pode verificar manualmente um ou mais termos traduzidos como um resultado decente, as outras traduções provavelmente serão aceitáveis. Dicionários com casos extremos (como nomes de territórios em disputa) teriam mais explicações.
     +++<br><br>+++
-    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    A principal razão para "traduções erradas" são conceitos mal definidos usados ​​para explicar aos tradutores da comunidade como gerar traduções de terminologia. Isso tornaria as traduções existentes do Wikidata (usadas não apenas por nós) inconsistentes. A segunda razão é se os dicionários usam traduções para conceitos sem uma correspondência estrita; em outras palavras, se fizermos definições mais estritas do que significa conceito, mas reutilizarmos termos menos exatos da Wikidada. Também há problemas quando idiomas inteiros são codificados com códigos errados. Observe que todos esses casos **traduções erradas NÃO são estritamente culpa do tradutor, mas sim da lexicografia**.
     +++<br><br>+++
-    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    Ainda é possível ter erros estritos no nível de tradução. Mas mesmo que indiquemos aos usuários como corrigir o Wikidata/Wikipedia (com base na melhor explicação contextual de um conceito, como este livro), os requisitos para dizer que o termo anterior foi objetivamente um erro de tradução humana errado (se seguir nossa seriedade na construção de dicionário) são muito elevados.
     +++<br><br>+++
-    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    Do ponto de vista da conciliação de dados, a seguinte metodologia é utilizada para publicar as traduções da terminologia com a tabela de conceitos principais.
     +++<br><br>+++
-    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_64_41.no1.tm.hxl.csv`, may reference Wiki QID.
-    . Every unique QID of  `1603_64_41.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
-    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
-    . The query result, with all QIDs and term labels, is shared as `1603_64_41.wikiq.tm.hxl.csv`
-    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_64_41.wikiq.tm.hxl.csv`
-    . `1603_64_41.no1.tm.hxl.csv` plus `1603_64_41.wikiq.tm.hxl.csv` created `1603_64_41.no11.tm.hxl.csv`
+    . A principal tabela lexicográfica artesanal (explicada no tópico anterior), também fornecida em `1603_64_41.no1.tm.hxl.csv`, pode fazer referência ao Wiki QID.
+    . Cada QID exclusivo de `1603_64_41.no1.tm.hxl.csv`, juntamente com códigos de idioma de [`1603:1:51`] (que requer conhecimento de idiomas humanos), é usado para preparar uma consulta SPARQL otimizada para execução em https://query.wikidata.org/[Wikidata Query Service]. A consulta é tão grande que não é viável para links "Try it" (URL longo), como https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[como o que você encontraria nos Tutoriais Wikidata ], ***mas*** funciona!
+    .. Note que o conhecimento é gratuito, as traduções estão lá, mas as necessidades humanitárias multilíngues podem faltar pessoas para preparar os arquivos e compartilhar do que para uso geral.
+    . O resultado da consulta, com todos os QIDs e rótulos de termos, é compartilhado como `1603_64_41.wikiq.tm.hxl.csv`
+    . As traduções revisadas pela comunidade de cada QID singular são pré-compiladas em um arquivo individual `1603_64_41.wikiq.tm.hxl.csv`
+    . `1603_64_41.no1.tm.hxl.csv` mais `1603_64_41.wikiq.tm.hxl.csv` criado `1603_64_41.no11.tm.hxl.csv`
 
 
 === Rēs dē factō in dictiōnāriīs
@@ -1955,6 +1955,48 @@ Lingua Franca Nova (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 7
 Rēs::
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
+
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
+
+      ix_hxlix;;
+        ix_wikip123
+
+      ix_hxlvoc;;
+        v_wiki_p_123
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
+
   numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -1997,90 +2039,6 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
 
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
-
-  /publication date/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
-
-      ix_hxlix;;
-        ix_wikip577
-
-      ix_hxlvoc;;
-        v_wiki_p_577
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
-
-  /scope and content/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
-
-      ix_hxlix;;
-        ix_wikip7535
-
-      ix_hxlvoc;;
-        v_wiki_p_7535
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
-
-  /cōdex pūblicandī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
-
-      ix_hxlix;;
-        ix_wikip123
-
-      ix_hxlvoc;;
-        v_wiki_p_123
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
-
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2108,12 +2066,54 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+
 
 <<<
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -2226,7 +2226,7 @@ Dictiōnāria initiīs
 [id='17']
 === [`17`] /Wikidata QIDs/
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Wikidata QIDs/
 
@@ -2237,11 +2237,11 @@ Rēs linguālibus::
 [id='17_11660']
 ==== [`17_11660`] Intellegentia artificialis
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q11660[Q11660]
 
-Rēs linguālibus::
+Rēs linguālibus (129)::
   Linguae multiplīs (Scrīptum incognitō):::
     /artificial intelligence - field of computer science and engineering practices for intelligence demonstrated by machines and intelligent agents/
 
@@ -2486,7 +2486,7 @@ Rēs linguālibus::
     +++<span lang="jam">Aatifishal intelijens</span>+++
 
   Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
-    +++<span lang="be">Штучны інтэлект</span>+++
+    +++<span lang="be">штучны інтэлект</span>+++
 
   Lingua Marathica (Devanāgarī):::
     +++<span lang="mr">कृत्रिम बुद्धिमत्ता</span>+++
@@ -2636,11 +2636,11 @@ Rēs linguālibus::
 [id='17_94702']
 ==== [`17_94702`] /collaborative filtering - algorithm/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q94702[Q94702]
 
-Rēs linguālibus::
+Rēs linguālibus (22)::
   Linguae multiplīs (Scrīptum incognitō):::
     /collaborative filtering - algorithm/
 
@@ -2714,11 +2714,11 @@ Rēs linguālibus::
 [id='17_161410']
 ==== [`17_161410`] /peer-to-peer - type of decentralized and distributed network architecture/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q161410[Q161410]
 
-Rēs linguālibus::
+Rēs linguālibus (63)::
   Linguae multiplīs (Scrīptum incognitō):::
     /peer-to-peer - type of decentralized and distributed network architecture/
 
@@ -2915,11 +2915,11 @@ Rēs linguālibus::
 [id='17_167323']
 ==== [`17_167323`] Altruismus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q167323[Q167323]
 
-Rēs linguālibus::
+Rēs linguālibus (76)::
   Linguae multiplīs (Scrīptum incognitō):::
     /altruism - principle or practice of concern for the welfare of others/
 
@@ -3155,11 +3155,11 @@ Rēs linguālibus::
 [id='17_180634']
 ==== [`17_180634`] /distributed computing - system whose components are located on different networked computers/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q180634[Q180634]
 
-Rēs linguālibus::
+Rēs linguālibus (55)::
   Linguae multiplīs (Scrīptum incognitō):::
     /distributed computing - system whose components are located on different networked computers/
 
@@ -3332,11 +3332,11 @@ Rēs linguālibus::
 [id='17_182985']
 ==== [`17_182985`] /electoral system - method by which voters make a choice between options/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q182985[Q182985]
 
-Rēs linguālibus::
+Rēs linguālibus (66)::
   Linguae multiplīs (Scrīptum incognitō):::
     /electoral system - method by which voters make a choice between options/
 
@@ -3542,11 +3542,11 @@ Rēs linguālibus::
 [id='17_186368']
 ==== [`17_186368`] Mutualismus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q186368[Q186368]
 
-Rēs linguālibus::
+Rēs linguālibus (58)::
   Linguae multiplīs (Scrīptum incognitō):::
     /mutualism - organism relationship in which each individual benefits from the activity of the other/
 
@@ -3728,11 +3728,11 @@ Rēs linguālibus::
 [id='17_188577']
 ==== [`17_188577`] /consensus decision-making -  Collective decision-making processes in which participants develop and decide on proposals with the aim, or requirement, of acceptance by all/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q188577[Q188577]
 
-Rēs linguālibus::
+Rēs linguālibus (28)::
   Linguae multiplīs (Scrīptum incognitō):::
     /consensus decision-making -  Collective decision-making processes in which participants develop and decide on proposals with the aim, or requirement, of acceptance by all/
 
@@ -3824,11 +3824,11 @@ Rēs linguālibus::
 [id='17_188961']
 ==== [`17_188961`] Decentralizatio
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q188961[Q188961]
 
-Rēs linguālibus::
+Rēs linguālibus (62)::
   Linguae multiplīs (Scrīptum incognitō):::
     /decentralization - process of redistributing or dispersing functions, powers, people or things away from a central location or authority/
 
@@ -4022,11 +4022,11 @@ Rēs linguālibus::
 [id='17_191934']
 ==== [`17_191934`] Commensalismus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q191934[Q191934]
 
-Rēs linguālibus::
+Rēs linguālibus (64)::
   Linguae multiplīs (Scrīptum incognitō):::
     /commensalism - an interaction between two organisms living together in more or less intimate association in a relationship in which one benefits and the other is unaffected./
 
@@ -4226,11 +4226,11 @@ Rēs linguālibus::
 [id='17_215028']
 ==== [`17_215028`] /peer review - evaluation of work by one or more people of similar competence to the producers of the work/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q215028[Q215028]
 
-Rēs linguālibus::
+Rēs linguālibus (53)::
   Linguae multiplīs (Scrīptum incognitō):::
     /peer review - evaluation of work by one or more people of similar competence to the producers of the work/
 
@@ -4397,11 +4397,11 @@ Rēs linguālibus::
 [id='17_290036']
 ==== [`17_290036`] /network simulation - simulating computer networks/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q290036[Q290036]
 
-Rēs linguālibus::
+Rēs linguālibus (8)::
   Linguae multiplīs (Scrīptum incognitō):::
     /network simulation - simulating computer networks/
 
@@ -4433,11 +4433,11 @@ Rēs linguālibus::
 [id='17_304922']
 ==== [`17_304922`] /social dynamics - study of behavior of groups/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q304922[Q304922]
 
-Rēs linguālibus::
+Rēs linguālibus (10)::
   Linguae multiplīs (Scrīptum incognitō):::
     /social dynamics - study of behavior of groups/
 
@@ -4475,11 +4475,11 @@ Rēs linguālibus::
 [id='17_388791']
 ==== [`17_388791`] /group decision-making - situation faced when individuals collectively make a choice/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q388791[Q388791]
 
-Rēs linguālibus::
+Rēs linguālibus (12)::
   Linguae multiplīs (Scrīptum incognitō):::
     /group decision-making - situation faced when individuals collectively make a choice/
 
@@ -4523,11 +4523,11 @@ Rēs linguālibus::
 [id='17_430880']
 ==== [`17_430880`] /collective consciousness - shared beliefs and ideas in society/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q430880[Q430880]
 
-Rēs linguālibus::
+Rēs linguālibus (28)::
   Linguae multiplīs (Scrīptum incognitō):::
     /collective consciousness - shared beliefs and ideas in society/
 
@@ -4619,11 +4619,11 @@ Rēs linguālibus::
 [id='17_432197']
 ==== [`17_432197`] /collective intelligence - group intelligence that emerges from collective efforts/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q432197[Q432197]
 
-Rēs linguālibus::
+Rēs linguālibus (31)::
   Linguae multiplīs (Scrīptum incognitō):::
     /collective intelligence - group intelligence that emerges from collective efforts/
 
@@ -4724,11 +4724,11 @@ Rēs linguālibus::
 [id='17_460851']
 ==== [`17_460851`] /ant colony optimization algorithms/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q460851[Q460851]
 
-Rēs linguālibus::
+Rēs linguālibus (25)::
   Linguae multiplīs (Scrīptum incognitō):::
     /ant colony optimization algorithms/
 
@@ -4811,11 +4811,11 @@ Rēs linguālibus::
 [id='17_465266']
 ==== [`17_465266`] /crowd simulation - model of movement/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q465266[Q465266]
 
-Rēs linguālibus::
+Rēs linguālibus (13)::
   Linguae multiplīs (Scrīptum incognitō):::
     /crowd simulation - model of movement/
 
@@ -4862,11 +4862,11 @@ Rēs linguālibus::
 [id='17_529909']
 ==== [`17_529909`] /multi-agent system/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q529909[Q529909]
 
-Rēs linguālibus::
+Rēs linguālibus (20)::
   Linguae multiplīs (Scrīptum incognitō):::
     /multi-agent system/
 
@@ -4934,11 +4934,11 @@ Rēs linguālibus::
 [id='17_559688']
 ==== [`17_559688`] /network emulation - controlled environment simulating real-world network scenarios in order to validate realistic performance of products/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q559688[Q559688]
 
-Rēs linguālibus::
+Rēs linguālibus (7)::
   Linguae multiplīs (Scrīptum incognitō):::
     /network emulation - controlled environment simulating real-world network scenarios in order to validate realistic performance of products/
 
@@ -4967,11 +4967,11 @@ Rēs linguālibus::
 [id='17_574814']
 ==== [`17_574814`] /discrete event simulation - type of simulation/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q574814[Q574814]
 
-Rēs linguālibus::
+Rēs linguālibus (18)::
   Linguae multiplīs (Scrīptum incognitō):::
     /discrete event simulation - type of simulation/
 
@@ -5033,11 +5033,11 @@ Rēs linguālibus::
 [id='17_609408']
 ==== [`17_609408`] /self-organization - process of creating order by local interactions/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q609408[Q609408]
 
-Rēs linguālibus::
+Rēs linguālibus (34)::
   Linguae multiplīs (Scrīptum incognitō):::
     /self-organization - process of creating order by local interactions/
 
@@ -5147,11 +5147,11 @@ Rēs linguālibus::
 [id='17_729672']
 ==== [`17_729672`] /noosphere - sphere of human thought/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q729672[Q729672]
 
-Rēs linguālibus::
+Rēs linguālibus (40)::
   Linguae multiplīs (Scrīptum incognitō):::
     /noosphere - sphere of human thought/
 
@@ -5279,11 +5279,11 @@ Rēs linguālibus::
 [id='17_753694']
 ==== [`17_753694`] Eusocialitas
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q753694[Q753694]
 
-Rēs linguālibus::
+Rēs linguālibus (38)::
   Linguae multiplīs (Scrīptum incognitō):::
     /eusociality - highest level of animal sociality a species can attain/
 
@@ -5405,11 +5405,11 @@ Rēs linguālibus::
 [id='17_780716']
 ==== [`17_780716`] /Social Exchange Theory - generalization theory/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q780716[Q780716]
 
-Rēs linguālibus::
+Rēs linguālibus (19)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Social Exchange Theory - generalization theory/
 
@@ -5474,11 +5474,11 @@ Rēs linguālibus::
 [id='17_839578']
 ==== [`17_839578`] /group dynamics - system of behaviors and psychological processes occurring within a social group or between social groups/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q839578[Q839578]
 
-Rēs linguālibus::
+Rēs linguālibus (38)::
   Linguae multiplīs (Scrīptum incognitō):::
     /group dynamics - system of behaviors and psychological processes occurring within a social group or between social groups/
 
@@ -5600,11 +5600,11 @@ Rēs linguālibus::
 [id='17_863960']
 ==== [`17_863960`] Intellegentia examinis
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q863960[Q863960]
 
-Rēs linguālibus::
+Rēs linguālibus (30)::
   Linguae multiplīs (Scrīptum incognitō):::
     /swarm intelligence - collective behavior of decentralized, self-organized systems/
 
@@ -5702,11 +5702,11 @@ Rēs linguālibus::
 [id='17_905036']
 ==== [`17_905036`] /computational sociology - branch of sociology that uses computational methods to study social phenomena/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q905036[Q905036]
 
-Rēs linguālibus::
+Rēs linguālibus (18)::
   Linguae multiplīs (Scrīptum incognitō):::
     /computational sociology - branch of sociology that uses computational methods to study social phenomena/
 
@@ -5768,11 +5768,11 @@ Rēs linguālibus::
 [id='17_1471594']
 ==== [`17_1471594`] /collective action - action taken together by a group of people whose goal is to enhance their status and achieve a common objective/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1471594[Q1471594]
 
-Rēs linguālibus::
+Rēs linguālibus (18)::
   Linguae multiplīs (Scrīptum incognitō):::
     /collective action - action taken together by a group of people whose goal is to enhance their status and achieve a common objective/
 
@@ -5834,11 +5834,11 @@ Rēs linguālibus::
 [id='17_1753943']
 ==== [`17_1753943`] /wisdom of the crowd - collective perception of a group of people/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1753943[Q1753943]
 
-Rēs linguālibus::
+Rēs linguālibus (23)::
   Linguae multiplīs (Scrīptum incognitō):::
     /wisdom of the crowd - collective perception of a group of people/
 
@@ -5915,11 +5915,11 @@ Rēs linguālibus::
 [id='17_2052203']
 ==== [`17_2052203`] /multi-objective optimization - area of multiple criteria decision making, that is concerned with mathematical optimization problems involving more than one objective function to be optimized simultaneously/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2052203[Q2052203]
 
-Rēs linguālibus::
+Rēs linguālibus (18)::
   Linguae multiplīs (Scrīptum incognitō):::
     /multi-objective optimization - area of multiple criteria decision making, that is concerned with mathematical optimization problems involving more than one objective function to be optimized simultaneously/
 
@@ -5981,11 +5981,11 @@ Rēs linguālibus::
 [id='17_2072794']
 ==== [`17_2072794`] /particle swarm optimization - optimization method that tries a set of candidate solutions (“particles“) moving around in the search-space, guided toward the best known positions as better positions are found by other particles/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2072794[Q2072794]
 
-Rēs linguālibus::
+Rēs linguālibus (19)::
   Linguae multiplīs (Scrīptum incognitō):::
     /particle swarm optimization - optimization method that tries a set of candidate solutions (“particles“) moving around in the search-space, guided toward the best known positions as better positions are found by other particles/
 
@@ -6050,11 +6050,11 @@ Rēs linguālibus::
 [id='17_2446723']
 ==== [`17_2446723`] /swarm robotics - coordination of multiple robots as a system/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2446723[Q2446723]
 
-Rēs linguālibus::
+Rēs linguālibus (16)::
   Linguae multiplīs (Scrīptum incognitō):::
     /swarm robotics - coordination of multiple robots as a system/
 
@@ -6110,11 +6110,11 @@ Rēs linguālibus::
 [id='17_2548752']
 ==== [`17_2548752`] /collective behavior - /social processes and events which do not reflect existing social structure, but which emerge in a spontaneous way/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2548752[Q2548752]
 
-Rēs linguālibus::
+Rēs linguālibus (19)::
   Linguae multiplīs (Scrīptum incognitō):::
     /collective behavior - /social processes and events which do not reflect existing social structure, but which emerge in a spontaneous way/
 
@@ -6179,11 +6179,11 @@ Rēs linguālibus::
 [id='17_2631895']
 ==== [`17_2631895`] /automated planning and scheduling - branch of artificial intelligence that concerns the realization of strategies or action sequences/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2631895[Q2631895]
 
-Rēs linguālibus::
+Rēs linguālibus (18)::
   Linguae multiplīs (Scrīptum incognitō):::
     /automated planning and scheduling - branch of artificial intelligence that concerns the realization of strategies or action sequences/
 
@@ -6245,11 +6245,11 @@ Rēs linguālibus::
 [id='17_2835898']
 ==== [`17_2835898`] /distributed algorithm - algorithm designed to run on computer hardware constructed from interconnected processors/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2835898[Q2835898]
 
-Rēs linguālibus::
+Rēs linguālibus (13)::
   Linguae multiplīs (Scrīptum incognitō):::
     /distributed algorithm - algorithm designed to run on computer hardware constructed from interconnected processors/
 
@@ -6296,11 +6296,11 @@ Rēs linguālibus::
 [id='17_3153007']
 ==== [`17_3153007`] /distributed artificial intelligence/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3153007[Q3153007]
 
-Rēs linguālibus::
+Rēs linguālibus (11)::
   Linguae multiplīs (Scrīptum incognitō):::
     /distributed artificial intelligence/
 
@@ -6341,11 +6341,11 @@ Rēs linguālibus::
 [id='17_3497720']
 ==== [`17_3497720`] /bees algorithm/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3497720[Q3497720]
 
-Rēs linguālibus::
+Rēs linguālibus (11)::
   Linguae multiplīs (Scrīptum incognitō):::
     /bees algorithm/
 
@@ -6386,11 +6386,11 @@ Rēs linguālibus::
 [id='17_4801057']
 ==== [`17_4801057`] /artificial bee colony algorithm - /optimization algorithm based on the intelligent foraging behaviour of honey bee swarm
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q4801057[Q4801057]
 
-Rēs linguālibus::
+Rēs linguālibus (10)::
   Linguae multiplīs (Scrīptum incognitō):::
     /artificial bee colony algorithm - /optimization algorithm based on the intelligent foraging behaviour of honey bee swarm
 
@@ -6428,11 +6428,11 @@ Rēs linguālibus::
 [id='17_5130575']
 ==== [`17_5130575`] Symbiosis purgatoria
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q5130575[Q5130575]
 
-Rēs linguālibus::
+Rēs linguālibus (15)::
   Linguae multiplīs (Scrīptum incognitō):::
     /cleaning symbiosis - m[utually beneficial association between individuals of two species/
 
@@ -6485,11 +6485,11 @@ Rēs linguālibus::
 [id='17_5162845']
 ==== [`17_5162845`] /consensus dynamics/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q5162845[Q5162845]
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     /consensus dynamics/
 
@@ -6509,11 +6509,11 @@ Rēs linguālibus::
 [id='17_5167913']
 ==== [`17_5167913`] /cooperative distributed problem solving/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q5167913[Q5167913]
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     /cooperative distributed problem solving/
 
@@ -6530,11 +6530,11 @@ Rēs linguālibus::
 [id='17_5249081']
 ==== [`17_5249081`] /decentralized computing - concept in where a computer system can have many parts or nodes and still function fully if one of the parts or nodes fail/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q5249081[Q5249081]
 
-Rēs linguālibus::
+Rēs linguālibus (13)::
   Linguae multiplīs (Scrīptum incognitō):::
     /decentralized computing - concept in where a computer system can have many parts or nodes and still function fully if one of the parts or nodes fail/
 
@@ -6581,11 +6581,11 @@ Rēs linguālibus::
 [id='17_6839259']
 ==== [`17_6839259`] /microbial cooperation/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6839259[Q6839259]
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     /microbial cooperation/
 
@@ -6605,11 +6605,11 @@ Rēs linguālibus::
 [id='17_6839260']
 ==== [`17_6839260`] /microbial intelligence -adaptive behavior among bacteria and protists/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6839260[Q6839260]
 
-Rēs linguālibus::
+Rēs linguālibus (6)::
   Linguae multiplīs (Scrīptum incognitō):::
     /microbial intelligence -adaptive behavior among bacteria and protists/
 
@@ -6635,11 +6635,11 @@ Rēs linguālibus::
 [id='17_6934423']
 ==== [`17_6934423`] /multi-agent planning/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6934423[Q6934423]
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     /multi-agent planning/
 
@@ -6659,11 +6659,11 @@ Rēs linguālibus::
 [id='17_6934508']
 ==== [`17_6934508`] /multi-swarm optimization/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6934508[Q6934508]
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     /multi-swarm optimization/
 
@@ -6683,11 +6683,11 @@ Rēs linguālibus::
 [id='17_6935067']
 ==== [`17_6935067`] /multiscale decision-making/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6935067[Q6935067]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     /multiscale decision-making/
 
@@ -6701,11 +6701,11 @@ Rēs linguālibus::
 [id='17_14915018']
 ==== [`17_14915018`] /swarm behaviour - collective behaviour of a large number of (usually) self-propelled entities of similar size/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q14915018[Q14915018]
 
-Rēs linguālibus::
+Rēs linguālibus (17)::
   Linguae multiplīs (Scrīptum incognitō):::
     /swarm behaviour - collective behaviour of a large number of (usually) self-propelled entities of similar size/
 
@@ -6764,11 +6764,11 @@ Rēs linguālibus::
 [id='17_18204722']
 ==== [`17_18204722`] /decentralized autonomous organization - computer network organization model/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q18204722[Q18204722]
 
-Rēs linguālibus::
+Rēs linguālibus (21)::
   Linguae multiplīs (Scrīptum incognitō):::
     /decentralized autonomous organization - computer network organization model/
 
@@ -6839,11 +6839,11 @@ Rēs linguālibus::
 [id='17_21281178']
 ==== [`17_21281178`] /distributed constrained optimisation problem/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q21281178[Q21281178]
 
-Rēs linguālibus::
+Rēs linguālibus (5)::
   Linguae multiplīs (Scrīptum incognitō):::
     /distributed constrained optimisation problem/
 
@@ -6866,11 +6866,11 @@ Rēs linguālibus::
 [id='17_28324877']
 ==== [`17_28324877`] /fish School Search/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q28324877[Q28324877]
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     /fish School Search/
 
@@ -6887,11 +6887,11 @@ Rēs linguālibus::
 [id='17_50818671']
 ==== [`17_50818671`] /federated learning - method for artificial intelligence/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q50818671[Q50818671]
 
-Rēs linguālibus::
+Rēs linguālibus (12)::
   Linguae multiplīs (Scrīptum incognitō):::
     /federated learning - method for artificial intelligence/
 
@@ -6935,11 +6935,11 @@ Rēs linguālibus::
 [id='17_55080113']
 ==== [`17_55080113`] /decentralized application - type of computer application/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q55080113[Q55080113]
 
-Rēs linguālibus::
+Rēs linguālibus (14)::
   Linguae multiplīs (Scrīptum incognitō):::
     /decentralized application - type of computer application/
 
@@ -6989,11 +6989,11 @@ Rēs linguālibus::
 [id='17_55080175']
 ==== [`17_55080175`] /dispersive flies optimisation/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q55080175[Q55080175]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     /dispersive flies optimisation/
 
@@ -7018,7 +7018,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -7027,7 +7027,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -7035,7 +7035,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -7043,7 +7043,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 

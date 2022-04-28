@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T23:04:55
+2022-04-24T10:33:35
 
 |
 /SPDX license ID/@eng-Latn
@@ -71,7 +71,7 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     _**Cōdex [1603:45:31]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:45:31] Dictiōnāria de calamitātibus**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
@@ -105,7 +105,7 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     The decision making behind the concepts of the dictionaries is based mostly on calamities (disasters) commonly cited on emergency response in humanitarian areas. When this is the case, the interlingual external codes will also be added to the concept.
     +++<br><br>+++
@@ -140,39 +140,39 @@ Referēns 4::
 
 
 === Methodī ex verbīs in dictiōnāriīs
-NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+NOTE: /No momento, não há fluxo de trabalho para usar https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], que na verdade poderia ser usado como armazenamento para nomenclatura mais rigorosa. As implementações atuais usam apenas conceitos do Wikidata, os Q-items./@eng-Latn
 
 ==== Methodī ex verbīs in Vicidata (Q modō)
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
-    The ***[1603:45:31] Dictiōnāria de calamitātibus*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    O ***[1603:45:31] Dictiōnāria de calamitātibus*** usa o Wikidata como uma estratégia para conciliar termos linguísticos para um ou mais de seus conceitos.
     +++<br><br>+++
-    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    Isso significa que este livro e os arquivos de dados de dicionários relacionados requerem atualizações periódicas para , no mínimo, sincronize e compartilhe novamente as traduções atualizadas.
     +++<br><br>+++
-    **How reliable are the community translations (Wikidata source)?**
+    **Qual a confiabilidade das traduções da comunidade (fonte Wikidata)?**
     +++<br><br>+++
-    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    A resposta curta padrão é: **elas são confiáveis**, mesmo nos casos de não haver traduções oficiais para cada assunto.
     +++<br><br>+++
-    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    Como referência, é provável que um tradutor profissional (sem acesso à Wikipedia ou bases de terminologia interna das organizações de controle) forneça resultados de qualidade inferior se você fizer testes cegos. Isso é possível porque não apenas o público médio, mas também terminólogos e tradutores profissionais ajudam a Wikipédia (e implicitamente o Wikidata).
     +++<br><br>+++
-    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    No entanto, mesmo quando o resultado está correto, a versão atual precisa de diferenciação aprimorada, no mínimo, sigla e forma longa . Para grandes organizações, existem recursos como __P1813 nomes curtos__, mas ainda não foram compilados com o conjunto de dados atual.
     +++<br><br>+++
-    **Major reasons for "wrong translations" are not translators fault**
+    **Os principais motivos para "traduções erradas" não são culpa dos tradutores**
     +++<br><br>+++
-    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    DICA: Como regra geral, para conceitos já muito definidos em que você, como humano, pode verificar manualmente um ou mais termos traduzidos como um resultado decente, as outras traduções provavelmente serão aceitáveis. Dicionários com casos extremos (como nomes de territórios em disputa) teriam mais explicações.
     +++<br><br>+++
-    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    A principal razão para "traduções erradas" são conceitos mal definidos usados ​​para explicar aos tradutores da comunidade como gerar traduções de terminologia. Isso tornaria as traduções existentes do Wikidata (usadas não apenas por nós) inconsistentes. A segunda razão é se os dicionários usam traduções para conceitos sem uma correspondência estrita; em outras palavras, se fizermos definições mais estritas do que significa conceito, mas reutilizarmos termos menos exatos da Wikidada. Também há problemas quando idiomas inteiros são codificados com códigos errados. Observe que todos esses casos **traduções erradas NÃO são estritamente culpa do tradutor, mas sim da lexicografia**.
     +++<br><br>+++
-    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    Ainda é possível ter erros estritos no nível de tradução. Mas mesmo que indiquemos aos usuários como corrigir o Wikidata/Wikipedia (com base na melhor explicação contextual de um conceito, como este livro), os requisitos para dizer que o termo anterior foi objetivamente um erro de tradução humana errado (se seguir nossa seriedade na construção de dicionário) são muito elevados.
     +++<br><br>+++
-    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    Do ponto de vista da conciliação de dados, a seguinte metodologia é utilizada para publicar as traduções da terminologia com a tabela de conceitos principais.
     +++<br><br>+++
-    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_45_31.no1.tm.hxl.csv`, may reference Wiki QID.
-    . Every unique QID of  `1603_45_31.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
-    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
-    . The query result, with all QIDs and term labels, is shared as `1603_45_31.wikiq.tm.hxl.csv`
-    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_45_31.wikiq.tm.hxl.csv`
-    . `1603_45_31.no1.tm.hxl.csv` plus `1603_45_31.wikiq.tm.hxl.csv` created `1603_45_31.no11.tm.hxl.csv`
+    . A principal tabela lexicográfica artesanal (explicada no tópico anterior), também fornecida em `1603_45_31.no1.tm.hxl.csv`, pode fazer referência ao Wiki QID.
+    . Cada QID exclusivo de `1603_45_31.no1.tm.hxl.csv`, juntamente com códigos de idioma de [`1603:1:51`] (que requer conhecimento de idiomas humanos), é usado para preparar uma consulta SPARQL otimizada para execução em https://query.wikidata.org/[Wikidata Query Service]. A consulta é tão grande que não é viável para links "Try it" (URL longo), como https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[como o que você encontraria nos Tutoriais Wikidata ], ***mas*** funciona!
+    .. Note que o conhecimento é gratuito, as traduções estão lá, mas as necessidades humanitárias multilíngues podem faltar pessoas para preparar os arquivos e compartilhar do que para uso geral.
+    . O resultado da consulta, com todos os QIDs e rótulos de termos, é compartilhado como `1603_45_31.wikiq.tm.hxl.csv`
+    . As traduções revisadas pela comunidade de cada QID singular são pré-compiladas em um arquivo individual `1603_45_31.wikiq.tm.hxl.csv`
+    . `1603_45_31.no1.tm.hxl.csv` mais `1603_45_31.wikiq.tm.hxl.csv` criado `1603_45_31.no11.tm.hxl.csv`
 
 
 === Rēs dē factō in dictiōnāriīs
@@ -2763,36 +2763,6 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
 
-  /GLIDE hazard code/:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_glidehc
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/GLIDE hazard code/</span>+++
-
-  /publication date/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
-
-      ix_hxlix;;
-        ix_wikip577
-
-      ix_hxlvoc;;
-        v_wiki_p_577
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
-
   /Wiki QID/:::
     Rēs interlinguālibus::::
       /rēgulam/;;
@@ -2814,27 +2784,6 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
 
-  numerus editionis:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
-
-      ix_hxlix;;
-        ix_wikip393
-
-      ix_hxlvoc;;
-        v_wiki_p_393
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
-
   scrīptor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2855,27 +2804,6 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
-
-  /scope and content/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
-
-      ix_hxlix;;
-        ix_wikip7535
-
-      ix_hxlvoc;;
-        v_wiki_p_7535
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2904,12 +2832,84 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
+  /GLIDE hazard code/:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_glidehc
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/GLIDE hazard code/</span>+++
+
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
+
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
+
 
 <<<
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -3039,14 +3039,14 @@ link:++https://en.wikipedia.org/wiki/File:Eruption_of_Vesuvius_from_Pacini%27s_o
 [id='1']
 === [`1`] Calamitas
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3839081[Q3839081]
 
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept206[concept206]
 
-Rēs linguālibus::
+Rēs linguālibus (117)::
   Linguae multiplīs (Scrīptum incognitō):::
     /disaster/
 
@@ -3407,7 +3407,7 @@ Rēs linguālibus::
 [id='8065']
 === [`8065`] calamitas naturalis
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q8065[Q8065]
 
@@ -3417,7 +3417,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept4772[concept4772]
 
-Rēs linguālibus::
+Rēs linguālibus (103)::
   Linguae multiplīs (Scrīptum incognitō):::
     /natural disaster/@eng-Latn
 
@@ -3734,7 +3734,7 @@ Rēs linguālibus::
 [id='8065_7944']
 ==== [`8065_7944`] Terrae motus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7944[Q7944]
 
@@ -3744,7 +3744,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept8600[concept8600]
 
-Rēs linguālibus::
+Rēs linguālibus (165)::
   Linguae multiplīs (Scrīptum incognitō):::
     /earthquake || result of a sudden release of energy in the Earth's crust that creates seismic waves/@eng-Latn
 
@@ -4247,7 +4247,7 @@ Rēs linguālibus::
 [id='8065_8068']
 ==== [`8065_8068`] Inundatio
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q8068[Q8068]
 
@@ -4257,7 +4257,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept10949[concept10949]
 
-Rēs linguālibus::
+Rēs linguālibus (142)::
   Linguae multiplīs (Scrīptum incognitō):::
     /flood || overflow of water that submerges land/@eng-Latn
 
@@ -4691,14 +4691,14 @@ Rēs linguālibus::
 [id='8065_8068_860333']
 ===== [`8065_8068_860333`] /flash flood/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q860333[Q860333]
 
   /GLIDE hazard code/:::
     FF
 
-Rēs linguālibus::
+Rēs linguālibus (31)::
   Linguae multiplīs (Scrīptum incognitō):::
     /flash flood || rapid flooding of low-lying areas, often caused by heavy rain associated with a severe thunderstorm, hurricane, tropical storm, or melt water from ice or snow/@eng-Latn
 
@@ -4799,7 +4799,7 @@ Rēs linguālibus::
 [id='8065_8070']
 ==== [`8065_8070`] Megacyma
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q8070[Q8070]
 
@@ -4809,7 +4809,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept8611[concept8611]
 
-Rēs linguālibus::
+Rēs linguālibus (138)::
   Linguae multiplīs (Scrīptum incognitō):::
     /tsunami || series of water waves caused by the displacement of a large volume of a body of water/@eng-Latn
 
@@ -5231,14 +5231,14 @@ Rēs linguālibus::
 [id='8065_8092']
 ==== [`8065_8092`] Typhon marinus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q8092[Q8092]
 
   /GLIDE hazard code/:::
     TC
 
-Rēs linguālibus::
+Rēs linguālibus (122)::
   Linguae multiplīs (Scrīptum incognitō):::
     /tropical cyclone || rapidly rotating storm system characterized by a low-pressure center, a closed low-level atmospheric circulation, strong winds, and a spiral arrangement of thunderstorms that produce heavy rain and/or squalls/@eng-Latn
 
@@ -5612,7 +5612,7 @@ Rēs linguālibus::
 [id='8065_43059']
 ==== [`8065_43059`] Ariditas
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q43059[Q43059]
 
@@ -5622,7 +5622,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept2849[concept2849]
 
-Rēs linguālibus::
+Rēs linguālibus (102)::
   Linguae multiplīs (Scrīptum incognitō):::
     /drought || extended period when a region notes a deficiency in its water supply/@eng-Latn
 
@@ -5936,14 +5936,14 @@ Rēs linguālibus::
 [id='8065_121742']
 ==== [`8065_121742`] /storm surge/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q121742[Q121742]
 
   /GLIDE hazard code/:::
     SS
 
-Rēs linguālibus::
+Rēs linguālibus (39)::
   Linguae multiplīs (Scrīptum incognitō):::
     /storm surge || a coastal flood or tsunami-like phenomenon of rising water commonly associated with low-pressure weather systems, such as cyclones/@eng-Latn
 
@@ -6068,7 +6068,7 @@ Rēs linguālibus::
 [id='8065_167903']
 ==== [`8065_167903`] /landslide/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q167903[Q167903]
 
@@ -6078,7 +6078,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept7822[concept7822]
 
-Rēs linguālibus::
+Rēs linguālibus (91)::
   Linguae multiplīs (Scrīptum incognitō):::
     /landslide || type of natural disasters involving ground movements, often caused by slope instability triggered by specific event/@eng-Latn
 
@@ -6359,7 +6359,7 @@ Rēs linguālibus::
 [id='8065_167903_7935']
 ===== [`8065_167903_7935`] Labina nivis
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7935[Q7935]
 
@@ -6369,7 +6369,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept2118[concept2118]
 
-Rēs linguālibus::
+Rēs linguālibus (117)::
   Linguae multiplīs (Scrīptum incognitō):::
     /avalanche || sudden, drastic flow of snow down a steep slope/@eng-Latn
 
@@ -6728,14 +6728,14 @@ Rēs linguālibus::
 [id='8065_167903_175768']
 ===== [`8065_167903_175768`] Pelorrhoea
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q175768[Q175768]
 
   /GLIDE hazard code/:::
     MS
 
-Rēs linguālibus::
+Rēs linguālibus (46)::
   Linguae multiplīs (Scrīptum incognitō):::
     /mudflow || form of mass wasting involving very rapid to extremely rapid surging flow of debris that has become partially or fully liquified by the addition of significant amounts of water to the source material/@eng-Latn
 
@@ -6881,14 +6881,14 @@ Rēs linguālibus::
 [id='8065_168983']
 ==== [`8065_168983`] Incendium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q168983[Q168983]
 
   /GLIDE hazard code/:::
     FR
 
-Rēs linguālibus::
+Rēs linguālibus (84)::
   Linguae multiplīs (Scrīptum incognitō):::
     /conflagration || large and destructive fire that threatens human life, animal life, health, and/or property/@eng-Latn
 
@@ -7148,7 +7148,7 @@ Rēs linguālibus::
 [id='8065_168983_169950']
 ===== [`8065_168983_169950`] /wildfire/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q169950[Q169950]
 
@@ -7158,7 +7158,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept10905[concept10905]
 
-Rēs linguālibus::
+Rēs linguālibus (89)::
   Linguae multiplīs (Scrīptum incognitō):::
     /wildfire || uncontrolled fire in an area of combustible vegetation that occurs in the countryside or a wilderness area/@eng-Latn
 
@@ -7433,14 +7433,14 @@ Rēs linguālibus::
 [id='8065_215864']
 ==== [`8065_215864`] /heat wave/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q215864[Q215864]
 
   /GLIDE hazard code/:::
     HT
 
-Rēs linguālibus::
+Rēs linguālibus (57)::
   Linguae multiplīs (Scrīptum incognitō):::
     /heat wave || prolonged period of excessively hot weather/@eng-Latn
 
@@ -7619,14 +7619,14 @@ Rēs linguālibus::
 [id='8065_642683']
 ==== [`8065_642683`] /cold wave/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q642683[Q642683]
 
   /GLIDE hazard code/:::
     CW
 
-Rēs linguālibus::
+Rēs linguālibus (34)::
   Linguae multiplīs (Scrīptum incognitō):::
     /cold wave || a period of abnormally cold weather/@eng-Latn
 
@@ -7736,11 +7736,11 @@ Rēs linguālibus::
 [id='8065_925246']
 ==== [`8065_925246`] /limnic eruption/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q925246[Q925246]
 
-Rēs linguālibus::
+Rēs linguālibus (26)::
   Linguae multiplīs (Scrīptum incognitō):::
     /limnic eruption || very rare type of natural disaster in which dissolved carbon dioxide (CO2) suddenly erupts from deep lake waters, forming a gas cloud capable of suffocating wildlife, livestock, and humans/@eng-Latn
 
@@ -7826,14 +7826,14 @@ Rēs linguālibus::
 [id='8065_2857578']
 ==== [`8065_2857578`] tempestas
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2857578[Q2857578]
 
   /GLIDE hazard code/:::
     ST
 
-Rēs linguālibus::
+Rēs linguālibus (81)::
   Linguae multiplīs (Scrīptum incognitō):::
     /thunderstorm || a storm characterized by the presence of lightning, usually accompanied by strong winds and often produce heavy rain and sometimes snow, sleet, or hail, but some produce little precipitation or no precipitation at all/@eng-Latn
 
@@ -8084,7 +8084,7 @@ Rēs linguālibus::
 [id='8065_7692360']
 ==== [`8065_7692360`] /volcanic eruption/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7692360[Q7692360]
 
@@ -8094,7 +8094,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept10155[concept10155]
 
-Rēs linguālibus::
+Rēs linguālibus (63)::
   Linguae multiplīs (Scrīptum incognitō):::
     /volcanic eruption || violent explosion of energy released by volcanoes/@eng-Latn
 
@@ -8293,7 +8293,7 @@ Rēs linguālibus::
 [id='44512']
 === [`44512`] Epidemia
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q44512[Q44512]
 
@@ -8303,7 +8303,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept8151[concept8151]
 
-Rēs linguālibus::
+Rēs linguālibus (109)::
   Linguae multiplīs (Scrīptum incognitō):::
     /epidemic || rapid spread of infectious disease to a large number of people in a given population within a short period of time/@eng-Latn
 
@@ -8638,14 +8638,14 @@ Rēs linguālibus::
 [id='44512_12184']
 ==== [`44512_12184`] Pandemia
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q12184[Q12184]
 
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept17114[concept17114]
 
-Rēs linguālibus::
+Rēs linguālibus (134)::
   Linguae multiplīs (Scrīptum incognitō):::
     /pandemic || epidemic of infectious disease that has spread across a large region with global health impact/@eng-Latn
 
@@ -9057,7 +9057,7 @@ Rēs linguālibus::
 [id='2920615']
 === [`2920615`] /anthropogenic hazards/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2920615[Q2920615]
 
@@ -9067,7 +9067,7 @@ Rēs interlinguālibus::
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept4770[concept4770]
 
-Rēs linguālibus::
+Rēs linguālibus (15)::
   Linguae multiplīs (Scrīptum incognitō):::
     /anthropogenic hazards || any hazard caused by human action or inaction, in contrast with a natural hazard or disaster/
 
@@ -9120,11 +9120,11 @@ Rēs linguālibus::
 [id='2920615_854975']
 ==== [`2920615_854975`] /bioterrorism/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q854975[Q854975]
 
-Rēs linguālibus::
+Rēs linguālibus (38)::
   Linguae multiplīs (Scrīptum incognitō):::
     /bioterrorism/@eng-Latn
 
@@ -9246,14 +9246,14 @@ Rēs linguālibus::
 [id='2920615_220187']
 ==== [`2920615_220187`] /oil spill/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q220187[Q220187]
 
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept6452[concept6452]
 
-Rēs linguālibus::
+Rēs linguālibus (47)::
   Linguae multiplīs (Scrīptum incognitō):::
     /oil spill || release of a liquid petroleum hydrocarbon into the environment, especially marine areas, due to human activity/
 
@@ -9402,14 +9402,14 @@ Rēs linguālibus::
 [id='2920615_1620824']
 ==== [`2920615_1620824`] /nuclear accident/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1620824[Q1620824]
 
   UNESCO thēsaurus:::
     http://vocabularies.unesco.org/thesaurus/concept10637[concept10637]
 
-Rēs linguālibus::
+Rēs linguālibus (38)::
   Linguae multiplīs (Scrīptum incognitō):::
     /nuclear accident/@eng-Latn
 
@@ -9542,7 +9542,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -9551,7 +9551,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -9559,7 +9559,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -9567,7 +9567,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 

@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-24T04:39:40
+2022-04-24T10:50:14
 
 |
 /SPDX license ID/@eng-Latn
@@ -76,7 +76,7 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     _**Cōdex [1603:1:1]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:1:1] //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
@@ -110,7 +110,7 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     /The global indexof every entry point of group of dictionaries./@eng-Latn
 
@@ -196,26 +196,44 @@ Lingua Anglica (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 11
 Rēs::
-  /publication date/@eng-Latn:::
+  Numerordĭnātĭo:::
     Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
-
       ix_hxlix;;
-        ix_wikip577
+        ix_n1603
 
       ix_hxlvoc;;
-        v_wiki_p_577
+        v_n1603
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
+        +++<span lang="la">Numerordĭnātĭo</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
+        +++<span lang="pt">uma estratégia genérica de organizar os números de maneira explícita como taxonomia</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
 
   /Wiki QID/:::
     Rēs interlinguālibus::::
@@ -237,6 +255,42 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+
+  //Cōdex annotātiōnibus internālibus//:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603ia
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Anotações internas de um códice. Lista de itens. Usado em 1603_1_1 como tags não documentadas para gerenciar como os dicionários são exportados</span>+++
+
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
 
   /cōdex pūblicandī/:::
     Rēs interlinguālibus::::
@@ -280,42 +334,6 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
 
-  numerus editionis:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
-
-      ix_hxlix;;
-        ix_wikip393
-
-      ix_hxlvoc;;
-        v_wiki_p_393
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
-
-  //Cōdex annotātiōnibus internālibus//:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_n1603ia
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Anotações internas de um códice. Lista de itens. Usado em 1603_1_1 como tags não documentadas para gerenciar como os dicionários são exportados</span>+++
-
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -343,27 +361,6 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
-  spōnsor:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
-
-      ix_hxlix;;
-        ix_wikip859
-
-      ix_hxlvoc;;
-        v_wiki_p_859
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
-
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -385,30 +382,33 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
 
-  Numerordĭnātĭo:::
+  spōnsor:::
     Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P859[P859]
+
       ix_hxlix;;
-        ix_n1603
+        ix_wikip859
 
       ix_hxlvoc;;
-        v_n1603
+        v_wiki_p_859
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">Numerordĭnātĭo</span>+++
+        +++<span lang="la">spōnsor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma estratégia genérica de organizar os números de maneira explícita como taxonomia</span>+++
+        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
 
 
 <<<
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -472,11 +472,11 @@ Dictiōnāria initiīs
 [id='1']
 === [`1`] //Meta dictiōnārium//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Meta dictiōnārium//
 
@@ -487,14 +487,14 @@ Rēs linguālibus::
 [id='1_1']
 ==== [`1_1`] //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:1:1
 
   //Cōdex annotātiōnibus internālibus//:::
     internale-100|publicum-10
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Numeroclatura Generālium ad MM ex Numerordĭnātĭo//
 
@@ -503,54 +503,54 @@ Rēs linguālibus::
 
 
 [id='1_2']
-==== [`1_2`] /Dictiōnāria de symbolī numerīs/
+==== [`1_2`] /Dictiōnāria dē symbolī numerīs/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:2
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
-    /Dictiōnāria de symbolī numerīs/
+    /Dictiōnāria dē symbolī numerīs/
 
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Dictiōnāria de symbolī numerīs/</span>+++
+    +++<span lang="la">/Dictiōnāria dē symbolī numerīs/</span>+++
 
 
 
 
 
 [id='1_3']
-==== [`1_3`] /Dictiōnāria de symbolī ab systemata scrīpta/
+==== [`1_3`] /Dictiōnāria dē symbolī ab systemata scrīpta/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:3
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
-    /Dictiōnāria de symbolī ab systemata scrīpta/
+    /Dictiōnāria dē symbolī ab systemata scrīpta/
 
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Dictiōnāria de symbolī ab systemata scrīpta/</span>+++
+    +++<span lang="la">/Dictiōnāria dē symbolī ab systemata scrīpta/</span>+++
 
 
 
 
 
 [id='1_4']
-==== [`1_4`] /Dictiōnāria de systemata scrīpta/
+==== [`1_4`] /Dictiōnāria dē systemata scrīpta/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:4
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
-    /Dictiōnāria de systemata scrīpta/
+    /Dictiōnāria dē systemata scrīpta/
 
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Dictiōnāria de systemata scrīpta/</span>+++
+    +++<span lang="la">/Dictiōnāria dē systemata scrīpta/</span>+++
 
 
 
@@ -559,11 +559,11 @@ Rēs linguālibus::
 [id='1_5']
 ==== [`1_5`] Concept of language
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:5
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     Concept of language
 
@@ -572,18 +572,18 @@ Rēs linguālibus::
 
 
 [id='1_6']
-==== [`1_6`] /Dictiōnāria de terminī typīs/
+==== [`1_6`] /Dictiōnāria dē terminī typīs/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:1:6
 
   //Cōdex annotātiōnibus internālibus//:::
     internale-20|publicum-10
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
-    /Dictiōnāria de terminī typīs/
+    /Dictiōnāria dē terminī typīs/
 
 
 
@@ -592,14 +592,14 @@ Rēs linguālibus::
 [id='1_7']
 ==== [`1_7`] //Dictiōnāria basibus dē rēs interlinguīs//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:1:7
 
   //Cōdex annotātiōnibus internālibus//:::
     internale-90|publicum-10
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria basibus dē rēs interlinguīs//
 
@@ -610,11 +610,11 @@ Rēs linguālibus::
 [id='1_10']
 ==== [`1_10`] //(Reserved namespace to document numeric suffixes)//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:10
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //(Reserved namespace to document numeric suffixes)//
 
@@ -625,11 +625,11 @@ Rēs linguālibus::
 [id='1_13']
 ==== [`1_13`] 
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:13
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [13] 1603:13 HXL Normae
 
@@ -640,11 +640,11 @@ Rēs linguālibus::
 [id='1_13_22']
 ===== [`1_13_22`] //Pre-build list of all +v_* attributes on 1603//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:13:22
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Pre-build list of all +v_* attributes on 1603//
 
@@ -658,11 +658,11 @@ Rēs linguālibus::
 [id='1_13_24']
 ===== [`1_13_24`] //Pre-build list of all +ix_* attributes on 1603//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:13:24
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Pre-build list of all +ix_* attributes on 1603//
 
@@ -676,11 +676,11 @@ Rēs linguālibus::
 [id='1_20']
 ==== [`1_20`] Concept of number, prebuild tables
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:1:20
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     Concept of number, prebuild tables
 
@@ -691,14 +691,14 @@ Rēs linguālibus::
 [id='1_51']
 ==== [`1_51`] //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:1:51
 
   //Cōdex annotātiōnibus internālibus//:::
     internale-90|publicum-10
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria Linguārum//
 
@@ -712,14 +712,14 @@ Rēs linguālibus::
 [id='1_99']
 ==== [`1_99`] Nōtitiae temporāriōrum circā librārium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:1:99
 
   //Cōdex annotātiōnibus internālibus//:::
     internale-20|publicum-1
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     Nōtitiae temporāriōrum circā librārium
 
@@ -730,14 +730,14 @@ Rēs linguālibus::
 [id='1_101']
 ==== [`1_101`] //Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:1:101
 
   //Cōdex annotātiōnibus internālibus//:::
     experimentum-50|internale-20
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria Archīōrum ad MMXXII ex Numerordĭnātĭo//
 
@@ -751,14 +751,14 @@ Rēs linguālibus::
 [id='1_2020']
 ==== [`1_2020`] //Guia rápido de lexicografia para colaboradores//@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:1:2020
 
   //Cōdex annotātiōnibus internālibus//:::
     internale-100|publicum-10
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Guia rápido de lexicografia para colaboradores//@por-Latn
 
@@ -769,14 +769,14 @@ Rēs linguālibus::
 [id='1_8000']
 ==== [`1_8000`] //Dicionários de lista de potenciais futuros dicionários//@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:1:8000
 
   //Cōdex annotātiōnibus internālibus//:::
     internale-50|publicum-30
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dicionários de lista de potenciais futuros dicionários//@por-Latn
 
@@ -789,14 +789,14 @@ Rēs linguālibus::
 [id='3']
 === [`3`] Commūnitās scientiae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:3
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1093434[Q1093434]
 
-Rēs linguālibus::
+Rēs linguālibus (5)::
   Linguae multiplīs (Scrīptum incognitō):::
     Commūnitās scientiae
 
@@ -819,14 +819,14 @@ Rēs linguālibus::
 [id='3_12']
 ==== [`3_12`] Vicidata
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:3:12
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2013[Q2013]
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     Vicidata
 
@@ -843,14 +843,14 @@ Rēs linguālibus::
 [id='3_12_6']
 ===== [`3_12_6`] //Speciālis collēctiōnī de Vicidata Proprietātī//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:3:12:6
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q18616576[Q18616576]
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Speciālis collēctiōnī de Vicidata Proprietātī//
 
@@ -867,14 +867,14 @@ Rēs linguālibus::
 [id='3_12_16']
 ===== [`3_12_16`] Vicidata Proprietātī
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:3:12:16
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q18616576[Q18616576]
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     Vicidata Proprietātī
 
@@ -891,14 +891,14 @@ Rēs linguālibus::
 [id='3_12_17']
 ===== [`3_12_17`] Vicidata rēs identitāte
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:3:12:17
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q43649390[Q43649390]
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     Vicidata rēs identitāte
 
@@ -915,11 +915,11 @@ Rēs linguālibus::
 [id='3_1603']
 ==== [`3_1603`] /Communitary translations via Wikidata/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:3:1603
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Communitary translations via Wikidata/
 
@@ -930,7 +930,7 @@ Rēs linguālibus::
 [id='3_1603_45']
 ===== [`3_1603_45`] 
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:3:1603:45
 
@@ -941,7 +941,7 @@ Rēs interlinguālibus::
 [id='3_1603_45_1']
 ====== [`3_1603_45_1`] 
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:3:1603:45:1
 
@@ -954,11 +954,11 @@ Rēs interlinguālibus::
 [id='13']
 === [`13`] HXL Normae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:13
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     HXL Normae
 
@@ -980,11 +980,11 @@ Rēs linguālibus::
 [id='14']
 === [`14`] //Librārium mīlitārī//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:14
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Librārium mīlitārī//
 
@@ -998,11 +998,11 @@ Rēs linguālibus::
 [id='14_997']
 ==== [`14_997`] //Dictiōnāria dē relevāminibus per bellīs//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:14:997
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria dē relevāminibus per bellīs//
 
@@ -1013,11 +1013,11 @@ Rēs linguālibus::
 [id='13_1603']
 ==== [`13_1603`] /HXL replacement maps to other namespaces/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:13:1603
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /HXL replacement maps to other namespaces/@eng-Latn
 
@@ -1028,11 +1028,11 @@ Rēs linguālibus::
 [id='13_1603_49']
 ===== [`13_1603_49`] /HXL replacement maps to UN m49 from other namespaces/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:13:1603:49
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /HXL replacement maps to UN m49 from other namespaces/@eng-Latn
 
@@ -1045,11 +1045,11 @@ Rēs linguālibus::
 [id='23']
 === [`23`] //Librārium lēgī//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:23
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Librārium lēgī//
 
@@ -1060,11 +1060,11 @@ Rēs linguālibus::
 [id='23_21']
 ==== [`23_21`] //Dictiōnāria dē Iurum humanorum defensor//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:23:21
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria dē Iurum humanorum defensor//
 
@@ -1075,11 +1075,11 @@ Rēs linguālibus::
 [id='23_36']
 ==== [`23_36`] //Dictiōnāria dē intraimperiīs lēgisperītīs per lēgēs certiōrātū//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:23:36
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria dē intraimperiīs lēgisperītīs per lēgēs certiōrātū//
 
@@ -1092,14 +1092,14 @@ Rēs linguālibus::
 [id='25']
 === [`25`] Mīlitāris scientiae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:25
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q11190[Q11190]
 
-Rēs linguālibus::
+Rēs linguālibus (7)::
   Linguae multiplīs (Scrīptum incognitō):::
     Medicina
 
@@ -1126,21 +1126,21 @@ Rēs linguālibus::
 
 
 [id='25_1']
-==== [`25_1`] /dictiōnāria de partes corporis humani/
+==== [`25_1`] /dictiōnāria dē partes corporis humani/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:25:1
 
   //Cōdex annotātiōnibus internālibus//:::
-    publicum-30
+    publicum-30|victionarium_q-50
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
-    //dictiōnāria de partes corporis humani//
+    //dictiōnāria dē partes corporis humani//
 
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/dictiōnāria de partes corporis humani/</span>+++
+    +++<span lang="la">/dictiōnāria dē partes corporis humani/</span>+++
 
 
 
@@ -1151,14 +1151,14 @@ Rēs linguālibus::
 [id='32']
 === [`32`] /Translitteratio librāriīs/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:32
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q134550[Q134550]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Translitteratio librāriīs/
 
@@ -1174,14 +1174,14 @@ Rēs linguālibus::
 [id='42']
 === [`42`] Forēnsis scientiae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:42
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q192386[Q192386]
 
-Rēs linguālibus::
+Rēs linguālibus (7)::
   Linguae multiplīs (Scrīptum incognitō):::
     Mīlitāris scientiae
 
@@ -1212,14 +1212,14 @@ Rēs linguālibus::
 [id='44']
 === [`44`] Forēnsis scientiae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:44
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q495304[Q495304]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     Forēnsis scientiae
 
@@ -1231,18 +1231,18 @@ Rēs linguālibus::
 
 
 [id='44_1']
-==== [`44_1`] //dictiōnāria de post mortis condici//
+==== [`44_1`] //dictiōnāria dē post mortis condici//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:44:1
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q99312209[Q99312209]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
-    //dictiōnāria de post mortis condici//
+    //dictiōnāria dē post mortis condici//
 
 
 
@@ -1251,14 +1251,17 @@ Rēs linguālibus::
 [id='44_86']
 ==== [`44_86`] //Dictiōnāria basibus dē tortūrīs//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   Numerordĭnātĭo:::
     1603:44:86
+
+  //Cōdex annotātiōnibus internālibus//:::
+    experimentum-50|publicum-30|victionarium_q-50
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q132781[Q132781]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria basibus dē tortūrīs//
 
@@ -1269,14 +1272,14 @@ Rēs linguālibus::
 [id='44_101']
 ==== [`44_101`] /Dictiōnāria basibus dē sceleribus contrā persōnam/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:44:101
 
   //Cōdex annotātiōnibus internālibus//:::
-    publicum-30|victionarium_q-50
+    experimentum-50|publicum-30|victionarium_q-50
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Dictiōnāria basibus dē sceleribus contrā persōnam/
 
@@ -1287,14 +1290,14 @@ Rēs linguālibus::
 [id='44_111']
 ==== [`44_111`] /Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:44:111
 
   //Cōdex annotātiōnibus internālibus//:::
-    publicum-30|victionarium_q-50
+    experimentum-50|publicum-30|victionarium_q-50
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Dictiōnāria basibus dē sceleribus contrā ūnam commūnitātem ab rēctōribus/
 
@@ -1303,15 +1306,15 @@ Rēs linguālibus::
 
 
 [id='44_142']
-==== [`44_142`] //dictiōnāria de vulnera ab arma ignifera//
+==== [`44_142`] //dictiōnāria dē vulnera ab arma ignifera//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:44:142
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
-    //dictiōnāria de vulnera ab arma ignifera//
+    //dictiōnāria dē vulnera ab arma ignifera//
 
   Linguae multiplīs (Scrīptum incognitō):::
     [142] 魏伯陽 
@@ -1325,11 +1328,11 @@ Rēs linguālibus::
 [id='45']
 === [`45`] (Interimperia) Locus cōdicī
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     Normās interimperia
 
@@ -1344,18 +1347,18 @@ Rēs linguālibus::
 
 
 [id='45_1']
-==== [`45_1`] //dictiōnāria de hūmānitātēs interimperia//
+==== [`45_1`] //dictiōnāria dē hūmānitātēs interimperia//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:1
 
   //Cōdex annotātiōnibus internālibus//:::
     emphasis-50|publicum-70|victionarium_q-50
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
-    //dictiōnāria de hūmānitātēs interimperia//
+    //dictiōnāria dē hūmānitātēs interimperia//
 
 
 
@@ -1364,14 +1367,14 @@ Rēs linguālibus::
 [id='45_16']
 ==== [`45_16`] (Interimperia) Locus cōdicī
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7200235[Q7200235]
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     (Interimperia) Locus cōdicī
 
@@ -1388,7 +1391,7 @@ Rēs linguālibus::
 [id='45_16_?']
 ===== [`45_16_?`] 
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?
 
@@ -1402,14 +1405,14 @@ Rēs interlinguālibus::
 [id='45_16_?_0']
 ====== [`45_16_?_0`] //imperium territōrium//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?:0
 
   ix_regex:::
     \1=[1603:45:49]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //imperium territōrium//
 
@@ -1423,14 +1426,14 @@ Rēs linguālibus::
 [id='45_16_?_1']
 ====== [`45_16_?_1`] //Infraimperium territōria ōrdō 1//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?:1
 
   ix_regex:::
     \1=[1603:45:49]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Infraimperium territōria ōrdō 1//
 
@@ -1444,14 +1447,14 @@ Rēs linguālibus::
 [id='45_16_?_2']
 ====== [`45_16_?_2`] //Infraimperium territōria ōrdō 2//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?:2
 
   ix_regex:::
     \1=[1603:45:49]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Infraimperium territōria ōrdō 2//
 
@@ -1465,14 +1468,14 @@ Rēs linguālibus::
 [id='45_16_?_3']
 ====== [`45_16_?_3`] //Infraimperium territōria ōrdō 3//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?:3
 
   ix_regex:::
     \1=[1603:45:49]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Infraimperium territōria ōrdō 3//
 
@@ -1486,14 +1489,14 @@ Rēs linguālibus::
 [id='45_16_?_4']
 ====== [`45_16_?_4`] //Infraimperium territōria ōrdō 4//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?:4
 
   ix_regex:::
     \1=[1603:45:49]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Infraimperium territōria ōrdō 4//
 
@@ -1507,14 +1510,14 @@ Rēs linguālibus::
 [id='45_16_?_5']
 ====== [`45_16_?_5`] //Infraimperium territōria ōrdō 5//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?:5
 
   ix_regex:::
     \1=[1603:45:49]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Infraimperium territōria ōrdō 5//
 
@@ -1528,14 +1531,14 @@ Rēs linguālibus::
 [id='45_16_?_6']
 ====== [`45_16_?_6`] //Infraimperium territōria ōrdō 6//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?:6
 
   ix_regex:::
     \1=[1603:45:49]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Infraimperium territōria ōrdō 6//
 
@@ -1549,14 +1552,14 @@ Rēs linguālibus::
 [id='45_16_?_21_?']
 ======= [`45_16_?_21_?`] (Interimperia) Locus cōdicī; exāctō (A1...A6)
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:16:?:21:?
 
   ix_regex:::
     \1=[1603:45:49] \2=[1603:45:16:916] 
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     (Interimperia) Locus cōdicī; exāctō (A1...A6)
 
@@ -1573,11 +1576,11 @@ Rēs linguālibus::
 [id='45_16_900']
 ===== [`45_16_900`] [private use] Entire world public P-Codes Adm 0 (>110)
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:900
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [private use] Entire world public P-Codes Adm 0 (>110)
 
@@ -1588,11 +1591,11 @@ Rēs linguālibus::
 [id='45_16_901']
 ===== [`45_16_901`] [private use] Entire world public P-Codes A.1 (>2500)
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:901
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [private use] Entire world public P-Codes A.1 (>2500)
 
@@ -1603,11 +1606,11 @@ Rēs linguālibus::
 [id='45_16_902']
 ===== [`45_16_902`] [private use] Entire world public P-Codes A.2 (>33700)
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:902
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [private use] Entire world public P-Codes A.2 (>33700)
 
@@ -1618,11 +1621,11 @@ Rēs linguālibus::
 [id='45_16_903']
 ===== [`45_16_903`] [private use] Entire world public P-Codes A.3 (>130500)
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:903
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [private use] Entire world public P-Codes A.3 (>130500)
 
@@ -1633,11 +1636,11 @@ Rēs linguālibus::
 [id='45_16_904']
 ===== [`45_16_904`] [private use] Entire world public P-Codes A.4 (>265000)
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:904
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [private use] Entire world public P-Codes A.4 (>265000)
 
@@ -1648,11 +1651,11 @@ Rēs linguālibus::
 [id='45_16_905']
 ===== [`45_16_905`] [private use] Entire world public P-Codes A.5
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:905
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [private use] Entire world public P-Codes A.5
 
@@ -1663,11 +1666,11 @@ Rēs linguālibus::
 [id='45_16_906']
 ===== [`45_16_906`] [private use] Entire world public P-Codes A.6
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:906
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [private use] Entire world public P-Codes A.6
 
@@ -1678,11 +1681,11 @@ Rēs linguālibus::
 [id='45_16_916']
 ===== [`45_16_916`] [meta] UN OCHA P-Code *WITHOUT* ISO 3166-1 prefix
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:916
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     [meta] UN OCHA P-Code *WITHOUT* ISO 3166-1 prefix
 
@@ -1693,11 +1696,11 @@ Rēs linguālibus::
 [id='45_16_921']
 ===== [`45_16_921`] [private use] Entire world public P-Codes A.0 + A1, +A.2 + A.3 + A.4 + A5 + A.6 (> 430000)
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:16:921
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     [private use] Entire world public P-Codes A.0 + A1, +A.2 + A.3 + A.4 + A5 + A.6 (> 430000)
 
@@ -1711,14 +1714,14 @@ Rēs linguālibus::
 [id='45_19']
 ==== [`45_19`] Dictiōnāria dē locī generibus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:19
 
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     Dictiōnāria dē locī generibus
 
@@ -1727,18 +1730,18 @@ Rēs linguālibus::
 
 
 [id='45_31']
-==== [`45_31`] Dictiōnāria de calamitātibus
+==== [`45_31`] Dictiōnāria dē calamitātibus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:45:31
 
   //Cōdex annotātiōnibus internālibus//:::
     emphasis-50|publicum-70|victionarium_q-50
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
-    Dictiōnāria de calamitātibus
+    Dictiōnāria dē calamitātibus
 
 
 
@@ -1747,11 +1750,11 @@ Rēs linguālibus::
 [id='45_49']
 ==== [`45_49`] //Imperia et regiōnēs territōria cōdicēs//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:49
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Imperia et regiōnēs territōria cōdicēs//
 
@@ -1771,11 +1774,11 @@ Rēs linguālibus::
 [id='45_95']
 ==== [`45_95`] //Dictiōnāria dē abūsīs interimperiīs contrā cīvēs ex auxiliātiō//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:95
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria dē abūsīs interimperiīs contrā cīvēs ex auxiliātiō//
 
@@ -1786,11 +1789,11 @@ Rēs linguālibus::
 [id='45_994']
 ==== [`45_994`] //Dictiōnāria dē Development aid//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:45:994
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria dē Development aid//
 
@@ -1803,14 +1806,14 @@ Rēs linguālibus::
 [id='47']
 === [`47`] Normās interindustriās
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:47
 
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1334738[Q1334738]
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     Normās interindustriās
 
@@ -1832,11 +1835,11 @@ Rēs linguālibus::
 [id='63']
 === [`63`] //Librārium hūmānitātī strictae//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:63
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Librārium hūmānitātī strictae//
 
@@ -1847,11 +1850,11 @@ Rēs linguālibus::
 [id='63_1']
 ==== [`63_1`] //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:63:1
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria basibus dē auxiliīs hūmānitātibus strictīs//
 
@@ -1862,14 +1865,14 @@ Rēs linguālibus::
 [id='63_101']
 ==== [`63_101`] //Dictiōnāria basibus dē rēbus vītālibus necessāriīs//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:63:101
 
   //Cōdex annotātiōnibus internālibus//:::
     emphasis-50|publicum-70|victionarium_q-50
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria basibus dē rēbus vītālibus necessāriīs//
 
@@ -1880,15 +1883,15 @@ Rēs linguālibus::
 <<<
 
 [id='64']
-=== [`64`] /Dictiōnāria de aquīs et aliae/
+=== [`64`] /Dictiōnāria dē aquīs et aliae/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:64
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
-    /Dictiōnāria de aquīs et aliae/
+    /Dictiōnāria dē aquīs et aliae/
 
 
 
@@ -1897,14 +1900,14 @@ Rēs linguālibus::
 [id='64_41']
 ==== [`64_41`] //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:64:41
 
   //Cōdex annotātiōnibus internālibus//:::
     publicum-30|victionarium_q-50
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictiōnāria basibus dē perītiae per susurrōs vītālēs//
 
@@ -1913,9 +1916,9 @@ Rēs linguālibus::
 
 
 [id='64_604']
-==== [`64_604`] //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+==== [`64_604`] //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   Numerordĭnātĭo:::
     1603:64:604
 
@@ -1925,9 +1928,9 @@ Rēs interlinguālibus::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2552246[Q2552246]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
-    //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+    //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//
 
 
 
@@ -1938,11 +1941,11 @@ Rēs linguālibus::
 [id='84']
 === [`84`] Dentālis scientiae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:84
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Linguae multiplīs (Scrīptum incognitō):::
     Dentālis scientiae
 
@@ -1957,9 +1960,9 @@ Rēs linguālibus::
 
 
 [id='84_1']
-==== [`84_1`] /Dictiōnāria dentālium/
+==== [`84_1`] /Dictiōnāria dēntālium/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   Numerordĭnātĭo:::
     1603:84:1
 
@@ -1969,12 +1972,12 @@ Rēs interlinguālibus::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q10627714[Q10627714]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
-    /Dictiōnāria dentālium/
+    /Dictiōnāria dēntālium/
 
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">/Dictiōnāria dentālium/</span>+++
+    +++<span lang="la">/Dictiōnāria dēntālium/</span>+++
 
 
 
@@ -1985,11 +1988,11 @@ Rēs linguālibus::
 [id='99']
 === [`99`] /Temporary public numeric namespace/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:99
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Temporary public numeric namespace/@eng-Latn
 
@@ -2000,7 +2003,7 @@ Rēs linguālibus::
 [id='99_876']
 ==== [`99_876`] //Human sexuality (meta dictionaries)//@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   Numerordĭnātĭo:::
     1603:99:876
 
@@ -2010,7 +2013,7 @@ Rēs interlinguālibus::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q154136[Q154136]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Human sexuality (meta dictionaries)//@eng-Latn
 
@@ -2021,14 +2024,14 @@ Rēs linguālibus::
 [id='99_987']
 ==== [`99_987`] //Personal name nomenclature//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   Numerordĭnātĭo:::
     1603:99:987
 
   //Cōdex annotātiōnibus internālibus//:::
     experimentum-90|publicum-10
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Personal name nomenclature//
 
@@ -2041,11 +2044,11 @@ Rēs linguālibus::
 [id='999999']
 === [`999999`] Data temporāriīs
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:999999
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     Data temporāriīs
 
@@ -2061,11 +2064,11 @@ Rēs linguālibus::
 [id='999999999']
 === [`999999999`] /Non data files (used for software which generate data)/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   Numerordĭnātĭo:::
     1603:999999999
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Non data files (used for software which generate data)/
 

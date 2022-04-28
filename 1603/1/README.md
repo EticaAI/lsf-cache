@@ -34,7 +34,7 @@
   - //opus papȳrō//
 -->
 
-## [`1603:1:2`] //dictiōnāria de symbolī numerīs//
+## [`1603:1:2`] //Dictiōnāria dē symbolī numerīs//
 
 ### Latinas viva, etymologia
 
@@ -44,7 +44,7 @@
 - symbolī, m, Vocative, https://en.wiktionary.org/wiki/symbolus#Latin
 - numerī, m, plural, https://en.wiktionary.org/wiki/numerus#Latin
 
-## [`1603:1:3`] //dictiōnāria de symbolī ab systemata scrīpta//
+## [`1603:1:3`] //Dictiōnāria dē symbolī ab systemata scrīpta//
 
 - dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
   - http://micmap.org/dicfro/search/gaffiot/dictionarium
@@ -57,7 +57,7 @@
   - http://ducange.enc.sorbonne.fr/ALPHABETUM
   - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=alphabetum
 
-## [`1603:1:4`] //dictiōnāria de systemata scrīpta//
+## [`1603:1:4`] //Dictiōnāria dē systemata scrīpta//
 
 - dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
   - http://micmap.org/dicfro/search/gaffiot/dictionarium
@@ -70,7 +70,7 @@
 
 ## [`1603:1:5`] /Concept of language/
 
-## [`1603:1:6`] /Dictiōnāria de terminī typīs/
+## [`1603:1:6`] /Dictiōnāria dē terminī typīs/
 - https://github.com/EticaAI/multilingual-lexicography/issues/16
 
 - dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
@@ -103,6 +103,18 @@
 
 - Literal translation of _//Dictiōnāria basibus de rēs interlinguīs//@lat-Latn_: _Basic dictionaries about interlingual things_
 
+## [`1603:1:??`] /Dictiōnāria dē generibus grammaticīs/
+- https://github.com/EticaAI/multilingual-lexicography/issues/15
+
+- dictiōnāria, n, plural, https://en.wiktionary.org/wiki/dictionarium#Latin
+  - http://micmap.org/dicfro/search/gaffiot/dictionarium
+  - http://nlw.renaessancestudier.org/words/start2.htm?../words/2/000422.htm
+- dē (+ ablative) https://en.wiktionary.org/wiki/de#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059%3Aentry%3Dinter1
+- genus grammaticum
+- generibus, n, pl, ablātīvus, https://en.wiktionary.org/wiki/genus#Latin
+- grammaticīs, m, pl, ablātīvus, https://en.wiktionary.org/wiki/grammaticus
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059%3Aentry%3Dgrammaticus1
 
 ## [`1603:1:20`] //
 ## [`1603:1:51`] //Dictiōnāria Linguārum ad MMXXII ex Numerordĭnātĭo//@lat-Latn

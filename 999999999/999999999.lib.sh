@@ -153,22 +153,28 @@ file_update_if_necessary() {
   if [ -f "$objectivum_archivum" ]; then
     # sha256sum "$objectivum_archivum"
     # sha256sum "$fontem_archivum"
-
+    objectivum_archivum_hash=$(sha256sum "$objectivum_archivum" | cut -d ' ' -f 1)
+    fontem_archivum_hash=$(sha256sum "$fontem_archivum" | cut -d ' ' -f 1)
+    # sha256sum "$fontem_archivum"
+    # echo "objectivum_archivum_hash [$objectivum_archivum_hash]"
+    # echo "fontem_archivum_hash [$fontem_archivum_hash]"
     # TODO: this function may bug with some cases when --silent is enabled
 
-    if [ -s "$objectivum_archivum" ] && [ "$(cmp "$fontem_archivum" "$objectivum_archivum")" = "" ]; then
-    # if [ -s "$objectivum_archivum" ] && [ "$(cmp --silent "$fontem_archivum" "$objectivum_archivum")" = "" ]; then
+    # if [ "$fontem_archivum_hash" != "$objectivum_archivum_hash" ]; then
+    if [[ "$fontem_archivum_hash" != "$objectivum_archivum_hash" ]]; then
+      echo "Not equal. Temporary will replace target file [$fontem_archivum_hash] --> [$objectivum_archivum_hash]"
+      # sha256sum "$objectivum_archivum"
+      # sha256sum "$fontem_archivum"
+      rm "$objectivum_archivum"
+      mv "$fontem_archivum" "$objectivum_archivum"
+    else
       echo "INFO: already equal. Temporary will be discarted"
       # echo "      [$fontem_archivum]"
       # echo "      [$objectivum_archivum]"
-      sha256sum "$objectivum_archivum"
-      sha256sum "$fontem_archivum"
+      # sha256sum "$objectivum_archivum"
+      # sha256sum "$fontem_archivum"
 
       rm "$fontem_archivum"
-    else
-      echo "Not equal. Temporary will replace target file"
-      rm "$objectivum_archivum"
-      mv "$fontem_archivum" "$objectivum_archivum"
     fi
   else
     mv "$fontem_archivum" "$objectivum_archivum"
@@ -509,8 +515,10 @@ file_convert_numerordinatio_de_hxltm() {
   # @TODO: implement NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM
   #        instead of hardcode 1|2|3|4|5|6|7|8|9
 
+  # hxlcut --exclude="#meta" \
   hxlcut --exclude="#meta" \
     "$fontem_archivum" |
+    hxlcut --skip-untagged |
     hxlselect --query="#item+conceptum+codicem>0" |
     hxlselect --query='#status+conceptum+codicem~^(1|2|3|4|5|6|7|8|9)$' --reverse |
     hxladd --before --spec="#item+conceptum+numerordinatio=${_prefix}:{{#item+conceptum+codicem}}" |
@@ -1217,6 +1225,12 @@ file_merge_numerordinatio_de_wiki_q() {
   # TODO: implement check if necessary to revalidate
   echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
 
+  # NOTE: explanation on the hotfix +ix_deleteme here:
+  #       https://github.com/EticaAI/multilingual-lexicography/issues/
+  #       29#issuecomment-1111707350
+  #       This may be removed when hxlmerge --replace works with so many
+  #       columns at once.
+
   if [ "$est_non_normale" -eq "1" ]; then
     # We apply 'hxlclean --lower' only on writting systems which this make
     # sence. On this case at least '+is_latn,+is_cyrl'
@@ -1248,9 +1262,26 @@ file_merge_numerordinatio_de_wiki_q() {
     "$fontem_archivum" \
     >"$objectivum_archivum_temporarium"
 
+  # BUG: if we use hxlmerge --replace, instead of not be repeated on final
+  #      dataset, we lost all additional column data. This migth be because
+  #      we're far beyond typical number of columns libhxl-python is tested to
+  #      work
+
+  # set -x
+  # hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
+  #   --replace \
+  #   --tags='#item+rem' \
+  #   --merge="$fontem_q_archivum_temporarium" \
+  #   "$fontem_archivum" \
+  #   >"$objectivum_archivum_temporarium"
+  # set +x
+
+  # | hxlcut --exclude='#item+rem+i_qcc+is_zxxx+ix_wikiq+ix_deleteme'
+
   sed -i '1d' "${objectivum_archivum_temporarium}"
 
-  rm "$fontem_q_archivum_temporarium"
+  # cp "$objectivum_archivum_temporarium" "$objectivum_archivum_temporarium.tmp"
+  # rm "$fontem_q_archivum_temporarium"
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 
@@ -2167,19 +2198,19 @@ opus_temporibus_cdn() {
   #   --in-limitem=2 \
   #   >"$opus_temporibus_temporarium"
 
-  # "${ROOTDIR}/999999999/0/1603_1.py" \
-  #   --ex-opere-temporibus='cdn' \
-  #   --quaero-ix_n1603ia='({publicum}>=1)' \
-  #   --in-ordinem=chaos \
-  #   --in-limitem=2 \
-  #   >"$opus_temporibus_temporarium"
-
   "${ROOTDIR}/999999999/0/1603_1.py" \
     --ex-opere-temporibus='cdn' \
     --quaero-ix_n1603ia='({publicum}>=1)' \
     --in-ordinem=chaos \
-    --in-limitem=25 \
+    --in-limitem=10 \
     >"$opus_temporibus_temporarium"
+
+  # "${ROOTDIR}/999999999/0/1603_1.py" \
+  #   --ex-opere-temporibus='cdn' \
+  #   --quaero-ix_n1603ia='({publicum}>=1)' \
+  #   --in-ordinem=chaos \
+  #   --in-limitem=25 \
+  #   >"$opus_temporibus_temporarium"
 
   while IFS=$'\t' read -r -a line; do
     # echo "${line[0]}"
@@ -2265,7 +2296,7 @@ actiones_completis_locali() {
 
   if [ -z "$(quaero__ix_n1603ia__victionarium_q "$numerordinatio")" ]; then
     # echo "yay"
-    file_translate_csv_de_numerordinatio_q "$numerordinatio" "0" "0" "1"
+    # file_translate_csv_de_numerordinatio_q "$numerordinatio" "0" "0" "1"
     file_merge_numerordinatio_de_wiki_q "$numerordinatio" "0" "0"
     file_convert_tmx_de_numerordinatio11 "$numerordinatio"
     file_convert_tbx_de_numerordinatio11 "$numerordinatio"
@@ -2277,7 +2308,7 @@ actiones_completis_locali() {
   neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
-  # temp_save_status "$numerordinatio" "locale"
+  temp_save_status "$numerordinatio" "locale"
 
 }
 

@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T23:13:02
+2022-04-24T10:57:14
 
 |
 /SPDX license ID/@eng-Latn
@@ -76,7 +76,7 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     _**Cōdex [1603:1:7]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:1:7] //Dictiōnāria basibus dē rēs interlinguīs//**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
@@ -110,7 +110,7 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     This Numerodinatio namespace contains dictionaries related to bare minimum interlingual concepts used to understand Numerodinatio tables.
     +++<br><br>+++
@@ -119,7 +119,7 @@ Rēs interlinguālibus::
 
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 48
+==== Concepta: 50
 
 ==== Rēs linguālibus: 2
 
@@ -144,7 +144,7 @@ https://iso639-3.sil.org/code/lat[lat]
 |
 Lingua Latina (Abecedarium Latinum)
 |
-48
+50
 
 |
 eng-Latn
@@ -162,27 +162,6 @@ Lingua Anglica (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 13
 Rēs::
-  /cōdex pūblicandī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
-
-      ix_hxlix;;
-        ix_wikip123
-
-      ix_hxlvoc;;
-        v_wiki_p_123
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
-
   numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -203,6 +182,90 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
+
+  /Wiki P/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        P[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikip
+
+      ix_hxlvoc;;
+        v_wiki_p
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki P/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Propriedade (ou atributo) descreve o valor de dados de uma instrução e pode ser considerada como uma categoria de dados, por exemplo, "cor" para o valor de dados "azul". Propriedades, quando combinadas com valores, formam uma declaração no Wikidata. Propriedades também são usadas em qualificadores. As propriedades têm suas próprias páginas no Wikidata e são conectadas a itens, resultando em uma estrutura de dados vinculada.</span>+++
+
+  /dictiōnārium ēditōrī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P98[P98]
+
+      ix_hxlix;;
+        ix_wikip98
+
+      ix_hxlvoc;;
+        v_wiki_p_98
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">editor de um trabalho compilado, como um livro ou um periódico (jornal ou revista acadêmica)</span>+++
+
+  /formatter URL/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P1630[P1630]
+
+      ix_hxlix;;
+        ix_wikip1630
+
+      ix_hxlvoc;;
+        v_wiki_p_1630
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/formatter URL/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">web page URL; URI template from which "$1" can be automatically replaced with the effective property value on items. If the site goes offline, set it to deprecated rank. If the formatter url changes, add a new statement with preferred rank.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">URL da página da web; Modelo de URI a partir do qual "$1" pode ser substituído automaticamente pelo valor efetivo da propriedade nos itens. Se o site ficar offline, defina-o para classificação obsoleta. Se o URL do formatador for alterado, adicione uma nova instrução com classificação preferencial.</span>+++
+
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
+
+      ix_hxlix;;
+        ix_wikip123
+
+      ix_hxlvoc;;
+        v_wiki_p_123
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -231,47 +294,20 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
-  /formatter URL/@eng-Latn:::
+  /rēgulam/:::
     Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P1630[P1630]
+      /Wiki QID/;;
+        https://www.wikidata.org/wiki/Q185612[Q185612]
 
       ix_hxlix;;
-        ix_wikip1630
+        ix_regulam
 
       ix_hxlvoc;;
-        v_wiki_p_1630
+        v_regex
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/formatter URL/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">web page URL; URI template from which "$1" can be automatically replaced with the effective property value on items. If the site goes offline, set it to deprecated rank. If the formatter url changes, add a new statement with preferred rank.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">URL da página da web; Modelo de URI a partir do qual "$1" pode ser substituído automaticamente pelo valor efetivo da propriedade nos itens. Se o site ficar offline, defina-o para classificação obsoleta. Se o URL do formatador for alterado, adicione uma nova instrução com classificação preferencial.</span>+++
-
-  /dictiōnārium ēditōrī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P98[P98]
-
-      ix_hxlix;;
-        ix_wikip98
-
-      ix_hxlvoc;;
-        v_wiki_p_98
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">editor de um trabalho compilado, como um livro ou um periódico (jornal ou revista acadêmica)</span>+++
+        +++<span lang="la">/rēgulam/</span>+++
 
   spōnsor:::
     Rēs interlinguālibus::::
@@ -294,48 +330,6 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
 
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
-
-  /Wiki P/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        P[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikip
-
-      ix_hxlvoc;;
-        v_wiki_p
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki P/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Propriedade (ou atributo) descreve o valor de dados de uma instrução e pode ser considerada como uma categoria de dados, por exemplo, "cor" para o valor de dados "azul". Propriedades, quando combinadas com valores, formam uma declaração no Wikidata. Propriedades também são usadas em qualificadores. As propriedades têm suas próprias páginas no Wikidata e são conectadas a itens, resultando em uma estrutura de dados vinculada.</span>+++
-
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -356,6 +350,27 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
 
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -378,27 +393,12 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
 
-  /rēgulam/:::
-    Rēs interlinguālibus::::
-      /Wiki QID/;;
-        https://www.wikidata.org/wiki/Q185612[Q185612]
-
-      ix_hxlix;;
-        ix_regulam
-
-      ix_hxlvoc;;
-        v_regex
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/rēgulam/</span>+++
-
 
 <<<
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -462,7 +462,7 @@ Dictiōnāria initiīs
 [id='1']
 === [`1`] /Generic numeric namespace/
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Generic numeric namespace/</span>+++
 
@@ -473,14 +473,14 @@ Rēs linguālibus::
 [id='1_1']
 ==== [`1_1`] Cōdex factō
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_codexfacto
 
   ix_hxlvoc:::
     v_codex_facto
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">Cōdex factō</span>+++
 
@@ -491,14 +491,14 @@ Rēs linguālibus::
 [id='1_2']
 ==== [`1_2`] Numerordĭnātĭo
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_n1603
 
   ix_hxlvoc:::
     v_n1603
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">Numerordĭnātĭo</span>+++
 
@@ -515,7 +515,7 @@ Rēs linguālibus::
 [id='1_3']
 ==== [`1_3`] Dictiōnāria
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">Dictiōnāria</span>+++
 
@@ -526,14 +526,14 @@ Rēs linguālibus::
 [id='1_4']
 ==== [`1_4`] Dictiōnāria necessitātibus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_dctnrnncssttbs
 
   ix_hxlvoc:::
     v_dictionaria_necessitatibus
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">Dictiōnāria necessitātibus</span>+++
 
@@ -550,7 +550,7 @@ Rēs linguālibus::
 [id='1_91']
 ==== [`1_91`] /Wiki QID/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /rēgulam/:::
     Q[1-9]\d*
 
@@ -560,7 +560,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_q
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Wiki QID/</span>+++
 
@@ -577,7 +577,7 @@ Rēs linguālibus::
 [id='1_92']
 ==== [`1_92`] /Wiki P/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /rēgulam/:::
     P[1-9]\d*
 
@@ -587,7 +587,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Wiki P/</span>+++
 
@@ -604,14 +604,14 @@ Rēs linguālibus::
 [id='1_93']
 ==== [`1_93`] /Wiki LID/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_wikil
 
   ix_hxlvoc:::
     v_wiki_l
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Wiki LID/</span>+++
 
@@ -628,7 +628,7 @@ Rēs linguālibus::
 [id='1_95']
 ==== [`1_95`] /rēgulam/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q185612[Q185612]
 
@@ -638,7 +638,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_regex
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/rēgulam/</span>+++
 
@@ -649,11 +649,11 @@ Rēs linguālibus::
 [id='1_96']
 ==== [`1_96`] //Cōdex annotātiōnibus internālibus//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   ix_hxlix:::
     ix_n1603ia
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
 
@@ -670,11 +670,11 @@ Rēs linguālibus::
 [id='1_97']
 ==== [`1_97`] //opus papȳrō ex 1603//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   ix_hxlix:::
     ix_n1603op
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">//opus papȳrō ex 1603//</span>+++
 
@@ -691,14 +691,14 @@ Rēs linguālibus::
 [id='1_200']
 ==== [`1_200`] /HXL Standard, hashtag, base tab, or attribute (but not readable header)/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_hxl
 
   ix_hxlvoc:::
     v_hxl
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/HXL Standard, hashtag, base tab, or attribute (but not readable header)/</span>+++
 
@@ -715,14 +715,14 @@ Rēs linguālibus::
 [id='1_201']
 ==== [`1_201`] /HXL Standard, full hashtag/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_hxlhstg
 
   ix_hxlvoc:::
     v_hxl_hashtag
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/HXL Standard, full hashtag/</span>+++
 
@@ -739,14 +739,14 @@ Rēs linguālibus::
 [id='1_202']
 ==== [`1_202`] /HXL Standard, human readable header (lat: caput)/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_hxlcpt
 
   ix_hxlvoc:::
     v_hxl_caput
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/HXL Standard, human readable header (lat: caput)/</span>+++
 
@@ -763,14 +763,14 @@ Rēs linguālibus::
 [id='1_203']
 ==== [`1_203`] /HXL Standard, base hashtag only/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_hxlt
 
   ix_hxlvoc:::
     v_hxl_t
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/HXL Standard, base hashtag only/</span>+++
 
@@ -787,14 +787,14 @@ Rēs linguālibus::
 [id='1_204']
 ==== [`1_204`] /HXL Standard, attributes only/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_hxla
 
   ix_hxlvoc:::
     v_hxl_a
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/HXL Standard, attributes only/</span>+++
 
@@ -811,14 +811,14 @@ Rēs linguālibus::
 [id='1_205']
 ==== [`1_205`] /Normalized CSV-like header; full header, only prefix or only suffix/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_csv
 
   ix_hxlvoc:::
     v_csv
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Normalized CSV-like header; full header, only prefix or only suffix/</span>+++
 
@@ -835,14 +835,14 @@ Rēs linguālibus::
 [id='1_206']
 ==== [`1_206`] /Normalized CSV-like identifier; prefix affinity (lat: praefīxum)/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_csvprfxu
 
   ix_hxlvoc:::
     v_csv_praefixum
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Normalized CSV-like identifier; prefix affinity (lat: praefīxum)/</span>+++
 
@@ -859,14 +859,14 @@ Rēs linguālibus::
 [id='1_207']
 ==== [`1_207`] /Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_csvsffxm
 
   ix_hxlvoc:::
     v_csv_suffixum
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Normalized CSV-like identifier; suffix affinity (lat: suffīxum)/</span>+++
 
@@ -883,11 +883,11 @@ Rēs linguālibus::
 [id='1_208']
 ==== [`1_208`] /GLIDE hazard code/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   ix_hxlix:::
     ix_glidehc
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/GLIDE hazard code/</span>+++
 
@@ -900,7 +900,7 @@ Rēs linguālibus::
 [id='2616']
 === [`2616`] /Wikidata P local numeric namespace/
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Wikidata P local numeric namespace/</span>+++
 
@@ -911,7 +911,7 @@ Rēs linguālibus::
 [id='2616_50']
 ==== [`2616_50`] scrīptor
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P50[P50]
 
@@ -921,7 +921,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_50
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">scrīptor</span>+++
 
@@ -938,7 +938,7 @@ Rēs linguālibus::
 [id='2616_98']
 ==== [`2616_98`] /dictiōnārium ēditōrī/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P98[P98]
 
@@ -948,7 +948,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_98
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
 
@@ -965,7 +965,7 @@ Rēs linguālibus::
 [id='2616_110']
 ==== [`2616_110`] pictor
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P110[P110]
 
@@ -975,7 +975,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_110
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">pictor</span>+++
 
@@ -992,7 +992,7 @@ Rēs linguālibus::
 [id='2616_123']
 ==== [`2616_123`] /cōdex pūblicandī/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P123[P123]
 
@@ -1002,7 +1002,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_123
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/cōdex pūblicandī/</span>+++
 
@@ -1019,7 +1019,7 @@ Rēs linguālibus::
 [id='2616_393']
 ==== [`2616_393`] numerus editionis
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P393[P393]
 
@@ -1029,7 +1029,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_393
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">numerus editionis</span>+++
 
@@ -1046,7 +1046,7 @@ Rēs linguālibus::
 [id='2616_487']
 ==== [`2616_487`] //unicodex pūnctō//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (4)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P487[P487]
 
@@ -1059,7 +1059,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_487
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">//unicodex pūnctō//</span>+++
 
@@ -1076,7 +1076,7 @@ Rēs linguālibus::
 [id='2616_577']
 ==== [`2616_577`] /publication date/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P577[P577]
 
@@ -1086,7 +1086,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_577
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/publication date/@eng-Latn</span>+++
 
@@ -1103,7 +1103,7 @@ Rēs linguālibus::
 [id='2616_655']
 ==== [`2616_655`] /translator/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P655[P655]
 
@@ -1113,7 +1113,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_655
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/translator/@eng-Latn</span>+++
 
@@ -1130,7 +1130,7 @@ Rēs linguālibus::
 [id='2616_854']
 ==== [`2616_854`] /reference URL/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P854[P854]
 
@@ -1140,7 +1140,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_854
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/reference URL/@eng-Latn</span>+++
 
@@ -1157,7 +1157,7 @@ Rēs linguālibus::
 [id='2616_856']
 ==== [`2616_856`] /official website/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P856[P856]
 
@@ -1167,7 +1167,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_856
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/official website/@eng-Latn</span>+++
 
@@ -1184,7 +1184,7 @@ Rēs linguālibus::
 [id='2616_859']
 ==== [`2616_859`] spōnsor
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P859[P859]
 
@@ -1194,7 +1194,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_859
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">spōnsor</span>+++
 
@@ -1211,7 +1211,7 @@ Rēs linguālibus::
 [id='2616_1476']
 ==== [`2616_1476`] titulus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P1476[P1476]
 
@@ -1221,7 +1221,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_1476
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">titulus</span>+++
 
@@ -1238,7 +1238,7 @@ Rēs linguālibus::
 [id='2616_1323']
 ==== [`2616_1323`] Terminologia Anatomica 98 ID
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (5)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P1323[P1323]
 
@@ -1254,7 +1254,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_1323
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">Terminologia Anatomica 98 ID</span>+++
 
@@ -1271,7 +1271,7 @@ Rēs linguālibus::
 [id='2616_1324']
 ==== [`2616_1324`] /source code repository/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P1324[P1324]
 
@@ -1281,7 +1281,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_1324
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/source code repository/@eng-Latn</span>+++
 
@@ -1298,7 +1298,7 @@ Rēs linguālibus::
 [id='2616_1630']
 ==== [`2616_1630`] /formatter URL/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P1630[P1630]
 
@@ -1308,7 +1308,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_1630
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/formatter URL/@eng-Latn</span>+++
 
@@ -1325,7 +1325,7 @@ Rēs linguālibus::
 [id='2616_1889']
 ==== [`2616_1889`] /different from/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P1889[P1889]
 
@@ -1335,7 +1335,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_1889
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/different from/@eng-Latn</span>+++
 
@@ -1352,7 +1352,7 @@ Rēs linguālibus::
 [id='2616_2479']
 ==== [`2616_2479`] /SPDX license ID/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (5)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P2479[P2479]
 
@@ -1368,7 +1368,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_2479
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
 
@@ -1385,7 +1385,7 @@ Rēs linguālibus::
 [id='2616_2699']
 ==== [`2616_2699`] URL
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P2699[P2699]
 
@@ -1395,7 +1395,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_2699
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">URL</span>+++
 
@@ -1409,10 +1409,37 @@ Rēs linguālibus::
 
 
 
+[id='2616_3575']
+==== [`2616_3575`] /data size/@eng-Latn
+
+Rēs interlinguālibus (3)::
+  /Wiki P/:::
+    https://www.wikidata.org/wiki/Property:P3575[P3575]
+
+  ix_hxlix:::
+    ix_wikip3575
+
+  ix_hxlvoc:::
+    v_wiki_p_3575
+
+Rēs linguālibus (3)::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">/data size/@eng-Latn</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">size of a software, dataset, neural network, or individual file</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">tamanho de um software, conjunto de dados, rede neural ou arquivo individual</span>+++
+
+
+
+
+
 [id='2616_3916']
 ==== [`2616_3916`] UNESCO thēsaurus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (5)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P3916[P3916]
 
@@ -1428,7 +1455,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_3916
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">UNESCO thēsaurus</span>+++
 
@@ -1445,7 +1472,7 @@ Rēs linguālibus::
 [id='2616_3982']
 ==== [`2616_3982`] /Terminologia Anatomica 98 Latin preferred term/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P3982[P3982]
 
@@ -1455,7 +1482,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_3982
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Terminologia Anatomica 98 Latin preferred term/@eng-Latn</span>+++
 
@@ -1472,7 +1499,7 @@ Rēs linguālibus::
 [id='2616_4354']
 ==== [`2616_4354`] /search formatter URL/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P4354[P4354]
 
@@ -1482,7 +1509,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_4354
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/search formatter URL/@eng-Latn</span>+++
 
@@ -1499,7 +1526,7 @@ Rēs linguālibus::
 [id='2616_4945']
 ==== [`2616_4945`] /download link/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P4945[P4945]
 
@@ -1509,7 +1536,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_4945
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/download link/@eng-Latn</span>+++
 
@@ -1520,10 +1547,37 @@ Rēs linguālibus::
 
 
 
+[id='2616_5185']
+==== [`2616_5185`] genus grammaticum
+
+Rēs interlinguālibus (3)::
+  /Wiki P/:::
+    https://www.wikidata.org/wiki/Property:P5185[P5185]
+
+  ix_hxlix:::
+    ix_wikip5185
+
+  ix_hxlvoc:::
+    v_wiki_p_5185
+
+Rēs linguālibus (3)::
+  Lingua Latina (Abecedarium Latinum):::
+    +++<span lang="la">genus grammaticum</span>+++
+
+  Lingua Anglica (Abecedarium Latinum):::
+    +++<span lang="en">grammatical gender of the word</span>+++
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">Gênero gramatical da palavra</span>+++
+
+
+
+
+
 [id='2616_7470']
 ==== [`2616_7470`] /URN formatter/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P7470[P7470]
 
@@ -1533,7 +1587,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_7470
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/URN formatter/@eng-Latn</span>+++
 
@@ -1550,7 +1604,7 @@ Rēs linguālibus::
 [id='2616_7535']
 ==== [`2616_7535`] /scope and content/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki P/:::
     https://www.wikidata.org/wiki/Property:P7535[P7535]
 
@@ -1560,7 +1614,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_p_7535
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/scope and content/@eng-Latn</span>+++
 
@@ -1579,14 +1633,14 @@ Rēs linguālibus::
 [id='2617']
 === [`2617`] /Wikidata Q local numeric namespace/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_wikiq9289584
 
   ix_hxlvoc:::
     v_wiki_q_9289584
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/Wikidata Q local numeric namespace/@eng-Latn</span>+++
 
@@ -1597,7 +1651,7 @@ Rēs linguālibus::
 [id='2617_355217']
 ==== [`2617_355217`] /to-do list/@eng-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q355217[Q355217]
 
@@ -1607,7 +1661,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_q_355217
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">/to-do list/@eng-Latn</span>+++
 
@@ -1624,7 +1678,7 @@ Rēs linguālibus::
 [id='2617_9289584']
 ==== [`2617_9289584`] caveat lector
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (3)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q9289584[Q9289584]
 
@@ -1634,7 +1688,7 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_wiki_q_9289584
 
-Rēs linguālibus::
+Rēs linguālibus (3)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">caveat lector</span>+++
 
@@ -1662,7 +1716,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -1671,7 +1725,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -1679,7 +1733,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -1687,7 +1741,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 

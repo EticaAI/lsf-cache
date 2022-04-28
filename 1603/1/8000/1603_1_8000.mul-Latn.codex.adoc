@@ -46,7 +46,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-24T04:45:56
+2022-04-24T10:57:01
 
 |
 /SPDX license ID/@eng-Latn
@@ -71,7 +71,7 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     _**Cōdex [1603:1:8000]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:1:8000] //Dicionários de lista de potenciais futuros dicionários//@por-Latn**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
@@ -105,16 +105,16 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     //Dicionários de lista de potenciais futuros dicionários//@por-Latn
 
 
 
 === Rēs dē factō in dictiōnāriīs
-==== Concepta: 17
+==== Concepta: 21
 
-==== Rēs linguālibus: 2
+==== Rēs linguālibus: 3
 
 [%header,cols="15h,25a,~,17"]
 |===
@@ -137,7 +137,19 @@ https://iso639-3.sil.org/code/mul[mul]
 |
 Linguae multiplīs (Scrīptum incognitō)
 |
-17
+21
+
+|
+por-Latn
+|
+https://glottolog.org/resource/languoid/id/port1283[port1283]
++++<br>+++
+https://iso639-3.sil.org/code/por[por]
++++<br>+++ https://www.wikidata.org/wiki/Q5146[Q5146]
+|
+Lingua Lusitana (Abecedarium Latinum)
+|
+2
 
 |
 eng-Latn
@@ -155,27 +167,6 @@ Lingua Anglica (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 8
 Rēs::
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
-
   numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -224,6 +215,69 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
+  /dictiōnārium ēditōrī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P98[P98]
+
+      ix_hxlix;;
+        ix_wikip98
+
+      ix_hxlvoc;;
+        v_wiki_p_98
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">editor de um trabalho compilado, como um livro ou um periódico (jornal ou revista acadêmica)</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+
+  spōnsor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P859[P859]
+
+      ix_hxlix;;
+        ix_wikip859
+
+      ix_hxlvoc;;
+        v_wiki_p_859
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">spōnsor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
+
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -263,27 +317,6 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">uma estratégia genérica de organizar os números de maneira explícita como taxonomia</span>+++
 
-  spōnsor:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
-
-      ix_hxlix;;
-        ix_wikip859
-
-      ix_hxlvoc;;
-        v_wiki_p_859
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
-
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -305,33 +338,12 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
 
-  /dictiōnārium ēditōrī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P98[P98]
-
-      ix_hxlix;;
-        ix_wikip98
-
-      ix_hxlvoc;;
-        v_wiki_p_98
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">editor de um trabalho compilado, como um livro ou um periódico (jornal ou revista acadêmica)</span>+++
-
 
 <<<
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -395,7 +407,7 @@ Dictiōnāria initiīs
 [id='1']
 === [`1`] /Dicionários internos/@por-latn
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Dicionários internos/@por-latn
 
@@ -408,7 +420,7 @@ Rēs linguālibus::
 [id='100']
 === [`100`] /Estatística/@por-Latn
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Estatística/@por-Latn
 
@@ -419,11 +431,11 @@ Rēs linguālibus::
 [id='100_1']
 ==== [`100_1`] /Escala de classificação/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7295720[Q7295720]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Escala de classificação/@por-Latn
 
@@ -434,11 +446,11 @@ Rēs linguālibus::
 [id='100_1_5']
 ===== [`100_1_5`] /Escala Likert/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q617473[Q617473]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Escala Likert/@por-Latn
 
@@ -449,11 +461,11 @@ Rēs linguālibus::
 [id='100_1_10']
 ===== [`100_1_10`] /Escala de um a dez/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7429725[Q7429725]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Escala de um a dez/@por-Latn
 
@@ -466,11 +478,11 @@ Rēs linguālibus::
 [id='200']
 === [`200`] /Grupo étnico/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q41710[Q41710]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Grupo étnico/@por-Latn
 
@@ -481,11 +493,11 @@ Rēs linguālibus::
 [id='200_1']
 ==== [`200_1`] /Lista de grupos étnicos/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q780000[Q780000]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Lista de grupos étnicos/@por-Latn
 
@@ -498,11 +510,11 @@ Rēs linguālibus::
 [id='320']
 === [`320`] /Transliteração/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q134550[Q134550]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Transliteração/@por-Latn
 
@@ -513,11 +525,11 @@ Rēs linguālibus::
 [id='320_1']
 ==== [`320_1`] /Romanização do grego/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q466126[Q466126]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Romanização do grego/@por-Latn
 
@@ -528,13 +540,38 @@ Rēs linguālibus::
 [id='320_2']
 ==== [`320_2`] /Romanização do russo/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6453319[Q6453319]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Romanização do russo/@por-Latn
+
+
+
+
+
+<<<
+
+[id='440']
+=== [`440`] /Ciência forense/@por-Latn
+
+Rēs interlinguālibus (1)::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q495304[Q495304]
+
+Rēs linguālibus (2)::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /Ciência forense/@por-Latn
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    Todos os dicionários criados em [1603:42] são sobre ciência forense. Embora a área seja vasta, o ideal é ter ajuda para decidir o que tem mais seria mais óbvio/fácil de priorizar para codificar eventos relevantes que também ocorrem como evidências para crimes de guerra e crimes contra a humanidade, o que implica em crimes que envolvem principalmente sinais assassinato intencional. Algumas informações:
+    +++<br><br>+++
+    . Sinais de mortes recentes (seja pela quantidade de corpos, ou pela falta de experiência de quem coleta evidências) não têm chance de perícia aprofundada de médico legista, então o que acaba sendo relevante são fotos (provavelmente tiradas por alguém da comunidade local e está em estado de choque).
+    . Perícias meses (normalmente anos depois) da exumação de covas coletivas e feitas por especialistas internacionais são uma ferramenta comum muito que tem validade mais aceita em investigações criminais. No caso de quantidade alta de locais, a exemplo do que aconteceu no genocídio de Ruanda em 1994 (mais de meio milhão de pessoas), a exumação é feita por amostragem: perícia detalhada de um ou poucos locais exemplares (e não perícia rasa de muitos locais).
+    . Típicamente quem comete o crime assume sair impunemente, age com brutalidade, e não faz questão de esconder (ou não sabe) detalhes que seriam óbvios em perícia. Normalmente não há governo funcional na região, e o acesso de investigadores será bloqueado principalmente se não for viável a argumentação de que é uma ação de grupo opositor.
+    . (...)
 
 
 
@@ -545,14 +582,14 @@ Rēs linguālibus::
 [id='876']
 === [`876`] /Sexualidade humana/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q154136[Q154136]
 
   Numerordĭnātĭo:::
     1604_99_876
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Sexualidade humana/@por-Latn
 
@@ -563,11 +600,11 @@ Rēs linguālibus::
 [id='876_2']
 ==== [`876_2`] /Sexo biológico/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q290[Q290]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Sexo biológico/@por-Latn
 
@@ -578,11 +615,11 @@ Rēs linguālibus::
 [id='876_3']
 ==== [`876_3`] /Identidade de gênero/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q48264[Q48264]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Identidade de gênero/@por-Latn
 
@@ -593,11 +630,11 @@ Rēs linguālibus::
 [id='876_4']
 ==== [`876_4`] //Dictionaries of grammatical gender//
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q162378[Q162378]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictionaries of grammatical gender//
 
@@ -608,7 +645,7 @@ Rēs linguālibus::
 [id='876_5']
 ==== [`876_5`] //Dictionaries of third-person pronouns//
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //Dictionaries of third-person pronouns//
 
@@ -621,11 +658,11 @@ Rēs linguālibus::
 [id='3000']
 === [`3000`] /Divisão administrativa/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q56061[Q56061]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Divisão administrativa/@por-Latn
 
@@ -636,13 +673,55 @@ Rēs linguālibus::
 [id='3000_1']
 ==== [`3000_1`] /Lista de Estados soberanos/@por-Latn
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q11750[Q11750]
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Lista de Estados soberanos/@por-Latn
+
+
+
+
+
+<<<
+
+[id='8000']
+=== [`8000`] /Não categorizado/@por-Latn
+
+Rēs linguālibus (1)::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /Não categorizado/@por-Latn
+
+
+
+
+
+[id='8000_1']
+==== [`8000_1`] /Coleção de perguntas sobre percepções de comunidade afetada sobre ajuda humanitária/@por-Latn
+
+Rēs linguālibus (2)::
+  Linguae multiplīs (Scrīptum incognitō):::
+    /Coleção de perguntas sobre percepções de comunidade afetada sobre ajuda humanitária/@por-Latn
+
+  Lingua Lusitana (Abecedarium Latinum):::
+    +++<span lang="pt">Discussão iniciada em https://twitter.com/fititnt/status/1516516585149767683 (comunidade do twitter, requer convite). Exemplos de relatório: https://groundtruthsolutions.org/wp-content/uploads/2021/11/GTS_Haiti_H2H_April_2022_EN.pdf</span>+++
+
+
+
+
+
+[id='8000_2']
+==== [`8000_2`] Dictiōnāria dē generibus grammaticīs
+
+Rēs interlinguālibus (1)::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q162378[Q162378]
+
+Rēs linguālibus (1)::
+  Linguae multiplīs (Scrīptum incognitō):::
+    Dictiōnāria dē generibus grammaticīs
 
 
 

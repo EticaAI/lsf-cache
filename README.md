@@ -1,21 +1,22 @@
 # 1603 Librārium
 - status_quo
   - summa
-    - codex: 20
-    - concepta_non_unicum: 1499
+    - codex: 21
+    - concepta_non_unicum: 1519
 
 
 ----
 **Tabula contentorum**
 - <a href="#1603_1_1">1603_1_1</a> <sup>C.84</sup> <sub>r.I.16</sub>  <sub>r.L.9</sub>
 - <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.16</sub>  <sub>r.L.5</sub>
-- <a href="#1603_1_7">1603_1_7</a> <sup>C.48</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
+- <a href="#1603_1_7">1603_1_7</a> <sup>C.50</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.I.21</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_99">1603_1_99</a> <sup>C.51</sup> <sub>r.I.11</sub>  <sub>r.L.6</sub>
 - <a href="#1603_1_101">1603_1_101</a> <sup>C.19</sup> <sub>r.I.7</sub>  <sub>r.L.4</sub>
 - <a href="#1603_1_2020">1603_1_2020</a> <sup>C.16</sup> <sub>r.I.11</sub>  <sub>r.L.5</sub>
-- <a href="#1603_1_8000">1603_1_8000</a> <sup>C.17</sup> <sub>r.I.13</sub>  <sub>r.L.4</sub>
+- <a href="#1603_1_8000">1603_1_8000</a> <sup>C.21</sup> <sub>r.I.13</sub>  <sub>r.L.5</sub>
 - <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.I.14</sub>  <sub>r.L.149</sub>
+- <a href="#1603_44_86">1603_44_86</a> <sup>C.14</sup> <sub>r.I.13</sub>  <sub>r.L.60</sub>
 - <a href="#1603_44_101">1603_44_101</a> <sup>C.22</sup> <sub>r.I.14</sub>  <sub>r.L.163</sub>
 - <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.16</sub>  <sub>r.L.227</sub>
 - <a href="#1603_45_1">1603_45_1</a> <sup>C.347</sup> <sub>r.I.15</sub>  <sub>r.L.246</sub>
@@ -76,8 +77,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 471785228,
-            "res_interlingualibus": 1275091073,
+            "res_lingualibus": 4231312133,
+            "res_interlingualibus": 1608913597,
             "res_picturae": null
         },
         "summa": {
@@ -87,7 +88,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T04:46:07"
+            "opus": "2022-04-24T11:15:32"
         }
     }
 }
@@ -168,7 +169,7 @@
 <a href="#1603_1_7" id="1603_1_7">§ 1603_1_7</a>
 
 - status_quo
-  - concepta: 48
+  - concepta: 50
   - res_interlingualibus: 13
   - res_lingualibus: 3
 
@@ -210,18 +211,18 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3314397489,
-            "res_lingualibus": 1924471636,
+            "res_interlingualibus": 3349434074,
+            "res_lingualibus": 394714035,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 48,
+            "concepta": 50,
             "res_interlingualibus": 13,
             "res_lingualibus": 3,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:13:13"
+            "opus": "2022-04-24T10:57:25"
         }
     }
 }
@@ -275,7 +276,7 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2360457057,
+            "res_interlingualibus": 2149973863,
             "res_lingualibus": 3335796304,
             "res_picturae": null
         },
@@ -286,7 +287,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:07:42"
+            "opus": "2022-04-24T11:05:25"
         }
     }
 }
@@ -340,8 +341,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 990334683,
-            "res_lingualibus": 2913012419,
+            "res_interlingualibus": 1317240631,
+            "res_lingualibus": 2822687442,
             "res_picturae": null
         },
         "summa": {
@@ -351,7 +352,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T22:56:54"
+            "opus": "2022-04-24T11:04:51"
         }
     }
 }
@@ -467,8 +468,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 123661179,
-            "res_lingualibus": 2864037185,
+            "res_interlingualibus": 3580119737,
+            "res_lingualibus": 2188848757,
             "res_picturae": null
         },
         "summa": {
@@ -478,7 +479,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:12:59"
+            "opus": "2022-04-24T11:05:03"
         }
     }
 }
@@ -492,9 +493,9 @@ The decision making is mostly based on what is very essential to explain other t
 <a href="#1603_1_8000" id="1603_1_8000">§ 1603_1_8000</a>
 
 - status_quo
-  - concepta: 17
+  - concepta: 21
   - res_interlingualibus: 13
-  - res_lingualibus: 4
+  - res_lingualibus: 5
 
 ### 1603_1_8000 Methodī ex dictiōnāriōrum corde
 
@@ -532,18 +533,18 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3184039263,
-            "res_lingualibus": 947517059,
+            "res_interlingualibus": 1276263509,
+            "res_lingualibus": 928269646,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 17,
+            "concepta": 21,
             "res_interlingualibus": 13,
-            "res_lingualibus": 4,
+            "res_lingualibus": 5,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T04:46:07"
+            "opus": "2022-04-24T10:57:12"
         }
     }
 }
@@ -626,6 +627,78 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 
 </details>
 
+## 1603_44_86 //Dictiōnāria basibus dē tortūrīs//
+
+
+<a href="#1603_44_86" id="1603_44_86">§ 1603_44_86</a>
+
+- status_quo
+  - concepta: 14
+  - res_interlingualibus: 13
+  - res_lingualibus: 60
+
+### 1603_44_86 Methodī ex dictiōnāriōrum corde
+
+/Dicionários genéricos sobre métodos de tortura/@por-Latn
+
+
+<details><summary>🔎🗄️1603_44_86🗄️🔍</summary>
+
+<pre>
+{
+    "annotationes_internalibus": {
+        "experimentum": 50,
+        "publicum": 30,
+        "victionarium_q": 50
+    },
+    "cdn": {
+        "annexis": [
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.~1/0.nnx.tm.hxl.csv"
+        ],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.mul-Latn.codex.adoc",
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.mul-Latn.codex.epub"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.no11.tbx",
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.no11.tm.hxl.csv",
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.no1.tm.hxl.csv",
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.no11.tmx",
+            "https://lsf-cdn.etica.ai/1603/44/86/1603_44_86.wikiq.tm.hxl.csv"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "/Dicionários genéricos sobre métodos de tortura/@por-Latn"
+        },
+        "nomen": "//Dictiōnāria basibus dē tortūrīs//"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 3705245090,
+            "res_lingualibus": 2964046392,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 14,
+            "res_interlingualibus": 13,
+            "res_lingualibus": 60,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-04-24T11:07:52"
+        }
+    }
+}
+</pre>
+
+</details>
+
 ## 1603_44_101 /Dictiōnāria basibus dē sceleribus contrā persōnam/
 
 
@@ -646,6 +719,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 <pre>
 {
     "annotationes_internalibus": {
+        "experimentum": 50,
         "publicum": 30,
         "victionarium_q": 50
     },
@@ -676,8 +750,8 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 4131722456,
-            "res_lingualibus": 3993241841,
+            "res_interlingualibus": 794440961,
+            "res_lingualibus": 4265261954,
             "res_picturae": null
         },
         "summa": {
@@ -687,7 +761,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:12:47"
+            "opus": "2022-04-24T11:04:09"
         }
     }
 }
@@ -766,7 +840,7 @@ A more well known term to describe the concepts here could be _Crimes against hu
 
 </details>
 
-## 1603_45_1 //dictiōnāria de hūmānitātēs interimperia//
+## 1603_45_1 //dictiōnāria dē hūmānitātēs interimperia//
 
 
 <a href="#1603_45_1" id="1603_45_1">§ 1603_45_1</a>
@@ -843,13 +917,13 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
         "methodi_ex_dictionariorum_corde": {
             "mul-Zyyy": "The decision making behind the concept dictionaries was lingual terminology translations and interlingual codes for organizations which often are mentioned in humanitarian areas.\n\n**UN System**\n\nThe dictionary contains an incomplete list of concepts of the UN System. \n\n**National Red Cross and Red Crescent Societies**\n\nThe dictionaries contain National Red Cross and Red Crescent concepts. It uses UN m49 as key, which can actually contain concepts that do not have valid national organizations because they are not strictly a country. The concepts which do are a country and have translations may also not be at a given moment be acknowledged by the International Red Cross and Red Crescent.\n\n**Subnational Red Cross and Red Crescent Societies**\n\nThe dictionaries here do not list subnational organizations. However, we do have standardized suggestions on how to decide a code for then: use the UN P-Code without the ISO 3166-1 letter prefix, but organize the subnational under the UN m49. Example:\n\n. National Red Cross of Brazil\n.. Code: 63_76\n... Numerodinatio: 1603:45:1:63:76\n. Subnational; Minas Gerais, Brazil\n.. UN P Code: BR33\n... Code: 63_76_33\n... Numerodinatio: 1603:45:1:63:76:33\n\nSome organizations which are not valid national Red Cross and Red Crescent (because they are not strictly independent counties) can encode them with this strategy.\n\n**Other humanitarian organizations are missing**\nWe're still adding organizations which are neither UN or Red Cross. However, we're likely to keep this focused on humanitarian aid and have development aid. Human rights and humanitarian relief organizations will not be added here"
         },
-        "nomen": "//dictiōnāria de hūmānitātēs interimperia//"
+        "nomen": "//dictiōnāria dē hūmānitātēs interimperia//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3284032452,
-            "res_lingualibus": 3286508650,
+            "res_interlingualibus": 1747192501,
+            "res_lingualibus": 3678698917,
             "res_picturae": null
         },
         "summa": {
@@ -859,7 +933,7 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:24:41"
+            "opus": "2022-04-24T11:02:11"
         }
     }
 }
@@ -1077,8 +1151,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2625866251,
-            "res_lingualibus": 3452996931,
+            "res_interlingualibus": 1861213962,
+            "res_lingualibus": 707414134,
             "res_picturae": null
         },
         "summa": {
@@ -1088,7 +1162,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:33:22"
+            "opus": "2022-04-24T11:15:32"
         }
     }
 }
@@ -1146,8 +1220,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 984725319,
-            "res_lingualibus": 3032582214,
+            "res_interlingualibus": 1091938928,
+            "res_lingualibus": 1022690086,
             "res_picturae": null
         },
         "summa": {
@@ -1157,7 +1231,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:10:39"
+            "opus": "2022-04-24T10:53:28"
         }
     }
 }
@@ -1244,7 +1318,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
 
 </details>
 
-## 1603_84_1 /Dictiōnāria dentālium/
+## 1603_84_1 /Dictiōnāria dēntālium/
 
 
 <a href="#1603_84_1" id="1603_84_1">§ 1603_84_1</a>
@@ -1288,13 +1362,13 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
         "methodi_ex_dictionariorum_corde": {
             "mul-Zyyy": null
         },
-        "nomen": "/Dictiōnāria dentālium/"
+        "nomen": "/Dictiōnāria dēntālium/"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2860921652,
-            "res_lingualibus": 1003817925,
+            "res_interlingualibus": 2581371489,
+            "res_lingualibus": 91773564,
             "res_picturae": null
         },
         "summa": {
@@ -1304,7 +1378,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:18:43"
+            "opus": "2022-04-24T11:06:18"
         }
     }
 }

@@ -711,7 +711,7 @@ def numerordinatio_nomen_v2(
             resultatum_item = helper(rem, item_attr)
             if resultatum_item:
                 if auxilium_linguam_admonitioni is False or \
-                    resultatum_item.lower().endswith('@' + item.lower()):
+                        resultatum_item.lower().endswith('@' + item.lower()):
                     return _brevis(resultatum_item)
                 else:
                     return _brevis('/' + resultatum_item + '/@' + item)
@@ -764,6 +764,7 @@ def _pre_pad(textum: str) -> str:
 
 
 def _pad(textum: str, pad: int) -> str:
+    textum = textum.replace('\\n', '\n')
     lineam = textum.splitlines()
     resultatum = ''
     for rem in lineam:
@@ -2998,7 +2999,8 @@ class Codex:
         # if interlinguae_totale > 1:
         if len(interlinguae) > 0:
 
-            paginae.append("Rēs interlinguālibus::")
+            paginae.append("Rēs interlinguālibus ({0})::".format(
+                len(interlinguae)))
 
             for interlingua in interlinguae:
                 paginae.append("  {0}:::\n{1}".format(
@@ -3069,7 +3071,9 @@ class Codex:
                     # We're assuming if content have line breaks, it is complex
                     # and we will not give hint about language.
                     # This can be reviewed on the future
-                    if item_text_i18n.find("\n") == -1:
+                    if item_text_i18n.find('\\n') == -1 and \
+                        item_text_i18n.find('\n') == -1 and \
+                            item_text_i18n.find("+++") == -1:
 
                         item_text_i18n = '+++<span lang="{1}">{0}</span>+++'.format(
                             item_textum,
@@ -3086,7 +3090,7 @@ class Codex:
 
         if linguae_totale > 0:
 
-            paginae.append("Rēs linguālibus::")
+            paginae.append("Rēs linguālibus ({0})::".format(linguae_totale))
 
             for lingua in linguae:
                 paginae.append("  {0}:::\n{1}".format(
@@ -3188,7 +3192,9 @@ class Codex:
                     # We're assuming if content have line breaks, it is complex
                     # and we will not give hint about language.
                     # This can be reviewed on the future
-                    if item_text_i18n.find("\n") == -1:
+                    if item_text_i18n.find('\\n') == -1 and \
+                        item_text_i18n.find('\n') == -1 and \
+                            item_text_i18n.find("+++") == -1:
 
                         item_text_i18n = '+++<span lang="{1}">{0}</span>+++'.format(
                             item_textum,
@@ -3700,10 +3706,64 @@ class LibrariaStatusQuo:
         else:
             return [yaml.dump(self.ex_codice(), allow_unicode=True)]
 
-    def imprimere_in_markdown(self):
+    def imprimere_in_csvw(self) -> list:
+        # https://github.com/w3c/csvw
+        # https://www.w3.org/TR/tabular-data-primer/
+        raise NotImplementedError('TODO')
+
+    def imprimere_in_datapackage(self) -> list:
+        """imprimere_in_datapackage
+
+        Trivia:
+        - datapackage, ---, https://specs.frictionlessdata.io/
+        - sarcina, f, s, Nom., https://en.wiktionary.org/wiki/sarcina
+
+
+        Returns:
+            list:
+        """
+        paginae = []
+        if self.ex_librario:
+            sarcina = {
+                'name': '1603',
+                'profile': 'data-package-catalog',
+                'resources': []
+            }
+            status = self.status_librario_ex_codex()
+            items_sorted = status['librarium'].items()
+            items_sorted = sorted(items_sorted, key=sort_numerodinatio_clavem)
+
+            for codex, item in items_sorted:
+                _path = numerordinatio_neo_separatum(codex, '/')
+                _nomen = numerordinatio_neo_separatum(codex, '_')
+
+                sarcina['resources'].append({
+                    # 'profile': 'data-package-catalog',  # To create sublevels
+                    'format': 'json',
+                    'name': _nomen,
+                    'path': _path + '/datapackage.json',
+                    'profile': 'tabular-data-package'
+                })
+        else:
+            ex_codice = self.ex_codice()
+            sarcina = {
+                'name': '1603',
+                'profile': 'tabular-data-package',
+                '_TODO': ex_codice
+            }
+
+            # raise NotImplementedError(
+            #     '--status-in-markdown requires --ex-librario')
+
+        paginae.append(json.dumps(
+            sarcina, indent=4, ensure_ascii=False, sort_keys=False))
+
+        return paginae
+
+    def imprimere_in_markdown(self) -> list:
         if not self.ex_librario:
             raise NotImplementedError(
-                '--status-in-markdown requires --ex-librario="locale"')
+                '--status-in-markdown requires --ex-librario')
         paginae = []
         status = self.status_librario_ex_codex()
         paginae.append('# 1603 Librārium')
@@ -5561,6 +5621,17 @@ class CLI_2600:
             # nargs='?'
         )
 
+        status_quo.add_argument(
+            '--status-in-datapackage',
+            help='Return status in frictionless datapackage.json. '
+            'With --ex-librario returns profile data-package-catalog.',
+            # metavar='',
+            dest='status_in_datapackage',
+            # const=True,
+            action='store_true',
+            # nargs='?'
+        )
+
         # - ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
         # - librāriō, n, s, /Ablative/,
         #     https://en.wiktionary.org/wiki/librarium#Latin
@@ -5749,6 +5820,8 @@ class CLI_2600:
 
                 if self.pyargs.status_in_markdown:
                     return self.output(libraria.imprimere_in_markdown())
+                if self.pyargs.status_in_datapackage:
+                    return self.output(libraria.imprimere_in_datapackage())
                 return self.output(libraria.imprimere())
 
             if not self.pyargs.codex_copertae and \
