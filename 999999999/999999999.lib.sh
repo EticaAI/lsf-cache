@@ -503,14 +503,14 @@ file_convert_numerordinatio_de_hxltm() {
   # if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
-  if [ ! -e "$objectivum_archivum" ]; then
-    echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
-  elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
-    # echo "${FUNCNAME[0]} objective exist, sources not changed recently"
-    return 0
-  else
-    echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
-  fi
+  # if [ ! -e "$objectivum_archivum" ]; then
+  #   echo "${FUNCNAME[0]} objective not exist. Reloading... [$objectivum_archivum]"
+  # elif [ -z "$(changed_recently "$fontem_archivum")" ]; then
+  #   echo "${FUNCNAME[0]} objective exist, sources not changed recently"
+  #   return 0
+  # else
+  #   echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
+  # fi
 
   # @TODO: implement NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM
   #        instead of hardcode 1|2|3|4|5|6|7|8|9
@@ -2240,19 +2240,19 @@ opus_temporibus_cdn() {
   #   --in-limitem=2 \
   #   >"$opus_temporibus_temporarium"
 
-  "${ROOTDIR}/999999999/0/1603_1.py" \
-    --ex-opere-temporibus='cdn' \
-    --quaero-ix_n1603ia='({publicum}>=1)' \
-    --in-ordinem=chaos \
-    --in-limitem=10 \
-    >"$opus_temporibus_temporarium"
-
   # "${ROOTDIR}/999999999/0/1603_1.py" \
   #   --ex-opere-temporibus='cdn' \
   #   --quaero-ix_n1603ia='({publicum}>=1)' \
   #   --in-ordinem=chaos \
-  #   --in-limitem=25 \
+  #   --in-limitem=10 \
   #   >"$opus_temporibus_temporarium"
+
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --ex-opere-temporibus='cdn' \
+    --quaero-ix_n1603ia='({publicum}>=1)' \
+    --in-ordinem=chaos \
+    --in-limitem=25 \
+    >"$opus_temporibus_temporarium"
 
   while IFS=$'\t' read -r -a line; do
     # echo "${line[0]}"
@@ -2286,6 +2286,7 @@ temp_save_status() {
 
   status_archivum_codex="${ROOTDIR}/$_path/$_nomen.statum.yml"
   datapackage_dictionaria="${ROOTDIR}/$_path/datapackage.json"
+  datapackage_librario="${ROOTDIR}/datapackage.json"
   status_archivum_librario="${ROOTDIR}/1603/1603.$_ex_librario.statum.yml"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603+$_nomen.statum.yml"
 
@@ -2299,19 +2300,32 @@ temp_save_status() {
 
   # echo "$status_archivum_librario status_archivum_librario "
 
-  set -x
+  # set -x
   "${ROOTDIR}/999999999/0/1603_1.py" \
     --codex-de "$_nomen" --status-quo --ex-librario="$_ex_librario" \
     >"$objectivum_archivum_temporarium"
-  set +x
+  # set +x
+
+  # We use statum.yml, not datapackage to know state of the library. That's why
+  # we can overryde directly
+  # set -x
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --codex-de "$_nomen" --status-quo --ex-librario="$_ex_librario" \
+    --status-in-datapackage \
+    >"$datapackage_librario"
+  # set +x
 
   # NOTE: this operation should be atomic. But for sake of portability,
   #       we're using temporary file without flog or setlock or something.
   #       Trying to use --status-quo --ex-librario
   #       without temporary file will reset old information. That's why
   #       we're using temp file
-  rm "$status_archivum_librario" &&
+  if [ -f "$status_archivum_librario" ]; then
+    rm "$status_archivum_librario" &&
+      mv "$objectivum_archivum_temporarium" "$status_archivum_librario"
+  else
     mv "$objectivum_archivum_temporarium" "$status_archivum_librario"
+  fi
 
 }
 

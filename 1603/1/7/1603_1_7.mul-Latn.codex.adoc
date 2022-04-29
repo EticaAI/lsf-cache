@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-24T10:57:14
+2022-04-29T02:04:15
 
 |
 /SPDX license ID/@eng-Latn
@@ -162,47 +162,89 @@ Lingua Anglica (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 13
 Rēs::
-  numerus editionis:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
-
-      ix_hxlix;;
-        ix_wikip393
-
-      ix_hxlvoc;;
-        v_wiki_p_393
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
-
-  /Wiki P/:::
+  /Wiki QID/:::
     Rēs interlinguālibus::::
       /rēgulam/;;
-        P[1-9]\d*
+        Q[1-9]\d*
 
       ix_hxlix;;
-        ix_wikip
+        ix_wikiq
 
       ix_hxlvoc;;
-        v_wiki_p
+        v_wiki_q
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki P/</span>+++
+        +++<span lang="la">/Wiki QID/</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.</span>+++
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Propriedade (ou atributo) descreve o valor de dados de uma instrução e pode ser considerada como uma categoria de dados, por exemplo, "cor" para o valor de dados "azul". Propriedades, quando combinadas com valores, formam uma declaração no Wikidata. Propriedades também são usadas em qualificadores. As propriedades têm suas próprias páginas no Wikidata e são conectadas a itens, resultando em uma estrutura de dados vinculada.</span>+++
+        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+
+  /rēgulam/:::
+    Rēs interlinguālibus::::
+      /Wiki QID/;;
+        https://www.wikidata.org/wiki/Q185612[Q185612]
+
+      ix_hxlix;;
+        ix_regulam
+
+      ix_hxlvoc;;
+        v_regex
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/rēgulam/</span>+++
+
+  /SPDX license ID/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
+
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
+
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
+
+      ix_hxlix;;
+        ix_wikip2479
+
+      ix_hxlvoc;;
+        v_wiki_p_2479
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">SPDX license identifier</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">identificador de licença SPDX</span>+++
+
+  spōnsor:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P859[P859]
+
+      ix_hxlix;;
+        ix_wikip859
+
+      ix_hxlvoc;;
+        v_wiki_p_859
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">spōnsor</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or individual that sponsors this item</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
 
   /dictiōnārium ēditōrī/:::
     Rēs interlinguālibus::::
@@ -224,6 +266,69 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">editor de um trabalho compilado, como um livro ou um periódico (jornal ou revista acadêmica)</span>+++
+
+  numerus editionis:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P393[P393]
+
+      ix_hxlix;;
+        ix_wikip393
+
+      ix_hxlvoc;;
+        v_wiki_p_393
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">numerus editionis</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
+
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
+
+  /Wiki P/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        P[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikip
+
+      ix_hxlvoc;;
+        v_wiki_p
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki P/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Property (also attribute) describes the data value of a statement and can be thought of as a category of data, for example "color" for the data value "blue". Properties, when paired with values, form a statement in Wikidata. Properties are also used in qualifiers. Properties have their own pages on Wikidata and are connected to items, resulting in a linked data structure.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Propriedade (ou atributo) descreve o valor de dados de uma instrução e pode ser considerada como uma categoria de dados, por exemplo, "cor" para o valor de dados "azul". Propriedades, quando combinadas com valores, formam uma declaração no Wikidata. Propriedades também são usadas em qualificadores. As propriedades têm suas próprias páginas no Wikidata e são conectadas a itens, resultando em uma estrutura de dados vinculada.</span>+++
 
   /formatter URL/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -266,111 +371,6 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
-
-  /SPDX license ID/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P2479[P2479]
-
-      /rēgulam/;;
-        [0-9A-Za-z\.\-]{3,36}[+]?
-
-      /formatter URL/@eng-Latn;;
-        https://spdx.org/licenses/$1.html
-
-      ix_hxlix;;
-        ix_wikip2479
-
-      ix_hxlvoc;;
-        v_wiki_p_2479
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">SPDX license identifier</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">identificador de licença SPDX</span>+++
-
-  /rēgulam/:::
-    Rēs interlinguālibus::::
-      /Wiki QID/;;
-        https://www.wikidata.org/wiki/Q185612[Q185612]
-
-      ix_hxlix;;
-        ix_regulam
-
-      ix_hxlvoc;;
-        v_regex
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/rēgulam/</span>+++
-
-  spōnsor:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P859[P859]
-
-      ix_hxlix;;
-        ix_wikip859
-
-      ix_hxlvoc;;
-        v_wiki_p_859
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">spōnsor</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
-
-  /scope and content/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
-
-      ix_hxlix;;
-        ix_wikip7535
-
-      ix_hxlvoc;;
-        v_wiki_p_7535
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
-
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
 
   /publication date/@eng-Latn:::
     Rēs interlinguālibus::::

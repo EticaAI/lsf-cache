@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T23:00:40
+2022-04-29T02:06:23
 
 |
 /SPDX license ID/@eng-Latn
@@ -71,7 +71,7 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     _**Cōdex [1603:45:19]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:45:19] Dictiōnāria dē locī generibus**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
@@ -105,7 +105,7 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     //Dictionaries of places (generic, superficial, non-specialized)//
     +++<br><br>+++
@@ -118,39 +118,39 @@ Rēs interlinguālibus::
 
 
 === Methodī ex verbīs in dictiōnāriīs
-NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+NOTE: /No momento, não há fluxo de trabalho para usar https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], que na verdade poderia ser usado como armazenamento para nomenclatura mais rigorosa. As implementações atuais usam apenas conceitos do Wikidata, os Q-items./@eng-Latn
 
 ==== Methodī ex verbīs in Vicidata (Q modō)
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
-    The ***[1603:45:19] Dictiōnāria dē locī generibus*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    O ***[1603:45:19] Dictiōnāria dē locī generibus*** usa o Wikidata como uma estratégia para conciliar termos linguísticos para um ou mais de seus conceitos.
     +++<br><br>+++
-    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    Isso significa que este livro e os arquivos de dados de dicionários relacionados requerem atualizações periódicas para , no mínimo, sincronize e compartilhe novamente as traduções atualizadas.
     +++<br><br>+++
-    **How reliable are the community translations (Wikidata source)?**
+    **Qual a confiabilidade das traduções da comunidade (fonte Wikidata)?**
     +++<br><br>+++
-    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    A resposta curta padrão é: **elas são confiáveis**, mesmo nos casos de não haver traduções oficiais para cada assunto.
     +++<br><br>+++
-    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    Como referência, é provável que um tradutor profissional (sem acesso à Wikipedia ou bases de terminologia interna das organizações de controle) forneça resultados de qualidade inferior se você fizer testes cegos. Isso é possível porque não apenas o público médio, mas também terminólogos e tradutores profissionais ajudam a Wikipédia (e implicitamente o Wikidata).
     +++<br><br>+++
-    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    No entanto, mesmo quando o resultado está correto, a versão atual precisa de diferenciação aprimorada, no mínimo, sigla e forma longa . Para grandes organizações, existem recursos como __P1813 nomes curtos__, mas ainda não foram compilados com o conjunto de dados atual.
     +++<br><br>+++
-    **Major reasons for "wrong translations" are not translators fault**
+    **Os principais motivos para "traduções erradas" não são culpa dos tradutores**
     +++<br><br>+++
-    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    DICA: Como regra geral, para conceitos já muito definidos em que você, como humano, pode verificar manualmente um ou mais termos traduzidos como um resultado decente, as outras traduções provavelmente serão aceitáveis. Dicionários com casos extremos (como nomes de territórios em disputa) teriam mais explicações.
     +++<br><br>+++
-    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    A principal razão para "traduções erradas" são conceitos mal definidos usados ​​para explicar aos tradutores da comunidade como gerar traduções de terminologia. Isso tornaria as traduções existentes do Wikidata (usadas não apenas por nós) inconsistentes. A segunda razão é se os dicionários usam traduções para conceitos sem uma correspondência estrita; em outras palavras, se fizermos definições mais estritas do que significa conceito, mas reutilizarmos termos menos exatos da Wikidada. Também há problemas quando idiomas inteiros são codificados com códigos errados. Observe que todos esses casos **traduções erradas NÃO são estritamente culpa do tradutor, mas sim da lexicografia**.
     +++<br><br>+++
-    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    Ainda é possível ter erros estritos no nível de tradução. Mas mesmo que indiquemos aos usuários como corrigir o Wikidata/Wikipedia (com base na melhor explicação contextual de um conceito, como este livro), os requisitos para dizer que o termo anterior foi objetivamente um erro de tradução humana errado (se seguir nossa seriedade na construção de dicionário) são muito elevados.
     +++<br><br>+++
-    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    Do ponto de vista da conciliação de dados, a seguinte metodologia é utilizada para publicar as traduções da terminologia com a tabela de conceitos principais.
     +++<br><br>+++
-    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_45_19.no1.tm.hxl.csv`, may reference Wiki QID.
-    . Every unique QID of  `1603_45_19.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
-    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
-    . The query result, with all QIDs and term labels, is shared as `1603_45_19.wikiq.tm.hxl.csv`
-    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_45_19.wikiq.tm.hxl.csv`
-    . `1603_45_19.no1.tm.hxl.csv` plus `1603_45_19.wikiq.tm.hxl.csv` created `1603_45_19.no11.tm.hxl.csv`
+    . A principal tabela lexicográfica artesanal (explicada no tópico anterior), também fornecida em `1603_45_19.no1.tm.hxl.csv`, pode fazer referência ao Wiki QID.
+    . Cada QID exclusivo de `1603_45_19.no1.tm.hxl.csv`, juntamente com códigos de idioma de [`1603:1:51`] (que requer conhecimento de idiomas humanos), é usado para preparar uma consulta SPARQL otimizada para execução em https://query.wikidata.org/[Wikidata Query Service]. A consulta é tão grande que não é viável para links "Try it" (URL longo), como https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[como o que você encontraria nos Tutoriais Wikidata ], ***mas*** funciona!
+    .. Note que o conhecimento é gratuito, as traduções estão lá, mas as necessidades humanitárias multilíngues podem faltar pessoas para preparar os arquivos e compartilhar do que para uso geral.
+    . O resultado da consulta, com todos os QIDs e rótulos de termos, é compartilhado como `1603_45_19.wikiq.tm.hxl.csv`
+    . As traduções revisadas pela comunidade de cada QID singular são pré-compiladas em um arquivo individual `1603_45_19.wikiq.tm.hxl.csv`
+    . `1603_45_19.no1.tm.hxl.csv` mais `1603_45_19.wikiq.tm.hxl.csv` criado `1603_45_19.no11.tm.hxl.csv`
 
 
 === Rēs dē factō in dictiōnāriīs
@@ -3080,47 +3080,26 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
 
-  numerus editionis:::
+  scrīptor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
+        https://www.wikidata.org/wiki/Property:P50[P50]
 
       ix_hxlix;;
-        ix_wikip393
+        ix_wikip50
 
       ix_hxlvoc;;
-        v_wiki_p_393
+        v_wiki_p_50
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
+        +++<span lang="la">scrīptor</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
-
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+        +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
 
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -3164,26 +3143,47 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
 
-  scrīptor:::
+  numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P50[P50]
+        https://www.wikidata.org/wiki/Property:P393[P393]
 
       ix_hxlix;;
-        ix_wikip50
+        ix_wikip393
 
       ix_hxlvoc;;
-        v_wiki_p_50
+        v_wiki_p_393
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">scrīptor</span>+++
+        +++<span lang="la">numerus editionis</span>+++
 
       Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
 
       Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
+        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
+
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
 
   /cōdex pūblicandī/:::
     Rēs interlinguālibus::::
@@ -3211,7 +3211,7 @@ Rēs::
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -3324,7 +3324,7 @@ Dictiōnāria initiīs
 [id='17']
 === [`17`] /Wikidata QIDs/
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Wikidata QIDs/
 
@@ -3335,11 +3335,11 @@ Rēs linguālibus::
 [id='17_7188']
 ==== [`17_7188`] Rectio
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7188[Q7188]
 
-Rēs linguālibus::
+Rēs linguālibus (154)::
   Linguae multiplīs (Scrīptum incognitō):::
     /government - system or group of people governing an organized community, often a state/
 
@@ -3809,11 +3809,11 @@ Rēs linguālibus::
 [id='17_7188_35054']
 ===== [`17_7188_35054`] /post office - customer service facility of a postal system/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q35054[Q35054]
 
-Rēs linguālibus::
+Rēs linguālibus (59)::
   Linguae multiplīs (Scrīptum incognitō):::
     /post office - customer service facility of a postal system/
 
@@ -3998,11 +3998,11 @@ Rēs linguālibus::
 [id='17_7188_701632']
 ===== [`17_7188_701632`] /municipal council - local government of a municipality/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q701632[Q701632]
 
-Rēs linguālibus::
+Rēs linguālibus (42)::
   Linguae multiplīs (Scrīptum incognitō):::
     /municipal council - local government of a municipality/
 
@@ -4136,11 +4136,11 @@ Rēs linguālibus::
 [id='17_7188_7843791']
 ===== [`17_7188_7843791`] /consulate - small official office of one country in another country/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7843791[Q7843791]
 
-Rēs linguālibus::
+Rēs linguālibus (48)::
   Linguae multiplīs (Scrīptum incognitō):::
     /consulate - small official office of one country in another country/
 
@@ -4292,11 +4292,11 @@ Rēs linguālibus::
 [id='17_7188_25550691']
 ===== [`17_7188_25550691`] Curia municipalis
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q25550691[Q25550691]
 
-Rēs linguālibus::
+Rēs linguālibus (46)::
   Linguae multiplīs (Scrīptum incognitō):::
     /town hall - chief administrative building of a municipality/
 
@@ -4442,11 +4442,11 @@ Rēs linguālibus::
 [id='17_7590']
 ==== [`17_7590`] Vectura
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7590[Q7590]
 
-Rēs linguālibus::
+Rēs linguālibus (146)::
   Linguae multiplīs (Scrīptum incognitō):::
     /transport - human-directed movement of things or people between locations/
 
@@ -4892,11 +4892,11 @@ Rēs linguālibus::
 [id='17_7590_5503']
 ===== [`17_7590_5503`] Ferrivia subterranea
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q5503[Q5503]
 
-Rēs linguālibus::
+Rēs linguālibus (109)::
   Linguae multiplīs (Scrīptum incognitō):::
     /rapid transit - high-capacity public transport generally used in urban areas/
 
@@ -5231,11 +5231,11 @@ Rēs linguālibus::
 [id='17_7590_55488']
 ===== [`17_7590_55488`] statio ferriviaria
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q55488[Q55488]
 
-Rēs linguālibus::
+Rēs linguālibus (114)::
   Linguae multiplīs (Scrīptum incognitō):::
     /railway station - railway facility where trains regularly stop to load or unload passengers and/or freight/
 
@@ -5585,11 +5585,11 @@ Rēs linguālibus::
 [id='17_7590_39715']
 ===== [`17_7590_39715`] pharus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q39715[Q39715]
 
-Rēs linguālibus::
+Rēs linguālibus (105)::
   Linguae multiplīs (Scrīptum incognitō):::
     /lighthouse - structure designed to emit light to aid navigation/
 
@@ -5912,11 +5912,11 @@ Rēs linguālibus::
 [id='17_7590_190928']
 ===== [`17_7590_190928`] Navale
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q190928[Q190928]
 
-Rēs linguālibus::
+Rēs linguālibus (56)::
   Linguae multiplīs (Scrīptum incognitō):::
     /shipyard - place where ships are repaired and built/
 
@@ -6092,11 +6092,11 @@ Rēs linguālibus::
 [id='17_7590_192375']
 ===== [`17_7590_192375`] /hangar - closed structure to hold aircraft or spacecraft in protective storage/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q192375[Q192375]
 
-Rēs linguālibus::
+Rēs linguālibus (54)::
   Linguae multiplīs (Scrīptum incognitō):::
     /hangar - closed structure to hold aircraft or spacecraft in protective storage/
 
@@ -6266,11 +6266,11 @@ Rēs linguālibus::
 [id='17_7590_494829']
 ===== [`17_7590_494829`] /bus station - structure, larger than a bus stop, where city or intercity buses stop to pick up and drop off passengers/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q494829[Q494829]
 
-Rēs linguālibus::
+Rēs linguālibus (77)::
   Linguae multiplīs (Scrīptum incognitō):::
     /bus station - structure, larger than a bus stop, where city or intercity buses stop to pick up and drop off passengers/
 
@@ -6509,11 +6509,11 @@ Rēs linguālibus::
 [id='17_7590_1395196']
 ===== [`17_7590_1395196`] /taxicab stand - queue area and pick-up point for taxis/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1395196[Q1395196]
 
-Rēs linguālibus::
+Rēs linguālibus (15)::
   Linguae multiplīs (Scrīptum incognitō):::
     /taxicab stand - queue area and pick-up point for taxis/
 
@@ -6566,11 +6566,11 @@ Rēs linguālibus::
 [id='17_7590_1248784']
 ===== [`17_7590_1248784`] Aëroportus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1248784[Q1248784]
 
-Rēs linguālibus::
+Rēs linguālibus (133)::
   Linguae multiplīs (Scrīptum incognitō):::
     /airport - location where aircraft take off and land with extended support facilities, mostly for commercial air transport/
 
@@ -6977,11 +6977,11 @@ Rēs linguālibus::
 [id='17_7590_1777951']
 ===== [`17_7590_1777951`] /boathouse - /building for storage of boats/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1777951[Q1777951]
 
-Rēs linguālibus::
+Rēs linguālibus (16)::
   Linguae multiplīs (Scrīptum incognitō):::
     /boathouse - /building for storage of boats/
 
@@ -7037,11 +7037,11 @@ Rēs linguālibus::
 [id='17_7590_13218805']
 ===== [`17_7590_13218805`] /multistorey car park - building designed for car parking and where there are a number of floors or levels on which parking takes place/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q13218805[Q13218805]
 
-Rēs linguālibus::
+Rēs linguālibus (30)::
   Linguae multiplīs (Scrīptum incognitō):::
     /multistorey car park - building designed for car parking and where there are a number of floors or levels on which parking takes place/
 
@@ -7139,11 +7139,11 @@ Rēs linguālibus::
 [id='17_8434']
 ==== [`17_8434`] Educatio
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q8434[Q8434]
 
-Rēs linguālibus::
+Rēs linguālibus (177)::
   Linguae multiplīs (Scrīptum incognitō):::
     /education - learning in which knowledge and skills are transferred through teaching/
 
@@ -7682,11 +7682,11 @@ Rēs linguālibus::
 [id='17_8434_3914']
 ===== [`17_8434_3914`] schola
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3914[Q3914]
 
-Rēs linguālibus::
+Rēs linguālibus (163)::
   Linguae multiplīs (Scrīptum incognitō):::
     /school - institution designed to teach students under the direction of school teacher/
 
@@ -8183,11 +8183,11 @@ Rēs linguālibus::
 [id='17_8434_3918']
 ===== [`17_8434_3918`] universitas
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3918[Q3918]
 
-Rēs linguālibus::
+Rēs linguālibus (165)::
   Linguae multiplīs (Scrīptum incognitō):::
     /university - academic institution for further education/
 
@@ -8690,11 +8690,11 @@ Rēs linguālibus::
 [id='17_8434_9842']
 ===== [`17_8434_9842`] Ludus litterarius
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q9842[Q9842]
 
-Rēs linguālibus::
+Rēs linguālibus (89)::
   Linguae multiplīs (Scrīptum incognitō):::
     /primary school - school in which children receive primary or elementary education from the age of about five to twelve/
 
@@ -8969,11 +8969,11 @@ Rēs linguālibus::
 [id='17_8434_159334']
 ===== [`17_8434_159334`] /secondary school - organization where secondary education is provided/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q159334[Q159334]
 
-Rēs linguālibus::
+Rēs linguālibus (86)::
   Linguae multiplīs (Scrīptum incognitō):::
     /secondary school - organization where secondary education is provided/
 
@@ -9239,11 +9239,11 @@ Rēs linguālibus::
 [id='17_8434_160645']
 ===== [`17_8434_160645`] Orphanotrophium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q160645[Q160645]
 
-Rēs linguālibus::
+Rēs linguālibus (60)::
   Linguae multiplīs (Scrīptum incognitō):::
     /orphanage - residential institution devoted to the care of orphans/
 
@@ -9431,11 +9431,11 @@ Rēs linguālibus::
 [id='17_8434_189004']
 ===== [`17_8434_189004`] Collegium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q189004[Q189004]
 
-Rēs linguālibus::
+Rēs linguālibus (90)::
   Linguae multiplīs (Scrīptum incognitō):::
     /college - higher education institution/
 
@@ -9713,11 +9713,11 @@ Rēs linguālibus::
 [id='17_8434_1076052']
 ===== [`17_8434_1076052`] /preschool - educational establishment offering early childhood education to children/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1076052[Q1076052]
 
-Rēs linguālibus::
+Rēs linguālibus (40)::
   Linguae multiplīs (Scrīptum incognitō):::
     /preschool - educational establishment offering early childhood education to children/
 
@@ -9845,11 +9845,11 @@ Rēs linguālibus::
 [id='17_11451']
 ==== [`17_11451`] Agricultura
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q11451[Q11451]
 
-Rēs linguālibus::
+Rēs linguālibus (182)::
   Linguae multiplīs (Scrīptum incognitō):::
     /agriculture - cultivation of life forms for food, fiber, biofuel and other products used to sustain life/
 
@@ -10403,11 +10403,11 @@ Rēs linguālibus::
 [id='17_11451_165044']
 ===== [`17_11451_165044`] Caldarium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q165044[Q165044]
 
-Rēs linguālibus::
+Rēs linguālibus (89)::
   Linguae multiplīs (Scrīptum incognitō):::
     /greenhouse - building in which plants are grown/
 
@@ -10682,11 +10682,11 @@ Rēs linguālibus::
 [id='17_11451_213643']
 ===== [`17_11451_213643`] /silo - structure for storing bulk materials/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q213643[Q213643]
 
-Rēs linguālibus::
+Rēs linguālibus (46)::
   Linguae multiplīs (Scrīptum incognitō):::
     /silo - structure for storing bulk materials/
 
@@ -10832,11 +10832,11 @@ Rēs linguālibus::
 [id='17_11451_489357']
 ===== [`17_11451_489357`] /farmhouse - chief dwellings attached to farms, particularly a dwelling for the family of a family-owned and -operated farm/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q489357[Q489357]
 
-Rēs linguālibus::
+Rēs linguālibus (33)::
   Linguae multiplīs (Scrīptum incognitō):::
     /farmhouse - chief dwellings attached to farms, particularly a dwelling for the family of a family-owned and -operated farm/
 
@@ -10943,11 +10943,11 @@ Rēs linguālibus::
 [id='17_11451_1303167']
 ===== [`17_11451_1303167`] Horreum
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1303167[Q1303167]
 
-Rēs linguālibus::
+Rēs linguālibus (67)::
   Linguae multiplīs (Scrīptum incognitō):::
     /barn - agricultural building used for storage and as a covered workplace, may contain a livestock housing section/
 
@@ -11156,11 +11156,11 @@ Rēs linguālibus::
 [id='17_11451_1349300']
 ===== [`17_11451_1349300`] /root cellar - structure, usually underground or partially underground, used for storage of vegetables, fruits, nuts, or other foods/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1349300[Q1349300]
 
-Rēs linguālibus::
+Rēs linguālibus (13)::
   Linguae multiplīs (Scrīptum incognitō):::
     /root cellar - structure, usually underground or partially underground, used for storage of vegetables, fruits, nuts, or other foods/
 
@@ -11207,11 +11207,11 @@ Rēs linguālibus::
 [id='17_31207']
 ==== [`17_31207`] /health care - prevention of disease and promotion of wellbeing/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q31207[Q31207]
 
-Rēs linguālibus::
+Rēs linguālibus (80)::
   Linguae multiplīs (Scrīptum incognitō):::
     /health care - prevention of disease and promotion of wellbeing/
 
@@ -11459,11 +11459,11 @@ Rēs linguālibus::
 [id='17_31207_16917']
 ===== [`17_31207_16917`] Valetudinarium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q16917[Q16917]
 
-Rēs linguālibus::
+Rēs linguālibus (137)::
   Linguae multiplīs (Scrīptum incognitō):::
     /hospital/
 
@@ -11882,11 +11882,11 @@ Rēs linguālibus::
 [id='17_31207_210999']
 ===== [`17_31207_210999`] /psychiatric hospital - hospital treating serious mental disorders/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q210999[Q210999]
 
-Rēs linguālibus::
+Rēs linguālibus (51)::
   Linguae multiplīs (Scrīptum incognitō):::
     /psychiatric hospital - hospital treating serious mental disorders/
 
@@ -12047,11 +12047,11 @@ Rēs linguālibus::
 [id='17_31207_837142']
 ===== [`17_31207_837142`] /nursing home - /type of residential care/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q837142[Q837142]
 
-Rēs linguālibus::
+Rēs linguālibus (30)::
   Linguae multiplīs (Scrīptum incognitō):::
     /nursing home - /type of residential care/
 
@@ -12149,11 +12149,11 @@ Rēs linguālibus::
 [id='17_31207_1774898']
 ===== [`17_31207_1774898`] /clinic - health care facility, primarily focused on the care of outpatients/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1774898[Q1774898]
 
-Rēs linguālibus::
+Rēs linguālibus (59)::
   Linguae multiplīs (Scrīptum incognitō):::
     /clinic - health care facility, primarily focused on the care of outpatients/
 
@@ -12338,11 +12338,11 @@ Rēs linguālibus::
 [id='17_8473']
 ==== [`17_8473`] Vires armatae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q8473[Q8473]
 
-Rēs linguālibus::
+Rēs linguālibus (116)::
   Linguae multiplīs (Scrīptum incognitō):::
     /military - organized body primarily tasked with preparing for and conducting war/
 
@@ -12698,11 +12698,11 @@ Rēs linguālibus::
 [id='17_8473_57821']
 ===== [`17_8473_57821`] Fortalitia
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q57821[Q57821]
 
-Rēs linguālibus::
+Rēs linguālibus (86)::
   Linguae multiplīs (Scrīptum incognitō):::
     /fortification - /military constructions and buildings designed for defense in warfare and military bases/
 
@@ -12968,11 +12968,11 @@ Rēs linguālibus::
 [id='17_8473_245016']
 ===== [`17_8473_245016`] Propugnaculum
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q245016[Q245016]
 
-Rēs linguālibus::
+Rēs linguālibus (62)::
   Linguae multiplīs (Scrīptum incognitō):::
     /military base - facility directly owned and operated by or for the military/
 
@@ -13166,11 +13166,11 @@ Rēs linguālibus::
 [id='17_9174']
 ==== [`17_9174`] religio
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q9174[Q9174]
 
-Rēs linguālibus::
+Rēs linguālibus (206)::
   Linguae multiplīs (Scrīptum incognitō):::
     /religion - set of beliefs, practices and traditions for a group or community/
 
@@ -13796,11 +13796,11 @@ Rēs linguālibus::
 [id='17_9174_16970']
 ===== [`17_9174_16970`] Ecclesia
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q16970[Q16970]
 
-Rēs linguālibus::
+Rēs linguālibus (149)::
   Linguae multiplīs (Scrīptum incognitō):::
     /church building - building constructed for Christian worship/
 
@@ -14255,11 +14255,11 @@ Rēs linguālibus::
 [id='17_9174_34627']
 ===== [`17_9174_34627`] synagoga
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q34627[Q34627]
 
-Rēs linguālibus::
+Rēs linguālibus (110)::
   Linguae multiplīs (Scrīptum incognitō):::
     /synagogue - Jewish (or rarely Samaritan) house of prayer/
 
@@ -14597,11 +14597,11 @@ Rēs linguālibus::
 [id='17_9174_44539']
 ===== [`17_9174_44539`] templum
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q44539[Q44539]
 
-Rēs linguālibus::
+Rēs linguālibus (106)::
   Linguae multiplīs (Scrīptum incognitō):::
     /temple - structure reserved for religious or spiritual activities/
 
@@ -14927,11 +14927,11 @@ Rēs linguālibus::
 [id='17_9174_44613']
 ===== [`17_9174_44613`] monasterium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q44613[Q44613]
 
-Rēs linguālibus::
+Rēs linguālibus (90)::
   Linguae multiplīs (Scrīptum incognitō):::
     /monastery - complex of buildings comprising the domestic quarters and workplace(s) of monks or nuns/
 
@@ -15209,11 +15209,11 @@ Rēs linguālibus::
 [id='17_9174_141140']
 ===== [`17_9174_141140`] /hussainiya - ceremonial gathering hall in Shia Islam/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q141140[Q141140]
 
-Rēs linguālibus::
+Rēs linguālibus (26)::
   Linguae multiplīs (Scrīptum incognitō):::
     /hussainiya - ceremonial gathering hall in Shia Islam/
 
@@ -15299,11 +15299,11 @@ Rēs linguālibus::
 [id='17_9174_199451']
 ===== [`17_9174_199451`] Pagoda
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q199451[Q199451]
 
-Rēs linguālibus::
+Rēs linguālibus (81)::
   Linguae multiplīs (Scrīptum incognitō):::
     /pagoda - tiered tower built in an East Asian style, a kind of decorative garden structure/
 
@@ -15554,11 +15554,11 @@ Rēs linguālibus::
 [id='17_9174_337986']
 ===== [`17_9174_337986`] Gurduara
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q337986[Q337986]
 
-Rēs linguālibus::
+Rēs linguālibus (47)::
   Linguae multiplīs (Scrīptum incognitō):::
     /gurdwara - place of worship in Sikhism/
 
@@ -15707,11 +15707,11 @@ Rēs linguālibus::
 [id='17_9174_697295']
 ===== [`17_9174_697295`] sanctuarium
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q697295[Q697295]
 
-Rēs linguālibus::
+Rēs linguālibus (50)::
   Linguae multiplīs (Scrīptum incognitō):::
     /shrine - /holy or sacred place, which is dedicated to a specific deity
 
@@ -15869,11 +15869,11 @@ Rēs linguālibus::
 [id='17_9174_842402']
 ===== [`17_9174_842402`] /Hindu temple - house of worship in Hinduism/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q842402[Q842402]
 
-Rēs linguālibus::
+Rēs linguālibus (61)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Hindu temple - house of worship in Hinduism/
 
@@ -16064,11 +16064,11 @@ Rēs linguālibus::
 [id='17_80962']
 ==== [`17_80962`] Ctenotrophia
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q80962[Q80962]
 
-Rēs linguālibus::
+Rēs linguālibus (99)::
   Linguae multiplīs (Scrīptum incognitō):::
     /animal husbandry - management of farmed animals by humans/
 
@@ -16373,11 +16373,11 @@ Rēs linguālibus::
 [id='17_80962_214252']
 ===== [`17_80962_214252`] /stable - building for horses and other livestock/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q214252[Q214252]
 
-Rēs linguālibus::
+Rēs linguālibus (66)::
   Linguae multiplīs (Scrīptum incognitō):::
     /stable - building for horses and other livestock/
 
@@ -16583,11 +16583,11 @@ Rēs linguālibus::
 [id='17_80962_385557']
 ===== [`17_80962_385557`] /slaughterhouse - facility where animals are killed for consumption as food products/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q385557[Q385557]
 
-Rēs linguālibus::
+Rēs linguālibus (54)::
   Linguae multiplīs (Scrīptum incognitō):::
     /slaughterhouse - facility where animals are killed for consumption as food products/
 
@@ -16757,11 +16757,11 @@ Rēs linguālibus::
 [id='17_80962_861182']
 ===== [`17_80962_861182`] /poultry farming - part of animal husbandry - chicken farming/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q861182[Q861182]
 
-Rēs linguālibus::
+Rēs linguālibus (47)::
   Linguae multiplīs (Scrīptum incognitō):::
     /poultry farming - part of animal husbandry - chicken farming/
 
@@ -16910,11 +16910,11 @@ Rēs linguālibus::
 [id='17_80962_1651566']
 ===== [`17_80962_1651566`] /pigsty - enclosure for pigs/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1651566[Q1651566]
 
-Rēs linguālibus::
+Rēs linguālibus (32)::
   Linguae multiplīs (Scrīptum incognitō):::
     /pigsty - enclosure for pigs/
 
@@ -17018,11 +17018,11 @@ Rēs linguālibus::
 [id='17_732717']
 ==== [`17_732717`] /law enforcement agency - government agency responsible for the enforcement of the laws/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q732717[Q732717]
 
-Rēs linguālibus::
+Rēs linguālibus (39)::
   Linguae multiplīs (Scrīptum incognitō):::
     /law enforcement agency - government agency responsible for the enforcement of the laws/
 
@@ -17147,11 +17147,11 @@ Rēs linguālibus::
 [id='17_732717_861951']
 ===== [`17_732717_861951`] /police station - headquarters for the police of a particular district, from which police officers are dispatched and to which persons under arrest are brought/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q861951[Q861951]
 
-Rēs linguālibus::
+Rēs linguālibus (47)::
   Linguae multiplīs (Scrīptum incognitō):::
     /police station - headquarters for the police of a particular district, from which police officers are dispatched and to which persons under arrest are brought/
 
@@ -17300,11 +17300,11 @@ Rēs linguālibus::
 [id='17_818670']
 ==== [`17_818670`] /penology - section of criminology that deals with the philosophy and practice of various societies in their attempts to repress criminal activities, and satisfy public opinion via an appropriate treatment regime for persons convicted of criminal offences/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q818670[Q818670]
 
-Rēs linguālibus::
+Rēs linguālibus (36)::
   Linguae multiplīs (Scrīptum incognitō):::
     /penology - section of criminology that deals with the philosophy and practice of various societies in their attempts to repress criminal activities, and satisfy public opinion via an appropriate treatment regime for persons convicted of criminal offences/
 
@@ -17420,11 +17420,11 @@ Rēs linguālibus::
 [id='17_818670_40357']
 ===== [`17_818670_40357`] Carcer
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q40357[Q40357]
 
-Rēs linguālibus::
+Rēs linguālibus (109)::
   Linguae multiplīs (Scrīptum incognitō):::
     /prison - place in which people legally are physically confined and usually deprived of a range of personal freedoms/
 
@@ -17759,11 +17759,11 @@ Rēs linguālibus::
 [id='17_1307276']
 ==== [`17_1307276`] /single-family detached home - free-standing residential building/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1307276[Q1307276]
 
-Rēs linguālibus::
+Rēs linguālibus (27)::
   Linguae multiplīs (Scrīptum incognitō):::
     /single-family detached home - free-standing residential building/
 
@@ -17852,11 +17852,11 @@ Rēs linguālibus::
 [id='17_1307276_3947']
 ===== [`17_1307276_3947`] domus
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3947[Q3947]
 
-Rēs linguālibus::
+Rēs linguālibus (173)::
   Linguae multiplīs (Scrīptum incognitō):::
     /house - building usually intended for living in/
 
@@ -18383,11 +18383,11 @@ Rēs linguālibus::
 [id='17_1307276_259059']
 ===== [`17_1307276_259059`] /household - group of one or more people living in the same dwelling and sharing meals or living accommodation; may consist of a single family or other grouping of people/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q259059[Q259059]
 
-Rēs linguālibus::
+Rēs linguālibus (53)::
   Linguae multiplīs (Scrīptum incognitō):::
     /household - group of one or more people living in the same dwelling and sharing meals or living accommodation; may consist of a single family or other grouping of people/
 
@@ -18554,11 +18554,11 @@ Rēs linguālibus::
 [id='17_1307276_1335996']
 ===== [`17_1307276_1335996`] /Studio apartment - is a small apartment (rarely a condo) in which the normal functions of a number of rooms – often the living room, bedroom, and kitchen – are combined into a single room/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1335996[Q1335996]
 
-Rēs linguālibus::
+Rēs linguālibus (25)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Studio apartment - is a small apartment (rarely a condo) in which the normal functions of a number of rooms – often the living room, bedroom, and kitchen – are combined into a single room/
 
@@ -18641,11 +18641,11 @@ Rēs linguālibus::
 [id='17_1307276_5784097']
 ===== [`17_1307276_5784097`] Casa
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q5784097[Q5784097]
 
-Rēs linguālibus::
+Rēs linguālibus (58)::
   Linguae multiplīs (Scrīptum incognitō):::
     /hut - a small dwelling - generally less complex than that of a house (durable, well-built dwelling) but more so than that of a shelter/ 
 
@@ -18827,11 +18827,11 @@ Rēs linguālibus::
 [id='17_1498804']
 ==== [`17_1498804`] /multiple dwellings - multiple separate housing units for residential inhabitants contained within one building or several buildings within one complex/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1498804[Q1498804]
 
-Rēs linguālibus::
+Rēs linguālibus (25)::
   Linguae multiplīs (Scrīptum incognitō):::
     /multiple dwellings - multiple separate housing units for residential inhabitants contained within one building or several buildings within one complex/
 
@@ -18914,11 +18914,11 @@ Rēs linguālibus::
 [id='17_1498804_161851']
 ===== [`17_1498804_161851`] /condominium - form of housing tenure and other real property/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q161851[Q161851]
 
-Rēs linguālibus::
+Rēs linguālibus (37)::
   Linguae multiplīs (Scrīptum incognitō):::
     /condominium - form of housing tenure and other real property/
 
@@ -19037,11 +19037,11 @@ Rēs linguālibus::
 [id='17_1498804_188507']
 ===== [`17_1498804_188507`] diaeta
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q188507[Q188507]
 
-Rēs linguālibus::
+Rēs linguālibus (72)::
   Linguae multiplīs (Scrīptum incognitō):::
     /apartment - self-contained housing unit occupying part of a building/
 
@@ -19265,11 +19265,11 @@ Rēs linguālibus::
 [id='17_1722438']
 ==== [`17_1722438`] /emergency shelter - place for people to live temporarily when they cannot live in their previous residence/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1722438[Q1722438]
 
-Rēs linguālibus::
+Rēs linguālibus (9)::
   Linguae multiplīs (Scrīptum incognitō):::
     /emergency shelter - place for people to live temporarily when they cannot live in their previous residence/
 
@@ -19304,11 +19304,11 @@ Rēs linguālibus::
 [id='17_1722438_1451763']
 ===== [`17_1722438_1451763`] /women's shelter - place of temporary refuge and support for women escaping violent or abusive situations/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1451763[Q1451763]
 
-Rēs linguālibus::
+Rēs linguālibus (24)::
   Linguae multiplīs (Scrīptum incognitō):::
     /women's shelter - place of temporary refuge and support for women escaping violent or abusive situations/
 
@@ -19388,11 +19388,11 @@ Rēs linguālibus::
 [id='17_7834471']
 ==== [`17_7834471`] /Transitional shelter/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7834471[Q7834471]
 
-Rēs linguālibus::
+Rēs linguālibus (2)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Transitional shelter/
 
@@ -19406,11 +19406,11 @@ Rēs linguālibus::
 [id='17_7834471_772298']
 ===== [`17_7834471_772298`] /homeless shelter - /temporary residence for homeless individuals and families
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q772298[Q772298]
 
-Rēs linguālibus::
+Rēs linguālibus (17)::
   Linguae multiplīs (Scrīptum incognitō):::
     /homeless shelter - /temporary residence for homeless individuals and families
 
@@ -19469,11 +19469,11 @@ Rēs linguālibus::
 [id='17_7834471_2681882']
 ===== [`17_7834471_2681882`] /refugee shelter - structures ranging from the most temporary tent accommodation through transitional shelter to building temporary pics and settlements and include the most basic kind of ad hoc structure/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2681882[Q2681882]
 
-Rēs linguālibus::
+Rēs linguālibus (6)::
   Linguae multiplīs (Scrīptum incognitō):::
     /refugee shelter - structures ranging from the most temporary tent accommodation through transitional shelter to building temporary pics and settlements and include the most basic kind of ad hoc structure/
 
@@ -19510,7 +19510,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -19519,7 +19519,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -19527,7 +19527,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -19535,7 +19535,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 

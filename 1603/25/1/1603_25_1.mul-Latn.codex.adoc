@@ -1,6 +1,6 @@
-= Cōdex [1603:25:1]: //dictiōnāria de partes corporis humani//
+= Cōdex [1603:25:1]: //dictiōnāria dē partes corporis humani//
 :doctype: book
-:title: Cōdex [1603:25:1]: //dictiōnāria de partes corporis humani//
+:title: Cōdex [1603:25:1]: //dictiōnāria dē partes corporis humani//
 :lang: la
 :toc: macro
 :toclevels: 5
@@ -14,7 +14,7 @@
 :source-highlighter: rouge
 :warning-caption: Hic sunt dracones
 :tip-caption: Commendātum
-:front-cover-image: image:1603_25_1.mul-Latn.codex.svg["Cōdex [1603_25_1]: //dictiōnāria de partes corporis humani//",1050,1600]
+:front-cover-image: image:1603_25_1.mul-Latn.codex.svg["Cōdex [1603_25_1]: //dictiōnāria dē partes corporis humani//",1050,1600]
 
 
 
@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T23:13:15
+2022-04-29T02:05:17
 
 |
 /SPDX license ID/@eng-Latn
@@ -76,9 +76,9 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
-    _**Cōdex [1603:25:1]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:25:1] //dictiōnāria de partes corporis humani//**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
+    _**Cōdex [1603:25:1]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:25:1] //dictiōnāria dē partes corporis humani//**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
     **SOBRE LEXICOGRAFIA**
     +++<br><br>+++
@@ -110,50 +110,48 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     This Numerodinatio namespace contains dictionaries related to general human body parts. Latin (while a natural language) actually is used as interlingual code. It's mostly based on Basle Nomina Anatomica 1895 ("BNA1895") and, if any difference, archaic terms are replaced with Terminologia Anatomica 95 ("TA95").
     +++<br><br>+++
     Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to external body parts.
-    +++<br><br>+++
-    All work on the main concept tables is manually compiled and reviewed by EticaAI.
 
 
 
 === Methodī ex verbīs in dictiōnāriīs
-NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+NOTE: /No momento, não há fluxo de trabalho para usar https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], que na verdade poderia ser usado como armazenamento para nomenclatura mais rigorosa. As implementações atuais usam apenas conceitos do Wikidata, os Q-items./@eng-Latn
 
 ==== Methodī ex verbīs in Vicidata (Q modō)
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
-    The ***[1603:25:1] //dictiōnāria de partes corporis humani//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    O ***[1603:25:1] //dictiōnāria dē partes corporis humani//*** usa o Wikidata como uma estratégia para conciliar termos linguísticos para um ou mais de seus conceitos.
     +++<br><br>+++
-    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    Isso significa que este livro e os arquivos de dados de dicionários relacionados requerem atualizações periódicas para , no mínimo, sincronize e compartilhe novamente as traduções atualizadas.
     +++<br><br>+++
-    **How reliable are the community translations (Wikidata source)?**
+    **Qual a confiabilidade das traduções da comunidade (fonte Wikidata)?**
     +++<br><br>+++
-    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    A resposta curta padrão é: **elas são confiáveis**, mesmo nos casos de não haver traduções oficiais para cada assunto.
     +++<br><br>+++
-    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    Como referência, é provável que um tradutor profissional (sem acesso à Wikipedia ou bases de terminologia interna das organizações de controle) forneça resultados de qualidade inferior se você fizer testes cegos. Isso é possível porque não apenas o público médio, mas também terminólogos e tradutores profissionais ajudam a Wikipédia (e implicitamente o Wikidata).
     +++<br><br>+++
-    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    No entanto, mesmo quando o resultado está correto, a versão atual precisa de diferenciação aprimorada, no mínimo, sigla e forma longa . Para grandes organizações, existem recursos como __P1813 nomes curtos__, mas ainda não foram compilados com o conjunto de dados atual.
     +++<br><br>+++
-    **Major reasons for "wrong translations" are not translators fault**
+    **Os principais motivos para "traduções erradas" não são culpa dos tradutores**
     +++<br><br>+++
-    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    DICA: Como regra geral, para conceitos já muito definidos em que você, como humano, pode verificar manualmente um ou mais termos traduzidos como um resultado decente, as outras traduções provavelmente serão aceitáveis. Dicionários com casos extremos (como nomes de territórios em disputa) teriam mais explicações.
     +++<br><br>+++
-    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    A principal razão para "traduções erradas" são conceitos mal definidos usados ​​para explicar aos tradutores da comunidade como gerar traduções de terminologia. Isso tornaria as traduções existentes do Wikidata (usadas não apenas por nós) inconsistentes. A segunda razão é se os dicionários usam traduções para conceitos sem uma correspondência estrita; em outras palavras, se fizermos definições mais estritas do que significa conceito, mas reutilizarmos termos menos exatos da Wikidada. Também há problemas quando idiomas inteiros são codificados com códigos errados. Observe que todos esses casos **traduções erradas NÃO são estritamente culpa do tradutor, mas sim da lexicografia**.
     +++<br><br>+++
-    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    Ainda é possível ter erros estritos no nível de tradução. Mas mesmo que indiquemos aos usuários como corrigir o Wikidata/Wikipedia (com base na melhor explicação contextual de um conceito, como este livro), os requisitos para dizer que o termo anterior foi objetivamente um erro de tradução humana errado (se seguir nossa seriedade na construção de dicionário) são muito elevados.
     +++<br><br>+++
-    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    Do ponto de vista da conciliação de dados, a seguinte metodologia é utilizada para publicar as traduções da terminologia com a tabela de conceitos principais.
     +++<br><br>+++
-    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_25_1.no1.tm.hxl.csv`, may reference Wiki QID.
-    . Every unique QID of  `1603_25_1.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
-    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
-    . The query result, with all QIDs and term labels, is shared as `1603_25_1.wikiq.tm.hxl.csv`
-    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_25_1.wikiq.tm.hxl.csv`
-    . `1603_25_1.no1.tm.hxl.csv` plus `1603_25_1.wikiq.tm.hxl.csv` created `1603_25_1.no11.tm.hxl.csv`
+    . A principal tabela lexicográfica artesanal (explicada no tópico anterior), também fornecida em `1603_25_1.no1.tm.hxl.csv`, pode fazer referência ao Wiki QID.
+    . Cada QID exclusivo de `1603_25_1.no1.tm.hxl.csv`, juntamente com códigos de idioma de [`1603:1:51`] (que requer conhecimento de idiomas humanos), é usado para preparar uma consulta SPARQL otimizada para execução em https://query.wikidata.org/[Wikidata Query Service]. A consulta é tão grande que não é viável para links "Try it" (URL longo), como https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[como o que você encontraria nos Tutoriais Wikidata ], ***mas*** funciona!
+    .. Note que o conhecimento é gratuito, as traduções estão lá, mas as necessidades humanitárias multilíngues podem faltar pessoas para preparar os arquivos e compartilhar do que para uso geral.
+    . O resultado da consulta, com todos os QIDs e rótulos de termos, é compartilhado como `1603_25_1.wikiq.tm.hxl.csv`
+    . As traduções revisadas pela comunidade de cada QID singular são pré-compiladas em um arquivo individual `1603_25_1.wikiq.tm.hxl.csv`
+    . `1603_25_1.no1.tm.hxl.csv` mais `1603_25_1.wikiq.tm.hxl.csv` criado `1603_25_1.no11.tm.hxl.csv`
 
 
 === Rēs dē factō in dictiōnāriīs
@@ -1940,33 +1938,6 @@ Lingua Franca Nova (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 11
 Rēs::
-  Terminologia Anatomica 98 ID:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P1323[P1323]
-
-      /rēgulam/;;
-        A\d{2}\.\d\.\d{2}\.\d{3}[FM]?
-
-      /formatter URL/@eng-Latn;;
-        https://wikidata-externalid-url.toolforge.org/?p=1323&url_prefix=https:%2F%2Fwww.unifr.ch%2Fifaa%2FPublic%2FEntryPage%2FTA98%20Tree%2FEntity%20TA98%20EN%2F&url_suffix=%20Entity%20TA98%20EN.htm&id=$1
-
-      ix_hxlix;;
-        ix_wikip1323
-
-      ix_hxlvoc;;
-        v_wiki_p_1323
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">Terminologia Anatomica 98 ID</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Terminologia Anatomica (1998 edition) human anatomical terminology identifier</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Terminologia Anatomica (edição de 1998) identificador de terminologia anatômica humana</span>+++
-
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -1993,90 +1964,6 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">identificador de licença SPDX</span>+++
-
-  /cōdex pūblicandī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
-
-      ix_hxlix;;
-        ix_wikip123
-
-      ix_hxlvoc;;
-        v_wiki_p_123
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
-
-  /scope and content/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
-
-      ix_hxlix;;
-        ix_wikip7535
-
-      ix_hxlvoc;;
-        v_wiki_p_7535
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
-
-  /reference URL/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P854[P854]
-
-      ix_hxlix;;
-        ix_wikip854
-
-      ix_hxlvoc;;
-        v_wiki_p_854
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/reference URL/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">should be used for Internet URLs as references</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">deve ser usado para URLs da Internet como referências</span>+++
-
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
 
   numerus editionis:::
     Rēs interlinguālibus::::
@@ -2120,6 +2007,48 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
 
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+
+  /reference URL/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P854[P854]
+
+      ix_hxlix;;
+        ix_wikip854
+
+      ix_hxlvoc;;
+        v_wiki_p_854
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/reference URL/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">should be used for Internet URLs as references</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">deve ser usado para URLs da Internet como referências</span>+++
+
   scrīptor:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2141,12 +2070,81 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
 
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
+
+  Terminologia Anatomica 98 ID:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P1323[P1323]
+
+      /rēgulam/;;
+        A\d{2}\.\d\.\d{2}\.\d{3}[FM]?
+
+      /formatter URL/@eng-Latn;;
+        https://wikidata-externalid-url.toolforge.org/?p=1323&url_prefix=https:%2F%2Fwww.unifr.ch%2Fifaa%2FPublic%2FEntryPage%2FTA98%20Tree%2FEntity%20TA98%20EN%2F&url_suffix=%20Entity%20TA98%20EN.htm&id=$1
+
+      ix_hxlix;;
+        ix_wikip1323
+
+      ix_hxlvoc;;
+        v_wiki_p_1323
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">Terminologia Anatomica 98 ID</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Terminologia Anatomica (1998 edition) human anatomical terminology identifier</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Terminologia Anatomica (edição de 1998) identificador de terminologia anatômica humana</span>+++
+
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
+
+      ix_hxlix;;
+        ix_wikip123
+
+      ix_hxlvoc;;
+        v_wiki_p_123
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
+
 
 <<<
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -2253,7 +2251,7 @@ Dictiōnāria initiīs
 
 <<<
 
-== //dictiōnāria de partes corporis humani//
+== //dictiōnāria dē partes corporis humani//
 image::1603_25_1.~2/0~2.png[title="++Sine nomine++"]
 
 Sine nomine
@@ -2273,12 +2271,9 @@ Sine nomine
 <<<
 
 [id='1']
-=== [`1`] caput humanum
+=== [`1`] Caput humanum
 
-Rēs interlinguālibus::
-  /Wiki QID/:::
-    https://www.wikidata.org/wiki/Q3409626[Q3409626]
-
+Rēs interlinguālibus (4)::
   Terminologia Anatomica 98 ID:::
     A01.1.00.001
 
@@ -2288,9 +2283,12 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_n1603_25_1_caput
 
-Rēs linguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q3409626[Q3409626]
+
+Rēs linguālibus (45)::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">caput humanum</span>+++
+    +++<span lang="la">Caput humanum</span>+++
 
   Macrolingua Arabica (Abecedarium Arabicum):::
     +++<span lang="ar">رأس الإنسان</span>+++
@@ -2329,7 +2327,7 @@ Rēs linguālibus::
     +++<span lang="nl">menselijk hoofd</span>+++
 
   Lingua Germanica (Abecedarium Latinum):::
-    +++<span lang="de">kopf des menschen</span>+++
+    +++<span lang="de">Kopf des Menschen</span>+++
 
   Lingua Hispanica (Abecedarium Latinum):::
     +++<span lang="es">cabeza humana</span>+++
@@ -2386,7 +2384,7 @@ Rēs linguālibus::
     +++<span lang="zh-hant">人類頭部</span>+++
 
   Lingua Corsica (Abecedarium Latinum):::
-    +++<span lang="co">capu</span>+++
+    +++<span lang="co">Capu</span>+++
 
   /Serbian/ (Abecedarium Latinum):::
     +++<span lang="sr-el">ljudska glava</span>+++
@@ -2398,7 +2396,7 @@ Rēs linguālibus::
     +++<span lang="be">галава чалавека</span>+++
 
   /Kabyle language/ (Abecedarium Latinum):::
-    +++<span lang="kab">aqerru</span>+++
+    +++<span lang="kab">Aqerru</span>+++
 
   /Upper Sorbian/ (Abecedarium Latinum):::
     +++<span lang="hsb">hłowa</span>+++
@@ -2431,10 +2429,7 @@ Rēs linguālibus::
 [id='1_1']
 ==== [`1_1`] sinciput
 
-Rēs interlinguālibus::
-  /Wiki QID/:::
-    https://www.wikidata.org/wiki/Q41055[Q41055]
-
+Rēs interlinguālibus (4)::
   Terminologia Anatomica 98 ID:::
     A01.1.00.002
 
@@ -2444,7 +2439,10 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_n1603_25_1_sinciput
 
-Rēs linguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q41055[Q41055]
+
+Rēs linguālibus (98)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">sinciput</span>+++
 
@@ -2506,7 +2504,7 @@ Rēs linguālibus::
     +++<span lang="nl">voorhoofd</span>+++
 
   Lingua Germanica (Abecedarium Latinum):::
-    +++<span lang="de">stirn</span>+++
+    +++<span lang="de">Stirn</span>+++
 
   Lingua Hispanica (Abecedarium Latinum):::
     +++<span lang="es">frente</span>+++
@@ -2515,7 +2513,7 @@ Rēs linguālibus::
     +++<span lang="it">fronte</span>+++
 
   Lingua Hibernica (Abecedarium Latinum):::
-    +++<span lang="ga">éadan</span>+++
+    +++<span lang="ga">Éadan</span>+++
 
   Lingua Suecica (Abecedarium Latinum):::
     +++<span lang="sv">panna</span>+++
@@ -2527,7 +2525,7 @@ Rēs linguālibus::
     +++<span lang="fi">otsa</span>+++
 
   Lingua Dacoromanica (Abecedarium Latinum):::
-    +++<span lang="ro">frunte</span>+++
+    +++<span lang="ro">Frunte</span>+++
 
   Lingua Vietnamensis (Abecedarium Latinum):::
     +++<span lang="vi">trán</span>+++
@@ -2536,13 +2534,13 @@ Rēs linguālibus::
     +++<span lang="ca">front</span>+++
 
   Lingua Ucrainica (Abecedarium Cyrillicum):::
-    +++<span lang="uk">чоло</span>+++
+    +++<span lang="uk">Чоло</span>+++
 
   Lingua Bulgarica (Abecedarium Cyrillicum):::
-    +++<span lang="bg">чело</span>+++
+    +++<span lang="bg">Чело</span>+++
 
   /Waray language/ (Abecedarium Latinum):::
-    +++<span lang="war">agtáng</span>+++
+    +++<span lang="war">Agtáng</span>+++
 
   /Bokmål/ (Abecedarium Latinum):::
     +++<span lang="nb">panne</span>+++
@@ -2563,25 +2561,25 @@ Rēs linguālibus::
     +++<span lang="ml">നെറ്റി</span>+++
 
   Lingua Indonesiana (Abecedarium Latinum):::
-    +++<span lang="id">dahi</span>+++
+    +++<span lang="id">Dahi</span>+++
 
   Macrolingua Persica (//Abecedarium Arabicum//):::
     +++<span lang="fa">پیشانی</span>+++
 
   Lingua Hungarica (Abecedarium Latinum):::
-    +++<span lang="hu">homlok</span>+++
+    +++<span lang="hu">Homlok</span>+++
 
   Lingua Vasconica (Abecedarium Latinum):::
-    +++<span lang="eu">bekoki</span>+++
+    +++<span lang="eu">Bekoki</span>+++
 
   Lingua Cambrica (Abecedarium Latinum):::
-    +++<span lang="cy">talcen</span>+++
+    +++<span lang="cy">Talcen</span>+++
 
   Lingua Gallaica (Abecedarium Latinum):::
-    +++<span lang="gl">testa</span>+++
+    +++<span lang="gl">Testa</span>+++
 
   Lingua Slovaca (Abecedarium Latinum):::
-    +++<span lang="sk">čelo</span>+++
+    +++<span lang="sk">Čelo</span>+++
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">frunto</span>+++
@@ -2590,40 +2588,40 @@ Rēs linguālibus::
     +++<span lang="ms">dahi</span>+++
 
   Macrolingua Estonica (Abecedarium Latinum):::
-    +++<span lang="et">laup</span>+++
+    +++<span lang="et">Laup</span>+++
 
   Lingua Croatica (Abecedarium Latinum):::
-    +++<span lang="hr">čelo</span>+++
+    +++<span lang="hr">Čelo</span>+++
 
   Lingua Turcica (Abecedarium Latinum):::
-    +++<span lang="tr">alın</span>+++
+    +++<span lang="tr">Alın</span>+++
 
   Lingua Saxonica (Abecedarium Latinum):::
-    +++<span lang="nds">steern</span>+++
+    +++<span lang="nds">Steern</span>+++
 
   Lingua Occitana (Abecedarium Latinum):::
-    +++<span lang="oc">front</span>+++
+    +++<span lang="oc">Front</span>+++
 
   Lingua Britonica (Abecedarium Latinum):::
-    +++<span lang="br">tal</span>+++
+    +++<span lang="br">Tal</span>+++
 
   Lingua Aragonensis (Abecedarium Latinum):::
-    +++<span lang="an">frent</span>+++
+    +++<span lang="an">Frent</span>+++
 
   Lingua Islandica (Abecedarium Latinum):::
     +++<span lang="is">enni</span>+++
 
   Lingua Sicula (Abecedarium Latinum):::
-    +++<span lang="scn">frunti</span>+++
+    +++<span lang="scn">Frunti</span>+++
 
   Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum):::
-    +++<span lang="gd">bathais</span>+++
+    +++<span lang="gd">Bathais</span>+++
 
   //Macrolingua Wu// (/ISO 15924 Zyyy/):::
     +++<span lang="wuu">额骨头</span>+++
 
   Lingua Serbica (Abecedarium Cyrillicum):::
-    +++<span lang="sr">чело</span>+++
+    +++<span lang="sr">Чело</span>+++
 
   Lingua Urdu (Abecedarium Arabicum):::
     +++<span lang="ur">پیشانی</span>+++
@@ -2632,25 +2630,25 @@ Rēs linguālibus::
     +++<span lang="gan">天門</span>+++
 
   Lingua Lithuanica (Abecedarium Latinum):::
-    +++<span lang="lt">kakta</span>+++
+    +++<span lang="lt">Kakta</span>+++
 
   Macrolingua Serbocroatica (Abecedarium Latinum):::
-    +++<span lang="sh">čelo</span>+++
+    +++<span lang="sh">Čelo</span>+++
 
   Macrolingua Lettonica (Abecedarium Latinum):::
     +++<span lang="lv">piere</span>+++
 
   Lingua Iavanica (Abecedarium Latinum):::
-    +++<span lang="jv">bathuk</span>+++
+    +++<span lang="jv">Bathuk</span>+++
 
   Lingua Neograeca (Alphabetum Graecum):::
     +++<span lang="el">μέτωπο</span>+++
 
   Lingua Frisice occidentalis (Abecedarium Latinum):::
-    +++<span lang="fy">foarholle</span>+++
+    +++<span lang="fy">Foarholle</span>+++
 
   Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
-    +++<span lang="be">лоб</span>+++
+    +++<span lang="be">Лоб</span>+++
 
   Lingua Marathica (Devanāgarī):::
     +++<span lang="mr">कपाळ</span>+++
@@ -2659,7 +2657,7 @@ Rēs linguālibus::
     +++<span lang="cdo">Ngiăh</span>+++
 
   Lingua Zazaca (Abecedarium Latinum):::
-    +++<span lang="diq">çare</span>+++
+    +++<span lang="diq">Çare</span>+++
 
   /Upper Sorbian/ (Abecedarium Latinum):::
     +++<span lang="hsb">čoło</span>+++
@@ -2668,16 +2666,16 @@ Rēs linguālibus::
     +++<span lang="mzn">سیال</span>+++
 
   /Min Nan Chinese/ (Abecedarium Latinum):::
-    +++<span lang="nan">thâu-hia̍h</span>+++
+    +++<span lang="nan">Thâu-hia̍h</span>+++
 
   /Kapampangan language/ (Abecedarium Latinum):::
-    +++<span lang="pam">kanwan</span>+++
+    +++<span lang="pam">Kanwan</span>+++
 
   Lingua Paniabica occidentalis (Abecedarium Arabicum):::
     +++<span lang="pnb">متھا</span>+++
 
   Lingua Samogitica (Abecedarium Latinum):::
-    +++<span lang="sgs">kakta</span>+++
+    +++<span lang="sgs">Kakta</span>+++
 
   Shilha language (/ISO 15924 Zyyy/):::
     +++<span lang="shi">ignzi</span>+++
@@ -2686,7 +2684,7 @@ Rēs linguālibus::
     +++<span lang="yue">額頭</span>+++
 
   Macrolingua Suahelica (Abecedarium Latinum):::
-    +++<span lang="sw">paji la uso</span>+++
+    +++<span lang="sw">Paji la uso</span>+++
 
   Macrolingua Iudaeo-Germanica (Alphabetum Hebraicum):::
     +++<span lang="yi">שטערן</span>+++
@@ -2695,22 +2693,22 @@ Rēs linguālibus::
     +++<span lang="ug">ماڭلاي</span>+++
 
   Lingua Tagalog (Abecedarium Latinum):::
-    +++<span lang="tl">noo</span>+++
+    +++<span lang="tl">Noo</span>+++
 
   Lingua Avarica (Abecedarium Cyrillicum):::
-    +++<span lang="av">нодо</span>+++
+    +++<span lang="av">Нодо</span>+++
 
   Macrolingua Atropatenica (Abecedarium Latinum):::
-    +++<span lang="az">alın</span>+++
+    +++<span lang="az">Alın</span>+++
 
   Lingua Tschuvaschica (Abecedarium Cyrillicum):::
-    +++<span lang="cv">çамка</span>+++
+    +++<span lang="cv">Çамка</span>+++
 
   Macrolingua Guaranica (Abecedarium Latinum):::
-    +++<span lang="gn">syva</span>+++
+    +++<span lang="gn">Syva</span>+++
 
   Lingua creola Haitiana (Abecedarium Latinum):::
-    +++<span lang="ht">fwon</span>+++
+    +++<span lang="ht">Fwon</span>+++
 
   Lingua Mingrelica (Abecedarium Georgianum):::
     +++<span lang="xmf">ჸვა</span>+++
@@ -2719,25 +2717,25 @@ Rēs linguālibus::
     +++<span lang="ckb">تەوێڵ</span>+++
 
   /Lingala/ (Abecedarium Latinum):::
-    +++<span lang="ln">eboló</span>+++
+    +++<span lang="ln">Eboló</span>+++
 
   Lingua Macedonica (Abecedarium Cyrillicum):::
     +++<span lang="mk">чело</span>+++
 
   Macrolinguae Quechuae (Abecedarium Latinum):::
-    +++<span lang="qu">mat'i</span>+++
+    +++<span lang="qu">Mat'i</span>+++
 
   Lingua Samica septentrionalis (Abecedarium Latinum):::
     +++<span lang="se">gállu</span>+++
 
   /Shona/ (Abecedarium Latinum):::
-    +++<span lang="sn">huma</span>+++
+    +++<span lang="sn">Huma</span>+++
 
   Lingua Somalica (Abecedarium Latinum):::
-    +++<span lang="so">foodda</span>+++
+    +++<span lang="so">Foodda</span>+++
 
   Lingua Franca Nova (Abecedarium Latinum):::
-    +++<span lang="lfn">fronte</span>+++
+    +++<span lang="lfn">Fronte</span>+++
 
 
 
@@ -2746,10 +2744,7 @@ Rēs linguālibus::
 [id='1_2']
 ==== [`1_2`] occiput
 
-Rēs interlinguālibus::
-  /Wiki QID/:::
-    https://www.wikidata.org/wiki/Q3321315[Q3321315]
-
+Rēs interlinguālibus (4)::
   Terminologia Anatomica 98 ID:::
     A01.1.00.003
 
@@ -2759,7 +2754,10 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_n1603_25_1_occiput
 
-Rēs linguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q3321315[Q3321315]
+
+Rēs linguālibus (20)::
   Lingua Latina (Abecedarium Latinum):::
     +++<span lang="la">occiput</span>+++
 
@@ -2773,7 +2771,7 @@ Rēs linguālibus::
     +++<span lang="th">ท้ายทอย</span>+++
 
   Lingua Lusitana (Abecedarium Latinum):::
-    +++<span lang="pt">occipício</span>+++
+    +++<span lang="pt">Occipício</span>+++
 
   Lingua Anglica (Abecedarium Latinum):::
     +++<span lang="en">occiput</span>+++
@@ -2782,22 +2780,22 @@ Rēs linguālibus::
     +++<span lang="fr">occiput</span>+++
 
   Lingua Germanica (Abecedarium Latinum):::
-    +++<span lang="de">occiput</span>+++
+    +++<span lang="de">Occiput</span>+++
 
   Lingua Hispanica (Abecedarium Latinum):::
-    +++<span lang="es">occipucio</span>+++
+    +++<span lang="es">Occipucio</span>+++
 
   Lingua Italiana (Abecedarium Latinum):::
     +++<span lang="it">occipite</span>+++
 
   Lingua Polonica (Abecedarium Latinum):::
-    +++<span lang="pl">potylica</span>+++
+    +++<span lang="pl">Potylica</span>+++
 
   Lingua Finnica (Abecedarium Latinum):::
-    +++<span lang="fi">takaraivo</span>+++
+    +++<span lang="fi">Takaraivo</span>+++
 
   Lingua Catalana (Abecedarium Latinum):::
-    +++<span lang="ca">occípit</span>+++
+    +++<span lang="ca">Occípit</span>+++
 
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">後頭部</span>+++
@@ -2806,13 +2804,13 @@ Rēs linguālibus::
     +++<span lang="nn">bakhovud</span>+++
 
   Lingua Vasconica (Abecedarium Latinum):::
-    +++<span lang="eu">okzipuzio</span>+++
+    +++<span lang="eu">Okzipuzio</span>+++
 
   Lingua Gallaica (Abecedarium Latinum):::
-    +++<span lang="gl">occipicio</span>+++
+    +++<span lang="gl">Occipicio</span>+++
 
   Lingua Lithuanica (Abecedarium Latinum):::
-    +++<span lang="lt">pakaušis</span>+++
+    +++<span lang="lt">Pakaušis</span>+++
 
   Lingua Yue (/ISO 15924 Zyyy/):::
     +++<span lang="yue">後尾枕</span>+++
@@ -2829,7 +2827,7 @@ Rēs linguālibus::
 [id='2']
 === [`2`] 
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_n1603n25n1collum
 
@@ -2848,12 +2846,9 @@ image::1603_25_1.~1/2~1.png[title="++Sine nomine++"]
 <<<
 
 [id='3']
-=== [`3`] truncus
+=== [`3`] Truncus
 
-Rēs interlinguālibus::
-  /Wiki QID/:::
-    https://www.wikidata.org/wiki/Q160695[Q160695]
-
+Rēs interlinguālibus (4)::
   Terminologia Anatomica 98 ID:::
     A01.1.00.013
 
@@ -2863,14 +2858,17 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_n1603_25_1_truncus
 
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q160695[Q160695]
+
 Rēs pictūrīs::
 * **3~1**
 +
 image::1603_25_1.~1/3~1.gif[title="++Sine nomine++"]
 
-Rēs linguālibus::
+Rēs linguālibus (73)::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">truncus</span>+++
+    +++<span lang="la">Truncus</span>+++
 
   Macrolingua Arabica (Abecedarium Arabicum):::
     +++<span lang="ar">جذع</span>+++
@@ -2912,7 +2910,7 @@ Rēs linguālibus::
     +++<span lang="nl">romp</span>+++
 
   Lingua Germanica (Abecedarium Latinum):::
-    +++<span lang="de">rumpf</span>+++
+    +++<span lang="de">Rumpf</span>+++
 
   Lingua Hispanica (Abecedarium Latinum):::
     +++<span lang="es">tronco</span>+++
@@ -2921,7 +2919,7 @@ Rēs linguālibus::
     +++<span lang="it">tronco</span>+++
 
   Lingua Hibernica (Abecedarium Latinum):::
-    +++<span lang="ga">tóracs</span>+++
+    +++<span lang="ga">Tóracs</span>+++
 
   Lingua Suecica (Abecedarium Latinum):::
     +++<span lang="sv">torso</span>+++
@@ -2933,7 +2931,7 @@ Rēs linguālibus::
     +++<span lang="fi">torso</span>+++
 
   Lingua Dacoromanica (Abecedarium Latinum):::
-    +++<span lang="ro">trunchi</span>+++
+    +++<span lang="ro">Trunchi</span>+++
 
   Lingua Vietnamensis (Abecedarium Latinum):::
     +++<span lang="vi">thân mình</span>+++
@@ -2942,13 +2940,13 @@ Rēs linguālibus::
     +++<span lang="ca">tronc</span>+++
 
   Lingua Ucrainica (Abecedarium Cyrillicum):::
-    +++<span lang="uk">тулуб</span>+++
+    +++<span lang="uk">Тулуб</span>+++
 
   Lingua Bulgarica (Abecedarium Cyrillicum):::
-    +++<span lang="bg">туловище</span>+++
+    +++<span lang="bg">Туловище</span>+++
 
   Lingua Slovena (Abecedarium Latinum):::
-    +++<span lang="sl">torzo</span>+++
+    +++<span lang="sl">Torzo</span>+++
 
   /Bokmål/ (Abecedarium Latinum):::
     +++<span lang="nb">torso</span>+++
@@ -2957,7 +2955,7 @@ Rēs linguālibus::
     +++<span lang="cs">trup</span>+++
 
   Lingua Danica (Abecedarium Latinum):::
-    +++<span lang="da">torso</span>+++
+    +++<span lang="da">Torso</span>+++
 
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">胴体</span>+++
@@ -2966,106 +2964,106 @@ Rēs linguālibus::
     +++<span lang="nn">truncus</span>+++
 
   Lingua Indonesiana (Abecedarium Latinum):::
-    +++<span lang="id">trunkus</span>+++
+    +++<span lang="id">Trunkus</span>+++
 
   Macrolingua Persica (//Abecedarium Arabicum//):::
     +++<span lang="fa">تنه</span>+++
 
   Lingua Hungarica (Abecedarium Latinum):::
-    +++<span lang="hu">torzó</span>+++
+    +++<span lang="hu">Torzó</span>+++
 
   Lingua Vasconica (Abecedarium Latinum):::
-    +++<span lang="eu">gorputz-enbor</span>+++
+    +++<span lang="eu">Gorputz-enbor</span>+++
 
   Lingua Gallaica (Abecedarium Latinum):::
-    +++<span lang="gl">tronco</span>+++
+    +++<span lang="gl">Tronco</span>+++
 
   Lingua Slovaca (Abecedarium Latinum):::
-    +++<span lang="sk">trup</span>+++
+    +++<span lang="sk">Trup</span>+++
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">torso</span>+++
 
   Macrolingua Estonica (Abecedarium Latinum):::
-    +++<span lang="et">kere</span>+++
+    +++<span lang="et">Kere</span>+++
 
   Lingua Croatica (Abecedarium Latinum):::
-    +++<span lang="hr">torzo</span>+++
+    +++<span lang="hr">Torzo</span>+++
 
   Lingua Turcica (Abecedarium Latinum):::
-    +++<span lang="tr">gövde</span>+++
+    +++<span lang="tr">Gövde</span>+++
 
   Lingua Occitana (Abecedarium Latinum):::
-    +++<span lang="oc">tronc</span>+++
+    +++<span lang="oc">Tronc</span>+++
 
   Lingua Batava Capitensis (Abecedarium Latinum):::
-    +++<span lang="af">torso</span>+++
+    +++<span lang="af">Torso</span>+++
 
   Lingua Aragonensis (Abecedarium Latinum):::
-    +++<span lang="an">tronco</span>+++
+    +++<span lang="an">Tronco</span>+++
 
   //Traditional Chinese// (/ISO 15924 Hant/):::
     +++<span lang="zh-hant">軀幹</span>+++
 
   Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum):::
-    +++<span lang="gd">colann</span>+++
+    +++<span lang="gd">Colann</span>+++
 
   /Serbian/ (Abecedarium Latinum):::
-    +++<span lang="sr-el">torzo</span>+++
+    +++<span lang="sr-el">Torzo</span>+++
 
   //Macrolingua Wu// (/ISO 15924 Zyyy/):::
     +++<span lang="wuu">躯干</span>+++
 
   Lingua Serbica (Abecedarium Cyrillicum):::
-    +++<span lang="sr">торзо</span>+++
+    +++<span lang="sr">Торзо</span>+++
 
   Lingua Urdu (Abecedarium Arabicum):::
     +++<span lang="ur">دھڑ</span>+++
 
   Lingua Lithuanica (Abecedarium Latinum):::
-    +++<span lang="lt">liemuo</span>+++
+    +++<span lang="lt">Liemuo</span>+++
 
   Macrolingua Serbocroatica (Abecedarium Latinum):::
-    +++<span lang="sh">torzo</span>+++
+    +++<span lang="sh">Torzo</span>+++
 
   Macrolingua Lettonica (Abecedarium Latinum):::
     +++<span lang="lv">rumpis</span>+++
 
   Lingua Bosnica (Abecedarium Latinum):::
-    +++<span lang="bs">torzo</span>+++
+    +++<span lang="bs">Torzo</span>+++
 
   /South Azerbaijani/ (Abecedarium Arabicum):::
     +++<span lang="azb">گؤوده(اینسان)</span>+++
 
   Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
-    +++<span lang="be">тулава</span>+++
+    +++<span lang="be">Тулава</span>+++
 
   /Kabyle language/ (Abecedarium Latinum):::
-    +++<span lang="kab">igiger</span>+++
+    +++<span lang="kab">Igiger</span>+++
 
   /Min Nan Chinese/ (Abecedarium Latinum):::
-    +++<span lang="nan">tōng-thé</span>+++
+    +++<span lang="nan">Tōng-thé</span>+++
 
   Lingua Yue (/ISO 15924 Zyyy/):::
     +++<span lang="yue">軀幹</span>+++
 
   Macrolingua Suahelica (Abecedarium Latinum):::
-    +++<span lang="sw">kiwiliwili</span>+++
+    +++<span lang="sw">Kiwiliwili</span>+++
 
   Lingua Xosana (Abecedarium Latinum):::
-    +++<span lang="xh">isibhukubhuku somzimba</span>+++
+    +++<span lang="xh">Isibhukubhuku somzimba</span>+++
 
   Lingua Uigurica (/ISO 15924 Zyyy/):::
     +++<span lang="ug">گەۋدە</span>+++
 
   Lingua Tagalog (Abecedarium Latinum):::
-    +++<span lang="tl">punungkatawan</span>+++
+    +++<span lang="tl">Punungkatawan</span>+++
 
   Lingua Avarica (Abecedarium Cyrillicum):::
-    +++<span lang="av">рачелкъай-2</span>+++
+    +++<span lang="av">Рачелкъай-2</span>+++
 
   Lingua Tschuvaschica (Abecedarium Cyrillicum):::
-    +++<span lang="cv">çанçурăм</span>+++
+    +++<span lang="cv">Çанçурăм</span>+++
 
   Macrolingua Curdica (/ISO 15924 Zyyy/):::
     +++<span lang="ku">Laşqolik</span>+++
@@ -3074,7 +3072,7 @@ Rēs linguālibus::
     +++<span lang="ku-arab">لاشقۆلک</span>+++
 
   Macrolingua Curdica (Abecedarium Latinum):::
-    +++<span lang="ku-latn">laşqolik</span>+++
+    +++<span lang="ku-latn">Laşqolik</span>+++
 
   Lingua Macedonica (Abecedarium Cyrillicum):::
     +++<span lang="mk">труп</span>+++
@@ -3083,22 +3081,19 @@ Rēs linguālibus::
     +++<span lang="ps">اتره</span>+++
 
   Lingua Somalica (Abecedarium Latinum):::
-    +++<span lang="so">ubuc</span>+++
+    +++<span lang="so">Ubuc</span>+++
 
   Ido (Abecedarium Latinum):::
-    +++<span lang="io">torso</span>+++
+    +++<span lang="io">Torso</span>+++
 
 
 
 
 
 [id='3_1']
-==== [`3_1`] pectus
+==== [`3_1`] Pectus
 
-Rēs interlinguālibus::
-  /Wiki QID/:::
-    https://www.wikidata.org/wiki/Q9645[Q9645]
-
+Rēs interlinguālibus (4)::
   Terminologia Anatomica 98 ID:::
     A01.1.00.014
 
@@ -3108,9 +3103,12 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_n1603_25_1_thorax
 
-Rēs linguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q9645[Q9645]
+
+Rēs linguālibus (104)::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">pectus</span>+++
+    +++<span lang="la">Pectus</span>+++
 
   Macrolingua Arabica (Abecedarium Arabicum):::
     +++<span lang="ar">صدر</span>+++
@@ -3173,10 +3171,10 @@ Rēs linguālibus::
     +++<span lang="fr">torse</span>+++
 
   Lingua Batavica (Abecedarium Latinum):::
-    +++<span lang="nl">borstkas</span>+++
+    +++<span lang="nl">Borstkas</span>+++
 
   Lingua Germanica (Abecedarium Latinum):::
-    +++<span lang="de">brust</span>+++
+    +++<span lang="de">Brust</span>+++
 
   Lingua Hispanica (Abecedarium Latinum):::
     +++<span lang="es">torso</span>+++
@@ -3185,7 +3183,7 @@ Rēs linguālibus::
     +++<span lang="it">petto</span>+++
 
   Lingua Hibernica (Abecedarium Latinum):::
-    +++<span lang="ga">cliabhrach</span>+++
+    +++<span lang="ga">Cliabhrach</span>+++
 
   Lingua Suecica (Abecedarium Latinum):::
     +++<span lang="sv">bröst</span>+++
@@ -3194,10 +3192,10 @@ Rēs linguālibus::
     +++<span lang="pl">klatka piersiowa</span>+++
 
   Lingua Finnica (Abecedarium Latinum):::
-    +++<span lang="fi">rinta</span>+++
+    +++<span lang="fi">Rinta</span>+++
 
   Lingua Vietnamensis (Abecedarium Latinum):::
-    +++<span lang="vi">ngực</span>+++
+    +++<span lang="vi">Ngực</span>+++
 
   Lingua Catalana (Abecedarium Latinum):::
     +++<span lang="ca">tors</span>+++
@@ -3209,10 +3207,10 @@ Rēs linguālibus::
     +++<span lang="bg">гръден кош</span>+++
 
   Lingua Slovena (Abecedarium Latinum):::
-    +++<span lang="sl">prsni koš</span>+++
+    +++<span lang="sl">Prsni koš</span>+++
 
   /Waray language/ (Abecedarium Latinum):::
-    +++<span lang="war">dughán</span>+++
+    +++<span lang="war">Dughán</span>+++
 
   /Bokmål/ (Abecedarium Latinum):::
     +++<span lang="nb">bryst</span>+++
@@ -3221,7 +3219,7 @@ Rēs linguālibus::
     +++<span lang="cs">hrudník</span>+++
 
   Lingua Danica (Abecedarium Latinum):::
-    +++<span lang="da">brystkasse</span>+++
+    +++<span lang="da">Brystkasse</span>+++
 
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">胸</span>+++
@@ -3230,7 +3228,7 @@ Rēs linguālibus::
     +++<span lang="nn">bryst</span>+++
 
   Lingua Indonesiana (Abecedarium Latinum):::
-    +++<span lang="id">dada</span>+++
+    +++<span lang="id">Dada</span>+++
 
   Macrolingua Persica (//Abecedarium Arabicum//):::
     +++<span lang="fa">سینه</span>+++
@@ -3239,16 +3237,16 @@ Rēs linguālibus::
     +++<span lang="hu">mellkas</span>+++
 
   Lingua Vasconica (Abecedarium Latinum):::
-    +++<span lang="eu">torax</span>+++
+    +++<span lang="eu">Torax</span>+++
 
   Lingua Cambrica (Abecedarium Latinum):::
-    +++<span lang="cy">thoracs</span>+++
+    +++<span lang="cy">Thoracs</span>+++
 
   Lingua Gallaica (Abecedarium Latinum):::
-    +++<span lang="gl">peito</span>+++
+    +++<span lang="gl">Peito</span>+++
 
   Lingua Slovaca (Abecedarium Latinum):::
-    +++<span lang="sk">hrudník</span>+++
+    +++<span lang="sk">Hrudník</span>+++
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">brusto</span>+++
@@ -3260,37 +3258,37 @@ Rēs linguālibus::
     +++<span lang="et">rind</span>+++
 
   Lingua Croatica (Abecedarium Latinum):::
-    +++<span lang="hr">prsni koš</span>+++
+    +++<span lang="hr">Prsni koš</span>+++
 
   Lingua Turcica (Abecedarium Latinum):::
     +++<span lang="tr">göğüs</span>+++
 
   Lingua Saxonica (Abecedarium Latinum):::
-    +++<span lang="nds">bost (liev)</span>+++
+    +++<span lang="nds">Bost (Liev)</span>+++
 
   Lingua Occitana (Abecedarium Latinum):::
-    +++<span lang="oc">torax</span>+++
+    +++<span lang="oc">Torax</span>+++
 
   Lingua Britonica (Abecedarium Latinum):::
-    +++<span lang="br">bruched</span>+++
+    +++<span lang="br">Bruched</span>+++
 
   Lingua Batava Capitensis (Abecedarium Latinum):::
     +++<span lang="af">bors</span>+++
 
   Lingua Luxemburgensis (Abecedarium Latinum):::
-    +++<span lang="lb">broscht</span>+++
+    +++<span lang="lb">Broscht</span>+++
 
   Lingua Aragonensis (Abecedarium Latinum):::
-    +++<span lang="an">tórax</span>+++
+    +++<span lang="an">Tórax</span>+++
 
   Lingua Islandica (Abecedarium Latinum):::
-    +++<span lang="is">frambolur</span>+++
+    +++<span lang="is">Frambolur</span>+++
 
   Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum):::
-    +++<span lang="gd">broilleach</span>+++
+    +++<span lang="gd">Broilleach</span>+++
 
   Lingua Vallonica (Abecedarium Latinum):::
-    +++<span lang="wa">cofe coistrece</span>+++
+    +++<span lang="wa">Cofe coistrece</span>+++
 
   //Macrolingua Wu// (/ISO 15924 Zyyy/):::
     +++<span lang="wuu">胸</span>+++
@@ -3302,10 +3300,10 @@ Rēs linguālibus::
     +++<span lang="ur">سینہ</span>+++
 
   Lingua Lithuanica (Abecedarium Latinum):::
-    +++<span lang="lt">krūtinė</span>+++
+    +++<span lang="lt">Krūtinė</span>+++
 
   Macrolingua Serbocroatica (Abecedarium Latinum):::
-    +++<span lang="sh">prsni koš</span>+++
+    +++<span lang="sh">Prsni koš</span>+++
 
   Macrolingua Lettonica (Abecedarium Latinum):::
     +++<span lang="lv">krūškurvis</span>+++
@@ -3317,10 +3315,10 @@ Rēs linguālibus::
     +++<span lang="be">грудная клетка</span>+++
 
   /Kabyle language/ (Abecedarium Latinum):::
-    +++<span lang="kab">idmaren</span>+++
+    +++<span lang="kab">Idmaren</span>+++
 
   Lingua Asturiana (Abecedarium Latinum):::
-    +++<span lang="ast">tórax</span>+++
+    +++<span lang="ast">Tórax</span>+++
 
   /Min Dong Chinese/ (/ISO 15924 Zyyy/):::
     +++<span lang="cdo">Sĭng-găng</span>+++
@@ -3335,28 +3333,28 @@ Rēs linguālibus::
     +++<span lang="mzn">سنه</span>+++
 
   /Min Nan Chinese/ (Abecedarium Latinum):::
-    +++<span lang="nan">heng-khám</span>+++
+    +++<span lang="nan">Heng-khám</span>+++
 
   Lingua Newari (Devanāgarī):::
     +++<span lang="new">नुगःपा</span>+++
 
   /Kapampangan language/ (Abecedarium Latinum):::
-    +++<span lang="pam">salu</span>+++
+    +++<span lang="pam">Salu</span>+++
 
   Lingua Samogitica (Abecedarium Latinum):::
-    +++<span lang="sgs">krauklėnė</span>+++
+    +++<span lang="sgs">Krauklėnė</span>+++
 
   Shilha language (/ISO 15924 Zyyy/):::
     +++<span lang="shi">idmarn</span>+++
 
   Lingua Vepsica (Abecedarium Latinum):::
-    +++<span lang="vep">rind</span>+++
+    +++<span lang="vep">Rind</span>+++
 
   Lingua Yue (/ISO 15924 Zyyy/):::
     +++<span lang="yue">胸</span>+++
 
   Macrolingua Suahelica (Abecedarium Latinum):::
-    +++<span lang="sw">kifua</span>+++
+    +++<span lang="sw">Kifua</span>+++
 
   /Zhuang languages/ (/ISO 15924 Zyyy/):::
     +++<span lang="za">Aek</span>+++
@@ -3365,25 +3363,25 @@ Rēs linguālibus::
     +++<span lang="yi">ברוסטקאסטן</span>+++
 
   Macrolingua Uzbecica (Abecedarium Latinum):::
-    +++<span lang="uz">koʻkrak qafasi</span>+++
+    +++<span lang="uz">Koʻkrak qafasi</span>+++
 
   Lingua Uigurica (/ISO 15924 Zyyy/):::
     +++<span lang="ug">تۆش</span>+++
 
   Lingua Tagalog (Abecedarium Latinum):::
-    +++<span lang="tl">dibdib</span>+++
+    +++<span lang="tl">Dibdib</span>+++
 
   Lingua Avarica (Abecedarium Cyrillicum):::
-    +++<span lang="av">керен</span>+++
+    +++<span lang="av">Керен</span>+++
 
   Macrolingua Atropatenica (Abecedarium Latinum):::
     +++<span lang="az">toraks</span>+++
 
   Macrolingua Guaranica (Abecedarium Latinum):::
-    +++<span lang="gn">pyti'a</span>+++
+    +++<span lang="gn">Pyti'a</span>+++
 
   Lingua Monensis (Abecedarium Latinum):::
-    +++<span lang="gv">cleeau</span>+++
+    +++<span lang="gv">Cleeau</span>+++
 
   Lingua Kazachica (/ISO 15924 Zyyy/):::
     +++<span lang="kk">Көкірек қуысы анатомиясы</span>+++
@@ -3398,40 +3396,37 @@ Rēs linguālibus::
     +++<span lang="ky">Көкүрөк</span>+++
 
   /Lingala/ (Abecedarium Latinum):::
-    +++<span lang="ln">bontólo</span>+++
+    +++<span lang="ln">Bontólo</span>+++
 
   Lingua Macedonica (Abecedarium Cyrillicum):::
-    +++<span lang="mk">граден кош</span>+++
+    +++<span lang="mk">Граден кош</span>+++
 
   Macrolingua Nepalensis (Devanāgarī):::
     +++<span lang="ne">छाति</span>+++
 
   Macrolinguae Quechuae (Abecedarium Latinum):::
-    +++<span lang="qu">qhasqu</span>+++
+    +++<span lang="qu">Qhasqu</span>+++
 
   /Shona/ (Abecedarium Latinum):::
-    +++<span lang="sn">chipfuva</span>+++
+    +++<span lang="sn">Chipfuva</span>+++
 
   Lingua Somalica (Abecedarium Latinum):::
-    +++<span lang="so">sakaar</span>+++
+    +++<span lang="so">Sakaar</span>+++
 
   Ido (Abecedarium Latinum):::
-    +++<span lang="io">torako</span>+++
+    +++<span lang="io">Torako</span>+++
 
   Lingua Franca Nova (Abecedarium Latinum):::
-    +++<span lang="lfn">torax</span>+++
+    +++<span lang="lfn">Torax</span>+++
 
 
 
 
 
 [id='3_2']
-==== [`3_2`] abdomen
+==== [`3_2`] Abdomen
 
-Rēs interlinguālibus::
-  /Wiki QID/:::
-    https://www.wikidata.org/wiki/Q9597[Q9597]
-
+Rēs interlinguālibus (4)::
   Terminologia Anatomica 98 ID:::
     A01.1.00.016
 
@@ -3441,9 +3436,12 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_n1603_25_1_abdomen
 
-Rēs linguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q9597[Q9597]
+
+Rēs linguālibus (110)::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">abdomen</span>+++
+    +++<span lang="la">Abdomen</span>+++
 
   Macrolingua Arabica (Abecedarium Arabicum):::
     +++<span lang="ar">بطن</span>+++
@@ -3500,7 +3498,7 @@ Rēs linguālibus::
     +++<span lang="nl">buik</span>+++
 
   Lingua Germanica (Abecedarium Latinum):::
-    +++<span lang="de">abdomen</span>+++
+    +++<span lang="de">Abdomen</span>+++
 
   Lingua Hispanica (Abecedarium Latinum):::
     +++<span lang="es">abdomen</span>+++
@@ -3509,19 +3507,19 @@ Rēs linguālibus::
     +++<span lang="it">addome</span>+++
 
   Lingua Hibernica (Abecedarium Latinum):::
-    +++<span lang="ga">abdóman</span>+++
+    +++<span lang="ga">Abdóman</span>+++
 
   Lingua Suecica (Abecedarium Latinum):::
     +++<span lang="sv">buken</span>+++
 
   Macrolingua Albanica (/Abecedarium Latinum/):::
-    +++<span lang="sq">abdomeni</span>+++
+    +++<span lang="sq">Abdomeni</span>+++
 
   Lingua Polonica (Abecedarium Latinum):::
     +++<span lang="pl">brzuch</span>+++
 
   Lingua Finnica (Abecedarium Latinum):::
-    +++<span lang="fi">vatsa</span>+++
+    +++<span lang="fi">Vatsa</span>+++
 
   Lingua Dacoromanica (Abecedarium Latinum):::
     +++<span lang="ro">abdomen</span>+++
@@ -3536,13 +3534,13 @@ Rēs linguālibus::
     +++<span lang="uk">живіт</span>+++
 
   Lingua Bulgarica (Abecedarium Cyrillicum):::
-    +++<span lang="bg">корем</span>+++
+    +++<span lang="bg">Корем</span>+++
 
   Lingua Slovena (Abecedarium Latinum):::
-    +++<span lang="sl">trebuh</span>+++
+    +++<span lang="sl">Trebuh</span>+++
 
   /Waray language/ (Abecedarium Latinum):::
-    +++<span lang="war">puson</span>+++
+    +++<span lang="war">Puson</span>+++
 
   /Bokmål/ (Abecedarium Latinum):::
     +++<span lang="nb">buk</span>+++
@@ -3551,7 +3549,7 @@ Rēs linguālibus::
     +++<span lang="cs">břicho</span>+++
 
   Lingua Danica (Abecedarium Latinum):::
-    +++<span lang="da">bughule</span>+++
+    +++<span lang="da">Bughule</span>+++
 
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">腹</span>+++
@@ -3560,25 +3558,25 @@ Rēs linguālibus::
     +++<span lang="nn">abdomen</span>+++
 
   Lingua Indonesiana (Abecedarium Latinum):::
-    +++<span lang="id">abdomen</span>+++
+    +++<span lang="id">Abdomen</span>+++
 
   Macrolingua Persica (//Abecedarium Arabicum//):::
     +++<span lang="fa">شکم</span>+++
 
   Lingua Hungarica (Abecedarium Latinum):::
-    +++<span lang="hu">has</span>+++
+    +++<span lang="hu">Has</span>+++
 
   Lingua Vasconica (Abecedarium Latinum):::
-    +++<span lang="eu">abdomen</span>+++
+    +++<span lang="eu">Abdomen</span>+++
 
   Lingua Cambrica (Abecedarium Latinum):::
-    +++<span lang="cy">abdomen</span>+++
+    +++<span lang="cy">Abdomen</span>+++
 
   Lingua Gallaica (Abecedarium Latinum):::
-    +++<span lang="gl">abdome</span>+++
+    +++<span lang="gl">Abdome</span>+++
 
   Lingua Slovaca (Abecedarium Latinum):::
-    +++<span lang="sk">brucho (stavovce)</span>+++
+    +++<span lang="sk">Brucho (stavovce)</span>+++
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">ventro</span>+++
@@ -3587,46 +3585,46 @@ Rēs linguālibus::
     +++<span lang="ms">Abdomen</span>+++
 
   Macrolingua Estonica (Abecedarium Latinum):::
-    +++<span lang="et">kõht</span>+++
+    +++<span lang="et">Kõht</span>+++
 
   Lingua Croatica (Abecedarium Latinum):::
-    +++<span lang="hr">trbuh</span>+++
+    +++<span lang="hr">Trbuh</span>+++
 
   Lingua Turcica (Abecedarium Latinum):::
-    +++<span lang="tr">karın</span>+++
+    +++<span lang="tr">Karın</span>+++
 
   Lingua Saxonica (Abecedarium Latinum):::
-    +++<span lang="nds">buuk</span>+++
+    +++<span lang="nds">Buuk</span>+++
 
   Lingua Occitana (Abecedarium Latinum):::
-    +++<span lang="oc">abdomèn</span>+++
+    +++<span lang="oc">Abdomèn</span>+++
 
   Lingua Britonica (Abecedarium Latinum):::
-    +++<span lang="br">kof</span>+++
+    +++<span lang="br">Kof</span>+++
 
   Lingua Batava Capitensis (Abecedarium Latinum):::
-    +++<span lang="af">abdomen</span>+++
+    +++<span lang="af">Abdomen</span>+++
 
   Lingua Aragonensis (Abecedarium Latinum):::
-    +++<span lang="an">abdomen</span>+++
+    +++<span lang="an">Abdomen</span>+++
 
   Lingua Islandica (Abecedarium Latinum):::
-    +++<span lang="is">afturbolur</span>+++
+    +++<span lang="is">Afturbolur</span>+++
 
   Lingua Sicula (Abecedarium Latinum):::
-    +++<span lang="scn">panza</span>+++
+    +++<span lang="scn">Panza</span>+++
 
   Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum):::
-    +++<span lang="gd">balg</span>+++
+    +++<span lang="gd">Balg</span>+++
 
   Lingua Limburgica (Abecedarium Latinum):::
-    +++<span lang="li">boek</span>+++
+    +++<span lang="li">Boek</span>+++
 
   /Serbian/ (Abecedarium Latinum):::
     +++<span lang="sr-el">trbuh</span>+++
 
   /West Flemish/ (Abecedarium Latinum):::
-    +++<span lang="vls">buuk</span>+++
+    +++<span lang="vls">Buuk</span>+++
 
   //Macrolingua Wu// (/ISO 15924 Zyyy/):::
     +++<span lang="wuu">腹</span>+++
@@ -3635,22 +3633,22 @@ Rēs linguālibus::
     +++<span lang="sr">трбух</span>+++
 
   Lingua Lithuanica (Abecedarium Latinum):::
-    +++<span lang="lt">pilvelis</span>+++
+    +++<span lang="lt">Pilvelis</span>+++
 
   Macrolingua Serbocroatica (Abecedarium Latinum):::
-    +++<span lang="sh">trbuh</span>+++
+    +++<span lang="sh">Trbuh</span>+++
 
   Macrolingua Lettonica (Abecedarium Latinum):::
-    +++<span lang="lv">vēders</span>+++
+    +++<span lang="lv">Vēders</span>+++
 
   Lingua Iavanica (Abecedarium Latinum):::
-    +++<span lang="jv">weteng</span>+++
+    +++<span lang="jv">Weteng</span>+++
 
   Lingua Neograeca (Alphabetum Graecum):::
     +++<span lang="el">κοιλιά</span>+++
 
   /Sundanese language/ (Abecedarium Latinum):::
-    +++<span lang="su">beuteung</span>+++
+    +++<span lang="su">Beuteung</span>+++
 
   Lingua Frisice occidentalis (Abecedarium Latinum):::
     +++<span lang="fy">búk</span>+++
@@ -3659,22 +3657,22 @@ Rēs linguālibus::
     +++<span lang="be">брушка</span>+++
 
   /Kabyle language/ (Abecedarium Latinum):::
-    +++<span lang="kab">adis</span>+++
+    +++<span lang="kab">Adis</span>+++
 
   Langobardus sermo (Abecedarium Latinum):::
-    +++<span lang="lmo">venter</span>+++
+    +++<span lang="lmo">Venter</span>+++
 
   Lingua Asturiana (Abecedarium Latinum):::
-    +++<span lang="ast">abdome</span>+++
+    +++<span lang="ast">Abdome</span>+++
 
   /Min Dong Chinese/ (/ISO 15924 Zyyy/):::
     +++<span lang="cdo">Bók-lō̤</span>+++
 
   Lingua Zazaca (Abecedarium Latinum):::
-    +++<span lang="diq">vêre</span>+++
+    +++<span lang="diq">Vêre</span>+++
 
   Lingua Extremadurensis (Abecedarium Latinum):::
-    +++<span lang="ext">abdomin</span>+++
+    +++<span lang="ext">Abdomin</span>+++
 
   /Hakka Chinese/ (/ISO 15924 Zyyy/):::
     +++<span lang="hak">Tú-sṳ́</span>+++
@@ -3686,13 +3684,13 @@ Rēs linguālibus::
     +++<span lang="mzn">اشکم</span>+++
 
   Lingua Navatlaca (Abecedarium Latinum):::
-    +++<span lang="nah">xillāntli</span>+++
+    +++<span lang="nah">Xillāntli</span>+++
 
   /Min Nan Chinese/ (Abecedarium Latinum):::
-    +++<span lang="nan">pak-tó͘</span>+++
+    +++<span lang="nan">Pak-tó͘</span>+++
 
   Lingua Vepsica (Abecedarium Latinum):::
-    +++<span lang="vep">koht</span>+++
+    +++<span lang="vep">Koht</span>+++
 
   Lingua Yue (/ISO 15924 Zyyy/):::
     +++<span lang="yue">腹</span>+++
@@ -3704,7 +3702,7 @@ Rēs linguālibus::
     +++<span lang="yi">בויך</span>+++
 
   Macrolingua Uzbecica (Abecedarium Latinum):::
-    +++<span lang="uz">abdomen</span>+++
+    +++<span lang="uz">Abdomen</span>+++
 
   Lingua Uigurica (/ISO 15924 Zyyy/):::
     +++<span lang="ug">قورساق قىسم</span>+++
@@ -3716,22 +3714,22 @@ Rēs linguālibus::
     +++<span lang="tt-cyrl">корсак</span>+++
 
   Lingua Tagalog (Abecedarium Latinum):::
-    +++<span lang="tl">puson</span>+++
+    +++<span lang="tl">Puson</span>+++
 
   Lingua Avarica (Abecedarium Cyrillicum):::
-    +++<span lang="av">чехь</span>+++
+    +++<span lang="av">Чехь</span>+++
 
   Macrolingua Atropatenica (Abecedarium Latinum):::
-    +++<span lang="az">abdomen</span>+++
+    +++<span lang="az">Abdomen</span>+++
 
   Lingua Tschuvaschica (Abecedarium Cyrillicum):::
-    +++<span lang="cv">хырăм</span>+++
+    +++<span lang="cv">Хырăм</span>+++
 
   Macrolingua Guaranica (Abecedarium Latinum):::
-    +++<span lang="gn">tyeguy</span>+++
+    +++<span lang="gn">Tyeguy</span>+++
 
   Lingua creola Haitiana (Abecedarium Latinum):::
-    +++<span lang="ht">vant</span>+++
+    +++<span lang="ht">Vant</span>+++
 
   Lingua Mingrelica (Abecedarium Georgianum):::
     +++<span lang="xmf">ქვარა</span>+++
@@ -3749,7 +3747,7 @@ Rēs linguālibus::
     +++<span lang="ky">Абдомен</span>+++
 
   /Lingala/ (Abecedarium Latinum):::
-    +++<span lang="ln">libumu</span>+++
+    +++<span lang="ln">Libumu</span>+++
 
   Lingua Macedonica (Abecedarium Cyrillicum):::
     +++<span lang="mk">стомак</span>+++
@@ -3761,10 +3759,10 @@ Rēs linguālibus::
     +++<span lang="ps">گېډه</span>+++
 
   Macrolinguae Quechuae (Abecedarium Latinum):::
-    +++<span lang="qu">wiksa</span>+++
+    +++<span lang="qu">Wiksa</span>+++
 
   Interlingua (Abecedarium Latinum):::
-    +++<span lang="ia">abdomine</span>+++
+    +++<span lang="ia">Abdomine</span>+++
 
   Ido (Abecedarium Latinum):::
     +++<span lang="io">abdomino</span>+++
@@ -3777,12 +3775,9 @@ Rēs linguālibus::
 
 
 [id='3_3']
-==== [`3_3`] pelvis
+==== [`3_3`] Pelvis
 
-Rēs interlinguālibus::
-  /Wiki QID/:::
-    https://www.wikidata.org/wiki/Q713102[Q713102]
-
+Rēs interlinguālibus (4)::
   Terminologia Anatomica 98 ID:::
     A01.1.00.017
 
@@ -3792,9 +3787,12 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_n1603_25_1_pelvis
 
-Rēs linguālibus::
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q713102[Q713102]
+
+Rēs linguālibus (73)::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">pelvis</span>+++
+    +++<span lang="la">Pelvis</span>+++
 
   Macrolingua Arabica (Abecedarium Arabicum):::
     +++<span lang="ar">حوض</span>+++
@@ -3845,7 +3843,7 @@ Rēs linguālibus::
     +++<span lang="nl">bekken</span>+++
 
   Lingua Germanica (Abecedarium Latinum):::
-    +++<span lang="de">becken</span>+++
+    +++<span lang="de">Becken</span>+++
 
   Lingua Hispanica (Abecedarium Latinum):::
     +++<span lang="es">pelvis</span>+++
@@ -3854,7 +3852,7 @@ Rēs linguālibus::
     +++<span lang="it">bacino</span>+++
 
   Lingua Hibernica (Abecedarium Latinum):::
-    +++<span lang="ga">peilbheas</span>+++
+    +++<span lang="ga">Peilbheas</span>+++
 
   Lingua Suecica (Abecedarium Latinum):::
     +++<span lang="sv">bäcken</span>+++
@@ -3866,13 +3864,13 @@ Rēs linguālibus::
     +++<span lang="pl">kość miedniczna</span>+++
 
   Lingua Finnica (Abecedarium Latinum):::
-    +++<span lang="fi">lantio</span>+++
+    +++<span lang="fi">Lantio</span>+++
 
   Lingua Dacoromanica (Abecedarium Latinum):::
-    +++<span lang="ro">pelvis</span>+++
+    +++<span lang="ro">Pelvis</span>+++
 
   Lingua Vietnamensis (Abecedarium Latinum):::
-    +++<span lang="vi">khung chậu</span>+++
+    +++<span lang="vi">Khung chậu</span>+++
 
   Lingua Catalana (Abecedarium Latinum):::
     +++<span lang="ca">pelvis</span>+++
@@ -3881,13 +3879,13 @@ Rēs linguālibus::
     +++<span lang="uk">таз</span>+++
 
   Lingua Bulgarica (Abecedarium Cyrillicum):::
-    +++<span lang="bg">таз</span>+++
+    +++<span lang="bg">Таз</span>+++
 
   Lingua Slovena (Abecedarium Latinum):::
-    +++<span lang="sl">medenica</span>+++
+    +++<span lang="sl">Medenica</span>+++
 
   /Waray language/ (Abecedarium Latinum):::
-    +++<span lang="war">pelvis</span>+++
+    +++<span lang="war">Pelvis</span>+++
 
   /Bokmål/ (Abecedarium Latinum):::
     +++<span lang="nb">bekken</span>+++
@@ -3896,7 +3894,7 @@ Rēs linguālibus::
     +++<span lang="cs">pánev</span>+++
 
   Lingua Danica (Abecedarium Latinum):::
-    +++<span lang="da">bækken</span>+++
+    +++<span lang="da">Bækken</span>+++
 
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">骨盤</span>+++
@@ -3905,25 +3903,25 @@ Rēs linguālibus::
     +++<span lang="nn">bekken</span>+++
 
   Lingua Indonesiana (Abecedarium Latinum):::
-    +++<span lang="id">pelvis</span>+++
+    +++<span lang="id">Pelvis</span>+++
 
   Macrolingua Persica (//Abecedarium Arabicum//):::
     +++<span lang="fa">لگن خاصره</span>+++
 
   Lingua Hungarica (Abecedarium Latinum):::
-    +++<span lang="hu">csontos medence</span>+++
+    +++<span lang="hu">Csontos medence</span>+++
 
   Lingua Vasconica (Abecedarium Latinum):::
-    +++<span lang="eu">pelbis</span>+++
+    +++<span lang="eu">Pelbis</span>+++
 
   Lingua Cambrica (Abecedarium Latinum):::
-    +++<span lang="cy">pelfis</span>+++
+    +++<span lang="cy">Pelfis</span>+++
 
   Lingua Gallaica (Abecedarium Latinum):::
-    +++<span lang="gl">pelve</span>+++
+    +++<span lang="gl">Pelve</span>+++
 
   Lingua Slovaca (Abecedarium Latinum):::
-    +++<span lang="sk">panva</span>+++
+    +++<span lang="sk">Panva</span>+++
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">pelvo</span>+++
@@ -3932,52 +3930,52 @@ Rēs linguālibus::
     +++<span lang="ms">Pelvis</span>+++
 
   Macrolingua Estonica (Abecedarium Latinum):::
-    +++<span lang="et">vaagen</span>+++
+    +++<span lang="et">Vaagen</span>+++
 
   Lingua Croatica (Abecedarium Latinum):::
-    +++<span lang="hr">zdjelica</span>+++
+    +++<span lang="hr">Zdjelica</span>+++
 
   Lingua Turcica (Abecedarium Latinum):::
     +++<span lang="tr">pelvis</span>+++
 
   Lingua Britonica (Abecedarium Latinum):::
-    +++<span lang="br">lestr</span>+++
+    +++<span lang="br">Lestr</span>+++
 
   Lingua Batava Capitensis (Abecedarium Latinum):::
     +++<span lang="af">bekken</span>+++
 
   Lingua Luxemburgensis (Abecedarium Latinum):::
-    +++<span lang="lb">becken</span>+++
+    +++<span lang="lb">Becken</span>+++
 
   //Traditional Chinese// (/ISO 15924 Hant/):::
     +++<span lang="zh-hant">骨盆</span>+++
 
   Lingua Islandica (Abecedarium Latinum):::
-    +++<span lang="is">mjaðmagrind</span>+++
+    +++<span lang="is">Mjaðmagrind</span>+++
 
   //Macrolingua Wu// (/ISO 15924 Zyyy/):::
     +++<span lang="wuu">骨盆</span>+++
 
   Lingua Serbica (Abecedarium Cyrillicum):::
-    +++<span lang="sr">karlica</span>+++
+    +++<span lang="sr">Karlica</span>+++
 
   Lingua Lithuanica (Abecedarium Latinum):::
-    +++<span lang="lt">kaulinis dubuo</span>+++
+    +++<span lang="lt">Kaulinis dubuo</span>+++
 
   Macrolingua Serbocroatica (Abecedarium Latinum):::
-    +++<span lang="sh">zdjelica</span>+++
+    +++<span lang="sh">Zdjelica</span>+++
 
   Macrolingua Lettonica (Abecedarium Latinum):::
     +++<span lang="lv">iegurnis</span>+++
 
   Lingua Bosnica (Abecedarium Latinum):::
-    +++<span lang="bs">karlica</span>+++
+    +++<span lang="bs">Karlica</span>+++
 
   Lingua Neograeca (Alphabetum Graecum):::
     +++<span lang="el">Λεκάνη</span>+++
 
   Lingua Asturiana (Abecedarium Latinum):::
-    +++<span lang="ast">maxana</span>+++
+    +++<span lang="ast">Maxana</span>+++
 
   Lingua Yue (/ISO 15924 Zyyy/):::
     +++<span lang="yue">躉</span>+++
@@ -3986,16 +3984,16 @@ Rēs linguālibus::
     +++<span lang="ug">يانپاش</span>+++
 
   Lingua Tagalog (Abecedarium Latinum):::
-    +++<span lang="tl">balakang</span>+++
+    +++<span lang="tl">Balakang</span>+++
 
   Lingua Avarica (Abecedarium Cyrillicum):::
-    +++<span lang="av">рохокъотӏялъул ракьа</span>+++
+    +++<span lang="av">РохокъотӀялъул ракьа</span>+++
 
   Macrolingua Atropatenica (Abecedarium Latinum):::
-    +++<span lang="az">çanaq</span>+++
+    +++<span lang="az">Çanaq</span>+++
 
   Lingua Tschuvaschica (Abecedarium Cyrillicum):::
-    +++<span lang="cv">сутана́</span>+++
+    +++<span lang="cv">Сутана́</span>+++
 
   Lingua Mingrelica (Abecedarium Georgianum):::
     +++<span lang="xmf">კინჭიხე</span>+++
@@ -4010,19 +4008,16 @@ Rēs linguālibus::
     +++<span lang="mk">карлица</span>+++
 
   Ido (Abecedarium Latinum):::
-    +++<span lang="io">pelvo</span>+++
+    +++<span lang="io">Pelvo</span>+++
 
 
 
 
 
 [id='3_4']
-==== [`3_4`] dorsum
+==== [`3_4`] Dorsum
 
-Rēs interlinguālibus::
-  /Wiki QID/:::
-    https://www.wikidata.org/wiki/Q133279[Q133279]
-
+Rēs interlinguālibus (4)::
   Terminologia Anatomica 98 ID:::
     A01.1.00.018
 
@@ -4032,14 +4027,17 @@ Rēs interlinguālibus::
   ix_hxlvoc:::
     v_n1603_25_1_dorsum
 
+  /Wiki QID/:::
+    https://www.wikidata.org/wiki/Q133279[Q133279]
+
 Rēs pictūrīs::
 * **3_4~1**
 +
 image::1603_25_1.~1/3_4~1.png[title="++Sine nomine++"]
 
-Rēs linguālibus::
+Rēs linguālibus (96)::
   Lingua Latina (Abecedarium Latinum):::
-    +++<span lang="la">dorsum</span>+++
+    +++<span lang="la">Dorsum</span>+++
 
   Macrolingua Arabica (Abecedarium Arabicum):::
     +++<span lang="ar">ظهر</span>+++
@@ -4093,7 +4091,7 @@ Rēs linguālibus::
     +++<span lang="nl">rug</span>+++
 
   Lingua Germanica (Abecedarium Latinum):::
-    +++<span lang="de">rücken</span>+++
+    +++<span lang="de">Rücken</span>+++
 
   Lingua Hispanica (Abecedarium Latinum):::
     +++<span lang="es">espalda</span>+++
@@ -4111,10 +4109,10 @@ Rēs linguālibus::
     +++<span lang="fi">selkä</span>+++
 
   Lingua Dacoromanica (Abecedarium Latinum):::
-    +++<span lang="ro">spate</span>+++
+    +++<span lang="ro">Spate</span>+++
 
   Lingua Vietnamensis (Abecedarium Latinum):::
-    +++<span lang="vi">lưng người</span>+++
+    +++<span lang="vi">Lưng người</span>+++
 
   Lingua Catalana (Abecedarium Latinum):::
     +++<span lang="ca">esquena</span>+++
@@ -4123,10 +4121,10 @@ Rēs linguālibus::
     +++<span lang="uk">спина</span>+++
 
   Lingua Bulgarica (Abecedarium Cyrillicum):::
-    +++<span lang="bg">гръб</span>+++
+    +++<span lang="bg">Гръб</span>+++
 
   /Waray language/ (Abecedarium Latinum):::
-    +++<span lang="war">bungkog</span>+++
+    +++<span lang="war">Bungkog</span>+++
 
   /Bokmål/ (Abecedarium Latinum):::
     +++<span lang="nb">rygg</span>+++
@@ -4144,55 +4142,55 @@ Rēs linguālibus::
     +++<span lang="nn">rygg</span>+++
 
   Lingua Indonesiana (Abecedarium Latinum):::
-    +++<span lang="id">punggung</span>+++
+    +++<span lang="id">Punggung</span>+++
 
   Macrolingua Persica (//Abecedarium Arabicum//):::
     +++<span lang="fa">پشت انسان</span>+++
 
   Lingua Vasconica (Abecedarium Latinum):::
-    +++<span lang="eu">bizkar</span>+++
+    +++<span lang="eu">Bizkar</span>+++
 
   Lingua Cambrica (Abecedarium Latinum):::
-    +++<span lang="cy">cefn</span>+++
+    +++<span lang="cy">Cefn</span>+++
 
   Lingua Gallaica (Abecedarium Latinum):::
-    +++<span lang="gl">costas</span>+++
+    +++<span lang="gl">Costas</span>+++
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">dorso</span>+++
 
   Macrolingua Estonica (Abecedarium Latinum):::
-    +++<span lang="et">selg</span>+++
+    +++<span lang="et">Selg</span>+++
 
   Lingua Croatica (Abecedarium Latinum):::
-    +++<span lang="hr">leđa</span>+++
+    +++<span lang="hr">Leđa</span>+++
 
   Lingua Turcica (Abecedarium Latinum):::
-    +++<span lang="tr">sırt</span>+++
+    +++<span lang="tr">Sırt</span>+++
 
   Lingua Saxonica (Abecedarium Latinum):::
-    +++<span lang="nds">rügg</span>+++
+    +++<span lang="nds">Rügg</span>+++
 
   Lingua Britonica (Abecedarium Latinum):::
-    +++<span lang="br">kein</span>+++
+    +++<span lang="br">Kein</span>+++
 
   Lingua Scotica quae Teutonica (Abecedarium Latinum):::
     +++<span lang="sco">back</span>+++
 
   Lingua Bavarica (Abecedarium Latinum):::
-    +++<span lang="bar">greids</span>+++
+    +++<span lang="bar">Greids</span>+++
 
   Lingua Aragonensis (Abecedarium Latinum):::
-    +++<span lang="an">esquena</span>+++
+    +++<span lang="an">Esquena</span>+++
 
   //Traditional Chinese// (/ISO 15924 Hant/):::
     +++<span lang="zh-hant">背</span>+++
 
   Lingua Sicula (Abecedarium Latinum):::
-    +++<span lang="scn">schina</span>+++
+    +++<span lang="scn">Schina</span>+++
 
   /West Flemish/ (Abecedarium Latinum):::
-    +++<span lang="vls">rik</span>+++
+    +++<span lang="vls">Rik</span>+++
 
   //Macrolingua Wu// (/ISO 15924 Zyyy/):::
     +++<span lang="wuu">背</span>+++
@@ -4201,34 +4199,34 @@ Rēs linguālibus::
     +++<span lang="sr">леђа</span>+++
 
   Lingua Lithuanica (Abecedarium Latinum):::
-    +++<span lang="lt">nugara</span>+++
+    +++<span lang="lt">Nugara</span>+++
 
   Macrolingua Lettonica (Abecedarium Latinum):::
     +++<span lang="lv">mugura</span>+++
 
   Lingua Bosnica (Abecedarium Latinum):::
-    +++<span lang="bs">leđa</span>+++
+    +++<span lang="bs">Leđa</span>+++
 
   Lingua Iavanica (Abecedarium Latinum):::
-    +++<span lang="jv">geger</span>+++
+    +++<span lang="jv">Geger</span>+++
 
   Lingua Neograeca (Alphabetum Graecum):::
     +++<span lang="el">Πλάτη</span>+++
 
   /Sundanese language/ (Abecedarium Latinum):::
-    +++<span lang="su">tonggong</span>+++
+    +++<span lang="su">Tonggong</span>+++
 
   Lingua Frisice occidentalis (Abecedarium Latinum):::
-    +++<span lang="fy">rêch</span>+++
+    +++<span lang="fy">Rêch</span>+++
 
   Lingua Ruthenica Alba (Abecedarium Cyrillicum):::
     +++<span lang="be">спіна</span>+++
 
   /Kabyle language/ (Abecedarium Latinum):::
-    +++<span lang="kab">azagur</span>+++
+    +++<span lang="kab">Azagur</span>+++
 
   Langobardus sermo (Abecedarium Latinum):::
-    +++<span lang="lmo">s'cena</span>+++
+    +++<span lang="lmo">S'cena</span>+++
 
   Lingua Asturiana (Abecedarium Latinum):::
     +++<span lang="ast">llombu</span>+++
@@ -4237,16 +4235,16 @@ Rēs linguālibus::
     +++<span lang="cdo">Piăng</span>+++
 
   Lingua Zazaca (Abecedarium Latinum):::
-    +++<span lang="diq">miyane</span>+++
+    +++<span lang="diq">Miyane</span>+++
 
   /Hakka Chinese/ (/ISO 15924 Zyyy/):::
     +++<span lang="hak">Poi-nòng</span>+++
 
   /Min Nan Chinese/ (Abecedarium Latinum):::
-    +++<span lang="nan">poē</span>+++
+    +++<span lang="nan">Poē</span>+++
 
   Lingua Samogitica (Abecedarium Latinum):::
-    +++<span lang="sgs">nogara</span>+++
+    +++<span lang="sgs">Nogara</span>+++
 
   Shilha language (/ISO 15924 Zyyy/):::
     +++<span lang="shi">tadawt</span>+++
@@ -4255,7 +4253,7 @@ Rēs linguālibus::
     +++<span lang="yue">背脊</span>+++
 
   Macrolingua Suahelica (Abecedarium Latinum):::
-    +++<span lang="sw">mgongo</span>+++
+    +++<span lang="sw">Mgongo</span>+++
 
   /Zhuang languages/ (/ISO 15924 Zyyy/):::
     +++<span lang="za">Laeng</span>+++
@@ -4264,22 +4262,22 @@ Rēs linguālibus::
     +++<span lang="yi">רוקן</span>+++
 
   Lingua Tagalog (Abecedarium Latinum):::
-    +++<span lang="tl">likod ng tao</span>+++
+    +++<span lang="tl">Likod ng tao</span>+++
 
   Lingua Avarica (Abecedarium Cyrillicum):::
-    +++<span lang="av">мугъ</span>+++
+    +++<span lang="av">Мугъ</span>+++
 
   Macrolingua Atropatenica (Abecedarium Latinum):::
-    +++<span lang="az">bel (insan)</span>+++
+    +++<span lang="az">Bel (insan)</span>+++
 
   Lingua Tschuvaschica (Abecedarium Cyrillicum):::
-    +++<span lang="cv">çурăм</span>+++
+    +++<span lang="cv">Çурăм</span>+++
 
   Macrolingua Guaranica (Abecedarium Latinum):::
-    +++<span lang="gn">atukupe</span>+++
+    +++<span lang="gn">Atukupe</span>+++
 
   Lingua creola Haitiana (Abecedarium Latinum):::
-    +++<span lang="ht">do</span>+++
+    +++<span lang="ht">Do</span>+++
 
   Lingua Mingrelica (Abecedarium Georgianum):::
     +++<span lang="xmf">ოჭიში</span>+++
@@ -4291,10 +4289,10 @@ Rēs linguālibus::
     +++<span lang="kk-arab">ارقا</span>+++
 
   Lingua Kazachica (Abecedarium Cyrillicum):::
-    +++<span lang="kk-cyrl">арқа</span>+++
+    +++<span lang="kk-cyrl">Арқа</span>+++
 
   Lingua Kazachica (Abecedarium Latinum):::
-    +++<span lang="kk-latn">arqa</span>+++
+    +++<span lang="kk-latn">Arqa</span>+++
 
   Macrolingua Curdica (/ISO 15924 Zyyy/):::
     +++<span lang="ku">Pişt</span>+++
@@ -4303,10 +4301,10 @@ Rēs linguālibus::
     +++<span lang="ku-arab">پشت</span>+++
 
   Macrolingua Curdica (Abecedarium Latinum):::
-    +++<span lang="ku-latn">pişt</span>+++
+    +++<span lang="ku-latn">Pişt</span>+++
 
   /Lingala/ (Abecedarium Latinum):::
-    +++<span lang="ln">mokɔngɔ</span>+++
+    +++<span lang="ln">Mokɔngɔ</span>+++
 
   Lingua Macedonica (Abecedarium Cyrillicum):::
     +++<span lang="mk">грб</span>+++
@@ -4315,16 +4313,16 @@ Rēs linguālibus::
     +++<span lang="ne">ढाड</span>+++
 
   Macrolinguae Quechuae (Abecedarium Latinum):::
-    +++<span lang="qu">wasa</span>+++
+    +++<span lang="qu">Wasa</span>+++
 
   Lingua Somalica (Abecedarium Latinum):::
-    +++<span lang="so">dhabar</span>+++
+    +++<span lang="so">Dhabar</span>+++
 
   Ido (Abecedarium Latinum):::
-    +++<span lang="io">dorso</span>+++
+    +++<span lang="io">Dorso</span>+++
 
   Lingua Franca Nova (Abecedarium Latinum):::
-    +++<span lang="lfn">dorso</span>+++
+    +++<span lang="lfn">Dorso</span>+++
 
 
 
@@ -4335,7 +4333,7 @@ Rēs linguālibus::
 [id='4']
 === [`4`] 
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (2)::
   ix_hxlix:::
     ix_n1603n25n1extremitates
 
@@ -4360,7 +4358,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -4369,7 +4367,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -4377,7 +4375,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -4385,7 +4383,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 

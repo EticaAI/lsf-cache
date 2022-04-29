@@ -1,6 +1,6 @@
-= Cōdex [1603:64:604]: //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+= Cōdex [1603:64:604]: //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//
 :doctype: book
-:title: Cōdex [1603:64:604]: //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+:title: Cōdex [1603:64:604]: //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//
 :lang: la
 :toc: macro
 :toclevels: 5
@@ -14,7 +14,7 @@
 :source-highlighter: rouge
 :warning-caption: Hic sunt dracones
 :tip-caption: Commendātum
-:front-cover-image: image:1603_64_604.mul-Latn.codex.svg["Cōdex [1603_64_604]: //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//",1050,1600]
+:front-cover-image: image:1603_64_604.mul-Latn.codex.svg["Cōdex [1603_64_604]: //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//",1050,1600]
 
 
 
@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-21T22:58:04
+2022-04-29T02:06:07
 
 |
 /SPDX license ID/@eng-Latn
@@ -71,9 +71,9 @@ endif::[]
 [id=0_999_1603_1]
 == Praefātiō 
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
-    _**Cōdex [1603:64:604]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:64:604] //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
+    _**Cōdex [1603:64:604]**_ é o formato de livro dos dados estruturados legíveis por máquina do grupo de dicionários _**[1603:64:604] //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//**_, que são distribuídos para os implementadores usarem em aplicativos externos. Este livro pretende ser um recurso avançado para outros lexicógrafos e tradutores de terminologia, inclusive para detectar e relatar inconsistências. Ele pode, no entanto, ser usado como um dicionário ad hoc se não houver trabalho derivado focado em suas necessidades específicas.
     +++<br><br>+++
     **SOBRE LEXICOGRAFIA**
     +++<br><br>+++
@@ -105,7 +105,7 @@ Rēs linguālibus::
 
 == Methodī ex cōdice
 === Methodī ex dictiōnāriōrum corde
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /scope and content/@eng-Latn:::
     The decision making behind these dictionaries are general terminology related to water and improving human health through cleanliness.
     +++<br><br>+++
@@ -122,39 +122,39 @@ Rēs interlinguālibus::
 
 
 === Methodī ex verbīs in dictiōnāriīs
-NOTE: /At the moment, there is no workflow to use https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], which actually could be used as storage for stricter nomenclature. The current implementations use only Wikidata concepts, the Q-items./@eng-Latn
+NOTE: /No momento, não há fluxo de trabalho para usar https://www.wikidata.org/wiki/Wikidata:Lexicographical_data[Wikidata lexicographical data], que na verdade poderia ser usado como armazenamento para nomenclatura mais rigorosa. As implementações atuais usam apenas conceitos do Wikidata, os Q-items./@eng-Latn
 
 ==== Methodī ex verbīs in Vicidata (Q modō)
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
-    The ***[1603:64:604] //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//*** uses Wikidata as one strategy to conciliate language terms for one or more of it's concepts.
+    O ***[1603:64:604] //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//*** usa o Wikidata como uma estratégia para conciliar termos linguísticos para um ou mais de seus conceitos.
     +++<br><br>+++
-    This means that this book, and related dictionaries data files require periodic updates to, at bare minimum, synchronize and re-share up to date translations.
+    Isso significa que este livro e os arquivos de dados de dicionários relacionados requerem atualizações periódicas para , no mínimo, sincronize e compartilhe novamente as traduções atualizadas.
     +++<br><br>+++
-    **How reliable are the community translations (Wikidata source)?**
+    **Qual a confiabilidade das traduções da comunidade (fonte Wikidata)?**
     +++<br><br>+++
-    The short, default answer is: **they are reliable**, even in cases of no authoritative translations for each subject.
+    A resposta curta padrão é: **elas são confiáveis**, mesmo nos casos de não haver traduções oficiais para cada assunto.
     +++<br><br>+++
-    As reference, it is likely a professional translator (without access to Wikipedia or Internal terminology bases of the control organizations) would deliver lower quality results if you do blind tests. This is possible because not just the average public, but even terminologists and professional translators help Wikipedia (and implicitly Wikidata).
+    Como referência, é provável que um tradutor profissional (sem acesso à Wikipedia ou bases de terminologia interna das organizações de controle) forneça resultados de qualidade inferior se você fizer testes cegos. Isso é possível porque não apenas o público médio, mas também terminólogos e tradutores profissionais ajudam a Wikipédia (e implicitamente o Wikidata).
     +++<br><br>+++
-    However, even when the result is correct, the current version needs improved differentiation, at minimum, acronym and long form. For major organizations, features such as __P1813 short names__ exist, but are not yet compiled with the current dataset.
+    No entanto, mesmo quando o resultado está correto, a versão atual precisa de diferenciação aprimorada, no mínimo, sigla e forma longa . Para grandes organizações, existem recursos como __P1813 nomes curtos__, mas ainda não foram compilados com o conjunto de dados atual.
     +++<br><br>+++
-    **Major reasons for "wrong translations" are not translators fault**
+    **Os principais motivos para "traduções erradas" não são culpa dos tradutores**
     +++<br><br>+++
-    TIP: As a rule of thumb, for already very defined concepts where you, as human, can manually verify one or more translated terms as a decent result, the other translations are likely to be acceptable. Dictionaries with edge cases (such as disputed territory names) would have further explanation.
+    DICA: Como regra geral, para conceitos já muito definidos em que você, como humano, pode verificar manualmente um ou mais termos traduzidos como um resultado decente, as outras traduções provavelmente serão aceitáveis. Dicionários com casos extremos (como nomes de territórios em disputa) teriam mais explicações.
     +++<br><br>+++
-    The main reason for "wrong translations" are poorly defined concepts used to explain for community translators how to generate terminology translations. This would make existing translations from Wikidata (used not just by us) inconsistent. The second reason is if the dictionaries use translations for concepts without a strict match; in other words, if we make stricter definitions of what concept means but reuse Wikidada less exact terms. There are also issues when entire languages are encoded with wrong codes. Note that all these cases **wrong translations are strictly NOT translators fault, but lexicography fault**.
+    A principal razão para "traduções erradas" são conceitos mal definidos usados ​​para explicar aos tradutores da comunidade como gerar traduções de terminologia. Isso tornaria as traduções existentes do Wikidata (usadas não apenas por nós) inconsistentes. A segunda razão é se os dicionários usam traduções para conceitos sem uma correspondência estrita; em outras palavras, se fizermos definições mais estritas do que significa conceito, mas reutilizarmos termos menos exatos da Wikidada. Também há problemas quando idiomas inteiros são codificados com códigos errados. Observe que todos esses casos **traduções erradas NÃO são estritamente culpa do tradutor, mas sim da lexicografia**.
     +++<br><br>+++
-    It is still possible to have strict translation level errors. But even if we point users how to correct Wikidata/Wikipedia (based on better contextual explanation of a concept, such as this book), the requirements to say the previous term was objectively a wrong human translation error (if following our seriousness on dictionary-building) are very high.
+    Ainda é possível ter erros estritos no nível de tradução. Mas mesmo que indiquemos aos usuários como corrigir o Wikidata/Wikipedia (com base na melhor explicação contextual de um conceito, como este livro), os requisitos para dizer que o termo anterior foi objetivamente um erro de tradução humana errado (se seguir nossa seriedade na construção de dicionário) são muito elevados.
     +++<br><br>+++
-    From the point of view of data conciliation, the following methodology is used to release the terminology translations with the main concept table.
+    Do ponto de vista da conciliação de dados, a seguinte metodologia é utilizada para publicar as traduções da terminologia com a tabela de conceitos principais.
     +++<br><br>+++
-    . The main handcrafted lexicographical table (explained on previous topic), also provided on `1603_64_604.no1.tm.hxl.csv`, may reference Wiki QID.
-    . Every unique QID of  `1603_64_604.no1.tm.hxl.csv`, together with language codes from [`1603:1:51`] (which requires knowing human languages), is used to prepare an SPARQL query optimized to run on https://query.wikidata.org/[Wikidata Query Service]. The query is so huge that it is not viable to "Try it" links (URL overlong), such https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[as what you would find on Wikidata Tutorials], ***but*** it works!
-    .. Note that the knowledge is free, the translations are there, but the multilingual humanitarian needs may lack people to prepare the files and shares then for general use.
-    . The query result, with all QIDs and term labels, is shared as `1603_64_604.wikiq.tm.hxl.csv`
-    . The community reviewed translations of each singular QID is pre-compiled on an individual file `1603_64_604.wikiq.tm.hxl.csv`
-    . `1603_64_604.no1.tm.hxl.csv` plus `1603_64_604.wikiq.tm.hxl.csv` created `1603_64_604.no11.tm.hxl.csv`
+    . A principal tabela lexicográfica artesanal (explicada no tópico anterior), também fornecida em `1603_64_604.no1.tm.hxl.csv`, pode fazer referência ao Wiki QID.
+    . Cada QID exclusivo de `1603_64_604.no1.tm.hxl.csv`, juntamente com códigos de idioma de [`1603:1:51`] (que requer conhecimento de idiomas humanos), é usado para preparar uma consulta SPARQL otimizada para execução em https://query.wikidata.org/[Wikidata Query Service]. A consulta é tão grande que não é viável para links "Try it" (URL longo), como https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples[como o que você encontraria nos Tutoriais Wikidata ], ***mas*** funciona!
+    .. Note que o conhecimento é gratuito, as traduções estão lá, mas as necessidades humanitárias multilíngues podem faltar pessoas para preparar os arquivos e compartilhar do que para uso geral.
+    . O resultado da consulta, com todos os QIDs e rótulos de termos, é compartilhado como `1603_64_604.wikiq.tm.hxl.csv`
+    . As traduções revisadas pela comunidade de cada QID singular são pré-compiladas em um arquivo individual `1603_64_604.wikiq.tm.hxl.csv`
+    . `1603_64_604.no1.tm.hxl.csv` mais `1603_64_604.wikiq.tm.hxl.csv` criado `1603_64_604.no11.tm.hxl.csv`
 
 
 === Rēs dē factō in dictiōnāriīs
@@ -2889,6 +2889,75 @@ Lingua Franca Nova (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 7
 Rēs::
+  /Wiki QID/:::
+    Rēs interlinguālibus::::
+      /rēgulam/;;
+        Q[1-9]\d*
+
+      ix_hxlix;;
+        ix_wikiq
+
+      ix_hxlvoc;;
+        v_wiki_q
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/Wiki QID/</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+
+  /SPDX license ID/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P2479[P2479]
+
+      /rēgulam/;;
+        [0-9A-Za-z\.\-]{3,36}[+]?
+
+      /formatter URL/@eng-Latn;;
+        https://spdx.org/licenses/$1.html
+
+      ix_hxlix;;
+        ix_wikip2479
+
+      ix_hxlvoc;;
+        v_wiki_p_2479
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">SPDX license identifier</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">identificador de licença SPDX</span>+++
+
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      Lingua Anglica (Abecedarium Latinum);;
+        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+
+      Lingua Lusitana (Abecedarium Latinum);;
+        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
+
   /cōdex pūblicandī/:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2931,33 +3000,6 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
 
-  /SPDX license ID/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P2479[P2479]
-
-      /rēgulam/;;
-        [0-9A-Za-z\.\-]{3,36}[+]?
-
-      /formatter URL/@eng-Latn;;
-        https://spdx.org/licenses/$1.html
-
-      ix_hxlix;;
-        ix_wikip2479
-
-      ix_hxlvoc;;
-        v_wiki_p_2479
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">SPDX license identifier</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">identificador de licença SPDX</span>+++
-
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
       /Wiki P/;;
@@ -2978,27 +3020,6 @@ Rēs::
 
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
-
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
 
   scrīptor:::
     Rēs interlinguālibus::::
@@ -3021,33 +3042,12 @@ Rēs::
       Lingua Lusitana (Abecedarium Latinum);;
         +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
 
-  /publication date/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
-
-      ix_hxlix;;
-        ix_wikip577
-
-      ix_hxlvoc;;
-        v_wiki_p_577
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
-
 
 <<<
 
 == Archīa
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Lingua Anglica (Abecedarium Latinum):::
     **Informações de contexto**: ignorando por um momento o fato de ter várias traduções (e otimizadas para receber contribuições regularmente, não _apenas_ um trabalho estático), então a diferença real no fluxo de trabalho usado para gerar cada grupo de dicionários em um Cōdex como este é o seguinte fato: **fornecemos formatos de arquivos estruturados legíveis por máquina mesmo quando os equivalentes em _idiomas internacionais_, como o inglês, não possuem para áreas como ajuda humanitária, ajuda ao desenvolvimento e direitos humanos**. Os mais próximos desse multilinguismo (fora da Wikimedia) são o SEMIeu da União Europeia (até 24 idiomas), mas mesmo assim têm problemas ao compartilhar traduções em todos os idiomas. As traduções das Nações Unidas (até 6 idiomas, raramente mais) não estão disponíveis por agências humanitárias para ajudar nas traduções de terminologia.
     +++<br><br>+++
@@ -3154,7 +3154,7 @@ Dictiōnāria initiīs
 
 <<<
 
-== //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+== //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//
 <<<
 
 [id='1']
@@ -3167,11 +3167,11 @@ Dictiōnāria initiīs
 [id='1_283']
 ==== [`1_283`] aqua
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q283[Q283]
 
-Rēs linguālibus::
+Rēs linguālibus (219)::
   Linguae multiplīs (Scrīptum incognitō):::
     /water/
 
@@ -3836,11 +3836,11 @@ Rēs linguālibus::
 [id='1_7892']
 ==== [`1_7892`] /drinking water/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7892[Q7892]
 
-Rēs linguālibus::
+Rēs linguālibus (87)::
   Linguae multiplīs (Scrīptum incognitō):::
     /drinking water/
 
@@ -4109,11 +4109,11 @@ Rēs linguālibus::
 [id='1_15324']
 ==== [`1_15324`] Corpus aquae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q15324[Q15324]
 
-Rēs linguālibus::
+Rēs linguālibus (92)::
   Linguae multiplīs (Scrīptum incognitō):::
     /body of water/
 
@@ -4397,11 +4397,11 @@ Rēs linguālibus::
 [id='1_81041']
 ==== [`1_81041`] Circulus aquae
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q81041[Q81041]
 
-Rēs linguālibus::
+Rēs linguālibus (97)::
   Linguae multiplīs (Scrīptum incognitō):::
     /earth water cycle/
 
@@ -4700,11 +4700,11 @@ Rēs linguālibus::
 [id='1_102192']
 ==== [`1_102192`] Aqua dulcis
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q102192[Q102192]
 
-Rēs linguālibus::
+Rēs linguālibus (76)::
   Linguae multiplīs (Scrīptum incognitō):::
     /fresh water/
 
@@ -4940,11 +4940,11 @@ Rēs linguālibus::
 [id='1_183129']
 ==== [`1_183129`] /water pollution/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q183129[Q183129]
 
-Rēs linguālibus::
+Rēs linguālibus (73)::
   Linguae multiplīs (Scrīptum incognitō):::
     /water pollution/
 
@@ -5171,11 +5171,11 @@ Rēs linguālibus::
 [id='1_336191']
 ==== [`1_336191`] /wastewater/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q336191[Q336191]
 
-Rēs linguālibus::
+Rēs linguālibus (62)::
   Linguae multiplīs (Scrīptum incognitō):::
     /wastewater/
 
@@ -5369,11 +5369,11 @@ Rēs linguālibus::
 [id='1_506004']
 ==== [`1_506004`] /tap water/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q506004[Q506004]
 
-Rēs linguālibus::
+Rēs linguālibus (40)::
   Linguae multiplīs (Scrīptum incognitō):::
     /tap water/
 
@@ -5501,11 +5501,11 @@ Rēs linguālibus::
 [id='1_625376']
 ==== [`1_625376`] /water quality/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q625376[Q625376]
 
-Rēs linguālibus::
+Rēs linguālibus (40)::
   Linguae multiplīs (Scrīptum incognitō):::
     /water quality/
 
@@ -5633,11 +5633,11 @@ Rēs linguālibus::
 [id='1_1138853']
 ==== [`1_1138853`] /human right to water and sanitation (HRWS)/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1138853[Q1138853]
 
-Rēs linguālibus::
+Rēs linguālibus (18)::
   Linguae multiplīs (Scrīptum incognitō):::
     /human right to water and sanitation (HRWS)/
 
@@ -5699,11 +5699,11 @@ Rēs linguālibus::
 [id='1_1463025']
 ==== [`1_1463025`] /water purification/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1463025[Q1463025]
 
-Rēs linguālibus::
+Rēs linguālibus (50)::
   Linguae multiplīs (Scrīptum incognitō):::
     /water purification/
 
@@ -5861,11 +5861,11 @@ Rēs linguālibus::
 [id='1_5376358']
 ==== [`1_5376358`] /water scarcity/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q5376358[Q5376358]
 
-Rēs linguālibus::
+Rēs linguālibus (40)::
   Linguae multiplīs (Scrīptum incognitō):::
     /water scarcity/
 
@@ -5993,11 +5993,11 @@ Rēs linguālibus::
 [id='1_6269285']
 ==== [`1_6269285`] /Joint Monitoring Programme for Water Supply and Sanitation/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6269285[Q6269285]
 
-Rēs linguālibus::
+Rēs linguālibus (5)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Joint Monitoring Programme for Water Supply and Sanitation/
 
@@ -6020,11 +6020,11 @@ Rēs linguālibus::
 [id='1_20127660']
 ==== [`1_20127660`] /wastewater treatment/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q20127660[Q20127660]
 
-Rēs linguālibus::
+Rēs linguālibus (24)::
   Linguae multiplīs (Scrīptum incognitō):::
     /wastewater treatment/
 
@@ -6104,11 +6104,11 @@ Rēs linguālibus::
 [id='1_48741129']
 ==== [`1_48741129`] /Sustainable Development Goal 6 - clean water and sanitation for all/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q48741129[Q48741129]
 
-Rēs linguālibus::
+Rēs linguālibus (20)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Sustainable Development Goal 6 - clean water and sanitation for all/
 
@@ -6178,11 +6178,11 @@ Rēs linguālibus::
 [id='3491872']
 === [`3491872`] /Improved water source/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3491872[Q3491872]
 
-Rēs linguālibus::
+Rēs linguālibus (10)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Improved water source/
 
@@ -6220,11 +6220,11 @@ Rēs linguālibus::
 [id='3491872_1049049']
 ==== [`3491872_1049049`] /Bottled water/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q1049049[Q1049049]
 
-Rēs linguālibus::
+Rēs linguālibus (40)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Bottled water/
 
@@ -6352,11 +6352,11 @@ Rēs linguālibus::
 [id='3491872_2137507']
 ==== [`3491872_2137507`] /rainwater harvesting/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2137507[Q2137507]
 
-Rēs linguālibus::
+Rēs linguālibus (28)::
   Linguae multiplīs (Scrīptum incognitō):::
     /rainwater harvesting/
 
@@ -6450,11 +6450,11 @@ Rēs linguālibus::
 [id='6007834']
 === [`6007834`] /Improved sanitation/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6007834[Q6007834]
 
-Rēs linguālibus::
+Rēs linguālibus (8)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Improved sanitation/
 
@@ -6486,11 +6486,11 @@ Rēs linguālibus::
 [id='6007834_268534']
 ==== [`6007834_268534`] /Flush toilet/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q268534[Q268534]
 
-Rēs linguālibus::
+Rēs linguālibus (41)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Flush toilet/
 
@@ -6621,11 +6621,11 @@ Rēs linguālibus::
 [id='6007834_30894822']
 ==== [`6007834_30894822`] /Ventilated improved pit latrine/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q30894822[Q30894822]
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Ventilated improved pit latrine/
 
@@ -6645,11 +6645,11 @@ Rēs linguālibus::
 [id='6007834_178496']
 ==== [`6007834_178496`] /Composting toilet/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q178496[Q178496]
 
-Rēs linguālibus::
+Rēs linguālibus (27)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Composting toilet/
 
@@ -6740,11 +6740,11 @@ Rēs linguālibus::
 [id='7649692']
 === [`7649692`] /Sustainable sanitation/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7649692[Q7649692]
 
-Rēs linguālibus::
+Rēs linguālibus (7)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Sustainable sanitation/
 
@@ -6775,7 +6775,7 @@ Rēs linguālibus::
 [id='9999999']
 === [`9999999`] //unimproved sanitation//
 
-Rēs linguālibus::
+Rēs linguālibus (1)::
   Linguae multiplīs (Scrīptum incognitō):::
     //unimproved sanitation//
 
@@ -6786,11 +6786,11 @@ Rēs linguālibus::
 [id='9999999_5893646']
 ==== [`9999999_5893646`] /Bucket toilet/ (@TODO: disambiguate QID from Honey bucket)
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q5893646[Q5893646]
 
-Rēs linguālibus::
+Rēs linguālibus (7)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Bucket toilet/ (@TODO: disambiguate QID from Honey bucket)
 
@@ -6819,11 +6819,11 @@ Rēs linguālibus::
 [id='9999999_3530438']
 ==== [`9999999_3530438`] /Flying toilet/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q3530438[Q3530438]
 
-Rēs linguālibus::
+Rēs linguālibus (4)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Flying toilet/
 
@@ -6843,11 +6843,11 @@ Rēs linguālibus::
 [id='9999999_17072861']
 ==== [`9999999_17072861`] /Open defecation/
 
-Rēs interlinguālibus::
+Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q17072861[Q17072861]
 
-Rēs linguālibus::
+Rēs linguālibus (11)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Open defecation/
 
@@ -6899,7 +6899,7 @@ Dictiōnāria fīnālī
 === [PRECISAMOS DE AJUDA] O PDF gerado não tem as fontes corretas para todos os idiomas
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Primeiro, desculpe se isso afeta seu idioma favorito :(. Estamos trabalhando nisso, mas ainda não estamos aperfeiçoando a geração de livros em tantos idiomas ao mesmo tempo.
     Se você tiver fontes instaladas em seu computador, provavelmente ainda poderá copiar e colar da versão eBook.
     Observe que todos os formatos destinados ao processamento de máquina funcionarão bem.
@@ -6908,7 +6908,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Quero ajudar! Alguma tradução está faltando ou está errada! Como muda-la?
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     A maioria (mas não todos) os conceitos estão usando o Wikidata Q. Na verdade, na maioria das vezes melhoramos o Wikidata enquanto preparamos os dicionários! Verifique se o conceito exato que você deseja tem um Q ID e clique nele. Lá você pode adicionar traduções.
     A próxima versão (provavelmente semanal) terá seus envios sem a necessidade de nos contatar diretamente.
 
@@ -6916,7 +6916,7 @@ Rēs linguālibus::
 === [eBook com Wikidata Q] Posso encontrar o conceito Wikidata, mas não consigo editar!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Embora o Wikidata seja mais flexível do que o da Wikipedia (por exemplo, permite conceitos sem a necessidade de criar páginas da Wikipedia), mesmo o Wikidata pode ter conceitos que exigem a criação de uma conta e não permitem edição anônima. Criar tal conta e confirmar e-mail é mais rápido do que pedir que outra pessoa faça isso por você.
     No entanto, embora o vandalismo no Wikidata seja raro, muito poucos conceitos exigirão uma conta com mais contribuições e não criada muito recentemente. Se este for o seu caso, ajude com os que você pode fazer sozinho e o resto peça para outra pessoa adicionar a você.
 
@@ -6924,7 +6924,7 @@ Rēs linguālibus::
 === Ouvi dizer que há interesse em ter o Cōdex além da língua latina! Como fazer?!
 
 Rēs linguālibus::
-  Lingua Anglica (Abecedarium Latinum):::
+  Lingua Lusitana (Abecedarium Latinum):::
     Por favor, entre em contato conosco. Este livro usa latim (às vezes _latim macarrónico_) para documentar todos os outros idiomas, mas obviamente podemos automatizar a geração de livros para outros usando outros sistemas de escrita e algum idioma de referência. Precisamos de ajuda especial com sistemas de escrita como Bengali, Devanagari e Tamil. Para scripts da direita para a esquerda, apesar de poder renderizar o texto, a impressão do livro exigirá um modelo diferente. Apenas substituir o latim não funcionará, por isso estamos abertos a ideias para proporcionar uma ótima experiência ao usuário!
 
 

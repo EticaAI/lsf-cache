@@ -3738,7 +3738,7 @@ class LibrariaStatusQuo:
 
                 sarcina['resources'].append({
                     # 'profile': 'data-package-catalog',  # To create sublevels
-                    'format': 'json',
+                    # 'format': 'json',
                     'name': _nomen,
                     'path': _path + '/datapackage.json',
                     'profile': 'tabular-data-package'
@@ -3783,7 +3783,7 @@ class LibrariaStatusQuo:
             #     '--status-in-markdown requires --ex-librario')
 
         paginae.append(json.dumps(
-            sarcina, indent=4, ensure_ascii=False, sort_keys=False))
+            sarcina, indent=2, ensure_ascii=False, sort_keys=False))
 
         return paginae
 

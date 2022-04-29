@@ -18,7 +18,7 @@
 - <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.I.14</sub>  <sub>r.L.149</sub>
 - <a href="#1603_44_86">1603_44_86</a> <sup>C.14</sup> <sub>r.I.13</sub>  <sub>r.L.60</sub>
 - <a href="#1603_44_101">1603_44_101</a> <sup>C.22</sup> <sub>r.I.14</sub>  <sub>r.L.163</sub>
-- <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.16</sub>  <sub>r.L.227</sub>
+- <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.15</sub>  <sub>r.L.227</sub>
 - <a href="#1603_45_1">1603_45_1</a> <sup>C.347</sup> <sub>r.I.15</sub>  <sub>r.L.246</sub>
 - <a href="#1603_45_19">1603_45_19</a> <sup>C.71</sup> <sub>r.I.12</sub>  <sub>r.L.242</sub>
 - <a href="#1603_45_31">1603_45_31</a> <sup>C.25</sup> <sub>r.I.14</sub>  <sub>r.L.212</sub>
@@ -77,8 +77,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 4231312133,
-            "res_interlingualibus": 1608913597,
+            "res_lingualibus": 1618673082,
+            "res_interlingualibus": 1848598022,
             "res_picturae": null
         },
         "summa": {
@@ -88,7 +88,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:15:32"
+            "opus": "2022-04-29T02:08:36"
         }
     }
 }
@@ -96,7 +96,7 @@
 
 </details>
 
-## 1603_1_6 /Dictiōnāria de terminī typīs/
+## 1603_1_6 /Dictiōnāria dē terminī typīs/
 
 
 <a href="#1603_1_6" id="1603_1_6">§ 1603_1_6</a>
@@ -139,13 +139,13 @@
         "methodi_ex_dictionariorum_corde": {
             "mul-Zyyy": "/Dictionaries of types of terms/@eng-Latn"
         },
-        "nomen": "/Dictiōnāria de terminī typīs/"
+        "nomen": "/Dictiōnāria dē terminī typīs/"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1095345129,
-            "res_lingualibus": 3271841031,
+            "res_interlingualibus": 39903831,
+            "res_lingualibus": 3335920416,
             "res_picturae": null
         },
         "summa": {
@@ -155,7 +155,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:33:34"
+            "opus": "2022-04-29T02:06:44"
         }
     }
 }
@@ -211,8 +211,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3349434074,
-            "res_lingualibus": 394714035,
+            "res_interlingualibus": 499817150,
+            "res_lingualibus": 3335796304,
             "res_picturae": null
         },
         "summa": {
@@ -222,7 +222,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T10:57:25"
+            "opus": "2022-04-29T02:04:22"
         }
     }
 }
@@ -276,7 +276,7 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2149973863,
+            "res_interlingualibus": 2707394908,
             "res_lingualibus": 3335796304,
             "res_picturae": null
         },
@@ -287,7 +287,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:05:25"
+            "opus": "2022-04-29T02:06:00"
         }
     }
 }
@@ -341,8 +341,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1317240631,
-            "res_lingualibus": 2822687442,
+            "res_interlingualibus": 3265196267,
+            "res_lingualibus": 510040775,
             "res_picturae": null
         },
         "summa": {
@@ -352,7 +352,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:04:51"
+            "opus": "2022-04-29T02:07:26"
         }
     }
 }
@@ -468,8 +468,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3580119737,
-            "res_lingualibus": 2188848757,
+            "res_interlingualibus": 2321528666,
+            "res_lingualibus": 4229296070,
             "res_picturae": null
         },
         "summa": {
@@ -479,7 +479,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:05:03"
+            "opus": "2022-04-29T02:04:56"
         }
     }
 }
@@ -533,8 +533,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1276263509,
-            "res_lingualibus": 928269646,
+            "res_interlingualibus": 286025463,
+            "res_lingualibus": 813155489,
             "res_picturae": null
         },
         "summa": {
@@ -544,7 +544,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T10:57:12"
+            "opus": "2022-04-29T02:07:16"
         }
     }
 }
@@ -552,7 +552,7 @@ The decision making is mostly based on what is very essential to explain other t
 
 </details>
 
-## 1603_25_1 //dictiōnāria de partes corporis humani//
+## 1603_25_1 //dictiōnāria dē partes corporis humani//
 
 
 <a href="#1603_25_1" id="1603_25_1">§ 1603_25_1</a>
@@ -568,15 +568,14 @@ This Numerodinatio namespace contains dictionaries related to general human body
 
 Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to external body parts.
 
-All work on the main concept tables is manually compiled and reviewed by EticaAI.
-
 
 <details><summary>🔎🗄️1603_25_1🗄️🔍</summary>
 
 <pre>
 {
     "annotationes_internalibus": {
-        "publicum": 30
+        "publicum": 30,
+        "victionarium_q": 50
     },
     "cdn": {
         "annexis": [
@@ -601,15 +600,15 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
             "mul-Zyyy": null
         },
         "methodi_ex_dictionariorum_corde": {
-            "mul-Zyyy": "This Numerodinatio namespace contains dictionaries related to general human body parts. Latin (while a natural language) actually is used as interlingual code. It's mostly based on Basle Nomina Anatomica 1895 (\"BNA1895\") and, if any difference, archaic terms are replaced with Terminologia Anatomica 95 (\"TA95\").\n\nCompared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to external body parts.\n\nAll work on the main concept tables is manually compiled and reviewed by EticaAI."
+            "mul-Zyyy": "This Numerodinatio namespace contains dictionaries related to general human body parts. Latin (while a natural language) actually is used as interlingual code. It's mostly based on Basle Nomina Anatomica 1895 (\"BNA1895\") and, if any difference, archaic terms are replaced with Terminologia Anatomica 95 (\"TA95\").\n\nCompared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to external body parts."
         },
-        "nomen": "//dictiōnāria de partes corporis humani//"
+        "nomen": "//dictiōnāria dē partes corporis humani//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1869904458,
-            "res_lingualibus": 170159209,
+            "res_interlingualibus": 4108983362,
+            "res_lingualibus": 335980117,
             "res_picturae": null
         },
         "summa": {
@@ -619,7 +618,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:13:58"
+            "opus": "2022-04-29T02:05:26"
         }
     }
 }
@@ -680,8 +679,8 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3705245090,
-            "res_lingualibus": 2964046392,
+            "res_interlingualibus": 2909421298,
+            "res_lingualibus": 2506029580,
             "res_picturae": null
         },
         "summa": {
@@ -691,7 +690,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:07:52"
+            "opus": "2022-04-29T02:07:39"
         }
     }
 }
@@ -750,8 +749,8 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 794440961,
-            "res_lingualibus": 4265261954,
+            "res_interlingualibus": 461094517,
+            "res_lingualibus": 2420562615,
             "res_picturae": null
         },
         "summa": {
@@ -761,7 +760,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:04:09"
+            "opus": "2022-04-29T02:07:06"
         }
     }
 }
@@ -776,7 +775,7 @@ All work on the main concept tables is manually compiled and reviewed by EticaAI
 
 - status_quo
   - concepta: 36
-  - res_interlingualibus: 16
+  - res_interlingualibus: 15
   - res_lingualibus: 227
 
 ### 1603_44_111 Methodī ex dictiōnāriōrum corde
@@ -791,6 +790,7 @@ A more well known term to describe the concepts here could be _Crimes against hu
 <pre>
 {
     "annotationes_internalibus": {
+        "experimentum": 50,
         "publicum": 30,
         "victionarium_q": 50
     },
@@ -821,18 +821,18 @@ A more well known term to describe the concepts here could be _Crimes against hu
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 982546927,
-            "res_lingualibus": 2039493664,
+            "res_interlingualibus": 1243856385,
+            "res_lingualibus": 768855872,
             "res_picturae": null
         },
         "summa": {
             "concepta": 36,
-            "res_interlingualibus": 16,
+            "res_interlingualibus": 15,
             "res_lingualibus": 227,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:16:57"
+            "opus": "2022-04-29T02:04:36"
         }
     }
 }
@@ -922,8 +922,8 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1747192501,
-            "res_lingualibus": 3678698917,
+            "res_interlingualibus": 2637986893,
+            "res_lingualibus": 3284015962,
             "res_picturae": null
         },
         "summa": {
@@ -933,7 +933,7 @@ We're still adding organizations which are neither UN or Red Cross. However, we'
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:02:11"
+            "opus": "2022-04-29T02:08:35"
         }
     }
 }
@@ -997,8 +997,8 @@ https://en.wikipedia.org/wiki/Nonbuilding_structure
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 866865499,
-            "res_lingualibus": 2390140697,
+            "res_interlingualibus": 2174947454,
+            "res_lingualibus": 2397618822,
             "res_picturae": null
         },
         "summa": {
@@ -1008,7 +1008,7 @@ https://en.wikipedia.org/wiki/Nonbuilding_structure
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:03:58"
+            "opus": "2022-04-29T02:06:34"
         }
     }
 }
@@ -1016,7 +1016,7 @@ https://en.wikipedia.org/wiki/Nonbuilding_structure
 
 </details>
 
-## 1603_45_31 Dictiōnāria de calamitātibus
+## 1603_45_31 Dictiōnāria dē calamitātibus
 
 
 <a href="#1603_45_31" id="1603_45_31">§ 1603_45_31</a>
@@ -1066,13 +1066,13 @@ The terminology translations are extracted from Wikidata, which means this recom
         "methodi_ex_dictionariorum_corde": {
             "mul-Zyyy": "The decision making behind the concepts of the dictionaries is based mostly on calamities (disasters) commonly cited on emergency response in humanitarian areas. When this is the case, the interlingual external codes will also be added to the concept.\n\nThe terminology translations are extracted from Wikidata, which means this recommended derived works periodically check for updates."
         },
-        "nomen": "Dictiōnāria de calamitātibus"
+        "nomen": "Dictiōnāria dē calamitātibus"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1981483380,
-            "res_lingualibus": 4048263107,
+            "res_interlingualibus": 1694258794,
+            "res_lingualibus": 1790180730,
             "res_picturae": null
         },
         "summa": {
@@ -1082,7 +1082,7 @@ The terminology translations are extracted from Wikidata, which means this recom
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:07:05"
+            "opus": "2022-04-29T02:05:11"
         }
     }
 }
@@ -1151,8 +1151,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1861213962,
-            "res_lingualibus": 707414134,
+            "res_interlingualibus": 2479861400,
+            "res_lingualibus": 3249620539,
             "res_picturae": null
         },
         "summa": {
@@ -1162,7 +1162,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:15:32"
+            "opus": "2022-04-29T02:08:12"
         }
     }
 }
@@ -1220,8 +1220,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1091938928,
-            "res_lingualibus": 1022690086,
+            "res_interlingualibus": 3325872538,
+            "res_lingualibus": 469158626,
             "res_picturae": null
         },
         "summa": {
@@ -1231,7 +1231,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T10:53:28"
+            "opus": "2022-04-29T02:05:50"
         }
     }
 }
@@ -1239,7 +1239,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
 
 </details>
 
-## 1603_64_604 //Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//
+## 1603_64_604 //Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//
 
 
 <a href="#1603_64_604" id="1603_64_604">§ 1603_64_604</a>
@@ -1294,13 +1294,13 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
         "methodi_ex_dictionariorum_corde": {
             "mul-Zyyy": "The decision making behind these dictionaries are general terminology related to water and improving human health through cleanliness.\n\nIn English, in the humanitarian sector the typical term used is WaSH: Water, Sanitation and Hygiene. The Latin term we use is not a direct literal translation from the English term, but the idea behind the concept. Add to this that /sanitation/@lat-Latn is somewhat redundant with /hygiene/@fra-Latn, which would generate a nonsensical Latin term in this context.\n\nAnother relevant topic which these dictionaries would contain terminology is the Sustainable Development Goal 6 (SDG 6 or Global Goal 6) about _clean water and sanitation for all_ (which is a concept much newer than the idea of WaSH on humanitarian sector). In English _hygiene_ is mentioned, but not as part of title or short descriptions.\n\n**How complete are these dictionaries?**\nThe concepts here are incomplete and the current state is more focused on available translations we can compile. The ideal would be to prepare the definitions and start to add them on Wikipedia, which in turn would allow us to start having very well defined QIDs to scale translations.\n\n**Know issues**\nAs 2022-04-19 the concept Q5893646 is an example of generating wrong translations. /Bucket toilet/@eng-Latn is linked to /Goldeimer/@deu-Latn (use of human excrementa exchanged for money). Ideally **before** asking for translation Initiatives we should review /Bucket toilet/@eng-Latn for a term easier to translate, not just create literal translations for other languages."
         },
-        "nomen": "//Dictiōnāria de aquīs et sānātiōnibus ex līmpidīs//"
+        "nomen": "//Dictiōnāria dē aquīs et sānātiōnibus ex līmpidīs//"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1503896082,
-            "res_lingualibus": 3026113299,
+            "res_interlingualibus": 2708875277,
+            "res_lingualibus": 2086804053,
             "res_picturae": null
         },
         "summa": {
@@ -1310,7 +1310,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T22:59:19"
+            "opus": "2022-04-29T02:06:16"
         }
     }
 }
@@ -1367,8 +1367,8 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2581371489,
-            "res_lingualibus": 91773564,
+            "res_interlingualibus": 1465749847,
+            "res_lingualibus": 733904306,
             "res_picturae": null
         },
         "summa": {
@@ -1378,7 +1378,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-24T11:06:18"
+            "opus": "2022-04-29T02:04:12"
         }
     }
 }
@@ -1386,7 +1386,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
 
 </details>
 
-## 1603_99_876 //Human sexuality (meta dictionaries)//
+## 1603_99_876 //Human sexuality (meta dictionaries)//@eng-Latn
 
 
 <a href="#1603_99_876" id="1603_99_876">§ 1603_99_876</a>
@@ -1427,13 +1427,13 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
         "methodi_ex_dictionariorum_corde": {
             "mul-Zyyy": "//Human sexuality (meta dictionaries). TODO: 1603_99_ is temporary prefix; this need to be moved from here later//@eng-Latn"
         },
-        "nomen": "//Human sexuality (meta dictionaries)//"
+        "nomen": "//Human sexuality (meta dictionaries)//@eng-Latn"
     },
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2672382230,
-            "res_lingualibus": 4062161470,
+            "res_interlingualibus": 1960345754,
+            "res_lingualibus": 2699061252,
             "res_picturae": null
         },
         "summa": {
@@ -1443,7 +1443,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T23:07:18"
+            "opus": "2022-04-29T02:06:54"
         }
     }
 }
@@ -1497,8 +1497,8 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 4215873839,
-            "res_lingualibus": 1437291990,
+            "res_interlingualibus": 244781300,
+            "res_lingualibus": 1924471636,
             "res_picturae": null
         },
         "summa": {
@@ -1508,7 +1508,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-21T22:57:06"
+            "opus": "2022-04-29T02:04:45"
         }
     }
 }
