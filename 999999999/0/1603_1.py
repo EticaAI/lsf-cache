@@ -3718,7 +3718,6 @@ class LibrariaStatusQuo:
         - datapackage, ---, https://specs.frictionlessdata.io/
         - sarcina, f, s, Nom., https://en.wiktionary.org/wiki/sarcina
 
-
         Returns:
             list:
         """
@@ -3746,11 +3745,39 @@ class LibrariaStatusQuo:
                 })
         else:
             ex_codice = self.ex_codice()
+
+            _path = numerordinatio_neo_separatum(self.codex.de_codex, '/')
+            # _nomen = numerordinatio_neo_separatum(codex, '_')
+
             sarcina = {
-                'name': '1603',
+                'name': self.codex.de_codex,
                 'profile': 'tabular-data-package',
-                '_TODO': ex_codice
+                'resources': [],
+                # '_TODO2': self.codex.de_codex,
+                # '_TODO': ex_codice,
             }
+
+            archivum_no1 = TabulaSimplici(
+                _path + '/' + self.codex.de_codex + '.no1.tm.hxl.csv',
+                self.codex.de_codex + '.no1.tm.hxl.csv'
+            )
+            archivum_no11 = TabulaSimplici(
+                _path + '/' + self.codex.de_codex + '.no11.tm.hxl.csv',
+                self.codex.de_codex + '.no11.tm.hxl.csv'
+            )
+            archivum_wikiq = TabulaSimplici(
+                _path + '/' + self.codex.de_codex + '.wikiq.tm.hxl.csv',
+                self.codex.de_codex + '.wikiq.tm.hxl.csv'
+            )
+
+            if archivum_no1.praeparatio():
+                sarcina['resources'].append(archivum_no1.quod_datapackage())
+
+            if archivum_no11.praeparatio():
+                sarcina['resources'].append(archivum_no11.quod_datapackage())
+
+            if archivum_wikiq.praeparatio():
+                sarcina['resources'].append(archivum_wikiq.quod_datapackage())
 
             # raise NotImplementedError(
             #     '--status-in-markdown requires --ex-librario')
@@ -5404,6 +5431,91 @@ class OpusTemporibus:
 
         if self.in_limitem > 0 and len(resultatum) > self.in_limitem:
             resultatum = resultatum[:self.in_limitem]
+
+        return resultatum
+
+
+class TabulaSimplici:
+    """Tabula simplicī /Simple Table/@eng-Latn
+
+    Trivia:
+    - tabula, s, f, nominativus, https://en.wiktionary.org/wiki/tabula#Latin
+    - simplicī, s, m/f/n, Dativus, https://en.wiktionary.org/wiki/simplex#Latin
+    """
+
+    archivum_trivio: str = ''
+    nomen: str = ''
+    statum: bool = None
+    caput: list = []
+    res_totali: int = 0
+    # codex_opus: list = []
+    # opus: list = []
+    # in_limitem: int = 0
+    # in_ordinem: str = None
+    # quaero_numerordinatio: list = []
+
+    def __init__(
+        self,
+        archivum_trivio: str,
+        nomen: str
+    ):
+        self.archivum_trivio = archivum_trivio
+        self.nomen = nomen
+        # self.initiari()
+
+    def _initiari(self):
+        """initiarī
+
+        Trivia:
+        - initiārī, https://en.wiktionary.org/wiki/initio#Latin
+        """
+        if not os.path.exists(self.archivum_trivio):
+            self.statum = False
+            return self.statum
+
+        with open(self.archivum_trivio) as csvfile:
+            reader = csv.reader(csvfile)
+            for lineam in reader:
+                if len(self.caput) == 0:
+                    self.caput = lineam
+                    continue
+                # TODO: what about empty lines?
+                self.res_totali += 1
+
+        self.statum = True
+        return self.statum
+
+    def praeparatio(self):
+        """praeparātiō
+
+        Trivia:
+        - praeparātiō, s, f, Nom., https://en.wiktionary.org/wiki/praeparatio
+        """
+        self._initiari()
+        return self.statum
+
+    def quod_datapackage(self) -> dict:
+        resultatum = {
+            'name': self.nomen,
+            'path': self.nomen,
+            'profile': 'tabular-data-resource',
+            'schema': {
+                'fields': []
+            },
+            'stats': {
+                'fields': len(self.caput),
+                'rows': self.res_totali,
+            }
+        }
+
+        for caput_rei in self.caput:
+            item = {
+                'name': caput_rei,
+                # TODO: actually get rigth type from reference dictionaries
+                # 'type': 'Any',
+                'type': 'string',
+            }
+            resultatum['schema']['fields'].append(item)
 
         return resultatum
 

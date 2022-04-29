@@ -88,7 +88,15 @@ actiones_completis_locali "1603_63_101"
 
 # @TODO: maybe check ssdiff (diff spreadsheets) to our uses. 
 
+#### tests _____________________________________________________________________
 # https://github.com/frictionlessdata/frictionless-py
 # pip3 install frictionless-py
-# frictionless validate data/invalid.csv
-# frictionless validate 1603/63/101/1603_63_101.no11.tm.hxl.csv
+#     frictionless validate data/invalid.csv
+#     frictionless validate 1603/63/101/1603_63_101.no11.tm.hxl.csv
+
+# https://github.com/CLARIAH/COW
+# pip3 install cow-csvw
+#     cow_tool build 1603/63/101/1603_63_101.no11.tm.hxl.csv
+#     cow_tool convert 1603/63/101/1603_63_101.no11.tm.hxl.csv
+
+# https://github.com/cldf/csvw
