@@ -77,8 +77,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 1618673082,
-            "res_interlingualibus": 1848598022,
+            "res_lingualibus": 2822683963,
+            "res_interlingualibus": 511965013,
             "res_picturae": null
         },
         "summa": {
@@ -88,7 +88,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:08:36"
+            "opus": "2022-04-30T00:55:00"
         }
     }
 }
@@ -144,8 +144,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 39903831,
-            "res_lingualibus": 3335920416,
+            "res_interlingualibus": 944896375,
+            "res_lingualibus": 326570128,
             "res_picturae": null
         },
         "summa": {
@@ -155,7 +155,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:06:44"
+            "opus": "2022-04-30T00:53:50"
         }
     }
 }
@@ -749,8 +749,8 @@ Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to 
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 461094517,
-            "res_lingualibus": 2420562615,
+            "res_interlingualibus": 546135189,
+            "res_lingualibus": 2747052489,
             "res_picturae": null
         },
         "summa": {
@@ -760,7 +760,7 @@ Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to 
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:07:06"
+            "opus": "2022-04-30T00:54:51"
         }
     }
 }

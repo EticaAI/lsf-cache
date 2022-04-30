@@ -105,3 +105,9 @@ deploy_0_9_markdown
 #     cow_tool convert 1603/63/101/1603_63_101.no11.tm.hxl.csv
 
 # https://github.com/cldf/csvw
+
+# ./999999999/0/1603_1.py --data-apothecae-ex='1603_45_1,1603_45_31' --data-apothecae-ad='apothecae.datapackage.json'
+# ./999999999/0/1603_1.py --data-apothecae-ex='1603_45_1,1603_45_31' --data-apothecae-ad='apothecae.sqlite'
+
+# printf "1603_45_1\n1603_45_31" > 999999/0/apothecae-list.txt
+# ./999999999/0/1603_1.py --data-apothecae-ex-archivo='999999/0/apothecae-list.txt' --data-apothecae-ad='apothecae.datapackage.json'

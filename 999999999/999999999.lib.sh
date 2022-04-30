@@ -2240,19 +2240,19 @@ opus_temporibus_cdn() {
   #   --in-limitem=2 \
   #   >"$opus_temporibus_temporarium"
 
-  # "${ROOTDIR}/999999999/0/1603_1.py" \
-  #   --ex-opere-temporibus='cdn' \
-  #   --quaero-ix_n1603ia='({publicum}>=1)' \
-  #   --in-ordinem=chaos \
-  #   --in-limitem=10 \
-  #   >"$opus_temporibus_temporarium"
-
   "${ROOTDIR}/999999999/0/1603_1.py" \
     --ex-opere-temporibus='cdn' \
     --quaero-ix_n1603ia='({publicum}>=1)' \
     --in-ordinem=chaos \
-    --in-limitem=25 \
+    --in-limitem=3 \
     >"$opus_temporibus_temporarium"
+
+  # "${ROOTDIR}/999999999/0/1603_1.py" \
+  #   --ex-opere-temporibus='cdn' \
+  #   --quaero-ix_n1603ia='({publicum}>=1)' \
+  #   --in-ordinem=chaos \
+  #   --in-limitem=25 \
+  #   >"$opus_temporibus_temporarium"
 
   while IFS=$'\t' read -r -a line; do
     # echo "${line[0]}"
@@ -2368,7 +2368,7 @@ actiones_completis_locali() {
   neo_codex_copertae_de_numerordinatio "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
-  neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
+  # neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
   temp_save_status "$numerordinatio" "locale"
 
 }

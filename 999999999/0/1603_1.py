@@ -69,7 +69,7 @@ import fnmatch
 # import json
 import datetime
 # from datetime import datetime
-
+from pathlib import Path
 
 import json
 from zlib import crc32
@@ -109,6 +109,12 @@ Exemplōrum gratiā:
 
     {0} --ex-opere-temporibus='cdn' \
 --quaero-ix_n1603ia='({{publicum}}>=9)&&({{victionarium_q}}>9)'
+
+    {0} --data-apothecae-ex='1603_45_1,1603_45_31' \
+--data-apothecae-ad='apothecae.datapackage.json'
+
+    {0} --data-apothecae-ex='1603_45_1,1603_45_31' \
+--data-apothecae-ad='apothecae.sqlite'
 
 """.format(__file__)
 
@@ -3759,15 +3765,18 @@ class LibrariaStatusQuo:
 
             archivum_no1 = TabulaSimplici(
                 _path + '/' + self.codex.de_codex + '.no1.tm.hxl.csv',
-                self.codex.de_codex + '.no1.tm.hxl.csv'
+                self.codex.de_codex + '.no1.tm.hxl.csv',
+                False
             )
             archivum_no11 = TabulaSimplici(
                 _path + '/' + self.codex.de_codex + '.no11.tm.hxl.csv',
-                self.codex.de_codex + '.no11.tm.hxl.csv'
+                self.codex.de_codex + '.no11.tm.hxl.csv',
+                False
             )
             archivum_wikiq = TabulaSimplici(
                 _path + '/' + self.codex.de_codex + '.wikiq.tm.hxl.csv',
-                self.codex.de_codex + '.wikiq.tm.hxl.csv'
+                self.codex.de_codex + '.wikiq.tm.hxl.csv',
+                False
             )
 
             if archivum_no1.praeparatio():
@@ -3785,7 +3794,27 @@ class LibrariaStatusQuo:
         paginae.append(json.dumps(
             sarcina, indent=2, ensure_ascii=False, sort_keys=False))
 
+        # self.imprimere_in_datapackage_sqlite()
+        # raise ValueError('testing')
+
         return paginae
+
+    def imprimere_in_datapackage_sqlite(self) -> list:
+        # https://framework.frictionlessdata.io/docs/tutorials
+        # /formats/sql-tutorial/
+        from frictionless import Package
+
+        _path = numerordinatio_neo_separatum(self.codex.de_codex, '/')
+
+        # package = Package('path/to/datapackage.json')
+        # package = Package(_path + '/datapackage.json')
+        # package = Package('/1603/1/51/datapackage.json')
+        package = Package(
+            '/workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/1/51/datapackage.json')
+        # package.to_sql('postgresql://database')
+        package.to_sql('sqlite:///sqlite.db')
+
+        return ['TESTI ONLY']
 
     def imprimere_in_markdown(self) -> list:
         if not self.ex_librario:
@@ -4323,6 +4352,179 @@ class CodexSarcinarumAdnexis:
             raise ValueError('index [{0}] [{1}]'.format(index, self.sarcina))
 
         return resultatum
+
+
+class DataApothecae:
+    """Data apothēcae
+
+
+    Trivia:
+    - data, n, pl, nominativus, https://en.wiktionary.org/wiki/datum#Latin
+    - apothēcae, f, s, dativus, https://en.wiktionary.org/wiki/apotheca#Latin
+
+    """
+
+    # No 1603 prefix
+    data_apothecae_ex: list = []
+    data_apothecae_ad: str = ''
+    data_apothecae_formato: str = None
+    resultatum: list = []
+
+    def __init__(
+        self,
+        data_apothecae_ex: list,
+        data_apothecae_ad: str = 'apothecae.datapackage.json',
+        data_apothecae_formato: str = None
+    ):
+
+        self.data_apothecae_ex = data_apothecae_ex
+        self.data_apothecae_ad = data_apothecae_ad
+        if data_apothecae_formato:
+            self.data_apothecae_formato = data_apothecae_formato
+        else:
+            if data_apothecae_ad.endswith('.db') or \
+                    data_apothecae_ad.endswith('.sqlite'):
+                self.data_apothecae_formato = 'sqlite'
+            elif data_apothecae_ad.endswith('.json'):
+                self.data_apothecae_formato = 'datapackage'
+            else:
+                raise ValueError('--data-apothecae-formato ?')
+
+        self.initiari()
+
+    def initiari(self):
+        """initiarī
+
+        Trivia:
+        - initiārī, https://en.wiktionary.org/wiki/initio#Latin
+        """
+        pass
+
+    def imprimere(self) -> list:
+        return self.resultatum
+
+    def praeparatio(self):
+        """praeparātiō
+
+        Trivia:
+        - praeparātiō, s, f, Nom., https://en.wiktionary.org/wiki/praeparatio
+        """
+
+        # codex = Codex('1603_1_1')
+        # libraria = LibrariaStatusQuo(
+        #     codex,
+        #     'locale')
+
+        # libraria.imprimere_in_datapackage_sqlite()
+        codex = Codex('1603_1_1')
+        libraria = LibrariaStatusQuo(
+            codex,
+            'locale')
+
+        if self.data_apothecae_formato == 'datapackage':
+            # return self.praeparatio_datapackage(libraria)
+            return self.praeparatio_datapackage()
+        if self.data_apothecae_formato == 'sqlite':
+            # return self.praeparatio_sqlite(libraria)
+            return self.praeparatio_sqlite()
+
+        return True
+
+    def praeparatio_datapackage(
+            self,
+            temporarium: str = None):
+        """praeparatio_datapackage
+
+        Args:
+            libraria (LibrariaStatusQuo):
+        """
+        paginae = []
+        sarcina = {
+            'name': '1603',
+            'profile': 'data-package-catalog',
+            'resources': []
+        }
+
+        sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_1'))
+        sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_51'))
+
+        for codex in self.data_apothecae_ex:
+            sarcina['resources'].append(
+                DataApothecae.quod_tabula(codex))
+
+        paginae.append(json.dumps(
+            sarcina, indent=2, ensure_ascii=False, sort_keys=False))
+
+        if temporarium:
+            with open(temporarium, 'w') as archivum:
+                for lineam in paginae:
+                    archivum.write(lineam)
+        else:
+            _path_archivum = NUMERORDINATIO_BASIM + '/' + self.data_apothecae_ad
+            # self.resultatum.append('TODO praeparatio_datapackage')
+            self.resultatum.append(_path_archivum)
+
+            with open(_path_archivum, 'w') as archivum:
+                # Further file processing goes here
+                for lineam in paginae:
+                    archivum.write(lineam)
+
+    def praeparatio_sqlite(self):
+        """praeparatio_sqlite
+
+        Args:
+            libraria (LibrariaStatusQuo):
+        """
+        # NOTE: we only use frictionless on this step. Thats why we dont
+        #       require for averange operations
+        from frictionless import Package
+
+        # temporarium = NUMERORDINATIO_BASIM + \
+        #     '/sqlite.{0}.datapackage.json'.format(
+        #         random.randrange(1, 999999))
+        temporarium = NUMERORDINATIO_BASIM + \
+            '/sqlite.TEMP.datapackage.json'
+
+        self.praeparatio_datapackage(temporarium=temporarium)
+        # print('temporarium', temporarium)
+
+        # package = Package(
+        #     NUMERORDINATIO_BASIM + '/1603/1/51/datapackage.json')
+        package = Package(temporarium)
+
+        sqlite_path = 'sqlite:///' + NUMERORDINATIO_BASIM + '/' \
+            + self.data_apothecae_ad
+        package.to_sql(sqlite_path)
+        os.remove(temporarium)
+
+        # self.resultatum.append('TODO: create datapackage first; then sqlite.')
+        self.resultatum.append(sqlite_path)
+
+    @staticmethod
+    def quod_tabula(numerodination: str, strictum: bool = True):
+
+        nomen = numerordinatio_neo_separatum(numerodination, '_')
+        _path = numerordinatio_neo_separatum(numerodination, '/')
+
+        archivum_no11 = TabulaSimplici(
+            _path + '/' + nomen + '.no11.tm.hxl.csv',
+            nomen,
+            True
+        )
+        if archivum_no11.praeparatio():
+            return archivum_no11.quod_datapackage()
+
+        archivum_no1 = TabulaSimplici(
+            _path + '/' + nomen + '.no1.tm.hxl.csv',
+            nomen,
+            True
+        )
+        if archivum_no1.praeparatio():
+            return archivum_no1.quod_datapackage()
+
+        if strictum:
+            raise ValueError('quod_tabula {0}'.format(numerodination))
+        return None
 
 
 class DictionariaInterlinguarum:
@@ -5448,6 +5650,9 @@ class TabulaSimplici:
     statum: bool = None
     caput: list = []
     res_totali: int = 0
+    ex_radice: bool = False
+    archivum_trivio_ex_radice: str = ''
+    archivum_nomini: str = ''
     # codex_opus: list = []
     # opus: list = []
     # in_limitem: int = 0
@@ -5457,10 +5662,12 @@ class TabulaSimplici:
     def __init__(
         self,
         archivum_trivio: str,
-        nomen: str
+        nomen: str,
+        ex_radice: bool = False
     ):
         self.archivum_trivio = archivum_trivio
         self.nomen = nomen
+        self.ex_radice = ex_radice
         # self.initiari()
 
     def _initiari(self):
@@ -5472,6 +5679,11 @@ class TabulaSimplici:
         if not os.path.exists(self.archivum_trivio):
             self.statum = False
             return self.statum
+
+        self.archivum_trivio_ex_radice = \
+            self.archivum_trivio.replace(NUMERORDINATIO_BASIM, '')
+
+        self.archivum_nomini = Path(self.archivum_trivio_ex_radice).name
 
         with open(self.archivum_trivio) as csvfile:
             reader = csv.reader(csvfile)
@@ -5495,9 +5707,15 @@ class TabulaSimplici:
         return self.statum
 
     def quod_datapackage(self) -> dict:
+        if self.ex_radice is True:
+            _path = self.archivum_trivio_ex_radice
+        else:
+            _path = self.archivum_nomini
+
         resultatum = {
             'name': self.nomen,
-            'path': self.nomen,
+            # 'path': self.nomen,
+            'path': _path,
             'profile': 'tabular-data-resource',
             'schema': {
                 'fields': []
@@ -5512,7 +5730,6 @@ class TabulaSimplici:
             item = {
                 'name': caput_rei,
                 # TODO: actually get rigth type from reference dictionaries
-                # 'type': 'Any',
                 'type': 'string',
             }
             resultatum['schema']['fields'].append(item)
@@ -5615,7 +5832,7 @@ class CLI_2600:
         )
 
         archivum = parser.add_argument_group(
-            "archivum",
+            "Archivum",
             "(DEFAULT USE) Use archive as source (directory not ready yet)")
 
         archivum.add_argument(
@@ -5628,8 +5845,50 @@ class CLI_2600:
             # nargs='?'
         )
 
+        # data, n, pl, nominativus, https://en.wiktionary.org/wiki/datum#Latin
+        # apothēcae, f, s, dativus, https://en.wiktionary.org/wiki/apotheca#Latin
+        data_apothecae = parser.add_argument_group(
+            "Data apothēcae",
+            'data apothēcae. (One) Warehouse of datasets. '
+            'Compile selected dictionaries to a single place '
+            '(likely single database entry point)'
+        )
+
+        data_apothecae.add_argument(
+            '--data-apothecae-ad',
+            help='Path to file (or reference to database) to store result ',
+            dest='data_apothecae_ad',
+            nargs='?',
+            default='apothecae.datapackage.json'
+        )
+
+        data_apothecae.add_argument(
+            '--data-apothecae-ex',
+            help='Comma-separated list of dictionaries to initialize',
+            dest='data_apothecae_ex',
+            type=lambda x: x.split(',')
+        )
+
+        data_apothecae.add_argument(
+            '--data-apothecae-ex-archivo',
+            help='Path to file with list (one item per line) of dictionaries '
+            'to initialize',
+            dest='data_apothecae_ex_archivo',
+        )
+
+        # fōrmātō, s, n, Dativus, https://en.wiktionary.org/wiki/formatus#Latin
+        data_apothecae.add_argument(
+            '--data-apothecae-formato',
+            help='Output format. Default will try make a guess from '
+            '--data-apothecae-ad pattern.',
+            dest='data_apothecae_formato',
+            nargs='?',
+            choices=['datapackage', 'sqlite'],
+            default=None
+        )
+
         dictionaria = parser.add_argument_group(
-            "dictionaria",
+            "Dictionaria",
             "Generate dictionaries. No input required (uses disk 1603 and "
             "999999999/1603 data files)")
 
@@ -5646,7 +5905,7 @@ class CLI_2600:
 
         # https://en.wiktionary.org/wiki/codex#Latin
         codex = parser.add_argument_group(
-            "codex",
+            "Codex",
             "Book/manual creation")
 
         codex.add_argument(
@@ -5710,7 +5969,8 @@ class CLI_2600:
         status_quo = parser.add_argument_group(
             "Status quō",
             "Calculate current situation. Used to take other actions. "
-            "Requires --codex-de 1603_NN_NN"
+            "Requires --codex-de 1603_NN_NN (focused Codex). "
+            "Works with --quaero-ix_n1603ia."
         )
 
         status_quo.add_argument(
@@ -5736,7 +5996,8 @@ class CLI_2600:
         status_quo.add_argument(
             '--status-in-datapackage',
             help='Return status in frictionless datapackage.json. '
-            'With --ex-librario returns profile data-package-catalog.',
+            'With --ex-librario returns profile data-package-catalog. '
+            ' (low level of details)',
             # metavar='',
             dest='status_in_datapackage',
             # const=True,
@@ -5893,6 +6154,43 @@ class CLI_2600:
         # cs1603_1.est_verbum_limiti(args.verbum_limiti)
         a1603z1.est_resultatum_separato(args.resultatum_separato)
         a1603z1.est_fontem_separato(args.fontem_separato)
+
+        if (self.pyargs.data_apothecae_ex and
+                len(self.pyargs.data_apothecae_ex) > 0) or \
+                (self.pyargs.data_apothecae_ex_archivo and
+                    len(self.pyargs.data_apothecae_ex_archivo)):
+
+            if self.pyargs.data_apothecae_ex:
+                data_apothecae_ex = self.pyargs.data_apothecae_ex
+            else:
+                # f = open(self.pyargs.data_apothecae_ex_archivo, "r")
+                # data_apothecae_ex = list(f.readlines())
+                data_apothecae_ex = []
+                # print(f.readlines())
+                with open(
+                        self.pyargs.data_apothecae_ex_archivo, "r") as archivum:
+                    for _lineam in archivum:
+                        if _lineam.startswith('#') or len(_lineam.strip()) == 0:
+                            continue
+                        lineam = _lineam.rstrip('\n')
+                        if lineam.find(',') > -1:
+                            lineam = lineam.split(',')[0]
+                        data_apothecae_ex.append(lineam)
+            # print(data_apothecae_ex)
+
+            # libraria.imprimere_in_datapackage_sqlite()
+
+            data_apothecae = DataApothecae(
+                # self.pyargs.data_apothecae_ex,
+                data_apothecae_ex,
+                data_apothecae_ad=self.pyargs.data_apothecae_ad,
+                data_apothecae_formato=self.pyargs.data_apothecae_formato,
+            )
+
+            data_apothecae.praeparatio()
+
+            return self.output(data_apothecae.imprimere())
+            # return self.output(['TODO...'])
 
         # if self.pyargs.actionem_sparql:
         if self.pyargs.ex_opere_temporibus and \
