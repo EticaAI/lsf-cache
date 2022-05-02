@@ -159,29 +159,29 @@ hxlexpand --query="#status+ix_wikiq>0" --tags="#meta+value+ix_wikiq" 999999/1603
 # numerordiatio_caput_ix_hxlix "$ROOTDIR/1603" > 999999/0/simple_caput_ix_hxlix.csv
 
 # ./999999999/0/1603_1.py ./999999999/0/1603_1.py --dictionaria-numerordinatio
-./999999999/0/1603_1.py --dictionaria-numerordinatio --punctum-separato-de-resultatum=',' >999999/1603/13/1603~dictionaria.hxl.csv
+./999999999/0/1603_1.py --methodus='deprecatum-dictionaria-numerordinatio' --punctum-separato-de-resultatum=',' > 999999/1603/13/1603~dictionaria.hxl.csv
 # ./999999999/0/1603_1.py \
 #   --objectivum-linguam="lat-Latn" \
 #   --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \
-#   --codex-de 1603_25_1 \
+#   --methodus='codex' --codex-de 1603_25_1 \
 #   >999999/1603/25/1/1603_25_1.mul-Zyyy.codex.md
 
 # ./999999999/0/1603_1.py \
 #   --objectivum-linguam="lat-Latn" \
 #   --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \
-#   --codex-de 1603_1_51 \
+#   --methodus='codex' --codex-de 1603_1_51 \
 #   >999999/1603/1/51/1603_1_51.mul-Zyyy.codex.md
 
 # ./999999999/0/1603_1.py \
 #   --objectivum-linguam="lat-Latn" \
 #   --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \
-#   --codex-de 1603_1_51 \
+#   --methodus='codex' --codex-de 1603_1_51 \
 #   >999999/1603/1/51/1603_1_51.mul-Zyyy.codex.md
 
 # ./999999999/0/1603_1.py \
 #   --objectivum-linguam="lat-Latn" \
 #   --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \
-#   --codex-de 1603_1_1 \
+#   --methodus='codex' --codex-de 1603_1_1 \
 #   >1603/1/1/1603_1_1.mul-Zyyy.codex.md
 
 # officinam/1603/1/1/1603_1_1.no1.tm.hxl.csv

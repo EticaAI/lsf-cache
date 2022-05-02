@@ -73,12 +73,12 @@ ROOTDIR="$(pwd)"
 # ./999999999/0/1603_3_12.py --actionem-sparql --query < 999999/0/1603_45_1.uniq.q.txt
 # ./999999999/0/1603_3_12.py --actionem-sparql --query --lingua-divisioni=3 --lingua-paginae=3 < 999999/0/1603_45_1.uniq.q.txt
 
-# ./999999999/0/1603_1.py --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc
-# ./999999999/0/1603_1.py --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/1/7/1603_1_7.mul-Latn.codex.adoc --out-file 1603/1/7/1603_1_7.mul-Latn.codex.pdf
+# ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc
+# ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_1_7 > 1603/1/7/1603_1_7.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/1/7/1603_1_7.mul-Latn.codex.adoc --out-file 1603/1/7/1603_1_7.mul-Latn.codex.pdf
 
-# ./999999999/0/1603_1.py --codex-de 1603_1_1 > 1603/1/1/1603_1_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/1/1/1603_1_1.mul-Latn.codex.adoc --out-file 1603/1/1/1603_1_1.mul-Latn.codex.pdf
+# ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_1_1 > 1603/1/1/1603_1_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/1/1/1603_1_1.mul-Latn.codex.adoc --out-file 1603/1/1/1603_1_1.mul-Latn.codex.pdf
 
-# ./999999999/0/1603_1.py --codex-de 1603_45_1 > 1603/45/1/1603_45_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/45/1/1603_45_1.mul-Latn.codex.adoc --out-file 1603/45/1/1603_45_1.mul-Latn.codex.pdf
+# ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_45_1 > 1603/45/1/1603_45_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/45/1/1603_45_1.mul-Latn.codex.adoc --out-file 1603/45/1/1603_45_1.mul-Latn.codex.pdf
 
 # bundle exec asciidoctor-pdf --attribute pdf-theme=/workspace/git/EticaAI/multilingual-lexicography-automation/officinam/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml --attribute pdf-fontsdir=/usr/share/fonts/truetype/noto,/workspace/git/EticaAI/multilingual-lexicography-automation/officinam/vendor/bundle/ruby/2.7.0/gems/asciidoctor-pdf-1.6.2/data/fonts /workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/45/1/1603_45_1.mul-Latn.codex.adoc --out-file /workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/45/1/1603_45_1.mul-Latn.codex.pdf
 
@@ -285,9 +285,6 @@ file_translate_csv_de_numerordinatio_q "1603_64_604" "0" "0"
 file_merge_numerordinatio_de_wiki_q "1603_64_604" "0" "0"
 neo_codex_de_numerordinatio "1603_64_604" "0" "0"
 neo_codex_de_numerordinatio_pdf "1603_64_604" "0" "0"
-
-# TODO: convert this to an function
-./999999999/0/1603_1.py --punctum-separato-de-resultatum=',' --de-archivum 1603/84/1/1603_84_1.no1.tm.hxl.csv > 1603/84/1/1603_84_1.meta.no1.tm.hxl.csv
 
 
 # TODO: maybe move this to somewhere else

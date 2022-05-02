@@ -77,8 +77,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 2822683963,
-            "res_interlingualibus": 511965013,
+            "res_lingualibus": 3955275017,
+            "res_interlingualibus": 2894794542,
             "res_picturae": null
         },
         "summa": {
@@ -88,7 +88,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-30T00:55:00"
+            "opus": "2022-04-30T05:00:36"
         }
     }
 }
@@ -144,8 +144,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 944896375,
-            "res_lingualibus": 326570128,
+            "res_interlingualibus": 3608185892,
+            "res_lingualibus": 163907287,
             "res_picturae": null
         },
         "summa": {
@@ -155,7 +155,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-30T00:53:50"
+            "opus": "2022-04-30T04:16:25"
         }
     }
 }
@@ -533,8 +533,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 286025463,
-            "res_lingualibus": 813155489,
+            "res_interlingualibus": 3999201526,
+            "res_lingualibus": 1305216334,
             "res_picturae": null
         },
         "summa": {
@@ -544,7 +544,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:07:16"
+            "opus": "2022-04-30T05:00:35"
         }
     }
 }
@@ -1071,8 +1071,8 @@ The terminology translations are extracted from Wikidata, which means this recom
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1694258794,
-            "res_lingualibus": 1790180730,
+            "res_interlingualibus": 465855141,
+            "res_lingualibus": 4104446690,
             "res_picturae": null
         },
         "summa": {
@@ -1082,7 +1082,7 @@ The terminology translations are extracted from Wikidata, which means this recom
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:05:11"
+            "opus": "2022-04-30T04:58:48"
         }
     }
 }
@@ -1151,8 +1151,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2479861400,
-            "res_lingualibus": 3249620539,
+            "res_interlingualibus": 46714417,
+            "res_lingualibus": 3099266324,
             "res_picturae": null
         },
         "summa": {
@@ -1162,7 +1162,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:08:12"
+            "opus": "2022-04-30T04:16:04"
         }
     }
 }
@@ -1220,8 +1220,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3325872538,
-            "res_lingualibus": 469158626,
+            "res_interlingualibus": 782483497,
+            "res_lingualibus": 3581235766,
             "res_picturae": null
         },
         "summa": {
@@ -1231,7 +1231,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:05:50"
+            "opus": "2022-04-30T03:31:55"
         }
     }
 }
@@ -1497,8 +1497,8 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 244781300,
-            "res_lingualibus": 1924471636,
+            "res_interlingualibus": 3050423937,
+            "res_lingualibus": 2865193974,
             "res_picturae": null
         },
         "summa": {
@@ -1508,7 +1508,7 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:04:45"
+            "opus": "2022-04-30T04:16:14"
         }
     }
 }

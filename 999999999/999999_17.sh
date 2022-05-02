@@ -27,8 +27,8 @@ set -e
 
 # time HTTPS_PROXY="socks5://127.0.0.1:9050" ./999999999/999999_17.sh
 
-# ./999999999/0/1603_1.py --codex-de 1603_45_31 --codex-in-tabulam-json | jq
-# ./999999999/0/1603_1.py --codex-de 1603_45_31 --codex-in-tabulam-json > 1603/45/31/1603_45_31.mul-Latn.tab.json
+# ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_45_31 --codex-in-tabulam-json | jq
+# ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_45_31 --codex-in-tabulam-json > 1603/45/31/1603_45_31.mul-Latn.tab.json
 # https://commons.wikimedia.org/wiki/Data:Sandbox/EmericusPetro/Example.tab
 
 # @TODO: implement download entire sheet
@@ -71,7 +71,7 @@ file_download_1603_xlsx "1"
 # actiones_completis_locali "1603_1_7"
 # actiones_completis_locali "1603_1_51"
 # actiones_completis_locali "1603_1_99"
-# actiones_completis_locali "1603_1_2020"
+# actiones_completis_locali "1603_25_1"
 # actiones_completis_locali "1603_44_86"
 # actiones_completis_locali "1603_45_31"
 # actiones_completis_locali "1603_63_101"
@@ -82,13 +82,16 @@ file_download_1603_xlsx "1"
 #### Manual action, TEST locally, one per time, END ----------------------------
 
 ## Full drill (remote, specific item)
-# actiones_completis_publicis "1603_1_7"
+actiones_completis_publicis "1603_25_1"
 # actiones_completis_publicis "1603_1_8000"
 # deploy_0_9_markdown
 
 ## Full drill (remote, randon publish few at time)
-opus_temporibus_cdn
-deploy_0_9_markdown
+# opus_temporibus_cdn
+# deploy_0_9_markdown
+
+# temp_validate_librario "locale"
+temp_validate_librario "cdn"
 
 # @TODO: maybe check ssdiff (diff spreadsheets) to our uses. 
 
@@ -106,8 +109,12 @@ deploy_0_9_markdown
 
 # https://github.com/cldf/csvw
 
-# ./999999999/0/1603_1.py --data-apothecae-ex='1603_45_1,1603_45_31' --data-apothecae-ad='apothecae.datapackage.json'
-# ./999999999/0/1603_1.py --data-apothecae-ex='1603_45_1,1603_45_31' --data-apothecae-ad='apothecae.sqlite'
+# ./999999999/0/1603_1.py --methodus='data-apothecae' --data-apothecae-ex='1603_45_1,1603_45_31' --data-apothecae-ad='apothecae.datapackage.json'
+# ./999999999/0/1603_1.py --methodus='data-apothecae' --data-apothecae-ex='1603_45_1,1603_45_31' --data-apothecae-ad='apothecae.sqlite'
 
 # printf "1603_45_1\n1603_45_31" > 999999/0/apothecae-list.txt
-# ./999999999/0/1603_1.py --data-apothecae-ex-archivo='999999/0/apothecae-list.txt' --data-apothecae-ad='apothecae.datapackage.json'
+# ./999999999/0/1603_1.py --methodus='data-apothecae' --data-apothecae-ex-archivo='999999/0/apothecae-list.txt' --data-apothecae-ad='apothecae.datapackage.json'
+
+# ./999999999/0/1603_1.py --methodus='status-quo' --status-quo-in-rdf-skos-turtle --codex-de 1603_63_101
+
+# ./999999999/0/1603_1.py --methodus='status-quo' --status-quo-in-rdf-skos-turtle --codex-de 1603_63_101 > 1603/63/101/1603_63_101.no11.skos.ttl
