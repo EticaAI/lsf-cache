@@ -629,6 +629,44 @@ file_convert_tmx_de_numerordinatio11() {
 }
 
 #######################################
+# Convert a "full" .no11.tm.hxl.csv to .no11.skos.ttl
+#
+# @see https://www.w3.org/2015/03/ShExValidata/
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+file_convert_rdf_skos_ttl_de_numerordinatio11() {
+  numerordinatio="$1"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  _basim_fontem="${ROOTDIR}"
+  _basim_objectivum="${ROOTDIR}"
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.skos.ttl"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no11.skos.ttl"
+  # tmeta="${ROOTDIR}/999999999/0/hxltm-exemplum.tmeta.yml"
+
+  echo "${FUNCNAME[0]}: [$fontem_archivum] --> [$objectivum_archivum]"
+
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --methodus='status-quo' \
+    --status-quo-in-rdf-skos-turtle \
+    --codex-de "$_nomen" \
+    >"$objectivum_archivum_temporarium"
+
+  file_update_if_necessary 'rdf_skos_ttl' "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+#######################################
 # Hotfix to remove duplicated merge keys in files (in place change)
 # See file_merge_numerordinatio_de_wiki_q() for reasoning
 #
@@ -727,7 +765,7 @@ neo_codex_de_numerordinatio() {
 
   # set -x
   "${ROOTDIR}/999999999/0/1603_1.py" \
-     --methodus='codex' \
+    --methodus='codex' \
     --objectivum-linguam="$est_objectivum_linguam" \
     --auxilium-linguam="$est_auxilium_linguam" \
     --codex-de "$_nomen" \
@@ -2384,7 +2422,6 @@ temp_validate_librario() {
   #   --codex-de "$_nomen" --status-quo \
   #   >"$opus_temporibus_temporarium"
 
-
   while IFS=$'\t' read -r -a line; do
     # echo "${line[0]}"
 
@@ -2402,48 +2439,48 @@ temp_validate_librario() {
     # echo "${line[2]}"
   done <"$opus_temporibus_temporarium"
 
-# ./999999999/0/1603_1.py --methodus='opus-temporibus' --ex-opere-temporibus='locale' --quaero-ix_n1603ia='({publicum}>=9)' > 999999/0/apothecae-list.txt
+  # ./999999999/0/1603_1.py --methodus='opus-temporibus' --ex-opere-temporibus='locale' --quaero-ix_n1603ia='({publicum}>=9)' > 999999/0/apothecae-list.txt
 
-#   "${ROOTDIR}/999999999/0/1603_1.py" \
-#     --methodus='status-quo' \
-#     --codex-de "$_nomen" --status-quo \
-#     >"$status_archivum_codex"
+  #   "${ROOTDIR}/999999999/0/1603_1.py" \
+  #     --methodus='status-quo' \
+  #     --codex-de "$_nomen" --status-quo \
+  #     >"$status_archivum_codex"
 
-#   "${ROOTDIR}/999999999/0/1603_1.py" \
-#     --methodus='status-quo' \
-#     --codex-de "$_nomen" --status-quo --status-in-datapackage \
-#     >"$datapackage_dictionaria"
+  #   "${ROOTDIR}/999999999/0/1603_1.py" \
+  #     --methodus='status-quo' \
+  #     --codex-de "$_nomen" --status-quo --status-in-datapackage \
+  #     >"$datapackage_dictionaria"
 
-#   # echo "$status_archivum_librario status_archivum_librario "
+  #   # echo "$status_archivum_librario status_archivum_librario "
 
-#   # set -x
-#   "${ROOTDIR}/999999999/0/1603_1.py" \
-#     --methodus='status-quo' \
-#     --codex-de "$_nomen" --status-quo --ex-librario="$_ex_librario" \
-#     >"$objectivum_archivum_temporarium"
-#   # set +x
+  #   # set -x
+  #   "${ROOTDIR}/999999999/0/1603_1.py" \
+  #     --methodus='status-quo' \
+  #     --codex-de "$_nomen" --status-quo --ex-librario="$_ex_librario" \
+  #     >"$objectivum_archivum_temporarium"
+  #   # set +x
 
-#   # We use statum.yml, not datapackage to know state of the library. That's why
-#   # we can overryde directly
-#   # set -x
-#   "${ROOTDIR}/999999999/0/1603_1.py" \
-#     --methodus='status-quo' \
-#     --codex-de "$_nomen" --status-quo --ex-librario="$_ex_librario" \
-#     --status-in-datapackage \
-#     >"$datapackage_librario"
-#   # set +x
+  #   # We use statum.yml, not datapackage to know state of the library. That's why
+  #   # we can overryde directly
+  #   # set -x
+  #   "${ROOTDIR}/999999999/0/1603_1.py" \
+  #     --methodus='status-quo' \
+  #     --codex-de "$_nomen" --status-quo --ex-librario="$_ex_librario" \
+  #     --status-in-datapackage \
+  #     >"$datapackage_librario"
+  #   # set +x
 
-#   # NOTE: this operation should be atomic. But for sake of portability,
-#   #       we're using temporary file without flog or setlock or something.
-#   #       Trying to use --status-quo --ex-librario
-#   #       without temporary file will reset old information. That's why
-#   #       we're using temp file
-#   if [ -f "$status_archivum_librario" ]; then
-#     rm "$status_archivum_librario" &&
-#       mv "$objectivum_archivum_temporarium" "$status_archivum_librario"
-#   else
-#     mv "$objectivum_archivum_temporarium" "$status_archivum_librario"
-#   fi
+  #   # NOTE: this operation should be atomic. But for sake of portability,
+  #   #       we're using temporary file without flog or setlock or something.
+  #   #       Trying to use --status-quo --ex-librario
+  #   #       without temporary file will reset old information. That's why
+  #   #       we're using temp file
+  #   if [ -f "$status_archivum_librario" ]; then
+  #     rm "$status_archivum_librario" &&
+  #       mv "$objectivum_archivum_temporarium" "$status_archivum_librario"
+  #   else
+  #     mv "$objectivum_archivum_temporarium" "$status_archivum_librario"
+  #   fi
 
 }
 
@@ -2477,6 +2514,7 @@ actiones_completis_locali() {
     # echo "yay"
     file_translate_csv_de_numerordinatio_q "$numerordinatio" "0" "0" "1"
     file_merge_numerordinatio_de_wiki_q "$numerordinatio" "0" "0"
+    file_convert_rdf_skos_ttl_de_numerordinatio11 "$numerordinatio"
     file_convert_tmx_de_numerordinatio11 "$numerordinatio"
     file_convert_tbx_de_numerordinatio11 "$numerordinatio"
   # else
@@ -2486,7 +2524,7 @@ actiones_completis_locali() {
   neo_codex_copertae_de_numerordinatio "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
   neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
-  # neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
+  neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
   temp_save_status "$numerordinatio" "locale"
 
 }

@@ -649,6 +649,17 @@ def numerordinatio_ordo(numerordinatio: str) -> int:
     return (normale.count('_') + 1)
 
 
+def numerordinatio_progenitori(
+        numerordinatio: str, separatum: str = "_") -> int:
+    # prōgenitōrī, s, m, dativus, https://en.wiktionary.org/wiki/progenitor
+    normale = numerordinatio_neo_separatum(numerordinatio, separatum)
+    _parts = normale.split(separatum)
+    _parts = _parts[:-1]
+    if len(_parts) == 0:
+        return "0"
+    return separatum.join(_parts)
+
+
 def numerordinatio_lineam_hxml5_details(rem: dict, title: str = None) -> str:
     # codex = rem['#item+conceptum+codicem']
 
@@ -4020,7 +4031,12 @@ class LibrariaStatusQuo:
 
         @see https://www.w3.org/TR/skos-reference/
         @see https://www.w3.org/TR/turtle/
-        @see https://www.w3.org/2015/03/ShExValidata/
+
+        @TODO: links to add to
+             https://github.com/EticaAI/multilingual-lexicography/issues/38
+             - https://www.fao.org/agrovoc/linked-data
+             - https://skos-play.sparna.fr/play/
+             - https://www.w3.org/2015/03/ShExValidata/
 
         Returns:
             list: _description_
@@ -4035,11 +4051,13 @@ class LibrariaStatusQuo:
             '# [{0}]'.format(
                 numerordinatio_neo_separatum(self.codex.de_codex, ':')),
             # '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .',
-            # '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .',
+            '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .',
             # '@prefix owl: <http://www.w3.org/2002/07/owl#> .',
             '@prefix skos: <http://www.w3.org/2004/02/skos/core#> .',
             # '# @prefix : {0}_ .'.format(self.codex.de_codex)
         ]
+
+        # @TODO; only add namespaces if they actually are necessary.
         paginae.extend(caput)
 
         # archivum_no1_et_no11 = DataApothecae.quod_tabula(self.codex.de_codex)
@@ -5887,6 +5905,25 @@ class TabulaSimplici:
                     item, lingua['Language-Tag_normalized']))
         return resultatum
 
+    def _quod_descendentia(
+            self, dictionaria_codici: list, item_codici: str) -> list:
+        # dēscendentia, n, pl, Nominativus,
+        #     https://en.wiktionary.org/wiki/descendens#Latin
+        resultatum = []
+
+        # de_codex_n = numerordinatio_progenitori(de_codex, ':')
+
+        # for clavem, _item in dictionaria_radici.items():
+        for clavem in dictionaria_codici:
+            # clavem_n = numerordinatio_progenitori(clavem, ':')
+            # print('clavem', de_codex_n, clavem_n)
+            progenitor = numerordinatio_progenitori(clavem, ':')
+            # print('clavem', item_codici, progenitor)
+            if progenitor == item_codici:
+                resultatum.append(clavem)
+            # pass
+        return resultatum
+
     def praeparatio(self):
         """praeparātiō
 
@@ -5930,24 +5967,87 @@ class TabulaSimplici:
         self._initiari_v2()
 
         paginae = []
+
+        nomen_radici = numerordinatio_neo_separatum(self.nomen, ':')
+
+        paginae.append("# @TODO /Isso requer revisão da organização/@por-Latn")
+        # paginae.append("<urn:{0}> a skos:Concept ;".format(nomen_radici))
+        paginae.append("<urn:{0}> a skos:ConceptScheme ;".format(nomen_radici))
+        # paginae.append("  skos:prefLabel\n    {0} .".format(
+        #     ",\n    ".join(linguae)
+        # ))
+        paginae.append("  skos:prefLabel \"{0}\"@{1} .".format(
+            nomen_radici,
+            'mul-Zyyy-x-n1603'
+        ))
+        paginae.append('')
+
+        dictionaria_codici = []
+
         # for codex_de, res in enumerate(self.concepta):
+        for codex_de, _res in self.concepta.items():
+            codex_de_n = numerordinatio_neo_separatum(codex_de, ':')
+            numerodinatio = nomen_radici + ':' + str(codex_de_n)
+            dictionaria_codici.append(numerodinatio)
+
         for codex_de, res in self.concepta.items():
-            nomen = numerordinatio_neo_separatum(self.nomen, ':')
+
             codex_de_n = numerordinatio_neo_separatum(codex_de, ':')
             if codex_de_n.startswith('0:1603'):
                 continue
-            numerodinatio = nomen + ':' + str(codex_de_n)
+            numerodinatio = nomen_radici + ':' + str(codex_de_n)
             # paginae.append(':{0} a skos:Concept ;'.format(codex_de))
-            paginae.append("<urn:{0}> a skos:Concept ; ".format(numerodinatio))
+            paginae.append("<urn:{0}> a skos:Concept ;".format(numerodinatio))
 
-            # paginae.append('# {0} ' + str(res))
+            progenitor = numerordinatio_progenitori(numerodinatio, ':')
+
+            if nomen_radici == progenitor:
+                paginae.append('  skos:topConceptOf\n    <urn:{0}> ;'.format(
+                    progenitor))
+
+            descendentia = self._quod_descendentia(
+                dictionaria_codici, numerodinatio)
+            if len(descendentia) > 0:
+                # print('descendentia', descendentia)
+                paginae.append('  skos:broader\n    {0} ;'.format(
+                    ' ,\n    '.join(
+                        map(lambda x: '<urn:' + x + '>', descendentia))
+                ))
+
+            # paginae.append('  rdfs:subClassOf <urn:{0}> ;'.format(
+            #     progenitor
+            # ))
+            # paginae.append('  skos:narrowerTransitive <urn:{0}> ;'.format(
+            paginae.append('  skos:narrower\n    <urn:{0}> ;'.format(
+                progenitor
+            ))
+            # @TODO: implement inverse, skos:broader
 
             linguae = self._quod_linguae(res)
             if len(linguae) > 0:
                 paginae.append("  skos:prefLabel\n    {0} .".format(
-                    ",\n    ".join(linguae)
+                    " ,\n    ".join(linguae)
                 ))
+            else:
+                # The "." also need to be on last statement
+                raise NotImplementedError('{0} / {0} needs be fixed'.format(
+                    nomen_radici, numerodinatio))
+
+            # paginae.append('  rdfs:subClassOf <urn:{0}> . '.format(
+            # paginae.append('  skos:topConceptOf <urn:{0}> . '.format(
+            #     progenitor
+            # ))
+            # paginae.append('  skos:topConceptOf <http://vocabularies.unesco.org/thesaurus> .')
+            # paginae.append('  skos:topConceptOf <http://vocabularies.unesco.org/thesaurus> ;')
             paginae.append('')
+
+        # @TODO: ...
+
+        # @TODO: edge case, such as 1603:25:1
+        #   <urn:1603:25:1:4> a skos:Concept ;
+        #   skos:prefLabel
+        #       "extremitates"@lat-Latn-x-wikip3982 .
+
         return paginae
 
 
