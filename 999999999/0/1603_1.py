@@ -4037,6 +4037,7 @@ class LibrariaStatusQuo:
              - https://www.fao.org/agrovoc/linked-data
              - https://skos-play.sparna.fr/play/
              - https://www.w3.org/2015/03/ShExValidata/
+             - https://skos-play.sparna.fr/skos-testing-tool
 
         Returns:
             list: _description_
@@ -5970,7 +5971,8 @@ class TabulaSimplici:
 
         nomen_radici = numerordinatio_neo_separatum(self.nomen, ':')
 
-        paginae.append("# @TODO /Isso requer revisão da organização/@por-Latn")
+        # https://www.w3.org/2015/03/ShExValidata/ (near ok)
+        # https://skos-play.sparna.fr/skos-testing-tool (needs more work)
         # paginae.append("<urn:{0}> a skos:Concept ;".format(nomen_radici))
         paginae.append("<urn:{0}> a skos:ConceptScheme ;".format(nomen_radici))
         # paginae.append("  skos:prefLabel\n    {0} .".format(
@@ -6009,7 +6011,8 @@ class TabulaSimplici:
                 dictionaria_codici, numerodinatio)
             if len(descendentia) > 0:
                 # print('descendentia', descendentia)
-                paginae.append('  skos:broader\n    {0} ;'.format(
+                # paginae.append('  skos:broader\n    {0} ;'.format(
+                paginae.append('  skos:narrower\n    {0} ;'.format(
                     ' ,\n    '.join(
                         map(lambda x: '<urn:' + x + '>', descendentia))
                 ))
@@ -6018,9 +6021,13 @@ class TabulaSimplici:
             #     progenitor
             # ))
             # paginae.append('  skos:narrowerTransitive <urn:{0}> ;'.format(
-            paginae.append('  skos:narrower\n    <urn:{0}> ;'.format(
-                progenitor
-            ))
+            # paginae.append('  skos:narrower\n    <urn:{0}> ;'.format(
+
+            # AVOID: tchbc - Top Concepts Having Broader Concepts
+            if nomen_radici != progenitor:
+                paginae.append('  skos:broader\n    <urn:{0}> ;'.format(
+                    progenitor
+                ))
             # @TODO: implement inverse, skos:broader
 
             linguae = self._quod_linguae(res)

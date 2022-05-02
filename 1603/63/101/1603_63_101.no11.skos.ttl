@@ -3,27 +3,24 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 
-# @TODO /Isso requer revisão da organização/@por-Latn
 <urn:1603:63:101> a skos:ConceptScheme ;
   skos:prefLabel "1603:63:101"@mul-Zyyy-x-n1603 .
 
 <urn:1603:63:101:1> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:1:2> ,
     <urn:1603:63:101:1:3> ,
     <urn:1603:63:101:1:4> ,
     <urn:1603:63:101:1:5> ,
     <urn:1603:63:101:1:6> ,
     <urn:1603:63:101:1:7> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/biological needs/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1> ;
   skos:prefLabel
     "/thirst || craving for fluids/@eng-Latn"@mul-Zyyy ,
@@ -90,7 +87,7 @@
     "Nyota"@sna-Latn .
 
 <urn:1603:63:101:1:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1> ;
   skos:prefLabel
     "/hunger || state in which a person, for a sustained period, is unable to eat sufficient food to meet basic nutritional needs/@eng-Latn"@mul-Zyyy ,
@@ -173,7 +170,7 @@
     "Hungro"@ido-Latn .
 
 <urn:1603:63:101:1:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1> ;
   skos:prefLabel
     "/urination || activity of emptying of the urinary bladder/@eng-Latn"@mul-Zyyy ,
@@ -244,7 +241,7 @@
     "Ispay"@que-Latn .
 
 <urn:1603:63:101:1:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1> ;
   skos:prefLabel
     "/menstruation || cyclic, physiologic discharge through the vagina of blood and endometrial tissues from the nonpregnant uterus/@eng-Latn"@mul-Zyyy ,
@@ -354,7 +351,7 @@
     "Menstruo"@ido-Latn .
 
 <urn:1603:63:101:1:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1> ;
   skos:prefLabel
     "/defecation || expulsion of feces from the rectum/@eng-Latn"@mul-Zyyy ,
@@ -427,7 +424,7 @@
     "جوهي"@snd-Arab .
 
 <urn:1603:63:101:1:7> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1> ;
   skos:prefLabel
     "/homeostasis || the state of steady internal conditions maintained by living things/@eng-Latn"@mul-Zyyy ,
@@ -516,7 +513,7 @@
     "Omeostase"@lfn-Latn .
 
 <urn:1603:63:101:1:8:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1:8> ;
   skos:prefLabel
     "/hyperthermia || elevated body temperature due to failed thermoregulation that occurs when a body produces or absorbs more heat than it dissipates/@eng-Latn"@mul-Zyyy ,
@@ -580,7 +577,7 @@
     "अतिताप"@nep-Deva .
 
 <urn:1603:63:101:1:8:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1:8> ;
   skos:prefLabel
     "/hypothermia || condition in which core temperature drops below the required temperature for normal metabolism and body functions/@eng-Latn"@mul-Zyyy ,
@@ -655,7 +652,7 @@
 <urn:1603:63:101:2> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:2:2> ,
     <urn:1603:63:101:2:3> ,
     <urn:1603:63:101:2:4> ,
@@ -672,15 +669,13 @@
     <urn:1603:63:101:2:99> ,
     <urn:1603:63:101:2:137> ,
     <urn:1603:63:101:2:999> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/acute need/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:2:2> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:2:2:1> ;
   skos:narrower
+    <urn:1603:63:101:2:2:1> ;
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/pain || type of unpleasant feeling/@eng-Latn"@mul-Zyyy ,
@@ -788,7 +783,7 @@
     "doloro"@ido-Latn .
 
 <urn:1603:63:101:2:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2:2> ;
   skos:prefLabel
     "/chronic pain || acute pain extending beyond the usual healing process; >3-12+ months/@eng-Latn"@mul-Zyyy ,
@@ -828,10 +823,10 @@
     "ئازاری بەردەوام"@ckb-Arab .
 
 <urn:1603:63:101:2:3> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:2:3:1> ,
     <urn:1603:63:101:2:3:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/wound || type of injury which happens relatively quickly in which skin is torn, cut, or punctured (an open wound), or where blunt force trauma causes a contusion (a closed wound)/@eng-Latn"@mul-Zyyy ,
@@ -923,7 +918,7 @@
     "Plago"@ido-Latn .
 
 <urn:1603:63:101:2:3:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2:3> ;
   skos:prefLabel
     "/bleeding || loss of blood escaping from the circulatory system/@eng-Latn"@mul-Zyyy ,
@@ -1006,9 +1001,9 @@
     "Hemoragio"@ido-Latn .
 
 <urn:1603:63:101:2:3:2> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:2:3:2:1> ;
   skos:narrower
+    <urn:1603:63:101:2:3:2:1> ;
+  skos:broader
     <urn:1603:63:101:2:3> ;
   skos:prefLabel
     "/burn || type of injury to skin, or other tissues, caused by heat, cold, electricity, chemicals, friction, or ultraviolet radiation (like sunburn)/@eng-Latn"@mul-Zyyy ,
@@ -1097,7 +1092,7 @@
     "पोलेको घाउ"@nep-Deva .
 
 <urn:1603:63:101:2:3:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2:3:2> ;
   skos:prefLabel
     "/sunburn || inflammatory reaction from ultraviolet radiation characterized by transient redness, tenderness and occasional blistering/@eng-Latn"@mul-Zyyy ,
@@ -1145,7 +1140,7 @@
     "Sunofrapo"@ido-Latn .
 
 <urn:1603:63:101:2:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/fever || common medical sign characterized by elevated body temperature/@eng-Latn"@mul-Zyyy ,
@@ -1272,7 +1267,7 @@
     "Febro"@ido-Latn .
 
 <urn:1603:63:101:2:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/headache || pain in the head or neck/@eng-Latn"@mul-Zyyy ,
@@ -1400,7 +1395,7 @@
     "дарди сар"@tgk-Zyyy .
 
 <urn:1603:63:101:2:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/dizziness || general term for a number of types of impairment in spatial perception and stability/@eng-Latn"@mul-Zyyy ,
@@ -1449,7 +1444,7 @@
     "ګنګسيت"@pus-Arab .
 
 <urn:1603:63:101:2:7> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/nausea || medical symptom or condition/@eng-Latn"@mul-Zyyy ,
@@ -1527,7 +1522,7 @@
     "Nauzeo"@ido-Latn .
 
 <urn:1603:63:101:2:8> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/vomiting || forcible expulsion of the contents of the stomach through the mouth/@eng-Latn"@mul-Zyyy ,
@@ -1632,7 +1627,7 @@
     "vomo"@ido-Latn .
 
 <urn:1603:63:101:2:10> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/somnolence || state of strong desire for sleep, or sleeping for unusually long periods/@eng-Latn"@mul-Zyyy ,
@@ -1676,7 +1671,7 @@
     "Сомноленција"@mkd-Cyrl .
 
 <urn:1603:63:101:2:11> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/dyspnea || feelings associated with impaired breathing/@eng-Latn"@mul-Zyyy ,
@@ -1755,7 +1750,7 @@
     "اڀ ساھي"@snd-Arab .
 
 <urn:1603:63:101:2:12> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/fatigue || medical symptom usually of physical and/or mental weakness that does not resolve with rest or sleep/@eng-Latn"@mul-Zyyy ,
@@ -1828,7 +1823,7 @@
     "Caajiska"@som-Latn .
 
 <urn:1603:63:101:2:13> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/foodborne illness || illness resulting from food that is spoiled or contaminated by pathogenic bacteria, viruses, parasites or toxins/@eng-Latn"@mul-Zyyy ,
@@ -1893,7 +1888,7 @@
     "खाद्य जनित रोग"@nep-Deva .
 
 <urn:1603:63:101:2:14> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/diarrhea || loose or liquid bowel movements/@eng-Latn"@mul-Zyyy ,
@@ -2005,7 +2000,7 @@
     "Isifo sohudo"@zul-Latn .
 
 <urn:1603:63:101:2:15:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2:15> ;
   skos:prefLabel
     "/traveler's diarrhea/@eng-Latn"@mul-Zyyy ,
@@ -2037,7 +2032,7 @@
     "διάρροια των ταξιδιωτών"@ell-Grek .
 
 <urn:1603:63:101:2:16> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/Irritant diaper dermatitis || generic term applied to skin rashes in the diaper area that are caused by various skin disorders and/or irritants/@eng-Latn"@mul-Zyyy ,
@@ -2061,7 +2056,7 @@
     "尿片疹"@yue-Zyyy .
 
 <urn:1603:63:101:2:99> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/list of cutaneous conditions (TODO: create dedicated Cōdex)/@eng-Latn"@mul-Zyyy ,
@@ -2078,10 +2073,10 @@
     "Piqmentlər"@aze-Latn .
 
 <urn:1603:63:101:2:137> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:2:137:1> ,
     <urn:1603:63:101:2:137:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/radiation exposure/@eng-Latn"@mul-Zyyy ,
@@ -2105,7 +2100,7 @@
     "изложеност на зрачење"@mkd-Cyrl .
 
 <urn:1603:63:101:2:137:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2:137> ;
   skos:prefLabel
     "/radiation syndrome || health problems caused by exposure to very high levels of ionizing radiation/@eng-Latn"@mul-Zyyy ,
@@ -2160,7 +2155,7 @@
     "Бемории шуоъӣ"@tgk-Zyyy .
 
 <urn:1603:63:101:2:137:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2:137> ;
   skos:prefLabel
     "/chronic radiation syndrome/@eng-Latn"@mul-Zyyy ,
@@ -2171,7 +2166,7 @@
     "Hội chứng nhiễm phóng xạ mãn tính"@vie-Latn .
 
 <urn:1603:63:101:2:999> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:2> ;
   skos:prefLabel
     "/list of medical symptoms/@eng-Latn"@mul-Zyyy ,
@@ -2189,21 +2184,19 @@
 <urn:1603:63:101:3> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:3:2> ,
     <urn:1603:63:101:3:3> ,
     <urn:1603:63:101:3:4> ,
     <urn:1603:63:101:3:99> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/chronic conditio/"@mul-Zyyy .
 
 <urn:1603:63:101:3:2> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:3:2:1> ,
     <urn:1603:63:101:3:2:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3> ;
   skos:prefLabel
     "/blood pressure || pressure exerted by circulating blood upon the walls of blood vessels/@eng-Latn"@mul-Zyyy ,
@@ -2289,7 +2282,7 @@
     "रक्तचाप"@nep-Deva .
 
 <urn:1603:63:101:3:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3:2> ;
   skos:prefLabel
     "/arterial hypertension || long term medical condition with elevated arterial blood pressure/@eng-Latn"@mul-Zyyy ,
@@ -2391,7 +2384,7 @@
     "Бемории ғалаёни хун"@tgk-Zyyy .
 
 <urn:1603:63:101:3:2:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3:2> ;
   skos:prefLabel
     "/hypotension || abnormally low blood pressure/@eng-Latn"@mul-Zyyy ,
@@ -2451,11 +2444,11 @@
     "Артерийн даралт багасах"@mon-Cyrl .
 
 <urn:1603:63:101:3:3> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:3:3:1> ,
     <urn:1603:63:101:3:3:2> ,
     <urn:1603:63:101:3:3:9> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3> ;
   skos:prefLabel
     "/diabetes || group of metabolic disorders characterized by high blood sugar levels over a prolonged period/@eng-Latn"@mul-Zyyy ,
@@ -2608,7 +2601,7 @@
     "diabeto"@ido-Latn .
 
 <urn:1603:63:101:3:3:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3:3> ;
   skos:prefLabel
     "/type-1 diabetes || form of diabetes mellitus/@eng-Latn"@mul-Zyyy ,
@@ -2663,7 +2656,7 @@
     "ဆီးချိုအမျိုးအစား-၁"@mya-Mymr .
 
 <urn:1603:63:101:3:3:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3:3> ;
   skos:prefLabel
     "/type 2 diabetes || type of diabetes mellitus with high blood sugar and insulin resistance/@eng-Latn"@mul-Zyyy ,
@@ -2724,7 +2717,7 @@
     "Diabete"@lfn-Latn .
 
 <urn:1603:63:101:3:3:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3:3> ;
   skos:prefLabel
     "/gestational diabetes || condition in which a woman without diabetes develops high blood sugar levels during pregnancy/@eng-Latn"@mul-Zyyy ,
@@ -2772,9 +2765,9 @@
     "ကိုယ်ဝန်ဆောင်ဆီးချို"@mya-Mymr .
 
 <urn:1603:63:101:3:4> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:3:4:1> ;
   skos:narrower
+    <urn:1603:63:101:3:4:1> ;
+  skos:broader
     <urn:1603:63:101:3> ;
   skos:prefLabel
     "/autoimmune disease || type of human disease/@eng-Latn"@mul-Zyyy ,
@@ -2835,7 +2828,7 @@
     "Maladia autoimune"@lfn-Latn .
 
 <urn:1603:63:101:3:4:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3:4> ;
   skos:prefLabel
     "/coeliac disease || long term autoimmune disorder caused by a reaction to gluten/@eng-Latn"@mul-Zyyy ,
@@ -2908,16 +2901,16 @@
     "Целијакија"@mkd-Cyrl .
 
 <urn:1603:63:101:3:99> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:3:99:1> ,
     <urn:1603:63:101:3:99:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3> ;
   skos:prefLabel
     "/chronic condition etc (temporary; needs to be categorized)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:3:99:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3:99> ;
   skos:prefLabel
     "/intestinal parasite infection || infections of the intestines with parasites/@eng-Latn"@mul-Zyyy ,
@@ -2938,7 +2931,7 @@
     "Inzoka zo mu nda"@kin-Latn .
 
 <urn:1603:63:101:3:99:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3:99> ;
   skos:prefLabel
     "/urinary incontinence || uncontrolled leakage of urine/@eng-Latn"@mul-Zyyy ,
@@ -2991,17 +2984,15 @@
 <urn:1603:63:101:4> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:4:2> ,
     <urn:1603:63:101:4:3> ,
     <urn:1603:63:101:4:5> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/Relevant conditions related to water, food or medicine/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:4:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:4> ;
   skos:prefLabel
     "/hyperhydration || excessive intake of water/@eng-Latn"@mul-Zyyy ,
@@ -3036,7 +3027,7 @@
     "Гипергидратация"@tat-Zyyy .
 
 <urn:1603:63:101:4:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:4> ;
   skos:prefLabel
     "/hypohydration || deficit of total body water/@eng-Latn"@mul-Zyyy ,
@@ -3104,9 +3095,9 @@
     "जलवियोजन"@nep-Deva .
 
 <urn:1603:63:101:4:5> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:4:5:1> ;
   skos:narrower
+    <urn:1603:63:101:4:5:1> ;
+  skos:broader
     <urn:1603:63:101:4> ;
   skos:prefLabel
     "/allergy || immune system response to a substance that most people tolerate well/@eng-Latn"@mul-Zyyy ,
@@ -3215,9 +3206,9 @@
     "Alergio"@ido-Latn .
 
 <urn:1603:63:101:4:5:1> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:4:5:1:1> ;
   skos:narrower
+    <urn:1603:63:101:4:5:1:1> ;
+  skos:broader
     <urn:1603:63:101:4:5> ;
   skos:prefLabel
     "/food allergy || hypersensitivity reaction type I disease that is an abnormal response to a food, triggered by the body's immune system/@eng-Latn"@mul-Zyyy ,
@@ -3272,7 +3263,7 @@
     "алергија на храна"@mkd-Cyrl .
 
 <urn:1603:63:101:4:5:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:4:5:1> ;
   skos:prefLabel
     "/egg allergy || food allergy that is an allergy or hypersensitivity to dietary substances from the yolk or whites of eggs, causing an overreaction of the immune system which may lead to severe physical symptoms/@eng-Latn"@mul-Zyyy ,
@@ -3304,7 +3295,7 @@
 <urn:1603:63:101:5> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:5:2> ,
     <urn:1603:63:101:5:3> ,
     <urn:1603:63:101:5:4> ,
@@ -3314,8 +3305,6 @@
     <urn:1603:63:101:5:8> ,
     <urn:1603:63:101:5:40> ,
     <urn:1603:63:101:5:50> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/hūmānae diaetīs/"@mul-Zyyy ,
     "قائمة الحميات الغذائية"@ara-Arab ,
@@ -3326,7 +3315,7 @@
     "食餌療法"@jpn-Jpan .
 
 <urn:1603:63:101:5:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/omnivore || organism consuming a variety of foods, usually including both plants and animals/@eng-Latn"@mul-Zyyy ,
@@ -3417,7 +3406,7 @@
     "omnivoro"@ido-Latn .
 
 <urn:1603:63:101:5:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/veganism || philosophy that rejects the use of animals/@eng-Latn"@mul-Zyyy ,
@@ -3505,7 +3494,7 @@
     "veganisme"@lfn-Latn .
 
 <urn:1603:63:101:5:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/vegetarianism || practice of abstaining from the consumption of meat/@eng-Latn"@mul-Zyyy ,
@@ -3609,7 +3598,7 @@
     "nalre'ucti"@jbo-Latn .
 
 <urn:1603:63:101:5:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/pollotarianism/@eng-Latn"@mul-Zyyy ,
@@ -3619,7 +3608,7 @@
     "Pollowegetarianizm"@pol-Latn .
 
 <urn:1603:63:101:5:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/pescetarianism/@eng-Latn"@mul-Zyyy ,
@@ -3653,7 +3642,7 @@
     "Pesketarianlıq"@aze-Latn .
 
 <urn:1603:63:101:5:7> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/lacto-ovo vegetarianism/@eng-Latn"@mul-Zyyy ,
@@ -3661,7 +3650,7 @@
     "Lacto-ovo vegetarianism"@eng-Latn .
 
 <urn:1603:63:101:5:8> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/lacto vegetarianism/@eng-Latn"@mul-Zyyy ,
@@ -3684,10 +3673,10 @@
     "Γαλακτοχορτοφαγία"@ell-Grek .
 
 <urn:1603:63:101:5:40> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:5:40:1> ,
     <urn:1603:63:101:5:40:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/food or drink taboo || substances considered taboo in certain cultures or religions/@eng-Latn"@mul-Zyyy ,
@@ -3714,7 +3703,7 @@
     "飲食禁忌"@zho-Hant .
 
 <urn:1603:63:101:5:40:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5:40> ;
   skos:prefLabel
     "/unclean animal || non-human animal, the handling or consumption of which is considered taboo in a given religion; e.g. pigs in Judaism or Islam/@eng-Latn"@mul-Zyyy ,
@@ -3745,7 +3734,7 @@
     "ناپاك ھايۋان"@uig-Zyyy .
 
 <urn:1603:63:101:5:40:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5:40> ;
   skos:prefLabel
     "/religious restrictions on the consumption of pork/@eng-Latn"@mul-Zyyy ,
@@ -3757,9 +3746,9 @@
     "Domuz eti tüketiminde dini kısıtlamalar"@tur-Latn .
 
 <urn:1603:63:101:5:50> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:5:50:10> ;
   skos:narrower
+    <urn:1603:63:101:5:50:10> ;
+  skos:broader
     <urn:1603:63:101:5> ;
   skos:prefLabel
     "/religion-based diets/@eng-Latn"@mul-Zyyy ,
@@ -3777,7 +3766,7 @@
     "Категорија:Верска исхрана"@mkd-Cyrl .
 
 <urn:1603:63:101:5:50:10> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:5:50> ;
   skos:prefLabel
     "/Islamic dietary laws || religious dietary restrictions/@eng-Latn"@mul-Zyyy ,
@@ -3802,7 +3791,7 @@
 <urn:1603:63:101:6> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:6:1> ,
     <urn:1603:63:101:6:2> ,
     <urn:1603:63:101:6:3> ,
@@ -3810,8 +3799,6 @@
     <urn:1603:63:101:6:5> ,
     <urn:1603:63:101:6:6> ,
     <urn:1603:63:101:6:9> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/development of the human body || process of growing to maturity; growth from a one-celled zygote to an adult human being/@eng-Latn"@mul-Zyyy ,
     "تطور الإنسان"@ara-Arab ,
@@ -3854,13 +3841,13 @@
     "човеков развој"@mkd-Cyrl .
 
 <urn:1603:63:101:6:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:6> ;
   skos:prefLabel
     "not known (human development)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:6:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:6> ;
   skos:prefLabel
     "/fetus || fetus sive foetus in vita humana est homo antenatalis inter stationem embryonicam et partum/@eng-Latn"@mul-Zyyy ,
@@ -3944,7 +3931,7 @@
     "Feto"@ido-Latn .
 
 <urn:1603:63:101:6:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:6> ;
   skos:prefLabel
     "/infans || est puer vel puella minimae aetatis, sic dictus, quia nondum fari coepit. Plurimi pueri prima verba circiter duodecim menses nati loquuntur/@lat-Latn"@mul-Zyyy ,
@@ -4053,7 +4040,7 @@
     "bebe"@lfn-Latn .
 
 <urn:1603:63:101:6:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:6> ;
   skos:prefLabel
     "/adulescentia || statio evolutionariae et psychologicae vitae humanae quae plerumque per tempus a pubertate ad legitimum adulti statum (aetatem maioritatis) fit/@lat-Latn"@mul-Zyyy ,
@@ -4149,7 +4136,7 @@
     "dhalinyaro"@som-Latn .
 
 <urn:1603:63:101:6:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:6> ;
   skos:prefLabel
     "adultum"@mul-Zyyy ,
@@ -4246,7 +4233,7 @@
     "Adulte"@lfn-Latn .
 
 <urn:1603:63:101:6:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:6> ;
   skos:prefLabel
     "/senectus || Senectus (-utis, f.) consistit in aetatibus quae spem vitae hominum approprinquant vel excedunt, et ergo finem circuli vitae humanae attingit/@lat-Latn"@mul-Zyyy ,
@@ -4331,7 +4318,7 @@
     "बृद्धावस्था"@nep-Deva .
 
 <urn:1603:63:101:6:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:6> ;
   skos:prefLabel
     "/not applicable (human development)/@eng-Latn"@mul-Zyyy .
@@ -4339,14 +4326,12 @@
 <urn:1603:63:101:7> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:7:0> ,
     <urn:1603:63:101:7:1> ,
     <urn:1603:63:101:7:2> ,
     <urn:1603:63:101:7:5> ,
     <urn:1603:63:101:7:9> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/pronomen personale || pronomina quae describunt personas grammaticale/@lat-Latn"@mul-Zyyy ,
     "ضمير شخصي"@ara-Arab ,
@@ -4414,33 +4399,33 @@
     "Ҷонишинҳои шахсӣ"@tgk-Zyyy .
 
 <urn:1603:63:101:7:0> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:7> ;
   skos:prefLabel
     "/not known (personal pronoun)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:7:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:7> ;
   skos:prefLabel
     "/masculine-like personal pronoun (for languages that allow it)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:7:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:7> ;
   skos:prefLabel
     "/feminine-like personal pronoun (for languages that allow it)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:7:5> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:7:5:999> ;
   skos:narrower
+    <urn:1603:63:101:7:5:999> ;
+  skos:broader
     <urn:1603:63:101:7> ;
   skos:prefLabel
     "/neuter personal pronoun (for languages that allow it)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:7:5:999> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:7:5> ;
   skos:prefLabel
     "/gender-neutral pronoun || pronouns that don't specify gender or sex of someone/@eng-Latn"@mul-Zyyy ,
@@ -4471,7 +4456,7 @@
     "sohkabealleneutrála pronomen"@sme-Latn .
 
 <urn:1603:63:101:7:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:7> ;
   skos:prefLabel
     "/not applicable (personal pronoun)/@eng-Latn"@mul-Zyyy .
@@ -4479,14 +4464,12 @@
 <urn:1603:63:101:8> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:8:0> ,
     <urn:1603:63:101:8:1> ,
     <urn:1603:63:101:8:2> ,
     <urn:1603:63:101:8:5> ,
     <urn:1603:63:101:8:9> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/genus (societas) || genus est vocabulum Anglicum quod in usu multorum est ad finem distinguendi aspectum socialem qualitatis feminae (puellae) ac viri (pueri) ab aspectum biologicum (quod in eo casu dicitur sex - sexus/@lat-Latn"@mul-Zyyy ,
     "نوع اجتماعي"@ara-Arab ,
@@ -4607,13 +4590,13 @@
     "jenero"@lfn-Latn .
 
 <urn:1603:63:101:8:0> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:8> ;
   skos:prefLabel
     "/not known (gender)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:8:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:8> ;
   skos:prefLabel
     "/masculine/@eng-Latn"@mul-Zyyy ,
@@ -4679,7 +4662,7 @@
     "Rag"@som-Latn .
 
 <urn:1603:63:101:8:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:8> ;
   skos:prefLabel
     "/feminine/@eng-Latn"@mul-Zyyy ,
@@ -4738,13 +4721,13 @@
     "Женственост"@mkd-Cyrl .
 
 <urn:1603:63:101:8:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:8> ;
   skos:prefLabel
     "/feminine/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:8:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:8> ;
   skos:prefLabel
     "/not applicable (gender)/@eng-Latn"@mul-Zyyy .
@@ -4752,14 +4735,12 @@
 <urn:1603:63:101:9> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:9:0> ,
     <urn:1603:63:101:9:1> ,
     <urn:1603:63:101:9:2> ,
     <urn:1603:63:101:9:5> ,
     <urn:1603:63:101:9:9> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/sexus || in biologia est modus geneticas proprietates coniunctandi et miscendi, qui praecipuum organismorum in virili et muliebri generibus (vel sexibus) saepe requirit/@lat-Latn"@mul-Zyyy ,
     "جنس"@ara-Arab ,
@@ -4893,13 +4874,13 @@
     "seso"@lfn-Latn .
 
 <urn:1603:63:101:9:0> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9> ;
   skos:prefLabel
     "/not known (sex)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:9:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9> ;
   skos:prefLabel
     "/male/@eng-Latn"@mul-Zyyy ,
@@ -5025,7 +5006,7 @@
     "mas"@lfn-Latn .
 
 <urn:1603:63:101:9:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9> ;
   skos:prefLabel
     "/female/@eng-Latn"@mul-Zyyy ,
@@ -5149,7 +5130,7 @@
     "fema"@lfn-Latn .
 
 <urn:1603:63:101:9:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9> ;
   skos:prefLabel
     "/intersex || ndividuals born with any of several sex characteristics including chromosome patterns, gonads, or genitals/@eng-Latn"@mul-Zyyy ,
@@ -5235,7 +5216,7 @@
     "Ucansi oluphakathi"@zul-Latn .
 
 <urn:1603:63:101:9:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9> ;
   skos:prefLabel
     "/not applicable (sex)/@eng-Latn"@mul-Zyyy .
@@ -5243,13 +5224,11 @@
 <urn:1603:63:101:10> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:10:0> ,
     <urn:1603:63:101:10:1> ,
     <urn:1603:63:101:10:2> ,
     <urn:1603:63:101:10:9> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/gender identity || person's private sense of, and subjective experience of, their own gender/@eng-Latn"@mul-Zyyy ,
     "هوية جنسية"@ara-Arab ,
@@ -5342,13 +5321,13 @@
     "identia de jenero"@lfn-Latn .
 
 <urn:1603:63:101:10:0> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:10> ;
   skos:prefLabel
     "/not known (gender identity)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:10:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:10> ;
   skos:prefLabel
     "/cisgender person || a person whose gender identity matches their assigned sex/@eng-Latn"@mul-Zyyy ,
@@ -5409,7 +5388,7 @@
     "sisjenero"@lfn-Latn .
 
 <urn:1603:63:101:10:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:10> ;
   skos:prefLabel
     "/transgender person || person whose gender identity is different from the gender they were assigned at birth/@eng-Latn"@mul-Zyyy ,
@@ -5505,7 +5484,7 @@
     "transjenero"@lfn-Latn .
 
 <urn:1603:63:101:10:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:10> ;
   skos:prefLabel
     "/not applicable (gender identity)/@eng-Latn"@mul-Zyyy .
@@ -5513,15 +5492,13 @@
 <urn:1603:63:101:11> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:11:0> ,
     <urn:1603:63:101:11:1> ,
     <urn:1603:63:101:11:2> ,
     <urn:1603:63:101:11:3> ,
     <urn:1603:63:101:11:4> ,
     <urn:1603:63:101:11:9> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/marital status || indicates whether the person is married (examples: married, single, divorced, and widowed)/@eng-Latn"@mul-Zyyy ,
     "الحالة الاجتماعية"@ara-Arab ,
@@ -5564,13 +5541,13 @@
     "siviiladilli"@sme-Latn .
 
 <urn:1603:63:101:11:0> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:11> ;
   skos:prefLabel
     "/not known (marital status)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:11:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:11> ;
   skos:prefLabel
     "/single person || person not in a marital relationship/@eng-Latn"@mul-Zyyy ,
@@ -5608,7 +5585,7 @@
     "mhux miżżewweġ"@mlt-Latn .
 
 <urn:1603:63:101:11:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:11> ;
   skos:prefLabel
     "/marriage || social union or legal contract between people called spouses that creates kinship/@eng-Latn"@mul-Zyyy ,
@@ -5767,7 +5744,7 @@
     "sposia"@lfn-Latn .
 
 <urn:1603:63:101:11:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:11> ;
   skos:prefLabel
     "/divorce || termination of a marital union/@eng-Latn"@mul-Zyyy ,
@@ -5883,7 +5860,7 @@
     "ҷудошавӣ бо ҳамсар"@tgk-Zyyy .
 
 <urn:1603:63:101:11:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:11> ;
   skos:prefLabel
     "/widowhood || state of having lost one's spouse to death/@eng-Latn"@mul-Zyyy ,
@@ -5924,7 +5901,7 @@
     "vidveso"@ido-Latn .
 
 <urn:1603:63:101:11:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:11> ;
   skos:prefLabel
     "/not applicable (marital status)/@eng-Latn"@mul-Zyyy .
@@ -5932,13 +5909,11 @@
 <urn:1603:63:101:12> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:12:0> ,
     <urn:1603:63:101:12:1> ,
     <urn:1603:63:101:12:2> ,
     <urn:1603:63:101:12:3> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/parenting || process of promoting and supporting the development of a child; refers to the aspects of raising a child aside from the biological relationship/@eng-Latn"@mul-Zyyy ,
     "تربية الأبناء"@ara-Arab ,
@@ -6010,25 +5985,25 @@
     "Тарбия"@tgk-Zyyy .
 
 <urn:1603:63:101:12:0> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:12> ;
   skos:prefLabel
     "/not known (parenting)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:12:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:12> ;
   skos:prefLabel
     "/no (parenting)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:12:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:12> ;
   skos:prefLabel
     "/yes (parenting)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:12:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:12> ;
   skos:prefLabel
     "/not applicable (parenting)/@eng-Latn"@mul-Zyyy .
@@ -6036,25 +6011,23 @@
 <urn:1603:63:101:13> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:13:0> ,
     <urn:1603:63:101:13:1> ,
     <urn:1603:63:101:13:2> ,
     <urn:1603:63:101:13:3> ,
     <urn:1603:63:101:13:9> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/refugee status/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:13:0> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:13> ;
   skos:prefLabel
     "/not known (refugee status)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:13:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:13> ;
   skos:prefLabel
     "/internally displaced person || person forced to leave their home who remains within their country/@eng-Latn"@mul-Zyyy ,
@@ -6095,7 +6068,7 @@
     "Məcburi köçkünlər"@aze-Latn .
 
 <urn:1603:63:101:13:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:13> ;
   skos:prefLabel
     "/asylum seeker || individual who seeks refuge, esp. political asylum, in a foreign country/@eng-Latn"@mul-Zyyy ,
@@ -6150,7 +6123,7 @@
     "dorvoohcci"@sme-Latn .
 
 <urn:1603:63:101:13:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:13> ;
   skos:prefLabel
     "/refugee || (short definition required)/@eng-Latn"@mul-Zyyy ,
@@ -6247,7 +6220,7 @@
     "Refugiato"@ina-Latn .
 
 <urn:1603:63:101:13:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:13> ;
   skos:prefLabel
     "/not applicable (refugee status)/@eng-Latn"@mul-Zyyy .
@@ -6255,7 +6228,7 @@
 <urn:1603:63:101:101> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:101:1> ,
     <urn:1603:63:101:101:2> ,
     <urn:1603:63:101:101:3> ,
@@ -6268,8 +6241,6 @@
     <urn:1603:63:101:101:40> ,
     <urn:1603:63:101:101:50> ,
     <urn:1603:63:101:101:60> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/first aid || first and immediate assistance given to any person suffering from either a minor or serious illness or injury/@eng-Latn"@mul-Zyyy ,
     "إسعاف أولي"@ara-Arab ,
@@ -6357,7 +6328,7 @@
     "Prime auxilio"@ina-Latn .
 
 <urn:1603:63:101:101:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/first aid kit || Collection of supplies and equipment that is used to give medical treatment/@eng-Latn"@mul-Zyyy ,
@@ -6404,7 +6375,7 @@
     "Санитария баштыгы"@kir-Zyyy .
 
 <urn:1603:63:101:101:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/hand sanitizer || liquid, gel or foam generally used to kill many viruses/bacteria/microorganisms on the hands/@eng-Latn"@mul-Zyyy ,
@@ -6453,7 +6424,7 @@
     "giehtadesinfekšuvdna"@sme-Latn .
 
 <urn:1603:63:101:101:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/medical glove || single-use glove worn during medical examinations and procedures/@eng-Latn"@mul-Zyyy ,
@@ -6487,7 +6458,7 @@
     "Дастпӯшакҳои тиббӣ"@tgk-Zyyy .
 
 <urn:1603:63:101:101:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/dressing || sterile pad or compress applied to a wound/@eng-Latn"@mul-Zyyy ,
@@ -6525,7 +6496,7 @@
     "Преврска"@mkd-Cyrl .
 
 <urn:1603:63:101:101:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/adhesive bandage || a small self-adhesive medical dressing used for injuries not serious enough to require a full-size bandage/@eng-Latn"@mul-Zyyy ,
@@ -6574,7 +6545,7 @@
     "Пластырлар"@kir-Zyyy .
 
 <urn:1603:63:101:101:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/bandage || piece of material used either to support a medical device such as a dressing or splint/@eng-Latn"@mul-Zyyy ,
@@ -6624,7 +6595,7 @@
     "Bandajo"@ido-Latn .
 
 <urn:1603:63:101:101:7> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/saline solution || saline water for medical purposes, including both normal saline (isotonic saline solution) and hypertonic saline solution/@eng-Latn"@mul-Zyyy ,
@@ -6675,10 +6646,10 @@
     "Физиологиялык эритме"@kir-Zyyy .
 
 <urn:1603:63:101:101:20> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:101:20:1> ,
     <urn:1603:63:101:101:20:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/analgesic || drugs used to relieve pain/@eng-Latn"@mul-Zyyy ,
@@ -6756,7 +6727,7 @@
     "Paradole"@lfn-Latn .
 
 <urn:1603:63:101:101:20:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101:20> ;
   skos:prefLabel
     "/paracetamol || also known as acetaminophen, is a medication used to treat fever and mild to moderate pain/@eng-Latn"@mul-Zyyy ,
@@ -6848,7 +6819,7 @@
     "i-paracetamol"@zul-Latn .
 
 <urn:1603:63:101:101:20:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101:20> ;
   skos:prefLabel
     "/aspirin || medication used to reduce pain, fever, or inflammation/@eng-Latn"@mul-Zyyy ,
@@ -6955,7 +6926,7 @@
     "Aspirino"@ido-Latn .
 
 <urn:1603:63:101:101:30> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/non-steroidal anti-inflammatory drug/@eng-Latn"@mul-Zyyy ,
@@ -7017,7 +6988,7 @@
     "Нестероиден антиинфламаторен лек"@mkd-Cyrl .
 
 <urn:1603:63:101:101:40> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/histamine antagonist || drug that binds to but does not activate histamine receptors, thereby blocking the actions of histamine or histamine agonists/@eng-Latn"@mul-Zyyy ,
@@ -7078,9 +7049,9 @@
     "antihistamiidna"@sme-Latn .
 
 <urn:1603:63:101:101:50> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:101:50:1> ;
   skos:narrower
+    <urn:1603:63:101:101:50:1> ;
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/antiseptic || antimicrobial substance/@eng-Latn"@mul-Zyyy ,
@@ -7148,7 +7119,7 @@
     "Антисептикҳо"@tgk-Zyyy .
 
 <urn:1603:63:101:101:50:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101:50> ;
   skos:prefLabel
     "/hydrogen peroxide/@eng-Latn"@mul-Zyyy ,
@@ -7226,15 +7197,15 @@
     "ဟိုက်ဒရိုဂျင်ပါအောက်ဆိုက်"@mya-Mymr .
 
 <urn:1603:63:101:101:60> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:101:60:1> ;
   skos:narrower
+    <urn:1603:63:101:101:60:1> ;
+  skos:broader
     <urn:1603:63:101:101> ;
   skos:prefLabel
     "/anti-diarrhea/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:101:60:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:101:60> ;
   skos:prefLabel
     "/bismuth subsalicylate || antacid elixir medication used to treat temporary discomforts of the stomach and gastrointestinal tract, such as nausea, heartburn, indigestion, upset stomach, and diarrhea/@eng-Latn"@mul-Zyyy ,
@@ -7262,14 +7233,12 @@
 <urn:1603:63:101:102> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:102:1> ,
     <urn:1603:63:101:102:2> ,
     <urn:1603:63:101:102:10> ,
     <urn:1603:63:101:102:11> ,
     <urn:1603:63:101:102:12> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/blood donation || occurs when a person or other mammal voluntarily has blood drawn/@eng-Latn"@mul-Zyyy ,
     "تبرع بالدم"@ara-Arab ,
@@ -7336,12 +7305,12 @@
     "donation de sanguine"@ina-Latn .
 
 <urn:1603:63:101:102:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:102:1:1> ,
     <urn:1603:63:101:102:1:2> ,
     <urn:1603:63:101:102:1:15> ,
     <urn:1603:63:101:102:1:28> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102> ;
   skos:prefLabel
     "/ABO blood group system/@eng-Latn"@mul-Zyyy ,
@@ -7392,7 +7361,7 @@
     "एबिओ रक्त समूह प्रणाली"@nep-Deva .
 
 <urn:1603:63:101:102:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102:1> ;
   skos:prefLabel
     "/A || human blood type/@eng-Latn"@mul-Zyyy ,
@@ -7484,7 +7453,7 @@
     "A"@lfn-Latn .
 
 <urn:1603:63:101:102:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102:1> ;
   skos:prefLabel
     "/B || human blood type/@eng-Latn"@mul-Zyyy ,
@@ -7570,7 +7539,7 @@
     "B"@lfn-Latn .
 
 <urn:1603:63:101:102:1:15> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102:1> ;
   skos:prefLabel
     "/O || human blood type/@eng-Latn"@mul-Zyyy ,
@@ -7657,7 +7626,7 @@
     "O"@lfn-Latn .
 
 <urn:1603:63:101:102:1:28> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102:1> ;
   skos:prefLabel
     "/AB || human blood type/@eng-Latn"@mul-Zyyy ,
@@ -7742,7 +7711,7 @@
     "AB"@lfn-Latn .
 
 <urn:1603:63:101:102:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102> ;
   skos:prefLabel
     "/Rh blood group system/@eng-Latn"@mul-Zyyy ,
@@ -7795,10 +7764,10 @@
     "Резус-фактор"@mkd-Cyrl .
 
 <urn:1603:63:101:102:10> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:102:10:1> ,
     <urn:1603:63:101:102:10:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102> ;
   skos:prefLabel
     "/whole blood || unseparated donated human blood/@eng-Latn"@mul-Zyyy ,
@@ -7819,7 +7788,7 @@
     "ολικό αίμα"@ell-Grek .
 
 <urn:1603:63:101:102:10:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102:10> ;
   skos:prefLabel
     "/packed red blood cells || red blood cells separated for blood transfusion/@eng-Latn"@mul-Zyyy ,
@@ -7844,7 +7813,7 @@
     "خون دی بوتل"@pnb-Arab .
 
 <urn:1603:63:101:102:10:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102:10> ;
   skos:prefLabel
     "/plateletpheresis || /method of collecting the platelets, which is performed by a device used in blood donation that separates the platelets and returns other portions of the blood to the donor/@eng-Latn"@mul-Zyyy ,
@@ -7856,7 +7825,7 @@
     "Plaquetoaférese"@glg-Latn .
 
 <urn:1603:63:101:102:11> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102> ;
   skos:prefLabel
     "/blood transfusion || generally the process of receiving blood or blood products into one's circulation intravenously/@eng-Latn"@mul-Zyyy ,
@@ -7932,7 +7901,7 @@
     "Transfusion sanguine"@ina-Latn .
 
 <urn:1603:63:101:102:12> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:102> ;
   skos:prefLabel
     "/autologous blood donation || blood donation marked for use by the donor, typically for a scheduled surgery/@eng-Latn"@mul-Zyyy ,
@@ -7945,12 +7914,10 @@
 <urn:1603:63:101:137> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:137:1> ,
     <urn:1603:63:101:137:2> ,
     <urn:1603:63:101:137:9> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/ionizing radiation || radiation that carries enough energy to liberate electrons from atoms or molecules/@eng-Latn"@mul-Zyyy ,
     "إشعاع مؤين"@ara-Arab ,
@@ -8025,11 +7992,11 @@
     "आयोनाइजेसन विकिरण"@nep-Deva .
 
 <urn:1603:63:101:137:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:137:1:1> ,
     <urn:1603:63:101:137:1:2> ,
     <urn:1603:63:101:137:1:3> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:137> ;
   skos:prefLabel
     "/ultraviolet radiation || electromagnetic radiation with a wavelength shorter than that of visible light, but longer than X-rays/@eng-Latn"@mul-Zyyy ,
@@ -8140,7 +8107,7 @@
     "Ultreviolea"@ido-Latn .
 
 <urn:1603:63:101:137:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:137:1> ;
   skos:prefLabel
     "/sunscreen || topical skin product that helps protect against sunburn/@eng-Latn"@mul-Zyyy ,
@@ -8189,7 +8156,7 @@
     "זונקרעם"@yid-Hebr .
 
 <urn:1603:63:101:137:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:137:1> ;
   skos:prefLabel
     "/thanaka || yellowish-white cosmetic paste made from ground bark/@eng-Latn"@mul-Zyyy ,
@@ -8211,17 +8178,17 @@
     "သနပ်ခါး"@mya-Mymr .
 
 <urn:1603:63:101:137:1:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:137:1> ;
   skos:prefLabel
     "/borak || cosmetic face powder or paste that is applied on the face for protection from the sun/@eng-Latn"@mul-Zyyy ,
     "Borak"@eng-Latn .
 
 <urn:1603:63:101:137:2> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:137:2:1> ,
     <urn:1603:63:101:137:2:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:137> ;
   skos:prefLabel
     "/particle detector || device used to detect, track, and/or identify ionising particles/@eng-Latn"@mul-Zyyy ,
@@ -8266,7 +8233,7 @@
     "забележувач на честички"@mkd-Cyrl .
 
 <urn:1603:63:101:137:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:137:2> ;
   skos:prefLabel
     "/dosimeter || device that measures exposure to ionizing radiation/@eng-Latn"@mul-Zyyy ,
@@ -8309,7 +8276,7 @@
     "Дозиметар"@mkd-Cyrl .
 
 <urn:1603:63:101:137:2:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:137:2> ;
   skos:prefLabel
     "/Geiger counter || instrument used for measuring ionizing radiation/@eng-Latn"@mul-Zyyy ,
@@ -8377,15 +8344,15 @@
     "Geiger Contator"@ile-Latn .
 
 <urn:1603:63:101:137:9> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:137:9:1> ;
   skos:narrower
+    <urn:1603:63:101:137:9:1> ;
+  skos:broader
     <urn:1603:63:101:137> ;
   skos:prefLabel
     "/radiological emergencies involving radioactive iodine/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:137:9:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:137:9> ;
   skos:prefLabel
     "/potassium iodate || chemical compound/@eng-Latn"@mul-Zyyy ,
@@ -8420,7 +8387,7 @@
 <urn:1603:63:101:180> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:180:1> ,
     <urn:1603:63:101:180:2> ,
     <urn:1603:63:101:180:3> ,
@@ -8432,8 +8399,6 @@
     <urn:1603:63:101:180:9> ,
     <urn:1603:63:101:180:10> ,
     <urn:1603:63:101:180:11> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/vaccines/@eng-Latn"@mul-Zyyy ,
     "لقاح"@ara-Arab ,
@@ -8564,7 +8529,7 @@
     "vaccino"@ina-Latn .
 
 <urn:1603:63:101:180:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/BCG vaccine/@eng-Latn"@mul-Zyyy ,
@@ -8631,7 +8596,7 @@
     "Umjovo i-BCG"@ssw-Latn .
 
 <urn:1603:63:101:180:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/Hepatitis B vaccine/"@mul-Zyyy ,
@@ -8683,7 +8648,7 @@
     "Umjovo weHepatitis B"@ssw-Latn .
 
 <urn:1603:63:101:180:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/polio vaccine/@eng-Latn"@mul-Zyyy ,
@@ -8734,7 +8699,7 @@
     "ပိုလီယိုရောဂါကာကွယ်ဆေး"@mya-Mymr .
 
 <urn:1603:63:101:180:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/diphtheria vaccine/@eng-Latn"@mul-Zyyy ,
@@ -8770,7 +8735,7 @@
     "ဆုံဆို့ရောဂါကာကွယ်ဆေး"@mya-Mymr .
 
 <urn:1603:63:101:180:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/tetanus vaccine/@eng-Latn"@mul-Zyyy ,
@@ -8805,7 +8770,7 @@
     "မေးခိုင်ရောဂါကာကွယ်ဆေး"@mya-Mymr .
 
 <urn:1603:63:101:180:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/pertussis vaccine/@eng-Latn"@mul-Zyyy ,
@@ -8844,7 +8809,7 @@
     "Umjovo wePertussis"@ssw-Latn .
 
 <urn:1603:63:101:180:7> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/Haemophilus influenzae type B vaccine/@eng-Latn"@mul-Zyyy ,
@@ -8880,7 +8845,7 @@
     "အဆုတ်ရောင် ဘီရောဂါကာကွယ်ဆေး"@mya-Mymr .
 
 <urn:1603:63:101:180:8> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/pneumococcal vaccine/@eng-Latn"@mul-Zyyy ,
@@ -8912,7 +8877,7 @@
     "နူမိုကောကယ်ကာကွယ်ဆေး"@mya-Mymr .
 
 <urn:1603:63:101:180:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/rotavirus vaccine/@eng-Latn"@mul-Zyyy ,
@@ -8942,7 +8907,7 @@
     "ရိုတာဗိုင်းရပ်စ်ကာကွယ်ဆေး"@mya-Mymr .
 
 <urn:1603:63:101:180:10> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/MMR vaccine (measles, mumps, rubella)/@eng-Latn"@mul-Zyyy ,
@@ -8988,7 +8953,7 @@
     "ДТПР-вакцина"@mkd-Cyrl .
 
 <urn:1603:63:101:180:11> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:180> ;
   skos:prefLabel
     "/HPV vaccine/@eng-Latn"@mul-Zyyy ,
@@ -9037,11 +9002,9 @@
 <urn:1603:63:101:200> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:200:1> ,
     <urn:1603:63:101:200:10> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/Hygiene || generic/@eng-Latn"@mul-Zyyy ,
     "نظافة"@ara-Arab ,
@@ -9137,7 +9100,7 @@
     "ijenia"@lfn-Latn .
 
 <urn:1603:63:101:200:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:200> ;
   skos:prefLabel
     "/soap || salt of fatty acids (long-chain carboxylic acids), used for washing and cleaning/@eng-Latn"@mul-Zyyy ,
@@ -9265,7 +9228,7 @@
     "Sapono"@ido-Latn .
 
 <urn:1603:63:101:200:10> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:200> ;
   skos:prefLabel
     "/deodorant || substance exerted in the groin or armpits to lessen the smell of body odour/@eng-Latn"@mul-Zyyy ,
@@ -9320,12 +9283,10 @@
 <urn:1603:63:101:205> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:205:1> ,
     <urn:1603:63:101:205:2> ,
     <urn:1603:63:101:205:3> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/oral hygiene || practice of keeping the mouth and teeth clean to prevent dental problems/@eng-Latn"@mul-Zyyy ,
     "صحة الفم"@ara-Arab ,
@@ -9360,7 +9321,7 @@
     "забна хигиена"@mkd-Cyrl .
 
 <urn:1603:63:101:205:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:205> ;
   skos:prefLabel
     "/toothpaste || paste or gel dentifrice used to clean and maintain the health of teeth/@eng-Latn"@mul-Zyyy ,
@@ -9437,7 +9398,7 @@
     "Dentifrico"@ido-Latn .
 
 <urn:1603:63:101:205:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:205> ;
   skos:prefLabel
     "/toothbrush || oral hygiene instrument used to clean the teeth, gums, and tongue/@eng-Latn"@mul-Zyyy ,
@@ -9523,7 +9484,7 @@
     "Dentobrosilo"@ido-Latn .
 
 <urn:1603:63:101:205:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:205> ;
   skos:prefLabel
     "/dental floss || cord of thin filaments used to remove food and dental plaque from between teeth in areas a toothbrush is unable to reach/@eng-Latn"@mul-Zyyy ,
@@ -9568,11 +9529,9 @@
 <urn:1603:63:101:210> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:210:1> ,
     <urn:1603:63:101:210:2> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/anal cleansing || hygienic practice that a person performs on the anal area of themselves after defecation/@eng-Latn"@mul-Zyyy ,
     "анальная гигиена"@rus-Cyrl ,
@@ -9590,13 +9549,13 @@
     "анал гигиенасы"@tat-Cyrl .
 
 <urn:1603:63:101:210:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:210:1:1> ,
     <urn:1603:63:101:210:1:2> ,
     <urn:1603:63:101:210:1:3> ,
     <urn:1603:63:101:210:1:4> ,
     <urn:1603:63:101:210:1:5> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:210> ;
   skos:prefLabel
     "/water || anal cleansing/@eng-Latn"@mul-Zyyy ,
@@ -9820,7 +9779,7 @@
     "acua"@lfn-Latn .
 
 <urn:1603:63:101:210:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:210:1> ;
   skos:prefLabel
     "/bidet || plumbing fixture or type of sink intended for washing the genitalia and anus of the human body/@eng-Latn"@mul-Zyyy ,
@@ -9866,7 +9825,7 @@
     "Bideto"@ido-Latn .
 
 <urn:1603:63:101:210:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:210:1> ;
   skos:prefLabel
     "/bidet shower || hand-held triggered nozzle that is placed near the toilet and delivers a spray of water used for anal cleansing and cleaning of the genitals after using the toilet for defecation and urination/@eng-Latn"@mul-Zyyy ,
@@ -9884,7 +9843,7 @@
     "ντους μπιντέ"@ell-Grek .
 
 <urn:1603:63:101:210:1:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:210:1> ;
   skos:prefLabel
     "/lota (vessel) || Vessel used in South Asia/@eng-Latn"@mul-Zyyy ,
@@ -9899,7 +9858,7 @@
     "लोटा"@nep-Deva .
 
 <urn:1603:63:101:210:1:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:210:1> ;
   skos:prefLabel
     "/āftābeh || a traditional hand-held plastic, metal, or ceramic bidet vessel used for either washing hands and the face or cleaning genitalia in a toilet/@eng-Latn"@mul-Zyyy ,
@@ -9911,7 +9870,7 @@
     "Aftafa"@aze-Latn .
 
 <urn:1603:63:101:210:1:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:210:1> ;
   skos:prefLabel
     "/towel || absorbent fabric or paper used for drying or wiping a body or a surface/@eng-Latn"@mul-Zyyy ,
@@ -9993,9 +9952,9 @@
     "ٽوال"@snd-Arab .
 
 <urn:1603:63:101:210:2> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:210:2:1> ;
   skos:narrower
+    <urn:1603:63:101:210:2:1> ;
+  skos:broader
     <urn:1603:63:101:210> ;
   skos:prefLabel
     "/paper || anal cleansing/@eng-Latn"@mul-Zyyy ,
@@ -10159,7 +10118,7 @@
     "Papero"@ido-Latn .
 
 <urn:1603:63:101:210:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:210:2> ;
   skos:prefLabel
     "/toilet paper || tissue paper for cleaning after urination or defecation/@eng-Latn"@mul-Zyyy ,
@@ -10234,12 +10193,10 @@
 <urn:1603:63:101:220> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:220:1> ,
     <urn:1603:63:101:220:2> ,
     <urn:1603:63:101:220:3> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/feminine hygiene || personal care products used by women/@eng-Latn"@mul-Zyyy ,
     "предмет женской гигиены"@rus-Cyrl ,
@@ -10262,7 +10219,7 @@
     "女性生理用品"@zho-Hant .
 
 <urn:1603:63:101:220:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:220> ;
   skos:prefLabel
     "/sanitary napkin || absorbent item worn in the underwear by women who are menstruating, bleeding after giving birth or similar/@eng-Latn"@mul-Zyyy ,
@@ -10324,7 +10281,7 @@
     "Гигиеналык көөк"@kir-Zyyy .
 
 <urn:1603:63:101:220:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:220> ;
   skos:prefLabel
     "/tampon || mass of absorbent material, primarily used as a feminine hygiene product/@eng-Latn"@mul-Zyyy ,
@@ -10369,7 +10326,7 @@
     "Tampono"@ido-Latn .
 
 <urn:1603:63:101:220:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:220> ;
   skos:prefLabel
     "/menstrual cup || feminine hygiene product worn inside the vagina during menstruation/@eng-Latn"@mul-Zyyy ,
@@ -10418,18 +10375,16 @@
 <urn:1603:63:101:230> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
-    <urn:1603:63:101:230:1> ;
   skos:narrower
-    <urn:1603:63:101> ;
+    <urn:1603:63:101:230:1> ;
   skos:prefLabel
     "/Infant hygiene/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:230:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:230:1:1> ,
     <urn:1603:63:101:230:1:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:230> ;
   skos:prefLabel
     "/diaper || type of underwear that allows one to defecate or urinate, without the use of a toilet/@eng-Latn"@mul-Zyyy ,
@@ -10497,7 +10452,7 @@
     "Lanjo"@ido-Latn .
 
 <urn:1603:63:101:230:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:230:1> ;
   skos:prefLabel
     "/disposable diaper || single-use diaper/@eng-Latn"@mul-Zyyy ,
@@ -10505,7 +10460,7 @@
     "使い捨ておむつ"@jpn-Jpan .
 
 <urn:1603:63:101:230:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:230:1> ;
   skos:prefLabel
     "/cloth diaper || reusable, washable diaper/@eng-Latn"@mul-Zyyy ,
@@ -10527,19 +10482,17 @@
 <urn:1603:63:101:240> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:240:1> ,
     <urn:1603:63:101:240:2> ,
     <urn:1603:63:101:240:3> ,
     <urn:1603:63:101:240:4> ,
     <urn:1603:63:101:240:5> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/Medical hygiene at home (draft)/@eng-latn"@mul-Zyyy .
 
 <urn:1603:63:101:240:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:240> ;
   skos:prefLabel
     "/adult diaper || diaper made to be worn by a person with a body larger than that of an infant or toddler/@eng-Latn"@mul-Zyyy ,
@@ -10562,7 +10515,7 @@
     "成人紙尿片"@yue-Zyyy .
 
 <urn:1603:63:101:240:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:240> ;
   skos:prefLabel
     "/ostomy pouching system || medical prosthetic that provides a means for the collection of waste from a diverted biological system/@eng-Latn"@mul-Zyyy ,
@@ -10581,7 +10534,7 @@
     "تورەگەی ڕاگری پاشماوەکان"@ckb-Arab .
 
 <urn:1603:63:101:240:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:240> ;
   skos:prefLabel
     "/incontinence pad || small, impermeable multi-layered sheet with high absorbency that is used in the incontinence and health-care industries as a precaution against urinary incontinence/@eng-Latn"@mul-Zyyy ,
@@ -10589,7 +10542,7 @@
     "尿吸収パッド"@jpn-Jpan .
 
 <urn:1603:63:101:240:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:240> ;
   skos:prefLabel
     "/urinary catheterization || Insertion of a catheter through the urethra to drain urine/@eng-Latn"@mul-Zyyy ,
@@ -10615,7 +10568,7 @@
     "Urinarna kateterizacija"@hbs-Latn .
 
 <urn:1603:63:101:240:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:240> ;
   skos:prefLabel
     "/urine collection device || deviation used to collect urine, especially in aircraft and spacecraft/@eng-Latn"@mul-Zyyy ,
@@ -10627,10 +10580,8 @@
 <urn:1603:63:101:499> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
-    <urn:1603:63:101:499:1> ;
   skos:narrower
-    <urn:1603:63:101> ;
+    <urn:1603:63:101:499:1> ;
   skos:prefLabel
     "/drinking water || water safe for consumption/@eng-Latn"@mul-Zyyy ,
     "ماء الشرب"@ara-Arab ,
@@ -10721,7 +10672,7 @@
     "juhkančáhci"@sme-Latn .
 
 <urn:1603:63:101:499:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:499> ;
   skos:prefLabel
     "/bottled water || water sold as a bottled product/@eng-Latn"@mul-Zyyy ,
@@ -10768,11 +10719,9 @@
 <urn:1603:63:101:500> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:500:10> ,
     <urn:1603:63:101:500:999> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/human nutrition/@eng-Latn"@mul-Zyyy ,
     "التغذية البشرية"@ara-Arab ,
@@ -10809,11 +10758,11 @@
     "човечка исхрана"@mkd-Cyrl .
 
 <urn:1603:63:101:500:10> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:500:10:1> ,
     <urn:1603:63:101:500:10:2> ,
     <urn:1603:63:101:500:10:9> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500> ;
   skos:prefLabel
     "/Infant nutrition || dietary needs of infants/@eng-Latn@eng-Latn"@mul-Zyyy ,
@@ -10823,7 +10772,7 @@
     "infant nutrition"@eng-Latn .
 
 <urn:1603:63:101:500:10:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:10> ;
   skos:prefLabel
     "/human breast milk || milk produced by the mammary glands in the breast of a human female/@eng-Latn"@mul-Zyyy ,
@@ -10894,7 +10843,7 @@
     "Ñukñu"@que-Latn .
 
 <urn:1603:63:101:500:10:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:10> ;
   skos:prefLabel
     "/breast pump || device for applying suction to breasts/@eng-Latn"@mul-Zyyy ,
@@ -10926,9 +10875,9 @@
     "Пумпа за измолзување"@mkd-Cyrl .
 
 <urn:1603:63:101:500:10:9> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:500:10:9:1> ;
   skos:narrower
+    <urn:1603:63:101:500:10:9:1> ;
+  skos:broader
     <urn:1603:63:101:500:10> ;
   skos:prefLabel
     "/baby food || food made especially for infants/@eng-Latn"@mul-Zyyy ,
@@ -10959,7 +10908,7 @@
     "Ukudla kwabantwana"@zul-Latn .
 
 <urn:1603:63:101:500:10:9:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:10:9> ;
   skos:prefLabel
     "/infant formula || manufactured food designed and marketed for feeding of infants/@eng-Latn"@mul-Zyyy ,
@@ -10993,19 +10942,19 @@
     "תרכובת מזון לתינוקות"@yid-Hebr .
 
 <urn:1603:63:101:500:999> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:500:999:1> ,
     <urn:1603:63:101:500:999:2> ,
     <urn:1603:63:101:500:999:3> ,
     <urn:1603:63:101:500:999:4> ,
     <urn:1603:63:101:500:999:5> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500> ;
   skos:prefLabel
     "/human nutrition (temporary; needs to be categorized)/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:500:999:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:999> ;
   skos:prefLabel
     "/emergency ration || food and drink that a person stores and relies on in case of an emergency/@eng-Latn"@mul-Zyyy ,
@@ -11019,7 +10968,7 @@
     "應急口糧"@zho-Hant .
 
 <urn:1603:63:101:500:999:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:999> ;
   skos:prefLabel
     "/energy bar || nutritional snack bar/@eng-Latn"@mul-Zyyy ,
@@ -11039,7 +10988,7 @@
     "energiastággu"@smn-Latn .
 
 <urn:1603:63:101:500:999:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:999> ;
   skos:prefLabel
     "/protein bar/@eng-Latn"@mul-Zyyy ,
@@ -11051,10 +11000,10 @@
     "Protein macunu"@tur-Latn .
 
 <urn:1603:63:101:500:999:4> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:500:999:4:1> ,
     <urn:1603:63:101:500:999:4:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:999> ;
   skos:prefLabel
     "/list of dried foods/@eng-Latn"@mul-Zyyy ,
@@ -11064,7 +11013,7 @@
     "senarai makanan kering"@msa-Zyyy .
 
 <urn:1603:63:101:500:999:4:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:999:4> ;
   skos:prefLabel
     "/dried fruit || fruit from which the majority of the original water content has been removed/@eng-Latn"@mul-Zyyy ,
@@ -11135,7 +11084,7 @@
     "сушено овошје"@mkd-Cyrl .
 
 <urn:1603:63:101:500:999:4:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:999:4> ;
   skos:prefLabel
     "/dried meat || meat that has been dehydrated/@eng-Latn"@mul-Zyyy ,
@@ -11159,7 +11108,7 @@
     "αποξηραμένο κρέας"@ell-Grek .
 
 <urn:1603:63:101:500:999:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:500:999> ;
   skos:prefLabel
     "/medical food || foods that are specially formulated and intended for the dietary management of a disease that has distinctive nutritional needs that cannot be met by normal diet alone/@eng-Latn"@mul-Zyyy ,
@@ -11174,10 +11123,8 @@
 <urn:1603:63:101:510> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
-    <urn:1603:63:101:510:1> ;
   skos:narrower
-    <urn:1603:63:101> ;
+    <urn:1603:63:101:510:1> ;
   skos:prefLabel
     "/Aves/"@mul-Zyyy ,
     "طائر"@ara-Arab ,
@@ -11383,7 +11330,7 @@
     "avia"@lfn-Latn .
 
 <urn:1603:63:101:510:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:510> ;
   skos:prefLabel
     "/chicken meat || meat of a chicken/@eng-Latn"@mul-Zyyy ,
@@ -11480,14 +11427,12 @@
 <urn:1603:63:101:511> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:511:1> ,
     <urn:1603:63:101:511:2> ,
     <urn:1603:63:101:511:3> ,
     <urn:1603:63:101:511:4> ,
     <urn:1603:63:101:511:5> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/Mammalia/"@mul-Zyyy ,
     "ثدييات"@ara-Arab ,
@@ -11676,7 +11621,7 @@
     "Mamal"@lfn-Latn .
 
 <urn:1603:63:101:511:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:511> ;
   skos:prefLabel
     "/beef || meat from cattle/@eng-Latn"@mul-Zyyy ,
@@ -11771,7 +11716,7 @@
     "bubamit"@vol-Latn .
 
 <urn:1603:63:101:511:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:511> ;
   skos:prefLabel
     "/veal || meat of young cattle/@eng-Latn"@mul-Zyyy ,
@@ -11843,7 +11788,7 @@
     "bubülamit"@vol-Latn .
 
 <urn:1603:63:101:511:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:511> ;
   skos:prefLabel
     "/pork meat || meat from a pig/@eng-Latn"@mul-Zyyy ,
@@ -11931,7 +11876,7 @@
     "سوئر جو گوشت"@snd-Arab .
 
 <urn:1603:63:101:511:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:511> ;
   skos:prefLabel
     "/mutton || meat of an adult sheep/@eng-Latn"@mul-Zyyy ,
@@ -11984,7 +11929,7 @@
     "Қой еті"@kaz-Zyyy .
 
 <urn:1603:63:101:511:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:511> ;
   skos:prefLabel
     "/venison || deer meat/@eng-Latn"@mul-Zyyy ,
@@ -12024,15 +11969,13 @@
 <urn:1603:63:101:512> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:512:1> ,
     <urn:1603:63:101:512:2> ,
     <urn:1603:63:101:512:3> ,
     <urn:1603:63:101:512:4> ,
     <urn:1603:63:101:512:50> ,
     <urn:1603:63:101:512:100> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/dairy product || food produced from or containing the milk of mammals/@eng-Latn"@mul-Zyyy ,
     "منتجات الألبان"@ara-Arab ,
@@ -12123,10 +12066,10 @@
     "Сүүн бүтээгдэхүүн"@mon-Cyrl .
 
 <urn:1603:63:101:512:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:512:1:1> ,
     <urn:1603:63:101:512:1:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512> ;
   skos:prefLabel
     "/milk || white liquid produced by the mammary glands of mammals/@eng-Latn"@mul-Zyyy ,
@@ -12342,7 +12285,7 @@
     "lete"@lfn-Latn .
 
 <urn:1603:63:101:512:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512:1> ;
   skos:prefLabel
     "/raw milk || milk that has not been pasteurized, a process of heating liquid foods to kill pathogens for safe consumption and extending the shelf life/@eng-Latn"@mul-Zyyy ,
@@ -12374,7 +12317,7 @@
     "свежо млеко"@mkd-Cyrl .
 
 <urn:1603:63:101:512:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512:1> ;
   skos:prefLabel
     "/UHT milk || milk sterilized via Ultra-high temperature processing (UHT)/@eng-Latn"@mul-Zyyy ,
@@ -12386,7 +12329,7 @@
     "trvanlivé mléko"@ces-Latn .
 
 <urn:1603:63:101:512:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512> ;
   skos:prefLabel
     "/evaporated milk || unsweetened condensed milk/@eng-Latn"@mul-Zyyy ,
@@ -12418,7 +12361,7 @@
     "згуснато млеко"@mkd-Cyrl .
 
 <urn:1603:63:101:512:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512> ;
   skos:prefLabel
     "/condensed milk || cow's milk from which water has been removed, most often found with sugar added, in the form of sweetened condensed milk/@eng-latn"@mul-Zyyy ,
@@ -12473,7 +12416,7 @@
     "Қойытылған сүт"@kaz-Zyyy .
 
 <urn:1603:63:101:512:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512> ;
   skos:prefLabel
     "/milk powder || dairy product made by evaporating milk to dryness (not the same as infant formula Q2287198)/@eng-Latn"@mul-Zyyy ,
@@ -12531,7 +12474,7 @@
     "Caano budo"@som-Latn .
 
 <urn:1603:63:101:512:50> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512> ;
   skos:prefLabel
     "/butter || dairy product made from the fat and protein components of churned cream and is a semi-solid emulsion at room temperature/@eng-Latn"@mul-Zyyy ,
@@ -12698,12 +12641,12 @@
     "butro"@ido-Latn .
 
 <urn:1603:63:101:512:100> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:512:100:1> ,
     <urn:1603:63:101:512:100:2> ,
     <urn:1603:63:101:512:100:3> ,
     <urn:1603:63:101:512:100:4> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512> ;
   skos:prefLabel
     "/fermented milk product || dairy food that has been fermented with lactic acid bacteria/@eng-Latn"@mul-Zyyy ,
@@ -12732,7 +12675,7 @@
     "киселомлечни производи"@mkd-Cyrl .
 
 <urn:1603:63:101:512:100:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512:100> ;
   skos:prefLabel
     "/yogurt || food produced by bacterial fermentation of milk/@eng-Latn"@mul-Zyyy ,
@@ -12841,7 +12784,7 @@
     "Yogurto"@ido-Latn .
 
 <urn:1603:63:101:512:100:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512:100> ;
   skos:prefLabel
     "/cheese || dairy product produced in wide ranges of flavors, textures and forms by coagulation of the milk protein casein/@eng-Latn"@mul-Zyyy ,
@@ -13027,7 +12970,7 @@
     "ceso"@lfn-Latn .
 
 <urn:1603:63:101:512:100:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512:100> ;
   skos:prefLabel
     "/buttermilk || type of fermented dairy drink/@eng-Latn"@mul-Zyyy ,
@@ -13102,7 +13045,7 @@
     "butro-lakto"@ido-Latn .
 
 <urn:1603:63:101:512:100:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:512:100> ;
   skos:prefLabel
     "/sour cream || dairy product produced by fermenting a regular cream with certain kinds of lactic acid bacteria/@eng-Latn"@mul-Zyyy ,
@@ -13151,12 +13094,10 @@
 <urn:1603:63:101:521> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:521:1> ,
     <urn:1603:63:101:521:10> ,
     <urn:1603:63:101:521:11> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/Piscis/"@mul-Zyyy ,
     "سمك"@ara-Arab ,
@@ -13380,7 +13321,7 @@
     "Pex"@lfn-Latn .
 
 <urn:1603:63:101:521:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:521> ;
   skos:prefLabel
     "/fish as food (generic) || fish species used as food by humans/@eng-Latn"@mul-Zyyy ,
@@ -13443,9 +13384,9 @@
     "Pisce (alimento)"@ina-Latn .
 
 <urn:1603:63:101:521:10> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:521:10:1> ;
   skos:narrower
+    <urn:1603:63:101:521:10:1> ;
+  skos:broader
     <urn:1603:63:101:521> ;
   skos:prefLabel
     "/sardine || common names used to refer to various small, oily forage fish within the herring family of Clupeidae/@eng-Latn"@mul-Zyyy ,
@@ -13492,7 +13433,7 @@
     "Zitye"@sna-Latn .
 
 <urn:1603:63:101:521:10:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:521:10> ;
   skos:prefLabel
     "/sardines as food/@eng-Latn"@mul-Zyyy ,
@@ -13505,7 +13446,7 @@
     "Sardhèn"@jav-Latn .
 
 <urn:1603:63:101:521:11> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:521> ;
   skos:prefLabel
     "/Thunnus || genus of ocean-dwelling, ray-finned bony fish from the mackerel family, Scombridae/@eng-Latn"@mul-Zyyy ,
@@ -13571,7 +13512,7 @@
 <urn:1603:63:101:555> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:555:1> ,
     <urn:1603:63:101:555:2> ,
     <urn:1603:63:101:555:3> ,
@@ -13582,8 +13523,6 @@
     <urn:1603:63:101:555:8> ,
     <urn:1603:63:101:555:9> ,
     <urn:1603:63:101:555:10> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/staple food (temporary; needs to be categorized) || food that is eaten routinely, and considered a dominant portion of a standard diet/@eng-Latn"@mul-Zyyy ,
     "غذاء رئيسي"@ara-Arab ,
@@ -13635,7 +13574,7 @@
     "alimento de base"@ina-Latn .
 
 <urn:1603:63:101:555:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Zea mays/@eng-Latn"@mul-Zyyy ,
@@ -13832,7 +13771,7 @@
     "Mais"@lfn-Latn .
 
 <urn:1603:63:101:555:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Oryza sativa et Oryza glaberrima || cereal grain and seed of different Oryza and Zizania species. rice/@eng-Latn"@mul-Zyyy ,
@@ -14023,7 +13962,7 @@
     "Ris"@lfn-Latn .
 
 <urn:1603:63:101:555:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Triticum || cereal grain/@eng-Latn"@mul-Zyyy ,
@@ -14190,7 +14129,7 @@
     "Trigo"@lfn-Latn .
 
 <urn:1603:63:101:555:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Solanum tuberosum || starchy tuber of the plant Solanum tuberosum and is a root vegetable native to the Americas/@eng-Latn"@mul-Zyyy ,
@@ -14394,7 +14333,7 @@
     "Patata"@lfn-Latn .
 
 <urn:1603:63:101:555:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Manihot esculenta || is a woody shrub of the spurge family, Euphorbiaceae, native to South America. Although a perennial plant, cassava is extensively cultivated as an annual crop in tropical and subtropical regions for its edible starchy tuberous root, a major source of carbohydrates/@eng-Latn"@mul-Zyyy ,
@@ -14499,7 +14438,7 @@
     "Manioko"@ido-Latn .
 
 <urn:1603:63:101:555:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Glycine max || species of plant also know as soya bean plant, soya and soybeans/@eng-Latn"@mul-Zyyy ,
@@ -14634,7 +14573,7 @@
     "Soia"@lfn-Latn .
 
 <urn:1603:63:101:555:7> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Ipomoea batatas || species of plant also know as sweet potato/@eng-Latn"@mul-Zyyy ,
@@ -14762,7 +14701,7 @@
     "Patato"@ido-Latn .
 
 <urn:1603:63:101:555:8> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Dioscorea || yam is the common name for some plant species in the genus Dioscorea (family Dioscoreaceae) that form edible tubers/@eng-Latn"@mul-Zyyy ,
@@ -14821,7 +14760,7 @@
     "Inyamo"@ido-Latn .
 
 <urn:1603:63:101:555:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/Sorghum bicolor et Sorghum arundinaceum || Commercial sorghum/@eng-Latn"@mul-Zyyy ,
@@ -14832,7 +14771,7 @@
     "Sorghum komersial"@jav-Latn .
 
 <urn:1603:63:101:555:10> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:555> ;
   skos:prefLabel
     "/cooking banana || /banana-like vegetable, less sweet/@eng-Latn"@mul-Zyyy ,
@@ -14889,18 +14828,16 @@
 <urn:1603:63:101:556> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
-    <urn:1603:63:101:556:1> ;
   skos:narrower
-    <urn:1603:63:101> ;
+    <urn:1603:63:101:556:1> ;
   skos:prefLabel
     "/lentils, chickpeas or other pulses/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:556:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:556:1:1> ,
     <urn:1603:63:101:556:1:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:556> ;
   skos:prefLabel
     "/bean || seed of one of several genera of the flowering plant family Fabaceae, which are used for human or animal food/@eng-Latn"@mul-Zyyy ,
@@ -14979,7 +14916,7 @@
     "Fava"@lfn-Latn .
 
 <urn:1603:63:101:556:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:556:1> ;
   skos:prefLabel
     "Lens culinaris et Lens esculenta"@mul-Zyyy ,
@@ -15090,7 +15027,7 @@
     "Lenticula"@ina-Latn .
 
 <urn:1603:63:101:556:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:556:1> ;
   skos:prefLabel
     "Cicer arietinum"@mul-Zyyy ,
@@ -15205,11 +15142,9 @@
 <urn:1603:63:101:557> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:557:1> ,
     <urn:1603:63:101:557:2> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/cooking oil || oil consumed by humans, from vegetable or animal origin/@eng-Latn"@mul-Zyyy ,
     "زيت الطهي"@ara-Arab ,
@@ -15281,7 +15216,7 @@
     "Yura wira"@que-Latn .
 
 <urn:1603:63:101:557:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:557:1:1> ,
     <urn:1603:63:101:557:1:2> ,
     <urn:1603:63:101:557:1:3> ,
@@ -15292,7 +15227,7 @@
     <urn:1603:63:101:557:1:8> ,
     <urn:1603:63:101:557:1:9> ,
     <urn:1603:63:101:557:1:10> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557> ;
   skos:prefLabel
     "/vegetable oil || extracted from seeds, or less often, from other parts of fruits/@eng-Latn"@mul-Zyyy ,
@@ -15370,7 +15305,7 @@
     "šaddoolju"@sme-Latn .
 
 <urn:1603:63:101:557:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/palm oil || edible vegetable oil from fruit of oil palms/@eng-Latn"@mul-Zyyy ,
@@ -15441,7 +15376,7 @@
     "Палмино масло"@mkd-Cyrl .
 
 <urn:1603:63:101:557:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/soybean oil || oil from the seeds of Glycine max/@eng-Latn"@mul-Zyyy ,
@@ -15485,7 +15420,7 @@
     "豆油"@yue-Zyyy .
 
 <urn:1603:63:101:557:1:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/canola oil || oil derived from a canola, low eruca acid cultivar of rapeseed/@eng-Latn"@mul-Zyyy ,
@@ -15502,7 +15437,7 @@
     "芥花籽油"@yue-Zyyy .
 
 <urn:1603:63:101:557:1:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/sunflower oil || oil pressed from the seed of Helianthus annuus/@eng-Latn"@mul-Zyyy ,
@@ -15568,7 +15503,7 @@
     "Сончогледово масло"@mkd-Cyrl .
 
 <urn:1603:63:101:557:1:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/palm kernel oil || edible plant oil derived from the kernel of the oil palm Elaeis guineensis/@eng-Latn"@mul-Zyyy ,
@@ -15597,7 +15532,7 @@
     "Mafúta ma ndiká"@lin-Latn .
 
 <urn:1603:63:101:557:1:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/peanut oil || mild-tasting vegetable oil derived from peanuts/@eng-Latn"@mul-Zyyy ,
@@ -15646,7 +15581,7 @@
     "ڕۆنی پینەت"@ckb-Arab .
 
 <urn:1603:63:101:557:1:7> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/cottonseed oil || cooking oil extracted from the seeds of cotton plants of various species, mainly Gossypium hirsutum and Gossypium herbaceum/@eng-Latn"@mul-Zyyy ,
@@ -15682,7 +15617,7 @@
     "Pambıq yağı"@aze-Latn .
 
 <urn:1603:63:101:557:1:8> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/coconut oil || edible oil extracted from the kernel or meat of mature coconuts harvested from the coconut palm/@eng-Latn"@mul-Zyyy ,
@@ -15748,7 +15683,7 @@
     "Кокосы зети"@oss-Cyrl .
 
 <urn:1603:63:101:557:1:9> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/olive oil || liquid fat extracted by pressing olives/@eng-Latn"@mul-Zyyy ,
@@ -15854,7 +15789,7 @@
     "Olio de oliva"@lfn-Latn .
 
 <urn:1603:63:101:557:1:10> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:1> ;
   skos:prefLabel
     "/corn oil || oil extracted from the germ of corn (maize)/@eng-latn"@mul-Zyyy ,
@@ -15895,9 +15830,9 @@
     "Жүгері майы"@kaz-Zyyy .
 
 <urn:1603:63:101:557:2> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:557:2:1> ;
   skos:narrower
+    <urn:1603:63:101:557:2:1> ;
+  skos:broader
     <urn:1603:63:101:557> ;
   skos:prefLabel
     "/animal fats and oils || fats and oils which are derived from animals/@eng-Latn"@mul-Zyyy ,
@@ -15939,7 +15874,7 @@
     "Mpɔ́ngɔ"@lin-Latn .
 
 <urn:1603:63:101:557:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:557:2> ;
   skos:prefLabel
     "/lard || semi-solid white fat product obtained by rendering the fatty tissue of the pig/@eng-Latn"@mul-Zyyy ,
@@ -15999,16 +15934,14 @@
 <urn:1603:63:101:558> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:558:1> ,
     <urn:1603:63:101:558:2> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/sugar/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:558:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:558> ;
   skos:prefLabel
     "/sugar || group of processed plant products, used as a food sweetener/@eng-Latn"@mul-Zyyy ,
@@ -16179,7 +16112,7 @@
     "zucar"@lfn-Latn .
 
 <urn:1603:63:101:558:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:558> ;
   skos:prefLabel
     "/sugar substitute || sweetener that contains significantly less food energy than sugar/@eng-Latn"@mul-Zyyy ,
@@ -16231,10 +16164,8 @@
 <urn:1603:63:101:559> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
-    <urn:1603:63:101:559:1> ;
   skos:narrower
-    <urn:1603:63:101> ;
+    <urn:1603:63:101:559:1> ;
   skos:prefLabel
     "/table salt || sodium chloride (NaCl) used as a food ingredient and nutrient/@eng-Latn"@mul-Zyyy ,
     "ملح الطعام"@ara-Arab ,
@@ -16390,7 +16321,7 @@
     "Manjebla salo"@ido-Latn .
 
 <urn:1603:63:101:559:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:559> ;
   skos:prefLabel
     "/iodised salt || table salt preparation with iodide salts added/@eng-Latn"@mul-Zyyy ,
@@ -16422,11 +16353,9 @@
 <urn:1603:63:101:590> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:590:1> ,
     <urn:1603:63:101:590:2> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/kitchen utensil/@eng-Latn"@mul-Zyyy ,
     "أداة طبخ"@ara-Arab ,
@@ -16463,9 +16392,9 @@
     "utensili tal-kċina"@mlt-Latn .
 
 <urn:1603:63:101:590:1> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:590:1:1> ;
   skos:narrower
+    <urn:1603:63:101:590:1:1> ;
+  skos:broader
     <urn:1603:63:101:590> ;
   skos:prefLabel
     "/cookware and bakeware || types of food preparation containers for use on stovetops or in ovens; cooking pots, casseroles, saucepans, frying pans, baking tins, stockpots, etc/@eng-Latn"@mul-Zyyy ,
@@ -16527,7 +16456,7 @@
     "Koqu-vari e bak-vari"@ido-Latn .
 
 <urn:1603:63:101:590:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:590:1> ;
   skos:prefLabel
     "/stock pot || generic name for one of the most common types of cooking pot used worldwide/@eng-Latn"@mul-Zyyy ,
@@ -16583,9 +16512,9 @@
     "Koqu-vari e bak-vari"@ido-Latn .
 
 <urn:1603:63:101:590:2> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:590:2:1> ;
   skos:narrower
+    <urn:1603:63:101:590:2:1> ;
+  skos:broader
     <urn:1603:63:101:590> ;
   skos:prefLabel
     "/kitchen knife || knive intended for use in the process of preparing food/@eng-Latn"@mul-Zyyy ,
@@ -16622,7 +16551,7 @@
     "Готварски нож"@mkd-Cyrl .
 
 <urn:1603:63:101:590:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:590:2> ;
   skos:prefLabel
     "/cleaver || large knife/@eng-Latn"@mul-Zyyy ,
@@ -16666,12 +16595,10 @@
 <urn:1603:63:101:591> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:591:1> ,
     <urn:1603:63:101:591:2> ,
     <urn:1603:63:101:591:3> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/table setting || group of matched tableware or flatware for one diner/@eng-Latn"@mul-Zyyy ,
     "Куверт"@rus-Cyrl ,
@@ -16695,11 +16622,11 @@
     "serbisyo sa mesa"@tgl-Latn .
 
 <urn:1603:63:101:591:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:591:1:1> ,
     <urn:1603:63:101:591:1:2> ,
     <urn:1603:63:101:591:1:3> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:591> ;
   skos:prefLabel
     "/cutlery || kitchen utensil used for eating food/@eng-Latn"@mul-Zyyy ,
@@ -16760,7 +16687,7 @@
     "pożati"@mlt-Latn .
 
 <urn:1603:63:101:591:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:591:1> ;
   skos:prefLabel
     "/spoon || utensil consisting of a small shallow bowl, oval or round, at the end of a handle/@eng-Latn"@mul-Zyyy ,
@@ -16874,7 +16801,7 @@
     "Culier"@lfn-Latn .
 
 <urn:1603:63:101:591:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:591:1> ;
   skos:prefLabel
     "/fork || utensil to spear food/@eng-Latn"@mul-Zyyy ,
@@ -16970,7 +16897,7 @@
     "Force"@lfn-Latn .
 
 <urn:1603:63:101:591:1:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:591:1> ;
   skos:prefLabel
     "/table knife || tableware/@eng-Latn"@mul-Zyyy ,
@@ -16995,7 +16922,7 @@
     "餐刀"@yue-Zyyy .
 
 <urn:1603:63:101:591:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:591> ;
   skos:prefLabel
     "/plate || flat vessel on which food can be served/@eng-Latn"@mul-Zyyy ,
@@ -17092,7 +17019,7 @@
     "Plado"@ido-Latn .
 
 <urn:1603:63:101:591:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:591> ;
   skos:prefLabel
     "/copo || #@TODO Wikidata requer revisao no termo em ingles#/@por-Latn"@mul-Zyyy ,
@@ -17143,19 +17070,17 @@
 <urn:1603:63:101:560> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:560:1> ,
     <urn:1603:63:101:560:2> ,
     <urn:1603:63:101:560:3> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/cooking fuel/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:560:1> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:560:1:1> ;
   skos:narrower
+    <urn:1603:63:101:560:1:1> ;
+  skos:broader
     <urn:1603:63:101:560> ;
   skos:prefLabel
     "/solid fuel || solid material that can be burnt to release energy/@eng-Latn"@mul-Zyyy ,
@@ -17195,7 +17120,7 @@
     "цврсто гориво"@mkd-Cyrl .
 
 <urn:1603:63:101:560:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:560:1> ;
   skos:prefLabel
     "/firewood || wood used for fires/@eng-Latn"@mul-Zyyy ,
@@ -17265,7 +17190,7 @@
     "Ҳезум"@tgk-Zyyy .
 
 <urn:1603:63:101:560:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:560> ;
   skos:prefLabel
     "/liquid fuel || combustible or energy-generating molecules that can be harnessed to create mechanical energy/@eng-Latn"@mul-Zyyy ,
@@ -17294,10 +17219,10 @@
     "Tečna goriva"@hbs-Latn .
 
 <urn:1603:63:101:560:3> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:560:3:1> ,
     <urn:1603:63:101:560:3:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:560> ;
   skos:prefLabel
     "/fuel gas || combustible in gas form/@eng-Latn"@mul-Zyyy ,
@@ -17334,7 +17259,7 @@
     "горивен гас"@mkd-Cyrl .
 
 <urn:1603:63:101:560:3:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:560:3> ;
   skos:prefLabel
     "/natural gas || naturally occurring hydrocarbon gas mixture consisting of methane and commonly includes various amounts of other higher alkanes, and sometimes a small percentage of carbon dioxide, nitrogen, hydrogen sulfide, or helium/@eng-Latn"@mul-Zyyy ,
@@ -17439,7 +17364,7 @@
     "Naturala gaso"@ido-Latn .
 
 <urn:1603:63:101:560:3:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:560:3> ;
   skos:prefLabel
     "/liquefied petroleum gas || flammable mixture of hydrocarbon gases, most commonly propane, butane, and propylene/@eng-Latn"@mul-Zyyy ,
@@ -17516,14 +17441,12 @@
 <urn:1603:63:101:600> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:600:1> ,
     <urn:1603:63:101:600:2> ,
     <urn:1603:63:101:600:5> ,
     <urn:1603:63:101:600:10> ,
     <urn:1603:63:101:600:20> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/clothing || covering worn on the human body/@eng-Latn"@mul-Zyyy ,
     "لباس"@ara-Arab ,
@@ -17676,15 +17599,15 @@
     "Vestetas"@lfn-Latn .
 
 <urn:1603:63:101:600:1> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:600:1:1> ;
   skos:narrower
+    <urn:1603:63:101:600:1:1> ;
+  skos:broader
     <urn:1603:63:101:600> ;
   skos:prefLabel
     "/full body clothing/@eng-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:600:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:600:1> ;
   skos:prefLabel
     "/burqa || traditional cover worn by women/@eng-Latn"@mul-Zyyy ,
@@ -17764,7 +17687,7 @@
     "برقعو"@snd-Arab .
 
 <urn:1603:63:101:600:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:600> ;
   skos:prefLabel
     "/dress || garment for women, children, or infants consisting of a bodice and skirt made in one or more pieces/@eng-Latn"@mul-Zyyy ,
@@ -17841,7 +17764,7 @@
     "Roba"@lfn-Latn .
 
 <urn:1603:63:101:600:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:600> ;
   skos:prefLabel
     "/trousers || clothing for the legs and lower body/@eng-Latn"@mul-Zyyy ,
@@ -17950,10 +17873,10 @@
     "Pantalon"@lfn-Latn .
 
 <urn:1603:63:101:600:10> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:600:10:1> ,
     <urn:1603:63:101:600:10:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:600> ;
   skos:prefLabel
     "/headgear || ny covering for the head; element of clothing which is worn on one's head/@eng-Latn"@mul-Zyyy ,
@@ -18005,7 +17928,7 @@
     "покривка за главата"@mkd-Cyrl .
 
 <urn:1603:63:101:600:10:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:600:10> ;
   skos:prefLabel
     "/niqab || cloth that covers the face as a part of sartorial hijab/@eng-Latn"@mul-Zyyy ,
@@ -18065,7 +17988,7 @@
     "Никаб"@mkd-Cyrl .
 
 <urn:1603:63:101:600:10:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:600:10> ;
   skos:prefLabel
     "/hijab || veil worn by Muslim women covering the head and neck/@eng-Latn"@mul-Zyyy ,
@@ -18150,7 +18073,7 @@
     "ဟေဂျားဘ်"@mya-Mymr .
 
 <urn:1603:63:101:600:20> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:600> ;
   skos:prefLabel
     "/footwear || garments worn on feet/@eng-Latn"@mul-Zyyy ,
@@ -18228,10 +18151,8 @@
 <urn:1603:63:101:1100> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
-    <urn:1603:63:101:1100:1> ;
   skos:narrower
-    <urn:1603:63:101> ;
+    <urn:1603:63:101:1100:1> ;
   skos:prefLabel
     "/currency || generally accepted medium of exchange for goods or services/@eng-Latn"@mul-Zyyy ,
     "عملة"@ara-Arab ,
@@ -18388,7 +18309,7 @@
     "moneto"@ido-Latn .
 
 <urn:1603:63:101:1100:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:1100> ;
   skos:prefLabel
     "/money || physical or virtual object or record accepted as payment/@eng-Latn"@mul-Zyyy ,
@@ -18565,11 +18486,9 @@
 <urn:1603:63:101:3000> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:3000:1> ,
     <urn:1603:63:101:3000:2> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/volunteering || unpaid work undertaken freely by individuals as a service to others/@eng-Latn"@mul-Zyyy ,
     "تطوع"@ara-Arab ,
@@ -18643,7 +18562,7 @@
     "رضاڪار"@snd-Arab .
 
 <urn:1603:63:101:3000:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3000> ;
   skos:prefLabel
     "/blood donation || occurs when a person or other mammal voluntarily has blood drawn/@eng-Latn"@mul-Zyyy ,
@@ -18711,9 +18630,9 @@
     "donation de sanguine"@ina-Latn .
 
 <urn:1603:63:101:3000:2> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:3000:2:1> ;
   skos:narrower
+    <urn:1603:63:101:3000:2:1> ;
+  skos:broader
     <urn:1603:63:101:3000> ;
   skos:prefLabel
     "/nutrition || process of assimilating nutrients in food/@eng-Latn"@mul-Zyyy ,
@@ -18808,7 +18727,7 @@
     "диеташиносӣ"@tgk-Zyyy .
 
 <urn:1603:63:101:3000:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:3000:2> ;
   skos:prefLabel
     "/cook || occupation involving cooking food/@eng-Latn"@mul-Zyyy ,
@@ -18905,15 +18824,13 @@
 <urn:1603:63:101:9000> a skos:Concept ;
   skos:topConceptOf
     <urn:1603:63:101> ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:9000:1> ,
     <urn:1603:63:101:9000:2> ,
     <urn:1603:63:101:9000:3> ,
     <urn:1603:63:101:9000:4> ,
     <urn:1603:63:101:9000:10> ,
     <urn:1603:63:101:9000:100> ;
-  skos:narrower
-    <urn:1603:63:101> ;
   skos:prefLabel
     "/emergency management || discipline of dealing with and avoiding both natural and man-made disasters, with the goal of reducing the harmful effects/@eng-Latn"@mul-Zyyy ,
     "إدارة الطوارئ"@ara-Arab ,
@@ -18957,9 +18874,9 @@
     "управување со кризи"@mkd-Cyrl .
 
 <urn:1603:63:101:9000:1> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:9000:1:1> ;
   skos:narrower
+    <urn:1603:63:101:9000:1:1> ;
+  skos:broader
     <urn:1603:63:101:9000> ;
   skos:prefLabel
     "/working animal || domesticated animals for assisting people/@eng-Latn"@mul-Zyyy ,
@@ -18997,11 +18914,11 @@
     "Chò-kang tōng-bu̍t"@nan-Latn .
 
 <urn:1603:63:101:9000:1:1> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:9000:1:1:1> ,
     <urn:1603:63:101:9000:1:1:2> ,
     <urn:1603:63:101:9000:1:1:10> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:1> ;
   skos:prefLabel
     "/search and rescue dog || dog trained to locate or retrieve a missing or trapped person/@eng-Latn"@mul-Zyyy ,
@@ -19026,25 +18943,25 @@
     "Axtarış-xilasetmə iti"@aze-Latn .
 
 <urn:1603:63:101:9000:1:1:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:1:1> ;
   skos:prefLabel
     "//cão de rastreio || utiliza-se uma peça de roupa específica da vítima e inicia as buscas por um ponto exato por onde ela passou. O cão fareja a trilha de odor deixada pela vítima quando se deslocou, ou seja, células mortas que impregnam o solo, folhas, ramos, galhos ou qualquer objeto que se encontre pelo caminho seguido pela mesma. O cão irá detectar o odor específico daquela vítima//@por-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:9000:1:1:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:1:1> ;
   skos:prefLabel
     "//cão de venteio || irá detectar as partículas liberadas pelo corpo humano no ar. Nesta situação há a formação do chamado “CONE de ODOR”. Ao detectar o cheiro no ar e entrar no cone, o cão buscará a fonte. Neste caso, o cão não trabalha com um odor específico, não sendo necessária a utilização de uma peça de roupa da vítima. O cão localizará qualquer humano que esteja dentro de sua área de busca, indicando apenas a vítima//@por-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:9000:1:1:10> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:1:1> ;
   skos:prefLabel
     "//cão forense || cão de resgate de restos mortais//@por-Latn"@mul-Zyyy .
 
 <urn:1603:63:101:9000:2> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:9000:2:1> ,
     <urn:1603:63:101:9000:2:2> ,
     <urn:1603:63:101:9000:2:3> ,
@@ -19056,7 +18973,7 @@
     <urn:1603:63:101:9000:2:100> ,
     <urn:1603:63:101:9000:2:900> ,
     <urn:1603:63:101:9000:2:901> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000> ;
   skos:prefLabel
     "/hand tool || tool equipment powered manually/@eng-Latn"@mul-Zyyy ,
@@ -19105,7 +19022,7 @@
     "рачен алат"@mkd-Cyrl .
 
 <urn:1603:63:101:9000:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/crowbar || hand tool used for pulling nails with leverage/@eng-Latn"@mul-Zyyy ,
@@ -19155,7 +19072,7 @@
     "Шегежұлғыш, шегесуырғыш"@kaz-Zyyy .
 
 <urn:1603:63:101:9000:2:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/pipe || tubular section or hollow cylinder/@eng-Latn"@mul-Zyyy ,
@@ -19221,7 +19138,7 @@
     "Tubo"@ido-Latn .
 
 <urn:1603:63:101:9000:2:3> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/sledgehammer || tool with a large, flat, often metal head, attached to a long handle/@eng-Latn"@mul-Zyyy ,
@@ -19265,7 +19182,7 @@
     "Martelego"@ido-Latn .
 
 <urn:1603:63:101:9000:2:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/pliers || tool with two legs, can fix or modify a workpiece/@eng-Latn"@mul-Zyyy ,
@@ -19335,7 +19252,7 @@
     "Sik'ina"@que-Latn .
 
 <urn:1603:63:101:9000:2:5> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/screwdriver || hand-tool used for driving screws/@eng-Latn"@mul-Zyyy ,
@@ -19421,7 +19338,7 @@
     "Turnavise"@lfn-Latn .
 
 <urn:1603:63:101:9000:2:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/wire cutters || pliers intended for the cutting of wire (they are generally not used to grab or turn anything)/@eng-Latn"@mul-Zyyy ,
@@ -19449,7 +19366,7 @@
     "Зым кескич"@kir-Zyyy .
 
 <urn:1603:63:101:9000:2:7> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/angle grinder || handheld power tool used for grinding (abrasive cutting) and polishing metals/@eng-Latn"@mul-Zyyy ,
@@ -19493,7 +19410,7 @@
     "Аголна брусилка"@mkd-Cyrl .
 
 <urn:1603:63:101:9000:2:10> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/shovel || tool for digging, lifting, and moving bulk materials/@eng-Latn"@mul-Zyyy ,
@@ -19572,7 +19489,7 @@
     "Бел"@tgk-Zyyy .
 
 <urn:1603:63:101:9000:2:100> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/machete || broad blade used either as an implement like an axe, or in combat like a short sword/@eng-Latn"@mul-Zyyy ,
@@ -19629,7 +19546,7 @@
     "мачета"@mkd-Cyrl .
 
 <urn:1603:63:101:9000:2:900> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/hammer || tool meant to deliver an impact to an object/@eng-Latn"@mul-Zyyy ,
@@ -19754,7 +19671,7 @@
     "Martel"@lfn-Latn .
 
 <urn:1603:63:101:9000:2:901> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:2> ;
   skos:prefLabel
     "/pickaxe || tool for breaking hard surfaces, with a long wooden handle and a curved metal bar with a sharp point/@eng-Latn"@mul-Zyyy ,
@@ -19821,10 +19738,10 @@
     "Piocho"@ido-Latn .
 
 <urn:1603:63:101:9000:3> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:9000:3:1> ,
     <urn:1603:63:101:9000:3:2> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000> ;
   skos:prefLabel
     "/power tool || tool that is actuated by an additional power source and mechanism other than by hand alone/@eng-Latn"@mul-Zyyy ,
@@ -19855,7 +19772,7 @@
     "ηλεκτρικό εργαλείο"@ell-Grek .
 
 <urn:1603:63:101:9000:3:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:3> ;
   skos:prefLabel
     "/chainsaw || high-powered cutting tool/@eng-Latn"@mul-Zyyy ,
@@ -19918,7 +19835,7 @@
     "Motosiera"@lfn-Latn .
 
 <urn:1603:63:101:9000:3:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:3> ;
   skos:prefLabel
     "/concrete saw || power tool used for cutting concrete, masonry, brick, asphalt, tile, and other solid materials/@eng-Latn"@mul-Zyyy ,
@@ -19933,7 +19850,7 @@
     "Steypusög"@isl-Latn .
 
 <urn:1603:63:101:9000:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000> ;
   skos:prefLabel
     "/electric generator || device that converts other energy to electrical energy/@eng-Latn"@mul-Zyyy ,
@@ -20022,17 +19939,17 @@
     "Nerūgoh"@tgk-Latn .
 
 <urn:1603:63:101:9000:10> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:9000:10:2> ;
   skos:narrower
+    <urn:1603:63:101:9000:10:2> ;
+  skos:broader
     <urn:1603:63:101:9000> ;
   skos:prefLabel
     "Symbolum"@mul-Zyyy .
 
 <urn:1603:63:101:9000:10:2> a skos:Concept ;
-  skos:broader
-    <urn:1603:63:101:9000:10:2:1> ;
   skos:narrower
+    <urn:1603:63:101:9000:10:2:1> ;
+  skos:broader
     <urn:1603:63:101:9000:10> ;
   skos:prefLabel
     "/road traffic control || directing vehicular and pedestrian traffic around a construction zone, accident or other road disruption/@eng-Latn"@mul-Zyyy ,
@@ -20047,7 +19964,7 @@
     "trafikregado"@epo-Latn .
 
 <urn:1603:63:101:9000:10:2:1> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:10:2> ;
   skos:prefLabel
     "/traffic cone || cone-shaped marker used for traffic management/@eng-Latn"@mul-Zyyy ,
@@ -20078,11 +19995,11 @@
     "雪糕筒"@yue-Zyyy .
 
 <urn:1603:63:101:9000:100> a skos:Concept ;
-  skos:broader
+  skos:narrower
     <urn:1603:63:101:9000:100:2> ,
     <urn:1603:63:101:9000:100:4> ,
     <urn:1603:63:101:9000:100:6> ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000> ;
   skos:prefLabel
     "/personal protective equipment || protective clothing or equipment designed to help protect an individual from injury, infection, or other hazards/@eng-Latn"@mul-Zyyy ,
@@ -20138,7 +20055,7 @@
     "व्यक्तिगत सुरक्षा पोसाक"@nep-Deva .
 
 <urn:1603:63:101:9000:100:2> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:100> ;
   skos:prefLabel
     "/helmet || any type of historical or modern armor worn to protect the head/@eng-Latn"@mul-Zyyy ,
@@ -20223,7 +20140,7 @@
     "Kasko"@ido-Latn .
 
 <urn:1603:63:101:9000:100:4> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:100> ;
   skos:prefLabel
     "/goggles || forms of protective eyewear/@eng-Latn"@mul-Zyyy ,
@@ -20266,7 +20183,7 @@
     "dorvolásat"@sme-Latn .
 
 <urn:1603:63:101:9000:100:6> a skos:Concept ;
-  skos:narrower
+  skos:broader
     <urn:1603:63:101:9000:100> ;
   skos:prefLabel
     "/glove || covering worn on the hand/@eng-Latn"@mul-Zyyy ,
