@@ -4032,26 +4032,29 @@ class LibrariaStatusQuo:
             )
         paginae = []
         caput = [
-            '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .',
-            '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .',
-            '@prefix owl: <http://www.w3.org/2002/07/owl#> .',
+            '# [{0}]'.format(
+                numerordinatio_neo_separatum(self.codex.de_codex, ':')),
+            # '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .',
+            # '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .',
+            # '@prefix owl: <http://www.w3.org/2002/07/owl#> .',
             '@prefix skos: <http://www.w3.org/2004/02/skos/core#> .',
-            '# @prefix : {0}_ .'.format(self.codex.de_codex)
+            # '# @prefix : {0}_ .'.format(self.codex.de_codex)
         ]
         paginae.extend(caput)
 
-        archivum_no1_et_no11 = DataApothecae.quod_tabula(self.codex.de_codex)
-        # paginae.append("# " + json.dumps(
-        paginae.append(json.dumps(
-            archivum_no1_et_no11,
-            indent=2, ensure_ascii=False, sort_keys=False))
+        # archivum_no1_et_no11 = DataApothecae.quod_tabula(self.codex.de_codex)
+        # # paginae.append("# " + json.dumps(
+        # paginae.append(json.dumps(
+        #     archivum_no1_et_no11,
+        #     indent=2, ensure_ascii=False, sort_keys=False))
 
         # paginae.append("# " + str(archivum_no1_et_no11))
 
-        # archivum_no1_et_no11 = DataApothecae.quod_tabula(
-        #     self.codex.de_codex, abstractum=True)
-        # concepta = archivum_no1_et_no11.quod_rdf_skos_ttl_concepta()
-        # paginae.extend(concepta)
+        archivum_no1_et_no11 = DataApothecae.quod_tabula(
+            self.codex.de_codex, abstractum=True)
+        concepta = archivum_no1_et_no11.quod_rdf_skos_ttl_concepta()
+        paginae.extend(['', ''])
+        paginae.extend(concepta)
         # paginae.append('# @prefix : {0}_ .'.format(self.codex.de_codex))
 
         # paginae.extend(self.imprimere_in_datapackage())
@@ -5850,7 +5853,8 @@ class TabulaSimplici:
         with open(self.archivum_trivio) as csvfile:
             reader = csv.DictReader(csvfile)
             for lineam in reader:
-                de_codex = lineam['#item+conceptum+numerordinatio']
+                # de_codex = lineam['#item+conceptum+numerordinatio']
+                de_codex = lineam['#item+conceptum+codicem']
                 self.concepta[de_codex] = lineam
                 # if len(self.caput) == 0:
                 #     self.caput = lineam
@@ -5860,6 +5864,28 @@ class TabulaSimplici:
 
         self.statum = True
         return self.statum
+
+    def _quod_linguae(self, res: dict) -> list:
+        resultatum = []
+        # resultatum.append('"todo"@en')
+        for clavem, item in res.items():
+            if not clavem.startswith('#item+rem') or len(item) == 0:
+                continue
+            if item.find('"') > -1:
+                # item = item.replace('"', 'zzzz')
+                item = item.replace('"', '\\"')
+            attrs = clavem.replace('#item+rem', '')
+            hxlattslinguae = qhxl_attr_2_bcp47(attrs)
+            # lingua = bcp47_langtag(clavem, [
+            lingua = bcp47_langtag(hxlattslinguae, [
+                # 'Language-Tag',
+                'Language-Tag_normalized',
+                'language'
+            ], strictum=False)
+            if lingua['language'] not in ['qcc', 'zxx']:
+                resultatum.append('"{0}"@{1}'.format(
+                    item, lingua['Language-Tag_normalized']))
+        return resultatum
 
     def praeparatio(self):
         """praeparātiō
@@ -5904,8 +5930,24 @@ class TabulaSimplici:
         self._initiari_v2()
 
         paginae = []
-        for codex_de, res in enumerate(self.concepta):
-            paginae.append(':{0} a skos:Concept ;'.format(codex_de))
+        # for codex_de, res in enumerate(self.concepta):
+        for codex_de, res in self.concepta.items():
+            nomen = numerordinatio_neo_separatum(self.nomen, ':')
+            codex_de_n = numerordinatio_neo_separatum(codex_de, ':')
+            if codex_de_n.startswith('0:1603'):
+                continue
+            numerodinatio = nomen + ':' + str(codex_de_n)
+            # paginae.append(':{0} a skos:Concept ;'.format(codex_de))
+            paginae.append("<urn:{0}> a skos:Concept ; ".format(numerodinatio))
+
+            # paginae.append('# {0} ' + str(res))
+
+            linguae = self._quod_linguae(res)
+            if len(linguae) > 0:
+                paginae.append("  skos:prefLabel\n    {0} .".format(
+                    ",\n    ".join(linguae)
+                ))
+            paginae.append('')
         return paginae
 
 
