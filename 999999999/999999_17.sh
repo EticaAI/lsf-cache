@@ -74,7 +74,7 @@ file_download_1603_xlsx "1"
 # actiones_completis_locali "1603_25_1"
 # actiones_completis_locali "1603_44_86"
 # actiones_completis_locali "1603_45_31"
-actiones_completis_locali "1603_63_101"
+# actiones_completis_locali "1603_63_101"
 # actiones_completis_locali "1603_44_86"
 # actiones_completis_locali "1603_99_876"
 # actiones_completis_locali "1603_1_8000"
@@ -82,7 +82,8 @@ actiones_completis_locali "1603_63_101"
 #### Manual action, TEST locally, one per time, END ----------------------------
 
 ## Full drill (remote, specific item)
-# actiones_completis_publicis "1603_25_1"
+# actiones_completis_publicis "1603_63_101"
+actiones_completis_publicis "1603_25_1"
 # actiones_completis_publicis "1603_1_8000"
 # deploy_0_9_markdown
 

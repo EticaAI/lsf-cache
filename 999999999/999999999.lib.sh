@@ -1851,6 +1851,13 @@ upload_cdn() {
   set +x
 
   temp_save_status "$numerordinatio" "cdn"
+
+  echo "------------------------ VALIDATE ------------------------"
+      echo "https://skos-play.sparna.fr/skos-testing-tool/test?url=https://lsf-cdn.etica.ai/$_path/$_nomen.no11.skos.ttl"
+  # echo "https://skos-play.sparna.fr/skos-testing-tool/test?url=https://lsf-cdn.etica.ai/$_path/$_nomen.no11.skos.ttl"
+  echo "------------------------ VALIDATE ------------------------"
+
+  # https://skos-play.sparna.fr/skos-testing-tool/test?url=https://lsf-cdn.etica.ai/1603/63/101/1603_63_101.no11.skos.ttl
 }
 
 ################################################################################
