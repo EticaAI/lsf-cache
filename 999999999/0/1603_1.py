@@ -5995,6 +5995,9 @@ class TabulaSimplici:
             codex_de_n = numerordinatio_neo_separatum(codex_de, ':')
             if codex_de_n.startswith('0:1603'):
                 continue
+            # This is deprecated use; used on 1603_25_1
+            if codex_de_n.startswith('0:999'):
+                continue
             numerodinatio = nomen_radici + ':' + str(codex_de_n)
             # paginae.append(':{0} a skos:Concept ;'.format(codex_de))
             paginae.append("<urn:{0}> a skos:Concept ;".format(numerodinatio))

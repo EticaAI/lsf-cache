@@ -175,3 +175,33 @@
   - http://www.perseus.tufts.edu/hopper/resolveform?type=exact&lookup=status&lang=latin
   - http://ducange.enc.sorbonne.fr/STATUS
 -->
+
+
+### Neo nomen
+
+- Medici sine finibus, https://la.wikipedia.org/wiki/Medici_sine_finibus
+  - http://ephemeris.alcuinus.net/archi2007/nuntius.php?id=330
+- /lexicographe/@fra-Latn, https://en.wiktionary.org/wiki/lexicographe#French
+- Gootle translate: /lexicographer/@eng-Latn -> /lexicographus/@lat-Latn
+- Gootle translate: /lexicographers/@eng-Latn -> /lexicographorum/@lat-Latn
+- Roberti Stephani lexicographorum principis Thesaurus linguae latinae, https://books.google.com.br/books?id=5dcv5bvVH6UC&printsec=frontcover
+  - https://en.wikipedia.org/wiki/Robert_Estienne
+    - > _Robert Estienne (...) Known as "Printer to the King" in Latin, Hebrew, and Greek, Estienne's most prominent work was the Thesaurus linguae latinae which is considered to be the foundation of modern Latin lexicography._
+- lexicographorum
+  - lexico + graphorum
+- -graphia
+  - geographus, m, s, Nominativus, https://en.wiktionary.org/wiki/geographus#Latin
+    - geō + graphōrum
+- ... Lexicographī sine finibus
+- Lexicographī, m, pl, Nominativus
+  - lexico-, ..., https://en.wiktionary.org/wiki/lexico-
+  - -graphī, ... https://en.wiktionary.org/wiki/geographus#Latin
+  - referencia:
+    - /Lexicographi Graeci/ https://www.degruyter.com/serial/lexg-b/html
+    - https://la.wikipedia.org/wiki/Specialis:MobileLanguages/Categoria:Lexicographi
+      - https://en.m.wikipedia.org/wiki/Category:Lexicographers
+      - https://pt.m.wikipedia.org/wiki/Categoria:Lexic%C3%B3grafos_do_Brasil
+- sine (+ ablativus), https://en.wiktionary.org/wiki/sine#Latin
+- fīnibus, m, pl, Ablativus, https://en.wiktionary.org/wiki/finis#Latin
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=finis
+- Lexicographī sine fīnibus

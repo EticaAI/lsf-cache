@@ -1,13 +1,13 @@
 # 1603 Librārium
 - status_quo
   - summa
-    - codex: 21
-    - concepta_non_unicum: 1519
+    - codex: 22
+    - concepta_non_unicum: 1523
 
 
 ----
 **Tabula contentorum**
-- <a href="#1603_1_1">1603_1_1</a> <sup>C.84</sup> <sub>r.I.16</sub>  <sub>r.L.9</sub>
+- <a href="#1603_1_1">1603_1_1</a> <sup>C.85</sup> <sub>r.I.16</sub>  <sub>r.L.9</sub>
 - <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.16</sub>  <sub>r.L.5</sub>
 - <a href="#1603_1_7">1603_1_7</a> <sup>C.50</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.I.21</sub>  <sub>r.L.3</sub>
@@ -15,7 +15,7 @@
 - <a href="#1603_1_101">1603_1_101</a> <sup>C.19</sup> <sub>r.I.7</sub>  <sub>r.L.4</sub>
 - <a href="#1603_1_2020">1603_1_2020</a> <sup>C.16</sup> <sub>r.I.11</sub>  <sub>r.L.5</sub>
 - <a href="#1603_1_8000">1603_1_8000</a> <sup>C.21</sup> <sub>r.I.13</sub>  <sub>r.L.5</sub>
-- <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.I.14</sub>  <sub>r.L.149</sub>
+- <a href="#1603_25_1">1603_25_1</a> <sup>C.10</sup> <sub>r.I.14</sub>  <sub>r.L.150</sub>
 - <a href="#1603_44_86">1603_44_86</a> <sup>C.14</sup> <sub>r.I.13</sub>  <sub>r.L.60</sub>
 - <a href="#1603_44_101">1603_44_101</a> <sup>C.22</sup> <sub>r.I.14</sub>  <sub>r.L.163</sub>
 - <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.15</sub>  <sub>r.L.227</sub>
@@ -26,6 +26,7 @@
 - <a href="#1603_64_41">1603_64_41</a> <sup>C.56</sup> <sub>r.I.12</sub>  <sub>r.L.151</sub>
 - <a href="#1603_64_604">1603_64_604</a> <sup>C.28</sup> <sub>r.I.12</sub>  <sub>r.L.228</sub>
 - <a href="#1603_84_1">1603_84_1</a> <sup>C.60</sup> <sub>r.I.12</sub>  <sub>r.L.5</sub>
+- <a href="#1603_99_123">1603_99_123</a> <sup>C.3</sup> <sub>r.I.13</sub>  <sub>r.L.228</sub>
 - <a href="#1603_99_876">1603_99_876</a> <sup>C.9</sup> <sub>r.I.10</sub>  <sub>r.L.4</sub>
 - <a href="#1603_99_987">1603_99_987</a> <sup>C.0</sup> <sub>r.I.5</sub>  <sub>r.L.3</sub>
 
@@ -37,7 +38,7 @@
 <a href="#1603_1_1" id="1603_1_1">§ 1603_1_1</a>
 
 - status_quo
-  - concepta: 84
+  - concepta: 85
   - res_interlingualibus: 16
   - res_lingualibus: 9
 
@@ -77,18 +78,18 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 3955275017,
-            "res_interlingualibus": 2894794542,
+            "res_lingualibus": 1035933902,
+            "res_interlingualibus": 2499299855,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 84,
+            "concepta": 85,
             "res_lingualibus": 9,
             "res_interlingualibus": 16,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-30T05:00:36"
+            "opus": "2022-05-11T22:24:40"
         }
     }
 }
@@ -144,8 +145,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 3608185892,
-            "res_lingualibus": 163907287,
+            "res_interlingualibus": 4099537252,
+            "res_lingualibus": 127703530,
             "res_picturae": null
         },
         "summa": {
@@ -155,7 +156,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-30T04:16:25"
+            "opus": "2022-05-11T22:24:40"
         }
     }
 }
@@ -560,7 +561,7 @@ The decision making is mostly based on what is very essential to explain other t
 - status_quo
   - concepta: 10
   - res_interlingualibus: 14
-  - res_lingualibus: 149
+  - res_lingualibus: 150
 
 ### 1603_25_1 Methodī ex dictiōnāriōrum corde
 
@@ -607,18 +608,18 @@ Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to 
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 4108983362,
-            "res_lingualibus": 335980117,
+            "res_interlingualibus": 2606884476,
+            "res_lingualibus": 334863777,
             "res_picturae": null
         },
         "summa": {
             "concepta": 10,
             "res_interlingualibus": 14,
-            "res_lingualibus": 149,
+            "res_lingualibus": 150,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:05:26"
+            "opus": "2022-05-03T03:49:56"
         }
     }
 }
@@ -821,8 +822,8 @@ A more well known term to describe the concepts here could be _Crimes against hu
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1243856385,
-            "res_lingualibus": 768855872,
+            "res_interlingualibus": 1078467486,
+            "res_lingualibus": 1428995289,
             "res_picturae": null
         },
         "summa": {
@@ -832,7 +833,7 @@ A more well known term to describe the concepts here could be _Crimes against hu
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:04:36"
+            "opus": "2022-05-11T22:24:23"
         }
     }
 }
@@ -1151,8 +1152,8 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 46714417,
-            "res_lingualibus": 3099266324,
+            "res_interlingualibus": 2126020132,
+            "res_lingualibus": 1802999434,
             "res_picturae": null
         },
         "summa": {
@@ -1162,7 +1163,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-30T04:16:04"
+            "opus": "2022-05-03T03:23:45"
         }
     }
 }
@@ -1379,6 +1380,76 @@ As 2022-04-19 the concept Q5893646 is an example of generating wrong translation
         },
         "tempus": {
             "opus": "2022-04-29T02:04:12"
+        }
+    }
+}
+</pre>
+
+</details>
+
+## 1603_99_123 /Code golf/@eng-Latn
+
+
+<a href="#1603_99_123" id="1603_99_123">§ 1603_99_123</a>
+
+- status_quo
+  - concepta: 3
+  - res_interlingualibus: 13
+  - res_lingualibus: 228
+
+### 1603_99_123 Methodī ex dictiōnāriōrum corde
+
+/Code golf/@eng-Latn
+
+
+<details><summary>🔎🗄️1603_99_123🗄️🔍</summary>
+
+<pre>
+{
+    "annotationes_internalibus": {
+        "experimentum": 90,
+        "publicum": 10,
+        "victionarium_q": 50
+    },
+    "cdn": {
+        "annexis": [],
+        "codex": [
+            "https://lsf-cdn.etica.ai/1603/99/123/1603_99_123.mul-Latn.codex.pdf",
+            "https://lsf-cdn.etica.ai/1603/99/123/1603_99_123.mul-Latn.codex.epub",
+            "https://lsf-cdn.etica.ai/1603/99/123/1603_99_123.mul-Latn.codex.adoc"
+        ],
+        "dictionaria": [
+            "https://lsf-cdn.etica.ai/1603/99/123/1603_99_123.no11.tbx",
+            "https://lsf-cdn.etica.ai/1603/99/123/1603_99_123.no11.tm.hxl.csv",
+            "https://lsf-cdn.etica.ai/1603/99/123/1603_99_123.wikiq.tm.hxl.csv",
+            "https://lsf-cdn.etica.ai/1603/99/123/1603_99_123.no1.tm.hxl.csv",
+            "https://lsf-cdn.etica.ai/1603/99/123/1603_99_123.no11.tmx"
+        ]
+    },
+    "meta": {
+        "caveat_lector": {
+            "mul-Zyyy": null
+        },
+        "methodi_ex_dictionariorum_corde": {
+            "mul-Zyyy": "/Code golf/@eng-Latn"
+        },
+        "nomen": "/Code golf/@eng-Latn"
+    },
+    "status_quo": {
+        "crc": {
+            "concepta": null,
+            "res_interlingualibus": 3772039849,
+            "res_lingualibus": 3205440250,
+            "res_picturae": null
+        },
+        "summa": {
+            "concepta": 3,
+            "res_interlingualibus": 13,
+            "res_lingualibus": 228,
+            "res_picturae": null
+        },
+        "tempus": {
+            "opus": "2022-05-11T22:21:42"
         }
     }
 }
