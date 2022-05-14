@@ -96,7 +96,7 @@ deploy_0_9_markdown
 # temp_validate_librario "locale"
 # temp_validate_librario "cdn"
 
-# @TODO: maybe check ssdiff (diff spreadsheets) to our uses. 
+# @TODO: maybe check ssdiff (diff spreadsheets) to our uses.
 
 #### tests _____________________________________________________________________
 # https://github.com/frictionlessdata/frictionless-py

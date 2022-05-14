@@ -134,6 +134,7 @@ file_update_if_necessary() {
 
   echo "${FUNCNAME[0]} ... [$fontem_archivum] --> [$objectivum_archivum]"
 
+  # TODO: implement frictionless validate
   case "${formatum_archivum}" in
   csv)
     is_valid=$(csvclean --dry-run "$fontem_archivum")
@@ -162,7 +163,7 @@ file_update_if_necessary() {
 
     # if [ "$fontem_archivum_hash" != "$objectivum_archivum_hash" ]; then
     if [[ "$fontem_archivum_hash" != "$objectivum_archivum_hash" ]]; then
-      echo "Not equal. Temporary will replace target file [$fontem_archivum_hash] --> [$objectivum_archivum_hash]"
+      echo "Not equal. Temporary will replace target file [$fontem_archivum] --> [$objectivum_archivum]"
       # sha256sum "$objectivum_archivum"
       # sha256sum "$fontem_archivum"
       rm "$objectivum_archivum"
@@ -1853,11 +1854,266 @@ upload_cdn() {
   temp_save_status "$numerordinatio" "cdn"
 
   echo "------------------------ VALIDATE ------------------------"
-      echo "https://skos-play.sparna.fr/skos-testing-tool/test?url=https://lsf-cdn.etica.ai/$_path/$_nomen.no11.skos.ttl"
+  echo "https://skos-play.sparna.fr/skos-testing-tool/test?url=https://lsf-cdn.etica.ai/$_path/$_nomen.no11.skos.ttl"
   # echo "https://skos-play.sparna.fr/skos-testing-tool/test?url=https://lsf-cdn.etica.ai/$_path/$_nomen.no11.skos.ttl"
   echo "------------------------ VALIDATE ------------------------"
 
   # https://skos-play.sparna.fr/skos-testing-tool/test?url=https://lsf-cdn.etica.ai/1603/63/101/1603_63_101.no11.skos.ttl
+}
+
+#######################################
+# Extract data from Wikidata based on items with respective Wikidata P.
+# Lingual information only
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (default "0", from real namespace)
+#   ex_wikidata_p
+#   lingua_paginae
+#   lingua_divisioni
+# Outputs:
+#   File
+#######################################
+wikidata_p_ex_linguis() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+  ex_wikidata_p="${4:-"P1585"}"
+  # P402,P1566,P1937,P6555,P8119
+  lingua_paginae="${5:-"1"}"
+  lingua_divisioni="${6:-"1"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  # fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
+
+  echo "${FUNCNAME[0]} [$ex_wikidata_p] [$lingua_paginae] [$lingua_divisioni] [$objectivum_archivum]"
+  # return 0
+
+  # set -x
+  printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
+    --actionem-sparql --de=P --query \
+    --lingua-divisioni="${lingua_divisioni}" \
+    --lingua-paginae="${lingua_paginae}" \
+    | "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm \
+      >"$objectivum_archivum_temporarium"
+
+  # frictionless validate "$objectivum_archivum_temporarium" || true
+  frictionless validate "$objectivum_archivum_temporarium"
+  # set +x
+
+  # TODO, maybe update file_update_if_necessary to implement frictionless validate
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+#######################################
+# Extract data from Wikidata based on items with respective Wikidata P.
+# Interlingual codes only.
+#
+# Globals:
+#   ROOTDIR
+#   VELOX  (if =1, ignore fonts)
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (default "0", from real namespace)
+#   ex_wikidata_p
+#   cum_interlinguis
+# Outputs:
+#   File
+#######################################
+wikidata_p_ex_interlinguis() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+  ex_wikidata_p="${4:-"P1585"}"
+  # P402,P1566,P1937,P6555,P8119
+  cum_interlinguis="${5:-""}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  # fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
+  # objectivum_archivum="${_basim_objectivum}/$_path/$_nomen~wikip~0.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen~wikip~0.tm.hxl.csv"
+
+  echo "${FUNCNAME[0]} [$objectivum_archivum]"
+  # return 0
+
+  printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
+    --actionem-sparql --de=P --query --ex-interlinguis \
+    --cum-interlinguis="$cum_interlinguis" |
+    "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm \
+      >"$objectivum_archivum_temporarium"
+
+  frictionless validate "$objectivum_archivum_temporarium" || true
+
+  # TODO, maybe update file_update_if_necessary to implement frictionless validate
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+#######################################
+# Extract data from Wikidata based on items with respective Wikidata P.
+# wikidata_p_ex_interlinguis + wikidata_p_ex_linguis
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (default "0", from real namespace)
+#   ex_wikidata_p
+#   lingua_paginae
+#   lingua_divisioni
+# Outputs:
+#   File
+#######################################
+wikidata_p_ex_totalibus() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+  ex_wikidata_p="${4:-"P1585"}"
+  # P402,P1566,P1937,P6555,P8119
+  cum_interlinguis="${5:-""}"
+
+  # @TODO make inferece from how many concepts source file would have
+  _lingua_divisioni="20"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_objectivum}/$_path/$_nomen~wikip~0.tm.hxl.csv"
+  objectivum_archivum_no1="${_basim_objectivum}/$_path/$_nomen.no1.tm.hxl.csv"
+  objectivum_archivum_no11="${_basim_objectivum}/$_path/$_nomen.no11.tm.hxl.csv"
+  # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
+  objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP.tm.hxl.csv"
+  objectivum_archivum_q_temporarium_cache="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP~2.tm.hxl.csv"
+  objectivum_archivum_temporarium_no11="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"
+
+  echo "${FUNCNAME[0]} <<TODO>> [$objectivum_archivum_no11]"
+
+  ## Interlingual ..............................................................
+  wikidata_p_ex_interlinguis "1679_45_16_76_2" "1" "1" "P1585" "P402,P1566,P1937,P6555,P8119"
+  exit 0
+  ## Lingual ...................................................................
+  # _lingua_divisioni
+  # https://www.shellcheck.net/wiki/SC2051
+  for i in {1..19}
+  do
+    echo "Number: $i"
+    sleep 10
+    wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "$i" "20"
+  done
+
+  fontem_1="${_basim_objectivum}/$_path/$_nomen~wikiq~1~$_lingua_divisioni.tm.hxl.csv"
+  fontem_2="${_basim_objectivum}/$_path/$_nomen~wikiq~2~$_lingua_divisioni.tm.hxl.csv"
+  tempfunc_merge_wikiq_files "$fontem_1" "$fontem_2" "$objectivum_archivum_q_temporarium"
+  echo "aaa $objectivum_archivum_temporarium"
+
+  for i in {3..19}; do
+    echo "merge Number: $i"
+    # i2=$((i + 1))
+    # 1679_45_16_76_2~wikiq~1~20.tm.hxl.csv
+    # fontem_1="${_basim_objectivum}/$_path/$_nomen~wikiq~$i~$_lingua_divisioni.tm.hxl.csv"
+    fontem_2="${_basim_objectivum}/$_path/$_nomen~wikiq~$i~$_lingua_divisioni.tm.hxl.csv"
+    # objectivum_archivum="${_basim_objectivum}/$_path/$_nomen~wikiq.tm.hxl.csv"
+    objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP.tm.hxl.csv"
+    # objectivum_archivum="$3"
+    tempfunc_merge_wikiq_files "$objectivum_archivum_q_temporarium" "$fontem_2" "$objectivum_archivum_q_temporarium_cache"
+
+    frictionless validate "$objectivum_archivum_q_temporarium_cache" || true
+
+    # TODO, maybe update file_update_if_necessary to implement frictionless validate
+    file_update_if_necessary csv "$objectivum_archivum_q_temporarium_cache" "$objectivum_archivum_q_temporarium"
+  done
+
+  hxlrename \
+    --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
+    "$objectivum_archivum_q_temporarium" \
+    >"$objectivum_archivum_q_temporarium_cache"
+
+  hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
+    --tags='#item+rem' \
+    --merge="$objectivum_archivum_q_temporarium_cache" \
+    "$objectivum_archivum_no1" \
+    >"$objectivum_archivum_temporarium_no11"
+
+  sed -i '1d' "${objectivum_archivum_temporarium_no11}"
+
+  file_hotfix_duplicated_merge_key "${objectivum_archivum_temporarium_no11}" '#item+rem+i_qcc+is_zxxx+ix_wikiq'
+  
+  file_update_if_necessary csv "$objectivum_archivum_temporarium_no11" "$objectivum_archivum_no11"
+
+  # _temp_no11_pub="${ROOTDIR}/$_path/$_nomen.no11.tm.hxl.csv"
+  # cp "$objectivum_archivum_no11" "$_temp_no11_pub"
+  # file_convert_rdf_skos_ttl_de_numerordinatio11 "$numerordinatio"
+  # file_convert_tmx_de_numerordinatio11 "$numerordinatio"
+  # file_convert_tbx_de_numerordinatio11 "$numerordinatio"
+
+  return 0
+
+}
+
+tempfunc_merge_wikiq_files() {
+  fontem_1="$1"
+  fontem_2="$2"
+  objectivum_archivum="$3"
+
+  echo "hxlmerge..."
+  echo "${FUNCNAME[0]} [$fontem_1] + [$fontem_2] --> [$objectivum_archivum]"
+  # set -x
+  hxlmerge --keys='#item+conceptum+codicem' \
+    --tags='#item+rem' \
+    --merge="$fontem_2" \
+    "$fontem_1" \
+    >"$objectivum_archivum"
+  # set +x
+
+  sed -i '1d' "$objectivum_archivum"
+  file_hotfix_duplicated_merge_key "$objectivum_archivum" '#item+rem+i_qcc+is_zxxx+ix_wikiq'
 }
 
 ################################################################################

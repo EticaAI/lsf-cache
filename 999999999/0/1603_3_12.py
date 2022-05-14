@@ -30,34 +30,13 @@
 # pytest
 #    python3 -m doctest ./999999999/0/1603_3_12.py
 
-#    ./999999999/0/1603_3_12.py
-#    NUMERORDINATIO_BASIM="/external/ndata" ./999999999/0/1603_3_12.py
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --wikidata-link
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --tsv > 999999/0/test.tsv
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv > 999999/0/test.csv
-#    printf "Q1065\nQ82151\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query | ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm
 
-# 1603_25_1 query
-# printf "Q3409626\nQ41055\nQ3321315\nQ160695\nQ9645\nQ9597\nQ713102\nQ133279\n" | ./999999999/0/1603_3_12.py --actionem-sparql --query
-
-
-# SELECT ?pic (STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem) ?item__rem__i_lat__is_latn
-# WHERE
-# {
-#   VALUES ?item { wd:Q3409626  wd:Q41055  wd:Q3321315  wd:Q160695  wd:Q9645  wd:Q9597  wd:Q713102  wd:Q133279  }
-#   bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
-#   OPTIONAL { ?item wdt:P18 ?pic }
-#   OPTIONAL { ?item rdfs:label ?item__rem__i_qcc__is_zxxx filter (lang(?item__rem__i_qcc__is_zxxx) = ""). }
-#   OPTIONAL { ?item rdfs:label ?item__rem__i_lat__is_latn filter (lang(?item__rem__i_lat__is_latn) = "la"). }
-# }
-# ORDER BY ASC (?id_numeric)
-
-## Example with proxy
+# Example with proxy
 # export HTTP_PROXY="socks5://127.0.0.1:9050"
 # export HTTPS_PROXY="socks5://127.0.0.1:9050"
 
-# TODO: https://sinaahmadi.github.io/posts/10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
+# TODO: https://sinaahmadi.github.io/posts
+#       /10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
 
 import os
 import sys
@@ -81,15 +60,59 @@ NUMERORDINATIO_BASIM = os.getenv('NUMERORDINATIO_BASIM', os.getcwd())
 NUMERORDINATIO_DEFALLO = int(os.getenv('NUMERORDINATIO_DEFALLO', '60'))  # �
 NUMERORDINATIO_MISSING = "�"
 DESCRIPTION = """
-1603_3_12.py is (...)
+Wikidata related query building and execution
 """
+
+__EPILOGUM__ = """
+------------------------------------------------------------------------------
+                            EXEMPLŌRUM GRATIĀ
+------------------------------------------------------------------------------
+    printf "Q1065\\nQ82151\\n" | {0} --actionem-sparql --query
+
+    printf "Q1065\\nQ82151\\n" | {0} --actionem-sparql --query \
+--lingua-divisioni=5 --lingua-paginae=1
+
+    printf "Q1065\\nQ82151\\n" | {0} --actionem-sparql --query \
+--lingua-divisioni=5 --lingua-paginae=1 \
+{0} --actionem-sparql --wikidata-link
+
+    printf "Q1065\\nQ82151\\n" | {0} --actionem-sparql --query \
+--lingua-divisioni=5 --lingua-paginae=1 \
+| {0} --actionem-sparql --tsv --ex-http-methodo=GET --cum-somno=0
+
+    printf "Q1065\\nQ82151\\n" | {0} --actionem-sparql --query \
+--lingua-divisioni=5 --lingua-paginae=1 \
+| {0} --actionem-sparql --tsv
+
+    printf "Q1065\\nQ82151\\n" | {0} --actionem-sparql --query \
+--lingua-divisioni=5 --lingua-paginae=1 \
+| {0} --actionem-sparql --csv > 999999/0/test.csv
+
+    printf "Q1065\\nQ82151\\n" | {0} --actionem-sparql --query \
+--lingua-divisioni=5 --lingua-paginae=1 \
+| {0} --actionem-sparql --csv --hxltm > 999999/0/test.tm.hxl.csv
+
+    printf "P1585\\n" | {0} --actionem-sparql --de=P --query \
+--ex-interlinguis
+
+    printf "P1585\\n" | {0} --actionem-sparql --de=P --query \
+--ex-interlinguis --cum-interlinguis=P402,P1566,P1937,P6555,P8119 \
+| {0} --actionem-sparql --csv --hxltm \
+> 999999/0/P1585~P402+P1566+P1937+P6555+P8119.tm.hxl.csv
+
+    printf "P1585\\n" | {0} --actionem-sparql --de=P --query \
+--lingua-divisioni=50 --lingua-paginae=1
+------------------------------------------------------------------------------
+                            EXEMPLŌRUM GRATIĀ
+------------------------------------------------------------------------------
+""".format(__file__)
 
 # In Python2, sys.stdin is a byte stream; in Python3, it's a text stream
 STDIN = sys.stdin.buffer
 
 # @see https://meta.wikimedia.org/wiki/User-Agent_policy
 # @see https://www.mediawiki.org/wiki/API:Etiquette
-USER_AGENT="EticaAI-multilingual-lexicography/2022.3.9 (https://meta.wikimedia.org/wiki/User:EmericusPetro; rocha@ieee.org) 1603_3_12.py/0.1"
+USER_AGENT = "EticaAI-multilingual-lexicography/2022.3.9 (https://meta.wikimedia.org/wiki/User:EmericusPetro; rocha@ieee.org) 1603_3_12.py/0.1"
 
 # print('getcwd:      ', os.getcwd())
 # print('oi', NUMERORDINATIO_BASIM)
@@ -168,6 +191,9 @@ class CS1603z3z12:
         self.resultatum_separato = "\t"
 
         self.qid = []
+        self.pid = []
+        self.ex_interlinguis = False
+        self.cum_interlinguis = []
 
     def _init_1613_1_51_datum(self):
         # archivum = NUMERORDINATIO_BASIM + "/1613/1603_2_60.no1.tm.hxl.tsv"
@@ -268,33 +294,25 @@ class CS1603z3z12:
 
         return self
 
-#     def query(self):
-#         term = """# https://en.wikiversity.org/wiki/Research_in_programming_Wikidata/Countries#List_of_countries
-# # https://w.wiki/4ij4
-# SELECT ?item ?item__eng_latn ?item__rus_cyrl
-# WHERE
-# {
-#   ?item wdt:P31 wd:Q6256. # instance country
-#   OPTIONAL {
-#     ?item rdfs:label ?item__eng_latn filter (lang(?item__eng_latn) = "en").
-#     ?item rdfs:label ?item__rus_cyrl filter (lang(?item__rus_cyrl) = "ru").
-#   }
-# }
-#         """
-#         return term
+    def est_wikidata_p(self, wikidata_codicem: str):
+        if wikidata_codicem not in self.pid:
+            self.pid.append(wikidata_codicem)
 
+        return self
 
-# SELECT ?item ?item_rem__eng_latn ?item_rem__rus_cyrl
-# WHERE
-# {
-#   VALUES ?item { wd:Q1065 wd:Q82151 wd:Q125761 wd:Q7809 }
-#   OPTIONAL {
-#     ?item rdfs:label ?item_rem__eng_latn filter (lang(?item_rem__eng_latn) = "en").
-#     ?item rdfs:label ?item_rem__rus_cyrl filter (lang(?item_rem__rus_cyrl) = "ru").
-#   }
-# }
+    def est_wikidata_p_interlinguis(self, statum: bool = True):
+        self.ex_interlinguis = statum
 
-    def query(self):
+    def est_wikidata_p_cum_interlinguis(self, cum_interlinguis: list = None):
+        if cum_interlinguis and len(cum_interlinguis):
+            for item in cum_interlinguis:
+                if len(item.strip()) > 0:
+                    self.cum_interlinguis.append(item.upper().replace('P', ''))
+            self.cum_interlinguis = sorted(self.cum_interlinguis, key=int)
+
+        return self
+
+    def query_q(self):
         langpair_full = self._query_linguam()
         self.D1613_1_51_langpair = self._query_linguam_limit(langpair_full)
 
@@ -304,10 +322,7 @@ class CS1603z3z12:
         # select = ['(?item AS ?item__conceptum__codicem)']
         select = [
             '(STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem)']
-        # select = [
-        #     '(STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem)',
-        #     '(STRAFTER(STR(?item), "entity/") AS ?item__rem__i_qcc__is_zxxx__ix_wikiq)'
-        # ]
+
         filter_otional = []
         for pair in self.D1613_1_51_langpair:
             select.append('?' + pair[1])
@@ -344,11 +359,155 @@ ORDER BY ASC (?id_numeric)
         # [TRY IT ↗]()
         return term
 
+# Teste atual
+# SELECT DISTINCT ?item ?itemLabel WHERE {
+#   SERVICE wikibase:label {
+#     bd:serviceParam wikibase:language "[AUTO_LANGUAGE]".
+#   }
+#   {
+#     SELECT DISTINCT ?item WHERE {
+#       {
+#         ?item p:P1585 ?statement0.
+#         ?statement0 (ps:P1585) _:anyValueP1585.
+#         #FILTER(EXISTS { ?statement0 prov:wasDerivedFrom ?reference. })
+
+#         #bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
+#       }
+#     }
+#     #ORDER BY ASC (?id_numeric)
+#   }
+# }
+    def query_p(self):
+        langpair_full = self._query_linguam()
+        self.D1613_1_51_langpair = self._query_linguam_limit(langpair_full)
+
+        qid = ['wd:' + x for x in self.qid if isinstance(x, str)]
+
+        _pid = self.pid[0]
+        # select = '?item ' + " ".join(self._query_linguam())
+
+        # select = ['(?item AS ?item__conceptum__codicem)']
+        select = [
+            '(STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem)']
+        # select.append('(?itemLabel AS ?meta____rem__i_por__is_latn)')
+        # select = [
+        #     '(STRAFTER(STR(?item), "entity/") AS ?item__conceptum__codicem)',
+        #     '(STRAFTER(STR(?item), "entity/") AS ?item__rem__i_qcc__is_zxxx__ix_wikiq)'
+        # ]
+        filter_otional = []
+        for pair in self.D1613_1_51_langpair:
+            select.append('?' + pair[1])
+
+            filter_otional.append(
+                'OPTIONAL { ?item rdfs:label ?' +
+                pair[1] + ' filter (lang(?' + pair[1] +
+                ') = "' + pair[0] + '"). }'
+            )
+
+        filter_optional_done = ['  ' + x for x in filter_otional]
+
+#         term = """
+# SELECT {select}
+# WHERE
+# {{
+#   VALUES ?item {{ {qitems} }}
+#   bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
+# {langfilter}
+# }}
+# ORDER BY ASC (?id_numeric)
+#         """.format(
+#             qitems=" ".join(qid),
+#             select=" ".join(select),
+#             langfilter="\n".join(filter_otional_done),
+#         )
+        term = """
+SELECT {select} WHERE {{
+  {{
+    SELECT DISTINCT ?item WHERE {{
+      ?item p:{wikidata_p} ?statement0.
+      ?statement0 (ps:{wikidata_p}) _:anyValue{wikidata_p}.
+    }}
+  }}
+{langfilter}
+  # bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
+}}
+# ORDER BY ASC (?id_numeric)
+        """.format(
+            wikidata_p=_pid,
+            qitems=" ".join(qid),
+            select=" ".join(select),
+            langfilter="\n".join(filter_optional_done),
+        )
+
+        # [TRY IT ↗]()
+        return term
+
+    def query_p_ex_interlinguis(self):
+        qid = ['wd:' + x for x in self.qid if isinstance(x, str)]
+
+        _pid = self.pid[0]
+
+        select = [
+            '(?wikidata_p_value AS ?item__conceptum__codicem)',
+            '(STRAFTER(STR(?item), "entity/") AS '
+            '?item__rem__i_qcc__is_zxxx__ix_wikiq)'
+        ]
+        group_by = [
+            '?wikidata_p_value',
+            '?item'
+        ]
+        filter_otional = []
+        # print('oiii',  self.cum_interlinguis)
+        # cum_interlinguis = []
+        for item in self.cum_interlinguis:
+            # print('item')
+            # (GROUP_CONCAT(?subdivisionLabel; separator = ", ") as ?subdivisionLabels)
+            # select.append('?item__rem__i_qcc__is_zxxx__ix_wikip{0}'.format(
+            select.append('(GROUP_CONCAT(DISTINCT ?p{0}_values; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wikip{0})'.format(
+                item
+            ))
+            # OPTIONAL { ?item wdt:P6555 ?item__rem__i_qcc__is_zxxx__ix_wikip6555 . }
+            filter_otional.append(
+                'OPTIONAL { ?item wdt:P' + item +
+                ' ?p' + item + '_values . }'
+            )
+        filter_optional_done = ['  ' + x for x in filter_otional]
+
+        term = """
+SELECT DISTINCT {select} WHERE {{
+  {{
+    SELECT DISTINCT ?item WHERE {{
+      ?item p:{wikidata_p} ?statement0.
+      ?statement0 (ps:{wikidata_p}) _:anyValue{wikidata_p}.
+    }}
+  }}
+  ?item wdt:{wikidata_p} ?wikidata_p_value .
+{optional_filters}
+}}
+GROUP BY {group_by}
+# ORDER BY ASC (?wikidata_p_value)
+ORDER BY ASC (?item__conceptum__codicem)
+        """.format(
+            wikidata_p=_pid,
+            qitems=" ".join(qid),
+            select=" ".join(select),
+            group_by=" ".join(group_by),
+            optional_filters="\n".join(filter_optional_done),
+        )
+
+        return term
+
     def exportatum_sparql(self):
         resultatum = []
         # resultatum.append('#TODO')
         # resultatum.append(str(self.D1613_1_51))
-        resultatum.append(self.query())
+        if len(self.qid) > 0:
+            resultatum.append(self.query_q())
+        if len(self.pid) > 0:
+            if self.ex_interlinguis:
+                resultatum.append(self.query_p_ex_interlinguis())
+            else:
+                resultatum.append(self.query_p())
         return resultatum
 
 
@@ -365,7 +524,13 @@ class CLI_2600:
         self.EXIT_SYNTAX = 2
 
     def make_args(self, hxl_output=True):
-        parser = argparse.ArgumentParser(description=DESCRIPTION)
+        # parser = argparse.ArgumentParser(description=DESCRIPTION)
+        parser = argparse.ArgumentParser(
+            prog="1603_3_12",
+            description=DESCRIPTION,
+            formatter_class=argparse.RawDescriptionHelpFormatter,
+            epilog=__EPILOGUM__
+        )
 
         # https://en.wikipedia.org/wiki/Code_word
         # https://en.wikipedia.org/wiki/Coded_set
@@ -409,6 +574,38 @@ class CLI_2600:
             dest='actionem_sparql',
             const=True,
             nargs='?'
+        )
+
+        neo_codex.add_argument(
+            '--de',
+            help='Change default input. Used with --query to change from Q to '
+            'P.',
+            dest='de',
+            nargs='?',
+            choices=['Q', 'P'],
+            default='Q'
+        )
+        # linguīs, f, pl, ablativus, https://en.wiktionary.org/wiki/lingua#Latin
+        neo_codex.add_argument(
+            '--ex-interlinguis',
+            help='Change output to return interlingual (codex) only. '
+            '',
+            metavar='',
+            dest='ex_interlinguis',
+            const=True,
+            nargs='?'
+        )
+        # cum (+ablativus), https://en.wiktionary.org/wiki/cum#Latin
+        neo_codex.add_argument(
+            '--cum-interlinguis',
+            help='Add additional (but optional value) P. '
+            'Accept multiple values (use comma ,). '
+            'Used with --ex-interlinguis',
+            metavar='',
+            dest='cum_interlinguis',
+            # default='mul-Zyyy',
+            # nargs='?'
+            type=lambda x: x.split(',')
         )
 
         neo_codex.add_argument(
@@ -487,18 +684,58 @@ class CLI_2600:
             nargs='?'
         )
 
-        parser.add_argument(
-            '--verbose',
-            help='Verbose output',
-            metavar='verbose',
+        # cum (+ablativus), https://en.wiktionary.org/wiki/cum#Latin
+        # somnō, m, s, ablativus, https://en.wiktionary.org/wiki/somnus#Latin
+        neo_codex.add_argument(
+            '--cum-somno',
+            help='Sleep in seconds. Defaults to "3".'
+            'Disable with "0"',
+            metavar='cum_somno',
+            default="3",
             nargs='?'
         )
-        if hxl_output:
-            parser.add_argument(
-                'outfile',
-                help='File to write (if omitted, use standard output).',
-                nargs='?'
-            )
+
+        # ex (+ ablativus) https://en.wiktionary.org/wiki/ex#Latin
+        # http, https://en.wiktionary.org/wiki/HTTP#English
+        # methodō, f, s, ablativus, https://en.wiktionary.org/wiki/methodus
+        neo_codex.add_argument(
+            '--ex-http-methodo',
+            help='HTTP method for SPARQL query execution '
+            '(NEEDS FIX: GET request have some bugs)',
+            dest='ex_http_methodo',
+            nargs='?',
+            choices=['POST', 'GET'],
+            default='POST'
+        )
+
+        # - optimization https://en.wiktionary.org/wiki/optimization
+        #   - optimize (1844) Back-formation from optimist.
+        #     https://en.wiktionary.org/wiki/optimize#English
+        #      - optimist From French optimiste, from Latin optimus (“best”).
+        #        https://en.wiktionary.org/wiki/optimist#English
+        #        - optimum, n, s, Nominativus,
+        #          https://en.wiktionary.org/wiki/optimus#Latin
+        neo_codex.add_argument(
+            '--optimum',
+            help='Undocumented optimizations. '
+            'Avoid heavy queries and try to off-load responsability '
+            '(like sorting) to client-side operations)',
+            metavar='optimum',
+            nargs='?'
+        )
+
+        # neo_codex.add_argument(
+        #     '--verbose',
+        #     help='Verbose output',
+        #     metavar='verbose',
+        #     nargs='?'
+        # )
+        # if hxl_output:
+        #     parser.add_argument(
+        #         'outfile',
+        #         help='File to write (if omitted, use standard output).',
+        #         nargs='?'
+        #     )
 
         # print('oioioi', parser)
         return parser.parse_args()
@@ -537,8 +774,18 @@ class CLI_2600:
 
                 for line in sys.stdin:
                     codicem = line.replace('\n', ' ').replace('\r', '')
-                    # TODO: deal with cases were have more than Qcode
-                    cs1603_3_12.est_wikidata_q(codicem)
+                    # TODO: deal with cases were have more than WikiQ
+                    # print(self.pyargs)
+                    if self.pyargs.de == 'P':
+                        if self.pyargs.cum_interlinguis and \
+                                len(self.pyargs.cum_interlinguis):
+                            cs1603_3_12.est_wikidata_p_cum_interlinguis(
+                                self.pyargs.cum_interlinguis)
+                        if self.pyargs.ex_interlinguis == True:
+                            cs1603_3_12.est_wikidata_p_interlinguis(True)
+                        cs1603_3_12.est_wikidata_p(codicem)
+                    elif self.pyargs.de == 'Q':
+                        cs1603_3_12.est_wikidata_q(codicem)
 
                 quod_query = cs1603_3_12.exportatum_sparql()
                 # tabulam_numerae = ['TODO']
@@ -598,10 +845,22 @@ class CLI_2600:
 
                 payload_query = "".join(full_query)
                 # Lets put an sleep, 3 seconds, just in case
-                sleep(3)
-                r = requests.post(sparql_backend, headers=headers, data={
-                    'query': payload_query
-                })
+
+                # cum_somno = int(self.pyargs.cum_somno)
+                if int(self.pyargs.cum_somno) > 0:
+                    sleep(int(self.pyargs.cum_somno))
+
+                if self.pyargs.ex_http_methodo == 'POST':
+                    r = requests.post(sparql_backend, headers=headers, data={
+                        'query': payload_query
+                    })
+                elif self.pyargs.ex_http_methodo == 'GET':
+                    r = requests.get(sparql_backend, headers=headers, data={
+                        'query': payload_query
+                    })
+
+                # print(r.request.headers)
+                # raise NotImplementedError('test')
 
                 # @TODO: --tsv --hxltm is know to be bugged (not sure if
                 #        Wikidata result already skip values)
