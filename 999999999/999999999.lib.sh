@@ -1145,8 +1145,8 @@ file_translate_csv_de_numerordinatio_q() {
     --actionem-sparql \
     --lingua-divisioni=5 \
     --lingua-paginae=1 \
-    --query <"$objectivum_archivum_temporarium_b_u" |
-    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+    --query --optimum <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm --optimum \
       >"$objectivum_archivum_temporarium_b_u_wiki_1_5"
 
   echo "2/5"
@@ -1154,8 +1154,8 @@ file_translate_csv_de_numerordinatio_q() {
     --actionem-sparql \
     --lingua-divisioni=5 \
     --lingua-paginae=2 \
-    --query <"$objectivum_archivum_temporarium_b_u" |
-    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+    --query --optimum <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm --optimum \
       >"$objectivum_archivum_temporarium_b_u_wiki_2_5"
 
   echo "3/5"
@@ -1163,8 +1163,8 @@ file_translate_csv_de_numerordinatio_q() {
     --actionem-sparql \
     --lingua-divisioni=5 \
     --lingua-paginae=3 \
-    --query <"$objectivum_archivum_temporarium_b_u" |
-    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+    --query --optimum <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm --optimum \
       >"$objectivum_archivum_temporarium_b_u_wiki_3_5"
 
   echo "4/5"
@@ -1172,8 +1172,8 @@ file_translate_csv_de_numerordinatio_q() {
     --actionem-sparql \
     --lingua-divisioni=5 \
     --lingua-paginae=4 \
-    --query <"$objectivum_archivum_temporarium_b_u" |
-    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+    --query --optimum <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm --optimum \
       >"$objectivum_archivum_temporarium_b_u_wiki_4_5"
 
   echo "5/5"
@@ -1181,8 +1181,8 @@ file_translate_csv_de_numerordinatio_q() {
     --actionem-sparql \
     --lingua-divisioni=5 \
     --lingua-paginae=5 \
-    --query <"$objectivum_archivum_temporarium_b_u" |
-    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
+    --query --optimum <"$objectivum_archivum_temporarium_b_u" |
+    ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm --optimum \
       >"$objectivum_archivum_temporarium_b_u_wiki_5_5"
 
   # Merging now...
@@ -1902,8 +1902,10 @@ wikidata_p_ex_linguis() {
   fi
 
   # fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
-  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
-  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
+  # objectivum_archivum="${_basim_objectivum}/$_path/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
+  # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.wikiq~${lingua_paginae}_${lingua_divisioni}.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.wikiq~${lingua_paginae}_${lingua_divisioni}.tm.hxl.csv"
 
   echo "${FUNCNAME[0]} [$ex_wikidata_p] [$lingua_paginae] [$lingua_divisioni] [$objectivum_archivum]"
   # return 0
@@ -1912,13 +1914,46 @@ wikidata_p_ex_linguis() {
   printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
     --actionem-sparql --de=P --query \
     --lingua-divisioni="${lingua_divisioni}" \
-    --lingua-paginae="${lingua_paginae}" \
-    | "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm \
+    --lingua-paginae="${lingua_paginae}" --optimum |
+    "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
       >"$objectivum_archivum_temporarium"
 
-  # frictionless validate "$objectivum_archivum_temporarium" || true
-  frictionless validate "$objectivum_archivum_temporarium"
-  # set +x
+  # # VALIDATE_EXIT_CODE=0
+  # : frictionless validate "$objectivum_archivum_temporarium"
+  VALIDATE_EXIT_CODE=0
+  frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
+
+  if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
+    echo "Failed. trying again in 15s [$objectivum_archivum_temporarium]"
+    sleep 15
+    printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
+      --actionem-sparql --de=P --query \
+      --lingua-divisioni="${lingua_divisioni}" \
+      --lingua-paginae="${lingua_paginae}" --optimum |
+      "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
+        >"$objectivum_archivum_temporarium"
+
+    VALIDATE_EXIT_CODE=0
+    frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
+
+    if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
+      echo "Failed AGAIN. trying again in 30s [$objectivum_archivum_temporarium]"
+      sleep 30
+      printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
+        --actionem-sparql --de=P --query \
+        --lingua-divisioni="${lingua_divisioni}" \
+        --lingua-paginae="${lingua_paginae}" --optimum |
+        "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
+          >"$objectivum_archivum_temporarium"
+
+      VALIDATE_EXIT_CODE=0
+      frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
+      if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
+        echo "Giving up on [$objectivum_archivum_temporarium]. Sorry."
+        return 1
+      fi
+    fi
+  fi
 
   # TODO, maybe update file_update_if_necessary to implement frictionless validate
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
@@ -1966,18 +2001,48 @@ wikidata_p_ex_interlinguis() {
   # fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
   # objectivum_archivum="${_basim_objectivum}/$_path/$_nomen~wikip~0.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.tm.hxl.csv"
-  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen~wikip~0.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.wikip~0.tm.hxl.csv"
 
   echo "${FUNCNAME[0]} [$objectivum_archivum]"
   # return 0
 
   printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
     --actionem-sparql --de=P --query --ex-interlinguis \
-    --cum-interlinguis="$cum_interlinguis" |
-    "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm \
+    --cum-interlinguis="$cum_interlinguis" --optimum |
+    "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
       >"$objectivum_archivum_temporarium"
 
-  frictionless validate "$objectivum_archivum_temporarium" || true
+  VALIDATE_EXIT_CODE=0
+  frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
+
+  if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
+    echo "Failed. trying again in 15s [$objectivum_archivum_temporarium]"
+    sleep 15
+    printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
+      --actionem-sparql --de=P --query --ex-interlinguis \
+      --cum-interlinguis="$cum_interlinguis" --optimum |
+      "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
+        >"$objectivum_archivum_temporarium"
+
+    frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
+  fi
+  # TODO: copy logic from wikidata_p_ex_linguis
+  # if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
+  #   echo "Failed AGAIN. Trying AGAIN in 30s [$objectivum_archivum_temporarium]"
+  #   sleep 30
+  #   printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
+  #     --actionem-sparql --de=P --query --ex-interlinguis \
+  #     --cum-interlinguis="$cum_interlinguis" --optimum |
+  #     "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
+  #       >"$objectivum_archivum_temporarium"
+
+  #   frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
+  # fi
+
+  # if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
+  #   echo "Giving up on [$objectivum_archivum_temporarium]. Sorry."
+  #   return 1
+  # fi
 
   # TODO, maybe update file_update_if_necessary to implement frictionless validate
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
@@ -2028,43 +2093,49 @@ wikidata_p_ex_totalibus() {
   fontem_archivum="${_basim_objectivum}/$_path/$_nomen~wikip~0.tm.hxl.csv"
   objectivum_archivum_no1="${_basim_objectivum}/$_path/$_nomen.no1.tm.hxl.csv"
   objectivum_archivum_no11="${_basim_objectivum}/$_path/$_nomen.no11.tm.hxl.csv"
+  objectivum_archivum_wikiq="${_basim_objectivum}/$_path/$_nomen.wikiq.tm.hxl.csv"
   # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
-  objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP.tm.hxl.csv"
-  objectivum_archivum_q_temporarium_cache="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP~2.tm.hxl.csv"
+  # objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP.tm.hxl.csv"
+  # objectivum_archivum_q_temporarium_cache="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP~2.tm.hxl.csv"
+  objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/$_nomen.wikiq~TEMP.tm.hxl.csv"
+  objectivum_archivum_q_temporarium_cache="${ROOTDIR}/999999/0/$_nomen.wikiq~TEMP~2.tm.hxl.csv"
   objectivum_archivum_temporarium_no11="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"
 
-  echo "${FUNCNAME[0]} <<TODO>> [$objectivum_archivum_no11]"
+  echo "${FUNCNAME[0]} <<TODO: still work in progress>> [$objectivum_archivum_no11]"
 
   ## Interlingual ..............................................................
-  wikidata_p_ex_interlinguis "1679_45_16_76_2" "1" "1" "P1585" "P402,P1566,P1937,P6555,P8119"
-  exit 0
+  wikidata_p_ex_interlinguis "$numerordinatio" "1" "1" "$ex_wikidata_p" "$cum_interlinguis"
+  # exit 0
   ## Lingual ...................................................................
-  # _lingua_divisioni
-  # https://www.shellcheck.net/wiki/SC2051
-  for i in {1..19}
-  do
+  # TODO: implementet configurable _lingua_divisioni
+  # for i in {1..19}; do
+  for i in {6..19}; do
     echo "Number: $i"
     sleep 10
-    wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "$i" "20"
+    wikidata_p_ex_linguis "$numerordinatio" "1" "1" "$ex_wikidata_p" "$i" "20"
   done
 
-  fontem_1="${_basim_objectivum}/$_path/$_nomen~wikiq~1~$_lingua_divisioni.tm.hxl.csv"
-  fontem_2="${_basim_objectivum}/$_path/$_nomen~wikiq~2~$_lingua_divisioni.tm.hxl.csv"
+  # fontem_1="${_basim_objectivum}/$_path/$_nomen~wikiq~1~$_lingua_divisioni.tm.hxl.csv"
+  # fontem_2="${_basim_objectivum}/$_path/$_nomen~wikiq~2~$_lingua_divisioni.tm.hxl.csv"
+  fontem_1="${_basim_objectivum}/$_path/$_nomen.wikiq~1_$_lingua_divisioni.tm.hxl.csv"
+  fontem_2="${_basim_objectivum}/$_path/$_nomen.wikiq~2_$_lingua_divisioni.tm.hxl.csv"
   tempfunc_merge_wikiq_files "$fontem_1" "$fontem_2" "$objectivum_archivum_q_temporarium"
-  echo "aaa $objectivum_archivum_temporarium"
+  # echo "aaa $objectivum_archivum_temporarium"
 
+  # Note; Minimum item of this loop is always 3
   for i in {3..19}; do
     echo "merge Number: $i"
     # i2=$((i + 1))
     # 1679_45_16_76_2~wikiq~1~20.tm.hxl.csv
     # fontem_1="${_basim_objectivum}/$_path/$_nomen~wikiq~$i~$_lingua_divisioni.tm.hxl.csv"
-    fontem_2="${_basim_objectivum}/$_path/$_nomen~wikiq~$i~$_lingua_divisioni.tm.hxl.csv"
+    # fontem_2="${_basim_objectivum}/$_path/$_nomen~wikiq~$i~$_lingua_divisioni.tm.hxl.csv"
+    fontem_2="${_basim_objectivum}/$_path/$_nomen.wikiq~${i}_${_lingua_divisioni}.tm.hxl.csv"
     # objectivum_archivum="${_basim_objectivum}/$_path/$_nomen~wikiq.tm.hxl.csv"
-    objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP.tm.hxl.csv"
+    # objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~TEMP.tm.hxl.csv"
     # objectivum_archivum="$3"
     tempfunc_merge_wikiq_files "$objectivum_archivum_q_temporarium" "$fontem_2" "$objectivum_archivum_q_temporarium_cache"
 
-    frictionless validate "$objectivum_archivum_q_temporarium_cache" || true
+    #frictionless validate "$objectivum_archivum_q_temporarium_cache"
 
     # TODO, maybe update file_update_if_necessary to implement frictionless validate
     file_update_if_necessary csv "$objectivum_archivum_q_temporarium_cache" "$objectivum_archivum_q_temporarium"
@@ -2081,10 +2152,12 @@ wikidata_p_ex_totalibus() {
     "$objectivum_archivum_no1" \
     >"$objectivum_archivum_temporarium_no11"
 
+  sed -i '1d' "$objectivum_archivum_q_temporarium"
   sed -i '1d' "${objectivum_archivum_temporarium_no11}"
 
   file_hotfix_duplicated_merge_key "${objectivum_archivum_temporarium_no11}" '#item+rem+i_qcc+is_zxxx+ix_wikiq'
-  
+
+  file_update_if_necessary csv "$objectivum_archivum_q_temporarium" "$objectivum_archivum_wikiq"
   file_update_if_necessary csv "$objectivum_archivum_temporarium_no11" "$objectivum_archivum_no11"
 
   # _temp_no11_pub="${ROOTDIR}/$_path/$_nomen.no11.tm.hxl.csv"

@@ -124,3 +124,8 @@ deploy_0_9_markdown
 # ./999999999/0/1603_1.py --methodus='status-quo' --status-quo-in-rdf-skos-turtle --codex-de 1603_1_7
 
 # ./999999999/0/1603_1.py --methodus='status-quo' --status-quo-in-rdf-skos-turtle --codex-de 1603_1_7 > ~/Downloads/1603_1_7.no11.skos.ttl
+
+
+#### TODO ______________________________________________________________________
+# GitHub gist, create from command line
+# https://cli.github.com/manual/gh_gist_edit

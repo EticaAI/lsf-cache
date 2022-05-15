@@ -205,3 +205,9 @@
 - fīnibus, m, pl, Ablativus, https://en.wiktionary.org/wiki/finis#Latin
   - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.04.0059:entry=finis
 - Lexicographī sine fīnibus
+
+
+<!--
+- https://pt.wikipedia.org/wiki/Amanuense
+- https://en.wiktionary.org/wiki/amanuensis
+-->

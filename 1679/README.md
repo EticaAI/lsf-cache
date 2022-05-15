@@ -124,3 +124,24 @@ P9119	LexML Brazil ID	identifier for laws in the LexML system		ExternalId	27,718
 ### [45:16:76:21] //Espaço numérico do Brasil, relacionado à geografia (Níveis 1+2+3+4+5+6)//
 
 `P1585	Brazilian municipality code	identifier for municipalities in Brazil	IBGE code	ExternalId	5,570`
+
+
+<!--
+- Pessoa jurítica
+  - (...)
+- Pessoa física
+  - https://pt.wikipedia.org/wiki/Cadastro_de_Pessoas_F%C3%ADsicas
+    - http://www.receita.fazenda.gov.br/Aplicacoes/ATCTA/CPF/
+  - https://pt.wikipedia.org/wiki/C%C3%A9dula_de_identidade
+    - Na pagina da Carteira de identidade cita os demais. Exemplo:
+      - https://pt.wikipedia.org/wiki/Carteira_Nacional_de_Habilita%C3%A7%C3%A3o
+      - https://pt.wikipedia.org/wiki/T%C3%ADtulo_de_Eleitor
+      - https://pt.wikipedia.org/wiki/Carteira_de_trabalho
+      - https://pt.wikipedia.org/wiki/Instituto_Nacional_do_Seguro_Social (numero do INSS, nao tem conceito direto)
+      - https://pt.wikipedia.org/wiki/PIS/PASEP
+      - Número de Identidade Profissional (opcional)
+      - https://pt.wikipedia.org/wiki/Certificado_de_alistamento_militar
+      - https://pt.wikipedia.org/wiki/SUS (cartão do SUS)
+      - https://pt.wikipedia.org/wiki/Certid%C3%A3o_de_nascimento
+      - https://pt.wikipedia.org/wiki/Registro_Nacional_de_Estrangeiros
+-->

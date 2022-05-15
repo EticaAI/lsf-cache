@@ -83,79 +83,41 @@ ROOTDIR="$(pwd)"
 # sleep 10
 # wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "4" "20"
 
+### //Dicionários de bases de dados espaciais do Brasil//@por-Latn
 wikidata_p_ex_totalibus "1679_45_16_76_2" "1" "1" "P1585" "P402,P1566,P1937,P6555,P8119"
+
+### P4251 //número da legenda no TSE//@por-Latn
+wikidata_p_ex_interlinguis "1679_3_12_4251" "1" "1" "P4251" ""
+
+### P6204 //Cadastro Nacional da Pessoa Jurídica//@por-Latn
+# wikidata_p_ex_interlinguis "1679_3_12_6204" "1" "1" "P6204" ""
+#     ValueError: invalid literal for int() with base 10: '00.317.929/0001-49'
+
+### P6555 //identificador de Unidade Eleitoral brasileira//@por-Latn
+wikidata_p_ex_interlinguis "1679_3_12_6555" "1" "1" "P6555" ""
+
+### P9119 //Identificador LeXML Brasil//@por-Latn
+# wikidata_p_ex_interlinguis "1679_3_12_9119" "1" "1" "P9119" ""
+#     ValueError: invalid literal for int() with base 10: 'urn:lex:br:advocacia.geral.uniao;procuradoria.geral.federal:portaria:2003-06-13;208'
+
+# @TODO criar funcao que "migre" resultado final arquivos selecionados; exemplo
+#        [1679_45_16_76_2] -> [1603_45_16_76_2]
+#
+#        1679_45_16_76_2.no1.tm.hxl.csv
+#        1679_45_16_76_2.no11.tm.hxl.csv
+#        1679_45_16_76_2.wikiq.tm.hxl.csv
+
+# @see https://servicodados.ibge.gov.br/api/docs/localidades
+# @see https://github.com/search?o=desc&q=ibge&s=stars&type=Repositories
+# @see CNAE
+#      - https://servicodados.ibge.gov.br/api/docs/CNAE?versao=2#api-_
+#      - https://cnae.ibge.gov.br/images/concla/documentacao/CNAE20_Introducao.pdf
+# @see https://sidra.ibge.gov.br/home/pnadct/brasil
+# @see https://servicodados.ibge.gov.br/api/docs
+# @see - https://servicodados.ibge.gov.br/api/docs/produtos?versao=1
+#        - https://servicodados.ibge.gov.br/api/v1/produtos/estatisticas
+#        - https://servicodados.ibge.gov.br/api/v1/produtos/geociencias
+#        - https://biblioteca.ibge.gov.br/visualizacao/livros/liv100600.pdf
 
 exit 1
 
-
-# echo "--actionem-sparql --de=P --query --ex-interlinguis --cum-interlinguis=P402,P1566,P1937,P6555,P8119"
-# printf "P1585\n" | ./999999999/0/1603_3_12.py \
-#   --actionem-sparql --de=P --query --ex-interlinguis --cum-interlinguis=P402,P1566,P1937,P6555,P8119 \
-#   | ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
-#   > 999999/0/P1585.tm.hxl.csv
-
-# sleep 5
-# echo "--actionem-sparql --de=P --query --lingua-divisioni=20 --lingua-paginae=1"
-# printf "P1585\n" | ./999999999/0/1603_3_12.py \
-#   --actionem-sparql --de=P --query --lingua-divisioni=20 --lingua-paginae=1 \
-#   | ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
-#   > 999999/0/P1585.wikiq~1-20.hxl.csv
-
-# sleep 5
-# echo "--actionem-sparql --de=P --query --lingua-divisioni=20 --lingua-paginae=2"
-# printf "P1585\n" | ./999999999/0/1603_3_12.py \
-#   --actionem-sparql --de=P --query --lingua-divisioni=20 --lingua-paginae=2 \
-#   | ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
-#   > 999999/0/P1585.wikiq~2-20.hxl.csv
-
-# sleep 5
-# echo "--actionem-sparql --de=P --query --lingua-divisioni=20 --lingua-paginae=3"
-# printf "P1585\n" | ./999999999/0/1603_3_12.py \
-#   --actionem-sparql --de=P --query --lingua-divisioni=20 --lingua-paginae=3 \
-#   | ./999999999/0/1603_3_12.py --actionem-sparql --csv --hxltm \
-#   > 999999/0/P1585.wikiq~3-20.hxl.csv
-
-# echo "hxlmerge..."
-# hxlmerge --keys='#item+conceptum+codicem' \
-#   --tags='#item+rem' \
-#   --merge="999999/0/P1585.wikiq~2-20.hxl.csv" \
-#   "999999/0/P1585.wikiq~1-20.hxl.csv" \
-#   >"999999/0/P1585.wikiq~1+2-20.hxl.csv"
-
-# sed -i '1d' "999999/0/P1585.wikiq~1+2-20.hxl.csv"
-
-# hxlmerge --keys='#item+conceptum+codicem' \
-#   --tags='#item+rem' \
-#   --merge="999999/0/P1585.wikiq~3-20.hxl.csv" \
-#   "999999/0/P1585.wikiq~1+2-20.hxl.csv" \
-#   >"999999/0/P1585.wikiq~1+2+3-20.hxl.csv"
-
-# sed -i '1d' "999999/0/P1585.wikiq~1+2+3-20.hxl.csv"
-
-# hxlrename \
-#   --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
-#   "999999/0/P1585.wikiq~1+2+3-20.hxl.csv" \
-#   >"999999/0/P1585.wikiq~1+2+3-20~TEMP.hxl.csv"
-
-# sed -i '1d' "999999/0/P1585.wikiq~1+2+3-20~TEMP.hxl.csv"
-
-# hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
-#   --tags='#item+rem' \
-#   --merge="999999/0/P1585.wikiq~1+2+3-20~TEMP.hxl.csv" \
-#   "999999/0/P1585.tm.hxl.csv" \
-#   >"999999/0/1679_45_16_76_2.no11.hxl.csv"
-
-# sed -i '1d' "999999/0/1679_45_16_76_2.no11.hxl.csv"
-
-# file_hotfix_duplicated_merge_key "999999/0/1679_45_16_76_2.no11.hxl.csv" '#item+rem+i_qcc+is_zxxx+ix_wikiq'
-
-# 999999/0/1679_45_16_76_2.no11.hxl.csv
-
-# @TODO eventualmente talvez anotar as propriedades de campos que tem aqui
-#       Cadastro Nacional de Endereços para Fins Estatísticos
-#       https://ftp.ibge.gov.br/Censos/Censo_Demografico_2010/Cadastro_Nacional_de_Enderecos_Fins_Estatisticos/
-
-# @TODO https://geoftp.ibge.gov.br/
-
-# @TODO https://geoftp.ibge.gov.br/organizacao_do_territorio/estrutura_territorial/divisao_territorial/2021/
-# @TODO https://geoftp.ibge.gov.br/cartas_e_mapas/bases_cartograficas_continuas/bc250/versao2021/geopackage/

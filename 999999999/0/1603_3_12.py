@@ -38,6 +38,7 @@
 # TODO: https://sinaahmadi.github.io/posts
 #       /10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
 
+from dataclasses import replace
 import os
 import sys
 import argparse
@@ -101,7 +102,12 @@ __EPILOGUM__ = """
 > 999999/0/P1585~P402+P1566+P1937+P6555+P8119.tm.hxl.csv
 
     printf "P1585\\n" | {0} --actionem-sparql --de=P --query \
---lingua-divisioni=50 --lingua-paginae=1
+--lingua-divisioni=20 --lingua-paginae=1 --optimum
+
+    printf "P1585\\n" | {0} --actionem-sparql --de=P --query \
+--lingua-divisioni=20 --lingua-paginae=1 --optimum \
+| {0} --actionem-sparql --csv --hxltm --optimum \
+> 999999/0/P1585~P402+P1566+P1937+P6555+P8119.wikiq~1~20.tm.hxl.csv
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
@@ -312,7 +318,7 @@ class CS1603z3z12:
 
         return self
 
-    def query_q(self):
+    def query_q(self, optimum: bool = False):
         langpair_full = self._query_linguam()
         self.D1613_1_51_langpair = self._query_linguam_limit(langpair_full)
 
@@ -340,18 +346,24 @@ class CS1603z3z12:
         # print('select', self.D1613_1_51_langpair)
         # print('select', select)
         # print('filter_otional', filter_otional)
+        if optimum:
+            est_optimum = '# '
+        else:
+            est_optimum = ''
+
         term = """
 SELECT {select}
 WHERE
 {{
   VALUES ?item {{ {qitems} }}
-  bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
+  {est_optimum}bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
 {langfilter}
 }}
-ORDER BY ASC (?id_numeric)
+{est_optimum}ORDER BY ASC (?id_numeric)
         """.format(
             qitems=" ".join(qid),
             select=" ".join(select),
+            est_optimum=est_optimum,
             langfilter="\n".join(filter_otional_done),
         )
         # """.format(qitems = " ".join(self.qid))
@@ -377,7 +389,7 @@ ORDER BY ASC (?id_numeric)
 #     #ORDER BY ASC (?id_numeric)
 #   }
 # }
-    def query_p(self):
+    def query_p(self, optimum: bool = True):
         langpair_full = self._query_linguam()
         self.D1613_1_51_langpair = self._query_linguam_limit(langpair_full)
 
@@ -406,6 +418,10 @@ ORDER BY ASC (?id_numeric)
 
         filter_optional_done = ['  ' + x for x in filter_otional]
 
+        if optimum:
+            est_optimum = '# '
+        else:
+            est_optimum = ''
 #         term = """
 # SELECT {select}
 # WHERE
@@ -429,20 +445,21 @@ SELECT {select} WHERE {{
     }}
   }}
 {langfilter}
-  # bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
+  {est_optimum}bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) .
 }}
-# ORDER BY ASC (?id_numeric)
+{est_optimum}ORDER BY ASC (?id_numeric)
         """.format(
             wikidata_p=_pid,
             qitems=" ".join(qid),
             select=" ".join(select),
+            est_optimum=est_optimum,
             langfilter="\n".join(filter_optional_done),
         )
 
         # [TRY IT ↗]()
         return term
 
-    def query_p_ex_interlinguis(self):
+    def query_p_ex_interlinguis(self, optimum: bool = False):
         qid = ['wd:' + x for x in self.qid if isinstance(x, str)]
 
         _pid = self.pid[0]
@@ -473,6 +490,8 @@ SELECT {select} WHERE {{
             )
         filter_optional_done = ['  ' + x for x in filter_otional]
 
+        # Not implemented optimum here
+
         term = """
 SELECT DISTINCT {select} WHERE {{
   {{
@@ -485,7 +504,6 @@ SELECT DISTINCT {select} WHERE {{
 {optional_filters}
 }}
 GROUP BY {group_by}
-# ORDER BY ASC (?wikidata_p_value)
 ORDER BY ASC (?item__conceptum__codicem)
         """.format(
             wikidata_p=_pid,
@@ -497,17 +515,18 @@ ORDER BY ASC (?item__conceptum__codicem)
 
         return term
 
-    def exportatum_sparql(self):
+    def exportatum_sparql(self, optimum: bool = False):
         resultatum = []
         # resultatum.append('#TODO')
         # resultatum.append(str(self.D1613_1_51))
         if len(self.qid) > 0:
-            resultatum.append(self.query_q())
+            resultatum.append(self.query_q(optimum=optimum))
         if len(self.pid) > 0:
             if self.ex_interlinguis:
-                resultatum.append(self.query_p_ex_interlinguis())
+                resultatum.append(
+                    self.query_p_ex_interlinguis(optimum=optimum))
             else:
-                resultatum.append(self.query_p())
+                resultatum.append(self.query_p(optimum=optimum))
         return resultatum
 
 
@@ -721,6 +740,7 @@ class CLI_2600:
             'Avoid heavy queries and try to off-load responsability '
             '(like sorting) to client-side operations)',
             metavar='optimum',
+            const=True,
             nargs='?'
         )
 
@@ -787,7 +807,8 @@ class CLI_2600:
                     elif self.pyargs.de == 'Q':
                         cs1603_3_12.est_wikidata_q(codicem)
 
-                quod_query = cs1603_3_12.exportatum_sparql()
+                quod_query = cs1603_3_12.exportatum_sparql(
+                    optimum=self.pyargs.optimum)
                 # tabulam_numerae = ['TODO']
                 # return self.output(tabulam_numerae)
                 return self.output(quod_query)
@@ -865,6 +886,8 @@ class CLI_2600:
                 # @TODO: --tsv --hxltm is know to be bugged (not sure if
                 #        Wikidata result already skip values)
 
+                # def sortq:
+
                 if self.pyargs.hxltm:
                     result_string = r.text.strip()
 
@@ -872,12 +895,25 @@ class CLI_2600:
                     #        however no testing sample exists at the moment.
                     #        Eventually needs be checked.
                     lines = result_string.splitlines()
-                    # caput = hxltm_hastag_de_csvhxlated(next(iter(lines)).split(","))
                     caput_crudum = lines.pop(0)
                     # print('caput_crudum', caput_crudum)
                     caput = hxltm_hastag_de_csvhxlated(caput_crudum.split(','))
-                    print(separator.join(caput))
-                    print("\n".join(lines))
+
+                    if self.pyargs.optimum:
+                        if caput[0] == '#item+conceptum+codicem':
+
+                            neo_lines = sorted(
+                                lines, key=lambda x: sort_hxltm_q(x))
+                            print(separator.join(caput))
+                            print("\n".join(neo_lines))
+                        else:
+                            # Likely error message?
+                            print(separator.join(caput))
+                            print("\n".join(lines))
+                            # raise NotImplementedError('@TODO --optimum')
+                    else:
+                        print(separator.join(caput))
+                        print("\n".join(lines))
 
                     # reader = csv.reader(lines, delimiter="\t")
                     # caput = hxltm_hastag_de_csvhxlated(next(reader))
@@ -922,31 +958,27 @@ class CLI_2600:
 
         return self.EXIT_OK
 
-# if not sys.stdin.isatty():
-#     print ("not sys.stdin.isatty")
-# else:
-#     print ("is  sys.stdin.isatty")
 
-# import fcntl
-# import os
-# import sys
+def sort_hxltm_q(lineam: str, index: int = 0, separatum: str = ','):
+    """sort_hxltm_q
 
-# # make stdin a non-blocking file
-# fd = sys.stdin.fileno()
-# fl = fcntl.fcntl(fd, fcntl.F_GETFL)
-# fcntl.fcntl(fd, fcntl.F_SETFL, fl | os.O_NONBLOCK)
+    Helper to order
 
-# try:
-#     print(sys.stdin.read())
-# except:
-#     print('No input')
+    Args:
+        item (_type_): _description_
 
-# from sys import stdin
-# from os import isatty
-
-# is_pipe = not isatty(stdin.fileno())
-
-# print('is_pipe', is_pipe)
+    Returns:
+        _type_: _description_
+    """
+    # Note: not a good idea do this way; it may work for first items
+    lineam_list = lineam.split(separatum)
+    # if isinstance(clavem, int):
+    #     return clavem
+    if lineam_list[index].startswith('Q'):
+        # return int(clavem.replace('Q', ''))
+        # raise ValueError(lineam_list[index])
+        return int(lineam_list[index].replace('Q', ''))
+    return int(lineam_list[index])
 
 
 if __name__ == "__main__":
