@@ -127,6 +127,8 @@ file_update_if_necessary() {
   formatum_archivum="$1"
   fontem_archivum="$2"
   objectivum_archivum="$3"
+  # https://en.wiktionary.org/wiki/est#Latin
+  # https://en.wiktionary.org/wiki/copia#Latin
 
   # echo "starting file_update_if_necessary ..."
   # echo "fontem_archivum $fontem_archivum"
@@ -134,7 +136,6 @@ file_update_if_necessary() {
 
   echo "${FUNCNAME[0]} ... [$fontem_archivum] --> [$objectivum_archivum]"
 
-  # TODO: implement frictionless validate
   case "${formatum_archivum}" in
   csv)
     is_valid=$(csvclean --dry-run "$fontem_archivum")
@@ -182,6 +183,78 @@ file_update_if_necessary() {
   fi
 
   # echo "done file_update_if_necessary ..."
+  return 0
+}
+
+#######################################
+# Copy file
+#
+# Globals:
+#   None
+# Arguments:
+#   numerordinatio_fonti
+#   numerordinatio_objectivo
+#   archivum_extensione
+#   est_temporarium_fontem [1]
+#   est_temporarium_objectivum [0]
+#
+# Outputs:
+#   1 (if need reload, Void if no reload need)
+#######################################
+archivum_copiae() {
+  numerordinatio_fonti="$1"
+  numerordinatio_objectivo="$2"
+  archivum_extensione="${3}"
+  est_temporarium_fontem="${4:-"1"}"
+  est_temporarium_objectivum="${5:-"0"}"
+  # TODO: maybe do some renaming if arhive contains other data?
+
+  # archīvum, n, s, nominativus, https://en.wiktionary.org/wiki/archivum
+  # cōpiae, f, s, dativus, https://en.wiktionary.org/wiki/est#Latin
+  # extēnsiōne, f, s, dativus, https://en.wiktionary.org/wiki/extensio#Latin
+  # fontī, m, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
+  # objectīvō, n, s, dativus, hhttps://en.wiktionary.org/wiki/objectivus#Latin
+
+  _path_fonti=$(numerordinatio_neo_separatum "$numerordinatio_fonti" "/")
+  _nomen_fonti=$(numerordinatio_neo_separatum "$numerordinatio_fonti" "_")
+
+  _path_objectivo=$(numerordinatio_neo_separatum "$numerordinatio_objectivo" "/")
+  _nomen_objectivo=$(numerordinatio_neo_separatum "$numerordinatio_objectivo" "_")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_fontem}/$_path_fonti/$_nomen_fonti.${archivum_extensione}"
+  objectivum_archivum="${_basim_objectivum}/$_path_objectivo/$_nomen_objectivo.${archivum_extensione}"
+
+  echo "${FUNCNAME[0]} ... [$fontem_archivum] --> [$objectivum_archivum]"
+
+  if [ -f "$objectivum_archivum" ]; then
+    objectivum_archivum_hash=$(sha256sum "$objectivum_archivum" | cut -d ' ' -f 1)
+    fontem_archivum_hash=$(sha256sum "$fontem_archivum" | cut -d ' ' -f 1)
+    if [[ "$fontem_archivum_hash" != "$objectivum_archivum_hash" ]]; then
+      echo "INFO: Not equal. Copy now..."
+      # echo "Not equal. Copy now... [$fontem_archivum] --> [$objectivum_archivum]"
+      # sha256sum "$objectivum_archivum"
+      # sha256sum "$fontem_archivum"
+      rm "$objectivum_archivum"
+      cp "$fontem_archivum" "$objectivum_archivum"
+    else
+      echo "INFO: already equal. No need to copy"
+    fi
+  else
+    echo "INFO: copy for the first time"
+    cp "$fontem_archivum" "$objectivum_archivum"
+  fi
+
   return 0
 }
 
@@ -2558,6 +2631,62 @@ fi
 #   0: success; have the tag
 #   1: fail; do not have the tag
 #######################################
+quaero__ix_n1603ia() {
+  numerordinatio="$1"
+  ix_n1603ia="$2"
+  condicio="${4-">="}"
+  numerum="${3-"1"}"
+
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+
+  # resultatum=$("${ROOTDIR}/999999999/0/1603_1.py" \
+  #   --ex-opere-temporibus='cdn' \
+  #   --quaero-ix_n1603ia='{victionarium_q}>=1' \
+  #   --quaero-numerordinatio="$_nomen")
+
+  # _rule='{victionarium_q}>=1'
+  _rule="{${ix_n1603ia}}${condicio}${numerum}"
+
+  # resultatum=$("${ROOTDIR}/999999999/0/1603_1.py" \
+  #   --methodus='opus-temporibus' \
+  #   --ex-opere-temporibus='cdn' \
+  #   --quaero-ix_n1603ia='{victionarium_q}>=1' \
+  #   --quaero-numerordinatio="$_nomen")
+
+  resultatum=$("${ROOTDIR}/999999999/0/1603_1.py" \
+    --methodus='opus-temporibus' \
+    --ex-opere-temporibus='cdn' \
+    --quaero-ix_n1603ia="$_rule" \
+    --quaero-numerordinatio="$_nomen")
+
+  # resultatum=${resultatum//[[:blank:]]/}
+
+  # echo "resultatum"
+  # echo "[$resultatum]"
+
+  if [ -z "$resultatum" ]; then
+    echo 1
+    return 1
+    # return 0
+  else
+    return 0
+    # return 1
+  fi
+}
+
+#######################################
+# Check if Numerodinatio needs Wikidata Q
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   (empty)
+# Returns:
+#   0: success; have the tag
+#   1: fail; do not have the tag
+#######################################
 quaero__ix_n1603ia__victionarium_q() {
   numerordinatio="$1"
 
@@ -2839,8 +2968,34 @@ actiones_completis_locali() {
   normal=$(tput sgr0)
   printf "\t%40s\n" "${blue}${FUNCNAME[0]} [$numerordinatio]${normal}"
 
-  file_convert_csv_de_downloaded_xlsx "$numerordinatio" "1" "1"
-  file_convert_numerordinatio_de_hxltm "$numerordinatio" "1" "0"
+  # file_convert_csv_de_downloaded_xlsx "$numerordinatio" "1" "1"
+  # file_convert_numerordinatio_de_hxltm "$numerordinatio" "1" "0"
+
+  # if have origo_per_amanuenses-nnn or not have origo_per_automata, we assume
+  # comes form the main library index
+  if [ -z "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_amanuenses" )" ] || [ -n "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_automata" )" ]; then
+    file_convert_csv_de_downloaded_xlsx "$numerordinatio" "1" "1"
+    file_convert_numerordinatio_de_hxltm "$numerordinatio" "1" "0"
+  fi
+
+  # scrībae, m, pl, Nominativus, https://en.wiktionary.org/wiki/scriba#Latin
+  # automatō, n, s, nominativus, https://en.wiktionary.org/wiki/automaton#Latin
+  # automatīs, m, pl, ablativus https://en.wiktionary.org/wiki/amanuensis#Latin
+  # automata, n, pl, accusativus
+  # āmanuēnsibus, m, pl, ablativus, 
+  # āmanuēnsīs, m, pl, accuativus, 
+
+  # ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+  # orīgō, f, s, nominativus, https://en.wiktionary.org/wiki/origo#Latin
+  # per (+ accusative), https://en.wiktionary.org/wiki/per#Latin
+  # orīgō ex āmanuēnsibus
+  # orīgō ex automatīs
+  # ...
+  # orīgō per āmanuēnsēs
+  # orīgō per automata
+  # Final:
+  #   - origo per automata. origo_per_automata-50
+  #   - origo per amanuenses. origo_per_amanuenses-50
 
   # @TODO: implement decent check if need download Wikidata Q again
   #        now is hardcoded as "1" on last parameter
@@ -2853,14 +3008,31 @@ actiones_completis_locali() {
     file_convert_rdf_skos_ttl_de_numerordinatio11 "$numerordinatio"
     file_convert_tmx_de_numerordinatio11 "$numerordinatio"
     file_convert_tbx_de_numerordinatio11 "$numerordinatio"
-  # else
-  #   echo "noop"
+  else
+    # echo "noop"
+    if [ -z "$(quaero__ix_n1603ia "$numerordinatio" "ontologia" )" ]; then
+      file_convert_rdf_skos_ttl_de_numerordinatio11 "$numerordinatio"
+      file_convert_tmx_de_numerordinatio11 "$numerordinatio"
+      file_convert_tbx_de_numerordinatio11 "$numerordinatio"
+    fi
   fi
 
-  neo_codex_copertae_de_numerordinatio "$numerordinatio" "0" "0"
-  neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
-  neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
-  neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
+  if [ -n "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_automata" )" ]; then
+    neo_codex_copertae_de_numerordinatio "$numerordinatio" "0" "0"
+    neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
+    neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
+    neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
+  else
+    echo "@TODO: ebook documentation disabled for automated imports;"
+    echo "       we need to only document what contains without print"
+    echo "       item by item on the PDF (compile time and final size"
+    echo "       make it less useful)."
+  fi
+
+  # neo_codex_copertae_de_numerordinatio "$numerordinatio" "0" "0"
+  # neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
+  # neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
+  # neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
   temp_save_status "$numerordinatio" "locale"
 
 }

@@ -53,35 +53,21 @@ ROOTDIR="$(pwd)"
 
 #### Manual action, TEST locally, one per time, END ----------------------------
 
-## Full drill (remote, specific item)
-# actiones_completis_publicis "1603_63_101"
-# actiones_completis_publicis "1603_25_1"
-# actiones_completis_publicis "1603_99_123"
-# actiones_completis_publicis "1603_1_8000"
-# actiones_completis_locali "1679_1_1"
-# deploy_0_9_markdown
+
+#### main ______________________________________________________________________
+file_download_1603_xlsx "1"
+actiones_completis_locali "1603_1_1"
 
 
-#### tests _____________________________________________________________________
+actiones_completis_locali "1603_45_16_76_2"
 
-# TODO: deal with timeouts. Some links
-#       - https://phabricator.wikimedia.org/T179879
-#       - https://phabricator.wikimedia.org/T166139
-#       - https://github.com/blazegraph/database/wiki/QueryHints
+exit 0
 
-# wikidata_p_ex_interlinguis "1679_45_16_76_2" "1" "1" "P1585" "P402,P1566,P1937,P6555,P8119"
+wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "4" "20"
+archivum_copiae "1679_45_16_76_2" "1603_45_16_76_2" "no1.tm.hxl.csv" "1" "0"
+archivum_copiae "1679_45_16_76_2" "1603_45_16_76_2" "no11.tm.hxl.csv" "1" "0"
 
-# sleep 10
-# wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "1" "20"
-
-# sleep 10
-# wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "2" "20"
-
-# sleep 10
-# wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "3" "20"
-
-# sleep 10
-# wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "4" "20"
+# exit 0
 
 ### //Dicionários de bases de dados espaciais do Brasil//@por-Latn
 wikidata_p_ex_totalibus "1679_45_16_76_2" "1" "1" "P1585" "P402,P1566,P1937,P6555,P8119"
