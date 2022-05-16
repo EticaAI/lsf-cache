@@ -331,7 +331,9 @@ deploy_1603_45_16_global_admX_unicum() {
 
   mv "${objectivum_archivum_temporarium}" "$objectivum_archivum"
 }
+#### main ______________________________________________________________________
 
+### From XLSX, start -----------------------------------------------------------
 # bootstrap_999999_1603_45_16_fetch_data
 # bootstrap_999999_1603_45_16
 # bootstrap_999999_1603_45_16_metadata_pre_deploy
@@ -348,5 +350,32 @@ deploy_1603_45_16_global_admX_unicum() {
 # deploy_1603_45_16_global_admX 6
 
 deploy_1603_45_16_global_admX_unicum
+
+### From XLSX, end -------------------------------------------------------------
+
+### From CODV2API, start -------------------------------------------------------
+# @see https://github.com/UGA-ITOSHumanitarianGIS/CODV2API
+# @see https://apps.itos.uga.edu/CODV2API/api/v1/themes/cod-ab/locations/BRA
+# @see https://beta.itos.uga.edu/CODV2API/api/v1/themes
+# @see - https://gistmaps.itos.uga.edu/arcgis/rest/services/COD_External
+#        - https://gistmaps.itos.uga.edu/arcgis/rest/services/COD_External/MOZ_PT/MapServer
+
+
+### From CODV2API, end ---------------------------------------------------------
+
+### From HDX, start -------------------------------------------------------
+# @see https://data.humdata.org/dashboards/cod
+# @see https://data.humdata.org/dataset/cod-ab-bra
+# @see https://data.humdata.org/dataset/cod-ab-ukr
+# @see https://data.humdata.org/dataset/cod-ab-eth
+# ...
+# @see https://geonode.wfp.org/
+
+### From HDX, end --------------------------------------------------------------
+
+### FROM OCHA Vocabularies, start ----------------------------------------------
+# @see https://vocabulary.unocha.org/
+# @see https://data.humdata.org/dataset/countries-and-territories
+# @see https://docs.google.com/spreadsheets/d/1NjSI2LaS3SqbgYc0HdD8oIb7lofGtiHgoKKATCpwVdY/edit#gid=1088874596
 
 set +x

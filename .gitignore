@@ -19,7 +19,6 @@ node_modules
 *.TEMP.*
 
 999999/0/
-!999999/0/.gitkep
 # *.xml
 # *.tmx
 # *.tbx
@@ -30,6 +29,10 @@ node_modules
 *.otf
 *.db
 *.sqlite
+# *.wikiq~1_20*
+
+# Example: 999999/1679/45/16/76/2/1679_45_16_76_2.wikiq~2_20.tm.hxl.csv
+*.wikiq~[0-9]*_[0-9]*.tm.hxl.csv
 
 # These files generate by software start from 30mb and up.
 # Not need to be commited on repository.

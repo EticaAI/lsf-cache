@@ -181,6 +181,16 @@ class CS1603z3z12:
     [extended_summary]
     """
 
+    # For items we already use and which SPARQL would return
+    # 'http://www.wikidata.org/entity/Q123' instead of 'Q123'
+    # Examples:
+    # - https://www.wikidata.org/wiki/Property:P131
+    # - https://www.wikidata.org/wiki/Property:P17
+    wikidata_entity_p = [
+        'P17',
+        'P131'
+    ]
+
     def __init__(self):
         self.D1613_1_51 = self._init_1613_1_51_datum()
 
@@ -198,6 +208,7 @@ class CS1603z3z12:
 
         self.qid = []
         self.pid = []
+        self.identitas_ex_wikiq = False
         self.ex_interlinguis = False
         self.cum_interlinguis = []
 
@@ -305,6 +316,9 @@ class CS1603z3z12:
             self.pid.append(wikidata_codicem)
 
         return self
+
+    def est_wikidata_p_identitas_ex_wikiq(self, statum: bool = True):
+        self.identitas_ex_wikiq = statum
 
     def est_wikidata_p_interlinguis(self, statum: bool = True):
         self.ex_interlinguis = statum
@@ -464,25 +478,65 @@ SELECT {select} WHERE {{
 
         _pid = self.pid[0]
 
-        select = [
-            '(?wikidata_p_value AS ?item__conceptum__codicem)',
-            '(STRAFTER(STR(?item), "entity/") AS '
-            '?item__rem__i_qcc__is_zxxx__ix_wikiq)'
-        ]
-        group_by = [
-            '?wikidata_p_value',
-            '?item'
-        ]
         filter_otional = []
+
+        if self.identitas_ex_wikiq:
+            select = [
+                # '(?wikidata_p_value AS ?item__conceptum__codicem)',
+                '(?id_numeric AS ?item__conceptum__codicem)',
+                '(STRAFTER(STR(?item), "entity/") AS '
+                '?item__rem__i_qcc__is_zxxx__ix_wikiq)'
+            ]
+            group_by = [
+                # '?wikidata_p_value',
+                '?id_numeric',
+                '?item'
+            ]
+            order_by = [
+                '?item__conceptum__codicem'
+            ]
+            filter_otional.append(
+                "bind(xsd:integer(strafter(str(?item), 'Q')) as ?id_numeric) ."
+            )
+
+        else:
+            select = [
+                '(?wikidata_p_value AS ?item__conceptum__codicem)',
+                '(STRAFTER(STR(?item), "entity/") AS '
+                '?item__rem__i_qcc__is_zxxx__ix_wikiq)'
+            ]
+            group_by = [
+                '?wikidata_p_value',
+                '?item'
+            ]
+            order_by = [
+                '?item__conceptum__codicem'
+            ]
+
         # print('oiii',  self.cum_interlinguis)
         # cum_interlinguis = []
         for item in self.cum_interlinguis:
             # print('item')
             # (GROUP_CONCAT(?subdivisionLabel; separator = ", ") as ?subdivisionLabels)
             # select.append('?item__rem__i_qcc__is_zxxx__ix_wikip{0}'.format(
-            select.append('(GROUP_CONCAT(DISTINCT ?p{0}_values; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wikip{0})'.format(
-                item
-            ))
+
+            # @TODO maybe this will not work as expected if wikidata_entity_p
+            #       have more than one value, but this already is an exception
+            if 'P' + item in self.wikidata_entity_p:
+
+                # (GROUP_CONCAT(DISTINCT STRAFTER(STR(?p131_values), "entity/"); separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wikip131)
+                # select.append(
+                #     '(STRAFTER(STR(?p{0}_values), "entity/") '
+                #     'AS ?item__rem__i_qcc__is_zxxx__ix_wikip{0})'.format(
+                #     item
+                # ))
+                select.append('(GROUP_CONCAT(DISTINCT STRAFTER(STR(?p{0}_values), "entity/"); separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wikip{0})'.format(
+                    item
+                ))
+            else:
+                select.append('(GROUP_CONCAT(DISTINCT ?p{0}_values; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wikip{0})'.format(
+                    item
+                ))
             # OPTIONAL { ?item wdt:P6555 ?item__rem__i_qcc__is_zxxx__ix_wikip6555 . }
             filter_otional.append(
                 'OPTIONAL { ?item wdt:P' + item +
@@ -504,12 +558,13 @@ SELECT DISTINCT {select} WHERE {{
 {optional_filters}
 }}
 GROUP BY {group_by}
-ORDER BY ASC (?item__conceptum__codicem)
+ORDER BY ASC ({order_by})
         """.format(
             wikidata_p=_pid,
             qitems=" ".join(qid),
             select=" ".join(select),
             group_by=" ".join(group_by),
+            order_by=" ".join(order_by),
             optional_filters="\n".join(filter_optional_done),
         )
 
@@ -614,6 +669,7 @@ class CLI_2600:
             const=True,
             nargs='?'
         )
+
         # cum (+ablativus), https://en.wiktionary.org/wiki/cum#Latin
         neo_codex.add_argument(
             '--cum-interlinguis',
@@ -625,6 +681,20 @@ class CLI_2600:
             # default='mul-Zyyy',
             # nargs='?'
             type=lambda x: x.split(',')
+        )
+
+        # identitās, f, s, nom., https://en.wiktionary.org/wiki/identitas#Latin
+        # ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+        # wikiq
+        neo_codex.add_argument(
+            '--identitas-ex-wikiq',
+            help='For query generation totally out of Wikidata P, '
+            'use this option if the reference P identifier is not fully '
+            'numeric (like brazilian URN Lex and CNPJ)',
+            metavar='',
+            dest='identitas_ex_wikiq',
+            const=True,
+            nargs='?'
         )
 
         neo_codex.add_argument(
@@ -797,13 +867,20 @@ class CLI_2600:
                     # TODO: deal with cases were have more than WikiQ
                     # print(self.pyargs)
                     if self.pyargs.de == 'P':
+
                         if self.pyargs.cum_interlinguis and \
                                 len(self.pyargs.cum_interlinguis):
                             cs1603_3_12.est_wikidata_p_cum_interlinguis(
                                 self.pyargs.cum_interlinguis)
+
                         if self.pyargs.ex_interlinguis == True:
                             cs1603_3_12.est_wikidata_p_interlinguis(True)
+
+                        if self.pyargs.identitas_ex_wikiq == True:
+                            cs1603_3_12.est_wikidata_p_identitas_ex_wikiq(True)
+
                         cs1603_3_12.est_wikidata_p(codicem)
+
                     elif self.pyargs.de == 'Q':
                         cs1603_3_12.est_wikidata_q(codicem)
 

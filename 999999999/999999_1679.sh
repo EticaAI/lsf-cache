@@ -28,6 +28,28 @@ set -e
 
 # time HTTPS_PROXY="socks5://127.0.0.1:9050" ./999999999/999999_1679.sh
 
+# @TODO: considerar entrar nesses Wikidata projects
+#        - https://www.wikidata.org/wiki/Wikidata:WikiProject_Brazilian_Laws
+#        - https://meta.wikimedia.org/wiki/Wiki_Movement_Brazil_User_Group/pt-br
+#        - https://www.wikidata.org/wiki/Wikidata:WikiProject_Hospitals
+# @TODO: potenciais listas em breve
+#        - https://www.wikidata.org/wiki/Wikidata:WikiProject_Medicine/Hospitals_by_country/Brazil
+#        - https://pt.wikipedia.org/wiki/Lista_de_hospitais_universit%C3%A1rios
+#        - https://pt.wikipedia.org/wiki/Lista_de_hospitais_do_Cear%C3%A1
+#        - pontos de entrada
+#          - https://www.wikidata.org/wiki/Wikidata:WikiProject_Hospitals/Properties
+#          - https://www.wikidata.org/wiki/Wikidata:WikiProject_Companies/Properties
+#            - Caso de uso: nome fantasia e nome oficial de hospitais e afins
+#
+# @TODO:
+#        - ftp://ftp.datasus.gov.br/cnes
+#        - ftp://ftp.datasus.gov.br/cnes/Download/SCNES_DICIONARIO_DE_DADOS.ZIP
+#        - ftp://ftp.datasus.gov.br/cnes/BASE_DE_DADOS_CNES_202204.ZIP
+#          - tbEstabelecimento202204.csv
+#        - Ver também
+#          - https://wiki.saude.gov.br/cnes/index.php/Principais_Conceitos
+#        - https://cnes.datasus.gov.br/pages/downloads/arquivosOutros.jsp
+
 # ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_45_31 --codex-in-tabulam-json | jq
 # ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_45_31 --codex-in-tabulam-json > 1603/45/31/1603_45_31.mul-Latn.tab.json
 # https://commons.wikimedia.org/wiki/Data:Sandbox/EmericusPetro/Example.tab
@@ -44,13 +66,17 @@ ROOTDIR="$(pwd)"
 #### Manual action, TEST locally, one per time, START --------------------------
 # Download entire XLSX to local temp
 # file_download_1603_xlsx "1"
-# actiones_completis_locali "1603_1_1"
-# actiones_completis_locali "1603_1_7"
-# actiones_completis_locali "1603_1_51"
-
 # actiones_completis_locali "1679_1_1"
 
 
+./999999999/0/999999999_10263485.py --help
+
+# https://cnes.datasus.gov.br/pages/downloads/arquivosOutros.jsp
+# ftp://ftp.datasus.gov.br/cnes/CNESBRASIL.ZIP
+
+wget ftp://ftp.datasus.gov.br/cnes/CNESBRASIL.ZIP
+
+exit 0
 #### Manual action, TEST locally, one per time, END ----------------------------
 
 
@@ -58,40 +84,27 @@ ROOTDIR="$(pwd)"
 file_download_1603_xlsx "1"
 actiones_completis_locali "1603_1_1"
 
-
-actiones_completis_locali "1603_45_16_76_2"
-
-exit 0
-
-wikidata_p_ex_linguis "1679_45_16_76_2" "1" "1" "P1585" "4" "20"
+## Create "1603_45_16_76_2" (refs IBGE municipality) only from Wikidata, start -
+# @TODO: this is just a quick test; the ideal is buld from autorative
+#        references here https://servicodados.ibge.gov.br/api/docs/localidades
+### //Dicionários de bases de dados espaciais do Brasil//@por-Latn
+wikidata_p_ex_totalibus "1679_45_16_76_2" "1" "1" "P1585" "P1585,P17,P131,P402,P1566,P1937,P6555,P8119"
 archivum_copiae "1679_45_16_76_2" "1603_45_16_76_2" "no1.tm.hxl.csv" "1" "0"
 archivum_copiae "1679_45_16_76_2" "1603_45_16_76_2" "no11.tm.hxl.csv" "1" "0"
-
-# exit 0
-
-### //Dicionários de bases de dados espaciais do Brasil//@por-Latn
-wikidata_p_ex_totalibus "1679_45_16_76_2" "1" "1" "P1585" "P402,P1566,P1937,P6555,P8119"
+actiones_completis_locali "1603_45_16_76_2"
 
 ### P4251 //número da legenda no TSE//@por-Latn
-wikidata_p_ex_interlinguis "1679_3_12_4251" "1" "1" "P4251" ""
+wikidata_p_ex_interlinguis "1679_3_12_4251" "1" "1" "P4251" "P4251" "0"
 
 ### P6204 //Cadastro Nacional da Pessoa Jurídica//@por-Latn
-# wikidata_p_ex_interlinguis "1679_3_12_6204" "1" "1" "P6204" ""
-#     ValueError: invalid literal for int() with base 10: '00.317.929/0001-49'
+wikidata_p_ex_interlinguis "1679_3_12_6204" "1" "1" "P6204" "P6204,P17,P131"  "1"
 
 ### P6555 //identificador de Unidade Eleitoral brasileira//@por-Latn
-wikidata_p_ex_interlinguis "1679_3_12_6555" "1" "1" "P6555" ""
+wikidata_p_ex_interlinguis "1679_3_12_6555" "1" "1" "P6555" "P6555,P131" "0"
 
 ### P9119 //Identificador LeXML Brasil//@por-Latn
-# wikidata_p_ex_interlinguis "1679_3_12_9119" "1" "1" "P9119" ""
-#     ValueError: invalid literal for int() with base 10: 'urn:lex:br:advocacia.geral.uniao;procuradoria.geral.federal:portaria:2003-06-13;208'
+wikidata_p_ex_interlinguis "1679_3_12_9119" "1" "1" "P9119" "P9119,P1476" "1"
 
-# @TODO criar funcao que "migre" resultado final arquivos selecionados; exemplo
-#        [1679_45_16_76_2] -> [1603_45_16_76_2]
-#
-#        1679_45_16_76_2.no1.tm.hxl.csv
-#        1679_45_16_76_2.no11.tm.hxl.csv
-#        1679_45_16_76_2.wikiq.tm.hxl.csv
 
 # @see https://servicodados.ibge.gov.br/api/docs/localidades
 # @see https://github.com/search?o=desc&q=ibge&s=stars&type=Repositories
@@ -105,5 +118,5 @@ wikidata_p_ex_interlinguis "1679_3_12_6555" "1" "1" "P6555" ""
 #        - https://servicodados.ibge.gov.br/api/v1/produtos/geociencias
 #        - https://biblioteca.ibge.gov.br/visualizacao/livros/liv100600.pdf
 
-exit 1
+exit 0
 

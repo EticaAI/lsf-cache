@@ -2043,8 +2043,9 @@ wikidata_p_ex_linguis() {
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
 #   est_temporarium_objectivumm (default "0", from real namespace)
-#   ex_wikidata_p
-#   cum_interlinguis
+#   ex_wikidata_p ['P1585'] (@TODO: remove this hardcoded value)
+#   cum_interlinguis ['']
+#   identitas_ex_wikiq ['']
 # Outputs:
 #   File
 #######################################
@@ -2055,6 +2056,7 @@ wikidata_p_ex_interlinguis() {
   ex_wikidata_p="${4:-"P1585"}"
   # P402,P1566,P1937,P6555,P8119
   cum_interlinguis="${5:-""}"
+  identitas_ex_wikiq="${6:-""}"
 
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
@@ -2079,11 +2081,21 @@ wikidata_p_ex_interlinguis() {
   echo "${FUNCNAME[0]} [$objectivum_archivum]"
   # return 0
 
+  if [ "$identitas_ex_wikiq" = "1" ]; then
+    _extras_sparql="--optimum --identitas-ex-wikiq"
+  else
+    _extras_sparql="--optimum "
+  fi
+
+  set -x
+
+  # shellcheck disable=SC2086
   printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
     --actionem-sparql --de=P --query --ex-interlinguis \
-    --cum-interlinguis="$cum_interlinguis" --optimum |
+    --cum-interlinguis="$cum_interlinguis" ${_extras_sparql} |
     "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
       >"$objectivum_archivum_temporarium"
+  set +x
 
   VALIDATE_EXIT_CODE=0
   frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
@@ -2091,31 +2103,19 @@ wikidata_p_ex_interlinguis() {
   if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
     echo "Failed. trying again in 15s [$objectivum_archivum_temporarium]"
     sleep 15
+
+    # shellcheck disable=SC2086
     printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
       --actionem-sparql --de=P --query --ex-interlinguis \
-      --cum-interlinguis="$cum_interlinguis" --optimum |
+      --cum-interlinguis="$cum_interlinguis" ${_extras_sparql} |
       "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
         >"$objectivum_archivum_temporarium"
 
     frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
+
+    # TODO: copy logic from wikidata_p_ex_linguis to try again at least one
+    #       more time and then show better error message
   fi
-  # TODO: copy logic from wikidata_p_ex_linguis
-  # if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
-  #   echo "Failed AGAIN. Trying AGAIN in 30s [$objectivum_archivum_temporarium]"
-  #   sleep 30
-  #   printf "%s\n" "$ex_wikidata_p" | "${ROOTDIR}/999999999/0/1603_3_12.py" \
-  #     --actionem-sparql --de=P --query --ex-interlinguis \
-  #     --cum-interlinguis="$cum_interlinguis" --optimum |
-  #     "${ROOTDIR}/999999999/0/1603_3_12.py" --actionem-sparql --csv --hxltm --optimum \
-  #       >"$objectivum_archivum_temporarium"
-
-  #   frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
-  # fi
-
-  # if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
-  #   echo "Giving up on [$objectivum_archivum_temporarium]. Sorry."
-  #   return 1
-  # fi
 
   # TODO, maybe update file_update_if_necessary to implement frictionless validate
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
@@ -2181,8 +2181,8 @@ wikidata_p_ex_totalibus() {
   # exit 0
   ## Lingual ...................................................................
   # TODO: implementet configurable _lingua_divisioni
-  # for i in {1..19}; do
-  for i in {6..19}; do
+  for i in {1..19}; do
+  # for i in {6..19}; do
     echo "Number: $i"
     sleep 10
     wikidata_p_ex_linguis "$numerordinatio" "1" "1" "$ex_wikidata_p" "$i" "20"
@@ -2973,7 +2973,7 @@ actiones_completis_locali() {
 
   # if have origo_per_amanuenses-nnn or not have origo_per_automata, we assume
   # comes form the main library index
-  if [ -z "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_amanuenses" )" ] || [ -n "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_automata" )" ]; then
+  if [ -z "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_amanuenses")" ] || [ -n "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_automata")" ]; then
     file_convert_csv_de_downloaded_xlsx "$numerordinatio" "1" "1"
     file_convert_numerordinatio_de_hxltm "$numerordinatio" "1" "0"
   fi
@@ -2982,8 +2982,8 @@ actiones_completis_locali() {
   # automatō, n, s, nominativus, https://en.wiktionary.org/wiki/automaton#Latin
   # automatīs, m, pl, ablativus https://en.wiktionary.org/wiki/amanuensis#Latin
   # automata, n, pl, accusativus
-  # āmanuēnsibus, m, pl, ablativus, 
-  # āmanuēnsīs, m, pl, accuativus, 
+  # āmanuēnsibus, m, pl, ablativus,
+  # āmanuēnsīs, m, pl, accuativus,
 
   # ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
   # orīgō, f, s, nominativus, https://en.wiktionary.org/wiki/origo#Latin
@@ -3010,14 +3010,14 @@ actiones_completis_locali() {
     file_convert_tbx_de_numerordinatio11 "$numerordinatio"
   else
     # echo "noop"
-    if [ -z "$(quaero__ix_n1603ia "$numerordinatio" "ontologia" )" ]; then
+    if [ -z "$(quaero__ix_n1603ia "$numerordinatio" "ontologia")" ]; then
       file_convert_rdf_skos_ttl_de_numerordinatio11 "$numerordinatio"
       file_convert_tmx_de_numerordinatio11 "$numerordinatio"
       file_convert_tbx_de_numerordinatio11 "$numerordinatio"
     fi
   fi
 
-  if [ -n "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_automata" )" ]; then
+  if [ -n "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_automata")" ]; then
     neo_codex_copertae_de_numerordinatio "$numerordinatio" "0" "0"
     neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
     neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
