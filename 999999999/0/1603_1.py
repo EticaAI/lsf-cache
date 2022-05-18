@@ -6666,7 +6666,7 @@ class CLI_2600:
                     self.pyargs.objectivum_formato == 'datapackage':
                 return self.output(libraria.imprimere_in_datapackage())
             if self.pyargs.status_in_rdf_skos_ttl or \
-                    self.pyargs.objectivum_formato == 'datapackage':
+                    self.pyargs.objectivum_formato == 'skos':
                 return self.output(libraria.imprimere_in_rdf_skos_ttl())
 
             raise ValueError('--status-quo-[option] ?')

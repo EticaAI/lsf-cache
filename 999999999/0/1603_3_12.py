@@ -30,13 +30,14 @@
 # pytest
 #    python3 -m doctest ./999999999/0/1603_3_12.py
 
-
 # Example with proxy
 # export HTTP_PROXY="socks5://127.0.0.1:9050"
 # export HTTPS_PROXY="socks5://127.0.0.1:9050"
 
 # TODO: https://sinaahmadi.github.io/posts
 #       /10-essential-sparql-queries-for-lexicographical-data-on-wikidata.html
+# TODO https://jena.apache.org/documentation/rdf-star/
+# TODO https://w3c.github.io/rdf-star/reports/#subj_Apache_Jena_
 
 from dataclasses import replace
 import os

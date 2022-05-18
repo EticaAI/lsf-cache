@@ -172,6 +172,34 @@ group by ?disease ?doid ?enLabel
 order by desc(?languages)
 -->
 
+<!--
+ ## Debug query about an item
+
+https://w.wiki/5BAE
+
+https://stackoverflow.com/questions/46383784/wikidata-get-all-properties-with-labels-and-values-of-an-item
+
+```sql
+SELECT ?wdLabel ?ps_Label ?wdpqLabel ?pq_Label {
+  VALUES (?company) {(wd:Q174)}
+  
+  ?company ?p ?statement .
+  ?statement ?ps ?ps_ .
+  
+  ?wd wikibase:claim ?p.
+  ?wd wikibase:statementProperty ?ps.
+  
+  OPTIONAL {
+  ?statement ?pq ?pq_ .
+  ?wdpq wikibase:qualifier ?pq .
+  }
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en" }
+} ORDER BY ?wd ?statement ?ps_
+```
+
+-->
+
 ----
 
 <!-- ### Neo latin term for citizen science

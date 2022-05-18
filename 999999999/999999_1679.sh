@@ -62,23 +62,45 @@ ROOTDIR="$(pwd)"
 # shellcheck source=999999999.lib.sh
 . "$ROOTDIR"/999999999/999999999.lib.sh
 
-
 #### Manual action, TEST locally, one per time, START --------------------------
 # Download entire XLSX to local temp
 # file_download_1603_xlsx "1"
 # actiones_completis_locali "1679_1_1"
 
 
-./999999999/0/999999999_10263485.py --help
+# actiones_completis_locali "1603_45_49"
+# exit 0
 
-# https://cnes.datasus.gov.br/pages/downloads/arquivosOutros.jsp
-# ftp://ftp.datasus.gov.br/cnes/CNESBRASIL.ZIP
+# cat 999999/0/ibge_un_adm2.tm.hxl.csv | ./999999999/0/999999999_54872.py --objectivum-formato=application/x-turtle --archivum-configurationi-ex-fonti=999999999/0/999999999_268072.meta.yml --praefixum-configurationi-ex-fonti=methodus,ibge_un_adm2 > 999999/0/ibge_un_adm2.no1.skos.ttl
 
-wget ftp://ftp.datasus.gov.br/cnes/CNESBRASIL.ZIP
+# cat 999999/0/xmlCNES.tm.hxl.csv | ./999999999/0/999999999_54872.py --objectivum-formato=application/x-turtle --archivum-configurationi-ex-fonti=999999999/0/999999999_10263485.meta.yml --praefixum-configurationi-ex-fonti=methodus,datasus_xmlcnae > 999999/0/xmlCNES.no1.skos.ttl
+
+archivum_unzip "999999/0/0/ftp.datasus.gov.br/cnes/CNESBRASIL.ZIP" "xmlCNES.xml" "999999/0/xmlCNES.xml"
+
+./999999999/0/999999999_10263485.py \
+  --methodus=datasus_xmlcnae --objectivum-formato=hxltm_csv \
+  "999999/0/xmlCNES.xml" >"999999/0/xmlCNES.tm.hxl.csv"
+
+./999999999/0/999999999_10263485.py \
+  --methodus=datasus_xmlcnae --objectivum-formato=hxltm_csv \
+  "999999/0/xmlCNES.xml" >"999999/1603/63/49/76/1603_63_49_76.tm.hxl.csv"
+
+hxlcut --exclude="#meta" "999999/1603/63/49/76/1603_63_49_76.tm.hxl.csv" | hxlcut --skip-untagged | hxladd --before --spec="#item+conceptum+codicem={{#item+rem+i_qcc+is_zxxx+ix_v76vcnes}}" | hxladd --before --spec="#item+conceptum+numerordinatio=1603:63:49:76:{{#item+conceptum+codicem}}" | hxlsort --tags="#item+conceptum+codicem" >"999999/1603/63/49/76/1603_63_49_76.no1.tm.hxl.csv"
+
+sed -i '1d' "999999/1603/63/49/76/1603_63_49_76.no1.tm.hxl.csv"
+
+archivum_copiae "1603_63_49_76" "1603_63_49_76" "no1.tm.hxl.csv" "1" "0"
+
+# exit 1
+
+file_download_1603_xlsx "1"
+actiones_completis_locali "1603_1_1"
+
+# The SKOS generation need optimization. Over 14min. Obviously not optimized
+actiones_completis_locali "1603_63_49_76"
 
 exit 0
 #### Manual action, TEST locally, one per time, END ----------------------------
-
 
 #### main ______________________________________________________________________
 file_download_1603_xlsx "1"
@@ -97,14 +119,13 @@ actiones_completis_locali "1603_45_16_76_2"
 wikidata_p_ex_interlinguis "1679_3_12_4251" "1" "1" "P4251" "P4251" "0"
 
 ### P6204 //Cadastro Nacional da Pessoa Jurídica//@por-Latn
-wikidata_p_ex_interlinguis "1679_3_12_6204" "1" "1" "P6204" "P6204,P17,P131"  "1"
+wikidata_p_ex_interlinguis "1679_3_12_6204" "1" "1" "P6204" "P6204,P17,P131" "1"
 
 ### P6555 //identificador de Unidade Eleitoral brasileira//@por-Latn
 wikidata_p_ex_interlinguis "1679_3_12_6555" "1" "1" "P6555" "P6555,P131" "0"
 
 ### P9119 //Identificador LeXML Brasil//@por-Latn
 wikidata_p_ex_interlinguis "1679_3_12_9119" "1" "1" "P9119" "P9119,P1476" "1"
-
 
 # @see https://servicodados.ibge.gov.br/api/docs/localidades
 # @see https://github.com/search?o=desc&q=ibge&s=stars&type=Repositories
@@ -119,4 +140,3 @@ wikidata_p_ex_interlinguis "1679_3_12_9119" "1" "1" "P9119" "P9119,P1476" "1"
 #        - https://biblioteca.ibge.gov.br/visualizacao/livros/liv100600.pdf
 
 exit 0
-

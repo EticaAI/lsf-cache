@@ -1,0 +1,123 @@
+methodus:
+  datasus_xmlcnae:
+    ### head --bytes 1500 999999/0/xmlCNES.xml > 999999/0/xmlCNES-top.xml
+    # <?xml version="1.0" encoding="ISO-8859-1"?>
+    # <DATAPACKET>
+    #     <METADATA>
+    #         <FIELDS>
+    #             <FIELD attrname="CO_UNIDADE" fieldtype="string" WIDTH="31" />
+    #             <FIELD attrname="NO_FANTASIA" fieldtype="string" WIDTH="60" />
+    #             <FIELD attrname="CO_MUNICIPIO_GESTOR" fieldtype="string" WIDTH="7" />
+    #             <FIELD attrname="CO_SIASUS" fieldtype="string" WIDTH="7" />
+    #             <FIELD attrname="NU_CNPJ" fieldtype="string" WIDTH="14" />
+    #             <FIELD attrname="NU_CPF" fieldtype="string" WIDTH="11" />
+    #             <FIELD attrname="CO_CNES" fieldtype="string" WIDTH="7" />
+    #             <FIELD attrname="DT_ATUALIZACAO" fieldtype="datetime" />
+    #             <FIELD attrname="CO_SIASUS1" fieldtype="string" WIDTH="7" />
+    #             <FIELD attrname="CO_SIASUS2" fieldtype="string" WIDTH="7" />
+    #             <FIELD attrname="CO_SIASUS3" fieldtype="string" WIDTH="7" />
+    #             <FIELD attrname="CO_SIASUS4" fieldtype="string" WIDTH="7" />
+    #             <FIELD attrname="CO_SIASUS5" fieldtype="string" WIDTH="7" />
+    #             <FIELD attrname="TP_UNIDADE" fieldtype="string" WIDTH="2" />
+    #         </FIELDS>
+    #         <PARAMS LCID="2057" />
+    #     </METADATA>
+    #     <ROWDATA>
+    #         <ROW CO_UNIDADE="4205509930639" NO_FANTASIA="SAUDE SERVICOS DE FISIOTERAPIA" CO_MUNICIPIO_GESTOR="420550" NU_CNPJ="34429874000180" CO_CNES="9930639" DT_ATUALIZACAO="20220324" TP_UNIDADE="36" />
+    #         <ROW CO_UNIDADE="5003709920749" NO_FANTASIA="( --removido-- )" CO_MUNICIPIO_GESTOR="500370" NU_CPF="( --removido-- )" CO_CNES="9920749" DT_ATUALIZACAO="20191003" TP_UNIDADE="22" />
+    #         <ROW CO_UNIDADE="5208709931317" NO_FANTASIA="IMPLANTALLE ODONTOLOGIA" CO_MUNICIPIO_GESTOR="520870" NU_CNPJ="30024080000186" CO_CNES="9931317" DT_ATUALIZACAO="20191004" TP_UN
+
+    ## __de_xml_ad_csv é uma gambiarra.
+    __de_xml_ad_csv:
+      - CO_UNIDADE
+      - NO_FANTASIA
+      - CO_MUNICIPIO_GESTOR
+      - CO_SIASUS
+      - NU_CNPJ
+      - NU_CPF
+      - CO_CNES
+      - DT_ATUALIZACAO
+      - CO_SIASUS1
+      - CO_SIASUS2
+      - CO_SIASUS3
+      - CO_SIASUS4
+      - CO_SIASUS5
+      - TP_UNIDADE
+    __de_xml_ad_csv__cast_int:
+      - CO_CNES
+    res: &datasus_xmlcnae
+      _�_:
+        csv_header: "{{caput_clavi}}"
+        hxl_hashtag: "#meta+{{caput_clavi_normali}}"
+        hxltm_hashtag: "#meta+{{caput_clavi_normali}}"
+      CO_UNIDADE:
+        hxl_hashtag: "#meta+id"
+      NO_FANTASIA:
+        ex_tabulae: [NO_FANTASIA]
+        # hxl_hashtag: "#loc+facility+code+v_bra_cnes"
+        hxl_hashtag: "#loc+facility+name"
+        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_wikip1813"
+      CO_MUNICIPIO_GESTOR:
+        ex_tabulae: [CO_MUNICIPIO_GESTOR]
+        hxl_hashtag: "#adm2+code+v_pcode"
+        hxl_res: "BR{{municipio_id}}"
+        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_wikip1585"
+      CO_SIASUS:
+      NU_CNPJ:
+        ex_tabulae: [NU_CNPJ]
+        hxl_hashtag: "#loc+facility+code+v_76_cnes"
+        hxltm_hashtag: "#meta+rem+i_qcc+is_zxxx+ix_wikip6204"
+      NU_CPF:
+        ex_tabulae: [NU_CPF]
+        hxl_hashtag: "#meta+{{caput_clavi_normali}}+sensitive"
+        hxltm_hashtag: "#meta+{{caput_clavi_normali}}+sensitive"
+      CO_CNES:
+        ex_tabulae: [CO_CNES]
+        hxl_hashtag: "#loc+facility+code+v_76_cnes"
+        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_v76vcnes"
+      DT_ATUALIZACAO:
+        ex_tabulae: [DT_ATUALIZACAO]
+        hxl_hashtag: "#date"
+      CO_SIASUS1:
+        ex_tabulae: [CO_SIASUS1]
+      CO_SIASUS2:
+        ex_tabulae: [CO_SIASUS2]
+      CO_SIASUS3:
+        ex_tabulae: [CO_SIASUS3]
+      CO_SIASUS4:
+        ex_tabulae: [CO_SIASUS4]
+      CO_SIASUS5:
+        ex_tabulae: [CO_SIASUS5]
+      TP_UNIDADE:
+        ex_tabulae: [TP_UNIDADE]
+    caput: *datasus_xmlcnae
+    numerordinatio:
+      praefixo: 1603:63:49:76
+
+      # identitās, f, s, nom., https://en.wiktionary.org/wiki/identitas#Latin
+      # ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+      # locālī, n, s, dativus, https://en.wiktionary.org/wiki/localis#Latin
+      identitas_locali_ex_hxl_hashtag:
+        - "#item+conceptum+codicem"
+        - "#item+rem+i_qcc+is_zxxx+ix_v76vcnes"
+        - "#loc+facility+code+v_76_cnes"
+
+      # https://www.wikidata.org/wiki/Property:P131
+      # Veja https://www.wikidata.org/wiki/Wikidata:List_of_properties/pt-br
+      # Veja https://www.wikidata.org/wiki/Wikidata:Database_reports/List_of_properties/all
+      # Veja https://www.wikidata.org/wiki/Wikidata:WikiProject_Ontology/Top-level_ontology_list
+      # Veja https://www.wikidata.org/wiki/EntitySchema:E49
+
+      # @TODO mover isso para outro lugar (precisa ser generalizado)
+      __skos_mapping:
+        1:
+          hxltm: "#item+rem+i_qcc+is_zxxx+ix_wikip1585"
+          # Brazilian municipality code (P1585)
+          predicate: "<http://www.wikidata.org/prop/P1585>"
+        2:
+          hxltm: "#meta+rem+i_qcc+is_zxxx+ix_wikip6204"
+          # CNPJ (P6204)
+          predicate: "<http://www.wikidata.org/prop/P6204>"
+      skos:related:
+        1:
+          hxltm: '#item+rem+i_qcc+is_zxxx+ix_wikip1585'

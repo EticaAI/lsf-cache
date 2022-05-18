@@ -15,6 +15,8 @@
 #                 - s3cmd (https://github.com/s3tools/s3cmd)
 #                   - pip3 install s3cmd
 #                 - ssconvert (sudo apt install gnumeric)
+#                 - wget
+#                 - unzip
 #
 #          BUGS:  ---
 #         NOTES:  ---
@@ -256,6 +258,80 @@ archivum_copiae() {
   fi
 
   return 0
+}
+
+#######################################
+# Mirror remote file from FTP to 999999/0/0/ with wget structure
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   archivum_fonti_ftp
+# Outputs:
+#   File(s) on disk
+#######################################
+archivum_speculo_ex_ftp() {
+  archivum_fonti_ftp="$1"
+
+  # archīvum, n, s, nominativus, https://en.wiktionary.org/wiki/archivum
+  # speculō, n, s, dativus, https://en.wiktionary.org/wiki/speculum#Latin
+  # fontī, m, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
+
+  objectivum_basi="${ROOTDIR}/999999/0/0"
+  objectivum_archivum="${ROOTDIR}/999999/0/0/${archivum_fonti_ftp/ftp:\/\//''}"
+
+  blue=$(tput setaf 4)
+  normal=$(tput sgr0)
+  printf "\t%40s\n" "${blue}${FUNCNAME[0]} [$archivum_fonti_ftp] \
+--> [$objectivum_archivum]${normal}"
+
+  # echo "${FUNCNAME[0]} ... [$archivum_fonti_ftp] --> [$objectivum_archivum]"
+  # exit 0
+
+  if [ ! -d "${objectivum_basi}" ]; then
+    mkdir "${objectivum_basi}"
+  fi
+
+  # cd "${objectivum_basi}"
+  # set -x
+  wget --directory-prefix "${objectivum_basi}" \
+    --mirror "$archivum_fonti_ftp"
+}
+
+#######################################
+# Extract file from zip archive on disk to target path
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   archivum_fonti_ex_zip
+#   archivum_fonti_ad_zip
+#   archivum_objectivo
+# Outputs:
+#   File(s) on disk
+#######################################
+archivum_unzip() {
+  archivum_fonti_ex_zip="$1"
+  archivum_fonti_ad_zip="$2"
+  archivum_objectivo="$3"
+
+  # archīvum, n, s, nominativus, https://en.wiktionary.org/wiki/archivum
+  # fontī, m, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
+  # objectīvō, n, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
+
+  objectivum_basi="${ROOTDIR}/999999/0/0"
+  objectivum_archivum="${ROOTDIR}/999999/0/0/${archivum_fonti_ftp}"
+
+  blue=$(tput setaf 4)
+  normal=$(tput sgr0)
+  printf "\t%40s\n" "${blue}${FUNCNAME[0]} [${archivum_fonti_ex_zip}] \
+/ [${archivum_fonti_ad_zip}] --> [${archivum_objectivo}]${normal}"
+
+  # set -x
+  unzip -p "${archivum_fonti_ex_zip}" \
+    "${archivum_fonti_ad_zip}" \
+    >"${archivum_objectivo}"
+  # set +x
 }
 
 #######################################
@@ -2182,7 +2258,7 @@ wikidata_p_ex_totalibus() {
   ## Lingual ...................................................................
   # TODO: implementet configurable _lingua_divisioni
   for i in {1..19}; do
-  # for i in {6..19}; do
+    # for i in {6..19}; do
     echo "Number: $i"
     sleep 10
     wikidata_p_ex_linguis "$numerordinatio" "1" "1" "$ex_wikidata_p" "$i" "20"
@@ -3010,7 +3086,7 @@ actiones_completis_locali() {
     file_convert_tbx_de_numerordinatio11 "$numerordinatio"
   else
     # echo "noop"
-    if [ -z "$(quaero__ix_n1603ia "$numerordinatio" "ontologia")" ]; then
+    if [ -z "$(quaero__ix_n1603ia "$numerordinatio" "origo_per_automata")" ]; then
       file_convert_rdf_skos_ttl_de_numerordinatio11 "$numerordinatio"
       file_convert_tmx_de_numerordinatio11 "$numerordinatio"
       file_convert_tbx_de_numerordinatio11 "$numerordinatio"
@@ -3033,7 +3109,7 @@ actiones_completis_locali() {
   # neo_codex_de_numerordinatio "$numerordinatio" "0" "0"
   # neo_codex_de_numerordinatio_epub "$numerordinatio" "0" "0"
   # neo_codex_de_numerordinatio_pdf "$numerordinatio" "0" "0"
-  temp_save_status "$numerordinatio" "locale"
+  # temp_save_status "$numerordinatio" "locale"
 
 }
 

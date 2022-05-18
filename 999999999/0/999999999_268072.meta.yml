@@ -1,0 +1,67 @@
+methodus:
+  ibge_un_adm2:
+    # Exemplo
+    # {
+    #   "municipio-id": "3106200",
+    #   "municipio-nome": "Belo Horizonte",
+    #   "microrregiao-id": 31030,
+    #   "microrregiao-nome": "Belo Horizonte",
+    #   "mesorregiao-id": 3107,
+    #   "mesorregiao-nome": "Metropolitana de Belo Horizonte",
+    #   "regiao-imediata-id": 310001,
+    #   "regiao-imediata-nome": "Belo Horizonte",
+    #   "regiao-intermediaria-id": 3101,
+    #   "regiao-intermediaria-nome": "Belo Horizonte",
+    #   "UF-id": 31,
+    #   "UF-sigla": "MG",
+    #   "UF-nome": "Minas Gerais",
+    #   "regiao-id": 3,
+    #   "regiao-sigla": "SE",
+    #   "regiao-nome": "Sudeste"
+    # }
+    res: &ibge_un_adm2_res
+      _�_:
+        csv_header: "{{caput_clavi}}"
+        hxl_hashtag: "#meta+{{caput_clavi_normali}}"
+        hxltm_hashtag: "#meta+{{caput_clavi_normali}}"
+      municipio_id:
+        ex_tabulae: [municipio_id]
+        hxl_hashtag: "#adm2+code+v_pcode"
+        hxl_res: "BR{{municipio_id}}"
+        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_wikip1585"
+      municipio_nome:
+        ex_tabulae: [municipio_nome]
+        hxl_hashtag: "#adm2+code+name"
+        # P1448: nome oficial do sujeito em sua língua oficial
+        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_wikip1448"
+      microrregiao_id:
+      microrregiao_nome:
+      mesorregiao_id:
+      mesorregiao_nome:
+      regiao_imediata_id:
+      regiao_imediata_nome:
+      regiao_intermediaria_id:
+      regiao_intermediaria_nome:
+      uf_id:
+        ex_tabulae: [uf_id]
+        hxl_hashtag: "#adm1+code+v_pcode"
+        hxl_res: "BR{{uf_id}}"
+      uf_sigla:
+      uf_nome:
+        ex_tabulae: [uf_nome]
+        hxl_hashtag: "#adm2+name"
+      regiao_id:
+      regiao_sigla:
+      regiao_nome:
+    # https://numerordinatio.etica.ai/
+    caput: *ibge_un_adm2_res
+    numerordinatio:
+      praefixo: 1603:45:16:76:2
+
+      # identitās, f, s, nom., https://en.wiktionary.org/wiki/identitas#Latin
+      # ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+      # locālī, n, s, dativus, https://en.wiktionary.org/wiki/localis#Latin
+      identitas_locali_ex_hxl_hashtag:
+        - '#item+conceptum+codicem'
+        - '#adm2+code+v_pcode'
+        - '#item+rem+i_qcc+is_zxxx+ix_wikip1585'

@@ -50,6 +50,8 @@ ROOTDIR="$(pwd)"
 #   None
 #######################################
 bootstrap_999999_1603_45_16_fetch_data() {
+
+  echo "${FUNCNAME[0]} [$DATA_UN_PCode_ZIP] ..."
   # @TODO: implement some way to force full rebuild even if the zip is saved locally
   if [ ! -f "${ROOTDIR}/999999/1603/45/16/1603_45_16.zip" ]; then
     wget -qO- "$DATA_UN_PCode_ZIP" >"${ROOTDIR}/999999/1603/45/16/1603_45_16.zip"
@@ -74,6 +76,8 @@ bootstrap_999999_1603_45_16() {
   # export PYTHONWARNINGS="ignore"
   # PYTHONWARNINGS="ignore"
 
+  echo "${FUNCNAME[0]} ..."
+
   echo "#meta,#meta+m49,#meta+archivum,#meta+iso3,#meta+sheets+original,#meta+sheets+new" >"${ROOTDIR}"/999999/1603/45/16/1_meta-de-archivum.csv
   echo "" >"${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt
   echo "#meta,#meta+m49,#meta+archivum,#meta+caput,#meta+level,#meta+language+#meta+hxlhashtag" >"${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.csv
@@ -84,6 +88,8 @@ bootstrap_999999_1603_45_16() {
     UNm49=$(numerordinatio_codicem_locali__1603_45_49 "$ISO3166p1a3")
 
     file_xlsx="${ISO3166p1a3_original}.xlsx"
+
+    echo "  > ${file_xlsx}"
 
     file_xlsx_sheets=""
     file_xlsx_sheets_new=""
@@ -140,6 +146,7 @@ bootstrap_999999_1603_45_16() {
 bootstrap_999999_1603_45_16_metadata_pre_deploy() {
   # echo "TODO"
 
+  echo "${FUNCNAME[0]}  ..."
   # About administrative civision https://en.wikipedia.org/wiki/Administrative_division
 
   echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel,#meta+source" \
@@ -153,6 +160,9 @@ bootstrap_999999_1603_45_16_metadata_pre_deploy() {
     UNm49=$(numerordinatio_codicem_locali__1603_45_49 "$ISO3166p1a3")
     numerordinatio="${PRAEFIXUM}${UNm49}:${administrative_level}"
     conceptum_codicem="${UNm49}:${administrative_level}"
+
+    echo "  > ${archivum_nomen}"
+
     # echo "archivum ${numerordinatio} $ISO3166p1a3 ${administrative_level} ${archivum_rel}"
     # echo ""
     echo "${numerordinatio},${conceptum_codicem},${UNm49},${administrative_level},${archivum_rel}" \
@@ -185,6 +195,8 @@ bootstrap_999999_1603_45_16_metadata_pre_deploy() {
 #######################################
 deploy_1603_45_16_prepare_directories() {
   # echo "TODO deploy_1603_45_16"
+
+  echo "${FUNCNAME[0]} ..."
 
   hxlcut --include="#item+conceptum+numerordinatio" \
     "${ROOTDIR}/999999/1603/45/16/3_meta-hxl.tm.hxl.csv" \
@@ -237,7 +249,7 @@ deploy_1603_45_16_global_admX() {
   objectivum_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.hxl.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.TEMP.hxl.csv"
 
-  if [ -z "$(changed_recently "$fontem_semitam")" ]; then return 0; fi
+  # if [ -z "$(changed_recently "$fontem_semitam")" ]; then return 0; fi
 
   echo "${FUNCNAME[0]} [$administrative_level] sources changed_recently. Reloading..."
 
@@ -336,15 +348,15 @@ deploy_1603_45_16_global_admX_unicum() {
 ### From XLSX, start -----------------------------------------------------------
 # bootstrap_999999_1603_45_16_fetch_data
 # bootstrap_999999_1603_45_16
-# bootstrap_999999_1603_45_16_metadata_pre_deploy
+bootstrap_999999_1603_45_16_metadata_pre_deploy
 
-# deploy_1603_45_16_prepare_directories
+deploy_1603_45_16_prepare_directories
 
 
-# deploy_1603_45_16_global_admX 0
-# deploy_1603_45_16_global_admX 1
-# deploy_1603_45_16_global_admX 2
-# deploy_1603_45_16_global_admX 3
+deploy_1603_45_16_global_admX 0
+deploy_1603_45_16_global_admX 1
+deploy_1603_45_16_global_admX 2
+deploy_1603_45_16_global_admX 3
 # deploy_1603_45_16_global_admX 4
 # deploy_1603_45_16_global_admX 5
 # deploy_1603_45_16_global_admX 6
