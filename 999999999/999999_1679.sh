@@ -49,6 +49,7 @@ set -e
 #        - Ver também
 #          - https://wiki.saude.gov.br/cnes/index.php/Principais_Conceitos
 #        - https://cnes.datasus.gov.br/pages/downloads/arquivosOutros.jsp
+#        - https://purl.org/anac/opendata
 
 # ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_45_31 --codex-in-tabulam-json | jq
 # ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_45_31 --codex-in-tabulam-json > 1603/45/31/1603_45_31.mul-Latn.tab.json

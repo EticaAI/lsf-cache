@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 # ==============================================================================
 #
-#          FILE:  999999999_54872.py
+#          FILE:  999999999_7200235.py
 #
-#         USAGE:  ./999999999/0/999999999_54872.py
-#                 ./999999999/0/999999999_54872.py --help
+#         USAGE:  ./999999999/0/999999999_7200235.py --help
 #
-#   DESCRIPTION:  RUN /999999999/0/999999999_54872.py --help
+#   DESCRIPTION:  RUN ./999999999/0/999999999_7200235.py --help
 #
 #       OPTIONS:  ---
 #
@@ -22,7 +21,13 @@
 #       CREATED:  2022-05-17 18:48 UTC based on 999999999_10263485.py
 #      REVISION:  ---
 # ==============================================================================
+# - https://github.com/hxl-team/HXL-Vocab/blob/master/Tools/static/hxl.ttl
+# - https://github.com/hxl-team/HXL-Vocab/blob/master/Tools/static
+#   /humanitarianProfileSection.dot.png
+# - https://github.com/hxl-team/HXL-Vocab/blob/master/Tools/static
+#   /hxl-geolocation-standard-draft.pdf
 
+import json
 import sys
 import os
 import argparse
@@ -39,28 +44,42 @@ import yaml
 
 # l999999999_0 = __import__('999999999_0')
 from L999999999_0 import (
+    CodAbTabulae,
+    csv_imprimendo,
     hxltm_carricato,
-    qhxl_hxlhashtag_2_bcp47
+    qhxl_hxlhashtag_2_bcp47,
+    XLSXSimplici
+    # xlsx_meta
 )
 
 STDIN = sys.stdin.buffer
 
-NOMEN = '999999999_54872'
+NOMEN = '999999999_7200235'
 
 DESCRIPTION = """
-{0} Conversor de HXLTM para formatos RDF (alternativa ao uso de 1603_1_1.py, \
-que envolve processamento muito mais intenso para datasets enormes)
-
-AVISO: versão atual ainda envolve carregar todos os dados para memória. \
-       Considere fornecer tabela HXLTM de entrada que já não contenha \
-       informações que pretende que estejam no arquivo gerado.
+{0} Pre-processor of P-Code external data to HXLTM working format.
 
 @see https://github.com/EticaAI/lexicographi-sine-finibus/issues/42
 
+@see - https://sites.google.com/site/ochaimwiki\
+/geodata-preparation-manual/p-code-guidelines
+     - https://docs.google.com/viewer?a=v&pid=sites&srcid=\
+ZGVmYXVsdGRvbWFpbnxvY2hhaW13aWtpfGd4Ojc4YTljNmEwNmM3MjkwNWU
+       - Note: on this one, Country level P-Codes start from 1, not 0.
+         Today adm0 represent the level
+     - https://mtoolbox.unocha.org
+     - https://github.com/hxl-team/HXL-Vocab/blob/master/Tools/hxl.ttl
+
 Trivia:
-- Q54872, https://www.wikidata.org/wiki/Q54872
-  - Resource Description Framework
-  - "formal language for describing data models (...)"
+- Q7200235, https://www.wikidata.org/wiki/Q7200235
+  - Place code - address system used by emergency response teams
+- Related
+  - Q56061, https://www.wikidata.org/wiki/Q56061
+    - /administrative territorial entity/@eng-Latn
+    - //divisio administrativa//@lat-Latn
+
+Maybe for later
+- https://www.unsalb.org/data
 """.format(__file__)
 
 __EPILOGUM__ = """
@@ -86,13 +105,22 @@ __EPILOGUM__ = """
 --praefixum-configurationi-ex-fonti=methodus,ibge_un_adm2 \
 > 999999/0/ibge_un_adm2.no1.n3
 
+
+   {0} --methodus=xlsx_metadata 999999/1603/45/16/xlsx/ago.xlsx
+   {0} --methodus=xlsx_ad_csv --ordines=2 999999/1603/45/16/xlsx/ago.xlsx
+
+    cat 999999/1603/45/16/csv/AGO_2.csv | \
+{0} --objectivum-formato=text/csv
+
+
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
 """.format(__file__)
 
-# autopep8 --list-fixes ./999999999/0/999999999_54872.py
-# pylint --disable=W0511,C0103,C0116 ./999999999/0/999999999_54872.py
+
+# autopep8 --list-fixes ./999999999/0/999999999_7200235.py
+# pylint --disable=W0511,C0103,C0116 ./999999999/0/999999999_7200235.py
 
 SYSTEMA_SARCINAE = str(Path(__file__).parent.resolve())
 PROGRAMMA_SARCINAE = str(Path().resolve())
@@ -129,7 +157,7 @@ class Cli:
     def make_args(self, hxl_output=True):
         # parser = argparse.ArgumentParser(description=DESCRIPTION)
         parser = argparse.ArgumentParser(
-            prog="999999999_54872",
+            prog="999999999_7200235",
             description=DESCRIPTION,
             formatter_class=argparse.RawDescriptionHelpFormatter,
             epilog=__EPILOGUM__
@@ -142,22 +170,61 @@ class Cli:
             nargs='?'
         )
 
-        # parser.add_argument(
-        #     '--methodus',
-        #     help='Modo de operação.',
-        #     dest='methodus',
-        #     nargs='?',
-        #     choices=[
-        #         'ibge_un_adm2',
-        #         # 'data-apothecae',
-        #         # 'hxltm-explanationi',
-        #         # 'opus-temporibus',
-        #         # 'status-quo',
-        #         # 'deprecatum-dictionaria-numerordinatio'
-        #     ],
-        #     # required=True
-        #     default='ibge_un_adm2'
-        # )
+        parser.add_argument(
+            '--methodus',
+            help='Modo de operação.',
+            dest='methodus',
+            nargs='?',
+            choices=[
+                'pcode_ex_xlsx',
+                'pcode_ex_csv',
+                'xlsx_metadata',
+                'xlsx_ad_csv',
+                'xlsx_ad_hxl',
+                'xlsx_ad_hxltm',
+            ],
+            # required=True
+            default='pcode_ex_csv'
+        )
+
+        # - Related
+        #   - Q56061, https://www.wikidata.org/wiki/Q56061
+        #     - /administrative territorial entity/@eng-Latn
+        #     - //divisio administrativa//@lat-Latn
+        #       - https://en.wiktionary.org/wiki/divisio#Latin
+        #       - https://en.wiktionary.org/wiki/administro#Latin
+        # - https://en.wiktionary.org/wiki/ordo#Latin
+        parser.add_argument(
+            '--ex-metadatis',
+            help='For operations related with metadata (nested object) '
+            'this option can be used to filter result. Mostly used to '
+            'help with scripts',
+            dest='ex_metadatis',
+            nargs='?',
+            # required=True
+            default=None
+        )
+
+        parser.add_argument(
+            '--ordines',
+            help='ōrdinēs. (literal latin: methodical arrangement, '
+            'order; plural). Use to specify explicit administrative '
+            'boundaries to work with. Comma separated.',
+            dest='ordines',
+            nargs='?',
+            # choices=[
+            #     'pcode_xlsx',
+            #     # 'pcode_xlsx_123456789',
+            #     # 'data-apothecae',
+            #     # 'hxltm-explanationi',
+            #     # 'opus-temporibus',
+            #     # 'status-quo',
+            #     # 'deprecatum-dictionaria-numerordinatio'
+            # ],
+            # required=True
+            type=lambda x: x.split(','),
+            default=None
+        )
 
         # objectīvum, n, s, nominativus,
         #                       https://en.wiktionary.org/wiki/objectivus#Latin
@@ -203,7 +270,7 @@ class Cli:
             help='Arquivo de configuração .meta.yml da fonte de dados',
             dest='archivum_configurationi',
             nargs='?',
-            required=True,
+            # required=True,
             default=None
         )
 
@@ -222,10 +289,21 @@ class Cli:
             default=None
         )
 
+        # silentium, n, s, nominativus, en.wiktionary.org/wiki/silentium#Latin
+        parser.add_argument(
+            '--silentium',
+            help='Instead of exception with error message, output nothing',
+            metavar="silentium",
+            dest="silentium",
+            action='store_const',
+            const=True,
+            default=False
+        )
+
         parser.add_argument(
             # '--venandum-insectum-est, --debug',
             '--venandum-insectum-est', '--debug',
-            help='Habilitar depuração? Informações adicionais',
+            help='Enable debug? Show extra informations',
             metavar="venandum_insectum",
             dest="venandum_insectum",
             action='store_const',
@@ -241,14 +319,21 @@ class Cli:
 
         return parser.parse_args()
 
-    def execute_cli(self, pyargs, stdin=STDIN, stdout=sys.stdout,
-                    stderr=sys.stderr):
+    def execute_cli(self, pyargs, stdin=STDIN, _stdout=sys.stdout,
+                    _stderr=sys.stderr):
         # self.pyargs = pyargs
 
         # _infile = None
         # _stdin = None
-        configuratio = self.quod_configuratio(
-            pyargs.archivum_configurationi, pyargs.praefixum_configurationi)
+        unm49_basi = '24'
+        adm_level = '2'
+        configuratio = {
+            'numerordinatio': {
+                'praefixo': '1603:45:16:{0}:{1}'.format(unm49_basi, adm_level)
+            }
+        }
+        # configuratio = self.quod_configuratio(
+        #     pyargs.archivum_configurationi, pyargs.praefixum_configurationi)
         if pyargs.venandum_insectum or VENANDUM_INSECTUM:
             self.venandum_insectum = True
 
@@ -256,8 +341,80 @@ class Cli:
             _infile = pyargs.infile
             _stdin = False
         else:
+            if pyargs.methodus.find('xlsx') > -1:
+                raise ValueError('stdin not implemented for XLSX input')
             _infile = None
             _stdin = True
+
+        if pyargs.methodus.startswith('xlsx'):
+            xlsx = XLSXSimplici(_infile)
+
+        if pyargs.methodus == 'xlsx_metadata':
+            # xlsx = XLSXSimplici(_infile)
+
+            if pyargs.ex_metadatis:
+                # @TODO: maybe implement a jq-like selector.
+                ex_metadatis = pyargs.ex_metadatis.replace('.','')
+                xlsx_meta = xlsx.meta()
+                if ex_metadatis in xlsx_meta:
+                    for item in xlsx_meta[ex_metadatis]:
+                        print(str(item))
+                    pass
+                else:
+                    raise ValueError('{0} not found in {1}'.format(
+                        pyargs.ex_metadatis,
+                        xlsx_meta
+                    ))
+            else:
+                print(json.dumps(xlsx.meta()))
+            xlsx.finis()
+            return self.EXIT_OK
+
+        if pyargs.methodus in ['xlsx_ad_csv', 'xlsx_ad_hxltm', 'xlsx_ad_hxl']:
+            if not pyargs.ordines or \
+                    not xlsx.de(pyargs.ordines[0]):
+
+                if pyargs.silentium:
+                    return self.EXIT_OK
+                caput = ['#status+error', '#meta+item', '#meta+value']
+                data = [
+                    ['ERROR', '--methodus', pyargs.methodus],
+                    ['ERROR', '--ordines', str(pyargs.ordines)],
+                    ['ERROR', 'input', _infile],
+                    ['ERROR', 'xlsx.meta', xlsx.meta()],
+                ]
+
+                csv_imprimendo(caput, data)
+                return self.EXIT_ERROR
+
+        if pyargs.methodus == 'xlsx_ad_csv':
+            xlsx.praeparatio()
+            caput, data = xlsx.imprimere()
+            csv_imprimendo(caput, data)
+
+            xlsx.finis()
+            return self.EXIT_OK
+
+        if pyargs.methodus in ['xlsx_ad_hxltm', 'xlsx_ad_hxl']:
+            schema = 'hxl'
+            if pyargs.methodus == 'xlsx_ad_hxltm':
+                schema = 'hxltm'
+
+            xlsx.praeparatio()
+            caput, data = xlsx.imprimere()
+
+            codt = CodAbTabulae(caput=caput, data=data)
+            caput, data = codt.praeparatio(schema).imprimere()
+            # print(type(caput), caput)
+            # print(type(data), data)
+            # raise NotImplementedError('test test')
+            csv_imprimendo(caput, data)
+
+            # print()
+            # print('@TODO not implemented yet')
+
+            xlsx.finis()
+            return self.EXIT_OK
 
         climain = CliMain(
             infile=_infile, stdin=_stdin,
