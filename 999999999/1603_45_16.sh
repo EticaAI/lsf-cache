@@ -174,10 +174,20 @@ bootstrap_999999_1603_45_16_neo() {
       echo "  cod-ab-$ISO3166p1a3-$cod_level ..."
 
       objectivum_archivum_csv="${ROOTDIR}/999999/1603/45/16/csv/${ISO3166p1a3}_${cod_level}.csv"
+      objectivum_archivum_hxl="${ROOTDIR}/999999/1603/45/16/hxl/${ISO3166p1a3}_${cod_level}.hxl.csv"
+      objectivum_archivum_hxltm="${ROOTDIR}/999999/1603/45/16/hxltm/${ISO3166p1a3}_${cod_level}.tm.hxl.csv"
 
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_csv \
         --ordines="$cod_level" "$file_path" > "${objectivum_archivum_csv}"
+
+      "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+        --methodus=xlsx_ad_hxl \
+        --ordines="$cod_level" "$file_path" > "${objectivum_archivum_hxl}"
+
+      "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+        --methodus=xlsx_ad_hxltm \
+        --ordines="$cod_level" "$file_path" > "${objectivum_archivum_hxltm}"
       return 0
       # continue
     done
