@@ -188,49 +188,11 @@ bootstrap_999999_1603_45_16_neo() {
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_hxltm \
         --ordines="$cod_level" "$file_path" > "${objectivum_archivum_hxltm}"
-      return 0
+      # return 0
       # continue
     done
-    return 0
-
-    for sheet_name in $(in2csv --names "$file_path"); do
-      # echo "  $sheet_name"
-      file_xlsx_sheets="${file_xlsx_sheets} ${sheet_name}"
-      file_xlsx_sheets_new_item=$(un_pcode_sheets_norma "$ISO3166p1a3" "$sheet_name")
-      file_xlsx_sheets_new="${file_xlsx_sheets_new} ${file_xlsx_sheets_new_item}"
-      echo "TODO [$file_xlsx_sheets_new]"
-      continue
-
-      if [ ! -f "${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv" ] || [ "${REBUILD_CSV_FROM_XLSX}" -eq "1" ]; then
-        in2csv --sheet="${sheet_name}" "$file_path" >"${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv"
-      fi
-      if [ ! -f "${ROOTDIR}/999999/1603/45/16/hxl/${file_xlsx_sheets_new_item}.hxl.csv" ] || [ "${REBUILD_CSV_FROM_XLSX}" -eq "1" ]; then
-        un_pcode_hxlate_csv_file "${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv" >"${ROOTDIR}/999999/1603/45/16/hxl/${file_xlsx_sheets_new_item}.hxl.csv"
-      fi
-
-      caput=$(head -n 1 "${ROOTDIR}/999999/1603/45/16/csv/${file_xlsx_sheets_new_item}.csv" | tr ',' "\n")
-      echo "$caput" >>"${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt
-      # echo "${PRAEFIXUM},$caput" >> "${ROOTDIR}"/999999/1603/45/16/meta-de-caput.csv
-      echo "$caput" | while IFS= read -r line; do
-        administrative_level=$(un_pcode_csvheader_administrative_level "${line}")
-        name_language=$(un_pcode_rawheader_name_language "$line")
-        hxlhashtag=$(un_pcode_rawhader_to_hxl "$line")
-        # echo $line
-        echo "${PRAEFIXUM}${UNm49},${UNm49},${file_xlsx},${line},${administrative_level},${name_language}${hxlhashtag}" >>"${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.csv
-      done
-
-    done
-    file_xlsx_sheets=$(trim "$file_xlsx_sheets")
-    file_xlsx_sheets_new=$(trim "$file_xlsx_sheets_new")
-
-    # Save learned metadata
-    echo "${PRAEFIXUM}${UNm49},${UNm49},${file_xlsx},${ISO3166p1a3},${file_xlsx_sheets},${file_xlsx_sheets_new}" >>"${ROOTDIR}"/999999/1603/45/16/1_meta-de-archivum.csv
-
+    # return 0
   done
-
-  sort "${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt | uniq >"${ROOTDIR}"/999999/1603/45/16/2.1_meta-de-caput.uniq.txt
-
-  rm "${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt
 }
 
 #######################################
