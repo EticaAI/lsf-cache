@@ -2616,6 +2616,7 @@ class XLSXSimplici:
         fons = self.workbook[self.active]
 
         for row_index, row in enumerate(fons.rows):
+            # print(row_index, row, self.active_row_end)
             if row_index >= self.active_row_start and \
                     row_index <= self.active_row_end:
                 linea = []
@@ -2646,6 +2647,15 @@ class XLSXSimplici:
         Trivia:
         - praeparātiō, s, f, Nom., https://en.wiktionary.org/wiki/praeparatio
         """
+
+        if self.workbook[self.active].max_column is None or \
+                self.workbook[self.active].max_row is None:
+            # print('Excel was saved without metas; opening without read-only')
+            self.workbook = load_workbook(
+                self.archivum_trivio, data_only=True, read_only=False)
+
+            self.workbook.iso_dates = True
+            self.sheet_active = None
 
         self.active_col_end = self.workbook[self.active].max_column
         self.active_row_end = self.workbook[self.active].max_row

@@ -181,6 +181,7 @@ bootstrap_999999_1603_45_16_neo() {
       objectivum_archivum_hxl="${ROOTDIR}/999999/1603/45/16/hxl/${ISO3166p1a3}_${cod_level}.hxl.csv"
       objectivum_archivum_hxltm="${ROOTDIR}/999999/1603/45/16/hxltm/${ISO3166p1a3}_${cod_level}.tm.hxl.csv"
 
+      # set -x
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_csv \
         --ordines="$cod_level" "$file_path" >"${objectivum_archivum_csv}"
@@ -192,6 +193,7 @@ bootstrap_999999_1603_45_16_neo() {
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_hxltm \
         --ordines="$cod_level" "$file_path" >"${objectivum_archivum_hxltm}"
+      # set +x
       # return 0
       # continue
     done
@@ -534,7 +536,7 @@ __temp_preprocess_external_indexes() {
     --methodus=de_hxltm_ad_hxltm \
     --adde-columnis='#country+code+v_unm49=DATA_REFERENTIBUS(i1603_45_49;#country+code+v_iso3)' \
     --cum-ordinibus-ex-columnis='-9:#meta+id|-8:#country+code+v_unm49|-7:#country+code+v_iso3|-6:#country+code+v_iso2' \
-    "$objectivum_archivum_q_temporarium" > "$objectivum_archivum_q_temporarium_2"
+    "$objectivum_archivum_q_temporarium" >"$objectivum_archivum_q_temporarium_2"
 
   set +x
   # file_update_if_necessary csv "$objectivum_archivum_q_temporarium" "$objectivum_archivum"
@@ -545,17 +547,66 @@ __temp_preprocess_external_indexes() {
 __temp_download_external_cod_data() {
   USER_AGENT="EticaAI/lexicographi-sine-finibus/2022.05.19 (https://meta.wikimedia.org/wiki/User:EmericusPetro; rocha@ieee.org) 1603_45_16.sh/0.1"
 
-
-
   fontem_archivum="${ROOTDIR}/999999/1603/45/16/1603_45_16.index.hxl.csv"
   objectivum_archivum_temporarium_todo="${ROOTDIR}/999999/0/1603_45_16.todo.hxl.csv"
+  objectivum_archivum_temporarium_todo_txt="${ROOTDIR}/999999/0/1603_45_16.todo.txt"
+  objectivum_archivum_temporarium_todo_txt2="${ROOTDIR}/999999/0/1603_45_16.todo~2.txt"
   objectivum_archivum="${ROOTDIR}/999999/1603/45/16/1603_45_16.index.hxl.csv"
   echo "${FUNCNAME[0]} ... USER_AGENT [$USER_AGENT] "
 
-  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
-    --methodus=de_hxltm_ad_hxltm \
-    --cum-columnis='#meta+id,#country+code+v_unm49,#date+created,#date+updated,#item+source+type_xlsx' \
-    "$fontem_archivum" > "$objectivum_archivum_temporarium_todo"
+  # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+  #   --methodus=de_hxltm_ad_hxltm \
+  #   --cum-columnis='#meta+id,#country+code+v_unm49,#date+created,#date+updated,#item+source+type_xlsx' \
+  #   "$fontem_archivum" |
+  #   hxldedup --tags='#item+source+type_xlsx' \
+  #     >"$objectivum_archivum_temporarium_todo"
+
+  # sed -i '1d' "${objectivum_archivum_temporarium_todo}"
+
+  # # echo "$objectivum_archivum_temporarium_todo"
+
+  # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+  #   --methodus=de_hxltm_ad_hxltm \
+  #   --cum-filtris='LOWER(#country+code+v_iso3)' \
+  #   --cum-columnis='#country+code+v_iso3,#item+source+type_xlsx' \
+  #   "$fontem_archivum" |
+  #   hxldedup --tags='#item+source+type_xlsx' \
+  #     >"$objectivum_archivum_temporarium_todo_txt"
+
+  # sed -i '1d' "${objectivum_archivum_temporarium_todo_txt}"
+
+  # sort "${objectivum_archivum_temporarium_todo_txt}" | uniq \
+  #   >"$objectivum_archivum_temporarium_todo_txt2"
+
+  # while IFS= read -r line; do
+  while IFS=, read -r iso3 source_url; do 
+    # if [ -n "$iso3" ]; then
+    if [[ $iso3 != \#* ]]; then
+
+      _iso3=${iso3//[![:print:]]/}
+      _source_url=${source_url//[![:print:]]/}
+      objectivum_archivum="${ROOTDIR}/999999/1603/45/16/xlsx/${_iso3}.xlsx"
+
+      echo "iso3 [${_iso3}]"
+      echo ""
+      echo "source_url [${_source_url}]"
+      echo ""
+      # echo "objectivum_archivum $objectivum_archivum"
+
+
+      ls -lha "$objectivum_archivum" || true
+      sleep 10
+      # ls "$objectivum_archivum"
+      set -x
+      curl --user-agent "$USER_AGENT" \
+        "$_source_url" \
+        > "${objectivum_archivum}"
+      set +x
+
+      ls -lha "$objectivum_archivum" || true
+      # sleep 300
+    fi
+  done <"$objectivum_archivum_temporarium_todo_txt"
 
   # curl --user-agent "$USER_AGENT" \
   #   "https://data.humdata.org/api/3/action/package_search?q=vocab_Topics=common+operational+dataset+-+cod" |
