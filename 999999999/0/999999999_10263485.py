@@ -6,7 +6,9 @@
 #         USAGE:  ./999999999/0/999999999_10263485.py
 #                 ./999999999/0/999999999_10263485.py --help
 #
-#   DESCRIPTION:  RUn /999999999/0/999999999_10263485.py --help
+#   DESCRIPTION:  RUN /999999999/0/999999999_10263485.py --help
+#                - Q10263485, https://www.wikidata.org/wiki/Q10263485
+#                  - DATASUS (Brasil)
 #
 #       OPTIONS:  ---
 #

@@ -6,6 +6,9 @@
 #         USAGE:  ./999999999/0/999999999_7200235.py --help
 #
 #   DESCRIPTION:  RUN ./999999999/0/999999999_7200235.py --help
+#                 - Q7200235, https://www.wikidata.org/wiki/Q7200235
+#                   - Place code - address system used by emergency response
+#                     teams
 #
 #       OPTIONS:  ---
 #
@@ -67,6 +70,11 @@ from L999999999_0 import (
 STDIN = sys.stdin.buffer
 
 NOMEN = '999999999_7200235'
+
+# @TODO move this _SEE_ALSO for some other place
+_SEE_ALSO = [
+    'https://en.wikipedia.org/wiki/Geopolitical_ontology'
+]
 
 DESCRIPTION = """
 {0} Pre-processor of P-Code external data to HXLTM working format.
@@ -229,6 +237,7 @@ class Cli:
                 # 'pcode_ex_xlsx',
                 # 'pcode_ex_csv',
                 'cod_ab_index',
+                'cod_ab_ad_rdf_skos_ttl',
                 'de_hxltm_ad_hxltm',  # load main file directly
                 # load main file by number (example: 1603_45_49)
                 'de_librario',
@@ -676,6 +685,9 @@ class Cli:
             csv_imprimendo(caput, data)
 
             return self.EXIT_OK
+
+        if pyargs.methodus.startswith('cod_ab_ad_rdf_skos_ttl'):
+            raise NotImplementedError
 
         if pyargs.methodus.startswith('xlsx'):
             xlsx = XLSXSimplici(_infile)

@@ -141,26 +141,35 @@ bootstrap_999999_1603_45_16() {
 #
 # Globals:
 #   ROOTDIR
+#
 # Arguments:
-#   None
+#   objectivum_iso3661p1a3  If given, will restrict processing to one place)
+#                           Empty will process all files on disk
+#
+# Outputs:
+#   Convert files
 #######################################
 bootstrap_999999_1603_45_16_neo() {
-  # @see https://github.com/wireservice/csvkit/issues/1112
-  # export PYTHONWARNINGS="ignore"
-  # PYTHONWARNINGS="ignore"
+  objectivum_iso3661p1a3="${1:-""}"
+  # objectivum_unm49="${1:-""}"
 
-  echo "${FUNCNAME[0]} ...2"
+  echo "${FUNCNAME[0]} ... [$objectivum_iso3661p1a3]"
 
-  echo "#meta,#meta+m49,#meta+archivum,#meta+iso3,#meta+sheets+original,#meta+sheets+new" >"${ROOTDIR}"/999999/1603/45/16/1_meta-de-archivum.csv
-  echo "" >"${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.txt
-  echo "#meta,#meta+m49,#meta+archivum,#meta+caput,#meta+level,#meta+language+#meta+hxlhashtag" >"${ROOTDIR}"/999999/1603/45/16/2_meta-de-caput.csv
-  echo "${FUNCNAME[0]} ...2"
   for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
     ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
     ISO3166p1a3=$(echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
     # UNm49=$(numerordinatio_codicem_locali__1603_45_49 "$ISO3166p1a3")
 
     file_xlsx="${ISO3166p1a3_original}.xlsx"
+
+    if [ -n "$objectivum_iso3661p1a3" ]; then
+      echo "... [$objectivum_iso3661p1a3] [$ISO3166p1a3]"
+      if [ "$objectivum_iso3661p1a3" != "$ISO3166p1a3" ]; then
+        echo "Skiping [$ISO3166p1a3]"
+        continue
+      fi
+    fi
+
     cod_ab_levels=$("${ROOTDIR}/999999999/0/999999999_7200235.py" \
       --methodus=xlsx_metadata \
       --ex-metadatis=.cod_ab_level "$file_path")
@@ -554,32 +563,32 @@ __temp_download_external_cod_data() {
   objectivum_archivum="${ROOTDIR}/999999/1603/45/16/1603_45_16.index.hxl.csv"
   echo "${FUNCNAME[0]} ... USER_AGENT [$USER_AGENT] "
 
-  # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
-  #   --methodus=de_hxltm_ad_hxltm \
-  #   --cum-columnis='#meta+id,#country+code+v_unm49,#date+created,#date+updated,#item+source+type_xlsx' \
-  #   "$fontem_archivum" |
-  #   hxldedup --tags='#item+source+type_xlsx' \
-  #     >"$objectivum_archivum_temporarium_todo"
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus=de_hxltm_ad_hxltm \
+    --cum-columnis='#meta+id,#country+code+v_unm49,#date+created,#date+updated,#item+source+type_xlsx' \
+    "$fontem_archivum" |
+    hxldedup --tags='#item+source+type_xlsx' \
+      >"$objectivum_archivum_temporarium_todo"
 
-  # sed -i '1d' "${objectivum_archivum_temporarium_todo}"
+  sed -i '1d' "${objectivum_archivum_temporarium_todo}"
 
-  # # echo "$objectivum_archivum_temporarium_todo"
+  # echo "$objectivum_archivum_temporarium_todo"
 
-  # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
-  #   --methodus=de_hxltm_ad_hxltm \
-  #   --cum-filtris='LOWER(#country+code+v_iso3)' \
-  #   --cum-columnis='#country+code+v_iso3,#item+source+type_xlsx' \
-  #   "$fontem_archivum" |
-  #   hxldedup --tags='#item+source+type_xlsx' \
-  #     >"$objectivum_archivum_temporarium_todo_txt"
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus=de_hxltm_ad_hxltm \
+    --cum-filtris='LOWER(#country+code+v_iso3)' \
+    --cum-columnis='#country+code+v_iso3,#item+source+type_xlsx' \
+    "$fontem_archivum" |
+    hxldedup --tags='#item+source+type_xlsx' \
+      >"$objectivum_archivum_temporarium_todo_txt"
 
-  # sed -i '1d' "${objectivum_archivum_temporarium_todo_txt}"
+  sed -i '1d' "${objectivum_archivum_temporarium_todo_txt}"
 
-  # sort "${objectivum_archivum_temporarium_todo_txt}" | uniq \
-  #   >"$objectivum_archivum_temporarium_todo_txt2"
+  sort "${objectivum_archivum_temporarium_todo_txt}" | uniq \
+    >"$objectivum_archivum_temporarium_todo_txt2"
 
   # while IFS= read -r line; do
-  while IFS=, read -r iso3 source_url; do 
+  while IFS=, read -r iso3 source_url; do
     # if [ -n "$iso3" ]; then
     if [[ $iso3 != \#* ]]; then
 
@@ -593,18 +602,18 @@ __temp_download_external_cod_data() {
       echo ""
       # echo "objectivum_archivum $objectivum_archivum"
 
-
       ls -lha "$objectivum_archivum" || true
       sleep 10
       # ls "$objectivum_archivum"
       set -x
       curl --user-agent "$USER_AGENT" \
         "$_source_url" \
-        > "${objectivum_archivum}"
+        >"${objectivum_archivum}"
       set +x
 
       ls -lha "$objectivum_archivum" || true
-      # sleep 300
+      # 5 min sleep
+      sleep 300
     fi
   done <"$objectivum_archivum_temporarium_todo_txt"
 
@@ -626,9 +635,13 @@ __temp_download_external_cod_data() {
 # __temp_download_external_cod_data
 # exit 1
 
-bootstrap_999999_1603_45_16_neo
+bootstrap_999999_1603_45_16_neo ""
+# bootstrap_999999_1603_45_16_neo "BRA"
 exit 1
 
+
+echo "after here is old scripts that need to be refatored"
+exit 1
 bootstrap_999999_1603_45_16_metadata_pre_deploy
 
 deploy_1603_45_16_prepare_directories
@@ -722,3 +735,32 @@ set +x
 
 ## This one somwwhat return what we need
 # https://data.humdata.org/api/3/action/package_search?q=vocab_Topics=common+operational+dataset+-+cod
+
+# https://www.npmjs.com/package/wikidata-taxonomy
+# Brazil
+#     wdtaxonomy Q155 -P P131 --brief
+#     wdtaxonomy Q155 -P P131 --brief -s
+#
+#     wdtaxonomy Q16502 -P P361
+#
+# Countryes
+#     wdtaxonomy Q6256
+#
+#     wdtaxonomy Q6256 -P P131
+# country (Q6256) •165 ×192
+# └──first-level administrative country subdivision (Q10864048) •3 ×106
+#    └──second-level administrative country subdivision (Q13220204) ×2726
+#       └──third-level administrative country subdivision (Q13221722) ×2922
+#          ├──??? (Q10872650) •2 ↑
+#          └──fourth-level administrative country subdivision (Q14757767) ×6364
+#             └──fifth-level administrative country subdivision (Q15640612) ×1
+#                └──sixth-level administrative country subdivision (Q22927291)
+#
+#     wdtaxonomy Q22927291 -P P131 -r
+# sixth-level administrative country subdivision (Q22927291)
+# └──fifth-level administrative country subdivision (Q15640612) ×1
+#    └──fourth-level administrative country subdivision (Q14757767) ×6364
+#       └──third-level administrative country subdivision (Q13221722) ×2922
+#          └──second-level administrative country subdivision (Q13220204) ×2726
+#             └──first-level administrative country subdivision (Q10864048) •3 ×106
+#                └──country (Q6256) •165 ×192

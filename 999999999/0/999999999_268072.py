@@ -7,6 +7,9 @@
 #                 ./999999999/0/999999999_268072.py --help
 #
 #   DESCRIPTION:  RUN /999999999/0/999999999_268072.py --help
+#                 - Q268072, https://www.wikidata.org/wiki/Q268072
+#                   - IBGE - Instituto Brasileiro de Geografia e Estatística
+#                     (Brasil)
 #
 #       OPTIONS:  ---
 #
