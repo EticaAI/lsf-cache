@@ -247,10 +247,10 @@ UNICODE_UCD_DERIVED_NUMERIC_TYPE="https://www.unicode.org/Public/UCD/latest/ucd/
   #   --rename="#country+name+i_ar+alt+v_unterm:#item+rem+i_ara+is_arab+ix_unterm" \
   #   "${fontem_archivum}" |
   #   hxlselect --query="#country+code+num+v_m49>0" |
-  #   hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unfts={{#country+code+v_fts}}" |
-  #   hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unreliefweb={{#country+code+v_reliefweb}}" |
-  #   hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unhrinfo={{#country+code+v_hrinfo_country}}" |
-  #   hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unm49={{#country+code+num+v_m49}}" |
+  #   hxladd --before --spec="#item+rem+i_qcc+is_zxxx+ix_unfts={{#country+code+v_fts}}" |
+  #   hxladd --before --spec="#item+rem+i_qcc+is_zxxx+ix_unreliefweb={{#country+code+v_reliefweb}}" |
+  #   hxladd --before --spec="#item+rem+i_qcc+is_zxxx+ix_unhrinfo={{#country+code+v_hrinfo_country}}" |
+  #   hxladd --before --spec="#item+rem+i_qcc+is_zxxx+ix_unm49={{#country+code+num+v_m49}}" |
   #   hxladd --before --spec="#item+conceptum+codicem={{#country+code+num+v_m49}}" |
   #   hxlsort --tags="#item+conceptum" \
   #     >"${objectivum_archivum_temporarium}"

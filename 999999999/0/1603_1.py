@@ -89,6 +89,9 @@ from L999999999_0 import (
     NUMERORDINATIO_BASIM,
     # NUMERORDINATIO_DEFALLO,
     # NUMERORDINATIO_MISSING,
+    numerordinatio_neo_separatum,
+    numerordinatio_ordo,
+    numerordinatio_progenitori,
     qhxl,
     qhxl_bcp47_2_hxlattr,
     qhxl_attr_2_bcp47,
@@ -246,32 +249,6 @@ EXTENSIONES_PICTURIS = [
 EXTENSIONES_IGNORATIS = [
 
 ]
-
-
-def numerordinatio_neo_separatum(
-        numerordinatio: str, separatum: str = "_") -> str:
-    resultatum = ''
-    resultatum = numerordinatio.replace('_', separatum)
-    resultatum = resultatum.replace('/', separatum)
-    resultatum = resultatum.replace(':', separatum)
-    # TODO: add more as need
-    return resultatum
-
-
-def numerordinatio_ordo(numerordinatio: str) -> int:
-    normale = numerordinatio_neo_separatum(numerordinatio, '_')
-    return (normale.count('_') + 1)
-
-
-def numerordinatio_progenitori(
-        numerordinatio: str, separatum: str = "_") -> int:
-    # prōgenitōrī, s, m, dativus, https://en.wiktionary.org/wiki/progenitor
-    normale = numerordinatio_neo_separatum(numerordinatio, separatum)
-    _parts = normale.split(separatum)
-    _parts = _parts[:-1]
-    if len(_parts) == 0:
-        return "0"
-    return separatum.join(_parts)
 
 
 def numerordinatio_lineam_hxml5_details(rem: dict, title: str = None) -> str:

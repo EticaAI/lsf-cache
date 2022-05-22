@@ -93,37 +93,37 @@
 '9999:3:0':
   eng-Latn-x-unhtcds:
     '0': 'Not Specified/Unknown'
-  zxx-Latn-x-unhtcds-systema:
+  qcc-Zxxx-x-unhtcds-systema:
     '0': 'NonSpecifiedUnknown'
 
 '9999:3:1':
   eng-Latn-x-unhtcds:
     '0': 'Masculine'
-  zxx-Latn-x-unhtcds-systema:
+  qcc-Zxxx-x-unhtcds-systema:
     '0': 'Masculine'
 
 '9999:3:2':
   eng-Latn-x-unhtcds:
     '0': 'Feminine'
-  zxx-Latn-x-unhtcds-systema:
+  qcc-Zxxx-x-unhtcds-systema:
     '0': 'Feminine'
 
 '9999:3:3':
   eng-Latn-x-unhtcds:
     '0': 'Transgender Masculine'
-  zxx-Latn-x-unhtcds-systema:
+  qcc-Zxxx-x-unhtcds-systema:
     '0': 'TransgenderMasculine'
 
 '9999:3:4':
   eng-Latn-x-unhtcds:
     '0': 'Transgender Feminine'
-  zxx-Latn-x-unhtcds-systema:
+  qcc-Zxxx-x-unhtcds-systema:
     '0': 'TransgenderFeminine'
 
 '9999:3:9':
   eng-Latn-x-unhtcds:
     '0': 'Non-Conforming'
-  zxx-Latn-x-unhtcds-systema:
+  qcc-Zxxx-x-unhtcds-systema:
     '0': 'NonConforming'
 
 # ---------------------------------------------------------------------------- #

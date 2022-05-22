@@ -52,12 +52,12 @@ tail -n +8 "${ROOTDIR}/999999/1603/47/15924/1603_47_15924.txt" \
 
 ### 1603_47_15924.hxl.csv --> 1603_47_15924.tm.hxl.csv _________________________
 hxlrename \
-  --rename="#code+v_iso1524n:#item+rem+i_zxx+is_zmth+ix_iso1524n" \
-  --rename="#code+v_iso1524a:#item+rem+i_zxx+is_latn+ix_iso1524a" \
+  --rename="#code+v_iso1524n:#item+rem+i_qcc+is_zxxx+ix_iso1524n" \
+  --rename="#code+v_iso1524a:#item+rem+i_qcc+is_zxxx+ix_iso1524a" \
   --rename="#item+name+i_eng+is_latn:#item+rem+i_eng+is_latn" \
   --rename="#item+name+i_fra+is_latn:#item+rem+i_fra+is_latn" \
   "${ROOTDIR}/999999/1603/47/15924/1603_47_15924.hxl.csv" |
-  hxladd --before --spec="#item+conceptum+codicem={{#item+rem+i_zxx+is_zmth+ix_iso1524n}}" |
+  hxladd --before --spec="#item+conceptum+codicem={{#item+rem+i_qcc+is_zxxx+ix_iso1524n}}" |
   hxlcut --include="#item+conceptum,#item+rem" |
   hxlsort --tags="#item+conceptum" \
     >"${ROOTDIR}/999999/1603/47/15924/1603_47_15924.tm.hxl.csv"
@@ -81,10 +81,10 @@ cp "${ROOTDIR}/1603/47/15924/1603_47_15924.no1.tm.hxl.csv" "${ROOTDIR}/1603/1/4/
 # TODO: make the conversion to JSON format. Or enable the JavaScript to support tm.hxl.csv files
 
 hxladd \
-  --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso1524a}}" \
-  --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso1524a}}" \
+  --before --spec="#x_item+lower={{#item+rem+i_qcc+is_zxxx+ix_iso1524a}}" \
+  --before --spec="#x_item+upper={{#item+rem+i_qcc+is_zxxx+ix_iso1524a}}" \
   "${ROOTDIR}/1603/47/15924/1603_47_15924.no1.tm.hxl.csv" |
-  hxladd --before --spec="#x_item={{#item+rem+i_zxx+is_latn+ix_iso1524a}}" |
+  hxladd --before --spec="#x_item={{#item+rem+i_qcc+is_zxxx+ix_iso1524a}}" |
   hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" |
   hxladd --before --spec="#x_item={{1-1+(#item+conceptum+codicem)}}" |
   hxlclean --lower="#x_item+lower" |

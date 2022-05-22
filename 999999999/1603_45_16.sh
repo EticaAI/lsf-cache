@@ -65,6 +65,7 @@ bootstrap_999999_1603_45_16_fetch_data() {
 
 #######################################
 # Convert the XLSXs to intermediate formats on 999999/1603/45/16
+# DEPRECATED use bootstrap_999999_1603_45_16_neo
 #
 # Globals:
 #   ROOTDIR
@@ -72,6 +73,8 @@ bootstrap_999999_1603_45_16_fetch_data() {
 #   None
 #######################################
 bootstrap_999999_1603_45_16() {
+
+  # DEPRECATED use bootstrap_999999_1603_45_16_neo
   # @see https://github.com/wireservice/csvkit/issues/1112
   # export PYTHONWARNINGS="ignore"
   # PYTHONWARNINGS="ignore"
@@ -166,7 +169,8 @@ bootstrap_999999_1603_45_16_neo() {
 
     file_xlsx_sheets=""
     file_xlsx_sheets_new=""
-    echo "TODO [$ISO3166p1a3_original] [$ISO3166p1a3] [$UNm49]"
+    echo ""
+    echo "${file_path}"
     # return 0
     # # ./999999999/0/999999999_7200235.py --methodus=xlsx_metadata --ex-metadatis=.cod_ab_level 999999/1603/45/16/xlsx/ago.xlsx
     fontem_archivum="${file_path}"
@@ -179,15 +183,15 @@ bootstrap_999999_1603_45_16_neo() {
 
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_csv \
-        --ordines="$cod_level" "$file_path" > "${objectivum_archivum_csv}"
+        --ordines="$cod_level" "$file_path" >"${objectivum_archivum_csv}"
 
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_hxl \
-        --ordines="$cod_level" "$file_path" > "${objectivum_archivum_hxl}"
+        --ordines="$cod_level" "$file_path" >"${objectivum_archivum_hxl}"
 
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_hxltm \
-        --ordines="$cod_level" "$file_path" > "${objectivum_archivum_hxltm}"
+        --ordines="$cod_level" "$file_path" >"${objectivum_archivum_hxltm}"
       # return 0
       # continue
     done
@@ -212,7 +216,7 @@ bootstrap_999999_1603_45_16_metadata_pre_deploy() {
   echo "${FUNCNAME[0]}  ..."
   # About administrative civision https://en.wikipedia.org/wiki/Administrative_division
 
-  echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel,#meta+source" \
+  echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_unm49,#item+rem+i_qcc+is_zxxx+ix_admlevel,#meta+source" \
     >"${ROOTDIR}/999999/1603/45/16/3_meta-hxl-temp.tm.hxl.csv"
 
   for archivum_loci in "${ROOTDIR}"/999999/1603/45/16/hxl/*.hxl.csv; do
@@ -234,7 +238,7 @@ bootstrap_999999_1603_45_16_metadata_pre_deploy() {
 
   # echo "TODO delete 999999/1603/45/16/3_meta-hxl-temp.hxl.csv"
 
-  hxlsort --tags="#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
+  hxlsort --tags="#item+rem+i_qcc+is_zxxx+ix_unm49,#item+rem+i_qcc+is_zxxx+ix_admlevel" \
     "${ROOTDIR}/999999/1603/45/16/3_meta-hxl-temp.tm.hxl.csv" \
     "${ROOTDIR}/999999/1603/45/16/3_meta-hxl.tm.hxl.csv"
 
@@ -316,7 +320,7 @@ deploy_1603_45_16_global_admX() {
 
   echo "${FUNCNAME[0]} [$administrative_level] sources changed_recently. Reloading..."
 
-  # echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
+  # echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_unm49,#item+rem+i_qcc+is_zxxx+ix_admlevel" \
   #   >"${ROOTDIR}/1603/45/16/1/1603_45_16_1.no1.tm.hxl.csv"
   echo "#adm${administrative_level}+code+pcode,#date,#date+valid_on,#date+valid_to" \
     >"${objectivum_archivum_temporarium}"
@@ -371,7 +375,7 @@ deploy_1603_45_16_global_admX_unicum() {
   # printf "01234\n" | ./999999999/0/2600.py --actionem-cifram
   # 15828996298662	01234
 
-  # echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_zxx+is_zmth+ix_unm49,#item+rem+i_zxx+is_zmth+ix_admlevel" \
+  # echo "#item+conceptum+numerordinatio,#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_unm49,#item+rem+i_qcc+is_zxxx+ix_admlevel" \
   #   >"${ROOTDIR}/1603/45/16/1/1603_45_16_1.no1.tm.hxl.csv"
   echo "#meta+adm_level,#meta+code+pcode,#date,#date+valid_on,#date+valid_to" \
     >"${objectivum_archivum_temporarium}"
@@ -406,9 +410,170 @@ deploy_1603_45_16_global_admX_unicum() {
 }
 #### main ______________________________________________________________________
 
+__temp_fetch_external_indexes() {
+  USER_AGENT="EticaAI/lexicographi-sine-finibus/2022.05.19 (https://meta.wikimedia.org/wiki/User:EmericusPetro; rocha@ieee.org) 1603_45_16.sh/0.1"
+
+  echo "${FUNCNAME[0]} ..."
+
+  curl --user-agent "$USER_AGENT" \
+    "https://data.humdata.org/api/3/action/package_search?q=vocab_Topics=common+operational+dataset+-+cod" |
+    jq >"${ROOTDIR}/999999/1603/45/16/unocha-hdx-cod~cached.search.json"
+
+  curl --user-agent "$USER_AGENT" \
+    "https://data.fieldmaps.io/cod.csv" \
+    >"${ROOTDIR}/999999/1603/45/16/fieldmaps-cod~cached.csv"
+}
+
+__temp_index_praeparationi_1603_45_16() {
+
+  echo "${FUNCNAME[0]} ..."
+
+  echo "    i1603_45_49 (ix_unm49 ex ix_unm49, ix_iso3166p1a2, ix_iso3166p1a3)"
+  set -x
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus=index_praeparationi \
+    --cum-columnis='#item+rem+i_qcc+is_zxxx+ix_unm49,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3' \
+    --index-ad-columnam='#item+rem+i_qcc+is_zxxx+ix_unm49' \
+    --index-nomini="i1603_45_49" \
+    1603_45_49
+  set +x
+
+  echo ""
+
+  echo "    i1603_45_49 (ix_iso3166p1a2 ex ix_unm49, ix_iso3166p1a2, ix_iso3166p1a3)"
+  set -x
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus=index_praeparationi \
+    --cum-columnis='#item+rem+i_qcc+is_zxxx+ix_unm49,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3' \
+    --index-ad-columnam='#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2' \
+    --index-nomini="i1603_45_49__iso3166p1a2" \
+    1603_45_49
+  set +x
+
+  echo ""
+
+  echo "    i1603_45_49 (iso3166p1a3 ex ix_unm49, ix_iso3166p1a2, ix_iso3166p1a3)"
+  set -x
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus=index_praeparationi \
+    --cum-columnis='#item+rem+i_qcc+is_zxxx+ix_unm49,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3' \
+    --index-ad-columnam='#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3' \
+    --index-nomini="i1603_45_49__iso3166p1a3" \
+    1603_45_49
+  set +x
+
+}
+
+__temp_preprocess_external_indexes() {
+  fontem_archivum="${ROOTDIR}/999999/1603/45/16/fieldmaps-cod~cached.csv"
+  objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/fieldmaps-cod.hxl.csv"
+  objectivum_archivum_q_temporarium_2="${ROOTDIR}/999999/0/fieldmaps-cod~2.hxl.csv"
+  objectivum_archivum="${ROOTDIR}/999999/1603/45/16/1603_45_16.index.hxl.csv"
+
+  # id,iso_3,adm0_name,adm0_name1,src_lvl,src_date,src_update,src_name,src_name1,src_lic,src_url,e_gpkg,e_shp,e_xlsx,o_gpkg,o_shp,o_xlsx
+  hxlcaput_initial='#meta+id,#country+code+v_iso3,#country+name+ref,#country+name+alt,#meta+source+cod_ab_level,#date+created,#date+updated,#org+name+source,#org+name+contributor1,#meta+license,#item+source+type_ckan,#item+source+extended+type_gpkg,#item+source+extended+type_shp,#item+source+extended+type_xlsx,#item+source+type_gpkg,#item+source+type_shp,#item+source+type_xlsx'
+
+  # hxlcaput_final="#meta+id,#country+code+v_iso3,#meta+source+cod_ab_level,#country+name+ref,#country+name+alt,#date+created,#date+updated,#org+name+source,#org+name+contributor1,#org+name+contributor2,#meta+license,#item+source+type_ckan,#item+source+type_gpkg,#item+source+type_shp,#item+source+type_xlsx"
+
+  # hxlcaput_final="#meta+id,#country+code+v_iso3,#meta+source+cod_ab_level,#country+name+ref,#country+name+alt,#date+created,#date+updated,#org+name+source,#org+name+contributor1,#org+name+contributor2,#meta+license,#item+source+type_ckan,#item+source+type_gpkg,#item+source+type_xlsx"
+
+  # hxlcaput_final="#item+source+type_xlsx!,#country+code+v_iso3!,#meta+id!,#meta+source+cod_ab_level!"
+
+  echo "${FUNCNAME[0]} ... [$fontem_archivum] --> [$objectivum_archivum]"
+
+  if [ -f "$objectivum_archivum_q_temporarium" ]; then
+    rm "$objectivum_archivum_q_temporarium"
+  fi
+  set -x
+  echo "$hxlcaput_initial" >"$objectivum_archivum_q_temporarium"
+  # cat "$fontem_archivum" | tail -n +2 "$objectivum_archivum_q_temporarium"
+  tail -n +2 "$fontem_archivum" >>"$objectivum_archivum_q_temporarium"
+
+  hxladd \
+    --spec="__#org+name+contributor2=Fieldmaps.io" \
+    "$objectivum_archivum_q_temporarium" >"$objectivum_archivum_q_temporarium_2"
+
+  sed -i '1d' "${objectivum_archivum_q_temporarium_2}"
+
+  csvcut --names "$objectivum_archivum_q_temporarium_2"
+
+  #   1: #meta+id
+  #   2: #country+code+v_iso3
+  #   3: #country+name+ref
+  #   4: #country+name+alt
+  #   5: #meta+source+cod_ab_level
+  #   6: #date+created
+  #   7: #date+updated
+  #   8: #org+name+source
+  #   9: #org+name+contributor1
+  # 10: #meta+license
+  # 11: #item+source+type_ckan
+  # 12: #item+source+extended+type_gpkg
+  # 13: #item+source+extended+type_shp
+  # 14: #item+source+extended+type_xlsx
+  # 15: #item+source+type_gpkg
+  # 16: #item+source+type_shp
+  # 17: #item+source+type_xlsx
+  # 18: #org+name+contributor2
+
+  csvcut --columns 1,2,5,6,7,17,15,11,18,9,8,10,3,4 "$objectivum_archivum_q_temporarium_2" >"$objectivum_archivum_q_temporarium"
+
+  csvcut --names "$objectivum_archivum_q_temporarium"
+
+  # sed -i '1d' "${objectivum_archivum_q_temporarium_2}"
+
+  # hxladd \
+  #   --spec="__#org+name+contributor2=https://fieldmaps.io/" \
+  #   "$objectivum_archivum_q_temporarium" |
+  #   hxlcut \
+  #     --include="$hxlcaput_final" \
+  #     "$objectivum_archivum_q_temporarium_2"
+  #meta+id,#country+code+v_iso3,#country+name,#country+name+alt,#meta+source+level,#date+created,#date+updated,#org+name+source,#org+name+contributor1,#meta+license,#item+source,#item+source+extended+type_gpkg,#item+source+extended+type_shp,#item+source+extended+type_xlsx,#item+source+type_gpkg,#item+source+type_shp,#item+source+type_xlsx
+
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus=de_hxltm_ad_hxltm \
+    --adde-columnis='#country+code+v_unm49=DATA_REFERENTIBUS(i1603_45_49;#country+code+v_iso3)' \
+    --cum-ordinibus-ex-columnis='-9:#meta+id|-8:#country+code+v_unm49|-7:#country+code+v_iso3|-6:#country+code+v_iso2' \
+    "$objectivum_archivum_q_temporarium" > "$objectivum_archivum_q_temporarium_2"
+
+  set +x
+  # file_update_if_necessary csv "$objectivum_archivum_q_temporarium" "$objectivum_archivum"
+  # file_update_if_necessary csv "$objectivum_archivum_q_temporarium" "$objectivum_archivum"
+  file_update_if_necessary csv "$objectivum_archivum_q_temporarium_2" "$objectivum_archivum"
+}
+
+__temp_download_external_cod_data() {
+  USER_AGENT="EticaAI/lexicographi-sine-finibus/2022.05.19 (https://meta.wikimedia.org/wiki/User:EmericusPetro; rocha@ieee.org) 1603_45_16.sh/0.1"
+
+
+
+  fontem_archivum="${ROOTDIR}/999999/1603/45/16/1603_45_16.index.hxl.csv"
+  objectivum_archivum_temporarium_todo="${ROOTDIR}/999999/0/1603_45_16.todo.hxl.csv"
+  objectivum_archivum="${ROOTDIR}/999999/1603/45/16/1603_45_16.index.hxl.csv"
+  echo "${FUNCNAME[0]} ... USER_AGENT [$USER_AGENT] "
+
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus=de_hxltm_ad_hxltm \
+    --cum-columnis='#meta+id,#country+code+v_unm49,#date+created,#date+updated,#item+source+type_xlsx' \
+    "$fontem_archivum" > "$objectivum_archivum_temporarium_todo"
+
+  # curl --user-agent "$USER_AGENT" \
+  #   "https://data.humdata.org/api/3/action/package_search?q=vocab_Topics=common+operational+dataset+-+cod" |
+  #   jq >"${ROOTDIR}/999999/1603/45/16/unocha-hdx-cod~cached.search.json"
+
+}
+
 ### From XLSX, start -----------------------------------------------------------
 # bootstrap_999999_1603_45_16_fetch_data
 # bootstrap_999999_1603_45_16
+
+# __temp_fetch_external_indexes
+# __temp_index_praeparationi_1603_45_16
+# __temp_preprocess_external_indexes
+# exit 1
+
+# __temp_download_external_cod_data
+# exit 1
 
 bootstrap_999999_1603_45_16_neo
 exit 1
@@ -482,3 +647,27 @@ deploy_1603_45_16_global_admX_unicum
 # @see https://docs.google.com/spreadsheets/d/1NjSI2LaS3SqbgYc0HdD8oIb7lofGtiHgoKKATCpwVdY/edit#gid=1088874596
 
 set +x
+
+# pip3 install ckanapi
+# ckanapi
+
+# ckanapi action group_list -r https://data.humdata.org/
+
+# ckanapi --remote=https://data.humdata.org/ action group_list
+
+# SITE_URL=https://data.humdata.org/ ckanapi action group_list
+
+# https://data.humdata.org/api/action/package_search?facet.field=[%22tags%22]&facet.limit=10&rows=0
+
+# https://data.humdata.org/api/action/package_search?facet.field=[%22tags%22]&facet.limit=10&rows=0
+
+# ckanapi -r https://data.humdata.org/ action package_search facet.field='["tags"]' facet.limit=10 rows=0
+
+# ckanapi -r https://data.humdata.org/ action package_search facet.field='["tags"]' facet.limit=10 rows=0
+
+# ckanapi -r https://data.humdata.org/ action package_search fq='tags:bra'
+
+# ckanapi -r https://data.humdata.org/ action package_search facet.field:'["organization"]' rows:0
+
+## This one somwwhat return what we need
+# https://data.humdata.org/api/3/action/package_search?q=vocab_Topics=common+operational+dataset+-+cod

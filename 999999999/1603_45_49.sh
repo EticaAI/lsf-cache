@@ -103,10 +103,10 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
     --rename="#country+name+i_ar+alt+v_unterm:#item+rem+i_ara+is_arab+ix_unterm" \
     "${fontem_archivum}" |
     hxlselect --query="#country+code+num+v_m49>0" |
-    hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unfts={{#country+code+v_fts}}" |
-    hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unreliefweb={{#country+code+v_reliefweb}}" |
-    hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unhrinfo={{#country+code+v_hrinfo_country}}" |
-    hxladd --before --spec="#item+rem+i_zxx+is_zmth+ix_unm49={{#country+code+num+v_m49}}" |
+    hxladd --before --spec="#item+rem+i_qcc+is_zxxx+ix_unfts={{#country+code+v_fts}}" |
+    hxladd --before --spec="#item+rem+i_qcc+is_zxxx+ix_unreliefweb={{#country+code+v_reliefweb}}" |
+    hxladd --before --spec="#item+rem+i_qcc+is_zxxx+ix_unhrinfo={{#country+code+v_hrinfo_country}}" |
+    hxladd --before --spec="#item+rem+i_qcc+is_zxxx+ix_unm49={{#country+code+num+v_m49}}" |
     hxladd --before --spec="#item+conceptum+codicem={{#country+code+num+v_m49}}" |
     hxlsort --tags="#item+conceptum" \
       >"${objectivum_archivum_temporarium}"
@@ -134,12 +134,13 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603_45_49.no1.tm.hxl.csv"
 
   if [ -z "$(changed_recently "$fontem_archivum")" ]; then return 0; fi
-
   echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
+  # echo "${FUNCNAME[0]} ..."
+
   hxlrename \
-    --rename="#country+code+v_iso2:#item+rem+i_zxx+is_latn+ix_iso3166p1a2" \
-    --rename="#country+code+v_iso3:#item+rem+i_zxx+is_latn+ix_iso3166p1a3" \
+    --rename="#country+code+v_iso2:#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2" \
+    --rename="#country+code+v_iso3:#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3" \
     "${fontem_archivum}" |
     hxladd --before --spec="#item+conceptum+numerordinatio=${PRAEFIXUM}{{(#item+conceptum+codicem)+1-1}}" |
     hxlcut --include="#item+conceptum,#item+rem" \
@@ -147,6 +148,13 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
 
   # @TODO: only do this if hxl did not removed empty header files ,,,,,,
   sed -i '1d' "${objectivum_archivum_temporarium}"
+
+  # echo "HOTFIX ',None,' -> ',,'"
+  sed -i 's/,None,/,,/g' "${objectivum_archivum_temporarium}"
+  sed -i 's/,None,/,,/g' "${objectivum_archivum_temporarium}"
+
+  # echo "fix here"
+  # return 1
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
@@ -171,11 +179,11 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
   echo "${FUNCNAME[0]} sources changed_recently. Reloading..."
 
   hxladd \
-    --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
-    --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
+    --before --spec="#x_item+lower={{#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2}}" \
+    --before --spec="#x_item+upper={{#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2}}" \
     "${fontem_archivum}" |
-    hxladd --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" |
-    hxladd --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" |
+    hxladd --before --spec="#x_item+lower={{#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3}}" |
+    hxladd --before --spec="#x_item+upper={{#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3}}" |
     hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" |
     hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" |
     hxlclean --lower="#x_item+lower" |
@@ -220,22 +228,22 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
 
   # echo "$fontem_archivum"
 
-  # echo "hxlcut --include='#item+conceptum+codicem,#item+rem+i_zxx+is_latn+ix_iso3166p1a2' $fontem_archivum"
+  # echo "hxlcut --include='#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2' $fontem_archivum"
 
   # ISO 3166 part 1 alpha 2
   hxlcut \
-    --include='#item+conceptum+codicem,#item+rem+i_zxx+is_latn+ix_iso3166p1a2' \
+    --include='#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2' \
     "$fontem_archivum" \
-    | hxlselect --query='#item+rem+i_zxx+is_latn+ix_iso3166p1a2 is not empty' \
+    | hxlselect --query='#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2 is not empty' \
     | hxladd --spec='#x_tag=item+conceptum+codicem+numeralem' \
     | tail -n +3  \
     >>"${objectivum_archivum_temporarium}"
 
   # ISO 3166 part 1 alpha 3
   hxlcut \
-    --include='#item+conceptum+codicem,#item+rem+i_zxx+is_latn+ix_iso3166p1a3' \
+    --include='#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3' \
     "$fontem_archivum" \
-    | hxlselect --query='#item+rem+i_zxx+is_latn+ix_iso3166p1a3 is not empty' \
+    | hxlselect --query='#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3 is not empty' \
     | hxladd --spec='#x_tag=item+conceptum+codicem+numeralem' \
     | tail -n +3  \
     >>"${objectivum_archivum_temporarium}"
@@ -243,11 +251,11 @@ DATA_UN_M49_CSV="https://proxy.hxlstandard.org/data.csv?dest=data_edit&filter01=
   # hxlselect --query='#x_substitution is not empty' 999999/0/1603_13_1603_45_49~1603_47_3166_1.r.hxl.csv
 
   # hxladd \
-  #   --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
-  #   --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso3166p1a2}}" \
+  #   --before --spec="#x_item+lower={{#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2}}" \
+  #   --before --spec="#x_item+upper={{#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2}}" \
   #   "${fontem_archivum}" |
-  #   hxladd --before --spec="#x_item+lower={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" |
-  #   hxladd --before --spec="#x_item+upper={{#item+rem+i_zxx+is_latn+ix_iso3166p1a3}}" |
+  #   hxladd --before --spec="#x_item+lower={{#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3}}" |
+  #   hxladd --before --spec="#x_item+upper={{#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3}}" |
   #   hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" |
   #   hxladd --before --spec="#x_item={{#item+conceptum+codicem}}" |
   #   hxlclean --lower="#x_item+lower" |

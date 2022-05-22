@@ -71,7 +71,7 @@ numerordiatio_summarium() {
     if [[ "$caput" =~ ix_hxlix ]]; then
       status_ix_hxlix="1"
       #echo "status_ix_hxlix $relative_path"
-      # hxlcut --include="#item+rem+i_zxx+is_latn+ix_hxl+ix_hxlvoc"  1603/25/1/1603_25_1.no1.tm.hxl.csv
+      # hxlcut --include="#item+rem+i_qcc+is_zxxx+ix_hxl+ix_hxlvoc"  1603/25/1/1603_25_1.no1.tm.hxl.csv
       values_ix_hxlix=$(hxlcut --include="#item+rem+i_qcc+is_zxxx+ix_hxlix" "$relative_path" | tail -n +3 | sort | uniq)
       values_ix_hxlix=$(echo "$values_ix_hxlix" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|" | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
       values_ix_hxlix=$(echo "$values_ix_hxlix" | tr --delete "[:blank:]")
