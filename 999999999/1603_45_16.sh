@@ -764,3 +764,11 @@ set +x
 #          └──second-level administrative country subdivision (Q13220204) ×2726
 #             └──first-level administrative country subdivision (Q10864048) •3 ×106
 #                └──country (Q6256) •165 ×192
+
+# https://github.com/seebi/rdf.sh (also any23 https://github.com/seebi/rdf.sh/issues/8)
+# /workspace/bin/rdf
+# rdf desc skos:narrower
+# rdf list geo:
+
+# rapper -g 999999/0/ibge_un_adm2.no1.skos.ttl
+# rapper --output dot --guess 999999/0/ibge_un_adm2.no1.skos.ttl

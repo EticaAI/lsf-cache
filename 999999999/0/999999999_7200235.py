@@ -64,17 +64,13 @@ from L999999999_0 import (
     hxltm_ex_selectis,
     hxltm_index_praeparationi,
     qhxl_hxlhashtag_2_bcp47,
+    HXLTMAdRDFSimplicis,
     XLSXSimplici
 )
 
 STDIN = sys.stdin.buffer
 
 NOMEN = '999999999_7200235'
-
-# @TODO move this _SEE_ALSO for some other place
-_SEE_ALSO = [
-    'https://en.wikipedia.org/wiki/Geopolitical_ontology'
-]
 
 DESCRIPTION = """
 {0} Pre-processor of P-Code external data to HXLTM working format.
@@ -173,6 +169,11 @@ DATA_REFERENTIBUS(i1603_45_49;#country+code+v_iso3)'
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
 """.format(__file__)
+
+# @TODO move this _SEE_ALSO for some other place
+_SEE_ALSO = [
+    'https://en.wikipedia.org/wiki/Geopolitical_ontology'
+]
 
 COD_AB_INDEX = NUMERORDINATIO_BASIM + \
     '/999999/1603/45/16/1603_45_16.index.hxl.csv'
