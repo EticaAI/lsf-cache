@@ -64,6 +64,181 @@ bootstrap_999999_1603_45_16_fetch_data() {
 }
 
 #######################################
+# Convert the XLSXs to intermediate formats on 999999/1603/45/16 using
+# 999999999_7200235.py to 1603/45/16/{cod_ab_level}/
+#
+# @TODO: potentially use more than one source (such as IGBE data for BRA)
+#        instead of direclty from OCHA
+#
+# Globals:
+#   ROOTDIR
+#
+# Arguments:
+#   objectivum_iso3661p1a3  If given, will restrict processing to one place)
+#                           Empty will process all files on disk
+#
+# Outputs:
+#   Convert files
+#######################################
+bootstrap_1603_45_16__all() {
+  # objectivum_iso3661p1a3="${1:-""}"
+  # objectivum_unm49="${1:-""}"
+
+  # echo "${FUNCNAME[0]} ... [$objectivum_iso3661p1a3]"
+  echo "${FUNCNAME[0]} ... [@TODO]"
+  opus_temporibus_temporarium="${ROOTDIR}/999999/0/1603_45_16.todo.tsv"
+
+  # set -x
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus='cod_ab_index' \
+    --punctum-separato-ad-tab \
+    --cum-columnis='#country+code+v_unm49,#country+code+v_iso3,#country+code+v_iso2,#meta+source+cod_ab_level,#date+created,#date+updated' \
+    >"${opus_temporibus_temporarium}"
+  # set +x
+
+  echo ""
+  echo "  LIST HERE <${opus_temporibus_temporarium}>"
+  echo ""
+
+
+
+  # while IFS=, read -r iso3 source_url; do
+  {
+    # remove read -r to not skip first line
+    read -r
+    while IFS=$'\t' read -r -a linea; do
+      unm49="${linea[0]}"
+      v_iso3="${linea[1]}"
+      v_iso2="${linea[2]}"
+      cod_ab_level_max="${linea[3]}"
+      numerordinatio_praefixo="1603_45_16"
+      echo ""
+      echo "        ${linea[*]}"
+      # echo "unm49 $unm49"
+      # echo "v_iso3 $v_iso3"
+      # echo "v_iso2 $v_iso2"
+
+      if [ "$unm49" = "426" ]; then
+        echo " 2022-05-23: we will skip LSA admin1 for now as it cannot extract"
+        echo " number (it use 3-letter P-codes)"
+        ## 2022-05-23: we will skip LSA admin1 for now as it cannot extract
+        ## number (it use 3-letter P-codes)
+        # admin1Name_en	admin1Pcode
+        # Maseru	LSA
+        # Butha-Buthe	LSB
+        # Leribe	LSC
+        # (...)
+        continue
+      fi
+
+
+      # echo "numerordinatio_praefixo $numerordinatio_praefixo"
+      # bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "3" "1" "0"
+      bootstrap_1603_45_16__item "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
+      # bootstrap_1603_45_16__item "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "1" "0"
+      # sleep 5
+    done
+  } <"${opus_temporibus_temporarium}"
+
+}
+
+#######################################
+# Convert the XLSXs to intermediate formats on 999999/1603/45/16 using
+# 999999999_7200235.py to 1603/45/16/{cod_ab_level}/
+#
+# @TODO: potentially use more than one source (such as IGBE data for BRA)
+#        instead of direclty from OCHA
+#
+# Globals:
+#   ROOTDIR
+#
+# Arguments:
+#   numerordinatio_praefixo
+#   unm49
+#   iso3661p1a3
+#   pcode_praefixo
+#   cod_ab_level_max
+#   est_temporarium_fontem
+#   est_temporarium_objectivum
+#
+# Outputs:
+#   Convert files
+#######################################
+bootstrap_1603_45_16__item() {
+  numerordinatio_praefixo="$1"
+  unm49="${2}"
+  iso3661p1a3="${3}"
+  pcode_praefixo="${4}"
+  cod_ab_level_max="${5}"
+  est_temporarium_fontem="${6:-"1"}"
+  est_temporarium_objectivum="${7:-"0"}"
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  _iso3661p1a3_lower=$(echo "$iso3661p1a3" | tr '[:upper:]' '[:lower:]')
+
+  fontem_archivum="${_basim_fontem}/1603/45/16/xlsx/${_iso3661p1a3_lower}.xlsx"
+  objectivum_archivum_basi="${_basim_objectivum}/1603/45/16/${unm49}"
+  opus_temporibus_temporarium="${ROOTDIR}/999999/0/${unm49}~lvl.tsv"
+
+  echo "${FUNCNAME[0]} ... [$numerordinatio_praefixo] [$unm49] [$iso3661p1a3] [$pcode_praefixo]"
+
+  # for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
+  ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
+  ISO3166p1a3=$(echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
+  # UNm49=$(numerordinatio_codicem_locali__1603_45_49 "$ISO3166p1a3")
+
+  if [ ! -d "$objectivum_archivum_basi" ]; then
+    mkdir "$objectivum_archivum_basi"
+  fi
+
+  # file_xlsx="${ISO3166p1a3_original}.xlsx"
+
+  echo "cod_ab_levels $cod_ab_level_max"
+
+  for ((i=0;i<=cod_ab_level_max;i++)); do
+    cod_level="$i"
+    if [ "$_iso3661p1a3_lower" == "bra" ] && [ "$cod_level" == "2" ]; then
+      echo ""
+      echo "Skiping COD-AB-BR lvl 2"
+      echo ""
+      continue
+    fi
+
+    objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
+    objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${cod_level}.no1.tm.hxl.csv"
+    echo "  cod-ab-$_iso3661p1a3_lower-$cod_level [$objectivum_archivum_no1] ..."
+    if [ ! -d "$objectivum_archivum_basi_lvl" ]; then
+      mkdir "$objectivum_archivum_basi_lvl"
+    fi
+
+    set -x
+    "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+      --methodus=xlsx_ad_no1 \
+      --numerordinatio-praefixo="$numerordinatio_praefixo" \
+      --ordines="$cod_level" \
+      --pcode-praefix="$pcode_praefixo" \
+      --unm49="$unm49" \
+      "$fontem_archivum" >"${objectivum_archivum_no1}"
+    set +x
+
+    frictionless validate "${objectivum_archivum_no1}" || true
+
+  done
+  # return 0
+  # done
+}
+
+#######################################
 # Convert the XLSXs to intermediate formats on 999999/1603/45/16
 # DEPRECATED use bootstrap_999999_1603_45_16_neo
 #
@@ -544,6 +719,7 @@ __temp_preprocess_external_indexes() {
   "${ROOTDIR}/999999999/0/999999999_7200235.py" \
     --methodus=de_hxltm_ad_hxltm \
     --adde-columnis='#country+code+v_unm49=DATA_REFERENTIBUS(i1603_45_49;#country+code+v_iso3)' \
+    --adde-columnis='#country+code+v_iso2=DATA_REFERENTIBUS(i1603_45_49__iso3166p1a2;#country+code+v_iso3)' \
     --cum-ordinibus-ex-columnis='-9:#meta+id|-8:#country+code+v_unm49|-7:#country+code+v_iso3|-6:#country+code+v_iso2' \
     "$objectivum_archivum_q_temporarium" >"$objectivum_archivum_q_temporarium_2"
 
@@ -635,10 +811,13 @@ __temp_download_external_cod_data() {
 # __temp_download_external_cod_data
 # exit 1
 
-bootstrap_999999_1603_45_16_neo ""
+bootstrap_1603_45_16__all
+# bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
-exit 1
 
+# bootstrap_1603_45_16__item "76" "BRA"
+# bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "1" "0"
+exit 1
 
 echo "after here is old scripts that need to be refatored"
 exit 1

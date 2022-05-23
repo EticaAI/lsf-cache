@@ -35,6 +35,7 @@ from genericpath import exists
 import json
 # import importlib
 import os
+from pathlib import Path
 # from pathlib import Path
 import re
 import sys
@@ -504,8 +505,20 @@ class CodAbTabulae:
     caput_originali: List[str] = None
     caput_hxl: List[str] = None
     caput_hxltm: List[str] = None
+    caput_no1: List[str] = None
     data: List[list] = None
     dictionaria_linguarum: Type['DictionariaLinguarum'] = None
+    ordo: int = 1
+    numerordinatio_praefixo: str = None
+    pcode_praefixo: str = None
+    unm49: str = None
+
+    # identitās, f, s, nom., https://en.wiktionary.org/wiki/identitas#Latin
+    # ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+    # locālī, n, s, dativus, https://en.wiktionary.org/wiki/localis#Latin
+    # identitas_locali_ex_hxl_hashtag: str = '#item+conceptum+codicem'
+    identitas_locali_index: int = -1
+    numerordinatio_indici: int = -2
 
     # https://en.wiktionary.org/wiki/originalis#Latin
 
@@ -518,11 +531,19 @@ class CodAbTabulae:
     def __init__(
         self,
         caput: list,
-        data: list = None
+        data: list = None,
+        ordo: int = 1,
+        numerordinatio_praefixo: str = None,
+        pcode_praefixo: str = None,
+        unm49: str = None,
     ):
         """__init__"""
         self.caput_originali = caput
         self.data = data
+        self.ordo = ordo
+        self.numerordinatio_praefixo = numerordinatio_praefixo
+        self.pcode_praefixo = pcode_praefixo
+        self.unm49 = unm49
 
     def imprimere(self) -> list:
         """imprimere /print/@eng-Latn
@@ -545,17 +566,21 @@ class CodAbTabulae:
 
         # if formatum is None or formatum == 'csv':
 
+        # print(self._objectivo_dictionario)
+
         caput = self.caput_originali
         data = self.data
         if self._objectivo_dictionario == 'hxl':
             caput = self.caput_hxl
         if self._objectivo_dictionario == 'hxltm':
             caput = self.caput_hxltm
+        if self._objectivo_dictionario == 'no1':
+            caput = self.caput_no1
 
         # @TODO potentially re-arrange the order of columns on the result
         return caput, data
 
-    def praeparatio(self, formatum: str = None):
+    def praeparatio(self, formatum: str):
         """praeparātiō
 
         Trivia:
@@ -565,6 +590,11 @@ class CodAbTabulae:
         self._objectivo_dictionario = formatum
 
         self.caput_hxl = []
+        self.dictionaria_linguarum = None
+
+        # print('self.data', self.data)
+
+        # Let's assume is a plain CSV (we skip if start with #)
         for index, res in enumerate(self.caput_originali):
             column = []
             if res and len(res) > 0 and not res.startswith('#') and \
@@ -576,23 +606,126 @@ class CodAbTabulae:
 
             self.caput_hxl.append(self.quod_hxl_de_caput_rei(res, column))
 
-        # @TODO refactor from bash scripts
-        #       - un_pcode_csvheader_administrative_level
-        if formatum is None or formatum == 'hxltm':
-            self.caput_hxltm = []
+        if formatum not in ['hxltm', 'no1']:
+            return self
+        # if formatum in ['hxltm', 'no1']:
+        self.caput_hxltm = []
 
-            self.dictionaria_linguarum = DictionariaLinguarum()
+        self.dictionaria_linguarum = DictionariaLinguarum()
 
-            for index, res in enumerate(self.caput_hxl):
-                self.caput_hxltm.append(
-                    self.quod_hxltm_de_hxl_rei(res))
-        # else:
-        # print('teste??', self.caput_hxltm)
+        for index, res in enumerate(self.caput_hxl):
+            caput_novi = self.quod_hxltm_de_hxl_rei(res)
 
-        # self.caput_hxltm = self.caput_hxl
-        # pass
+            if caput_novi == '#item+conceptum+codicem':
+                self.identitas_locali_index = index
+            # if caput_novi == '#item+conceptum+numerordinatio':
+            #     self.numerordinatio_indici = index
+
+            self.caput_hxltm.append(caput_novi)
+
+        if self.identitas_locali_index < 0:
+            self.praeparatio_identitas_locali()
+
+        if formatum == 'no1':
+            self.caput_no1 = []
+
+            # self.dictionaria_linguarum = DictionariaLinguarum()
+
+            for index, res in enumerate(self.caput_hxltm):
+                caput_novi = self.quod_no1_de_hxltm_rei(res)
+
+                # if caput_novi == '#item+conceptum+codicem':
+                #     self.identitas_locali_index = index
+                if caput_novi == '#item+conceptum+numerordinatio':
+                    self.numerordinatio_indici = index
+
+                self.caput_no1.append(caput_novi)
+
+        # if formatum in ['hxltm', 'no1'] and self.identitas_locali_index < 0:
+        #     self.praeparatio_identitas_locali()
+
+        if self.numerordinatio_indici < 0:
+            self.praeparatio_numerordinatio()
 
         return self
+
+    def praeparatio_identitas_locali(self):
+        """praeparatio_identitas_locali
+        """
+        pcode_index = None
+        pcode_hashtag_de_facto = ''
+        if self.ordo == 0:
+            pcode_hashtag = [
+                '#country+code+v_pcode', '#country+code+v_iso2',
+                '#country+code+v_iso3166p1a2']
+        else:
+            pcode_hashtag = ['#adm{0}+code+v_pcode'.format(self.ordo)]
+
+        for item in pcode_hashtag:
+            if item in self.caput_hxltm:
+                pcode_hashtag_de_facto = item
+                pcode_index = self.caput_hxltm.index(item)
+                break
+
+        if pcode_index is None:
+            raise SyntaxError(
+                '{0} not in (hxltm)<{1}>/(hxl)<{2}>(csv){3}'.format(
+                pcode_hashtag, self.caput_hxltm,
+                self.caput_hxl, self.caput_originali
+            ))
+        # pcode_index = self.caput_hxltm.index(pcode_hashtag)
+
+        self.caput_hxltm.insert(0, '#item+conceptum+codicem')
+        data_novis = []
+
+        for linea in self.data:
+            linea_novae = []
+            pcode_completo = linea[pcode_index]
+            if self.ordo == 0:
+                linea_novae.append(pcode_completo)  # Ex. BR
+            else:
+
+                # Ex. 31 ad BR31
+                pcode_numeri = pcode_completo.replace(self.pcode_praefixo, '')
+
+                ## Ex: Haiti admin3Pcode HT0111-01, HT0111-02, HT0111-03
+                pcode_numeri = re.sub('[^0-9]','', pcode_numeri)
+
+                try:
+                    linea_novae.append(int(pcode_numeri))
+                except ValueError as err:
+                    raise ValueError('<{0}:{1}> -> int({2})?? [{3}]'.format(
+                        pcode_hashtag_de_facto,
+                        pcode_completo,
+                        pcode_numeri,
+                        err
+                    ))
+
+            linea_novae.extend(linea)
+            data_novis.append(linea_novae)
+
+        self.data = data_novis
+
+    def praeparatio_numerordinatio(self):
+        """numerordinatio
+        """
+        identitas_locali_index = self.caput_hxltm.index(
+            '#item+conceptum+codicem')
+        self.caput_no1.insert(0, '#item+conceptum+numerordinatio')
+        data_novis = []
+
+        for linea in self.data:
+            linea_novae = ['{0}:{1}:{2}:{3}'.format(
+                self.numerordinatio_praefixo,
+                self.unm49,
+                str(self.ordo),
+                linea[identitas_locali_index],
+
+            )]
+            linea_novae.extend(linea)
+            data_novis.append(linea_novae)
+
+        self.data = data_novis
 
     @staticmethod
     def quod_columna_alphabeto_orini(column: list = None) -> str:
@@ -618,6 +751,8 @@ class CodAbTabulae:
                     _ordo.add(len(alpha))
             if len(_ordo) == 1:
                 ordo = _ordo.pop()
+
+        # print('  ordo', ordo, column)
         return ordo
 
     @staticmethod
@@ -676,6 +811,10 @@ class CodAbTabulae:
                         data_exemplis)
                     if ordo_codici and ordo_codici in [2, 3]:
                         suffīxum = '+code+v_iso{0}'.format(ordo_codici)
+                    elif ordo_codici is None:
+                        # Weird case: no data at all on adm0. Lets force
+                        # as ISO 3661p1a2
+                        suffīxum = '+code+v_iso2'
                     else:
                         suffīxum = '+code'
                 else:
@@ -716,7 +855,7 @@ class CodAbTabulae:
         return '{0}{1}{2}'.format(praefīxum, suffīxum, lingua)
 
     def quod_hxltm_de_hxl_rei(self, hxlhashtag: str) -> str:
-        """quod_hxl_de_caput_rei
+        """quod_hxltm_de_hxl_rei
 
         Args:
             res (str):
@@ -762,18 +901,74 @@ class CodAbTabulae:
 
         return hxlhashtag
 
-# def cod_caput_ad_hxl_hastag(caput: list) -> list:
-#     """cod_caput_ad_hxl_hastag
-#     Convert a raw CSV header to HXL hashtags
+    def quod_no1_de_hxltm_rei(self, hxlhashtag: str) -> str:
+        """quod_no1_de_hxltm_rei
 
-#     Args:
-#         caput (list):
+        Args:
+            res (str):
 
-#     Returns:
-#         list:
-#     """
-#     # un_pcode_csvheader_administrative_level
-#     return caput
+        Returns:
+            str:
+        """
+        # lingua = ''
+
+        if not hxlhashtag or len(hxlhashtag) == 0 or \
+                not hxlhashtag.startswith('#'):
+            return ''
+
+        # print('hxlhashtag', hxlhashtag)
+        # Time-related hashtags
+        # @see https://www.wikidata.org/wiki/Wikidata:List_of_properties/time
+        # # https://www.wikidata.org/wiki/Property:P571
+        # # inception (P571)
+        # # time when an entity begins to exist
+        # # equivalent property
+        # #  - https://schema.org/dateCreated
+        # #  - http://id.nlm.nih.gov/mesh/vocab#dateCreated
+        # if hxlhashtag == '#date+start':
+        #     return '#item+rem+i_qcc+is_zxxx+ix_wikip571'
+
+        # # P729 service entry
+        # # date or point in time on which a piece or class of equipment
+        # # https://www.wikidata.org/wiki/Property:P729
+        # if hxlhashtag == '#date+start':
+        #     return '#item+rem+i_qcc+is_zxxx+ix_wikip729'
+
+        # # P729 service entry
+        # # date or point in time on which a piece or class of equipment
+        # # https://www.wikidata.org/wiki/Property:P730
+        # if hxlhashtag == '#date+end':
+        #     return '#item+rem+i_qcc+is_zxxx+ix_wikip730'
+
+        # publication date (P577)
+        # date or point in time when a work was first published or released
+        # https://www.wikidata.org/wiki/Property:P577
+        if hxlhashtag == '#date+start':
+            return '#item+rem+i_qcc+is_zxxx+ix_wikip577'
+
+        # discontinued date (P2669)
+        # date that the availability of a product was discontinued;
+        # see also "dissolved, abolished or demolished" (P576)
+        # https://www.wikidata.org/wiki/Property:P2669
+        if hxlhashtag == '#date+end':
+            return '#item+rem+i_qcc+is_zxxx+ix_wikip2669'
+
+        ## retrieved (P813)
+        # - https://www.wikidata.org/wiki/Property:P813
+        # - https://wiki.openstreetmap.org/wiki/Key:check_date
+        if hxlhashtag == '#date+updated':
+            return '#item+rem+i_qcc+is_zxxx+ix_wikip813'
+
+        # ISO 3166-1 alpha-2 code (P297)
+        # https://www.wikidata.org/wiki/Property:P297
+        if hxlhashtag in [
+                '#country+code+v_iso2', '#country+code+v_iso3166p1a2']:
+            # @TODO: make qualifier if this is not adm0
+            return '#item+rem+i_qcc+is_zxxx+ix_wikip297'
+
+        # @TODO '#adm1+code+v_pcode' likely to be alpha 2 (needs check data)
+
+        return self.quod_hxltm_de_hxl_rei(hxlhashtag)
 
 
 def configuratio(
@@ -808,13 +1003,14 @@ def configuratio(
     return None
 
 
-def csv_imprimendo(caput: list = None, data: list = None, delimiter: str = ',',
-                   archivum_trivio: str = None):
+def csv_imprimendo(
+        caput: list = None, data: list = None, punctum_separato: str = ",",
+        archivum_trivio: str = None):
     if archivum_trivio:
         raise NotImplementedError('{0}'.format(archivum_trivio))
     # imprimendō, v, s, dativus, https://en.wiktionary.org/wiki/impressus#Latin
 
-    _writer = csv.writer(sys.stdout, delimiter=delimiter)
+    _writer = csv.writer(sys.stdout, delimiter=punctum_separato)
     if caput and len(caput) > 0:
         _writer.writerow(caput)
     _writer.writerows(data)
@@ -2760,6 +2956,131 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
     return rem[query]
 
 
+class TabulaAdHXLTM:
+    """Tabula ad HXLTM
+
+    - tabula, f, s, nominativus, https://en.wiktionary.org/wiki/tabula
+    - ad (+ accusativus),https://en.wiktionary.org/wiki/ad#Latin
+    - ex (+ ablativus)
+    - HXLTM, https://hxltm.etica.ai/
+
+    """
+    methodus_ex_tabulae: dict = {}
+    # methodus_ex_tabulae: dict = {}
+    objectivum_formato: str = 'hxltm_csv'
+    methodus: str = ''
+
+    # _hxltm: '#meta+{caput}'
+
+    #  '#meta+{{caput_clavi_normali}}'
+    _hxltm_hashtag_defallo: str = '#meta+{{caput_clavi_normali}}'
+    _hxl_hashtag_defallo: str = '#meta+{{caput_clavi_normali}}'
+
+    def __init__(
+        self,
+        methodus_ex_tabulae: dict,
+        objectivum_formato: str,
+        methodus: str,
+    ):
+        """__init__ _summary_
+
+        Args:
+            methodus_ex_tabulae (dict):
+        """
+        self.methodus_ex_tabulae = methodus_ex_tabulae
+        self.objectivum_formato = objectivum_formato
+        self.methodus = methodus
+
+    def caput_translationi(self, caput: list) -> list:
+        """Caput trānslātiōnī
+
+        - trānslātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/translatio
+        - caput, n, s, nominativus, https://en.wiktionary.org/wiki/caput#Latin
+
+        Args:
+            caput (list): _description_
+
+        Returns:
+            list: _description_
+        """
+
+        # if self.objectivum_formato.find('hxltm') > -1:
+        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxltm')
+        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxltm')
+        #     neo_caput = map(self.clavis_ad_hxl, caput)
+        #     # neo_caput = map(self.clavis_ad_hxl, caput)
+        # if self.objectivum_formato.find('hxl') > -1:
+        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxl')
+        #     neo_caput = map(self.clavis_ad_hxl, caput)
+        if self.objectivum_formato.find('hxl') > -1:
+            neo_caput = map(self.clavis_ad_hxl, caput)
+        else:
+            neo_caput = map(self.clavis_normationi, caput)
+        return neo_caput
+
+    def clavis_normationi(self, clavis: str) -> str:
+        """clāvis nōrmātiōnī
+
+        - clāvis, f, s, normativus, https://en.wiktionary.org/wiki/clavis#Latin
+        - nōrmātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/normatio
+
+        Args:
+            clavis (str):
+
+        Returns:
+            str:
+        """
+        if not clavis or len(clavis) == 0:
+            return ''
+        clavis_normali = clavis.strip().lower()\
+            .replace(' ', '_').replace('-', '_')
+
+        return clavis_normali
+
+    # def clavis_ad_hxl(self, clavis: str, classis: str = 'hxltm') -> str:
+    def clavis_ad_hxl(self, clavis: str) -> str:
+        """clavis_ad_hxltm
+
+        - clāvis, f, s, normativus, https://en.wiktionary.org/wiki/clavis#Latin
+        - nōrmātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/normatio
+
+        Args:
+            clavis (str):
+
+        Returns:
+            str:
+        """
+        clavis_normationi = self.clavis_normationi(clavis)
+
+        if not clavis or len(clavis) == 0:
+            return ''
+        # print(classis)
+        # neo_caput = 'hxl_hashtag'
+        # forma = self._hxl_hashtag_defallo
+        # if classis == 'hxltm' or not classis:
+        if self.objectivum_formato.find('hxltm') > -1:
+            neo_caput = 'hxltm_hashtag'
+            forma = self._hxltm_hashtag_defallo
+        # elif classis == 'hxl':
+        elif self.objectivum_formato.find('hxl') > -1:
+            neo_caput = 'hxl_hashtag'
+            forma = self._hxl_hashtag_defallo
+
+        if clavis_normationi in self.methodus_ex_tabulae['caput'].keys():
+            if self.methodus_ex_tabulae['caput'][clavis_normationi] and \
+                neo_caput in self.methodus_ex_tabulae['caput'][clavis_normationi] and \
+                    self.methodus_ex_tabulae['caput'][clavis_normationi][neo_caput]:
+                forma = self.methodus_ex_tabulae['caput'][clavis_normationi][neo_caput]
+
+        hxl_hashtag = forma.replace(
+            '{{caput_clavi_normali}}', clavis_normationi)
+
+        return hxl_hashtag
+
+    # def clavis_ad_hxl(self, clavis: str) -> str:
+    #     pass
+
+
 class TabulaSimplici:
     """Tabula simplicī /Simple Table/@eng-Latn
 
@@ -3053,6 +3374,7 @@ class XLSXSimplici:
             archivum_trivio (str):
         """
         # from openpyxl import load_workbook
+        # print(archivum_trivio)
         self.archivum_trivio = archivum_trivio
         self.workbook = load_workbook(
             archivum_trivio, data_only=True, read_only=True)

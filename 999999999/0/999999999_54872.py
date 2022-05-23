@@ -101,10 +101,10 @@ _ET_AL_URL = [
     'https://www.w3.org/2018/09/rdf-data-viz/',
     'https://rdf2svg.redefer.rhizomik.net/',
     # 'http://robot.obolibrary.org/reason',
-    ## Papers
+    # Papers
     'https://www.w3.org/2009/12/rdf-ws/papers/ws21',
     # https://en.wikipedia.org/wiki/Ontology_engineering
-    ## 300 page book
+    # 300 page book
     # - https://people.cs.uct.ac.za/~mkeet/files/OEbook.pdf
     # - https://people.cs.uct.ac.za/~mkeet/OEbook/OEsoftware.html#OElang
 ]
@@ -426,132 +426,6 @@ class CliMain:
             # print('oi actio')
             # numerordinatio_neo_separatum
         # print('failed')
-
-
-# @TODO remove TabulaAdHXLTM from this file
-class TabulaAdHXLTM:
-    """Tabula ad HXLTM
-
-    - tabula, f, s, nominativus, https://en.wiktionary.org/wiki/tabula
-    - ad (+ accusativus),https://en.wiktionary.org/wiki/ad#Latin
-    - ex (+ ablativus)
-    - HXLTM, https://hxltm.etica.ai/
-
-    """
-    methodus_ex_tabulae: dict = {}
-    # methodus_ex_tabulae: dict = {}
-    objectivum_formato: str = 'hxltm_csv'
-    methodus: str = ''
-
-    # _hxltm: '#meta+{caput}'
-
-    #  '#meta+{{caput_clavi_normali}}'
-    _hxltm_hashtag_defallo: str = '#meta+{{caput_clavi_normali}}'
-    _hxl_hashtag_defallo: str = '#meta+{{caput_clavi_normali}}'
-
-    def __init__(
-        self,
-        methodus_ex_tabulae: dict,
-        objectivum_formato: str,
-        methodus: str,
-    ):
-        """__init__ _summary_
-
-        Args:
-            methodus_ex_tabulae (dict):
-        """
-        self.methodus_ex_tabulae = methodus_ex_tabulae
-        self.objectivum_formato = objectivum_formato
-        self.methodus = methodus
-
-    def caput_translationi(self, caput: list) -> list:
-        """Caput trānslātiōnī
-
-        - trānslātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/translatio
-        - caput, n, s, nominativus, https://en.wiktionary.org/wiki/caput#Latin
-
-        Args:
-            caput (list): _description_
-
-        Returns:
-            list: _description_
-        """
-
-        # if self.objectivum_formato.find('hxltm') > -1:
-        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxltm')
-        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxltm')
-        #     neo_caput = map(self.clavis_ad_hxl, caput)
-        #     # neo_caput = map(self.clavis_ad_hxl, caput)
-        # if self.objectivum_formato.find('hxl') > -1:
-        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxl')
-        #     neo_caput = map(self.clavis_ad_hxl, caput)
-        if self.objectivum_formato.find('hxl') > -1:
-            neo_caput = map(self.clavis_ad_hxl, caput)
-        else:
-            neo_caput = map(self.clavis_normationi, caput)
-        return neo_caput
-
-    def clavis_normationi(self, clavis: str) -> str:
-        """clāvis nōrmātiōnī
-
-        - clāvis, f, s, normativus, https://en.wiktionary.org/wiki/clavis#Latin
-        - nōrmātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/normatio
-
-        Args:
-            clavis (str):
-
-        Returns:
-            str:
-        """
-        if not clavis or len(clavis) == 0:
-            return ''
-        clavis_normali = clavis.strip().lower()\
-            .replace(' ', '_').replace('-', '_')
-
-        return clavis_normali
-
-    # def clavis_ad_hxl(self, clavis: str, classis: str = 'hxltm') -> str:
-    def clavis_ad_hxl(self, clavis: str) -> str:
-        """clavis_ad_hxltm
-
-        - clāvis, f, s, normativus, https://en.wiktionary.org/wiki/clavis#Latin
-        - nōrmātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/normatio
-
-        Args:
-            clavis (str):
-
-        Returns:
-            str:
-        """
-        clavis_normationi = self.clavis_normationi(clavis)
-
-        if not clavis or len(clavis) == 0:
-            return ''
-        # print(classis)
-        # neo_caput = 'hxl_hashtag'
-        # forma = self._hxl_hashtag_defallo
-        # if classis == 'hxltm' or not classis:
-        if self.objectivum_formato.find('hxltm') > -1:
-            neo_caput = 'hxltm_hashtag'
-            forma = self._hxltm_hashtag_defallo
-        # elif classis == 'hxl':
-        elif self.objectivum_formato.find('hxl') > -1:
-            neo_caput = 'hxl_hashtag'
-            forma = self._hxl_hashtag_defallo
-
-        if clavis_normationi in self.methodus_ex_tabulae['caput'].keys():
-            if self.methodus_ex_tabulae['caput'][clavis_normationi] and \
-                neo_caput in self.methodus_ex_tabulae['caput'][clavis_normationi] and \
-                    self.methodus_ex_tabulae['caput'][clavis_normationi][neo_caput]:
-                forma = self.methodus_ex_tabulae['caput'][clavis_normationi][neo_caput]
-
-        hxl_hashtag = forma.replace(
-            '{{caput_clavi_normali}}', clavis_normationi)
-
-        return hxl_hashtag
-
-    # def clavis_ad_hxl(self, clavis: str) -> str:
-    #     pass
 
 
 def numerordinatio_neo_separatum(

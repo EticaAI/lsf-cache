@@ -94,7 +94,8 @@ from L999999999_0 import (
     # numerordinatio_progenitori,
     qhxl,
     qhxl_bcp47_2_hxlattr,
-    qhxl_attr_2_bcp47
+    qhxl_attr_2_bcp47,
+    TabulaSimplici
 )
 
 DESCRIPTION = """

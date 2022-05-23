@@ -39,6 +39,11 @@ from typing import (
     # List,
 )
 
+from L999999999_0 import (
+    # hxltm_carricato,
+    TabulaAdHXLTM
+)
+
 import yaml
 
 import xml.etree.ElementTree as XMLElementTree
@@ -423,131 +428,6 @@ def de_dotted(self, dotted_key: str,  # pylint: disable=invalid-name
         lambda d, key: d.get(
             key) if d else default, keys, fontem
     )
-
-
-class TabulaAdHXLTM:
-    """Tabula ad HXLTM
-
-    - tabula, f, s, nominativus, https://en.wiktionary.org/wiki/tabula
-    - ad (+ accusativus),https://en.wiktionary.org/wiki/ad#Latin
-    - ex (+ ablativus)
-    - HXLTM, https://hxltm.etica.ai/
-
-    """
-    methodus_ex_tabulae: dict = {}
-    # methodus_ex_tabulae: dict = {}
-    objectivum_formato: str = 'hxltm_csv'
-    methodus: str = ''
-
-    # _hxltm: '#meta+{caput}'
-
-    #  '#meta+{{caput_clavi_normali}}'
-    _hxltm_hashtag_defallo: str = '#meta+{{caput_clavi_normali}}'
-    _hxl_hashtag_defallo: str = '#meta+{{caput_clavi_normali}}'
-
-    def __init__(
-        self,
-        methodus_ex_tabulae: dict,
-        objectivum_formato: str,
-        methodus: str,
-    ):
-        """__init__ _summary_
-
-        Args:
-            methodus_ex_tabulae (dict):
-        """
-        self.methodus_ex_tabulae = methodus_ex_tabulae
-        self.objectivum_formato = objectivum_formato
-        self.methodus = methodus
-
-    def caput_translationi(self, caput: list) -> list:
-        """Caput trānslātiōnī
-
-        - trānslātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/translatio
-        - caput, n, s, nominativus, https://en.wiktionary.org/wiki/caput#Latin
-
-        Args:
-            caput (list): _description_
-
-        Returns:
-            list: _description_
-        """
-
-        # if self.objectivum_formato.find('hxltm') > -1:
-        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxltm')
-        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxltm')
-        #     neo_caput = map(self.clavis_ad_hxl, caput)
-        #     # neo_caput = map(self.clavis_ad_hxl, caput)
-        # if self.objectivum_formato.find('hxl') > -1:
-        #     # neo_caput = map(self.clavis_ad_hxl, caput, 'hxl')
-        #     neo_caput = map(self.clavis_ad_hxl, caput)
-        if self.objectivum_formato.find('hxl') > -1:
-            neo_caput = map(self.clavis_ad_hxl, caput)
-        else:
-            neo_caput = map(self.clavis_normationi, caput)
-        return neo_caput
-
-    def clavis_normationi(self, clavis: str) -> str:
-        """clāvis nōrmātiōnī
-
-        - clāvis, f, s, normativus, https://en.wiktionary.org/wiki/clavis#Latin
-        - nōrmātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/normatio
-
-        Args:
-            clavis (str):
-
-        Returns:
-            str:
-        """
-        if not clavis or len(clavis) == 0:
-            return ''
-        clavis_normali = clavis.strip().lower()\
-            .replace(' ', '_').replace('-', '_')
-
-        return clavis_normali
-
-    # def clavis_ad_hxl(self, clavis: str, classis: str = 'hxltm') -> str:
-    def clavis_ad_hxl(self, clavis: str) -> str:
-        """clavis_ad_hxltm
-
-        - clāvis, f, s, normativus, https://en.wiktionary.org/wiki/clavis#Latin
-        - nōrmātiōnī, f, s, dativus, https://en.wiktionary.org/wiki/normatio
-
-        Args:
-            clavis (str):
-
-        Returns:
-            str:
-        """
-        # @TODO: generalize this block with 999999999_268072.py
-
-        # clavis_normationi = self.clavis_normationi(clavis)
-        clavis_normationi = clavis
-
-        if not clavis or len(clavis) == 0:
-            return ''
-
-        if self.objectivum_formato.find('hxltm') > -1:
-            neo_caput = 'hxltm_hashtag'
-            forma = self._hxltm_hashtag_defallo
-        # elif classis == 'hxl':
-        elif self.objectivum_formato.find('hxl') > -1:
-            neo_caput = 'hxl_hashtag'
-            forma = self._hxl_hashtag_defallo
-
-        if clavis_normationi in self.methodus_ex_tabulae['caput'].keys():
-            if self.methodus_ex_tabulae['caput'][clavis_normationi] and \
-                neo_caput in self.methodus_ex_tabulae['caput'][clavis_normationi] and \
-                    self.methodus_ex_tabulae['caput'][clavis_normationi][neo_caput]:
-                forma = self.methodus_ex_tabulae['caput'][clavis_normationi][neo_caput]
-
-        hxl_hashtag = forma.replace(
-            '{{caput_clavi}}', clavis)
-
-        hxl_hashtag = forma.replace(
-            '{{caput_clavi_normali}}', self.clavis_normationi(clavis))
-
-        return hxl_hashtag
 
 
 if __name__ == "__main__":
