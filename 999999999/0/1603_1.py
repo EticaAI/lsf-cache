@@ -4134,7 +4134,8 @@ class DataApothecae:
             if abstractum:
                 return archivum_no1
             return archivum_no1.quod_datapackage()
-
+        # print('archivum_no11', archivum_no11)
+        # print('archivum_no1', archivum_no1)
         if strictum:
             raise ValueError('quod_tabula {0}'.format(numerodination))
         return None

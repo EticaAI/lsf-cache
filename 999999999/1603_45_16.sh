@@ -215,7 +215,12 @@ bootstrap_1603_45_16__item() {
     fi
 
     objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
-    objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${cod_level}.no1.tm.hxl.csv"
+    objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+
+    # set -x
+    # rm "$objectivum_archivum_no1" || true
+    # set +x
+    # continue
     echo "  cod-ab-$_iso3661p1a3_lower-$cod_level [$objectivum_archivum_no1] ..."
     if [ ! -d "$objectivum_archivum_basi_lvl" ]; then
       mkdir "$objectivum_archivum_basi_lvl"
@@ -951,3 +956,9 @@ set +x
 
 # rapper -g 999999/0/ibge_un_adm2.no1.skos.ttl
 # rapper --output dot --guess 999999/0/ibge_un_adm2.no1.skos.ttl
+
+
+#### @TODO: population --------------------------------------------------------
+# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Countries_sorted_by_population
+# https://w.wiki/5CDt
+#

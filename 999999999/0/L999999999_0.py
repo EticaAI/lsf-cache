@@ -3122,6 +3122,7 @@ class TabulaSimplici:
         - initiārī, https://en.wiktionary.org/wiki/initio#Latin
         """
         if not os.path.exists(self.archivum_trivio):
+            # print('self.archivum_trivio', self.archivum_trivio)
             self.statum = False
             return self.statum
 

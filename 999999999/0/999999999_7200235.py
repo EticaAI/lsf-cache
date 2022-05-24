@@ -154,9 +154,9 @@ Generic HXLTM processing . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 '#meta+v_iso3+alt=LOWER(#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3)' \
 
 Numerordinatio . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    {0} --methodus=xlsx_ad_no1 --ordines=1 \
---numerordinatio-praefixo=1603_45_16 --pcode-praefixo=AO --unm49=24 \
-999999/1603/45/16/xlsx/ago.xlsx
+    {0} --methodus=xlsx_ad_no1  \
+--numerordinatio-praefixo=1603_45_16 --unm49=24 --ordines=1 \
+--pcode-praefixo=AO 999999/1603/45/16/xlsx/ago.xlsx
 
 
 Index preparation (warn up cache) . . . . . . . . . . . . . . . . . . . . . . .

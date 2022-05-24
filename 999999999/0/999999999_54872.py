@@ -83,10 +83,13 @@ __EPILOGUM__ = """
 > 999999/0/ibge_un_adm2.no1.skos.ttl
 
     cat 999999/0/ibge_un_adm2.tm.hxl.csv | \
-{0} --objectivum-formato=application/n-triples \
+{0} --objectivum-formato=application/x-turtle \
 --archivum-configurationi-ex-fonti=999999999/0/999999999_268072.meta.yml \
 --praefixum-configurationi-ex-fonti=methodus,ibge_un_adm2 \
-> 999999/0/ibge_un_adm2.no1.n3
+| rapper --quiet --input=turtle --output=ntriples /dev/fd/0
+
+    rapper --quiet --input=turtle --output=ntriples \
+999999/0/ibge_un_adm2.no1.skos.ttl > 999999/0/ibge_un_adm2.no1.skos.nt
 
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
@@ -422,6 +425,9 @@ class CliMain:
         if self.pyargs.objectivum_formato == 'application/x-turtle':
             return self.hxltm_ad_rdf.resultatum_ad_turtle()
         if self.pyargs.objectivum_formato == 'application/n-triples':
+            raise NotImplementedError(
+                'Use turtle output and pipe to rapper '
+                '(raptor2-utils) or similar')
             return self.hxltm_ad_rdf.resultatum_ad_ntriples()
             # print('oi actio')
             # numerordinatio_neo_separatum
