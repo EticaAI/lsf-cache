@@ -1051,7 +1051,8 @@ def hxltm_carricato__cod_ab_levels(
     _numerordinatio__done = []
 
     for linea in data:
-        for cod_ab_level in range(0, int(linea[1])):
+        # for cod_ab_level in range(0, int(linea[1])):
+        for cod_ab_level in range(0, (int(linea[1]) + 1)):
             linea_novae = []
             numerordinatio = '{0}:{1}:{2}'.format(
                 numerordinatio_praefixo, linea[0], cod_ab_level

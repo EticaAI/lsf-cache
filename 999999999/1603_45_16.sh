@@ -174,13 +174,14 @@ bootstrap_1603_45_16__apothecae() {
   objectivum_archivum_datapackage="apothecae~${nomen}.datapackage.json"
   objectivum_archivum_sqlite="apothecae~${nomen}.sqlite"
   # apothecae.datapackage.json
-  # set -x
+
+  set -x
   "${ROOTDIR}/999999999/0/999999999_7200235.py" \
     --methodus='cod_ab_index_levels' \
     --sine-capite \
     --cum-columnis='#item+conceptum+numerordinatio' \
     >"${opus_temporibus_temporarium}"
-  # set +x
+  set +x
 
   ## 2022-05-23: we will skip LSA admin1 for now as it cannot extract
   ## number (it use 3-letter P-codes)
@@ -191,12 +192,23 @@ bootstrap_1603_45_16__apothecae() {
   # (...)
   sed -i '/1603:45:16:426:0/d' "${opus_temporibus_temporarium}"
   sed -i '/1603:45:16:426:1/d' "${opus_temporibus_temporarium}"
+  sed -i '/1603:45:16:426:2/d' "${opus_temporibus_temporarium}"
+
+  # @TODO: next line is empty table, the exporter should not generate.
+  #        This is just a quick hotfix
+  sed -i '/1603:45:16:8:3/d' "${opus_temporibus_temporarium}"
+
+  # @TODO: Tables with over 200 columns raize error with frictionless
+  #        SQLAlchemy export to SQL. Need to investigate. For now
+  #        avoiding loading the Brazil table with translations
+  sed -i '/1603:45:16:76:2/d' "${opus_temporibus_temporarium}"
 
   echo ""
   echo "  LIST HERE <${opus_temporibus_temporarium}>"
   echo ""
 
   if [ -n "$est_meta_datapackage" ]; then
+    echo " est_meta_datapackage..."
     set -x
     "${ROOTDIR}/999999999/0/1603_1.py" \
       --methodus='data-apothecae' \
@@ -206,6 +218,7 @@ bootstrap_1603_45_16__apothecae() {
   fi
 
   if [ -n "$est_tabulae_sqlite" ]; then
+    echo " est_tabulae_sqlite..."
     set -x
     "${ROOTDIR}/999999999/0/1603_1.py" \
       --methodus='data-apothecae' \
@@ -905,6 +918,7 @@ __temp_download_external_cod_data() {
 # bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
 bootstrap_1603_45_16__apothecae "1" "1" "" ""
+# bootstrap_1603_45_16__apothecae "1" "" "" ""
 exit 1
 
 echo "after here is old scripts that need to be refatored"
