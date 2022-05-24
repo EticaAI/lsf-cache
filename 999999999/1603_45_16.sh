@@ -100,8 +100,6 @@ bootstrap_1603_45_16__all() {
   echo "  LIST HERE <${opus_temporibus_temporarium}>"
   echo ""
 
-
-
   # while IFS=, read -r iso3 source_url; do
   {
     # remove read -r to not skip first line
@@ -131,7 +129,6 @@ bootstrap_1603_45_16__all() {
         continue
       fi
 
-
       # echo "numerordinatio_praefixo $numerordinatio_praefixo"
       # bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "3" "1" "0"
       bootstrap_1603_45_16__item "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
@@ -139,6 +136,94 @@ bootstrap_1603_45_16__all() {
       # sleep 5
     done
   } <"${opus_temporibus_temporarium}"
+
+}
+
+#######################################
+# Convert the XLSXs to intermediate formats on 999999/1603/45/16 using
+# 999999999_7200235.py to 1603/45/16/{cod_ab_level}/
+#
+# @TODO: potentially use more than one source (such as IGBE data for BRA)
+#        instead of direclty from OCHA
+#
+# Globals:
+#   ROOTDIR
+#
+# Arguments:
+#   est_meta_datapackage
+#   est_tabulae_sqlite
+#   est_tabulae_postgresql
+#   est_graphicus_rdf
+#
+# Outputs:
+#   Convert files
+#######################################
+bootstrap_1603_45_16__apothecae() {
+  # objectivum_iso3661p1a3="${1:-""}"
+  est_meta_datapackage="${1:-""}"
+  est_tabulae_sqlite="${2:-""}"
+  est_tabulae_postgresql="${3:-""}"
+  est_graphicus_rdf="${4:-""}"
+  # est_postgresql="${2:-""}"
+
+  nomen="1603_45_16"
+
+  # echo "${FUNCNAME[0]} ... [$objectivum_iso3661p1a3]"
+  echo "${FUNCNAME[0]} ... [@TODO]"
+  opus_temporibus_temporarium="${ROOTDIR}/999999/0/1603_45_16.apothecae.todo.txt"
+  objectivum_archivum_datapackage="apothecae~${nomen}.datapackage.json"
+  objectivum_archivum_sqlite="apothecae~${nomen}.sqlite"
+  # apothecae.datapackage.json
+  # set -x
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus='cod_ab_index_levels' \
+    --sine-capite \
+    --cum-columnis='#item+conceptum+numerordinatio' \
+    >"${opus_temporibus_temporarium}"
+  # set +x
+
+  ## 2022-05-23: we will skip LSA admin1 for now as it cannot extract
+  ## number (it use 3-letter P-codes)
+  # admin1Name_en	admin1Pcode
+  # Maseru	LSA
+  # Butha-Buthe	LSB
+  # Leribe	LSC
+  # (...)
+  sed -i '/1603:45:16:426:0/d' "${opus_temporibus_temporarium}"
+  sed -i '/1603:45:16:426:1/d' "${opus_temporibus_temporarium}"
+
+  echo ""
+  echo "  LIST HERE <${opus_temporibus_temporarium}>"
+  echo ""
+
+  if [ -n "$est_meta_datapackage" ]; then
+    set -x
+    "${ROOTDIR}/999999999/0/1603_1.py" \
+      --methodus='data-apothecae' \
+      --data-apothecae-ex-archivo="${opus_temporibus_temporarium}" \
+      --data-apothecae-ad="$objectivum_archivum_datapackage"
+    set +x
+  fi
+
+  if [ -n "$est_tabulae_sqlite" ]; then
+    set -x
+    "${ROOTDIR}/999999999/0/1603_1.py" \
+      --methodus='data-apothecae' \
+      --data-apothecae-ex-archivo="${opus_temporibus_temporarium}" \
+      --data-apothecae-ad="$objectivum_archivum_sqlite"
+    set +x
+  fi
+
+  if [ -n "$est_tabulae_postgresql" ]; then
+    echo "est_tabulae_postgresql requires specify connection"
+    echo "skiping for now..."
+  fi
+
+  if [ -n "$est_graphicus_rdf" ]; then
+    echo "TODO est_graphicus_rdf"
+  fi
+
+  # ./999999999/0/1603_1.py --methodus='data-apothecae' --data-apothecae-ex-archivo='999999/0/apothecae-list.txt' --data-apothecae-ad='apothecae.datapackage.json'
 
 }
 
@@ -205,7 +290,7 @@ bootstrap_1603_45_16__item() {
 
   echo "cod_ab_levels $cod_ab_level_max"
 
-  for ((i=0;i<=cod_ab_level_max;i++)); do
+  for ((i = 0; i <= cod_ab_level_max; i++)); do
     cod_level="$i"
     if [ "$_iso3661p1a3_lower" == "bra" ] && [ "$cod_level" == "2" ]; then
       echo ""
@@ -816,12 +901,10 @@ __temp_download_external_cod_data() {
 # __temp_download_external_cod_data
 # exit 1
 
-bootstrap_1603_45_16__all
+# bootstrap_1603_45_16__all
 # bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
-
-# bootstrap_1603_45_16__item "76" "BRA"
-# bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "1" "0"
+bootstrap_1603_45_16__apothecae "1" "1" "" ""
 exit 1
 
 echo "after here is old scripts that need to be refatored"
@@ -956,7 +1039,6 @@ set +x
 
 # rapper -g 999999/0/ibge_un_adm2.no1.skos.ttl
 # rapper --output dot --guess 999999/0/ibge_un_adm2.no1.skos.ttl
-
 
 #### @TODO: population --------------------------------------------------------
 # https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Countries_sorted_by_population

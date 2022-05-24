@@ -40,7 +40,7 @@ from pathlib import Path
 from os.path import exists
 
 # import json
-from typing import Type
+from typing import Tuple, Type
 import yaml
 # import urllib.request
 # import requests
@@ -65,6 +65,9 @@ from L999999999_0 import (
     hxltm_index_praeparationi,
     qhxl_hxlhashtag_2_bcp47,
     HXLTMAdRDFSimplicis,
+    numerordinatio_neo_separatum,
+    # numerordinatio_ordo,
+    # numerordinatio_progenitori,
     XLSXSimplici
 )
 
@@ -120,6 +123,12 @@ Work with local COD-AB index . . . . . . . . . . . . . . . . . . . . . . . . .
 
     {0} --methodus='cod_ab_index' --cum-ordinibus-ex-columnis=\
 '-9:#meta+id|-8:#country+code+v_iso3|-7:#country+code+v_iso2'
+
+Work with local COD-AB index (levels) . . . . . . . . . . . . . . . . . . . . .
+    {0} --methodus='cod_ab_index_levels' --punctum-separato-ad-tab
+
+    {0} --methodus='cod_ab_index_levels' --sine-capite \
+--cum-columnis='#item+conceptum+numerordinatio'
 
 Process XLSXs from external sources . . . . . . . . . . . . . . . . . . . . . .
    {0} --methodus=xlsx_metadata 999999/1603/45/16/xlsx/ago.xlsx
@@ -245,6 +254,7 @@ class Cli:
                 # 'pcode_ex_xlsx',
                 # 'pcode_ex_csv',
                 'cod_ab_index',
+                'cod_ab_index_levels',
                 'cod_ab_ad_rdf_skos_ttl',
                 'de_hxltm_ad_hxltm',  # load main file directly
                 # load main file by number (example: 1603_45_49)
@@ -534,6 +544,17 @@ class Cli:
             const=True,
             default=False
         )
+        # sine (+ ablative) https://en.wiktionary.org/wiki/sine#Latin
+        # capite, s, n, ablativus, https://en.wiktionary.org/wiki/caput#Latin
+        parser.add_argument(
+            '--sine-capite',
+            help='Output without header',
+            metavar="sine_capite",
+            dest="sine_capite",
+            action='store_const',
+            const=True,
+            default=False
+        )
 
         # parser.add_argument(
         #     # '--venandum-insectum-est, --debug',
@@ -599,23 +620,23 @@ class Cli:
         if pyargs.venandum_insectum or VENANDUM_INSECTUM:
             self.venandum_insectum = True
 
-        # if stdin.isatty():
-        #     _infile = pyargs.infile
-        #     _stdin = False
-        # else:
-        #     if pyargs.methodus in ['xlsx_metadata', 'de_librario']:
-        #         # print('   oi pyargs.infile', pyargs.infile)
-        #         raise ValueError(
-        #             'stdin not implemented for {0} input'.format(
-        #                 pyargs.methodus))
-        #     _infile = None
-        #     _stdin = True
+        if stdin.isatty():
+            _infile = pyargs.infile
+            _stdin = False
+        else:
+            #     if pyargs.methodus in ['xlsx_metadata', 'de_librario']:
+            #         # print('   oi pyargs.infile', pyargs.infile)
+            #         raise ValueError(
+            #             'stdin not implemented for {0} input'.format(
+            #                 pyargs.methodus))
+            #     _infile = None
+            _stdin = True
 
         _infile = pyargs.infile
-
+        # raise NotImplementedError(pyargs.methodus)
         if pyargs.methodus in [
             'de_hxltm_ad_hxltm', 'de_librario',
-                'index_praeparationi',  'cod_ab_index']:
+                'index_praeparationi',  'cod_ab_index', 'cod_ab_index_levels']:
             # Decide which main file to load.
             # if pyargs.methodus.startswith('de_librario'):
             if pyargs.methodus.startswith(
@@ -631,6 +652,13 @@ class Cli:
                 caput, data = hxltm_carricato(_infile, _stdin)
             elif pyargs.methodus.startswith('cod_ab_index'):
                 caput, data = hxltm_carricato(COD_AB_INDEX)
+
+            if pyargs.methodus == 'cod_ab_index_levels':
+                # @TODO cod_ab_index_levels
+                # caput, data = hxltm_carricato(COD_AB_INDEX)
+                # raise NotImplementedError(pyargs.methodus)
+
+                caput, data = hxltm_carricato__cod_ab_levels(caput, data)
 
             est_data_referentibus = hxltm__est_data_referentibus(
                 pyargs.adde_columnis,
@@ -747,6 +775,9 @@ class Cli:
                     data_json_len, data_json_len_uniq, _path))
                 return self.EXIT_OK
 
+            if pyargs.sine_capite:
+                caput = None
+
             csv_imprimendo(caput, data, punctum_separato)
 
             return self.EXIT_OK
@@ -800,6 +831,8 @@ class Cli:
         if pyargs.methodus == 'xlsx_ad_csv':
             xlsx.praeparatio()
             caput, data = xlsx.imprimere()
+            if pyargs.sine_capite:
+                caput = None
             csv_imprimendo(caput, data, punctum_separato=punctum_separato)
 
             xlsx.finis()
@@ -827,6 +860,8 @@ class Cli:
             # print(type(caput), caput)
             # print(type(data), data)
             # raise NotImplementedError('test test')
+            if pyargs.sine_capite:
+                caput = None
             csv_imprimendo(caput, data, punctum_separato=punctum_separato)
 
             # print()
@@ -982,30 +1017,61 @@ class CliMain:
         # print('failed')
 
 
-def numerordinatio_neo_separatum(
-        numerordinatio: str, separatum: str = "_") -> str:
-    resultatum = ''
-    resultatum = numerordinatio.replace('_', separatum)
-    resultatum = resultatum.replace('/', separatum)
-    resultatum = resultatum.replace(':', separatum)
-    # TODO: add more as need
-    return resultatum
+def hxltm_carricato__cod_ab_levels(
+    caput: list, data: list, numerordinatio_praefixo: str = '1603_45_16'
+) -> Tuple[list, list]:
+    """hxltm_carricato__cod_ab_levels filter cod_ab_index into a list of levels
 
+    Args:
+        caput (list): _description_
+        data (list): _description_
 
-def numerordinatio_ordo(numerordinatio: str) -> int:
-    normale = numerordinatio_neo_separatum(numerordinatio, '_')
-    return (normale.count('_') + 1)
+    Returns:
+        Tuple[list, list]: _description_
+    """
+    caput_novo = ['#item+conceptum+numerordinatio']
+    caput_cum_columnis = [
+        '#country+code+v_unm49',
+        '#meta+source+cod_ab_level',
+        '#country+code+v_iso3',
+        '#country+code+v_iso2'
+    ]
+    data_novis = []
 
+    caput, data = hxltm_cum_aut_sine_columnis_simplicibus(
+        caput, data, caput_cum_columnis)
 
-def numerordinatio_progenitori(
-        numerordinatio: str, separatum: str = "_") -> int:
-    # prōgenitōrī, s, m, dativus, https://en.wiktionary.org/wiki/progenitor
-    normale = numerordinatio_neo_separatum(numerordinatio, separatum)
-    _parts = normale.split(separatum)
-    _parts = _parts[:-1]
-    if len(_parts) == 0:
-        return "0"
-    return separatum.join(_parts)
+    numerordinatio_praefixo = numerordinatio_neo_separatum(
+        numerordinatio_praefixo, ':')
+
+    caput_novo.extend(caput_cum_columnis)
+
+    data.sort(key=lambda linea: int(linea[0]))
+
+    _numerordinatio__done = []
+
+    for linea in data:
+        for cod_ab_level in range(0, int(linea[1])):
+            linea_novae = []
+            numerordinatio = '{0}:{1}:{2}'.format(
+                numerordinatio_praefixo, linea[0], cod_ab_level
+            )
+
+            if numerordinatio in _numerordinatio__done:
+                continue
+
+            _numerordinatio__done.append(numerordinatio)
+            linea_novae.append(numerordinatio)
+            linea_novae.append(linea[0])
+            linea_novae.append(cod_ab_level)
+            linea_novae.append(linea[2])
+            linea_novae.append(linea[3])
+            # linea_novae.extend(linea)
+            data_novis.append(linea_novae)
+
+    # raise NotImplementedError
+    # return caput, data
+    return caput_novo, data_novis
 
 
 if __name__ == "__main__":
