@@ -925,6 +925,21 @@ __temp_download_external_cod_data() {
   --punctum-separato-ad-tab \
   > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl"
 
+rapper --quiet --input=turtle --output=dot \
+  "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
+  > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
+rapper --quiet --input=turtle --output=dot \
+  "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
+  > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
+
+# dot -Tsvg \
+#   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot" \
+#   > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.svg"
+
+# dot -Tpng \
+#   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot" \
+#   > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.png" 
+
 exit 1
 
 echo "after here is old scripts that need to be refatored"
@@ -1060,7 +1075,23 @@ set +x
 # rapper -g 999999/0/ibge_un_adm2.no1.skos.ttl
 # rapper --output dot --guess 999999/0/ibge_un_adm2.no1.skos.ttl
 
-#### @TODO: population --------------------------------------------------------
-# https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Countries_sorted_by_population
-# https://w.wiki/5CDt
-#
+#### @TODO: population _________________________________________________________
+# - https://www.wikidata.org/wiki/Wikidata:SPARQL_query_service/queries/examples#Countries_sorted_by_population
+# - https://w.wiki/5CDt
+# - https://www.wikidata.org/wiki/Property:P1082
+# - https://www.wikidata.org/wiki/Property_talk:P1082
+# - https://www.wikidata.org/wiki/Property:P4179
+# - https://www.wikidata.org/wiki/Property:P8204
+# - https://www.wikidata.org/wiki/Wikidata:Property_proposal/Historical_Population
+# - https://www.wikidata.org/wiki/Property:P1539 female population
+# - https://www.wikidata.org/wiki/Property:P1539 female population
+# - https://www.wikidata.org/wiki/Property:P1540 male population
+# - https://www.wikidata.org/wiki/Property:P6344
+#   - https://www.wikidata.org/wiki/Wikidata:Property_proposal/rural_population
+# - https://www.wikidata.org/wiki/Property:P6343
+#   - https://www.wikidata.org/wiki/Wikidata:Property_proposal/urban_population
+# - https://www.wikidata.org/wiki/Property:P1538
+#   - https://www.wikidata.org/wiki/Wikidata:Property_proposal/Archive/26#P1538
+# - https://www.wikidata.org/wiki/Category:Properties_with_tabular-data-datatype
+# - https://www.wikidata.org/wiki/Special:ListProperties/tabular-data
+

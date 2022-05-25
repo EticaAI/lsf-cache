@@ -1,0 +1,8 @@
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+
+SELECT ?related ?unm49
+WHERE {
+    ?s skos:related ?related .
+    ?s wdt:P2082 ?unm49 ;
+}

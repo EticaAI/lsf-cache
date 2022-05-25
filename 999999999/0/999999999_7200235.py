@@ -1093,6 +1093,7 @@ def hxltm_carricato__cod_ab_levels_ttl(
 
     @see https://www.wikidata.org/wiki/EntitySchema:E49
     @see https://www.wikidata.org/wiki/Wikidata:List_of_properties/geography
+    @see https://www.wikidata.org/wiki/Special:ListDatatypes
 
     Args:
         caput (list): _description_
@@ -1199,7 +1200,7 @@ def hxltm_carricato__cod_ab_levels_ttl(
         _paginae_basi.append(
             f'  skos:topConceptOf <urn:{basi}>')
 
-        ordo_nunc = 1
+        # ordo_nunc = 1
 
         if ordo_maximo >= 1:
             _paginae_basi.append(
@@ -1219,9 +1220,56 @@ def hxltm_carricato__cod_ab_levels_ttl(
             _paginae_secundus.append(
                 f'<urn:{numerodiatio_re}:2> a skos:Concept')
             _paginae_secundus.append(
-                f'  skos:prefLabel "{numerodiatio_re}:1"@mul-Zyyy-x-n1603')
+                f'  skos:prefLabel "{numerodiatio_re}:2"@mul-Zyyy-x-n1603')
             _paginae_secundus.append(
                 f'  skos:related <urn:{numerodiatio_re}>')
+
+        if ordo_maximo >= 3:
+            _paginae_secundus.append(
+                f'  skos:related <urn:{numerodiatio_re}:3>')
+
+            _paginae_tertius.append(
+                f'<urn:{numerodiatio_re}:3> a skos:Concept')
+            _paginae_tertius.append(
+                f'  skos:prefLabel "{numerodiatio_re}:3"@mul-Zyyy-x-n1603')
+            _paginae_tertius.append(
+                f'  skos:related <urn:{numerodiatio_re}>')
+
+        if ordo_maximo >= 4:
+            _paginae_tertius.append(
+                f'  skos:related <urn:{numerodiatio_re}:4>')
+
+            _paginae_quartus.append(
+                f'<urn:{numerodiatio_re}:4> a skos:Concept')
+            _paginae_quartus.append(
+                f'  skos:prefLabel "{numerodiatio_re}:4"@mul-Zyyy-x-n1603')
+            _paginae_quartus.append(
+                f'  skos:related <urn:{numerodiatio_re}>')
+
+        if ordo_maximo >= 5:
+            _paginae_quartus.append(
+                f'  skos:related <urn:{numerodiatio_re}:5>')
+
+            _paginae_quintus.append(
+                f'<urn:{numerodiatio_re}:5> a skos:Concept')
+            _paginae_quintus.append(
+                f'  skos:prefLabel "{numerodiatio_re}:5"@mul-Zyyy-x-n1603')
+            _paginae_quintus.append(
+                f'  skos:related <urn:{numerodiatio_re}>')
+
+        if ordo_maximo == 6:
+            _paginae_quintus.append(
+                f'  skos:related <urn:{numerodiatio_re}:6>')
+
+            _paginae_sextus.append(
+                f'<urn:{numerodiatio_re}:6> a skos:Concept')
+            _paginae_sextus.append(
+                f'  skos:prefLabel "{numerodiatio_re}:6"@mul-Zyyy-x-n1603')
+            _paginae_sextus.append(
+                f'  skos:related <urn:{numerodiatio_re}>')
+
+        if ordo_maximo > 6:
+            raise ValueError
 
         #     _paginae_basi.append(
         #         f'  skos:broaderTransitive <urn:{numerodiatio_re}:1>')
