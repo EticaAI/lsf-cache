@@ -80,7 +80,7 @@ ROOTDIR="$(pwd)"
 
 # ./999999999/0/1603_1.py --methodus='codex' --codex-de 1603_45_1 > 1603/45/1/1603_45_1.mul-Latn.codex.adoc ; bundle exec asciidoctor-pdf 1603/45/1/1603_45_1.mul-Latn.codex.adoc --out-file 1603/45/1/1603_45_1.mul-Latn.codex.pdf
 
-# bundle exec asciidoctor-pdf --attribute pdf-theme=/workspace/git/EticaAI/multilingual-lexicography-automation/officinam/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml --attribute pdf-fontsdir=/usr/share/fonts/truetype/noto,/workspace/git/EticaAI/multilingual-lexicography-automation/officinam/vendor/bundle/ruby/2.7.0/gems/asciidoctor-pdf-1.6.2/data/fonts /workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/45/1/1603_45_1.mul-Latn.codex.adoc --out-file /workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/45/1/1603_45_1.mul-Latn.codex.pdf
+# bundle exec asciidoctor-pdf --attribute pdf-theme=/workspace/git/EticaAI/lexicographi-sine-finibus/officinam/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml --attribute pdf-fontsdir=/usr/share/fonts/truetype/noto,/workspace/git/EticaAI/lexicographi-sine-finibus/officinam/vendor/bundle/ruby/2.7.0/gems/asciidoctor-pdf-1.6.2/data/fonts /workspace/git/EticaAI/lexicographi-sine-finibus/officinam/1603/45/1/1603_45_1.mul-Latn.codex.adoc --out-file /workspace/git/EticaAI/lexicographi-sine-finibus/officinam/1603/45/1/1603_45_1.mul-Latn.codex.pdf
 
 # exit 0
 

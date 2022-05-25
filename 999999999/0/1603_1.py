@@ -3360,7 +3360,7 @@ class LibrariaStatusQuo:
         # package = Package(_path + '/datapackage.json')
         # package = Package('/1603/1/51/datapackage.json')
         package = Package(
-            '/workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/1/51/datapackage.json')
+            '/workspace/git/EticaAI/lexicographi-sine-finibus/officinam/1603/1/51/datapackage.json')
         # package.to_sql('postgresql://database')
         package.to_sql('sqlite:///sqlite.db')
 

@@ -397,7 +397,7 @@ p5305_sparql_endpoint_jena_fuseki_start_system
 
 # p5305_sparql_endpoint_jena_fuseki_start
 
-# ln -s /workspace/git/EticaAI/multilingual-lexicography-automation/officinam/999999999/0/1686799/apache-jena/bin /workspace/bin/apache-jena
+# ln -s /workspace/git/EticaAI/lexicographi-sine-finibus/officinam/999999999/0/1686799/apache-jena/bin /workspace/bin/apache-jena
 # vim ~/.bash_profile:
 #     PATH="/workspace/bin/apache-jena:$PATH"
 # @TODO https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04-pt

@@ -62,7 +62,7 @@
 
 # cd /workspace/git/EticaAI/pywikibot
 # python3 pwb.py login
-# python3 pwb.py upload /workspace/git/EticaAI/multilingual-lexicography-automation/officinam/1603/45/31/1603_45_31.mul-Latn.tab.json
+# python3 pwb.py upload /workspace/git/EticaAI/lexicographi-sine-finibus/officinam/1603/45/31/1603_45_31.mul-Latn.tab.json
 
 # (...) Using this tutorial (without need to use pywikibot)
 # https://www.mediawiki.org/wiki/API:Upload#Python

@@ -670,9 +670,9 @@ class CodAbTabulae:
         if pcode_index is None:
             raise SyntaxError(
                 '{0} not in (hxltm)<{1}>/(hxl)<{2}>(csv){3}'.format(
-                pcode_hashtag, self.caput_hxltm,
-                self.caput_hxl, self.caput_originali
-            ))
+                    pcode_hashtag, self.caput_hxltm,
+                    self.caput_hxl, self.caput_originali
+                ))
         # pcode_index = self.caput_hxltm.index(pcode_hashtag)
 
         self.caput_hxltm.insert(0, '#item+conceptum+codicem')
@@ -688,8 +688,8 @@ class CodAbTabulae:
                 # Ex. 31 ad BR31
                 pcode_numeri = pcode_completo.replace(self.pcode_praefixo, '')
 
-                ## Ex: Haiti admin3Pcode HT0111-01, HT0111-02, HT0111-03
-                pcode_numeri = re.sub('[^0-9]','', pcode_numeri)
+                # Ex: Haiti admin3Pcode HT0111-01, HT0111-02, HT0111-03
+                pcode_numeri = re.sub('[^0-9]', '', pcode_numeri)
 
                 try:
                     linea_novae.append(int(pcode_numeri))
@@ -2830,6 +2830,44 @@ def qhxl_hxlhashtag_2_bcp47(
         )
 
     return bcp47_simplici
+
+
+def numerordinatio_descendentibus(
+        numerordinatio: str, collectio: list, ordo_maximo: int = None) -> list:
+    """numerordinatio_descendentibus _summary_
+
+    Trivia:
+     - collēctiō, s, f, , nominativus
+    - dēscendentibus, pl, m/f/n, , dativus,
+        https://en.wiktionary.org/wiki/descendens#Latin
+    - ōrdō, s, m, nominativus, https://en.wiktionary.org/wiki/ordo#Latin
+    - ōrdinī, s, m, dativus,
+    - maximō, s, m/n, dativus, https://en.wiktionary.org/wiki/maximus#Latin
+
+    Args:
+        numerordinatio (str): _description_
+        collectio (list): _description_
+        ordo_maximo (int, optional): _description_. Defaults to None.
+
+    Returns:
+        list: _description_
+    """
+
+    resultatum = []
+
+    if ordo_maximo is not None:
+        ordo_maximo = ordo_maximo + numerordinatio_ordo(numerordinatio)
+
+    for item in collectio:
+        if item.startswith(numerordinatio) and item != numerordinatio:
+            if ordo_maximo is None:
+                resultatum.append(item)
+            else:
+                item_ordini = numerordinatio_ordo(item)
+                if item_ordini <= ordo_maximo:
+                    resultatum.append(item)
+
+    return resultatum
 
 
 def numerordinatio_neo_separatum(

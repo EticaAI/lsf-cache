@@ -76,21 +76,21 @@ ROOTDIR="$(pwd)"
 
 # cat 999999/0/xmlCNES.tm.hxl.csv | ./999999999/0/999999999_54872.py --objectivum-formato=application/x-turtle --archivum-configurationi-ex-fonti=999999999/0/999999999_10263485.meta.yml --praefixum-configurationi-ex-fonti=methodus,datasus_xmlcnae > 999999/0/xmlCNES.no1.skos.ttl
 
-archivum_unzip "999999/0/0/ftp.datasus.gov.br/cnes/CNESBRASIL.ZIP" "xmlCNES.xml" "999999/0/xmlCNES.xml"
+# archivum_unzip "999999/0/0/ftp.datasus.gov.br/cnes/CNESBRASIL.ZIP" "xmlCNES.xml" "999999/0/xmlCNES.xml"
 
-./999999999/0/999999999_10263485.py \
-  --methodus=datasus_xmlcnae --objectivum-formato=hxltm_csv \
-  "999999/0/xmlCNES.xml" >"999999/0/xmlCNES.tm.hxl.csv"
+# ./999999999/0/999999999_10263485.py \
+#   --methodus=datasus_xmlcnae --objectivum-formato=hxltm_csv \
+#   "999999/0/xmlCNES.xml" >"999999/0/xmlCNES.tm.hxl.csv"
 
-./999999999/0/999999999_10263485.py \
-  --methodus=datasus_xmlcnae --objectivum-formato=hxltm_csv \
-  "999999/0/xmlCNES.xml" >"999999/1603/63/49/76/1603_63_49_76.tm.hxl.csv"
+# ./999999999/0/999999999_10263485.py \
+#   --methodus=datasus_xmlcnae --objectivum-formato=hxltm_csv \
+#   "999999/0/xmlCNES.xml" >"999999/1603/63/49/76/1603_63_49_76.tm.hxl.csv"
 
-hxlcut --exclude="#meta" "999999/1603/63/49/76/1603_63_49_76.tm.hxl.csv" | hxlcut --skip-untagged | hxladd --before --spec="#item+conceptum+codicem={{#item+rem+i_qcc+is_zxxx+ix_v76vcnes}}" | hxladd --before --spec="#item+conceptum+numerordinatio=1603:63:49:76:{{#item+conceptum+codicem}}" | hxlsort --tags="#item+conceptum+codicem" >"999999/1603/63/49/76/1603_63_49_76.no1.tm.hxl.csv"
+# hxlcut --exclude="#meta" "999999/1603/63/49/76/1603_63_49_76.tm.hxl.csv" | hxlcut --skip-untagged | hxladd --before --spec="#item+conceptum+codicem={{#item+rem+i_qcc+is_zxxx+ix_v76vcnes}}" | hxladd --before --spec="#item+conceptum+numerordinatio=1603:63:49:76:{{#item+conceptum+codicem}}" | hxlsort --tags="#item+conceptum+codicem" >"999999/1603/63/49/76/1603_63_49_76.no1.tm.hxl.csv"
 
-sed -i '1d' "999999/1603/63/49/76/1603_63_49_76.no1.tm.hxl.csv"
+# sed -i '1d' "999999/1603/63/49/76/1603_63_49_76.no1.tm.hxl.csv"
 
-archivum_copiae "1603_63_49_76" "1603_63_49_76" "no1.tm.hxl.csv" "1" "0"
+# archivum_copiae "1603_63_49_76" "1603_63_49_76" "no1.tm.hxl.csv" "1" "0"
 
 # exit 1
 

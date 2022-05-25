@@ -26,7 +26,7 @@ While decisions on how to organize, as of 2021-01, are still open, **such numeri
 ## [`1603`] /Base prefix/
 - [1603/](1603/)
 
-The multilingual-lexicography-automation project will use `1603` as the main namespace to reference other references.
+The lexicographi-sine-finibus project will use `1603` as the main namespace to reference other references.
 
 
 ### [`1603:1`] /Metadata overview of 1603 namespaces/
@@ -50,7 +50,7 @@ The multilingual-lexicography-automation project will use `1603` as the main nam
 ### [`1603:45:16`] /Place codes (by UN m49 numeric)/
 - [1603/45/16/](1603/45/16/)
 
-> Note: the main interest in multilingual-lexicography-automation is **linguistic content** and how to conciliate data via existing coding systems both for ourselves and third parties **interested in improving multilingualism**. Except for potential data to allow disambiguation which is is not heavyweight (such as centroid coordinates) we do not plan to re-publish administrative boundaries.
+> Note: the main interest in lexicographi-sine-finibus is **linguistic content** and how to conciliate data via existing coding systems both for ourselves and third parties **interested in improving multilingualism**. Except for potential data to allow disambiguation which is is not heavyweight (such as centroid coordinates) we do not plan to re-publish administrative boundaries.
 
 ### [`1603:47`] /ISO/
 - [1603/47/](1603/47/)

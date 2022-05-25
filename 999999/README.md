@@ -7,7 +7,7 @@ TL;DR:
 
 ## License notice
 
-Content from `999999` on multilingual-lexicography-automation **are not** intended for final distribution.
+Content from `999999` on lexicographi-sine-finibus **are not** intended for final distribution.
 
 However, they may be used to contact data providers about inconsistencies between different sources. This task is relevant as often source providers are manual work done by humans, and this can contain errors when comparing with other data sources.
 

@@ -36,27 +36,27 @@ cd /workspace/git/EticaAI/n-data-pseudobase
 deploy_0_9_status() {
   git \
     --git-dir /workspace/git/EticaAI/n-data.git-metadata \
-    --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam \
+    --work-tree /workspace/git/EticaAI/lexicographi-sine-finibus/officina \
     status
 
   echo ""
   echo "  manual inspection:"
-  echo "  git --git-dir /workspace/git/EticaAI/n-data.git-metadata --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam gui"
+  echo "  git --git-dir /workspace/git/EticaAI/n-data.git-metadata --work-tree /workspace/git/EticaAI/lexicographi-sine-finibus/officina gui"
   echo ""
 }
 
 deploy_0_9_commit() {
   git \
     --git-dir /workspace/git/EticaAI/n-data.git-metadata \
-    --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam \
+    --work-tree /workspace/git/EticaAI/lexicographi-sine-finibus/officina \
     add .
   git \
     --git-dir /workspace/git/EticaAI/n-data.git-metadata \
-    --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam \
+    --work-tree /workspace/git/EticaAI/lexicographi-sine-finibus/officina \
     commit -m "$DEPLOY_0_9_COMMIT_MESSAGE"
   git \
     --git-dir /workspace/git/EticaAI/n-data.git-metadata \
-    --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam \
+    --work-tree /workspace/git/EticaAI/lexicographi-sine-finibus/officina \
     push
   # return 0
   exit 0
@@ -81,11 +81,11 @@ done
 
 # git \
 #     --git-dir /workspace/git/EticaAI/n-data.git-metadata \
-#     --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam \
+#     --work-tree /workspace/git/EticaAI/lexicographi-sine-finibus/officina \
 #     add .
 
 # cd /workspace/git/EticaAI/n-data-pseudobase
-# git --git-dir /workspace/git/EticaAI/n-data.git-metadata --work-tree /workspace/git/EticaAI/multilingual-lexicography-automation/officinam gui
+# git --git-dir /workspace/git/EticaAI/n-data.git-metadata --work-tree /workspace/git/EticaAI/lexicographi-sine-finibus/officina gui
 
-# GIT_DIR="/workspace/git/EticaAI/n-data.git-metadata" GIT_WORK_TREE="/workspace/git/EticaAI/n-data-pseudobase" code /workspace/git/EticaAI/multilingual-lexicography-automation/officinam
+# GIT_DIR="/workspace/git/EticaAI/n-data.git-metadata" GIT_WORK_TREE="/workspace/git/EticaAI/n-data-pseudobase" code /workspace/git/EticaAI/lexicographi-sine-finibus/officina
 

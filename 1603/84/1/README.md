@@ -1,6 +1,6 @@
 # [`1603:84:1`] /Dictiōnāria dentāria/
 
-See discussion at https://github.com/EticaAI/multilingual-lexicography-automation/issues/8.
+See discussion at https://github.com/EticaAI/lexicographi-sine-finibus/issues/8.
 
 
 ## Extra notes

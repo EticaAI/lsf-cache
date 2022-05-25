@@ -917,8 +917,14 @@ __temp_download_external_cod_data() {
 # bootstrap_1603_45_16__all
 # bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
-bootstrap_1603_45_16__apothecae "1" "1" "" ""
+# bootstrap_1603_45_16__apothecae "1" "1" "" ""
 # bootstrap_1603_45_16__apothecae "1" "" "" ""
+
+"${ROOTDIR}/999999999/0/999999999_7200235.py" \
+  --methodus='cod_ab_index_levels_ttl' \
+  --punctum-separato-ad-tab \
+  > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl"
+
 exit 1
 
 echo "after here is old scripts that need to be refatored"
