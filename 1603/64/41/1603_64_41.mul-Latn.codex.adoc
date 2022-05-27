@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-04-30T03:31:24
+2022-05-26T22:40:38
 
 |
 /SPDX license ID/@eng-Latn
@@ -150,7 +150,7 @@ Rēs linguālibus (1)::
 === Rēs dē factō in dictiōnāriīs
 ==== Concepta: 56
 
-==== Rēs linguālibus: 149
+==== Rēs linguālibus: 150
 
 [%header,cols="15h,25a,~,17"]
 |===
@@ -545,7 +545,7 @@ https://iso639-3.sil.org/code/swe[swe]
 |
 Lingua Suecica (Abecedarium Latinum)
 |
-21
+22
 
 |
 sqi-Latn
@@ -569,7 +569,7 @@ https://iso639-3.sil.org/code/pol[pol]
 |
 Lingua Polonica (Abecedarium Latinum)
 |
-24
+25
 
 |
 fin-Latn
@@ -689,7 +689,7 @@ https://iso639-3.sil.org/code/ces[ces]
 |
 Lingua Bohemica (Abecedarium Latinum)
 |
-23
+24
 
 |
 dan-Latn
@@ -761,7 +761,7 @@ https://iso639-3.sil.org/code/fas[fas]
 |
 Macrolingua Persica (//Abecedarium Arabicum//)
 |
-35
+36
 
 |
 hun-Latn
@@ -1012,6 +1012,18 @@ https://iso639-3.sil.org/code/scn[scn]
 +++<br>+++ https://www.wikidata.org/wiki/Q33973[Q33973]
 |
 Lingua Sicula (Abecedarium Latinum)
+|
+1
+
+|
+gla-Latn
+|
+https://glottolog.org/resource/languoid/id/scot1245[scot1245]
++++<br>+++
+https://iso639-3.sil.org/code/gla[gla]
++++<br>+++ https://www.wikidata.org/wiki/Q9314[Q9314]
+|
+Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum)
 |
 1
 
@@ -1955,26 +1967,26 @@ Lingua Franca Nova (Abecedarium Latinum)
 
 ==== Rēs interlinguālibus: 7
 Rēs::
-  /publication date/@eng-Latn:::
+  numerus editionis:::
     Rēs interlinguālibus::::
       /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
+        https://www.wikidata.org/wiki/Property:P393[P393]
 
       ix_hxlix;;
-        ix_wikip577
+        ix_wikip393
 
       ix_hxlvoc;;
-        v_wiki_p_577
+        v_wiki_p_393
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
+        +++<span lang="la">numerus editionis</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        number of an edition (first, second, ... as 1, 2, ...) or event
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento
 
   scrīptor:::
     Rēs interlinguālibus::::
@@ -1991,32 +2003,11 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">scrīptor</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Main creator(s) of a written work (use on works, not humans)</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        Main creator(s) of a written work (use on works, not humans)
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Principais criadores de uma obra escrita (uso em obras, não em humanos)</span>+++
-
-  /scope and content/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P7535[P7535]
-
-      ix_hxlix;;
-        ix_wikip7535
-
-      ix_hxlvoc;;
-        v_wiki_p_7535
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/scope and content/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        Principais criadores de uma obra escrita (uso em obras, não em humanos)
 
   /Wiki QID/:::
     Rēs interlinguālibus::::
@@ -2033,11 +2024,74 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">/Wiki QID/</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.
+
+  /cōdex pūblicandī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P123[P123]
+
+      ix_hxlix;;
+        ix_wikip123
+
+      ix_hxlvoc;;
+        v_wiki_p_123
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/cōdex pūblicandī/</span>+++
+
+      #item+rem+definitionem+i_eng+is_latn;;
+        organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software
+
+      #item+rem+definitionem+i_por+is_latn;;
+        organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software
+
+  /scope and content/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P7535[P7535]
+
+      ix_hxlix;;
+        ix_wikip7535
+
+      ix_hxlvoc;;
+        v_wiki_p_7535
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/scope and content/@eng-Latn</span>+++
+
+      #item+rem+definitionem+i_eng+is_latn;;
+        a summary statement providing an overview of the archival collection
+
+      #item+rem+definitionem+i_por+is_latn;;
+        uma declaração resumida fornecendo uma visão geral da coleção de arquivo
+
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      #item+rem+definitionem+i_eng+is_latn;;
+        Date or point in time when a work was first published or released
+
+      #item+rem+definitionem+i_por+is_latn;;
+        Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2060,53 +2114,11 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">SPDX license identifier</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        SPDX license identifier
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">identificador de licença SPDX</span>+++
-
-  /cōdex pūblicandī/:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P123[P123]
-
-      ix_hxlix;;
-        ix_wikip123
-
-      ix_hxlvoc;;
-        v_wiki_p_123
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/cōdex pūblicandī/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or person responsible for publishing books, periodicals, printed music, podcasts, games or software</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou pessoa responsável pela publicação de livros, periódicos, música impressa, podcasts, jogos ou software</span>+++
-
-  numerus editionis:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P393[P393]
-
-      ix_hxlix;;
-        ix_wikip393
-
-      ix_hxlvoc;;
-        v_wiki_p_393
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">numerus editionis</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        identificador de licença SPDX
 
 
 <<<
@@ -2241,7 +2253,7 @@ Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q11660[Q11660]
 
-Rēs linguālibus (129)::
+Rēs linguālibus (130)::
   Linguae multiplīs (Scrīptum incognitō):::
     /artificial intelligence - field of computer science and engineering practices for intelligence demonstrated by machines and intelligent agents/
 
@@ -2439,6 +2451,9 @@ Rēs linguālibus (129)::
 
   Lingua Veneta (Abecedarium Latinum):::
     +++<span lang="vec">Inteligensa artificial</span>+++
+
+  Lingua Scotica seu Scotica Gadelica (Abecedarium Latinum):::
+    +++<span lang="gd">Tuigse inntealta</span>+++
 
   Lingua Limburgica (Abecedarium Latinum):::
     +++<span lang="li">Kónsmaesige intelligentie</span>+++
@@ -3482,7 +3497,7 @@ Rēs linguālibus (66)::
     +++<span lang="sr">изборни систем</span>+++
 
   Lingua Lithuanica (Abecedarium Latinum):::
-    +++<span lang="lt">Rinkimų sistema</span>+++
+    +++<span lang="lt">rinkimų sistema</span>+++
 
   Macrolingua Serbocroatica (Abecedarium Latinum):::
     +++<span lang="sh">Izborni sistem</span>+++
@@ -5037,7 +5052,7 @@ Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q609408[Q609408]
 
-Rēs linguālibus (34)::
+Rēs linguālibus (35)::
   Linguae multiplīs (Scrīptum incognitō):::
     /self-organization - process of creating order by local interactions/
 
@@ -5083,11 +5098,14 @@ Rēs linguālibus (34)::
   Lingua Italiana (Abecedarium Latinum):::
     +++<span lang="it">Auto-organizzazione</span>+++
 
+  Lingua Suecica (Abecedarium Latinum):::
+    +++<span lang="sv">självorganisering</span>+++
+
   Lingua Polonica (Abecedarium Latinum):::
     +++<span lang="pl">Samoorganizacja</span>+++
 
   Lingua Finnica (Abecedarium Latinum):::
-    +++<span lang="fi">Itseorganisoituminen</span>+++
+    +++<span lang="fi">itseorganisoituminen</span>+++
 
   Lingua Catalana (Abecedarium Latinum):::
     +++<span lang="ca">autoorganització</span>+++
@@ -5660,7 +5678,7 @@ Rēs linguālibus (30)::
     +++<span lang="pl">inteligencja rozproszona</span>+++
 
   Lingua Finnica (Abecedarium Latinum):::
-    +++<span lang="fi">Parviäly</span>+++
+    +++<span lang="fi">parviäly</span>+++
 
   Lingua Dacoromanica (Abecedarium Latinum):::
     +++<span lang="ro">Inteligență „roi”</span>+++
@@ -6585,7 +6603,7 @@ Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q6839259[Q6839259]
 
-Rēs linguālibus (4)::
+Rēs linguālibus (5)::
   Linguae multiplīs (Scrīptum incognitō):::
     /microbial cooperation/
 
@@ -6597,6 +6615,9 @@ Rēs linguālibus (4)::
 
   Lingua Ucrainica (Abecedarium Cyrillicum):::
     +++<span lang="uk">Кооперація мікроорганізмів</span>+++
+
+  Macrolingua Persica (//Abecedarium Arabicum//):::
+    +++<span lang="fa">همکاری میکروبی</span>+++
 
 
 
@@ -6768,7 +6789,7 @@ Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q18204722[Q18204722]
 
-Rēs linguālibus (21)::
+Rēs linguālibus (23)::
   Linguae multiplīs (Scrīptum incognitō):::
     /decentralized autonomous organization - computer network organization model/
 
@@ -6805,6 +6826,9 @@ Rēs linguālibus (21)::
   Lingua Italiana (Abecedarium Latinum):::
     +++<span lang="it">Decentralized autonomous organization</span>+++
 
+  Lingua Polonica (Abecedarium Latinum):::
+    +++<span lang="pl">Zdecentralizowana autonomiczna organizacja</span>+++
+
   Lingua Dacoromanica (Abecedarium Latinum):::
     +++<span lang="ro">Organizație Autonomă Descentralizată</span>+++
 
@@ -6813,6 +6837,9 @@ Rēs linguālibus (21)::
 
   /Bokmål/ (Abecedarium Latinum):::
     +++<span lang="nb">Desentralisert autonom organisasjon</span>+++
+
+  Lingua Bohemica (Abecedarium Latinum):::
+    +++<span lang="cs">Decentralizovaná autonomní organizace (DAO)</span>+++
 
   Lingua Iaponica (Scriptura Iaponica):::
     +++<span lang="ja">分散型自律組織</span>+++

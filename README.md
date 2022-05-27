@@ -2,12 +2,12 @@
 - status_quo
   - summa
     - codex: 22
-    - concepta_non_unicum: 1523
+    - concepta_non_unicum: 1526
 
 
 ----
 **Tabula contentorum**
-- <a href="#1603_1_1">1603_1_1</a> <sup>C.85</sup> <sub>r.I.16</sub>  <sub>r.L.9</sub>
+- <a href="#1603_1_1">1603_1_1</a> <sup>C.88</sup> <sub>r.I.16</sub>  <sub>r.L.9</sub>
 - <a href="#1603_1_6">1603_1_6</a> <sup>C.3</sup> <sub>r.I.16</sub>  <sub>r.L.5</sub>
 - <a href="#1603_1_7">1603_1_7</a> <sup>C.50</sup> <sub>r.I.13</sub>  <sub>r.L.3</sub>
 - <a href="#1603_1_51">1603_1_51</a> <sup>C.265</sup> <sub>r.I.21</sub>  <sub>r.L.3</sub>
@@ -23,7 +23,7 @@
 - <a href="#1603_45_19">1603_45_19</a> <sup>C.71</sup> <sub>r.I.12</sub>  <sub>r.L.242</sub>
 - <a href="#1603_45_31">1603_45_31</a> <sup>C.25</sup> <sub>r.I.14</sub>  <sub>r.L.212</sub>
 - <a href="#1603_63_101">1603_63_101</a> <sup>C.332</sup> <sub>r.I.14</sub>  <sub>r.L.250</sub>
-- <a href="#1603_64_41">1603_64_41</a> <sup>C.56</sup> <sub>r.I.12</sub>  <sub>r.L.151</sub>
+- <a href="#1603_64_41">1603_64_41</a> <sup>C.56</sup> <sub>r.I.12</sub>  <sub>r.L.152</sub>
 - <a href="#1603_64_604">1603_64_604</a> <sup>C.28</sup> <sub>r.I.12</sub>  <sub>r.L.228</sub>
 - <a href="#1603_84_1">1603_84_1</a> <sup>C.60</sup> <sub>r.I.12</sub>  <sub>r.L.5</sub>
 - <a href="#1603_99_123">1603_99_123</a> <sup>C.3</sup> <sub>r.I.13</sub>  <sub>r.L.228</sub>
@@ -38,7 +38,7 @@
 <a href="#1603_1_1" id="1603_1_1">§ 1603_1_1</a>
 
 - status_quo
-  - concepta: 85
+  - concepta: 88
   - res_interlingualibus: 16
   - res_lingualibus: 9
 
@@ -53,6 +53,7 @@
 {
     "annotationes_internalibus": {
         "internale": 100,
+        "origo_per_amanuenses": 100,
         "publicum": 10
     },
     "meta": {
@@ -78,18 +79,18 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 1035933902,
-            "res_interlingualibus": 2499299855,
+            "res_lingualibus": 1973842197,
+            "res_interlingualibus": 776715327,
             "res_picturae": null
         },
         "summa": {
-            "concepta": 85,
+            "concepta": 88,
             "res_lingualibus": 9,
             "res_interlingualibus": 16,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-05-11T22:24:40"
+            "opus": "2022-05-26T22:44:25"
         }
     }
 }
@@ -469,8 +470,8 @@ The decision making is mostly based on what is very essential to explain other t
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2321528666,
-            "res_lingualibus": 4229296070,
+            "res_interlingualibus": 4022217941,
+            "res_lingualibus": 3680960473,
             "res_picturae": null
         },
         "summa": {
@@ -480,7 +481,7 @@ The decision making is mostly based on what is very essential to explain other t
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:04:56"
+            "opus": "2022-05-26T22:42:41"
         }
     }
 }
@@ -608,8 +609,8 @@ Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to 
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2606884476,
-            "res_lingualibus": 334863777,
+            "res_interlingualibus": 530850833,
+            "res_lingualibus": 1051643623,
             "res_picturae": null
         },
         "summa": {
@@ -619,7 +620,7 @@ Compared to BNA1895 and TA95, 1603:25:1 is a very small subset, mostly a map to 
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-05-03T03:49:56"
+            "opus": "2022-05-26T22:44:24"
         }
     }
 }
@@ -1179,7 +1180,7 @@ Traditional paper dictionaries already are not complete enough to explain how th
 - status_quo
   - concepta: 56
   - res_interlingualibus: 12
-  - res_lingualibus: 151
+  - res_lingualibus: 152
 
 ### 1603_64_41 Methodī ex dictiōnāriōrum corde
 
@@ -1221,18 +1222,18 @@ Traditional paper dictionaries already are not complete enough to explain how th
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 782483497,
-            "res_lingualibus": 3581235766,
+            "res_interlingualibus": 2231965616,
+            "res_lingualibus": 1653135361,
             "res_picturae": null
         },
         "summa": {
             "concepta": 56,
             "res_interlingualibus": 12,
-            "res_lingualibus": 151,
+            "res_lingualibus": 152,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-30T03:31:55"
+            "opus": "2022-05-26T22:42:23"
         }
     }
 }

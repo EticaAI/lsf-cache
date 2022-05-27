@@ -24,6 +24,7 @@
 #       CREATED:  2022-05-17 18:48 UTC based on 999999999_10263485.py
 #      REVISION:  ---
 # ==============================================================================
+# /opt/Protege-5.5.0/run.sh
 
 import sys
 import os
@@ -110,6 +111,8 @@ _ET_AL_URL = [
     # 300 page book
     # - https://people.cs.uct.ac.za/~mkeet/files/OEbook.pdf
     # - https://people.cs.uct.ac.za/~mkeet/OEbook/OEsoftware.html#OElang
+    'https://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole/',
+    'https://en.wikipedia.org/wiki/Mereology',
 ]
 
 # https://github.com/seebi/rdf.sh#installation

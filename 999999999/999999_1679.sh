@@ -92,6 +92,8 @@ ROOTDIR="$(pwd)"
 
 # archivum_copiae "1603_63_49_76" "1603_63_49_76" "no1.tm.hxl.csv" "1" "0"
 
+# wikidata_p_ex_interlinguis "1679_45_16_76_2" "1" "1" "P1585" "P1585,P17,P131,P402,P1566,P1937,P6555,P8119"
+
 # exit 1
 
 file_download_1603_xlsx "1"

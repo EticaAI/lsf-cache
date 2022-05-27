@@ -1094,4 +1094,5 @@ set +x
 #   - https://www.wikidata.org/wiki/Wikidata:Property_proposal/Archive/26#P1538
 # - https://www.wikidata.org/wiki/Category:Properties_with_tabular-data-datatype
 # - https://www.wikidata.org/wiki/Special:ListProperties/tabular-data
-
+# - Exemplo de população
+#   - wdt:P1082 "+6747815"^^xsd:decimal ;
