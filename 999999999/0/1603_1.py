@@ -52,6 +52,9 @@
 #        https://www.mediawiki.org/wiki
 #        /Help:Tabular_Data?rdfrom=commons:Help:Tabular_Data
 
+# @see https://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole
+
+from genericpath import exists
 import sys
 import os
 import argparse
@@ -83,6 +86,8 @@ import csv
 import yaml
 
 from L999999999_0 import (
+    OntologiaSimplici,
+    OntologiaSimpliciAdOWL,
     bcp47_langtag,
     DictionariaLinguarum,
     DictionariaInterlinguarum,
@@ -183,6 +188,18 @@ Status quō . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
     {0} --methodus='status-quo' --status-quo-in-datapackage \
 --ex-librario='locale'
+
+Ontologia simplicī . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    {0} --methodus='ontologia-simplici' --ontologia-radici=1603_1_1
+
+    {0} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7
+
+    {0} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 \
+--ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv
+
+    {0} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 \
+--ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv \
+| rapper --quiet --input=turtle --output=turtle /dev/fd/0
 
 Opus temporibus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
     {0} --methodus='opus-temporibus' --ex-opere-temporibus='cdn'
@@ -972,7 +989,7 @@ class Codex:
         - dictiōnāria, n, pl, (Nominative),
           https://en.wiktionary.org/wiki/dictionarium#Latin
         - archīva, n, pl, (Nominative)
-        - ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
+        - ex (+ ablativus), https://en.wiktionary.org/wiki/ex#Latin
         - ad (+ accusative), https://en.wiktionary.org/wiki/ad#Latin
         - ab (+ ablative), https://en.wiktionary.org/wiki/ab#Latin
         - prō (+ ablative, accusative) (accusative in Late Latin)
@@ -4851,6 +4868,7 @@ class CLI_2600:
                 'codex',
                 'data-apothecae',
                 'hxltm-explanationi',
+                'ontologia-simplici',
                 'opus-temporibus',
                 'status-quo',
                 'deprecatum-dictionaria-numerordinatio'
@@ -5052,6 +5070,34 @@ class CLI_2600:
             # const=True,
             action='store_true',
             # nargs='?'
+        )
+
+        # https://en.wikipedia.org/wiki/Status_quo
+        # https://en.wiktionary.org/wiki/ontologia#Latin
+        # simplicī, s, m/f/b, dativus, https://en.wiktionary.org/wiki/simplex
+        ontologia_simplici = parser.add_argument_group(
+            "Ontologia simplicī",
+            '[ --methodus=\'ontologia-simplici\' ] '
+            "Otimized generation of OWL from previous generated table "
+            "Requires --ontologia-radici 1603_NN_NN (focused Codex). "
+        )
+
+        ontologia_simplici.add_argument(
+            '--ontologia-radici',
+            help='Working ontology code',
+            # metavar='',
+            dest='ontologia_radici',
+            # const=True,
+            nargs='?'
+        )
+
+        ontologia_simplici.add_argument(
+            '--ontologia-ex-archivo',
+            help='Explicit path to a file on disk. ',
+            # metavar='',
+            dest='ontologia_ex_archivo',
+            # const=True,
+            nargs='?'
         )
 
         # https://en.wikipedia.org/wiki/Status_quo
@@ -5310,6 +5356,41 @@ class CLI_2600:
 
             return self.output(data_apothecae.imprimere())
             # return self.output(['TODO...'])
+
+        # Ontologia Simplicī ___________________________________________________
+        if pyargs.methodus == 'ontologia-simplici':
+            # @TODO implement from direct file
+            if not pyargs.ontologia_radici:
+                raise ValueError('--ontologia-radici ?')
+
+            if not pyargs.ontologia_ex_archivo:
+                ontologia_ex_archivo_basi = '{0}/{1}'.format(
+                    numerordinatio_neo_separatum(pyargs.ontologia_radici, '/'),
+                    numerordinatio_neo_separatum(pyargs.ontologia_radici, '_'),
+                )
+                print(ontologia_ex_archivo_basi + '.no11.tm.hxl.csv')
+                if exists(ontologia_ex_archivo_basi + '.no11.tm.hxl.csv'):
+                    ontologia_ex_archivo = \
+                        ontologia_ex_archivo_basi + '.no11.tm.hxl.csv'
+                elif exists(ontologia_ex_archivo_basi + '.no1.tm.hxl.csv'):
+                    ontologia_ex_archivo = \
+                        ontologia_ex_archivo_basi + '.no1.tm.hxl.csv'
+                else:
+                    raise NotADirectoryError(
+                        '@TODO infer from --ontologia-radici ')
+            else:
+                ontologia_ex_archivo = pyargs.ontologia_ex_archivo
+
+            ontologia = OntologiaSimpliciAdOWL(
+                pyargs.ontologia_radici,
+                ontologia_ex_archivo
+            )
+            # print(ontologia)
+            # ontologia.imprimere_ad_tabula()
+            ontologia.imprimere_ad_owl()
+
+            # print(pyargs.ontologia_radici)
+            return self.EXIT_OK
 
         # Opus temporibus _____________________________________________________
         # if self.pyargs.dictionaria_numerordinatio:

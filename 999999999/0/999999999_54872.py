@@ -26,6 +26,7 @@
 # ==============================================================================
 # /opt/Protege-5.5.0/run.sh
 
+import json
 import sys
 import os
 import argparse
@@ -42,6 +43,7 @@ import yaml
 
 # l999999999_0 = __import__('999999999_0')
 from L999999999_0 import (
+    bcp47_rdf_extension_poc,
     hxltm_carricato,
     HXLTMAdRDFSimplicis
 )
@@ -91,6 +93,15 @@ __EPILOGUM__ = """
 
     rapper --quiet --input=turtle --output=ntriples \
 999999/0/ibge_un_adm2.no1.skos.ttl > 999999/0/ibge_un_adm2.no1.skos.nt
+
+
+Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    {0} --objectivum-formato=_temp_bcp47 \
+999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
+
+    {0} --objectivum-formato=_temp_bcp47 \
+999999999/1568346/data/unesco-thesaurus.bcp47g.tsv \
+| rapper --quiet --input=turtle --output=turtle /dev/fd/0
 
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
@@ -216,6 +227,7 @@ class Cli:
                 # #    /loading-wikidata-dump
                 # #    - Uses '.ndjson' as extension
                 # 'application/x-ndjson',
+                '_temp_bcp47',
             ],
             # required=True
             default='application/x-turtle'
@@ -231,7 +243,7 @@ class Cli:
             help='Arquivo de configuração .meta.yml da fonte de dados',
             dest='archivum_configurationi',
             nargs='?',
-            required=True,
+            # required=True,
             default=None
         )
 
@@ -273,19 +285,37 @@ class Cli:
                     stderr=sys.stderr):
         # self.pyargs = pyargs
 
-        # _infile = None
-        # _stdin = None
-        configuratio = self.quod_configuratio(
-            pyargs.archivum_configurationi, pyargs.praefixum_configurationi)
-        if pyargs.venandum_insectum or VENANDUM_INSECTUM:
-            self.venandum_insectum = True
-
         if stdin.isatty():
             _infile = pyargs.infile
             _stdin = False
         else:
             _infile = None
             _stdin = True
+
+        # @TODO remove thsi temporary part
+        if pyargs.objectivum_formato == '_temp_bcp47':
+            caput, data = hxltm_carricato(
+                _infile, _stdin, punctum_separato="\t")
+            # print(caput, data)
+            # print('')
+            meta = bcp47_rdf_extension_poc(caput, data)
+            # print(json.dumps(meta, sort_keys=True ,ensure_ascii=False))
+            # return self.EXIT_OK
+
+            for prefix, iri in meta['prefixes'].items():
+                print('@prefix {0}: <{1}> .'.format(prefix, iri))
+
+            for triple in meta['triples']:
+                print('{0} {1} {2} .'.format(triple[0], triple[1], triple[2]))
+
+            return self.EXIT_OK
+
+        # _infile = None
+        # _stdin = None
+        configuratio = self.quod_configuratio(
+            pyargs.archivum_configurationi, pyargs.praefixum_configurationi)
+        if pyargs.venandum_insectum or VENANDUM_INSECTUM:
+            self.venandum_insectum = True
 
         climain = CliMain(
             infile=_infile, stdin=_stdin,

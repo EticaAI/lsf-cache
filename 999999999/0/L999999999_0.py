@@ -29,10 +29,14 @@
 """Common library for 999999999_*.py cli scripts
 """
 
+# pytest
+#    python3 -m doctest ./999999999/0/L999999999_0.py
+
 
 import csv
 from genericpath import exists
 import json
+from multiprocessing.sharedctypes import Value
 # import importlib
 import os
 from pathlib import Path
@@ -41,6 +45,7 @@ import re
 import sys
 from datetime import date, datetime
 from typing import (
+    Iterator,
     List,
     Tuple,
     Type,
@@ -81,6 +86,25 @@ EXIT_SYNTAX = 2
 
 #     return L1603_1_51.DictionariaLinguarum()
 
+BCP47_LANGTAG_EXTENSIONS = {
+    'r': lambda r, strictum: bcp47_rdf_extension(r, strictum=strictum)
+}
+BCP47_LANGTAG_RDF_NAMESPACES = {
+    'rdf': 'http://www.w3.org/2000/01/rdf-schema#',
+    'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
+    'xsd': 'http://www.w3.org/2001/XMLSchema#',
+    'owl': 'http://www.w3.org/2002/07/owl#',
+    'skos': 'http://www.w3.org/2004/02/skos/core#',
+    # https://www.w3.org/ns/csvw
+    # https://www.w3.org/ns/csvw.ttl
+    # 'csvw': '<http://www.w3.org/ns/csvw#>',
+    'p': 'http://www.wikidata.org/prop/',
+    'dct': 'http://purl.org/dc/terms/',
+    # @TODO see also https://www.w3.org/ns/prov.ttl boostrapper imported by
+    #       https://www.w3.org/ns/csvw.ttl
+    'unescothes': 'http://vocabularies.unesco.org/thesaurus/',
+}
+
 
 def bcp47_langtag(
         rem: str,
@@ -110,9 +134,12 @@ def bcp47_langtag(
        upfront and there is no problem with using other licenses
        than public domain.
     Changelog:
+       - 2022-05-28: Uses global variable BCP47_LANGTAG_EXTENSIONS to search
+                     for functions to process extensions.
        - 2021-11-22: Partial implementation of BCP47 (RFC 5646)
        - 2021-01-02: Fixes on Language-Tag_normalized (discoversed when ported
                      JavaScript version was created)
+
     Args:
         rem (str):                       The BCP47 langtag
         clavem (Type[Union[str, list]]): Key (string) for specific value or keys
@@ -126,6 +153,7 @@ def bcp47_langtag(
         Emerson Rocha <rocha(at)ieee.org>
     License:
         SPDX-License-Identifier: Unlicense OR 0BSD
+
     -------------
     The syntax of the language tag in ABNF [RFC5234] is:
     Language-Tag  = langtag             ; normal language tags
@@ -188,11 +216,14 @@ def bcp47_langtag(
                 / "zh-xiang"
     alphanum      = (ALPHA / DIGIT)     ; letters and numbers
     -------------
+
     Most tests use examples from https://tools.ietf.org/search/bcp47 and
     https://github.com/unicode-org/cldr/blob/main/tools/cldr-code
     /src/main/resources/org/unicode/cldr/util/data/langtagTest.txt
-    Exemplōrum gratiā (et Python doctest, id est, testum automata):
-    (run with python3 -m doctest myscript.py)
+
+    Exemplōrum gratiā (et Python doctest, id est, automata testīs):
+        (python3 -m doctest myscript.py)
+
     >>> bcp47_langtag('pt-Latn-BR', 'language')
     'pt'
     >>> bcp47_langtag('pt-Latn-BR', 'script')
@@ -462,6 +493,16 @@ def bcp47_langtag(
 
             result['Language-Tag_normalized'] = '-'.join(norm)
 
+    if len(result['extension'].keys()) > 0 and \
+            'BCP47_LANGTAG_EXTENSIONS' in globals():
+        for extension_key, extension_raw in result['extension'].items():
+            if extension_key in BCP47_LANGTAG_EXTENSIONS:
+                result['extension'][extension_key] = \
+                    BCP47_LANGTAG_EXTENSIONS[extension_key](
+                        extension_raw,
+                        strictum=strictum
+                )
+
     if strictum and len(result['_error']) > 0:
         raise ValueError(
             'Errors for [' + rem + ']: ' + ', '.join(result['_error']))
@@ -478,6 +519,462 @@ def bcp47_langtag(
             'clavem [' + str(type(clavem)) + '] != [str, list]')
 
     return result
+
+
+def bcp47_rdf_extension(
+        rem: str,
+        clavem: Type[Union[str, list]] = None,
+        strictum: bool = True
+) -> dict:
+    """""Public domain python function to process RDF "G" extension for BCP47
+
+    The bcp47_rdf_extension is an public domain python function to
+    aid parsing of the IETF BCP 47 language tag. It implements the syntactic
+    analysis of RFC 5646 and does not require lookup tables which makes
+    it friendly for quick analysis.
+
+    The general description of extensions is described at
+    https://www.rfc-editor.org/rfc/rfc5646.html#section-2.2.6
+
+    Args:
+        bcp47_extension_r (str):         The r extention part of a BCP47
+                                         language tag
+        clavem (Type[Union[str, list]]): Key (string) for specific value or keys
+                                         (list) to return a dict (optional)
+        strictum (bool):                 Throw exceptions. False replace values
+                                        with False (optional)
+
+    Returns:
+        dict: Python dictionary. None means not found. False means the feature
+                                 is not implemented
+
+    Changelog:
+        - 2022-05-28: Created.
+
+    Author:
+        Emerson Rocha <rocha(at)ieee.org>
+
+    License:
+        SPDX-License-Identifier: Unlicense OR 0BSD
+
+    -----
+    See also
+        - en.wikipedia.org/wiki/Resource_Description_Framework#Vocabulary
+        - https://en.wikipedia.org/wiki/Reification_(knowledge_representation)
+        - https://en.wikipedia.org/wiki/First-order_logic
+        - https://en.wikipedia.org/wiki/Universal_quantification
+        - https://en.wikipedia.org/wiki/List_of_logic_symbols
+          - "∀" U+2200
+          - “🔗” (U+1F517)
+
+
+    RDF Vocabulary / Properties
+        - rdf:subject – the subject of the RDF statement
+        - rdf:predicate – the predicate of the RDF statement
+
+    @TODO: - https://en.wikipedia.org/wiki/First-order_logic#Logical_symbols
+             - The logical connectives: ∧ for conjunction,
+               ∨ for disjunction, → for implication, ↔ for biconditional,
+               ¬ for negation. Occasionally other logical connective symbol
+               are included. Some authors[7] use Cpq, instead of →,
+               and Epq, instead of ↔, especially in contexts where → is used
+               for other purposes. Moreover, the horseshoe ⊃ may replace →;
+               the triple-bar ≡ may replace ↔;
+               a tilde (~), Np, or Fp, may replace ¬;
+               a double bar {\displaystyle \|}\|, {\displaystyle +}+ or
+               Apq may replace ∨; and ampersand &, Kpq, or the middle dot, ⋅,
+               may replace ∧, especially if these symbols are not available
+               for technical reasons. (The aforementioned symbols
+               Cpq, Epq, Np, Apq, and Kpq are used in Polish notation.)
+           - en.wikipedia.org/wiki/Polish_notation#Polish_notation_for_logic
+           - https://en.wikipedia.org/wiki/Hungarian_notation
+           - https://en.wikipedia.org/wiki/Leszynski_naming_convention
+
+    -----
+
+    Exemplōrum gratiā (et Python doctest, id est, automata testīs):
+        (python3 -m doctest myscript.py)
+
+    >>> bcp47_rdf_extension('pskos-prefLabel', 'rdf:predicate')
+    ['skos:prefLabel']
+
+    >>> bcp47_rdf_extension('pdc-contributor-pdc-creator-pdc-publisher',
+    ... 'rdf:predicate')
+    ['dc:contributor', 'dc:creator', 'dc:publisher']
+
+    >>> bcp47_rdf_extension('pdct-modified-txsd-dateTime',
+    ... ['rdf:predicate', 'rdfs:Datatype'])
+    {'rdf:predicate': ['dct:modified'], 'rdfs:Datatype': 'xsd:dateTime'}
+
+    """
+    # For sake of copy-and-paste portability, we ignore a few pylints:
+    # pylint: disable=too-many-branches,too-many-statements,too-many-locals
+    result = {
+        'rdf:Statement_raw': rem,
+        # 'bcp47_extension_r_normalized': None,
+        'rdf:subject': [],
+        'rdf:predicate': [],
+        'rdf:object': [],
+        'rdfs:Datatype': None,
+        '_unknown': [],
+        '_error': [],
+    }
+    _predicates = []
+    _subjects = []
+    _objects = []
+
+    # result['bcp47_extension_r_normalized'] = \
+    #     result['bcp47_extension_r'].lower()
+
+    if rem.find('-') > 0:
+        r_parts = rem.split('-')
+        r_parts_tot = len(r_parts)
+        r_rest = r_parts_tot
+        while r_rest > 0:
+            r_item_key = r_parts[r_parts_tot - r_rest]
+            r_item_value = r_parts[r_parts_tot - r_rest + 1]
+            if r_item_key.startswith('p'):
+                _predicates.append('{0}:{1}'.format(
+                    r_item_key.lstrip('p').lower(),
+                    r_item_value
+                ))
+
+            # sU2200
+            elif r_item_key.lower().startswith('su'):
+                _subjects.append('∀{0}'.format(
+                    r_item_value.lstrip('s')
+                ))
+            elif r_item_key.lower().startswith('ss'):
+                _subjects.append('{0}'.format(
+                    r_item_value.lstrip('s')
+                ))
+
+            # oU1F517
+            elif r_item_key.lower().startswith('ou'):
+                _objects.append('🔗{0}'.format(
+                    r_item_value.lstrip('o')
+                ))
+
+            elif r_item_key.startswith('t'):
+                if result['rdfs:Datatype'] is None:
+                    result['rdfs:Datatype'] = '{0}:{1}'.format(
+                        r_item_key.lstrip('t'),
+                        r_item_value
+                    )
+                else:
+                    result['_error'].append(
+                        'rdfs:Datatype [{0}]-[{1}]'.format(
+                            r_item_key,
+                            r_item_value
+                        ))
+            else:
+                result['_error'].append('Unknow [{0}-{1}]'.format(
+                    r_item_key,
+                    r_item_value
+                ))
+            r_rest = r_rest - 2
+
+        if len(_predicates) > 0:
+            _predicates.sort()
+            result['rdf:predicate'] = _predicates
+
+        if len(_objects) > 0:
+            _objects.sort()
+            result['rdf:object'] = _objects
+
+        if len(_subjects) > 0:
+            _subjects.sort()
+            result['rdf:subject'] = _subjects
+
+    else:
+        result['_error'].append('G extension do not have -')
+
+    if len(r_parts) % 2 == 0:
+        pass
+    else:
+        result['_error'].append('G extension not even number')
+
+    if strictum and len(result['_error']) > 0:
+        raise SyntaxError('[{0}]: <{1}>'.format(
+            rem, result['_error']))
+
+    if clavem is not None:
+        if isinstance(clavem, str):
+            return result[clavem]
+        if isinstance(clavem, list):
+            result_partial = {}
+            for item in clavem:
+                result_partial[item] = result[item]
+            return result_partial
+        raise TypeError(
+            'clavem [' + str(type(clavem)) + '] != [str, list]')
+
+    return result
+
+
+def bcp47_rdf_extension_relationship(
+        header: List[str],
+        strictum: bool = True
+) -> dict:
+    """""Metadata processing of the bcp47_rdf_extension version
+
+    _extended_summary_
+
+    Args:
+        caput (List[str]): _description_
+        strictum (bool, optional): _description_. Defaults to True.
+
+    Returns:
+        dict: _description_
+    """
+    result = {
+        'columns_original': header,
+        'columns': [],
+        # 'rdf:subject': None,
+        # 'rdf:predicate': [],
+        # 'rdf:object': None,
+        # 'rdfs:Datatype': None,
+        # '_unknown': [],
+        'rdfs:Container': {},
+        'prefixes': {
+            'rdf': BCP47_LANGTAG_RDF_NAMESPACES['rdf'],
+            'rdfs': BCP47_LANGTAG_RDF_NAMESPACES['rdfs'],
+            'xsd': BCP47_LANGTAG_RDF_NAMESPACES['xsd'],
+            'owl': BCP47_LANGTAG_RDF_NAMESPACES['owl']
+        },
+        '_error': [],
+    }
+
+    # print('header', header)
+
+    for index, item in enumerate(header):
+        item_meta = bcp47_langtag(
+            item, ['language', 'script', 'extension'], strictum=False)
+        # @TODO; get erros and export them to upper level
+        item_meta['_column'] = index
+        inline_namespace = None
+        inline_namespace_iri = None
+        # is_inline_namespace = False
+        if 'r' in item_meta['extension'] and \
+                len(item_meta['extension']['r']['rdf:object']) > 0:
+            for object in item_meta['extension']['r']['rdf:object']:
+                if object.startswith('🔗'):
+                    # is_inline_namespace = True
+                    inline_namespace = object.replace('🔗', '')
+                    strictum = True
+                    if inline_namespace not in BCP47_LANGTAG_RDF_NAMESPACES:
+                        if strictum:
+                            raise SyntaxError(
+                                'inline_namespace ({0}) ? <{1}> <{2}>'.format(
+                                    inline_namespace, header, item_meta
+                                ))
+                        else:
+                            inline_namespace_iri = '_' + inline_namespace
+                    else:
+                        inline_namespace_iri = \
+                            BCP47_LANGTAG_RDF_NAMESPACES[inline_namespace]
+                        result['prefixes'][inline_namespace] = inline_namespace_iri
+
+        # print('item inline_namespace_iri', item, inline_namespace_iri)
+        if 'r' in item_meta['extension'] and \
+                len(item_meta['extension']['r']['rdf:subject']) > 0:
+            for subject in item_meta['extension']['r']['rdf:subject']:
+                is_pivot_key = False
+                if subject.startswith('∀'):
+                    is_pivot_key = True
+                    subject = subject.replace('∀', '')
+                if subject.startswith('🔗'):
+                    is_pivot_key = True
+                    subject = subject.replace('🔗', '')
+
+                if subject not in result['rdfs:Container']:
+                    result['rdfs:Container'][subject] = {
+                        'pivot': {
+                            'index': -1,
+                            'iri': inline_namespace_iri,
+                            'prefix': 'urn',
+                            # We will fallback the pivots as generic classes
+                            # We should enable later override this behavior
+                            # via language tag on the pivot
+                            'rdf:predicate': ['rdfs:Class'],
+                        },
+                        'columns': []
+                    }
+
+                if inline_namespace is not None:
+                    result['rdfs:Container'][subject]['pivot']['prefix'] = \
+                        inline_namespace
+                result['rdfs:Container'][subject]['columns'].append(index)
+
+                if is_pivot_key:
+                    if result['rdfs:Container'][subject]['pivot']['index'] > -1:
+                        SyntaxError('{0} <{1}>'.format(header, item_meta))
+                    result['rdfs:Container'][subject]['pivot']['index'] = index
+
+        if 'r' in item_meta['extension'] and \
+                len(item_meta['extension']['r']['rdf:predicate']) > 0:
+                for predicate in item_meta['extension']['r']['rdf:predicate']:
+                    prefix, suffix = predicate.split(':')
+                    if prefix not in result['prefixes']:
+                        if prefix not in BCP47_LANGTAG_RDF_NAMESPACES:
+                            raise SyntaxError(
+                                'prefix [{0}]? <{1}> <{2}>'.format(
+                                prefix, header, BCP47_LANGTAG_RDF_NAMESPACES
+                            ))
+                        result['prefixes'][prefix] = \
+                            BCP47_LANGTAG_RDF_NAMESPACES[prefix]
+
+
+        result['columns'].append(item_meta)
+
+    return result
+
+
+def bcp47_rdf_extension_poc(
+        header: List[str],
+        data: List[List],
+        objective_bag: str = '1',
+        _auxiliary_bags: List[str] = None,
+        namespaces: List[dict] = None,
+        strictum: bool = True
+) -> dict:
+    """bcp47_rdf_extension_poc _summary_
+
+    _extended_summary_
+
+    Args:
+        header (List[str]): _description_
+        data (List[List]): _description_
+        strictum (bool, optional): _description_. Defaults to True.
+
+    Returns:
+        dict: _description_
+
+    Exemplōrum gratiā (et Python doctest, id est, automata testīs):
+        (python3 -m doctest myscript.py)
+
+
+    >>> namespaces = [
+    ...    {'prefix': 'dc', 'iri': 'http://purl.org/dc/elements/1.1/'}
+    ... ]
+
+    >>> header_1 = ['qcc-Zxxx-r-sRDF-subject',
+    ...             'eng-Latn-r-pdc-contributor-pdc-creator-pdc-publisher']
+    >>> header_2 = ['qcc-Zxxx-r-sU2200-s0',
+    ...             'eng-Latn-r-pdc-contributor-pdc-creator-pdc-publisher']
+    >>> data_1 = [['<http://vocabularies.unesco.org/thesaurus>'
+    ...             'UNESCO']]
+    >>> poc1 = bcp47_rdf_extension_poc(header_2, data_1, namespaces)
+
+    # >>> poc1['header_result']
+    #'pskos-prefLabel'
+
+    """
+    # raise NotImplementedError(header)
+    result = {
+        'header': header,
+        'header_result': [],
+        'data': data,
+        # 'rdf:subject': None,
+        # 'rdf:predicate': [],
+        # 'rdf:object': None,
+        # 'rdfs:Datatype': None,
+        # '_unknown': [],
+        'triples': [],
+        'prefixes': {},
+        '_error': [],
+    }
+    # return {}
+
+    # print('header', header)
+
+    # header.pop()
+
+    meta = bcp47_rdf_extension_relationship(header, strictum=strictum)
+    meta['data'] = data
+    # return meta
+    if objective_bag not in meta['rdfs:Container']:
+        raise SyntaxError('objective_bag({0})? {1} <{1}>'.format(
+            objective_bag, header, meta))
+    bag_meta = meta['rdfs:Container'][objective_bag]
+    is_urn = bag_meta['pivot']['prefix'].startswith('urn')
+    prexi_iri = None
+
+    # return bag_meta
+    if not is_urn:
+        prexi_iri = bag_meta['pivot']['iri']
+
+    index_id = bag_meta['pivot']['index']
+    triples_delayed = []
+
+    def _helper_aux(
+        bag_meta, bcp47_lang=None, subject=None,
+        object_literal=None, linea=[]
+    ) -> Tuple:
+        triples = []
+
+        # @TODO: implement some way to discover implicit relations
+        #        (up to one level). Would need scan table twice
+        triples_delayed = []
+        # This obviously is simplistic, because we can reference multiple
+        # columns for same hashtags.
+        for predicate in bag_meta['rdf:predicate']:
+            object_result = object_literal
+            if not bcp47_lang.startswith('qcc'):
+                object_result = '"{0}"@{1}'.format(object_result, bcp47_lang)
+            else:
+                object_result = '"{0}"'.format(object_result)
+
+            triples.append([subject, predicate, object_result])
+
+        # raise ValueError(bag_meta)
+
+        return triples, triples_delayed
+
+    for linea in data:
+        # triple = []
+        # First pivot
+        if is_urn:
+            triple_subject = '<urn:{0}>'.format(linea[index_id])
+        else:
+            triple_subject = '<{0}{1}>'.format(prexi_iri, linea[index_id])
+
+        # Predicate for self is Subject here
+        for predicate in bag_meta['pivot']['rdf:predicate']:
+            triple = [triple_subject, 'a', predicate]
+            result['triples'].append(triple)
+
+        for referenced_by in bag_meta['columns']:
+            if referenced_by == index_id:
+                continue
+
+            _bcp47lang = '{0}-{1}'.format(
+                meta['columns'][referenced_by]['language'],
+                meta['columns'][referenced_by]['script'],
+            )
+            object_literal = linea[referenced_by]
+            aux_triples, triples_delayed = _helper_aux(
+                meta['columns'][referenced_by]['extension']['r'],
+                bcp47_lang=_bcp47lang,
+                subject=triple_subject,
+                object_literal=object_literal,
+                linea=linea)
+            if len(aux_triples) > 0:
+                result['triples'].extend(aux_triples)
+
+    # result['prefixes'] = BCP47_LANGTAG_RDF_NAMESPACES
+    result['prefixes'] = meta['prefixes']
+
+    return result
+    # return result['triples']
+    return objective_bag_meta
+    main_prefix = '_:'
+    main_is_urn = False
+    result['triples'].append(meta['rdfs:Container'][objective_bag])
+
+    return result['triples']
+
+    return meta
 
 
 class CodAbTabulae:
@@ -2352,7 +2849,8 @@ def hxltm_adde_columna(
 
 def hxltm_carricato(
     archivum_trivio: str = None,
-    est_stdin: bool = False
+    est_stdin: bool = False,
+    punctum_separato=","
 ) -> list:
     """hxltm_carricato load entire raw CSV file to memory.
 
@@ -2379,7 +2877,7 @@ def hxltm_carricato(
                 # caput = linea
                 # _reader_caput = csv.reader(linea)
                 _gambi = [linea, linea]
-                _reader_caput = csv.reader(_gambi)
+                _reader_caput = csv.reader(_gambi, delimiter=punctum_separato)
                 caput = next(_reader_caput)
             else:
                 _data.append(linea)
@@ -2389,7 +2887,7 @@ def hxltm_carricato(
     #     fons = archivum_trivio
     data = []
     with open(archivum_trivio, 'r') as _fons:
-        _csv_reader = csv.reader(_fons)
+        _csv_reader = csv.reader(_fons, delimiter=punctum_separato)
         for linea in _csv_reader:
             if len(caput) == 0:
                 # caput = linea
@@ -2896,6 +3394,197 @@ def numerordinatio_progenitori(
     return separatum.join(_parts)
 
 
+class OntologiaSimplici:
+    """Ontologia Simplicī
+
+
+    Trivia:
+    - ontologia, ---, https://en.wiktionary.org/wiki/ontologia#Latin
+    - simplicī, s, m/f/b, dativus, https://en.wiktionary.org/wiki/simplex
+    - ex (+ ablativus), https://en.wiktionary.org/wiki/ex#Latin
+    - rādīcī, s, f, dativus, https://en.wiktionary.org/wiki/radix#Latin
+    - archīvō, s, n, dativus, https://en.wiktionary.org/wiki/archivum
+
+    @see https://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole
+    @see https://www.w3.org/TR/owl2-overview/#Overview
+
+    """
+
+    # No 1603 prefix
+    ontologia_radici: str = None
+
+    # dictionaria_radici: This affects how we infer "classes".
+    # Without this we may make partsOf as if they're classes,
+    # which may be wrong
+    dictionaria_radici: str = None
+
+    ordo_radici: int = None
+    data_apothecae_ex: str = []
+    caput_no1: List[str] = None
+    data: List[list] = None
+
+    PRAEFIXUM = [
+        '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .',
+        '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .',
+        '@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .',
+        '@prefix owl: <http://www.w3.org/2002/07/owl#> .',
+        '@prefix skos: <http://www.w3.org/2004/02/skos/core#> .',
+        '@prefix p: <http://www.wikidata.org/prop/> .'
+    ]
+
+    PARENTES = []
+
+    def __init__(
+        self,
+        ontologia_radici: str,
+        ontologia_ex_archivo: str,
+        dictionaria_radici: str = None
+    ):
+
+        self.ontologia_radici = numerordinatio_neo_separatum(
+            ontologia_radici, ':')
+        self.ontologia_ex_archivo = ontologia_ex_archivo
+        if dictionaria_radici:
+            self.dictionaria_radici = numerordinatio_neo_separatum(
+                dictionaria_radici, ':')
+        else:
+            self.dictionaria_radici = self.ontologia_radici
+
+        self.initiari()
+
+    def initiari(self):
+        """initiarī
+
+        Trivia:
+        - initiārī, https://en.wiktionary.org/wiki/initio#Latin
+        """
+        self.caput_no1, self.data = hxltm_carricato(self.ontologia_ex_archivo)
+
+        if self.caput_no1[0] != '#item+conceptum+numerordinatio':
+            raise SyntaxError('Non [{0}] index 0 ad [{1}]'.format(
+                '#item+conceptum+numerordinatio',
+                self.ontologia_ex_archivo
+            ))
+
+        if self.caput_no1[1] != '#item+conceptum+codicem':
+            raise SyntaxError('Non [{0}] index 1 ad [{1}]'.format(
+                '#item+conceptum+codicem',
+                self.ontologia_ex_archivo
+            ))
+
+        self.ordo_radici = numerordinatio_ordo(self.ontologia_radici)
+
+        _parents__parts = self.dictionaria_radici.split(':')
+        _parents__parens = []
+        # print('oi', _parents__parts)
+        for item in _parents__parts:
+            if len(_parents__parens) == 0:
+                self.PARENTES.append(
+                    '<urn:{0}> rdf:type owl:Ontology .'.format(item))
+                self.PARENTES.append(
+                    '<urn:{0}> rdf:type owl:Class .'.format(item))
+                self.PARENTES.append('')
+                _parents__parens.append(item)
+                continue
+
+            # if len(_parents__parens) > 0:
+            #     # _parents__parens.append(item)
+            #     # _aa =
+            #     numerordinatio_nunc = ':'.join(_parents__parens)
+            # else:
+            #     # numerordinatio_nunc = item
+
+            #     self.PARENTES.append(
+            #         '<urn:{0}> rdf:type owl:Ontology .'.format(item))
+            #     _parents__parens.append(item)
+            #     continue
+            _parents__parens_old = list(_parents__parens)
+            _parents__parens.append(item)
+            numerordinatio_nunc = ':'.join(_parents__parens)
+
+            self.PARENTES.append(
+                '<urn:{0}> rdf:type owl:Class .'.format(numerordinatio_nunc))
+            self.PARENTES.append(
+                '<urn:{0}> rdfs:subClassOf <urn:{1}> .'.format(
+                    numerordinatio_nunc, ':'.join(_parents__parens_old)))
+            # if len(_parents__parens) > 0:
+            #     self.PARENTES.append(
+            #         '<urn:{0}> rdfs:subClassOf <urn:{1}> .'.format(
+            #             numerordinatio_nunc, ':'.join(_parents__parens)))
+
+            self.PARENTES.append('')
+        # self.PARENTES = []
+        # pass
+
+    def imprimere_ad_tabula(self, punctum_separato: str = ","):
+        csv_imprimendo(
+            self.caput_no1, self.data, punctum_separato=punctum_separato)
+        # return self.resultatum
+
+
+class OntologiaSimpliciAdOWL(OntologiaSimplici):
+    def imprimere_ad_owl(self, punctum_separato: str = ","):
+        # - part of (P361)
+        #   - https://www.wikidata.org/wiki/Property:P361
+        #   - https://www.wikidata.org/wiki/Special:EntityData/P361.ttl
+        # - has part or parts (P527)
+        #   - https://www.wikidata.org/wiki/Property:P527
+        #   - https://www.wikidata.org/wiki/Special:EntityData/P527.ttl
+        # - inverse property (P1696)
+        #   - https://www.wikidata.org/wiki/Property:P1696
+        #   - https://www.wikidata.org/wiki/Property_talk:P1696
+        # - https://www.wikidata.org/wiki/EntitySchema:E49
+        # ObjectInverseOf
+        # owl:inverseOf
+        #
+        # @TODO parse list of wikidata properties
+        # https://www.wikidata.org/wiki/Property:P31
+
+        paginae = []
+        paginae.append('# {0}'.format(self.ontologia_radici))
+        paginae.extend(self.PRAEFIXUM)
+        paginae.append('')
+        paginae.append('p:P361 rdf:type owl:ObjectProperty .')
+        paginae.append('p:P1696 rdf:type owl:ObjectProperty .')
+        paginae.append('p:P361 owl:inverseOf p:P1696 .')
+        paginae.append('')
+        paginae.extend(self.PARENTES)
+        paginae.append('')
+
+        ordo_nunc = self.ordo_radici
+        parēns = {
+            ordo_nunc: self.ontologia_radici
+        }
+        # print(parēns)
+        for linea in self.data:
+            numerordinatio_nunc = numerordinatio_neo_separatum(linea[0], ':')
+            if numerordinatio_nunc.startswith(
+                    self.ontologia_radici + ':0:1603'):
+                continue
+
+            ordo_nunc = numerordinatio_ordo(linea[0])
+            parēns[ordo_nunc] = numerordinatio_nunc
+            numerordinatio_parentī = parēns[ordo_nunc - 1]
+
+            # paginae.append('# {0} {1} {2}'.format(
+            #     linea[0], linea[1], ordo_nunc))
+
+            paginae.append('<urn:{0}> p:P361 <urn:{1}> .'.format(
+                numerordinatio_nunc, numerordinatio_parentī,
+                parēns[ordo_nunc]))
+
+            paginae.append(
+                '<urn:{0}> rdfs:Literal "{1}" .'.format(
+                    numerordinatio_nunc, numerordinatio_nunc,
+                    parēns[ordo_nunc]))
+
+            paginae.append('')
+            # ordo_nunc = self.ordo_radici
+            # parēns = self.ontologia_radici
+
+        ttl_imprimendo(paginae)
+
+
 def qhxl(rem: dict, query: Union[str, list]):
     if isinstance(query, str):
         query = [query]
@@ -3387,6 +4076,17 @@ class TabulaSimplici:
         #       "extremitates"@lat-Latn-x-wikip3982 .
 
         return paginae
+
+
+def ttl_imprimendo(
+        paginae: Iterator[str],
+        archivum_trivio: str = None):
+    if archivum_trivio:
+        raise NotImplementedError('{0}'.format(archivum_trivio))
+    # imprimendō, v, s, dativus, https://en.wiktionary.org/wiki/impressus#Latin
+
+    for linea in paginae:
+        print(linea)
 
 
 class XLSXSimplici:

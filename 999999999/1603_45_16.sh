@@ -932,6 +932,9 @@ rapper --quiet --input=turtle --output=dot \
   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
   > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
 
+# ./999999999/0/1603_1.py --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 --ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv | rapper --quiet --input=turtle --output=turtle /dev/fd/0 > /home/fititnt/Downloads/test.ttl
+# ./999999999/0/1603_1.py --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 --ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv | rapper --quiet --input=turtle --output=dot /dev/fd/0 > /home/fititnt/Downloads/test.dot
+
 # dot -Tsvg \
 #   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot" \
 #   > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.svg"
