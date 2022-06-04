@@ -601,7 +601,8 @@ def bcp47_langtag_callback_hxl(
             prefix, term = _r['rdfs:Datatype'].lower().split(':')
             resultatum.append('+rdf_t_{0}_{1}'.format(prefix, term))
 
-        if _r['csvw:separator'] and len(_r['csvw:separator']) > 0:
+        if 'csvw:separator' in _r and \
+                _r['csvw:separator'] and len(_r['csvw:separator']) > 0:
             decoded_separator = None
             for decoded, value in CSVW_SEPARATORS.items():
                 if _r['csvw:separator'] == value:
@@ -613,7 +614,8 @@ def bcp47_langtag_callback_hxl(
                         _r['csvw:separator'], langtag_meta, CSVW_SEPARATORS
                     ))
 
-            resultatum.append('+rdf_y_csvwseparator_{0}'.format(decoded_separator))
+            resultatum.append(
+                '+rdf_y_csvwseparator_{0}'.format(decoded_separator))
 
     resultatum = sorted(resultatum)
 
@@ -777,7 +779,7 @@ def bcp47_rdf_extension(
             elif r_item_key.startswith('t'):
                 if result['rdfs:Datatype'] is None:
                     result['rdfs:Datatype'] = '{0}:{1}'.format(
-                        r_item_key.lstrip('t'),
+                        r_item_key.lstrip('t').lower(),
                         r_item_value
                     )
                 else:
