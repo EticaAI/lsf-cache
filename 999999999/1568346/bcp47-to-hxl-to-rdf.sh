@@ -59,9 +59,7 @@ bcp47_to_hxl_to_rdf__tests() {
       bpc47="${linea[0]}"
       hxl="${linea[1]}"
       rdf="${linea[2]}"
-      namespace="${linea[3]}"
-      # echo ""
-      # echo "        ${linea[*]}"
+      # namespace="${linea[3]}"
 
       bc47_full=$("${ROOTDIR}/999999999/0/linguacodex.py" \
         --de_bcp47_simplex --de_codex="${bpc47}" --quod=.extension)

@@ -86,23 +86,49 @@ EXIT_SYNTAX = 2
 
 #     return L1603_1_51.DictionariaLinguarum()
 
+BCP47_LANGTAG_CALLBACKS = {
+    'hxl_attrs': lambda lmeta, strictum: bcp47_langtag_callback_hxl(
+        lmeta, strictum=strictum)
+}
+
 BCP47_LANGTAG_EXTENSIONS = {
     'r': lambda r, strictum: bcp47_rdf_extension(r, strictum=strictum)
 }
-BCP47_LANGTAG_RDF_NAMESPACES = {
+
+# @TODO allow non hardcoded CSV_SEPARATORS
+# Hacky way to have inline cell separators.
+CSVW_SEPARATORS = {
+    # HXL: +rdf_ycsvwseparator_u007c, BCP47, (...)-r-yCSVWseparator-u007c
+    'u007c': '|',
+    'u007cu007c': '||',
+    'u0020': ' ',
+    'u003b': ';',
+    'u0009': '	'  # tab
+}
+
+RDF_NAMESPACES = {
     'rdf': 'http://www.w3.org/2000/01/rdf-schema#',
     'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
     'xsd': 'http://www.w3.org/2001/XMLSchema#',
     'owl': 'http://www.w3.org/2002/07/owl#',
+    'obo': 'http://purl.obolibrary.org/obo/',
     'skos': 'http://www.w3.org/2004/02/skos/core#',
+    'wdata': 'http://www.wikidata.org/wiki/Special:EntityData/',
     # https://www.w3.org/ns/csvw
     # https://www.w3.org/ns/csvw.ttl
     # 'csvw': '<http://www.w3.org/ns/csvw#>',
-    'p': 'http://www.wikidata.org/prop/',
-    'dct': 'http://purl.org/dc/terms/',
+    # 'p': 'http://www.wikidata.org/prop/',
+    # 'dct': 'http://purl.org/dc/terms/',
+    # 'dc': 'http://purl.org/dc/elements/1.1/',
     # @TODO see also https://www.w3.org/ns/prov.ttl boostrapper imported by
     #       https://www.w3.org/ns/csvw.ttl
-    'unescothes': 'http://vocabularies.unesco.org/thesaurus/',
+    # 'unescothes': 'http://vocabularies.unesco.org/thesaurus/',
+}
+
+# This can be pre-populated by tools before being used
+# @see rdf_namespaces_extras()
+RDF_NAMESPACES_EXTRAS = {
+
 }
 
 
@@ -271,8 +297,9 @@ def bcp47_langtag(
 'language': 'en', 'script': 'Latn', 'region': 'US', \
 'variant': ['lojban', 'gaulish'], \
 'extension': {'a': '12345678-ABCD', 'b': 'ABCDEFGH'}, \
-'privateuse': ['a', 'b', 'c', '12345678'], \
-'grandfathered': None, '_unknown': [], '_error': []}
+'privateuse': ['a', 'b', 'c', '12345678'], 'grandfathered': None, \
+'_callbacks': {'hxl_attrs': '+i_en+is_latn+ix_12345678+ix_a+ix_b+ix_c'}, \
+'_unknown': [], '_error': []}
 
     # BCP47: "Example: The language tag "en-a-aaa-b-ccc-bbb-x-xyz" is in
     # canonical form, while "en-b-ccc-bbb-a-aaa-X-xyz" is well-formed (...)
@@ -282,7 +309,8 @@ def bcp47_langtag(
 'Language-Tag_normalized': 'en-a-aaa-b-ccc-bbb-x-xyz', \
 'language': 'en', 'script': None, 'region': None, 'variant': [], \
 'extension': {'a': 'aaa', 'b': 'ccc-bbb'}, 'privateuse': ['xyz'], \
-'grandfathered': None, '_unknown': [], '_error': []}
+'grandfathered': None, '_callbacks': {'hxl_attrs': '+i_en+ix_xyz'}, \
+'_unknown': [], '_error': []}
     """
     # For sake of copy-and-paste portability, we ignore a few pylints:
     # pylint: disable=too-many-branches,too-many-statements,too-many-locals
@@ -298,6 +326,7 @@ def bcp47_langtag(
         'extension': {},   # Example {'a': ['bbb', 'ccc'], 'd': True}
         'privateuse': [],  # Example: ['wadegile', 'private1']
         'grandfathered': None,
+        '_callbacks': {},
         '_unknown': [],
         '_error': [],
     }
@@ -503,6 +532,14 @@ def bcp47_langtag(
                         strictum=strictum
                 )
 
+    if 'BCP47_LANGTAG_CALLBACKS' in globals():
+        if clavem is None or \
+                ('_callbacks' == clavem or '_callbacks' in clavem):
+            # pass
+            for cb_key, cb_fn in BCP47_LANGTAG_CALLBACKS.items():
+                result['_callbacks'][cb_key] = cb_fn(result, strictum=strictum)
+        # raise NotImplementedError(BCP47_LANGTAG_CALLBACKS)
+
     if strictum and len(result['_error']) > 0:
         raise ValueError(
             'Errors for [' + rem + ']: ' + ', '.join(result['_error']))
@@ -519,6 +556,68 @@ def bcp47_langtag(
             'clavem [' + str(type(clavem)) + '] != [str, list]')
 
     return result
+
+
+def bcp47_langtag_callback_hxl(
+        langtag_meta: dict,
+        strictum: bool = True
+) -> dict:
+    resultatum = []
+    # resultatum.append('+todo')
+    resultatum.append('+i_{0}'.format(langtag_meta['language'].lower()))
+
+    if langtag_meta['script']:
+        resultatum.append('+is_{0}'.format(langtag_meta['script'].lower()))
+
+    if langtag_meta['privateuse'] and len(langtag_meta['privateuse']) > 0:
+        for item in langtag_meta['privateuse']:
+            resultatum.append('+ix_{0}'.format(item.lower()))
+
+    if langtag_meta['extension'] and 'r' in langtag_meta['extension']:
+        _r = langtag_meta['extension']['r']
+
+        if _r['rdf:predicate'] and len(_r['rdf:predicate']) > 0:
+            for item in _r['rdf:predicate']:
+                prefix, term = item.lower().split(':')
+                resultatum.append('+rdf_p_{0}_{1}'.format(prefix, term))
+
+        if _r['rdf:subject'] and len(_r['rdf:subject']) > 0:
+            for item in _r['rdf:subject']:
+                subject_key, subject_namespace = item.lower().split(':')
+                # raise ValueError(item)
+                # item_num = int(''.join(filter(str.isdigit, item)))
+                # # item_prefix = ''.join(filter(str.isdigit, item, ))
+                # item_prefix = item.replace(str(item_num), '')
+                # item_prefix = item_prefix.encode("unicode_escape").decode()
+                # item_prefix = item_prefix.replace('\\', '')
+                # # item_prefix = item_prefix.encode().decode()
+                # # prefix, term = item.lower().split(':')
+                # resultatum.append(
+                #     '+rdf_s_{0}_{1}'.format(item_prefix, item_num))
+                resultatum.append(
+                    '+rdf_s_{0}_{1}'.format(subject_key, subject_namespace))
+
+        if _r['rdfs:Datatype'] and len(_r['rdfs:Datatype']) > 0:
+            prefix, term = _r['rdfs:Datatype'].lower().split(':')
+            resultatum.append('+rdf_t_{0}_{1}'.format(prefix, term))
+
+        if _r['csvw:separator'] and len(_r['csvw:separator']) > 0:
+            decoded_separator = None
+            for decoded, value in CSVW_SEPARATORS.items():
+                if _r['csvw:separator'] == value:
+                    decoded_separator = decoded
+                    break
+            if decoded_separator is None:
+                raise NotImplementedError(
+                    '[{0}] [{1}] not implemented in <{2}>'.format(
+                        _r['csvw:separator'], langtag_meta, CSVW_SEPARATORS
+                    ))
+
+            resultatum.append('+rdf_y_csvwseparator_{0}'.format(decoded_separator))
+
+    resultatum = sorted(resultatum)
+
+    return ''.join(resultatum)
 
 
 def bcp47_rdf_extension(
@@ -616,6 +715,7 @@ def bcp47_rdf_extension(
         'rdf:predicate': [],
         'rdf:object': [],
         'rdfs:Datatype': None,
+        # 'csvw:separator': '',
         '_unknown': [],
         '_error': [],
     }
@@ -640,19 +740,38 @@ def bcp47_rdf_extension(
                 ))
 
             # sU2200
+            # elif r_item_key.lower().startswith('su'):
+            #     _subjects.append('∀{0}'.format(
+            #         r_item_value.lstrip('s')
+            #     ))
+            # elif r_item_key.lower().startswith('ss'):
+            #     _subjects.append('{0}'.format(
+            #         r_item_value.lstrip('s')
+            #     ))
+
+            # # oU1F517
+            # elif r_item_key.lower().startswith('ou'):
+            #     _objects.append('🔗{0}'.format(
+            #         r_item_value.lstrip('o')
+            #     ))
+
+            # exemplum: sU2200 (if using unicode as prefix, assume is key)
             elif r_item_key.lower().startswith('su'):
-                _subjects.append('∀{0}'.format(
-                    r_item_value.lstrip('s')
+                _subjects.append('{0}:{1}'.format(
+                    r_item_key.lstrip('s'), r_item_value.lstrip('s')
                 ))
+            # exemplum: sS (not using unicode as key, assuming is just
+            #           a pointer, not the pivoct column)
             elif r_item_key.lower().startswith('ss'):
-                _subjects.append('{0}'.format(
-                    r_item_value.lstrip('s')
+                _subjects.append('{0}:{1}'.format(
+                    '_' + r_item_key.lower().lstrip(
+                        's'), r_item_value.lstrip('s')
                 ))
 
-            # oU1F517
+            # exemplum: oU1F517
             elif r_item_key.lower().startswith('ou'):
-                _objects.append('🔗{0}'.format(
-                    r_item_value.lstrip('o')
+                _objects.append('{0}:{1}'.format(
+                    r_item_key.lstrip('o'), r_item_value
                 ))
 
             elif r_item_key.startswith('t'):
@@ -664,6 +783,42 @@ def bcp47_rdf_extension(
                 else:
                     result['_error'].append(
                         'rdfs:Datatype [{0}]-[{1}]'.format(
+                            r_item_key,
+                            r_item_value
+                        ))
+
+            elif r_item_key.lower().startswith('ycsvw'):
+                if r_item_key.lower() == 'ycsvwseparator':
+                    r_item_value = r_item_value.lower()
+                    r_item_value_enc = '__error__'
+                    # @TODO implement in pure python encode/decode. This is
+                    #       an obvious ugly hacky
+                    if r_item_value in CSVW_SEPARATORS:
+                        r_item_value_enc = CSVW_SEPARATORS[r_item_value]
+                    # if r_item_value == 'u007c':
+                    #     r_item_value_enc = '|'
+                    # elif r_item_value == 'u007cu007c':
+                    #     r_item_value_enc = '||'
+                    # elif r_item_value == 'u0020':
+                    #     r_item_value_enc = ' '
+                    # elif r_item_value == 'u003b':
+                    #     r_item_value_enc = ';'
+                    # elif r_item_value == 'u0009':
+                    #     r_item_value_enc = '	'  # tab
+                    else:
+                        raise NotImplementedError(
+                            'Sorry, separator [{0}] of [{1}] not implemented. '
+                            'This may be a bug. '
+                            'Hardcoded options <{2}> '.format(
+                                r_item_value, rem, CSVW_SEPARATORS))
+
+                    result['csvw:separator'] = '{0}'.format(
+                        # r_item_value
+                        r_item_value_enc
+                    )
+                else:
+                    result['_error'].append(
+                        'csvw:??? [{0}]-[{1}]'.format(
                             r_item_key,
                             r_item_value
                         ))
@@ -737,10 +892,13 @@ def bcp47_rdf_extension_relationship(
         # '_unknown': [],
         'rdfs:Container': {},
         'prefixes': {
-            'rdf': BCP47_LANGTAG_RDF_NAMESPACES['rdf'],
-            'rdfs': BCP47_LANGTAG_RDF_NAMESPACES['rdfs'],
-            'xsd': BCP47_LANGTAG_RDF_NAMESPACES['xsd'],
-            'owl': BCP47_LANGTAG_RDF_NAMESPACES['owl']
+            'rdf': RDF_NAMESPACES['rdf'],
+            'rdfs': RDF_NAMESPACES['rdfs'],
+            'xsd': RDF_NAMESPACES['xsd'],
+            'owl': RDF_NAMESPACES['owl'],
+            'obo': RDF_NAMESPACES['obo'],
+            'skos': RDF_NAMESPACES['skos'],
+            'wdata': RDF_NAMESPACES['wdata'],
         },
         '_error': [],
     }
@@ -758,11 +916,25 @@ def bcp47_rdf_extension_relationship(
         if 'r' in item_meta['extension'] and \
                 len(item_meta['extension']['r']['rdf:object']) > 0:
             for object in item_meta['extension']['r']['rdf:object']:
-                if object.startswith('🔗'):
+                # if object.startswith('🔗'):
+                #     # is_inline_namespace = True
+                #     inline_namespace = object.replace('🔗', '')
+                #     strictum = True
+                if object.startswith('_'):
                     # is_inline_namespace = True
-                    inline_namespace = object.replace('🔗', '')
+                    inline_namespace = object.replace('_', '')
                     strictum = True
-                    if inline_namespace not in BCP47_LANGTAG_RDF_NAMESPACES:
+                    if inline_namespace in RDF_NAMESPACES:
+                        inline_namespace_iri = \
+                            RDF_NAMESPACES[inline_namespace]
+                        result['prefixes'][inline_namespace] = \
+                            inline_namespace_iri
+                    elif inline_namespace in RDF_NAMESPACES_EXTRAS:
+                        inline_namespace_iri = \
+                            RDF_NAMESPACES_EXTRAS[inline_namespace]
+                        result['prefixes'][inline_namespace] = \
+                            inline_namespace_iri
+                    else:
                         if strictum:
                             raise SyntaxError(
                                 'inline_namespace ({0}) ? <{1}> <{2}>'.format(
@@ -770,25 +942,28 @@ def bcp47_rdf_extension_relationship(
                                 ))
                         else:
                             inline_namespace_iri = '_' + inline_namespace
-                    else:
-                        inline_namespace_iri = \
-                            BCP47_LANGTAG_RDF_NAMESPACES[inline_namespace]
-                        result['prefixes'][inline_namespace] = inline_namespace_iri
 
         # print('item inline_namespace_iri', item, inline_namespace_iri)
         if 'r' in item_meta['extension'] and \
                 len(item_meta['extension']['r']['rdf:subject']) > 0:
             for subject in item_meta['extension']['r']['rdf:subject']:
                 is_pivot_key = False
-                if subject.startswith('∀'):
+                subject_key, subject_value = subject.split(':')
+                # if subject.startswith('∀'):
+                #     is_pivot_key = True
+                #     subject = subject.replace('∀', '')
+                # if subject.startswith('🔗'):
+                #     is_pivot_key = True
+                #     subject = subject.replace('🔗', '')
+                if subject.startswith('∀') or subject.startswith('🔗') or \
+                        subject.lower().startswith('u2200') or \
+                        subject.lower().startswith('u1F517'):
                     is_pivot_key = True
-                    subject = subject.replace('∀', '')
-                if subject.startswith('🔗'):
-                    is_pivot_key = True
-                    subject = subject.replace('🔗', '')
+                    # raise ValueError('deu', is_pivot_key)
 
-                if subject not in result['rdfs:Container']:
-                    result['rdfs:Container'][subject] = {
+                if subject_value not in result['rdfs:Container']:
+                    # result['rdfs:Container'][subject] = {
+                    result['rdfs:Container'][subject_value] = {
                         'pivot': {
                             'index': -1,
                             'iri': inline_namespace_iri,
@@ -802,38 +977,44 @@ def bcp47_rdf_extension_relationship(
                     }
 
                 if inline_namespace is not None:
-                    result['rdfs:Container'][subject]['pivot']['prefix'] = \
+                    result['rdfs:Container'][subject_value]['pivot']['prefix'] = \
                         inline_namespace
-                result['rdfs:Container'][subject]['columns'].append(index)
+                result['rdfs:Container'][subject_value]['columns'].append(
+                    index)
 
                 if is_pivot_key:
-                    if result['rdfs:Container'][subject]['pivot']['index'] > -1:
+                    if result['rdfs:Container'][subject_value]['pivot']['index'] > -1:
                         SyntaxError('{0} <{1}>'.format(header, item_meta))
-                    result['rdfs:Container'][subject]['pivot']['index'] = index
+                    # raise ValueError('deu', index)
+                    result['rdfs:Container'][subject_value]['pivot']['index'] = index
 
         if 'r' in item_meta['extension'] and \
                 len(item_meta['extension']['r']['rdf:predicate']) > 0:
-                for predicate in item_meta['extension']['r']['rdf:predicate']:
-                    prefix, suffix = predicate.split(':')
-                    if prefix not in result['prefixes']:
-                        if prefix not in BCP47_LANGTAG_RDF_NAMESPACES:
-                            raise SyntaxError(
-                                'prefix [{0}]? <{1}> <{2}>'.format(
-                                prefix, header, BCP47_LANGTAG_RDF_NAMESPACES
+            for predicate in item_meta['extension']['r']['rdf:predicate']:
+                prefix, suffix = predicate.split(':')
+                if prefix not in result['prefixes']:
+                    # if prefix not in RDF_NAMESPACES:
+                    if prefix not in RDF_NAMESPACES_EXTRAS:
+                        raise SyntaxError(
+                            'prefix [{0}]? <{1}> <{2}>'.format(
+                                prefix, header, RDF_NAMESPACES_EXTRAS
                             ))
-                        result['prefixes'][prefix] = \
-                            BCP47_LANGTAG_RDF_NAMESPACES[prefix]
-
+                    result['prefixes'][prefix] = \
+                        RDF_NAMESPACES_EXTRAS[prefix]
 
         result['columns'].append(item_meta)
+    # raise ValueError(result['rdfs:Container'])
 
     return result
 
 
+# @TODO implement via command line specify which objective_bag.
+# #     Defaults to 1 but we actually can get the others
+
 def bcp47_rdf_extension_poc(
         header: List[str],
         data: List[List],
-        objective_bag: str = '1',
+        objective_bag: str = '2',
         _auxiliary_bags: List[str] = None,
         namespaces: List[dict] = None,
         strictum: bool = True
@@ -860,11 +1041,11 @@ def bcp47_rdf_extension_poc(
 
     >>> header_1 = ['qcc-Zxxx-r-sRDF-subject',
     ...             'eng-Latn-r-pdc-contributor-pdc-creator-pdc-publisher']
-    >>> header_2 = ['qcc-Zxxx-r-sU2200-s0',
+    >>> header_2 = ['qcc-Zxxx-r-sU2200-s1',
     ...             'eng-Latn-r-pdc-contributor-pdc-creator-pdc-publisher']
-    >>> data_1 = [['<http://vocabularies.unesco.org/thesaurus>'
+    >>> data_1 = [['<http://vocabularies.unesco.org/thesaurus>',
     ...             'UNESCO']]
-    >>> poc1 = bcp47_rdf_extension_poc(header_2, data_1, namespaces)
+    >>> poc1 = bcp47_rdf_extension_poc(header_2, data_1, namespaces=namespaces)
 
     # >>> poc1['header_result']
     #'pskos-prefLabel'
@@ -892,10 +1073,15 @@ def bcp47_rdf_extension_poc(
 
     meta = bcp47_rdf_extension_relationship(header, strictum=strictum)
     meta['data'] = data
+    # raise ValueError(meta)
+    # raise ValueError(objective_bag, meta['rdfs:Container'])
     # return meta
+    # print(meta['rdfs:Container'])
+
     if objective_bag not in meta['rdfs:Container']:
-        raise SyntaxError('objective_bag({0})? {1} <{1}>'.format(
+        raise SyntaxError('objective_bag({0})? {1} <{2}>'.format(
             objective_bag, header, meta))
+
     bag_meta = meta['rdfs:Container'][objective_bag]
     is_urn = bag_meta['pivot']['prefix'].startswith('urn')
     prexi_iri = None
@@ -919,6 +1105,8 @@ def bcp47_rdf_extension_poc(
         # This obviously is simplistic, because we can reference multiple
         # columns for same hashtags.
         for predicate in bag_meta['rdf:predicate']:
+            if not object_literal:
+                continue
             object_result = object_literal
             if not bcp47_lang.startswith('qcc'):
                 object_result = '"{0}"@{1}'.format(object_result, bcp47_lang)
@@ -962,7 +1150,9 @@ def bcp47_rdf_extension_poc(
             if len(aux_triples) > 0:
                 result['triples'].extend(aux_triples)
 
-    # result['prefixes'] = BCP47_LANGTAG_RDF_NAMESPACES
+    # raise ValueError(meta)
+
+    # result['prefixes'] = RDF_NAMESPACES
     result['prefixes'] = meta['prefixes']
 
     return result
@@ -1549,7 +1739,8 @@ class DictionariaLinguarum:
         return datum
 
     def imprimere(
-            self, linguam: list = None, codex: Type['Codex'] = None) -> list:
+            self, linguam: list = None,
+            codex: Type['Codex'] = None) -> list:  # type: ignore
         """imprimere /print/@eng-Latn
 
         Trivia:
@@ -2089,6 +2280,205 @@ def descriptio_tabulae_de_lingua(
     paginae.append('|===')
 
     return paginae
+
+
+def hxl_hashtag_to_bcp47(hashtag: str) -> str:
+    """hxl_hashtag_to_bcp47 _summary_
+
+    _extended_summary_
+
+    Args:
+        hashtag (str): an full HXL hashtag
+
+    Returns:
+        str: an BCP47 language tag
+    """
+    if not hashtag.startswith('#'):
+        raise ValueError('{0} not start with #'.format(hashtag))
+
+    # This this AST is similar to bcp47_langtag
+    result = {
+        # The input Language-Tag, _as it is_
+        'Language-Tag': None,
+        # The Language-Tag normalized syntax, if no errors
+        'Language-Tag_normalized': None,
+        'language': None,
+        'script': None,
+        'region': None,
+        'variant': [],
+        'extension': {
+            # Based on AST of bcp47_langtag_callback_hxl()
+            'r': {
+                'rdf:Statement_raw': None,
+                # 'bcp47_extension_r_normalized': None,
+                'rdf:subject': [],
+                'rdf:predicate': [],
+                'rdf:object': [],
+                'rdfs:Datatype': None,
+                '_unknown': [],
+                '_error': [],
+            }
+        },
+        'privateuse': [],  # Example: ['wadegile', 'private1']
+        'grandfathered': None,
+        '_callbacks': {
+            'hxl_attrs': None,
+            'hxl_original': hashtag,
+            'rdf_parts': None
+        },
+        '_unknown': [],
+        '_error': [],
+    }
+
+    _bpc47_g_parts = []
+
+    parts = hashtag.split('+')
+    # bash_hashtag = parts.pop(0)
+    privateuse = []
+    rdf_parts = []
+    for item in parts:
+        if item.startswith('i_'):
+            result['language'] = item.lower().replace('i_', '')
+
+        if item.startswith('is_'):
+            result['script'] = item.replace('is_', '').capitalize()
+
+        # Did we really use ir_ as prefix for region? Is necessary at all?
+        # Anyway adding here, just in case may relevant later
+        # (Rocha, 2022-05-31)
+        if item.startswith('ir_'):
+            region = item.replace('ir_', '')
+            if region.isdigit():
+                result['region'] = region
+            else:
+                result['region'] = region.upper()
+
+        if item.startswith('ix_'):
+            privateuse.append(item.lower().replace('ix_', ''))
+
+        if item.startswith('rdf_'):
+            rdf_parts.append(item.replace('rdf_', ''))
+
+    if len(privateuse) > 0:
+        privateuse.sort()
+        result['privateuse'] = privateuse
+
+    if len(rdf_parts) > 0:
+        result['_callbacks']['rdf_parts'] = rdf_parts
+        for item in rdf_parts:
+            if item.startswith('s_'):
+                # _subject= item.replace('s_', '').replace('_', ':')
+                _subject_code, _subjec_value = item.replace(
+                    's_', '').split('_')
+                _subject_code = _subject_code.upper()
+                _subjec_value = _subjec_value.replace('s', '')
+
+                # @TODO get a value like '∀0' instead of 'u2200:0'
+                # _subject_code = ("\u2200").encode().decode('utf-8')
+                # _subject_code = ("\u2200")
+                # _subject_code = ("\u2200")
+                # _subject_code = str(ord("\u2200"))
+                # _subject_code = str(ord("\u2200"))
+                # _subject_code = ("\\u{0}".format(str(2200)))
+                # _subject_code = (r"\u2200").encode().decode('utf-8')
+                # _subject_code = ("\u2200").encode().decode('utf-8')
+                _subjec_value = _subjec_value.replace('s', '')
+                # result['extension']['r']['rdf:subject'].append(_subject)
+                result['extension']['r']['rdf:subject'].append('{0}:{1}'.format(
+                    _subject_code, _subjec_value
+                ))
+
+                _bpc47_g_parts.append('s{0}-s{1}'.format(
+                    _subject_code, _subjec_value
+                ))
+
+            elif item.startswith('p_'):
+                _predicate = item.replace('p_', '').replace('_', ':')
+                result['extension']['r']['rdf:predicate'].append(_predicate)
+                _predicate_key, _object = _predicate.split(':')
+                _bpc47_g_parts.append('p{0}-{1}'.format(
+                    _predicate_key.upper(), _object
+                ))
+
+            elif item.startswith('y_'):
+                _cell_transformer = item.replace('y_', '').lower()
+                _tkey, _tvalue = _cell_transformer.split('_')
+                if _tkey == 'csvwseparator':
+                    # _cell_separator = CSVW_SEPARATORS[_tvalue]
+                    decoded_separator = None
+                    if _tvalue in CSVW_SEPARATORS:
+                        decoded_separator = _tvalue
+                        # encoded_separator = CSVW_SEPARATORS[_tvalue]
+
+                    if decoded_separator is None:
+                        raise NotImplementedError(
+                            '[{0}] [{1}] not implemented in <{2}>'.format(
+                                _tvalue, hashtag, CSVW_SEPARATORS
+                            ))
+
+                    result['extension']['r']['csvw:separator'] = \
+                        decoded_separator
+                    # _predicate_key, _object = _predicate.split(':')
+                    _bpc47_g_parts.append('yCSVWseparator-{0}'.format(
+                        decoded_separator
+                    ))
+                else:
+                    result['_unknown'].append('rdf_parts [{0}]'.format(item))
+
+            elif item.startswith('o_'):
+                _object = item.replace('o_', '').replace('_', ':')
+                result['extension']['r']['rdf:object'].append(_object)
+                raise NotImplementedError(
+                    'o [{0}] <{1}>'.format(item, hashtag))
+            else:
+                result['_unknown'].append('rdf_parts [{0}]'.format(item))
+            # pass
+        if len(_bpc47_g_parts) > 0:
+            result['extension']['r']['rdf:Statement_raw'] = \
+                'r-' + '-'.join(_bpc47_g_parts)
+            # norm.append('r-' + '-'.join(_bpc47_g_parts))
+
+    # resultatum = '-'.join(resultatum)
+
+    # based on bcp47_langtag() without grandfathered and -r- implemented
+    if len(result['_error']) == 0:
+        norm = []
+        if result['language']:
+            norm.append(result['language'])
+        if result['script']:
+            norm.append(result['script'])
+        if result['region']:
+            norm.append(result['region'])
+        if len(result['variant']) > 0:
+            norm.append('-'.join(result['variant']))
+
+        # if len(result['extension']) > 0:
+        #     sorted_extension = {}
+        #     for key in sorted(result['extension']):
+        #         sorted_extension[key] = result['extension'][key]
+        #     result['extension'] = sorted_extension
+
+        #     # for key in result['extension']:
+        #     #     # if result['extension'][key][0] is None:
+        #     #     #     norm.append(key)
+        #     #     # else:
+        #     #     #     norm.append(key)
+        #     #     #     # norm.extend(result['extension'][key])
+        #     #     #     norm.append(result['extension'][key])
+        #     #     norm.append(key)
+        #     #     # norm.extend(result['extension'][key])
+        #     #     norm.append(result['extension'][key])
+
+        if result['extension']['r']['rdf:Statement_raw']:
+            # norm.append('r-' + '-'.join(_bpc47_g_parts))
+            norm.append(result['extension']['r']['rdf:Statement_raw'])
+
+        if len(result['privateuse']) > 0:
+            norm.append('x-' + '-'.join(result['privateuse']))
+
+        result['Language-Tag_normalized'] = '-'.join(norm)
+
+    return result
 
 
 def hxltm_data_referentibus(data_referentibus_index: str, columna: str):
@@ -3328,6 +3718,34 @@ def qhxl_hxlhashtag_2_bcp47(
         )
 
     return bcp47_simplici
+
+
+def rdf_namespaces_extras(archivum: str) -> dict:
+    """rdf_namespaces_extras Populate global RDF_NAMESPACES_EXTRAS
+
+    _extended_summary_
+
+    Args:
+        archivum (str): path or stdin for archive with extra namespace
+
+    Returns:
+        dict: result
+    """
+    caput, data = hxltm_carricato(archivum)
+    index_prefix = caput.index('#x_rdf+prefix')
+    index_iri = caput.index('#x_rdf+iri')
+    if index_prefix == -1:
+        raise SyntaxError('#x_rdf+prefix ? [{0}]'.format(archivum))
+    if index_iri == -1:
+        raise SyntaxError('#x_rdf+iri ? [{0}]'.format(index_iri))
+
+    global RDF_NAMESPACES_EXTRAS
+    for linea in data:
+        RDF_NAMESPACES_EXTRAS[linea[index_prefix]] = linea[index_iri]
+
+    # print(index_prefix, index_iri, RDF_NAMESPACES_EXTRAS)
+    # pass
+    return RDF_NAMESPACES_EXTRAS
 
 
 def numerordinatio_descendentibus(

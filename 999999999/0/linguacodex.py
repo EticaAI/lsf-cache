@@ -251,6 +251,7 @@ import langcodes
 
 from L999999999_0 import (
     bcp47_langtag,
+    hxl_hashtag_to_bcp47,
     # bcp47_rdf_extension,
     # bcp47_rdf_extension_poc,
 )
@@ -299,6 +300,16 @@ EXEMPLUM
    {0} --de_bcp47_simplex \
 --de_codex=qcc-Zxxx-r-pDCT-modified-txsd-datetime
 
+   {0} --de_bcp47_simplex \
+--de_codex=qcc-Zxxx-r-sU2200-s0
+
+   {0} --de_hxl_simplex --de_hxlhashtag=\
+'#item+i_qcc+is_zxxx+rdf_s_u2200_s0+rdf_p_SKOS_related+ix_wikip123' \
+--quod=.Language-Tag_normalized
+
+   {0} --de_hxl_simplex --de_bcp47_simplex \
+--de_codex=qcc-Zxxx-r-sU2200-s0-pSKOS-related-x-wikip12
+
 ABOUT LANGUAGE-TERRITORY INFORMATION
 (--quod .communitas)
     (from python langcodes documentation)
@@ -324,6 +335,12 @@ parser.add_argument(
     '--de_codex', action='store', help="""
     The main natural language to inspect using some well know language code.
     """)
+
+parser.add_argument(
+    '--de_hxlhashtag', action='store', help="""
+    The HXL Hashtag to to inspect. Requires --de_hxl_simplex
+    """)
+
 # This is just in case we start to add new code standards
 parser.add_argument(
     '--de_codex_norma', action='store', default='BCP47', help="""
@@ -349,10 +366,17 @@ parser.add_argument(
     """)
 
 parser.add_argument(
-    '--de_bcp47_simplex_et_rdf', action='store_true', help="""
-    Same as --de_bcp47_simplex, except that will parse experimental -g-
-    extension semantics.
+    '--de_hxl_simplex', action='store_true', help="""
+    Parse a full HXL hashtag and try to infer a BCP47 language tag with
+    extensions. This is somewhat reverse-engineering of previously created
+    tags. Requires --de_hxlhashtag
     """)
+
+# parser.add_argument(
+#     '--de_bcp47_simplex_et_rdf', action='store_true', help="""
+#     Same as --de_bcp47_simplex, except that will parse experimental -g-
+#     extension semantics.
+#     """)
 
 # fōrmātum, https://en.wiktionary.org/wiki/formatus#Latin
 parser.add_argument(
@@ -691,6 +715,7 @@ class LinguaCodexCli:
     argparse_args = None
     linguacodex: Type['LinguaCodex'] = None
     de_bcp47_simplex: bool = False
+    de_hxl_simplex: bool = False
     error: list = []
 
     def __init__(self, argparse_args):
@@ -700,6 +725,9 @@ class LinguaCodexCli:
 
         if argparse_args.de_bcp47_simplex:
             self.de_bcp47_simplex = True
+
+        elif argparse_args.de_hxl_simplex:
+            self.de_hxl_simplex = True
             # pass
         else:
             self.linguacodex = LinguaCodex(
@@ -727,7 +755,8 @@ class LinguaCodexCli:
         # print(self.argparse_args)
         # sys.exit()
 
-        if not self.argparse_args.de_codex:
+        if not self.argparse_args.de_codex and \
+                not self.argparse_args.de_hxlhashtag:
             if not self.argparse_args.de_nomen:
                 # raise ValueError('--de_codex? --de_nomen?')
                 self.error.append('--de_codex? --de_nomen?')
@@ -737,6 +766,14 @@ class LinguaCodexCli:
                 return None
                 # raise ValueError('--imponendum_praejudicium?')
 
+        if self.de_hxl_simplex:
+            de_hxlhashtag = self.argparse_args.de_hxlhashtag
+            de_hxlhashtag = hxl_hashtag_to_bcp47(de_hxlhashtag)
+            # raise NotImplementedError('todo', self.argparse_args.de_hxlhashtag, de_hxlhashtag)
+            return quaerendum_de_punctum(
+                de_hxlhashtag,
+                self.argparse_args.quod
+            )
         if self.de_bcp47_simplex:
             return quaerendum_de_punctum(
                 bcp47_langtag(

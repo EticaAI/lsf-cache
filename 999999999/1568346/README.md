@@ -13,4 +13,9 @@
 
 <!--
 @TODO add externay key https://www.wikidata.org/wiki/Q69370
+@TODO https://oborel.github.io/
+
+- https://raw.githubusercontent.com/oborel/obo-relations/master/core.owl
+  - @prefix ro http://purl.obolibrary.org/obo/
+  - @prefix obo http://purl.obolibrary.org/obo/
 -->

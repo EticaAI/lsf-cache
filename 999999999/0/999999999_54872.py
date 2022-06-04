@@ -43,9 +43,11 @@ import yaml
 
 # l999999999_0 = __import__('999999999_0')
 from L999999999_0 import (
+    RDF_NAMESPACES_EXTRAS,
     bcp47_rdf_extension_poc,
     hxltm_carricato,
-    HXLTMAdRDFSimplicis
+    HXLTMAdRDFSimplicis,
+    rdf_namespaces_extras
 )
 
 STDIN = sys.stdin.buffer
@@ -96,10 +98,17 @@ __EPILOGUM__ = """
 
 
 Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    {0} --objectivum-formato=_temp_bcp47 \
+    {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
+999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
 
-    {0} --objectivum-formato=_temp_bcp47 \
+    {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
+999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
+--rdf-bag=2 \
+999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
+
+    {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
+999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv \
 | rapper --quiet --input=turtle --output=turtle /dev/fd/0
 
@@ -239,6 +248,30 @@ class Cli:
         # ex
         # fontī, m, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
         parser.add_argument(
+            '--rdf-bag',
+            help='(Advanced) RDF bag; extract triples from tabular data from '
+            'other groups than 1',
+            dest='rdf_bag',
+            nargs='?',
+            # required=True,
+            default='1'
+        )
+
+        parser.add_argument(
+            '--rdf-namespaces-archivo',
+            help='HXL file with additional RDF namespaces',
+            dest='rdf_namespace_archivo',
+            nargs='?',
+            # required=True,
+            default=None
+        )
+
+        # archīvum, n, s, nominativus, https://en.wiktionary.org/wiki/archivum
+        # cōnfigūrātiōnī, f, s, dativus,
+        #                      https://en.wiktionary.org/wiki/configuratio#Latin
+        # ex
+        # fontī, m, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
+        parser.add_argument(
             '--archivum-configurationi-ex-fonti',
             help='Arquivo de configuração .meta.yml da fonte de dados',
             dest='archivum_configurationi',
@@ -246,6 +279,7 @@ class Cli:
             # required=True,
             default=None
         )
+
 
         # praefīxum	, n, s, nominativus,
         #                         https://en.wiktionary.org/wiki/praefixus#Latin
@@ -292,13 +326,20 @@ class Cli:
             _infile = None
             _stdin = True
 
+        # rdf_namespace_archivo
+        if pyargs.rdf_namespace_archivo:
+            rdf_namespaces_extras(pyargs.rdf_namespace_archivo)
+            # print(RDF_NAMESPACES_EXTRAS)
+            # pass
+
         # @TODO remove thsi temporary part
         if pyargs.objectivum_formato == '_temp_bcp47':
             caput, data = hxltm_carricato(
                 _infile, _stdin, punctum_separato="\t")
             # print(caput, data)
             # print('')
-            meta = bcp47_rdf_extension_poc(caput, data)
+            meta = bcp47_rdf_extension_poc(
+                caput, data, objective_bag=pyargs.rdf_bag)
             # print(json.dumps(meta, sort_keys=True ,ensure_ascii=False))
             # return self.EXIT_OK
 
