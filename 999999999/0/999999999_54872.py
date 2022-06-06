@@ -47,6 +47,7 @@ from L999999999_0 import (
     bcp47_rdf_extension_poc,
     hxltm_carricato,
     HXLTMAdRDFSimplicis,
+    hxltm_carricato_brevibus,
     rdf_namespaces_extras
 )
 
@@ -98,6 +99,13 @@ __EPILOGUM__ = """
 
 
 Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+(Debug information in JSON)
+    {0} --objectivum-formato=_temp_bcp47_meta_in_json \
+--rdf-namespaces-archivo=\
+999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
+999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
+
+(Data operations)
     {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
@@ -237,6 +245,7 @@ class Cli:
                 # #    - Uses '.ndjson' as extension
                 # 'application/x-ndjson',
                 '_temp_bcp47',
+                '_temp_bcp47_meta_in_json',
             ],
             # required=True
             default='application/x-turtle'
@@ -279,7 +288,6 @@ class Cli:
             # required=True,
             default=None
         )
-
 
         # praefīxum	, n, s, nominativus,
         #                         https://en.wiktionary.org/wiki/praefixus#Latin
@@ -331,6 +339,16 @@ class Cli:
             rdf_namespaces_extras(pyargs.rdf_namespace_archivo)
             # print(RDF_NAMESPACES_EXTRAS)
             # pass
+
+        # @TODO maybe refactor this temporary part
+        if pyargs.objectivum_formato == '_temp_bcp47_meta_in_json':
+            caput, data = hxltm_carricato_brevibus(
+                _infile, _stdin, punctum_separato="\t")
+
+            meta = bcp47_rdf_extension_poc(
+                caput, data, objective_bag=pyargs.rdf_bag, est_meta=True)
+            print(json.dumps(meta, sort_keys=False, ensure_ascii=False))
+            return self.EXIT_OK
 
         # @TODO remove thsi temporary part
         if pyargs.objectivum_formato == '_temp_bcp47':

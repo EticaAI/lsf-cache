@@ -106,8 +106,59 @@ CSVW_SEPARATORS = {
     'u0009': '	'  # tab
 }
 
+# @see https://www.asciitable.com/
+
+EXTRA_OPERATORS = {
+    # Used for @prefix
+    'STX': {
+        'eng-Latn': '(start of text)',
+        # 'hxl': 'u02',
+        'hxl': 'u0002',
+        'wikidata': 'Q10366650',  # https://www.wikidata.org/wiki/Q10366650
+        # 'unicode': 'U+0002',
+        'unicode': u"\x02"
+    },
+    # Used to explain what separator the cell value may use
+    'GS': {
+        'eng-Latn': '(group separator)',  # Also: information separator three
+        'hxl': 'u001d',
+        # 'hxl': 'u001d',
+        'wikidata': 'Q10366650',  # https://www.wikidata.org/wiki/Q110028713
+        # 'unicode': 'U+001D',
+        'unicode': u"\x1D",
+    }
+}
+
+# @see https://en.wikipedia.org/wiki/List_of_logic_symbols
+FIRST_ORDER_LOGIC = {
+    '∀': {
+        'python': u'\u2200',
+        'eng-Latn': 'universal quantification',
+        'hxl': 'u2200',
+        'wdata': 'Q126695',  # https://www.wikidata.org/wiki/Q126695
+        'unicode': 'U+2200'
+    },
+    '∃': {
+        'python': u'\u2203',
+        'eng-Latn': 'existential quantification',
+        'hxl': 'u2203',
+        'wdata': 'Q773483',  # https://www.wikidata.org/wiki/Q773483
+        'unicode': 'U+2203'
+    },
+    # print(u'{0}'.format("\U0001D53B"))
+    # print(u'{0}'.format(u"\U0001D53B"))
+    '𝔻': {
+        'python': u"\U0001D53B",
+        'eng-Latn': 'domain of discourse',
+        'hxl': 'u0001D53B',
+        'wdata': 'Q1228944',  # https://www.wikidata.org/wiki/Q1228944
+        'unicode': 'U+1D53B'
+    },
+}
+
+
 RDF_NAMESPACES = {
-    'rdf': 'http://www.w3.org/2000/01/rdf-schema#',
+    'rdf': 'https://www.w3.org/1999/02/22-rdf-syntax-ns#',
     'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
     'xsd': 'http://www.w3.org/2001/XMLSchema#',
     'owl': 'http://www.w3.org/2002/07/owl#',
@@ -129,6 +180,211 @@ RDF_NAMESPACES = {
 # @see rdf_namespaces_extras()
 RDF_NAMESPACES_EXTRAS = {
 
+}
+
+# Note: prefixes that already are lower case do not be here
+RDF_NAMESPACES_PREFIX = {
+
+    # From https://www.w3.org/1999/02/22-rdf-syntax-ns# ______________________
+    # 'rdf:type': 'rdf:type',
+    # 'rdf:subject': 'rdf:subject',
+    # 'rdf:predicate': 'rdf:predicate',
+    # 'rdf:object': 'rdf:object',
+    # 'rdf:rest': 'rdf:rest',
+    # 'rdf:language': 'rdf:language',
+    # 'rdf:direction': 'rdf:direction',
+    # 'rdf:nil': 'rdf:nil',
+    'rdf:alt': 'rdf:Alt',
+    'rdf:bag': 'rdf:Bag',
+    'rdf:compoundliteral': 'rdf:CompoundLiteral',
+    'rdf:html': 'rdf:HTML',  # www.w3.org/TR/rdf11-concepts/#h3_section-html
+    'rdf:json': 'rdf:JSON',
+    'rdf:langstring': 'rdf:langString',
+    'rdf:list': 'rdf:List',
+    'rdf:plainliteral': 'rdf:PlainLiteral',
+    'rdf:property': 'rdf:Property',
+    'rdf:seq': 'rdf:Seq',
+    'rdf:statement': 'rdf:Statement',
+    'rdf:xmlliteral': 'rdf:XMLLiteral',
+
+    # From http://www.w3.org/2000/01/rdf-schema# _____________________________
+    'rdfs:class': 'rdfs:Class',
+    'rdfs:container': 'rdfs:Container',
+    # 'rdfs:member': 'rdfs:member',
+    # 'rdfs:label': 'rdfs:label',
+    # 'rdfs:domain': 'rdfs:domain',
+    # 'rdfs:range': 'rdfs:range',
+    'rdfs:containermembershipproperty': 'rdfs:ContainerMembershipProperty',
+    'rdfs:datatype': 'rdfs:Datatype',
+    'rdfs:isdefinedby': 'rdfs:isDefinedBy',
+    'rdfs:literal': 'rdfs:Literal',
+    'rdfs:resource': 'rdfs:Resource',
+    'rdfs:seealso': 'rdfs:seeAlso',
+    'rdfs:subclassof': 'rdfs:subClassOf',
+    'rdfs:subpropertyof': 'rdfs:subPropertyOf',
+
+    # From https://www.w3.org/TR/rdf11-concepts/#h3_xsd-datatypes ____________
+    'xsd:datetime': 'xsd:dateTime',
+    'xsd:datetimestamp': 'xsd:dateTimeStamp',
+    'xsd:gyear': 'xsd:gYear',
+    'xsd:gmonth': 'xsd:gMonth',
+    'xsd:gday': 'xsd:gDay',
+    'xsd:gyearmonth': 'xsd:gYearMonth',
+    'xsd:gmonthday': 'xsd:gMonthDay',
+    'xsd:yearmonthduration': 'xsd:yearMonthDuration',
+    'xsd:daytimeduration': 'xsd:dayTimeDuration',
+    'xsd:unsignedbyte': 'xsd:unsignedByte',
+    'xsd:unsignedshort': 'xsd:unsignedShort',
+    'xsd:unsignedint': 'xsd:unsignedInt',
+    'xsd:unsignedlong': 'xsd:unsignedLong',
+    'xsd:positiveinteger': 'xsd:positiveInteger',
+    'xsd:nonnegativeinteger': 'xsd:nonNegativeInteger',
+    'xsd:negativeinteger': 'xsd:negativeInteger',
+    'xsd:nonpositiveinteger': 'xsd:nonPositiveInteger',
+    'xsd:hexbinary': 'xsd:hexBinary',
+    'xsd:base64binary': 'xsd:base64Binary',
+    'xsd:anyuri': 'xsd:anyURI',
+    'xsd:normalizedstring': 'xsd:normalizedString',
+    'xsd:nmtoken': 'xsd:NMTOKEN',
+    'xsd:name': 'xsd:Name',
+    'xsd:ncname': 'xsd:NCName',
+    # xsd:ID and xsd:IDREF are for cross references within an XML document.
+    'xsd:id': 'xsd:ID',  # https://www.w3.org/TR/xmlschema11-2/#ID
+    'xsd:idref': 'xsd:IDREF',  # https://www.w3.org/TR/xmlschema11-2/#IDREF
+    'xsd:idrefs': 'xsd:IDREFS',  # https://www.w3.org/TR/xmlschema11-2/#IDREFS
+
+    # From http://www.w3.org/2002/07/owl# ____________________________________
+    # 'owl:imports': 'owl:imports',
+    # 'owl:cardinality': 'owl:cardinality',
+    # 'owl:deprecated': 'owl:deprecated',
+    # 'owl:members': 'owl:members',
+    'owl:alldifferent': 'owl:AllDifferent',
+    'owl:alldisjointclasses': 'owl:AllDisjointClasses',
+    'owl:alldisjointproperties': 'owl:AllDisjointProperties',
+    'owl:annotation': 'owl:Annotation',
+    'owl:annotationproperty': 'owl:AnnotationProperty',
+    'owl:asymmetricproperty': 'owl:AsymmetricProperty',
+    'owl:axiom': 'owl:Axiom',
+    'owl:class': 'owl:Class',
+    'owl:datarange': 'owl:DataRange',
+    'owl:datatypeproperty': 'owl:DatatypeProperty',
+    'owl:deprecatedclass': 'owl:DeprecatedClass',
+    'owl:deprecatedproperty': 'owl:DeprecatedProperty',
+    'owl:functionalproperty': 'owl:FunctionalProperty',
+    'owl:inversefunctionalproperty': 'owl:InverseFunctionalProperty',
+    'owl:irreflexiveproperty': 'owl:IrreflexiveProperty',
+    'owl:namedindividual': 'owl:NamedIndividual',
+    'owl:negativepropertyassertion': 'owl:NegativePropertyAssertion',
+    'owl:nothing': 'owl:Nothing',
+    'owl:objectproperty': 'owl:ObjectProperty',
+    'owl:ontology': 'owl:Ontology',
+    'owl:ontologyproperty': 'owl:OntologyProperty',
+    'owl:reflexiveproperty': 'owl:ReflexiveProperty',
+    'owl:restriction': 'owl:Restriction',
+    'owl:symmetricproperty': 'owl:SymmetricProperty',
+    'owl:transitiveproperty': 'owl:TransitiveProperty',
+    'owl:thing': 'owl:Thing',
+    'owl:allvaluesfrom': 'owl:allValuesFrom',
+    'owl:annotatedproperty': 'owl:annotatedProperty',
+    'owl:annotatedsource': 'owl:annotatedSource',
+    'owl:annotatedtarget': 'owl:annotatedTarget',
+    'owl:assertionproperty': 'owl:assertionProperty',
+    'owl:backwardcompatiblewith': 'owl:backwardCompatibleWith',
+    'owl:bottomdataproperty': 'owl:bottomDataProperty',
+    'owl:bottomobjectproperty': 'owl:bottomObjectProperty',
+    'owl:complementof': 'owl:complementOf',
+    'owl:datatypecomplementof': 'owl:datatypeComplementOf',
+    'owl:differentfrom': 'owl:differentFrom',
+    'owl:disjointunionof': 'owl:disjointUnionOf',
+    'owl:disjointwith': 'owl:disjointwith',
+    'owl:distinctmembers': 'owl:distinctMembers',
+    'owl:equivalentclass': 'owl:equivalentClass',
+    'owl:equivalentproperty': 'owl:equivalentProperty',
+    'owl:haskey': 'owl:hasKey',
+    'owl:hasself': 'owl:hasSelf',
+    'owl:hasvalue': 'owl:hasValue',
+    'owl:incompatiblewith': 'owl:incompatibleWith',
+    'owl:intersectionof': 'owl:intersectionOf',
+    'owl:inverseof': 'owl:inverseOf',
+    'owl:maxcardinality': 'owl:maxCardinality',
+    'owl:maxqualifiedcardinality': 'owl:maxQualifiedCardinality',
+    'owl:mincardinality': 'owl:minCardinality',
+    'owl:minqualifiedcardinality': 'owl:minQualifiedCardinality',
+    'owl:onclass': 'owl:onClass',
+    'owl:ondatarange': 'owl:onDataRange',
+    'owl:ondatatype': 'owl:onDatatype',
+    'owl:oneof': 'owl:oneOf',
+    'owl:onproperties': 'owl:onProperties',
+    'owl:onproperty': 'owl:onProperty',
+    'owl:priorversion': 'owl:priorVersion',
+    'owl:propertychainaxiom': 'owl:propertyChainAxiom',
+    'owl:propertydisjointwith': 'owl:propertyDisjointWith',
+    'owl:qualifiedcardinality': 'owl:qualifiedCardinality',
+    'owl:sameas': 'owl:sameAs',
+    'owl:somevaluesfrom': 'owl:someValuesFrom',
+    'owl:sourceindividual': 'owl:sourceIndividual',
+    'owl:targetindividual': 'owl:targetIndividual',
+    'owl:targetvalue': 'owl:targetValue',
+    'owl:topdataproperty': 'owl:topDataProperty',
+    'owl:topobjectproperty': 'owl:topObjectProperty',
+    'owl:unionof': 'owl:unionOf',
+    'owl:versioninfo': 'owl:versionInfo',
+    'owl:versioniri': 'owl:versionIRI',
+    'owl:withrestrictions': 'owl:withRestrictions',
+
+    # @SEE http://www.w3.org/2004/02/skos/core# ______________________________
+
+    'skos:collection': 'skos:Collection',
+    'skos:concept': 'skos:Concept',
+    'skos:concept': 'skos:Concept',
+    'skos:conceptscheme': 'skos:ConceptScheme',
+    'skos:orderedcollection': 'skos:OrderedCollection',
+    'skos:altlabel': 'skos:altLabel',
+    'skos:broadmatch': 'skos:broadMatch',
+    # 'skos:broader': 'skos:broader',
+    'skos:broadertransitive': 'skos:broaderTransitive',
+    'skos:changenote': 'skos:changeNote',
+    'skos:closematch': 'skos:closeMatch',
+    # 'skos:definition': 'skos:definition',
+    'skos:editorialnote': 'skos:editorialNote',
+    'skos:exactmatch': 'skos:exactMatch',
+    'skos:exactmatch': 'skos:exactMatch',
+    # 'skos:example': 'skos:example',
+    'skos:hastopconcept': 'skos:hasTopConcept',
+    'skos:hiddenlabel': 'skos:hiddenLabel',
+    'skos:historynote': 'skos:historyNote',
+    'skos:inscheme': 'skos:inScheme',
+    'skos:mappingrelation': 'skos:mappingRelation',
+    # 'skos:member': 'skos:member',
+    'skos:memberlist': 'skos:memberList',
+    'skos:narrowmatch': 'skos:narrowMatch',
+    # 'skos:narrower': 'skos:narrower',
+    # 'skos:notation': 'skos:notation',
+    # 'skos:note': 'skos:note',
+    'skos:preflabel': 'skos:prefLabel',
+    # 'skos:related': 'skos:related',
+    'skos:relatedmatch': 'skos:relatedMatch',
+    'skos:scopenote': 'skos:scopeNote',
+    'skos:semanticrelation': 'skos:semanticRelation',
+    'skos:topconceptof': 'skos:topConceptOf',
+
+    # @SEE https://oborel.github.io/ _________________________________________
+    # https://www.ebi.ac.uk/ols/ontologies/ro
+    # ------------------------------- Entities -------------------------------
+    # continuant
+    'obo:bfo2': 'obo:BFO_0000002',  # purl.obolibrary.org/obo/BFO_0000002
+    # occurrent
+    'obo:bfo3': 'obo:BFO_0000003',  # purl.obolibrary.org/obo/BFO_0000003
+    # ------------------------------- Relations -------------------------------
+    # @TODO https://www.ebi.ac.uk/ols/ontologies/ro
+    'obo:bfopartof': 'obo:BFO_0000050',  # purl.obolibrary.org/obo/BFO_0000050
+    'obo:bfo50': 'obo:BFO_0000050',
+    # bfo_part_of <- ro_located_in
+    'obo:ro1025': 'obo:RO_0001025',  # purl.obolibrary.org/obo/RO_0001025
+    'obo:rolocatedin': 'obo:BFO_0000002',
+}
+# Note: prefixes that already are lower case do not be here
+RDF_NAMESPACES_PREFIX_EXTRAS = {
 }
 
 
@@ -561,7 +817,17 @@ def bcp47_langtag(
 def bcp47_langtag_callback_hxl(
         langtag_meta: dict,
         strictum: bool = True
-) -> dict:
+) -> str:
+    """bcp47_langtag_callback_hxl convert a bcp47_langtag meta to hxl attributes
+
+    Args:
+        langtag_meta (dict): a bcp47_langtag compatible metadata
+        strictum (bool, optional): (not implemented yet). Defaults to True.
+
+    Returns:
+        str: return HXL attributes (without HXL hashtag)
+    """
+
     resultatum = []
     # resultatum.append('+todo')
     resultatum.append('+i_{0}'.format(langtag_meta['language'].lower()))
@@ -578,44 +844,95 @@ def bcp47_langtag_callback_hxl(
 
         if _r['rdf:predicate'] and len(_r['rdf:predicate']) > 0:
             for item in _r['rdf:predicate']:
-                prefix, term = item.lower().split(':')
-                resultatum.append('+rdf_p_{0}_{1}'.format(prefix, term))
+                # prefix, term, subject_domain, _nop2 = item.lower().split(':')
+                # raise ValueError(item)
+                # print(item)
+                normalized_predicate, _subject_part = item.lower().split('||')
+                subject_domain = _subject_part
+
+                # discarting not yet implemented additional subject meta :NOP
+                _subject_part = _subject_part.replace(':nop', '')
+
+                # SPECIAL CASE: OBO prefix we remove leading zeroes and _
+                if normalized_predicate.startswith('obo:'):
+                    normalized_predicate = normalized_predicate.lower()
+                    _predicate_ns = 'obo'
+                    _predicate_item_raw = \
+                        normalized_predicate.replace('obo:', '')
+                    _predicate_item_raw_digits = ''.join(
+                        filter(str.isdigit, _predicate_item_raw))
+                    _predicate_item_raw_alpha = \
+                        _predicate_item_raw.replace(
+                            _predicate_item_raw_digits, '').replace(
+                                '_', '')
+                    _predicate_item = '{0}{1}'.format(
+                        _predicate_item_raw_alpha,
+                        _predicate_item_raw_digits.lstrip('0')
+                    )
+                    # prefix, term = _predicate_item.split(':')
+                    subject_domain = _subject_part.lstrip('0')
+                    prefix = _predicate_ns
+                    # term = _predicate_item_raw_digits
+                    term = _predicate_item
+                else:
+                    subject_domain, _nop = subject_domain.split(':')
+                    prefix, term = normalized_predicate.split(':')
+                # raise ValueError(_predicate_part)
+                resultatum.append('+rdf_p_{0}_{1}_s{2}'.format(
+                    prefix, term, subject_domain))
 
         if _r['rdf:subject'] and len(_r['rdf:subject']) > 0:
             for item in _r['rdf:subject']:
-                subject_key, subject_namespace = item.lower().split(':')
-                # raise ValueError(item)
-                # item_num = int(''.join(filter(str.isdigit, item)))
-                # # item_prefix = ''.join(filter(str.isdigit, item, ))
-                # item_prefix = item.replace(str(item_num), '')
-                # item_prefix = item_prefix.encode("unicode_escape").decode()
-                # item_prefix = item_prefix.replace('\\', '')
-                # # item_prefix = item_prefix.encode().decode()
-                # # prefix, term = item.lower().split(':')
-                # resultatum.append(
-                #     '+rdf_s_{0}_{1}'.format(item_prefix, item_num))
+                # subject_key, subject_namespace, _nop = item.lower().split(':')
+                _temp1, temp2 = item.lower().split('||')
+                subject_key = _temp1
+                subject_namespace = temp2
+                subject_namespace = subject_namespace.replace(':nop', '')
                 resultatum.append(
-                    '+rdf_s_{0}_{1}'.format(subject_key, subject_namespace))
+                    '+rdf_s_{0}_s{1}'.format(subject_key, subject_namespace))
 
         if _r['rdfs:Datatype'] and len(_r['rdfs:Datatype']) > 0:
-            prefix, term = _r['rdfs:Datatype'].lower().split(':')
+            # prefix, term, _nop = _r['rdfs:Datatype'].lower().split(':')
+            _temp1, _temp2 = _r['rdfs:Datatype'].lower().split('||')
+            prefix, term = _temp1.split(':')
             resultatum.append('+rdf_t_{0}_{1}'.format(prefix, term))
 
-        if 'csvw:separator' in _r and \
-                _r['csvw:separator'] and len(_r['csvw:separator']) > 0:
-            decoded_separator = None
-            for decoded, value in CSVW_SEPARATORS.items():
-                if _r['csvw:separator'] == value:
-                    decoded_separator = decoded
-                    break
-            if decoded_separator is None:
-                raise NotImplementedError(
-                    '[{0}] [{1}] not implemented in <{2}>'.format(
-                        _r['csvw:separator'], langtag_meta, CSVW_SEPARATORS
-                    ))
+        if _r["xsl:transform"] and len(_r["xsl:transform"]) > 0:
+            value_prefixes = None
+            value_separator = None
+            for titem in _r["xsl:transform"]:
+                # tverb, tval_1, _nop_tval_2 = titem.split(':')
 
-            resultatum.append(
-                '+rdf_y_csvwseparator_{0}'.format(decoded_separator))
+                _temp1, temp2 = titem.split('||')
+                tverb = _temp1
+                tval_1, _nop_tval_2 = temp2.split(':')
+
+                if tverb.lower() == EXTRA_OPERATORS['STX']['hxl']:
+                    if value_prefixes is None:
+                        value_prefixes = []
+                    value_prefixes.append(tval_1)
+
+                elif tverb.lower() == EXTRA_OPERATORS['GS']['hxl']:
+                    # @TODO: check this at compile time
+                    if tval_1 in CSVW_SEPARATORS:
+                        value_separator = tval_1
+                    else:
+                        raise NotImplementedError(
+                            'Separator [{0}] not implemented '
+                            'Context: [{1}] ; Options <{2}>'.format(
+                                tval_1, langtag_meta, CSVW_SEPARATORS
+                            ))
+
+                    # value_separator = CSVW_SEPARATORS[tval_1]
+
+            if value_prefixes is not None:
+                for titem in value_prefixes:
+                    resultatum.append('+rdf_y_{0}_{1}'.format(
+                        EXTRA_OPERATORS['STX']['hxl'], titem))
+
+            if value_separator is not None:
+                resultatum.append('+rdf_y_{0}_{1}'.format(
+                    EXTRA_OPERATORS['GS']['hxl'], value_separator))
 
     resultatum = sorted(resultatum)
 
@@ -717,11 +1034,13 @@ def bcp47_rdf_extension(
         'rdf:predicate': [],
         'rdf:object': [],
         'rdfs:Datatype': None,
-        # 'csvw:separator': '',
+        'xsl:transform': [],
         '_unknown': [],
         '_error': [],
+        # 'csvw:separator': '', # Added only if necessary
+        # 'prefix': [],  # Added only if necessary
     }
-    _predicates = []
+    # _predicates = []
     _subjects = []
     _objects = []
 
@@ -732,108 +1051,166 @@ def bcp47_rdf_extension(
         r_parts = rem.split('-')
         r_parts_tot = len(r_parts)
         r_rest = r_parts_tot
-        while r_rest > 0:
-            r_item_key = r_parts[r_parts_tot - r_rest]
-            r_item_value = r_parts[r_parts_tot - r_rest + 1]
-            if r_item_key.startswith('p'):
-                _predicates.append('{0}:{1}'.format(
-                    r_item_key.lstrip('p').lower(),
-                    r_item_value
+        is_disbalanced = False
+
+        if len(r_parts) % 3 != 0:
+            is_disbalanced = True
+            result['_error'].append('G extension not groups of 3: {0}'.format(
+                len(r_parts)
+            ))
+
+        while (r_rest > 0) and (is_disbalanced is False):
+            r_verb = r_parts[r_parts_tot - r_rest]
+            r_op_1 = r_parts[r_parts_tot - r_rest + 1]
+            r_op_2 = r_parts[r_parts_tot - r_rest + 2]
+
+            r_op = r_verb[0].lower()
+
+            if r_op_1[0].lower() != r_op or r_op_2[0].lower() != r_op:
+                result['_error'].append(
+                    'Prefix not equal [{0}]: [{1}-{2}-{3}]'.format(
+                        r_op,
+                        r_verb,
+                        r_op_1,
+                        r_op_2,
+                    ))
+                r_rest = r_rest - 3
+                continue
+
+            r_verb = r_verb[1:]
+            r_op_1 = r_op_1[1:]
+            r_op_2 = r_op_2[1:]
+            if r_op_2 == 'nop':
+                r_op_2 = 'NOP'
+
+            if r_op == 'p':
+                if r_op_2[0].lower() != 's':
+                    result['_error'].append(
+                        '[{3}] only implemented for reference subject. '
+                        'This means require prefix [s]: '
+                        'Used: [{0}{1}-{0}{2}{0}-{3}]'.format(
+                            r_op,
+                            r_verb,
+                            r_op_1,
+                            r_op_2,
+
+                        ))
+                else:
+                    r_op_2 = r_op_2[1:]
+
+                    result['rdf:predicate'].append('{0}:{1}||{2}:{3}'.format(
+                        r_verb.lower(), r_op_1, r_op_2, 'NOP'
+                    ))
+            elif r_op == 's':
+                _subjects.append('{0}||{1}:{2}'.format(
+                    r_verb.upper(), r_op_1.lower(), r_op_2
                 ))
-
-            # sU2200
-            # elif r_item_key.lower().startswith('su'):
-            #     _subjects.append('∀{0}'.format(
-            #         r_item_value.lstrip('s')
-            #     ))
-            # elif r_item_key.lower().startswith('ss'):
-            #     _subjects.append('{0}'.format(
-            #         r_item_value.lstrip('s')
-            #     ))
-
-            # # oU1F517
-            # elif r_item_key.lower().startswith('ou'):
-            #     _objects.append('🔗{0}'.format(
-            #         r_item_value.lstrip('o')
-            #     ))
-
-            # exemplum: sU2200 (if using unicode as prefix, assume is key)
-            elif r_item_key.lower().startswith('su'):
-                _subjects.append('{0}:{1}'.format(
-                    r_item_key.lstrip('s'), r_item_value.lstrip('s')
-                ))
-            # exemplum: sS (not using unicode as key, assuming is just
-            #           a pointer, not the pivoct column)
-            elif r_item_key.lower().startswith('ss'):
-                _subjects.append('{0}:{1}'.format(
-                    '_' + r_item_key.lower().lstrip(
-                        's'), r_item_value.lstrip('s')
-                ))
-
-            # exemplum: oU1F517
-            elif r_item_key.lower().startswith('ou'):
-                _objects.append('{0}:{1}'.format(
-                    r_item_key.lstrip('o'), r_item_value
-                ))
-
-            elif r_item_key.startswith('t'):
+            elif r_op == 'o':
+                result['_error'].append(
+                    'rdf:object not implemented yet.'
+                    'Used: [{0}{1}-{0}{2}{0}-{3}]'.format(
+                        r_op,
+                        r_verb,
+                        r_op_1,
+                        r_op_2,
+                    ))
+                # continue
+            elif r_op == 't':
                 if result['rdfs:Datatype'] is None:
-                    result['rdfs:Datatype'] = '{0}:{1}'.format(
-                        r_item_key.lstrip('t').lower(),
-                        r_item_value
+                    result['rdfs:Datatype'] = '{0}:{1}||{2}'.format(
+                        r_verb.lower(), r_op_1, 'NOP'
                     )
                 else:
                     result['_error'].append(
-                        'rdfs:Datatype [{0}]-[{1}]'.format(
-                            r_item_key,
-                            r_item_value
+                        'rdfs:Datatype duplicated [{0}]-[{1}]'.format(
+                            r_verb.lower(),
+                            r_op_1
                         ))
-
-            elif r_item_key.lower().startswith('ycsvw'):
-                if r_item_key.lower() == 'ycsvwseparator':
-                    r_item_value = r_item_value.lower()
-                    r_item_value_enc = '__error__'
-                    # @TODO implement in pure python encode/decode. This is
-                    #       an obvious ugly hacky
-                    if r_item_value in CSVW_SEPARATORS:
-                        r_item_value_enc = CSVW_SEPARATORS[r_item_value]
-                    # if r_item_value == 'u007c':
-                    #     r_item_value_enc = '|'
-                    # elif r_item_value == 'u007cu007c':
-                    #     r_item_value_enc = '||'
-                    # elif r_item_value == 'u0020':
-                    #     r_item_value_enc = ' '
-                    # elif r_item_value == 'u003b':
-                    #     r_item_value_enc = ';'
-                    # elif r_item_value == 'u0009':
-                    #     r_item_value_enc = '	'  # tab
-                    else:
-                        raise NotImplementedError(
-                            'Sorry, separator [{0}] of [{1}] not implemented. '
-                            'This may be a bug. '
-                            'Hardcoded options <{2}> '.format(
-                                r_item_value, rem, CSVW_SEPARATORS))
-
-                    result['csvw:separator'] = '{0}'.format(
-                        # r_item_value
-                        r_item_value_enc
-                    )
-                else:
-                    result['_error'].append(
-                        'csvw:??? [{0}]-[{1}]'.format(
-                            r_item_key,
-                            r_item_value
-                        ))
-            else:
-                result['_error'].append('Unknow [{0}-{1}]'.format(
-                    r_item_key,
-                    r_item_value
+            elif r_op == 'y':
+                result['xsl:transform'].append('{0}||{1}:{2}'.format(
+                    r_verb.upper(), r_op_1.lower(), r_op_2,
                 ))
-            r_rest = r_rest - 2
+            else:
+                result['_error'].append(
+                    'Unknown prefix [{0}]: [{0}{1}-{0}{2}{0}-{3}]'.format(
+                        r_op,
+                        r_verb,
+                        r_op_1,
+                        r_op_2,
+                    ))
 
-        if len(_predicates) > 0:
-            _predicates.sort()
-            result['rdf:predicate'] = _predicates
+            r_verb = r_verb.upper()
+            r_op_2 = r_op_2.lower()
+
+            r_rest = r_rest - 3
+
+        # if len(_predicates) > 0:
+        #     _predicates.sort()
+        #     result['rdf:predicate'] = _predicates
+        if len(result['rdf:predicate']) > 0:
+            result['rdf:predicate'].sort()
+            # raise ValueError(result['rdf:predicate'])
+            # print('all', result['rdf:predicate'])
+            for index in range(len(result['rdf:predicate'])):
+                _item_parts = result['rdf:predicate'][index]
+
+                # print(_item_parts)
+
+                # _predicate_ns, _predicate_item, _subject, _subject_nop = \
+                #     _item_parts.split(':')
+                _temp1, _temp2 = _item_parts.split('||')
+                _predicate_ns, _predicate_item = _temp1.split(':')
+                _subject, _subject_nop = _temp2.split(':')
+
+                raw_predicate = f'{_predicate_ns}:{_predicate_item}'
+                normalized_predicate = None
+
+                if raw_predicate in RDF_NAMESPACES_PREFIX:
+                    normalized_predicate = RDF_NAMESPACES_PREFIX[raw_predicate]
+                elif raw_predicate in RDF_NAMESPACES_PREFIX_EXTRAS:
+                    normalized_predicate = \
+                        RDF_NAMESPACES_PREFIX_EXTRAS[raw_predicate]
+
+                if normalized_predicate is not None:
+                    if normalized_predicate.startswith('obo:'):
+                        normalized_predicate = normalized_predicate.lower()
+                        _predicate_ns = 'obo'
+                        _predicate_item_raw = \
+                            normalized_predicate.replace('obo:', '')
+                        _predicate_item_raw_digits = ''.join(
+                            filter(str.isdigit, _predicate_item_raw))
+                        _predicate_item_raw_alpha = \
+                            _predicate_item_raw.replace(
+                                _predicate_item_raw_digits, '').replace(
+                                    '_', '')
+                        _predicate_item = '{0}{1}'.format(
+                            _predicate_item_raw_alpha,
+                            _predicate_item_raw_digits.lstrip('0')
+                        )
+                    else:
+                        _predicate_ns, _predicate_item = \
+                            normalized_predicate.split(':')
+                        # pass
+
+                    result['rdf:predicate'][index] = \
+                        '{0}||{1}:{2}'.format(
+                        RDF_NAMESPACES_PREFIX[raw_predicate],
+                        _subject, _subject_nop)
+                else:
+                    # _p1, _p2, _s1, _s2 = \
+                    #     result['rdf:predicate'][index].split(':')
+                    # result['rdf:predicate'][index] = '{0}:{1}||{2}:{3}'.format(
+                    #     _p1, _p2, _s1, _s2
+                    # )
+                    result['rdf:predicate'][index] = '{0}:{1}||{2}:{3}'.format(
+                        _predicate_ns, _predicate_item, _subject, _subject_nop
+                    )
+                    # pass
+
+                # if raw_predicate in RDF_NAMESPACES_PREFIX:
+                #     result['rdf:predicate'][index] = '{0}:{1}'.format(
+                #         RDF_NAMESPACES_PREFIX[raw_predicate], subject)
+                # pass
 
         if len(_objects) > 0:
             _objects.sort()
@@ -843,13 +1220,23 @@ def bcp47_rdf_extension(
             _subjects.sort()
             result['rdf:subject'] = _subjects
 
+        if len(result['xsl:transform']) > 0:
+            result['xsl:transform'].sort()
+
+            # result['rdf:subject'] = _subjects
+
     else:
         result['_error'].append('G extension do not have -')
 
-    if len(r_parts) % 2 == 0:
-        pass
-    else:
-        result['_error'].append('G extension not even number')
+    # if len(r_parts) % 3 == 0:
+    #     pass
+    # else:
+    #     result['_error'].append('G extension not groups of 3')
+
+    # if len(r_parts) % 2 == 0:
+    #     pass
+    # else:
+    #     result['_error'].append('G extension not even number')
 
     if strictum and len(result['_error']) > 0:
         raise SyntaxError('[{0}]: <{1}>'.format(
@@ -871,6 +1258,7 @@ def bcp47_rdf_extension(
 
 def bcp47_rdf_extension_relationship(
         header: List[str],
+        namespaces: List[dict] = None,
         strictum: bool = True
 ) -> dict:
     """""Metadata processing of the bcp47_rdf_extension version
@@ -893,17 +1281,24 @@ def bcp47_rdf_extension_relationship(
         # 'rdfs:Datatype': None,
         # '_unknown': [],
         'rdfs:Container': {},
-        'prefixes': {
-            'rdf': RDF_NAMESPACES['rdf'],
-            'rdfs': RDF_NAMESPACES['rdfs'],
-            'xsd': RDF_NAMESPACES['xsd'],
-            'owl': RDF_NAMESPACES['owl'],
-            'obo': RDF_NAMESPACES['obo'],
-            'skos': RDF_NAMESPACES['skos'],
-            'wdata': RDF_NAMESPACES['wdata'],
-        },
+        'prefixes': RDF_NAMESPACES,
+        # 'prefixes': {
+        #     'rdf': RDF_NAMESPACES['rdf'],
+        #     'rdfs': RDF_NAMESPACES['rdfs'],
+        #     'xsd': RDF_NAMESPACES['xsd'],
+        #     'owl': RDF_NAMESPACES['owl'],
+        #     'obo': RDF_NAMESPACES['obo'],
+        #     'skos': RDF_NAMESPACES['skos'],
+        #     'wdata': RDF_NAMESPACES['wdata'],
+        # },
         '_error': [],
     }
+
+    result['prefixes'] = RDF_NAMESPACES
+
+    if namespaces is not None and len(namespaces) > 0:
+        for item in namespaces:
+            result['prefixes'][item['prefix']] = item['iri']
 
     # print('header', header)
 
@@ -914,7 +1309,17 @@ def bcp47_rdf_extension_relationship(
         item_meta['_column'] = index
         inline_namespace = None
         inline_namespace_iri = None
-        # is_inline_namespace = False
+        is_inline_namespace = False
+
+        is_pivot_key = False
+
+        object_prefixes = None
+        if 'r' in item_meta['extension'] and \
+                'prefix' in item_meta['extension']['r'] and \
+                len(item_meta['extension']['r']['prefix']) > 0:
+            object_prefixes = item_meta['extension']['r']['prefix']
+
+        # RDFStatement: Subject -> Predicate -> [[ Object ]]
         if 'r' in item_meta['extension'] and \
                 len(item_meta['extension']['r']['rdf:object']) > 0:
             for object in item_meta['extension']['r']['rdf:object']:
@@ -945,21 +1350,25 @@ def bcp47_rdf_extension_relationship(
                         else:
                             inline_namespace_iri = '_' + inline_namespace
 
-        # print('item inline_namespace_iri', item, inline_namespace_iri)
+        # RDFStatement: [[ Subject ]] -> Predicate -> Object
         if 'r' in item_meta['extension'] and \
                 len(item_meta['extension']['r']['rdf:subject']) > 0:
             for subject in item_meta['extension']['r']['rdf:subject']:
-                is_pivot_key = False
+                # is_pivot_key = False
                 subject_key, subject_value = subject.split(':')
+                _temp1, _temp2 = subject.split('||')
+                subject_key = _temp1
+                subject_value = _temp2.replace(':NOP', '')
+                # raise ValueError(subject)
                 # if subject.startswith('∀'):
                 #     is_pivot_key = True
                 #     subject = subject.replace('∀', '')
                 # if subject.startswith('🔗'):
                 #     is_pivot_key = True
                 #     subject = subject.replace('🔗', '')
-                if subject.startswith('∀') or subject.startswith('🔗') or \
+                if subject.startswith('∀') or subject.startswith('∃') or \
                         subject.lower().startswith('u2200') or \
-                        subject.lower().startswith('u1F517'):
+                        subject.lower().startswith('u2203'):
                     is_pivot_key = True
                     # raise ValueError('deu', is_pivot_key)
 
@@ -968,7 +1377,7 @@ def bcp47_rdf_extension_relationship(
                     result['rdfs:Container'][subject_value] = {
                         'pivot': {
                             'index': -1,
-                            'iri': inline_namespace_iri,
+                            # 'iri': inline_namespace_iri,
                             'prefix': 'urn',
                             # We will fallback the pivots as generic classes
                             # We should enable later override this behavior
@@ -987,22 +1396,32 @@ def bcp47_rdf_extension_relationship(
                 if is_pivot_key:
                     if result['rdfs:Container'][subject_value]['pivot']['index'] > -1:
                         SyntaxError('{0} <{1}>'.format(header, item_meta))
+                    if object_prefixes is not None and len(object_prefixes) > 1:
+                        SyntaxError('{0} <{1}>:: > 1 prefix [{2}]'.format(
+                            header, item_meta, object_prefixes))
+                    if object_prefixes is not None:
+                        result['rdfs:Container'][subject_value]['pivot']['prefix'] = object_prefixes[0]
                     # raise ValueError('deu', index)
                     result['rdfs:Container'][subject_value]['pivot']['index'] = index
 
+        # RDFStatement: Subject -> [[ Predicate ]] -> Object
         if 'r' in item_meta['extension'] and \
                 len(item_meta['extension']['r']['rdf:predicate']) > 0:
-            for predicate in item_meta['extension']['r']['rdf:predicate']:
-                prefix, suffix = predicate.split(':')
-                if prefix not in result['prefixes']:
+            for item in item_meta['extension']['r']['rdf:predicate']:
+                # raise ValueError(predicate)
+                # prefix, suffix = predicate.split(':')
+                predicate, subject = item.split('||')
+                predicate_namespce, _ignore = predicate.split(':')
+                subject = subject.replace(':NOP', '')  # Not used... yet
+                if predicate_namespce not in result['prefixes']:
                     # if prefix not in RDF_NAMESPACES:
-                    if prefix not in RDF_NAMESPACES_EXTRAS:
+                    if predicate_namespce not in RDF_NAMESPACES_EXTRAS:
                         raise SyntaxError(
                             'prefix [{0}]? <{1}> <{2}>'.format(
-                                prefix, header, RDF_NAMESPACES_EXTRAS
+                                predicate_namespce, header, RDF_NAMESPACES_EXTRAS
                             ))
-                    result['prefixes'][prefix] = \
-                        RDF_NAMESPACES_EXTRAS[prefix]
+                    result['prefixes'][predicate_namespce] = \
+                        RDF_NAMESPACES_EXTRAS[predicate_namespce]
 
         result['columns'].append(item_meta)
     # raise ValueError(result['rdfs:Container'])
@@ -1016,9 +1435,10 @@ def bcp47_rdf_extension_relationship(
 def bcp47_rdf_extension_poc(
         header: List[str],
         data: List[List],
-        objective_bag: str = '2',
+        objective_bag: str = '1',
         _auxiliary_bags: List[str] = None,
         namespaces: List[dict] = None,
+        est_meta: bool = False,
         strictum: bool = True
 ) -> dict:
     """bcp47_rdf_extension_poc _summary_
@@ -1042,9 +1462,9 @@ def bcp47_rdf_extension_poc(
     ... ]
 
     >>> header_1 = ['qcc-Zxxx-r-sRDF-subject',
-    ...             'eng-Latn-r-pdc-contributor-pdc-creator-pdc-publisher']
+    ...             'eng-Latn-r-pDC-contributor-pDC-creator-pDC-publisher']
     >>> header_2 = ['qcc-Zxxx-r-sU2200-s1',
-    ...             'eng-Latn-r-pdc-contributor-pdc-creator-pdc-publisher']
+    ...             'eng-Latn-r-pDC-contributor-pDC-creator-pDC-publisher']
     >>> data_1 = [['<http://vocabularies.unesco.org/thesaurus>',
     ...             'UNESCO']]
     >>> poc1 = bcp47_rdf_extension_poc(header_2, data_1, namespaces=namespaces)
@@ -1055,42 +1475,79 @@ def bcp47_rdf_extension_poc(
     """
     # raise NotImplementedError(header)
     result = {
-        'header': header,
-        'header_result': [],
-        'data': data,
+        # 'caput': header,
+        'caput_asa': {},
         # 'rdf:subject': None,
         # 'rdf:predicate': [],
         # 'rdf:object': None,
         # 'rdfs:Datatype': None,
         # '_unknown': [],
+        # We always start with default prefixes
+        'prefixes': RDF_NAMESPACES,
+        'data': data,
         'triples': [],
-        'prefixes': {},
         '_error': [],
     }
+
     # return {}
 
     # print('header', header)
 
     # header.pop()
 
-    meta = bcp47_rdf_extension_relationship(header, strictum=strictum)
+    if est_meta:
+        # Try harder to discover issues
+        strictum = False
+
+    meta = bcp47_rdf_extension_relationship(
+        header, namespaces=namespaces, strictum=strictum)
+    result['caput_asa'] = meta
     meta['data'] = data
+
+    # if len(result['caput_asa']['_error']) > 0:
+    #     result['caput_asa']
     # raise ValueError(meta)
     # raise ValueError(objective_bag, meta['rdfs:Container'])
     # return meta
     # print(meta['rdfs:Container'])
 
     if objective_bag not in meta['rdfs:Container']:
-        raise SyntaxError('objective_bag({0})? {1} <{2}>'.format(
-            objective_bag, header, meta))
+        possible_bags = meta['rdfs:Container'].keys()
+        if est_meta:
+            result['_error'].append(
+                'objective_bag({0})? possible <{1}>'.format(
+                    objective_bag, possible_bags
+                ))
+            return result
+        else:
+            if len(meta['data']) > 2:
+                # meta['data'] = meta['data'][0:1]
+                meta['data'] = meta['data'][0]
+
+            raise SyntaxError(
+                'objective_bag({0})? possible <{1}>: '
+                'header <{2}> Meta <{3}>'.format(
+                    objective_bag, possible_bags, header, meta))
+
+    # print(meta)
+    # print('')
+    # print(meta['rdfs:Container'][objective_bag])
 
     bag_meta = meta['rdfs:Container'][objective_bag]
     is_urn = bag_meta['pivot']['prefix'].startswith('urn')
-    prexi_iri = None
+    prefix_pivot = None
 
     # return bag_meta
     if not is_urn:
-        prexi_iri = bag_meta['pivot']['iri']
+        # @todo solve this error later
+        prefix_pivot = bag_meta['pivot']['prefix']
+        if prefix_pivot not in result['prefixes']:
+            if prefix_pivot not in RDF_NAMESPACES_EXTRAS:
+                raise ValueError('prefix [{0}] not in [{1}]'.format(
+                    prefix_pivot, RDF_NAMESPACES_EXTRAS
+                ))
+            result['prefixes'][prefix_pivot] = \
+                RDF_NAMESPACES_EXTRAS[prefix_pivot]
 
     index_id = bag_meta['pivot']['index']
     triples_delayed = []
@@ -1106,17 +1563,77 @@ def bcp47_rdf_extension_poc(
         triples_delayed = []
         # This obviously is simplistic, because we can reference multiple
         # columns for same hashtags.
-        for predicate in bag_meta['rdf:predicate']:
+
+        is_literal = True
+
+        value_separator = None
+        value_prefixes = None
+        if len(bag_meta["xsl:transform"]) > 0:
+            for titem in bag_meta["xsl:transform"]:
+
+                # tverb, tval_1, _nop_tval_2 = titem.split(':')
+                _temp1, temp2 = titem.split('||')
+                tverb = _temp1
+                tval_1, _nop_tval_2 = temp2.split(':')
+
+                if tverb == EXTRA_OPERATORS['STX']['hxl']:
+                    if value_prefixes is None:
+                        value_prefixes = []
+                    value_prefixes.append(tval_1)
+
+                elif tverb == EXTRA_OPERATORS['GS']['hxl']:
+                    # @TODO: check this at compile time
+                    value_separator = CSVW_SEPARATORS[tval_1]
+
+        # if 'csvw:separator' in bag_meta and \
+        #         len(bag_meta['csvw:separator']) > 0:
+        #     value_separator = bag_meta['csvw:separator']
+
+        # if 'prefix' in bag_meta and \
+        #         len(bag_meta['prefix']) > 0:
+        #     value_prefixes = bag_meta['prefix']
+
+        for predicate_and_subject in bag_meta['rdf:predicate']:
             if not object_literal:
                 continue
-            object_result = object_literal
-            if not bcp47_lang.startswith('qcc'):
-                object_result = '"{0}"@{1}'.format(object_result, bcp47_lang)
+
+            _temp1, _temp2 = predicate_and_subject.split('||')
+            predicate = _temp1
+
+            if value_separator is not None and \
+                object_literal.find(value_separator) > -1 and \
+                    object_literal.find('\\' + value_separator) == -1:
+                # @TODO: if a field have both separator and escaped separator
+                #        we will fail. This would require a regex split, but
+                #        but not implementing for now for performance reasons.
+                object_results = object_literal.split(value_separator)
+                # pass
             else:
-                object_result = '"{0}"'.format(object_result)
+                object_results = [object_literal]
 
-            triples.append([subject, predicate, object_result])
+            if value_prefixes is not None:
+                is_literal = False
+                for prefix in value_prefixes:
+                    for index in range(len(object_results)):
+                        if not object_results[index].startswith(prefix):
+                            object_results[index] = '{0}:{1}'.format(
+                                prefix, object_results[index]
+                            )
 
+            for item in object_results:
+                if not bcp47_lang.startswith('qcc'):
+                    object_result = '"{0}"@{1}'.format(item, bcp47_lang)
+                elif not is_literal:
+                    # Example: prefixed result
+                    object_result = item
+                else:
+                    # TODO: implement other data types
+                    object_result = '"{0}"'.format(item)
+
+                triples.append([subject, predicate, object_result])
+            continue
+
+        # print('bag_meta', bag_meta)
         # raise ValueError(bag_meta)
 
         return triples, triples_delayed
@@ -1127,7 +1644,7 @@ def bcp47_rdf_extension_poc(
         if is_urn:
             triple_subject = '<urn:{0}>'.format(linea[index_id])
         else:
-            triple_subject = '<{0}{1}>'.format(prexi_iri, linea[index_id])
+            triple_subject = '{0}:{1}'.format(prefix_pivot, linea[index_id])
 
         # Predicate for self is Subject here
         for predicate in bag_meta['pivot']['rdf:predicate']:
@@ -1152,10 +1669,10 @@ def bcp47_rdf_extension_poc(
             if len(aux_triples) > 0:
                 result['triples'].extend(aux_triples)
 
-    # raise ValueError(meta)
-
-    # result['prefixes'] = RDF_NAMESPACES
-    result['prefixes'] = meta['prefixes']
+    if est_meta:
+        # @TODO: annex extra information
+        # return bag_meta
+        return result
 
     return result
     # return result['triples']
@@ -2317,8 +2834,11 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                 'rdf:predicate': [],
                 'rdf:object': [],
                 'rdfs:Datatype': None,
+                'xsl:transform': [],
                 '_unknown': [],
                 '_error': [],
+                # 'csvw:separator': '', # Added only if necessary
+                # 'prefix': [],  # Added only if necessary
             }
         },
         'privateuse': [],  # Example: ['wadegile', 'private1']
@@ -2367,6 +2887,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
 
     if len(rdf_parts) > 0:
         result['_callbacks']['rdf_parts'] = rdf_parts
+        # value_prefixes = None
         for item in rdf_parts:
             if item.startswith('s_'):
                 # _subject= item.replace('s_', '').replace('_', ':')
@@ -2375,57 +2896,126 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                 _subject_code = _subject_code.upper()
                 _subjec_value = _subjec_value.replace('s', '')
 
-                # @TODO get a value like '∀0' instead of 'u2200:0'
-                # _subject_code = ("\u2200").encode().decode('utf-8')
-                # _subject_code = ("\u2200")
-                # _subject_code = ("\u2200")
-                # _subject_code = str(ord("\u2200"))
-                # _subject_code = str(ord("\u2200"))
-                # _subject_code = ("\\u{0}".format(str(2200)))
-                # _subject_code = (r"\u2200").encode().decode('utf-8')
-                # _subject_code = ("\u2200").encode().decode('utf-8')
                 _subjec_value = _subjec_value.replace('s', '')
-                # result['extension']['r']['rdf:subject'].append(_subject)
-                result['extension']['r']['rdf:subject'].append('{0}:{1}'.format(
-                    _subject_code, _subjec_value
-                ))
+                result['extension']['r']['rdf:subject'].append(
+                    '{0}||{1}:NOP'.format(
+                        _subject_code, _subjec_value
+                    ))
 
-                _bpc47_g_parts.append('s{0}-s{1}'.format(
+                _bpc47_g_parts.append('s{0}-s{1}-snop'.format(
                     _subject_code, _subjec_value
                 ))
 
             elif item.startswith('p_'):
-                _predicate = item.replace('p_', '').replace('_', ':')
-                result['extension']['r']['rdf:predicate'].append(_predicate)
-                _predicate_key, _object = _predicate.split(':')
-                _bpc47_g_parts.append('p{0}-{1}'.format(
-                    _predicate_key.upper(), _object
+                _item_parts = item.replace('p_', '').replace('_', ':')
+                _item_parts = _item_parts + ':NOP'
+                result['extension']['r']['rdf:predicate'].append(_item_parts)
+                _index_p = result['extension']['r']['rdf:predicate'].index(
+                    _item_parts
+                )
+
+                # _subject_nop = 'NOP' reserved for potential future use
+                _predicate_ns, _predicate_item, _subject, _subject_nop = \
+                    _item_parts.split(':')
+
+                _subject = ''.join(filter(str.isdigit, _subject))
+
+                raw_predicate = f'{_predicate_ns}:{_predicate_item}'
+                normalized_predicate = None
+
+                if raw_predicate in RDF_NAMESPACES_PREFIX:
+                    normalized_predicate = RDF_NAMESPACES_PREFIX[raw_predicate]
+                elif raw_predicate in RDF_NAMESPACES_PREFIX_EXTRAS:
+                    normalized_predicate = \
+                        RDF_NAMESPACES_PREFIX_EXTRAS[raw_predicate]
+
+                if normalized_predicate is not None:
+                    if normalized_predicate.startswith('obo:'):
+                        normalized_predicate = normalized_predicate.lower()
+                        _predicate_ns = 'obo'
+                        _predicate_item_raw = \
+                            normalized_predicate.replace('obo:', '')
+                        _predicate_item_raw_digits = ''.join(
+                            filter(str.isdigit, _predicate_item_raw))
+                        _predicate_item_raw_alpha = \
+                            _predicate_item_raw.replace(
+                                _predicate_item_raw_digits, '').replace(
+                                    '_', '')
+                        _predicate_item = '{0}{1}'.format(
+                            _predicate_item_raw_alpha,
+                            _predicate_item_raw_digits.lstrip('0')
+                        )
+                    else:
+                        _predicate_ns, _predicate_item = \
+                            normalized_predicate.split(':')
+                        # pass
+
+                    result['extension']['r']['rdf:predicate'][_index_p] = \
+                        '{0}||{1}:{2}'.format(
+                        RDF_NAMESPACES_PREFIX[raw_predicate],
+                        _subject, _subject_nop)
+                else:
+                    result['extension']['r']['rdf:predicate'][_index_p] = \
+                        '{0}||{1}:{2}'.format(
+                        raw_predicate,
+                        _subject, _subject_nop)
+
+                _bpc47_g_parts.append('p{0}-p{1}-ps{2}'.format(
+                    _predicate_ns.upper(), _predicate_item, _subject,
                 ))
+                # _bpc47_g_parts.append('p{0}-p{1}-p{2}'.format(
+                #     _predicate_ns.upper(), _predicate_item,
+                #     _subject, _subject_nop.lower()
+                # ))
 
             elif item.startswith('y_'):
-                _cell_transformer = item.replace('y_', '').lower()
-                _tkey, _tvalue = _cell_transformer.split('_')
-                if _tkey == 'csvwseparator':
+                # _cell_transformer = item.replace('y_', '').lower()
+                _cell_transformer = item[2:]
+                tverb, tval_1 = _cell_transformer.split('_')
+                # if _tkey == 'csvwseparator':
+                # print('oi', _tkey, _tvalue)
+                if tverb.lower() == EXTRA_OPERATORS['GS']['hxl']:
                     # _cell_separator = CSVW_SEPARATORS[_tvalue]
                     decoded_separator = None
-                    if _tvalue in CSVW_SEPARATORS:
-                        decoded_separator = _tvalue
+                    if tval_1 in CSVW_SEPARATORS:
+                        decoded_separator = tval_1
                         # encoded_separator = CSVW_SEPARATORS[_tvalue]
 
                     if decoded_separator is None:
                         raise NotImplementedError(
                             '[{0}] [{1}] not implemented in <{2}>'.format(
-                                _tvalue, hashtag, CSVW_SEPARATORS
+                                tval_1, hashtag, CSVW_SEPARATORS
                             ))
 
-                    result['extension']['r']['csvw:separator'] = \
-                        decoded_separator
-                    # _predicate_key, _object = _predicate.split(':')
-                    _bpc47_g_parts.append('yCSVWseparator-{0}'.format(
-                        decoded_separator
+                    result['extension']['r']['xsl:transform'].append(
+                        '{0}||{1}:NOP'.format(tverb.upper(), tval_1.lower()))
+
+                    _bpc47_g_parts.append('y{0}-y{1}-ynop'.format(
+                        EXTRA_OPERATORS['GS']['hxl'].upper(), decoded_separator
+                    ))
+                elif tverb == EXTRA_OPERATORS['STX']['hxl']:
+                    result['extension']['r']['xsl:transform'].append(
+                        '{0}||{1}:NOP'.format(tverb.upper(), tval_1.lower()))
+
+                    _bpc47_g_parts.append('y{0}-y{1}-ynop'.format(
+                        tverb.upper(), tval_1.lower()
                     ))
                 else:
                     result['_unknown'].append('rdf_parts [{0}]'.format(item))
+
+                # result['extension']['r']['xsl:transform'].append(_item_parts)
+                # _index_p = result['extension']['r']['rdf:predicate'].index(
+                #     _item_parts
+                # )
+
+            elif item.startswith('t_'):
+                # _cell_transformer = item.replace('y_', '').lower()
+                _cell_transformer = item[2:]
+                tverb, tval_1 = _cell_transformer.split('_')
+                # raise ValueError(item)
+                _bpc47_g_parts.append('t{0}-t{1}-tnop'.format(
+                    tverb.upper(), tval_1.lower()
+                ))
 
             elif item.startswith('o_'):
                 _object = item.replace('o_', '').replace('_', ':')
@@ -3298,6 +3888,69 @@ def hxltm_carricato(
 
     # _reader = csv.reader(_data)
     # return caput, list(_reader)
+    return caput, data
+
+
+def hxltm_carricato_brevibus(
+    archivum_trivio: str = None,
+    est_stdin: bool = False,
+    punctum_separato: str = ",",
+    data_lineis: int = 3,
+    est_hxl: bool = False
+) -> list:
+    """hxltm_carricato_brevibus read only header and part of the data
+
+    Note: this helper is not as efficent as read line by line. But some
+    operations already require such task.
+
+    Trivia:
+    - carricātō, n, s, dativus, https://en.wiktionary.org/wiki/carricatus#Latin
+      - verbum: https://en.wiktionary.org/wiki/carricatus#Latin
+    - capitī, s, n, https://en.wiktionary.org/wiki/caput#Latin
+    - brevibus, pl, m/f/n, https://en.wiktionary.org/wiki/brevis#Latin
+
+    Args:
+        archivum_trivio (str, optional): Path to file. Defaults to None.
+        est_stdin (bool, optional): Is the file stdin?. Defaults to False.
+
+    Returns:
+        list: list of [caput, data], where data is array of lines
+    """
+    caput = []
+
+    if est_stdin:
+        _data = []
+        for linea in sys.stdin:
+            if len(caput) == 0:
+                # caput = linea
+                # _reader_caput = csv.reader(linea)
+                _gambi = [linea, linea]
+                _reader_caput = csv.reader(_gambi, delimiter=punctum_separato)
+                caput = next(_reader_caput)
+            else:
+                if data_lineis <= 0:
+                    pass
+                else:
+                    data_lineis -= 1
+                    _data.append(linea)
+        _reader = csv.reader(_data)
+        return caput, list(_reader)
+        # return caput
+    # else:
+    #     fons = archivum_trivio
+    data = []
+    with open(archivum_trivio, 'r') as _fons:
+        _csv_reader = csv.reader(_fons, delimiter=punctum_separato)
+        for linea in _csv_reader:
+            if len(caput) == 0:
+                caput = linea
+            else:
+                if data_lineis <= 0:
+                    break
+                else:
+                    data_lineis -= 1
+                    data.append(linea)
+
     return caput, data
 
 
