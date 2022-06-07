@@ -382,6 +382,15 @@ RDF_NAMESPACES_PREFIX = {
     # bfo_part_of <- ro_located_in
     'obo:ro1025': 'obo:RO_0001025',  # purl.obolibrary.org/obo/RO_0001025
     'obo:rolocatedin': 'obo:BFO_0000002',
+
+    # -------------- TOPIC: Administrative regions, COD-AB, etc --------------
+    # RO_0001025 ~ BFO_0000082 ?
+    'obo:locatedinatalltimes': 'obo:BFO_0000082',
+    'obo:bfo82': 'obo:BFO_0000082',
+    'obo:bfolocatedinatsometime': 'obo:BFO_0000171',
+    'obo:bfo171': 'obo:BFO_0000171',
+    'obo:locationofatsometime': 'obo:BFO_0000124',
+    'obo:bfo124': 'obo:BFO_0000124',
 }
 # Note: prefixes that already are lower case do not be here
 RDF_NAMESPACES_PREFIX_EXTRAS = {
