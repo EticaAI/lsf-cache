@@ -1,10 +1,10 @@
 {
   "caput_asa": {
     "columns_original": [
-      "qcc-Zxxx-r-sU2200-s1-snop-pOBO-bfo124-ps2",
-      "qcc-Zxxx-r-sU2200-s2-snop-pOBO-bfo124-ps3-pOBO-bfo171-ps1",
-      "qcc-Zxxx-r-sU2200-s3-snop-pOBO-bfo124-ps3-pOBO-bfo171-ps2",
-      "qcc-Zxxx-r-sU2200-s4-snop-pOBO-bfo124-ps4-pOBO-bfo171-ps3",
+      "qcc-Zxxx-r-sU2200-s1-snop-pOBO-pbfo124-ps2",
+      "qcc-Zxxx-r-sU2200-s2-snop-pOBO-pbfo124-ps3-pOBO-pbfo171-ps1",
+      "qcc-Zxxx-r-sU2200-s3-snop-pOBO-pbfo124-ps3-pOBO-pbfo171-ps2",
+      "qcc-Zxxx-r-sU2200-s4-snop-pOBO-pbfo124-ps4-pOBO-pbfo171-ps3",
       "por-Latn-r-pSKOS-pprefLabel-ps1",
       "por-Latn-r-pSKOS-pprefLabel-ps2",
       "por-Latn-r-pSKOS-pprefLabel-ps3",
@@ -16,18 +16,18 @@
         "script": "Zxxx",
         "extension": {
           "r": {
-            "rdf:Statement_raw": "sU2200-s1-snop-pOBO-bfo124-ps2",
+            "rdf:Statement_raw": "sU2200-s1-snop-pOBO-pbfo124-ps2",
             "rdf:subject": [
               "U2200||1:NOP"
             ],
-            "rdf:predicate": [],
+            "rdf:predicate": [
+              "obo:BFO_0000124||2:NOP"
+            ],
             "rdf:object": [],
             "rdfs:Datatype": null,
             "xsl:transform": [],
             "_unknown": [],
-            "_error": [
-              "Prefix not equal [p]: [pOBO-bfo124-ps2]"
-            ]
+            "_error": []
           }
         },
         "_column": 0
@@ -37,19 +37,19 @@
         "script": "Zxxx",
         "extension": {
           "r": {
-            "rdf:Statement_raw": "sU2200-s2-snop-pOBO-bfo124-ps3-pOBO-bfo171-ps1",
+            "rdf:Statement_raw": "sU2200-s2-snop-pOBO-pbfo124-ps3-pOBO-pbfo171-ps1",
             "rdf:subject": [
               "U2200||2:NOP"
             ],
-            "rdf:predicate": [],
+            "rdf:predicate": [
+              "obo:BFO_0000124||3:NOP",
+              "obo:BFO_0000171||1:NOP"
+            ],
             "rdf:object": [],
             "rdfs:Datatype": null,
             "xsl:transform": [],
             "_unknown": [],
-            "_error": [
-              "Prefix not equal [p]: [pOBO-bfo124-ps3]",
-              "Prefix not equal [p]: [pOBO-bfo171-ps1]"
-            ]
+            "_error": []
           }
         },
         "_column": 1
@@ -59,19 +59,19 @@
         "script": "Zxxx",
         "extension": {
           "r": {
-            "rdf:Statement_raw": "sU2200-s3-snop-pOBO-bfo124-ps3-pOBO-bfo171-ps2",
+            "rdf:Statement_raw": "sU2200-s3-snop-pOBO-pbfo124-ps3-pOBO-pbfo171-ps2",
             "rdf:subject": [
               "U2200||3:NOP"
             ],
-            "rdf:predicate": [],
+            "rdf:predicate": [
+              "obo:BFO_0000124||3:NOP",
+              "obo:BFO_0000171||2:NOP"
+            ],
             "rdf:object": [],
             "rdfs:Datatype": null,
             "xsl:transform": [],
             "_unknown": [],
-            "_error": [
-              "Prefix not equal [p]: [pOBO-bfo124-ps3]",
-              "Prefix not equal [p]: [pOBO-bfo171-ps2]"
-            ]
+            "_error": []
           }
         },
         "_column": 2
@@ -81,19 +81,19 @@
         "script": "Zxxx",
         "extension": {
           "r": {
-            "rdf:Statement_raw": "sU2200-s4-snop-pOBO-bfo124-ps4-pOBO-bfo171-ps3",
+            "rdf:Statement_raw": "sU2200-s4-snop-pOBO-pbfo124-ps4-pOBO-pbfo171-ps3",
             "rdf:subject": [
               "U2200||4:NOP"
             ],
-            "rdf:predicate": [],
+            "rdf:predicate": [
+              "obo:BFO_0000124||4:NOP",
+              "obo:BFO_0000171||3:NOP"
+            ],
             "rdf:object": [],
             "rdfs:Datatype": null,
             "xsl:transform": [],
             "_unknown": [],
-            "_error": [
-              "Prefix not equal [p]: [pOBO-bfo124-ps4]",
-              "Prefix not equal [p]: [pOBO-bfo171-ps3]"
-            ]
+            "_error": []
           }
         },
         "_column": 3

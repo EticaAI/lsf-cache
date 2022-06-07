@@ -9,7 +9,7 @@
       "rus-Cyrl-r-pSKOS-pprefLabel-ps1",
       "arb-Arab-r-pSKOS-pprefLabel-ps1",
       "spa-Latn-r-pSKOS-pprefLabel-ps1",
-      "qcc-Zxxx-r-pDCT-pmodified-pnop-txsd-tdatetime-tnop"
+      "qcc-Zxxx-r-pDCT-pmodified-ps1-txsd-tdatetime-tnop"
     ],
     "columns": [
       {
@@ -183,16 +183,16 @@
         "script": "Zxxx",
         "extension": {
           "r": {
-            "rdf:Statement_raw": "pDCT-pmodified-pnop-txsd-tdatetime-tnop",
+            "rdf:Statement_raw": "pDCT-pmodified-ps1-txsd-tdatetime-tnop",
             "rdf:subject": [],
-            "rdf:predicate": [],
+            "rdf:predicate": [
+              "dct:modified||1:NOP"
+            ],
             "rdf:object": [],
             "rdfs:Datatype": "xsd:datetime||NOP",
             "xsl:transform": [],
             "_unknown": [],
-            "_error": [
-              "[NOP] only implemented for reference subject. This means require prefix [s]: Used: [pDCT-pmodifiedp-NOP]"
-            ]
+            "_error": []
           }
         },
         "_column": 8
@@ -232,7 +232,8 @@
       "owl": "http://www.w3.org/2002/07/owl#",
       "obo": "http://purl.obolibrary.org/obo/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
-      "wdata": "http://www.wikidata.org/wiki/Special:EntityData/"
+      "wdata": "http://www.wikidata.org/wiki/Special:EntityData/",
+      "dct": "http://purl.org/dc/terms/"
     },
     "_error": [],
     "data": [
@@ -278,7 +279,8 @@
     "owl": "http://www.w3.org/2002/07/owl#",
     "obo": "http://purl.obolibrary.org/obo/",
     "skos": "http://www.w3.org/2004/02/skos/core#",
-    "wdata": "http://www.wikidata.org/wiki/Special:EntityData/"
+    "wdata": "http://www.wikidata.org/wiki/Special:EntityData/",
+    "dct": "http://purl.org/dc/terms/"
   },
   "data": [
     [

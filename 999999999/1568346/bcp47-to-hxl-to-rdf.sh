@@ -91,8 +91,8 @@ test_unesco_thesaurus() {
   archivum__unesco_thesaurus_bcp47="${ROOTDIR}/999999999/1568346/data/unesco-thesaurus.bcp47g.tsv"
   archivum__resultata_bag1="${ROOTDIR}/999999/0/unesco-thesaurus~rdfbag1.ttl"
   archivum__resultata_bag2="${ROOTDIR}/999999/0/unesco-thesaurus~rdfbag2.ttl"
-  archivum__resultata_ttl="${ROOTDIR}/999999/0/unesco-thesaurus.rdf.ttl"
-  archivum__resultata_xml="${ROOTDIR}/999999/0/unesco-thesaurus.rdf.xml"
+  archivum__resultata_ttl="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.rdf.ttl"
+  archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.rdf.xml"
   archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.meta.json"
 
   set -x
@@ -472,7 +472,8 @@ bcp47_and_hxlrdf_roundtrip__drill() {
 
 # echo "test"
 
-# test_cod_ab
+test_unesco_thesaurus
+test_cod_ab
 test_cod_ab__with_inferences_prebuild
 exit 0
 
@@ -488,6 +489,11 @@ bcp47_and_hxlrdf_roundtrip__drill
 # ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/0/unesco-thesaurus.meta.json
 
 # ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/1568346/data/unesco-thesaurus.meta.json
+
+
+# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq
+
+# ./999999999/0/999999999_54872.py 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --objectivum-formato=_temp_bcp47_meta_in_json --rdf-bag=1 | jq
 
 #### BFO _______________________________________________________________________
 # @see https://standards.iso.org/iso-iec/21838/-2/ed-1/en/
