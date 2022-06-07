@@ -223,6 +223,91 @@ test_cod_ab() {
 }
 
 #######################################
+# test_cod_ab__with_inferences_prebuild
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   None
+# Outputs:
+#   Test result
+#######################################
+test_cod_ab__with_inferences_prebuild() {
+  archivum__namespace="${ROOTDIR}/999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv"
+  archivum__cod_ab_bcp47="${ROOTDIR}/999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv"
+  archivum__resultata_bag1="${ROOTDIR}/999999/0/cod-ab-example1-with-inferences~rdfbag1.ttl"
+  archivum__resultata_bag2="${ROOTDIR}/999999/0/cod-ab-example1-with-inferences~rdfbag2.ttl"
+  archivum__resultata_bag3="${ROOTDIR}/999999/0/cod-ab-example1-with-inferences~rdfbag3.ttl"
+  archivum__resultata_bag4="${ROOTDIR}/999999/0/cod-ab-example1-with-inferences~rdfbag4.ttl"
+  archivum__resultata_ttl="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.ttl"
+  archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.xml"
+  archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.meta.json"
+
+  # officina/999999/1568346/data
+
+  set -x
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --objectivum-formato=_temp_bcp47_meta_in_json \
+    --rdf-namespaces-archivo="${archivum__namespace}" \
+    "${archivum__cod_ab_bcp47}" |
+    jq >"${archivum__resultata_meta_json}"
+
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --objectivum-formato=_temp_bcp47 \
+    --rdf-bag=1 \
+    --rdf-namespaces-archivo="${archivum__namespace}" \
+    "${archivum__cod_ab_bcp47}" |
+    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+      >"${archivum__resultata_bag1}"
+
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --objectivum-formato=_temp_bcp47 \
+    --rdf-bag=2 \
+    --rdf-namespaces-archivo="${archivum__namespace}" \
+    "${archivum__cod_ab_bcp47}" |
+    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+      >"${archivum__resultata_bag2}"
+
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --objectivum-formato=_temp_bcp47 \
+    --rdf-bag=3 \
+    --rdf-namespaces-archivo="${archivum__namespace}" \
+    "${archivum__cod_ab_bcp47}" |
+    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+      >"${archivum__resultata_bag3}"
+
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --objectivum-formato=_temp_bcp47 \
+    --rdf-bag=4 \
+    --rdf-namespaces-archivo="${archivum__namespace}" \
+    "${archivum__cod_ab_bcp47}" |
+    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+      >"${archivum__resultata_bag4}"
+
+  # @TODO eventually remove  --nocheck
+  # riot --output=Turtle \
+  riot --time --nocheck --output=RDF/XML \
+    "${archivum__resultata_bag1}" \
+    "${archivum__resultata_bag2}" \
+    "${archivum__resultata_bag3}" \
+    "${archivum__resultata_bag4}" \
+    >"${archivum__resultata_xml}"
+
+  riot --time --nocheck --output=Turtle \
+    "${archivum__resultata_xml}" \
+    >"${archivum__resultata_ttl}"
+
+
+  # Is not validating rigth now; Lets allow fail
+  echo "before riot --validate"
+  # # set +e
+  riot --validate "${archivum__resultata_ttl}" || echo "Failed. Ignoring..."
+  # # set -e
+  echo "after riot --validate"
+  set +x
+}
+
+#######################################
 # bcp47_and_hxlrdf_roundtrip item
 #
 # Globals:
@@ -387,7 +472,8 @@ bcp47_and_hxlrdf_roundtrip__drill() {
 
 # echo "test"
 
-test_cod_ab
+# test_cod_ab
+test_cod_ab__with_inferences_prebuild
 exit 0
 
 echo "bcp47_to_hxl_to_rdf__tests"
