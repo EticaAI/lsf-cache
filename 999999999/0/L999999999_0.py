@@ -157,7 +157,13 @@ FIRST_ORDER_LOGIC = {
 }
 
 
-RDF_NAMESPACES = {
+# spatiīs
+# - spatium, s, n, nominativus, https://en.wiktionary.org/wiki/spatium#Latin
+# - nōminālī, s, n, dativus, https://en.wiktionary.org/wiki/nominalis#Latin
+# - ... /spatium nominali/ (s, n)
+#   - /spatia nōminālibus/ (pl, n)
+# RDF_NAMESPACES = {
+RDF_SPATIA_NOMINALIBUS = {
     'rdf': 'https://www.w3.org/1999/02/22-rdf-syntax-ns#',
     'rdfs': 'http://www.w3.org/2000/01/rdf-schema#',
     'xsd': 'http://www.w3.org/2001/XMLSchema#',
@@ -178,12 +184,12 @@ RDF_NAMESPACES = {
 
 # This can be pre-populated by tools before being used
 # @see rdf_namespaces_extras()
-RDF_NAMESPACES_EXTRAS = {
+RDF_SPATIA_NOMINALIBUS_EXTRAS = {
 
 }
 
 # Note: prefixes that already are lower case do not be here
-RDF_NAMESPACES_PREFIX = {
+RDF_SPATIA_NOMINALIBUS_PREFIX = {
 
     # From https://www.w3.org/1999/02/22-rdf-syntax-ns# ______________________
     # 'rdf:type': 'rdf:type',
@@ -393,7 +399,7 @@ RDF_NAMESPACES_PREFIX = {
     'obo:bfo124': 'obo:BFO_0000124',
 }
 # Note: prefixes that already are lower case do not be here
-RDF_NAMESPACES_PREFIX_EXTRAS = {
+RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS = {
 }
 
 
@@ -1174,11 +1180,11 @@ def bcp47_rdf_extension(
                 raw_predicate = f'{_predicate_ns}:{_predicate_item}'
                 normalized_predicate = None
 
-                if raw_predicate in RDF_NAMESPACES_PREFIX:
-                    normalized_predicate = RDF_NAMESPACES_PREFIX[raw_predicate]
-                elif raw_predicate in RDF_NAMESPACES_PREFIX_EXTRAS:
+                if raw_predicate in RDF_SPATIA_NOMINALIBUS_PREFIX:
+                    normalized_predicate = RDF_SPATIA_NOMINALIBUS_PREFIX[raw_predicate]
+                elif raw_predicate in RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS:
                     normalized_predicate = \
-                        RDF_NAMESPACES_PREFIX_EXTRAS[raw_predicate]
+                        RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS[raw_predicate]
 
                 if normalized_predicate is not None:
                     if normalized_predicate.startswith('obo:'):
@@ -1203,7 +1209,7 @@ def bcp47_rdf_extension(
 
                     result['rdf:predicate'][index] = \
                         '{0}||{1}:{2}'.format(
-                        RDF_NAMESPACES_PREFIX[raw_predicate],
+                        RDF_SPATIA_NOMINALIBUS_PREFIX[raw_predicate],
                         _subject, _subject_nop)
                 else:
                     # _p1, _p2, _s1, _s2 = \
@@ -1216,9 +1222,9 @@ def bcp47_rdf_extension(
                     )
                     # pass
 
-                # if raw_predicate in RDF_NAMESPACES_PREFIX:
+                # if raw_predicate in RDF_SPATIA_NOMINALIBUS_PREFIX:
                 #     result['rdf:predicate'][index] = '{0}:{1}'.format(
-                #         RDF_NAMESPACES_PREFIX[raw_predicate], subject)
+                #         RDF_SPATIA_NOMINALIBUS_PREFIX[raw_predicate], subject)
                 # pass
 
         if len(_objects) > 0:
@@ -1282,32 +1288,32 @@ def bcp47_rdf_extension_relationship(
         dict: _description_
     """
     result = {
-        'columns_original': header,
-        'columns': [],
+        'caput_originali': header,
+        'caput_originali_asa': [],
         # 'rdf:subject': None,
         # 'rdf:predicate': [],
         # 'rdf:object': None,
         # 'rdfs:Datatype': None,
         # '_unknown': [],
         'rdfs:Container': {},
-        'prefixes': RDF_NAMESPACES,
-        # 'prefixes': {
-        #     'rdf': RDF_NAMESPACES['rdf'],
-        #     'rdfs': RDF_NAMESPACES['rdfs'],
-        #     'xsd': RDF_NAMESPACES['xsd'],
-        #     'owl': RDF_NAMESPACES['owl'],
-        #     'obo': RDF_NAMESPACES['obo'],
-        #     'skos': RDF_NAMESPACES['skos'],
-        #     'wdata': RDF_NAMESPACES['wdata'],
+        'rdf_spatia_nominalibus': RDF_SPATIA_NOMINALIBUS,
+        # 'rdf_spatia_nominalibus': {
+        #     'rdf': RDF_SPATIA_NOMINALIBUS['rdf'],
+        #     'rdfs': RDF_SPATIA_NOMINALIBUS['rdfs'],
+        #     'xsd': RDF_SPATIA_NOMINALIBUS['xsd'],
+        #     'owl': RDF_SPATIA_NOMINALIBUS['owl'],
+        #     'obo': RDF_SPATIA_NOMINALIBUS['obo'],
+        #     'skos': RDF_SPATIA_NOMINALIBUS['skos'],
+        #     'wdata': RDF_SPATIA_NOMINALIBUS['wdata'],
         # },
         '_error': [],
     }
 
-    result['prefixes'] = RDF_NAMESPACES
+    result['rdf_spatia_nominalibus'] = RDF_SPATIA_NOMINALIBUS
 
     if namespaces is not None and len(namespaces) > 0:
         for item in namespaces:
-            result['prefixes'][item['prefix']] = item['iri']
+            result['rdf_spatia_nominalibus'][item['prefix']] = item['iri']
 
     # print('header', header)
 
@@ -1315,7 +1321,8 @@ def bcp47_rdf_extension_relationship(
         item_meta = bcp47_langtag(
             item, ['language', 'script', 'extension'], strictum=False)
         # @TODO; get erros and export them to upper level
-        item_meta['_column'] = index
+        # item_meta['_column'] = index
+        item_meta['_index_ex_tabula'] = index
         inline_namespace = None
         inline_namespace_iri = None
         is_inline_namespace = False
@@ -1340,15 +1347,15 @@ def bcp47_rdf_extension_relationship(
                     # is_inline_namespace = True
                     inline_namespace = object.replace('_', '')
                     strictum = True
-                    if inline_namespace in RDF_NAMESPACES:
+                    if inline_namespace in RDF_SPATIA_NOMINALIBUS:
                         inline_namespace_iri = \
-                            RDF_NAMESPACES[inline_namespace]
-                        result['prefixes'][inline_namespace] = \
+                            RDF_SPATIA_NOMINALIBUS[inline_namespace]
+                        result['rdf_spatia_nominalibus'][inline_namespace] = \
                             inline_namespace_iri
-                    elif inline_namespace in RDF_NAMESPACES_EXTRAS:
+                    elif inline_namespace in RDF_SPATIA_NOMINALIBUS_EXTRAS:
                         inline_namespace_iri = \
-                            RDF_NAMESPACES_EXTRAS[inline_namespace]
-                        result['prefixes'][inline_namespace] = \
+                            RDF_SPATIA_NOMINALIBUS_EXTRAS[inline_namespace]
+                        result['rdf_spatia_nominalibus'][inline_namespace] = \
                             inline_namespace_iri
                     else:
                         if strictum:
@@ -1384,34 +1391,34 @@ def bcp47_rdf_extension_relationship(
                 if subject_value not in result['rdfs:Container']:
                     # result['rdfs:Container'][subject] = {
                     result['rdfs:Container'][subject_value] = {
-                        'pivot': {
+                        'trivium': {
                             'index': -1,
                             # 'iri': inline_namespace_iri,
-                            'prefix': 'urn',
+                            'rdf_praefixum': 'urn',
                             # We will fallback the pivots as generic classes
                             # We should enable later override this behavior
                             # via language tag on the pivot
                             'rdf:predicate': ['rdfs:Class'],
                         },
-                        'columns': []
+                        'indices_columnis': []
                     }
 
                 if inline_namespace is not None:
-                    result['rdfs:Container'][subject_value]['pivot']['prefix'] = \
+                    result['rdfs:Container'][subject_value]['trivium']['rdf_praefixum'] = \
                         inline_namespace
-                result['rdfs:Container'][subject_value]['columns'].append(
+                result['rdfs:Container'][subject_value]['indices_columnis'].append(
                     index)
 
                 if is_pivot_key:
-                    if result['rdfs:Container'][subject_value]['pivot']['index'] > -1:
+                    if result['rdfs:Container'][subject_value]['trivium']['index'] > -1:
                         SyntaxError('{0} <{1}>'.format(header, item_meta))
                     if object_prefixes is not None and len(object_prefixes) > 1:
                         SyntaxError('{0} <{1}>:: > 1 prefix [{2}]'.format(
                             header, item_meta, object_prefixes))
                     if object_prefixes is not None:
-                        result['rdfs:Container'][subject_value]['pivot']['prefix'] = object_prefixes[0]
+                        result['rdfs:Container'][subject_value]['trivium']['rdf_praefixum'] = object_prefixes[0]
                     # raise ValueError('deu', index)
-                    result['rdfs:Container'][subject_value]['pivot']['index'] = index
+                    result['rdfs:Container'][subject_value]['trivium']['index'] = index
 
         # RDFStatement: Subject -> [[ Predicate ]] -> Object
         if 'r' in item_meta['extension'] and \
@@ -1422,17 +1429,17 @@ def bcp47_rdf_extension_relationship(
                 predicate, subject = item.split('||')
                 predicate_namespce, _ignore = predicate.split(':')
                 subject = subject.replace(':NOP', '')  # Not used... yet
-                if predicate_namespce not in result['prefixes']:
-                    # if prefix not in RDF_NAMESPACES:
-                    if predicate_namespce not in RDF_NAMESPACES_EXTRAS:
+                if predicate_namespce not in result['rdf_spatia_nominalibus']:
+                    # if prefix not in RDF_SPATIA_NOMINALIBUS:
+                    if predicate_namespce not in RDF_SPATIA_NOMINALIBUS_EXTRAS:
                         raise SyntaxError(
                             'prefix [{0}]? <{1}> <{2}>'.format(
-                                predicate_namespce, header, RDF_NAMESPACES_EXTRAS
+                                predicate_namespce, header, RDF_SPATIA_NOMINALIBUS_EXTRAS
                             ))
-                    result['prefixes'][predicate_namespce] = \
-                        RDF_NAMESPACES_EXTRAS[predicate_namespce]
+                    result['rdf_spatia_nominalibus'][predicate_namespce] = \
+                        RDF_SPATIA_NOMINALIBUS_EXTRAS[predicate_namespce]
 
-        result['columns'].append(item_meta)
+        result['caput_originali_asa'].append(item_meta)
     # raise ValueError(result['rdfs:Container'])
 
     return result
@@ -1492,9 +1499,9 @@ def bcp47_rdf_extension_poc(
         # 'rdfs:Datatype': None,
         # '_unknown': [],
         # We always start with default prefixes
-        'prefixes': RDF_NAMESPACES,
+        'rdf_spatia_nominalibus': RDF_SPATIA_NOMINALIBUS,
         'data': data,
-        'triples': [],
+        'rdf_triplis': [],
         '_error': [],
     }
 
@@ -1511,7 +1518,7 @@ def bcp47_rdf_extension_poc(
     meta = bcp47_rdf_extension_relationship(
         header, namespaces=namespaces, strictum=strictum)
     result['caput_asa'] = meta
-    meta['data'] = data
+    # meta['data'] = data
 
     # if len(result['caput_asa']['_error']) > 0:
     #     result['caput_asa']
@@ -1543,22 +1550,22 @@ def bcp47_rdf_extension_poc(
     # print(meta['rdfs:Container'][objective_bag])
 
     bag_meta = meta['rdfs:Container'][objective_bag]
-    is_urn = bag_meta['pivot']['prefix'].startswith('urn')
+    is_urn = bag_meta['trivium']['rdf_praefixum'].startswith('urn')
     prefix_pivot = None
 
     # return bag_meta
     if not is_urn:
         # @todo solve this error later
-        prefix_pivot = bag_meta['pivot']['prefix']
-        if prefix_pivot not in result['prefixes']:
-            if prefix_pivot not in RDF_NAMESPACES_EXTRAS:
+        prefix_pivot = bag_meta['trivium']['rdf_praefixum']
+        if prefix_pivot not in result['rdf_spatia_nominalibus']:
+            if prefix_pivot not in RDF_SPATIA_NOMINALIBUS_EXTRAS:
                 raise ValueError('prefix [{0}] not in [{1}]'.format(
-                    prefix_pivot, RDF_NAMESPACES_EXTRAS
+                    prefix_pivot, RDF_SPATIA_NOMINALIBUS_EXTRAS
                 ))
-            result['prefixes'][prefix_pivot] = \
-                RDF_NAMESPACES_EXTRAS[prefix_pivot]
+            result['rdf_spatia_nominalibus'][prefix_pivot] = \
+                RDF_SPATIA_NOMINALIBUS_EXTRAS[prefix_pivot]
 
-    index_id = bag_meta['pivot']['index']
+    index_id = bag_meta['trivium']['index']
     triples_delayed = []
 
     def _helper_aux(
@@ -1656,27 +1663,27 @@ def bcp47_rdf_extension_poc(
             triple_subject = '{0}:{1}'.format(prefix_pivot, linea[index_id])
 
         # Predicate for self is Subject here
-        for predicate in bag_meta['pivot']['rdf:predicate']:
+        for predicate in bag_meta['trivium']['rdf:predicate']:
             triple = [triple_subject, 'a', predicate]
-            result['triples'].append(triple)
+            result['rdf_triplis'].append(triple)
 
-        for referenced_by in bag_meta['columns']:
+        for referenced_by in bag_meta['indices_columnis']:
             if referenced_by == index_id:
                 continue
 
             _bcp47lang = '{0}-{1}'.format(
-                meta['columns'][referenced_by]['language'],
-                meta['columns'][referenced_by]['script'],
+                meta['caput_originali_asa'][referenced_by]['language'],
+                meta['caput_originali_asa'][referenced_by]['script'],
             )
             object_literal = linea[referenced_by]
             aux_triples, triples_delayed = _helper_aux(
-                meta['columns'][referenced_by]['extension']['r'],
+                meta['caput_originali_asa'][referenced_by]['extension']['r'],
                 bcp47_lang=_bcp47lang,
                 subject=triple_subject,
                 object_literal=object_literal,
                 linea=linea)
             if len(aux_triples) > 0:
-                result['triples'].extend(aux_triples)
+                result['rdf_triplis'].extend(aux_triples)
 
     if est_meta:
         # @TODO: annex extra information
@@ -1684,15 +1691,6 @@ def bcp47_rdf_extension_poc(
         return result
 
     return result
-    # return result['triples']
-    return objective_bag_meta
-    main_prefix = '_:'
-    main_is_urn = False
-    result['triples'].append(meta['rdfs:Container'][objective_bag])
-
-    return result['triples']
-
-    return meta
 
 
 class CodAbTabulae:
@@ -2932,11 +2930,11 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                 raw_predicate = f'{_predicate_ns}:{_predicate_item}'
                 normalized_predicate = None
 
-                if raw_predicate in RDF_NAMESPACES_PREFIX:
-                    normalized_predicate = RDF_NAMESPACES_PREFIX[raw_predicate]
-                elif raw_predicate in RDF_NAMESPACES_PREFIX_EXTRAS:
+                if raw_predicate in RDF_SPATIA_NOMINALIBUS_PREFIX:
+                    normalized_predicate = RDF_SPATIA_NOMINALIBUS_PREFIX[raw_predicate]
+                elif raw_predicate in RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS:
                     normalized_predicate = \
-                        RDF_NAMESPACES_PREFIX_EXTRAS[raw_predicate]
+                        RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS[raw_predicate]
 
                 if normalized_predicate is not None:
                     if normalized_predicate.startswith('obo:'):
@@ -2961,7 +2959,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
 
                     result['extension']['r']['rdf:predicate'][_index_p] = \
                         '{0}||{1}:{2}'.format(
-                        RDF_NAMESPACES_PREFIX[raw_predicate],
+                        RDF_SPATIA_NOMINALIBUS_PREFIX[raw_predicate],
                         _subject, _subject_nop)
                 else:
                     result['extension']['r']['rdf:predicate'][_index_p] = \
@@ -4385,7 +4383,7 @@ def qhxl_hxlhashtag_2_bcp47(
 
 
 def rdf_namespaces_extras(archivum: str) -> dict:
-    """rdf_namespaces_extras Populate global RDF_NAMESPACES_EXTRAS
+    """rdf_namespaces_extras Populate global RDF_SPATIA_NOMINALIBUS_EXTRAS
 
     _extended_summary_
 
@@ -4403,13 +4401,13 @@ def rdf_namespaces_extras(archivum: str) -> dict:
     if index_iri == -1:
         raise SyntaxError('#x_rdf+iri ? [{0}]'.format(index_iri))
 
-    global RDF_NAMESPACES_EXTRAS
+    global RDF_SPATIA_NOMINALIBUS_EXTRAS
     for linea in data:
-        RDF_NAMESPACES_EXTRAS[linea[index_prefix]] = linea[index_iri]
+        RDF_SPATIA_NOMINALIBUS_EXTRAS[linea[index_prefix]] = linea[index_iri]
 
-    # print(index_prefix, index_iri, RDF_NAMESPACES_EXTRAS)
+    # print(index_prefix, index_iri, RDF_SPATIA_NOMINALIBUS_EXTRAS)
     # pass
-    return RDF_NAMESPACES_EXTRAS
+    return RDF_SPATIA_NOMINALIBUS_EXTRAS
 
 
 def numerordinatio_descendentibus(

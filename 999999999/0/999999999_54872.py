@@ -43,7 +43,7 @@ import yaml
 
 # l999999999_0 = __import__('999999999_0')
 from L999999999_0 import (
-    RDF_NAMESPACES_EXTRAS,
+    RDF_SPATIA_NOMINALIBUS_EXTRAS,
     bcp47_rdf_extension_poc,
     hxltm_carricato,
     HXLTMAdRDFSimplicis,
@@ -337,7 +337,7 @@ class Cli:
         # rdf_namespace_archivo
         if pyargs.rdf_namespace_archivo:
             rdf_namespaces_extras(pyargs.rdf_namespace_archivo)
-            # print(RDF_NAMESPACES_EXTRAS)
+            # print(RDF_SPATIA_NOMINALIBUS_EXTRAS)
             # pass
 
         # @TODO maybe refactor this temporary part
@@ -361,10 +361,10 @@ class Cli:
             # print(json.dumps(meta, sort_keys=True ,ensure_ascii=False))
             # return self.EXIT_OK
 
-            for prefix, iri in meta['prefixes'].items():
+            for prefix, iri in meta['rdf_spatia_nominalibus'].items():
                 print('@prefix {0}: <{1}> .'.format(prefix, iri))
 
-            for triple in meta['triples']:
+            for triple in meta['rdf_triplis']:
                 print('{0} {1} {2} .'.format(triple[0], triple[1], triple[2]))
 
             return self.EXIT_OK

@@ -1,6 +1,6 @@
 {
   "caput_asa": {
-    "columns_original": [
+    "caput_originali": [
       "qcc-Zxxx-r-sU2200-s1-snop-pOBO-pbfo124-ps2",
       "qcc-Zxxx-r-sU2200-s2-snop-pOBO-pbfo124-ps3-pOBO-pbfo171-ps1",
       "qcc-Zxxx-r-sU2200-s3-snop-pOBO-pbfo124-ps3-pOBO-pbfo171-ps2",
@@ -10,7 +10,7 @@
       "por-Latn-r-pSKOS-pprefLabel-ps3",
       "por-Latn-r-pSKOS-pprefLabel-ps4"
     ],
-    "columns": [
+    "caput_originali_asa": [
       {
         "language": "qcc",
         "script": "Zxxx",
@@ -30,7 +30,7 @@
             "_error": []
           }
         },
-        "_column": 0
+        "_index_ex_tabula": 0
       },
       {
         "language": "qcc",
@@ -52,7 +52,7 @@
             "_error": []
           }
         },
-        "_column": 1
+        "_index_ex_tabula": 1
       },
       {
         "language": "qcc",
@@ -74,7 +74,7 @@
             "_error": []
           }
         },
-        "_column": 2
+        "_index_ex_tabula": 2
       },
       {
         "language": "qcc",
@@ -96,7 +96,7 @@
             "_error": []
           }
         },
-        "_column": 3
+        "_index_ex_tabula": 3
       },
       {
         "language": "por",
@@ -115,7 +115,7 @@
             "_error": []
           }
         },
-        "_column": 4
+        "_index_ex_tabula": 4
       },
       {
         "language": "por",
@@ -134,7 +134,7 @@
             "_error": []
           }
         },
-        "_column": 5
+        "_index_ex_tabula": 5
       },
       {
         "language": "por",
@@ -153,7 +153,7 @@
             "_error": []
           }
         },
-        "_column": 6
+        "_index_ex_tabula": 6
       },
       {
         "language": "por",
@@ -172,60 +172,60 @@
             "_error": []
           }
         },
-        "_column": 7
+        "_index_ex_tabula": 7
       }
     ],
     "rdfs:Container": {
       "1": {
-        "pivot": {
+        "trivium": {
           "index": 0,
-          "prefix": "urn",
+          "rdf_praefixum": "urn",
           "rdf:predicate": [
             "rdfs:Class"
           ]
         },
-        "columns": [
+        "indices_columnis": [
           0
         ]
       },
       "2": {
-        "pivot": {
+        "trivium": {
           "index": 1,
-          "prefix": "urn",
+          "rdf_praefixum": "urn",
           "rdf:predicate": [
             "rdfs:Class"
           ]
         },
-        "columns": [
+        "indices_columnis": [
           1
         ]
       },
       "3": {
-        "pivot": {
+        "trivium": {
           "index": 2,
-          "prefix": "urn",
+          "rdf_praefixum": "urn",
           "rdf:predicate": [
             "rdfs:Class"
           ]
         },
-        "columns": [
+        "indices_columnis": [
           2
         ]
       },
       "4": {
-        "pivot": {
+        "trivium": {
           "index": 3,
-          "prefix": "urn",
+          "rdf_praefixum": "urn",
           "rdf:predicate": [
             "rdfs:Class"
           ]
         },
-        "columns": [
+        "indices_columnis": [
           3
         ]
       }
     },
-    "prefixes": {
+    "rdf_spatia_nominalibus": {
       "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -234,31 +234,9 @@
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "wdata": "http://www.wikidata.org/wiki/Special:EntityData/"
     },
-    "_error": [],
-    "data": [
-      [
-        "1603:45:16:76:0",
-        "1603:45:16:76:1:31",
-        "1603:45:16:76:2:3106200",
-        "_",
-        "Brasil",
-        "Minas Gerais",
-        "Belo Horizonte",
-        "_"
-      ],
-      [
-        "1603:45:16:24:0",
-        "1603:45:16:24:1:7",
-        "1603:45:16:24:2:7060",
-        "1603:45:16:24:3:7060201",
-        "Angola",
-        "Cuanza Sul",
-        "Sumbe (Ngangula)",
-        "Kikombo"
-      ]
-    ]
+    "_error": []
   },
-  "prefixes": {
+  "rdf_spatia_nominalibus": {
     "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -289,7 +267,7 @@
       "Kikombo"
     ]
   ],
-  "triples": [
+  "rdf_triplis": [
     [
       "<urn:1603:45:16:76:0>",
       "a",

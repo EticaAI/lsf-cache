@@ -1,6 +1,6 @@
 {
   "caput_asa": {
-    "columns_original": [
+    "caput_originali": [
       "qcc-Zxxx-r-sU2200-s1-snop",
       "qcc-Zxxx-r-sU2203-s2-snop-yU001D-yu007c-ynop-yU0002-yunescothes-ynop",
       "qcc-Zxxx-r-pSKOS-pbroader-ps2-sU0001D53B-s2-snop-yU001D-yu007c-ynop-yU0002-yunescothes-ynop",
@@ -11,7 +11,7 @@
       "spa-Latn-r-pSKOS-pprefLabel-ps1",
       "qcc-Zxxx-r-pDCT-pmodified-ps1-txsd-tdatetime-tnop"
     ],
-    "columns": [
+    "caput_originali_asa": [
       {
         "language": "qcc",
         "script": "Zxxx",
@@ -29,7 +29,7 @@
             "_error": []
           }
         },
-        "_column": 0
+        "_index_ex_tabula": 0
       },
       {
         "language": "qcc",
@@ -51,7 +51,7 @@
             "_error": []
           }
         },
-        "_column": 1
+        "_index_ex_tabula": 1
       },
       {
         "language": "qcc",
@@ -75,7 +75,7 @@
             "_error": []
           }
         },
-        "_column": 2
+        "_index_ex_tabula": 2
       },
       {
         "language": "qcc",
@@ -97,7 +97,7 @@
             "_error": []
           }
         },
-        "_column": 3
+        "_index_ex_tabula": 3
       },
       {
         "language": "qcc",
@@ -119,7 +119,7 @@
             "_error": []
           }
         },
-        "_column": 4
+        "_index_ex_tabula": 4
       },
       {
         "language": "rus",
@@ -138,7 +138,7 @@
             "_error": []
           }
         },
-        "_column": 5
+        "_index_ex_tabula": 5
       },
       {
         "language": "arb",
@@ -157,7 +157,7 @@
             "_error": []
           }
         },
-        "_column": 6
+        "_index_ex_tabula": 6
       },
       {
         "language": "spa",
@@ -176,7 +176,7 @@
             "_error": []
           }
         },
-        "_column": 7
+        "_index_ex_tabula": 7
       },
       {
         "language": "qcc",
@@ -195,37 +195,37 @@
             "_error": []
           }
         },
-        "_column": 8
+        "_index_ex_tabula": 8
       }
     ],
     "rdfs:Container": {
       "1": {
-        "pivot": {
+        "trivium": {
           "index": 0,
-          "prefix": "urn",
+          "rdf_praefixum": "urn",
           "rdf:predicate": [
             "rdfs:Class"
           ]
         },
-        "columns": [
+        "indices_columnis": [
           0
         ]
       },
       "2": {
-        "pivot": {
+        "trivium": {
           "index": 1,
-          "prefix": "urn",
+          "rdf_praefixum": "urn",
           "rdf:predicate": [
             "rdfs:Class"
           ]
         },
-        "columns": [
+        "indices_columnis": [
           1,
           2
         ]
       }
     },
-    "prefixes": {
+    "rdf_spatia_nominalibus": {
       "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
       "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
       "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -235,44 +235,9 @@
       "wdata": "http://www.wikidata.org/wiki/Special:EntityData/",
       "dct": "http://purl.org/dc/terms/"
     },
-    "_error": [],
-    "data": [
-      [
-        "1603:999:9",
-        "concept9",
-        "",
-        "",
-        "concept10",
-        "Политика в области образования",
-        "سياسة تربوية",
-        "Política educacional",
-        "2019-12-15T22:36:40Z"
-      ],
-      [
-        "1603:999:10",
-        "concept10",
-        "",
-        "concept4938|concept7597",
-        "concept9",
-        "Право на образование",
-        "حق في التعليم",
-        "Derecho a la educación",
-        "2019-12-15T13:26:49Z"
-      ],
-      [
-        "1603:999:4938",
-        "concept4938",
-        "concept10",
-        "",
-        "concept10",
-        "Возможности получения образования",
-        "فرص تربوية",
-        "Oportunidades educacionales",
-        "2019-12-15T22:36:42Z"
-      ]
-    ]
+    "_error": []
   },
-  "prefixes": {
+  "rdf_spatia_nominalibus": {
     "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
@@ -317,7 +282,7 @@
       "2019-12-15T22:36:42Z"
     ]
   ],
-  "triples": [
+  "rdf_triplis": [
     [
       "<urn:1603:999:9>",
       "a",
