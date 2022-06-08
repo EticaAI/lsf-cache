@@ -1418,6 +1418,24 @@ def bcp47_rdf_extension_relationship(
 
     # print('header', header)
 
+    def _aux_init_container(result: dict, subject: str) -> dict:
+        result['rdfs:Container'][subject] = {
+            'trivium': {
+                'index': -1,
+                # 'iri': inline_namespace_iri,
+                # 'rdf_praefixum': 'urn',
+                'rdf_praefixum': 'urnmdciii',
+                # We will fallback the pivots as generic classes
+                # We should enable later override this behavior
+                # via language tag on the pivot
+                'rdf:predicate': [],
+                # @TODO: implement the semantics of is_a
+                'rdf:type': [],
+            },
+            'indices_columnis': []
+        }
+        return result
+
     for index, item in enumerate(header):
         item_meta = bcp47_langtag(
             item, ['language', 'script', 'extension'], strictum=False)
@@ -1490,27 +1508,29 @@ def bcp47_rdf_extension_relationship(
                     # raise ValueError('deu', is_pivot_key)
 
                 if subject_value not in result['rdfs:Container']:
-                    # result['rdfs:Container'][subject] = {
-                    result['rdfs:Container'][subject_value] = {
-                        'trivium': {
-                            'index': -1,
-                            # 'iri': inline_namespace_iri,
-                            # 'rdf_praefixum': 'urn',
-                            'rdf_praefixum': 'urnmdciii',
-                            # We will fallback the pivots as generic classes
-                            # We should enable later override this behavior
-                            # via language tag on the pivot
-                            'rdf:predicate': [],
-                            # @TODO: implement the semantics of is_a
-                            'rdf:type': [],
-                        },
-                        'indices_columnis': []
-                    }
+                    result = _aux_init_container(result, subject_value)
+                    # result['rdfs:Container'][subject_value] = {
+                    #     'trivium': {
+                    #         'index': -1,
+                    #         # 'iri': inline_namespace_iri,
+                    #         # 'rdf_praefixum': 'urn',
+                    #         'rdf_praefixum': 'urnmdciii',
+                    #         # We will fallback the pivots as generic classes
+                    #         # We should enable later override this behavior
+                    #         # via language tag on the pivot
+                    #         'rdf:predicate': [],
+                    #         # @TODO: implement the semantics of is_a
+                    #         'rdf:type': [],
+                    #     },
+                    #     'indices_columnis': []
+                    # }
 
                 if inline_namespace is not None:
                     result['rdfs:Container'][subject_value][
                         'trivium']['rdf_praefixum'] = inline_namespace
 
+                # Add itself. 
+                # @TODO test better corner cases
                 result['rdfs:Container'][subject_value][
                     'indices_columnis'].append(
                     index)
@@ -1532,12 +1552,12 @@ def bcp47_rdf_extension_relationship(
         # RDFStatement: Subject -> [[ Predicate ]] -> Object
         if 'r' in item_meta['extension'] and \
                 len(item_meta['extension']['r']['rdf:predicate']) > 0:
-            for item in item_meta['extension']['r']['rdf:predicate']:
+            for item_p in item_meta['extension']['r']['rdf:predicate']:
                 # raise ValueError(predicate)
                 # prefix, suffix = predicate.split(':')
-                predicate, subject = item.split('||')
+                predicate, subject = item_p.split('||')
                 predicate_namespce, _ignore = predicate.split(':')
-                subject = subject.replace(':NOP', '')  # Not used... yet
+                subject_value = subject.replace(':NOP', '')  # Not used... yet
                 if predicate_namespce not in result['rdf_spatia_nominalibus']:
                     # if prefix not in RDF_SPATIA_NOMINALIBUS:
                     if predicate_namespce not in RDF_SPATIA_NOMINALIBUS_EXTRAS:
@@ -1551,7 +1571,10 @@ def bcp47_rdf_extension_relationship(
 
                 # print(item, item_meta)
                 # print(item_meta)
-                # print(item_meta['_index_ex_tabula'])
+                # print(item_meta['_index_ex_tabula'], subject, result['rdfs:Container'].keys())
+                if subject_value not in result['rdfs:Container']:
+                    result = _aux_init_container(result, subject_value)
+
                 result['rdfs:Container'][subject_value][
                     'indices_columnis'].append(
                     item_meta['_index_ex_tabula'])
@@ -1584,7 +1607,6 @@ def bcp47_rdf_extension_relationship(
             indices_columnis_unicus = list(set(indices_columnis_unicus))
             result['rdfs:Container'][item]['indices_columnis'] = \
                 indices_columnis_unicus
-
 
     return result
 
@@ -1813,7 +1835,7 @@ def bcp47_rdf_extension_poc(
         for ego_typus in bag_meta['trivium']['rdf:type']:
             if not ego_typus.endswith('||0:NOP'):
                 raise NotImplementedError('[{0}] <{1}>'.format(
-                    ego_typus, bag_meta ))
+                    ego_typus, bag_meta))
             _ego_typus = ego_typus.replace('||0:NOP', '')
             triple = [triple_subject, 'a', _ego_typus]
             result['rdf_triplis'].append(triple)

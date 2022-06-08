@@ -7,17 +7,25 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <urn:mdciii:1603:45:16:24:0>
-        rdf:type  skos:Concept ;
-        rdf:type  owl:Thing .
+        skos:prefLabel   "Angola"@por-Latn ;
+        rdf:type         skos:Concept ;
+        rdf:type         owl:Thing ;
+        obo:BFO_0000171  "1603:45:16:24:1:7" .
 
 <urn:mdciii:1603:45:16:76:0>
-        rdf:type  skos:Concept ;
-        rdf:type  owl:Thing .
+        skos:prefLabel   "Brasil"@por-Latn ;
+        rdf:type         skos:Concept ;
+        rdf:type         owl:Thing ;
+        obo:BFO_0000171  "1603:45:16:76:1:31" .
 
 <urn:mdciii:1603:45:16:76:1:31>
-        rdf:type  skos:Concept ;
-        rdf:type  owl:Thing .
+        skos:prefLabel   "Minas Gerais"@por-Latn ;
+        rdf:type         skos:Concept ;
+        rdf:type         owl:Thing ;
+        obo:BFO_0000171  "1603:45:16:76:2:3106200" .
 
 <urn:mdciii:1603:45:16:24:1:7>
-        rdf:type  skos:Concept ;
-        rdf:type  owl:Thing .
+        skos:prefLabel   "Cuanza Sul"@por-Latn ;
+        rdf:type         skos:Concept ;
+        rdf:type         owl:Thing ;
+        obo:BFO_0000171  "1603:45:16:24:2:7060" .

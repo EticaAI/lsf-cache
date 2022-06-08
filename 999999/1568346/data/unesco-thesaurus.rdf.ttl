@@ -8,25 +8,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <urn:mdciii:1603:999:4938>
-        rdf:type  skos:Concept ;
-        rdf:type  owl:Thing .
-
-<urn:mdciii:1603:999:9>
-        rdf:type  skos:Concept ;
-        rdf:type  owl:Thing .
-
-<urn:mdciii:concept10>
-        skos:related    "concept9" ;
-        skos:prefLabel  "حق في التعليم"@arb-Arab ;
-        skos:prefLabel  "Право на образование"@rus-Cyrl ;
-        skos:prefLabel  "Derecho a la educación"@spa-Latn ;
-        skos:narrower   "concept4938|concept7597" ;
+        skos:prefLabel  "فرص تربوية"@arb-Arab ;
+        skos:prefLabel  "Возможности получения образования"@rus-Cyrl ;
+        skos:prefLabel  "Oportunidades educacionales"@spa-Latn ;
         rdf:type        skos:Concept ;
         rdf:type        owl:Thing ;
-        dct:modified    "2019-12-15T13:26:49Z" .
+        dct:modified    "2019-12-15T22:36:42Z" .
 
-<urn:mdciii:concept9>
-        skos:related    "concept10" ;
+<urn:mdciii:1603:999:9>
         skos:prefLabel  "سياسة تربوية"@arb-Arab ;
         skos:prefLabel  "Политика в области образования"@rus-Cyrl ;
         skos:prefLabel  "Política educacional"@spa-Latn ;
@@ -34,16 +23,27 @@
         rdf:type        owl:Thing ;
         dct:modified    "2019-12-15T22:36:40Z" .
 
+<urn:mdciii:concept10>
+        skos:related   "concept9" ;
+        skos:narrower  "concept4938|concept7597" ;
+        rdf:type       skos:Concept ;
+        rdf:type       owl:Thing .
+
+<urn:mdciii:concept9>
+        skos:related  "concept10" ;
+        rdf:type      skos:Concept ;
+        rdf:type      owl:Thing .
+
 <urn:mdciii:concept4938>
-        skos:related    "concept10" ;
-        skos:prefLabel  "فرص تربوية"@arb-Arab ;
-        skos:prefLabel  "Возможности получения образования"@rus-Cyrl ;
-        skos:prefLabel  "Oportunidades educacionales"@spa-Latn ;
-        skos:broader    "concept10" ;
-        rdf:type        skos:Concept ;
-        rdf:type        owl:Thing ;
-        dct:modified    "2019-12-15T22:36:42Z" .
+        skos:related  "concept10" ;
+        skos:broader  "concept10" ;
+        rdf:type      skos:Concept ;
+        rdf:type      owl:Thing .
 
 <urn:mdciii:1603:999:10>
-        rdf:type  skos:Concept ;
-        rdf:type  owl:Thing .
+        skos:prefLabel  "حق في التعليم"@arb-Arab ;
+        skos:prefLabel  "Право на образование"@rus-Cyrl ;
+        skos:prefLabel  "Derecho a la educación"@spa-Latn ;
+        rdf:type        skos:Concept ;
+        rdf:type        owl:Thing ;
+        dct:modified    "2019-12-15T13:26:49Z" .
