@@ -381,6 +381,13 @@ RDF_SPATIA_NOMINALIBUS_PREFIX = {
     'obo:bfo2': 'obo:BFO_0000002',  # purl.obolibrary.org/obo/BFO_0000002
     # occurrent
     'obo:bfo3': 'obo:BFO_0000003',  # purl.obolibrary.org/obo/BFO_0000003
+
+    # BFO_0000029: site (used also for places)
+    'obo:bfo29': 'obo:BFO_0000029',
+
+    # @TODO: add at least the core of BFO here (or do a funcion to generate
+    #        at least the numeral form of them, without the aliases)
+
     # ------------------------------- Relations -------------------------------
     # @TODO https://www.ebi.ac.uk/ols/ontologies/ro
     'obo:bfopartof': 'obo:BFO_0000050',  # purl.obolibrary.org/obo/BFO_0000050
@@ -401,6 +408,57 @@ RDF_SPATIA_NOMINALIBUS_PREFIX = {
 # Note: prefixes that already are lower case do not be here
 RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS = {
 }
+
+# ------- Needs refactoring later, START -------
+
+# def _rdf_spatia_nominalibus_prefix(rem: str, methodos: str = 'asa') -> dict:
+
+
+def _rdf_spatia_nominalibus_prefix_normali(rem: str) -> dict:
+    # exemplum: obo:bfo29 -> obo:BFO_0000029
+    rem_l = rem.lower()
+    if rem_l in RDF_SPATIA_NOMINALIBUS_PREFIX:
+        return RDF_SPATIA_NOMINALIBUS_PREFIX[rem_l]
+    elif rem in RDF_SPATIA_NOMINALIBUS_PREFIX.values():
+        # already normalized; redundant function call
+        return rem
+
+    if rem_l.startswith('obo:'):
+        rem_ls = rem_l.replace('obo:', ''). replace('_', '')
+        rem_digits = ''.join(filter(str.isdigit, rem_ls))
+        rem_item_alpha = rem_ls.replace(rem_digits, '').upper()
+        rem_digits_full = rem_digits.zfill(7)
+        return 'obo:{0}_{1}'.format(rem_item_alpha, rem_digits_full)
+
+    # Worst case: assume input already is normalized
+    return rem
+
+
+def _rdf_spatia_nominalibus_prefix_simplici(rem: str) -> dict:
+    # exemplum: obo:BFO_0000029 -> obo:bfo29
+    # exemplum: obo:BFO_0098765 -> obo:bfo98765
+    # rem = 'obo:BFO_0000129'
+    rem_l = rem.lower()
+    # raise ValueError('oi')
+    if rem_l in RDF_SPATIA_NOMINALIBUS_PREFIX:
+        return rem_l
+    elif rem in RDF_SPATIA_NOMINALIBUS_PREFIX.values():
+        # already normalized; redundant function call
+        # raise ValueError('oi2')
+        clavem = list(RDF_SPATIA_NOMINALIBUS_PREFIX.keys())
+        index = list(RDF_SPATIA_NOMINALIBUS_PREFIX.values()).index(rem)
+        return clavem[index]
+
+    if rem_l.startswith('obo:'):
+        rem_ls = rem_l.replace('obo:', ''). replace('_', '')
+        rem_digits = ''.join(filter(str.isdigit, rem_ls))
+        rem_item_alpha = rem_ls.replace(rem_digits, '').lower()
+        # rem_digits_full = rem_digits.zfill(7)
+        return 'obo:{0}{1}'.format(rem_item_alpha, rem_digits)
+
+    return rem
+
+# ------- Needs refactoring later, END -------
 
 
 def bcp47_langtag(
@@ -857,6 +915,21 @@ def bcp47_langtag_callback_hxl(
     if langtag_meta['extension'] and 'r' in langtag_meta['extension']:
         _r = langtag_meta['extension']['r']
 
+        if 'rdf:type' in _r and len(_r['rdf:type']) > 0:
+            for item in _r['rdf:type']:
+
+                _temp1, temp2 = item.split('||')
+                subject_key = _temp1
+                subject_namespace = temp2
+                # _predicate = _rdf_spatia_nominalibus_prefix_normali(_temp1)
+                _predicate = _rdf_spatia_nominalibus_prefix_simplici(_temp1)
+                # raise ValueError(_predicate)
+                __predicate_prefix, _predicate_item = _predicate.split(':')
+                subject_namespace = subject_namespace.replace(':nop', '')
+                resultatum.append(
+                    '+rdf_a_{0}_{1}'.format(
+                        __predicate_prefix, _predicate_item))
+
         if _r['rdf:predicate'] and len(_r['rdf:predicate']) > 0:
             for item in _r['rdf:predicate']:
                 # prefix, term, subject_domain, _nop2 = item.lower().split(':')
@@ -896,7 +969,7 @@ def bcp47_langtag_callback_hxl(
                 resultatum.append('+rdf_p_{0}_{1}_s{2}'.format(
                     prefix, term, subject_domain))
 
-        if _r['rdf:subject'] and len(_r['rdf:subject']) > 0:
+        if 'rdf:subject' in _r and len(_r['rdf:subject']) > 0:
             for item in _r['rdf:subject']:
                 # subject_key, subject_namespace, _nop = item.lower().split(':')
                 _temp1, temp2 = item.lower().split('||')
@@ -1028,16 +1101,18 @@ def bcp47_rdf_extension(
     Exemplōrum gratiā (et Python doctest, id est, automata testīs):
         (python3 -m doctest myscript.py)
 
-    >>> bcp47_rdf_extension('pskos-prefLabel', 'rdf:predicate')
-    ['skos:prefLabel']
+    >>> bcp47_rdf_extension('pskos-pprefLabel-ps1', 'rdf:predicate')
+    ['skos:prefLabel||1:NOP']
 
-    >>> bcp47_rdf_extension('pdc-contributor-pdc-creator-pdc-publisher',
+    >>> bcp47_rdf_extension(
+    ... 'pDC-pcontributor-ps2-pDC-pcreator-ps3-pDC-ppublisher-ps4',
     ... 'rdf:predicate')
-    ['dc:contributor', 'dc:creator', 'dc:publisher']
+    ['dc:contributor||2:NOP', 'dc:creator||3:NOP', 'dc:publisher||4:NOP']
 
-    >>> bcp47_rdf_extension('pdct-modified-txsd-dateTime',
+    >>> bcp47_rdf_extension('pDCT-pmodified-ps1-tXSD-tdateTime-tnop',
     ... ['rdf:predicate', 'rdfs:Datatype'])
-    {'rdf:predicate': ['dct:modified'], 'rdfs:Datatype': 'xsd:dateTime'}
+    {'rdf:predicate': ['dct:modified||1:NOP'], \
+'rdfs:Datatype': 'xsd:dateTime||NOP'}
 
     """
     # For sake of copy-and-paste portability, we ignore a few pylints:
@@ -1048,6 +1123,7 @@ def bcp47_rdf_extension(
         'rdf:subject': [],
         'rdf:predicate': [],
         'rdf:object': [],
+        'rdf:type': [],
         'rdfs:Datatype': None,
         'xsl:transform': [],
         '_unknown': [],
@@ -1098,7 +1174,19 @@ def bcp47_rdf_extension(
             if r_op_2 == 'nop':
                 r_op_2 = 'NOP'
 
-            if r_op == 'p':
+            if r_op == 'a':
+
+                verb = r_verb.lower() + ':' + r_op_1
+
+                if verb in RDF_SPATIA_NOMINALIBUS_PREFIX:
+                    verb = RDF_SPATIA_NOMINALIBUS_PREFIX[verb]
+
+                result['rdf:type'].append('{0}||{1}'.format(
+                    verb, r_op_2
+                ))
+                # pass
+
+            elif r_op == 'p':
                 if r_op_2[0].lower() != 's':
                     result['_error'].append(
                         '[{3}] only implemented for reference subject. '
@@ -1399,26 +1487,33 @@ def bcp47_rdf_extension_relationship(
                             # We should enable later override this behavior
                             # via language tag on the pivot
                             'rdf:predicate': ['rdfs:Class'],
+                            # @TODO: implement the semantics of is_a
+                            'rdf:type': [],
                         },
                         'indices_columnis': []
                     }
 
                 if inline_namespace is not None:
-                    result['rdfs:Container'][subject_value]['trivium']['rdf_praefixum'] = \
-                        inline_namespace
-                result['rdfs:Container'][subject_value]['indices_columnis'].append(
+                    result['rdfs:Container'][subject_value][
+                        'trivium']['rdf_praefixum'] = inline_namespace
+
+                result['rdfs:Container'][subject_value][
+                    'indices_columnis'].append(
                     index)
 
                 if is_pivot_key:
-                    if result['rdfs:Container'][subject_value]['trivium']['index'] > -1:
+                    if result['rdfs:Container'][subject_value][
+                            'trivium']['index'] > -1:
                         SyntaxError('{0} <{1}>'.format(header, item_meta))
                     if object_prefixes is not None and len(object_prefixes) > 1:
                         SyntaxError('{0} <{1}>:: > 1 prefix [{2}]'.format(
                             header, item_meta, object_prefixes))
                     if object_prefixes is not None:
-                        result['rdfs:Container'][subject_value]['trivium']['rdf_praefixum'] = object_prefixes[0]
+                        result['rdfs:Container'][subject_value][
+                            'trivium']['rdf_praefixum'] = object_prefixes[0]
                     # raise ValueError('deu', index)
-                    result['rdfs:Container'][subject_value]['trivium']['index'] = index
+                    result['rdfs:Container'][subject_value][
+                        'trivium']['index'] = index
 
         # RDFStatement: Subject -> [[ Predicate ]] -> Object
         if 'r' in item_meta['extension'] and \
@@ -1434,7 +1529,8 @@ def bcp47_rdf_extension_relationship(
                     if predicate_namespce not in RDF_SPATIA_NOMINALIBUS_EXTRAS:
                         raise SyntaxError(
                             'prefix [{0}]? <{1}> <{2}>'.format(
-                                predicate_namespce, header, RDF_SPATIA_NOMINALIBUS_EXTRAS
+                                predicate_namespce, header,
+                                RDF_SPATIA_NOMINALIBUS_EXTRAS
                             ))
                     result['rdf_spatia_nominalibus'][predicate_namespce] = \
                         RDF_SPATIA_NOMINALIBUS_EXTRAS[predicate_namespce]
@@ -1479,8 +1575,8 @@ def bcp47_rdf_extension_poc(
 
     >>> header_1 = ['qcc-Zxxx-r-sRDF-subject',
     ...             'eng-Latn-r-pDC-contributor-pDC-creator-pDC-publisher']
-    >>> header_2 = ['qcc-Zxxx-r-sU2200-s1',
-    ...             'eng-Latn-r-pDC-contributor-pDC-creator-pDC-publisher']
+    >>> header_2 = ['qcc-Zxxx-r-sU2200-s1-snop',
+    ...  'eng-Latn-r-pDC-pcontributor-ps1-pDC-pcreator-ps1-pDC-publisher-ps1']
     >>> data_1 = [['<http://vocabularies.unesco.org/thesaurus>',
     ...             'UNESCO']]
     >>> poc1 = bcp47_rdf_extension_poc(header_2, data_1, namespaces=namespaces)
@@ -1489,6 +1585,9 @@ def bcp47_rdf_extension_poc(
     #'pskos-prefLabel'
 
     """
+    if not data:
+        data = []
+
     # raise NotImplementedError(header)
     result = {
         # 'caput': header,
@@ -1499,7 +1598,7 @@ def bcp47_rdf_extension_poc(
         # 'rdfs:Datatype': None,
         # '_unknown': [],
         # We always start with default prefixes
-        'rdf_spatia_nominalibus': RDF_SPATIA_NOMINALIBUS,
+        # 'rdf_spatia_nominalibus': RDF_SPATIA_NOMINALIBUS,
         'data': data,
         'rdf_triplis': [],
         '_error': [],
@@ -1517,15 +1616,9 @@ def bcp47_rdf_extension_poc(
 
     meta = bcp47_rdf_extension_relationship(
         header, namespaces=namespaces, strictum=strictum)
+    # raise ValueError(meta)
     result['caput_asa'] = meta
     # meta['data'] = data
-
-    # if len(result['caput_asa']['_error']) > 0:
-    #     result['caput_asa']
-    # raise ValueError(meta)
-    # raise ValueError(objective_bag, meta['rdfs:Container'])
-    # return meta
-    # print(meta['rdfs:Container'])
 
     if objective_bag not in meta['rdfs:Container']:
         possible_bags = meta['rdfs:Container'].keys()
@@ -1536,20 +1629,20 @@ def bcp47_rdf_extension_poc(
                 ))
             return result
         else:
-            if len(meta['data']) > 2:
+            if len(data) > 2:
                 # meta['data'] = meta['data'][0:1]
-                meta['data'] = meta['data'][0]
+                data = data[0]
 
             raise SyntaxError(
                 'objective_bag({0})? possible <{1}>: '
-                'header <{2}> Meta <{3}>'.format(
-                    objective_bag, possible_bags, header, meta))
+                'header <{2}> Meta <{3}>, data <{4}>'.format(
+                    objective_bag, possible_bags, header, meta, data))
 
     # print(meta)
     # print('')
     # print(meta['rdfs:Container'][objective_bag])
 
-    bag_meta = meta['rdfs:Container'][objective_bag]
+    bag_meta = result['caput_asa']['rdfs:Container'][objective_bag]
     is_urn = bag_meta['trivium']['rdf_praefixum'].startswith('urn')
     prefix_pivot = None
 
@@ -2840,6 +2933,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                 'rdf:subject': [],
                 'rdf:predicate': [],
                 'rdf:object': [],
+                'rdf:type': [],
                 'rdfs:Datatype': None,
                 'xsl:transform': [],
                 '_unknown': [],
@@ -2911,6 +3005,17 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
 
                 _bpc47_g_parts.append('s{0}-s{1}-snop'.format(
                     _subject_code, _subjec_value
+                ))
+
+            elif item.startswith('a_'):
+                prefix = item.replace('a_', '').replace('_', ':')
+                prefix_normali = _rdf_spatia_nominalibus_prefix_simplici(prefix)
+                # raise ValueError(item, prefix_normali)
+                type_prefix, type_item = prefix_normali.split(':')
+                type_meta = prefix_normali + '||NOP'
+                result['extension']['r']['rdf:type'].append(type_meta)
+                _bpc47_g_parts.append('a{0}-a{1}-anop'.format(
+                    type_prefix.upper(), type_item.lower()
                 ))
 
             elif item.startswith('p_'):

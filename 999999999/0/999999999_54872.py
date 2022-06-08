@@ -361,7 +361,12 @@ class Cli:
             # print(json.dumps(meta, sort_keys=True ,ensure_ascii=False))
             # return self.EXIT_OK
 
-            for prefix, iri in meta['rdf_spatia_nominalibus'].items():
+            # raise ValueError(meta)
+
+            rdf_spatia_nominalibus = \
+                meta['caput_asa']['rdf_spatia_nominalibus']
+
+            for prefix, iri in rdf_spatia_nominalibus.items():
                 print('@prefix {0}: <{1}> .'.format(prefix, iri))
 
             for triple in meta['rdf_triplis']:

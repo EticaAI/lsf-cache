@@ -301,6 +301,12 @@ EXEMPLUM
 --de_codex=qcc-Zxxx-r-pDCT-pmodified-ps1-txsd-tdatetime-tnop \
 --quod=.Language-Tag_normalized
 
+   {0} --de_bcp47_simplex \
+--de_codex=qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s1-snop
+
+   {0} --de_hxl_simplex \
+--de_hxlhashtag='#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_s_u2200_s1'
+
 (Non-sense attribute and hashtag, but all options)
    {0} --de_bcp47_simplex --de_codex=qcc-Zxxx-r-sU2203-s2-snop-\
 yU001D-yu007c-ynop-yU0002-yunescothes-ynop-pSKOS-pbroader-ps2-\
