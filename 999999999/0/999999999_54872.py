@@ -101,11 +101,17 @@ __EPILOGUM__ = """
 Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Debug information in JSON)
     {0} --objectivum-formato=_temp_bcp47_meta_in_json \
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-bag=2
+
+    {0} --objectivum-formato=_temp_bcp47_meta_in_json \
 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
 
 (Data operations)
+    {0} --objectivum-formato=_temp_bcp47 \
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-bag=2
+
     {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv

@@ -156,6 +156,18 @@ FIRST_ORDER_LOGIC = {
     },
 }
 
+# @TODO RDF_TYPUS_AD_TRIVIUM_INCOGNITA: test the implications of mixing
+#       SKOS (use case: the translations) and
+#       OWL (use case: data used for inferences) and how bad 'skos:Concept'
+#       would break. (rocha, 2022-06-08 10:09 UTC)
+# @TODO RDF_TYPUS_AD_TRIVIA_INCOGNITA: If things go bad, we can just ask
+#       user to not import SKOS (or change mapping from owl:Class to
+#       owl:Thing) to not break the inferences and instanceOf's
+#       (rocha, 2022-06-08 10:17 UTC)
+
+# @see https://www.w3.org/TR/skos-reference/#concepts
+RDF_TYPUS_AD_TRIVIUM_INCOGNITA = 'skos:Concept'
+RDF_TYPUS_AD_TRIVIUM_SEMPER = ['skos:Concept', 'owl:Thing']
 
 # spatiīs
 # - spatium, s, n, nominativus, https://en.wiktionary.org/wiki/spatium#Latin
@@ -1398,6 +1410,7 @@ def bcp47_rdf_extension_relationship(
     }
 
     result['rdf_spatia_nominalibus'] = RDF_SPATIA_NOMINALIBUS
+    # RDF_TYPUS_AD_TRIVIA_INCOGNITA
 
     if namespaces is not None and len(namespaces) > 0:
         for item in namespaces:
@@ -1486,7 +1499,7 @@ def bcp47_rdf_extension_relationship(
                             # We will fallback the pivots as generic classes
                             # We should enable later override this behavior
                             # via language tag on the pivot
-                            'rdf:predicate': ['rdfs:Class'],
+                            'rdf:predicate': [],
                             # @TODO: implement the semantics of is_a
                             'rdf:type': [],
                         },
@@ -1537,6 +1550,21 @@ def bcp47_rdf_extension_relationship(
 
         result['caput_originali_asa'].append(item_meta)
     # raise ValueError(result['rdfs:Container'])
+
+    for item in result['rdfs:Container']:
+        if RDF_TYPUS_AD_TRIVIUM_INCOGNITA and \
+                len(result['rdfs:Container'][item]['trivium']['rdf:type']) == 0:
+            result['rdfs:Container'][item]['trivium']['rdf:type'] = \
+                [RDF_TYPUS_AD_TRIVIUM_INCOGNITA + '||0:NOP']
+        if len(RDF_TYPUS_AD_TRIVIUM_SEMPER) > 0:
+            for semper_typus in RDF_TYPUS_AD_TRIVIUM_SEMPER:
+                if semper_typus + '||0:NOP' not in \
+                        result['rdfs:Container'][item]['trivium']['rdf:type']:
+                    result['rdfs:Container'][item][
+                        'trivium']['rdf:type'].append(
+                        semper_typus + '||0:NOP'
+                    )
+                # pass
 
     return result
 
@@ -1755,10 +1783,18 @@ def bcp47_rdf_extension_poc(
         else:
             triple_subject = '{0}:{1}'.format(prefix_pivot, linea[index_id])
 
-        # Predicate for self is Subject here
-        for predicate in bag_meta['trivium']['rdf:predicate']:
-            triple = [triple_subject, 'a', predicate]
+        for ego_typus in bag_meta['trivium']['rdf:type']:
+            if not ego_typus.endswith('||0:NOP'):
+                raise NotImplementedError('[{0}] <{1}>'.format(
+                    ego_typus, bag_meta ))
+            _ego_typus = ego_typus.replace('||0:NOP', '')
+            triple = [triple_subject, 'a', _ego_typus]
             result['rdf_triplis'].append(triple)
+
+        # Predicate for self is Subject here
+        # for predicate in bag_meta['trivium']['rdf:predicate']:
+        #     triple = [triple_subject, 'a', predicate]
+        #     result['rdf_triplis'].append(triple)
 
         for referenced_by in bag_meta['indices_columnis']:
             if referenced_by == index_id:
@@ -3009,7 +3045,8 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
 
             elif item.startswith('a_'):
                 prefix = item.replace('a_', '').replace('_', ':')
-                prefix_normali = _rdf_spatia_nominalibus_prefix_simplici(prefix)
+                prefix_normali = _rdf_spatia_nominalibus_prefix_simplici(
+                    prefix)
                 # raise ValueError(item, prefix_normali)
                 type_prefix, type_item = prefix_normali.split(':')
                 type_meta = prefix_normali + '||NOP'

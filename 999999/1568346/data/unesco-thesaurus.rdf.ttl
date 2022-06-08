@@ -7,15 +7,21 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<urn:concept10>  rdf:type  rdfs:Class .
+<urn:concept10>  rdf:type  skos:Concept ;
+        rdf:type  owl:Thing .
 
-<urn:concept9>  rdf:type  rdfs:Class .
+<urn:concept9>  rdf:type  skos:Concept ;
+        rdf:type  owl:Thing .
 
-<urn:1603:999:9>  rdf:type  rdfs:Class .
+<urn:1603:999:9>  rdf:type  skos:Concept ;
+        rdf:type  owl:Thing .
 
-<urn:1603:999:10>  rdf:type  rdfs:Class .
+<urn:1603:999:10>  rdf:type  skos:Concept ;
+        rdf:type  owl:Thing .
 
-<urn:1603:999:4938>  rdf:type  rdfs:Class .
+<urn:1603:999:4938>  rdf:type  skos:Concept ;
+        rdf:type  owl:Thing .
 
 <urn:concept4938>  skos:broader  "concept10" ;
-        rdf:type      rdfs:Class .
+        rdf:type      skos:Concept ;
+        rdf:type      owl:Thing .

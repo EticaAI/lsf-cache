@@ -196,10 +196,11 @@
         "trivium": {
           "index": 0,
           "rdf_praefixum": "urn",
-          "rdf:predicate": [
-            "rdfs:Class"
-          ],
-          "rdf:type": []
+          "rdf:predicate": [],
+          "rdf:type": [
+            "skos:Concept||0:NOP",
+            "owl:Thing||0:NOP"
+          ]
         },
         "indices_columnis": [
           0
@@ -209,10 +210,11 @@
         "trivium": {
           "index": 1,
           "rdf_praefixum": "urn",
-          "rdf:predicate": [
-            "rdfs:Class"
-          ],
-          "rdf:type": []
+          "rdf:predicate": [],
+          "rdf:type": [
+            "skos:Concept||0:NOP",
+            "owl:Thing||0:NOP"
+          ]
         },
         "indices_columnis": [
           1
@@ -222,10 +224,11 @@
         "trivium": {
           "index": 2,
           "rdf_praefixum": "urn",
-          "rdf:predicate": [
-            "rdfs:Class"
-          ],
-          "rdf:type": []
+          "rdf:predicate": [],
+          "rdf:type": [
+            "skos:Concept||0:NOP",
+            "owl:Thing||0:NOP"
+          ]
         },
         "indices_columnis": [
           2
@@ -235,10 +238,11 @@
         "trivium": {
           "index": 3,
           "rdf_praefixum": "urn",
-          "rdf:predicate": [
-            "rdfs:Class"
-          ],
-          "rdf:type": []
+          "rdf:predicate": [],
+          "rdf:type": [
+            "skos:Concept||0:NOP",
+            "owl:Thing||0:NOP"
+          ]
         },
         "indices_columnis": [
           3
@@ -282,12 +286,22 @@
     [
       "<urn:1603:45:16:76:0>",
       "a",
-      "rdfs:Class"
+      "skos:Concept"
+    ],
+    [
+      "<urn:1603:45:16:76:0>",
+      "a",
+      "owl:Thing"
     ],
     [
       "<urn:1603:45:16:24:0>",
       "a",
-      "rdfs:Class"
+      "skos:Concept"
+    ],
+    [
+      "<urn:1603:45:16:24:0>",
+      "a",
+      "owl:Thing"
     ]
   ],
   "_error": []
