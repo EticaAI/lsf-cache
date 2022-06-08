@@ -16,17 +16,33 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   </rdf:Description>
   <rdf:Description rdf:about="urn:mdciii:concept10">
+    <skos:related>concept9</skos:related>
+    <skos:prefLabel xml:lang="arb-Arab">حق في التعليم</skos:prefLabel>
+    <skos:prefLabel xml:lang="rus-Cyrl">Право на образование</skos:prefLabel>
+    <skos:prefLabel xml:lang="spa-Latn">Derecho a la educación</skos:prefLabel>
+    <skos:narrower>concept4938|concept7597</skos:narrower>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dct:modified>2019-12-15T13:26:49Z</dct:modified>
   </rdf:Description>
   <rdf:Description rdf:about="urn:mdciii:concept9">
+    <skos:related>concept10</skos:related>
+    <skos:prefLabel xml:lang="arb-Arab">سياسة تربوية</skos:prefLabel>
+    <skos:prefLabel xml:lang="rus-Cyrl">Политика в области образования</skos:prefLabel>
+    <skos:prefLabel xml:lang="spa-Latn">Política educacional</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dct:modified>2019-12-15T22:36:40Z</dct:modified>
   </rdf:Description>
   <rdf:Description rdf:about="urn:mdciii:concept4938">
+    <skos:related>concept10</skos:related>
+    <skos:prefLabel xml:lang="arb-Arab">فرص تربوية</skos:prefLabel>
+    <skos:prefLabel xml:lang="rus-Cyrl">Возможности получения образования</skos:prefLabel>
+    <skos:prefLabel xml:lang="spa-Latn">Oportunidades educacionales</skos:prefLabel>
     <skos:broader>concept10</skos:broader>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <dct:modified>2019-12-15T22:36:42Z</dct:modified>
   </rdf:Description>
   <rdf:Description rdf:about="urn:mdciii:1603:999:10">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>

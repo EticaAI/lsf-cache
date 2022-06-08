@@ -1549,6 +1549,13 @@ def bcp47_rdf_extension_relationship(
                     result['rdf_spatia_nominalibus'][predicate_namespce] = \
                         RDF_SPATIA_NOMINALIBUS_EXTRAS[predicate_namespce]
 
+                # print(item, item_meta)
+                # print(item_meta)
+                # print(item_meta['_index_ex_tabula'])
+                result['rdfs:Container'][subject_value][
+                    'indices_columnis'].append(
+                    item_meta['_index_ex_tabula'])
+
         result['caput_originali_asa'].append(item_meta)
     # raise ValueError(result['rdfs:Container'])
 
@@ -1566,6 +1573,18 @@ def bcp47_rdf_extension_relationship(
                         semper_typus + '||0:NOP'
                     )
                 # pass
+
+        # remove duplicates
+        _rdf_container_indices = result['rdfs:Container'].keys()
+        # print(_rdf_container_indices)
+        for _, item in enumerate(_rdf_container_indices):
+            # print(item, result['rdfs:Container'])
+            indices_columnis_unicus = \
+                result['rdfs:Container'][item]['indices_columnis']
+            indices_columnis_unicus = list(set(indices_columnis_unicus))
+            result['rdfs:Container'][item]['indices_columnis'] = \
+                indices_columnis_unicus
+
 
     return result
 
@@ -1698,6 +1717,8 @@ def bcp47_rdf_extension_poc(
     ) -> Tuple:
         triples = []
 
+        # raise ValueError(bag_meta)
+
         # @TODO: implement some way to discover implicit relations
         #        (up to one level). Would need scan table twice
         triples_delayed = []
@@ -1778,6 +1799,7 @@ def bcp47_rdf_extension_poc(
 
         return triples, triples_delayed
 
+    # raise ValueError(data, bag_meta)
     for linea in data:
         # triple = []
         # First pivot
@@ -1797,9 +1819,10 @@ def bcp47_rdf_extension_poc(
             result['rdf_triplis'].append(triple)
 
         # Predicate for self is Subject here
-        # for predicate in bag_meta['trivium']['rdf:predicate']:
-        #     triple = [triple_subject, 'a', predicate]
-        #     result['rdf_triplis'].append(triple)
+        for predicate in bag_meta['trivium']['rdf:predicate']:
+            # raise ValueError(predicate)
+            triple = [triple_subject, 'a', predicate]
+            result['rdf_triplis'].append(triple)
 
         for referenced_by in bag_meta['indices_columnis']:
             if referenced_by == index_id:
