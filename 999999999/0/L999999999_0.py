@@ -1495,7 +1495,8 @@ def bcp47_rdf_extension_relationship(
                         'trivium': {
                             'index': -1,
                             # 'iri': inline_namespace_iri,
-                            'rdf_praefixum': 'urn',
+                            # 'rdf_praefixum': 'urn',
+                            'rdf_praefixum': 'urnmdciii',
                             # We will fallback the pivots as generic classes
                             # We should enable later override this behavior
                             # via language tag on the pivot
@@ -1672,6 +1673,8 @@ def bcp47_rdf_extension_poc(
 
     bag_meta = result['caput_asa']['rdfs:Container'][objective_bag]
     is_urn = bag_meta['trivium']['rdf_praefixum'].startswith('urn')
+    is_urn_mdciii = bag_meta[
+        'trivium']['rdf_praefixum'].startswith('urnmdciii')
     prefix_pivot = None
 
     # return bag_meta
@@ -1778,7 +1781,9 @@ def bcp47_rdf_extension_poc(
     for linea in data:
         # triple = []
         # First pivot
-        if is_urn:
+        if is_urn_mdciii:
+            triple_subject = '<urn:mdciii:{0}>'.format(linea[index_id])
+        elif is_urn:
             triple_subject = '<urn:{0}>'.format(linea[index_id])
         else:
             triple_subject = '{0}:{1}'.format(prefix_pivot, linea[index_id])
