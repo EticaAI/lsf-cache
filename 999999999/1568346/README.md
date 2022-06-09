@@ -30,7 +30,7 @@ Full Example:
 - BCP 47: `qcc-Zxxx-r-yU0002-yunescothes-ynop`
 - Cell value: `concept10`
   - Transformed result:
-    - unescothes:concept10
+    - `unescothes:concept10`
 
 ### Test data
 - 999999999/1568346/data/unesco-thesaurus.tm.hxl.tsv

@@ -125,6 +125,17 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv \
 | rapper --quiet --input=turtle --output=turtle /dev/fd/0
 
+(Data operation; example of "SKOS version" without OWL/OBO assertions)
+    {0} --objectivum-formato=_temp_bcp47 \
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
+--rdf-sine-spatia-nominalibus=owl,obo --rdf-bag=2
+
+(Data operation; example of "OWL + OBO" without SKOS linguistic metadata)
+    {0} --objectivum-formato=_temp_bcp47 \
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
+--rdf-sine-spatia-nominalibus=skos,wdata --rdf-bag=2
+
+
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------

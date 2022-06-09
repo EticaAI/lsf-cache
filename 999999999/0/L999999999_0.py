@@ -1951,23 +1951,6 @@ def bcp47_rdf_extension_poc(
 
         return triples, triples_delayed
 
-    def _helper_aux_object(
-        object_value: str,
-        object_tabula_indici: int,
-        # trivium: str,
-    ) -> Tuple:
-        # result
-        # triples = []
-        # trivium
-        # return object_value
-        # @TODO make it non-harcoded
-        # return '<urn:mdciii:{0}>'.format(object_value)
-
-        # @TODO implement object separator
-
-        object_result = '"{0}"'.format(object_value)
-        return object_value
-
     # raise ValueError(data, bag_meta)
     for linea in data:
         # triple = []
@@ -1987,6 +1970,10 @@ def bcp47_rdf_extension_poc(
                 raise NotImplementedError('[{0}] <{1}>'.format(
                     ego_typus, bag_meta))
             _ego_typus = ego_typus.replace('||0:NOP', '')
+            if rdf_sine_spatia_nominalibus is not None:
+                _ego_typus.split(':').pop(0)
+                if _ego_typus.split(':').pop(0) in rdf_sine_spatia_nominalibus:
+                    continue
             triple = [triple_subject, 'a', _ego_typus]
             result['rdf_triplis'].append(triple)
 
@@ -2019,6 +2006,20 @@ def bcp47_rdf_extension_poc(
 
             if len(aux_triples) > 0:
                 result['rdf_triplis'].extend(aux_triples)
+
+    if rdf_sine_spatia_nominalibus is not None:
+        _temp1 = {}
+        for item_ns, item_iri in result['caput_asa']['rdf_spatia_nominalibus'].items():
+            if item_ns not in rdf_sine_spatia_nominalibus:
+                _temp1[item_ns] = item_iri
+        result['caput_asa']['rdf_spatia_nominalibus'] = _temp1
+        # raise ValueError(result['rdf_spatia_nominalibus'])
+        # pass
+        # and is_namespaced_object is True:
+
+    if 'rdf_spatia_nominalibus' in result:
+        # @TODO remove this later.
+        del result['rdf_spatia_nominalibus']
 
     if est_meta:
         # @TODO: annex extra information
@@ -2192,8 +2193,8 @@ class CodAbTabulae:
         # if formatum in ['hxltm', 'no1'] and self.identitas_locali_index < 0:
         #     self.praeparatio_identitas_locali()
 
-        if self.numerordinatio_indici < 0:
-            self.praeparatio_numerordinatio()
+            if self.numerordinatio_indici < 0:
+                self.praeparatio_numerordinatio()
 
         return self
 

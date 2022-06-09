@@ -133,7 +133,7 @@ bootstrap_1603_45_16__all() {
       # bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "3" "1" "0"
       bootstrap_1603_45_16__item "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
       # bootstrap_1603_45_16__item "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "1" "0"
-      # sleep 5
+      sleep 5
     done
   } <"${opus_temporibus_temporarium}"
 
@@ -417,6 +417,8 @@ bootstrap_999999_1603_45_16() {
 # Convert the XLSXs to intermediate formats on 999999/1603/45/16 using
 # 999999999_7200235.py
 #
+# @DEPRECATED
+#
 # Globals:
 #   ROOTDIR
 #
@@ -431,7 +433,15 @@ bootstrap_999999_1603_45_16_neo() {
   objectivum_iso3661p1a3="${1:-""}"
   # objectivum_unm49="${1:-""}"
 
+
+
   echo "${FUNCNAME[0]} ... [$objectivum_iso3661p1a3]"
+
+  echo "NOTE: this entire function is deprecated." Use bootstrap_1603_45_16__item
+  echo "  Use bootstrap_1603_45_16__item (called by bootstrap_1603_45_16__all)"
+  echo "  or at least call 999999999_7200235.py with correct --pcode-praefixo="
+  sleep 3
+  echo "running anyway..."
 
   for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
     ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
@@ -468,7 +478,7 @@ bootstrap_999999_1603_45_16_neo() {
       objectivum_archivum_hxl="${ROOTDIR}/999999/1603/45/16/hxl/${ISO3166p1a3}_${cod_level}.hxl.csv"
       objectivum_archivum_hxltm="${ROOTDIR}/999999/1603/45/16/hxltm/${ISO3166p1a3}_${cod_level}.tm.hxl.csv"
 
-      # set -x
+      set -x
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_csv \
         --ordines="$cod_level" "$file_path" >"${objectivum_archivum_csv}"
@@ -477,10 +487,11 @@ bootstrap_999999_1603_45_16_neo() {
         --methodus=xlsx_ad_hxl \
         --ordines="$cod_level" "$file_path" >"${objectivum_archivum_hxl}"
 
+
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_hxltm \
         --ordines="$cod_level" "$file_path" >"${objectivum_archivum_hxltm}"
-      # set +x
+      set +x
       # return 0
       # continue
     done
@@ -914,9 +925,10 @@ __temp_download_external_cod_data() {
 # __temp_download_external_cod_data
 # exit 1
 
-# bootstrap_1603_45_16__all
+bootstrap_1603_45_16__all
 # bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
+# bootstrap_999999_1603_45_16_neo "MOZ"
 # bootstrap_1603_45_16__apothecae "1" "1" "" ""
 # bootstrap_1603_45_16__apothecae "1" "" "" ""
 
