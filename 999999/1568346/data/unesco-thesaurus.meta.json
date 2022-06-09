@@ -198,7 +198,7 @@
             ],
             "rdf:object": [],
             "rdf:type": [],
-            "rdfs:Datatype": "xsd:datetime||NOP",
+            "rdfs:Datatype": "xsd:dateTime||NOP",
             "xsl:transform": [],
             "_unknown": [],
             "_error": []
@@ -252,7 +252,8 @@
       "obo": "http://purl.obolibrary.org/obo/",
       "skos": "http://www.w3.org/2004/02/skos/core#",
       "wdata": "http://www.wikidata.org/wiki/Special:EntityData/",
-      "dct": "http://purl.org/dc/terms/"
+      "dct": "http://purl.org/dc/terms/",
+      "unescothes": "http://vocabularies.unesco.org/thesaurus/"
     },
     "_error": []
   },
@@ -320,7 +321,7 @@
     [
       "<urn:mdciii:1603:999:9>",
       "dct:modified",
-      "\"2019-12-15T22:36:40Z\""
+      "\"2019-12-15T22:36:40Z\"^^xsd:dateTime"
     ],
     [
       "<urn:mdciii:1603:999:10>",
@@ -350,7 +351,7 @@
     [
       "<urn:mdciii:1603:999:10>",
       "dct:modified",
-      "\"2019-12-15T13:26:49Z\""
+      "\"2019-12-15T13:26:49Z\"^^xsd:dateTime"
     ],
     [
       "<urn:mdciii:1603:999:4938>",
@@ -380,7 +381,7 @@
     [
       "<urn:mdciii:1603:999:4938>",
       "dct:modified",
-      "\"2019-12-15T22:36:42Z\""
+      "\"2019-12-15T22:36:42Z\"^^xsd:dateTime"
     ]
   ],
   "_error": []

@@ -36,6 +36,11 @@ Full Example:
 - 999999999/1568346/data/unesco-thesaurus.tm.hxl.tsv
   - https://vocabularies.unesco.org/exports/thesaurus/latest/unesco-thesaurus.ttl
 
+## To Dos
+- https://www.w3.org/wiki/UsingSeeAlso
+  - maybe `-r-bVERB-bitem-bnop` ? (this would make result hardcoded to `rdfs:seeAlso`)
+  - maybe `-r-bRDFSx1dseeAlso-bitem-bnop` ?
+
 <!--
 @TODO add externay key https://www.wikidata.org/wiki/Q69370
 @TODO https://oborel.github.io/

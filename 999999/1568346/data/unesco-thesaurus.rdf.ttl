@@ -3,6 +3,7 @@
 @prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix unescothes: <http://vocabularies.unesco.org/thesaurus/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,7 +14,7 @@
         skos:prefLabel  "Oportunidades educacionales"@spa-Latn ;
         rdf:type        skos:Concept ;
         rdf:type        owl:Thing ;
-        dct:modified    "2019-12-15T22:36:42Z" .
+        dct:modified    "2019-12-15T22:36:42Z"^^xsd:dateTime .
 
 <urn:mdciii:1603:999:9>
         skos:prefLabel  "سياسة تربوية"@arb-Arab ;
@@ -21,22 +22,23 @@
         skos:prefLabel  "Política educacional"@spa-Latn ;
         rdf:type        skos:Concept ;
         rdf:type        owl:Thing ;
-        dct:modified    "2019-12-15T22:36:40Z" .
+        dct:modified    "2019-12-15T22:36:40Z"^^xsd:dateTime .
 
 <urn:mdciii:concept10>
-        skos:related   "concept9" ;
-        skos:narrower  "concept4938|concept7597" ;
+        skos:related   unescothes:concept9 ;
+        skos:narrower  unescothes:concept7597 ;
+        skos:narrower  unescothes:concept4938 ;
         rdf:type       skos:Concept ;
         rdf:type       owl:Thing .
 
 <urn:mdciii:concept9>
-        skos:related  "concept10" ;
+        skos:related  unescothes:concept10 ;
         rdf:type      skos:Concept ;
         rdf:type      owl:Thing .
 
 <urn:mdciii:concept4938>
-        skos:related  "concept10" ;
-        skos:broader  "concept10" ;
+        skos:related  unescothes:concept10 ;
+        skos:broader  unescothes:concept10 ;
         rdf:type      skos:Concept ;
         rdf:type      owl:Thing .
 
@@ -46,4 +48,4 @@
         skos:prefLabel  "Derecho a la educación"@spa-Latn ;
         rdf:type        skos:Concept ;
         rdf:type        owl:Thing ;
-        dct:modified    "2019-12-15T13:26:49Z" .
+        dct:modified    "2019-12-15T13:26:49Z"^^xsd:dateTime .
