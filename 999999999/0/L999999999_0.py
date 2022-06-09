@@ -1194,7 +1194,7 @@ def bcp47_rdf_extension(
                 if verb in RDF_SPATIA_NOMINALIBUS_PREFIX:
                     verb = RDF_SPATIA_NOMINALIBUS_PREFIX[verb]
 
-                result['rdf:type'].append('{0}||{1}'.format(
+                result['rdf:type'].append('{0}||0:{1}'.format(
                     verb, r_op_2
                 ))
                 # pass
@@ -1396,6 +1396,8 @@ def bcp47_rdf_extension_relationship(
     Returns:
         dict: _description_
     """
+    # @TODO: this function is obviously doing too much at once. Eventually
+    #        can be refactored. (rocha, 2022-06-09 10:50 UTC)
     result = {
         'caput_originali': header,
         'caput_originali_asa': [],
@@ -1445,6 +1447,7 @@ def bcp47_rdf_extension_relationship(
         }
         return result
 
+    # ========= Fist iteration over each column, START =========
     for index, item in enumerate(header):
         item_meta = bcp47_langtag(
             item, ['language', 'script', 'extension'], strictum=False)
@@ -1570,7 +1573,9 @@ def bcp47_rdf_extension_relationship(
                     item_meta['_index_ex_tabula'])
 
         result['caput_originali_asa'].append(item_meta)
-    # raise ValueError(result['rdfs:Container'])
+    
+    # ========= Fist iteration over each column, END =========
+    # Note: after here still necessary do some additional checks
 
     # Clean up, general changes, etc on rdfs:Container
     for item in result['rdfs:Container']:
@@ -1602,8 +1607,10 @@ def bcp47_rdf_extension_relationship(
         # print(result['rdfs:Container'][item]['trivium']['index'])
         _trivium_indici = int(
             result['rdfs:Container'][item]['trivium']['index'])
+
         _trivum_xsl = result['caput_originali_asa'][
             _trivium_indici]['extension']['r']['xsl:transform']
+
         if _trivum_xsl and len(_trivum_xsl) > 0:
             for _itemxls in _trivum_xsl:
                 # Exemplum: U0002||unescothes:NOP
@@ -1614,8 +1621,11 @@ def bcp47_rdf_extension_relationship(
                     # print('tval_1', tval_1)
                     result['rdfs:Container'][item]['trivium'][
                         'rdf_praefixum'] = tval_1
+
+        _trivum_rdftypes = result['caput_originali_asa'][
+            _trivium_indici]['extension']['r']['rdf:type']
                 # print('_itemxls', _itemxls)
-        # print(item, result['rdfs:Container'])
+        # print(item, _trivum_rdftypes)
         # print(item, _trivum_xsl)
         # print(item_meta)
         # print(item_meta['extension']['r']['xsl:transform'])
@@ -3217,7 +3227,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                     prefix)
                 # raise ValueError(item, prefix_normali)
                 type_prefix, type_item = prefix_normali.split(':')
-                type_meta = prefix_normali + '||NOP'
+                type_meta = prefix_normali + '||0:NOP'
                 result['extension']['r']['rdf:type'].append(type_meta)
                 _bpc47_g_parts.append('a{0}-a{1}-anop'.format(
                     type_prefix.upper(), type_item.lower()
