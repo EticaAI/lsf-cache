@@ -182,6 +182,7 @@ RDF_SPATIA_NOMINALIBUS = {
     'owl': 'http://www.w3.org/2002/07/owl#',
     'obo': 'http://purl.obolibrary.org/obo/',
     'skos': 'http://www.w3.org/2004/02/skos/core#',
+    # 'mdciii': 'urn:mdciii:',
     'wdata': 'http://www.wikidata.org/wiki/Special:EntityData/',
     # https://www.w3.org/ns/csvw
     # https://www.w3.org/ns/csvw.ttl
@@ -1828,6 +1829,7 @@ def bcp47_rdf_extension_poc(
         #         len(bag_meta['prefix']) > 0:
         #     value_prefixes = bag_meta['prefix']
 
+
         for predicate_and_subject in bag_meta['rdf:predicate']:
             if not object_literal:
                 continue
@@ -1855,10 +1857,42 @@ def bcp47_rdf_extension_poc(
                                 prefix, object_results[index]
                             )
 
+            is_object_also_a_key = False
+
+            if len(bag_meta['rdf:subject']) > 0:
+                # TODO: deal with cases where a subject can be subject for more than
+                #       a group
+                for sitem in bag_meta['rdf:subject']:
+                    if sitem.startswith((
+                        FIRST_ORDER_LOGIC['∀']['hxl'].upper(),
+                        FIRST_ORDER_LOGIC['∃']['hxl'].upper()
+                    )):
+                        is_object_also_a_key = True
+                        _temp1, _temp2 = sitem.split('||')
+                        _subject_group = _temp2.split(':').pop(0)
+                        _subject_bag = result[
+                            'caput_asa']['rdfs:Container'][_subject_group]
+                        is_object_also_urnmcdiii = False
+                        prefix_object_also_a_key = ''
+                        if _subject_bag['trivium']['rdf_praefixum'] == \
+                            'urnmdciii':
+                            is_object_also_urnmcdiii = True
+                        else:
+                            prefix_object_also_a_key = \
+                                _subject_bag['trivium']['rdf_praefixum']
+
+                        # print('foi', _temp1, _temp2, _subject_group, _subject_bag)
+                        # print('foi2', is_object_also_a_key, is_object_also_urnmcdiii, prefix_object_also_a_key)
+                # pass
+
             for item in object_results:
                 # object_result = _helper_aux_object(item)
 
-                if 'rdfs:Datatype' in bag_meta and \
+                if is_object_also_a_key and is_object_also_urnmcdiii:
+                    object_result = '<urn:mcdiii:{0}>'.format(item)
+                elif is_object_also_a_key and len(prefix_object_also_a_key) > 0:
+                    bject_result = '{0}:{1}'.format(prefix_object_also_a_key, item)
+                elif 'rdfs:Datatype' in bag_meta and \
                         bag_meta['rdfs:Datatype']:
                     _temp1, _temp2 = bag_meta['rdfs:Datatype'].split('||')
                     object_result = '"{0}"^^{1}'.format(item, _temp1)
@@ -1875,7 +1909,7 @@ def bcp47_rdf_extension_poc(
                     object_result = '"{0}"'.format(item)
 
                 triples.append([subject, predicate, object_result])
-            continue
+                # continue
 
         # print('bag_meta', bag_meta)
         # raise ValueError(bag_meta)

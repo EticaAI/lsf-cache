@@ -40,6 +40,11 @@ Full Example:
 - https://www.w3.org/wiki/UsingSeeAlso
   - maybe `-r-bVERB-bitem-bnop` ? (this would make result hardcoded to `rdfs:seeAlso`)
   - maybe `-r-bRDFSx1dseeAlso-bitem-bnop` ?
+- `urn:uuid:`
+  - beyond `urn:mciii:` prefix, potentially create some built-in `urn:uuid`
+    to unique items.
+- `urn:(hash-term)`
+  - Same as `urn:uuid:`, but with somewhat predictable output
 
 <!--
 @TODO add externay key https://www.wikidata.org/wiki/Q69370
