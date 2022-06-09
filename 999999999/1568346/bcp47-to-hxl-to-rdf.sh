@@ -37,7 +37,11 @@ bcp47_to_hxl_to_rdf__tests() {
   # numerordinatio="$1"
   # ex_librario="$2"
 
-  # echo "oi"
+  stype_blue=$(tput setaf 4)
+  stype_green=$(tput setaf 2)
+  style_red=$(tput setaf 1)
+  style_normal=$(tput sgr0)
+  printf "\t%40s\n" "${stype_blue}${FUNCNAME[0]} [STARTED]${style_normal}"
 
   archivum__regulae_exemplis="${ROOTDIR}/999999999/1568346/bcp47-to-hxl-to-rdf.hxl.tsv"
   # echo "oi2"
@@ -74,6 +78,7 @@ bcp47_to_hxl_to_rdf__tests() {
     done
   } <"${archivum__regulae_exemplis}"
 
+  printf "\t%40s\n" "${stype_green}${FUNCNAME[0]} [DONE]${style_normal}"
 }
 
 #######################################
@@ -94,6 +99,12 @@ test_unesco_thesaurus() {
   archivum__resultata_ttl="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.rdf.ttl"
   archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.rdf.xml"
   archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.meta.json"
+
+  stype_blue=$(tput setaf 4)
+  stype_green=$(tput setaf 2)
+  style_red=$(tput setaf 1)
+  style_normal=$(tput sgr0)
+  printf "\t%40s\n" "${stype_blue}${FUNCNAME[0]} [STARTED]${style_normal}"
 
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
@@ -137,6 +148,8 @@ test_unesco_thesaurus() {
   # # set -e
   echo "after riot --validate"
   set +x
+
+  printf "\t%40s\n" "${stype_green}${FUNCNAME[0]} [DONE]${style_normal}"
 }
 
 #######################################
@@ -159,6 +172,12 @@ test_cod_ab() {
   archivum__resultata_ttl="${ROOTDIR}/999999/1568346/data/cod-ab-example1.rdf.ttl"
   archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/cod-ab-example1.rdf.xml"
   archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/cod-ab-example1.meta.json"
+
+  stype_blue=$(tput setaf 4)
+  stype_green=$(tput setaf 2)
+  style_red=$(tput setaf 1)
+  style_normal=$(tput sgr0)
+  printf "\t%40s\n" "${stype_blue}${FUNCNAME[0]} [STARTED]${style_normal}"
 
   # officina/999999/1568346/data
 
@@ -220,6 +239,8 @@ test_cod_ab() {
   # # set -e
   echo "after riot --validate"
   set +x
+
+  printf "\t%40s\n" "${stype_green}${FUNCNAME[0]} [DONE]${style_normal}"
 }
 
 #######################################
@@ -242,6 +263,12 @@ test_cod_ab__with_inferences_prebuild() {
   archivum__resultata_ttl="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.ttl"
   archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.xml"
   archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.meta.json"
+
+  stype_blue=$(tput setaf 4)
+  stype_green=$(tput setaf 2)
+  style_red=$(tput setaf 1)
+  style_normal=$(tput sgr0)
+  printf "\t%40s\n" "${stype_blue}${FUNCNAME[0]} [STARTED]${style_normal}"
 
   # officina/999999/1568346/data
 
@@ -299,12 +326,15 @@ test_cod_ab__with_inferences_prebuild() {
 
 
   # Is not validating rigth now; Lets allow fail
-  echo "before riot --validate"
+  # echo "before riot --validate"
   # # set +e
-  riot --validate "${archivum__resultata_ttl}" || echo "Failed. Ignoring..."
+  # riot --validate "${archivum__resultata_ttl}" || echo "Failed. Ignoring..."
+  # If this fail, entire thing will stop and not print done
+  riot --validate "${archivum__resultata_ttl}"
   # # set -e
-  echo "after riot --validate"
+  # echo "after riot --validate"
   set +x
+  printf "\t%40s\n" "${stype_green}${FUNCNAME[0]} [DONE]${style_normal}"
 }
 
 #######################################
@@ -472,19 +502,27 @@ bcp47_and_hxlrdf_roundtrip__drill() {
 
 # echo "test"
 
-test_unesco_thesaurus
-test_cod_ab
-test_cod_ab__with_inferences_prebuild
-exit 0
+# test_unesco_thesaurus
+# test_cod_ab
+# test_cod_ab__with_inferences_prebuild
+# exit 0
 
 echo "bcp47_to_hxl_to_rdf__tests"
 bcp47_to_hxl_to_rdf__tests
 
+echo "bcp47_and_hxlrdf_roundtrip__drill"
+bcp47_and_hxlrdf_roundtrip__drill
+
 echo "test_unesco_thesaurus"
 test_unesco_thesaurus
 
-echo "bcp47_and_hxlrdf_roundtrip__drill"
-bcp47_and_hxlrdf_roundtrip__drill
+echo "test_cod_ab"
+test_cod_ab
+
+echo "test_cod_ab__with_inferences_prebuild"
+test_cod_ab__with_inferences_prebuild
+
+exit 0
 
 # ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/0/unesco-thesaurus.meta.json
 
