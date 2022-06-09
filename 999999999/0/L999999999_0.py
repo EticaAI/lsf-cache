@@ -1455,6 +1455,8 @@ def bcp47_rdf_extension_relationship(
         inline_namespace_iri = None
         is_inline_namespace = False
 
+        # raise ValueError(item_meta)
+
         is_pivot_key = False
 
         object_prefixes = None
@@ -1504,12 +1506,7 @@ def bcp47_rdf_extension_relationship(
                 subject_key = _temp1
                 subject_value = _temp2.replace(':NOP', '')
                 # raise ValueError(subject)
-                # if subject.startswith('∀'):
-                #     is_pivot_key = True
-                #     subject = subject.replace('∀', '')
-                # if subject.startswith('🔗'):
-                #     is_pivot_key = True
-                #     subject = subject.replace('🔗', '')
+
                 if subject.startswith('∀') or subject.startswith('∃') or \
                         subject.lower().startswith('u2200') or \
                         subject.lower().startswith('u2203'):
@@ -1518,21 +1515,6 @@ def bcp47_rdf_extension_relationship(
 
                 if subject_value not in result['rdfs:Container']:
                     result = _aux_init_container(result, subject_value)
-                    # result['rdfs:Container'][subject_value] = {
-                    #     'trivium': {
-                    #         'index': -1,
-                    #         # 'iri': inline_namespace_iri,
-                    #         # 'rdf_praefixum': 'urn',
-                    #         'rdf_praefixum': 'urnmdciii',
-                    #         # We will fallback the pivots as generic classes
-                    #         # We should enable later override this behavior
-                    #         # via language tag on the pivot
-                    #         'rdf:predicate': [],
-                    #         # @TODO: implement the semantics of is_a
-                    #         'rdf:type': [],
-                    #     },
-                    #     'indices_columnis': []
-                    # }
 
                 if inline_namespace is not None:
                     result['rdfs:Container'][subject_value][
@@ -1580,7 +1562,6 @@ def bcp47_rdf_extension_relationship(
 
                 # print(item, item_meta)
                 # print(item_meta)
-                # print(item_meta['_index_ex_tabula'], subject, result['rdfs:Container'].keys())
                 if subject_value not in result['rdfs:Container']:
                     result = _aux_init_container(result, subject_value)
 
@@ -1591,6 +1572,7 @@ def bcp47_rdf_extension_relationship(
         result['caput_originali_asa'].append(item_meta)
     # raise ValueError(result['rdfs:Container'])
 
+    # Clean up, general changes, etc on rdfs:Container
     for item in result['rdfs:Container']:
         if RDF_TYPUS_AD_TRIVIUM_INCOGNITA and \
                 len(result['rdfs:Container'][item]['trivium']['rdf:type']) == 0:
@@ -1609,13 +1591,34 @@ def bcp47_rdf_extension_relationship(
         # remove duplicates
         _rdf_container_indices = result['rdfs:Container'].keys()
         # print(_rdf_container_indices)
-        for _, item in enumerate(_rdf_container_indices):
+        for _, item2 in enumerate(_rdf_container_indices):
             # print(item, result['rdfs:Container'])
             indices_columnis_unicus = \
-                result['rdfs:Container'][item]['indices_columnis']
+                result['rdfs:Container'][item2]['indices_columnis']
             indices_columnis_unicus = list(set(indices_columnis_unicus))
-            result['rdfs:Container'][item]['indices_columnis'] = \
+            result['rdfs:Container'][item2]['indices_columnis'] = \
                 indices_columnis_unicus
+
+        # print(result['rdfs:Container'][item]['trivium']['index'])
+        _trivium_indici = int(
+            result['rdfs:Container'][item]['trivium']['index'])
+        _trivum_xsl = result['caput_originali_asa'][
+            _trivium_indici]['extension']['r']['xsl:transform']
+        if _trivum_xsl and len(_trivum_xsl) > 0:
+            for _itemxls in _trivum_xsl:
+                # Exemplum: U0002||unescothes:NOP
+                _temp1, temp2 = _itemxls.split('||')
+                tverb = _temp1
+                tval_1, _nop_tval_2 = temp2.split(':')
+                if tverb.lower() == EXTRA_OPERATORS['STX']['hxl']:
+                    # print('tval_1', tval_1)
+                    result['rdfs:Container'][item]['trivium'][
+                        'rdf_praefixum'] = tval_1
+                # print('_itemxls', _itemxls)
+        # print(item, result['rdfs:Container'])
+        # print(item, _trivum_xsl)
+        # print(item_meta)
+        # print(item_meta['extension']['r']['xsl:transform'])
 
     return result
 
@@ -1678,6 +1681,7 @@ def bcp47_rdf_extension_poc(
         # '_unknown': [],
         # We always start with default prefixes
         # 'rdf_spatia_nominalibus': RDF_SPATIA_NOMINALIBUS,
+        'rdf_spatia_nominalibus': {},
         'data': data,
         'rdf_triplis': [],
         '_error': [],
@@ -1829,7 +1833,6 @@ def bcp47_rdf_extension_poc(
         #         len(bag_meta['prefix']) > 0:
         #     value_prefixes = bag_meta['prefix']
 
-
         for predicate_and_subject in bag_meta['rdf:predicate']:
             if not object_literal:
                 continue
@@ -1860,8 +1863,8 @@ def bcp47_rdf_extension_poc(
             is_object_also_a_key = False
 
             if len(bag_meta['rdf:subject']) > 0:
-                # TODO: deal with cases where a subject can be subject for more than
-                #       a group
+                # TODO: deal with cases where a subject can be subject for
+                #       more than a group
                 for sitem in bag_meta['rdf:subject']:
                     if sitem.startswith((
                         FIRST_ORDER_LOGIC['∀']['hxl'].upper(),
@@ -1875,15 +1878,11 @@ def bcp47_rdf_extension_poc(
                         is_object_also_urnmcdiii = False
                         prefix_object_also_a_key = ''
                         if _subject_bag['trivium']['rdf_praefixum'] == \
-                            'urnmdciii':
+                                'urnmdciii':
                             is_object_also_urnmcdiii = True
                         else:
                             prefix_object_also_a_key = \
                                 _subject_bag['trivium']['rdf_praefixum']
-
-                        # print('foi', _temp1, _temp2, _subject_group, _subject_bag)
-                        # print('foi2', is_object_also_a_key, is_object_also_urnmcdiii, prefix_object_also_a_key)
-                # pass
 
             for item in object_results:
                 # object_result = _helper_aux_object(item)
@@ -1891,7 +1890,8 @@ def bcp47_rdf_extension_poc(
                 if is_object_also_a_key and is_object_also_urnmcdiii:
                     object_result = '<urn:mcdiii:{0}>'.format(item)
                 elif is_object_also_a_key and len(prefix_object_also_a_key) > 0:
-                    bject_result = '{0}:{1}'.format(prefix_object_also_a_key, item)
+                    bject_result = '{0}:{1}'.format(
+                        prefix_object_also_a_key, item)
                 elif 'rdfs:Datatype' in bag_meta and \
                         bag_meta['rdfs:Datatype']:
                     _temp1, _temp2 = bag_meta['rdfs:Datatype'].split('||')

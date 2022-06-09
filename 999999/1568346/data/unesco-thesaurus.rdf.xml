@@ -8,6 +8,18 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  <rdf:Description rdf:about="http://vocabularies.unesco.org/thesaurus/concept10">
+    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept9"/>
+    <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept7597"/>
+    <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept4938"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://vocabularies.unesco.org/thesaurus/concept9">
+    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </rdf:Description>
   <rdf:Description rdf:about="urn:mdciii:1603:999:4938">
     <skos:prefLabel xml:lang="arb-Arab">فرص تربوية</skos:prefLabel>
     <skos:prefLabel xml:lang="rus-Cyrl">Возможности получения образования</skos:prefLabel>
@@ -24,19 +36,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T22:36:40Z</dct:modified>
   </rdf:Description>
-  <rdf:Description rdf:about="urn:mdciii:concept10">
-    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept9"/>
-    <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept7597"/>
-    <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept4938"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:mdciii:concept9">
-    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:mdciii:concept4938">
+  <rdf:Description rdf:about="http://vocabularies.unesco.org/thesaurus/concept4938">
     <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
     <skos:broader rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>

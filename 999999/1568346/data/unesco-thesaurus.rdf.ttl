@@ -8,6 +8,16 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+unescothes:concept10  skos:related  unescothes:concept9 ;
+        skos:narrower  unescothes:concept7597 ;
+        skos:narrower  unescothes:concept4938 ;
+        rdf:type       skos:Concept ;
+        rdf:type       owl:Thing .
+
+unescothes:concept9  skos:related  unescothes:concept10 ;
+        rdf:type      skos:Concept ;
+        rdf:type      owl:Thing .
+
 <urn:mdciii:1603:999:4938>
         skos:prefLabel  "فرص تربوية"@arb-Arab ;
         skos:prefLabel  "Возможности получения образования"@rus-Cyrl ;
@@ -24,19 +34,7 @@
         rdf:type        owl:Thing ;
         dct:modified    "2019-12-15T22:36:40Z"^^xsd:dateTime .
 
-<urn:mdciii:concept10>
-        skos:related   unescothes:concept9 ;
-        skos:narrower  unescothes:concept7597 ;
-        skos:narrower  unescothes:concept4938 ;
-        rdf:type       skos:Concept ;
-        rdf:type       owl:Thing .
-
-<urn:mdciii:concept9>
-        skos:related  unescothes:concept10 ;
-        rdf:type      skos:Concept ;
-        rdf:type      owl:Thing .
-
-<urn:mdciii:concept4938>
+unescothes:concept4938
         skos:related  unescothes:concept10 ;
         skos:broader  unescothes:concept10 ;
         rdf:type      skos:Concept ;
