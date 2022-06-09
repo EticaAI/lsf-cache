@@ -1647,6 +1647,7 @@ def bcp47_rdf_extension_poc(
         objective_bag: str = '1',
         _auxiliary_bags: List[str] = None,
         namespaces: List[dict] = None,
+        rdf_sine_spatia_nominalibus: List = None,
         est_meta: bool = False,
         strictum: bool = True
 ) -> dict:
@@ -1701,6 +1702,9 @@ def bcp47_rdf_extension_poc(
         'rdf_triplis': [],
         '_error': [],
     }
+
+    if not rdf_sine_spatia_nominalibus or len(rdf_sine_spatia_nominalibus) == 0:
+        rdf_sine_spatia_nominalibus = None
 
     # return {}
 
@@ -1901,12 +1905,14 @@ def bcp47_rdf_extension_poc(
 
             for item in object_results:
                 # object_result = _helper_aux_object(item)
+                is_namespaced_object = False
 
                 if is_object_also_a_key and is_object_also_urnmcdiii:
                     object_result = '<urn:mcdiii:{0}>'.format(item)
                 elif is_object_also_a_key and len(prefix_object_also_a_key) > 0:
-                    bject_result = '{0}:{1}'.format(
+                    object_result = '{0}:{1}'.format(
                         prefix_object_also_a_key, item)
+                    is_namespaced_object = True
                 elif 'rdfs:Datatype' in bag_meta and \
                         bag_meta['rdfs:Datatype']:
                     _temp1, _temp2 = bag_meta['rdfs:Datatype'].split('||')
@@ -1923,6 +1929,20 @@ def bcp47_rdf_extension_poc(
                     #     item, object_tabula_indici)
                     object_result = '"{0}"'.format(item)
 
+                # raise ValueError(item)
+                if rdf_sine_spatia_nominalibus is not None \
+                        and predicate.find(':') > -1:
+                    _item_p_ns = predicate.split(':').pop(0)
+                    if _item_p_ns in rdf_sine_spatia_nominalibus:
+                        continue
+                # raise ValueError(item, is_namespaced_object)
+                if rdf_sine_spatia_nominalibus is not None \
+                        and is_namespaced_object is True:
+                    # raise ValueError(item)
+                    _item_o_ns = object_result.split(':').pop(0)
+                    if _item_o_ns in rdf_sine_spatia_nominalibus:
+                        continue
+                # raise ValueError(item)
                 triples.append([subject, predicate, object_result])
                 # continue
 
@@ -1957,6 +1977,9 @@ def bcp47_rdf_extension_poc(
         elif is_urn:
             triple_subject = '<urn:{0}>'.format(linea[index_id])
         else:
+            if rdf_sine_spatia_nominalibus is not None and \
+                    prefix_pivot in rdf_sine_spatia_nominalibus:
+                continue
             triple_subject = '{0}:{1}'.format(prefix_pivot, linea[index_id])
 
         for ego_typus in bag_meta['trivium']['rdf:type']:

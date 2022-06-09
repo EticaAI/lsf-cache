@@ -535,6 +535,8 @@ exit 0
 
 # ./999999999/0/linguacodex.py --de_bcp47_simplex --de_codex=por-Latn-r-pSKOS-pprefLabel-ps4
 
+# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-bag=2 --rdf-sine-spatia-nominalibus=skos
+
 #### BFO _______________________________________________________________________
 # @see https://standards.iso.org/iso-iec/21838/-2/ed-1/en/
 # @see https://basic-formal-ontology.org/
