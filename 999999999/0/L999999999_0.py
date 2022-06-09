@@ -1573,7 +1573,7 @@ def bcp47_rdf_extension_relationship(
                     item_meta['_index_ex_tabula'])
 
         result['caput_originali_asa'].append(item_meta)
-    
+
     # ========= Fist iteration over each column, END =========
     # Note: after here still necessary do some additional checks
 
@@ -1614,9 +1614,9 @@ def bcp47_rdf_extension_relationship(
         if _trivum_xsl and len(_trivum_xsl) > 0:
             for _itemxls in _trivum_xsl:
                 # Exemplum: U0002||unescothes:NOP
-                _temp1, temp2 = _itemxls.split('||')
+                _temp1, _temp2 = _itemxls.split('||')
                 tverb = _temp1
-                tval_1, _nop_tval_2 = temp2.split(':')
+                tval_1, _nop_tval_2 = _temp2.split(':')
                 if tverb.lower() == EXTRA_OPERATORS['STX']['hxl']:
                     # print('tval_1', tval_1)
                     result['rdfs:Container'][item]['trivium'][
@@ -1624,11 +1624,16 @@ def bcp47_rdf_extension_relationship(
 
         _trivum_rdftypes = result['caput_originali_asa'][
             _trivium_indici]['extension']['r']['rdf:type']
-                # print('_itemxls', _itemxls)
-        # print(item, _trivum_rdftypes)
-        # print(item, _trivum_xsl)
-        # print(item_meta)
-        # print(item_meta['extension']['r']['xsl:transform'])
+        if _trivum_rdftypes and len(_trivum_rdftypes) > 0:
+            # Exemplum: ['obo:BFO_0000029||0:NOP']
+            for _itemtype in _trivum_rdftypes:
+                # _temp1, _temp2 = _itemtype.split('||')
+                # tverb = _temp1
+                # tval_1, _nop_tval_2 = _temp2.split(':')
+                if _itemtype not in \
+                        result['rdfs:Container'][item]['trivium']['rdf:type']:
+                    result['rdfs:Container'][item]['trivium'][
+                        'rdf:type'].append(_itemtype)
 
     return result
 
