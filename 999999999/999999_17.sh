@@ -67,9 +67,9 @@ ROOTDIR="$(pwd)"
 #### Manual action, TEST locally, one per time, START --------------------------
 # Download entire XLSX to local temp
 file_download_1603_xlsx "1"
-actiones_completis_locali "1603_1_1"
-actiones_completis_locali "1603_1_7"
-actiones_completis_locali "1603_1_51"
+# actiones_completis_locali "1603_1_1"
+# actiones_completis_locali "1603_1_7"
+# actiones_completis_locali "1603_1_51"
 # actiones_completis_locali "1603_1_99"
 # actiones_completis_locali "1603_25_1"
 # actiones_completis_locali "1603_44_86"
