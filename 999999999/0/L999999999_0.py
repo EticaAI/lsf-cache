@@ -183,8 +183,6 @@ RDF_SPATIA_NOMINALIBUS = {
     'obo': 'http://purl.obolibrary.org/obo/',
     'skos': 'http://www.w3.org/2004/02/skos/core#',
     # 'mdciii': 'urn:mdciii:',
-    'wdata': 'http://www.wikidata.org/wiki/Special:EntityData/',
-    'devnull': 'http://example.org/dev/null/',
     # https://www.w3.org/ns/csvw.ttl
     # 'csvw': '<http://www.w3.org/ns/csvw#>',
     # 'p': 'http://www.wikidata.org/prop/',
@@ -197,9 +195,15 @@ RDF_SPATIA_NOMINALIBUS = {
 
 # This can be pre-populated by tools before being used
 # @see rdf_namespaces_extras()
+# @see https://www.wikidata.org/wiki/EntitySchema:E49
 RDF_SPATIA_NOMINALIBUS_EXTRAS = {
-
+    'devnull': 'http://example.org/dev/null/',
+    'wdata': 'http://www.wikidata.org/wiki/Special:EntityData/',
+    # 'p': 'http://www.wikidata.org/prop/',
+    'wdt': 'http://www.wikidata.org/prop/direct/',
+    'wdv': 'http://www.wikidata.org/value/',
 }
+# For "Base OWL" of Wikidata, download link: http://wikiba.se/ontology
 
 # Note: prefixes that already are lower case do not be here
 RDF_SPATIA_NOMINALIBUS_PREFIX = {
@@ -2288,7 +2292,6 @@ class CodAbTabulae:
         """numerordinatio_bpc47
         """
         return self.praeparatio_numerordinatio()
-
 
     @staticmethod
     def quod_columna_alphabeto_orini(column: list = None) -> str:

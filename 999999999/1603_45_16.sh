@@ -844,18 +844,18 @@ __temp_preprocess_external_indexes() {
 }
 
 __temp_preproces_quicktest_1603_16_24() {
-  echo "${FUNCNAME[0]} ..."
+  # echo "${FUNCNAME[0]} ..."
 
-  fontem_archivum="${ROOTDIR}/999999/1603/45/16/xlsx/ago.xlsx"
-  objectivum_archivum_ordo_1="${ROOTDIR}/999999/1603/16/24/1/1603_16_24_1.no1.bpc47.csv"
-  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
-    --methodus=xlsx_ad_no1bcp47 \
-    --numerordinatio-praefixo=1603_16 \
-    --unm49=24 \
-    --ordines=1 \
-    --pcode-praefixo=AO \
-    "${fontem_archivum}" > "$objectivum_archivum_ordo_1"
-  return 0
+  # fontem_archivum="${ROOTDIR}/999999/1603/45/16/xlsx/ago.xlsx"
+  # objectivum_archivum_ordo_1="${ROOTDIR}/999999/1603/16/24/1/1603_16_24_1.no1.bpc47.csv"
+  # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+  #   --methodus=xlsx_ad_no1bcp47 \
+  #   --numerordinatio-praefixo=1603_16 \
+  #   --unm49=24 \
+  #   --ordines=1 \
+  #   --pcode-praefixo=AO \
+  #   "${fontem_archivum}" > "$objectivum_archivum_ordo_1"
+  # return 0
 
   numerordinatio_praefixo="1603_16"
   unm49="24"
@@ -865,18 +865,28 @@ __temp_preproces_quicktest_1603_16_24() {
   est_temporarium_fontem="1"
   est_temporarium_objectivum="1"
 
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
   _iso3661p1a3_lower=$(echo "$iso3661p1a3" | tr '[:upper:]' '[:lower:]')
 
   fontem_archivum="${_basim_fontem}/1603/45/16/xlsx/${_iso3661p1a3_lower}.xlsx"
-  objectivum_archivum_basi="${_basim_objectivum}/1603/45/16/${unm49}"
+  # objectivum_archivum_basi="${_basim_objectivum}/1603/45/16/${unm49}"
+  objectivum_archivum_basi="${_basim_objectivum}/1603/16/${unm49}"
   opus_temporibus_temporarium="${ROOTDIR}/999999/0/${unm49}~lvl.tsv"
 
   echo "${FUNCNAME[0]} ... [$numerordinatio_praefixo] [$unm49] [$iso3661p1a3] [$pcode_praefixo]"
 
   ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
   ISO3166p1a3=$(echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
-
-
 
 
   for ((i = 0; i <= cod_ab_level_max; i++)); do
@@ -890,6 +900,7 @@ __temp_preproces_quicktest_1603_16_24() {
 
     objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
     objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+    objectivum_archivum_no1bcp47="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
 
     # set -x
     # rm "$objectivum_archivum_no1" || true
@@ -897,6 +908,7 @@ __temp_preproces_quicktest_1603_16_24() {
     # continue
     echo "  cod-ab-$_iso3661p1a3_lower-$cod_level [$objectivum_archivum_no1] ..."
     if [ ! -d "$objectivum_archivum_basi_lvl" ]; then
+      echo "Pre-creating the directory [$objectivum_archivum_basi_lvl]"
       mkdir "$objectivum_archivum_basi_lvl"
     fi
 
@@ -911,6 +923,18 @@ __temp_preproces_quicktest_1603_16_24() {
     set +x
 
     frictionless validate "${objectivum_archivum_no1}" || true
+
+    set -x
+    "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+      --methodus=xlsx_ad_no1bcp47 \
+      --numerordinatio-praefixo="$numerordinatio_praefixo" \
+      --ordines="$cod_level" \
+      --pcode-praefix="$pcode_praefixo" \
+      --unm49="$unm49" \
+      "$fontem_archivum" >"${objectivum_archivum_no1bcp47}"
+    set +x
+
+    frictionless validate "${objectivum_archivum_no1bcp47}" || true
 
   done
 }
