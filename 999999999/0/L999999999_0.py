@@ -183,6 +183,88 @@ FIRST_ORDER_LOGIC = {
     },
 }
 
+# @see https://hxlstandard.org/standard/1-1final/dictionary/#classification
+# @see https://www.wikidata.org/wiki/Wikidata:List_of_properties
+# @see https://docs.google.com/spreadsheets
+#      /d/1NjSI2LaS3SqbgYc0HdD8oIb7lofGtiHgoKKATCpwVdY/edit#gid=1088874596
+# @see https://www.wikidata.org/wiki/Wikidata:List_of_properties/name
+HXL_ATTRIBUTES_AD_WIKIDATA = {
+    'geo': {
+        '+name+v_unterm': {
+            # P1448: official name of the subject in its official language(s)
+            'wdata': 'P1448'  # official name
+        },
+        '+name': {
+            # P1448: short name of a place, organisation, person, journal,
+            #        Wikidata property, etc.
+            'wdata': 'P1813'  # short name
+        },
+        # [+code / +v_pcode] varies by context
+        # '+code': {}
+        '+v_m49': {
+            'wdata': 'P2082'  # United Nations M.49 code for the subject item
+        },
+        '+v_iso3166p1a2': {
+            'wdata': 'P297'  # ISO 3166-1 alpha-2 code
+        },
+        '+v_iso3166p1a3': {
+            'wdata': 'P298'  # ISO 3166-1 alpha-3 code
+        },
+        # Consider using UN m49 code instead of the ISO one
+        '+v_iso3166p1n': {
+            'wdata': 'P299'  # ISO 3166-1 numeric code
+        },
+        '+v_iso3166p2': {
+            'wdata': 'P300'  # subdivision code ISO 3166-2
+        },
+    },
+    # Note: avoid use generic
+    'zzzgeneric': {
+        '+name': {
+            # name; name the subject is known by.
+            # If a more specific property is available, use that
+            'wdata': 'P2561'
+        }
+    },
+}
+
+
+# wdtaxonomy Q6256 -P P131
+HXL_HASHTAGS_AD_WIKIDATA = {
+    '#country': {
+        'wdata': 'Q6256'  # country
+    },
+    # Not a valid HXL hashtag, but using anyway as alias to country
+    '#adm0': {
+        'hxlattrs': HXL_ATTRIBUTES_AD_WIKIDATA['geo'],
+        'wdata': 'Q6256'  # country
+    },
+    '#adm1': {
+        'hxlattrs': HXL_ATTRIBUTES_AD_WIKIDATA['geo'],
+        'wdata': 'Q10864048'  # first-level administrative country subdivisio
+    },
+    '#adm2': {
+        'hxlattrs': HXL_ATTRIBUTES_AD_WIKIDATA['geo'],
+        'wdata': 'Q13220204'  # second-level administrative country subdivision
+    },
+    '#adm3': {
+        'hxlattrs': HXL_ATTRIBUTES_AD_WIKIDATA['geo'],
+        'wdata': 'Q13221722'  # third-level administrative country subdivision
+    },
+    '#adm4': {
+        'hxlattrs': HXL_ATTRIBUTES_AD_WIKIDATA['geo'],
+        'wdata': 'Q14757767'  # fourth-level administrative country subdivision
+    },
+    '#adm5': {
+        'hxlattrs': HXL_ATTRIBUTES_AD_WIKIDATA['geo'],
+        'wdata': 'Q15640612'  # fifth-level administrative country subdivision
+    },
+    '#adm6': {
+        'hxlattrs': HXL_ATTRIBUTES_AD_WIKIDATA['geo'],
+        'wdata': 'Q22927291'  # sixth-level administrative country subdivision
+    },
+}
+
 # @TODO RDF_TYPUS_AD_TRIVIUM_INCOGNITA: test the implications of mixing
 #       SKOS (use case: the translations) and
 #       OWL (use case: data used for inferences) and how bad 'skos:Concept'
@@ -2093,7 +2175,7 @@ class CodAbTabulae:
     caput_hxl: List[str] = None
     caput_hxltm: List[str] = None
     caput_no1: List[str] = None
-    caput_no1bpc47: List[str] = None
+    caput_no1bcp47: List[str] = None
     data: List[list] = None
     dictionaria_linguarum: Type['DictionariaLinguarum'] = None
     ordo: int = 1
@@ -2167,8 +2249,8 @@ class CodAbTabulae:
         if self._objectivo_dictionario == 'no1':
             caput = self.caput_no1
         if self._objectivo_dictionario == 'no1bcp47':
-            # caput = self.caput_no1bpc47
-            caput = self.caput_no1
+            caput = self.caput_no1bcp47
+            # caput = self.caput_no1
 
         # @TODO potentially re-arrange the order of columns on the result
         return caput, data
@@ -2241,6 +2323,27 @@ class CodAbTabulae:
 
             if self.numerordinatio_indici < 0:
                 self.praeparatio_numerordinatio()
+
+        if formatum in ['no1bcp47']:
+            self.caput_no1bcp47 = []
+
+            # self.dictionaria_linguarum = DictionariaLinguarum()
+
+            for index, res in enumerate(self.caput_no1):
+                caput_novi = self.quod_no1bcp47_de_hxltm_rei(res)
+
+                # if caput_novi == '#item+conceptum+codicem':
+                #     self.identitas_locali_index = index
+                # if caput_novi == '#item+conceptum+numerordinatio':
+                #     self.numerordinatio_indici = index
+
+                self.caput_no1bcp47.append(caput_novi)
+
+        # if formatum in ['hxltm', 'no1'] and self.identitas_locali_index < 0:
+        #     self.praeparatio_identitas_locali()
+
+            # if self.numerordinatio_indici < 0:
+            #     self.praeparatio_numerordinatio()
 
         return self
 
@@ -2322,9 +2425,33 @@ class CodAbTabulae:
 
         self.data = data_novis
 
-    def praeparatio_numerordinatio_bpc47(self):
-        """numerordinatio_bpc47
+    def praeparatio_numerordinatio_bcp47(self):
+        """numerordinatio_bcp47
         """
+
+        self.praeparatio_numerordinatio()
+
+        self.caput_no1bcp47 = self.caput_no1
+        # @TODO ...
+
+        # identitas_locali_index = self.caput_hxltm.index(
+        #     '#item+conceptum+codicem')
+        # self.caput_no1.insert(0, '#item+conceptum+numerordinatio')
+        # data_novis = []
+
+        # for linea in self.data:
+        #     linea_novae = ['{0}:{1}:{2}:{3}'.format(
+        #         self.numerordinatio_praefixo,
+        #         self.unm49,
+        #         str(self.ordo),
+        #         linea[identitas_locali_index],
+
+        #     )]
+        #     linea_novae.extend(linea)
+        #     data_novis.append(linea_novae)
+
+        # self.data = data_novis
+
         return self.praeparatio_numerordinatio()
 
     @staticmethod
@@ -2569,6 +2696,28 @@ class CodAbTabulae:
         # @TODO '#adm1+code+v_pcode' likely to be alpha 2 (needs check data)
 
         return self.quod_hxltm_de_hxl_rei(hxlhashtag)
+
+    @staticmethod
+    def quod_no1bcp47_de_hxltm_rei(hxlhashtag: str) -> str:
+        """quod_no1bcp47_de_hxltm_rei
+
+        Args:
+            res (str):
+
+        Returns:
+            str:
+        """
+        # lingua = ''
+
+        if not hxlhashtag or len(hxlhashtag) == 0 or \
+                not hxlhashtag.startswith('#'):
+            return ''
+
+        if hxlhashtag in BCP47_EX_HXL:
+            return BCP47_EX_HXL[hxlhashtag]['bcp47']
+
+        # return hxlhashtag + '+oi'
+        return hxlhashtag
 
 
 def configuratio(
@@ -3247,7 +3396,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
         '_error': [],
     }
 
-    _bpc47_g_parts = []
+    _bcp47_g_parts = []
 
     # raise ValueError(hashtag)
 
@@ -3308,7 +3457,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                         _subject_code, _subjec_value
                     ))
 
-                _bpc47_g_parts.append('s{0}-s{1}-snop'.format(
+                _bcp47_g_parts.append('s{0}-s{1}-snop'.format(
                     _subject_code, _subjec_value
                 ))
 
@@ -3320,7 +3469,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                 type_prefix, type_item = prefix_normali.split(':')
                 type_meta = prefix_normali + '||0:NOP'
                 result['extension']['r']['rdf:type'].append(type_meta)
-                _bpc47_g_parts.append('a{0}-a{1}-anop'.format(
+                _bcp47_g_parts.append('a{0}-a{1}-anop'.format(
                     type_prefix.upper(), type_item.lower()
                 ))
 
@@ -3378,10 +3527,10 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                         raw_predicate,
                         _subject, _subject_nop)
 
-                _bpc47_g_parts.append('p{0}-p{1}-ps{2}'.format(
+                _bcp47_g_parts.append('p{0}-p{1}-ps{2}'.format(
                     _predicate_ns.upper(), _predicate_item, _subject,
                 ))
-                # _bpc47_g_parts.append('p{0}-p{1}-p{2}'.format(
+                # _bcp47_g_parts.append('p{0}-p{1}-p{2}'.format(
                 #     _predicate_ns.upper(), _predicate_item,
                 #     _subject, _subject_nop.lower()
                 # ))
@@ -3408,14 +3557,14 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                     result['extension']['r']['xsl:transform'].append(
                         '{0}||{1}:NOP'.format(tverb.upper(), tval_1.lower()))
 
-                    _bpc47_g_parts.append('y{0}-y{1}-ynop'.format(
+                    _bcp47_g_parts.append('y{0}-y{1}-ynop'.format(
                         EXTRA_OPERATORS['GS']['hxl'].upper(), decoded_separator
                     ))
                 elif tverb == EXTRA_OPERATORS['STX']['hxl']:
                     result['extension']['r']['xsl:transform'].append(
                         '{0}||{1}:NOP'.format(tverb.upper(), tval_1.lower()))
 
-                    _bpc47_g_parts.append('y{0}-y{1}-ynop'.format(
+                    _bcp47_g_parts.append('y{0}-y{1}-ynop'.format(
                         tverb.upper(), tval_1.lower()
                     ))
                 else:
@@ -3431,7 +3580,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
                 _cell_transformer = item[2:]
                 tverb, tval_1 = _cell_transformer.split('_')
                 # raise ValueError(item)
-                _bpc47_g_parts.append('t{0}-t{1}-tnop'.format(
+                _bcp47_g_parts.append('t{0}-t{1}-tnop'.format(
                     tverb.upper(), tval_1.lower()
                 ))
 
@@ -3443,10 +3592,10 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
             else:
                 result['_unknown'].append('rdf_parts [{0}]'.format(item))
             # pass
-        if len(_bpc47_g_parts) > 0:
+        if len(_bcp47_g_parts) > 0:
             result['extension']['r']['rdf:Statement_raw'] = \
-                'r-' + '-'.join(_bpc47_g_parts)
-            # norm.append('r-' + '-'.join(_bpc47_g_parts))
+                'r-' + '-'.join(_bcp47_g_parts)
+            # norm.append('r-' + '-'.join(_bcp47_g_parts))
 
     # resultatum = '-'.join(resultatum)
 
@@ -3480,7 +3629,7 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
         #     #     norm.append(result['extension'][key])
 
         if result['extension']['r']['rdf:Statement_raw']:
-            # norm.append('r-' + '-'.join(_bpc47_g_parts))
+            # norm.append('r-' + '-'.join(_bcp47_g_parts))
             norm.append(result['extension']['r']['rdf:Statement_raw'])
 
         if len(result['privateuse']) > 0:
