@@ -95,6 +95,33 @@ BCP47_LANGTAG_EXTENSIONS = {
     'r': lambda r, strictum: bcp47_rdf_extension(r, strictum=strictum)
 }
 
+# BCP47_EX_HXL = {
+#     'qcc-Zxxx-r-aMDCIII-alatcodicem-anop':
+#     '#item+conceptum+codicem',
+#     'qcc-Zxxx-r-aMDCIII-alatnumerordinatio-anop-sU2200-s1603-snop':
+#     '#item+conceptum+numerordinatio',
+# }
+BCP47_EX_HXL = {
+    '#item+conceptum+codicem': {
+        'bcp47': 'qcc-Zxxx-r-aMDCIII-alatcodicem-anop',
+        'hxl': '#item+rem+i_qcc+is_zxxx+rdf_a_mdciii_latcodicem',
+        'hxltm': '#item+conceptum+codicem'
+    },
+    '#item+conceptum+numerordinatio': {
+        'bcp47': 'qcc-Zxxx-r-aMDCIII-alatnumerordinatio-anop-sU2200-s1603-snop',
+        'hxl': '#item+rem+i_qcc+is_zxxx'
+        '+rdf_a_mdciii_latnumerordinatio+rdf_s_u2200_s1603',
+        'hxltm': '#item+conceptum+numerordinatio'
+    }
+}
+
+BCP47_AD_HXL = {
+    'qcc-Zxxx-r-aMDCIII-alatcodicem-anop':
+    BCP47_EX_HXL['#item+conceptum+codicem'],
+    'qcc-Zxxx-r-aMDCIII-alatnumerordinatio-anop-sU2200-s1603-snop':
+    BCP47_EX_HXL['#item+conceptum+numerordinatio']
+}
+
 # @TODO allow non hardcoded CSV_SEPARATORS
 # Hacky way to have inline cell separators.
 CSVW_SEPARATORS = {
@@ -1810,6 +1837,9 @@ def bcp47_rdf_extension_poc(
     ) -> Tuple:
         triples = []
 
+        if subject is None or len(subject) == 0:
+            return []
+
         # raise ValueError(bag_meta)
         # print(bag_meta)
 
@@ -1959,6 +1989,10 @@ def bcp47_rdf_extension_poc(
     for linea in data:
         # triple = []
         # First pivot
+
+        if not linea[index_id] or len(linea[index_id]) == 0:
+            continue
+
         if is_urn_mdciii:
             triple_subject = '<urn:mdciii:{0}>'.format(linea[index_id])
         elif is_urn:
@@ -3215,8 +3249,19 @@ def hxl_hashtag_to_bcp47(hashtag: str) -> str:
 
     _bpc47_g_parts = []
 
+    # raise ValueError(hashtag)
+
+    # _know_hardcoded = {**BCP47_EX_HXL, **BCP47_EX_HXL_EXTRAS}
+    _know_hardcoded = BCP47_EX_HXL
+    if hashtag in _know_hardcoded:
+        _hashtag = _know_hardcoded[hashtag]['hxl']
+        result['_callbacks']['hxl_original'] = hashtag
+        # raise ValueError(hashtag, _hashtag)
+        hashtag = _hashtag
+
     parts = hashtag.split('+')
     # bash_hashtag = parts.pop(0)
+    # print('parts', parts)
     privateuse = []
     rdf_parts = []
     for item in parts:

@@ -466,7 +466,33 @@ bcp47_and_hxlrdf_roundtrip__drill() {
     "qcc-Zxxx-r-pSKOS-pbroader-ps2-sU2203-s2-snop-tXSD-tdatetime-tnop-yU0002-yunescothes-ynop-yU001D-yu007c-ynop" \
     ""
 
-  index_now=$((4))
+  echo ""
+  echo "    test4 (special case qcc-Zxxx-r-aMDCIII-alatcodicem-anop)"
+  bcp47_and_hxlrdf_roundtrip \
+    "qcc-Zxxx-r-aMDCIII-alatcodicem-anop" \
+    "" \
+    "qcc-Zxxx-r-aMDCIII-alatcodicem-anop" \
+    ""
+
+  echo ""
+  echo "    test5 (special case qcc-Zxxx-r-aMDCIII-alatnumerordinatio-anop-sU2200-s1603-snop)"
+  bcp47_and_hxlrdf_roundtrip \
+    "qcc-Zxxx-r-aMDCIII-alatnumerordinatio-anop-sU2200-s1603-snop" \
+    "" \
+    "qcc-Zxxx-r-aMDCIII-alatnumerordinatio-anop-sU2200-s1603-snop" \
+    ""
+
+  echo ""
+  echo "    test6 (special case +conceptum+codicem -> +i_qcc+is_zxxx+rdf_a_mdciii_latcodicem)"
+  bcp47_and_hxlrdf_roundtrip \
+    "" \
+    "+conceptum+codicem" \
+    "" \
+    "+i_qcc+is_zxxx+rdf_a_mdciii_latcodicem"
+
+  echo "@TODO (test other hardcoded conversions from BCP47_EX_HXL and BCP47_AD_HXL"
+
+  index_now=$((7))
 
   # Will fail without manual ajusts:
   #  - lat-Latn-r-pSKOS-pprefLabel-ps1

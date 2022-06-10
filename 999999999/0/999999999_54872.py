@@ -43,8 +43,11 @@ import yaml
 
 # l999999999_0 = __import__('999999999_0')
 from L999999999_0 import (
+    BCP47_AD_HXL,
     RDF_SPATIA_NOMINALIBUS_EXTRAS,
+    bcp47_langtag,
     bcp47_rdf_extension_poc,
+    hxl_hashtag_to_bcp47,
     hxltm_carricato,
     HXLTMAdRDFSimplicis,
     hxltm_carricato_brevibus,
@@ -135,6 +138,14 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
 --rdf-sine-spatia-nominalibus=skos,wdata --rdf-bag=2
 
+(Data operations, header conversion RDF+HXL -> RDF+BCP47)
+    varbcp47=$(head -n1 \
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv)
+    {0} --objectivum-formato=_temp_header_hxl_to_bcp47 "$varbcp47"
+
+(Data operations, header conversion RDF+BCP47 -> RDF+HXL)
+    {0} --objectivum-formato=_temp_header_bcp47_to_hxl \
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv
 
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
@@ -262,6 +273,8 @@ class Cli:
                 # 'application/x-ndjson',
                 '_temp_bcp47',
                 '_temp_bcp47_meta_in_json',
+                '_temp_header_hxl_to_bcp47',
+                '_temp_header_bcp47_to_hxl',
             ],
             # required=True
             default='application/x-turtle'
@@ -401,6 +414,110 @@ class Cli:
 
             for triple in meta['rdf_triplis']:
                 print('{0} {1} {2} .'.format(triple[0], triple[1], triple[2]))
+
+            return self.EXIT_OK
+
+        if pyargs.objectivum_formato == '_temp_header_bcp47_to_hxl':
+            delimiter = "\t"
+            hxl_base = '#item+rem'
+            if _stdin is True:
+                raise NotImplementedError
+            if _infile.find("\t") == -1:
+                if _infile.find(",") > -1:
+                    delimiter = ','
+                else:
+                    raise NotImplementedError
+
+            caput = _infile.split(delimiter)
+            caput_novo = []
+            errors = []
+
+            for item in caput:
+                if item in BCP47_AD_HXL:
+                    # print(BCP47_AD_HXL[item])
+                    # item_meta = bcp47_langtag(BCP47_AD_HXL[item])
+                    caput_novo.append(BCP47_AD_HXL[item]['hxltm'])
+                    continue
+                # item_meta = bcp47_langtag(item,strictum=False)
+                item_meta = bcp47_langtag(item)
+
+                if len(item_meta['_error']) == 0 and \
+                        item_meta['Language-Tag_normalized']:
+                    caput_novo.append('{0}{1}'.format(
+                        hxl_base,
+                        item_meta['_callbacks']['hxl_attrs']
+                    ))
+                else:
+                    caput_novo.append('qcc-Zxxx-x-error')
+                    if len(item_meta['_error']) > 0:
+                        errors.append('ERROR: {0}'.format(item))
+                        errors.extend(item_meta['_error'])
+                    else:
+                        errors.append('ERROR: {0} <{1}>'.format(
+                            item, item_meta))
+
+                # caput_novo.append('{0}{1}'.format(
+                #     hxl_base,
+                #     item_meta['_callbacks']['hxl_attrs']
+                # ))
+
+            if len(errors) > 0:
+                print(errors)
+                return self.EXIT_ERROR
+
+            print(delimiter.join(caput_novo))
+
+            # caput, data = hxltm_carricato_brevibus(
+            #     _infile, _stdin, punctum_separato="\t")
+
+            # meta = bcp47_rdf_extension_poc(
+            #     caput, data, objective_bag=pyargs.rdf_bag,
+            #     rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus,
+            #     est_meta=True)
+            # print(json.dumps(meta, sort_keys=False, ensure_ascii=False))
+            return self.EXIT_OK
+
+        if pyargs.objectivum_formato == '_temp_header_hxl_to_bcp47':
+            delimiter = "\t"
+            if _stdin is True:
+                raise NotImplementedError
+            if _infile.find("\t") == -1:
+                if _infile.find(",") > -1:
+                    delimiter = ','
+                else:
+                    raise NotImplementedError
+
+            caput = _infile.split(delimiter)
+            caput_novo = []
+            errors = []
+
+            # print('TODO _temp_header_hxl_to_bcp47', caput)
+
+            for item in caput:
+                item_meta = hxl_hashtag_to_bcp47(item)
+                # print('')
+                # print(item, item_meta)
+                if len(item_meta['_error']) == 0 and \
+                        item_meta['Language-Tag_normalized']:
+                    caput_novo.append(item_meta['Language-Tag_normalized'])
+                else:
+                    caput_novo.append('qcc-Zxxx-x-error')
+                    if len(item_meta['_error']) > 0:
+                        errors.append('ERROR: {0}'.format(item))
+                        errors.extend(item_meta['_error'])
+                    else:
+                        errors.append('ERROR: {0} <{1}>'.format(
+                            item, item_meta))
+                # caput_novo.append('{0}{1}'.format(
+                #     hxl_base,
+                #     item_meta['_callbacks']['hxl_attrs']
+                # ))
+
+            if len(errors) > 0:
+                print(errors)
+                return self.EXIT_ERROR
+
+            print(delimiter.join(caput_novo))
 
             return self.EXIT_OK
 
