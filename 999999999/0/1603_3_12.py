@@ -519,26 +519,26 @@ SELECT {select} WHERE {{
         for item in self.cum_interlinguis:
             # print('item')
             # (GROUP_CONCAT(?subdivisionLabel; separator = ", ") as ?subdivisionLabels)
-            # select.append('?item__rem__i_qcc__is_zxxx__ix_wikip{0}'.format(
+            # select.append('?item__rem__i_qcc__is_zxxx__ix_wdatap{0}'.format(
 
             # @TODO maybe this will not work as expected if wikidata_entity_p
             #       have more than one value, but this already is an exception
             if 'P' + item in self.wikidata_entity_p:
 
-                # (GROUP_CONCAT(DISTINCT STRAFTER(STR(?p131_values), "entity/"); separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wikip131)
+                # (GROUP_CONCAT(DISTINCT STRAFTER(STR(?p131_values), "entity/"); separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wdatap131)
                 # select.append(
                 #     '(STRAFTER(STR(?p{0}_values), "entity/") '
-                #     'AS ?item__rem__i_qcc__is_zxxx__ix_wikip{0})'.format(
+                #     'AS ?item__rem__i_qcc__is_zxxx__ix_wdatap{0})'.format(
                 #     item
                 # ))
-                select.append('(GROUP_CONCAT(DISTINCT STRAFTER(STR(?p{0}_values), "entity/"); separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wikip{0})'.format(
+                select.append('(GROUP_CONCAT(DISTINCT STRAFTER(STR(?p{0}_values), "entity/"); separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wdatap{0})'.format(
                     item
                 ))
             else:
-                select.append('(GROUP_CONCAT(DISTINCT ?p{0}_values; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wikip{0})'.format(
+                select.append('(GROUP_CONCAT(DISTINCT ?p{0}_values; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wdatap{0})'.format(
                     item
                 ))
-            # OPTIONAL { ?item wdt:P6555 ?item__rem__i_qcc__is_zxxx__ix_wikip6555 . }
+            # OPTIONAL { ?item wdt:P6555 ?item__rem__i_qcc__is_zxxx__ix_wdatap6555 . }
             filter_otional.append(
                 'OPTIONAL { ?item wdt:P' + item +
                 ' ?p' + item + '_values . }'

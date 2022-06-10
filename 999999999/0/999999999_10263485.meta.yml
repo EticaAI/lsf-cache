@@ -56,17 +56,17 @@ methodus:
         ex_tabulae: [NO_FANTASIA]
         # hxl_hashtag: "#loc+facility+code+v_bra_cnes"
         hxl_hashtag: "#loc+facility+name"
-        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_wikip1813"
+        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_wdatap1813"
       CO_MUNICIPIO_GESTOR:
         ex_tabulae: [CO_MUNICIPIO_GESTOR]
         hxl_hashtag: "#adm2+code+v_pcode"
         hxl_res: "BR{{municipio_id}}"
-        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_wikip1585"
+        hxltm_hashtag: "#item+rem+i_qcc+is_zxxx+ix_wdatap1585"
       CO_SIASUS:
       NU_CNPJ:
         ex_tabulae: [NU_CNPJ]
         hxl_hashtag: "#loc+facility+code+v_76_cnes"
-        hxltm_hashtag: "#meta+rem+i_qcc+is_zxxx+ix_wikip6204"
+        hxltm_hashtag: "#meta+rem+i_qcc+is_zxxx+ix_wdatap6204"
       NU_CPF:
         ex_tabulae: [NU_CPF]
         hxl_hashtag: "#meta+{{caput_clavi_normali}}+sensitive"
@@ -111,13 +111,13 @@ methodus:
       # @TODO mover isso para outro lugar (precisa ser generalizado)
       __skos_mapping:
         1:
-          hxltm: "#item+rem+i_qcc+is_zxxx+ix_wikip1585"
+          hxltm: "#item+rem+i_qcc+is_zxxx+ix_wdatap1585"
           # Brazilian municipality code (P1585)
           predicate: "<http://www.wikidata.org/prop/P1585>"
         2:
-          hxltm: "#meta+rem+i_qcc+is_zxxx+ix_wikip6204"
+          hxltm: "#meta+rem+i_qcc+is_zxxx+ix_wdatap6204"
           # CNPJ (P6204)
           predicate: "<http://www.wikidata.org/prop/P6204>"
       skos:related:
         1:
-          hxltm: '#item+rem+i_qcc+is_zxxx+ix_wikip1585'
+          hxltm: '#item+rem+i_qcc+is_zxxx+ix_wdatap1585'

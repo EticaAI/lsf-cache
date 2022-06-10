@@ -2833,7 +2833,7 @@ opus_temporibus_cdn() {
     --ex-opere-temporibus='cdn' \
     --quaero-ix_n1603ia='({publicum}>=1)' \
     --in-ordinem=chaos \
-    --in-limitem=3 \
+    --in-limitem=1 \
     >"$opus_temporibus_temporarium"
 
   # "${ROOTDIR}/999999999/0/1603_1.py" \

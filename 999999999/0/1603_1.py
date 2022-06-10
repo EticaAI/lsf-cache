@@ -1374,46 +1374,46 @@ class Codex:
 
         scrīptor = self.quod_res('0_1603_1_7_2616_50')
         if scrīptor and qhxl(scrīptor, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip50'] = \
+            meta['#item+rem+i_qcc+is_zxxx+ix_wdatap50'] = \
                 qhxl(scrīptor, meta_langs)
 
         translator = self.quod_res('0_1603_1_7_2616_655')
         if translator and qhxl(translator, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip655'] = \
+            meta['#item+rem+i_qcc+is_zxxx+ix_wdatap655'] = \
                 qhxl(translator, meta_langs)
 
         dictiōnārium_ēditōrī = self.quod_res('0_1603_1_7_2616_98')
         if dictiōnārium_ēditōrī and \
                 qhxl(dictiōnārium_ēditōrī, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip98'] = \
+            meta['#item+rem+i_qcc+is_zxxx+ix_wdatap98'] = \
                 qhxl(dictiōnārium_ēditōrī, meta_langs)
 
         publisher = self.quod_res('0_1603_1_7_2616_123')
         if publisher and qhxl(publisher, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip123'] = \
+            meta['#item+rem+i_qcc+is_zxxx+ix_wdatap123'] = \
                 qhxl(publisher, meta_langs)
 
         publication_date = self.quod_res('0_1603_1_7_2616_577')
         if publication_date and qhxl(publication_date, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip577'] = \
+            meta['#item+rem+i_qcc+is_zxxx+ix_wdatap577'] = \
                 qhxl(publication_date, meta_langs)
 
-        meta['#item+rem+i_qcc+is_zxxx+ix_wikip393'] = \
+        meta['#item+rem+i_qcc+is_zxxx+ix_wdatap393'] = \
             datetime.datetime.now().replace(microsecond=0).isoformat()
 
         spdx_licentiam = self.quod_res('0_1603_1_7_2616_2479')
         if spdx_licentiam and qhxl(spdx_licentiam, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip2479'] = \
+            meta['#item+rem+i_qcc+is_zxxx+ix_wdatap2479'] = \
                 qhxl(spdx_licentiam, meta_langs)
 
         reference_url = self.quod_res('0_1603_1_7_2616_854')
         if reference_url and qhxl(reference_url, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip854'] = \
+            meta['#item+rem+i_qcc+is_zxxx+ix_wdatap854'] = \
                 qhxl(reference_url, meta_langs)
 
         spōnsor = self.quod_res('0_1603_1_7_2616_859')
         if spōnsor and qhxl(spōnsor, meta_langs) is not None:
-            meta['#item+rem+i_qcc+is_zxxx+ix_wikip859'] = \
+            meta['#item+rem+i_qcc+is_zxxx+ix_wdatap859'] = \
                 qhxl(spōnsor, meta_langs)
 
         # paginae.append("")
@@ -1538,30 +1538,30 @@ class Codex:
 
         # scrīptor = self.quod_res('0_1603_1_7_2616_50')
         # if scrīptor and qhxl(scrīptor, meta_langs) is not None:
-        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip50'] = \
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wdatap50'] = \
         #         qhxl(scrīptor, meta_langs)
 
         # publisher = self.quod_res('0_1603_1_7_2616_123')
         # if publisher and qhxl(publisher, meta_langs) is not None:
-        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip123'] = \
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wdatap123'] = \
         #         qhxl(publisher, meta_langs)
 
         # publication_date = self.quod_res('0_1603_1_7_2616_577')
         # if publication_date and qhxl(publication_date, meta_langs) is not None:
-        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip577'] = \
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wdatap577'] = \
         #         qhxl(publication_date, meta_langs)
 
-        # meta['#item+rem+i_qcc+is_zxxx+ix_wikip393'] = \
+        # meta['#item+rem+i_qcc+is_zxxx+ix_wdatap393'] = \
         #     datetime.datetime.now().replace(microsecond=0).isoformat()
 
         # spdx_licentiam = self.quod_res('0_1603_1_7_2616_2479')
         # if spdx_licentiam and qhxl(spdx_licentiam, meta_langs) is not None:
-        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip2479'] = \
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wdatap2479'] = \
         #         qhxl(spdx_licentiam, meta_langs)
 
         # reference_url = self.quod_res('0_1603_1_7_2616_854')
         # if reference_url and qhxl(reference_url, meta_langs) is not None:
-        #     meta['#item+rem+i_qcc+is_zxxx+ix_wikip854'] = \
+        #     meta['#item+rem+i_qcc+is_zxxx+ix_wdatap854'] = \
         #         qhxl(reference_url, meta_langs)
 
         # # paginae.append("")
@@ -1668,14 +1668,14 @@ class Codex:
                 '0_1603_1_7_2616_7535_' + codicem_normale)
 
             # @DEPRECATED: reconsider if we keep or remove it. For now
-            #              we're using #meta+rem+i_qcc+is_zxxx+ix_wikip7535
+            #              we're using #meta+rem+i_qcc+is_zxxx+ix_wdatap7535
             #              as one additional column
             if speciale_note and \
                     qhxl(speciale_note, meta_langs) is not None:
                 term = qhxl(speciale_note, meta_langs)
                 term2 = self.notitiae.translatio(term)
                 meta = {}
-                meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = _pre_pad(term2)
+                meta['#item+rem+i_qcc+is_zxxx+ix_wdatap7535'] = _pre_pad(term2)
                 # meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
 
                 resultatum.append("<<<")
@@ -2269,14 +2269,14 @@ class Codex:
                     qhxl(scope_and_content, meta_langs) is not None:
                 term = qhxl(scope_and_content, meta_langs)
                 term2 = self.notitiae.translatio(term)
-                meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = term2
-                # meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
+                meta['#item+rem+i_qcc+is_zxxx+ix_wdatap7535'] = term2
+                # meta['#item+rem+i_qcc+is_zxxx+ix_wdatap7535'] = \
                 #     term.replace("\\n", "\n")
 
             # paginae.append("")
             # paginae.append(str(meta))
             # paginae.append("")
-            if len(meta.keys()) > 0 and meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535']:
+            if len(meta.keys()) > 0 and meta['#item+rem+i_qcc+is_zxxx+ix_wdatap7535']:
 
                 paginae.extend(self.res_explanationibus(meta))
                 # meta_tabulae = self.conceptum_ad_tabula_codicibus(meta)
@@ -2302,7 +2302,7 @@ class Codex:
                 # paginae.extend(meta_tabulae)
                 paginae.extend(self.res_explanationibus(meta2))
                 paginae.append("")
-                # meta['#item+rem+i_qcc+is_zxxx+ix_wikip7535'] = \
+                # meta['#item+rem+i_qcc+is_zxxx+ix_wdatap7535'] = \
                 #     term.replace("\\n", "\n")
 
         referentia = []
@@ -2842,9 +2842,9 @@ class CodexAnnexo:
         _sarcina = self.codex.sarcinarum.quod_sarcinarum(self.sarcina)
         link = ''
 
-        if _sarcina and 'ix_wikip854' in _sarcina['meta'] and \
-                _sarcina['meta']['ix_wikip854']:
-            link = _sarcina['meta']['ix_wikip854']
+        if _sarcina and 'ix_wdatap854' in _sarcina['meta'] and \
+                _sarcina['meta']['ix_wdatap854']:
+            link = _sarcina['meta']['ix_wdatap854']
 
         return link
 
@@ -2856,8 +2856,8 @@ class CodexAnnexo:
             # return str(_sarcina)
             return ''
 
-        if _sarcina['_meta'][self.nomen]['ix_wikip854']:
-            link = _sarcina['_meta'][self.nomen]['ix_wikip854']
+        if _sarcina['_meta'][self.nomen]['ix_wdatap854']:
+            link = _sarcina['_meta'][self.nomen]['ix_wdatap854']
 
         return link
 
@@ -3881,13 +3881,13 @@ class CodexSarcinarumAdnexis:
 
     def _quod_meta(self, trivum):
         meta = {
-            'ix_wikip2479': None,  # license
+            'ix_wdatap2479': None,  # license
             'ix_wikiq': None,
-            'ix_wikip577': None,  # /publication date/
-            'ix_wikip1476': None,  # /title of published work.../
-            'ix_wikip110': None,  # /illustrator/
-            'ix_wikip50': None,   # /author/
-            'ix_wikip854': None,  # /reference URL/
+            'ix_wdatap577': None,  # /publication date/
+            'ix_wdatap1476': None,  # /title of published work.../
+            'ix_wdatap110': None,  # /illustrator/
+            'ix_wdatap50': None,   # /author/
+            'ix_wdatap854': None,  # /reference URL/
             # '__': [],
         }
         # @TODO: allow have more detailed metadata per individual item
@@ -3911,13 +3911,13 @@ class CodexSarcinarumAdnexis:
     def _quod_meta_rem(self, trivum):
         resultatum = {}
         meta = {
-            'ix_wikip2479': None,  # license
+            'ix_wdatap2479': None,  # license
             'ix_wikiq': None,
-            'ix_wikip577': None,  # /publication date/
-            'ix_wikip1476': None,  # /title of published work.../
-            'ix_wikip110': None,  # /illustrator/
-            'ix_wikip50': None,   # /author/
-            'ix_wikip854': None,  # /reference URL/
+            'ix_wdatap577': None,  # /publication date/
+            'ix_wdatap1476': None,  # /title of published work.../
+            'ix_wdatap110': None,  # /illustrator/
+            'ix_wdatap50': None,   # /author/
+            'ix_wdatap854': None,  # /reference URL/
             # '__': [],
         }
         # @TODO: allow have more detailed metadata per individual item
@@ -3945,17 +3945,17 @@ class CodexSarcinarumAdnexis:
     def _quod_meta_titulum(self, meta):
         nomen = ''
 
-        if meta['ix_wikip110']:
-            nomen += meta['ix_wikip110'] + ' '
+        if meta['ix_wdatap110']:
+            nomen += meta['ix_wdatap110'] + ' '
 
-        if meta['ix_wikip577']:
-            nomen += meta['ix_wikip577'] + ' '
+        if meta['ix_wdatap577']:
+            nomen += meta['ix_wdatap577'] + ' '
 
-        if meta['ix_wikip1476']:
-            nomen += meta['ix_wikip1476'] + ' '
+        if meta['ix_wdatap1476']:
+            nomen += meta['ix_wdatap1476'] + ' '
 
-        if meta['ix_wikip2479']:
-            nomen += ' [' + meta['ix_wikip2479'] + ']'
+        if meta['ix_wdatap2479']:
+            nomen += ' [' + meta['ix_wdatap2479'] + ']'
 
         return nomen
 
@@ -4534,8 +4534,8 @@ class DictionariaNumerordinatio:
             '0',
             '0',
             '#item',
-            'rem+i_qcc+is_zxxx+ix_wikip',
-            '#item+rem+i_qcc+is_zxxx+ix_wikip',
+            'rem+i_qcc+is_zxxx+ix_wdatap',
+            '#item+rem+i_qcc+is_zxxx+ix_wdatap',
             '/Wikidata, P; Property (also attribute)/',
             'https://www.wikidata.org/wiki/Property:$1'
         ])
@@ -4554,7 +4554,7 @@ class DictionariaNumerordinatio:
             '#item+rem+i_qcc+is_zxxx+ix_hxla',
             '#item+rem+i_qcc+is_zxxx+ix_exemplum',
             '#item+rem+i_mul+is_zyyy',
-            '#item+rem+i_qcc+is_zxxx+ix_wikip1630',  # formatter URL
+            '#item+rem+i_qcc+is_zxxx+ix_wdatap1630',  # formatter URL
             # '#meta',
         ])
 

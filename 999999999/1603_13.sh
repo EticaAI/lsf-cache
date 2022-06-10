@@ -42,7 +42,7 @@ numerordiatio_summarium() {
   basim="$1"
   shopt -s nullglob globstar
   # for i in "$basim/"**
-  echo "#meta+id,#meta+archivum,#meta+conceptum+total,#meta+caput+total,#status+ix_hxlix,#status+ix_hxlvoc,#status+ix_wikip,#status+ix_wikiq,#meta+caput,#meta+value+ix_hxlix,#meta+value+ix_hxlvoc,#meta+value+ix_wikip,#meta+value+ix_wikiq"
+  echo "#meta+id,#meta+archivum,#meta+conceptum+total,#meta+caput+total,#status+ix_hxlix,#status+ix_hxlvoc,#status+ix_wdatap,#status+ix_wikiq,#meta+caput,#meta+value+ix_hxlix,#meta+value+ix_hxlvoc,#meta+value+ix_wdatap,#meta+value+ix_wikiq"
   for i in "$basim/"**/*no1.tm.hxl.csv; do
     if [[ "$i" =~ .meta. ]]; then
       # echo "Skiping meta..."
@@ -53,7 +53,7 @@ numerordiatio_summarium() {
     status_ix_hxlix="0"
     status_ix_hxlvoc="0"
     #item +rem +i_qcc +is_zxxx +ix_wikiq
-    status_ix_wikip="0"
+    status_ix_wdatap="0"
     status_ix_wikiq="0"
     concept_count=$(wc --lines "$relative_path" | cut --fields=1 --delimiter=' ')
     concept_count=$((concept_count - 1))
@@ -83,12 +83,12 @@ numerordiatio_summarium() {
       values_ix_hxlvoc=$(echo "$values_ix_hxlvoc" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|" | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
       values_ix_hxlvoc=$(echo "$values_ix_hxlvoc" | tr --delete "[:blank:]")
     fi
-    if [[ "$caput" =~ ix_wikip ]]; then
-      status_ix_wikip="1"
-      #echo "status_ix_wikip $relative_path"
-      values_ix_wikip=$(hxlcut --include="#item+rem+i_qcc+is_zxxx+ix_wikip" "$relative_path" | tail -n +3 | sort | uniq)
-      values_ix_wikip=$(echo "$values_ix_wikip" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|" | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
-      values_ix_wikip=$(echo "$values_ix_wikip" | tr --delete "[:blank:]")
+    if [[ "$caput" =~ ix_wdatap ]]; then
+      status_ix_wdatap="1"
+      #echo "status_ix_wdatap $relative_path"
+      values_ix_wdatap=$(hxlcut --include="#item+rem+i_qcc+is_zxxx+ix_wdatap" "$relative_path" | tail -n +3 | sort | uniq)
+      values_ix_wdatap=$(echo "$values_ix_wdatap" | sed 's/^+//' | tr --squeeze-repeats "\r\n" "|" | tr --delete '"' | sed 's/^|//' | sed 's/|$//')
+      values_ix_wdatap=$(echo "$values_ix_wdatap" | tr --delete "[:blank:]")
     fi
     if [[ "$caput" =~ ix_wikiq ]]; then
       status_ix_wikiq="1"
@@ -103,7 +103,7 @@ numerordiatio_summarium() {
     fi
 
     # echo "$caput"
-    echo "$numerordiation,$relative_path,$concept_count,$caput_count,$status_ix_hxlix,$status_ix_hxlvoc,$status_ix_wikip,$status_ix_wikiq,$caput,$values_ix_hxlix,$values_ix_hxlvoc,$values_ix_wikip,$values_ix_wikiq"
+    echo "$numerordiation,$relative_path,$concept_count,$caput_count,$status_ix_hxlix,$status_ix_hxlvoc,$status_ix_wdatap,$status_ix_wikiq,$caput,$values_ix_hxlix,$values_ix_hxlvoc,$values_ix_wdatap,$values_ix_wikiq"
     # echo "$numerordiation,$relative_path,$concept_count,$caput_count,$status_ix_hxlix,$status_ix_hxlvoc,<$caput>,,"
   done
 }
@@ -152,7 +152,7 @@ numerordiatio_summarium() {
 numerordiatio_summarium "$ROOTDIR/1603" >999999/1603/13/1603~meta.hxl.csv
 hxlexpand --query="#status+ix_hxlix>0" --tags="#meta+value+ix_hxlix" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_hxlix" >999999/1603/13/1603~meta__ix_hxlix.hxl.csv
 hxlexpand --query="#status+ix_hxlvoc>0" --tags="#meta+value+ix_hxlvoc" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_hxlvoc" >999999/1603/13/1603~meta__ix_hxlvoc.hxl.csv
-hxlexpand --query="#status+ix_wikip>0" --tags="#meta+value+ix_wikip" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_wikip" >999999/1603/13/1603~meta__ix_wikip.hxl.csv
+hxlexpand --query="#status+ix_wdatap>0" --tags="#meta+value+ix_wdatap" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_wdatap" >999999/1603/13/1603~meta__ix_wdatap.hxl.csv
 hxlexpand --query="#status+ix_wikiq>0" --tags="#meta+value+ix_wikiq" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_wikiq" >999999/1603/13/1603~meta__ix_wikiq.hxl.csv
 
 # hxlexpand --tags="#meta+value+ix_hxlix" 999999/1603/13/1603~meta.hxl.csv | hxlcut --include="#meta+id,#meta+value+ix_hxlix"

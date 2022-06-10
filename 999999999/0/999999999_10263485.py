@@ -115,8 +115,8 @@ CSV_AD_HXLTM_TABULAE = {
     # @TODO: create wikiq
     'CO_UNIDADE': '#item+rem+i_qcc+is_zxxx+ix_brcnae',
     'NO_FANTASIA': '#meta+NO_FANTASIA',
-    'CO_MUNICIPIO_GESTOR': '#item+rem+i_qcc+is_zxxx+ix_wikip1585',
-    'NU_CNPJ': '#item+rem+i_qcc+is_zxxx+ix_wikip6204',
+    'CO_MUNICIPIO_GESTOR': '#item+rem+i_qcc+is_zxxx+ix_wdatap1585',
+    'NU_CNPJ': '#item+rem+i_qcc+is_zxxx+ix_wdatap6204',
     'CO_CNES': '#meta+CO_CNES',
     'DT_ATUALIZACAO': '#meta+DT_ATUALIZACAO',
     'TP_UNIDADE': '#meta+TP_UNIDADE',

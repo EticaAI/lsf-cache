@@ -21,7 +21,7 @@
 - <a href="#1603_44_111">1603_44_111</a> <sup>C.36</sup> <sub>r.I.15</sub>  <sub>r.L.227</sub>
 - <a href="#1603_45_1">1603_45_1</a> <sup>C.347</sup> <sub>r.I.15</sub>  <sub>r.L.246</sub>
 - <a href="#1603_45_19">1603_45_19</a> <sup>C.71</sup> <sub>r.I.12</sub>  <sub>r.L.242</sub>
-- <a href="#1603_45_31">1603_45_31</a> <sup>C.25</sup> <sub>r.I.14</sub>  <sub>r.L.212</sub>
+- <a href="#1603_45_31">1603_45_31</a> <sup>C.25</sup> <sub>r.I.14</sub>  <sub>r.L.213</sub>
 - <a href="#1603_63_101">1603_63_101</a> <sup>C.332</sup> <sub>r.I.14</sub>  <sub>r.L.250</sub>
 - <a href="#1603_64_41">1603_64_41</a> <sup>C.56</sup> <sub>r.I.12</sub>  <sub>r.L.152</sub>
 - <a href="#1603_64_604">1603_64_604</a> <sup>C.28</sup> <sub>r.I.12</sub>  <sub>r.L.228</sub>
@@ -79,8 +79,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_lingualibus": 1973842197,
-            "res_interlingualibus": 776715327,
+            "res_lingualibus": 106351066,
+            "res_interlingualibus": 1633575921,
             "res_picturae": null
         },
         "summa": {
@@ -90,7 +90,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-05-26T22:44:25"
+            "opus": "2022-06-10T12:29:28"
         }
     }
 }
@@ -146,8 +146,8 @@
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 4099537252,
-            "res_lingualibus": 127703530,
+            "res_interlingualibus": 207678323,
+            "res_lingualibus": 3953513707,
             "res_picturae": null
         },
         "summa": {
@@ -157,7 +157,7 @@
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-05-11T22:24:40"
+            "opus": "2022-06-10T12:09:49"
         }
     }
 }
@@ -823,8 +823,8 @@ A more well known term to describe the concepts here could be _Crimes against hu
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 1078467486,
-            "res_lingualibus": 1428995289,
+            "res_interlingualibus": 2611919653,
+            "res_lingualibus": 420980324,
             "res_picturae": null
         },
         "summa": {
@@ -834,7 +834,7 @@ A more well known term to describe the concepts here could be _Crimes against hu
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-05-11T22:24:23"
+            "opus": "2022-06-10T12:04:02"
         }
     }
 }
@@ -999,8 +999,8 @@ https://en.wikipedia.org/wiki/Nonbuilding_structure
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 2174947454,
-            "res_lingualibus": 2397618822,
+            "res_interlingualibus": 353786954,
+            "res_lingualibus": 3602680874,
             "res_picturae": null
         },
         "summa": {
@@ -1010,7 +1010,7 @@ https://en.wikipedia.org/wiki/Nonbuilding_structure
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-29T02:06:34"
+            "opus": "2022-06-10T12:00:22"
         }
     }
 }
@@ -1026,7 +1026,7 @@ https://en.wikipedia.org/wiki/Nonbuilding_structure
 - status_quo
   - concepta: 25
   - res_interlingualibus: 14
-  - res_lingualibus: 212
+  - res_lingualibus: 213
 
 ### 1603_45_31 Methodī ex dictiōnāriōrum corde
 
@@ -1073,18 +1073,18 @@ The terminology translations are extracted from Wikidata, which means this recom
     "status_quo": {
         "crc": {
             "concepta": null,
-            "res_interlingualibus": 465855141,
-            "res_lingualibus": 4104446690,
+            "res_interlingualibus": 1846307715,
+            "res_lingualibus": 2310413358,
             "res_picturae": null
         },
         "summa": {
             "concepta": 25,
             "res_interlingualibus": 14,
-            "res_lingualibus": 212,
+            "res_lingualibus": 213,
             "res_picturae": null
         },
         "tempus": {
-            "opus": "2022-04-30T04:58:48"
+            "opus": "2022-06-10T12:29:27"
         }
     }
 }

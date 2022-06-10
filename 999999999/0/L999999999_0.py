@@ -2526,45 +2526,45 @@ class CodAbTabulae:
         # #  - https://schema.org/dateCreated
         # #  - http://id.nlm.nih.gov/mesh/vocab#dateCreated
         # if hxlhashtag == '#date+start':
-        #     return '#item+rem+i_qcc+is_zxxx+ix_wikip571'
+        #     return '#item+rem+i_qcc+is_zxxx+ix_wdatap571'
 
         # # P729 service entry
         # # date or point in time on which a piece or class of equipment
         # # https://www.wikidata.org/wiki/Property:P729
         # if hxlhashtag == '#date+start':
-        #     return '#item+rem+i_qcc+is_zxxx+ix_wikip729'
+        #     return '#item+rem+i_qcc+is_zxxx+ix_wdatap729'
 
         # # P729 service entry
         # # date or point in time on which a piece or class of equipment
         # # https://www.wikidata.org/wiki/Property:P730
         # if hxlhashtag == '#date+end':
-        #     return '#item+rem+i_qcc+is_zxxx+ix_wikip730'
+        #     return '#item+rem+i_qcc+is_zxxx+ix_wdatap730'
 
         # publication date (P577)
         # date or point in time when a work was first published or released
         # https://www.wikidata.org/wiki/Property:P577
         if hxlhashtag == '#date+start':
-            return '#item+rem+i_qcc+is_zxxx+ix_wikip577'
+            return '#item+rem+i_qcc+is_zxxx+ix_wdatap577'
 
         # discontinued date (P2669)
         # date that the availability of a product was discontinued;
         # see also "dissolved, abolished or demolished" (P576)
         # https://www.wikidata.org/wiki/Property:P2669
         if hxlhashtag == '#date+end':
-            return '#item+rem+i_qcc+is_zxxx+ix_wikip2669'
+            return '#item+rem+i_qcc+is_zxxx+ix_wdatap2669'
 
         ## retrieved (P813)
         # - https://www.wikidata.org/wiki/Property:P813
         # - https://wiki.openstreetmap.org/wiki/Key:check_date
         if hxlhashtag == '#date+updated':
-            return '#item+rem+i_qcc+is_zxxx+ix_wikip813'
+            return '#item+rem+i_qcc+is_zxxx+ix_wdatap813'
 
         # ISO 3166-1 alpha-2 code (P297)
         # https://www.wikidata.org/wiki/Property:P297
         if hxlhashtag in [
                 '#country+code+v_iso2', '#country+code+v_iso3166p1a2']:
             # @TODO: make qualifier if this is not adm0
-            return '#item+rem+i_qcc+is_zxxx+ix_wikip297'
+            return '#item+rem+i_qcc+is_zxxx+ix_wdatap297'
 
         # @TODO '#adm1+code+v_pcode' likely to be alpha 2 (needs check data)
 
@@ -3059,17 +3059,17 @@ class DictionariaInterlinguarum:
             clavem_i18n = lineam['#item+rem+i_qcc+is_zxxx+ix_hxlix']
             definitionem = lineam['#item+rem+definitionem+i_eng+is_latn']
             item_text_i18n = lineam['#item+rem+i_lat+is_latn']
-            ix_wikip = lineam['#item+rem+i_qcc+is_zxxx+ix_wikip']
+            ix_wdatap = lineam['#item+rem+i_qcc+is_zxxx+ix_wdatap']
             # ix_glottocode = ''
             # ix_iso639p3a3 = lineam['#item+rem+i_qcc+is_zxxx+ix_iso639p3a3']
             ix_iso639p3a3 = ''
             # ix_wikiq = lineam['#item+rem+i_qcc+is_zxxx+ix_wikiq+ix_linguam']
             # ix_wikiq = ''
-            ix_wikip = ''
-            if len(ix_wikip) > 0:
-                ix_wikip = \
+            ix_wdatap = ''
+            if len(ix_wdatap) > 0:
+                ix_wdatap = \
                     "https://www.wikidata.org/wiki/Property:{0}[{0}]".format(
-                        ix_wikip)
+                        ix_wdatap)
 
             if len(ix_iso639p3a3) > 0:
                 ix_iso639p3a3 = \
@@ -3083,7 +3083,7 @@ class DictionariaInterlinguarum:
             # resultatum_corpus.append(linguam)
             # resultatum_corpus.append(
             resultatum_corpus.append("| {0}".format(clavem_i18n))
-            resultatum_corpus.append("| {0}".format(ix_wikip))
+            resultatum_corpus.append("| {0}".format(ix_wdatap))
             resultatum_corpus.append("| {0}".format(ix_iso639p3a3))
             # resultatum_corpus.append("| {0}".format(ix_wikiq))
             resultatum_corpus.append("| {0}".format(item_text_i18n))
@@ -4130,7 +4130,7 @@ class HXLTMAdRDFSimplicis:
             # print('# {0}'.format(linea))
             # print('# {0}'.format(self.identitas_locali_index))
             # _codex_locali = self.quod(
-            #     linea, '#item+rem+i_qcc+is_zxxx+ix_wikip1585')
+            #     linea, '#item+rem+i_qcc+is_zxxx+ix_wdatap1585')
             _codex_locali = str(int(linea[self.identitas_locali_index]))
             print('<urn:{0}:{1}> a skos:Concept ;'.format(
                 self.praefixo,
@@ -5123,7 +5123,7 @@ def qhxl_bcp47_2_hxlattr(bcp47: str) -> str:
     >>> qhxl_bcp47_2_hxlattr('lat-Latn-x-private1-private2')
     '+i_lat+is_latn+ix_private1+ix_private2'
     >>> qhxl_bcp47_2_hxlattr('qcc-Zxxx-x-wikip')
-    '+i_qcc+is_zxxx+ix_wikip'
+    '+i_qcc+is_zxxx+ix_wdatap'
     """
     resultatum = ''
     bcp47_parsed = bcp47_langtag(bcp47)
@@ -5154,12 +5154,12 @@ def res_interlingualibus_formata(rem: dict, query) -> str:
         return "https://www.wikidata.org/wiki/{0}[{0}]".format(
             rem[query])
 
-    if query.find('+ix_wikip3916') > -1 and query.endswith('+ix_wikip3916'):
+    if query.find('+ix_wdatap3916') > -1 and query.endswith('+ix_wdatap3916'):
         # No https?
         return "http://vocabularies.unesco.org/thesaurus/{0}[{0}]".format(
             rem[query])
 
-    if query.find('+ix_wikip') > -1 and query.endswith('+ix_wikip'):
+    if query.find('+ix_wdatap') > -1 and query.endswith('+ix_wdatap'):
         return "https://www.wikidata.org/wiki/Property:{0}[{0}]".format(
             rem[query])
 
