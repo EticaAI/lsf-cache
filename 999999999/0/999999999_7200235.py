@@ -164,8 +164,15 @@ Generic HXLTM processing . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 --adde-columnis=\
 '#meta+v_iso3+alt=LOWER(#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3)' \
 
-Numerordinatio . . . . .. . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    {0} --methodus=xlsx_ad_no1  \
+
+Numerordinatio (HXL) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    {0} --methodus=xlsx_ad_no1 \
+--numerordinatio-praefixo=1603_45_16 --unm49=24 --ordines=1 \
+--pcode-praefixo=AO 999999/1603/45/16/xlsx/ago.xlsx
+
+
+Numerordinatio (BCP47) . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    {0} --methodus=xlsx_ad_no1bcp47 \
 --numerordinatio-praefixo=1603_45_16 --unm49=24 --ordines=1 \
 --pcode-praefixo=AO 999999/1603/45/16/xlsx/ago.xlsx
 
@@ -267,6 +274,7 @@ class Cli:
                 'xlsx_ad_hxl',
                 'xlsx_ad_hxltm',
                 'xlsx_ad_no1',
+                'xlsx_ad_no1bcp47',
                 # praeparātiōnī https://en.wiktionary.org/wiki/praeparatio#Latin
                 'index_praeparationi',
             ],
@@ -821,7 +829,8 @@ class Cli:
             return self.EXIT_OK
 
         if pyargs.methodus in [
-                'xlsx_ad_csv', 'xlsx_ad_no1', 'xlsx_ad_hxltm', 'xlsx_ad_hxl']:
+                'xlsx_ad_csv', 'xlsx_ad_no1', 'xlsx_ad_no1bcp47',
+                'xlsx_ad_hxltm', 'xlsx_ad_hxl']:
             if not pyargs.ordines or \
                     not xlsx.de(pyargs.ordines[0]):
 
@@ -848,12 +857,18 @@ class Cli:
             xlsx.finis()
             return self.EXIT_OK
 
-        if pyargs.methodus in ['xlsx_ad_no1', 'xlsx_ad_hxltm', 'xlsx_ad_hxl']:
+        if pyargs.methodus in [
+                'xlsx_ad_no1', 'xlsx_ad_no1bcp47',
+                'xlsx_ad_hxltm', 'xlsx_ad_hxl']:
+
             schema = 'hxl'
             if pyargs.methodus == 'xlsx_ad_hxltm':
                 schema = 'hxltm'
             if pyargs.methodus == 'xlsx_ad_no1':
                 schema = 'no1'
+
+            if pyargs.methodus == 'xlsx_ad_no1bcp47':
+                schema = 'no1bcp47'
 
             xlsx.praeparatio()
             caput, data = xlsx.imprimere()

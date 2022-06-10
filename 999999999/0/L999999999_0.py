@@ -184,7 +184,7 @@ RDF_SPATIA_NOMINALIBUS = {
     'skos': 'http://www.w3.org/2004/02/skos/core#',
     # 'mdciii': 'urn:mdciii:',
     'wdata': 'http://www.wikidata.org/wiki/Special:EntityData/',
-    # https://www.w3.org/ns/csvw
+    'devnull': 'http://example.org/dev/null/',
     # https://www.w3.org/ns/csvw.ttl
     # 'csvw': '<http://www.w3.org/ns/csvw#>',
     # 'p': 'http://www.wikidata.org/prop/',
@@ -2055,6 +2055,7 @@ class CodAbTabulae:
     caput_hxl: List[str] = None
     caput_hxltm: List[str] = None
     caput_no1: List[str] = None
+    caput_no1bpc47: List[str] = None
     data: List[list] = None
     dictionaria_linguarum: Type['DictionariaLinguarum'] = None
     ordo: int = 1
@@ -2117,6 +2118,8 @@ class CodAbTabulae:
 
         # print(self._objectivo_dictionario)
 
+        # raise ValueError(self._objectivo_dictionario)
+
         caput = self.caput_originali
         data = self.data
         if self._objectivo_dictionario == 'hxl':
@@ -2124,6 +2127,9 @@ class CodAbTabulae:
         if self._objectivo_dictionario == 'hxltm':
             caput = self.caput_hxltm
         if self._objectivo_dictionario == 'no1':
+            caput = self.caput_no1
+        if self._objectivo_dictionario == 'no1bcp47':
+            # caput = self.caput_no1bpc47
             caput = self.caput_no1
 
         # @TODO potentially re-arrange the order of columns on the result
@@ -2155,7 +2161,8 @@ class CodAbTabulae:
 
             self.caput_hxl.append(self.quod_hxl_de_caput_rei(res, column))
 
-        if formatum not in ['hxltm', 'no1']:
+        # if formatum not in ['hxltm', 'no1']:
+        if formatum not in ['hxltm', 'no1', 'no1bcp47']:
             return self
         # if formatum in ['hxltm', 'no1']:
         self.caput_hxltm = []
@@ -2175,7 +2182,8 @@ class CodAbTabulae:
         if self.identitas_locali_index < 0:
             self.praeparatio_identitas_locali()
 
-        if formatum == 'no1':
+        # if formatum == 'no1':
+        if formatum in ['no1', 'no1bcp47']:
             self.caput_no1 = []
 
             # self.dictionaria_linguarum = DictionariaLinguarum()
@@ -2275,6 +2283,12 @@ class CodAbTabulae:
             data_novis.append(linea_novae)
 
         self.data = data_novis
+
+    def praeparatio_numerordinatio_bpc47(self):
+        """numerordinatio_bpc47
+        """
+        return self.praeparatio_numerordinatio()
+
 
     @staticmethod
     def quod_columna_alphabeto_orini(column: list = None) -> str:

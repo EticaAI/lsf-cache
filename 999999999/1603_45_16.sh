@@ -843,6 +843,78 @@ __temp_preprocess_external_indexes() {
   file_update_if_necessary csv "$objectivum_archivum_q_temporarium_2" "$objectivum_archivum"
 }
 
+__temp_preproces_quicktest_1603_16_24() {
+  echo "${FUNCNAME[0]} ..."
+
+  fontem_archivum="${ROOTDIR}/999999/1603/45/16/xlsx/ago.xlsx"
+  objectivum_archivum_ordo_1="${ROOTDIR}/999999/1603/16/24/1/1603_16_24_1.no1.bpc47.csv"
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus=xlsx_ad_no1bcp47 \
+    --numerordinatio-praefixo=1603_16 \
+    --unm49=24 \
+    --ordines=1 \
+    --pcode-praefixo=AO \
+    "${fontem_archivum}" > "$objectivum_archivum_ordo_1"
+  return 0
+
+  numerordinatio_praefixo="1603_16"
+  unm49="24"
+  iso3661p1a3="ago"
+  pcode_praefixo="AO"
+  cod_ab_level_max="3"
+  est_temporarium_fontem="1"
+  est_temporarium_objectivum="1"
+
+  _iso3661p1a3_lower=$(echo "$iso3661p1a3" | tr '[:upper:]' '[:lower:]')
+
+  fontem_archivum="${_basim_fontem}/1603/45/16/xlsx/${_iso3661p1a3_lower}.xlsx"
+  objectivum_archivum_basi="${_basim_objectivum}/1603/45/16/${unm49}"
+  opus_temporibus_temporarium="${ROOTDIR}/999999/0/${unm49}~lvl.tsv"
+
+  echo "${FUNCNAME[0]} ... [$numerordinatio_praefixo] [$unm49] [$iso3661p1a3] [$pcode_praefixo]"
+
+  ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
+  ISO3166p1a3=$(echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
+
+
+
+
+  for ((i = 0; i <= cod_ab_level_max; i++)); do
+    cod_level="$i"
+    if [ "$_iso3661p1a3_lower" == "bra" ] && [ "$cod_level" == "2" ]; then
+      echo ""
+      echo "Skiping COD-AB-BR lvl 2"
+      echo ""
+      continue
+    fi
+
+    objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
+    objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+
+    # set -x
+    # rm "$objectivum_archivum_no1" || true
+    # set +x
+    # continue
+    echo "  cod-ab-$_iso3661p1a3_lower-$cod_level [$objectivum_archivum_no1] ..."
+    if [ ! -d "$objectivum_archivum_basi_lvl" ]; then
+      mkdir "$objectivum_archivum_basi_lvl"
+    fi
+
+    set -x
+    "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+      --methodus=xlsx_ad_no1 \
+      --numerordinatio-praefixo="$numerordinatio_praefixo" \
+      --ordines="$cod_level" \
+      --pcode-praefix="$pcode_praefixo" \
+      --unm49="$unm49" \
+      "$fontem_archivum" >"${objectivum_archivum_no1}"
+    set +x
+
+    frictionless validate "${objectivum_archivum_no1}" || true
+
+  done
+}
+
 __temp_download_external_cod_data() {
   USER_AGENT="EticaAI/lexicographi-sine-finibus/2022.05.19 (https://meta.wikimedia.org/wiki/User:EmericusPetro; rocha@ieee.org) 1603_45_16.sh/0.1"
 
@@ -924,8 +996,12 @@ __temp_download_external_cod_data() {
 
 # __temp_download_external_cod_data
 # exit 1
+# bootstrap_1603_45_16__all
+# bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "3" "1" "0"
+__temp_preproces_quicktest_1603_16_24
+exit 0
 
-bootstrap_1603_45_16__all
+# bootstrap_1603_45_16__all
 # bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
 # bootstrap_999999_1603_45_16_neo "MOZ"
@@ -1111,3 +1187,9 @@ set +x
 # - https://www.wikidata.org/wiki/Special:ListProperties/tabular-data
 # - Exemplo de população
 #   - wdt:P1082 "+6747815"^^xsd:decimal ;
+
+
+#### TEMP / Other tests ________________________________________________________
+# ./999999999/0/999999999_7200235.py --methodus=xlsx_ad_no1 --numerordinatio-praefixo=1603_45_16_24 --ordines=0 --pcode-praefix=AO --unm49=24 999999/1603/45/16/xlsx/ago.xlsx
+# ./999999999/0/999999999_7200235.py --methodus=xlsx_ad_no1 --numerordinatio-praefixo=1603_45_16_24 --ordines=0 --pcode-praefix=AO --unm49=24 999999/1603/45/16/xlsx/ago.xlsx
+# ./999999999/0/999999999_7200235.py --methodus=xlsx_ad_no1 --numerordinatio-praefixo=1603_45_16_24 --ordines=3 --pcode-praefix=AO --unm49=24 999999/1603/45/16/xlsx/ago.xlsx
