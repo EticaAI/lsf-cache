@@ -9,6 +9,12 @@
 - https://en.wikipedia.org/wiki/Resource_Description_Framework#Vocabulary
 - https://github.com/hxl-team/HXL-Vocab/blob/master/Tools/hxl.ttl
 
+- _Final_, well formated versions on HXL hashtags and BCP47 version are equivalent.
+  - Is possible to convert from both versions column by column,
+    **without need to re-calculate context**
+  - `BCP47_EX_HXL` on L999999999_0.py is just a syntatic sugar for
+    `#item+conceptum+codicem` and `#item+conceptum+numerordinatio`
+
 ## Note on harecoded special cases for cell value expansion: HXL `+rdf_y_*` and BCP47 `-r-y*`
 
 ### Explode list of items
@@ -35,6 +41,67 @@ Full Example:
 ### Test data
 - 999999999/1568346/data/unesco-thesaurus.tm.hxl.tsv
   - https://vocabularies.unesco.org/exports/thesaurus/latest/unesco-thesaurus.ttl
+
+## Note on numeration of abstract groups (used to link columns as concept bags)
+Since both Numerordinatio on HXL and BCP47 are equivalent
+(without need to re-calculate context of relationships) when merging different
+datasets together, for mere sake of convenience (not enforced by tools)
+for datasets that already are highly reusable, as mere suggestion:
+
+- Keep in mind that is possible to mark a column as making part of more than
+  one "subject group".
+  - **The decision of such numbers does not matter for exported output**
+    - This is very, very useful for merging RDF triples despite tabular format
+      using HXL+RDF / HXL+BCP47 actually having very complext content
+      (id est, content that you can "explode" on several graph groups)
+- For sake of make simpler for end user, let's assume the "subject group"
+  number zero "1" is focused content. So if user trying to merging
+    logical groups would start to use "2", then "3", then "4", ...
+  - In practice, the only thing tooling do is if you do not provide a concept
+    group, it will assume you want "1". But the tooling will work with
+    any number bigger than 0
+
+### Suggested "subject group" for country, and administrative boundaries 1 to 6+
+
+- Country:
+  - Number: `500`
+  - BCP47 RDF extension part (self): `r-sU2200-s500-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s500`
+- #adm1:
+  - Number: `501`
+  - BCP47 RDF extension part (self): `r-sU2200-s501-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s501`
+- #adm2:
+  - Number: `502`
+  - BCP47 RDF extension part (self): `r-sU2200-s502-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s502`
+- #adm3:
+  - Number: `503`
+  - BCP47 RDF extension part (self): `r-sU2200-s503-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s503`
+- #adm4:
+  - Number: `504`
+  - BCP47 RDF extension part (self): `r-sU2200-s504-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s504`
+- #adm5:
+  - Number: `505`
+  - BCP47 RDF extension part (self): `r-sU2200-s505-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s505`
+- #adm6:
+  - Number: `506`
+  - BCP47 RDF extension part (self): `r-sU2200-s506-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s506`
+
+
+> Note: since is possible to mark columns with more than one subject group,
+> by this convention if the content you want already is not a final
+> dataset, for a dataset that is for example about #adm3, you could:
+>
+> - #adm3:
+>   - Number: `503` and `1`
+>   - BCP47 RDF extension part (self): `r-sU2200-s1-snop-sU2200-s503-snop`
+>   - HXL RDF attribute (self): `+rdf_s_u2200_s1+rdf_s_u2200_s503`
+
 
 ## To Dos
 - https://www.w3.org/wiki/UsingSeeAlso

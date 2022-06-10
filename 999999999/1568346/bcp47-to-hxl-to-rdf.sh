@@ -272,16 +272,21 @@ test_cod_ab__with_inferences_prebuild() {
 
   # officina/999999/1568346/data
 
+  # @TODO: implement implicit aliases when sU2200 reference multiple subject
+  #        groups (like s500-s506 for administrative regions) but user
+  #        askis for s1 and s1 is also one of these s500-s506.
+
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47_meta_in_json \
     --rdf-namespaces-archivo="${archivum__namespace}" \
+    --rdf-bag=500 \
     "${archivum__cod_ab_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=1 \
+    --rdf-bag=500 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -289,7 +294,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=2 \
+    --rdf-bag=501 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -297,7 +302,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=3 \
+    --rdf-bag=502 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -305,7 +310,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=4 \
+    --rdf-bag=503 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -530,8 +535,8 @@ bcp47_and_hxlrdf_roundtrip__drill() {
 
 # test_unesco_thesaurus
 # test_cod_ab
-# test_cod_ab__with_inferences_prebuild
-# exit 0
+test_cod_ab__with_inferences_prebuild
+exit 0
 
 echo "bcp47_to_hxl_to_rdf__tests"
 bcp47_to_hxl_to_rdf__tests
