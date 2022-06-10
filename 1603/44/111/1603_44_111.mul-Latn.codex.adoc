@@ -51,7 +51,7 @@ EticaAI
 |
 numerus editionis
 |
-2022-05-11T22:22:42
+2022-06-10T12:02:15
 
 |
 /SPDX license ID/@eng-Latn
@@ -944,7 +944,7 @@ https://iso639-3.sil.org/code/msa[msa]
 |
 Macrolingua Malayana (/ISO 15924 Zyyy/)
 |
-19
+20
 
 |
 est-Latn
@@ -1016,7 +1016,7 @@ https://iso639-3.sil.org/code/bre[bre]
 |
 Lingua Britonica (Abecedarium Latinum)
 |
-9
+10
 
 |
 arz-Latn
@@ -2204,7 +2204,7 @@ https://iso639-3.sil.org/code/uzb[uzb]
 |
 Macrolingua Uzbecica (Abecedarium Latinum)
 |
-11
+12
 
 |
 uig-Zyyy
@@ -2372,7 +2372,7 @@ https://iso639-3.sil.org/code/glv[glv]
 |
 Lingua Monensis (Abecedarium Latinum)
 |
-4
+5
 
 |
 hau-Latn
@@ -2897,11 +2897,47 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">/translator/@eng-Latn</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">agent who adapts any kind of written text from one language to another</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        agent who adapts any kind of written text from one language to another
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">agente que adapta qualquer tipo de texto escrito de um idioma para outro</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        agente que adapta qualquer tipo de texto escrito de um idioma para outro
+
+  //Cōdex annotātiōnibus internālibus//:::
+    Rēs interlinguālibus::::
+      ix_hxlix;;
+        ix_n1603ia
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
+
+      #item+rem+definitionem+i_eng+is_latn;;
+        Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported
+
+      #item+rem+definitionem+i_por+is_latn;;
+        Anotações internas de um códice. Lista de itens. Usado em 1603_1_1 como tags não documentadas para gerenciar como os dicionários são exportados
+
+  /dictiōnārium ēditōrī/:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P98[P98]
+
+      ix_hxlix;;
+        ix_wikip98
+
+      ix_hxlvoc;;
+        v_wiki_p_98
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
+
+      #item+rem+definitionem+i_eng+is_latn;;
+        editor of a compiled work such as a book or a periodical (newspaper or an academic journal)
+
+      #item+rem+definitionem+i_por+is_latn;;
+        editor de um trabalho compilado, como um livro ou um periódico (jornal ou revista acadêmica)
 
   /scope and content/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -2918,47 +2954,11 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">/scope and content/@eng-Latn</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a summary statement providing an overview of the archival collection</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        a summary statement providing an overview of the archival collection
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma declaração resumida fornecendo uma visão geral da coleção de arquivo</span>+++
-
-  //Cōdex annotātiōnibus internālibus//:::
-    Rēs interlinguālibus::::
-      ix_hxlix;;
-        ix_n1603ia
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">//Cōdex annotātiōnibus internālibus//</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Internal annotations of a codex. List of items. Used on 1603_1_1 as undocumented tags to manage how dictionaries are exported</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Anotações internas de um códice. Lista de itens. Usado em 1603_1_1 como tags não documentadas para gerenciar como os dicionários são exportados</span>+++
-
-  /Wiki QID/:::
-    Rēs interlinguālibus::::
-      /rēgulam/;;
-        Q[1-9]\d*
-
-      ix_hxlix;;
-        ix_wikiq
-
-      ix_hxlvoc;;
-        v_wiki_q
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/Wiki QID/</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        uma declaração resumida fornecendo uma visão geral da coleção de arquivo
 
   numerus editionis:::
     Rēs interlinguālibus::::
@@ -2975,11 +2975,11 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">numerus editionis</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">number of an edition (first, second, ... as 1, 2, ...) or event</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        number of an edition (first, second, ... as 1, 2, ...) or event
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        número de uma edição (primeira, segunda, ... como 1, 2, ...) ou evento
 
   spōnsor:::
     Rēs interlinguālibus::::
@@ -2996,32 +2996,11 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">spōnsor</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">organization or individual that sponsors this item</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        organization or individual that sponsors this item
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">organização ou indivíduo que patrocina este item</span>+++
-
-  /publication date/@eng-Latn:::
-    Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P577[P577]
-
-      ix_hxlix;;
-        ix_wikip577
-
-      ix_hxlvoc;;
-        v_wiki_p_577
-
-    Rēs linguālibus::::
-      Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/publication date/@eng-Latn</span>+++
-
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">Date or point in time when a work was first published or released</span>+++
-
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        organização ou indivíduo que patrocina este item
 
   /SPDX license ID/@eng-Latn:::
     Rēs interlinguālibus::::
@@ -3044,11 +3023,11 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">/SPDX license ID/@eng-Latn</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">SPDX license identifier</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        SPDX license identifier
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">identificador de licença SPDX</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        identificador de licença SPDX
 
   Numerordĭnātĭo:::
     Rēs interlinguālibus::::
@@ -3062,32 +3041,53 @@ Rēs::
       Lingua Latina (Abecedarium Latinum);;
         +++<span lang="la">Numerordĭnātĭo</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">a generic strategy of arranging numbers in an taxonomy-like explicit way</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        a generic strategy of arranging numbers in an taxonomy-like explicit way
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">uma estratégia genérica de organizar os números de maneira explícita como taxonomia</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        uma estratégia genérica de organizar os números de maneira explícita como taxonomia
 
-  /dictiōnārium ēditōrī/:::
+  /Wiki QID/:::
     Rēs interlinguālibus::::
-      /Wiki P/;;
-        https://www.wikidata.org/wiki/Property:P98[P98]
+      /rēgulam/;;
+        Q[1-9]\d*
 
       ix_hxlix;;
-        ix_wikip98
+        ix_wikiq
 
       ix_hxlvoc;;
-        v_wiki_p_98
+        v_wiki_q
 
     Rēs linguālibus::::
       Lingua Latina (Abecedarium Latinum);;
-        +++<span lang="la">/dictiōnārium ēditōrī/</span>+++
+        +++<span lang="la">/Wiki QID/</span>+++
 
-      Lingua Anglica (Abecedarium Latinum);;
-        +++<span lang="en">editor of a compiled work such as a book or a periodical (newspaper or an academic journal)</span>+++
+      #item+rem+definitionem+i_eng+is_latn;;
+        QID (or Q number) is the unique identifier of a data item on Wikidata, comprising the letter "Q" followed by one or more digits. It is used to help people and machines understand the difference between items with the same or similar names e.g there are several places in the world called London and many people called James Smith. This number appears next to the name at the top of each Wikidata item.
 
-      Lingua Lusitana (Abecedarium Latinum);;
-        +++<span lang="pt">editor de um trabalho compilado, como um livro ou um periódico (jornal ou revista acadêmica)</span>+++
+      #item+rem+definitionem+i_por+is_latn;;
+        QID (ou número Q) é o identificador único de um item de dados no Wikidata, composto pela letra "Q" seguida por um ou mais dígitos. Ele é usado para ajudar pessoas e máquinas a entender a diferença entre itens com nomes iguais ou semelhantes, por exemplo, existem vários lugares no mundo chamados Londres e muitas pessoas chamadas James Smith. Este número aparece ao lado do nome na parte superior de cada item do Wikidata.
+
+  /publication date/@eng-Latn:::
+    Rēs interlinguālibus::::
+      /Wiki P/;;
+        https://www.wikidata.org/wiki/Property:P577[P577]
+
+      ix_hxlix;;
+        ix_wikip577
+
+      ix_hxlvoc;;
+        v_wiki_p_577
+
+    Rēs linguālibus::::
+      Lingua Latina (Abecedarium Latinum);;
+        +++<span lang="la">/publication date/@eng-Latn</span>+++
+
+      #item+rem+definitionem+i_eng+is_latn;;
+        Date or point in time when a work was first published or released
+
+      #item+rem+definitionem+i_por+is_latn;;
+        Data ou ponto no tempo em que um trabalho foi publicado ou lançado pela primeira vez
 
 
 <<<
@@ -3400,7 +3400,7 @@ Rēs linguālibus (120)::
     +++<span lang="fa">قومیت</span>+++
 
   Lingua Hungarica (Abecedarium Latinum):::
-    +++<span lang="hu">etnikum</span>+++
+    +++<span lang="hu">etnikai csoport</span>+++
 
   Lingua Vasconica (Abecedarium Latinum):::
     +++<span lang="eu">etnia</span>+++
@@ -4545,7 +4545,7 @@ Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q7278[Q7278]
 
-Rēs linguālibus (147)::
+Rēs linguālibus (148)::
   Linguae multiplīs (Scrīptum incognitō):::
     factio politica || est societas civilis quae pondus politicum intra gubernationem vel administratio digestanem adfectat, plerumque in certaminibus electoralibus certando
 
@@ -4914,6 +4914,9 @@ Rēs linguālibus (147)::
 
   Macrolingua Guaranica (Abecedarium Latinum):::
     +++<span lang="gn">Aty ojokuaikuaáva</span>+++
+
+  Lingua Monensis (Abecedarium Latinum):::
+    +++<span lang="gv">partee politickagh</span>+++
 
   Lingua Haussana (Abecedarium Latinum):::
     +++<span lang="ha">jam'iyyar siyasa</span>+++
@@ -5353,7 +5356,7 @@ Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q2285706[Q2285706]
 
-Rēs linguālibus (83)::
+Rēs linguālibus (84)::
   Linguae multiplīs (Scrīptum incognitō):::
     /head of government || chief officer of the executive branch of a government/@eng-Latn
 
@@ -5494,6 +5497,9 @@ Rēs linguālibus (83)::
 
   Lingua Occitana (Abecedarium Latinum):::
     +++<span lang="oc">cap de govèrn</span>+++
+
+  Lingua Britonica (Abecedarium Latinum):::
+    +++<span lang="br">Penn Gouarnamant</span>+++
 
   Lingua Luxemburgensis (Abecedarium Latinum):::
     +++<span lang="lb">Regierungschef</span>+++
@@ -8223,7 +8229,7 @@ Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q838958[Q838958]
 
-Rēs linguālibus (42)::
+Rēs linguālibus (43)::
   Linguae multiplīs (Scrīptum incognitō):::
     /Rome Statute of the International Criminal Court/@eng-Latn
 
@@ -8343,6 +8349,9 @@ Rēs linguālibus (42)::
 
   Lingua Neograeca (Alphabetum Graecum):::
     +++<span lang="el">Καταστατικό της Ρώμης για το Διεθνές Ποινικό Δικαστήριο</span>+++
+
+  Macrolingua Uzbecica (Abecedarium Latinum):::
+    +++<span lang="uz">Xalqaro jinoiy sudning Rim nizomi</span>+++
 
   Macrolingua Atropatenica (Abecedarium Latinum):::
     +++<span lang="az">Roma Statusu</span>+++
@@ -8808,7 +8817,7 @@ Rēs interlinguālibus (1)::
   /Wiki QID/:::
     https://www.wikidata.org/wiki/Q154278[Q154278]
 
-Rēs linguālibus (67)::
+Rēs linguālibus (68)::
   Linguae multiplīs (Scrīptum incognitō):::
     /ethnic cleansing || systematic removal of a certain ethnic or religious group/@eng-Latn
 
@@ -8934,6 +8943,9 @@ Rēs linguālibus (67)::
 
   Lingua Esperantica (Abecedarium Latinum):::
     +++<span lang="eo">etna purigado</span>+++
+
+  Macrolingua Malayana (/ISO 15924 Zyyy/):::
+    +++<span lang="ms">Pembersihan etnik</span>+++
 
   Macrolingua Estonica (Abecedarium Latinum):::
     +++<span lang="et">etniline puhastus</span>+++

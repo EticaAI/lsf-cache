@@ -131,12 +131,12 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Data operation; example of "SKOS version" without OWL/OBO assertions)
     {0} --objectivum-formato=_temp_bcp47 \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
---rdf-sine-spatia-nominalibus=owl,obo --rdf-bag=2
+--rdf-sine-spatia-nominalibus=owl,obo,devnull --rdf-bag=2
 
 (Data operation; example of "OWL + OBO" without SKOS linguistic metadata)
     {0} --objectivum-formato=_temp_bcp47 \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
---rdf-sine-spatia-nominalibus=skos,wdata --rdf-bag=2
+--rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-bag=2
 
 (Data operations, header conversion RDF+HXL -> RDF+BCP47)
     varbcp47=$(head -n1 \
