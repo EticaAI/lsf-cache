@@ -308,9 +308,10 @@ test_cod_ab__with_inferences_prebuild() {
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
       >"${archivum__resultata_bag3}"
 
+  # --rdf-trivio=503 is equivalent to --rdf-trivio=1
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-trivio=503 \
+    --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
