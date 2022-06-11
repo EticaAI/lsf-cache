@@ -1543,6 +1543,13 @@ def bcp47_rdf_extension_relationship(
     # print('header', header)
 
     def _aux_init_container(result: dict, subject: str) -> dict:
+        """_aux_init_container
+
+        Each time a column asks for a subjec group, we create one with default
+        values. Note that the container MAY not actually have a primary key
+        (which could lead to break) but as long as the user don't ask
+        for such group, it will not break
+        """
         result['rdfs:Container'][subject] = {
             'trivium': {
                 'index': -1,
@@ -1555,9 +1562,42 @@ def bcp47_rdf_extension_relationship(
                 'rdf:predicate': [],
                 # @TODO: implement the semantics of is_a
                 'rdf:type': [],
+                # aliīs, pl, m/f/n, dativus, en.wiktionary.org/wiki/alius#Latin
+                'trivium_aliis': []
             },
-            'indices_columnis': []
+            'indices_columnis': [],
+            # alia, pl, n, accusativus, en.wiktionary.org/wiki/alius#Latin
+            'indices_columnis_per_alia': {}
         }
+        return result
+
+    def _aux_recalc_containers(result: dict) -> dict:
+        """_aux_recalc_containers
+
+        The major reason for this recalculation is at the end resolve the
+        aliases for same group. This allow copy-and-pasting strategies
+        while the user could ADD (not replace) new names for keys
+        and use these names to create more focused relations
+        """
+        # result['rdfs:Container'][subject] = {
+        #     'trivium': {
+        #         'index': -1,
+        #         # 'iri': inline_namespace_iri,
+        #         # 'rdf_praefixum': 'urn',
+        #         'rdf_praefixum': 'urnmdciii',
+        #         # We will fallback the pivots as generic classes
+        #         # We should enable later override this behavior
+        #         # via language tag on the pivot
+        #         'rdf:predicate': [],
+        #         # @TODO: implement the semantics of is_a
+        #         'rdf:type': [],
+        #         # aliīs, pl, m/f/n, dativus, en.wiktionary.org/wiki/alius#Latin
+        #         'trivium_aliis': []
+        #     },
+        #     'indices_columnis': [],
+        #     # alia, pl, n, accusativus, en.wiktionary.org/wiki/alius#Latin
+        #     'indices_columnis_per_alia': {}
+        # }
         return result
 
     # ========= Fist iteration over each column, START =========
@@ -1747,6 +1787,8 @@ def bcp47_rdf_extension_relationship(
                         result['rdfs:Container'][item]['trivium']['rdf:type']:
                     result['rdfs:Container'][item]['trivium'][
                         'rdf:type'].append(_itemtype)
+
+    result = _aux_recalc_containers(result)
 
     return result
 

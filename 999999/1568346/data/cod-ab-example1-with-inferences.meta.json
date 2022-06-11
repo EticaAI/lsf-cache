@@ -4,7 +4,7 @@
       "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s500-snop-sU2200-s500-snop-pOBO-pbfo124-ps501",
       "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s501-snop-pOBO-pbfo124-ps502-pOBO-pbfo171-ps500",
       "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s502-snop-pOBO-pbfo124-ps502-pOBO-pbfo171-ps501",
-      "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s503-snop-pOBO-pbfo124-ps503-pOBO-pbfo171-ps502",
+      "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s1-snop-sU2200-s503-snop-pOBO-pbfo124-ps503-pOBO-pbfo171-ps502",
       "por-Latn-r-pSKOS-pprefLabel-ps500",
       "por-Latn-r-pSKOS-pprefLabel-ps501",
       "por-Latn-r-pSKOS-pprefLabel-ps502",
@@ -91,8 +91,9 @@
         "script": "Zxxx",
         "extension": {
           "r": {
-            "rdf:Statement_raw": "aOBO-abfo29-anop-sU2200-s503-snop-pOBO-pbfo124-ps503-pOBO-pbfo171-ps502",
+            "rdf:Statement_raw": "aOBO-abfo29-anop-sU2200-s1-snop-sU2200-s503-snop-pOBO-pbfo124-ps503-pOBO-pbfo171-ps502",
             "rdf:subject": [
+              "U2200||1:NOP",
               "U2200||503:NOP"
             ],
             "rdf:predicate": [
@@ -202,13 +203,15 @@
             "skos:Concept||0:NOP",
             "owl:Thing||0:NOP",
             "obo:BFO_0000029||0:NOP"
-          ]
+          ],
+          "trivium_aliis": []
         },
         "indices_columnis": [
           0,
           1,
           4
-        ]
+        ],
+        "indices_columnis_per_alia": {}
       },
       "501": {
         "trivium": {
@@ -219,14 +222,16 @@
             "skos:Concept||0:NOP",
             "owl:Thing||0:NOP",
             "obo:BFO_0000029||0:NOP"
-          ]
+          ],
+          "trivium_aliis": []
         },
         "indices_columnis": [
           0,
           1,
           2,
           5
-        ]
+        ],
+        "indices_columnis_per_alia": {}
       },
       "502": {
         "trivium": {
@@ -237,14 +242,33 @@
             "skos:Concept||0:NOP",
             "owl:Thing||0:NOP",
             "obo:BFO_0000029||0:NOP"
-          ]
+          ],
+          "trivium_aliis": []
         },
         "indices_columnis": [
           1,
           2,
           3,
           6
-        ]
+        ],
+        "indices_columnis_per_alia": {}
+      },
+      "1": {
+        "trivium": {
+          "index": 3,
+          "rdf_praefixum": "urnmdciii",
+          "rdf:predicate": [],
+          "rdf:type": [
+            "skos:Concept||0:NOP",
+            "owl:Thing||0:NOP",
+            "obo:BFO_0000029||0:NOP"
+          ],
+          "trivium_aliis": []
+        },
+        "indices_columnis": [
+          3
+        ],
+        "indices_columnis_per_alia": {}
       },
       "503": {
         "trivium": {
@@ -255,12 +279,14 @@
             "skos:Concept||0:NOP",
             "owl:Thing||0:NOP",
             "obo:BFO_0000029||0:NOP"
-          ]
+          ],
+          "trivium_aliis": []
         },
         "indices_columnis": [
           3,
           7
-        ]
+        ],
+        "indices_columnis_per_alia": {}
       }
     },
     "rdf_spatia_nominalibus": {

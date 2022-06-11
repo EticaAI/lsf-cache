@@ -535,8 +535,8 @@ bcp47_and_hxlrdf_roundtrip__drill() {
 
 # test_unesco_thesaurus
 # test_cod_ab
-test_cod_ab__with_inferences_prebuild
-exit 0
+# test_cod_ab__with_inferences_prebuild
+# exit 0
 
 echo "bcp47_to_hxl_to_rdf__tests"
 bcp47_to_hxl_to_rdf__tests
