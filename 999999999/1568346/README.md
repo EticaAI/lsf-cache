@@ -64,31 +64,31 @@ for datasets that already are highly reusable, as mere suggestion:
 ### Suggested "subject group" for country, and administrative boundaries 1 to 6+
 
 - Country:
-  - Number: `500`
-  - BCP47 RDF extension part (self): `r-sU2200-s500-snop`
-  - HXL RDF attribute (self): `+rdf_s_u2200_s500`
+  - Number: `5000`
+  - BCP47 RDF extension part (self): `r-sU2200-s5000-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s5000`
 - #adm1:
-  - Number: `501`
-  - BCP47 RDF extension part (self): `r-sU2200-s501-snop`
-  - HXL RDF attribute (self): `+rdf_s_u2200_s501`
+  - Number: `5001`
+  - BCP47 RDF extension part (self): `r-sU2200-s5001-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s5001`
 - #adm2:
-  - Number: `502`
-  - BCP47 RDF extension part (self): `r-sU2200-s502-snop`
-  - HXL RDF attribute (self): `+rdf_s_u2200_s502`
+  - Number: `5002`
+  - BCP47 RDF extension part (self): `r-sU2200-s5002-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s5002`
 - #adm3:
-  - Number: `503`
-  - BCP47 RDF extension part (self): `r-sU2200-s503-snop`
-  - HXL RDF attribute (self): `+rdf_s_u2200_s503`
+  - Number: `5003`
+  - BCP47 RDF extension part (self): `r-sU2200-s5003-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s5003`
 - #adm4:
-  - Number: `504`
-  - BCP47 RDF extension part (self): `r-sU2200-s504-snop`
-  - HXL RDF attribute (self): `+rdf_s_u2200_s504`
+  - Number: `5004`
+  - BCP47 RDF extension part (self): `r-sU2200-s5004-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s5004`
 - #adm5:
-  - Number: `505`
-  - BCP47 RDF extension part (self): `r-sU2200-s505-snop`
-  - HXL RDF attribute (self): `+rdf_s_u2200_s505`
+  - Number: `5005`
+  - BCP47 RDF extension part (self): `r-sU2200-s5005-snop`
+  - HXL RDF attribute (self): `+rdf_s_u2200_s5005`
 - #adm6:
-  - Number: `506`
+  - Number: `5006`
   - BCP47 RDF extension part (self): `r-sU2200-s506-snop`
   - HXL RDF attribute (self): `+rdf_s_u2200_s506`
 
@@ -98,9 +98,9 @@ for datasets that already are highly reusable, as mere suggestion:
 > dataset, for a dataset that is for example about #adm3, you could:
 >
 > - #adm3:
->   - Number: `503` and `1`
->   - BCP47 RDF extension part (self): `r-sU2200-s1-snop-sU2200-s503-snop`
->   - HXL RDF attribute (self): `+rdf_s_u2200_s1+rdf_s_u2200_s503`
+>   - Number: `5003` and `1`
+>   - BCP47 RDF extension part (self): `r-sU2200-s1-snop-sU2200-s5003-snop`
+>   - HXL RDF attribute (self): `+rdf_s_u2200_s1+rdf_s_u2200_s5003`
 
 
 ## To Dos
