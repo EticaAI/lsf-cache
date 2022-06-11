@@ -45,6 +45,7 @@ import yaml
 from L999999999_0 import (
     BCP47_AD_HXL,
     RDF_SPATIA_NOMINALIBUS_EXTRAS,
+    SetEncoder,
     bcp47_langtag,
     bcp47_rdf_extension_poc,
     hxl_hashtag_to_bcp47,
@@ -389,7 +390,7 @@ class Cli:
                 caput, data, objective_bag=pyargs.rdf_bag,
                 rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus,
                 est_meta=True)
-            print(json.dumps(meta, sort_keys=False, ensure_ascii=False))
+            print(json.dumps(meta, sort_keys=False, ensure_ascii=False, cls=SetEncoder))
             return self.EXIT_OK
 
         # @TODO remove thsi temporary part
