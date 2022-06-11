@@ -1,7 +1,7 @@
 {
   "caput_asa": {
     "caput_originali": [
-      "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s500-snop-sU2200-s500-snop-pOBO-pbfo124-ps501",
+      "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s500-snop-pOBO-pbfo124-ps501",
       "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s501-snop-pOBO-pbfo124-ps502-pOBO-pbfo171-ps500",
       "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s502-snop-pOBO-pbfo124-ps502-pOBO-pbfo171-ps501",
       "qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s1-snop-sU2200-s503-snop-pOBO-pbfo124-ps503-pOBO-pbfo171-ps502",
@@ -16,9 +16,8 @@
         "script": "Zxxx",
         "extension": {
           "r": {
-            "rdf:Statement_raw": "aOBO-abfo29-anop-sU2200-s500-snop-sU2200-s500-snop-pOBO-pbfo124-ps501",
+            "rdf:Statement_raw": "aOBO-abfo29-anop-sU2200-s500-snop-pOBO-pbfo124-ps501",
             "rdf:subject": [
-              "U2200||500:NOP",
               "U2200||500:NOP"
             ],
             "rdf:predicate": [
@@ -211,7 +210,7 @@
           1,
           4
         ],
-        "indices_columnis_per_alia": {}
+        "indices_columnis_cum_aliis": []
       },
       "501": {
         "trivium": {
@@ -231,7 +230,7 @@
           2,
           5
         ],
-        "indices_columnis_per_alia": {}
+        "indices_columnis_cum_aliis": []
       },
       "502": {
         "trivium": {
@@ -251,7 +250,7 @@
           3,
           6
         ],
-        "indices_columnis_per_alia": {}
+        "indices_columnis_cum_aliis": []
       },
       "1": {
         "trivium": {
@@ -268,7 +267,7 @@
         "indices_columnis": [
           3
         ],
-        "indices_columnis_per_alia": {}
+        "indices_columnis_cum_aliis": []
       },
       "503": {
         "trivium": {
@@ -286,7 +285,7 @@
           3,
           7
         ],
-        "indices_columnis_per_alia": {}
+        "indices_columnis_cum_aliis": []
       }
     },
     "rdf_spatia_nominalibus": {
@@ -296,6 +295,21 @@
       "owl": "http://www.w3.org/2002/07/owl#",
       "obo": "http://purl.obolibrary.org/obo/",
       "skos": "http://www.w3.org/2004/02/skos/core#"
+    },
+    "trivium_aliis_per_indicem": {
+      "0": [
+        "500"
+      ],
+      "1": [
+        "501"
+      ],
+      "2": [
+        "502"
+      ],
+      "3": [
+        "1",
+        "503"
+      ]
     },
     "_error": []
   },
