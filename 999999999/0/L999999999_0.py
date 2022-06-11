@@ -1554,7 +1554,8 @@ def bcp47_rdf_extension_relationship(
         result['rdfs:Container'][subject] = {
             'trivium': {
                 # 'alia': (str(subject), str(subject)),
-                'alia': {str(subject)},
+                # 'alia': {str(subject)},
+                'alia': [str(subject)],
                 # 'alia': [str(subject)],
                 'index': -1,
                 # 'iri': inline_namespace_iri,
@@ -1571,7 +1572,7 @@ def bcp47_rdf_extension_relationship(
             },
             'indices_columnis': [],
             # aliīs, pl, n, ablativus, en.wiktionary.org/wiki/alius#Latin
-            'indices_cum_aliis': set()
+            'indices_cum_aliis': []
         }
         return result
 
@@ -1605,15 +1606,12 @@ def bcp47_rdf_extension_relationship(
                     trivium_aliis[index_ex_tabula] = set()
                 trivium_aliis[int(index_ex_tabula)].add(aliud)
 
+        # Second pass
+        _trivium_aliis = []
         for trivium_alii, _item in result['rdfs:Container'].items():
-            _cum_aliis = []
-
+            _trivium_aliis.append(trivium_alii)
             _trivium_indici = _item['trivium']['index']
-            # _cum_aliis = _item['indices_columnis']
             _cum_aliis = []
-            # _cum_aliis.
-
-            # print(trivium_alii, _trivium_indici, trivium_aliis[_trivium_indici])
 
             for _item in trivium_aliis[_trivium_indici]:
                 _cum_aliis.extend(
@@ -1622,12 +1620,15 @@ def bcp47_rdf_extension_relationship(
             # trivium_aliis[_trivium_indici] = \
             #     set(list(trivium_aliis[_trivium_indici]).sort())
             # trivium_aliis[_trivium_indici].sort()
+            trivium_aliis[_trivium_indici] = \
+                list(trivium_aliis[_trivium_indici])
+            trivium_aliis[_trivium_indici].sort(key=int)
 
             result['rdfs:Container'][trivium_alii]['trivium']['alia'] = \
                 trivium_aliis[_trivium_indici]
 
-            _cum_aliis.sort()
-            _cum_aliis = set(_cum_aliis)
+            _cum_aliis = list(set(_cum_aliis))
+            _cum_aliis.sort(key=int)
 
             result['rdfs:Container'][trivium_alii]['indices_cum_aliis'] = \
                 _cum_aliis
@@ -1635,6 +1636,17 @@ def bcp47_rdf_extension_relationship(
             # if 'extension' not in item_caput_asa or \
             #         'r' not in item_caput_asa['extension']:
             #     continue
+
+        # Third pass; mostly to re-order rdfs:Container to generate same
+        # abstract syntax tree even if order of columns change
+        _trivium_aliis.sort(key=int)
+        rdfs_container_novo = {}
+        for trivium_alii in _trivium_aliis:
+            rdfs_container_novo[trivium_alii] = \
+                result['rdfs:Container'][trivium_alii]
+            # pass
+
+        result['rdfs:Container'] = rdfs_container_novo
 
         result['trivium_aliis_per_indicem'] = trivium_aliis
         return result
@@ -2184,7 +2196,8 @@ def bcp47_rdf_extension_poc(
             triple = [triple_subject, 'a', predicate]
             result['rdf_triplis'].append(triple)
 
-        for referenced_by in bag_meta['indices_columnis']:
+        # for referenced_by in bag_meta['indices_columnis']:
+        for referenced_by in bag_meta['indices_cum_aliis']:
             if referenced_by == index_id:
                 continue
 

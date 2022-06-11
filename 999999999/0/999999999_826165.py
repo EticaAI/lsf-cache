@@ -82,7 +82,7 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
     {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
---rdf-bag=2 \
+--rdf-trivio=2 \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
 
     {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
@@ -209,7 +209,7 @@ class Cli:
         # # ex
         # # fontī, m, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
         parser.add_argument(
-            '--rdf-bag',
+            '--rdf-trivio',
             help='(Advanced) RDF bag; extract triples from tabular data from '
             'other groups than 1',
             dest='rdf_bag',

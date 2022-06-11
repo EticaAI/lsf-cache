@@ -115,7 +115,7 @@ test_unesco_thesaurus() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=1 \
+    --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__unesco_thesaurus_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -123,7 +123,7 @@ test_unesco_thesaurus() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=2 \
+    --rdf-trivio=2 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__unesco_thesaurus_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -190,7 +190,7 @@ test_cod_ab() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=1 \
+    --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -198,7 +198,7 @@ test_cod_ab() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=2 \
+    --rdf-trivio=2 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -206,7 +206,7 @@ test_cod_ab() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=3 \
+    --rdf-trivio=3 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -214,7 +214,7 @@ test_cod_ab() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=4 \
+    --rdf-trivio=4 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -280,13 +280,13 @@ test_cod_ab__with_inferences_prebuild() {
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47_meta_in_json \
     --rdf-namespaces-archivo="${archivum__namespace}" \
-    --rdf-bag=500 \
+    --rdf-trivio=500 \
     "${archivum__cod_ab_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=500 \
+    --rdf-trivio=500 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -294,7 +294,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=501 \
+    --rdf-trivio=501 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -302,7 +302,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=502 \
+    --rdf-trivio=502 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -310,7 +310,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
-    --rdf-bag=503 \
+    --rdf-trivio=503 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
@@ -560,13 +560,13 @@ exit 0
 # ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/1568346/data/unesco-thesaurus.meta.json
 
 
-# ./999999999/0/999999999_54872.py 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv --objectivum-formato=_temp_bcp47_meta_in_json --rdf-bag=1 | jq
+# ./999999999/0/999999999_54872.py 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv --objectivum-formato=_temp_bcp47_meta_in_json --rdf-trivio=1 | jq
 
-# ./999999999/0/999999999_54872.py 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --objectivum-formato=_temp_bcp47_meta_in_json --rdf-bag=1 | jq
+# ./999999999/0/999999999_54872.py 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --objectivum-formato=_temp_bcp47_meta_in_json --rdf-trivio=1 | jq
 
 # ./999999999/0/linguacodex.py --de_bcp47_simplex --de_codex=por-Latn-r-pSKOS-pprefLabel-ps4
 
-# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-bag=2 --rdf-sine-spatia-nominalibus=skos
+# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2 --rdf-sine-spatia-nominalibus=skos
 
 #### BFO _______________________________________________________________________
 # @see https://standards.iso.org/iso-iec/21838/-2/ed-1/en/

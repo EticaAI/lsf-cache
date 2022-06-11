@@ -105,7 +105,7 @@ __EPILOGUM__ = """
 Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Debug information in JSON)
     {0} --objectivum-formato=_temp_bcp47_meta_in_json \
-999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-bag=2
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2
 
     {0} --objectivum-formato=_temp_bcp47_meta_in_json \
 --rdf-namespaces-archivo=\
@@ -114,15 +114,15 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 (Data operations)
     {0} --objectivum-formato=_temp_bcp47 \
-999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-bag=2
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2
 
     {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
-999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-bag=1
+999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-trivio=1
 
     {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
-999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-bag=2
+999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-trivio=2
 
     {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
@@ -132,12 +132,12 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Data operation; example of "SKOS version" without OWL/OBO assertions)
     {0} --objectivum-formato=_temp_bcp47 \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
---rdf-sine-spatia-nominalibus=owl,obo,devnull --rdf-bag=2
+--rdf-sine-spatia-nominalibus=owl,obo,devnull --rdf-trivio=2
 
 (Data operation; example of "OWL + OBO" without SKOS linguistic metadata)
     {0} --objectivum-formato=_temp_bcp47 \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
---rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-bag=2
+--rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-trivio=2
 
 (Data operations, header conversion RDF+HXL -> RDF+BCP47)
     varbcp47=$(head -n1 \
@@ -282,7 +282,7 @@ class Cli:
         )
 
         parser.add_argument(
-            '--rdf-bag',
+            '--rdf-trivio',
             help='(Advanced) RDF bag; extract triples from tabular data from '
             'other groups than 1',
             dest='rdf_bag',
@@ -390,7 +390,8 @@ class Cli:
                 caput, data, objective_bag=pyargs.rdf_bag,
                 rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus,
                 est_meta=True)
-            print(json.dumps(meta, sort_keys=False, ensure_ascii=False, cls=SetEncoder))
+            print(json.dumps(
+                meta, sort_keys=False, ensure_ascii=False, cls=SetEncoder))
             return self.EXIT_OK
 
         # @TODO remove thsi temporary part
