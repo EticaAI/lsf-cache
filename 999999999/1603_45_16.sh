@@ -924,17 +924,17 @@ __temp_preproces_quicktest_1603_16_24() {
 
     frictionless validate "${objectivum_archivum_no1}" || true
 
-    set -x
-    "${ROOTDIR}/999999999/0/999999999_7200235.py" \
-      --methodus=xlsx_ad_no1bcp47 \
-      --numerordinatio-praefixo="$numerordinatio_praefixo" \
-      --ordines="$cod_level" \
-      --pcode-praefix="$pcode_praefixo" \
-      --unm49="$unm49" \
-      "$fontem_archivum" >"${objectivum_archivum_no1bcp47}"
-    set +x
+    # set -x
+    # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    #   --methodus=xlsx_ad_no1bcp47 \
+    #   --numerordinatio-praefixo="$numerordinatio_praefixo" \
+    #   --ordines="$cod_level" \
+    #   --pcode-praefix="$pcode_praefixo" \
+    #   --unm49="$unm49" \
+    #   "$fontem_archivum" >"${objectivum_archivum_no1bcp47}"
+    # set +x
 
-    frictionless validate "${objectivum_archivum_no1bcp47}" || true
+    # frictionless validate "${objectivum_archivum_no1bcp47}" || true
 
   done
 }
@@ -1022,10 +1022,10 @@ __temp_download_external_cod_data() {
 # exit 1
 # bootstrap_1603_45_16__all
 # bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "3" "1" "0"
-__temp_preproces_quicktest_1603_16_24
-exit 0
+# __temp_preproces_quicktest_1603_16_24
+# exit 0
 
-# bootstrap_1603_45_16__all
+bootstrap_1603_45_16__all
 # bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
 # bootstrap_999999_1603_45_16_neo "MOZ"

@@ -2633,7 +2633,8 @@ class CodAbTabulae:
             linea_novae = []
             pcode_completo = linea[pcode_index]
             if ordo == 0:
-                linea_novae.append(pcode_completo)  # Ex. BR
+                # linea_novae.append(pcode_completo)  # Ex. BR
+                linea_novae.append(self.unm49)  # Ex. 76 ex BR
             else:
 
                 # Ex. 31 ad BR31
@@ -2751,7 +2752,7 @@ class CodAbTabulae:
         if self.ordo > 0:
             hashtag_numerordinatio = '#adm{0}+v_numerordinatio'.format(
                 self.ordo)
-        self.caput_no1.insert(0, hashtag_numerordinatio)
+        # self.caput_no1.insert(0, hashtag_numerordinatio)
         self.caput_no1.insert(0, '#item+conceptum+numerordinatio')
         data_novis = []
 
@@ -2767,7 +2768,8 @@ class CodAbTabulae:
                 str(self.ordo),
                 _identitas_locali,
             )
-            linea_novae = [_numerordinatio, _numerordinatio]
+            # linea_novae = [_numerordinatio, _numerordinatio]
+            linea_novae = [_numerordinatio]
             linea_novae.extend(linea)
 
             data_novis.append(linea_novae)
