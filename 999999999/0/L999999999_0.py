@@ -197,8 +197,11 @@ HXL_ATTRIBUTES_AD_RDF = {
         '__alia__': {
             '+name+alt1': '+name+alt',
             '+name+alt2': '+name+alt',
-            '+v_iso2': '+v_iso3166p1a2',
-            '+v_iso3': '+v_iso3166p1a3',
+            '+v_iso2': '+code+v_iso3166p1a2',
+            '+v_iso3': '+code+v_iso3166p1a3',
+        },
+        '+code+v_numerodinatio': {
+            'numerodinatio_est': True
         },
         '+name+v_unterm': {
             # P1448: official name of the subject in its official language(s)
@@ -231,20 +234,20 @@ HXL_ATTRIBUTES_AD_RDF = {
         },
         # [+code / +v_pcode] varies by context
         # '+code': {}
-        '+v_m49': {
+        '+code+v_m49': {
             'wdata': 'P2082'  # United Nations M.49 code for the subject item
         },
-        '+v_iso3166p1a2': {
+        '+code+v_iso3166p1a2': {
             'wdata': 'P297'  # ISO 3166-1 alpha-2 code
         },
-        '+v_iso3166p1a3': {
+        '+code+v_iso3166p1a3': {
             'wdata': 'P298'  # ISO 3166-1 alpha-3 code
         },
         # Consider using UN m49 code instead of the ISO one
-        '+v_iso3166p1n': {
+        '+code+v_iso3166p1n': {
             'wdata': 'P299'  # ISO 3166-1 numeric code
         },
-        '+v_iso3166p2': {
+        '+code+v_iso3166p2': {
             'wdata': 'P300'  # subdivision code ISO 3166-2
         },
     },
@@ -389,6 +392,73 @@ HXL_HASHTAGS_AD_RDF = {
     },
 }
 
+# @TODO this part is somewhat hardcoded
+HXL_HASH_ET_ATTRIBUTA_AD_RDF = {
+    # @TODO
+    #      - #country+code+v_iso3166p1a2
+    '#country+code+v_numerodinatio': {
+        '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5000-snop-pOBO-pbfo124-ps5001',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5001+rdf_s_u2200_s5000'
+    },
+    '#adm1+code+v_numerodinatio': {
+        '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5001-snop-pOBO-pbfo124-ps5002-pOBO-pbfo171-ps5000',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5002+rdf_p_obo_bfo171_s5000+rdf_s_u2200_s5001'
+    },
+    # @TODO make P-Codes using "instance of (P31)" like > p:P31 Q7200235
+    # @see https://en.wikipedia.org/wiki/Place_code
+    # @see https://www.wikidata.org/wiki/Q7200235 Q7200235
+    # '#adm1+code+v_pcode': {
+    #     '__no1bpc47__': '',
+    #     '__no1hxl__': ''
+    # },
+    '#adm2+code+v_numerodinatio': {
+        '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5002-snop-pOBO-pbfo124-ps5002-pOBO-pbfo171-ps5001',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5002+rdf_p_obo_bfo171_s5001+rdf_s_u2200_s5002'
+    },
+    '#adm3+code+v_numerodinatio': {
+        '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5003-snop-pOBO-pbfo124-ps5003-pOBO-pbfo171-ps5002',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5003+rdf_p_obo_bfo171_s5002+rdf_s_u2200_s5003'
+    },
+    '#adm4+code+v_numerodinatio': {
+        '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5004-snop-pOBO-pbfo124-ps5004-pOBO-pbfo171-ps5003',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5004+rdf_p_obo_bfo171_s5003+rdf_s_u2200_s5004'
+    },
+    '#adm5+code+v_numerodinatio': {
+        '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5005-snop-pOBO-pbfo124-ps5005-pOBO-pbfo171-ps5004',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5005+rdf_p_obo_bfo171_s5004+rdf_s_u2200_s5005'
+    },
+    '#adm6+code+v_numerodinatio': {
+        '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5006-snop-pOBO-pbfo124-ps5005-pOBO-pbfo171-ps5004',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5005+rdf_p_obo_bfo171_s5004+rdf_s_u2200_s5005'
+    },
+    # @see https://www.wikidata.org/wiki/EntitySchema:E49
+    # publication date (P577)
+    # date or point in time when a work was first published or released
+    # https://www.wikidata.org/wiki/Property:P577
+    '#date+start': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp577-ps1603-txsd-tdatetime-tnop',
+        '__no1hxl__':
+        '#item+rem+i_qcc+is_zxxx+rdf_p_p_p577_s1603+rdf_t_xsd_datetime'
+    },
+    # discontinued date (P2669)
+    # date that the availability of a product was discontinued;
+    # see also "dissolved, abolished or demolished" (P576)
+    # https://www.wikidata.org/wiki/Property:P2669
+    '#date+end': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp2699-ps1603-txsd-tdatetime-tnop',
+        '__no1hxl__':
+        '#item+rem+i_qcc+is_zxxx+rdf_p_p_p2699_s1603+rdf_t_xsd_datetime'
+    },
+    ## retrieved (P813)
+    # - https://www.wikidata.org/wiki/Property:P813
+    # - https://wiki.openstreetmap.org/wiki/Key:check_date
+    '#date+updated': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp813-ps1603-txsd-tdatetime-tnop',
+        '__no1hxl__':
+        '#item+rem+i_qcc+is_zxxx+rdf_p_p_p813_s1603+rdf_t_xsd_datetime'
+    },
+}
+
 
 # @TODO reorganize this
 def _expand_hxl_ad_rdf():
@@ -452,6 +522,7 @@ RDF_SPATIA_NOMINALIBUS_EXTRAS = {
     # 'p': 'http://www.wikidata.org/prop/',
     'wdt': 'http://www.wikidata.org/prop/direct/',
     'wdv': 'http://www.wikidata.org/value/',
+    'p': 'http://www.wikidata.org/prop/',
 }
 # For "Base OWL" of Wikidata, download link: http://wikiba.se/ontology
 
@@ -1747,12 +1818,18 @@ def bcp47_rdf_extension_relationship(
                     trivium_aliis[index_ex_tabula] = set()
                 trivium_aliis[int(index_ex_tabula)].add(aliud)
 
+        # print(trivium_aliis, result['rdfs:Container'])
+
         # Second pass
         _trivium_aliis = []
         for trivium_alii, _item in result['rdfs:Container'].items():
             _trivium_aliis.append(trivium_alii)
             _trivium_indici = _item['trivium']['index']
             _cum_aliis = []
+
+            if _trivium_indici == -1:
+                # Item is referenced by others, but does not explicitly exist
+                continue
 
             for _item in trivium_aliis[_trivium_indici]:
                 _cum_aliis.extend(
@@ -2114,6 +2191,10 @@ def bcp47_rdf_extension_poc(
     for caput_originali_asa in result['caput_asa']['caput_originali_asa']:
         # print(caput_originali_asa)
         # print(caput_originali_asa['extension']['r']['xsl:transform'])
+
+        if 'r' not in caput_originali_asa['extension']:
+            continue
+
         xsl_items = caput_originali_asa['extension']['r']['xsl:transform']
         if not xsl_items or len(xsl_items) == 0:
             continue
@@ -2557,6 +2638,43 @@ class CodAbTabulae:
 
                 self.caput_no1.append(caput_novi)
 
+            if len(self.caput_no1) != len(set(self.caput_no1)):
+
+                caput_novi__reversed = []
+                # caput_no1 = list(self.caput_no1)
+                caput_no1 = self.caput_no1[:]
+                _len_caput = len(caput_no1)
+                _index = _len_caput - 1
+                _done = []
+                while _index > -1:
+                    # print('oi', _index, _totale)
+                    _res = caput_no1[_index]
+                    _totale = caput_no1.count(_res)
+                    # print(self.caput_no1[_index])
+                    if _totale > 1:
+                        _done.append(_res)
+                        # print('  >>repeated', _res, caput_no1)
+                        # @TODO make a more semantic way to have duplicated
+                        #       items than ix_altN
+                        _res_novo = '{0}+ix_alt{1}'.format(
+                            _res, (_totale - _done.count(_res))
+                        )
+                        # caput_no1[caput_no1.index(_res)] = '__done' + str(index)
+                        # caput_no1[caput_no1.index(_res)] = None
+                        caput_novi__reversed.append(_res_novo)
+                        # print('   > > repeated neo', _res, caput_no1)
+                    else:
+                        caput_novi__reversed.append(_res)
+                    # _index += 1
+                    _index = _index - 1
+                # for _index in range(len(self.caput_no1)):
+                # for _item in self.caput_no1:
+
+                caput_novi__reversed.reverse()
+                self.caput_no1 = caput_novi__reversed
+
+            # self.caput_no1
+
         # if formatum in ['hxltm', 'no1'] and self.identitas_locali_index < 0:
         #     self.praeparatio_identitas_locali()
 
@@ -2746,6 +2864,7 @@ class CodAbTabulae:
     def praeparatio_numerordinatio(self):
         """numerordinatio
         """
+        # print('oi')
         identitas_locali_index = self.caput_hxltm.index(
             '#item+conceptum+codicem')
         hashtag_numerordinatio = '#country+v_numerordinatio'
@@ -2931,7 +3050,6 @@ class CodAbTabulae:
 
             # Something weird happened
 
-        # print('res', res, '{0}{1}{2}'.format(praefīxum, suffīxum, lingua), "\t\t", data_exemplis[:3])
         return '{0}{1}{2}'.format(praefīxum, suffīxum, lingua)
 
     def quod_hxltm_de_hxl_rei(self, hxlhashtag: str) -> str:
@@ -2995,6 +3113,10 @@ class CodAbTabulae:
         if not hxlhashtag or len(hxlhashtag) == 0 or \
                 not hxlhashtag.startswith('#'):
             return ''
+
+        _hxl = HXLHashtagSimplici(hxlhashtag).praeparatio()
+
+        return _hxl.quod_numerordinatio()
 
         # print('hxlhashtag', hxlhashtag)
         # Time-related hashtags
@@ -3836,10 +3958,46 @@ class HXLHashtagSimplici:
 
         return resultatum
 
+    def quod_bcp47(self, caput_contextui: List[str] = None,
+                   strictum=True) -> str:
+
+        if self.hashtag in BCP47_EX_HXL:
+            # Already '#item+conceptum+codicem'/'#item+conceptum+numerordinatio'
+            return BCP47_EX_HXL[self.hashtag]['bcp47']
+
+        if self.hashtag in HXL_HASH_ET_ATTRIBUTA_AD_RDF:
+            return HXL_HASH_ET_ATTRIBUTA_AD_RDF[self.hashtag]['__no1bpc47__']
+
+
+        hxl_base = '#item+rem'
+        numerordinatio = self.quod_numerordinatio(caput_contextui)
+        item_meta = hxl_hashtag_to_bcp47(numerordinatio)
+
+        if len(item_meta['_error']) == 0 and \
+                item_meta['Language-Tag_normalized']:
+            return item_meta['Language-Tag_normalized']
+            # print('item_meta    ', item_meta)
+            # bcp47 = '{0}{1}'.format(
+            #     hxl_base,
+            #     item_meta['_callbacks']['hxl_attrs']
+            # )
+            return bcp47
+        else:
+            # print('item_meta    ', item_meta)
+            if strictum:
+                raise SyntaxError('{0} <{1}> <{2}>'.format(
+                    self.hashtag, numerordinatio, item_meta)
+                )
+            return 'qcc-Zxxx-r-aDEVNULL-abnop-anop-x-error'
+
     def quod_numerordinatio(self, caput_contextui: List[str] = None):
         if self.hashtag in BCP47_EX_HXL:
             # Already '#item+conceptum+codicem'/'#item+conceptum+numerordinatio'
             return self.hashtag
+
+        if self.hashtag in HXL_HASH_ET_ATTRIBUTA_AD_RDF:
+            return HXL_HASH_ET_ATTRIBUTA_AD_RDF[self.hashtag]['__no1hxl__']
+
         resultatum = []
         rdf_parts = []
         # if self.ad_rdf is None:
@@ -3903,6 +4061,10 @@ class HXLHashtagSimplici:
                 _linguae[0], _script[0], _rdf_parts
             )
         else:
+            if len(_rdf_parts) == 0:
+                return '#meta+ERROR+{0}'.format(
+                    self.hashtag.replace('#', '')
+                )
             return '#item+rem+i_qcc+is_zxxx{0}'.format(
                 _rdf_parts
             )
@@ -4021,6 +4183,11 @@ def hxl_hashtag_to_bcp47(
         # raise ValueError(hashtag, _hashtag)
         hashtag = _hashtag
 
+    if hashtag in HXL_HASH_ET_ATTRIBUTA_AD_RDF:
+        _hashtag = _know_hardcoded[hashtag]['hxl']
+        result['_callbacks']['hxl_original'] = hashtag
+        hashtag = HXL_HASH_ET_ATTRIBUTA_AD_RDF[hashtag]['__no1hxl__']
+
     parts = hashtag.split('+')
     # bash_hashtag = parts.pop(0)
     # print('parts', parts)
@@ -4087,7 +4254,10 @@ def hxl_hashtag_to_bcp47(
                 ))
 
             elif item.startswith('p_'):
-                _item_parts = item.replace('p_', '').replace('_', ':')
+                # print('item', item)
+                # _item_parts = item.replace('p_', '').replace('_', ':')
+                # _item_parts = item.lstrip('p_').replace('_', ':')
+                _item_parts = item[2:].replace('_', ':')
                 _item_parts = _item_parts + ':NOP'
                 result['extension']['r']['rdf:predicate'].append(_item_parts)
                 _index_p = result['extension']['r']['rdf:predicate'].index(
@@ -4095,6 +4265,7 @@ def hxl_hashtag_to_bcp47(
                 )
 
                 # _subject_nop = 'NOP' reserved for potential future use
+                # print('_item_parts', _item_parts)
                 _predicate_ns, _predicate_item, _subject, _subject_nop = \
                     _item_parts.split(':')
 

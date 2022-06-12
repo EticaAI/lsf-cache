@@ -45,6 +45,7 @@ import yaml
 from L999999999_0 import (
     BCP47_AD_HXL,
     RDF_SPATIA_NOMINALIBUS_EXTRAS,
+    HXLHashtagSimplici,
     SetEncoder,
     bcp47_langtag,
     bcp47_rdf_extension_poc,
@@ -273,7 +274,9 @@ class Cli:
                 # #    - Uses '.ndjson' as extension
                 # 'application/x-ndjson',
                 '_temp_bcp47',
+                '_temp_no1',
                 '_temp_bcp47_meta_in_json',
+                '_temp_hxl_meta_in_json',
                 '_temp_header_hxl_to_bcp47',
                 '_temp_header_bcp47_to_hxl',
             ],
@@ -346,6 +349,26 @@ class Cli:
         )
 
         parser.add_argument(
+            '--punctum-separato-de-fontem',
+            help='Character(s) used as separator from input file ' +
+            'Used only for tabular results. ' +
+            'Defaults to comma ","',
+            dest='fontem_separato',
+            default=",",
+            nargs='?'
+        )
+
+        parser.add_argument(
+            '--punctum-separato-de-resultatum',
+            help='Character(s) used as separator for generate output. ' +
+            'Used only for tabular results. ' +
+            'Defaults to tab "\t"',
+            dest='resultatum_separato',
+            default="\t",
+            nargs='?'
+        )
+
+        parser.add_argument(
             # '--venandum-insectum-est, --debug',
             '--venandum-insectum-est', '--debug',
             help='Habilitar depuração? Informações adicionais',
@@ -375,6 +398,9 @@ class Cli:
             _infile = None
             _stdin = True
 
+        resultatum_separato = pyargs.resultatum_separato
+        fontem_separato = pyargs.fontem_separato
+
         # rdf_namespace_archivo
         if pyargs.rdf_namespace_archivo:
             rdf_namespaces_extras(pyargs.rdf_namespace_archivo)
@@ -382,22 +408,54 @@ class Cli:
             # pass
 
         # @TODO maybe refactor this temporary part
-        if pyargs.objectivum_formato == '_temp_bcp47_meta_in_json':
+        # if pyargs.objectivum_formato == '_temp_bcp47_meta_in_json':
+        if pyargs.objectivum_formato in [
+                '_temp_bcp47_meta_in_json', '_temp_hxl_meta_in_json']:
             caput, data = hxltm_carricato_brevibus(
-                _infile, _stdin, punctum_separato="\t")
+                _infile, _stdin, punctum_separato=fontem_separato)
+
+            if pyargs.objectivum_formato == '_temp_hxl_meta_in_json':
+                caput_novo = []
+                for _item in caput:
+                    # print('hxl item     > ', _item)
+                    _hxl = HXLHashtagSimplici(_item).praeparatio()
+                    _item_bcp47 = _hxl.quod_bcp47(strictum=False)
+                    # print('_item_bcp47  > ', _item_bcp47)
+                    caput_novo.append(_item_bcp47)
+                caput = caput_novo
+                # print('caput', caput)
+
+            rdf_sine_spatia_nominalibus = pyargs.rdf_sine_spatia_nominalibus
+            if not rdf_sine_spatia_nominalibus:
+                rdf_sine_spatia_nominalibus = []
+            rdf_sine_spatia_nominalibus.append('devnull')
 
             meta = bcp47_rdf_extension_poc(
                 caput, data, objective_bag=pyargs.rdf_bag,
-                rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus,
+                rdf_sine_spatia_nominalibus=rdf_sine_spatia_nominalibus,
                 est_meta=True)
             print(json.dumps(
                 meta, sort_keys=False, ensure_ascii=False, cls=SetEncoder))
             return self.EXIT_OK
 
         # @TODO remove thsi temporary part
-        if pyargs.objectivum_formato == '_temp_bcp47':
+        # if pyargs.objectivum_formato == '_temp_bcp47':
+        if pyargs.objectivum_formato in ['_temp_bcp47', '_temp_no1']:
+
             caput, data = hxltm_carricato(
-                _infile, _stdin, punctum_separato="\t")
+                _infile, _stdin, punctum_separato=fontem_separato)
+
+            if pyargs.objectivum_formato == '_temp_no1':
+                caput_novo = []
+                for _item in caput:
+                    # print('hxl item     > ', _item)
+                    _hxl = HXLHashtagSimplici(_item).praeparatio()
+                    _item_bcp47 = _hxl.quod_bcp47(strictum=False)
+                    # print('_item_bcp47  > ', _item_bcp47)
+                    caput_novo.append(_item_bcp47)
+                caput = caput_novo
+                # print('caput', caput)
+
             # print(caput, data)
             # print('')
             meta = bcp47_rdf_extension_poc(
@@ -405,6 +463,8 @@ class Cli:
                 rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus)
             # print(json.dumps(meta, sort_keys=True ,ensure_ascii=False))
             # return self.EXIT_OK
+
+
 
             # raise ValueError(meta)
 
@@ -420,6 +480,7 @@ class Cli:
             return self.EXIT_OK
 
         if pyargs.objectivum_formato == '_temp_header_bcp47_to_hxl':
+            # delimiter = "\t"
             delimiter = "\t"
             hxl_base = '#item+rem'
             if _stdin is True:
@@ -434,6 +495,7 @@ class Cli:
             caput_novo = []
             errors = []
 
+            # TODO: rework this funcion
             for item in caput:
                 if item in BCP47_AD_HXL:
                     # print(BCP47_AD_HXL[item])

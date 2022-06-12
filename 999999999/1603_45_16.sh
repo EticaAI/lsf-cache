@@ -1021,15 +1021,15 @@ __temp_download_external_cod_data() {
 # exit 1
 
 # @TODO manualy renamed 999999/1603/45/16/xlsx/aze.xlsx[aze_adm1]
-#       from 'admin0Name_en' to 'admin0Pcode'
+#       from 'admin0Name_en' to 'admin0Pcode' (2022-06-12 )
 
 # __temp_download_external_cod_data
 # exit 1
 # echo "all"
-bootstrap_1603_45_16__all
+# bootstrap_1603_45_16__all
 # bootstrap_1603_45_16__item "1603_45_16" "24" "AGO" "AO" "1" "1" "0"
 # bootstrap_1603_45_16__item "1603_45_16" "24" "AGO" "AO" "3" "1" "0"
-# __temp_preproces_quicktest_1603_16_24
+__temp_preproces_quicktest_1603_16_24
 exit 0
 
 # bootstrap_1603_45_16__all
