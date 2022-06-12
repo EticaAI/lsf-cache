@@ -2930,6 +2930,8 @@ class CodAbTabulae:
                 suffīxum = suffīxum + '+' + _item.lower()
 
             # Something weird happened
+
+        # print('res', res, '{0}{1}{2}'.format(praefīxum, suffīxum, lingua), "\t\t", data_exemplis[:3])
         return '{0}{1}{2}'.format(praefīxum, suffīxum, lingua)
 
     def quod_hxltm_de_hxl_rei(self, hxlhashtag: str) -> str:

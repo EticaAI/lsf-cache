@@ -1020,9 +1020,12 @@ __temp_download_external_cod_data() {
 # __temp_preprocess_external_indexes
 # exit 1
 
+# @TODO manualy renamed 999999/1603/45/16/xlsx/aze.xlsx[aze_adm1]
+#       from 'admin0Name_en' to 'admin0Pcode'
+
 # __temp_download_external_cod_data
 # exit 1
-echo "all"
+# echo "all"
 bootstrap_1603_45_16__all
 # bootstrap_1603_45_16__item "1603_45_16" "24" "AGO" "AO" "1" "1" "0"
 # bootstrap_1603_45_16__item "1603_45_16" "24" "AGO" "AO" "3" "1" "0"
