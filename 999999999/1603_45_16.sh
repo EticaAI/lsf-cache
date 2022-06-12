@@ -313,6 +313,7 @@ bootstrap_1603_45_16__item() {
     fi
 
     objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
+    # objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
     objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
 
     # set -x
@@ -1021,11 +1022,12 @@ __temp_download_external_cod_data() {
 # __temp_download_external_cod_data
 # exit 1
 # bootstrap_1603_45_16__all
-# bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "3" "1" "0"
+# bootstrap_1603_45_16__item "1603_45_16" "24" "AGO" "AO" "1" "1" "0"
+bootstrap_1603_45_16__item "1603_45_16" "24" "AGO" "AO" "3" "1" "0"
 # __temp_preproces_quicktest_1603_16_24
-# exit 0
+exit 0
 
-bootstrap_1603_45_16__all
+# bootstrap_1603_45_16__all
 # bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
 # bootstrap_999999_1603_45_16_neo "MOZ"
