@@ -2535,6 +2535,10 @@ class CodAbTabulae:
             self.caput_hxltm.append(caput_novi)
 
         if self.identitas_locali_index < 0:
+            ōrdinēs = range(self.ordo + 1)
+            for ordo in reversed(ōrdinēs):
+                self.praeparatio_identitas_numerodinatio(ordo)
+            # self.praeparatio_identitas_numerodinatio(0)
             self.praeparatio_identitas_locali()
 
         # if formatum == 'no1':
@@ -2592,17 +2596,20 @@ class CodAbTabulae:
 
         return self
 
-    def praeparatio_identitas_locali(self):
+    def praeparatio_identitas_locali(
+            self, ordo: int = None, hxl_hashtag: str = '#item+conceptum+codicem'):
         """praeparatio_identitas_locali
         """
+        if ordo is None:
+            ordo = self.ordo
         pcode_index = None
         pcode_hashtag_de_facto = ''
-        if self.ordo == 0:
+        if ordo == 0:
             pcode_hashtag = [
                 '#country+code+v_pcode', '#country+code+v_iso2',
                 '#country+code+v_iso3166p1a2']
         else:
-            pcode_hashtag = ['#adm{0}+code+v_pcode'.format(self.ordo)]
+            pcode_hashtag = ['#adm{0}+code+v_pcode'.format(ordo)]
 
         for item in pcode_hashtag:
             if item in self.caput_hxltm:
@@ -2618,13 +2625,14 @@ class CodAbTabulae:
                 ))
         # pcode_index = self.caput_hxltm.index(pcode_hashtag)
 
-        self.caput_hxltm.insert(0, '#item+conceptum+codicem')
+        # self.caput_hxltm.insert(0, '#item+conceptum+codicem')
+        self.caput_hxltm.insert(0, hxl_hashtag)
         data_novis = []
 
         for linea in self.data:
             linea_novae = []
             pcode_completo = linea[pcode_index]
-            if self.ordo == 0:
+            if ordo == 0:
                 linea_novae.append(pcode_completo)  # Ex. BR
             else:
 
@@ -2636,6 +2644,91 @@ class CodAbTabulae:
 
                 try:
                     linea_novae.append(int(pcode_numeri))
+                except ValueError as err:
+                    raise ValueError('<{0}:{1}> -> int({2})?? [{3}]'.format(
+                        pcode_hashtag_de_facto,
+                        pcode_completo,
+                        pcode_numeri,
+                        err
+                    ))
+
+            linea_novae.extend(linea)
+            data_novis.append(linea_novae)
+
+        self.data = data_novis
+
+    def praeparatio_identitas_numerodinatio(
+            self, ordo: int = None):
+        """praeparatio_identitas_numerodinatio
+
+        Change self.data and self.caput_hxltm
+
+        Args:
+            ordo (int, optional): _description_. Defaults to None.
+
+        """
+        # raise NotImplementedError
+        hxl_hashtag = '#adm{0}+code+v_numerodinatio'.format(ordo)
+        # if ordo is None:
+        #     ordo = self.ordo
+        pcode_index = None
+        pcode_hashtag_de_facto = ''
+        if ordo == 0:
+            hxl_hashtag = '#country+code+v_numerodinatio'
+            pcode_hashtag = [
+                '#country+code+v_pcode', '#country+code+v_iso2',
+                '#country+code+v_iso3166p1a2']
+        else:
+            pcode_hashtag = ['#adm{0}+code+v_pcode'.format(ordo)]
+
+        for item in pcode_hashtag:
+            if item in self.caput_hxltm:
+                pcode_hashtag_de_facto = item
+                pcode_index = self.caput_hxltm.index(item)
+                break
+
+        if pcode_index is None:
+            raise SyntaxError(
+                '{0} not in (hxltm)<{1}>/(hxl)<{2}>(csv){3}'.format(
+                    pcode_hashtag, self.caput_hxltm,
+                    self.caput_hxl, self.caput_originali
+                ))
+        # pcode_index = self.caput_hxltm.index(pcode_hashtag)
+
+        # self.caput_hxltm.insert(0, '#item+conceptum+codicem')
+        self.caput_hxltm.insert(0, hxl_hashtag)
+        data_novis = []
+
+        for linea in self.data:
+            linea_novae = []
+            pcode_completo = linea[pcode_index]
+            if ordo == 0:
+                # raise ValueError(ordo)
+                _numerordinatio = '{0}:{1}:{2}'.format(
+                    self.numerordinatio_praefixo,
+                    self.unm49,
+                    "0",
+                )
+                # linea_novae.append(pcode_completo)  # Ex. 76 for BR
+                linea_novae.append(_numerordinatio)  # Ex. 76 for BR
+            else:
+
+                # Ex. 31 ad BR31
+                pcode_numeri = pcode_completo.replace(self.pcode_praefixo, '')
+
+                # Ex: Haiti admin3Pcode HT0111-01, HT0111-02, HT0111-03
+                pcode_numeri = re.sub('[^0-9]', '', pcode_numeri)
+
+                try:
+                    pcode_numeri = int(pcode_numeri)
+                    _numerordinatio = '{0}:{1}:{2}:{3}'.format(
+                        self.numerordinatio_praefixo,
+                        self.unm49,
+                        ordo,
+                        str(pcode_numeri),
+                    )
+
+                    linea_novae.append(_numerordinatio)
                 except ValueError as err:
                     raise ValueError('<{0}:{1}> -> int({2})?? [{3}]'.format(
                         pcode_hashtag_de_facto,
