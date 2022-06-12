@@ -434,8 +434,6 @@ bootstrap_999999_1603_45_16_neo() {
   objectivum_iso3661p1a3="${1:-""}"
   # objectivum_unm49="${1:-""}"
 
-
-
   echo "${FUNCNAME[0]} ... [$objectivum_iso3661p1a3]"
 
   echo "NOTE: this entire function is deprecated." Use bootstrap_1603_45_16__item
@@ -487,7 +485,6 @@ bootstrap_999999_1603_45_16_neo() {
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_hxl \
         --ordines="$cod_level" "$file_path" >"${objectivum_archivum_hxl}"
-
 
       "${ROOTDIR}/999999999/0/999999999_7200235.py" \
         --methodus=xlsx_ad_hxltm \
@@ -890,7 +887,6 @@ __temp_preproces_quicktest_1603_16_24() {
   ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
   ISO3166p1a3=$(echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
 
-
   for ((i = 0; i <= cod_ab_level_max; i++)); do
     cod_level="$i"
     if [ "$_iso3661p1a3_lower" == "bra" ] && [ "$cod_level" == "2" ]; then
@@ -902,6 +898,7 @@ __temp_preproces_quicktest_1603_16_24() {
 
     objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
     objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+    objectivum_archivum_no1_owl_ttl="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.owl.ttl"
     objectivum_archivum_no1bcp47="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
 
     # set -x
@@ -925,6 +922,15 @@ __temp_preproces_quicktest_1603_16_24() {
     set +x
 
     frictionless validate "${objectivum_archivum_no1}" || true
+
+    rdf_trivio=$((5000 + cod_level))
+
+    "${ROOTDIR}/999999999/0/999999999_54872.py" \
+      --objectivum-formato=_temp_no1 \
+      --rdf-trivio="${rdf_trivio}" \
+      "${objectivum_archivum_no1}" |
+      rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+      > "${objectivum_archivum_no1_owl_ttl}"
 
     # set -x
     # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
@@ -1042,14 +1048,14 @@ exit 0
 "${ROOTDIR}/999999999/0/999999999_7200235.py" \
   --methodus='cod_ab_index_levels_ttl' \
   --punctum-separato-ad-tab \
-  > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl"
+  >"${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl"
 
 rapper --quiet --input=turtle --output=dot \
   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
-  > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
+  >"${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
 rapper --quiet --input=turtle --output=dot \
   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
-  > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
+  >"${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
 
 # ./999999999/0/1603_1.py --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 --ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv | rapper --quiet --input=turtle --output=turtle /dev/fd/0 > /home/fititnt/Downloads/test.ttl
 # ./999999999/0/1603_1.py --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 --ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv | rapper --quiet --input=turtle --output=dot /dev/fd/0 > /home/fititnt/Downloads/test.dot
@@ -1060,7 +1066,7 @@ rapper --quiet --input=turtle --output=dot \
 
 # dot -Tpng \
 #   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot" \
-#   > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.png" 
+#   > "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.png"
 
 exit 1
 
@@ -1218,7 +1224,6 @@ set +x
 # - https://www.wikidata.org/wiki/Special:ListProperties/tabular-data
 # - Exemplo de população
 #   - wdt:P1082 "+6747815"^^xsd:decimal ;
-
 
 #### TEMP / Other tests ________________________________________________________
 # ./999999999/0/999999999_7200235.py --methodus=xlsx_ad_no1 --numerordinatio-praefixo=1603_45_16_24 --ordines=0 --pcode-praefix=AO --unm49=24 999999/1603/45/16/xlsx/ago.xlsx
