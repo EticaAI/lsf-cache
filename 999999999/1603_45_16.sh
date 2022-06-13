@@ -129,11 +129,11 @@ bootstrap_1603_45_16__all() {
         continue
       fi
 
-      # echo "numerordinatio_praefixo $numerordinatio_praefixo"
-      # bootstrap_1603_45_16__item "1603_45_16_24" "24" "AGO" "AO" "3" "1" "0"
-      bootstrap_1603_45_16__item "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
-      # bootstrap_1603_45_16__item "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "1" "0"
-      sleep 5
+
+      bootstrap_1603_45_16__item_no1 "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
+      bootstrap_1603_45_16__item_rdf "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
+
+      # sleep 5
     done
   } <"${opus_temporibus_temporarium}"
 
@@ -262,7 +262,7 @@ bootstrap_1603_45_16__apothecae() {
 # Outputs:
 #   Convert files
 #######################################
-bootstrap_1603_45_16__item() {
+bootstrap_1603_45_16__item_no1() {
   numerordinatio_praefixo="$1"
   unm49="${2}"
   iso3661p1a3="${3}"
@@ -291,8 +291,8 @@ bootstrap_1603_45_16__item() {
   echo "${FUNCNAME[0]} ... [$numerordinatio_praefixo] [$unm49] [$iso3661p1a3] [$pcode_praefixo]"
 
   # for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
-  ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
-  ISO3166p1a3=$(echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
+  # ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
+  # ISO3166p1a3=$(echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
   # UNm49=$(numerordinatio_codicem_locali__1603_45_49 "$ISO3166p1a3")
 
   if [ ! -d "$objectivum_archivum_basi" ]; then
@@ -336,6 +336,126 @@ bootstrap_1603_45_16__item() {
     set +x
 
     frictionless validate "${objectivum_archivum_no1}" || true
+
+  done
+  # return 0
+  # done
+}
+
+#######################################
+# Convert the XLSXs to intermediate formats on 999999/1603/45/16 using
+# 999999999_7200235.py to 1603/45/16/{cod_ab_level}/
+#
+# @TODO: potentially use more than one source (such as IGBE data for BRA)
+#        instead of direclty from OCHA
+#
+# Globals:
+#   ROOTDIR
+#
+# Arguments:
+#   numerordinatio_praefixo
+#   unm49
+#   iso3661p1a3
+#   pcode_praefixo
+#   cod_ab_level_max
+#   est_temporarium_fontem
+#   est_temporarium_objectivum
+#
+# Outputs:
+#   Convert files
+#######################################
+bootstrap_1603_45_16__item_rdf() {
+  numerordinatio_praefixo="$1"
+  unm49="${2}"
+  iso3661p1a3="${3}"
+  pcode_praefixo="${4}"
+  cod_ab_level_max="${5}"
+  est_temporarium_fontem="${6:-"1"}"
+  est_temporarium_objectivum="${7:-"0"}"
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  _iso3661p1a3_lower=$(echo "$iso3661p1a3" | tr '[:upper:]' '[:lower:]')
+
+  fontem_archivum="${_basim_fontem}/1603/45/16/xlsx/${_iso3661p1a3_lower}.xlsx"
+  objectivum_archivum_basi="${_basim_objectivum}/1603/45/16/${unm49}"
+  opus_temporibus_temporarium="${ROOTDIR}/999999/0/${unm49}~lvl.tsv"
+
+  echo "${FUNCNAME[0]} ... [$numerordinatio_praefixo] [$unm49] [$iso3661p1a3] [$pcode_praefixo]"
+
+  # for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
+  # ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
+  # ISO3166p1a3=$(echo "$ISO3166p1a3_original" | tr '[:lower:]' '[:upper:]')
+  # UNm49=$(numerordinatio_codicem_locali__1603_45_49 "$ISO3166p1a3")
+
+  # if [ ! -d "$objectivum_archivum_basi" ]; then
+  #   mkdir "$objectivum_archivum_basi"
+  # fi
+
+  # file_xlsx="${ISO3166p1a3_original}.xlsx"
+
+  echo "cod_ab_levels $cod_ab_level_max"
+
+  for ((i = 0; i <= cod_ab_level_max; i++)); do
+    cod_level="$i"
+    if [ "$_iso3661p1a3_lower" == "bra" ] && [ "$cod_level" == "2" ]; then
+      echo ""
+      echo "Skiping COD-AB-BR lvl 2"
+      echo ""
+      continue
+    fi
+
+    objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
+    # objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+    objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+
+    objectivum_archivum_no1_owl_ttl="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.owl.ttl"
+
+    # set -x
+    # rm "$objectivum_archivum_no1" || true
+    # set +x
+    # continue
+    echo "  cod-ab-$_iso3661p1a3_lower-$cod_level [$objectivum_archivum_no1] ..."
+    # if [ ! -d "$objectivum_archivum_basi_lvl" ]; then
+    #   mkdir "$objectivum_archivum_basi_lvl"
+    # fi
+
+    echo "TODO"
+
+    rdf_trivio=$((5000 + cod_level))
+
+    set -x
+    "${ROOTDIR}/999999999/0/999999999_54872.py" \
+      --objectivum-formato=_temp_no1 \
+      --rdf-trivio="${rdf_trivio}" \
+      "${objectivum_archivum_no1}" |
+      rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+      > "${objectivum_archivum_no1_owl_ttl}"
+    set +x
+
+    echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
+
+    sleep 10
+
+    # set -x
+    # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    #   --methodus=xlsx_ad_no1 \
+    #   --numerordinatio-praefixo="$numerordinatio_praefixo" \
+    #   --ordines="$cod_level" \
+    #   --pcode-praefix="$pcode_praefixo" \
+    #   --unm49="$unm49" \
+    #   "$fontem_archivum" >"${objectivum_archivum_no1}"
+    # set +x
+
 
   done
   # return 0
@@ -436,8 +556,8 @@ bootstrap_999999_1603_45_16_neo() {
 
   echo "${FUNCNAME[0]} ... [$objectivum_iso3661p1a3]"
 
-  echo "NOTE: this entire function is deprecated." Use bootstrap_1603_45_16__item
-  echo "  Use bootstrap_1603_45_16__item (called by bootstrap_1603_45_16__all)"
+  echo "NOTE: this entire function is deprecated." Use bootstrap_1603_45_16__item_no1
+  echo "  Use bootstrap_1603_45_16__item_no1 (called by bootstrap_1603_45_16__all)"
   echo "  or at least call 999999999_7200235.py with correct --pcode-praefixo="
   sleep 3
   echo "running anyway..."
@@ -932,6 +1052,8 @@ __temp_preproces_quicktest_1603_16_24() {
       rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
       > "${objectivum_archivum_no1_owl_ttl}"
 
+    echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
+
     # set -x
     # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
     #   --methodus=xlsx_ad_no1bcp47 \
@@ -1032,10 +1154,10 @@ __temp_download_external_cod_data() {
 # __temp_download_external_cod_data
 # exit 1
 # echo "all"
-# bootstrap_1603_45_16__all
-# bootstrap_1603_45_16__item "1603_45_16" "24" "AGO" "AO" "1" "1" "0"
-# bootstrap_1603_45_16__item "1603_45_16" "24" "AGO" "AO" "3" "1" "0"
-__temp_preproces_quicktest_1603_16_24
+bootstrap_1603_45_16__all
+# bootstrap_1603_45_16__item_no1 "1603_45_16" "24" "AGO" "AO" "1" "1" "0"
+# bootstrap_1603_45_16__item_no1 "1603_45_16" "24" "AGO" "AO" "3" "1" "0"
+# __temp_preproces_quicktest_1603_16_24
 exit 0
 
 # bootstrap_1603_45_16__all

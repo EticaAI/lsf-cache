@@ -464,8 +464,6 @@ class Cli:
             # print(json.dumps(meta, sort_keys=True ,ensure_ascii=False))
             # return self.EXIT_OK
 
-
-
             # raise ValueError(meta)
 
             rdf_spatia_nominalibus = \
