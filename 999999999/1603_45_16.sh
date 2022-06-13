@@ -129,10 +129,11 @@ bootstrap_1603_45_16__all() {
         continue
       fi
 
-      # bootstrap_1603_45_16__item_no1 "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
+      bootstrap_1603_45_16__item_no1 "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
       bootstrap_1603_45_16__item_rdf "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
 
-      sleep 3
+      echo "Sleep 10 (disable me later)"
+      sleep 10
     done
   } <"${opus_temporibus_temporarium}"
 
@@ -442,11 +443,29 @@ bootstrap_1603_45_16__item_rdf() {
     #   > "${objectivum_archivum_no1_owl_ttl}"
     # set +x
     set -x
+
+    # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    #   --methodus=xlsx_ad_no1 \
+    #   --numerordinatio-praefixo="$numerordinatio_praefixo" \
+    #   --ordines="$cod_level" \
+    #   --pcode-praefix="$pcode_praefixo" \
+    #   --unm49="$unm49" \
+    #   "$fontem_archivum" >"${objectivum_archivum_no1}"
+    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    #   --objectivum-formato=_temp_no1 \
+    #   --rdf-trivio="${rdf_trivio}" \
+    #   "${objectivum_archivum_no1}"
+
+    # @
+    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    #   --objectivum-formato=_temp_no1 \
+    #   --rdf-trivio="${rdf_trivio}" \
+    #   "${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
+
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_no1 \
       --rdf-trivio="${rdf_trivio}" \
-      "${objectivum_archivum_no1}" \
-      > "${opus_temporibus_temporarium}"
+      <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
     rapper --quiet --input=turtle --output=turtle \
       "${opus_temporibus_temporarium}" \
@@ -455,7 +474,7 @@ bootstrap_1603_45_16__item_rdf() {
 
     echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
 
-    sleep 10
+    # sleep 10
 
     # set -x
     # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
