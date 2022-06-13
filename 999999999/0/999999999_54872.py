@@ -770,5 +770,7 @@ if __name__ == "__main__":
 
     est_cli = Cli()
     args = est_cli.make_args()
+    # print('  >>>>  args', args)
+    # raise ValueError(args)
 
     est_cli.execute_cli(args)

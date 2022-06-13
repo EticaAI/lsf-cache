@@ -129,11 +129,10 @@ bootstrap_1603_45_16__all() {
         continue
       fi
 
-
-      bootstrap_1603_45_16__item_no1 "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
+      # bootstrap_1603_45_16__item_no1 "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
       bootstrap_1603_45_16__item_rdf "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
 
-      # sleep 5
+      sleep 3
     done
   } <"${opus_temporibus_temporarium}"
 
@@ -388,7 +387,8 @@ bootstrap_1603_45_16__item_rdf() {
 
   fontem_archivum="${_basim_fontem}/1603/45/16/xlsx/${_iso3661p1a3_lower}.xlsx"
   objectivum_archivum_basi="${_basim_objectivum}/1603/45/16/${unm49}"
-  opus_temporibus_temporarium="${ROOTDIR}/999999/0/${unm49}~lvl.tsv"
+  # opus_temporibus_temporarium="${ROOTDIR}/999999/0/${unm49}~lvl.tsv"
+  opus_temporibus_temporarium="${ROOTDIR}/999999/0/${unm49}.ttl"
 
   echo "${FUNCNAME[0]} ... [$numerordinatio_praefixo] [$unm49] [$iso3661p1a3] [$pcode_praefixo]"
 
@@ -429,17 +429,28 @@ bootstrap_1603_45_16__item_rdf() {
     #   mkdir "$objectivum_archivum_basi_lvl"
     # fi
 
-    echo "TODO"
+    # echo "TODO"
 
     rdf_trivio=$((5000 + cod_level))
 
+    # set -x
+    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    #   --objectivum-formato=_temp_no1 \
+    #   --rdf-trivio="${rdf_trivio}" \
+    #   "${objectivum_archivum_no1}" |
+    #   rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+    #   > "${objectivum_archivum_no1_owl_ttl}"
+    # set +x
     set -x
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_no1 \
       --rdf-trivio="${rdf_trivio}" \
-      "${objectivum_archivum_no1}" |
-      rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
-      > "${objectivum_archivum_no1_owl_ttl}"
+      "${objectivum_archivum_no1}" \
+      > "${opus_temporibus_temporarium}"
+
+    rapper --quiet --input=turtle --output=turtle \
+      "${opus_temporibus_temporarium}" \
+      >"${objectivum_archivum_no1_owl_ttl}"
     set +x
 
     echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
@@ -456,8 +467,10 @@ bootstrap_1603_45_16__item_rdf() {
     #   "$fontem_archivum" >"${objectivum_archivum_no1}"
     # set +x
 
+    rm "$opus_temporibus_temporarium"
 
   done
+
   # return 0
   # done
 }
@@ -1047,10 +1060,11 @@ __temp_preproces_quicktest_1603_16_24() {
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_no1 \
+      --punctum-separato-de-fontem=',' \
       --rdf-trivio="${rdf_trivio}" \
       "${objectivum_archivum_no1}" |
       rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
-      > "${objectivum_archivum_no1_owl_ttl}"
+        >"${objectivum_archivum_no1_owl_ttl}"
 
     echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
 
