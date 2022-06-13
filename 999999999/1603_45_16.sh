@@ -132,8 +132,8 @@ bootstrap_1603_45_16__all() {
       bootstrap_1603_45_16__item_no1 "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
       bootstrap_1603_45_16__item_rdf "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
 
-      echo "Sleep 10 (disable me later)"
-      sleep 10
+      # echo "Sleep 5 (disable me later)"
+      # sleep 5
     done
   } <"${opus_temporibus_temporarium}"
 
@@ -470,6 +470,8 @@ bootstrap_1603_45_16__item_rdf() {
     rapper --quiet --input=turtle --output=turtle \
       "${opus_temporibus_temporarium}" \
       >"${objectivum_archivum_no1_owl_ttl}"
+
+    riot --validate "${objectivum_archivum_no1_owl_ttl}"
     set +x
 
     echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
