@@ -109,12 +109,14 @@ test_unesco_thesaurus() {
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47_meta_in_json \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__unesco_thesaurus_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__unesco_thesaurus_bcp47}" |
@@ -123,6 +125,7 @@ test_unesco_thesaurus() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=2 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__unesco_thesaurus_bcp47}" |
@@ -184,12 +187,14 @@ test_cod_ab() {
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47_meta_in_json \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -198,6 +203,7 @@ test_cod_ab() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=2 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -206,6 +212,7 @@ test_cod_ab() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=3 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -214,6 +221,7 @@ test_cod_ab() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=4 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -279,6 +287,7 @@ test_cod_ab__with_inferences_prebuild() {
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47_meta_in_json \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     --rdf-trivio=5000 \
     "${archivum__cod_ab_bcp47}" |
@@ -286,6 +295,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=5000 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -294,6 +304,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=5001 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -302,6 +313,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=5002 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -311,6 +323,7 @@ test_cod_ab__with_inferences_prebuild() {
   # --rdf-trivio=503 is equivalent to --rdf-trivio=1
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
+    --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |

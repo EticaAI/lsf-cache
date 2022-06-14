@@ -106,18 +106,23 @@ __EPILOGUM__ = """
 Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Debug information in JSON)
     {0} --objectivum-formato=_temp_bcp47_meta_in_json \
+--punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2
 
     {0} --objectivum-formato=_temp_bcp47_meta_in_json \
+--punctum-separato-de-fontem=$'\\t' \
 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
 
 (Data operations)
     {0} --objectivum-formato=_temp_bcp47 \
+--punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2
 
-    {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
+    {0} --objectivum-formato=_temp_bcp47
+--punctum-separato-de-fontem=$'\\t' \
+--rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-trivio=1
 
@@ -125,18 +130,22 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-trivio=2
 
-    {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
+    {0} --objectivum-formato=_temp_bcp47 \
+--punctum-separato-de-fontem=$'\\t' \
+--rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv \
 | rapper --quiet --input=turtle --output=turtle /dev/fd/0
 
 (Data operation; example of "SKOS version" without OWL/OBO assertions)
     {0} --objectivum-formato=_temp_bcp47 \
+--punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
 --rdf-sine-spatia-nominalibus=owl,obo,devnull --rdf-trivio=2
 
 (Data operation; example of "OWL + OBO" without SKOS linguistic metadata)
     {0} --objectivum-formato=_temp_bcp47 \
+--punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
 --rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-trivio=2
 
@@ -319,6 +328,20 @@ class Cli:
             default=None
         )
 
+        # numerordinatio
+        # cum (+ ablativus) https://en.wiktionary.org/wiki/cum#Latin
+        # antecessōribus, pl, m, ablativus, en.wiktionary.org/wiki/antecessor
+        parser.add_argument(
+            '--numerordinatio-cum-antecessoribus',
+            help='If RDF output should generate implicily Numerordinatio '
+            'antecessors',
+            metavar="cum_antecessoribus",
+            dest="cum_antecessoribus",
+            action='store_const',
+            const=True,
+            default=False
+        )
+
         # archīvum, n, s, nominativus, https://en.wiktionary.org/wiki/archivum
         # cōnfigūrātiōnī, f, s, dativus,
         #                      https://en.wiktionary.org/wiki/configuratio#Latin
@@ -433,6 +456,7 @@ class Cli:
             meta = bcp47_rdf_extension_poc(
                 caput, data, objective_bag=pyargs.rdf_bag,
                 rdf_sine_spatia_nominalibus=rdf_sine_spatia_nominalibus,
+                cum_antecessoribus=pyargs.cum_antecessoribus,
                 est_meta=True)
             print(json.dumps(
                 meta, sort_keys=False, ensure_ascii=False, cls=SetEncoder))
@@ -460,7 +484,8 @@ class Cli:
             # print('')
             meta = bcp47_rdf_extension_poc(
                 caput, data, objective_bag=pyargs.rdf_bag,
-                rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus)
+                rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus,
+                cum_antecessoribus=pyargs.cum_antecessoribus)
             # print(json.dumps(meta, sort_keys=True ,ensure_ascii=False))
             # return self.EXIT_OK
 

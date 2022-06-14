@@ -104,6 +104,10 @@ for datasets that already are highly reusable, as mere suggestion:
 
 
 ## To Dos
+- improve baseline relations with SKOS even when loading a single file
+  (e.g. show the entire previous parents)
+- Change the new implementation to divide the SKOS and OWL format
+- Automate entrypoint files to import other data
 - https://www.w3.org/wiki/UsingSeeAlso
   - maybe `-r-bVERB-bitem-bnop` ? (this would make result hardcoded to `rdfs:seeAlso`)
   - maybe `-r-bRDFSx1dseeAlso-bitem-bnop` ?
