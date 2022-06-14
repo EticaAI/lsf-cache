@@ -5876,12 +5876,19 @@ def numerordinatio_cum_antecessoribus(
 
         # Exemplum: 1603
         # if ordo == 1:
-        if ordo == radix:
+        if ordo < radix:
+            pass
+        elif ordo == radix:
             NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.extend([
                 [
-                    '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
+                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
                     'a',
                     'skos:ConceptScheme',
+                ],
+                [
+                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    'rdfs:label',
+                    '"{0}:::"'.format(':'.join(trivium)),
                 ],
                 # [
                 #     '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
@@ -5893,19 +5900,31 @@ def numerordinatio_cum_antecessoribus(
         elif ordo == (radix + 1):
             NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.extend([
                 [
-                    '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
+                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
                     'a',
-                    'skos:Concept',
+                    'skos:ConceptScheme',
                 ],
                 [
-                    '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
-                    'skos:topConceptOf',
-                    '<urn:{0}:{1}>'.format(
+                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    'skos:inScheme',
+                    '<urn:{0}:{1}:::>'.format(
                         praefixum, ':'.join(trivium_antecessori)),
                 ]
             ])
         else:
-            # @TODO
+            NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.extend([
+                [
+                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    'a',
+                    'skos:ConceptScheme',
+                ],
+                [
+                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    'skos:inScheme',
+                    '<urn:{0}:{1}:::>'.format(
+                        praefixum, ':'.join(trivium_antecessori)),
+                ]
+            ])
             pass
 
         trivium_antecessori.append(_part)
