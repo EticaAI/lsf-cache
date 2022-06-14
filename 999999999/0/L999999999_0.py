@@ -2411,7 +2411,14 @@ def bcp47_rdf_extension_poc(
             # ''.split()
             trivium_antecessori = linea[index_id].split(':')
             # This initialize
+            trivium_antecessori.pop()
             numerordinatio_cum_antecessoribus(trivium_antecessori)
+
+            result['rdf_triplis'].append([
+                '<urn:mdciii:{0}()>'.format(':'.join(trivium_antecessori)),
+                'skos:member',
+                triple_subject
+            ])
         elif is_urn:
             triple_subject = '<urn:{0}>'.format(linea[index_id])
             triple_rdfs_label_literal = linea[index_id]
@@ -5881,14 +5888,14 @@ def numerordinatio_cum_antecessoribus(
         elif ordo == radix:
             NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.extend([
                 [
-                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
                     'a',
                     'skos:ConceptScheme',
                 ],
                 [
-                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
                     'rdfs:label',
-                    '"{0}:::"'.format(':'.join(trivium)),
+                    '"({0})"'.format(':'.join(trivium)),
                 ],
                 # [
                 #     '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
@@ -5900,29 +5907,58 @@ def numerordinatio_cum_antecessoribus(
         elif ordo == (radix + 1):
             NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.extend([
                 [
-                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
                     'a',
-                    'skos:ConceptScheme',
+                    # 'skos:ConceptScheme',
+                    'skos:Collection',
                 ],
                 [
-                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
+                    'rdfs:label',
+                    '"({0})"'.format(':'.join(trivium)),
+                ],
+                [
+                    '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
+                    # 'skos:member',
+                    # '<urn:{0}:{1}()>'.format(
+                    #     praefixum, ':'.join(trivium_antecessori)),
                     'skos:inScheme',
-                    '<urn:{0}:{1}:::>'.format(
+                    # 'skos:member',
+                    '<urn:{0}:{1}()>'.format(
                         praefixum, ':'.join(trivium_antecessori)),
+                    # '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
                 ]
+                # [
+                #     # '<urn:{0}:{1}::>'.format(praefixum, ':'.join(trivium)),
+                #     # 'skos:member',
+                #     '<urn:{0}:{1}()>'.format(
+                #         praefixum, ':'.join(trivium_antecessori)),
+                #     # 'skos:inScheme',
+                #     'skos:member',
+                #     # '<urn:{0}:{1}::>'.format(
+                #     #     praefixum, ':'.join(trivium_antecessori)),
+                #     '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
+                # ]
             ])
         else:
             NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.extend([
                 [
-                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
+                    '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
                     'a',
-                    'skos:ConceptScheme',
+                    # 'skos:ConceptScheme',
+                    'skos:Collection',
                 ],
                 [
-                    '<urn:{0}:{1}:::>'.format(praefixum, ':'.join(trivium)),
-                    'skos:inScheme',
-                    '<urn:{0}:{1}:::>'.format(
+                    '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
+                    'rdfs:label',
+                    '"({0})"'.format(':'.join(trivium)),
+                ],
+                [
+                    '<urn:{0}:{1}()>'.format(
                         praefixum, ':'.join(trivium_antecessori)),
+                    # 'skos:inScheme',
+                    'skos:member',
+                    '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
                 ]
             ])
             pass

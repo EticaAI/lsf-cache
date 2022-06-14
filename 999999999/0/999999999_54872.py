@@ -496,6 +496,7 @@ class Cli:
 
             for prefix, iri in rdf_spatia_nominalibus.items():
                 print('@prefix {0}: <{1}> .'.format(prefix, iri))
+
             if pyargs.cum_antecessoribus and \
                 'antecessoribus_rdf_triplis' in meta and \
                     len(meta['antecessoribus_rdf_triplis']):
