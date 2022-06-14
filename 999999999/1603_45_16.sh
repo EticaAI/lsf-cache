@@ -464,6 +464,7 @@ bootstrap_1603_45_16__item_rdf() {
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_no1 \
+      --numerordinatio-cum-antecessoribus \
       --rdf-trivio="${rdf_trivio}" \
       <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
@@ -1081,6 +1082,7 @@ __temp_preproces_quicktest_1603_16_24() {
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_no1 \
+      --numerordinatio-cum-antecessoribus \
       --punctum-separato-de-fontem=',' \
       --rdf-trivio="${rdf_trivio}" \
       "${objectivum_archivum_no1}" |
@@ -1189,9 +1191,9 @@ __temp_download_external_cod_data() {
 # __temp_download_external_cod_data
 # exit 1
 # echo "all"
-bootstrap_1603_45_16__all
+# bootstrap_1603_45_16__all
 # bootstrap_1603_45_16__item_no1 "1603_45_16" "24" "AGO" "AO" "1" "1" "0"
-# bootstrap_1603_45_16__item_no1 "1603_45_16" "24" "AGO" "AO" "3" "1" "0"
+bootstrap_1603_45_16__item_rdf "1603_45_16" "24" "AGO" "AO" "3" "1" "0"
 # __temp_preproces_quicktest_1603_16_24
 exit 0
 

@@ -496,6 +496,12 @@ class Cli:
 
             for prefix, iri in rdf_spatia_nominalibus.items():
                 print('@prefix {0}: <{1}> .'.format(prefix, iri))
+            if pyargs.cum_antecessoribus and \
+                'antecessoribus_rdf_triplis' in meta and \
+                    len(meta['antecessoribus_rdf_triplis']):
+                for triple in meta['antecessoribus_rdf_triplis']:
+                    print('{0} {1} {2} .'.format(
+                        triple[0], triple[1], triple[2]))
 
             for triple in meta['rdf_triplis']:
                 print('{0} {1} {2} .'.format(triple[0], triple[1], triple[2]))

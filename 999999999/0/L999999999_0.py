@@ -459,8 +459,9 @@ HXL_HASH_ET_ATTRIBUTA_AD_RDF = {
     },
 }
 
-
 # @TODO reorganize this
+
+
 def _expand_hxl_ad_rdf():
     global HXL_ATTRIBUTES_AD_RDF
     global HXL_HASHTAGS_AD_RDF
@@ -474,6 +475,15 @@ def _expand_hxl_ad_rdf():
         # print(HXL_ATTRIBUTES_AD_RDF)
     # else:
     #     print('already ready _prepare_HXL_HASHTAGS_AD_RDF')
+
+
+# @TODO maybe rework this part global object part. It's used with
+#       999999999_54872.py --numerordinatio-cum-antecessoribus
+NUMERODINATIO_ANTECESSORIBUS__OKAY = []
+NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS = [
+
+]
+
 
 # @TODO RDF_TYPUS_AD_TRIVIUM_INCOGNITA: test the implications of mixing
 #       SKOS (use case: the translations) and
@@ -2392,15 +2402,30 @@ def bcp47_rdf_extension_poc(
         if not linea[index_id] or len(linea[index_id]) == 0:
             continue
 
+        triple_rdfs_label_literal = None
         if is_urn_mdciii:
+
             triple_subject = '<urn:mdciii:{0}>'.format(linea[index_id])
+            triple_rdfs_label_literal = linea[index_id]
+
+            # ''.split()
+            trivium_antecessori = linea[index_id].split(':')
+            # This initialize
+            numerordinatio_cum_antecessoribus(trivium_antecessori)
         elif is_urn:
             triple_subject = '<urn:{0}>'.format(linea[index_id])
+            triple_rdfs_label_literal = linea[index_id]
         else:
             if rdf_sine_spatia_nominalibus is not None and \
                     prefix_pivot in rdf_sine_spatia_nominalibus:
                 continue
             triple_subject = '{0}:{1}'.format(prefix_pivot, linea[index_id])
+
+        if triple_rdfs_label_literal is not None:
+            result['rdf_triplis'].append([
+                triple_subject, 'rdfs:label',
+                '"' + triple_rdfs_label_literal + '"'
+            ])
 
         for ego_typus in bag_meta['trivium']['rdf:type']:
             if not ego_typus.endswith('||0:NOP'):
@@ -2447,7 +2472,8 @@ def bcp47_rdf_extension_poc(
 
     if rdf_sine_spatia_nominalibus is not None:
         _temp1 = {}
-        for item_ns, item_iri in result['caput_asa']['rdf_spatia_nominalibus'].items():
+        for item_ns, item_iri in \
+                result['caput_asa']['rdf_spatia_nominalibus'].items():
             if item_ns not in rdf_sine_spatia_nominalibus:
                 _temp1[item_ns] = item_iri
         result['caput_asa']['rdf_spatia_nominalibus'] = _temp1
@@ -2458,6 +2484,9 @@ def bcp47_rdf_extension_poc(
     if 'rdf_spatia_nominalibus' in result:
         # @TODO remove this later.
         del result['rdf_spatia_nominalibus']
+
+    result['antecessoribus_rdf_triplis'] = \
+        NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS
 
     if est_meta:
         # @TODO: annex extra information
@@ -3969,7 +3998,6 @@ class HXLHashtagSimplici:
 
         if self.hashtag in HXL_HASH_ET_ATTRIBUTA_AD_RDF:
             return HXL_HASH_ET_ATTRIBUTA_AD_RDF[self.hashtag]['__no1bpc47__']
-
 
         hxl_base = '#item+rem'
         numerordinatio = self.quod_numerordinatio(caput_contextui)
@@ -5801,6 +5829,89 @@ def numerordinatio_descendentibus(
 
     return resultatum
 
+# @TODO https://stackoverflow.com/questions/55506715/nested-skos-concept-schemes
+
+
+def numerordinatio_cum_antecessoribus(
+        numerordinatio: Union[str, list],
+        praefixum: str = 'mdciii',
+        radix: int = 2,
+        est_urn: bool = True
+) -> str:
+
+    if est_urn is not True:
+        # @TODO: implement this
+        raise NotImplementedError
+
+    global NUMERODINATIO_ANTECESSORIBUS__OKAY
+    global NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS
+
+    if not isinstance(numerordinatio, list):
+        _numerordinatio = numerordinatio_neo_separatum(numerordinatio, ':')
+        numerordinatio = _numerordinatio.split(':')
+
+    if ':'.join(numerordinatio) in NUMERODINATIO_ANTECESSORIBUS__OKAY:
+        return NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS
+
+    _parts = numerordinatio
+    ordo = 0
+    trivium = []
+    trivium_antecessori = []
+    # trivium_descendenti = []
+    while len(_parts) > 0:
+        ordo = ordo + 1
+        _part = _parts.pop(0)
+        trivium.append(_part)
+        # trivium_descendenti = trivium
+        # if len(_part) > 0:
+        #     trivium_descendenti.append(_part[0])
+        # else:
+        #     trivium_descendenti = None
+
+        if ':'.join(trivium) in NUMERODINATIO_ANTECESSORIBUS__OKAY:
+            trivium_antecessori.append(_part)
+            continue
+        else:
+            NUMERODINATIO_ANTECESSORIBUS__OKAY.append(':'.join(trivium))
+
+        # Exemplum: 1603
+        # if ordo == 1:
+        if ordo == radix:
+            NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.extend([
+                [
+                    '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
+                    'a',
+                    'skos:ConceptScheme',
+                ],
+                # [
+                #     '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
+                #     'skos:hasTopConcept',
+                #     '<urn:{0}:{1}>'.format(
+                #         praefixum, ':'.join(trivium_descendenti)),
+                # ]
+            ])
+        elif ordo == (radix + 1):
+            NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.extend([
+                [
+                    '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
+                    'a',
+                    'skos:Concept',
+                ],
+                [
+                    '<urn:{0}:{1}>'.format(praefixum, ':'.join(trivium)),
+                    'skos:topConceptOf',
+                    '<urn:{0}:{1}>'.format(
+                        praefixum, ':'.join(trivium_antecessori)),
+                ]
+            ])
+        else:
+            # @TODO
+            pass
+
+        trivium_antecessori.append(_part)
+
+    return NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS
+
 
 def numerordinatio_neo_separatum(
         numerordinatio: str, separatum: str = "_") -> str:
@@ -6043,7 +6154,6 @@ def owl_index() -> str:
 </rdf:RDF>
     """
     return resultatum
-
 
 
 def qhxl(rem: dict, query: Union[str, list]):

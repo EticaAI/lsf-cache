@@ -6,6 +6,14 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
+<urn:mdciii:1603:45>
+    a skos:ConceptScheme .
+
+<urn:mdciii:1603:45:16>
+    a skos:Concept ;
+    skos:topConceptOf <urn:mdciii:1603:45> .
+
 <urn:mdciii:1603:45:16:24:0>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:24:0" .
 
