@@ -6,552 +6,755 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:90()> .
+
+<urn:mdciii:1603:45:16:90()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:90)" ;
+    skos:member <urn:mdciii:1603:45:16:90:3()> .
+
+<urn:mdciii:1603:45:16:90:3()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:90:3)" ;
+    skos:member <urn:mdciii:1603:45:16:90:3:101010102>, <urn:mdciii:1603:45:16:90:3:101010103>, <urn:mdciii:1603:45:16:90:3:101010104>, <urn:mdciii:1603:45:16:90:3:101010105>, <urn:mdciii:1603:45:16:90:3:101020106>, <urn:mdciii:1603:45:16:90:3:101020107>, <urn:mdciii:1603:45:16:90:3:101020108>, <urn:mdciii:1603:45:16:90:3:101020109>, <urn:mdciii:1603:45:16:90:3:101020110>, <urn:mdciii:1603:45:16:90:3:101030111>, <urn:mdciii:1603:45:16:90:3:101030112>, <urn:mdciii:1603:45:16:90:3:101030113>, <urn:mdciii:1603:45:16:90:3:101030114>, <urn:mdciii:1603:45:16:90:3:1010411009>, <urn:mdciii:1603:45:16:90:3:1010411010>, <urn:mdciii:1603:45:16:90:3:1010411011>, <urn:mdciii:1603:45:16:90:3:1010411012>, <urn:mdciii:1603:45:16:90:3:1010421004>, <urn:mdciii:1603:45:16:90:3:1010421005>, <urn:mdciii:1603:45:16:90:3:1010421006>, <urn:mdciii:1603:45:16:90:3:1010421007>, <urn:mdciii:1603:45:16:90:3:1010421008>, <urn:mdciii:1603:45:16:90:3:1010431001>, <urn:mdciii:1603:45:16:90:3:1010431002>, <urn:mdciii:1603:45:16:90:3:1010431003>, <urn:mdciii:1603:45:16:90:3:202040201>, <urn:mdciii:1603:45:16:90:3:202040202>, <urn:mdciii:1603:45:16:90:3:202050209>, <urn:mdciii:1603:45:16:90:3:202050210>, <urn:mdciii:1603:45:16:90:3:202060207>, <urn:mdciii:1603:45:16:90:3:202070203>, <urn:mdciii:1603:45:16:90:3:202070204>, <urn:mdciii:1603:45:16:90:3:202070205>, <urn:mdciii:1603:45:16:90:3:202070206>, <urn:mdciii:1603:45:16:90:3:202080211>, <urn:mdciii:1603:45:16:90:3:202080212>, <urn:mdciii:1603:45:16:90:3:202080226>, <urn:mdciii:1603:45:16:90:3:202090213>, <urn:mdciii:1603:45:16:90:3:202090215>, <urn:mdciii:1603:45:16:90:3:202090216>, <urn:mdciii:1603:45:16:90:3:202090225>, <urn:mdciii:1603:45:16:90:3:202100214>, <urn:mdciii:1603:45:16:90:3:202100220>, <urn:mdciii:1603:45:16:90:3:202110208>, <urn:mdciii:1603:45:16:90:3:202110217>, <urn:mdciii:1603:45:16:90:3:202110218>, <urn:mdciii:1603:45:16:90:3:202110219>, <urn:mdciii:1603:45:16:90:3:202120221>, <urn:mdciii:1603:45:16:90:3:202120222>, <urn:mdciii:1603:45:16:90:3:202120223>, <urn:mdciii:1603:45:16:90:3:202120224>, <urn:mdciii:1603:45:16:90:3:303130301>, <urn:mdciii:1603:45:16:90:3:303130302>, <urn:mdciii:1603:45:16:90:3:303130313>, <urn:mdciii:1603:45:16:90:3:303130314>, <urn:mdciii:1603:45:16:90:3:303130315>, <urn:mdciii:1603:45:16:90:3:303130316>, <urn:mdciii:1603:45:16:90:3:303140303>, <urn:mdciii:1603:45:16:90:3:303140304>, <urn:mdciii:1603:45:16:90:3:303140305>, <urn:mdciii:1603:45:16:90:3:303140306>, <urn:mdciii:1603:45:16:90:3:303140307>, <urn:mdciii:1603:45:16:90:3:303140308>, <urn:mdciii:1603:45:16:90:3:303150309>, <urn:mdciii:1603:45:16:90:3:303150310>, <urn:mdciii:1603:45:16:90:3:303150311>, <urn:mdciii:1603:45:16:90:3:303150312>, <urn:mdciii:1603:45:16:90:3:404300401>, <urn:mdciii:1603:45:16:90:3:404300402>, <urn:mdciii:1603:45:16:90:3:404300403>, <urn:mdciii:1603:45:16:90:3:404300404>, <urn:mdciii:1603:45:16:90:3:404300405>, <urn:mdciii:1603:45:16:90:3:404300406>, <urn:mdciii:1603:45:16:90:3:404300407>, <urn:mdciii:1603:45:16:90:3:404300408>, <urn:mdciii:1603:45:16:90:3:404310409>, <urn:mdciii:1603:45:16:90:3:404310410>, <urn:mdciii:1603:45:16:90:3:404310411>, <urn:mdciii:1603:45:16:90:3:404310412>, <urn:mdciii:1603:45:16:90:3:404310413>, <urn:mdciii:1603:45:16:90:3:505320501>, <urn:mdciii:1603:45:16:90:3:505320502>, <urn:mdciii:1603:45:16:90:3:505320503>, <urn:mdciii:1603:45:16:90:3:505320504>, <urn:mdciii:1603:45:16:90:3:505320505>, <urn:mdciii:1603:45:16:90:3:505320506>, <urn:mdciii:1603:45:16:90:3:505320507>, <urn:mdciii:1603:45:16:90:3:505320508>, <urn:mdciii:1603:45:16:90:3:505320509>, <urn:mdciii:1603:45:16:90:3:505320510>, <urn:mdciii:1603:45:16:90:3:606330601>, <urn:mdciii:1603:45:16:90:3:606330602>, <urn:mdciii:1603:45:16:90:3:606340603>, <urn:mdciii:1603:45:16:90:3:606340604>, <urn:mdciii:1603:45:16:90:3:606340605>, <urn:mdciii:1603:45:16:90:3:606350606>, <urn:mdciii:1603:45:16:90:3:606350607>, <urn:mdciii:1603:45:16:90:3:606350608>, <urn:mdciii:1603:45:16:90:3:606360609>, <urn:mdciii:1603:45:16:90:3:606360610>, <urn:mdciii:1603:45:16:90:3:606360611>, <urn:mdciii:1603:45:16:90:3:606360612>, <urn:mdciii:1603:45:16:90:3:606370613>, <urn:mdciii:1603:45:16:90:3:606370614>, <urn:mdciii:1603:45:16:90:3:606370615>, <urn:mdciii:1603:45:16:90:3:606370616>, <urn:mdciii:1603:45:16:90:3:606380617>, <urn:mdciii:1603:45:16:90:3:606380618>, <urn:mdciii:1603:45:16:90:3:606390621>, <urn:mdciii:1603:45:16:90:3:606390622>, <urn:mdciii:1603:45:16:90:3:606400619>, <urn:mdciii:1603:45:16:90:3:606400620>, <urn:mdciii:1603:45:16:90:3:707160707>, <urn:mdciii:1603:45:16:90:3:707160708>, <urn:mdciii:1603:45:16:90:3:707160709>, <urn:mdciii:1603:45:16:90:3:707170706>, <urn:mdciii:1603:45:16:90:3:707170710>, <urn:mdciii:1603:45:16:90:3:707170712>, <urn:mdciii:1603:45:16:90:3:707180711>, <urn:mdciii:1603:45:16:90:3:707180713>, <urn:mdciii:1603:45:16:90:3:707190705>, <urn:mdciii:1603:45:16:90:3:707190714>, <urn:mdciii:1603:45:16:90:3:707200703>, <urn:mdciii:1603:45:16:90:3:707200704>, <urn:mdciii:1603:45:16:90:3:707210702>, <urn:mdciii:1603:45:16:90:3:707210729>, <urn:mdciii:1603:45:16:90:3:707220715>, <urn:mdciii:1603:45:16:90:3:707220716>, <urn:mdciii:1603:45:16:90:3:707230701>, <urn:mdciii:1603:45:16:90:3:707230730>, <urn:mdciii:1603:45:16:90:3:707240717>, <urn:mdciii:1603:45:16:90:3:707240718>, <urn:mdciii:1603:45:16:90:3:707250726>, <urn:mdciii:1603:45:16:90:3:707250727>, <urn:mdciii:1603:45:16:90:3:707250728>, <urn:mdciii:1603:45:16:90:3:707260719>, <urn:mdciii:1603:45:16:90:3:707260720>, <urn:mdciii:1603:45:16:90:3:707270724>, <urn:mdciii:1603:45:16:90:3:707270725>, <urn:mdciii:1603:45:16:90:3:707280721>, <urn:mdciii:1603:45:16:90:3:707280722>, <urn:mdciii:1603:45:16:90:3:707280723>, <urn:mdciii:1603:45:16:90:3:707290731>, <urn:mdciii:1603:45:16:90:3:707290732>, <urn:mdciii:1603:45:16:90:3:707290733>, <urn:mdciii:1603:45:16:90:3:808440805>, <urn:mdciii:1603:45:16:90:3:808440806>, <urn:mdciii:1603:45:16:90:3:808440807>, <urn:mdciii:1603:45:16:90:3:808440808>, <urn:mdciii:1603:45:16:90:3:808440820>, <urn:mdciii:1603:45:16:90:3:808450809>, <urn:mdciii:1603:45:16:90:3:808450810>, <urn:mdciii:1603:45:16:90:3:808450811>, <urn:mdciii:1603:45:16:90:3:808460812>, <urn:mdciii:1603:45:16:90:3:808460813>, <urn:mdciii:1603:45:16:90:3:808460814>, <urn:mdciii:1603:45:16:90:3:808460815>, <urn:mdciii:1603:45:16:90:3:808460816>, <urn:mdciii:1603:45:16:90:3:808460817>, <urn:mdciii:1603:45:16:90:3:808460818>, <urn:mdciii:1603:45:16:90:3:808460819>, <urn:mdciii:1603:45:16:90:3:808470801>, <urn:mdciii:1603:45:16:90:3:808470802>, <urn:mdciii:1603:45:16:90:3:808470803>, <urn:mdciii:1603:45:16:90:3:808470804>, <urn:mdciii:1603:45:16:90:3:909480901>, <urn:mdciii:1603:45:16:90:3:909480902>, <urn:mdciii:1603:45:16:90:3:909480903>, <urn:mdciii:1603:45:16:90:3:909480904>, <urn:mdciii:1603:45:16:90:3:909480905>, <urn:mdciii:1603:45:16:90:3:909480906>, <urn:mdciii:1603:45:16:90:3:909490907>, <urn:mdciii:1603:45:16:90:3:909490908>, <urn:mdciii:1603:45:16:90:3:909490909>, <urn:mdciii:1603:45:16:90:3:909490910>, <urn:mdciii:1603:45:16:90:3:909490911>, <urn:mdciii:1603:45:16:90:3:909490912>, <urn:mdciii:1603:45:16:90:3:909490917>, <urn:mdciii:1603:45:16:90:3:909500913>, <urn:mdciii:1603:45:16:90:3:909500914>, <urn:mdciii:1603:45:16:90:3:909500915>, <urn:mdciii:1603:45:16:90:3:909500916> .
+
 <urn:mdciii:1603:45:16:90:3:101010101>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101010101" .
 
 <urn:mdciii:1603:45:16:90:3:101010102>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101010102" .
 
 <urn:mdciii:1603:45:16:90:3:101010103>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101010103" .
 
 <urn:mdciii:1603:45:16:90:3:101010104>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101010104" .
 
 <urn:mdciii:1603:45:16:90:3:101010105>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101010105" .
 
 <urn:mdciii:1603:45:16:90:3:101020106>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101020106" .
 
 <urn:mdciii:1603:45:16:90:3:101020107>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101020107" .
 
 <urn:mdciii:1603:45:16:90:3:101020108>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101020108" .
 
 <urn:mdciii:1603:45:16:90:3:101020109>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101020109" .
 
 <urn:mdciii:1603:45:16:90:3:101020110>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101020110" .
 
 <urn:mdciii:1603:45:16:90:3:101030111>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101030111" .
 
 <urn:mdciii:1603:45:16:90:3:101030112>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101030112" .
 
 <urn:mdciii:1603:45:16:90:3:101030113>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101030113" .
 
 <urn:mdciii:1603:45:16:90:3:101030114>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:101030114" .
 
 <urn:mdciii:1603:45:16:90:3:1010411009>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010411009" .
 
 <urn:mdciii:1603:45:16:90:3:1010411010>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010411010" .
 
 <urn:mdciii:1603:45:16:90:3:1010411011>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010411011" .
 
 <urn:mdciii:1603:45:16:90:3:1010411012>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010411012" .
 
 <urn:mdciii:1603:45:16:90:3:1010421004>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010421004" .
 
 <urn:mdciii:1603:45:16:90:3:1010421005>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010421005" .
 
 <urn:mdciii:1603:45:16:90:3:1010421006>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010421006" .
 
 <urn:mdciii:1603:45:16:90:3:1010421007>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010421007" .
 
 <urn:mdciii:1603:45:16:90:3:1010421008>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010421008" .
 
 <urn:mdciii:1603:45:16:90:3:1010431001>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010431001" .
 
 <urn:mdciii:1603:45:16:90:3:1010431002>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010431002" .
 
 <urn:mdciii:1603:45:16:90:3:1010431003>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:1010431003" .
 
 <urn:mdciii:1603:45:16:90:3:202040201>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202040201" .
 
 <urn:mdciii:1603:45:16:90:3:202040202>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202040202" .
 
 <urn:mdciii:1603:45:16:90:3:202050209>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202050209" .
 
 <urn:mdciii:1603:45:16:90:3:202050210>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202050210" .
 
 <urn:mdciii:1603:45:16:90:3:202060207>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202060207" .
 
 <urn:mdciii:1603:45:16:90:3:202070203>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202070203" .
 
 <urn:mdciii:1603:45:16:90:3:202070204>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202070204" .
 
 <urn:mdciii:1603:45:16:90:3:202070205>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202070205" .
 
 <urn:mdciii:1603:45:16:90:3:202070206>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202070206" .
 
 <urn:mdciii:1603:45:16:90:3:202080211>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202080211" .
 
 <urn:mdciii:1603:45:16:90:3:202080212>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202080212" .
 
 <urn:mdciii:1603:45:16:90:3:202080226>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202080226" .
 
 <urn:mdciii:1603:45:16:90:3:202090213>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202090213" .
 
 <urn:mdciii:1603:45:16:90:3:202090215>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202090215" .
 
 <urn:mdciii:1603:45:16:90:3:202090216>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202090216" .
 
 <urn:mdciii:1603:45:16:90:3:202090225>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202090225" .
 
 <urn:mdciii:1603:45:16:90:3:202100214>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202100214" .
 
 <urn:mdciii:1603:45:16:90:3:202100220>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202100220" .
 
 <urn:mdciii:1603:45:16:90:3:202110208>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202110208" .
 
 <urn:mdciii:1603:45:16:90:3:202110217>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202110217" .
 
 <urn:mdciii:1603:45:16:90:3:202110218>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202110218" .
 
 <urn:mdciii:1603:45:16:90:3:202110219>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202110219" .
 
 <urn:mdciii:1603:45:16:90:3:202120221>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202120221" .
 
 <urn:mdciii:1603:45:16:90:3:202120222>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202120222" .
 
 <urn:mdciii:1603:45:16:90:3:202120223>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202120223" .
 
 <urn:mdciii:1603:45:16:90:3:202120224>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:202120224" .
 
 <urn:mdciii:1603:45:16:90:3:303130301>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303130301" .
 
 <urn:mdciii:1603:45:16:90:3:303130302>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303130302" .
 
 <urn:mdciii:1603:45:16:90:3:303130313>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303130313" .
 
 <urn:mdciii:1603:45:16:90:3:303130314>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303130314" .
 
 <urn:mdciii:1603:45:16:90:3:303130315>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303130315" .
 
 <urn:mdciii:1603:45:16:90:3:303130316>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303130316" .
 
 <urn:mdciii:1603:45:16:90:3:303140303>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303140303" .
 
 <urn:mdciii:1603:45:16:90:3:303140304>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303140304" .
 
 <urn:mdciii:1603:45:16:90:3:303140305>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303140305" .
 
 <urn:mdciii:1603:45:16:90:3:303140306>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303140306" .
 
 <urn:mdciii:1603:45:16:90:3:303140307>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303140307" .
 
 <urn:mdciii:1603:45:16:90:3:303140308>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303140308" .
 
 <urn:mdciii:1603:45:16:90:3:303150309>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303150309" .
 
 <urn:mdciii:1603:45:16:90:3:303150310>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303150310" .
 
 <urn:mdciii:1603:45:16:90:3:303150311>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303150311" .
 
 <urn:mdciii:1603:45:16:90:3:303150312>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:303150312" .
 
 <urn:mdciii:1603:45:16:90:3:404300401>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404300401" .
 
 <urn:mdciii:1603:45:16:90:3:404300402>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404300402" .
 
 <urn:mdciii:1603:45:16:90:3:404300403>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404300403" .
 
 <urn:mdciii:1603:45:16:90:3:404300404>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404300404" .
 
 <urn:mdciii:1603:45:16:90:3:404300405>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404300405" .
 
 <urn:mdciii:1603:45:16:90:3:404300406>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404300406" .
 
 <urn:mdciii:1603:45:16:90:3:404300407>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404300407" .
 
 <urn:mdciii:1603:45:16:90:3:404300408>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404300408" .
 
 <urn:mdciii:1603:45:16:90:3:404310409>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404310409" .
 
 <urn:mdciii:1603:45:16:90:3:404310410>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404310410" .
 
 <urn:mdciii:1603:45:16:90:3:404310411>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404310411" .
 
 <urn:mdciii:1603:45:16:90:3:404310412>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404310412" .
 
 <urn:mdciii:1603:45:16:90:3:404310413>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:404310413" .
 
 <urn:mdciii:1603:45:16:90:3:505320501>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320501" .
 
 <urn:mdciii:1603:45:16:90:3:505320502>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320502" .
 
 <urn:mdciii:1603:45:16:90:3:505320503>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320503" .
 
 <urn:mdciii:1603:45:16:90:3:505320504>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320504" .
 
 <urn:mdciii:1603:45:16:90:3:505320505>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320505" .
 
 <urn:mdciii:1603:45:16:90:3:505320506>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320506" .
 
 <urn:mdciii:1603:45:16:90:3:505320507>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320507" .
 
 <urn:mdciii:1603:45:16:90:3:505320508>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320508" .
 
 <urn:mdciii:1603:45:16:90:3:505320509>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320509" .
 
 <urn:mdciii:1603:45:16:90:3:505320510>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:505320510" .
 
 <urn:mdciii:1603:45:16:90:3:606330601>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606330601" .
 
 <urn:mdciii:1603:45:16:90:3:606330602>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606330602" .
 
 <urn:mdciii:1603:45:16:90:3:606340603>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606340603" .
 
 <urn:mdciii:1603:45:16:90:3:606340604>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606340604" .
 
 <urn:mdciii:1603:45:16:90:3:606340605>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606340605" .
 
 <urn:mdciii:1603:45:16:90:3:606350606>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606350606" .
 
 <urn:mdciii:1603:45:16:90:3:606350607>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606350607" .
 
 <urn:mdciii:1603:45:16:90:3:606350608>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606350608" .
 
 <urn:mdciii:1603:45:16:90:3:606360609>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606360609" .
 
 <urn:mdciii:1603:45:16:90:3:606360610>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606360610" .
 
 <urn:mdciii:1603:45:16:90:3:606360611>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606360611" .
 
 <urn:mdciii:1603:45:16:90:3:606360612>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606360612" .
 
 <urn:mdciii:1603:45:16:90:3:606370613>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606370613" .
 
 <urn:mdciii:1603:45:16:90:3:606370614>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606370614" .
 
 <urn:mdciii:1603:45:16:90:3:606370615>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606370615" .
 
 <urn:mdciii:1603:45:16:90:3:606370616>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606370616" .
 
 <urn:mdciii:1603:45:16:90:3:606380617>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606380617" .
 
 <urn:mdciii:1603:45:16:90:3:606380618>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606380618" .
 
 <urn:mdciii:1603:45:16:90:3:606390621>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606390621" .
 
 <urn:mdciii:1603:45:16:90:3:606390622>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606390622" .
 
 <urn:mdciii:1603:45:16:90:3:606400619>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606400619" .
 
 <urn:mdciii:1603:45:16:90:3:606400620>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:606400620" .
 
 <urn:mdciii:1603:45:16:90:3:707160707>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707160707" .
 
 <urn:mdciii:1603:45:16:90:3:707160708>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707160708" .
 
 <urn:mdciii:1603:45:16:90:3:707160709>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707160709" .
 
 <urn:mdciii:1603:45:16:90:3:707170706>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707170706" .
 
 <urn:mdciii:1603:45:16:90:3:707170710>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707170710" .
 
 <urn:mdciii:1603:45:16:90:3:707170712>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707170712" .
 
 <urn:mdciii:1603:45:16:90:3:707180711>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707180711" .
 
 <urn:mdciii:1603:45:16:90:3:707180713>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707180713" .
 
 <urn:mdciii:1603:45:16:90:3:707190705>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707190705" .
 
 <urn:mdciii:1603:45:16:90:3:707190714>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707190714" .
 
 <urn:mdciii:1603:45:16:90:3:707200703>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707200703" .
 
 <urn:mdciii:1603:45:16:90:3:707200704>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707200704" .
 
 <urn:mdciii:1603:45:16:90:3:707210702>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707210702" .
 
 <urn:mdciii:1603:45:16:90:3:707210729>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707210729" .
 
 <urn:mdciii:1603:45:16:90:3:707220715>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707220715" .
 
 <urn:mdciii:1603:45:16:90:3:707220716>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707220716" .
 
 <urn:mdciii:1603:45:16:90:3:707230701>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707230701" .
 
 <urn:mdciii:1603:45:16:90:3:707230730>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707230730" .
 
 <urn:mdciii:1603:45:16:90:3:707240717>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707240717" .
 
 <urn:mdciii:1603:45:16:90:3:707240718>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707240718" .
 
 <urn:mdciii:1603:45:16:90:3:707250726>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707250726" .
 
 <urn:mdciii:1603:45:16:90:3:707250727>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707250727" .
 
 <urn:mdciii:1603:45:16:90:3:707250728>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707250728" .
 
 <urn:mdciii:1603:45:16:90:3:707260719>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707260719" .
 
 <urn:mdciii:1603:45:16:90:3:707260720>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707260720" .
 
 <urn:mdciii:1603:45:16:90:3:707270724>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707270724" .
 
 <urn:mdciii:1603:45:16:90:3:707270725>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707270725" .
 
 <urn:mdciii:1603:45:16:90:3:707280721>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707280721" .
 
 <urn:mdciii:1603:45:16:90:3:707280722>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707280722" .
 
 <urn:mdciii:1603:45:16:90:3:707280723>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707280723" .
 
 <urn:mdciii:1603:45:16:90:3:707290731>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707290731" .
 
 <urn:mdciii:1603:45:16:90:3:707290732>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707290732" .
 
 <urn:mdciii:1603:45:16:90:3:707290733>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:707290733" .
 
 <urn:mdciii:1603:45:16:90:3:808440805>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808440805" .
 
 <urn:mdciii:1603:45:16:90:3:808440806>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808440806" .
 
 <urn:mdciii:1603:45:16:90:3:808440807>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808440807" .
 
 <urn:mdciii:1603:45:16:90:3:808440808>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808440808" .
 
 <urn:mdciii:1603:45:16:90:3:808440820>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808440820" .
 
 <urn:mdciii:1603:45:16:90:3:808450809>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808450809" .
 
 <urn:mdciii:1603:45:16:90:3:808450810>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808450810" .
 
 <urn:mdciii:1603:45:16:90:3:808450811>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808450811" .
 
 <urn:mdciii:1603:45:16:90:3:808460812>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808460812" .
 
 <urn:mdciii:1603:45:16:90:3:808460813>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808460813" .
 
 <urn:mdciii:1603:45:16:90:3:808460814>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808460814" .
 
 <urn:mdciii:1603:45:16:90:3:808460815>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808460815" .
 
 <urn:mdciii:1603:45:16:90:3:808460816>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808460816" .
 
 <urn:mdciii:1603:45:16:90:3:808460817>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808460817" .
 
 <urn:mdciii:1603:45:16:90:3:808460818>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808460818" .
 
 <urn:mdciii:1603:45:16:90:3:808460819>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808460819" .
 
 <urn:mdciii:1603:45:16:90:3:808470801>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808470801" .
 
 <urn:mdciii:1603:45:16:90:3:808470802>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808470802" .
 
 <urn:mdciii:1603:45:16:90:3:808470803>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808470803" .
 
 <urn:mdciii:1603:45:16:90:3:808470804>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:808470804" .
 
 <urn:mdciii:1603:45:16:90:3:909480901>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909480901" .
 
 <urn:mdciii:1603:45:16:90:3:909480902>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909480902" .
 
 <urn:mdciii:1603:45:16:90:3:909480903>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909480903" .
 
 <urn:mdciii:1603:45:16:90:3:909480904>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909480904" .
 
 <urn:mdciii:1603:45:16:90:3:909480905>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909480905" .
 
 <urn:mdciii:1603:45:16:90:3:909480906>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909480906" .
 
 <urn:mdciii:1603:45:16:90:3:909490907>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909490907" .
 
 <urn:mdciii:1603:45:16:90:3:909490908>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909490908" .
 
 <urn:mdciii:1603:45:16:90:3:909490909>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909490909" .
 
 <urn:mdciii:1603:45:16:90:3:909490910>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909490910" .
 
 <urn:mdciii:1603:45:16:90:3:909490911>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909490911" .
 
 <urn:mdciii:1603:45:16:90:3:909490912>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909490912" .
 
 <urn:mdciii:1603:45:16:90:3:909490917>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909490917" .
 
 <urn:mdciii:1603:45:16:90:3:909500913>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909500913" .
 
 <urn:mdciii:1603:45:16:90:3:909500914>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909500914" .
 
 <urn:mdciii:1603:45:16:90:3:909500915>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909500915" .
 
 <urn:mdciii:1603:45:16:90:3:909500916>
-    a obo:BFO_0000029, owl:Thing, skos:Concept .
+    a obo:BFO_0000029, owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:3:909500916" .
 

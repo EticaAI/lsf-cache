@@ -2412,13 +2412,18 @@ def bcp47_rdf_extension_poc(
             trivium_antecessori = linea[index_id].split(':')
             # This initialize
             trivium_antecessori.pop()
-            numerordinatio_cum_antecessoribus(trivium_antecessori)
+            if len(trivium_antecessori) > 0 and len(trivium_antecessori[0]) > 0:
+                # trivium_antecessori = list(trivium_antecessori)
+                numerordinatio_cum_antecessoribus(trivium_antecessori)
 
-            result['rdf_triplis'].append([
-                '<urn:mdciii:{0}()>'.format(':'.join(trivium_antecessori)),
-                'skos:member',
-                triple_subject
-            ])
+                _ns = ':'.join(trivium_antecessori)
+
+                if len(_ns.strip()) > 0:
+                    result['rdf_triplis'].append([
+                        '<urn:mdciii:{0}()>'.format(_ns),
+                        'skos:member',
+                        triple_subject
+                    ])
         elif is_urn:
             triple_subject = '<urn:{0}>'.format(linea[index_id])
             triple_rdfs_label_literal = linea[index_id]
@@ -5856,6 +5861,9 @@ def numerordinatio_cum_antecessoribus(
     if not isinstance(numerordinatio, list):
         _numerordinatio = numerordinatio_neo_separatum(numerordinatio, ':')
         numerordinatio = _numerordinatio.split(':')
+
+    if len(numerordinatio) == 0 or len(numerordinatio[0].strip()) == 0:
+        raise SyntaxError(numerordinatio)
 
     if ':'.join(numerordinatio) in NUMERODINATIO_ANTECESSORIBUS__OKAY:
         return NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS
