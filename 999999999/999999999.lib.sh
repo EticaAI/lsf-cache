@@ -33,7 +33,10 @@
 # Quick tests
 #   ./999999999/999999999.lib.sh
 
-ROOTDIR="$(pwd)"
+__ROOTDIR="$(pwd)"
+ROOTDIR="${ROOTDIR:-__ROOTDIR}"
+DESTDIR="${DESTDIR:-$ROOTDIR}"
+
 _S3CFG="$HOME/.config/s3cfg/s3cfg-lsf1603.ini"
 S3CFG="${S3CFG:-${_S3CFG}}"
 
@@ -48,6 +51,19 @@ NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM="${NUMERORDINATIO_STATUS_CONCEPT
 # These files are also generated as part of bootstrapping step
 # 1603_45_49.tsv, 1603_47_639_3.tsv, 1603_47_15924.tsv,
 NUMERORDINATIO_DATUM="${ROOTDIR}/999999/999999"
+
+#### Fancy colors constants - - - - - - - - - - - - - - - - - - - - - - - - - -
+tty_blue=$(tput setaf 4)
+tty_green=$(tput setaf 2)
+tty_red=$(tput setaf 1)
+tty_normal=$(tput sgr0)
+
+## Example
+# printf "\n\t%40s\n" "${tty_blue}${FUNCNAME[0]} STARTED ${tty_normal}"
+# printf "\t%40s\n" "${tty_green}${FUNCNAME[0]} FINISHED OKAY ${tty_normal}"
+# printf "\t%40s\n" "${tty_blue} INFO: [] ${tty_normal}"
+# printf "\t%40s\n" "${tty_red} ERROR: [] ${tty_normal}"
+#### Fancy colors constants - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 #######################################
 # Return if a path (or a file) don't exist or if did not changed recently.
@@ -192,7 +208,8 @@ file_update_if_necessary() {
 # Copy file
 #
 # Globals:
-#   None
+#   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   numerordinatio_fonti
 #   numerordinatio_objectivo
@@ -229,9 +246,9 @@ archivum_copiae() {
     _basim_fontem="${ROOTDIR}"
   fi
   if [ "$est_temporarium_objectivum" -eq "1" ]; then
-    _basim_objectivum="${ROOTDIR}/999999"
+    _basim_objectivum="${DESTDIR}/999999"
   else
-    _basim_objectivum="${ROOTDIR}"
+    _basim_objectivum="${DESTDIR}"
   fi
 
   fontem_archivum="${_basim_fontem}/$_path_fonti/$_nomen_fonti.${archivum_extensione}"
@@ -265,6 +282,7 @@ archivum_copiae() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   archivum_fonti_ftp
 # Outputs:
@@ -278,7 +296,7 @@ archivum_speculo_ex_ftp() {
   # fontī, m, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
 
   objectivum_basi="${ROOTDIR}/999999/0/0"
-  objectivum_archivum="${ROOTDIR}/999999/0/0/${archivum_fonti_ftp/ftp:\/\//''}"
+  objectivum_archivum="${DESTDIR}/999999/0/0/${archivum_fonti_ftp/ftp:\/\//''}"
 
   blue=$(tput setaf 4)
   normal=$(tput sgr0)
@@ -303,6 +321,7 @@ archivum_speculo_ex_ftp() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   archivum_fonti_ex_zip
 #   archivum_fonti_ad_zip
@@ -320,7 +339,7 @@ archivum_unzip() {
   # objectīvō, n, s, dativus, https://en.wiktionary.org/wiki/fons#Latin
 
   objectivum_basi="${ROOTDIR}/999999/0/0"
-  objectivum_archivum="${ROOTDIR}/999999/0/0/${archivum_fonti_ftp}"
+  objectivum_archivum="${DESTDIR}/999999/0/0/${archivum_fonti_ftp}"
 
   blue=$(tput setaf 4)
   normal=$(tput sgr0)
@@ -371,7 +390,7 @@ numerordinatio_neo_separatum() {
 # Note: see file_download_1603_xlsx() for download entire xlsx at once.
 #
 # Globals:
-#   ROOTDIR
+#   DESTDIR
 #   FORCE_REDOWNLOAD
 #   FORCE_REDOWNLOAD_REM
 # Arguments:
@@ -392,16 +411,16 @@ file_download_if_necessary() {
   est_temporarium="${6:-"1"}"
 
   if [ "$est_temporarium" -eq "1" ]; then
-    _basim="${ROOTDIR}/999999"
+    _basim="${DESTDIR}/999999"
   else
-    _basim="${ROOTDIR}"
+    _basim="${DESTDIR}"
   fi
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
 
   # objectivum_archivum="${ROOTDIR}/999999/1613/1613.tm.hxl.csv"
   objectivum_archivum="${_basim}/$_path/$_nomen.$archivum_extensionem"
-  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$archivum_extensionem"
+  objectivum_archivum_temporarium="${DESTDIR}/999999/0/$_nomen.$archivum_extensionem"
 
   # if [ -d "${_basim}/$_path/" ]; then
   #   echo "${_basim}/$_path/"
@@ -453,7 +472,7 @@ file_download_if_necessary() {
 # Default stale time: 15 min
 #
 # Globals:
-#   ROOTDIR
+#   ROOTDIR     (note: this maybe could be converted to DESTDIR)
 #   DATA_1603
 # Arguments:
 #   est_temporarium
@@ -511,6 +530,7 @@ file_download_1603_xlsx() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 #   NUMERORDINATIO_STATUS_CONCEPTUM_MINIMAM
 #   NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM
 # Arguments:
@@ -538,16 +558,16 @@ file_convert_csv_de_downloaded_xlsx() {
     _basim_fontem="${ROOTDIR}"
   fi
   if [ "$est_temporarium_objectivum" -eq "1" ]; then
-    _basim_objectivum="${ROOTDIR}/999999"
+    _basim_objectivum="${DESTDIR}/999999"
   else
-    _basim_objectivum="${ROOTDIR}"
+    _basim_objectivum="${DESTDIR}"
   fi
 
   fontem_archivum="${_basim_fontem}/1603/1603.xlsx"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.tm.hxl.csv"
-  objectivum_archivum_temporarium_csv="${ROOTDIR}/999999/0/$_nomen~prehotfix-0s.csv"
-  objectivum_archivum_temporarium_csv2="${ROOTDIR}/999999/0/$_nomen.csv"
-  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.tm.hxl.csv"
+  objectivum_archivum_temporarium_csv="${DESTDIR}/999999/0/$_nomen~prehotfix-0s.csv"
+  objectivum_archivum_temporarium_csv2="${DESTDIR}/999999/0/$_nomen.csv"
+  objectivum_archivum_temporarium="${DESTDIR}/999999/0/$_nomen.tm.hxl.csv"
 
   echo "${FUNCNAME[0]}: [$numerordinatio]; [$fontem_archivum] --> [$objectivum_archivum]"
 
@@ -613,6 +633,7 @@ file_convert_csv_de_downloaded_xlsx() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 #   NUMERORDINATIO_STATUS_CONCEPTUM_MINIMAM
 #   NUMERORDINATIO_STATUS_CONCEPTUM_CODICEM_MINIMAM
 # Arguments:
@@ -637,14 +658,14 @@ file_convert_numerordinatio_de_hxltm() {
     _basim_fontem="${ROOTDIR}"
   fi
   if [ "$est_temporarium_objectivum" -eq "1" ]; then
-    _basim_objectivum="${ROOTDIR}/999999"
+    _basim_objectivum="${DESTDIR}/999999"
   else
-    _basim_objectivum="${ROOTDIR}"
+    _basim_objectivum="${DESTDIR}"
   fi
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no1.tm.hxl.csv"
-  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+  objectivum_archivum_temporarium="${DESTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
 
   echo "${FUNCNAME[0]} [$numerordinatio] [$fontem_archivum] -> [$objectivum_archivum]"
 
@@ -696,6 +717,7 @@ file_convert_numerordinatio_de_hxltm() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   numerordinatio
 # Outputs:
@@ -709,7 +731,7 @@ file_convert_xml_de_numerordinatio11() {
   _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
 
   _basim_fontem="${ROOTDIR}"
-  _basim_objectivum="${ROOTDIR}"
+  _basim_objectivum="${DESTDIR}"
   tmeta="${ROOTDIR}/999999999/0/hxltm-exemplum.tmeta.yml"
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
@@ -725,6 +747,7 @@ file_convert_xml_de_numerordinatio11() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   numerordinatio
 # Outputs:
@@ -738,7 +761,7 @@ file_convert_tbx_de_numerordinatio11() {
   _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
 
   _basim_fontem="${ROOTDIR}"
-  _basim_objectivum="${ROOTDIR}"
+  _basim_objectivum="${DESTDIR}"
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tbx"
@@ -754,6 +777,7 @@ file_convert_tbx_de_numerordinatio11() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   numerordinatio
 # Outputs:
@@ -767,7 +791,7 @@ file_convert_tmx_de_numerordinatio11() {
   _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
 
   _basim_fontem="${ROOTDIR}"
-  _basim_objectivum="${ROOTDIR}"
+  _basim_objectivum="${DESTDIR}"
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tmx"
@@ -785,6 +809,7 @@ file_convert_tmx_de_numerordinatio11() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   numerordinatio
 # Outputs:
@@ -798,7 +823,7 @@ file_convert_rdf_skos_ttl_de_numerordinatio11() {
   _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
 
   _basim_fontem="${ROOTDIR}"
-  _basim_objectivum="${ROOTDIR}"
+  _basim_objectivum="${DESTDIR}"
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.skos.ttl"
@@ -861,6 +886,7 @@ file_hotfix_duplicated_merge_key() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
@@ -888,9 +914,9 @@ neo_codex_de_numerordinatio() {
     _basim_fontem="${ROOTDIR}"
   fi
   if [ "$est_temporarium_objectivum" -eq "1" ]; then
-    _basim_objectivum="${ROOTDIR}/999999"
+    _basim_objectivum="${DESTDIR}/999999"
   else
-    _basim_objectivum="${ROOTDIR}"
+    _basim_objectivum="${DESTDIR}"
   fi
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.no1.tm.hxl.csv"
@@ -931,6 +957,7 @@ neo_codex_de_numerordinatio() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
@@ -966,8 +993,8 @@ neo_codex_copertae_de_numerordinatio() {
   echo "${FUNCNAME[0]} [$numerordinatio]"
 
   fontem_archivum="${ROOTDIR}/999999999/0/codex_copertae.svg"
-  objectivum_archivum="${ROOTDIR}/$_path/$_nomen.$est_objectivum_linguam.codex.svg"
-  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.svg"
+  objectivum_archivum="${DESTDIR}/$_path/$_nomen.$est_objectivum_linguam.codex.svg"
+  objectivum_archivum_temporarium="${DESTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.svg"
 
   if [ -f "$objectivum_archivum" ]; then
     rm "$objectivum_archivum"
@@ -1004,6 +1031,7 @@ neo_codex_copertae_de_numerordinatio() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 # Arguments:
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
@@ -1031,14 +1059,14 @@ neo_codex_de_numerordinatio_epub() {
     _basim_fontem="${ROOTDIR}"
   fi
   if [ "$est_temporarium_objectivum" -eq "1" ]; then
-    _basim_objectivum="${ROOTDIR}/999999"
+    _basim_objectivum="${DESTDIR}/999999"
   else
-    _basim_objectivum="${ROOTDIR}"
+    _basim_objectivum="${DESTDIR}"
   fi
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.epub"
-  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.epub"
+  objectivum_archivum_temporarium="${DESTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.epub"
   # ascidoctor_custom_library="${ROOTDIR}/999999999/0/custom_pdf_converter.rb"
   # ascidoctor_theme="${ROOTDIR}/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml"
   # ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto,/usr/share/fonts/opentype/noto"
@@ -1085,6 +1113,7 @@ neo_codex_de_numerordinatio_epub() {
 #
 # Globals:
 #   ROOTDIR
+#   DESTDIR
 #   VELOX  (if =1, ignore fonts)
 # Arguments:
 #   numerordinatio
@@ -1113,14 +1142,14 @@ neo_codex_de_numerordinatio_pdf() {
     _basim_fontem="${ROOTDIR}"
   fi
   if [ "$est_temporarium_objectivum" -eq "1" ]; then
-    _basim_objectivum="${ROOTDIR}/999999"
+    _basim_objectivum="${DESTDIR}/999999"
   else
-    _basim_objectivum="${ROOTDIR}"
+    _basim_objectivum="${DESTDIR}"
   fi
 
   fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.$est_objectivum_linguam.codex.pdf"
-  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.pdf"
+  objectivum_archivum_temporarium="${DESTDIR}/999999/0/$_nomen.$est_objectivum_linguam.codex.pdf"
   ascidoctor_theme="${ROOTDIR}/999999999/0/1603_1.asciidoctor-pdf-theme-1.yml"
   ascidoctor_font_dir_neo="/usr/share/fonts/truetype/noto,/usr/share/fonts/opentype/noto"
   ascidoctor_font_dir_repo="${ROOTDIR}/999999/1603/1/3/"
@@ -1194,7 +1223,7 @@ neo_codex_de_numerordinatio_pdf() {
 #  - '+v_wiki_q'
 #
 # Globals:
-#   ROOTDIR
+#   ROOTDIR (here another case that migth be relevant add DESTDIR)
 # Arguments:
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
@@ -1551,6 +1580,8 @@ contains() {
 # Normalization of PCode sheets. The RawSheetname may (or not) have ISO3166p1a3
 # so this avoid redundancy.
 #
+# @DEPRECATED
+#
 # Globals:
 #   None
 # Arguments:
@@ -1564,6 +1595,9 @@ un_pcode_sheets_norma() {
 
 #######################################
 # Do "the best possible" to infer HXL heading.
+#
+# @DEPRECATED
+#
 # Globals:
 #   None
 # Arguments:
@@ -1610,6 +1644,8 @@ un_pcode_rawheader_is_pcode() {
 #######################################
 # Return if header is likely be an Pcode
 #
+# @DEPRECATED
+#
 # Globals:
 #   None
 # Arguments:
@@ -1642,6 +1678,8 @@ trim() {
 # Only return numeric PCode admin level if the item matches typical raw CSV
 # header of a PCode (excludes administrative names)
 #
+# @DEPRCATED
+#
 # Globals:
 #   None
 # Arguments:
@@ -1659,6 +1697,8 @@ un_pcode_csvheader_pcode_level() {
 
 #######################################
 # Return administrative level either from PCode or administrative name
+#
+# @DEPRECATED
 #
 # Globals:
 #   None
@@ -1682,6 +1722,8 @@ un_pcode_csvheader_administrative_level() {
 #######################################
 # For a typical CSV header, return if is generic "date"
 #
+# @DEPRECATED
+#
 # Globals:
 #   None
 # Arguments:
@@ -1699,6 +1741,8 @@ un_pcode_csvheader_date() {
 #######################################
 # For a typical CSV header, return if is generic "date valid on"
 #
+# @DEPRECATED
+#
 # Globals:
 #   None
 # Arguments:
@@ -1714,6 +1758,8 @@ un_pcode_csvheader_date_valid_on() {
 }
 #######################################
 # For a typical CSV header, return if is generic "date valid to"
+#
+# @DEPRECATED
 #
 # Globals:
 #   None
@@ -1733,6 +1779,7 @@ un_pcode_csvheader_date_valid_to() {
 # Only return numeric PCode admin level if the item matches typical raw CSV
 # header
 #
+# @DEPRECATED
 #
 # Globals:
 #   None
@@ -1756,6 +1803,8 @@ un_pcode_rawheader_name_language() {
 
 #######################################
 # Generate an HXL Hashtag based on a raw CSV header item
+#
+# @DEPRECATED
 #
 # Globals:
 #   None
@@ -1795,6 +1844,8 @@ un_pcode_rawhader_to_hxl() {
 # From a list of comma separated raw headers, return a comma separated
 # HXLAted headers. Only for P-Code-like CSV files
 #
+# @DEPRECATED
+#
 # Globals:
 #   None
 # Arguments:
@@ -1825,6 +1876,8 @@ un_pcode_hxlate_csv_header() {
 #######################################
 # Generate an HXL Hashtag based on a raw CSV header item
 #
+# @DEPRECATED
+#
 # Example:
 #    un_pcode_hxlate_csv_file AFG_1.csv > AFG_1.hxl.csv
 #
@@ -1854,6 +1907,8 @@ un_pcode_hxlate_csv_file() {
 
 #######################################
 # Return an 1603_45_49 (UN m49 numeric code) from other common systems
+#
+# @DEPRECATED
 #
 # Example:
 #    un_pcode_hxlate_csv_file AFG_1.csv > AFG_1.hxl.csv
@@ -2015,7 +2070,7 @@ upload_cdn() {
 # Lingual information only
 #
 # Globals:
-#   ROOTDIR
+#   ROOTDIR (DESTDIR may be need to add here if necessary. Needs tests)
 # Arguments:
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
@@ -2113,7 +2168,7 @@ wikidata_p_ex_linguis() {
 # Interlingual codes only.
 #
 # Globals:
-#   ROOTDIR
+#   ROOTDIR (DESTDIR may be need to add here if necessary. Needs tests)
 #   VELOX  (if =1, ignore fonts)
 # Arguments:
 #   numerordinatio
@@ -2202,7 +2257,7 @@ wikidata_p_ex_interlinguis() {
 # wikidata_p_ex_interlinguis + wikidata_p_ex_linguis
 #
 # Globals:
-#   ROOTDIR
+#   ROOTDIR (DESTDIR may be need to add here if necessary. Needs tests)
 # Arguments:
 #   numerordinatio
 #   est_temporarium_fontem (default "1", from 99999/)
