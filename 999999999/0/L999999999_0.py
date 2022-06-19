@@ -4104,9 +4104,12 @@ class HXLHashtagSimplici:
             )
         else:
             if len(_rdf_parts) == 0:
-                return '#meta+ERROR+{0}'.format(
+                return '#meta+rem+i_qcc+is_zxxx+ix_ERROR+{0}'.format(
                     self.hashtag.replace('#', '')
                 )
+                # return '#meta+ERROR+{0}'.format(
+                #     self.hashtag.replace('#', '')
+                # )
             return '#item+rem+i_qcc+is_zxxx{0}'.format(
                 _rdf_parts
             )

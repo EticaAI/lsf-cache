@@ -54,6 +54,7 @@
 
 # @see https://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole
 
+from ast import Try
 from genericpath import exists
 import sys
 import os
@@ -156,6 +157,10 @@ Data apothēcae . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 --data-apothecae-ad='apothecae.datapackage.json'
 
     {0} --methodus='data-apothecae' \
+--data-apothecae-ex='1603_1_1,1603_1_51' \
+--data-apothecae-ad='999999/0/catalog-v001.xml'
+
+    {0} --methodus='data-apothecae' \
 --data-apothecae-ex='1603_45_1,1603_45_31' \
 --data-apothecae-ad='apothecae.sqlite'
 
@@ -220,6 +225,15 @@ Opus temporibus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 # In Python2, sys.stdin is a byte stream; in Python3, it's a text stream
 STDIN = sys.stdin.buffer
 
+# Example
+# CODEX_AD_HOC_NUMERORDINATIO='{"#item+rem+i_qcc+is_zxxx+ix_n1603":
+#    "1603_16_24_0", "#item+rem+i_mul+is_zyyy":
+#     "1603_16_24_0 Angola 0"}' ./999999999/0/1603_1.py
+#     --methodus='status-quo' --status-quo-in-json --codex-de 1603_16_24_0
+CODEX_AD_HOC_NUMERORDINATIO = os.getenv('CODEX_AD_HOC_NUMERORDINATIO', None)
+
+# DATA_APOTHECAE_MINIMIS="1" disable implicit import of 1603_1_1 and 1603_1_51
+DATA_APOTHECAE_MINIMIS = os.getenv('DATA_APOTHECAE_MINIMIS', "")
 
 # a b aa bb
 # printf "30160\n31161\n1830260\n1891267\n" | \
@@ -813,8 +827,16 @@ class Codex:
                     self.m1603_1_1__de_codex = lineam
 
         if not self.m1603_1_1__de_codex:
-            raise ValueError("{0} not defined on 1603_1_1 [{1}]".format(
-                self.de_codex, fullpath))
+            if CODEX_AD_HOC_NUMERORDINATIO is not None:
+                codex_ad_hoc = json.loads(CODEX_AD_HOC_NUMERORDINATIO)
+                if not '#item+rem+i_qcc+is_zxxx+ix_n1603' in codex_ad_hoc or \
+                        not '#item+rem+i_mul+is_zyyy' in codex_ad_hoc:
+                    raise SyntaxError("bad CODEX_AD_HOC_NUMERORDINATIO [{1}]".format(
+                        self.de_codex, CODEX_AD_HOC_NUMERORDINATIO))
+                self.m1603_1_1__de_codex = codex_ad_hoc
+            else:
+                raise ValueError("{0} not defined on 1603_1_1 [{1}]".format(
+                    self.de_codex, fullpath))
 
     def _init_codex(self):
         # numerordinatio = numerordinatio_neo_separatum(self.de_codex, ':')
@@ -4007,6 +4029,8 @@ class DataApothecae:
                 self.data_apothecae_formato = 'sqlite'
             elif data_apothecae_ad.endswith('.json'):
                 self.data_apothecae_formato = 'datapackage'
+            elif data_apothecae_ad.endswith('.xml'):
+                self.data_apothecae_formato = 'catalog_v001'
             else:
                 raise ValueError('--data-apothecae-formato ?')
 
@@ -4044,11 +4068,101 @@ class DataApothecae:
         if self.data_apothecae_formato == 'datapackage':
             # return self.praeparatio_datapackage(libraria)
             return self.praeparatio_datapackage()
+
+        if self.data_apothecae_formato == 'catalog_v001':
+            # return self.praeparatio_datapackage(libraria)
+            return self.praeparatio_catalog_v001()
+
         if self.data_apothecae_formato == 'sqlite':
             # return self.praeparatio_sqlite(libraria)
             return self.praeparatio_sqlite()
 
         return True
+
+    def praeparatio_catalog_v001(
+            self,
+            temporarium: str = None):
+        """praeparatio_catalog_v001 _summary_
+
+        A Protege-like catalog-v001.xml file syntax
+
+        Specification:
+            - https://en.wikipedia.org/wiki/XML_catalog
+            - www.oasis-open.org/committees/download.php/14810/xml-catalogs.pdf
+            - https://datatracker.ietf.org/doc/html/rfc3986#section-3.4
+
+        Examples:
+            - https://github.com/EnvironmentOntology
+              /environmental-exposure-ontology/blob/v2022-05-12/catalog-v001.xml
+            - https://github.com/w3c-lbd-cg/opm/blob/master/catalog-v001.xml
+
+        See also:
+            - http://www.stylusstudio.com/super-catalogs.html
+            - https://norman.walsh.name/2003/06/05/xmlcatalogs
+            - https://norman.walsh.name/2003/06/26/cache
+
+        Args:
+            temporarium (str, optional): _description_. Defaults to None.
+        """
+        paginae = [
+            '<?xml version="1.0" encoding="UTF-8" standalone="no"?>',
+            '<catalog prefer="public" '
+            'xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">'
+        ]
+
+        # raise ValueError("TODO")
+
+        # if bool(DATA_APOTHECAE_MINIMIS) is True:
+
+        for codex in self.data_apothecae_ex:
+            codex__under = numerordinatio_neo_separatum(codex, '_')
+            codex__path = numerordinatio_neo_separatum(codex, '/')
+            codex__norm = numerordinatio_neo_separatum(codex, ':')
+            ontologia_ex_archivo_basi = '{0}/{1}'.format(
+                codex__path, codex__under,
+            )
+            # print(ontologia_ex_archivo_basi + '.no11.tm.hxl.csv')
+            if exists(ontologia_ex_archivo_basi + '.no11.owl.ttl'):
+                paginae.append(
+                    '    <uri id="_{0}_" name="urn:mdciii:{2}?t=owl"'
+                    ' uri="{1}/{0}.no11.owl.ttl"/>'.format(
+                        codex__under, codex__path, codex__norm
+                    ))
+            elif exists(ontologia_ex_archivo_basi + '.no1.owl.ttl'):
+                paginae.append(
+                    '    <uri id="_{0}_" name="urn:mdciii:{2}?t=owl"'
+                    ' uri="{1}/{0}.no1.owl.ttl"/>'.format(
+                        codex__under, codex__path, codex__norm
+                    ))
+
+            if exists(ontologia_ex_archivo_basi + '.no11.skos.ttl'):
+                paginae.append(
+                    '    <uri id="_{0}_" name="urn:mdciii:{2}?t=owl"'
+                    ' uri="{1}/{0}.no11.skos.ttl"/>'.format(
+                        codex__under, codex__path, codex__norm
+                    ))
+            elif exists(ontologia_ex_archivo_basi + '.no1.skos.ttl'):
+                paginae.append(
+                    '    <uri id="_{0}_" name="urn:mdciii:{2}?t=skos"'
+                    ' uri="{1}/{0}.no1.skos.ttl"/>'.format(
+                        codex__under, codex__path, codex__norm
+                    ))
+
+        paginae.append('</catalog>')
+
+        if temporarium:
+            with open(temporarium, 'w') as archivum:
+                for lineam in paginae:
+                    archivum.write(lineam + "\n")
+        else:
+            _path_archivum = NUMERORDINATIO_BASIM + '/' + self.data_apothecae_ad
+            # self.resultatum.append('TODO praeparatio_datapackage')
+            self.resultatum.append(_path_archivum)
+
+            with open(_path_archivum, 'w') as archivum:
+                # Further file processing goes here
+                for lineam in paginae:
+                    archivum.write(lineam + "\n")
 
     def praeparatio_datapackage(
             self,
@@ -4065,14 +4179,22 @@ class DataApothecae:
             'resources': []
         }
 
-        sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_1'))
-        sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_51'))
+        # raise ValueError(DATA_APOTHECAE_MINIMIS, bool(DATA_APOTHECAE_MINIMIS))
 
-        for codex in self.data_apothecae_ex:
-            if codex in ['1603_1_1', '1603_1_51']:
-                continue
-            sarcina['resources'].append(
-                DataApothecae.quod_tabula(codex))
+        # if bool(DATA_APOTHECAE_MINIMIS) is True:
+        if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1"):
+            for codex in self.data_apothecae_ex:
+                sarcina['resources'].append(
+                    DataApothecae.quod_tabula(codex))
+        else:
+            sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_1'))
+            sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_51'))
+
+            for codex in self.data_apothecae_ex:
+                if codex in ['1603_1_1', '1603_1_51']:
+                    continue
+                sarcina['resources'].append(
+                    DataApothecae.quod_tabula(codex))
 
         paginae.append(json.dumps(
             sarcina, indent=2, ensure_ascii=False, sort_keys=False))

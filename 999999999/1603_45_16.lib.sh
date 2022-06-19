@@ -29,8 +29,6 @@
 set -e
 # set -x
 
-echo "1603_45_16.sh"
-
 PRAEFIXUM="1603:45:16:"
 REBUILD_CSV_FROM_XLSX="0" # REBUILD_CSV_FROM_XLSX="0"
 DATA_UN_PCode_ZIP="https://drive.google.com/uc?export=download&id=1jRshR0Mywd_w8r6W2njUFWv7oDVLgKQi"
@@ -786,7 +784,7 @@ deploy_1603_45_16_prepare_directories() {
 #######################################
 deploy_1603_45_16_global_admX() {
   administrative_level=${1}
-  fontem_semitam="${ROOTDIR}/999999/1603/45/16/hxl"
+  # fontem_semitam="${ROOTDIR}/999999/1603/45/16/hxl"
   objectivum_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.hxl.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/999/1603_45_16_1_${administrative_level}.TEMP.hxl.csv"
 
@@ -838,7 +836,7 @@ deploy_1603_45_16_global_admX() {
 #######################################
 deploy_1603_45_16_global_admX_unicum() {
   # administrative_level=${1}
-  fontem_semitam="${ROOTDIR}/999999/1603/45/16/hxl"
+  # fontem_semitam="${ROOTDIR}/999999/1603/45/16/hxl"
   objectivum_archivum="${ROOTDIR}/1603/45/16/999/1603_45_16_1_15828996298662.hxl.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/1603/45/16/999/1603_45_16_1_15828996298662.TEMP.hxl.csv"
 
@@ -1074,7 +1072,7 @@ __temp_preproces_quicktest_1603_16_24() {
     objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
     objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
     objectivum_archivum_no1_owl_ttl="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.owl.ttl"
-    objectivum_archivum_no1bcp47="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+    # objectivum_archivum_no1bcp47="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
 
     # set -x
     # rm "$objectivum_archivum_no1" || true
