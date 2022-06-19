@@ -2082,6 +2082,7 @@ def bcp47_rdf_extension_poc(
         namespaces: List[dict] = None,
         rdf_sine_spatia_nominalibus: List = None,
         cum_antecessoribus: bool = False,
+        rdf_ontologia_ordinibus: list = None,
         est_meta: bool = False,
         strictum: bool = True
 ) -> dict:
@@ -2414,7 +2415,9 @@ def bcp47_rdf_extension_poc(
             trivium_antecessori.pop()
             if len(trivium_antecessori) > 0 and len(trivium_antecessori[0]) > 0:
                 # trivium_antecessori = list(trivium_antecessori)
-                numerordinatio_cum_antecessoribus(trivium_antecessori)
+                numerordinatio_cum_antecessoribus(
+                    trivium_antecessori,
+                    rdf_ontologia_ordinibus=rdf_ontologia_ordinibus)
 
                 _ns = ':'.join(trivium_antecessori)
 
@@ -5849,6 +5852,7 @@ def numerordinatio_descendentibus(
 
 def numerordinatio_cum_antecessoribus(
         numerordinatio: Union[str, list],
+        rdf_ontologia_ordinibus: list = None,
         praefixum: str = 'mdciii',
         radix: int = 2,
         est_urn: bool = True
@@ -5857,6 +5861,12 @@ def numerordinatio_cum_antecessoribus(
     if est_urn is not True:
         # @TODO: implement this
         raise NotImplementedError
+
+    owl_ontology_ranks = []
+    if rdf_ontologia_ordinibus is not None and len(rdf_ontologia_ordinibus) > 0:
+        owl_ontology_ranks = []
+        for item in rdf_ontologia_ordinibus:
+            owl_ontology_ranks.append(int(item))
 
     global NUMERODINATIO_ANTECESSORIBUS__OKAY
     global NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS
@@ -5891,6 +5901,15 @@ def numerordinatio_cum_antecessoribus(
             continue
         else:
             NUMERODINATIO_ANTECESSORIBUS__OKAY.append(':'.join(trivium))
+
+
+        if len(owl_ontology_ranks) > 0 and ordo in owl_ontology_ranks and \
+            ordo >= radix:
+            NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.append([
+                    '<urn:{0}:{1}(1)>'.format(praefixum, ':'.join(trivium)),
+                    'a',
+                    'owl:Ontology',
+                ])
 
         # Exemplum: 1603
         # if ordo == 1:
@@ -5972,7 +5991,7 @@ def numerordinatio_cum_antecessoribus(
                     '<urn:{0}:{1}()>'.format(praefixum, ':'.join(trivium)),
                 ]
             ])
-            pass
+            # pass
 
         trivium_antecessori.append(_part)
 

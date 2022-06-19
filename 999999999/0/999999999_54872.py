@@ -107,7 +107,9 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Debug information in JSON)
     {0} --objectivum-formato=_temp_bcp47_meta_in_json \
 --punctum-separato-de-fontem=$'\\t' \
-999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
+--numerordinatio-cum-antecessoribus \
+--rdf-ontologia-ordinibus=5 --rdf-trivio=5002
 
     {0} --objectivum-formato=_temp_bcp47_meta_in_json \
 --punctum-separato-de-fontem=$'\\t' \
@@ -118,17 +120,21 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Data operations)
     {0} --objectivum-formato=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
-999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
+--numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
+--rdf-trivio=5002
 
-    {0} --objectivum-formato=_temp_bcp47
+    {0} --objectivum-formato=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
-999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-trivio=1
+999999999/1568346/data/unesco-thesaurus.bcp47g.tsv \
+--numerordinatio-cum-antecessoribus --rdf-trivio=1
 
     {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
-999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-trivio=2
+999999999/1568346/data/unesco-thesaurus.bcp47g.tsv \
+--numerordinatio-cum-antecessoribus --rdf-trivio=5001
 
     {0} --objectivum-formato=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
@@ -141,22 +147,23 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
     {0} --objectivum-formato=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
---rdf-sine-spatia-nominalibus=owl,obo,devnull --rdf-trivio=2
+--rdf-sine-spatia-nominalibus=owl,obo,devnull --rdf-trivio=5002
 
 (Data operation; example of "OWL + OBO" without SKOS linguistic metadata)
     {0} --objectivum-formato=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
---rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-trivio=2
+--rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-trivio=5002
 
 (Data operations, header conversion RDF+HXL -> RDF+BCP47)
-    varbcp47=$(head -n1 \
-999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv)
-    {0} --objectivum-formato=_temp_header_hxl_to_bcp47 "$varbcp47"
+    varhxl=$(head -n1 \
+999999999/1568346/data/cod-ab-example1-with-inferences.no1.hxl.tm.tsv)
+    {0} --objectivum-formato=_temp_header_hxl_to_bcp47 "$varhxl"
 
 (Data operations, header conversion RDF+BCP47 -> RDF+HXL)
-    {0} --objectivum-formato=_temp_header_bcp47_to_hxl \
-999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv
+    varbcp47=$(head -n1 \
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv)
+    {0} --objectivum-formato=_temp_header_bcp47_to_hxl "$varbcp47"
 
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
@@ -342,6 +349,20 @@ class Cli:
             default=False
         )
 
+        # numerordinatio
+        # ōrdinibus, pl, m, dativus, en.wiktionary.org/wiki/ordo#Latin
+        parser.add_argument(
+            '--rdf-ontologia-ordinibus',
+            help='Of antecessors, the Numerordinatio order which they would '
+            'be an [<subject> rdf:type owl:Ontology]. '
+            'Requires --numerordinatio-cum-antecessoribus',
+            metavar="rdf_ontologia_ordinibus",
+            dest="rdf_ontologia_ordinibus",
+            nargs='?',
+            # required=True,
+            type=lambda x: x.split(',')
+        )
+
         # archīvum, n, s, nominativus, https://en.wiktionary.org/wiki/archivum
         # cōnfigūrātiōnī, f, s, dativus,
         #                      https://en.wiktionary.org/wiki/configuratio#Latin
@@ -457,6 +478,7 @@ class Cli:
                 caput, data, objective_bag=pyargs.rdf_bag,
                 rdf_sine_spatia_nominalibus=rdf_sine_spatia_nominalibus,
                 cum_antecessoribus=pyargs.cum_antecessoribus,
+                rdf_ontologia_ordinibus=pyargs.rdf_ontologia_ordinibus,
                 est_meta=True)
             print(json.dumps(
                 meta, sort_keys=False, ensure_ascii=False, cls=SetEncoder))
@@ -485,7 +507,8 @@ class Cli:
             meta = bcp47_rdf_extension_poc(
                 caput, data, objective_bag=pyargs.rdf_bag,
                 rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus,
-                cum_antecessoribus=pyargs.cum_antecessoribus)
+                cum_antecessoribus=pyargs.cum_antecessoribus,
+                rdf_ontologia_ordinibus=pyargs.rdf_ontologia_ordinibus)
             # print(json.dumps(meta, sort_keys=True ,ensure_ascii=False))
             # return self.EXIT_OK
 

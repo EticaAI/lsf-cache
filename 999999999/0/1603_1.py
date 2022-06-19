@@ -4129,6 +4129,7 @@ class DataApothecae:
                         codex__under, codex__path, codex__norm
                     ))
             elif exists(ontologia_ex_archivo_basi + '.no1.owl.ttl'):
+                # print('foi', ontologia_ex_archivo_basi + '.no1.owl.ttl')
                 paginae.append(
                     '    <uri id="_{0}_" name="urn:mdciii:{2}?t=owl"'
                     ' uri="{1}/{0}.no1.owl.ttl"/>'.format(

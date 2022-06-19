@@ -296,6 +296,7 @@ test_cod_ab__with_inferences_prebuild() {
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
+    --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
     --rdf-trivio=5000 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -305,6 +306,7 @@ test_cod_ab__with_inferences_prebuild() {
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
+    --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
     --rdf-trivio=5001 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -314,6 +316,7 @@ test_cod_ab__with_inferences_prebuild() {
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
+    --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
     --rdf-trivio=5002 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
@@ -324,6 +327,7 @@ test_cod_ab__with_inferences_prebuild() {
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --objectivum-formato=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
+    --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
     --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |

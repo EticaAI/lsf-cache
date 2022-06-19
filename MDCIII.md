@@ -26,6 +26,38 @@
       - https://github.com/mazimweal/mazimweal.github.io/blob/master/FAIR%20disaster%20vocabularies/SLR_selected_papers.csv
 
 
+## Conventions
+
+- `urn:mdciii:1603:16:24:0`
+  - **Particular** (or a instance_of)
+  - Country of Angola (Administrative Boundaries 0 = Country in this case)
+- `urn:mdciii:1603:16:24()`, `urn:mdciii:1603:16()`
+  - **Universal** (or a class)
+  - This type of pattern is used inside RDF files to make distinction between
+    universals and particulars (and this distinction is very important)
+- `urn:mdciii:1603:1:1603(0)`
+  - The number inside `()` is used to reference something outside the data
+    itself. So is not mere a **Universal** (or a class) but a resource to a
+    file
+    - In this case, `0` is used for boostrapping resources which explain other
+      resources, like `1603/1/1603/1603_1_1603.owl`
+- `urn:mdciii:1603:16:24:0(1)`
+  - Reference to a resource (often a file) that contain data related with
+    `urn:mdciii:1603:16:24:0` particulars (or isntance_of).
+      In this case is only one particular (country of Angola)
+    - Example: `1603/16/24/0/1603_16_24_0.no1.owl.ttl`
+
+- Trivia: the `(` (see https://www.compart.com/en/unicode/category/Ps) and
+  `)` (see https://www.compart.com/en/unicode/category/Pe) the same way the
+  numbers are not not strictly `0123456789` and the separator varies by context
+  (most used ones: `:`, `_` and `/`) could be replaced by other respective
+  Unicode Ps and Unicode Pe.
+
+### TODOs
+- Improve file extensiosn generated. Maybe we should save Protege files
+  on XML format with `owl.owx` extension?
+  - https://github.com/protegeproject/protege/issues/969#issuecomment-755985817
+
 <!--
 
 Missing translations to portuguese from BFO 2020:

@@ -335,6 +335,11 @@
   "rdf_triplis": [
     [
       "<urn:mdciii:1603:45:16:76:0>",
+      "rdfs:label",
+      "\"1603:45:16:76:0\""
+    ],
+    [
+      "<urn:mdciii:1603:45:16:76:0>",
       "a",
       "skos:Concept"
     ],
@@ -357,6 +362,11 @@
       "<urn:mdciii:1603:45:16:76:0>",
       "skos:prefLabel",
       "\"Brasil\"@por-Latn"
+    ],
+    [
+      "<urn:mdciii:1603:45:16:24:0>",
+      "rdfs:label",
+      "\"1603:45:16:24:0\""
     ],
     [
       "<urn:mdciii:1603:45:16:24:0>",
@@ -384,6 +394,62 @@
       "\"Angola\"@por-Latn"
     ]
   ],
-  "antecessoribus_rdf_triplis": [],
+  "antecessoribus_rdf_triplis": [
+    [
+      "<urn:mdciii:1603:45()>",
+      "a",
+      "skos:ConceptScheme"
+    ],
+    [
+      "<urn:mdciii:1603:45()>",
+      "rdfs:label",
+      "\"(1603:45)\""
+    ],
+    [
+      "<urn:mdciii:1603:45:16()>",
+      "a",
+      "skos:Collection"
+    ],
+    [
+      "<urn:mdciii:1603:45:16()>",
+      "rdfs:label",
+      "\"(1603:45:16)\""
+    ],
+    [
+      "<urn:mdciii:1603:45:16()>",
+      "skos:inScheme",
+      "<urn:mdciii:1603:45()>"
+    ],
+    [
+      "<urn:mdciii:1603:45:16:76()>",
+      "a",
+      "skos:Collection"
+    ],
+    [
+      "<urn:mdciii:1603:45:16:76()>",
+      "rdfs:label",
+      "\"(1603:45:16:76)\""
+    ],
+    [
+      "<urn:mdciii:1603:45:16()>",
+      "skos:member",
+      "<urn:mdciii:1603:45:16:76()>"
+    ],
+    [
+      "<urn:mdciii:1603:45:16:24()>",
+      "a",
+      "skos:Collection"
+    ],
+    [
+      "<urn:mdciii:1603:45:16:24()>",
+      "rdfs:label",
+      "\"(1603:45:16:24)\""
+    ],
+    [
+      "<urn:mdciii:1603:45:16()>",
+      "skos:member",
+      "<urn:mdciii:1603:45:16:24()>"
+    ]
+  ],
   "_error": []
 }
