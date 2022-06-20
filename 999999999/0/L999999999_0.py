@@ -4015,8 +4015,11 @@ class HXLHashtagSimplici:
             return HXL_HASH_ET_ATTRIBUTA_AD_RDF[self.hashtag]['__no1bpc47__']
 
         hxl_base = '#item+rem'
-        numerordinatio = self.quod_numerordinatio(caput_contextui)
-        item_meta = hxl_hashtag_to_bcp47(numerordinatio)
+        # numerordinatio = self.quod_numerordinatio(caput_contextui)
+        # item_meta = hxl_hashtag_to_bcp47(numerordinatio)
+        item_meta = hxl_hashtag_to_bcp47(self.hashtag)
+
+        # print(item_meta)
 
         if len(item_meta['_error']) == 0 and \
                 item_meta['Language-Tag_normalized']:
@@ -5902,14 +5905,13 @@ def numerordinatio_cum_antecessoribus(
         else:
             NUMERODINATIO_ANTECESSORIBUS__OKAY.append(':'.join(trivium))
 
-
         if len(owl_ontology_ranks) > 0 and ordo in owl_ontology_ranks and \
-            ordo >= radix:
+                ordo >= radix:
             NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS.append([
-                    '<urn:{0}:{1}(1)>'.format(praefixum, ':'.join(trivium)),
-                    'a',
-                    'owl:Ontology',
-                ])
+                '<urn:{0}:{1}(1)>'.format(praefixum, ':'.join(trivium)),
+                'a',
+                'owl:Ontology',
+            ])
 
         # Exemplum: 1603
         # if ordo == 1:
