@@ -480,7 +480,7 @@ bootstrap_1603_45_16__item_rdf() {
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_no1 \
       --numerordinatio-cum-antecessoribus \
-      --numerordinatio-cum-antecessoribus="5" \
+      --rdf-ontologia-ordinibus="5" \
       --rdf-trivio="${rdf_trivio}" \
       <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
@@ -1102,7 +1102,7 @@ __temp_preproces_quicktest_1603_16_24() {
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_no1 \
       --numerordinatio-cum-antecessoribus \
-      --numerordinatio-cum-antecessoribus="5" \
+      --rdf-ontologia-ordinibus="5" \
       --punctum-separato-de-fontem=',' \
       --rdf-trivio="${rdf_trivio}" \
       "${objectivum_archivum_no1}" |
