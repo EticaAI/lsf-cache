@@ -2363,7 +2363,8 @@ def bcp47_rdf_extension_poc(
                     object_result = '"{0}"^^{1}'.format(item, _temp1)
                 elif not bcp47_lang.startswith('qcc'):
                     # @TODO escape " on item (if any)
-                    object_result = '"{0}"@{1}'.format(item, bcp47_lang)
+                    object_result = '"{0}"@{1}'.format(
+                        rdf_literal_escape(item), bcp47_lang)
                 elif not is_literal:
                     # Example: prefixed result
                     object_result = item
@@ -2439,7 +2440,7 @@ def bcp47_rdf_extension_poc(
         if triple_rdfs_label_literal is not None:
             result['rdf_triplis'].append([
                 triple_subject, 'rdfs:label',
-                '"' + triple_rdfs_label_literal + '"'
+                '"' + rdf_literal_escape(triple_rdfs_label_literal) + '"'
             ])
 
         for ego_typus in bag_meta['trivium']['rdf:type']:
@@ -5132,7 +5133,7 @@ class HXLTMAdRDFSimplicis:
                 if item and _index in self._hxltm_unlabeled_index and \
                         self._hxltm_unlabeled_info[_index]['bcp47']:
                     _skos_related_raw.append('"{0}"@{1}'.format(
-                        item.replace('"', '\\"'),
+                        rdf_literal_escape(item),
                         self._hxltm_unlabeled_info[_index]['bcp47']
                     ))
                     # pass
@@ -5776,6 +5777,35 @@ def qhxl_hxlhashtag_2_bcp47(
         )
 
     return bcp47_simplici
+
+
+def rdf_literal_escape(textum: str) -> str:
+    # @see https://stackoverflow.com/questions
+    #      /40828501/how-to-encode-rdf-n-triples-string-literals
+    # @see https://github.com/RDFLib/rdflib/blob/master/rdflib/term.py
+    # @TODO this strategy is obviously too lazy and should be rewriten.
+
+    if not textum:
+        return textum
+    if not isinstance(textum, str):
+        # Likely error, or maybe using int or something
+        return textum
+
+    textum = textum.strip()
+
+    # raise ValueError(textum)
+    # TODOs [#x22, #x5C, #xA, #xD]
+    if textum.find(r'\n') > -1:
+        textum = textum.replace(r'\n', r'\\n')
+    if textum.find(r'\r') > -1:
+        textum = textum.replace(r'\r', r'\\r')
+    if textum.find(r'"') > -1:
+        textum = textum.replace(r'"', r'\"')
+
+    # Since we're using rapper to validate RDFs we will find other errors.
+    # Way too lazy for now.
+
+    return textum
 
 
 def rdf_namespaces_extras(archivum: str) -> dict:
@@ -6578,7 +6608,8 @@ class TabulaSimplici:
             ], strictum=False)
             if lingua['language'] not in ['qcc', 'zxx']:
                 resultatum.append('"{0}"@{1}'.format(
-                    item, lingua['Language-Tag_normalized']))
+                    rdf_literal_escape(item),
+                    lingua['Language-Tag_normalized']))
         return resultatum
 
     def _quod_descendentia(
@@ -6654,7 +6685,7 @@ class TabulaSimplici:
         #     ",\n    ".join(linguae)
         # ))
         paginae.append("  skos:prefLabel \"{0}\"@{1} .".format(
-            nomen_radici,
+            rdf_literal_escape(nomen_radici),
             'mul-Zyyy-x-n1603'
         ))
         paginae.append('')

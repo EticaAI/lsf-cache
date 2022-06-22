@@ -4124,27 +4124,27 @@ class DataApothecae:
             # print(ontologia_ex_archivo_basi + '.no11.tm.hxl.csv')
             if exists(ontologia_ex_archivo_basi + '.no11.owl.ttl'):
                 paginae.append(
-                    '    <uri id="_{0}_" name="urn:mdciii:{2}?t=owl"'
+                    '    <uri id="_{0}__11" name="urn:mdciii:{2}(11)"'
                     ' uri="{1}/{0}.no11.owl.ttl"/>'.format(
                         codex__under, codex__path, codex__norm
                     ))
-            elif exists(ontologia_ex_archivo_basi + '.no1.owl.ttl'):
+            if exists(ontologia_ex_archivo_basi + '.no1.owl.ttl'):
                 # print('foi', ontologia_ex_archivo_basi + '.no1.owl.ttl')
                 paginae.append(
-                    '    <uri id="_{0}_" name="urn:mdciii:{2}?t=owl"'
+                    '    <uri id="_{0}__1" name="urn:mdciii:{2}(1)"'
                     ' uri="{1}/{0}.no1.owl.ttl"/>'.format(
                         codex__under, codex__path, codex__norm
                     ))
 
             if exists(ontologia_ex_archivo_basi + '.no11.skos.ttl'):
                 paginae.append(
-                    '    <uri id="_{0}_" name="urn:mdciii:{2}?t=owl"'
+                    '    <uri id="_{0}__1_11" name="urn:mdciii:{2}(1)(11)"'
                     ' uri="{1}/{0}.no11.skos.ttl"/>'.format(
                         codex__under, codex__path, codex__norm
                     ))
-            elif exists(ontologia_ex_archivo_basi + '.no1.skos.ttl'):
+            if exists(ontologia_ex_archivo_basi + '.no1.skos.ttl'):
                 paginae.append(
-                    '    <uri id="_{0}_" name="urn:mdciii:{2}?t=skos"'
+                    '    <uri id="_{0}__1_1" name="urn:mdciii:{2}(1)(1)"'
                     ' uri="{1}/{0}.no1.skos.ttl"/>'.format(
                         codex__under, codex__path, codex__norm
                     ))
