@@ -238,7 +238,7 @@ __temp_preproces_quicktest_1603_16_24() {
     objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
     objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
     objectivum_archivum_no1_owl_ttl="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.owl.ttl"
-    objectivum_archivum_no1bcp47="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+    # objectivum_archivum_no1bcp47="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
 
     # set -x
     # rm "$objectivum_archivum_no1" || true
