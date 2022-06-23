@@ -1,0 +1,3070 @@
+# [1603:16]
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdt: <http://www.wikidata.org/prop/direct/> .
+
+# @TODO: need decide if administrative boundaries levels 
+# are only related or  skos:broaderTransitive + skos:narrowerTransitive
+
+<urn:mdciii:1603:16:1:0()> a skos:ConceptScheme ;
+  rdfs:label "(1603:16)" ;
+  skos:hasTopConcept
+    <urn:mdciii:1603:16:8:0> ,
+    <urn:mdciii:1603:16:12:0> ,
+    <urn:mdciii:1603:16:24:0> ,
+    <urn:mdciii:1603:16:28:0> ,
+    <urn:mdciii:1603:16:31:0> ,
+    <urn:mdciii:1603:16:32:0> ,
+    <urn:mdciii:1603:16:44:0> ,
+    <urn:mdciii:1603:16:50:0> ,
+    <urn:mdciii:1603:16:51:0> ,
+    <urn:mdciii:1603:16:52:0> ,
+    <urn:mdciii:1603:16:60:0> ,
+    <urn:mdciii:1603:16:64:0> ,
+    <urn:mdciii:1603:16:68:0> ,
+    <urn:mdciii:1603:16:72:0> ,
+    <urn:mdciii:1603:16:76:0> ,
+    <urn:mdciii:1603:16:84:0> ,
+    <urn:mdciii:1603:16:90:0> ,
+    <urn:mdciii:1603:16:92:0> ,
+    <urn:mdciii:1603:16:100:0> ,
+    <urn:mdciii:1603:16:104:0> ,
+    <urn:mdciii:1603:16:108:0> ,
+    <urn:mdciii:1603:16:112:0> ,
+    <urn:mdciii:1603:16:116:0> ,
+    <urn:mdciii:1603:16:120:0> ,
+    <urn:mdciii:1603:16:132:0> ,
+    <urn:mdciii:1603:16:136:0> ,
+    <urn:mdciii:1603:16:140:0> ,
+    <urn:mdciii:1603:16:144:0> ,
+    <urn:mdciii:1603:16:148:0> ,
+    <urn:mdciii:1603:16:152:0> ,
+    <urn:mdciii:1603:16:156:0> ,
+    <urn:mdciii:1603:16:170:0> ,
+    <urn:mdciii:1603:16:174:0> ,
+    <urn:mdciii:1603:16:178:0> ,
+    <urn:mdciii:1603:16:180:0> ,
+    <urn:mdciii:1603:16:188:0> ,
+    <urn:mdciii:1603:16:192:0> ,
+    <urn:mdciii:1603:16:204:0> ,
+    <urn:mdciii:1603:16:212:0> ,
+    <urn:mdciii:1603:16:214:0> ,
+    <urn:mdciii:1603:16:218:0> ,
+    <urn:mdciii:1603:16:222:0> ,
+    <urn:mdciii:1603:16:231:0> ,
+    <urn:mdciii:1603:16:232:0> ,
+    <urn:mdciii:1603:16:242:0> ,
+    <urn:mdciii:1603:16:254:0> ,
+    <urn:mdciii:1603:16:262:0> ,
+    <urn:mdciii:1603:16:266:0> ,
+    <urn:mdciii:1603:16:268:0> ,
+    <urn:mdciii:1603:16:270:0> ,
+    <urn:mdciii:1603:16:275:0> ,
+    <urn:mdciii:1603:16:288:0> ,
+    <urn:mdciii:1603:16:296:0> ,
+    <urn:mdciii:1603:16:308:0> ,
+    <urn:mdciii:1603:16:312:0> ,
+    <urn:mdciii:1603:16:320:0> ,
+    <urn:mdciii:1603:16:324:0> ,
+    <urn:mdciii:1603:16:328:0> ,
+    <urn:mdciii:1603:16:332:0> ,
+    <urn:mdciii:1603:16:340:0> ,
+    <urn:mdciii:1603:16:348:0> ,
+    <urn:mdciii:1603:16:360:0> ,
+    <urn:mdciii:1603:16:364:0> ,
+    <urn:mdciii:1603:16:368:0> ,
+    <urn:mdciii:1603:16:384:0> ,
+    <urn:mdciii:1603:16:388:0> ,
+    <urn:mdciii:1603:16:392:0> ,
+    <urn:mdciii:1603:16:398:0> ,
+    <urn:mdciii:1603:16:404:0> ,
+    <urn:mdciii:1603:16:408:0> ,
+    <urn:mdciii:1603:16:417:0> ,
+    <urn:mdciii:1603:16:418:0> ,
+    <urn:mdciii:1603:16:422:0> ,
+    <urn:mdciii:1603:16:426:0> ,
+    <urn:mdciii:1603:16:430:0> ,
+    <urn:mdciii:1603:16:434:0> ,
+    <urn:mdciii:1603:16:450:0> ,
+    <urn:mdciii:1603:16:454:0> ,
+    <urn:mdciii:1603:16:458:0> ,
+    <urn:mdciii:1603:16:462:0> ,
+    <urn:mdciii:1603:16:466:0> ,
+    <urn:mdciii:1603:16:474:0> ,
+    <urn:mdciii:1603:16:478:0> ,
+    <urn:mdciii:1603:16:480:0> ,
+    <urn:mdciii:1603:16:484:0> ,
+    <urn:mdciii:1603:16:496:0> ,
+    <urn:mdciii:1603:16:498:0> ,
+    <urn:mdciii:1603:16:500:0> ,
+    <urn:mdciii:1603:16:504:0> ,
+    <urn:mdciii:1603:16:508:0> ,
+    <urn:mdciii:1603:16:516:0> ,
+    <urn:mdciii:1603:16:524:0> ,
+    <urn:mdciii:1603:16:534:0> ,
+    <urn:mdciii:1603:16:548:0> ,
+    <urn:mdciii:1603:16:558:0> ,
+    <urn:mdciii:1603:16:562:0> ,
+    <urn:mdciii:1603:16:566:0> ,
+    <urn:mdciii:1603:16:583:0> ,
+    <urn:mdciii:1603:16:584:0> ,
+    <urn:mdciii:1603:16:586:0> ,
+    <urn:mdciii:1603:16:591:0> ,
+    <urn:mdciii:1603:16:598:0> ,
+    <urn:mdciii:1603:16:600:0> ,
+    <urn:mdciii:1603:16:604:0> ,
+    <urn:mdciii:1603:16:608:0> ,
+    <urn:mdciii:1603:16:616:0> ,
+    <urn:mdciii:1603:16:624:0> ,
+    <urn:mdciii:1603:16:626:0> ,
+    <urn:mdciii:1603:16:630:0> ,
+    <urn:mdciii:1603:16:642:0> ,
+    <urn:mdciii:1603:16:643:0> ,
+    <urn:mdciii:1603:16:646:0> ,
+    <urn:mdciii:1603:16:659:0> ,
+    <urn:mdciii:1603:16:662:0> ,
+    <urn:mdciii:1603:16:670:0> ,
+    <urn:mdciii:1603:16:678:0> ,
+    <urn:mdciii:1603:16:686:0> ,
+    <urn:mdciii:1603:16:690:0> ,
+    <urn:mdciii:1603:16:694:0> ,
+    <urn:mdciii:1603:16:703:0> ,
+    <urn:mdciii:1603:16:704:0> ,
+    <urn:mdciii:1603:16:706:0> ,
+    <urn:mdciii:1603:16:710:0> ,
+    <urn:mdciii:1603:16:716:0> ,
+    <urn:mdciii:1603:16:728:0> ,
+    <urn:mdciii:1603:16:729:0> ,
+    <urn:mdciii:1603:16:732:0> ,
+    <urn:mdciii:1603:16:740:0> ,
+    <urn:mdciii:1603:16:748:0> ,
+    <urn:mdciii:1603:16:760:0> ,
+    <urn:mdciii:1603:16:764:0> ,
+    <urn:mdciii:1603:16:768:0> ,
+    <urn:mdciii:1603:16:776:0> ,
+    <urn:mdciii:1603:16:780:0> ,
+    <urn:mdciii:1603:16:792:0> ,
+    <urn:mdciii:1603:16:796:0> ,
+    <urn:mdciii:1603:16:800:0> ,
+    <urn:mdciii:1603:16:804:0> ,
+    <urn:mdciii:1603:16:818:0> ,
+    <urn:mdciii:1603:16:834:0> ,
+    <urn:mdciii:1603:16:850:0> ,
+    <urn:mdciii:1603:16:854:0> ,
+    <urn:mdciii:1603:16:858:0> ,
+    <urn:mdciii:1603:16:860:0> ,
+    <urn:mdciii:1603:16:862:0> ,
+    <urn:mdciii:1603:16:887:0> ,
+    <urn:mdciii:1603:16:894:0> .
+
+<urn:mdciii:1603:16:8:0> a skos:Concept ;
+  rdfs:label "1603:16:8:0" ;
+  wdt:P2082 "008" ;
+  wdt:P299 "008" ;
+  wdt:P298 "ALB" ;
+  wdt:P297 "AL" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:8:1> .
+
+<urn:mdciii:1603:16:8:1> a skos:Concept ;
+  rdfs:label "1603:16:8:1" ;
+  skos:related <urn:mdciii:1603:16:8:0> ;
+  skos:related <urn:mdciii:1603:16:8:2> .
+
+<urn:mdciii:1603:16:8:2> a skos:Concept ;
+  rdfs:label "1603:16:8:2" ;
+  skos:related <urn:mdciii:1603:16:8:1> ;
+  skos:related <urn:mdciii:1603:16:8:3> .
+
+<urn:mdciii:1603:16:8:3> a skos:Concept ;
+  rdfs:label "1603:16:8:3" ;
+  skos:related <urn:mdciii:1603:16:8:2> .
+
+<urn:mdciii:1603:16:12:0> a skos:Concept ;
+  rdfs:label "1603:16:12:0" ;
+  wdt:P2082 "012" ;
+  wdt:P299 "012" ;
+  wdt:P298 "DZA" ;
+  wdt:P297 "DZ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:12:1> .
+
+<urn:mdciii:1603:16:12:1> a skos:Concept ;
+  rdfs:label "1603:16:12:1" ;
+  skos:related <urn:mdciii:1603:16:12:0> ;
+  skos:related <urn:mdciii:1603:16:12:2> .
+
+<urn:mdciii:1603:16:12:2> a skos:Concept ;
+  rdfs:label "1603:16:12:2" ;
+  skos:related <urn:mdciii:1603:16:12:1> .
+
+<urn:mdciii:1603:16:24:0> a skos:Concept ;
+  rdfs:label "1603:16:24:0" ;
+  wdt:P2082 "024" ;
+  wdt:P299 "024" ;
+  wdt:P298 "AGO" ;
+  wdt:P297 "AO" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:24:1> .
+
+<urn:mdciii:1603:16:24:1> a skos:Concept ;
+  rdfs:label "1603:16:24:1" ;
+  skos:related <urn:mdciii:1603:16:24:0> ;
+  skos:related <urn:mdciii:1603:16:24:2> .
+
+<urn:mdciii:1603:16:24:2> a skos:Concept ;
+  rdfs:label "1603:16:24:2" ;
+  skos:related <urn:mdciii:1603:16:24:1> ;
+  skos:related <urn:mdciii:1603:16:24:3> .
+
+<urn:mdciii:1603:16:24:3> a skos:Concept ;
+  rdfs:label "1603:16:24:3" ;
+  skos:related <urn:mdciii:1603:16:24:2> .
+
+<urn:mdciii:1603:16:28:0> a skos:Concept ;
+  rdfs:label "1603:16:28:0" ;
+  wdt:P2082 "028" ;
+  wdt:P299 "028" ;
+  wdt:P298 "ATG" ;
+  wdt:P297 "AG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:28:1> .
+
+<urn:mdciii:1603:16:28:1> a skos:Concept ;
+  rdfs:label "1603:16:28:1" ;
+  skos:related <urn:mdciii:1603:16:28:0> .
+
+<urn:mdciii:1603:16:31:0> a skos:Concept ;
+  rdfs:label "1603:16:31:0" ;
+  wdt:P2082 "031" ;
+  wdt:P299 "031" ;
+  wdt:P298 "AZE" ;
+  wdt:P297 "AZ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:31:1> .
+
+<urn:mdciii:1603:16:31:1> a skos:Concept ;
+  rdfs:label "1603:16:31:1" ;
+  skos:related <urn:mdciii:1603:16:31:0> .
+
+<urn:mdciii:1603:16:32:0> a skos:Concept ;
+  rdfs:label "1603:16:32:0" ;
+  wdt:P2082 "032" ;
+  wdt:P299 "032" ;
+  wdt:P298 "ARG" ;
+  wdt:P297 "AR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:32:1> .
+
+<urn:mdciii:1603:16:32:1> a skos:Concept ;
+  rdfs:label "1603:16:32:1" ;
+  skos:related <urn:mdciii:1603:16:32:0> ;
+  skos:related <urn:mdciii:1603:16:32:2> .
+
+<urn:mdciii:1603:16:32:2> a skos:Concept ;
+  rdfs:label "1603:16:32:2" ;
+  skos:related <urn:mdciii:1603:16:32:1> .
+
+<urn:mdciii:1603:16:44:0> a skos:Concept ;
+  rdfs:label "1603:16:44:0" ;
+  wdt:P2082 "044" ;
+  wdt:P299 "044" ;
+  wdt:P298 "BHS" ;
+  wdt:P297 "BS" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:44:1> .
+
+<urn:mdciii:1603:16:44:1> a skos:Concept ;
+  rdfs:label "1603:16:44:1" ;
+  skos:related <urn:mdciii:1603:16:44:0> .
+
+<urn:mdciii:1603:16:50:0> a skos:Concept ;
+  rdfs:label "1603:16:50:0" ;
+  wdt:P2082 "050" ;
+  wdt:P299 "050" ;
+  wdt:P298 "BGD" ;
+  wdt:P297 "BD" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:50:1> .
+
+<urn:mdciii:1603:16:50:1> a skos:Concept ;
+  rdfs:label "1603:16:50:1" ;
+  skos:related <urn:mdciii:1603:16:50:0> ;
+  skos:related <urn:mdciii:1603:16:50:2> .
+
+<urn:mdciii:1603:16:50:2> a skos:Concept ;
+  rdfs:label "1603:16:50:2" ;
+  skos:related <urn:mdciii:1603:16:50:1> ;
+  skos:related <urn:mdciii:1603:16:50:3> .
+
+<urn:mdciii:1603:16:50:3> a skos:Concept ;
+  rdfs:label "1603:16:50:3" ;
+  skos:related <urn:mdciii:1603:16:50:2> ;
+  skos:related <urn:mdciii:1603:16:50:4> .
+
+<urn:mdciii:1603:16:50:4> a skos:Concept ;
+  rdfs:label "1603:16:50:4" ;
+  skos:related <urn:mdciii:1603:16:50:3> .
+
+<urn:mdciii:1603:16:51:0> a skos:Concept ;
+  rdfs:label "1603:16:51:0" ;
+  wdt:P2082 "051" ;
+  wdt:P299 "051" ;
+  wdt:P298 "ARM" ;
+  wdt:P297 "AM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:51:1> .
+
+<urn:mdciii:1603:16:51:1> a skos:Concept ;
+  rdfs:label "1603:16:51:1" ;
+  skos:related <urn:mdciii:1603:16:51:0> ;
+  skos:related <urn:mdciii:1603:16:51:2> .
+
+<urn:mdciii:1603:16:51:2> a skos:Concept ;
+  rdfs:label "1603:16:51:2" ;
+  skos:related <urn:mdciii:1603:16:51:1> .
+
+<urn:mdciii:1603:16:52:0> a skos:Concept ;
+  rdfs:label "1603:16:52:0" ;
+  wdt:P2082 "052" ;
+  wdt:P299 "052" ;
+  wdt:P298 "BRB" ;
+  wdt:P297 "BB" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:52:1> .
+
+<urn:mdciii:1603:16:52:1> a skos:Concept ;
+  rdfs:label "1603:16:52:1" ;
+  skos:related <urn:mdciii:1603:16:52:0> .
+
+<urn:mdciii:1603:16:60:0> a skos:Concept ;
+  rdfs:label "1603:16:60:0" ;
+  wdt:P2082 "060" ;
+  wdt:P299 "060" ;
+  wdt:P298 "BMU" ;
+  wdt:P297 "BM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:60:1> .
+
+<urn:mdciii:1603:16:60:1> a skos:Concept ;
+  rdfs:label "1603:16:60:1" ;
+  skos:related <urn:mdciii:1603:16:60:0> ;
+  skos:related <urn:mdciii:1603:16:60:2> .
+
+<urn:mdciii:1603:16:60:2> a skos:Concept ;
+  rdfs:label "1603:16:60:2" ;
+  skos:related <urn:mdciii:1603:16:60:1> .
+
+<urn:mdciii:1603:16:64:0> a skos:Concept ;
+  rdfs:label "1603:16:64:0" ;
+  wdt:P2082 "064" ;
+  wdt:P299 "064" ;
+  wdt:P298 "BTN" ;
+  wdt:P297 "BT" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:64:1> .
+
+<urn:mdciii:1603:16:64:1> a skos:Concept ;
+  rdfs:label "1603:16:64:1" ;
+  skos:related <urn:mdciii:1603:16:64:0> ;
+  skos:related <urn:mdciii:1603:16:64:2> .
+
+<urn:mdciii:1603:16:64:2> a skos:Concept ;
+  rdfs:label "1603:16:64:2" ;
+  skos:related <urn:mdciii:1603:16:64:1> .
+
+<urn:mdciii:1603:16:68:0> a skos:Concept ;
+  rdfs:label "1603:16:68:0" ;
+  wdt:P2082 "068" ;
+  wdt:P299 "068" ;
+  wdt:P298 "BOL" ;
+  wdt:P297 "BO" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:68:1> .
+
+<urn:mdciii:1603:16:68:1> a skos:Concept ;
+  rdfs:label "1603:16:68:1" ;
+  skos:related <urn:mdciii:1603:16:68:0> ;
+  skos:related <urn:mdciii:1603:16:68:2> .
+
+<urn:mdciii:1603:16:68:2> a skos:Concept ;
+  rdfs:label "1603:16:68:2" ;
+  skos:related <urn:mdciii:1603:16:68:1> ;
+  skos:related <urn:mdciii:1603:16:68:3> .
+
+<urn:mdciii:1603:16:68:3> a skos:Concept ;
+  rdfs:label "1603:16:68:3" ;
+  skos:related <urn:mdciii:1603:16:68:2> .
+
+<urn:mdciii:1603:16:72:0> a skos:Concept ;
+  rdfs:label "1603:16:72:0" ;
+  wdt:P2082 "072" ;
+  wdt:P299 "072" ;
+  wdt:P298 "BWA" ;
+  wdt:P297 "BW" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:72:1> .
+
+<urn:mdciii:1603:16:72:1> a skos:Concept ;
+  rdfs:label "1603:16:72:1" ;
+  skos:related <urn:mdciii:1603:16:72:0> ;
+  skos:related <urn:mdciii:1603:16:72:2> .
+
+<urn:mdciii:1603:16:72:2> a skos:Concept ;
+  rdfs:label "1603:16:72:2" ;
+  skos:related <urn:mdciii:1603:16:72:1> ;
+  skos:related <urn:mdciii:1603:16:72:3> .
+
+<urn:mdciii:1603:16:72:3> a skos:Concept ;
+  rdfs:label "1603:16:72:3" ;
+  skos:related <urn:mdciii:1603:16:72:2> .
+
+<urn:mdciii:1603:16:76:0> a skos:Concept ;
+  rdfs:label "1603:16:76:0" ;
+  wdt:P2082 "076" ;
+  wdt:P299 "076" ;
+  wdt:P298 "BRA" ;
+  wdt:P297 "BR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:76:1> .
+
+<urn:mdciii:1603:16:76:1> a skos:Concept ;
+  rdfs:label "1603:16:76:1" ;
+  skos:related <urn:mdciii:1603:16:76:0> ;
+  skos:related <urn:mdciii:1603:16:76:2> .
+
+<urn:mdciii:1603:16:76:2> a skos:Concept ;
+  rdfs:label "1603:16:76:2" ;
+  skos:related <urn:mdciii:1603:16:76:1> .
+
+<urn:mdciii:1603:16:84:0> a skos:Concept ;
+  rdfs:label "1603:16:84:0" ;
+  wdt:P2082 "084" ;
+  wdt:P299 "084" ;
+  wdt:P298 "BLZ" ;
+  wdt:P297 "BZ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:84:1> .
+
+<urn:mdciii:1603:16:84:1> a skos:Concept ;
+  rdfs:label "1603:16:84:1" ;
+  skos:related <urn:mdciii:1603:16:84:0> .
+
+<urn:mdciii:1603:16:90:0> a skos:Concept ;
+  rdfs:label "1603:16:90:0" ;
+  wdt:P2082 "090" ;
+  wdt:P299 "090" ;
+  wdt:P298 "SLB" ;
+  wdt:P297 "SB" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:90:1> .
+
+<urn:mdciii:1603:16:90:1> a skos:Concept ;
+  rdfs:label "1603:16:90:1" ;
+  skos:related <urn:mdciii:1603:16:90:0> ;
+  skos:related <urn:mdciii:1603:16:90:2> .
+
+<urn:mdciii:1603:16:90:2> a skos:Concept ;
+  rdfs:label "1603:16:90:2" ;
+  skos:related <urn:mdciii:1603:16:90:1> ;
+  skos:related <urn:mdciii:1603:16:90:3> .
+
+<urn:mdciii:1603:16:90:3> a skos:Concept ;
+  rdfs:label "1603:16:90:3" ;
+  skos:related <urn:mdciii:1603:16:90:2> .
+
+<urn:mdciii:1603:16:92:0> a skos:Concept ;
+  rdfs:label "1603:16:92:0" ;
+  wdt:P2082 "092" ;
+  wdt:P299 "092" ;
+  wdt:P298 "VGB" ;
+  wdt:P297 "VG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:92:1> .
+
+<urn:mdciii:1603:16:92:1> a skos:Concept ;
+  rdfs:label "1603:16:92:1" ;
+  skos:related <urn:mdciii:1603:16:92:0> .
+
+<urn:mdciii:1603:16:100:0> a skos:Concept ;
+  rdfs:label "1603:16:100:0" ;
+  wdt:P2082 "100" ;
+  wdt:P299 "100" ;
+  wdt:P298 "BGR" ;
+  wdt:P297 "BG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:100:1> .
+
+<urn:mdciii:1603:16:100:1> a skos:Concept ;
+  rdfs:label "1603:16:100:1" ;
+  skos:related <urn:mdciii:1603:16:100:0> ;
+  skos:related <urn:mdciii:1603:16:100:2> .
+
+<urn:mdciii:1603:16:100:2> a skos:Concept ;
+  rdfs:label "1603:16:100:2" ;
+  skos:related <urn:mdciii:1603:16:100:1> .
+
+<urn:mdciii:1603:16:104:0> a skos:Concept ;
+  rdfs:label "1603:16:104:0" ;
+  wdt:P2082 "104" ;
+  wdt:P299 "104" ;
+  wdt:P298 "MMR" ;
+  wdt:P297 "MM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:104:1> .
+
+<urn:mdciii:1603:16:104:1> a skos:Concept ;
+  rdfs:label "1603:16:104:1" ;
+  skos:related <urn:mdciii:1603:16:104:0> ;
+  skos:related <urn:mdciii:1603:16:104:2> .
+
+<urn:mdciii:1603:16:104:2> a skos:Concept ;
+  rdfs:label "1603:16:104:2" ;
+  skos:related <urn:mdciii:1603:16:104:1> ;
+  skos:related <urn:mdciii:1603:16:104:3> .
+
+<urn:mdciii:1603:16:104:3> a skos:Concept ;
+  rdfs:label "1603:16:104:3" ;
+  skos:related <urn:mdciii:1603:16:104:2> .
+
+<urn:mdciii:1603:16:108:0> a skos:Concept ;
+  rdfs:label "1603:16:108:0" ;
+  wdt:P2082 "108" ;
+  wdt:P299 "108" ;
+  wdt:P298 "BDI" ;
+  wdt:P297 "BI" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:108:1> .
+
+<urn:mdciii:1603:16:108:1> a skos:Concept ;
+  rdfs:label "1603:16:108:1" ;
+  skos:related <urn:mdciii:1603:16:108:0> ;
+  skos:related <urn:mdciii:1603:16:108:2> .
+
+<urn:mdciii:1603:16:108:2> a skos:Concept ;
+  rdfs:label "1603:16:108:2" ;
+  skos:related <urn:mdciii:1603:16:108:1> .
+
+<urn:mdciii:1603:16:112:0> a skos:Concept ;
+  rdfs:label "1603:16:112:0" ;
+  wdt:P2082 "112" ;
+  wdt:P299 "112" ;
+  wdt:P298 "BLR" ;
+  wdt:P297 "BY" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:112:1> .
+
+<urn:mdciii:1603:16:112:1> a skos:Concept ;
+  rdfs:label "1603:16:112:1" ;
+  skos:related <urn:mdciii:1603:16:112:0> ;
+  skos:related <urn:mdciii:1603:16:112:2> .
+
+<urn:mdciii:1603:16:112:2> a skos:Concept ;
+  rdfs:label "1603:16:112:2" ;
+  skos:related <urn:mdciii:1603:16:112:1> .
+
+<urn:mdciii:1603:16:116:0> a skos:Concept ;
+  rdfs:label "1603:16:116:0" ;
+  wdt:P2082 "116" ;
+  wdt:P299 "116" ;
+  wdt:P298 "KHM" ;
+  wdt:P297 "KH" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:116:1> .
+
+<urn:mdciii:1603:16:116:1> a skos:Concept ;
+  rdfs:label "1603:16:116:1" ;
+  skos:related <urn:mdciii:1603:16:116:0> ;
+  skos:related <urn:mdciii:1603:16:116:2> .
+
+<urn:mdciii:1603:16:116:2> a skos:Concept ;
+  rdfs:label "1603:16:116:2" ;
+  skos:related <urn:mdciii:1603:16:116:1> ;
+  skos:related <urn:mdciii:1603:16:116:3> .
+
+<urn:mdciii:1603:16:116:3> a skos:Concept ;
+  rdfs:label "1603:16:116:3" ;
+  skos:related <urn:mdciii:1603:16:116:2> .
+
+<urn:mdciii:1603:16:120:0> a skos:Concept ;
+  rdfs:label "1603:16:120:0" ;
+  wdt:P2082 "120" ;
+  wdt:P299 "120" ;
+  wdt:P298 "CMR" ;
+  wdt:P297 "CM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:120:1> .
+
+<urn:mdciii:1603:16:120:1> a skos:Concept ;
+  rdfs:label "1603:16:120:1" ;
+  skos:related <urn:mdciii:1603:16:120:0> ;
+  skos:related <urn:mdciii:1603:16:120:2> .
+
+<urn:mdciii:1603:16:120:2> a skos:Concept ;
+  rdfs:label "1603:16:120:2" ;
+  skos:related <urn:mdciii:1603:16:120:1> ;
+  skos:related <urn:mdciii:1603:16:120:3> .
+
+<urn:mdciii:1603:16:120:3> a skos:Concept ;
+  rdfs:label "1603:16:120:3" ;
+  skos:related <urn:mdciii:1603:16:120:2> .
+
+<urn:mdciii:1603:16:132:0> a skos:Concept ;
+  rdfs:label "1603:16:132:0" ;
+  wdt:P2082 "132" ;
+  wdt:P299 "132" ;
+  wdt:P298 "CPV" ;
+  wdt:P297 "CV" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:132:1> .
+
+<urn:mdciii:1603:16:132:1> a skos:Concept ;
+  rdfs:label "1603:16:132:1" ;
+  skos:related <urn:mdciii:1603:16:132:0> ;
+  skos:related <urn:mdciii:1603:16:132:2> .
+
+<urn:mdciii:1603:16:132:2> a skos:Concept ;
+  rdfs:label "1603:16:132:2" ;
+  skos:related <urn:mdciii:1603:16:132:1> .
+
+<urn:mdciii:1603:16:136:0> a skos:Concept ;
+  rdfs:label "1603:16:136:0" ;
+  wdt:P2082 "136" ;
+  wdt:P299 "136" ;
+  wdt:P298 "CYM" ;
+  wdt:P297 "KY" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:136:1> .
+
+<urn:mdciii:1603:16:136:1> a skos:Concept ;
+  rdfs:label "1603:16:136:1" ;
+  skos:related <urn:mdciii:1603:16:136:0> .
+
+<urn:mdciii:1603:16:140:0> a skos:Concept ;
+  rdfs:label "1603:16:140:0" ;
+  wdt:P2082 "140" ;
+  wdt:P299 "140" ;
+  wdt:P298 "CAF" ;
+  wdt:P297 "CF" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:140:1> .
+
+<urn:mdciii:1603:16:140:1> a skos:Concept ;
+  rdfs:label "1603:16:140:1" ;
+  skos:related <urn:mdciii:1603:16:140:0> ;
+  skos:related <urn:mdciii:1603:16:140:2> .
+
+<urn:mdciii:1603:16:140:2> a skos:Concept ;
+  rdfs:label "1603:16:140:2" ;
+  skos:related <urn:mdciii:1603:16:140:1> ;
+  skos:related <urn:mdciii:1603:16:140:3> .
+
+<urn:mdciii:1603:16:140:3> a skos:Concept ;
+  rdfs:label "1603:16:140:3" ;
+  skos:related <urn:mdciii:1603:16:140:2> .
+
+<urn:mdciii:1603:16:144:0> a skos:Concept ;
+  rdfs:label "1603:16:144:0" ;
+  wdt:P2082 "144" ;
+  wdt:P299 "144" ;
+  wdt:P298 "LKA" ;
+  wdt:P297 "LK" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:144:1> .
+
+<urn:mdciii:1603:16:144:1> a skos:Concept ;
+  rdfs:label "1603:16:144:1" ;
+  skos:related <urn:mdciii:1603:16:144:0> ;
+  skos:related <urn:mdciii:1603:16:144:2> .
+
+<urn:mdciii:1603:16:144:2> a skos:Concept ;
+  rdfs:label "1603:16:144:2" ;
+  skos:related <urn:mdciii:1603:16:144:1> ;
+  skos:related <urn:mdciii:1603:16:144:3> .
+
+<urn:mdciii:1603:16:144:3> a skos:Concept ;
+  rdfs:label "1603:16:144:3" ;
+  skos:related <urn:mdciii:1603:16:144:2> ;
+  skos:related <urn:mdciii:1603:16:144:4> .
+
+<urn:mdciii:1603:16:144:4> a skos:Concept ;
+  rdfs:label "1603:16:144:4" ;
+  skos:related <urn:mdciii:1603:16:144:3> .
+
+<urn:mdciii:1603:16:148:0> a skos:Concept ;
+  rdfs:label "1603:16:148:0" ;
+  wdt:P2082 "148" ;
+  wdt:P299 "148" ;
+  wdt:P298 "TCD" ;
+  wdt:P297 "TD" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:148:1> .
+
+<urn:mdciii:1603:16:148:1> a skos:Concept ;
+  rdfs:label "1603:16:148:1" ;
+  skos:related <urn:mdciii:1603:16:148:0> ;
+  skos:related <urn:mdciii:1603:16:148:2> .
+
+<urn:mdciii:1603:16:148:2> a skos:Concept ;
+  rdfs:label "1603:16:148:2" ;
+  skos:related <urn:mdciii:1603:16:148:1> .
+
+<urn:mdciii:1603:16:152:0> a skos:Concept ;
+  rdfs:label "1603:16:152:0" ;
+  wdt:P2082 "152" ;
+  wdt:P299 "152" ;
+  wdt:P298 "CHL" ;
+  wdt:P297 "CL" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:152:1> .
+
+<urn:mdciii:1603:16:152:1> a skos:Concept ;
+  rdfs:label "1603:16:152:1" ;
+  skos:related <urn:mdciii:1603:16:152:0> ;
+  skos:related <urn:mdciii:1603:16:152:2> .
+
+<urn:mdciii:1603:16:152:2> a skos:Concept ;
+  rdfs:label "1603:16:152:2" ;
+  skos:related <urn:mdciii:1603:16:152:1> ;
+  skos:related <urn:mdciii:1603:16:152:3> .
+
+<urn:mdciii:1603:16:152:3> a skos:Concept ;
+  rdfs:label "1603:16:152:3" ;
+  skos:related <urn:mdciii:1603:16:152:2> .
+
+<urn:mdciii:1603:16:156:0> a skos:Concept ;
+  rdfs:label "1603:16:156:0" ;
+  wdt:P2082 "156" ;
+  wdt:P299 "156" ;
+  wdt:P298 "CHN" ;
+  wdt:P297 "CN" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:156:1> .
+
+<urn:mdciii:1603:16:156:1> a skos:Concept ;
+  rdfs:label "1603:16:156:1" ;
+  skos:related <urn:mdciii:1603:16:156:0> ;
+  skos:related <urn:mdciii:1603:16:156:2> .
+
+<urn:mdciii:1603:16:156:2> a skos:Concept ;
+  rdfs:label "1603:16:156:2" ;
+  skos:related <urn:mdciii:1603:16:156:1> .
+
+<urn:mdciii:1603:16:156:0> a skos:Concept ;
+  rdfs:label "1603:16:156:0" ;
+  wdt:P2082 "156" ;
+  wdt:P299 "156" ;
+  wdt:P298 "CHN" ;
+  wdt:P297 "CN" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:156:1> .
+
+<urn:mdciii:1603:16:156:1> a skos:Concept ;
+  rdfs:label "1603:16:156:1" ;
+  skos:related <urn:mdciii:1603:16:156:0> ;
+  skos:related <urn:mdciii:1603:16:156:2> .
+
+<urn:mdciii:1603:16:156:2> a skos:Concept ;
+  rdfs:label "1603:16:156:2" ;
+  skos:related <urn:mdciii:1603:16:156:1> .
+
+<urn:mdciii:1603:16:170:0> a skos:Concept ;
+  rdfs:label "1603:16:170:0" ;
+  wdt:P2082 "170" ;
+  wdt:P299 "170" ;
+  wdt:P298 "COL" ;
+  wdt:P297 "CO" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:170:1> .
+
+<urn:mdciii:1603:16:170:1> a skos:Concept ;
+  rdfs:label "1603:16:170:1" ;
+  skos:related <urn:mdciii:1603:16:170:0> ;
+  skos:related <urn:mdciii:1603:16:170:2> .
+
+<urn:mdciii:1603:16:170:2> a skos:Concept ;
+  rdfs:label "1603:16:170:2" ;
+  skos:related <urn:mdciii:1603:16:170:1> .
+
+<urn:mdciii:1603:16:174:0> a skos:Concept ;
+  rdfs:label "1603:16:174:0" ;
+  wdt:P2082 "174" ;
+  wdt:P299 "174" ;
+  wdt:P298 "COM" ;
+  wdt:P297 "KM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:174:1> .
+
+<urn:mdciii:1603:16:174:1> a skos:Concept ;
+  rdfs:label "1603:16:174:1" ;
+  skos:related <urn:mdciii:1603:16:174:0> ;
+  skos:related <urn:mdciii:1603:16:174:2> .
+
+<urn:mdciii:1603:16:174:2> a skos:Concept ;
+  rdfs:label "1603:16:174:2" ;
+  skos:related <urn:mdciii:1603:16:174:1> ;
+  skos:related <urn:mdciii:1603:16:174:3> .
+
+<urn:mdciii:1603:16:174:3> a skos:Concept ;
+  rdfs:label "1603:16:174:3" ;
+  skos:related <urn:mdciii:1603:16:174:2> .
+
+<urn:mdciii:1603:16:178:0> a skos:Concept ;
+  rdfs:label "1603:16:178:0" ;
+  wdt:P2082 "178" ;
+  wdt:P299 "178" ;
+  wdt:P298 "COG" ;
+  wdt:P297 "CG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:178:1> .
+
+<urn:mdciii:1603:16:178:1> a skos:Concept ;
+  rdfs:label "1603:16:178:1" ;
+  skos:related <urn:mdciii:1603:16:178:0> ;
+  skos:related <urn:mdciii:1603:16:178:2> .
+
+<urn:mdciii:1603:16:178:2> a skos:Concept ;
+  rdfs:label "1603:16:178:2" ;
+  skos:related <urn:mdciii:1603:16:178:1> .
+
+<urn:mdciii:1603:16:180:0> a skos:Concept ;
+  rdfs:label "1603:16:180:0" ;
+  wdt:P2082 "180" ;
+  wdt:P299 "180" ;
+  wdt:P298 "COD" ;
+  wdt:P297 "CD" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:180:1> .
+
+<urn:mdciii:1603:16:180:1> a skos:Concept ;
+  rdfs:label "1603:16:180:1" ;
+  skos:related <urn:mdciii:1603:16:180:0> ;
+  skos:related <urn:mdciii:1603:16:180:2> .
+
+<urn:mdciii:1603:16:180:2> a skos:Concept ;
+  rdfs:label "1603:16:180:2" ;
+  skos:related <urn:mdciii:1603:16:180:1> .
+
+<urn:mdciii:1603:16:188:0> a skos:Concept ;
+  rdfs:label "1603:16:188:0" ;
+  wdt:P2082 "188" ;
+  wdt:P299 "188" ;
+  wdt:P298 "CRI" ;
+  wdt:P297 "CR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:188:1> .
+
+<urn:mdciii:1603:16:188:1> a skos:Concept ;
+  rdfs:label "1603:16:188:1" ;
+  skos:related <urn:mdciii:1603:16:188:0> ;
+  skos:related <urn:mdciii:1603:16:188:2> .
+
+<urn:mdciii:1603:16:188:2> a skos:Concept ;
+  rdfs:label "1603:16:188:2" ;
+  skos:related <urn:mdciii:1603:16:188:1> ;
+  skos:related <urn:mdciii:1603:16:188:3> .
+
+<urn:mdciii:1603:16:188:3> a skos:Concept ;
+  rdfs:label "1603:16:188:3" ;
+  skos:related <urn:mdciii:1603:16:188:2> .
+
+<urn:mdciii:1603:16:192:0> a skos:Concept ;
+  rdfs:label "1603:16:192:0" ;
+  wdt:P2082 "192" ;
+  wdt:P299 "192" ;
+  wdt:P298 "CUB" ;
+  wdt:P297 "CU" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:192:1> .
+
+<urn:mdciii:1603:16:192:1> a skos:Concept ;
+  rdfs:label "1603:16:192:1" ;
+  skos:related <urn:mdciii:1603:16:192:0> ;
+  skos:related <urn:mdciii:1603:16:192:2> .
+
+<urn:mdciii:1603:16:192:2> a skos:Concept ;
+  rdfs:label "1603:16:192:2" ;
+  skos:related <urn:mdciii:1603:16:192:1> .
+
+<urn:mdciii:1603:16:204:0> a skos:Concept ;
+  rdfs:label "1603:16:204:0" ;
+  wdt:P2082 "204" ;
+  wdt:P299 "204" ;
+  wdt:P298 "BEN" ;
+  wdt:P297 "BJ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:204:1> .
+
+<urn:mdciii:1603:16:204:1> a skos:Concept ;
+  rdfs:label "1603:16:204:1" ;
+  skos:related <urn:mdciii:1603:16:204:0> ;
+  skos:related <urn:mdciii:1603:16:204:2> .
+
+<urn:mdciii:1603:16:204:2> a skos:Concept ;
+  rdfs:label "1603:16:204:2" ;
+  skos:related <urn:mdciii:1603:16:204:1> .
+
+<urn:mdciii:1603:16:212:0> a skos:Concept ;
+  rdfs:label "1603:16:212:0" ;
+  wdt:P2082 "212" ;
+  wdt:P299 "212" ;
+  wdt:P298 "DMA" ;
+  wdt:P297 "DM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:212:1> .
+
+<urn:mdciii:1603:16:212:1> a skos:Concept ;
+  rdfs:label "1603:16:212:1" ;
+  skos:related <urn:mdciii:1603:16:212:0> .
+
+<urn:mdciii:1603:16:214:0> a skos:Concept ;
+  rdfs:label "1603:16:214:0" ;
+  wdt:P2082 "214" ;
+  wdt:P299 "214" ;
+  wdt:P298 "DOM" ;
+  wdt:P297 "DO" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:214:1> .
+
+<urn:mdciii:1603:16:214:1> a skos:Concept ;
+  rdfs:label "1603:16:214:1" ;
+  skos:related <urn:mdciii:1603:16:214:0> ;
+  skos:related <urn:mdciii:1603:16:214:2> .
+
+<urn:mdciii:1603:16:214:2> a skos:Concept ;
+  rdfs:label "1603:16:214:2" ;
+  skos:related <urn:mdciii:1603:16:214:1> ;
+  skos:related <urn:mdciii:1603:16:214:3> .
+
+<urn:mdciii:1603:16:214:3> a skos:Concept ;
+  rdfs:label "1603:16:214:3" ;
+  skos:related <urn:mdciii:1603:16:214:2> ;
+  skos:related <urn:mdciii:1603:16:214:4> .
+
+<urn:mdciii:1603:16:214:4> a skos:Concept ;
+  rdfs:label "1603:16:214:4" ;
+  skos:related <urn:mdciii:1603:16:214:3> .
+
+<urn:mdciii:1603:16:218:0> a skos:Concept ;
+  rdfs:label "1603:16:218:0" ;
+  wdt:P2082 "218" ;
+  wdt:P299 "218" ;
+  wdt:P298 "ECU" ;
+  wdt:P297 "EC" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:218:1> .
+
+<urn:mdciii:1603:16:218:1> a skos:Concept ;
+  rdfs:label "1603:16:218:1" ;
+  skos:related <urn:mdciii:1603:16:218:0> ;
+  skos:related <urn:mdciii:1603:16:218:2> .
+
+<urn:mdciii:1603:16:218:2> a skos:Concept ;
+  rdfs:label "1603:16:218:2" ;
+  skos:related <urn:mdciii:1603:16:218:1> ;
+  skos:related <urn:mdciii:1603:16:218:3> .
+
+<urn:mdciii:1603:16:218:3> a skos:Concept ;
+  rdfs:label "1603:16:218:3" ;
+  skos:related <urn:mdciii:1603:16:218:2> .
+
+<urn:mdciii:1603:16:222:0> a skos:Concept ;
+  rdfs:label "1603:16:222:0" ;
+  wdt:P2082 "222" ;
+  wdt:P299 "222" ;
+  wdt:P298 "SLV" ;
+  wdt:P297 "SV" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:222:1> .
+
+<urn:mdciii:1603:16:222:1> a skos:Concept ;
+  rdfs:label "1603:16:222:1" ;
+  skos:related <urn:mdciii:1603:16:222:0> ;
+  skos:related <urn:mdciii:1603:16:222:2> .
+
+<urn:mdciii:1603:16:222:2> a skos:Concept ;
+  rdfs:label "1603:16:222:2" ;
+  skos:related <urn:mdciii:1603:16:222:1> .
+
+<urn:mdciii:1603:16:231:0> a skos:Concept ;
+  rdfs:label "1603:16:231:0" ;
+  wdt:P2082 "231" ;
+  wdt:P299 "231" ;
+  wdt:P298 "ETH" ;
+  wdt:P297 "ET" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:231:1> .
+
+<urn:mdciii:1603:16:231:1> a skos:Concept ;
+  rdfs:label "1603:16:231:1" ;
+  skos:related <urn:mdciii:1603:16:231:0> ;
+  skos:related <urn:mdciii:1603:16:231:2> .
+
+<urn:mdciii:1603:16:231:2> a skos:Concept ;
+  rdfs:label "1603:16:231:2" ;
+  skos:related <urn:mdciii:1603:16:231:1> ;
+  skos:related <urn:mdciii:1603:16:231:3> .
+
+<urn:mdciii:1603:16:231:3> a skos:Concept ;
+  rdfs:label "1603:16:231:3" ;
+  skos:related <urn:mdciii:1603:16:231:2> .
+
+<urn:mdciii:1603:16:232:0> a skos:Concept ;
+  rdfs:label "1603:16:232:0" ;
+  wdt:P2082 "232" ;
+  wdt:P299 "232" ;
+  wdt:P298 "ERI" ;
+  wdt:P297 "ER" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:232:1> .
+
+<urn:mdciii:1603:16:232:1> a skos:Concept ;
+  rdfs:label "1603:16:232:1" ;
+  skos:related <urn:mdciii:1603:16:232:0> ;
+  skos:related <urn:mdciii:1603:16:232:2> .
+
+<urn:mdciii:1603:16:232:2> a skos:Concept ;
+  rdfs:label "1603:16:232:2" ;
+  skos:related <urn:mdciii:1603:16:232:1> .
+
+<urn:mdciii:1603:16:242:0> a skos:Concept ;
+  rdfs:label "1603:16:242:0" ;
+  wdt:P2082 "242" ;
+  wdt:P299 "242" ;
+  wdt:P298 "FJI" ;
+  wdt:P297 "FJ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:242:1> .
+
+<urn:mdciii:1603:16:242:1> a skos:Concept ;
+  rdfs:label "1603:16:242:1" ;
+  skos:related <urn:mdciii:1603:16:242:0> ;
+  skos:related <urn:mdciii:1603:16:242:2> .
+
+<urn:mdciii:1603:16:242:2> a skos:Concept ;
+  rdfs:label "1603:16:242:2" ;
+  skos:related <urn:mdciii:1603:16:242:1> ;
+  skos:related <urn:mdciii:1603:16:242:3> .
+
+<urn:mdciii:1603:16:242:3> a skos:Concept ;
+  rdfs:label "1603:16:242:3" ;
+  skos:related <urn:mdciii:1603:16:242:2> .
+
+<urn:mdciii:1603:16:254:0> a skos:Concept ;
+  rdfs:label "1603:16:254:0" ;
+  wdt:P2082 "254" ;
+  wdt:P299 "254" ;
+  wdt:P298 "GUF" ;
+  wdt:P297 "GF" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:254:1> .
+
+<urn:mdciii:1603:16:254:1> a skos:Concept ;
+  rdfs:label "1603:16:254:1" ;
+  skos:related <urn:mdciii:1603:16:254:0> ;
+  skos:related <urn:mdciii:1603:16:254:2> .
+
+<urn:mdciii:1603:16:254:2> a skos:Concept ;
+  rdfs:label "1603:16:254:2" ;
+  skos:related <urn:mdciii:1603:16:254:1> .
+
+<urn:mdciii:1603:16:262:0> a skos:Concept ;
+  rdfs:label "1603:16:262:0" ;
+  wdt:P2082 "262" ;
+  wdt:P299 "262" ;
+  wdt:P298 "DJI" ;
+  wdt:P297 "DJ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:262:1> .
+
+<urn:mdciii:1603:16:262:1> a skos:Concept ;
+  rdfs:label "1603:16:262:1" ;
+  skos:related <urn:mdciii:1603:16:262:0> ;
+  skos:related <urn:mdciii:1603:16:262:2> .
+
+<urn:mdciii:1603:16:262:2> a skos:Concept ;
+  rdfs:label "1603:16:262:2" ;
+  skos:related <urn:mdciii:1603:16:262:1> .
+
+<urn:mdciii:1603:16:266:0> a skos:Concept ;
+  rdfs:label "1603:16:266:0" ;
+  wdt:P2082 "266" ;
+  wdt:P299 "266" ;
+  wdt:P298 "GAB" ;
+  wdt:P297 "GA" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:266:1> .
+
+<urn:mdciii:1603:16:266:1> a skos:Concept ;
+  rdfs:label "1603:16:266:1" ;
+  skos:related <urn:mdciii:1603:16:266:0> ;
+  skos:related <urn:mdciii:1603:16:266:2> .
+
+<urn:mdciii:1603:16:266:2> a skos:Concept ;
+  rdfs:label "1603:16:266:2" ;
+  skos:related <urn:mdciii:1603:16:266:1> .
+
+<urn:mdciii:1603:16:268:0> a skos:Concept ;
+  rdfs:label "1603:16:268:0" ;
+  wdt:P2082 "268" ;
+  wdt:P299 "268" ;
+  wdt:P298 "GEO" ;
+  wdt:P297 "GE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:268:1> .
+
+<urn:mdciii:1603:16:268:1> a skos:Concept ;
+  rdfs:label "1603:16:268:1" ;
+  skos:related <urn:mdciii:1603:16:268:0> .
+
+<urn:mdciii:1603:16:268:0> a skos:Concept ;
+  rdfs:label "1603:16:268:0" ;
+  wdt:P2082 "268" ;
+  wdt:P299 "268" ;
+  wdt:P298 "GEO" ;
+  wdt:P297 "GE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:268:1> .
+
+<urn:mdciii:1603:16:268:1> a skos:Concept ;
+  rdfs:label "1603:16:268:1" ;
+  skos:related <urn:mdciii:1603:16:268:0> .
+
+<urn:mdciii:1603:16:268:0> a skos:Concept ;
+  rdfs:label "1603:16:268:0" ;
+  wdt:P2082 "268" ;
+  wdt:P299 "268" ;
+  wdt:P298 "GEO" ;
+  wdt:P297 "GE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:268:1> .
+
+<urn:mdciii:1603:16:268:1> a skos:Concept ;
+  rdfs:label "1603:16:268:1" ;
+  skos:related <urn:mdciii:1603:16:268:0> .
+
+<urn:mdciii:1603:16:268:0> a skos:Concept ;
+  rdfs:label "1603:16:268:0" ;
+  wdt:P2082 "268" ;
+  wdt:P299 "268" ;
+  wdt:P298 "GEO" ;
+  wdt:P297 "GE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:268:1> .
+
+<urn:mdciii:1603:16:268:1> a skos:Concept ;
+  rdfs:label "1603:16:268:1" ;
+  skos:related <urn:mdciii:1603:16:268:0> .
+
+<urn:mdciii:1603:16:270:0> a skos:Concept ;
+  rdfs:label "1603:16:270:0" ;
+  wdt:P2082 "270" ;
+  wdt:P299 "270" ;
+  wdt:P298 "GMB" ;
+  wdt:P297 "GM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:270:1> .
+
+<urn:mdciii:1603:16:270:1> a skos:Concept ;
+  rdfs:label "1603:16:270:1" ;
+  skos:related <urn:mdciii:1603:16:270:0> ;
+  skos:related <urn:mdciii:1603:16:270:2> .
+
+<urn:mdciii:1603:16:270:2> a skos:Concept ;
+  rdfs:label "1603:16:270:2" ;
+  skos:related <urn:mdciii:1603:16:270:1> .
+
+<urn:mdciii:1603:16:275:0> a skos:Concept ;
+  rdfs:label "1603:16:275:0" ;
+  wdt:P2082 "275" ;
+  wdt:P299 "275" ;
+  wdt:P298 "PSE" ;
+  wdt:P297 "PS" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:275:1> .
+
+<urn:mdciii:1603:16:275:1> a skos:Concept ;
+  rdfs:label "1603:16:275:1" ;
+  skos:related <urn:mdciii:1603:16:275:0> ;
+  skos:related <urn:mdciii:1603:16:275:2> .
+
+<urn:mdciii:1603:16:275:2> a skos:Concept ;
+  rdfs:label "1603:16:275:2" ;
+  skos:related <urn:mdciii:1603:16:275:1> .
+
+<urn:mdciii:1603:16:275:0> a skos:Concept ;
+  rdfs:label "1603:16:275:0" ;
+  wdt:P2082 "275" ;
+  wdt:P299 "275" ;
+  wdt:P298 "PSE" ;
+  wdt:P297 "PS" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:275:1> .
+
+<urn:mdciii:1603:16:275:1> a skos:Concept ;
+  rdfs:label "1603:16:275:1" ;
+  skos:related <urn:mdciii:1603:16:275:0> ;
+  skos:related <urn:mdciii:1603:16:275:2> .
+
+<urn:mdciii:1603:16:275:2> a skos:Concept ;
+  rdfs:label "1603:16:275:2" ;
+  skos:related <urn:mdciii:1603:16:275:1> .
+
+<urn:mdciii:1603:16:288:0> a skos:Concept ;
+  rdfs:label "1603:16:288:0" ;
+  wdt:P2082 "288" ;
+  wdt:P299 "288" ;
+  wdt:P298 "GHA" ;
+  wdt:P297 "GH" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:288:1> .
+
+<urn:mdciii:1603:16:288:1> a skos:Concept ;
+  rdfs:label "1603:16:288:1" ;
+  skos:related <urn:mdciii:1603:16:288:0> ;
+  skos:related <urn:mdciii:1603:16:288:2> .
+
+<urn:mdciii:1603:16:288:2> a skos:Concept ;
+  rdfs:label "1603:16:288:2" ;
+  skos:related <urn:mdciii:1603:16:288:1> .
+
+<urn:mdciii:1603:16:296:0> a skos:Concept ;
+  rdfs:label "1603:16:296:0" ;
+  wdt:P2082 "296" ;
+  wdt:P299 "296" ;
+  wdt:P298 "KIR" ;
+  wdt:P297 "KI" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:296:1> .
+
+<urn:mdciii:1603:16:296:1> a skos:Concept ;
+  rdfs:label "1603:16:296:1" ;
+  skos:related <urn:mdciii:1603:16:296:0> ;
+  skos:related <urn:mdciii:1603:16:296:2> .
+
+<urn:mdciii:1603:16:296:2> a skos:Concept ;
+  rdfs:label "1603:16:296:2" ;
+  skos:related <urn:mdciii:1603:16:296:1> .
+
+<urn:mdciii:1603:16:308:0> a skos:Concept ;
+  rdfs:label "1603:16:308:0" ;
+  wdt:P2082 "308" ;
+  wdt:P299 "308" ;
+  wdt:P298 "GRD" ;
+  wdt:P297 "GD" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:308:1> .
+
+<urn:mdciii:1603:16:308:1> a skos:Concept ;
+  rdfs:label "1603:16:308:1" ;
+  skos:related <urn:mdciii:1603:16:308:0> .
+
+<urn:mdciii:1603:16:312:0> a skos:Concept ;
+  rdfs:label "1603:16:312:0" ;
+  wdt:P2082 "312" ;
+  wdt:P299 "312" ;
+  wdt:P298 "GLP" ;
+  wdt:P297 "GP" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:312:1> .
+
+<urn:mdciii:1603:16:312:1> a skos:Concept ;
+  rdfs:label "1603:16:312:1" ;
+  skos:related <urn:mdciii:1603:16:312:0> ;
+  skos:related <urn:mdciii:1603:16:312:2> .
+
+<urn:mdciii:1603:16:312:2> a skos:Concept ;
+  rdfs:label "1603:16:312:2" ;
+  skos:related <urn:mdciii:1603:16:312:1> .
+
+<urn:mdciii:1603:16:320:0> a skos:Concept ;
+  rdfs:label "1603:16:320:0" ;
+  wdt:P2082 "320" ;
+  wdt:P299 "320" ;
+  wdt:P298 "GTM" ;
+  wdt:P297 "GT" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:320:1> .
+
+<urn:mdciii:1603:16:320:1> a skos:Concept ;
+  rdfs:label "1603:16:320:1" ;
+  skos:related <urn:mdciii:1603:16:320:0> ;
+  skos:related <urn:mdciii:1603:16:320:2> .
+
+<urn:mdciii:1603:16:320:2> a skos:Concept ;
+  rdfs:label "1603:16:320:2" ;
+  skos:related <urn:mdciii:1603:16:320:1> .
+
+<urn:mdciii:1603:16:324:0> a skos:Concept ;
+  rdfs:label "1603:16:324:0" ;
+  wdt:P2082 "324" ;
+  wdt:P299 "324" ;
+  wdt:P298 "GIN" ;
+  wdt:P297 "GN" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:324:1> .
+
+<urn:mdciii:1603:16:324:1> a skos:Concept ;
+  rdfs:label "1603:16:324:1" ;
+  skos:related <urn:mdciii:1603:16:324:0> ;
+  skos:related <urn:mdciii:1603:16:324:2> .
+
+<urn:mdciii:1603:16:324:2> a skos:Concept ;
+  rdfs:label "1603:16:324:2" ;
+  skos:related <urn:mdciii:1603:16:324:1> ;
+  skos:related <urn:mdciii:1603:16:324:3> .
+
+<urn:mdciii:1603:16:324:3> a skos:Concept ;
+  rdfs:label "1603:16:324:3" ;
+  skos:related <urn:mdciii:1603:16:324:2> .
+
+<urn:mdciii:1603:16:328:0> a skos:Concept ;
+  rdfs:label "1603:16:328:0" ;
+  wdt:P2082 "328" ;
+  wdt:P299 "328" ;
+  wdt:P298 "GUY" ;
+  wdt:P297 "GY" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:328:1> .
+
+<urn:mdciii:1603:16:328:1> a skos:Concept ;
+  rdfs:label "1603:16:328:1" ;
+  skos:related <urn:mdciii:1603:16:328:0> ;
+  skos:related <urn:mdciii:1603:16:328:2> .
+
+<urn:mdciii:1603:16:328:2> a skos:Concept ;
+  rdfs:label "1603:16:328:2" ;
+  skos:related <urn:mdciii:1603:16:328:1> .
+
+<urn:mdciii:1603:16:332:0> a skos:Concept ;
+  rdfs:label "1603:16:332:0" ;
+  wdt:P2082 "332" ;
+  wdt:P299 "332" ;
+  wdt:P298 "HTI" ;
+  wdt:P297 "HT" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:332:1> .
+
+<urn:mdciii:1603:16:332:1> a skos:Concept ;
+  rdfs:label "1603:16:332:1" ;
+  skos:related <urn:mdciii:1603:16:332:0> ;
+  skos:related <urn:mdciii:1603:16:332:2> .
+
+<urn:mdciii:1603:16:332:2> a skos:Concept ;
+  rdfs:label "1603:16:332:2" ;
+  skos:related <urn:mdciii:1603:16:332:1> ;
+  skos:related <urn:mdciii:1603:16:332:3> .
+
+<urn:mdciii:1603:16:332:3> a skos:Concept ;
+  rdfs:label "1603:16:332:3" ;
+  skos:related <urn:mdciii:1603:16:332:2> .
+
+<urn:mdciii:1603:16:340:0> a skos:Concept ;
+  rdfs:label "1603:16:340:0" ;
+  wdt:P2082 "340" ;
+  wdt:P299 "340" ;
+  wdt:P298 "HND" ;
+  wdt:P297 "HN" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:340:1> .
+
+<urn:mdciii:1603:16:340:1> a skos:Concept ;
+  rdfs:label "1603:16:340:1" ;
+  skos:related <urn:mdciii:1603:16:340:0> ;
+  skos:related <urn:mdciii:1603:16:340:2> .
+
+<urn:mdciii:1603:16:340:2> a skos:Concept ;
+  rdfs:label "1603:16:340:2" ;
+  skos:related <urn:mdciii:1603:16:340:1> .
+
+<urn:mdciii:1603:16:348:0> a skos:Concept ;
+  rdfs:label "1603:16:348:0" ;
+  wdt:P2082 "348" ;
+  wdt:P299 "348" ;
+  wdt:P298 "HUN" ;
+  wdt:P297 "HU" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:348:1> .
+
+<urn:mdciii:1603:16:348:1> a skos:Concept ;
+  rdfs:label "1603:16:348:1" ;
+  skos:related <urn:mdciii:1603:16:348:0> ;
+  skos:related <urn:mdciii:1603:16:348:2> .
+
+<urn:mdciii:1603:16:348:2> a skos:Concept ;
+  rdfs:label "1603:16:348:2" ;
+  skos:related <urn:mdciii:1603:16:348:1> .
+
+<urn:mdciii:1603:16:360:0> a skos:Concept ;
+  rdfs:label "1603:16:360:0" ;
+  wdt:P2082 "360" ;
+  wdt:P299 "360" ;
+  wdt:P298 "IDN" ;
+  wdt:P297 "ID" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:360:1> .
+
+<urn:mdciii:1603:16:360:1> a skos:Concept ;
+  rdfs:label "1603:16:360:1" ;
+  skos:related <urn:mdciii:1603:16:360:0> ;
+  skos:related <urn:mdciii:1603:16:360:2> .
+
+<urn:mdciii:1603:16:360:2> a skos:Concept ;
+  rdfs:label "1603:16:360:2" ;
+  skos:related <urn:mdciii:1603:16:360:1> ;
+  skos:related <urn:mdciii:1603:16:360:3> .
+
+<urn:mdciii:1603:16:360:3> a skos:Concept ;
+  rdfs:label "1603:16:360:3" ;
+  skos:related <urn:mdciii:1603:16:360:2> ;
+  skos:related <urn:mdciii:1603:16:360:4> .
+
+<urn:mdciii:1603:16:360:4> a skos:Concept ;
+  rdfs:label "1603:16:360:4" ;
+  skos:related <urn:mdciii:1603:16:360:3> .
+
+<urn:mdciii:1603:16:364:0> a skos:Concept ;
+  rdfs:label "1603:16:364:0" ;
+  wdt:P2082 "364" ;
+  wdt:P299 "364" ;
+  wdt:P298 "IRN" ;
+  wdt:P297 "IR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:364:1> .
+
+<urn:mdciii:1603:16:364:1> a skos:Concept ;
+  rdfs:label "1603:16:364:1" ;
+  skos:related <urn:mdciii:1603:16:364:0> ;
+  skos:related <urn:mdciii:1603:16:364:2> .
+
+<urn:mdciii:1603:16:364:2> a skos:Concept ;
+  rdfs:label "1603:16:364:2" ;
+  skos:related <urn:mdciii:1603:16:364:1> .
+
+<urn:mdciii:1603:16:368:0> a skos:Concept ;
+  rdfs:label "1603:16:368:0" ;
+  wdt:P2082 "368" ;
+  wdt:P299 "368" ;
+  wdt:P298 "IRQ" ;
+  wdt:P297 "IQ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:368:1> .
+
+<urn:mdciii:1603:16:368:1> a skos:Concept ;
+  rdfs:label "1603:16:368:1" ;
+  skos:related <urn:mdciii:1603:16:368:0> ;
+  skos:related <urn:mdciii:1603:16:368:2> .
+
+<urn:mdciii:1603:16:368:2> a skos:Concept ;
+  rdfs:label "1603:16:368:2" ;
+  skos:related <urn:mdciii:1603:16:368:1> ;
+  skos:related <urn:mdciii:1603:16:368:3> .
+
+<urn:mdciii:1603:16:368:3> a skos:Concept ;
+  rdfs:label "1603:16:368:3" ;
+  skos:related <urn:mdciii:1603:16:368:2> .
+
+<urn:mdciii:1603:16:384:0> a skos:Concept ;
+  rdfs:label "1603:16:384:0" ;
+  wdt:P2082 "384" ;
+  wdt:P299 "384" ;
+  wdt:P298 "CIV" ;
+  wdt:P297 "CI" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:384:1> .
+
+<urn:mdciii:1603:16:384:1> a skos:Concept ;
+  rdfs:label "1603:16:384:1" ;
+  skos:related <urn:mdciii:1603:16:384:0> ;
+  skos:related <urn:mdciii:1603:16:384:2> .
+
+<urn:mdciii:1603:16:384:2> a skos:Concept ;
+  rdfs:label "1603:16:384:2" ;
+  skos:related <urn:mdciii:1603:16:384:1> ;
+  skos:related <urn:mdciii:1603:16:384:3> .
+
+<urn:mdciii:1603:16:384:3> a skos:Concept ;
+  rdfs:label "1603:16:384:3" ;
+  skos:related <urn:mdciii:1603:16:384:2> .
+
+<urn:mdciii:1603:16:388:0> a skos:Concept ;
+  rdfs:label "1603:16:388:0" ;
+  wdt:P2082 "388" ;
+  wdt:P299 "388" ;
+  wdt:P298 "JAM" ;
+  wdt:P297 "JM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:388:1> .
+
+<urn:mdciii:1603:16:388:1> a skos:Concept ;
+  rdfs:label "1603:16:388:1" ;
+  skos:related <urn:mdciii:1603:16:388:0> .
+
+<urn:mdciii:1603:16:392:0> a skos:Concept ;
+  rdfs:label "1603:16:392:0" ;
+  wdt:P2082 "392" ;
+  wdt:P299 "392" ;
+  wdt:P298 "JPN" ;
+  wdt:P297 "JP" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:392:1> .
+
+<urn:mdciii:1603:16:392:1> a skos:Concept ;
+  rdfs:label "1603:16:392:1" ;
+  skos:related <urn:mdciii:1603:16:392:0> ;
+  skos:related <urn:mdciii:1603:16:392:2> .
+
+<urn:mdciii:1603:16:392:2> a skos:Concept ;
+  rdfs:label "1603:16:392:2" ;
+  skos:related <urn:mdciii:1603:16:392:1> .
+
+<urn:mdciii:1603:16:398:0> a skos:Concept ;
+  rdfs:label "1603:16:398:0" ;
+  wdt:P2082 "398" ;
+  wdt:P299 "398" ;
+  wdt:P298 "KAZ" ;
+  wdt:P297 "KZ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:398:1> .
+
+<urn:mdciii:1603:16:398:1> a skos:Concept ;
+  rdfs:label "1603:16:398:1" ;
+  skos:related <urn:mdciii:1603:16:398:0> ;
+  skos:related <urn:mdciii:1603:16:398:2> .
+
+<urn:mdciii:1603:16:398:2> a skos:Concept ;
+  rdfs:label "1603:16:398:2" ;
+  skos:related <urn:mdciii:1603:16:398:1> .
+
+<urn:mdciii:1603:16:404:0> a skos:Concept ;
+  rdfs:label "1603:16:404:0" ;
+  wdt:P2082 "404" ;
+  wdt:P299 "404" ;
+  wdt:P298 "KEN" ;
+  wdt:P297 "KE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:404:1> .
+
+<urn:mdciii:1603:16:404:1> a skos:Concept ;
+  rdfs:label "1603:16:404:1" ;
+  skos:related <urn:mdciii:1603:16:404:0> ;
+  skos:related <urn:mdciii:1603:16:404:2> .
+
+<urn:mdciii:1603:16:404:2> a skos:Concept ;
+  rdfs:label "1603:16:404:2" ;
+  skos:related <urn:mdciii:1603:16:404:1> .
+
+<urn:mdciii:1603:16:408:0> a skos:Concept ;
+  rdfs:label "1603:16:408:0" ;
+  wdt:P2082 "408" ;
+  wdt:P299 "408" ;
+  wdt:P298 "PRK" ;
+  wdt:P297 "KP" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:408:1> .
+
+<urn:mdciii:1603:16:408:1> a skos:Concept ;
+  rdfs:label "1603:16:408:1" ;
+  skos:related <urn:mdciii:1603:16:408:0> ;
+  skos:related <urn:mdciii:1603:16:408:2> .
+
+<urn:mdciii:1603:16:408:2> a skos:Concept ;
+  rdfs:label "1603:16:408:2" ;
+  skos:related <urn:mdciii:1603:16:408:1> .
+
+<urn:mdciii:1603:16:417:0> a skos:Concept ;
+  rdfs:label "1603:16:417:0" ;
+  wdt:P2082 "417" ;
+  wdt:P299 "417" ;
+  wdt:P298 "KGZ" ;
+  wdt:P297 "KG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:417:1> .
+
+<urn:mdciii:1603:16:417:1> a skos:Concept ;
+  rdfs:label "1603:16:417:1" ;
+  skos:related <urn:mdciii:1603:16:417:0> .
+
+<urn:mdciii:1603:16:418:0> a skos:Concept ;
+  rdfs:label "1603:16:418:0" ;
+  wdt:P2082 "418" ;
+  wdt:P299 "418" ;
+  wdt:P298 "LAO" ;
+  wdt:P297 "LA" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:418:1> .
+
+<urn:mdciii:1603:16:418:1> a skos:Concept ;
+  rdfs:label "1603:16:418:1" ;
+  skos:related <urn:mdciii:1603:16:418:0> ;
+  skos:related <urn:mdciii:1603:16:418:2> .
+
+<urn:mdciii:1603:16:418:2> a skos:Concept ;
+  rdfs:label "1603:16:418:2" ;
+  skos:related <urn:mdciii:1603:16:418:1> .
+
+<urn:mdciii:1603:16:422:0> a skos:Concept ;
+  rdfs:label "1603:16:422:0" ;
+  wdt:P2082 "422" ;
+  wdt:P299 "422" ;
+  wdt:P298 "LBN" ;
+  wdt:P297 "LB" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:422:1> .
+
+<urn:mdciii:1603:16:422:1> a skos:Concept ;
+  rdfs:label "1603:16:422:1" ;
+  skos:related <urn:mdciii:1603:16:422:0> ;
+  skos:related <urn:mdciii:1603:16:422:2> .
+
+<urn:mdciii:1603:16:422:2> a skos:Concept ;
+  rdfs:label "1603:16:422:2" ;
+  skos:related <urn:mdciii:1603:16:422:1> ;
+  skos:related <urn:mdciii:1603:16:422:3> .
+
+<urn:mdciii:1603:16:422:3> a skos:Concept ;
+  rdfs:label "1603:16:422:3" ;
+  skos:related <urn:mdciii:1603:16:422:2> .
+
+<urn:mdciii:1603:16:426:0> a skos:Concept ;
+  rdfs:label "1603:16:426:0" ;
+  wdt:P2082 "426" ;
+  wdt:P299 "426" ;
+  wdt:P298 "LSO" ;
+  wdt:P297 "LS" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:426:1> .
+
+<urn:mdciii:1603:16:426:1> a skos:Concept ;
+  rdfs:label "1603:16:426:1" ;
+  skos:related <urn:mdciii:1603:16:426:0> ;
+  skos:related <urn:mdciii:1603:16:426:2> .
+
+<urn:mdciii:1603:16:426:2> a skos:Concept ;
+  rdfs:label "1603:16:426:2" ;
+  skos:related <urn:mdciii:1603:16:426:1> .
+
+<urn:mdciii:1603:16:430:0> a skos:Concept ;
+  rdfs:label "1603:16:430:0" ;
+  wdt:P2082 "430" ;
+  wdt:P299 "430" ;
+  wdt:P298 "LBR" ;
+  wdt:P297 "LR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:430:1> .
+
+<urn:mdciii:1603:16:430:1> a skos:Concept ;
+  rdfs:label "1603:16:430:1" ;
+  skos:related <urn:mdciii:1603:16:430:0> ;
+  skos:related <urn:mdciii:1603:16:430:2> .
+
+<urn:mdciii:1603:16:430:2> a skos:Concept ;
+  rdfs:label "1603:16:430:2" ;
+  skos:related <urn:mdciii:1603:16:430:1> .
+
+<urn:mdciii:1603:16:434:0> a skos:Concept ;
+  rdfs:label "1603:16:434:0" ;
+  wdt:P2082 "434" ;
+  wdt:P299 "434" ;
+  wdt:P298 "LBY" ;
+  wdt:P297 "LY" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:434:1> .
+
+<urn:mdciii:1603:16:434:1> a skos:Concept ;
+  rdfs:label "1603:16:434:1" ;
+  skos:related <urn:mdciii:1603:16:434:0> ;
+  skos:related <urn:mdciii:1603:16:434:2> .
+
+<urn:mdciii:1603:16:434:2> a skos:Concept ;
+  rdfs:label "1603:16:434:2" ;
+  skos:related <urn:mdciii:1603:16:434:1> .
+
+<urn:mdciii:1603:16:450:0> a skos:Concept ;
+  rdfs:label "1603:16:450:0" ;
+  wdt:P2082 "450" ;
+  wdt:P299 "450" ;
+  wdt:P298 "MDG" ;
+  wdt:P297 "MG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:450:1> .
+
+<urn:mdciii:1603:16:450:1> a skos:Concept ;
+  rdfs:label "1603:16:450:1" ;
+  skos:related <urn:mdciii:1603:16:450:0> ;
+  skos:related <urn:mdciii:1603:16:450:2> .
+
+<urn:mdciii:1603:16:450:2> a skos:Concept ;
+  rdfs:label "1603:16:450:2" ;
+  skos:related <urn:mdciii:1603:16:450:1> ;
+  skos:related <urn:mdciii:1603:16:450:3> .
+
+<urn:mdciii:1603:16:450:3> a skos:Concept ;
+  rdfs:label "1603:16:450:3" ;
+  skos:related <urn:mdciii:1603:16:450:2> ;
+  skos:related <urn:mdciii:1603:16:450:4> .
+
+<urn:mdciii:1603:16:450:4> a skos:Concept ;
+  rdfs:label "1603:16:450:4" ;
+  skos:related <urn:mdciii:1603:16:450:3> .
+
+<urn:mdciii:1603:16:454:0> a skos:Concept ;
+  rdfs:label "1603:16:454:0" ;
+  wdt:P2082 "454" ;
+  wdt:P299 "454" ;
+  wdt:P298 "MWI" ;
+  wdt:P297 "MW" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:454:1> .
+
+<urn:mdciii:1603:16:454:1> a skos:Concept ;
+  rdfs:label "1603:16:454:1" ;
+  skos:related <urn:mdciii:1603:16:454:0> ;
+  skos:related <urn:mdciii:1603:16:454:2> .
+
+<urn:mdciii:1603:16:454:2> a skos:Concept ;
+  rdfs:label "1603:16:454:2" ;
+  skos:related <urn:mdciii:1603:16:454:1> ;
+  skos:related <urn:mdciii:1603:16:454:3> .
+
+<urn:mdciii:1603:16:454:3> a skos:Concept ;
+  rdfs:label "1603:16:454:3" ;
+  skos:related <urn:mdciii:1603:16:454:2> .
+
+<urn:mdciii:1603:16:458:0> a skos:Concept ;
+  rdfs:label "1603:16:458:0" ;
+  wdt:P2082 "458" ;
+  wdt:P299 "458" ;
+  wdt:P298 "MYS" ;
+  wdt:P297 "MY" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:458:1> .
+
+<urn:mdciii:1603:16:458:1> a skos:Concept ;
+  rdfs:label "1603:16:458:1" ;
+  skos:related <urn:mdciii:1603:16:458:0> ;
+  skos:related <urn:mdciii:1603:16:458:2> .
+
+<urn:mdciii:1603:16:458:2> a skos:Concept ;
+  rdfs:label "1603:16:458:2" ;
+  skos:related <urn:mdciii:1603:16:458:1> .
+
+<urn:mdciii:1603:16:462:0> a skos:Concept ;
+  rdfs:label "1603:16:462:0" ;
+  wdt:P2082 "462" ;
+  wdt:P299 "462" ;
+  wdt:P298 "MDV" ;
+  wdt:P297 "MV" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:462:1> .
+
+<urn:mdciii:1603:16:462:1> a skos:Concept ;
+  rdfs:label "1603:16:462:1" ;
+  skos:related <urn:mdciii:1603:16:462:0> ;
+  skos:related <urn:mdciii:1603:16:462:2> .
+
+<urn:mdciii:1603:16:462:2> a skos:Concept ;
+  rdfs:label "1603:16:462:2" ;
+  skos:related <urn:mdciii:1603:16:462:1> ;
+  skos:related <urn:mdciii:1603:16:462:3> .
+
+<urn:mdciii:1603:16:462:3> a skos:Concept ;
+  rdfs:label "1603:16:462:3" ;
+  skos:related <urn:mdciii:1603:16:462:2> .
+
+<urn:mdciii:1603:16:466:0> a skos:Concept ;
+  rdfs:label "1603:16:466:0" ;
+  wdt:P2082 "466" ;
+  wdt:P299 "466" ;
+  wdt:P298 "MLI" ;
+  wdt:P297 "ML" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:466:1> .
+
+<urn:mdciii:1603:16:466:1> a skos:Concept ;
+  rdfs:label "1603:16:466:1" ;
+  skos:related <urn:mdciii:1603:16:466:0> ;
+  skos:related <urn:mdciii:1603:16:466:2> .
+
+<urn:mdciii:1603:16:466:2> a skos:Concept ;
+  rdfs:label "1603:16:466:2" ;
+  skos:related <urn:mdciii:1603:16:466:1> ;
+  skos:related <urn:mdciii:1603:16:466:3> .
+
+<urn:mdciii:1603:16:466:3> a skos:Concept ;
+  rdfs:label "1603:16:466:3" ;
+  skos:related <urn:mdciii:1603:16:466:2> .
+
+<urn:mdciii:1603:16:474:0> a skos:Concept ;
+  rdfs:label "1603:16:474:0" ;
+  wdt:P2082 "474" ;
+  wdt:P299 "474" ;
+  wdt:P298 "MTQ" ;
+  wdt:P297 "MQ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:474:1> .
+
+<urn:mdciii:1603:16:474:1> a skos:Concept ;
+  rdfs:label "1603:16:474:1" ;
+  skos:related <urn:mdciii:1603:16:474:0> ;
+  skos:related <urn:mdciii:1603:16:474:2> .
+
+<urn:mdciii:1603:16:474:2> a skos:Concept ;
+  rdfs:label "1603:16:474:2" ;
+  skos:related <urn:mdciii:1603:16:474:1> .
+
+<urn:mdciii:1603:16:478:0> a skos:Concept ;
+  rdfs:label "1603:16:478:0" ;
+  wdt:P2082 "478" ;
+  wdt:P299 "478" ;
+  wdt:P298 "MRT" ;
+  wdt:P297 "MR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:478:1> .
+
+<urn:mdciii:1603:16:478:1> a skos:Concept ;
+  rdfs:label "1603:16:478:1" ;
+  skos:related <urn:mdciii:1603:16:478:0> ;
+  skos:related <urn:mdciii:1603:16:478:2> .
+
+<urn:mdciii:1603:16:478:2> a skos:Concept ;
+  rdfs:label "1603:16:478:2" ;
+  skos:related <urn:mdciii:1603:16:478:1> .
+
+<urn:mdciii:1603:16:480:0> a skos:Concept ;
+  rdfs:label "1603:16:480:0" ;
+  wdt:P2082 "480" ;
+  wdt:P299 "480" ;
+  wdt:P298 "MUS" ;
+  wdt:P297 "MU" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:480:1> .
+
+<urn:mdciii:1603:16:480:1> a skos:Concept ;
+  rdfs:label "1603:16:480:1" ;
+  skos:related <urn:mdciii:1603:16:480:0> .
+
+<urn:mdciii:1603:16:484:0> a skos:Concept ;
+  rdfs:label "1603:16:484:0" ;
+  wdt:P2082 "484" ;
+  wdt:P299 "484" ;
+  wdt:P298 "MEX" ;
+  wdt:P297 "MX" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:484:1> .
+
+<urn:mdciii:1603:16:484:1> a skos:Concept ;
+  rdfs:label "1603:16:484:1" ;
+  skos:related <urn:mdciii:1603:16:484:0> ;
+  skos:related <urn:mdciii:1603:16:484:2> .
+
+<urn:mdciii:1603:16:484:2> a skos:Concept ;
+  rdfs:label "1603:16:484:2" ;
+  skos:related <urn:mdciii:1603:16:484:1> .
+
+<urn:mdciii:1603:16:496:0> a skos:Concept ;
+  rdfs:label "1603:16:496:0" ;
+  wdt:P2082 "496" ;
+  wdt:P299 "496" ;
+  wdt:P298 "MNG" ;
+  wdt:P297 "MN" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:496:1> .
+
+<urn:mdciii:1603:16:496:1> a skos:Concept ;
+  rdfs:label "1603:16:496:1" ;
+  skos:related <urn:mdciii:1603:16:496:0> ;
+  skos:related <urn:mdciii:1603:16:496:2> .
+
+<urn:mdciii:1603:16:496:2> a skos:Concept ;
+  rdfs:label "1603:16:496:2" ;
+  skos:related <urn:mdciii:1603:16:496:1> .
+
+<urn:mdciii:1603:16:498:0> a skos:Concept ;
+  rdfs:label "1603:16:498:0" ;
+  wdt:P2082 "498" ;
+  wdt:P299 "498" ;
+  wdt:P298 "MDA" ;
+  wdt:P297 "MD" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:498:1> .
+
+<urn:mdciii:1603:16:498:1> a skos:Concept ;
+  rdfs:label "1603:16:498:1" ;
+  skos:related <urn:mdciii:1603:16:498:0> .
+
+<urn:mdciii:1603:16:500:0> a skos:Concept ;
+  rdfs:label "1603:16:500:0" ;
+  wdt:P2082 "500" ;
+  wdt:P299 "500" ;
+  wdt:P298 "MSR" ;
+  wdt:P297 "MS" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:500:1> .
+
+<urn:mdciii:1603:16:500:1> a skos:Concept ;
+  rdfs:label "1603:16:500:1" ;
+  skos:related <urn:mdciii:1603:16:500:0> .
+
+<urn:mdciii:1603:16:504:0> a skos:Concept ;
+  rdfs:label "1603:16:504:0" ;
+  wdt:P2082 "504" ;
+  wdt:P299 "504" ;
+  wdt:P298 "MAR" ;
+  wdt:P297 "MA" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:504:1> .
+
+<urn:mdciii:1603:16:504:1> a skos:Concept ;
+  rdfs:label "1603:16:504:1" ;
+  skos:related <urn:mdciii:1603:16:504:0> ;
+  skos:related <urn:mdciii:1603:16:504:2> .
+
+<urn:mdciii:1603:16:504:2> a skos:Concept ;
+  rdfs:label "1603:16:504:2" ;
+  skos:related <urn:mdciii:1603:16:504:1> .
+
+<urn:mdciii:1603:16:508:0> a skos:Concept ;
+  rdfs:label "1603:16:508:0" ;
+  wdt:P2082 "508" ;
+  wdt:P299 "508" ;
+  wdt:P298 "MOZ" ;
+  wdt:P297 "MZ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:508:1> .
+
+<urn:mdciii:1603:16:508:1> a skos:Concept ;
+  rdfs:label "1603:16:508:1" ;
+  skos:related <urn:mdciii:1603:16:508:0> ;
+  skos:related <urn:mdciii:1603:16:508:2> .
+
+<urn:mdciii:1603:16:508:2> a skos:Concept ;
+  rdfs:label "1603:16:508:2" ;
+  skos:related <urn:mdciii:1603:16:508:1> ;
+  skos:related <urn:mdciii:1603:16:508:3> .
+
+<urn:mdciii:1603:16:508:3> a skos:Concept ;
+  rdfs:label "1603:16:508:3" ;
+  skos:related <urn:mdciii:1603:16:508:2> .
+
+<urn:mdciii:1603:16:516:0> a skos:Concept ;
+  rdfs:label "1603:16:516:0" ;
+  wdt:P2082 "516" ;
+  wdt:P299 "516" ;
+  wdt:P298 "NAM" ;
+  wdt:P297 "NA" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:516:1> .
+
+<urn:mdciii:1603:16:516:1> a skos:Concept ;
+  rdfs:label "1603:16:516:1" ;
+  skos:related <urn:mdciii:1603:16:516:0> ;
+  skos:related <urn:mdciii:1603:16:516:2> .
+
+<urn:mdciii:1603:16:516:2> a skos:Concept ;
+  rdfs:label "1603:16:516:2" ;
+  skos:related <urn:mdciii:1603:16:516:1> .
+
+<urn:mdciii:1603:16:524:0> a skos:Concept ;
+  rdfs:label "1603:16:524:0" ;
+  wdt:P2082 "524" ;
+  wdt:P299 "524" ;
+  wdt:P298 "NPL" ;
+  wdt:P297 "NP" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:524:1> .
+
+<urn:mdciii:1603:16:524:1> a skos:Concept ;
+  rdfs:label "1603:16:524:1" ;
+  skos:related <urn:mdciii:1603:16:524:0> ;
+  skos:related <urn:mdciii:1603:16:524:2> .
+
+<urn:mdciii:1603:16:524:2> a skos:Concept ;
+  rdfs:label "1603:16:524:2" ;
+  skos:related <urn:mdciii:1603:16:524:1> .
+
+<urn:mdciii:1603:16:534:0> a skos:Concept ;
+  rdfs:label "1603:16:534:0" ;
+  wdt:P2082 "534" ;
+  wdt:P299 "534" ;
+  wdt:P298 "SXM" ;
+  wdt:P297 "SX" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:534:1> .
+
+<urn:mdciii:1603:16:534:1> a skos:Concept ;
+  rdfs:label "1603:16:534:1" ;
+  skos:related <urn:mdciii:1603:16:534:0> .
+
+<urn:mdciii:1603:16:548:0> a skos:Concept ;
+  rdfs:label "1603:16:548:0" ;
+  wdt:P2082 "548" ;
+  wdt:P299 "548" ;
+  wdt:P298 "VUT" ;
+  wdt:P297 "VU" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:548:1> .
+
+<urn:mdciii:1603:16:548:1> a skos:Concept ;
+  rdfs:label "1603:16:548:1" ;
+  skos:related <urn:mdciii:1603:16:548:0> ;
+  skos:related <urn:mdciii:1603:16:548:2> .
+
+<urn:mdciii:1603:16:548:2> a skos:Concept ;
+  rdfs:label "1603:16:548:2" ;
+  skos:related <urn:mdciii:1603:16:548:1> .
+
+<urn:mdciii:1603:16:558:0> a skos:Concept ;
+  rdfs:label "1603:16:558:0" ;
+  wdt:P2082 "558" ;
+  wdt:P299 "558" ;
+  wdt:P298 "NIC" ;
+  wdt:P297 "NI" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:558:1> .
+
+<urn:mdciii:1603:16:558:1> a skos:Concept ;
+  rdfs:label "1603:16:558:1" ;
+  skos:related <urn:mdciii:1603:16:558:0> ;
+  skos:related <urn:mdciii:1603:16:558:2> .
+
+<urn:mdciii:1603:16:558:2> a skos:Concept ;
+  rdfs:label "1603:16:558:2" ;
+  skos:related <urn:mdciii:1603:16:558:1> .
+
+<urn:mdciii:1603:16:562:0> a skos:Concept ;
+  rdfs:label "1603:16:562:0" ;
+  wdt:P2082 "562" ;
+  wdt:P299 "562" ;
+  wdt:P298 "NER" ;
+  wdt:P297 "NE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:562:1> .
+
+<urn:mdciii:1603:16:562:1> a skos:Concept ;
+  rdfs:label "1603:16:562:1" ;
+  skos:related <urn:mdciii:1603:16:562:0> ;
+  skos:related <urn:mdciii:1603:16:562:2> .
+
+<urn:mdciii:1603:16:562:2> a skos:Concept ;
+  rdfs:label "1603:16:562:2" ;
+  skos:related <urn:mdciii:1603:16:562:1> ;
+  skos:related <urn:mdciii:1603:16:562:3> .
+
+<urn:mdciii:1603:16:562:3> a skos:Concept ;
+  rdfs:label "1603:16:562:3" ;
+  skos:related <urn:mdciii:1603:16:562:2> .
+
+<urn:mdciii:1603:16:566:0> a skos:Concept ;
+  rdfs:label "1603:16:566:0" ;
+  wdt:P2082 "566" ;
+  wdt:P299 "566" ;
+  wdt:P298 "NGA" ;
+  wdt:P297 "NG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:566:1> .
+
+<urn:mdciii:1603:16:566:1> a skos:Concept ;
+  rdfs:label "1603:16:566:1" ;
+  skos:related <urn:mdciii:1603:16:566:0> ;
+  skos:related <urn:mdciii:1603:16:566:2> .
+
+<urn:mdciii:1603:16:566:2> a skos:Concept ;
+  rdfs:label "1603:16:566:2" ;
+  skos:related <urn:mdciii:1603:16:566:1> .
+
+<urn:mdciii:1603:16:583:0> a skos:Concept ;
+  rdfs:label "1603:16:583:0" ;
+  wdt:P2082 "583" ;
+  wdt:P299 "583" ;
+  wdt:P298 "FSM" ;
+  wdt:P297 "FM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:583:1> .
+
+<urn:mdciii:1603:16:583:1> a skos:Concept ;
+  rdfs:label "1603:16:583:1" ;
+  skos:related <urn:mdciii:1603:16:583:0> ;
+  skos:related <urn:mdciii:1603:16:583:2> .
+
+<urn:mdciii:1603:16:583:2> a skos:Concept ;
+  rdfs:label "1603:16:583:2" ;
+  skos:related <urn:mdciii:1603:16:583:1> .
+
+<urn:mdciii:1603:16:584:0> a skos:Concept ;
+  rdfs:label "1603:16:584:0" ;
+  wdt:P2082 "584" ;
+  wdt:P299 "584" ;
+  wdt:P298 "MHL" ;
+  wdt:P297 "MH" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:584:1> .
+
+<urn:mdciii:1603:16:584:1> a skos:Concept ;
+  rdfs:label "1603:16:584:1" ;
+  skos:related <urn:mdciii:1603:16:584:0> ;
+  skos:related <urn:mdciii:1603:16:584:2> .
+
+<urn:mdciii:1603:16:584:2> a skos:Concept ;
+  rdfs:label "1603:16:584:2" ;
+  skos:related <urn:mdciii:1603:16:584:1> .
+
+<urn:mdciii:1603:16:586:0> a skos:Concept ;
+  rdfs:label "1603:16:586:0" ;
+  wdt:P2082 "586" ;
+  wdt:P299 "586" ;
+  wdt:P298 "PAK" ;
+  wdt:P297 "PK" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:586:1> .
+
+<urn:mdciii:1603:16:586:1> a skos:Concept ;
+  rdfs:label "1603:16:586:1" ;
+  skos:related <urn:mdciii:1603:16:586:0> ;
+  skos:related <urn:mdciii:1603:16:586:2> .
+
+<urn:mdciii:1603:16:586:2> a skos:Concept ;
+  rdfs:label "1603:16:586:2" ;
+  skos:related <urn:mdciii:1603:16:586:1> ;
+  skos:related <urn:mdciii:1603:16:586:3> .
+
+<urn:mdciii:1603:16:586:3> a skos:Concept ;
+  rdfs:label "1603:16:586:3" ;
+  skos:related <urn:mdciii:1603:16:586:2> .
+
+<urn:mdciii:1603:16:591:0> a skos:Concept ;
+  rdfs:label "1603:16:591:0" ;
+  wdt:P2082 "591" ;
+  wdt:P299 "591" ;
+  wdt:P298 "PAN" ;
+  wdt:P297 "PA" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:591:1> .
+
+<urn:mdciii:1603:16:591:1> a skos:Concept ;
+  rdfs:label "1603:16:591:1" ;
+  skos:related <urn:mdciii:1603:16:591:0> ;
+  skos:related <urn:mdciii:1603:16:591:2> .
+
+<urn:mdciii:1603:16:591:2> a skos:Concept ;
+  rdfs:label "1603:16:591:2" ;
+  skos:related <urn:mdciii:1603:16:591:1> ;
+  skos:related <urn:mdciii:1603:16:591:3> .
+
+<urn:mdciii:1603:16:591:3> a skos:Concept ;
+  rdfs:label "1603:16:591:3" ;
+  skos:related <urn:mdciii:1603:16:591:2> .
+
+<urn:mdciii:1603:16:598:0> a skos:Concept ;
+  rdfs:label "1603:16:598:0" ;
+  wdt:P2082 "598" ;
+  wdt:P299 "598" ;
+  wdt:P298 "PNG" ;
+  wdt:P297 "PG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:598:1> .
+
+<urn:mdciii:1603:16:598:1> a skos:Concept ;
+  rdfs:label "1603:16:598:1" ;
+  skos:related <urn:mdciii:1603:16:598:0> ;
+  skos:related <urn:mdciii:1603:16:598:2> .
+
+<urn:mdciii:1603:16:598:2> a skos:Concept ;
+  rdfs:label "1603:16:598:2" ;
+  skos:related <urn:mdciii:1603:16:598:1> ;
+  skos:related <urn:mdciii:1603:16:598:3> .
+
+<urn:mdciii:1603:16:598:3> a skos:Concept ;
+  rdfs:label "1603:16:598:3" ;
+  skos:related <urn:mdciii:1603:16:598:2> .
+
+<urn:mdciii:1603:16:600:0> a skos:Concept ;
+  rdfs:label "1603:16:600:0" ;
+  wdt:P2082 "600" ;
+  wdt:P299 "600" ;
+  wdt:P298 "PRY" ;
+  wdt:P297 "PY" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:600:1> .
+
+<urn:mdciii:1603:16:600:1> a skos:Concept ;
+  rdfs:label "1603:16:600:1" ;
+  skos:related <urn:mdciii:1603:16:600:0> ;
+  skos:related <urn:mdciii:1603:16:600:2> .
+
+<urn:mdciii:1603:16:600:2> a skos:Concept ;
+  rdfs:label "1603:16:600:2" ;
+  skos:related <urn:mdciii:1603:16:600:1> .
+
+<urn:mdciii:1603:16:604:0> a skos:Concept ;
+  rdfs:label "1603:16:604:0" ;
+  wdt:P2082 "604" ;
+  wdt:P299 "604" ;
+  wdt:P298 "PER" ;
+  wdt:P297 "PE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:604:1> .
+
+<urn:mdciii:1603:16:604:1> a skos:Concept ;
+  rdfs:label "1603:16:604:1" ;
+  skos:related <urn:mdciii:1603:16:604:0> ;
+  skos:related <urn:mdciii:1603:16:604:2> .
+
+<urn:mdciii:1603:16:604:2> a skos:Concept ;
+  rdfs:label "1603:16:604:2" ;
+  skos:related <urn:mdciii:1603:16:604:1> ;
+  skos:related <urn:mdciii:1603:16:604:3> .
+
+<urn:mdciii:1603:16:604:3> a skos:Concept ;
+  rdfs:label "1603:16:604:3" ;
+  skos:related <urn:mdciii:1603:16:604:2> .
+
+<urn:mdciii:1603:16:608:0> a skos:Concept ;
+  rdfs:label "1603:16:608:0" ;
+  wdt:P2082 "608" ;
+  wdt:P299 "608" ;
+  wdt:P298 "PHL" ;
+  wdt:P297 "PH" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:608:1> .
+
+<urn:mdciii:1603:16:608:1> a skos:Concept ;
+  rdfs:label "1603:16:608:1" ;
+  skos:related <urn:mdciii:1603:16:608:0> ;
+  skos:related <urn:mdciii:1603:16:608:2> .
+
+<urn:mdciii:1603:16:608:2> a skos:Concept ;
+  rdfs:label "1603:16:608:2" ;
+  skos:related <urn:mdciii:1603:16:608:1> ;
+  skos:related <urn:mdciii:1603:16:608:3> .
+
+<urn:mdciii:1603:16:608:3> a skos:Concept ;
+  rdfs:label "1603:16:608:3" ;
+  skos:related <urn:mdciii:1603:16:608:2> .
+
+<urn:mdciii:1603:16:616:0> a skos:Concept ;
+  rdfs:label "1603:16:616:0" ;
+  wdt:P2082 "616" ;
+  wdt:P299 "616" ;
+  wdt:P298 "POL" ;
+  wdt:P297 "PL" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:616:1> .
+
+<urn:mdciii:1603:16:616:1> a skos:Concept ;
+  rdfs:label "1603:16:616:1" ;
+  skos:related <urn:mdciii:1603:16:616:0> ;
+  skos:related <urn:mdciii:1603:16:616:2> .
+
+<urn:mdciii:1603:16:616:2> a skos:Concept ;
+  rdfs:label "1603:16:616:2" ;
+  skos:related <urn:mdciii:1603:16:616:1> .
+
+<urn:mdciii:1603:16:624:0> a skos:Concept ;
+  rdfs:label "1603:16:624:0" ;
+  wdt:P2082 "624" ;
+  wdt:P299 "624" ;
+  wdt:P298 "GNB" ;
+  wdt:P297 "GW" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:624:1> .
+
+<urn:mdciii:1603:16:624:1> a skos:Concept ;
+  rdfs:label "1603:16:624:1" ;
+  skos:related <urn:mdciii:1603:16:624:0> ;
+  skos:related <urn:mdciii:1603:16:624:2> .
+
+<urn:mdciii:1603:16:624:2> a skos:Concept ;
+  rdfs:label "1603:16:624:2" ;
+  skos:related <urn:mdciii:1603:16:624:1> .
+
+<urn:mdciii:1603:16:626:0> a skos:Concept ;
+  rdfs:label "1603:16:626:0" ;
+  wdt:P2082 "626" ;
+  wdt:P299 "626" ;
+  wdt:P298 "TLS" ;
+  wdt:P297 "TL" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:626:1> .
+
+<urn:mdciii:1603:16:626:1> a skos:Concept ;
+  rdfs:label "1603:16:626:1" ;
+  skos:related <urn:mdciii:1603:16:626:0> ;
+  skos:related <urn:mdciii:1603:16:626:2> .
+
+<urn:mdciii:1603:16:626:2> a skos:Concept ;
+  rdfs:label "1603:16:626:2" ;
+  skos:related <urn:mdciii:1603:16:626:1> ;
+  skos:related <urn:mdciii:1603:16:626:3> .
+
+<urn:mdciii:1603:16:626:3> a skos:Concept ;
+  rdfs:label "1603:16:626:3" ;
+  skos:related <urn:mdciii:1603:16:626:2> .
+
+<urn:mdciii:1603:16:630:0> a skos:Concept ;
+  rdfs:label "1603:16:630:0" ;
+  wdt:P2082 "630" ;
+  wdt:P299 "630" ;
+  wdt:P298 "PRI" ;
+  wdt:P297 "PR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:630:1> .
+
+<urn:mdciii:1603:16:630:1> a skos:Concept ;
+  rdfs:label "1603:16:630:1" ;
+  skos:related <urn:mdciii:1603:16:630:0> .
+
+<urn:mdciii:1603:16:642:0> a skos:Concept ;
+  rdfs:label "1603:16:642:0" ;
+  wdt:P2082 "642" ;
+  wdt:P299 "642" ;
+  wdt:P298 "ROU" ;
+  wdt:P297 "RO" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:642:1> .
+
+<urn:mdciii:1603:16:642:1> a skos:Concept ;
+  rdfs:label "1603:16:642:1" ;
+  skos:related <urn:mdciii:1603:16:642:0> ;
+  skos:related <urn:mdciii:1603:16:642:2> .
+
+<urn:mdciii:1603:16:642:2> a skos:Concept ;
+  rdfs:label "1603:16:642:2" ;
+  skos:related <urn:mdciii:1603:16:642:1> .
+
+<urn:mdciii:1603:16:643:0> a skos:Concept ;
+  rdfs:label "1603:16:643:0" ;
+  wdt:P2082 "643" ;
+  wdt:P299 "643" ;
+  wdt:P298 "RUS" ;
+  wdt:P297 "RU" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:643:1> .
+
+<urn:mdciii:1603:16:643:1> a skos:Concept ;
+  rdfs:label "1603:16:643:1" ;
+  skos:related <urn:mdciii:1603:16:643:0> ;
+  skos:related <urn:mdciii:1603:16:643:2> .
+
+<urn:mdciii:1603:16:643:2> a skos:Concept ;
+  rdfs:label "1603:16:643:2" ;
+  skos:related <urn:mdciii:1603:16:643:1> .
+
+<urn:mdciii:1603:16:646:0> a skos:Concept ;
+  rdfs:label "1603:16:646:0" ;
+  wdt:P2082 "646" ;
+  wdt:P299 "646" ;
+  wdt:P298 "RWA" ;
+  wdt:P297 "RW" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:646:1> .
+
+<urn:mdciii:1603:16:646:1> a skos:Concept ;
+  rdfs:label "1603:16:646:1" ;
+  skos:related <urn:mdciii:1603:16:646:0> ;
+  skos:related <urn:mdciii:1603:16:646:2> .
+
+<urn:mdciii:1603:16:646:2> a skos:Concept ;
+  rdfs:label "1603:16:646:2" ;
+  skos:related <urn:mdciii:1603:16:646:1> ;
+  skos:related <urn:mdciii:1603:16:646:3> .
+
+<urn:mdciii:1603:16:646:3> a skos:Concept ;
+  rdfs:label "1603:16:646:3" ;
+  skos:related <urn:mdciii:1603:16:646:2> .
+
+<urn:mdciii:1603:16:659:0> a skos:Concept ;
+  rdfs:label "1603:16:659:0" ;
+  wdt:P2082 "659" ;
+  wdt:P299 "659" ;
+  wdt:P298 "KNA" ;
+  wdt:P297 "KN" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:659:1> .
+
+<urn:mdciii:1603:16:659:1> a skos:Concept ;
+  rdfs:label "1603:16:659:1" ;
+  skos:related <urn:mdciii:1603:16:659:0> .
+
+<urn:mdciii:1603:16:662:0> a skos:Concept ;
+  rdfs:label "1603:16:662:0" ;
+  wdt:P2082 "662" ;
+  wdt:P299 "662" ;
+  wdt:P298 "LCA" ;
+  wdt:P297 "LC" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:662:1> .
+
+<urn:mdciii:1603:16:662:1> a skos:Concept ;
+  rdfs:label "1603:16:662:1" ;
+  skos:related <urn:mdciii:1603:16:662:0> ;
+  skos:related <urn:mdciii:1603:16:662:2> .
+
+<urn:mdciii:1603:16:662:2> a skos:Concept ;
+  rdfs:label "1603:16:662:2" ;
+  skos:related <urn:mdciii:1603:16:662:1> .
+
+<urn:mdciii:1603:16:670:0> a skos:Concept ;
+  rdfs:label "1603:16:670:0" ;
+  wdt:P2082 "670" ;
+  wdt:P299 "670" ;
+  wdt:P298 "VCT" ;
+  wdt:P297 "VC" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:670:1> .
+
+<urn:mdciii:1603:16:670:1> a skos:Concept ;
+  rdfs:label "1603:16:670:1" ;
+  skos:related <urn:mdciii:1603:16:670:0> .
+
+<urn:mdciii:1603:16:678:0> a skos:Concept ;
+  rdfs:label "1603:16:678:0" ;
+  wdt:P2082 "678" ;
+  wdt:P299 "678" ;
+  wdt:P298 "STP" ;
+  wdt:P297 "ST" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:678:1> .
+
+<urn:mdciii:1603:16:678:1> a skos:Concept ;
+  rdfs:label "1603:16:678:1" ;
+  skos:related <urn:mdciii:1603:16:678:0> ;
+  skos:related <urn:mdciii:1603:16:678:2> .
+
+<urn:mdciii:1603:16:678:2> a skos:Concept ;
+  rdfs:label "1603:16:678:2" ;
+  skos:related <urn:mdciii:1603:16:678:1> .
+
+<urn:mdciii:1603:16:686:0> a skos:Concept ;
+  rdfs:label "1603:16:686:0" ;
+  wdt:P2082 "686" ;
+  wdt:P299 "686" ;
+  wdt:P298 "SEN" ;
+  wdt:P297 "SN" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:686:1> .
+
+<urn:mdciii:1603:16:686:1> a skos:Concept ;
+  rdfs:label "1603:16:686:1" ;
+  skos:related <urn:mdciii:1603:16:686:0> ;
+  skos:related <urn:mdciii:1603:16:686:2> .
+
+<urn:mdciii:1603:16:686:2> a skos:Concept ;
+  rdfs:label "1603:16:686:2" ;
+  skos:related <urn:mdciii:1603:16:686:1> ;
+  skos:related <urn:mdciii:1603:16:686:3> .
+
+<urn:mdciii:1603:16:686:3> a skos:Concept ;
+  rdfs:label "1603:16:686:3" ;
+  skos:related <urn:mdciii:1603:16:686:2> .
+
+<urn:mdciii:1603:16:690:0> a skos:Concept ;
+  rdfs:label "1603:16:690:0" ;
+  wdt:P2082 "690" ;
+  wdt:P299 "690" ;
+  wdt:P298 "SYC" ;
+  wdt:P297 "SC" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:690:1> .
+
+<urn:mdciii:1603:16:690:1> a skos:Concept ;
+  rdfs:label "1603:16:690:1" ;
+  skos:related <urn:mdciii:1603:16:690:0> ;
+  skos:related <urn:mdciii:1603:16:690:2> .
+
+<urn:mdciii:1603:16:690:2> a skos:Concept ;
+  rdfs:label "1603:16:690:2" ;
+  skos:related <urn:mdciii:1603:16:690:1> ;
+  skos:related <urn:mdciii:1603:16:690:3> .
+
+<urn:mdciii:1603:16:690:3> a skos:Concept ;
+  rdfs:label "1603:16:690:3" ;
+  skos:related <urn:mdciii:1603:16:690:2> .
+
+<urn:mdciii:1603:16:694:0> a skos:Concept ;
+  rdfs:label "1603:16:694:0" ;
+  wdt:P2082 "694" ;
+  wdt:P299 "694" ;
+  wdt:P298 "SLE" ;
+  wdt:P297 "SL" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:694:1> .
+
+<urn:mdciii:1603:16:694:1> a skos:Concept ;
+  rdfs:label "1603:16:694:1" ;
+  skos:related <urn:mdciii:1603:16:694:0> ;
+  skos:related <urn:mdciii:1603:16:694:2> .
+
+<urn:mdciii:1603:16:694:2> a skos:Concept ;
+  rdfs:label "1603:16:694:2" ;
+  skos:related <urn:mdciii:1603:16:694:1> ;
+  skos:related <urn:mdciii:1603:16:694:3> .
+
+<urn:mdciii:1603:16:694:3> a skos:Concept ;
+  rdfs:label "1603:16:694:3" ;
+  skos:related <urn:mdciii:1603:16:694:2> ;
+  skos:related <urn:mdciii:1603:16:694:4> .
+
+<urn:mdciii:1603:16:694:4> a skos:Concept ;
+  rdfs:label "1603:16:694:4" ;
+  skos:related <urn:mdciii:1603:16:694:3> .
+
+<urn:mdciii:1603:16:703:0> a skos:Concept ;
+  rdfs:label "1603:16:703:0" ;
+  wdt:P2082 "703" ;
+  wdt:P299 "703" ;
+  wdt:P298 "SVK" ;
+  wdt:P297 "SK" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:703:1> .
+
+<urn:mdciii:1603:16:703:1> a skos:Concept ;
+  rdfs:label "1603:16:703:1" ;
+  skos:related <urn:mdciii:1603:16:703:0> ;
+  skos:related <urn:mdciii:1603:16:703:2> .
+
+<urn:mdciii:1603:16:703:2> a skos:Concept ;
+  rdfs:label "1603:16:703:2" ;
+  skos:related <urn:mdciii:1603:16:703:1> .
+
+<urn:mdciii:1603:16:704:0> a skos:Concept ;
+  rdfs:label "1603:16:704:0" ;
+  wdt:P2082 "704" ;
+  wdt:P299 "704" ;
+  wdt:P298 "VNM" ;
+  wdt:P297 "VN" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:704:1> .
+
+<urn:mdciii:1603:16:704:1> a skos:Concept ;
+  rdfs:label "1603:16:704:1" ;
+  skos:related <urn:mdciii:1603:16:704:0> ;
+  skos:related <urn:mdciii:1603:16:704:2> .
+
+<urn:mdciii:1603:16:704:2> a skos:Concept ;
+  rdfs:label "1603:16:704:2" ;
+  skos:related <urn:mdciii:1603:16:704:1> .
+
+<urn:mdciii:1603:16:706:0> a skos:Concept ;
+  rdfs:label "1603:16:706:0" ;
+  wdt:P2082 "706" ;
+  wdt:P299 "706" ;
+  wdt:P298 "SOM" ;
+  wdt:P297 "SO" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:706:1> .
+
+<urn:mdciii:1603:16:706:1> a skos:Concept ;
+  rdfs:label "1603:16:706:1" ;
+  skos:related <urn:mdciii:1603:16:706:0> ;
+  skos:related <urn:mdciii:1603:16:706:2> .
+
+<urn:mdciii:1603:16:706:2> a skos:Concept ;
+  rdfs:label "1603:16:706:2" ;
+  skos:related <urn:mdciii:1603:16:706:1> .
+
+<urn:mdciii:1603:16:710:0> a skos:Concept ;
+  rdfs:label "1603:16:710:0" ;
+  wdt:P2082 "710" ;
+  wdt:P299 "710" ;
+  wdt:P298 "ZAF" ;
+  wdt:P297 "ZA" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:710:1> .
+
+<urn:mdciii:1603:16:710:1> a skos:Concept ;
+  rdfs:label "1603:16:710:1" ;
+  skos:related <urn:mdciii:1603:16:710:0> ;
+  skos:related <urn:mdciii:1603:16:710:2> .
+
+<urn:mdciii:1603:16:710:2> a skos:Concept ;
+  rdfs:label "1603:16:710:2" ;
+  skos:related <urn:mdciii:1603:16:710:1> ;
+  skos:related <urn:mdciii:1603:16:710:3> .
+
+<urn:mdciii:1603:16:710:3> a skos:Concept ;
+  rdfs:label "1603:16:710:3" ;
+  skos:related <urn:mdciii:1603:16:710:2> ;
+  skos:related <urn:mdciii:1603:16:710:4> .
+
+<urn:mdciii:1603:16:710:4> a skos:Concept ;
+  rdfs:label "1603:16:710:4" ;
+  skos:related <urn:mdciii:1603:16:710:3> .
+
+<urn:mdciii:1603:16:716:0> a skos:Concept ;
+  rdfs:label "1603:16:716:0" ;
+  wdt:P2082 "716" ;
+  wdt:P299 "716" ;
+  wdt:P298 "ZWE" ;
+  wdt:P297 "ZW" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:716:1> .
+
+<urn:mdciii:1603:16:716:1> a skos:Concept ;
+  rdfs:label "1603:16:716:1" ;
+  skos:related <urn:mdciii:1603:16:716:0> ;
+  skos:related <urn:mdciii:1603:16:716:2> .
+
+<urn:mdciii:1603:16:716:2> a skos:Concept ;
+  rdfs:label "1603:16:716:2" ;
+  skos:related <urn:mdciii:1603:16:716:1> ;
+  skos:related <urn:mdciii:1603:16:716:3> .
+
+<urn:mdciii:1603:16:716:3> a skos:Concept ;
+  rdfs:label "1603:16:716:3" ;
+  skos:related <urn:mdciii:1603:16:716:2> .
+
+<urn:mdciii:1603:16:728:0> a skos:Concept ;
+  rdfs:label "1603:16:728:0" ;
+  wdt:P2082 "728" ;
+  wdt:P299 "728" ;
+  wdt:P298 "SSD" ;
+  wdt:P297 "SS" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:728:1> .
+
+<urn:mdciii:1603:16:728:1> a skos:Concept ;
+  rdfs:label "1603:16:728:1" ;
+  skos:related <urn:mdciii:1603:16:728:0> ;
+  skos:related <urn:mdciii:1603:16:728:2> .
+
+<urn:mdciii:1603:16:728:2> a skos:Concept ;
+  rdfs:label "1603:16:728:2" ;
+  skos:related <urn:mdciii:1603:16:728:1> .
+
+<urn:mdciii:1603:16:729:0> a skos:Concept ;
+  rdfs:label "1603:16:729:0" ;
+  wdt:P2082 "729" ;
+  wdt:P299 "729" ;
+  wdt:P298 "SDN" ;
+  wdt:P297 "SD" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:729:1> .
+
+<urn:mdciii:1603:16:729:1> a skos:Concept ;
+  rdfs:label "1603:16:729:1" ;
+  skos:related <urn:mdciii:1603:16:729:0> ;
+  skos:related <urn:mdciii:1603:16:729:2> .
+
+<urn:mdciii:1603:16:729:2> a skos:Concept ;
+  rdfs:label "1603:16:729:2" ;
+  skos:related <urn:mdciii:1603:16:729:1> .
+
+<urn:mdciii:1603:16:732:0> a skos:Concept ;
+  rdfs:label "1603:16:732:0" ;
+  wdt:P2082 "732" ;
+  wdt:P299 "732" ;
+  wdt:P298 "ESH" ;
+  wdt:P297 "EH" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:732:1> .
+
+<urn:mdciii:1603:16:732:1> a skos:Concept ;
+  rdfs:label "1603:16:732:1" ;
+  skos:related <urn:mdciii:1603:16:732:0> .
+
+<urn:mdciii:1603:16:740:0> a skos:Concept ;
+  rdfs:label "1603:16:740:0" ;
+  wdt:P2082 "740" ;
+  wdt:P299 "740" ;
+  wdt:P298 "SUR" ;
+  wdt:P297 "SR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:740:1> .
+
+<urn:mdciii:1603:16:740:1> a skos:Concept ;
+  rdfs:label "1603:16:740:1" ;
+  skos:related <urn:mdciii:1603:16:740:0> ;
+  skos:related <urn:mdciii:1603:16:740:2> .
+
+<urn:mdciii:1603:16:740:2> a skos:Concept ;
+  rdfs:label "1603:16:740:2" ;
+  skos:related <urn:mdciii:1603:16:740:1> .
+
+<urn:mdciii:1603:16:748:0> a skos:Concept ;
+  rdfs:label "1603:16:748:0" ;
+  wdt:P2082 "748" ;
+  wdt:P299 "748" ;
+  wdt:P298 "SWZ" ;
+  wdt:P297 "SZ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:748:1> .
+
+<urn:mdciii:1603:16:748:1> a skos:Concept ;
+  rdfs:label "1603:16:748:1" ;
+  skos:related <urn:mdciii:1603:16:748:0> ;
+  skos:related <urn:mdciii:1603:16:748:2> .
+
+<urn:mdciii:1603:16:748:2> a skos:Concept ;
+  rdfs:label "1603:16:748:2" ;
+  skos:related <urn:mdciii:1603:16:748:1> .
+
+<urn:mdciii:1603:16:760:0> a skos:Concept ;
+  rdfs:label "1603:16:760:0" ;
+  wdt:P2082 "760" ;
+  wdt:P299 "760" ;
+  wdt:P298 "SYR" ;
+  wdt:P297 "SY" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:760:1> .
+
+<urn:mdciii:1603:16:760:1> a skos:Concept ;
+  rdfs:label "1603:16:760:1" ;
+  skos:related <urn:mdciii:1603:16:760:0> ;
+  skos:related <urn:mdciii:1603:16:760:2> .
+
+<urn:mdciii:1603:16:760:2> a skos:Concept ;
+  rdfs:label "1603:16:760:2" ;
+  skos:related <urn:mdciii:1603:16:760:1> ;
+  skos:related <urn:mdciii:1603:16:760:3> .
+
+<urn:mdciii:1603:16:760:3> a skos:Concept ;
+  rdfs:label "1603:16:760:3" ;
+  skos:related <urn:mdciii:1603:16:760:2> .
+
+<urn:mdciii:1603:16:764:0> a skos:Concept ;
+  rdfs:label "1603:16:764:0" ;
+  wdt:P2082 "764" ;
+  wdt:P299 "764" ;
+  wdt:P298 "THA" ;
+  wdt:P297 "TH" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:764:1> .
+
+<urn:mdciii:1603:16:764:1> a skos:Concept ;
+  rdfs:label "1603:16:764:1" ;
+  skos:related <urn:mdciii:1603:16:764:0> ;
+  skos:related <urn:mdciii:1603:16:764:2> .
+
+<urn:mdciii:1603:16:764:2> a skos:Concept ;
+  rdfs:label "1603:16:764:2" ;
+  skos:related <urn:mdciii:1603:16:764:1> ;
+  skos:related <urn:mdciii:1603:16:764:3> .
+
+<urn:mdciii:1603:16:764:3> a skos:Concept ;
+  rdfs:label "1603:16:764:3" ;
+  skos:related <urn:mdciii:1603:16:764:2> .
+
+<urn:mdciii:1603:16:768:0> a skos:Concept ;
+  rdfs:label "1603:16:768:0" ;
+  wdt:P2082 "768" ;
+  wdt:P299 "768" ;
+  wdt:P298 "TGO" ;
+  wdt:P297 "TG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:768:1> .
+
+<urn:mdciii:1603:16:768:1> a skos:Concept ;
+  rdfs:label "1603:16:768:1" ;
+  skos:related <urn:mdciii:1603:16:768:0> ;
+  skos:related <urn:mdciii:1603:16:768:2> .
+
+<urn:mdciii:1603:16:768:2> a skos:Concept ;
+  rdfs:label "1603:16:768:2" ;
+  skos:related <urn:mdciii:1603:16:768:1> ;
+  skos:related <urn:mdciii:1603:16:768:3> .
+
+<urn:mdciii:1603:16:768:3> a skos:Concept ;
+  rdfs:label "1603:16:768:3" ;
+  skos:related <urn:mdciii:1603:16:768:2> .
+
+<urn:mdciii:1603:16:776:0> a skos:Concept ;
+  rdfs:label "1603:16:776:0" ;
+  wdt:P2082 "776" ;
+  wdt:P299 "776" ;
+  wdt:P298 "TON" ;
+  wdt:P297 "TO" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:776:1> .
+
+<urn:mdciii:1603:16:776:1> a skos:Concept ;
+  rdfs:label "1603:16:776:1" ;
+  skos:related <urn:mdciii:1603:16:776:0> ;
+  skos:related <urn:mdciii:1603:16:776:2> .
+
+<urn:mdciii:1603:16:776:2> a skos:Concept ;
+  rdfs:label "1603:16:776:2" ;
+  skos:related <urn:mdciii:1603:16:776:1> ;
+  skos:related <urn:mdciii:1603:16:776:3> .
+
+<urn:mdciii:1603:16:776:3> a skos:Concept ;
+  rdfs:label "1603:16:776:3" ;
+  skos:related <urn:mdciii:1603:16:776:2> .
+
+<urn:mdciii:1603:16:780:0> a skos:Concept ;
+  rdfs:label "1603:16:780:0" ;
+  wdt:P2082 "780" ;
+  wdt:P299 "780" ;
+  wdt:P298 "TTO" ;
+  wdt:P297 "TT" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:780:1> .
+
+<urn:mdciii:1603:16:780:1> a skos:Concept ;
+  rdfs:label "1603:16:780:1" ;
+  skos:related <urn:mdciii:1603:16:780:0> .
+
+<urn:mdciii:1603:16:792:0> a skos:Concept ;
+  rdfs:label "1603:16:792:0" ;
+  wdt:P2082 "792" ;
+  wdt:P299 "792" ;
+  wdt:P298 "TUR" ;
+  wdt:P297 "TR" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:792:1> .
+
+<urn:mdciii:1603:16:792:1> a skos:Concept ;
+  rdfs:label "1603:16:792:1" ;
+  skos:related <urn:mdciii:1603:16:792:0> ;
+  skos:related <urn:mdciii:1603:16:792:2> .
+
+<urn:mdciii:1603:16:792:2> a skos:Concept ;
+  rdfs:label "1603:16:792:2" ;
+  skos:related <urn:mdciii:1603:16:792:1> .
+
+<urn:mdciii:1603:16:796:0> a skos:Concept ;
+  rdfs:label "1603:16:796:0" ;
+  wdt:P2082 "796" ;
+  wdt:P299 "796" ;
+  wdt:P298 "TCA" ;
+  wdt:P297 "TC" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:796:1> .
+
+<urn:mdciii:1603:16:796:1> a skos:Concept ;
+  rdfs:label "1603:16:796:1" ;
+  skos:related <urn:mdciii:1603:16:796:0> .
+
+<urn:mdciii:1603:16:800:0> a skos:Concept ;
+  rdfs:label "1603:16:800:0" ;
+  wdt:P2082 "800" ;
+  wdt:P299 "800" ;
+  wdt:P298 "UGA" ;
+  wdt:P297 "UG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:800:1> .
+
+<urn:mdciii:1603:16:800:1> a skos:Concept ;
+  rdfs:label "1603:16:800:1" ;
+  skos:related <urn:mdciii:1603:16:800:0> ;
+  skos:related <urn:mdciii:1603:16:800:2> .
+
+<urn:mdciii:1603:16:800:2> a skos:Concept ;
+  rdfs:label "1603:16:800:2" ;
+  skos:related <urn:mdciii:1603:16:800:1> ;
+  skos:related <urn:mdciii:1603:16:800:3> .
+
+<urn:mdciii:1603:16:800:3> a skos:Concept ;
+  rdfs:label "1603:16:800:3" ;
+  skos:related <urn:mdciii:1603:16:800:2> ;
+  skos:related <urn:mdciii:1603:16:800:4> .
+
+<urn:mdciii:1603:16:800:4> a skos:Concept ;
+  rdfs:label "1603:16:800:4" ;
+  skos:related <urn:mdciii:1603:16:800:3> .
+
+<urn:mdciii:1603:16:804:0> a skos:Concept ;
+  rdfs:label "1603:16:804:0" ;
+  wdt:P2082 "804" ;
+  wdt:P299 "804" ;
+  wdt:P298 "UKR" ;
+  wdt:P297 "UA" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:804:1> .
+
+<urn:mdciii:1603:16:804:1> a skos:Concept ;
+  rdfs:label "1603:16:804:1" ;
+  skos:related <urn:mdciii:1603:16:804:0> ;
+  skos:related <urn:mdciii:1603:16:804:2> .
+
+<urn:mdciii:1603:16:804:2> a skos:Concept ;
+  rdfs:label "1603:16:804:2" ;
+  skos:related <urn:mdciii:1603:16:804:1> ;
+  skos:related <urn:mdciii:1603:16:804:3> .
+
+<urn:mdciii:1603:16:804:3> a skos:Concept ;
+  rdfs:label "1603:16:804:3" ;
+  skos:related <urn:mdciii:1603:16:804:2> .
+
+<urn:mdciii:1603:16:818:0> a skos:Concept ;
+  rdfs:label "1603:16:818:0" ;
+  wdt:P2082 "818" ;
+  wdt:P299 "818" ;
+  wdt:P298 "EGY" ;
+  wdt:P297 "EG" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:818:1> .
+
+<urn:mdciii:1603:16:818:1> a skos:Concept ;
+  rdfs:label "1603:16:818:1" ;
+  skos:related <urn:mdciii:1603:16:818:0> ;
+  skos:related <urn:mdciii:1603:16:818:2> .
+
+<urn:mdciii:1603:16:818:2> a skos:Concept ;
+  rdfs:label "1603:16:818:2" ;
+  skos:related <urn:mdciii:1603:16:818:1> .
+
+<urn:mdciii:1603:16:834:0> a skos:Concept ;
+  rdfs:label "1603:16:834:0" ;
+  wdt:P2082 "834" ;
+  wdt:P299 "834" ;
+  wdt:P298 "TZA" ;
+  wdt:P297 "TZ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:834:1> .
+
+<urn:mdciii:1603:16:834:1> a skos:Concept ;
+  rdfs:label "1603:16:834:1" ;
+  skos:related <urn:mdciii:1603:16:834:0> ;
+  skos:related <urn:mdciii:1603:16:834:2> .
+
+<urn:mdciii:1603:16:834:2> a skos:Concept ;
+  rdfs:label "1603:16:834:2" ;
+  skos:related <urn:mdciii:1603:16:834:1> ;
+  skos:related <urn:mdciii:1603:16:834:3> .
+
+<urn:mdciii:1603:16:834:3> a skos:Concept ;
+  rdfs:label "1603:16:834:3" ;
+  skos:related <urn:mdciii:1603:16:834:2> .
+
+<urn:mdciii:1603:16:850:0> a skos:Concept ;
+  rdfs:label "1603:16:850:0" ;
+  wdt:P2082 "850" ;
+  wdt:P299 "850" ;
+  wdt:P298 "VIR" ;
+  wdt:P297 "VI" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:850:1> .
+
+<urn:mdciii:1603:16:850:1> a skos:Concept ;
+  rdfs:label "1603:16:850:1" ;
+  skos:related <urn:mdciii:1603:16:850:0> ;
+  skos:related <urn:mdciii:1603:16:850:2> .
+
+<urn:mdciii:1603:16:850:2> a skos:Concept ;
+  rdfs:label "1603:16:850:2" ;
+  skos:related <urn:mdciii:1603:16:850:1> .
+
+<urn:mdciii:1603:16:854:0> a skos:Concept ;
+  rdfs:label "1603:16:854:0" ;
+  wdt:P2082 "854" ;
+  wdt:P299 "854" ;
+  wdt:P298 "BFA" ;
+  wdt:P297 "BF" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:854:1> .
+
+<urn:mdciii:1603:16:854:1> a skos:Concept ;
+  rdfs:label "1603:16:854:1" ;
+  skos:related <urn:mdciii:1603:16:854:0> ;
+  skos:related <urn:mdciii:1603:16:854:2> .
+
+<urn:mdciii:1603:16:854:2> a skos:Concept ;
+  rdfs:label "1603:16:854:2" ;
+  skos:related <urn:mdciii:1603:16:854:1> ;
+  skos:related <urn:mdciii:1603:16:854:3> .
+
+<urn:mdciii:1603:16:854:3> a skos:Concept ;
+  rdfs:label "1603:16:854:3" ;
+  skos:related <urn:mdciii:1603:16:854:2> .
+
+<urn:mdciii:1603:16:858:0> a skos:Concept ;
+  rdfs:label "1603:16:858:0" ;
+  wdt:P2082 "858" ;
+  wdt:P299 "858" ;
+  wdt:P298 "URY" ;
+  wdt:P297 "UY" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:858:1> .
+
+<urn:mdciii:1603:16:858:1> a skos:Concept ;
+  rdfs:label "1603:16:858:1" ;
+  skos:related <urn:mdciii:1603:16:858:0> ;
+  skos:related <urn:mdciii:1603:16:858:2> .
+
+<urn:mdciii:1603:16:858:2> a skos:Concept ;
+  rdfs:label "1603:16:858:2" ;
+  skos:related <urn:mdciii:1603:16:858:1> .
+
+<urn:mdciii:1603:16:860:0> a skos:Concept ;
+  rdfs:label "1603:16:860:0" ;
+  wdt:P2082 "860" ;
+  wdt:P299 "860" ;
+  wdt:P298 "UZB" ;
+  wdt:P297 "UZ" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:860:1> .
+
+<urn:mdciii:1603:16:860:1> a skos:Concept ;
+  rdfs:label "1603:16:860:1" ;
+  skos:related <urn:mdciii:1603:16:860:0> ;
+  skos:related <urn:mdciii:1603:16:860:2> .
+
+<urn:mdciii:1603:16:860:2> a skos:Concept ;
+  rdfs:label "1603:16:860:2" ;
+  skos:related <urn:mdciii:1603:16:860:1> .
+
+<urn:mdciii:1603:16:862:0> a skos:Concept ;
+  rdfs:label "1603:16:862:0" ;
+  wdt:P2082 "862" ;
+  wdt:P299 "862" ;
+  wdt:P298 "VEN" ;
+  wdt:P297 "VE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:862:1> .
+
+<urn:mdciii:1603:16:862:1> a skos:Concept ;
+  rdfs:label "1603:16:862:1" ;
+  skos:related <urn:mdciii:1603:16:862:0> ;
+  skos:related <urn:mdciii:1603:16:862:2> .
+
+<urn:mdciii:1603:16:862:2> a skos:Concept ;
+  rdfs:label "1603:16:862:2" ;
+  skos:related <urn:mdciii:1603:16:862:1> ;
+  skos:related <urn:mdciii:1603:16:862:3> .
+
+<urn:mdciii:1603:16:862:3> a skos:Concept ;
+  rdfs:label "1603:16:862:3" ;
+  skos:related <urn:mdciii:1603:16:862:2> .
+
+<urn:mdciii:1603:16:887:0> a skos:Concept ;
+  rdfs:label "1603:16:887:0" ;
+  wdt:P2082 "887" ;
+  wdt:P299 "887" ;
+  wdt:P298 "YEM" ;
+  wdt:P297 "YE" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:887:1> .
+
+<urn:mdciii:1603:16:887:1> a skos:Concept ;
+  rdfs:label "1603:16:887:1" ;
+  skos:related <urn:mdciii:1603:16:887:0> ;
+  skos:related <urn:mdciii:1603:16:887:2> .
+
+<urn:mdciii:1603:16:887:2> a skos:Concept ;
+  rdfs:label "1603:16:887:2" ;
+  skos:related <urn:mdciii:1603:16:887:1> ;
+  skos:related <urn:mdciii:1603:16:887:3> .
+
+<urn:mdciii:1603:16:887:3> a skos:Concept ;
+  rdfs:label "1603:16:887:3" ;
+  skos:related <urn:mdciii:1603:16:887:2> .
+
+<urn:mdciii:1603:16:894:0> a skos:Concept ;
+  rdfs:label "1603:16:894:0" ;
+  wdt:P2082 "894" ;
+  wdt:P299 "894" ;
+  wdt:P298 "ZMB" ;
+  wdt:P297 "ZM" ;
+  skos:topConceptOf <urn:mdciii:1603:16:1:0()> ;
+  skos:related <urn:mdciii:1603:16:894:1> .
+
+<urn:mdciii:1603:16:894:1> a skos:Concept ;
+  rdfs:label "1603:16:894:1" ;
+  skos:related <urn:mdciii:1603:16:894:0> ;
+  skos:related <urn:mdciii:1603:16:894:2> .
+
+<urn:mdciii:1603:16:894:2> a skos:Concept ;
+  rdfs:label "1603:16:894:2" ;
+  skos:related <urn:mdciii:1603:16:894:1> .
+

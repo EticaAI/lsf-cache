@@ -393,9 +393,16 @@ __temp_download_external_cod_data() {
   --punctum-separato-ad-tab \
   >"${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl"
 
+# officina/1603/16/1/.gitkeep
+"${ROOTDIR}/999999999/0/999999999_7200235.py" \
+  --methodus='cod_ab_index_levels_ttl' \
+  --numerordinatio-praefixo="1603_16" \
+  >"${ROOTDIR}/999999/1603/16/1/0/1603_16_1_0.no1.owl.ttl"
+
 rapper --quiet --input=turtle --output=dot \
   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
   >"${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
+
 rapper --quiet --input=turtle --output=dot \
   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
   >"${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
