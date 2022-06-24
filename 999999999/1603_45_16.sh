@@ -375,7 +375,7 @@ __temp_download_external_cod_data() {
 # __temp_download_external_cod_data
 # exit 1
 # echo "all"
-# bootstrap_1603_45_16__all "1603_45_16"
+bootstrap_1603_45_16__all "1603_45_16"
 # bootstrap_1603_45_16__item_no1 "1603_45_16" "24" "AGO" "AO" "1" "1" "0"
 # bootstrap_1603_45_16__item_rdf "1603_45_16" "24" "AGO" "AO" "3" "1" "0"
 # __temp_preproces_quicktest_1603_16_24
@@ -399,15 +399,14 @@ __temp_download_external_cod_data() {
   --numerordinatio-praefixo="1603_16" \
   >"${ROOTDIR}/999999/1603/16/1/0/1603_16_1_0.no1.owl.ttl"
 
-rapper --quiet --input=turtle --output=dot \
-  "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
-  >"${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
+# Very basic validation
+rapper --input=turtle --count "${ROOTDIR}/999999/1603/16/1/0/1603_16_1_0.no1.owl.ttl"
 
 rapper --quiet --input=turtle --output=dot \
   "${ROOTDIR}/999999/1603/45/16/1603_45_16.index.skos.ttl" \
   >"${ROOTDIR}/999999/1603/45/16/1603_45_16.index.dot"
 
-exit 0
+# exit 0
 
 # ./999999999/0/1603_1.py --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 --ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv | rapper --quiet --input=turtle --output=turtle /dev/fd/0 > /home/fititnt/Downloads/test.ttl
 # ./999999999/0/1603_1.py --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 --ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv | rapper --quiet --input=turtle --output=dot /dev/fd/0 > /home/fititnt/Downloads/test.dot

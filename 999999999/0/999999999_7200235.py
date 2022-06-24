@@ -1118,6 +1118,10 @@ def hxltm_carricato__cod_ab_levels_ttl(
     @see https://www.wikidata.org/wiki/EntitySchema:E49
     @see https://www.wikidata.org/wiki/Wikidata:List_of_properties/geography
     @see https://www.wikidata.org/wiki/Special:ListDatatypes
+    @see - wikidata.org/wiki/Wikidata:List_of_properties/transitive_relation
+           - located in the administrative territorial entity (P131)
+           - contains administrative territorial entity (P150)
+
 
     Args:
         caput (list): _description_
@@ -1182,25 +1186,47 @@ def hxltm_carricato__cod_ab_levels_ttl(
     # return []
 
     paginae.append('# [{0}]'.format(basi))
+    paginae.append(
+        '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .')
     paginae.append('@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .')
+    paginae.append('@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .')
+    paginae.append('@prefix owl: <http://www.w3.org/2002/07/owl#> .')
     paginae.append('@prefix skos: <http://www.w3.org/2004/02/skos/core#> .')
     # paginae.append('@prefix p: <http://www.wikidata.org/prop/> .')
-    paginae.append('@prefix wdt: <http://www.wikidata.org/prop/direct/> .')
+    # paginae.append('@prefix wdt: <http://www.wikidata.org/prop/direct/> .')
+    paginae.append('@prefix p: <http://www.wikidata.org/prop/> .')
     paginae.append('')
-    paginae.append(
-        '# @TODO: need decide if administrative boundaries levels \n#'
-        ' are only related or  skos:broaderTransitive + skos:narrowerTransitive'
-    )
+
+    # @see stackoverflow.com/questions/55506715/nested-skos-concept-schemes
+
+    paginae.append(f"<urn:mdciii:{basi}()> a skos:ConceptScheme ;\n"
+                   f"  rdfs:label \"({basi})\" .")
+
     paginae.append('')
-    paginae.append("<urn:mdciii:{0}:1:0()> a skos:ConceptScheme ;\n"
-                   "  rdfs:label \"({0})\" ;".format(
+    paginae.append(f"<urn:mdciii:{basi}:1()> a skos:Collection ;\n"
+                   f"  rdfs:label \"({basi}:1)\" ;\n"
+                   f"  skos:inScheme <urn:mdciii:{basi}()> ;\n"
+                   f"  skos:member <urn:mdciii:{basi}:1:0()> ."
+                   )
+
+    paginae.append('')
+    # This pattern is used to reference full URLs and force tools undestand
+    # that the path is an OWL ontology
+    paginae.append(f"<urn:mdciii:{basi}:1:0(1)> a owl:Ontology .")
+
+    paginae.append('')
+    paginae.append("<urn:mdciii:{0}:1:0()> a skos:Collection ;\n"
+                   "  rdfs:label \"({0}:1)\" ;".format(
                        basi))
-    #    "  skos:prefLabel \"{0}\"@mul-Zyyy-x-n1603 ;".format(
-    #        basi))
-    paginae.append("  skos:hasTopConcept\n    {0} .".format(
+    paginae.append("  skos:member\n    {0} .".format(
         " ,\n    ".join(
-            map(lambda x: f'<urn:mdciii:{x}:0>', numerodiatio_collecti))
+            map(lambda x: f'<urn:mdciii:{x}()>', numerodiatio_collecti))
     ))
+    # We're not using skos:hasTopConcept anymore, but skos:member
+    # paginae.append("  skos:hasTopConcept\n    {0} .".format(
+    #     " ,\n    ".join(
+    #         map(lambda x: f'<urn:mdciii:{x}:0>', numerodiatio_collecti))
+    # ))
 
     paginae.append('')
 
@@ -1216,88 +1242,102 @@ def hxltm_carricato__cod_ab_levels_ttl(
         _paginae_quintus = []
         _paginae_sextus = []
 
+        # paginae.append(
+            # f'<urn:mdciii:{numerodiatio_re}:0()> a skos:Collection')
+        paginae.append(
+            f"<urn:mdciii:{numerodiatio_re}()> a skos:Collection ;\n"
+            f"  rdfs:label \"({numerodiatio_re}:0)\" ;\n"
+            f"  skos:member <urn:mdciii:{numerodiatio_re}:0> ."
+        )
+        paginae.append('  # @TODO add lower administrative levels here')
+        paginae.append('')
+        # _paginae_basi.append(
+        #     f'  rdfs:label "{numerodiatio_re}:0"')
+
         _paginae_basi.append(
             f'<urn:mdciii:{numerodiatio_re}:0> a skos:Concept')
         _paginae_basi.append(
             f'  rdfs:label "{numerodiatio_re}:0"')
         # _paginae_basi.append(
         #     f'  skos:prefLabel "{numerodiatio_re}"@mul-Zyyy-x-n1603')
-        _paginae_basi.append(f'  wdt:P2082 "{linea[1].zfill(3)}"')
+        _paginae_basi.append(f'  p:P2082 "{linea[1].zfill(3)}"')
         # ISO 3166-1 numeric
-        _paginae_basi.append(f'  wdt:P299 "{linea[1].zfill(3)}"')
-        _paginae_basi.append(f'  wdt:P298 "{linea[2]}"')
-        _paginae_basi.append(f'  wdt:P297 "{linea[3]}"')
-        _paginae_basi.append(
-            f'  skos:topConceptOf <urn:mdciii:{basi}:1:0()>')
+        _paginae_basi.append(f'  p:P299 "{linea[1].zfill(3)}"')
+        _paginae_basi.append(f'  p:P298 "{linea[2]}"')
+        _paginae_basi.append(f'  p:P297 "{linea[3]}"')
+
+        # Disablig topConceptOf
+        # _paginae_basi.append(
+        #     f'  skos:topConceptOf <urn:mdciii:{basi}:1:0()>')
         # f'  skos:topConceptOf <urn:{basi}>')
 
         # ordo_nunc = 1
 
         if ordo_maximo >= 1:
-            _paginae_basi.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:1>')
+            # _paginae_basi.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:1()>')
 
             _paginae_primus.append(
-                f'<urn:mdciii:{numerodiatio_re}:1> a skos:Concept')
+                f'<urn:mdciii:{numerodiatio_re}:1()> a skos:Collection')
             _paginae_primus.append(
-                f'  rdfs:label "{numerodiatio_re}:1"')
-            _paginae_primus.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:0>')
+                f'  rdfs:label "({numerodiatio_re}:1)"')
+            # _paginae_primus.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:0>')
 
         if ordo_maximo >= 2:
-            _paginae_primus.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:2>')
+            # _paginae_primus.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:2>')
 
             _paginae_secundus.append(
-                f'<urn:mdciii:{numerodiatio_re}:2> a skos:Concept')
+                f'<urn:mdciii:{numerodiatio_re}:2()> a skos:Collection')
             _paginae_secundus.append(
-                f'  rdfs:label "{numerodiatio_re}:2"')
-            _paginae_secundus.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:1>')
+                f'  rdfs:label "({numerodiatio_re}:2)"')
+            # _paginae_secundus.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:1>')
 
         if ordo_maximo >= 3:
-            _paginae_secundus.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:3>')
+            # _paginae_secundus.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:3>')
 
             _paginae_tertius.append(
-                f'<urn:mdciii:{numerodiatio_re}:3> a skos:Concept')
+                f'<urn:mdciii:{numerodiatio_re}:3()> a skos:Collection')
             _paginae_tertius.append(
-                f'  rdfs:label "{numerodiatio_re}:3"')
-            _paginae_tertius.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:2>')
+                f'  rdfs:label "({numerodiatio_re}:3)"')
+            # _paginae_tertius.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:2>')
 
         if ordo_maximo >= 4:
-            _paginae_tertius.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:4>')
+            # _paginae_tertius.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:4>')
 
             _paginae_quartus.append(
-                f'<urn:mdciii:{numerodiatio_re}:4> a skos:Concept')
+                f'<urn:mdciii:{numerodiatio_re}:4> a skos:Collection')
             _paginae_quartus.append(
-                f'  rdfs:label "{numerodiatio_re}:4"')
-            _paginae_quartus.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:3>')
+                f'  rdfs:label "{numerodiatio_re}:4()"')
+            # _paginae_quartus.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:3>')
 
         if ordo_maximo >= 5:
             _paginae_quartus.append(
                 f'  skos:related <urn:mdciii:{numerodiatio_re}:5>')
 
             _paginae_quintus.append(
-                f'<urn:mdciii:{numerodiatio_re}:5> a skos:Concept')
+                f'<urn:mdciii:{numerodiatio_re}:5> a skos:Collection')
             _paginae_quintus.append(
-                f'  rdfs:label "{numerodiatio_re}:5"')
-            _paginae_quintus.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:4>')
+                f'  rdfs:label "{numerodiatio_re}:5()"')
+            # _paginae_quintus.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:4>')
 
         if ordo_maximo == 6:
             _paginae_quintus.append(
                 f'  skos:related <urn:mdciii:{numerodiatio_re}:6>')
 
             _paginae_sextus.append(
-                f'<urn:mdciii:{numerodiatio_re}:6> a skos:Concept')
+                f'<urn:mdciii:{numerodiatio_re}:6()> a skos:Collection')
             _paginae_sextus.append(
                 f'  rdfs:label "{numerodiatio_re}:6"')
-            _paginae_sextus.append(
-                f'  skos:related <urn:mdciii:{numerodiatio_re}:5>')
+            # _paginae_sextus.append(
+            #     f'  skos:related <urn:mdciii:{numerodiatio_re}:5>')
 
         if ordo_maximo > 6:
             raise ValueError
