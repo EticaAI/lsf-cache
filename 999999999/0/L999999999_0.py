@@ -4035,7 +4035,7 @@ class HXLHashtagSimplici:
             # print('item_meta    ', item_meta)
             if strictum:
                 raise SyntaxError('{0} <{1}> <{2}>'.format(
-                    self.hashtag, numerordinatio, item_meta)
+                    self.hashtag, caput_contextui, item_meta)
                 )
             return 'qcc-Zxxx-r-aDEVNULL-abnop-anop-x-error'
 

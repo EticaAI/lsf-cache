@@ -56,6 +56,8 @@
 
 from ast import Try
 from genericpath import exists
+import glob
+from multiprocessing.sharedctypes import Value
 import sys
 import os
 import argparse
@@ -172,6 +174,18 @@ Data apothēcae . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
     {0} --methodus='data-apothecae' \
 --data-apothecae-ex-archivo='999999/0/apothecae-list.txt' \
 --data-apothecae-ad='apothecae.sqlite'
+
+(Data catalog / Datapackage, ex-suffixis, ex-praefixis)
+
+    {0} --methodus='data-apothecae' --data-apothecae-ad-stdout \
+--data-apothecae-formato='catalog' \
+--data-apothecae-ex-suffixis='no1.owl.ttl,no11.owl.ttl,no1.skos.ttl,\
+no11.skos.ttl' --data-apothecae-ex-praefixis='1603'
+
+    {0} --methodus='data-apothecae' --data-apothecae-ad-stdout \
+--data-apothecae-formato='datapackage' \
+--data-apothecae-ex-suffixis='no1.tm.hxl.csv,no11.tm.hxl.csv' \
+--data-apothecae-ex-praefixis='1603_1_1,1603_16_1'
 
 Dictionaria Numerordĭnātĭo (deprecated) . . . . . . . . . . . . . . . . . . . .
     {0} --methodus='deprecatum-dictionaria-numerordinatio'
@@ -335,6 +349,56 @@ def numerordinatio_lineam_hxml5_details(rem: dict, title: str = None) -> str:
 #     # resultatum.append('</ul>')
 
 #     return resultatum
+
+
+def numerordinatio_ex_praefixis(
+        ex_praefixis: list, ex_suffixis: list,
+        numerordinatio_basim: str) -> list:
+
+    _ex_praefixis = []
+    resultatum = []
+    _resultatum = []
+    for item in ex_praefixis:
+        _pattern = item.replace('_', '/').replace(':', '/')
+        _pattern.strip('_')
+        _ex_praefixis.append(_pattern + '/')
+    _ex_praefixis = tuple(filter(len, _ex_praefixis))
+    _ex_suffixis = tuple(filter(len, ex_suffixis))
+
+    for file in glob.iglob(r'{0}/**/*.*'.format(
+            numerordinatio_basim), recursive=True):
+        # print(file)
+        file_without_prefix = file.replace(numerordinatio_basim + '/', '')
+        # print(file_without_prefix)
+        if not file_without_prefix.startswith(_ex_praefixis):
+            # print('Skip out of prefix directories', file_without_prefix)
+            continue
+        if not file_without_prefix.endswith(_ex_suffixis):
+            # print('Skip out of suffix files', file_without_prefix)
+            continue
+        _filename = os.path.basename(file)
+        _numerodinatio = _filename.split('.')[0]
+        # print('foi', file_without_prefix)
+        # print(os.path.basename(file))
+        # print(_numerodinatio)
+        _resultatum.append(_numerodinatio)
+
+    def _sort_numerodinatio_clavem_neo(item):
+        parts = item.split('_')
+        for i in range(len(parts)):
+            parts[i] = int(parts[i])
+        return tuple(parts)
+
+    resultatum = sorted(
+        list(set(_resultatum)), key=_sort_numerodinatio_clavem_neo)
+    # resultatum = sorted(list(set(_resultatum)), reverse=False)
+
+    # for item in resultatum:
+    #     print(item)
+
+    # raise NotImplementedError(ex_praefixis, _ex_praefixis)
+
+    return resultatum
 
 
 def numerordinatio_nomen(
@@ -549,6 +613,14 @@ def sort_numerodinatio_clavem(item):
     Returns:
         _type_: _description_
     """
+    # @TODO this next function is simpler and seems to work better. Needs more
+    #        testing. But already used with numerordinatio_ex_praefixis()
+    # def _sort_numerodinatio_clavem_neo(item):
+    #     parts = item.split('_')
+    #     for i in range(len(parts)):
+    #         parts[i] = int(parts[i])
+    #     return tuple(parts)
+
     # Use case status['librarium'].items()
     ordo_simples = 0
     # codex_crudum = item[0]
@@ -4015,9 +4087,17 @@ class DataApothecae:
     def __init__(
         self,
         data_apothecae_ex: list,
-        data_apothecae_ad: str = 'apothecae.datapackage.json',
+        data_apothecae_ad: Union[bool, str] = 'apothecae.datapackage.json',
         data_apothecae_formato: str = None
     ):
+
+        # NOTE: the command line options for strout and to auto detect
+        #       numerordinatios from paths is done outsite DataApothecae
+
+        if not data_apothecae_ad and data_apothecae_formato is None:
+            raise SyntaxError(
+                'data_apothecae_ad et data_apothecae_formato nullus? '
+                '--data-apothecae-formato="<data-apothecae-formato>"')
 
         self.data_apothecae_ex = data_apothecae_ex
         self.data_apothecae_ad = data_apothecae_ad
@@ -4030,9 +4110,13 @@ class DataApothecae:
             elif data_apothecae_ad.endswith('.json'):
                 self.data_apothecae_formato = 'datapackage'
             elif data_apothecae_ad.endswith('.xml'):
-                self.data_apothecae_formato = 'catalog_v001'
+                self.data_apothecae_formato = 'catalog'
             else:
                 raise ValueError('--data-apothecae-formato ?')
+
+        if not data_apothecae_ad and self.data_apothecae_formato == 'sqlite':
+            raise SyntaxError(
+                'sqlite not work with stdout. Please specify a path')
 
         self.initiari()
 
@@ -4069,7 +4153,7 @@ class DataApothecae:
             # return self.praeparatio_datapackage(libraria)
             return self.praeparatio_datapackage()
 
-        if self.data_apothecae_formato == 'catalog_v001':
+        if self.data_apothecae_formato == 'catalog':
             # return self.praeparatio_datapackage(libraria)
             return self.praeparatio_catalog_v001()
 
@@ -4156,14 +4240,19 @@ class DataApothecae:
                 for lineam in paginae:
                     archivum.write(lineam + "\n")
         else:
-            _path_archivum = NUMERORDINATIO_BASIM + '/' + self.data_apothecae_ad
-            # self.resultatum.append('TODO praeparatio_datapackage')
-            self.resultatum.append(_path_archivum)
-
-            with open(_path_archivum, 'w') as archivum:
-                # Further file processing goes here
+            if self.data_apothecae_ad is False:
                 for lineam in paginae:
-                    archivum.write(lineam + "\n")
+                    print(lineam)
+            else:
+                _path_archivum = \
+                    NUMERORDINATIO_BASIM + '/' + self.data_apothecae_ad
+                # self.resultatum.append('TODO praeparatio_datapackage')
+                self.resultatum.append(_path_archivum)
+
+                with open(_path_archivum, 'w') as archivum:
+                    # Further file processing goes here
+                    for lineam in paginae:
+                        archivum.write(lineam + "\n")
 
     def praeparatio_datapackage(
             self,
@@ -4205,14 +4294,18 @@ class DataApothecae:
                 for lineam in paginae:
                     archivum.write(lineam)
         else:
-            _path_archivum = NUMERORDINATIO_BASIM + '/' + self.data_apothecae_ad
-            # self.resultatum.append('TODO praeparatio_datapackage')
-            self.resultatum.append(_path_archivum)
-
-            with open(_path_archivum, 'w') as archivum:
-                # Further file processing goes here
+            if self.data_apothecae_ad is False:
                 for lineam in paginae:
-                    archivum.write(lineam)
+                    print(lineam)
+            else:
+                _path_archivum = NUMERORDINATIO_BASIM + '/' + self.data_apothecae_ad
+                # self.resultatum.append('TODO praeparatio_datapackage')
+                self.resultatum.append(_path_archivum)
+
+                with open(_path_archivum, 'w') as archivum:
+                    # Further file processing goes here
+                    for lineam in paginae:
+                        archivum.write(lineam)
 
     def praeparatio_sqlite(self):
         """praeparatio_sqlite
@@ -5080,10 +5173,39 @@ class CLI_2600:
         )
 
         data_apothecae.add_argument(
+            '--data-apothecae-ad-stdout',
+            help='Print data-apothecae result. '
+            'Requires --data-apothecae-formato',
+            dest='data_apothecae_ad_stdout',
+            # nargs='?',
+            default=False,
+            action='store_true'
+        )
+
+        data_apothecae.add_argument(
             '--data-apothecae-ex',
             help='Comma-separated list of dictionaries to initialize '
             'the data warehouse. ',
             dest='data_apothecae_ex',
+            type=lambda x: x.split(',')
+        )
+
+        data_apothecae.add_argument(
+            '--data-apothecae-ex-praefixis',
+            help='Comma-separated list of prefixes of dictionaries '
+            'to initialize the data warehouse. Will search by paths and load'
+            'the ones which de facto exist . Example: "1603_1_1,1603_16_1"',
+            dest='data_apothecae_ex_praefixis',
+            type=lambda x: x.split(',')
+        )
+
+        data_apothecae.add_argument(
+            '--data-apothecae-ex-suffixis',
+            help='Comma-separated list of file suffixes of dictionaries '
+            'to initialize the data warehouse. Used with '
+            '--data-apothecae-ex-praefixis. '
+            'Example: "no1.tm.hxl.csv,no1.owl.ttl"',
+            dest='data_apothecae_ex_suffix',
             type=lambda x: x.split(',')
         )
 
@@ -5101,7 +5223,7 @@ class CLI_2600:
             '--data-apothecae-ad pattern.',
             dest='data_apothecae_formato',
             nargs='?',
-            choices=['datapackage', 'sqlite'],
+            choices=['datapackage', 'sqlite', 'catalog'],
             default=None
         )
 
@@ -5446,7 +5568,24 @@ class CLI_2600:
         #       avoid override something
         if pyargs.methodus == 'data-apothecae':
 
-            if self.pyargs.data_apothecae_ex:
+            if self.pyargs.data_apothecae_ex_praefixis and \
+                    len(self.pyargs.data_apothecae_ex_praefixis) > 0:
+                if self.pyargs.data_apothecae_ex_suffix and \
+                        len(self.pyargs.data_apothecae_ex_suffix):
+                    data_apothecae_ex_suffix = \
+                        self.pyargs.data_apothecae_ex_suffix
+                else:
+                    data_apothecae_ex_suffix = [
+                        '.no1.tm.hxl.csv',
+                        '.no1.owl.ttl',
+                    ]
+
+                data_apothecae_ex = numerordinatio_ex_praefixis(
+                    self.pyargs.data_apothecae_ex_praefixis,
+                    data_apothecae_ex_suffix,
+                    NUMERORDINATIO_BASIM
+                )
+            elif self.pyargs.data_apothecae_ex:
                 data_apothecae_ex = self.pyargs.data_apothecae_ex
             else:
                 # f = open(self.pyargs.data_apothecae_ex_archivo, "r")
@@ -5468,10 +5607,14 @@ class CLI_2600:
 
             # libraria.imprimere_in_datapackage_sqlite()
 
+            data_apothecae_ad = self.pyargs.data_apothecae_ad
+            if self.pyargs.data_apothecae_ad_stdout:
+                data_apothecae_ad = False
+
             data_apothecae = DataApothecae(
                 # self.pyargs.data_apothecae_ex,
                 data_apothecae_ex,
-                data_apothecae_ad=self.pyargs.data_apothecae_ad,
+                data_apothecae_ad=data_apothecae_ad,
                 data_apothecae_formato=self.pyargs.data_apothecae_formato,
             )
 
