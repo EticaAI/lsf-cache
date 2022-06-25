@@ -94,6 +94,7 @@ __EPILOGUM__ = """
 --lingua-divisioni=5 --lingua-paginae=1 \
 | {0} --actionem-sparql --csv --hxltm > 999999/0/test.tm.hxl.csv
 
+# (Brazilian municipality code (P1585))
     printf "P1585\\n" | {0} --actionem-sparql --de=P --query \
 --ex-interlinguis
 
@@ -109,6 +110,13 @@ __EPILOGUM__ = """
 --lingua-divisioni=20 --lingua-paginae=1 --optimum \
 | {0} --actionem-sparql --csv --hxltm --optimum \
 > 999999/0/P1585~P402+P1566+P1937+P6555+P8119.wikiq~1~20.tm.hxl.csv
+
+# @TODO https://www.wikidata.org/wiki/\
+Wikidata:SPARQL_query_service/queries/examples#Countries_sorted_by_population
+
+# country (P17)
+    printf "P17\\n" | {0} --actionem-sparql --de=P --query \
+--ex-interlinguis
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
