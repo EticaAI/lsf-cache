@@ -14,7 +14,7 @@
 #       OPTIONS:  ---
 #
 #  REQUIREMENTS:  - python3
-#                   - pip install openpyxl
+#                   - pip install openpyxl pyyaml
 #          BUGS:  ---
 #         NOTES:  ---
 #       AUTHORS:  Emerson Rocha <rocha[at]ieee.org>
@@ -37,7 +37,7 @@ import csv
 from functools import reduce
 from genericpath import exists
 import json
-from multiprocessing.sharedctypes import Value
+# from multiprocessing.sharedctypes import Value
 # import importlib
 import os
 from pathlib import Path
@@ -53,11 +53,27 @@ from typing import (
     Type,
     Union
 )
-import yaml
 
-from openpyxl import (
-    load_workbook
-)
+# Allow fail if user does not have, but just using part of the tools
+# import yaml
+try:
+    import yaml
+except ModuleNotFoundError:
+    # Error handling
+    pass
+
+# Allow fail if user does not have, but just using part of the tools
+# from openpyxl import (
+#     load_workbook
+# )
+try:
+    from openpyxl import (
+        load_workbook
+    )
+except ModuleNotFoundError:
+    # Error handling
+    pass
+
 
 # pylint --disable=W0511,C0103,C0302,C0116 ./999999999/0/L999999999_0.py
 

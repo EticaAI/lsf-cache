@@ -54,10 +54,10 @@
 
 # @see https://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole
 
-from ast import Try
+# from ast import Try
 from genericpath import exists
 import glob
-from multiprocessing.sharedctypes import Value
+# from multiprocessing.sharedctypes import Value
 import sys
 import os
 import argparse
@@ -75,18 +75,24 @@ import fnmatch
 # import json
 import datetime
 # from datetime import datetime
-from pathlib import Path
+# from pathlib import Path
 
 import json
 from zlib import crc32
-
 
 # from itertools import permutations
 # from itertools import product
 # valueee = list(itertools.permutations([1, 2, 3]))
 import csv
 
-import yaml
+# Allow fail if user does not have, but just using part of the tools
+# import yaml
+try:
+    import yaml
+except ModuleNotFoundError:
+    # Error handling
+    pass
+
 
 from L999999999_0 import (
     OntologiaSimplici,
@@ -185,7 +191,7 @@ no11.skos.ttl' --data-apothecae-ex-praefixis='1603'
     {0} --methodus='data-apothecae' --data-apothecae-ad-stdout \
 --data-apothecae-formato='datapackage' \
 --data-apothecae-ex-suffixis='no1.tm.hxl.csv,no11.tm.hxl.csv' \
---data-apothecae-ex-praefixis='1603_1_1,1603_16_1'
+--data-apothecae-ex-praefixis='1603_1_1,1603_16_1,1603_45,!1603_45_16'
 
 Dictionaria Numerordĭnātĭo (deprecated) . . . . . . . . . . . . . . . . . . . .
     {0} --methodus='deprecatum-dictionaria-numerordinatio'
@@ -356,29 +362,54 @@ def numerordinatio_ex_praefixis(
         numerordinatio_basim: str) -> list:
 
     _ex_praefixis = []
+    _ex_praefixis_non = []
+    _ex_suffixis = []
+    _ex_suffixis_non = []
     resultatum = []
     _resultatum = []
+
     for item in ex_praefixis:
         _pattern = item.replace('_', '/').replace(':', '/')
         _pattern.strip('_')
-        _ex_praefixis.append(_pattern + '/')
+        if _pattern[0] == '!':
+            _ex_praefixis_non.append(_pattern[1:] + '/')
+        else:
+            _ex_praefixis.append(_pattern + '/')
+
+    for item in ex_suffixis:
+        if item[0] == '!':
+            _ex_suffixis_non.append(item[1:])
+        else:
+            _ex_suffixis.append(item)
+
     _ex_praefixis = tuple(filter(len, _ex_praefixis))
+    _ex_praefixis_non = tuple(filter(len, _ex_praefixis_non))
     _ex_suffixis = tuple(filter(len, ex_suffixis))
+    _ex_suffixis_non = tuple(filter(len, _ex_suffixis_non))
+    # raise ValueError(_ex_suffixis_non)
 
     for file in glob.iglob(r'{0}/**/*.*'.format(
             numerordinatio_basim), recursive=True):
         # print(file)
-        file_without_prefix = file.replace(numerordinatio_basim + '/', '')
-        # print(file_without_prefix)
-        if not file_without_prefix.startswith(_ex_praefixis):
-            # print('Skip out of prefix directories', file_without_prefix)
+        file_relative = file.replace(numerordinatio_basim + '/', '')
+        # print(file_relative)
+        if not file_relative.startswith(_ex_praefixis):
+            # print('Skip out of prefix directories', file_relative)
             continue
-        if not file_without_prefix.endswith(_ex_suffixis):
-            # print('Skip out of suffix files', file_without_prefix)
+        if not file_relative.endswith(_ex_suffixis):
+            # print('Skip out of suffix files', file_relative)
+            continue
+        if len(_ex_praefixis_non) > 0 and \
+                file_relative.startswith(_ex_praefixis_non):
+            # print('Skip out of !prefix files', file_relative)
+            continue
+        if len(_ex_suffixis_non) > 0 and \
+                file_relative.endswith(_ex_suffixis_non):
+            # print('Skip out of !suffix files', file_relative)
             continue
         _filename = os.path.basename(file)
         _numerodinatio = _filename.split('.')[0]
-        # print('foi', file_without_prefix)
+        # print('foi', file_relative)
         # print(os.path.basename(file))
         # print(_numerodinatio)
         _resultatum.append(_numerodinatio)
@@ -4144,10 +4175,10 @@ class DataApothecae:
         #     'locale')
 
         # libraria.imprimere_in_datapackage_sqlite()
-        codex = Codex('1603_1_1')
-        libraria = LibrariaStatusQuo(
-            codex,
-            'locale')
+        # codex = Codex('1603_1_1')
+        # libraria = LibrariaStatusQuo(
+        #     codex,
+        #     'locale')
 
         if self.data_apothecae_formato == 'datapackage':
             # return self.praeparatio_datapackage(libraria)
@@ -5194,7 +5225,9 @@ class CLI_2600:
             '--data-apothecae-ex-praefixis',
             help='Comma-separated list of prefixes of dictionaries '
             'to initialize the data warehouse. Will search by paths and load'
-            'the ones which de facto exist . Example: "1603_1_1,1603_16_1"',
+            'the ones which de facto exist. '
+            'Example: "1603_1_1,1603_16_1". '
+            'Example (negation !): "1603,!1603_45_16".',
             dest='data_apothecae_ex_praefixis',
             type=lambda x: x.split(',')
         )
@@ -5204,7 +5237,8 @@ class CLI_2600:
             help='Comma-separated list of file suffixes of dictionaries '
             'to initialize the data warehouse. Used with '
             '--data-apothecae-ex-praefixis. '
-            'Example: "no1.tm.hxl.csv,no1.owl.ttl"',
+            'Example: "no1.tm.hxl.csv,no1.owl.ttl". '
+            'Example (negation !): ".ttl,!.owl.ttl". ',
             dest='data_apothecae_ex_suffix',
             type=lambda x: x.split(',')
         )
@@ -5577,7 +5611,11 @@ class CLI_2600:
                 else:
                     data_apothecae_ex_suffix = [
                         '.no1.tm.hxl.csv',
+                        '.no11.tm.hxl.csv',
                         '.no1.owl.ttl',
+                        '.no11.owl.ttl',
+                        '.no1.skos.ttl',
+                        '.no11.skos.ttl',
                     ]
 
                 data_apothecae_ex = numerordinatio_ex_praefixis(
