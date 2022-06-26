@@ -401,6 +401,135 @@ archivum_unzip() {
 }
 
 #######################################
+# [Requires 999999999_54872.py] Convert BCP47+RDF header to HXLTM hashtags
+#
+# Example:
+#  caput_bcp47_ad_hxltm_ad \
+#    "qcc-Zxxx-r-aMDCIII-alatcodicem-anop,qcc-Zxxx-x-wikiq" ","
+#  # #item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_wikiq
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   caput
+#   separatum
+# Outputs:
+#   hxl
+#######################################
+caput_bcp47_ad_hxltm_ad() {
+  caput="$1"
+  separatum="$2"
+
+  # KNOW ISSUE: as 2022-06-25 the 999999999_54872.py may fail to autodetect
+  #             delimiter if user test only a single column.
+
+  caput_tab=$(echo "$caput" | tr "$separatum" '\t')
+
+  resultatum_tab=$("${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --objectivum-formato=_temp_header_bcp47_to_hxl "$caput_tab")
+
+  resultatum_finali=$(echo "$resultatum_tab" | tr '\t' "$separatum")
+
+  printf "%s" "${resultatum_finali}"
+}
+
+#######################################
+# [Pure shell bash] Convert normalized CSV header to HXL hashtags.
+#
+# Example:
+#  caput_csvnormali_ad_hxltm "item__conceptum__codicem" ","
+#  # #item+conceptum+codicem
+#
+# Globals:
+#   None
+# Arguments:
+#   caput
+#   separatum
+# Outputs:
+#   hxl
+#######################################
+caput_csvnormali_ad_hxltm() {
+  caput="$1"
+  separatum="$2"
+  resultatum=()
+
+  # shellcheck disable=SC2207
+  declare -a items=($(echo "$caput" | tr "$separatum" " "))
+
+  for i in "${!items[@]}"; do
+    # echo "$i=>${items[i]}"
+    resultatum+=("#${items[i]//__/+}")
+  done
+
+  resultatum_sep=$(printf ",%s" "${resultatum[@]}")
+  printf "%s" "${resultatum_sep:1}"
+}
+
+#######################################
+# [Pure shell bash] Convert HXL hashtags to normalized CSV header
+#
+# Example:
+#  caput_hxltm_ad_csvnormali "#item+conceptum+codicem" ","
+#  # item__conceptum__codicem
+#
+# Globals:
+#   None
+# Arguments:
+#   caput
+#   separatum
+# Outputs:
+#   hxl
+#######################################
+caput_hxltm_ad_csvnormali() {
+  caput="$1"
+  separatum="$2"
+  resultatum=()
+  # shellcheck disable=SC2207
+  declare -a items=($(echo "$caput" | tr "$separatum" " "))
+
+  for i in "${!items[@]}"; do
+    varitem="${items[i]//+/__}"
+    resultatum+=("${varitem//#/}")
+  done
+
+  resultatum_sep=$(printf ",%s" "${resultatum[@]}")
+  printf "%s" "${resultatum_sep:1}"
+}
+
+#######################################
+# [Requires 999999999_54872.py] Convert HXL+RDF header to to BCP47+RDF header
+#
+# Example:
+#  caput_hxltm_ad_bcp47 \
+#    "item__conceptum__codicem,item__rem__i_qcc__is_zxxx__ix_wikiq" ","
+#  # qcc-Zxxx-r-aMDCIII-alatcodicem-anop,qcc-Zxxx-x-wikiq
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   caput
+#   separatum
+# Outputs:
+#   hxl
+#######################################
+caput_hxltm_ad_bcp47() {
+  caput="$1"
+  separatum="$2"
+
+  # KNOW ISSUE: as 2022-06-25 the 999999999_54872.py may fail to autodetect
+  #             delimiter if user test only a single column.
+
+  caput_tab=$(echo "$caput" | tr "$separatum" '\t')
+
+  resultatum_tab=$("${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --objectivum-formato=_temp_header_hxl_to_bcp47 "$caput_tab")
+
+  resultatum_finali=$(echo "$resultatum_tab" | tr '\t' "$separatum")
+
+  printf "%s" "${resultatum_finali}"
+}
+
+#######################################
 # What relative path from an numerordinatio string?
 #
 # Example:
@@ -2644,12 +2773,14 @@ numerordinatio_codicem_transation_separator() {
   numerordinatio_codicem="$1"
   separator_finale="$2"
   separator_initiale="${3:-\:}"
-  resultatum=""
+  # resultatum=""
   if [ -z "$numerordinatio_codicem" ] || [ -z "$separator_finale" ]; then
     echo "errorem [$*]"
     return 1
   fi
+  # shellcheck disable=SC2001,SC2178
   resultatum=$(echo "$numerordinatio_codicem" | sed "s|${separator_initiale}|${separator_finale}|g")
+  # shellcheck disable=SC2128
   echo "$resultatum"
 }
 
@@ -2831,6 +2962,7 @@ quaero__ix_n1603ia() {
   #   --quaero-ix_n1603ia='{victionarium_q}>=1' \
   #   --quaero-numerordinatio="$_nomen")
 
+  # shellcheck disable=SC2178
   resultatum=$("${ROOTDIR}/999999999/0/1603_1.py" \
     --methodus='opus-temporibus' \
     --ex-opere-temporibus='cdn' \
@@ -2842,6 +2974,7 @@ quaero__ix_n1603ia() {
   # echo "resultatum"
   # echo "[$resultatum]"
 
+  # shellcheck disable=SC2128
   if [ -z "$resultatum" ]; then
     echo 1
     return 1

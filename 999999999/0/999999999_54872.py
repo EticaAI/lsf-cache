@@ -542,7 +542,10 @@ class Cli:
                 if _infile.find(",") > -1:
                     delimiter = ','
                 else:
-                    raise NotImplementedError
+                    # If user is requesting only a single header, this will
+                    # fail to auto-detect
+                    raise NotImplementedError(
+                        "Delimiter [{0}]?? Single header item?".format(_infile))
 
             caput = _infile.split(delimiter)
             caput_novo = []
@@ -602,7 +605,10 @@ class Cli:
                 if _infile.find(",") > -1:
                     delimiter = ','
                 else:
-                    raise NotImplementedError
+                    # If user is requesting only a single header, this will
+                    # fail to auto-detect
+                    raise NotImplementedError(
+                        "Delimiter [{0}]?? Single header item?".format(_infile))
 
             caput = _infile.split(delimiter)
             caput_novo = []

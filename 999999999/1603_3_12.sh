@@ -43,7 +43,6 @@ ROOTDIR="$(pwd)"
 #  - UNDP country code (P2983)
 #    - This seems to be not used on last decade
 
-
 # TODO: https://w.wiki/4fMq
 # # organização estabelecida pelas Nações Unidas (Q15285626)
 # SELECT ?wikidataq  ?wikidataqLabel WHERE {
@@ -96,6 +95,77 @@ WHERE
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
 
+#######################################
+# Return list of administrative level 0 codes ("country/territory" codes)
+#
+# Globals:
+#   None
+# Arguments:
+#   None
+# Outputs:
+#   csvfile (stdout)
+#######################################
+1603_3_12_wikipedia_adm0_v2() {
+  # fontem_archivum=
+  objectivum_archivum="${ROOTDIR}/1603/3/1603_3__adm0_v2.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/1603/3/1603_3__adm0_v2.TEMP.csv"
+  objectivum_archivum_temporarium_hxltm="${ROOTDIR}/1603/3/1603_3__adm0_v2.TEMP.tm.hxl.csv"
+  objectivum_archivum_hxltm="${ROOTDIR}/1603/3/1603_3__adm0.tm.hxl.csv"
+
+  # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
+
+  curl --header "Accept: text/csv" --silent --show-error \
+    --get https://query.wikidata.org/sparql --data-urlencode query='
+SELECT
+  (xsd:integer(?ix_iso3166p1n) AS ?item__conceptum__codicem)
+  (STRAFTER(STR(?item), "entity/") AS ?item__rem__i_qcc__is_zxxx__ix_wikiq)
+  #?item__rem__i_qcc__is_zxxx__ix_iso3166p1n
+  (GROUP_CONCAT(DISTINCT ?ix_iso3166p1n; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p1n)
+  (GROUP_CONCAT(DISTINCT ?ix_unm49; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unm49)
+  (GROUP_CONCAT(DISTINCT ?ix_iso3166p1a2; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p1a2)
+  (GROUP_CONCAT(DISTINCT ?ix_iso3166p1a3; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p1a3)
+  (GROUP_CONCAT(DISTINCT ?ix_unescothes; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unescothes)
+  (GROUP_CONCAT(DISTINCT ?ix_unagrovoc; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unagrovoc)
+  (GROUP_CONCAT(DISTINCT ?ix_osmrelid; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_osmrelid)
+  (GROUP_CONCAT(DISTINCT ?ix_geonames; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_geonames)
+  (GROUP_CONCAT(DISTINCT ?ix_geonlp; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_geonlp)
+  (GROUP_CONCAT(DISTINCT ?ix_worldnet; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_worldnet)
+  (GROUP_CONCAT(DISTINCT ?ix_usciafb; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_usciafb)
+  (GROUP_CONCAT(DISTINCT ?ix_githubtopic; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_githubtopic)
+
+WHERE
+{
+  ?item wdt:P31 wd:Q6256 ;
+  OPTIONAL { ?item wdt:P2082 ?ix_unm49. }
+  ?item wdt:P299 ?ix_iso3166p1n.
+  OPTIONAL { ?item wdt:P297 ?ix_iso3166p1a2. }
+  OPTIONAL { ?item wdt:P298 ?ix_iso3166p1a3. }
+  OPTIONAL { ?item wdt:P3916 ?ix_unescothes. }
+  OPTIONAL { ?item wdt:P8061 ?ix_unagrovoc. }
+  OPTIONAL { ?item wdt:P402 ?ix_osmrelid. }
+  OPTIONAL { ?item wdt:P9100 ?ix_geonames. }
+  OPTIONAL { ?item wdt:P5400 ?ix_geonlp. }
+  OPTIONAL { ?item wdt:P8814 ?ix_worldnet. }
+  OPTIONAL { ?item wdt:P9948 ?ix_usciafb. }
+  OPTIONAL { ?item wdt:P9100 ?ix_githubtopic. }
+}
+GROUP BY ?item ?ix_iso3166p1n
+ORDER BY ASC(?item__rem__i_qcc__is_zxxx__ix_iso3166p1n)
+' >"$objectivum_archivum_temporarium"
+
+  frictionless validate "$objectivum_archivum_temporarium"
+
+  caput_csvnormali=$(head -n1 "$objectivum_archivum_temporarium")
+  caput_hxltm=$(caput_csvnormali_ad_hxltm "${caput_csvnormali}" ",")
+
+  echo "$caput_hxltm" > "$objectivum_archivum_temporarium_hxltm"
+  tail -n +2 "$objectivum_archivum_temporarium" >> "$objectivum_archivum_temporarium_hxltm"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+  file_update_if_necessary csv "$objectivum_archivum_temporarium_hxltm" "$objectivum_archivum_hxltm"
+}
 
 #######################################
 # Return Wikipedia/Wikidata language codes (used to know how many
@@ -161,19 +231,45 @@ order by (?wmCode)
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
 
+# caput_csvnormali_ad_hxltm "item__conceptum__codicem" ","
+# echo ""
+# caput_csvnormali_ad_hxltm "item__conceptum__codicem,item__rem__i_qcc__is_zxxx__ix_wikiq" ","
+# echo ""
+# echo ""
+# caput_hxltm_ad_csvnormali "#item+conceptum+codicem" ","
+# echo ""
+# caput_hxltm_ad_csvnormali "#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_wikiq" ","
+# echo ""
+# echo ""
+# caput_hxltm_ad_bcp47 "#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_wikiq" ","
+# echo ""
+# echo ""
+# echo ""
+# caput_bcp47_ad_hxltm_ad "qcc-Zxxx-r-aMDCIII-alatcodicem-anop,qcc-Zxxx-x-wikiq" ","
+# echo ""
+# # caput_hxltm_ad_bcp47 "#item+conceptum+codicem" ","
+# # echo ""
+# # caput_hxltm_ad_bcp47 "#item+rem+i_qcc+is_zxxx+ix_wikiq" ","
+# # echo ""
+# exit 0
 
 1603_3_12_wikipedia_language_codes
 
 1603_3_12_wikipedia_adm0
 
-exit 0
+1603_3_12_wikipedia_adm0_v2
 
+# temp, see later
+# - https://www.wikidata.org/wiki/Help:Frequently_used_properties
+# - https://www.wikidata.org/wiki/Property:P3896
+# - https://www.wikidata.org/wiki/Wikidata:Map_data
+
+exit 0
 
 # TODO: maybe check https://www.npmjs.com/package/wikidata-taxonomy
 #       npm install -g wikidata-taxonomy
 # Examples
 # wdtaxonomy P2082
-
 
 ### Current query for download translations (have bugs)
 # # Variant of
@@ -190,7 +286,7 @@ exit 0
 #   ?adm0 wdt:P31/wdt:P279* wd:Q3624078;
 #   rdfs:label ?label
 #   OPTIONAL { ?adm0 wdt:P2082|wdt:P299 ?iso3166p1n. }
-  
+
 #   #FILTER(?iso3166p1n > xsd:integer(0))
 # }
 # # order by ?adm0
