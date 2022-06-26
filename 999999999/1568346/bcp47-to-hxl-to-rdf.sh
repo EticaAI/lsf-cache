@@ -143,7 +143,6 @@ test_unesco_thesaurus() {
     "${archivum__resultata_xml}" \
     >"${archivum__resultata_ttl}"
 
-
   # Is not validating rigth now; Lets allow fail
   echo "before riot --validate"
   # # set +e
@@ -238,7 +237,6 @@ test_cod_ab() {
   riot --time --nocheck --output=Turtle \
     "${archivum__resultata_xml}" \
     >"${archivum__resultata_ttl}"
-
 
   # Is not validating rigth now; Lets allow fail
   echo "before riot --validate"
@@ -346,7 +344,6 @@ test_cod_ab__with_inferences_prebuild() {
   riot --time --nocheck --output=Turtle \
     "${archivum__resultata_xml}" \
     >"${archivum__resultata_ttl}"
-
 
   # Is not validating rigth now; Lets allow fail
   # echo "before riot --validate"
@@ -549,11 +546,47 @@ bcp47_and_hxlrdf_roundtrip__drill() {
   } <"${archivum__regulae_exemplis}"
 }
 
+#######################################
+# bcp47_to_hxl_to_rdf__tests
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   None
+# Outputs:
+#   Test result
+#######################################
+test_hxltmlib_hxltmcli() {
+  # numerordinatio="$1"
+  # ex_librario="$2"
+
+  stype_blue=$(tput setaf 4)
+  stype_green=$(tput setaf 2)
+  style_red=$(tput setaf 1)
+  style_normal=$(tput sgr0)
+  printf "\t%40s\n" "${stype_blue}${FUNCNAME[0]} [STARTED]${style_normal}"
+
+  archivum_exemplis="${ROOTDIR}/999999999/1568346/data/wikidata-p17-without-typum.tm.hxl.csv"
+  archivum_resultata_hxltm="${ROOTDIR}/999999/1568346/data/wikidata-p17-without-typum.tm.hxl.csv"
+  # archivum_resultata_ttl="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.ttl"
+  # archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.xml"
+  # archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.meta.json"
+
+  hxltmcli "${archivum_exemplis}" \
+    --rdf-conceptum-typo='obo:BFO_0000029|p:P17' \
+    > "$archivum_resultata_hxltm"
+
+  frictionless validate "$archivum_resultata_hxltm"
+
+  printf "\t%40s\n" "${stype_green}${FUNCNAME[0]} [DONE]${style_normal}"
+}
+
 # echo "test"
 
 # test_unesco_thesaurus
 # test_cod_ab
 # test_cod_ab__with_inferences_prebuild
+# test_hxltmlib_hxltmcli
 # exit 0
 
 echo "bcp47_to_hxl_to_rdf__tests"
@@ -571,12 +604,14 @@ test_cod_ab
 echo "test_cod_ab__with_inferences_prebuild"
 test_cod_ab__with_inferences_prebuild
 
+echo "test_hxltmlib_hxltmcli"
+test_hxltmlib_hxltmcli
+
 exit 0
 
 # ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/0/unesco-thesaurus.meta.json
 
 # ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/1568346/data/unesco-thesaurus.meta.json
-
 
 # ./999999999/0/999999999_54872.py 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv --objectivum-formato=_temp_bcp47_meta_in_json --rdf-trivio=1 | jq
 
@@ -600,7 +635,6 @@ exit 0
 
 # rdfdiff 999999/0/bfo_classes_only.owl 999999/0/BFO-PT.owl.xml RDF/XML RDF/XML http://purl.obolibrary.org/obo/ http://purl.obolibrary.org/obo/ > 999999/0/diff-obo-source-vs-pt.diff
 
-
 # riot --quiet --output=ntriples 999999/0/BFO-PT.owl.xml > 999999/0/BFO-PT.owl.n3
 # riot --quiet --output=ntriples 999999/0/bfo_classes_only.owl > 999999/0/bfo_classes_only.owl.n3
 
@@ -608,7 +642,6 @@ exit 0
 # rdfdiff 999999/0/bfo_classes_only.owl.n3 999999/0/BFO-PT.owl.n3 ntriples ntriples http://purl.obolibrary.org/obo/ http://purl.obolibrary.org/obo/ > 999999/0/diff-obo-source-vs-pt.diff
 
 # rdfcompare 999999/0/bfo_classes_only.owl.n3 999999/0/BFO-PT.owl.n3 ntriples ntriples http://purl.obolibrary.org/obo/ http://purl.obolibrary.org/obo/
-
 
 # 999999/0/21838-2/owl/bfo-2020.owl
 # riot --quiet --output=ntriples 999999/0/21838-2/owl/bfo-2020.owl > 999999/0/21838-2/owl/bfo-2020.owl.n3

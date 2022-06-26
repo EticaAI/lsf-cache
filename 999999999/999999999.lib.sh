@@ -414,7 +414,7 @@ archivum_unzip() {
 #   caput
 #   separatum
 # Outputs:
-#   hxl
+#   bcp47 header
 #######################################
 caput_bcp47_ad_hxltm_ad() {
   caput="$1"
@@ -446,7 +446,7 @@ caput_bcp47_ad_hxltm_ad() {
 #   caput
 #   separatum
 # Outputs:
-#   hxl
+#   hxltm header
 #######################################
 caput_csvnormali_ad_hxltm() {
   caput="$1"
@@ -478,7 +478,7 @@ caput_csvnormali_ad_hxltm() {
 #   caput
 #   separatum
 # Outputs:
-#   hxl
+#   csvnormali header
 #######################################
 caput_hxltm_ad_csvnormali() {
   caput="$1"
@@ -510,7 +510,7 @@ caput_hxltm_ad_csvnormali() {
 #   caput
 #   separatum
 # Outputs:
-#   hxl
+#   bcp47 header
 #######################################
 caput_hxltm_ad_bcp47() {
   caput="$1"
