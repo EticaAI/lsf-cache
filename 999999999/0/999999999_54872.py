@@ -503,6 +503,10 @@ class Cli:
                 rdf_ontologia_ordinibus=pyargs.rdf_ontologia_ordinibus,
                 est_meta=True)
 
+            # print('  aa', meta['caput_asa'])
+            # print('  bb', meta['caput_asa']['caput_originali'])
+            # print('  aa', meta['caput_asa']['caput_ad_columnae_i'])
+
             numerordinatio_data__sortnames(
                 meta['caput_asa'], _infile, est_bcp47=est_bcp47,
                 punctum_separato=fontem_separato)
@@ -889,6 +893,8 @@ def numerordinatio_data__sortnames(
     if not est_bcp47:
         caput_novo = numerordinatio_caput_bcp47_to_hxlhashtag(caput_novo)
 
+    # print('   oi', caput_novo)
+
     with open(fontem, 'r') as _fons:
         _writer = csv.writer(sys.stdout, delimiter=punctum_separato)
         _csv_reader = csv.reader(_fons, delimiter=punctum_separato)
@@ -918,6 +924,8 @@ def numerordinatio_caput_bcp47_to_hxlhashtag(
             continue
         # item_meta = bcp47_langtag(item,strictum=False)
         item_meta = bcp47_langtag(item)
+
+        # print('   333', item_meta['_callbacks']['hxl_attrs'])
 
         if len(item_meta['_error']) == 0 and \
                 item_meta['Language-Tag_normalized']:

@@ -406,13 +406,13 @@ bootstrap_1603_45_16__item_bcp47() {
   # objectivum_archivum_basi="${_basim_objectivum}/1603/45/16/${unm49}"
   objectivum_archivum_basi="${_basim_objectivum}/${__group_path}/${unm49}"
   # opus_temporibus_temporarium="${ROOTDIR}/999999/0/${unm49}~lvl.tsv"
-  opus_temporibus_temporarium="${DESTDIR}/999999/0/${unm49}~1.ttl"
-  opus_temporibus_temporarium_2="${DESTDIR}/999999/0/${unm49}~2.ttl"
+  opus_temporibus_temporarium="${DESTDIR}/999999/0/${unm49}~1.csv"
+  opus_temporibus_temporarium_2="${DESTDIR}/999999/0/${unm49}~2.csv"
 
   printf "\t%40s\n" "${tty_blue}${FUNCNAME[0]} STARTED [$numerordinatio_praefixo] [$unm49] [$iso3661p1a3] [$pcode_praefixo]${tty_normal}"
 
-  echo "TODO this is just a draft. please implement me later"
-  return 0
+  # echo "TODO this is just a draft. please implement me later"
+  # return 0
 
   # for file_path in "${ROOTDIR}"/999999/1603/45/16/xlsx/*.xlsx; do
   # ISO3166p1a3_original=$(basename --suffix=.xlsx "$file_path")
@@ -439,11 +439,11 @@ bootstrap_1603_45_16__item_bcp47() {
     objectivum_archivum_basi_lvl="${objectivum_archivum_basi}/${cod_level}"
     # objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
     objectivum_archivum_no1="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.tm.hxl.csv"
+    objectivum_archivum_bcp47="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.bcp47.csv"
 
-    objectivum_archivum_no1_owl_ttl="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.owl.ttl"
-    objectivum_archivum_no1_skos_ttl="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.skos.ttl"
+    # objectivum_archivum_no1_owl_ttl="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.owl.ttl"
+    # objectivum_archivum_no1_skos_ttl="${objectivum_archivum_basi_lvl}/${numerordinatio_praefixo}_${unm49}_${cod_level}.no1.skos.ttl"
 
-    # set -x
     # rm "$objectivum_archivum_no1" || true
     # set +x
     # continue
@@ -456,6 +456,30 @@ bootstrap_1603_45_16__item_bcp47() {
 
     rdf_trivio=$((5000 + cod_level))
 
+    set -x
+    "${ROOTDIR}/999999999/0/999999999_54872.py" \
+      --objectivum-formato=_temp_no1_to_no1_shortnames \
+      "${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
+
+    # Temporary fix: remove some generated tags with error: +ix_error
+    # Somewhat temporary: remove non-merget alts: +ix_alt0
+    # Non-temporary: remove implicit tags: +ix_hxlattrs
+    hxlcut \
+      --exclude='#*+ix_error,#*+ix_hxlattrs' \
+      "${opus_temporibus_temporarium}" >"${opus_temporibus_temporarium_2}"
+
+    # Delete first line ,,,,,
+    sed -i '1d' "${opus_temporibus_temporarium_2}"
+
+    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    #   --objectivum-formato=_temp_no1_to_no1_shortnames \
+    #   --numerordinatio-cum-antecessoribus \
+    #   --rdf-sine-spatia-nominalibus=skos,devnull \
+    #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
+    #   --rdf-trivio="${rdf_trivio}" \
+    #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
+
+    set -x
     ##  Computational-like RDF serialization, "OWL version" --------------------
 
     # @TODO fix generation of invalid format if
@@ -469,52 +493,52 @@ bootstrap_1603_45_16__item_bcp47() {
     #   --rdf-trivio="${rdf_trivio}" \
     #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
-    "${ROOTDIR}/999999999/0/999999999_54872.py" \
-      --objectivum-formato=_temp_no1 \
-      --numerordinatio-cum-antecessoribus \
-      --rdf-sine-spatia-nominalibus=devnull \
-      --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
-      --rdf-trivio="${rdf_trivio}" \
-      <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
+    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    #   --objectivum-formato=_temp_no1 \
+    #   --numerordinatio-cum-antecessoribus \
+    #   --rdf-sine-spatia-nominalibus=devnull \
+    #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
+    #   --rdf-trivio="${rdf_trivio}" \
+    #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
-    rapper --quiet --input=turtle --output=turtle \
-      "${opus_temporibus_temporarium}" \
-      >"${objectivum_archivum_no1_owl_ttl}"
+    # rapper --quiet --input=turtle --output=turtle \
+    #   "${opus_temporibus_temporarium}" \
+    #   >"${objectivum_archivum_no1_owl_ttl}"
 
-    riot --validate "${objectivum_archivum_no1_owl_ttl}"
+    # riot --validate "${objectivum_archivum_no1_owl_ttl}"
 
-    ##  Linguistic-like RDF serialization, "SKOS version" ----------------------
-    # @TODO fix invalid generation if disabling OWL with
-    #        --rdf-sine-spatia-nominalibus=owl
+    # ##  Linguistic-like RDF serialization, "SKOS version" ----------------------
+    # # @TODO fix invalid generation if disabling OWL with
+    # #        --rdf-sine-spatia-nominalibus=owl
+
+    # # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    # #   --objectivum-formato=_temp_no1 \
+    # #   --numerordinatio-cum-antecessoribus \
+    # #   --rdf-sine-spatia-nominalibus=owl,obo,p,geo,devnull \
+    # #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
+    # #   --rdf-trivio="${rdf_trivio}" \
+    # #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium_2}"
 
     # "${ROOTDIR}/999999999/0/999999999_54872.py" \
     #   --objectivum-formato=_temp_no1 \
     #   --numerordinatio-cum-antecessoribus \
-    #   --rdf-sine-spatia-nominalibus=owl,obo,p,geo,devnull \
+    #   --rdf-sine-spatia-nominalibus=obo,p,geo,devnull \
     #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
     #   --rdf-trivio="${rdf_trivio}" \
     #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium_2}"
 
-    "${ROOTDIR}/999999999/0/999999999_54872.py" \
-      --objectivum-formato=_temp_no1 \
-      --numerordinatio-cum-antecessoribus \
-      --rdf-sine-spatia-nominalibus=obo,p,geo,devnull \
-      --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
-      --rdf-trivio="${rdf_trivio}" \
-      <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium_2}"
+    # rapper --quiet --input=turtle --output=turtle \
+    #   "${opus_temporibus_temporarium_2}" \
+    #   >"${objectivum_archivum_no1_skos_ttl}"
 
-    rapper --quiet --input=turtle --output=turtle \
-      "${opus_temporibus_temporarium_2}" \
-      >"${objectivum_archivum_no1_skos_ttl}"
-
-    riot --validate "${objectivum_archivum_no1_skos_ttl}"
+    # riot --validate "${objectivum_archivum_no1_skos_ttl}"
     set +x
 
-    echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
-    echo "SKOS TTL: [${objectivum_archivum_no1_skos_ttl}]"
+    # echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
+    # echo "SKOS TTL: [${objectivum_archivum_no1_skos_ttl}]"
 
-    rm "$opus_temporibus_temporarium"
-    rm "$opus_temporibus_temporarium_2"
+    # rm "$opus_temporibus_temporarium"
+    # rm "$opus_temporibus_temporarium_2"
 
   done
 

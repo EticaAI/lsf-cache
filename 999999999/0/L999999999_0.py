@@ -1299,6 +1299,8 @@ def bcp47_langtag_callback_hxl(
         str: return HXL attributes (without HXL hashtag)
     """
 
+    # raise ValueError(langtag_meta)
+
     resultatum = []
     # resultatum.append('+todo')
     resultatum.append('+i_{0}'.format(langtag_meta['language'].lower()))
@@ -1308,7 +1310,12 @@ def bcp47_langtag_callback_hxl(
 
     if langtag_meta['privateuse'] and len(langtag_meta['privateuse']) > 0:
         for item in langtag_meta['privateuse']:
-            resultatum.append('+ix_{0}'.format(item.lower()))
+            # print('    444', item)
+            if len(item) > 1:
+                resultatum.append('+ix_{0}'.format(item.lower()))
+            else:
+                langtag_meta['_error'].append(
+                    'private tag len = 1 [{0}]'.format(item))
 
     if langtag_meta['extension'] and 'r' in langtag_meta['extension']:
         _r = langtag_meta['extension']['r']
@@ -1422,6 +1429,8 @@ def bcp47_langtag_callback_hxl(
 
     resultatum = sorted(resultatum)
 
+    # raise ValueError(resultatum, langtag_meta)
+
     return ''.join(resultatum)
 
 
@@ -1439,6 +1448,11 @@ def bcp47_langtag_callback_hxl_minimal(
         str: return HXL attributes (without HXL hashtag)
     """
     res = bcp47_langtag_callback_hxl(langtag_meta, strictum)
+    minimal_parts = []
+    extra_parts = []
+    parts = res.replace('+i_qcc+is_zxxx', '').split('+')
+
+    parts = list(filter(None, parts))
 
     # raise ValueError(res)
 
@@ -1446,15 +1460,52 @@ def bcp47_langtag_callback_hxl_minimal(
     if not res.startswith('+i_qcc+is_zxxx'):
         return None
 
+    # Do no run twice
+    if res.find('+ix_hxlattrs') > -1:
+        return None
+
     # If does not have an RDF tab about being a pivot key, we return False
     # This may either signal a error OR a HXL tag that subject is implicit
     # u2203
     if res.find('+rdf_s_u2200_s') == -1 and res.find('+rdf_s_u2203_s') == -1:
+        # The folowing block is disabled for now as theres some cases
+        # valid +ix_ prefixes exist, but large tables they would conflict.
+
+        # # ... however, if it does have a keys -x-LLL (+ix_LLL), let's attempt
+        # # to assume they are unique engouth and sort it.
+        # # ... except if is ix_error
+        # if res.find('+ix_') > -1 and res.find('+ix_error') == -1:
+        #     for item in parts:
+        #         if item.startswith('ix_'):
+        #             minimal_parts.append(item)
+        #         else:
+        #             extra_parts.append(item)
+        #     if len(extra_parts) == 0:
+        #         return [res, None]
+
+        #     minimal = '+i_qcc+is_zxxx+' + '+'.join(minimal_parts)
+        #     extra = '+'.join(extra_parts)
+
+        #     return [minimal, extra]
+
+        # ... and do this also for data types such as +rdf_t_xsd_datetime
+        # even if does not have ix_
+        if res.find('+rdf_t_') > -1:
+            for item in parts:
+                if not item.startswith('rdf_t_'):
+                    minimal_parts.append(item)
+                else:
+                    extra_parts.append(item)
+            if len(extra_parts) == 0:
+                return [res, None]
+
+            minimal = '+i_qcc+is_zxxx+' + '+'.join(minimal_parts)
+            extra = '+'.join(extra_parts)
+
+            return [minimal, extra]
+
         return False
 
-    minimal_parts = []
-    extra_parts = []
-    parts = res.replace('+i_qcc+is_zxxx', '').split('+')
     for item in parts:
         if item.startswith('rdf_s_u2200_s') or item.startswith('rdf_s_u2203_s'):
             minimal_parts.append(item)
@@ -2850,12 +2901,18 @@ class CodAbTabulae:
                     # print(self.caput_no1[_index])
                     if _totale > 1:
                         _done.append(_res)
+                        _alt_now = (_totale - _done.count(_res))
                         # print('  >>repeated', _res, caput_no1)
-                        # @TODO make a more semantic way to have duplicated
-                        #       items than ix_altN
-                        _res_novo = '{0}+ix_alt{1}'.format(
-                            _res, (_totale - _done.count(_res))
-                        )
+
+                        # Only add altN to duplicates
+                        if _alt_now == 0:
+                            _res_novo = _res
+                        else:
+                            # @TODO make a more semantic way to have duplicated
+                            #       items than ix_altN
+                            _res_novo = '{0}+ix_alt{1}'.format(
+                                _res, _alt_now
+                            )
                         # caput_no1[caput_no1.index(_res)] = '__done' + str(index)
                         # caput_no1[caput_no1.index(_res)] = None
                         caput_novi__reversed.append(_res_novo)
@@ -4634,6 +4691,8 @@ def hxl_hashtag_to_bcp47(
     #     _hxl_attrs, False)
     result['_callbacks']['hxl_minimal'] = bcp47_langtag_callback_hxl_minimal(
         result, False)
+
+    # print(result['_callbacks']['hxl_minimal'])
 
     # print(result['Language-Tag_normalized'] , result['_error'])
     # print('[[{0}]]'.format(result['Language-Tag_normalized']))
@@ -6467,6 +6526,7 @@ def qhxl_attr_2_bcp47(hxlatt: str) -> str:
     resultatum = tempus1[0] + '-' + tempus1[1].capitalize()
     # @TODO: test better cases with +ix_
     resultatum = resultatum.replace('+ix_', '-x-')
+    # raise ValueError
 
     return resultatum
 
