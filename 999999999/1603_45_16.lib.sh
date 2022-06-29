@@ -384,6 +384,7 @@ bootstrap_1603_45_16__item_bcp47() {
   cod_ab_level_max="${5}"
   est_temporarium_fontem="${6:-"1"}"
   est_temporarium_objectivum="${7:-"0"}"
+  # shellcheck disable=SC2034
   rdf_ontologia_ordinibus="${8:-"5"}"
 
   if [ "$est_temporarium_fontem" -eq "1" ]; then
@@ -462,14 +463,22 @@ bootstrap_1603_45_16__item_bcp47() {
       "${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
     # Temporary fix: remove some generated tags with error: +ix_error
-    # Somewhat temporary: remove non-merget alts: +ix_alt0
+    # Somewhat temporary: remove non-merget alts: +ix_alt1|+ix_alt12|+ix_alt13
     # Non-temporary: remove implicit tags: +ix_hxlattrs
     hxlcut \
-      --exclude='#*+ix_error,#*+ix_hxlattrs' \
+      --exclude='#*+ix_error,#*+ix_hxlattrs,#*+ix_alt1,#*+ix_alt2,#*+ix_alt3' \
       "${opus_temporibus_temporarium}" >"${opus_temporibus_temporarium_2}"
 
     # Delete first line ,,,,,
     sed -i '1d' "${opus_temporibus_temporarium_2}"
+
+    frictionless validate "${opus_temporibus_temporarium_2}"
+
+    "${ROOTDIR}/999999999/0/999999999_54872.py" \
+      --objectivum-formato=_temp_data_hxl_to_bcp47 \
+      "${opus_temporibus_temporarium_2}" >"${opus_temporibus_temporarium}"
+
+    frictionless validate "${opus_temporibus_temporarium}"
 
     # "${ROOTDIR}/999999999/0/999999999_54872.py" \
     #   --objectivum-formato=_temp_no1_to_no1_shortnames \
@@ -479,66 +488,12 @@ bootstrap_1603_45_16__item_bcp47() {
     #   --rdf-trivio="${rdf_trivio}" \
     #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
-    set -x
-    ##  Computational-like RDF serialization, "OWL version" --------------------
-
-    # @TODO fix generation of invalid format if
-    #       --rdf-sine-spatia-nominalibus=skos,devnull is enabled
-
-    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    #   --objectivum-formato=_temp_no1 \
-    #   --numerordinatio-cum-antecessoribus \
-    #   --rdf-sine-spatia-nominalibus=skos,devnull \
-    #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
-    #   --rdf-trivio="${rdf_trivio}" \
-    #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
-
-    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    #   --objectivum-formato=_temp_no1 \
-    #   --numerordinatio-cum-antecessoribus \
-    #   --rdf-sine-spatia-nominalibus=devnull \
-    #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
-    #   --rdf-trivio="${rdf_trivio}" \
-    #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
-
-    # rapper --quiet --input=turtle --output=turtle \
-    #   "${opus_temporibus_temporarium}" \
-    #   >"${objectivum_archivum_no1_owl_ttl}"
-
-    # riot --validate "${objectivum_archivum_no1_owl_ttl}"
-
-    # ##  Linguistic-like RDF serialization, "SKOS version" ----------------------
-    # # @TODO fix invalid generation if disabling OWL with
-    # #        --rdf-sine-spatia-nominalibus=owl
-
-    # # "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    # #   --objectivum-formato=_temp_no1 \
-    # #   --numerordinatio-cum-antecessoribus \
-    # #   --rdf-sine-spatia-nominalibus=owl,obo,p,geo,devnull \
-    # #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
-    # #   --rdf-trivio="${rdf_trivio}" \
-    # #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium_2}"
-
-    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    #   --objectivum-formato=_temp_no1 \
-    #   --numerordinatio-cum-antecessoribus \
-    #   --rdf-sine-spatia-nominalibus=obo,p,geo,devnull \
-    #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
-    #   --rdf-trivio="${rdf_trivio}" \
-    #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium_2}"
-
-    # rapper --quiet --input=turtle --output=turtle \
-    #   "${opus_temporibus_temporarium_2}" \
-    #   >"${objectivum_archivum_no1_skos_ttl}"
-
-    # riot --validate "${objectivum_archivum_no1_skos_ttl}"
     set +x
 
-    # echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
-    # echo "SKOS TTL: [${objectivum_archivum_no1_skos_ttl}]"
+    file_update_if_necessary csv "$opus_temporibus_temporarium" "$objectivum_archivum_bcp47"
 
     # rm "$opus_temporibus_temporarium"
-    # rm "$opus_temporibus_temporarium_2"
+    rm "$opus_temporibus_temporarium_2"
 
   done
 
