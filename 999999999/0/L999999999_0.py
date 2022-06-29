@@ -106,6 +106,8 @@ EXIT_SYNTAX = 2
 
 BCP47_LANGTAG_CALLBACKS = {
     'hxl_attrs': lambda lmeta, strictum: bcp47_langtag_callback_hxl(
+        lmeta, strictum=strictum),
+    'hxl_minimal': lambda lmeta, strictum: bcp47_langtag_callback_hxl_minimal(
         lmeta, strictum=strictum)
 }
 
@@ -130,7 +132,14 @@ BCP47_EX_HXL = {
         'hxl': '#item+rem+i_qcc+is_zxxx'
         '+rdf_a_mdciii_latnumerordinatio+rdf_s_u2200_s1603',
         'hxltm': '#item+conceptum+numerordinatio'
-    }
+    },
+    # # Make sure secondary roundtrip works
+    # '#item+rem+i_qcc+is_zxxx+rdf_a_mdciii_latnumerordinatio+rdf_s_u2200_s1603': {
+    #     'bcp47': 'qcc-Zxxx-r-aMDCIII-alatnumerordinatio-anop-sU2200-s1603-snop',
+    #     'hxl': '#item+rem+i_qcc+is_zxxx'
+    #     '+rdf_a_mdciii_latnumerordinatio+rdf_s_u2200_s1603',
+    #     'hxltm': '#item+conceptum+numerordinatio'
+    # }
 }
 
 BCP47_AD_HXL = {
@@ -416,43 +425,69 @@ HXL_HASH_ET_ATTRIBUTA_AD_RDF = {
         '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5000-snop-pOBO-pbfo124-ps5001',
         '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5001+rdf_s_u2200_s5000'
     },
+    # P297 ISO 3166-1 alpha-2 code, https://www.wikidata.org/wiki/Property:P297
+    '#country+code+v_iso3166p1a2': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp297-ps5000-x-p297',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+ix_p297+rdf_p_p_p297_s5000'
+    },
     '#adm1+code+v_numerodinatio': {
         '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5001-snop-pOBO-pbfo124-ps5002-pOBO-pbfo171-ps5000',
         '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5002+rdf_p_obo_bfo171_s5000+rdf_s_u2200_s5001'
     },
     # @TODO make P-Codes using "instance of (P31)" like > p:P31 Q7200235
+    #       (change for this TODO) drafted +v_pcode's
     # @see https://en.wikipedia.org/wiki/Place_code
     # @see https://www.wikidata.org/wiki/Q7200235 Q7200235
-    # '#adm1+code+v_pcode': {
-    #     '__no1bpc47__': '',
-    #     '__no1hxl__': ''
-    # },
+    '#adm1+code+v_pcode': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pWDATA-pq7200235-ps5001-x-wdataq7200235',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+ix_wdataq7200235+rdf_p_wdata_q7200235_s5001'
+    },
     '#adm2+code+v_numerodinatio': {
         '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5002-snop-pOBO-pbfo124-ps5002-pOBO-pbfo171-ps5001',
         '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5002+rdf_p_obo_bfo171_s5001+rdf_s_u2200_s5002'
+    },
+    '#adm2+code+v_pcode': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pWDATA-pq7200235-ps5002-x-wdataq7200235',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+ix_wdataq7200235+rdf_p_wdata_q7200235_s5002'
     },
     '#adm3+code+v_numerodinatio': {
         '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5003-snop-pOBO-pbfo124-ps5003-pOBO-pbfo171-ps5002',
         '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5003+rdf_p_obo_bfo171_s5002+rdf_s_u2200_s5003'
     },
+    '#adm3+code+v_pcode': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pWDATA-pq7200235-ps5003-x-wdataq7200235',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+ix_wdataq7200235+rdf_p_wdata_q7200235_s5003'
+    },
     '#adm4+code+v_numerodinatio': {
         '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5004-snop-pOBO-pbfo124-ps5004-pOBO-pbfo171-ps5003',
         '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5004+rdf_p_obo_bfo171_s5003+rdf_s_u2200_s5004'
+    },
+    '#adm4+code+v_pcode': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pWDATA-pq7200235-ps5004-x-wdataq7200235',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+ix_wdataq7200235+rdf_p_wdata_q7200235_s5004'
     },
     '#adm5+code+v_numerodinatio': {
         '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5005-snop-pOBO-pbfo124-ps5005-pOBO-pbfo171-ps5004',
         '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5005+rdf_p_obo_bfo171_s5004+rdf_s_u2200_s5005'
     },
+    '#adm5+code+v_pcode': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pWDATA-pq7200235-ps5005-x-wdataq7200235',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+ix_wdataq7200235+rdf_p_wdata_q7200235_s5005'
+    },
     '#adm6+code+v_numerodinatio': {
         '__no1bpc47__': 'qcc-Zxxx-r-aOBO-abfo29-anop-sU2200-s5006-snop-pOBO-pbfo124-ps5005-pOBO-pbfo171-ps5004',
         '__no1hxl__': '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo124_s5005+rdf_p_obo_bfo171_s5004+rdf_s_u2200_s5005'
+    },
+    '#adm6+code+v_pcode': {
+        '__no1bpc47__': 'qcc-Zxxx-r-pWDATA-pq7200235-ps5006-x-wdataq7200235',
+        '__no1hxl__': '#item+rem+i_qcc+is_zxxx+ix_wdataq7200235+rdf_p_wdata_q7200235_s5006'
     },
     # @see https://www.wikidata.org/wiki/EntitySchema:E49
     # publication date (P577)
     # date or point in time when a work was first published or released
     # https://www.wikidata.org/wiki/Property:P577
     '#date+start': {
-        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp577-ps1603-txsd-tdatetime-tnop',
+        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp577-ps1603-tXSD-tdatetime-tnop',
         '__no1hxl__':
         '#item+rem+i_qcc+is_zxxx+rdf_p_p_p577_s1603+rdf_t_xsd_datetime'
     },
@@ -461,7 +496,7 @@ HXL_HASH_ET_ATTRIBUTA_AD_RDF = {
     # see also "dissolved, abolished or demolished" (P576)
     # https://www.wikidata.org/wiki/Property:P2669
     '#date+end': {
-        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp2699-ps1603-txsd-tdatetime-tnop',
+        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp2699-ps1603-tXSD-tdatetime-tnop',
         '__no1hxl__':
         '#item+rem+i_qcc+is_zxxx+rdf_p_p_p2699_s1603+rdf_t_xsd_datetime'
     },
@@ -469,7 +504,7 @@ HXL_HASH_ET_ATTRIBUTA_AD_RDF = {
     # - https://www.wikidata.org/wiki/Property:P813
     # - https://wiki.openstreetmap.org/wiki/Key:check_date
     '#date+updated': {
-        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp813-ps1603-txsd-tdatetime-tnop',
+        '__no1bpc47__': 'qcc-Zxxx-r-pP-pp813-ps1603-tXSD-tdatetime-tnop',
         '__no1hxl__':
         '#item+rem+i_qcc+is_zxxx+rdf_p_p_p813_s1603+rdf_t_xsd_datetime'
     },
@@ -990,8 +1025,8 @@ def bcp47_langtag(
 'variant': ['lojban', 'gaulish'], \
 'extension': {'a': '12345678-ABCD', 'b': 'ABCDEFGH'}, \
 'privateuse': ['a', 'b', 'c', '12345678'], 'grandfathered': None, \
-'_callbacks': {'hxl_attrs': '+i_en+is_latn+ix_12345678+ix_a+ix_b+ix_c'}, \
-'_unknown': [], '_error': []}
+'_callbacks': {'hxl_attrs': '+i_en+is_latn+ix_12345678+ix_a+ix_b+ix_c', \
+'hxl_minimal': None}, '_unknown': [], '_error': []}
 
     # BCP47: "Example: The language tag "en-a-aaa-b-ccc-bbb-x-xyz" is in
     # canonical form, while "en-b-ccc-bbb-a-aaa-X-xyz" is well-formed (...)
@@ -1001,8 +1036,8 @@ def bcp47_langtag(
 'Language-Tag_normalized': 'en-a-aaa-b-ccc-bbb-x-xyz', \
 'language': 'en', 'script': None, 'region': None, 'variant': [], \
 'extension': {'a': 'aaa', 'b': 'ccc-bbb'}, 'privateuse': ['xyz'], \
-'grandfathered': None, '_callbacks': {'hxl_attrs': '+i_en+ix_xyz'}, \
-'_unknown': [], '_error': []}
+'grandfathered': None, '_callbacks': {'hxl_attrs': '+i_en+ix_xyz', \
+'hxl_minimal': None}, '_unknown': [], '_error': []}
     """
     # For sake of copy-and-paste portability, we ignore a few pylints:
     # pylint: disable=too-many-branches,too-many-statements,too-many-locals
@@ -1390,6 +1425,50 @@ def bcp47_langtag_callback_hxl(
     return ''.join(resultatum)
 
 
+def bcp47_langtag_callback_hxl_minimal(
+        langtag_meta: dict,
+        strictum: bool = True
+) -> str:
+    """bcp47_langtag_callback_hxl convert a bcp47_langtag meta to hxl attributes
+
+    Args:
+        langtag_meta (dict): a bcp47_langtag compatible metadata
+        strictum (bool, optional): (not implemented yet). Defaults to True.
+
+    Returns:
+        str: return HXL attributes (without HXL hashtag)
+    """
+    res = bcp47_langtag_callback_hxl(langtag_meta, strictum)
+
+    # raise ValueError(res)
+
+    # We only try to compact interlingual concepts, not linguistic
+    if not res.startswith('+i_qcc+is_zxxx'):
+        return None
+
+    # If does not have an RDF tab about being a pivot key, we return False
+    # This may either signal a error OR a HXL tag that subject is implicit
+    # u2203
+    if res.find('+rdf_s_u2200_s') == -1 and res.find('+rdf_s_u2203_s') == -1:
+        return False
+
+    minimal_parts = []
+    extra_parts = []
+    parts = res.replace('+i_qcc+is_zxxx', '').split('+')
+    for item in parts:
+        if item.startswith('rdf_s_u2200_s') or item.startswith('rdf_s_u2203_s'):
+            minimal_parts.append(item)
+        else:
+            extra_parts.append(item)
+    if len(extra_parts) == 0:
+        return [res, None]
+
+    minimal = '+i_qcc+is_zxxx+' + '+'.join(minimal_parts)
+    extra = '+'.join(extra_parts)
+
+    return [minimal, extra]
+
+
 def bcp47_rdf_extension(
         rem: str,
         clavem: Type[Union[str, list]] = None,
@@ -1730,6 +1809,37 @@ def bcp47_rdf_extension(
     return result
 
 
+def bcp47_rdf_extension_caput_ad_columnae_i(
+        caput_originali: List[str],
+        caput_originali_asa: List[str],
+        namespaces: List[dict] = None,
+        strictum: bool = True
+) -> dict:
+    resultatum = []
+    extras = []
+    for index in range(len(caput_originali)):
+        _hxl_minimal = caput_originali_asa[index]['_callbacks']['hxl_minimal']
+        if not _hxl_minimal:
+            resultatum.append(caput_originali[index])
+        else:
+            # resultatum.append(caput_originali[index])
+            _meta = hxl_hashtag_to_bcp47('#item' + _hxl_minimal[0])
+            resultatum.append(_meta['Language-Tag_normalized'])
+            extras.append([
+                _meta['Language-Tag_normalized'] + '-x-hxlattrs',
+                _hxl_minimal[1]
+            ])
+            # resultatum.append(caput_originali[index])
+        # resultatum.append(caput_originali_asa[index])
+        # print(caput_originali_asa[index])
+        # break
+    # return caput_originali
+    if len(extras):
+        resultatum.extend(extras)
+
+    return resultatum
+
+
 def bcp47_rdf_extension_relationship(
         header: List[str],
         namespaces: List[dict] = None,
@@ -1737,7 +1847,10 @@ def bcp47_rdf_extension_relationship(
 ) -> dict:
     """""Metadata processing of the bcp47_rdf_extension version
 
-    _extended_summary_
+    Note about caput_ad_columnae_i:
+    - We can generate an ASA about how would be if long column names
+      would be renamed and added as text value, (e.g. do it from a
+      wide dataset), but not designed to do it from narrow dataset
 
     Args:
         caput (List[str]): _description_
@@ -1746,10 +1859,17 @@ def bcp47_rdf_extension_relationship(
     Returns:
         dict: _description_
     """
+    # About caput_**, see
+    # - https://en.wikipedia.org/wiki/Wide_and_narrow_data
+    # - https://tidyr.tidyverse.org/
+    # - pandas.pydata.org/pandas-docs/stable/reference/api/pandas.melt.html
+    # - pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.pivot.html
+
     # @TODO: this function is obviously doing too much at once. Eventually
     #        can be refactored. (rocha, 2022-06-09 10:50 UTC)
     result = {
         'caput_originali': header,
+        'caput_ad_columnae_i': [],
         'caput_originali_asa': [],
         # 'rdf:subject': None,
         # 'rdf:predicate': [],
@@ -1897,7 +2017,8 @@ def bcp47_rdf_extension_relationship(
     # ========= Fist iteration over each column, START =========
     for index, item in enumerate(header):
         item_meta = bcp47_langtag(
-            item, ['language', 'script', 'extension'], strictum=False)
+            item, ['language', 'script', 'extension', '_callbacks'],
+            strictum=False)
         # @TODO; get erros and export them to upper level
         # item_meta['_column'] = index
         item_meta['_index_ex_tabula'] = index
@@ -2083,6 +2204,10 @@ def bcp47_rdf_extension_relationship(
                         'rdf:type'].append(_itemtype)
 
     result = _aux_recalc_containers(result)
+
+    result['caput_ad_columnae_i'] = bcp47_rdf_extension_caput_ad_columnae_i(
+        result['caput_originali'],
+        result['caput_originali_asa'])
 
     return result
 
@@ -2561,6 +2686,7 @@ class CodAbTabulae:
     numerordinatio_praefixo: str = None
     pcode_praefixo: str = None
     unm49: str = None
+    experimentum_est: bool = False
 
     # identitās, f, s, nom., https://en.wiktionary.org/wiki/identitas#Latin
     # ex (+ ablative), https://en.wiktionary.org/wiki/ex#Latin
@@ -2577,6 +2703,12 @@ class CodAbTabulae:
     # objectīvō, n, dativus, https://en.wiktionary.org/wiki/objectivus#Latin
     _objectivo_dictionario: str = None
 
+    # Columns marked merge from output
+    _column_merge: list = []
+
+    # Columns marked to discard from output
+    _column_devnull: list = []
+
     def __init__(
         self,
         caput: list,
@@ -2585,6 +2717,7 @@ class CodAbTabulae:
         numerordinatio_praefixo: str = None,
         pcode_praefixo: str = None,
         unm49: str = None,
+        experimentum_est: bool = False,
     ):
         """__init__"""
         self.caput_originali = caput
@@ -2593,6 +2726,7 @@ class CodAbTabulae:
         self.numerordinatio_praefixo = numerordinatio_praefixo
         self.pcode_praefixo = pcode_praefixo
         self.unm49 = unm49
+        self.experimentum_est = experimentum_est
 
     def imprimere(self) -> list:
         """imprimere /print/@eng-Latn
@@ -3571,9 +3705,9 @@ def de_dotted(dotted_key: str,  # pylint: disable=invalid-name
     Trivia: dē, https://en.wiktionary.org/wiki/de#Latin
     Examples:
         >>> exemplum = {'a': {'a2': 123}, 'b': 456}
-        >>> otlg = HXLTMOntologia(exemplum)
-        >>> otlg.de('a.a2', fontem=exemplum)
+        >>> de_dotted('a.a2', fontem=exemplum)
         123
+
     Args:
         dotted_key (str): Dotted key notation
         default ([Any], optional): Value if not found. Defaults to None.
@@ -4232,6 +4366,7 @@ def hxl_hashtag_to_bcp47(
         'grandfathered': None,
         '_callbacks': {
             'hxl_attrs': None,
+            'hxl_minimal': None,
             'hxl_original': hashtag,
             'rdf_parts': None
         },
@@ -4488,6 +4623,20 @@ def hxl_hashtag_to_bcp47(
             norm.append('x-' + '-'.join(result['privateuse']))
 
         result['Language-Tag_normalized'] = '-'.join(norm)
+
+    _hxl_original = result['_callbacks']['hxl_original'].lower()
+
+    _hxl_attrs = _hxl_original.replace('#item+rem', '').replace(
+        '#item+status', '').replace('#item+conceptum', '').replace('#item', '')
+
+    result['_callbacks']['hxl_attrs'] = _hxl_attrs
+    # result['_callbacks']['hxl_minimal'] = bcp47_langtag_callback_hxl(
+    #     _hxl_attrs, False)
+    result['_callbacks']['hxl_minimal'] = bcp47_langtag_callback_hxl_minimal(
+        result, False)
+
+    # print(result['Language-Tag_normalized'] , result['_error'])
+    # print('[[{0}]]'.format(result['Language-Tag_normalized']))
 
     return result
 
@@ -5742,7 +5891,7 @@ def hxltm_index_praeparationi(
 
 def qhxl_hxlhashtag_2_bcp47(
         hxlhashtag: str, hxlstd11_compat: bool = False) -> str:
-    """qhxl_hxlhashtag_2_bcp47
+    """qhxl_hxlhashtag_2_bcp47 (no -r- RDF extension support)
 
     (try) to convert full HXL hashtag to BCP47
 
@@ -6336,7 +6485,7 @@ def qhxl_bcp47_2_hxlattr(bcp47: str) -> str:
     >>> qhxl_bcp47_2_hxlattr('lat-Latn-x-private1-private2')
     '+i_lat+is_latn+ix_private1+ix_private2'
     >>> qhxl_bcp47_2_hxlattr('qcc-Zxxx-x-wikip')
-    '+i_qcc+is_zxxx+ix_wdatap'
+    '+i_qcc+is_zxxx+ix_wikip'
     """
     resultatum = ''
     bcp47_parsed = bcp47_langtag(bcp47)
@@ -6655,6 +6804,37 @@ class TabulaSimplici:
         """
         self._initiari()
         return self.statum
+
+    def quod_csvw(self) -> dict:
+        if self.ex_radice is True:
+            _path = self.archivum_trivio_ex_radice
+        else:
+            _path = self.archivum_nomini
+
+        resultatum = {
+            # 'name': self.nomen,
+            # 'path': self.nomen,
+            'url': _path,
+            # 'profile': 'tabular-data-resource',
+            'tableSchema': {
+                'columns': [],
+                'foreignKeys': []
+            },
+            # 'stats': {
+            #     'fields': len(self.caput),
+            #     'rows': self.res_totali,
+            # }
+        }
+
+        for caput_rei in self.caput:
+            item = {
+                'name': caput_rei,
+                # TODO: actually get rigth type from reference dictionaries
+                'datatype': 'string',
+            }
+            resultatum['tableSchema']['columns'].append(item)
+
+        return resultatum
 
     def quod_datapackage(self) -> dict:
         if self.ex_radice is True:

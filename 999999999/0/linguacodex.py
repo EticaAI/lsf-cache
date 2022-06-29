@@ -317,7 +317,7 @@ tXSD-tdatetime-tnop
 +rdf_y_u0002_unescothes+rdf_y_u001d_u007c'
 
    {0} --de_hxl_simplex --de_hxlhashtag=\
-'#item+i_qcc+is_zxxx+rdf_s_u2200_s1+rdf_p_SKOS_related_s2+ix_wdatap123' \
+'#item+i_qcc+is_zxxx+rdf_s_u2200_s1+rdf_p_skos_related_s2+ix_wdatap123' \
 --quod=.Language-Tag_normalized
 
    {0} --de_hxl_simplex --de_bcp47_simplex \

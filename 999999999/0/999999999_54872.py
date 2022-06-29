@@ -26,6 +26,7 @@
 # ==============================================================================
 # /opt/Protege-5.5.0/run.sh
 
+import csv
 import json
 import sys
 import os
@@ -48,6 +49,7 @@ from L999999999_0 import (
     HXLHashtagSimplici,
     SetEncoder,
     bcp47_langtag,
+    bcp47_langtag_callback_hxl,
     bcp47_rdf_extension_poc,
     hxl_hashtag_to_bcp47,
     hxltm_carricato,
@@ -117,6 +119,12 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
 
+    {0} --objectivum-formato=_temp_hxl_meta_in_json \
+--punctum-separato-de-fontem=$'\\t' \
+999999999/1568346/data/cod-ab-example1-with-inferences.no1.tm.hxl.tsv \
+--numerordinatio-cum-antecessoribus \
+--rdf-ontologia-ordinibus=5 --rdf-trivio=5002
+
 (Data operations)
     {0} --objectivum-formato=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
@@ -157,13 +165,18 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 
 (Data operations, header conversion RDF+HXL -> RDF+BCP47)
     varhxl=$(head -n1 \
-999999999/1568346/data/cod-ab-example1-with-inferences.no1.hxl.tm.tsv)
+999999999/1568346/data/cod-ab-example1-with-inferences.no1.tm.hxl.tsv)
     {0} --objectivum-formato=_temp_header_hxl_to_bcp47 "$varhxl"
 
 (Data operations, header conversion RDF+BCP47 -> RDF+HXL)
     varbcp47=$(head -n1 \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv)
     {0} --objectivum-formato=_temp_header_bcp47_to_hxl "$varbcp47"
+
+(Create shorter column names; good for databases, less for command line)
+    {0} --objectivum-formato=_temp_bcp47_to_bcp47_shortnames \
+--punctum-separato-de-fontem=$'\\t' \
+999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv
 
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
@@ -295,6 +308,8 @@ class Cli:
                 '_temp_hxl_meta_in_json',
                 '_temp_header_hxl_to_bcp47',
                 '_temp_header_bcp47_to_hxl',
+                '_temp_bcp47_to_bcp47_shortnames',
+                '_temp_no1_to_no1_shortnames',
             ],
             # required=True
             default='application/x-turtle'
@@ -451,6 +466,49 @@ class Cli:
             # print(RDF_SPATIA_NOMINALIBUS_EXTRAS)
             # pass
 
+        if pyargs.objectivum_formato in [
+                '_temp_bcp47_to_bcp47_shortnames',
+                '_temp_no1_to_no1_shortnames']:
+            # if pyargs.objectivum_formato = '_temp_no1_to_no1_shortnames':
+
+            if _stdin:
+                raise NotImplementedError('{0} not with stdin'.format(
+                    pyargs.objectivum_formato))
+
+            caput, data = hxltm_carricato_brevibus(
+                _infile, _stdin, punctum_separato=fontem_separato)
+
+            est_bcp47 = True
+            if pyargs.objectivum_formato == '_temp_no1_to_no1_shortnames':
+                est_bcp47 = False
+                caput_novo = []
+                for _item in caput:
+                    # print('hxl item     > ', _item)
+                    _hxl = HXLHashtagSimplici(_item).praeparatio()
+                    _item_bcp47 = _hxl.quod_bcp47(strictum=False)
+                    # print('_item_bcp47  > ', _item_bcp47)
+                    caput_novo.append(_item_bcp47)
+                caput = caput_novo
+                # print('caput', caput)
+
+            rdf_sine_spatia_nominalibus = pyargs.rdf_sine_spatia_nominalibus
+            if not rdf_sine_spatia_nominalibus:
+                rdf_sine_spatia_nominalibus = []
+            rdf_sine_spatia_nominalibus.append('devnull')
+
+            meta = bcp47_rdf_extension_poc(
+                caput, data, objective_bag=pyargs.rdf_bag,
+                rdf_sine_spatia_nominalibus=rdf_sine_spatia_nominalibus,
+                cum_antecessoribus=pyargs.cum_antecessoribus,
+                rdf_ontologia_ordinibus=pyargs.rdf_ontologia_ordinibus,
+                est_meta=True)
+
+            numerordinatio_data__sortnames(
+                meta['caput_asa'], _infile, est_bcp47=est_bcp47,
+                punctum_separato=fontem_separato)
+
+            return self.EXIT_OK
+
         # @TODO maybe refactor this temporary part
         # if pyargs.objectivum_formato == '_temp_bcp47_meta_in_json':
         if pyargs.objectivum_formato in [
@@ -547,11 +605,15 @@ class Cli:
                     raise NotImplementedError(
                         "Delimiter [{0}]?? Single header item?".format(_infile))
 
+            # Use case: strip line breaks
+            _infile = _infile.strip()
+
             caput = _infile.split(delimiter)
             caput_novo = []
             errors = []
 
             # TODO: rework this funcion
+            # TODO: draft on numerordinatio_caput_bcp47_to_hxlhashtag()
             for item in caput:
                 if item in BCP47_AD_HXL:
                     # print(BCP47_AD_HXL[item])
@@ -609,6 +671,9 @@ class Cli:
                     # fail to auto-detect
                     raise NotImplementedError(
                         "Delimiter [{0}]?? Single header item?".format(_infile))
+
+            # Use case: strip line breaks
+            _infile = _infile.strip()
 
             caput = _infile.split(delimiter)
             caput_novo = []
@@ -799,6 +864,82 @@ class CliMain:
             # print('oi actio')
             # numerordinatio_neo_separatum
         # print('failed')
+
+
+def numerordinatio_data__sortnames(
+    caput_asa: dict, fontem: str,
+    est_bcp47: bool = True, punctum_separato: str = ","
+):
+    # json.dumps(caput_asa)
+    # print(json.dumps(caput_asa))
+    # return ''
+    # print(caput_asa['caput_originali'])
+    # print(caput_asa['caput_ad_columnae_i'])
+
+    caput_novo = []
+    res_novae = []
+
+    for item in caput_asa['caput_ad_columnae_i']:
+        if isinstance(item, list):
+            caput_novo.append(item[0])
+            res_novae.append(item[1])
+        else:
+            caput_novo.append(item)
+
+    if not est_bcp47:
+        caput_novo = numerordinatio_caput_bcp47_to_hxlhashtag(caput_novo)
+
+    with open(fontem, 'r') as _fons:
+        _writer = csv.writer(sys.stdout, delimiter=punctum_separato)
+        _csv_reader = csv.reader(_fons, delimiter=punctum_separato)
+
+        # discard original header
+        next(_csv_reader)
+        # _writer.writerow(_header_original)
+        _writer.writerow(caput_novo)
+
+        for linea in _csv_reader:
+            linea_novae = linea
+            if len(res_novae) > 0:
+                linea_novae.extend(res_novae)
+            _writer.writerow(linea_novae)
+
+
+def numerordinatio_caput_bcp47_to_hxlhashtag(
+        caput: str, hxl_base: str = '#item+rem') -> str:
+
+    caput_novo = []
+    errors = []
+    for item in caput:
+        if item in BCP47_AD_HXL:
+            # print(BCP47_AD_HXL[item])
+            # item_meta = bcp47_langtag(BCP47_AD_HXL[item])
+            caput_novo.append(BCP47_AD_HXL[item]['hxltm'])
+            continue
+        # item_meta = bcp47_langtag(item,strictum=False)
+        item_meta = bcp47_langtag(item)
+
+        if len(item_meta['_error']) == 0 and \
+                item_meta['Language-Tag_normalized']:
+            caput_novo.append('{0}{1}'.format(
+                hxl_base,
+                item_meta['_callbacks']['hxl_attrs']
+            ))
+        else:
+            caput_novo.append('qcc-Zxxx-x-error')
+            if len(item_meta['_error']) > 0:
+                errors.append('ERROR: {0}'.format(item))
+                errors.extend(item_meta['_error'])
+            else:
+                errors.append('ERROR: {0} <{1}>'.format(
+                    item, item_meta))
+
+    if len(errors) > 0:
+        raise SyntaxError('<{0}>? <{1}>'.format(
+            caput, errors
+        ))
+
+    return caput_novo
 
 
 def numerordinatio_neo_separatum(

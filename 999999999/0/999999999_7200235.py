@@ -581,6 +581,17 @@ class Cli:
 
         parser.add_argument(
             # '--venandum-insectum-est, --debug',
+            '--experimentum-est',
+            help='(Internal testing only) Enable undocumented feature',
+            metavar="experimentum_est",
+            dest="experimentum_est",
+            action='store_const',
+            const=True,
+            default=False
+        )
+
+        parser.add_argument(
+            # '--venandum-insectum-est, --debug',
             '--venandum-insectum-est', '--debug',
             help='Enable debug? Show extra informations',
             metavar="venandum_insectum",
@@ -887,6 +898,9 @@ class Cli:
             xlsx.praeparatio()
             caput, data = xlsx.imprimere()
 
+            # print(pyargs)
+            # print(pyargs.experimentum_est)
+
             codt = CodAbTabulae(
                 caput=caput,
                 data=data,
@@ -894,6 +908,7 @@ class Cli:
                 numerordinatio_praefixo=numerordinatio_praefixo,
                 pcode_praefixo=pcode_praefixo,
                 unm49=unm49,
+                experimentum_est=pyargs.experimentum_est
             )
             caput, data = codt.praeparatio(schema).imprimere()
             # print(type(caput), caput)
