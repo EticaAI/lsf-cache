@@ -1,0 +1,96 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:262()> .
+
+<urn:mdciii:1603:45:16:262()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:262)" ;
+    skos:member <urn:mdciii:1603:45:16:262:2()> .
+
+<urn:mdciii:1603:45:16:262:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:262:2)" ;
+    skos:member <urn:mdciii:1603:45:16:262:2:102>, <urn:mdciii:1603:45:16:262:2:201>, <urn:mdciii:1603:45:16:262:2:202>, <urn:mdciii:1603:45:16:262:2:203>, <urn:mdciii:1603:45:16:262:2:204>, <urn:mdciii:1603:45:16:262:2:301>, <urn:mdciii:1603:45:16:262:2:302>, <urn:mdciii:1603:45:16:262:2:303>, <urn:mdciii:1603:45:16:262:2:401>, <urn:mdciii:1603:45:16:262:2:501> .
+
+<urn:mdciii:1603:45:16:262:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:262:2:101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:101" ;
+    skos:prefLabel "Alaili Dadda"@eng-Latn ;
+    wdata:q7200235 "DJ0101" .
+
+<urn:mdciii:1603:45:16:262:2:102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:102" ;
+    skos:prefLabel "Obock"@eng-Latn ;
+    wdata:q7200235 "DJ0102" .
+
+<urn:mdciii:1603:45:16:262:2:201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:201" ;
+    skos:prefLabel "Dorra"@eng-Latn ;
+    wdata:q7200235 "DJ0201" .
+
+<urn:mdciii:1603:45:16:262:2:202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:202" ;
+    skos:prefLabel "Randa"@eng-Latn ;
+    wdata:q7200235 "DJ0202" .
+
+<urn:mdciii:1603:45:16:262:2:203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:203" ;
+    skos:prefLabel "Balha"@eng-Latn ;
+    wdata:q7200235 "DJ0203" .
+
+<urn:mdciii:1603:45:16:262:2:204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:204" ;
+    skos:prefLabel "Tadjourah"@eng-Latn ;
+    wdata:q7200235 "DJ0204" .
+
+<urn:mdciii:1603:45:16:262:2:301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:301" ;
+    skos:prefLabel "YobokiI"@eng-Latn ;
+    wdata:q7200235 "DJ0301" .
+
+<urn:mdciii:1603:45:16:262:2:302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:302" ;
+    skos:prefLabel "Dilkhil"@eng-Latn ;
+    wdata:q7200235 "DJ0302" .
+
+<urn:mdciii:1603:45:16:262:2:303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:303" ;
+    skos:prefLabel "As Eyla"@eng-Latn ;
+    wdata:q7200235 "DJ0303" .
+
+<urn:mdciii:1603:45:16:262:2:401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:401" ;
+    skos:prefLabel "Djibouti"@eng-Latn ;
+    wdata:q7200235 "DJ0401" .
+
+<urn:mdciii:1603:45:16:262:2:501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:262:2:501" ;
+    skos:prefLabel "Ali Sabeh"@eng-Latn ;
+    wdata:q7200235 "DJ0501" .
+

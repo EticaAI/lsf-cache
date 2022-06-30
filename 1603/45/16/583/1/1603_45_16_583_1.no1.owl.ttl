@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -33,23 +34,27 @@
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:583:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
     rdfs:label "1603:45:16:583:1:1" ;
-    skos:prefLabel "Yap"@eng-Latn .
+    skos:prefLabel "Yap"@eng-Latn ;
+    wdata:q7200235 "FM1" .
 
 <urn:mdciii:1603:45:16:583:1:2>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:583:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
     rdfs:label "1603:45:16:583:1:2" ;
-    skos:prefLabel "Chuuk"@eng-Latn .
+    skos:prefLabel "Chuuk"@eng-Latn ;
+    wdata:q7200235 "FM2" .
 
 <urn:mdciii:1603:45:16:583:1:3>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:583:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
     rdfs:label "1603:45:16:583:1:3" ;
-    skos:prefLabel "Pohnpei"@eng-Latn .
+    skos:prefLabel "Pohnpei"@eng-Latn ;
+    wdata:q7200235 "FM3" .
 
 <urn:mdciii:1603:45:16:583:1:4>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:583:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
     rdfs:label "1603:45:16:583:1:4" ;
-    skos:prefLabel "Kosrae"@eng-Latn .
+    skos:prefLabel "Kosrae"@eng-Latn ;
+    wdata:q7200235 "FM4" .
 

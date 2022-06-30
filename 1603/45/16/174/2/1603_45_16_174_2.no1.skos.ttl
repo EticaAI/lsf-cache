@@ -1,0 +1,132 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:174()> .
+
+<urn:mdciii:1603:45:16:174()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:174)" ;
+    skos:member <urn:mdciii:1603:45:16:174:2()> .
+
+<urn:mdciii:1603:45:16:174:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:174:2)" ;
+    skos:member <urn:mdciii:1603:45:16:174:2:12>, <urn:mdciii:1603:45:16:174:2:13>, <urn:mdciii:1603:45:16:174:2:14>, <urn:mdciii:1603:45:16:174:2:15>, <urn:mdciii:1603:45:16:174:2:21>, <urn:mdciii:1603:45:16:174:2:22>, <urn:mdciii:1603:45:16:174:2:23>, <urn:mdciii:1603:45:16:174:2:24>, <urn:mdciii:1603:45:16:174:2:25>, <urn:mdciii:1603:45:16:174:2:26>, <urn:mdciii:1603:45:16:174:2:27>, <urn:mdciii:1603:45:16:174:2:28>, <urn:mdciii:1603:45:16:174:2:29>, <urn:mdciii:1603:45:16:174:2:31>, <urn:mdciii:1603:45:16:174:2:32>, <urn:mdciii:1603:45:16:174:2:33> .
+
+<urn:mdciii:1603:45:16:174:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:174:2:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:11" ;
+    skos:prefLabel "Domoni"@eng-Latn ;
+    wdata:q7200235 "KM11" .
+
+<urn:mdciii:1603:45:16:174:2:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:12" ;
+    skos:prefLabel "Mrémani"@eng-Latn ;
+    wdata:q7200235 "KM12" .
+
+<urn:mdciii:1603:45:16:174:2:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:13" ;
+    skos:prefLabel "Mutsamudu"@eng-Latn ;
+    wdata:q7200235 "KM13" .
+
+<urn:mdciii:1603:45:16:174:2:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:14" ;
+    skos:prefLabel "Ouani"@eng-Latn ;
+    wdata:q7200235 "KM14" .
+
+<urn:mdciii:1603:45:16:174:2:15>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:15" ;
+    skos:prefLabel "Sima"@eng-Latn ;
+    wdata:q7200235 "KM15" .
+
+<urn:mdciii:1603:45:16:174:2:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:21" ;
+    skos:prefLabel "Hamahamet-Mboinkou"@eng-Latn ;
+    wdata:q7200235 "KM21" .
+
+<urn:mdciii:1603:45:16:174:2:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:22" ;
+    skos:prefLabel "Hambou"@eng-Latn ;
+    wdata:q7200235 "KM22" .
+
+<urn:mdciii:1603:45:16:174:2:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:23" ;
+    skos:prefLabel "Itsandra-Hamanvou"@eng-Latn ;
+    wdata:q7200235 "KM23" .
+
+<urn:mdciii:1603:45:16:174:2:24>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:24" ;
+    skos:prefLabel "Mbadjini Est"@eng-Latn ;
+    wdata:q7200235 "KM24" .
+
+<urn:mdciii:1603:45:16:174:2:25>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:25" ;
+    skos:prefLabel "Mbadjini Ouest"@eng-Latn ;
+    wdata:q7200235 "KM25" .
+
+<urn:mdciii:1603:45:16:174:2:26>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:26" ;
+    skos:prefLabel "Mitsamiouli-Mboudé"@eng-Latn ;
+    wdata:q7200235 "KM26" .
+
+<urn:mdciii:1603:45:16:174:2:27>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:27" ;
+    skos:prefLabel "Moroni-Bambao"@eng-Latn ;
+    wdata:q7200235 "KM27" .
+
+<urn:mdciii:1603:45:16:174:2:28>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:28" ;
+    skos:prefLabel "Oichili-Dimani"@eng-Latn ;
+    wdata:q7200235 "KM28" .
+
+<urn:mdciii:1603:45:16:174:2:29>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:29" ;
+    skos:prefLabel "Kartala"@eng-Latn ;
+    wdata:q7200235 "KM29" .
+
+<urn:mdciii:1603:45:16:174:2:31>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:31" ;
+    skos:prefLabel "Djando"@eng-Latn ;
+    wdata:q7200235 "KM31" .
+
+<urn:mdciii:1603:45:16:174:2:32>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:32" ;
+    skos:prefLabel "Fomboni"@eng-Latn ;
+    wdata:q7200235 "KM32" .
+
+<urn:mdciii:1603:45:16:174:2:33>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:2:33" ;
+    skos:prefLabel "Nioumachioi"@eng-Latn ;
+    wdata:q7200235 "KM33" .
+

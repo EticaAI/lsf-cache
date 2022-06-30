@@ -1,0 +1,84 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:266()> .
+
+<urn:mdciii:1603:45:16:266()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:266)" ;
+    skos:member <urn:mdciii:1603:45:16:266:1()> .
+
+<urn:mdciii:1603:45:16:266:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:266:1)" ;
+    skos:member <urn:mdciii:1603:45:16:266:1:2>, <urn:mdciii:1603:45:16:266:1:3>, <urn:mdciii:1603:45:16:266:1:4>, <urn:mdciii:1603:45:16:266:1:5>, <urn:mdciii:1603:45:16:266:1:6>, <urn:mdciii:1603:45:16:266:1:7>, <urn:mdciii:1603:45:16:266:1:8>, <urn:mdciii:1603:45:16:266:1:9> .
+
+<urn:mdciii:1603:45:16:266:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:266:1:1>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:1" ;
+    skos:prefLabel "Estuaire"@fra-Latn ;
+    wdata:q7200235 "GA001" .
+
+<urn:mdciii:1603:45:16:266:1:2>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:2" ;
+    skos:prefLabel "Haut-Ogooue"@fra-Latn ;
+    wdata:q7200235 "GA002" .
+
+<urn:mdciii:1603:45:16:266:1:3>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:3" ;
+    skos:prefLabel "Moyen-Ogooue"@fra-Latn ;
+    wdata:q7200235 "GA003" .
+
+<urn:mdciii:1603:45:16:266:1:4>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:4" ;
+    skos:prefLabel "Ngounie"@fra-Latn ;
+    wdata:q7200235 "GA004" .
+
+<urn:mdciii:1603:45:16:266:1:5>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:5" ;
+    skos:prefLabel "Nyanga"@fra-Latn ;
+    wdata:q7200235 "GA005" .
+
+<urn:mdciii:1603:45:16:266:1:6>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:6" ;
+    skos:prefLabel "Ogooue-Ivindo"@fra-Latn ;
+    wdata:q7200235 "GA006" .
+
+<urn:mdciii:1603:45:16:266:1:7>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:7" ;
+    skos:prefLabel "Ogooue-Lolo"@fra-Latn ;
+    wdata:q7200235 "GA007" .
+
+<urn:mdciii:1603:45:16:266:1:8>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:8" ;
+    skos:prefLabel "Ogooue-Maritime"@fra-Latn ;
+    wdata:q7200235 "GA008" .
+
+<urn:mdciii:1603:45:16:266:1:9>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:266:1:9" ;
+    skos:prefLabel "Woleu-Ntem"@fra-Latn ;
+    wdata:q7200235 "GA009" .
+

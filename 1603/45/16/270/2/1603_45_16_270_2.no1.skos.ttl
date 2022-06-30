@@ -1,0 +1,252 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:270()> .
+
+<urn:mdciii:1603:45:16:270()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:270)" ;
+    skos:member <urn:mdciii:1603:45:16:270:2()> .
+
+<urn:mdciii:1603:45:16:270:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:270:2)" ;
+    skos:member <urn:mdciii:1603:45:16:270:2:201>, <urn:mdciii:1603:45:16:270:2:202>, <urn:mdciii:1603:45:16:270:2:203>, <urn:mdciii:1603:45:16:270:2:204>, <urn:mdciii:1603:45:16:270:2:301>, <urn:mdciii:1603:45:16:270:2:302>, <urn:mdciii:1603:45:16:270:2:303>, <urn:mdciii:1603:45:16:270:2:304>, <urn:mdciii:1603:45:16:270:2:305>, <urn:mdciii:1603:45:16:270:2:306>, <urn:mdciii:1603:45:16:270:2:307>, <urn:mdciii:1603:45:16:270:2:308>, <urn:mdciii:1603:45:16:270:2:309>, <urn:mdciii:1603:45:16:270:2:401>, <urn:mdciii:1603:45:16:270:2:402>, <urn:mdciii:1603:45:16:270:2:403>, <urn:mdciii:1603:45:16:270:2:404>, <urn:mdciii:1603:45:16:270:2:405>, <urn:mdciii:1603:45:16:270:2:501>, <urn:mdciii:1603:45:16:270:2:601>, <urn:mdciii:1603:45:16:270:2:602>, <urn:mdciii:1603:45:16:270:2:603>, <urn:mdciii:1603:45:16:270:2:604>, <urn:mdciii:1603:45:16:270:2:605>, <urn:mdciii:1603:45:16:270:2:606>, <urn:mdciii:1603:45:16:270:2:701>, <urn:mdciii:1603:45:16:270:2:702>, <urn:mdciii:1603:45:16:270:2:703>, <urn:mdciii:1603:45:16:270:2:704>, <urn:mdciii:1603:45:16:270:2:705>, <urn:mdciii:1603:45:16:270:2:801>, <urn:mdciii:1603:45:16:270:2:802>, <urn:mdciii:1603:45:16:270:2:803>, <urn:mdciii:1603:45:16:270:2:804>, <urn:mdciii:1603:45:16:270:2:805>, <urn:mdciii:1603:45:16:270:2:806> .
+
+<urn:mdciii:1603:45:16:270:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:270:2:101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:101" ;
+    skos:prefLabel "Banjul"@eng-Latn ;
+    wdata:q7200235 "GM0101" .
+
+<urn:mdciii:1603:45:16:270:2:201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:201" ;
+    skos:prefLabel "Fulladu East"@eng-Latn ;
+    wdata:q7200235 "GM0201" .
+
+<urn:mdciii:1603:45:16:270:2:202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:202" ;
+    skos:prefLabel "Kantora"@eng-Latn ;
+    wdata:q7200235 "GM0202" .
+
+<urn:mdciii:1603:45:16:270:2:203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:203" ;
+    skos:prefLabel "Sandu"@eng-Latn ;
+    wdata:q7200235 "GM0203" .
+
+<urn:mdciii:1603:45:16:270:2:204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:204" ;
+    skos:prefLabel "Wuli"@eng-Latn ;
+    wdata:q7200235 "GM0204" .
+
+<urn:mdciii:1603:45:16:270:2:301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:301" ;
+    skos:prefLabel "Foni Bintang Karenai"@eng-Latn ;
+    wdata:q7200235 "GM0301" .
+
+<urn:mdciii:1603:45:16:270:2:302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:302" ;
+    skos:prefLabel "Foni Bondali"@eng-Latn ;
+    wdata:q7200235 "GM0302" .
+
+<urn:mdciii:1603:45:16:270:2:303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:303" ;
+    skos:prefLabel "Foni Brefet"@eng-Latn ;
+    wdata:q7200235 "GM0303" .
+
+<urn:mdciii:1603:45:16:270:2:304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:304" ;
+    skos:prefLabel "Foni Jarrol"@eng-Latn ;
+    wdata:q7200235 "GM0304" .
+
+<urn:mdciii:1603:45:16:270:2:305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:305" ;
+    skos:prefLabel "Foni Kansala"@eng-Latn ;
+    wdata:q7200235 "GM0305" .
+
+<urn:mdciii:1603:45:16:270:2:306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:306" ;
+    skos:prefLabel "Kombo Central"@eng-Latn ;
+    wdata:q7200235 "GM0306" .
+
+<urn:mdciii:1603:45:16:270:2:307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:307" ;
+    skos:prefLabel "Kombo East"@eng-Latn ;
+    wdata:q7200235 "GM0307" .
+
+<urn:mdciii:1603:45:16:270:2:308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:308" ;
+    skos:prefLabel "Kombo North/St Marie"@eng-Latn ;
+    wdata:q7200235 "GM0308" .
+
+<urn:mdciii:1603:45:16:270:2:309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:309" ;
+    skos:prefLabel "Kombo South"@eng-Latn ;
+    wdata:q7200235 "GM0309" .
+
+<urn:mdciii:1603:45:16:270:2:401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:401" ;
+    skos:prefLabel "Fulladu West"@eng-Latn ;
+    wdata:q7200235 "GM0401" .
+
+<urn:mdciii:1603:45:16:270:2:402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:402" ;
+    skos:prefLabel "Janjanbureh"@eng-Latn ;
+    wdata:q7200235 "GM0402" .
+
+<urn:mdciii:1603:45:16:270:2:403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:403" ;
+    skos:prefLabel "Niamina Dankunku"@eng-Latn ;
+    wdata:q7200235 "GM0403" .
+
+<urn:mdciii:1603:45:16:270:2:404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:404" ;
+    skos:prefLabel "Niamina East"@eng-Latn ;
+    wdata:q7200235 "GM0404" .
+
+<urn:mdciii:1603:45:16:270:2:405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:405" ;
+    skos:prefLabel "Niamina West"@eng-Latn ;
+    wdata:q7200235 "GM0405" .
+
+<urn:mdciii:1603:45:16:270:2:501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:501" ;
+    skos:prefLabel "Kanifing"@eng-Latn ;
+    wdata:q7200235 "GM0501" .
+
+<urn:mdciii:1603:45:16:270:2:601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:601" ;
+    skos:prefLabel "Central Baddibu"@eng-Latn ;
+    wdata:q7200235 "GM0601" .
+
+<urn:mdciii:1603:45:16:270:2:602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:602" ;
+    skos:prefLabel "Jokadu"@eng-Latn ;
+    wdata:q7200235 "GM0602" .
+
+<urn:mdciii:1603:45:16:270:2:603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:603" ;
+    skos:prefLabel "Lower Baddibu"@eng-Latn ;
+    wdata:q7200235 "GM0603" .
+
+<urn:mdciii:1603:45:16:270:2:604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:604" ;
+    skos:prefLabel "Lower Niumi"@eng-Latn ;
+    wdata:q7200235 "GM0604" .
+
+<urn:mdciii:1603:45:16:270:2:605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:605" ;
+    skos:prefLabel "Upper Baddibu"@eng-Latn ;
+    wdata:q7200235 "GM0605" .
+
+<urn:mdciii:1603:45:16:270:2:606>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:606" ;
+    skos:prefLabel "Upper Niumi"@eng-Latn ;
+    wdata:q7200235 "GM0606" .
+
+<urn:mdciii:1603:45:16:270:2:701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:701" ;
+    skos:prefLabel "Lower Saloum"@eng-Latn ;
+    wdata:q7200235 "GM0701" .
+
+<urn:mdciii:1603:45:16:270:2:702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:702" ;
+    skos:prefLabel "Niani"@eng-Latn ;
+    wdata:q7200235 "GM0702" .
+
+<urn:mdciii:1603:45:16:270:2:703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:703" ;
+    skos:prefLabel "Nianija"@eng-Latn ;
+    wdata:q7200235 "GM0703" .
+
+<urn:mdciii:1603:45:16:270:2:704>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:704" ;
+    skos:prefLabel "Sami"@eng-Latn ;
+    wdata:q7200235 "GM0704" .
+
+<urn:mdciii:1603:45:16:270:2:705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:705" ;
+    skos:prefLabel "Upper Saloum"@eng-Latn ;
+    wdata:q7200235 "GM0705" .
+
+<urn:mdciii:1603:45:16:270:2:801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:801" ;
+    skos:prefLabel "Jarra Central"@eng-Latn ;
+    wdata:q7200235 "GM0801" .
+
+<urn:mdciii:1603:45:16:270:2:802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:802" ;
+    skos:prefLabel "Jarra East"@eng-Latn ;
+    wdata:q7200235 "GM0802" .
+
+<urn:mdciii:1603:45:16:270:2:803>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:803" ;
+    skos:prefLabel "Jarra West"@eng-Latn ;
+    wdata:q7200235 "GM0803" .
+
+<urn:mdciii:1603:45:16:270:2:804>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:804" ;
+    skos:prefLabel "Kiang Central"@eng-Latn ;
+    wdata:q7200235 "GM0804" .
+
+<urn:mdciii:1603:45:16:270:2:805>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:805" ;
+    skos:prefLabel "Kiang East"@eng-Latn ;
+    wdata:q7200235 "GM0805" .
+
+<urn:mdciii:1603:45:16:270:2:806>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:270:2:806" ;
+    skos:prefLabel "Kiang West"@eng-Latn ;
+    wdata:q7200235 "GM0806" .
+

@@ -1,0 +1,360 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:174()> .
+
+<urn:mdciii:1603:45:16:174()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:174)" ;
+    skos:member <urn:mdciii:1603:45:16:174:3()> .
+
+<urn:mdciii:1603:45:16:174:3()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:174:3)" ;
+    skos:member <urn:mdciii:1603:45:16:174:3:112>, <urn:mdciii:1603:45:16:174:3:113>, <urn:mdciii:1603:45:16:174:3:114>, <urn:mdciii:1603:45:16:174:3:115>, <urn:mdciii:1603:45:16:174:3:121>, <urn:mdciii:1603:45:16:174:3:122>, <urn:mdciii:1603:45:16:174:3:123>, <urn:mdciii:1603:45:16:174:3:124>, <urn:mdciii:1603:45:16:174:3:125>, <urn:mdciii:1603:45:16:174:3:131>, <urn:mdciii:1603:45:16:174:3:132>, <urn:mdciii:1603:45:16:174:3:133>, <urn:mdciii:1603:45:16:174:3:134>, <urn:mdciii:1603:45:16:174:3:141>, <urn:mdciii:1603:45:16:174:3:142>, <urn:mdciii:1603:45:16:174:3:143>, <urn:mdciii:1603:45:16:174:3:151>, <urn:mdciii:1603:45:16:174:3:152>, <urn:mdciii:1603:45:16:174:3:153>, <urn:mdciii:1603:45:16:174:3:211>, <urn:mdciii:1603:45:16:174:3:212>, <urn:mdciii:1603:45:16:174:3:213>, <urn:mdciii:1603:45:16:174:3:221>, <urn:mdciii:1603:45:16:174:3:222>, <urn:mdciii:1603:45:16:174:3:231>, <urn:mdciii:1603:45:16:174:3:232>, <urn:mdciii:1603:45:16:174:3:233>, <urn:mdciii:1603:45:16:174:3:234>, <urn:mdciii:1603:45:16:174:3:235>, <urn:mdciii:1603:45:16:174:3:241>, <urn:mdciii:1603:45:16:174:3:242>, <urn:mdciii:1603:45:16:174:3:243>, <urn:mdciii:1603:45:16:174:3:251>, <urn:mdciii:1603:45:16:174:3:252>, <urn:mdciii:1603:45:16:174:3:261>, <urn:mdciii:1603:45:16:174:3:262>, <urn:mdciii:1603:45:16:174:3:263>, <urn:mdciii:1603:45:16:174:3:264>, <urn:mdciii:1603:45:16:174:3:265>, <urn:mdciii:1603:45:16:174:3:266>, <urn:mdciii:1603:45:16:174:3:271>, <urn:mdciii:1603:45:16:174:3:272>, <urn:mdciii:1603:45:16:174:3:273>, <urn:mdciii:1603:45:16:174:3:274>, <urn:mdciii:1603:45:16:174:3:281>, <urn:mdciii:1603:45:16:174:3:282>, <urn:mdciii:1603:45:16:174:3:283>, <urn:mdciii:1603:45:16:174:3:291>, <urn:mdciii:1603:45:16:174:3:311>, <urn:mdciii:1603:45:16:174:3:321>, <urn:mdciii:1603:45:16:174:3:322>, <urn:mdciii:1603:45:16:174:3:323>, <urn:mdciii:1603:45:16:174:3:331>, <urn:mdciii:1603:45:16:174:3:332> .
+
+<urn:mdciii:1603:45:16:174:3(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:174:3:111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:111" ;
+    skos:prefLabel "Bambao Mtsanga"@eng-Latn ;
+    wdata:q7200235 "KM111" .
+
+<urn:mdciii:1603:45:16:174:3:112>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:112" ;
+    skos:prefLabel "Domoni"@eng-Latn ;
+    wdata:q7200235 "KM112" .
+
+<urn:mdciii:1603:45:16:174:3:113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:113" ;
+    skos:prefLabel "Jimlimé"@eng-Latn ;
+    wdata:q7200235 "KM113" .
+
+<urn:mdciii:1603:45:16:174:3:114>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:114" ;
+    skos:prefLabel "Koni"@eng-Latn ;
+    wdata:q7200235 "KM114" .
+
+<urn:mdciii:1603:45:16:174:3:115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:115" ;
+    skos:prefLabel "Ngandzalé"@eng-Latn ;
+    wdata:q7200235 "KM115" .
+
+<urn:mdciii:1603:45:16:174:3:121>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:121" ;
+    skos:prefLabel "Adda"@eng-Latn ;
+    wdata:q7200235 "KM121" .
+
+<urn:mdciii:1603:45:16:174:3:122>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:122" ;
+    skos:prefLabel "Chaweni"@eng-Latn ;
+    wdata:q7200235 "KM122" .
+
+<urn:mdciii:1603:45:16:174:3:123>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:123" ;
+    skos:prefLabel "Mramani"@eng-Latn ;
+    wdata:q7200235 "KM123" .
+
+<urn:mdciii:1603:45:16:174:3:124>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:124" ;
+    skos:prefLabel "Mrémani"@eng-Latn ;
+    wdata:q7200235 "KM124" .
+
+<urn:mdciii:1603:45:16:174:3:125>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:125" ;
+    skos:prefLabel "Ongojou"@eng-Latn ;
+    wdata:q7200235 "KM125" .
+
+<urn:mdciii:1603:45:16:174:3:131>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:131" ;
+    skos:prefLabel "Bandrani Ya Chironkamba"@eng-Latn ;
+    wdata:q7200235 "KM131" .
+
+<urn:mdciii:1603:45:16:174:3:132>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:132" ;
+    skos:prefLabel "Bandrani Ya Mtsangani"@eng-Latn ;
+    wdata:q7200235 "KM132" .
+
+<urn:mdciii:1603:45:16:174:3:133>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:133" ;
+    skos:prefLabel "Mirontsi"@eng-Latn ;
+    wdata:q7200235 "KM133" .
+
+<urn:mdciii:1603:45:16:174:3:134>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:134" ;
+    skos:prefLabel "Mutsamudu"@eng-Latn ;
+    wdata:q7200235 "KM134" .
+
+<urn:mdciii:1603:45:16:174:3:141>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:141" ;
+    skos:prefLabel "Bambao Mtrouni"@eng-Latn ;
+    wdata:q7200235 "KM141" .
+
+<urn:mdciii:1603:45:16:174:3:142>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:142" ;
+    skos:prefLabel "Bazimini"@eng-Latn ;
+    wdata:q7200235 "KM142" .
+
+<urn:mdciii:1603:45:16:174:3:143>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:143" ;
+    skos:prefLabel "Ouani"@eng-Latn ;
+    wdata:q7200235 "KM143" .
+
+<urn:mdciii:1603:45:16:174:3:151>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:151" ;
+    skos:prefLabel "Moya"@eng-Latn ;
+    wdata:q7200235 "KM151" .
+
+<urn:mdciii:1603:45:16:174:3:152>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:152" ;
+    skos:prefLabel "Sima"@eng-Latn ;
+    wdata:q7200235 "KM152" .
+
+<urn:mdciii:1603:45:16:174:3:153>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:153" ;
+    skos:prefLabel "Vouani"@eng-Latn ;
+    wdata:q7200235 "KM153" .
+
+<urn:mdciii:1603:45:16:174:3:211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:211" ;
+    skos:prefLabel "Mboinkou"@eng-Latn ;
+    wdata:q7200235 "KM211" .
+
+<urn:mdciii:1603:45:16:174:3:212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:212" ;
+    skos:prefLabel "Nyuma Mro"@eng-Latn ;
+    wdata:q7200235 "KM212" .
+
+<urn:mdciii:1603:45:16:174:3:213>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:213" ;
+    skos:prefLabel "Nyuma Msiru"@eng-Latn ;
+    wdata:q7200235 "KM213" .
+
+<urn:mdciii:1603:45:16:174:3:221>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:221" ;
+    skos:prefLabel "Djoumoipangua"@eng-Latn ;
+    wdata:q7200235 "KM221" .
+
+<urn:mdciii:1603:45:16:174:3:222>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:222" ;
+    skos:prefLabel "Tsinimoipangua"@eng-Latn ;
+    wdata:q7200235 "KM222" .
+
+<urn:mdciii:1603:45:16:174:3:231>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:231" ;
+    skos:prefLabel "Bangaani"@eng-Latn ;
+    wdata:q7200235 "KM231" .
+
+<urn:mdciii:1603:45:16:174:3:232>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:232" ;
+    skos:prefLabel "Djoumoichongo"@eng-Latn ;
+    wdata:q7200235 "KM232" .
+
+<urn:mdciii:1603:45:16:174:3:233>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:233" ;
+    skos:prefLabel "Hamanvou"@eng-Latn ;
+    wdata:q7200235 "KM233" .
+
+<urn:mdciii:1603:45:16:174:3:234>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:234" ;
+    skos:prefLabel "Isahari"@eng-Latn ;
+    wdata:q7200235 "KM234" .
+
+<urn:mdciii:1603:45:16:174:3:235>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:235" ;
+    skos:prefLabel "Mbadani"@eng-Latn ;
+    wdata:q7200235 "KM235" .
+
+<urn:mdciii:1603:45:16:174:3:241>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:241" ;
+    skos:prefLabel "Domba"@eng-Latn ;
+    wdata:q7200235 "KM241" .
+
+<urn:mdciii:1603:45:16:174:3:242>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:242" ;
+    skos:prefLabel "Itsahidi"@eng-Latn ;
+    wdata:q7200235 "KM242" .
+
+<urn:mdciii:1603:45:16:174:3:243>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:243" ;
+    skos:prefLabel "Pimba"@eng-Latn ;
+    wdata:q7200235 "KM243" .
+
+<urn:mdciii:1603:45:16:174:3:251>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:251" ;
+    skos:prefLabel "Ngouengoe"@eng-Latn ;
+    wdata:q7200235 "KM251" .
+
+<urn:mdciii:1603:45:16:174:3:252>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:252" ;
+    skos:prefLabel "Nioumagama"@eng-Latn ;
+    wdata:q7200235 "KM252" .
+
+<urn:mdciii:1603:45:16:174:3:261>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:261" ;
+    skos:prefLabel "Cembenoi Lac Salé"@eng-Latn ;
+    wdata:q7200235 "KM261" .
+
+<urn:mdciii:1603:45:16:174:3:262>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:262" ;
+    skos:prefLabel "Cembenoi Sada Djoulamlima"@eng-Latn ;
+    wdata:q7200235 "KM262" .
+
+<urn:mdciii:1603:45:16:174:3:263>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:263" ;
+    skos:prefLabel "Mitsamiouli"@eng-Latn ;
+    wdata:q7200235 "KM263" .
+
+<urn:mdciii:1603:45:16:174:3:264>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:264" ;
+    skos:prefLabel "Nyuma Komo"@eng-Latn ;
+    wdata:q7200235 "KM264" .
+
+<urn:mdciii:1603:45:16:174:3:265>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:265" ;
+    skos:prefLabel "Nyumamro Kiblani"@eng-Latn ;
+    wdata:q7200235 "KM265" .
+
+<urn:mdciii:1603:45:16:174:3:266>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:266" ;
+    skos:prefLabel "Nyumamro Souheili"@eng-Latn ;
+    wdata:q7200235 "KM266" .
+
+<urn:mdciii:1603:45:16:174:3:271>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:271" ;
+    skos:prefLabel "Bambao Ya Hari"@eng-Latn ;
+    wdata:q7200235 "KM271" .
+
+<urn:mdciii:1603:45:16:174:3:272>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:272" ;
+    skos:prefLabel "Bambao Ya Mboini"@eng-Latn ;
+    wdata:q7200235 "KM272" .
+
+<urn:mdciii:1603:45:16:174:3:273>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:273" ;
+    skos:prefLabel "Bambao Yadjou"@eng-Latn ;
+    wdata:q7200235 "KM273" .
+
+<urn:mdciii:1603:45:16:174:3:274>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:274" ;
+    skos:prefLabel "Moroni"@eng-Latn ;
+    wdata:q7200235 "KM274" .
+
+<urn:mdciii:1603:45:16:174:3:281>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:281" ;
+    skos:prefLabel "Dimani"@eng-Latn ;
+    wdata:q7200235 "KM281" .
+
+<urn:mdciii:1603:45:16:174:3:282>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:282" ;
+    skos:prefLabel "Oichili Yadjou"@eng-Latn ;
+    wdata:q7200235 "KM282" .
+
+<urn:mdciii:1603:45:16:174:3:283>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:283" ;
+    skos:prefLabel "Oichili Yamboini"@eng-Latn ;
+    wdata:q7200235 "KM283" .
+
+<urn:mdciii:1603:45:16:174:3:291>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:291" ;
+    skos:prefLabel "Cratère du Karthala"@eng-Latn ;
+    wdata:q7200235 "KM291" .
+
+<urn:mdciii:1603:45:16:174:3:311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:311" ;
+    skos:prefLabel "Djando"@eng-Latn ;
+    wdata:q7200235 "KM311" .
+
+<urn:mdciii:1603:45:16:174:3:321>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:321" ;
+    skos:prefLabel "Fomboni"@eng-Latn ;
+    wdata:q7200235 "KM321" .
+
+<urn:mdciii:1603:45:16:174:3:322>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:322" ;
+    skos:prefLabel "Moili Mdjini"@eng-Latn ;
+    wdata:q7200235 "KM322" .
+
+<urn:mdciii:1603:45:16:174:3:323>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:323" ;
+    skos:prefLabel "Moimbassa"@eng-Latn ;
+    wdata:q7200235 "KM323" .
+
+<urn:mdciii:1603:45:16:174:3:331>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:331" ;
+    skos:prefLabel "Mlédjélé"@eng-Latn ;
+    wdata:q7200235 "KM331" .
+
+<urn:mdciii:1603:45:16:174:3:332>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:174:3:332" ;
+    skos:prefLabel "Moimbao"@eng-Latn ;
+    wdata:q7200235 "KM332" .
+

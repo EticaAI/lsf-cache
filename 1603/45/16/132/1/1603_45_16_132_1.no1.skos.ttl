@@ -1,0 +1,162 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:132()> .
+
+<urn:mdciii:1603:45:16:132()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:132)" ;
+    skos:member <urn:mdciii:1603:45:16:132:1()> .
+
+<urn:mdciii:1603:45:16:132:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:132:1)" ;
+    skos:member <urn:mdciii:1603:45:16:132:1:10>, <urn:mdciii:1603:45:16:132:1:11>, <urn:mdciii:1603:45:16:132:1:12>, <urn:mdciii:1603:45:16:132:1:13>, <urn:mdciii:1603:45:16:132:1:14>, <urn:mdciii:1603:45:16:132:1:15>, <urn:mdciii:1603:45:16:132:1:16>, <urn:mdciii:1603:45:16:132:1:17>, <urn:mdciii:1603:45:16:132:1:18>, <urn:mdciii:1603:45:16:132:1:19>, <urn:mdciii:1603:45:16:132:1:2>, <urn:mdciii:1603:45:16:132:1:20>, <urn:mdciii:1603:45:16:132:1:21>, <urn:mdciii:1603:45:16:132:1:22>, <urn:mdciii:1603:45:16:132:1:3>, <urn:mdciii:1603:45:16:132:1:4>, <urn:mdciii:1603:45:16:132:1:5>, <urn:mdciii:1603:45:16:132:1:6>, <urn:mdciii:1603:45:16:132:1:7>, <urn:mdciii:1603:45:16:132:1:8>, <urn:mdciii:1603:45:16:132:1:9> .
+
+<urn:mdciii:1603:45:16:132:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:132:1:1>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:1" ;
+    skos:prefLabel "Boa Vista"@por-Latn ;
+    wdata:q7200235 "CV01" .
+
+<urn:mdciii:1603:45:16:132:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:10" ;
+    skos:prefLabel "Ribeira Grande de Santiago"@por-Latn ;
+    wdata:q7200235 "CV10" .
+
+<urn:mdciii:1603:45:16:132:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:11" ;
+    skos:prefLabel "Sal"@por-Latn ;
+    wdata:q7200235 "CV11" .
+
+<urn:mdciii:1603:45:16:132:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:12" ;
+    skos:prefLabel "Santa Catarina"@por-Latn ;
+    wdata:q7200235 "CV12" .
+
+<urn:mdciii:1603:45:16:132:1:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:13" ;
+    skos:prefLabel "Santa Catarina Do Fogo"@por-Latn ;
+    wdata:q7200235 "CV13" .
+
+<urn:mdciii:1603:45:16:132:1:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:14" ;
+    skos:prefLabel "Santa Cruz"@por-Latn ;
+    wdata:q7200235 "CV14" .
+
+<urn:mdciii:1603:45:16:132:1:15>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:15" ;
+    skos:prefLabel "Sao Domingos"@por-Latn ;
+    wdata:q7200235 "CV15" .
+
+<urn:mdciii:1603:45:16:132:1:16>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:16" ;
+    skos:prefLabel "Sao Filipe"@por-Latn ;
+    wdata:q7200235 "CV16" .
+
+<urn:mdciii:1603:45:16:132:1:17>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:17" ;
+    skos:prefLabel "Sao Lourenco Dos Orgaos"@por-Latn ;
+    wdata:q7200235 "CV17" .
+
+<urn:mdciii:1603:45:16:132:1:18>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:18" ;
+    skos:prefLabel "Sao Miguel"@por-Latn ;
+    wdata:q7200235 "CV18" .
+
+<urn:mdciii:1603:45:16:132:1:19>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:19" ;
+    skos:prefLabel "Sao Salvador Do Mundo"@por-Latn ;
+    wdata:q7200235 "CV19" .
+
+<urn:mdciii:1603:45:16:132:1:2>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:2" ;
+    skos:prefLabel "Brava"@por-Latn ;
+    wdata:q7200235 "CV02" .
+
+<urn:mdciii:1603:45:16:132:1:20>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:20" ;
+    skos:prefLabel "Sao Vicente"@por-Latn ;
+    wdata:q7200235 "CV20" .
+
+<urn:mdciii:1603:45:16:132:1:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:21" ;
+    skos:prefLabel "Tarrafal"@por-Latn ;
+    wdata:q7200235 "CV21" .
+
+<urn:mdciii:1603:45:16:132:1:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:22" ;
+    skos:prefLabel "Tarrafal De Sao Nicolau"@por-Latn ;
+    wdata:q7200235 "CV22" .
+
+<urn:mdciii:1603:45:16:132:1:3>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:3" ;
+    skos:prefLabel "Maio"@por-Latn ;
+    wdata:q7200235 "CV03" .
+
+<urn:mdciii:1603:45:16:132:1:4>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:4" ;
+    skos:prefLabel "Mosteiros"@por-Latn ;
+    wdata:q7200235 "CV04" .
+
+<urn:mdciii:1603:45:16:132:1:5>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:5" ;
+    skos:prefLabel "Paul"@por-Latn ;
+    wdata:q7200235 "CV05" .
+
+<urn:mdciii:1603:45:16:132:1:6>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:6" ;
+    skos:prefLabel "Porto Novo"@por-Latn ;
+    wdata:q7200235 "CV06" .
+
+<urn:mdciii:1603:45:16:132:1:7>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:7" ;
+    skos:prefLabel "Praia"@por-Latn ;
+    wdata:q7200235 "CV07" .
+
+<urn:mdciii:1603:45:16:132:1:8>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:8" ;
+    skos:prefLabel "Ribeira Brava"@por-Latn ;
+    wdata:q7200235 "CV08" .
+
+<urn:mdciii:1603:45:16:132:1:9>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:132:1:9" ;
+    skos:prefLabel "Ribeira Grande"@por-Latn ;
+    wdata:q7200235 "CV09" .
+

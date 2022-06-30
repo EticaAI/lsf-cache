@@ -1,0 +1,186 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:180()> .
+
+<urn:mdciii:1603:45:16:180()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:180)" ;
+    skos:member <urn:mdciii:1603:45:16:180:1()> .
+
+<urn:mdciii:1603:45:16:180:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:180:1)" ;
+    skos:member <urn:mdciii:1603:45:16:180:1:20>, <urn:mdciii:1603:45:16:180:1:31>, <urn:mdciii:1603:45:16:180:1:32>, <urn:mdciii:1603:45:16:180:1:33>, <urn:mdciii:1603:45:16:180:1:41>, <urn:mdciii:1603:45:16:180:1:42>, <urn:mdciii:1603:45:16:180:1:43>, <urn:mdciii:1603:45:16:180:1:44>, <urn:mdciii:1603:45:16:180:1:45>, <urn:mdciii:1603:45:16:180:1:51>, <urn:mdciii:1603:45:16:180:1:52>, <urn:mdciii:1603:45:16:180:1:53>, <urn:mdciii:1603:45:16:180:1:54>, <urn:mdciii:1603:45:16:180:1:61>, <urn:mdciii:1603:45:16:180:1:62>, <urn:mdciii:1603:45:16:180:1:63>, <urn:mdciii:1603:45:16:180:1:71>, <urn:mdciii:1603:45:16:180:1:72>, <urn:mdciii:1603:45:16:180:1:73>, <urn:mdciii:1603:45:16:180:1:74>, <urn:mdciii:1603:45:16:180:1:81>, <urn:mdciii:1603:45:16:180:1:82>, <urn:mdciii:1603:45:16:180:1:83>, <urn:mdciii:1603:45:16:180:1:91>, <urn:mdciii:1603:45:16:180:1:92> .
+
+<urn:mdciii:1603:45:16:180:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:180:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:10" ;
+    skos:prefLabel "Kinshasa"@fra-Latn ;
+    wdata:q7200235 "CD10" .
+
+<urn:mdciii:1603:45:16:180:1:20>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:20" ;
+    skos:prefLabel "Kongo-Central"@fra-Latn ;
+    wdata:q7200235 "CD20" .
+
+<urn:mdciii:1603:45:16:180:1:31>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:31" ;
+    skos:prefLabel "Kwango"@fra-Latn ;
+    wdata:q7200235 "CD31" .
+
+<urn:mdciii:1603:45:16:180:1:32>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:32" ;
+    skos:prefLabel "Kwilu"@fra-Latn ;
+    wdata:q7200235 "CD32" .
+
+<urn:mdciii:1603:45:16:180:1:33>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:33" ;
+    skos:prefLabel "Maï-Ndombe"@fra-Latn ;
+    wdata:q7200235 "CD33" .
+
+<urn:mdciii:1603:45:16:180:1:41>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:41" ;
+    skos:prefLabel "Equateur"@fra-Latn ;
+    wdata:q7200235 "CD41" .
+
+<urn:mdciii:1603:45:16:180:1:42>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:42" ;
+    skos:prefLabel "Sud-Ubangi"@fra-Latn ;
+    wdata:q7200235 "CD42" .
+
+<urn:mdciii:1603:45:16:180:1:43>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:43" ;
+    skos:prefLabel "Nord-Ubangi"@fra-Latn ;
+    wdata:q7200235 "CD43" .
+
+<urn:mdciii:1603:45:16:180:1:44>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:44" ;
+    skos:prefLabel "Mongala"@fra-Latn ;
+    wdata:q7200235 "CD44" .
+
+<urn:mdciii:1603:45:16:180:1:45>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:45" ;
+    skos:prefLabel "Tshuapa"@fra-Latn ;
+    wdata:q7200235 "CD45" .
+
+<urn:mdciii:1603:45:16:180:1:51>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:51" ;
+    skos:prefLabel "Tshopo"@fra-Latn ;
+    wdata:q7200235 "CD51" .
+
+<urn:mdciii:1603:45:16:180:1:52>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:52" ;
+    skos:prefLabel "Bas-Uele"@fra-Latn ;
+    wdata:q7200235 "CD52" .
+
+<urn:mdciii:1603:45:16:180:1:53>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:53" ;
+    skos:prefLabel "Haut-Uele"@fra-Latn ;
+    wdata:q7200235 "CD53" .
+
+<urn:mdciii:1603:45:16:180:1:54>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:54" ;
+    skos:prefLabel "Ituri"@fra-Latn ;
+    wdata:q7200235 "CD54" .
+
+<urn:mdciii:1603:45:16:180:1:61>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:61" ;
+    skos:prefLabel "Nord-Kivu"@fra-Latn ;
+    wdata:q7200235 "CD61" .
+
+<urn:mdciii:1603:45:16:180:1:62>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:62" ;
+    skos:prefLabel "Sud-Kivu"@fra-Latn ;
+    wdata:q7200235 "CD62" .
+
+<urn:mdciii:1603:45:16:180:1:63>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:63" ;
+    skos:prefLabel "Maniema"@fra-Latn ;
+    wdata:q7200235 "CD63" .
+
+<urn:mdciii:1603:45:16:180:1:71>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:71" ;
+    skos:prefLabel "Haut-Katanga"@fra-Latn ;
+    wdata:q7200235 "CD71" .
+
+<urn:mdciii:1603:45:16:180:1:72>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:72" ;
+    skos:prefLabel "Lualaba"@fra-Latn ;
+    wdata:q7200235 "CD72" .
+
+<urn:mdciii:1603:45:16:180:1:73>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:73" ;
+    skos:prefLabel "Haut-Lomami"@fra-Latn ;
+    wdata:q7200235 "CD73" .
+
+<urn:mdciii:1603:45:16:180:1:74>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:74" ;
+    skos:prefLabel "Tanganyika"@fra-Latn ;
+    wdata:q7200235 "CD74" .
+
+<urn:mdciii:1603:45:16:180:1:81>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:81" ;
+    skos:prefLabel "Lomami"@fra-Latn ;
+    wdata:q7200235 "CD81" .
+
+<urn:mdciii:1603:45:16:180:1:82>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:82" ;
+    skos:prefLabel "Kasaï-Oriental"@fra-Latn ;
+    wdata:q7200235 "CD82" .
+
+<urn:mdciii:1603:45:16:180:1:83>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:83" ;
+    skos:prefLabel "Sankuru"@fra-Latn ;
+    wdata:q7200235 "CD83" .
+
+<urn:mdciii:1603:45:16:180:1:91>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:91" ;
+    skos:prefLabel "Kasaï-Central"@fra-Latn ;
+    wdata:q7200235 "CD91" .
+
+<urn:mdciii:1603:45:16:180:1:92>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:180:1:92" ;
+    skos:prefLabel "Kasaï"@fra-Latn ;
+    wdata:q7200235 "CD92" .
+

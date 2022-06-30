@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -33,17 +34,20 @@
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:174:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
     rdfs:label "1603:45:16:174:1:1" ;
-    skos:prefLabel "Anjouan (Ndzouani)"@eng-Latn .
+    skos:prefLabel "Anjouan (Ndzouani)"@eng-Latn ;
+    wdata:q7200235 "KM1" .
 
 <urn:mdciii:1603:45:16:174:1:2>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:174:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
     rdfs:label "1603:45:16:174:1:2" ;
-    skos:prefLabel "Grande Comore (Ngazidja)"@eng-Latn .
+    skos:prefLabel "Grande Comore (Ngazidja)"@eng-Latn ;
+    wdata:q7200235 "KM2" .
 
 <urn:mdciii:1603:45:16:174:1:3>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:174:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
     rdfs:label "1603:45:16:174:1:3" ;
-    skos:prefLabel "Mohéli (Mwali)"@eng-Latn .
+    skos:prefLabel "Mohéli (Mwali)"@eng-Latn ;
+    wdata:q7200235 "KM3" .
 

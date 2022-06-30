@@ -1,0 +1,222 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:214()> .
+
+<urn:mdciii:1603:45:16:214()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:214)" ;
+    skos:member <urn:mdciii:1603:45:16:214:2()> .
+
+<urn:mdciii:1603:45:16:214:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:214:2)" ;
+    skos:member <urn:mdciii:1603:45:16:214:2:1001>, <urn:mdciii:1603:45:16:214:2:1002>, <urn:mdciii:1603:45:16:214:2:1003>, <urn:mdciii:1603:45:16:214:2:102>, <urn:mdciii:1603:45:16:214:2:103>, <urn:mdciii:1603:45:16:214:2:104>, <urn:mdciii:1603:45:16:214:2:201>, <urn:mdciii:1603:45:16:214:2:202>, <urn:mdciii:1603:45:16:214:2:203>, <urn:mdciii:1603:45:16:214:2:204>, <urn:mdciii:1603:45:16:214:2:301>, <urn:mdciii:1603:45:16:214:2:302>, <urn:mdciii:1603:45:16:214:2:303>, <urn:mdciii:1603:45:16:214:2:401>, <urn:mdciii:1603:45:16:214:2:402>, <urn:mdciii:1603:45:16:214:2:403>, <urn:mdciii:1603:45:16:214:2:501>, <urn:mdciii:1603:45:16:214:2:502>, <urn:mdciii:1603:45:16:214:2:601>, <urn:mdciii:1603:45:16:214:2:602>, <urn:mdciii:1603:45:16:214:2:603>, <urn:mdciii:1603:45:16:214:2:604>, <urn:mdciii:1603:45:16:214:2:701>, <urn:mdciii:1603:45:16:214:2:702>, <urn:mdciii:1603:45:16:214:2:703>, <urn:mdciii:1603:45:16:214:2:801>, <urn:mdciii:1603:45:16:214:2:802>, <urn:mdciii:1603:45:16:214:2:901>, <urn:mdciii:1603:45:16:214:2:902>, <urn:mdciii:1603:45:16:214:2:903>, <urn:mdciii:1603:45:16:214:2:904> .
+
+<urn:mdciii:1603:45:16:214:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:214:2:1001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:1001" ;
+    skos:prefLabel "Provincia El Seibo"@spa-Latn ;
+    wdata:q7200235 "DO1001" .
+
+<urn:mdciii:1603:45:16:214:2:1002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:1002" ;
+    skos:prefLabel "Provincia La Altagracia"@spa-Latn ;
+    wdata:q7200235 "DO1002" .
+
+<urn:mdciii:1603:45:16:214:2:1003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:1003" ;
+    skos:prefLabel "Provincia La Romana"@spa-Latn ;
+    wdata:q7200235 "DO1003" .
+
+<urn:mdciii:1603:45:16:214:2:101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:101" ;
+    skos:prefLabel "Provincia Duarte"@spa-Latn ;
+    wdata:q7200235 "DO0101" .
+
+<urn:mdciii:1603:45:16:214:2:102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:102" ;
+    skos:prefLabel "Provincia Hermanas Mirabal"@spa-Latn ;
+    wdata:q7200235 "DO0102" .
+
+<urn:mdciii:1603:45:16:214:2:103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:103" ;
+    skos:prefLabel "Provincia María Trinidad Sánchez"@spa-Latn ;
+    wdata:q7200235 "DO0103" .
+
+<urn:mdciii:1603:45:16:214:2:104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:104" ;
+    skos:prefLabel "Provincia Samaná"@spa-Latn ;
+    wdata:q7200235 "DO0104" .
+
+<urn:mdciii:1603:45:16:214:2:201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:201" ;
+    skos:prefLabel "Provincia Dajabón"@spa-Latn ;
+    wdata:q7200235 "DO0201" .
+
+<urn:mdciii:1603:45:16:214:2:202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:202" ;
+    skos:prefLabel "Provincia Monte Cristi"@spa-Latn ;
+    wdata:q7200235 "DO0202" .
+
+<urn:mdciii:1603:45:16:214:2:203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:203" ;
+    skos:prefLabel "Provincia Santiago Rodríguez"@spa-Latn ;
+    wdata:q7200235 "DO0203" .
+
+<urn:mdciii:1603:45:16:214:2:204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:204" ;
+    skos:prefLabel "Provincia Valverde"@spa-Latn ;
+    wdata:q7200235 "DO0204" .
+
+<urn:mdciii:1603:45:16:214:2:301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:301" ;
+    skos:prefLabel "Provincia Espaillat"@spa-Latn ;
+    wdata:q7200235 "DO0301" .
+
+<urn:mdciii:1603:45:16:214:2:302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:302" ;
+    skos:prefLabel "Provincia Puerto Plata"@spa-Latn ;
+    wdata:q7200235 "DO0302" .
+
+<urn:mdciii:1603:45:16:214:2:303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:303" ;
+    skos:prefLabel "Provincia Santiago"@spa-Latn ;
+    wdata:q7200235 "DO0303" .
+
+<urn:mdciii:1603:45:16:214:2:401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:401" ;
+    skos:prefLabel "Provincia La Vega"@spa-Latn ;
+    wdata:q7200235 "DO0401" .
+
+<urn:mdciii:1603:45:16:214:2:402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:402" ;
+    skos:prefLabel "Provincia Monseñor Nouel"@spa-Latn ;
+    wdata:q7200235 "DO0402" .
+
+<urn:mdciii:1603:45:16:214:2:403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:403" ;
+    skos:prefLabel "Provincia Sánchez Ramírez"@spa-Latn ;
+    wdata:q7200235 "DO0403" .
+
+<urn:mdciii:1603:45:16:214:2:501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:501" ;
+    skos:prefLabel "Provincia Elías Piña"@spa-Latn ;
+    wdata:q7200235 "DO0501" .
+
+<urn:mdciii:1603:45:16:214:2:502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:502" ;
+    skos:prefLabel "Provincia San Juan"@spa-Latn ;
+    wdata:q7200235 "DO0502" .
+
+<urn:mdciii:1603:45:16:214:2:601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:601" ;
+    skos:prefLabel "Provincia Baoruco"@spa-Latn ;
+    wdata:q7200235 "DO0601" .
+
+<urn:mdciii:1603:45:16:214:2:602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:602" ;
+    skos:prefLabel "Provincia Barahona"@spa-Latn ;
+    wdata:q7200235 "DO0602" .
+
+<urn:mdciii:1603:45:16:214:2:603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:603" ;
+    skos:prefLabel "Provincia Independencia"@spa-Latn ;
+    wdata:q7200235 "DO0603" .
+
+<urn:mdciii:1603:45:16:214:2:604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:604" ;
+    skos:prefLabel "Provincia Pedernales"@spa-Latn ;
+    wdata:q7200235 "DO0604" .
+
+<urn:mdciii:1603:45:16:214:2:701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:701" ;
+    skos:prefLabel "Provincia Hato Mayor"@spa-Latn ;
+    wdata:q7200235 "DO0701" .
+
+<urn:mdciii:1603:45:16:214:2:702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:702" ;
+    skos:prefLabel "Provincia Monte Plata"@spa-Latn ;
+    wdata:q7200235 "DO0702" .
+
+<urn:mdciii:1603:45:16:214:2:703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:703" ;
+    skos:prefLabel "Provincia San Pedro de Macorís"@spa-Latn ;
+    wdata:q7200235 "DO0703" .
+
+<urn:mdciii:1603:45:16:214:2:801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:801" ;
+    skos:prefLabel "Distrito Nacional"@spa-Latn ;
+    wdata:q7200235 "DO0801" .
+
+<urn:mdciii:1603:45:16:214:2:802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:802" ;
+    skos:prefLabel "Provincia Santo Domingo"@spa-Latn ;
+    wdata:q7200235 "DO0802" .
+
+<urn:mdciii:1603:45:16:214:2:901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:901" ;
+    skos:prefLabel "Provincia Azua"@spa-Latn ;
+    wdata:q7200235 "DO0901" .
+
+<urn:mdciii:1603:45:16:214:2:902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:902" ;
+    skos:prefLabel "Provincia Peravia"@spa-Latn ;
+    wdata:q7200235 "DO0902" .
+
+<urn:mdciii:1603:45:16:214:2:903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:903" ;
+    skos:prefLabel "Provincia San Cristóbal"@spa-Latn ;
+    wdata:q7200235 "DO0903" .
+
+<urn:mdciii:1603:45:16:214:2:904>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:214:2:904" ;
+    skos:prefLabel "Provincia San José de Ocoa"@spa-Latn ;
+    wdata:q7200235 "DO0904" .
+
