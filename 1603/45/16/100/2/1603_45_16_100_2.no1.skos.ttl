@@ -1,0 +1,1620 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:100()> .
+
+<urn:mdciii:1603:45:16:100()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:100)" ;
+    skos:member <urn:mdciii:1603:45:16:100:2()> .
+
+<urn:mdciii:1603:45:16:100:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:100:2)" ;
+    skos:member <urn:mdciii:1603:45:16:100:2:10001>, <urn:mdciii:1603:45:16:100:2:10002>, <urn:mdciii:1603:45:16:100:2:10003>, <urn:mdciii:1603:45:16:100:2:10004>, <urn:mdciii:1603:45:16:100:2:10005>, <urn:mdciii:1603:45:16:100:2:10006>, <urn:mdciii:1603:45:16:100:2:10007>, <urn:mdciii:1603:45:16:100:2:10008>, <urn:mdciii:1603:45:16:100:2:10009>, <urn:mdciii:1603:45:16:100:2:10010>, <urn:mdciii:1603:45:16:100:2:10011>, <urn:mdciii:1603:45:16:100:2:10012>, <urn:mdciii:1603:45:16:100:2:1002>, <urn:mdciii:1603:45:16:100:2:1003>, <urn:mdciii:1603:45:16:100:2:1004>, <urn:mdciii:1603:45:16:100:2:1005>, <urn:mdciii:1603:45:16:100:2:1006>, <urn:mdciii:1603:45:16:100:2:1007>, <urn:mdciii:1603:45:16:100:2:1008>, <urn:mdciii:1603:45:16:100:2:1009>, <urn:mdciii:1603:45:16:100:2:1010>, <urn:mdciii:1603:45:16:100:2:1011>, <urn:mdciii:1603:45:16:100:2:1012>, <urn:mdciii:1603:45:16:100:2:1013>, <urn:mdciii:1603:45:16:100:2:1014>, <urn:mdciii:1603:45:16:100:2:11001>, <urn:mdciii:1603:45:16:100:2:11002>, <urn:mdciii:1603:45:16:100:2:11003>, <urn:mdciii:1603:45:16:100:2:11004>, <urn:mdciii:1603:45:16:100:2:11005>, <urn:mdciii:1603:45:16:100:2:11006>, <urn:mdciii:1603:45:16:100:2:12001>, <urn:mdciii:1603:45:16:100:2:12002>, <urn:mdciii:1603:45:16:100:2:12003>, <urn:mdciii:1603:45:16:100:2:12004>, <urn:mdciii:1603:45:16:100:2:12005>, <urn:mdciii:1603:45:16:100:2:12006>, <urn:mdciii:1603:45:16:100:2:12007>, <urn:mdciii:1603:45:16:100:2:12008>, <urn:mdciii:1603:45:16:100:2:12009>, <urn:mdciii:1603:45:16:100:2:12010>, <urn:mdciii:1603:45:16:100:2:12011>, <urn:mdciii:1603:45:16:100:2:13001>, <urn:mdciii:1603:45:16:100:2:13002>, <urn:mdciii:1603:45:16:100:2:13003>, <urn:mdciii:1603:45:16:100:2:13004>, <urn:mdciii:1603:45:16:100:2:13005>, <urn:mdciii:1603:45:16:100:2:13006>, <urn:mdciii:1603:45:16:100:2:13007>, <urn:mdciii:1603:45:16:100:2:13008>, <urn:mdciii:1603:45:16:100:2:13009>, <urn:mdciii:1603:45:16:100:2:13010>, <urn:mdciii:1603:45:16:100:2:13011>, <urn:mdciii:1603:45:16:100:2:13012>, <urn:mdciii:1603:45:16:100:2:13013>, <urn:mdciii:1603:45:16:100:2:13014>, <urn:mdciii:1603:45:16:100:2:13015>, <urn:mdciii:1603:45:16:100:2:13016>, <urn:mdciii:1603:45:16:100:2:13017>, <urn:mdciii:1603:45:16:100:2:13018>, <urn:mdciii:1603:45:16:100:2:14001>, <urn:mdciii:1603:45:16:100:2:14002>, <urn:mdciii:1603:45:16:100:2:14003>, <urn:mdciii:1603:45:16:100:2:14004>, <urn:mdciii:1603:45:16:100:2:14005>, <urn:mdciii:1603:45:16:100:2:14006>, <urn:mdciii:1603:45:16:100:2:14007>, <urn:mdciii:1603:45:16:100:2:15001>, <urn:mdciii:1603:45:16:100:2:15002>, <urn:mdciii:1603:45:16:100:2:15003>, <urn:mdciii:1603:45:16:100:2:15004>, <urn:mdciii:1603:45:16:100:2:15005>, <urn:mdciii:1603:45:16:100:2:15006>, <urn:mdciii:1603:45:16:100:2:15007>, <urn:mdciii:1603:45:16:100:2:15008>, <urn:mdciii:1603:45:16:100:2:16001>, <urn:mdciii:1603:45:16:100:2:16002>, <urn:mdciii:1603:45:16:100:2:16003>, <urn:mdciii:1603:45:16:100:2:16004>, <urn:mdciii:1603:45:16:100:2:16005>, <urn:mdciii:1603:45:16:100:2:16006>, <urn:mdciii:1603:45:16:100:2:16007>, <urn:mdciii:1603:45:16:100:2:16008>, <urn:mdciii:1603:45:16:100:2:16009>, <urn:mdciii:1603:45:16:100:2:16010>, <urn:mdciii:1603:45:16:100:2:17001>, <urn:mdciii:1603:45:16:100:2:17002>, <urn:mdciii:1603:45:16:100:2:17003>, <urn:mdciii:1603:45:16:100:2:17004>, <urn:mdciii:1603:45:16:100:2:17005>, <urn:mdciii:1603:45:16:100:2:17006>, <urn:mdciii:1603:45:16:100:2:17007>, <urn:mdciii:1603:45:16:100:2:18001>, <urn:mdciii:1603:45:16:100:2:18002>, <urn:mdciii:1603:45:16:100:2:18003>, <urn:mdciii:1603:45:16:100:2:18004>, <urn:mdciii:1603:45:16:100:2:19001>, <urn:mdciii:1603:45:16:100:2:19002>, <urn:mdciii:1603:45:16:100:2:19003>, <urn:mdciii:1603:45:16:100:2:19004>, <urn:mdciii:1603:45:16:100:2:19005>, <urn:mdciii:1603:45:16:100:2:19006>, <urn:mdciii:1603:45:16:100:2:19007>, <urn:mdciii:1603:45:16:100:2:19008>, <urn:mdciii:1603:45:16:100:2:19009>, <urn:mdciii:1603:45:16:100:2:19010>, <urn:mdciii:1603:45:16:100:2:20001>, <urn:mdciii:1603:45:16:100:2:20002>, <urn:mdciii:1603:45:16:100:2:20003>, <urn:mdciii:1603:45:16:100:2:20004>, <urn:mdciii:1603:45:16:100:2:20005>, <urn:mdciii:1603:45:16:100:2:20006>, <urn:mdciii:1603:45:16:100:2:20007>, <urn:mdciii:1603:45:16:100:2:20008>, <urn:mdciii:1603:45:16:100:2:20009>, <urn:mdciii:1603:45:16:100:2:2001>, <urn:mdciii:1603:45:16:100:2:20010>, <urn:mdciii:1603:45:16:100:2:20011>, <urn:mdciii:1603:45:16:100:2:20012>, <urn:mdciii:1603:45:16:100:2:20013>, <urn:mdciii:1603:45:16:100:2:20014>, <urn:mdciii:1603:45:16:100:2:20015>, <urn:mdciii:1603:45:16:100:2:20016>, <urn:mdciii:1603:45:16:100:2:20017>, <urn:mdciii:1603:45:16:100:2:20018>, <urn:mdciii:1603:45:16:100:2:20019>, <urn:mdciii:1603:45:16:100:2:2002>, <urn:mdciii:1603:45:16:100:2:20020>, <urn:mdciii:1603:45:16:100:2:20021>, <urn:mdciii:1603:45:16:100:2:20022>, <urn:mdciii:1603:45:16:100:2:2003>, <urn:mdciii:1603:45:16:100:2:2004>, <urn:mdciii:1603:45:16:100:2:2005>, <urn:mdciii:1603:45:16:100:2:2006>, <urn:mdciii:1603:45:16:100:2:2007>, <urn:mdciii:1603:45:16:100:2:2008>, <urn:mdciii:1603:45:16:100:2:2009>, <urn:mdciii:1603:45:16:100:2:2010>, <urn:mdciii:1603:45:16:100:2:2011>, <urn:mdciii:1603:45:16:100:2:2012>, <urn:mdciii:1603:45:16:100:2:2013>, <urn:mdciii:1603:45:16:100:2:21001>, <urn:mdciii:1603:45:16:100:2:22001>, <urn:mdciii:1603:45:16:100:2:22002>, <urn:mdciii:1603:45:16:100:2:22003>, <urn:mdciii:1603:45:16:100:2:22004>, <urn:mdciii:1603:45:16:100:2:22005>, <urn:mdciii:1603:45:16:100:2:22006>, <urn:mdciii:1603:45:16:100:2:22007>, <urn:mdciii:1603:45:16:100:2:22008>, <urn:mdciii:1603:45:16:100:2:22009>, <urn:mdciii:1603:45:16:100:2:22010>, <urn:mdciii:1603:45:16:100:2:22011>, <urn:mdciii:1603:45:16:100:2:23001>, <urn:mdciii:1603:45:16:100:2:23002>, <urn:mdciii:1603:45:16:100:2:23003>, <urn:mdciii:1603:45:16:100:2:23004>, <urn:mdciii:1603:45:16:100:2:23005>, <urn:mdciii:1603:45:16:100:2:24001>, <urn:mdciii:1603:45:16:100:2:24002>, <urn:mdciii:1603:45:16:100:2:24003>, <urn:mdciii:1603:45:16:100:2:24004>, <urn:mdciii:1603:45:16:100:2:24005>, <urn:mdciii:1603:45:16:100:2:24006>, <urn:mdciii:1603:45:16:100:2:24007>, <urn:mdciii:1603:45:16:100:2:24008>, <urn:mdciii:1603:45:16:100:2:24009>, <urn:mdciii:1603:45:16:100:2:24010>, <urn:mdciii:1603:45:16:100:2:24011>, <urn:mdciii:1603:45:16:100:2:24012>, <urn:mdciii:1603:45:16:100:2:25001>, <urn:mdciii:1603:45:16:100:2:25002>, <urn:mdciii:1603:45:16:100:2:25003>, <urn:mdciii:1603:45:16:100:2:25004>, <urn:mdciii:1603:45:16:100:2:25005>, <urn:mdciii:1603:45:16:100:2:25006>, <urn:mdciii:1603:45:16:100:2:25007>, <urn:mdciii:1603:45:16:100:2:25008>, <urn:mdciii:1603:45:16:100:2:25009>, <urn:mdciii:1603:45:16:100:2:25010>, <urn:mdciii:1603:45:16:100:2:26001>, <urn:mdciii:1603:45:16:100:2:26002>, <urn:mdciii:1603:45:16:100:2:26003>, <urn:mdciii:1603:45:16:100:2:26004>, <urn:mdciii:1603:45:16:100:2:26005>, <urn:mdciii:1603:45:16:100:2:26006>, <urn:mdciii:1603:45:16:100:2:26007>, <urn:mdciii:1603:45:16:100:2:26008>, <urn:mdciii:1603:45:16:100:2:26009>, <urn:mdciii:1603:45:16:100:2:26010>, <urn:mdciii:1603:45:16:100:2:26011>, <urn:mdciii:1603:45:16:100:2:27001>, <urn:mdciii:1603:45:16:100:2:27002>, <urn:mdciii:1603:45:16:100:2:27003>, <urn:mdciii:1603:45:16:100:2:27004>, <urn:mdciii:1603:45:16:100:2:27005>, <urn:mdciii:1603:45:16:100:2:27006>, <urn:mdciii:1603:45:16:100:2:27007>, <urn:mdciii:1603:45:16:100:2:27008>, <urn:mdciii:1603:45:16:100:2:27009>, <urn:mdciii:1603:45:16:100:2:27010>, <urn:mdciii:1603:45:16:100:2:28001>, <urn:mdciii:1603:45:16:100:2:28002>, <urn:mdciii:1603:45:16:100:2:28003>, <urn:mdciii:1603:45:16:100:2:28004>, <urn:mdciii:1603:45:16:100:2:28005>, <urn:mdciii:1603:45:16:100:2:3001>, <urn:mdciii:1603:45:16:100:2:3002>, <urn:mdciii:1603:45:16:100:2:3003>, <urn:mdciii:1603:45:16:100:2:3004>, <urn:mdciii:1603:45:16:100:2:3005>, <urn:mdciii:1603:45:16:100:2:3006>, <urn:mdciii:1603:45:16:100:2:3007>, <urn:mdciii:1603:45:16:100:2:3008>, <urn:mdciii:1603:45:16:100:2:4001>, <urn:mdciii:1603:45:16:100:2:4002>, <urn:mdciii:1603:45:16:100:2:4003>, <urn:mdciii:1603:45:16:100:2:4004>, <urn:mdciii:1603:45:16:100:2:5001>, <urn:mdciii:1603:45:16:100:2:5002>, <urn:mdciii:1603:45:16:100:2:5003>, <urn:mdciii:1603:45:16:100:2:5004>, <urn:mdciii:1603:45:16:100:2:5005>, <urn:mdciii:1603:45:16:100:2:5006>, <urn:mdciii:1603:45:16:100:2:5007>, <urn:mdciii:1603:45:16:100:2:5008>, <urn:mdciii:1603:45:16:100:2:5009>, <urn:mdciii:1603:45:16:100:2:5010>, <urn:mdciii:1603:45:16:100:2:5011>, <urn:mdciii:1603:45:16:100:2:6001>, <urn:mdciii:1603:45:16:100:2:6002>, <urn:mdciii:1603:45:16:100:2:6003>, <urn:mdciii:1603:45:16:100:2:6004>, <urn:mdciii:1603:45:16:100:2:6005>, <urn:mdciii:1603:45:16:100:2:6006>, <urn:mdciii:1603:45:16:100:2:6007>, <urn:mdciii:1603:45:16:100:2:7001>, <urn:mdciii:1603:45:16:100:2:7002>, <urn:mdciii:1603:45:16:100:2:7003>, <urn:mdciii:1603:45:16:100:2:7004>, <urn:mdciii:1603:45:16:100:2:7005>, <urn:mdciii:1603:45:16:100:2:7006>, <urn:mdciii:1603:45:16:100:2:7007>, <urn:mdciii:1603:45:16:100:2:7008>, <urn:mdciii:1603:45:16:100:2:7009>, <urn:mdciii:1603:45:16:100:2:8001>, <urn:mdciii:1603:45:16:100:2:8002>, <urn:mdciii:1603:45:16:100:2:8003>, <urn:mdciii:1603:45:16:100:2:8004>, <urn:mdciii:1603:45:16:100:2:8005>, <urn:mdciii:1603:45:16:100:2:8006>, <urn:mdciii:1603:45:16:100:2:8007>, <urn:mdciii:1603:45:16:100:2:8008>, <urn:mdciii:1603:45:16:100:2:9001>, <urn:mdciii:1603:45:16:100:2:9002>, <urn:mdciii:1603:45:16:100:2:9003>, <urn:mdciii:1603:45:16:100:2:9004>, <urn:mdciii:1603:45:16:100:2:9005>, <urn:mdciii:1603:45:16:100:2:9006>, <urn:mdciii:1603:45:16:100:2:9007>, <urn:mdciii:1603:45:16:100:2:9008>, <urn:mdciii:1603:45:16:100:2:9009>, <urn:mdciii:1603:45:16:100:2:9010>, <urn:mdciii:1603:45:16:100:2:9011> .
+
+<urn:mdciii:1603:45:16:100:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:100:2:10001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10001" ;
+    skos:prefLabel "Batak"@eng-Latn ;
+    wdata:q7200235 "BG010001" .
+
+<urn:mdciii:1603:45:16:100:2:10002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10002" ;
+    skos:prefLabel "Belovo"@eng-Latn ;
+    wdata:q7200235 "BG010002" .
+
+<urn:mdciii:1603:45:16:100:2:10003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10003" ;
+    skos:prefLabel "Bratsigovo"@eng-Latn ;
+    wdata:q7200235 "BG010003" .
+
+<urn:mdciii:1603:45:16:100:2:10004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10004" ;
+    skos:prefLabel "Lesichovo"@eng-Latn ;
+    wdata:q7200235 "BG010004" .
+
+<urn:mdciii:1603:45:16:100:2:10005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10005" ;
+    skos:prefLabel "Panagiurishte"@eng-Latn ;
+    wdata:q7200235 "BG010005" .
+
+<urn:mdciii:1603:45:16:100:2:10006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10006" ;
+    skos:prefLabel "Pazardzik"@eng-Latn ;
+    wdata:q7200235 "BG010006" .
+
+<urn:mdciii:1603:45:16:100:2:10007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10007" ;
+    skos:prefLabel "Peshtera"@eng-Latn ;
+    wdata:q7200235 "BG010007" .
+
+<urn:mdciii:1603:45:16:100:2:10008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10008" ;
+    skos:prefLabel "Rakitovo"@eng-Latn ;
+    wdata:q7200235 "BG010008" .
+
+<urn:mdciii:1603:45:16:100:2:10009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10009" ;
+    skos:prefLabel "Sarnitsa"@eng-Latn ;
+    wdata:q7200235 "BG010009" .
+
+<urn:mdciii:1603:45:16:100:2:1001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1001" ;
+    skos:prefLabel "Bansko"@eng-Latn ;
+    wdata:q7200235 "BG001001" .
+
+<urn:mdciii:1603:45:16:100:2:10010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10010" ;
+    skos:prefLabel "Septemvri"@eng-Latn ;
+    wdata:q7200235 "BG010010" .
+
+<urn:mdciii:1603:45:16:100:2:10011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10011" ;
+    skos:prefLabel "Strelcha"@eng-Latn ;
+    wdata:q7200235 "BG010011" .
+
+<urn:mdciii:1603:45:16:100:2:10012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:10012" ;
+    skos:prefLabel "Velingrad"@eng-Latn ;
+    wdata:q7200235 "BG010012" .
+
+<urn:mdciii:1603:45:16:100:2:1002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1002" ;
+    skos:prefLabel "Belitsa"@eng-Latn ;
+    wdata:q7200235 "BG001002" .
+
+<urn:mdciii:1603:45:16:100:2:1003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1003" ;
+    skos:prefLabel "Blagoevgrad"@eng-Latn ;
+    wdata:q7200235 "BG001003" .
+
+<urn:mdciii:1603:45:16:100:2:1004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1004" ;
+    skos:prefLabel "Garmen"@eng-Latn ;
+    wdata:q7200235 "BG001004" .
+
+<urn:mdciii:1603:45:16:100:2:1005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1005" ;
+    skos:prefLabel "Gotse Delchev"@eng-Latn ;
+    wdata:q7200235 "BG001005" .
+
+<urn:mdciii:1603:45:16:100:2:1006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1006" ;
+    skos:prefLabel "Hadzhidimovo"@eng-Latn ;
+    wdata:q7200235 "BG001006" .
+
+<urn:mdciii:1603:45:16:100:2:1007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1007" ;
+    skos:prefLabel "Kresna"@eng-Latn ;
+    wdata:q7200235 "BG001007" .
+
+<urn:mdciii:1603:45:16:100:2:1008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1008" ;
+    skos:prefLabel "Petrich"@eng-Latn ;
+    wdata:q7200235 "BG001008" .
+
+<urn:mdciii:1603:45:16:100:2:1009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1009" ;
+    skos:prefLabel "Razlog"@eng-Latn ;
+    wdata:q7200235 "BG001009" .
+
+<urn:mdciii:1603:45:16:100:2:1010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1010" ;
+    skos:prefLabel "Sandanski"@eng-Latn ;
+    wdata:q7200235 "BG001010" .
+
+<urn:mdciii:1603:45:16:100:2:1011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1011" ;
+    skos:prefLabel "Satovcha"@eng-Latn ;
+    wdata:q7200235 "BG001011" .
+
+<urn:mdciii:1603:45:16:100:2:1012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1012" ;
+    skos:prefLabel "Simitli"@eng-Latn ;
+    wdata:q7200235 "BG001012" .
+
+<urn:mdciii:1603:45:16:100:2:1013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1013" ;
+    skos:prefLabel "Strumiani"@eng-Latn ;
+    wdata:q7200235 "BG001013" .
+
+<urn:mdciii:1603:45:16:100:2:1014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:1014" ;
+    skos:prefLabel "Yakoruda"@eng-Latn ;
+    wdata:q7200235 "BG001014" .
+
+<urn:mdciii:1603:45:16:100:2:11001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:11001" ;
+    skos:prefLabel "Breznik"@eng-Latn ;
+    wdata:q7200235 "BG011001" .
+
+<urn:mdciii:1603:45:16:100:2:11002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:11002" ;
+    skos:prefLabel "Kovachevtsi"@eng-Latn ;
+    wdata:q7200235 "BG011002" .
+
+<urn:mdciii:1603:45:16:100:2:11003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:11003" ;
+    skos:prefLabel "Pernik"@eng-Latn ;
+    wdata:q7200235 "BG011003" .
+
+<urn:mdciii:1603:45:16:100:2:11004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:11004" ;
+    skos:prefLabel "Radomir"@eng-Latn ;
+    wdata:q7200235 "BG011004" .
+
+<urn:mdciii:1603:45:16:100:2:11005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:11005" ;
+    skos:prefLabel "Tran"@eng-Latn ;
+    wdata:q7200235 "BG011005" .
+
+<urn:mdciii:1603:45:16:100:2:11006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:11006" ;
+    skos:prefLabel "Zemen"@eng-Latn ;
+    wdata:q7200235 "BG011006" .
+
+<urn:mdciii:1603:45:16:100:2:12001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12001" ;
+    skos:prefLabel "Belene"@eng-Latn ;
+    wdata:q7200235 "BG012001" .
+
+<urn:mdciii:1603:45:16:100:2:12002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12002" ;
+    skos:prefLabel "Cherven Briag"@eng-Latn ;
+    wdata:q7200235 "BG012002" .
+
+<urn:mdciii:1603:45:16:100:2:12003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12003" ;
+    skos:prefLabel "Dolna Mitropolia"@eng-Latn ;
+    wdata:q7200235 "BG012003" .
+
+<urn:mdciii:1603:45:16:100:2:12004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12004" ;
+    skos:prefLabel "Dolni Dabnik"@eng-Latn ;
+    wdata:q7200235 "BG012004" .
+
+<urn:mdciii:1603:45:16:100:2:12005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12005" ;
+    skos:prefLabel "Guliantsi"@eng-Latn ;
+    wdata:q7200235 "BG012005" .
+
+<urn:mdciii:1603:45:16:100:2:12006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12006" ;
+    skos:prefLabel "Iskar"@eng-Latn ;
+    wdata:q7200235 "BG012006" .
+
+<urn:mdciii:1603:45:16:100:2:12007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12007" ;
+    skos:prefLabel "Knezha"@eng-Latn ;
+    wdata:q7200235 "BG012007" .
+
+<urn:mdciii:1603:45:16:100:2:12008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12008" ;
+    skos:prefLabel "Levski"@eng-Latn ;
+    wdata:q7200235 "BG012008" .
+
+<urn:mdciii:1603:45:16:100:2:12009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12009" ;
+    skos:prefLabel "Nikopol"@eng-Latn ;
+    wdata:q7200235 "BG012009" .
+
+<urn:mdciii:1603:45:16:100:2:12010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12010" ;
+    skos:prefLabel "Pleven"@eng-Latn ;
+    wdata:q7200235 "BG012010" .
+
+<urn:mdciii:1603:45:16:100:2:12011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:12011" ;
+    skos:prefLabel "Pordim"@eng-Latn ;
+    wdata:q7200235 "BG012011" .
+
+<urn:mdciii:1603:45:16:100:2:13001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13001" ;
+    skos:prefLabel "Asenovgrad"@eng-Latn ;
+    wdata:q7200235 "BG013001" .
+
+<urn:mdciii:1603:45:16:100:2:13002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13002" ;
+    skos:prefLabel "Brezovo"@eng-Latn ;
+    wdata:q7200235 "BG013002" .
+
+<urn:mdciii:1603:45:16:100:2:13003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13003" ;
+    skos:prefLabel "Hisaria"@eng-Latn ;
+    wdata:q7200235 "BG013003" .
+
+<urn:mdciii:1603:45:16:100:2:13004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13004" ;
+    skos:prefLabel "Kaloianovo"@eng-Latn ;
+    wdata:q7200235 "BG013004" .
+
+<urn:mdciii:1603:45:16:100:2:13005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13005" ;
+    skos:prefLabel "Karlovo"@eng-Latn ;
+    wdata:q7200235 "BG013005" .
+
+<urn:mdciii:1603:45:16:100:2:13006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13006" ;
+    skos:prefLabel "Krichim"@eng-Latn ;
+    wdata:q7200235 "BG013006" .
+
+<urn:mdciii:1603:45:16:100:2:13007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13007" ;
+    skos:prefLabel "Kuklen"@eng-Latn ;
+    wdata:q7200235 "BG013007" .
+
+<urn:mdciii:1603:45:16:100:2:13008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13008" ;
+    skos:prefLabel "Laki"@eng-Latn ;
+    wdata:q7200235 "BG013008" .
+
+<urn:mdciii:1603:45:16:100:2:13009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13009" ;
+    skos:prefLabel "Maritsa"@eng-Latn ;
+    wdata:q7200235 "BG013009" .
+
+<urn:mdciii:1603:45:16:100:2:13010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13010" ;
+    skos:prefLabel "Parvomai"@eng-Latn ;
+    wdata:q7200235 "BG013010" .
+
+<urn:mdciii:1603:45:16:100:2:13011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13011" ;
+    skos:prefLabel "Perushtitsa"@eng-Latn ;
+    wdata:q7200235 "BG013011" .
+
+<urn:mdciii:1603:45:16:100:2:13012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13012" ;
+    skos:prefLabel "Plovdiv"@eng-Latn ;
+    wdata:q7200235 "BG013012" .
+
+<urn:mdciii:1603:45:16:100:2:13013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13013" ;
+    skos:prefLabel "Rakovski"@eng-Latn ;
+    wdata:q7200235 "BG013013" .
+
+<urn:mdciii:1603:45:16:100:2:13014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13014" ;
+    skos:prefLabel "Rodopi"@eng-Latn ;
+    wdata:q7200235 "BG013014" .
+
+<urn:mdciii:1603:45:16:100:2:13015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13015" ;
+    skos:prefLabel "Sadovo"@eng-Latn ;
+    wdata:q7200235 "BG013015" .
+
+<urn:mdciii:1603:45:16:100:2:13016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13016" ;
+    skos:prefLabel "Saedinenie"@eng-Latn ;
+    wdata:q7200235 "BG013016" .
+
+<urn:mdciii:1603:45:16:100:2:13017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13017" ;
+    skos:prefLabel "Sopot"@eng-Latn ;
+    wdata:q7200235 "BG013017" .
+
+<urn:mdciii:1603:45:16:100:2:13018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:13018" ;
+    skos:prefLabel "Stamboliiski"@eng-Latn ;
+    wdata:q7200235 "BG013018" .
+
+<urn:mdciii:1603:45:16:100:2:14001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:14001" ;
+    skos:prefLabel "Isperih"@eng-Latn ;
+    wdata:q7200235 "BG014001" .
+
+<urn:mdciii:1603:45:16:100:2:14002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:14002" ;
+    skos:prefLabel "Kubrat"@eng-Latn ;
+    wdata:q7200235 "BG014002" .
+
+<urn:mdciii:1603:45:16:100:2:14003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:14003" ;
+    skos:prefLabel "Loznitsa"@eng-Latn ;
+    wdata:q7200235 "BG014003" .
+
+<urn:mdciii:1603:45:16:100:2:14004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:14004" ;
+    skos:prefLabel "Razgrad"@eng-Latn ;
+    wdata:q7200235 "BG014004" .
+
+<urn:mdciii:1603:45:16:100:2:14005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:14005" ;
+    skos:prefLabel "Samuil"@eng-Latn ;
+    wdata:q7200235 "BG014005" .
+
+<urn:mdciii:1603:45:16:100:2:14006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:14006" ;
+    skos:prefLabel "Tsar Kaloian"@eng-Latn ;
+    wdata:q7200235 "BG014006" .
+
+<urn:mdciii:1603:45:16:100:2:14007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:14007" ;
+    skos:prefLabel "Zavet"@eng-Latn ;
+    wdata:q7200235 "BG014007" .
+
+<urn:mdciii:1603:45:16:100:2:15001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:15001" ;
+    skos:prefLabel "Biala"@eng-Latn ;
+    wdata:q7200235 "BG015001" .
+
+<urn:mdciii:1603:45:16:100:2:15002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:15002" ;
+    skos:prefLabel "Borovo"@eng-Latn ;
+    wdata:q7200235 "BG015002" .
+
+<urn:mdciii:1603:45:16:100:2:15003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:15003" ;
+    skos:prefLabel "Dve Mogili"@eng-Latn ;
+    wdata:q7200235 "BG015003" .
+
+<urn:mdciii:1603:45:16:100:2:15004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:15004" ;
+    skos:prefLabel "Ivanovo"@eng-Latn ;
+    wdata:q7200235 "BG015004" .
+
+<urn:mdciii:1603:45:16:100:2:15005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:15005" ;
+    skos:prefLabel "Ruse"@eng-Latn ;
+    wdata:q7200235 "BG015005" .
+
+<urn:mdciii:1603:45:16:100:2:15006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:15006" ;
+    skos:prefLabel "Slivo Pole"@eng-Latn ;
+    wdata:q7200235 "BG015006" .
+
+<urn:mdciii:1603:45:16:100:2:15007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:15007" ;
+    skos:prefLabel "Tsenovo"@eng-Latn ;
+    wdata:q7200235 "BG015007" .
+
+<urn:mdciii:1603:45:16:100:2:15008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:15008" ;
+    skos:prefLabel "Vetovo"@eng-Latn ;
+    wdata:q7200235 "BG015008" .
+
+<urn:mdciii:1603:45:16:100:2:16001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16001" ;
+    skos:prefLabel "Hitrino"@eng-Latn ;
+    wdata:q7200235 "BG016001" .
+
+<urn:mdciii:1603:45:16:100:2:16002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16002" ;
+    skos:prefLabel "Kaolinovo"@eng-Latn ;
+    wdata:q7200235 "BG016002" .
+
+<urn:mdciii:1603:45:16:100:2:16003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16003" ;
+    skos:prefLabel "Kaspichan"@eng-Latn ;
+    wdata:q7200235 "BG016003" .
+
+<urn:mdciii:1603:45:16:100:2:16004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16004" ;
+    skos:prefLabel "Nikola Kozlevo"@eng-Latn ;
+    wdata:q7200235 "BG016004" .
+
+<urn:mdciii:1603:45:16:100:2:16005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16005" ;
+    skos:prefLabel "Novi Pazar"@eng-Latn ;
+    wdata:q7200235 "BG016005" .
+
+<urn:mdciii:1603:45:16:100:2:16006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16006" ;
+    skos:prefLabel "Shumen"@eng-Latn ;
+    wdata:q7200235 "BG016006" .
+
+<urn:mdciii:1603:45:16:100:2:16007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16007" ;
+    skos:prefLabel "Smiadovo"@eng-Latn ;
+    wdata:q7200235 "BG016007" .
+
+<urn:mdciii:1603:45:16:100:2:16008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16008" ;
+    skos:prefLabel "Varbitsa"@eng-Latn ;
+    wdata:q7200235 "BG016008" .
+
+<urn:mdciii:1603:45:16:100:2:16009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16009" ;
+    skos:prefLabel "Veliki Preslav"@eng-Latn ;
+    wdata:q7200235 "BG016009" .
+
+<urn:mdciii:1603:45:16:100:2:16010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:16010" ;
+    skos:prefLabel "Venets"@eng-Latn ;
+    wdata:q7200235 "BG016010" .
+
+<urn:mdciii:1603:45:16:100:2:17001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:17001" ;
+    skos:prefLabel "Alfatar"@eng-Latn ;
+    wdata:q7200235 "BG017001" .
+
+<urn:mdciii:1603:45:16:100:2:17002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:17002" ;
+    skos:prefLabel "Dulovo"@eng-Latn ;
+    wdata:q7200235 "BG017002" .
+
+<urn:mdciii:1603:45:16:100:2:17003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:17003" ;
+    skos:prefLabel "Glavnitsa"@eng-Latn ;
+    wdata:q7200235 "BG017003" .
+
+<urn:mdciii:1603:45:16:100:2:17004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:17004" ;
+    skos:prefLabel "Kainardzha"@eng-Latn ;
+    wdata:q7200235 "BG017004" .
+
+<urn:mdciii:1603:45:16:100:2:17005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:17005" ;
+    skos:prefLabel "Silistra"@eng-Latn ;
+    wdata:q7200235 "BG017005" .
+
+<urn:mdciii:1603:45:16:100:2:17006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:17006" ;
+    skos:prefLabel "Sitovo"@eng-Latn ;
+    wdata:q7200235 "BG017006" .
+
+<urn:mdciii:1603:45:16:100:2:17007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:17007" ;
+    skos:prefLabel "Tutrakan"@eng-Latn ;
+    wdata:q7200235 "BG017007" .
+
+<urn:mdciii:1603:45:16:100:2:18001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:18001" ;
+    skos:prefLabel "Kotel"@eng-Latn ;
+    wdata:q7200235 "BG018001" .
+
+<urn:mdciii:1603:45:16:100:2:18002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:18002" ;
+    skos:prefLabel "Nova Zagora"@eng-Latn ;
+    wdata:q7200235 "BG018002" .
+
+<urn:mdciii:1603:45:16:100:2:18003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:18003" ;
+    skos:prefLabel "Sliven"@eng-Latn ;
+    wdata:q7200235 "BG018003" .
+
+<urn:mdciii:1603:45:16:100:2:18004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:18004" ;
+    skos:prefLabel "Tvarditsa"@eng-Latn ;
+    wdata:q7200235 "BG018004" .
+
+<urn:mdciii:1603:45:16:100:2:19001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19001" ;
+    skos:prefLabel "Banite"@eng-Latn ;
+    wdata:q7200235 "BG019001" .
+
+<urn:mdciii:1603:45:16:100:2:19002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19002" ;
+    skos:prefLabel "Borino"@eng-Latn ;
+    wdata:q7200235 "BG019002" .
+
+<urn:mdciii:1603:45:16:100:2:19003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19003" ;
+    skos:prefLabel "Chepelare"@eng-Latn ;
+    wdata:q7200235 "BG019003" .
+
+<urn:mdciii:1603:45:16:100:2:19004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19004" ;
+    skos:prefLabel "Devin"@eng-Latn ;
+    wdata:q7200235 "BG019004" .
+
+<urn:mdciii:1603:45:16:100:2:19005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19005" ;
+    skos:prefLabel "Dospat"@eng-Latn ;
+    wdata:q7200235 "BG019005" .
+
+<urn:mdciii:1603:45:16:100:2:19006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19006" ;
+    skos:prefLabel "Madan"@eng-Latn ;
+    wdata:q7200235 "BG019006" .
+
+<urn:mdciii:1603:45:16:100:2:19007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19007" ;
+    skos:prefLabel "Nedelino"@eng-Latn ;
+    wdata:q7200235 "BG019007" .
+
+<urn:mdciii:1603:45:16:100:2:19008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19008" ;
+    skos:prefLabel "Rudozem"@eng-Latn ;
+    wdata:q7200235 "BG019008" .
+
+<urn:mdciii:1603:45:16:100:2:19009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19009" ;
+    skos:prefLabel "Smolian"@eng-Latn ;
+    wdata:q7200235 "BG019009" .
+
+<urn:mdciii:1603:45:16:100:2:19010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:19010" ;
+    skos:prefLabel "Zlatograd"@eng-Latn ;
+    wdata:q7200235 "BG019010" .
+
+<urn:mdciii:1603:45:16:100:2:20001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20001" ;
+    skos:prefLabel "Anton"@eng-Latn ;
+    wdata:q7200235 "BG020001" .
+
+<urn:mdciii:1603:45:16:100:2:20002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20002" ;
+    skos:prefLabel "Botevgrad"@eng-Latn ;
+    wdata:q7200235 "BG020002" .
+
+<urn:mdciii:1603:45:16:100:2:20003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20003" ;
+    skos:prefLabel "Bozhurishte"@eng-Latn ;
+    wdata:q7200235 "BG020003" .
+
+<urn:mdciii:1603:45:16:100:2:20004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20004" ;
+    skos:prefLabel "Chavdar"@eng-Latn ;
+    wdata:q7200235 "BG020004" .
+
+<urn:mdciii:1603:45:16:100:2:20005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20005" ;
+    skos:prefLabel "Chelopech"@eng-Latn ;
+    wdata:q7200235 "BG020005" .
+
+<urn:mdciii:1603:45:16:100:2:20006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20006" ;
+    skos:prefLabel "Dolna Bania"@eng-Latn ;
+    wdata:q7200235 "BG020006" .
+
+<urn:mdciii:1603:45:16:100:2:20007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20007" ;
+    skos:prefLabel "Dragoman"@eng-Latn ;
+    wdata:q7200235 "BG020007" .
+
+<urn:mdciii:1603:45:16:100:2:20008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20008" ;
+    skos:prefLabel "Elin Pelin"@eng-Latn ;
+    wdata:q7200235 "BG020008" .
+
+<urn:mdciii:1603:45:16:100:2:20009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20009" ;
+    skos:prefLabel "Etropole"@eng-Latn ;
+    wdata:q7200235 "BG020009" .
+
+<urn:mdciii:1603:45:16:100:2:2001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2001" ;
+    skos:prefLabel "Aitos"@eng-Latn ;
+    wdata:q7200235 "BG002001" .
+
+<urn:mdciii:1603:45:16:100:2:20010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20010" ;
+    skos:prefLabel "Godech"@eng-Latn ;
+    wdata:q7200235 "BG020010" .
+
+<urn:mdciii:1603:45:16:100:2:20011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20011" ;
+    skos:prefLabel "Gorna Malina"@eng-Latn ;
+    wdata:q7200235 "BG020011" .
+
+<urn:mdciii:1603:45:16:100:2:20012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20012" ;
+    skos:prefLabel "Ihtiman"@eng-Latn ;
+    wdata:q7200235 "BG020012" .
+
+<urn:mdciii:1603:45:16:100:2:20013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20013" ;
+    skos:prefLabel "Koprivshtitsa"@eng-Latn ;
+    wdata:q7200235 "BG020013" .
+
+<urn:mdciii:1603:45:16:100:2:20014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20014" ;
+    skos:prefLabel "Kostenets"@eng-Latn ;
+    wdata:q7200235 "BG020014" .
+
+<urn:mdciii:1603:45:16:100:2:20015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20015" ;
+    skos:prefLabel "Kostinbrod"@eng-Latn ;
+    wdata:q7200235 "BG020015" .
+
+<urn:mdciii:1603:45:16:100:2:20016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20016" ;
+    skos:prefLabel "Mirkovo"@eng-Latn ;
+    wdata:q7200235 "BG020016" .
+
+<urn:mdciii:1603:45:16:100:2:20017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20017" ;
+    skos:prefLabel "Pirdop"@eng-Latn ;
+    wdata:q7200235 "BG020017" .
+
+<urn:mdciii:1603:45:16:100:2:20018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20018" ;
+    skos:prefLabel "Pravets"@eng-Latn ;
+    wdata:q7200235 "BG020018" .
+
+<urn:mdciii:1603:45:16:100:2:20019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20019" ;
+    skos:prefLabel "Samokov"@eng-Latn ;
+    wdata:q7200235 "BG020019" .
+
+<urn:mdciii:1603:45:16:100:2:2002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2002" ;
+    skos:prefLabel "Burgas"@eng-Latn ;
+    wdata:q7200235 "BG002002" .
+
+<urn:mdciii:1603:45:16:100:2:20020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20020" ;
+    skos:prefLabel "Slivnitsa"@eng-Latn ;
+    wdata:q7200235 "BG020020" .
+
+<urn:mdciii:1603:45:16:100:2:20021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20021" ;
+    skos:prefLabel "Svoge"@eng-Latn ;
+    wdata:q7200235 "BG020021" .
+
+<urn:mdciii:1603:45:16:100:2:20022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:20022" ;
+    skos:prefLabel "Zlatitsa"@eng-Latn ;
+    wdata:q7200235 "BG020022" .
+
+<urn:mdciii:1603:45:16:100:2:2003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2003" ;
+    skos:prefLabel "Kameno"@eng-Latn ;
+    wdata:q7200235 "BG002003" .
+
+<urn:mdciii:1603:45:16:100:2:2004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2004" ;
+    skos:prefLabel "Karnobat"@eng-Latn ;
+    wdata:q7200235 "BG002004" .
+
+<urn:mdciii:1603:45:16:100:2:2005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2005" ;
+    skos:prefLabel "Malko Tarnovo"@eng-Latn ;
+    wdata:q7200235 "BG002005" .
+
+<urn:mdciii:1603:45:16:100:2:2006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2006" ;
+    skos:prefLabel "Nesebar"@eng-Latn ;
+    wdata:q7200235 "BG002006" .
+
+<urn:mdciii:1603:45:16:100:2:2007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2007" ;
+    skos:prefLabel "Pomorie"@eng-Latn ;
+    wdata:q7200235 "BG002007" .
+
+<urn:mdciii:1603:45:16:100:2:2008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2008" ;
+    skos:prefLabel "Primorsko"@eng-Latn ;
+    wdata:q7200235 "BG002008" .
+
+<urn:mdciii:1603:45:16:100:2:2009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2009" ;
+    skos:prefLabel "Ruen"@eng-Latn ;
+    wdata:q7200235 "BG002009" .
+
+<urn:mdciii:1603:45:16:100:2:2010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2010" ;
+    skos:prefLabel "Sozopol"@eng-Latn ;
+    wdata:q7200235 "BG002010" .
+
+<urn:mdciii:1603:45:16:100:2:2011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2011" ;
+    skos:prefLabel "Sredets"@eng-Latn ;
+    wdata:q7200235 "BG002011" .
+
+<urn:mdciii:1603:45:16:100:2:2012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2012" ;
+    skos:prefLabel "Sungurlare"@eng-Latn ;
+    wdata:q7200235 "BG002012" .
+
+<urn:mdciii:1603:45:16:100:2:2013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:2013" ;
+    skos:prefLabel "Tsarevo"@eng-Latn ;
+    wdata:q7200235 "BG002013" .
+
+<urn:mdciii:1603:45:16:100:2:21001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:21001" ;
+    skos:prefLabel "Sofia City"@eng-Latn ;
+    wdata:q7200235 "BG021001" .
+
+<urn:mdciii:1603:45:16:100:2:22001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22001" ;
+    skos:prefLabel "Bratya Daskalovi"@eng-Latn ;
+    wdata:q7200235 "BG022001" .
+
+<urn:mdciii:1603:45:16:100:2:22002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22002" ;
+    skos:prefLabel "Chirpan"@eng-Latn ;
+    wdata:q7200235 "BG022002" .
+
+<urn:mdciii:1603:45:16:100:2:22003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22003" ;
+    skos:prefLabel "Galabovo"@eng-Latn ;
+    wdata:q7200235 "BG022003" .
+
+<urn:mdciii:1603:45:16:100:2:22004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22004" ;
+    skos:prefLabel "Gurkovo"@eng-Latn ;
+    wdata:q7200235 "BG022004" .
+
+<urn:mdciii:1603:45:16:100:2:22005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22005" ;
+    skos:prefLabel "Kazanlak"@eng-Latn ;
+    wdata:q7200235 "BG022005" .
+
+<urn:mdciii:1603:45:16:100:2:22006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22006" ;
+    skos:prefLabel "Maglizh"@eng-Latn ;
+    wdata:q7200235 "BG022006" .
+
+<urn:mdciii:1603:45:16:100:2:22007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22007" ;
+    skos:prefLabel "Nikolaevo"@eng-Latn ;
+    wdata:q7200235 "BG022007" .
+
+<urn:mdciii:1603:45:16:100:2:22008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22008" ;
+    skos:prefLabel "Opan"@eng-Latn ;
+    wdata:q7200235 "BG022008" .
+
+<urn:mdciii:1603:45:16:100:2:22009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22009" ;
+    skos:prefLabel "Pavel Bania"@eng-Latn ;
+    wdata:q7200235 "BG022009" .
+
+<urn:mdciii:1603:45:16:100:2:22010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22010" ;
+    skos:prefLabel "Radnevo"@eng-Latn ;
+    wdata:q7200235 "BG022010" .
+
+<urn:mdciii:1603:45:16:100:2:22011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:22011" ;
+    skos:prefLabel "Stara Zagora"@eng-Latn ;
+    wdata:q7200235 "BG022011" .
+
+<urn:mdciii:1603:45:16:100:2:23001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:23001" ;
+    skos:prefLabel "Antonovo"@eng-Latn ;
+    wdata:q7200235 "BG023001" .
+
+<urn:mdciii:1603:45:16:100:2:23002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:23002" ;
+    skos:prefLabel "Omurtag"@eng-Latn ;
+    wdata:q7200235 "BG023002" .
+
+<urn:mdciii:1603:45:16:100:2:23003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:23003" ;
+    skos:prefLabel "Opaka"@eng-Latn ;
+    wdata:q7200235 "BG023003" .
+
+<urn:mdciii:1603:45:16:100:2:23004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:23004" ;
+    skos:prefLabel "Popovo"@eng-Latn ;
+    wdata:q7200235 "BG023004" .
+
+<urn:mdciii:1603:45:16:100:2:23005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:23005" ;
+    skos:prefLabel "Targovishte"@eng-Latn ;
+    wdata:q7200235 "BG023005" .
+
+<urn:mdciii:1603:45:16:100:2:24001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24001" ;
+    skos:prefLabel "Aksakovo"@eng-Latn ;
+    wdata:q7200235 "BG024001" .
+
+<urn:mdciii:1603:45:16:100:2:24002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24002" ;
+    skos:prefLabel "Avren"@eng-Latn ;
+    wdata:q7200235 "BG024002" .
+
+<urn:mdciii:1603:45:16:100:2:24003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24003" ;
+    skos:prefLabel "Beloslav"@eng-Latn ;
+    wdata:q7200235 "BG024003" .
+
+<urn:mdciii:1603:45:16:100:2:24004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24004" ;
+    skos:prefLabel "Byala"@eng-Latn ;
+    wdata:q7200235 "BG024004" .
+
+<urn:mdciii:1603:45:16:100:2:24005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24005" ;
+    skos:prefLabel "Dalgopol"@eng-Latn ;
+    wdata:q7200235 "BG024005" .
+
+<urn:mdciii:1603:45:16:100:2:24006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24006" ;
+    skos:prefLabel "Devnia"@eng-Latn ;
+    wdata:q7200235 "BG024006" .
+
+<urn:mdciii:1603:45:16:100:2:24007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24007" ;
+    skos:prefLabel "Dolni Chiflik"@eng-Latn ;
+    wdata:q7200235 "BG024007" .
+
+<urn:mdciii:1603:45:16:100:2:24008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24008" ;
+    skos:prefLabel "Provadia"@eng-Latn ;
+    wdata:q7200235 "BG024008" .
+
+<urn:mdciii:1603:45:16:100:2:24009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24009" ;
+    skos:prefLabel "Suvorovo"@eng-Latn ;
+    wdata:q7200235 "BG024009" .
+
+<urn:mdciii:1603:45:16:100:2:24010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24010" ;
+    skos:prefLabel "Valchi Dol"@eng-Latn ;
+    wdata:q7200235 "BG024010" .
+
+<urn:mdciii:1603:45:16:100:2:24011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24011" ;
+    skos:prefLabel "Varna"@eng-Latn ;
+    wdata:q7200235 "BG024011" .
+
+<urn:mdciii:1603:45:16:100:2:24012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:24012" ;
+    skos:prefLabel "Vetrino"@eng-Latn ;
+    wdata:q7200235 "BG024012" .
+
+<urn:mdciii:1603:45:16:100:2:25001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25001" ;
+    skos:prefLabel "Elena"@eng-Latn ;
+    wdata:q7200235 "BG025001" .
+
+<urn:mdciii:1603:45:16:100:2:25002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25002" ;
+    skos:prefLabel "Gorna Oriahovitsa"@eng-Latn ;
+    wdata:q7200235 "BG025002" .
+
+<urn:mdciii:1603:45:16:100:2:25003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25003" ;
+    skos:prefLabel "Liaskovets"@eng-Latn ;
+    wdata:q7200235 "BG025003" .
+
+<urn:mdciii:1603:45:16:100:2:25004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25004" ;
+    skos:prefLabel "Pavlikeni"@eng-Latn ;
+    wdata:q7200235 "BG025004" .
+
+<urn:mdciii:1603:45:16:100:2:25005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25005" ;
+    skos:prefLabel "Polski Trambesh"@eng-Latn ;
+    wdata:q7200235 "BG025005" .
+
+<urn:mdciii:1603:45:16:100:2:25006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25006" ;
+    skos:prefLabel "Strazhitsa"@eng-Latn ;
+    wdata:q7200235 "BG025006" .
+
+<urn:mdciii:1603:45:16:100:2:25007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25007" ;
+    skos:prefLabel "Suhindol"@eng-Latn ;
+    wdata:q7200235 "BG025007" .
+
+<urn:mdciii:1603:45:16:100:2:25008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25008" ;
+    skos:prefLabel "Svishtov"@eng-Latn ;
+    wdata:q7200235 "BG025008" .
+
+<urn:mdciii:1603:45:16:100:2:25009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25009" ;
+    skos:prefLabel "Veliko Tarnovo"@eng-Latn ;
+    wdata:q7200235 "BG025009" .
+
+<urn:mdciii:1603:45:16:100:2:25010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:25010" ;
+    skos:prefLabel "Zlataritsa"@eng-Latn ;
+    wdata:q7200235 "BG025010" .
+
+<urn:mdciii:1603:45:16:100:2:26001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26001" ;
+    skos:prefLabel "Belogradchik"@eng-Latn ;
+    wdata:q7200235 "BG026001" .
+
+<urn:mdciii:1603:45:16:100:2:26002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26002" ;
+    skos:prefLabel "Boinitsa"@eng-Latn ;
+    wdata:q7200235 "BG026002" .
+
+<urn:mdciii:1603:45:16:100:2:26003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26003" ;
+    skos:prefLabel "Bregovo"@eng-Latn ;
+    wdata:q7200235 "BG026003" .
+
+<urn:mdciii:1603:45:16:100:2:26004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26004" ;
+    skos:prefLabel "Chuprene"@eng-Latn ;
+    wdata:q7200235 "BG026004" .
+
+<urn:mdciii:1603:45:16:100:2:26005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26005" ;
+    skos:prefLabel "Dimovo"@eng-Latn ;
+    wdata:q7200235 "BG026005" .
+
+<urn:mdciii:1603:45:16:100:2:26006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26006" ;
+    skos:prefLabel "Gramada"@eng-Latn ;
+    wdata:q7200235 "BG026006" .
+
+<urn:mdciii:1603:45:16:100:2:26007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26007" ;
+    skos:prefLabel "Kula"@eng-Latn ;
+    wdata:q7200235 "BG026007" .
+
+<urn:mdciii:1603:45:16:100:2:26008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26008" ;
+    skos:prefLabel "Makresh"@eng-Latn ;
+    wdata:q7200235 "BG026008" .
+
+<urn:mdciii:1603:45:16:100:2:26009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26009" ;
+    skos:prefLabel "Novo Selo"@eng-Latn ;
+    wdata:q7200235 "BG026009" .
+
+<urn:mdciii:1603:45:16:100:2:26010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26010" ;
+    skos:prefLabel "Ruzhintsi"@eng-Latn ;
+    wdata:q7200235 "BG026010" .
+
+<urn:mdciii:1603:45:16:100:2:26011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:26011" ;
+    skos:prefLabel "Vidin"@eng-Latn ;
+    wdata:q7200235 "BG026011" .
+
+<urn:mdciii:1603:45:16:100:2:27001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27001" ;
+    skos:prefLabel "Biala Slatina"@eng-Latn ;
+    wdata:q7200235 "BG027001" .
+
+<urn:mdciii:1603:45:16:100:2:27002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27002" ;
+    skos:prefLabel "Borovan"@eng-Latn ;
+    wdata:q7200235 "BG027002" .
+
+<urn:mdciii:1603:45:16:100:2:27003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27003" ;
+    skos:prefLabel "Hairedin"@eng-Latn ;
+    wdata:q7200235 "BG027003" .
+
+<urn:mdciii:1603:45:16:100:2:27004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27004" ;
+    skos:prefLabel "Kozlodui"@eng-Latn ;
+    wdata:q7200235 "BG027004" .
+
+<urn:mdciii:1603:45:16:100:2:27005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27005" ;
+    skos:prefLabel "Krivodol"@eng-Latn ;
+    wdata:q7200235 "BG027005" .
+
+<urn:mdciii:1603:45:16:100:2:27006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27006" ;
+    skos:prefLabel "Mezdra"@eng-Latn ;
+    wdata:q7200235 "BG027006" .
+
+<urn:mdciii:1603:45:16:100:2:27007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27007" ;
+    skos:prefLabel "Mizia"@eng-Latn ;
+    wdata:q7200235 "BG027007" .
+
+<urn:mdciii:1603:45:16:100:2:27008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27008" ;
+    skos:prefLabel "Oryahovo"@eng-Latn ;
+    wdata:q7200235 "BG027008" .
+
+<urn:mdciii:1603:45:16:100:2:27009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27009" ;
+    skos:prefLabel "Roman"@eng-Latn ;
+    wdata:q7200235 "BG027009" .
+
+<urn:mdciii:1603:45:16:100:2:27010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:27010" ;
+    skos:prefLabel "Vratsa"@eng-Latn ;
+    wdata:q7200235 "BG027010" .
+
+<urn:mdciii:1603:45:16:100:2:28001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:28001" ;
+    skos:prefLabel "Boliarovo"@eng-Latn ;
+    wdata:q7200235 "BG028001" .
+
+<urn:mdciii:1603:45:16:100:2:28002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:28002" ;
+    skos:prefLabel "Elhovo"@eng-Latn ;
+    wdata:q7200235 "BG028002" .
+
+<urn:mdciii:1603:45:16:100:2:28003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:28003" ;
+    skos:prefLabel "Straldzha"@eng-Latn ;
+    wdata:q7200235 "BG028003" .
+
+<urn:mdciii:1603:45:16:100:2:28004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:28004" ;
+    skos:prefLabel "Tundzha"@eng-Latn ;
+    wdata:q7200235 "BG028004" .
+
+<urn:mdciii:1603:45:16:100:2:28005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:28005" ;
+    skos:prefLabel "Yambol"@eng-Latn ;
+    wdata:q7200235 "BG028005" .
+
+<urn:mdciii:1603:45:16:100:2:3001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:3001" ;
+    skos:prefLabel "Balchik"@eng-Latn ;
+    wdata:q7200235 "BG003001" .
+
+<urn:mdciii:1603:45:16:100:2:3002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:3002" ;
+    skos:prefLabel "Dobrich"@eng-Latn ;
+    wdata:q7200235 "BG003002" .
+
+<urn:mdciii:1603:45:16:100:2:3003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:3003" ;
+    skos:prefLabel "Dobrichka"@eng-Latn ;
+    wdata:q7200235 "BG003003" .
+
+<urn:mdciii:1603:45:16:100:2:3004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:3004" ;
+    skos:prefLabel "General Toshevo"@eng-Latn ;
+    wdata:q7200235 "BG003004" .
+
+<urn:mdciii:1603:45:16:100:2:3005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:3005" ;
+    skos:prefLabel "Kavarna"@eng-Latn ;
+    wdata:q7200235 "BG003005" .
+
+<urn:mdciii:1603:45:16:100:2:3006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:3006" ;
+    skos:prefLabel "Krushari"@eng-Latn ;
+    wdata:q7200235 "BG003006" .
+
+<urn:mdciii:1603:45:16:100:2:3007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:3007" ;
+    skos:prefLabel "Shabla"@eng-Latn ;
+    wdata:q7200235 "BG003007" .
+
+<urn:mdciii:1603:45:16:100:2:3008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:3008" ;
+    skos:prefLabel "Tervel"@eng-Latn ;
+    wdata:q7200235 "BG003008" .
+
+<urn:mdciii:1603:45:16:100:2:4001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:4001" ;
+    skos:prefLabel "Drianovo"@eng-Latn ;
+    wdata:q7200235 "BG004001" .
+
+<urn:mdciii:1603:45:16:100:2:4002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:4002" ;
+    skos:prefLabel "Gabrovo"@eng-Latn ;
+    wdata:q7200235 "BG004002" .
+
+<urn:mdciii:1603:45:16:100:2:4003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:4003" ;
+    skos:prefLabel "Sevlievo"@eng-Latn ;
+    wdata:q7200235 "BG004003" .
+
+<urn:mdciii:1603:45:16:100:2:4004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:4004" ;
+    skos:prefLabel "Triavna"@eng-Latn ;
+    wdata:q7200235 "BG004004" .
+
+<urn:mdciii:1603:45:16:100:2:5001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5001" ;
+    skos:prefLabel "Dimitrovgrad"@eng-Latn ;
+    wdata:q7200235 "BG005001" .
+
+<urn:mdciii:1603:45:16:100:2:5002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5002" ;
+    skos:prefLabel "Harmanli"@eng-Latn ;
+    wdata:q7200235 "BG005002" .
+
+<urn:mdciii:1603:45:16:100:2:5003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5003" ;
+    skos:prefLabel "Haskovo"@eng-Latn ;
+    wdata:q7200235 "BG005003" .
+
+<urn:mdciii:1603:45:16:100:2:5004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5004" ;
+    skos:prefLabel "Ivailovgrad"@eng-Latn ;
+    wdata:q7200235 "BG005004" .
+
+<urn:mdciii:1603:45:16:100:2:5005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5005" ;
+    skos:prefLabel "Lubimets"@eng-Latn ;
+    wdata:q7200235 "BG005005" .
+
+<urn:mdciii:1603:45:16:100:2:5006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5006" ;
+    skos:prefLabel "Madzharovo"@eng-Latn ;
+    wdata:q7200235 "BG005006" .
+
+<urn:mdciii:1603:45:16:100:2:5007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5007" ;
+    skos:prefLabel "Mineralni Bani"@eng-Latn ;
+    wdata:q7200235 "BG005007" .
+
+<urn:mdciii:1603:45:16:100:2:5008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5008" ;
+    skos:prefLabel "Simeonovgrad"@eng-Latn ;
+    wdata:q7200235 "BG005008" .
+
+<urn:mdciii:1603:45:16:100:2:5009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5009" ;
+    skos:prefLabel "Stambolovo"@eng-Latn ;
+    wdata:q7200235 "BG005009" .
+
+<urn:mdciii:1603:45:16:100:2:5010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5010" ;
+    skos:prefLabel "Svilengrad"@eng-Latn ;
+    wdata:q7200235 "BG005010" .
+
+<urn:mdciii:1603:45:16:100:2:5011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:5011" ;
+    skos:prefLabel "Topolovgrad"@eng-Latn ;
+    wdata:q7200235 "BG005011" .
+
+<urn:mdciii:1603:45:16:100:2:6001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:6001" ;
+    skos:prefLabel "Ardino"@eng-Latn ;
+    wdata:q7200235 "BG006001" .
+
+<urn:mdciii:1603:45:16:100:2:6002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:6002" ;
+    skos:prefLabel "Chernoochene"@eng-Latn ;
+    wdata:q7200235 "BG006002" .
+
+<urn:mdciii:1603:45:16:100:2:6003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:6003" ;
+    skos:prefLabel "Dzhebel"@eng-Latn ;
+    wdata:q7200235 "BG006003" .
+
+<urn:mdciii:1603:45:16:100:2:6004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:6004" ;
+    skos:prefLabel "Kardzhali"@eng-Latn ;
+    wdata:q7200235 "BG006004" .
+
+<urn:mdciii:1603:45:16:100:2:6005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:6005" ;
+    skos:prefLabel "Kirkovo"@eng-Latn ;
+    wdata:q7200235 "BG006005" .
+
+<urn:mdciii:1603:45:16:100:2:6006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:6006" ;
+    skos:prefLabel "Krumovgrad"@eng-Latn ;
+    wdata:q7200235 "BG006006" .
+
+<urn:mdciii:1603:45:16:100:2:6007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:6007" ;
+    skos:prefLabel "Momchilgrad"@eng-Latn ;
+    wdata:q7200235 "BG006007" .
+
+<urn:mdciii:1603:45:16:100:2:7001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7001" ;
+    skos:prefLabel "Boboshevo"@eng-Latn ;
+    wdata:q7200235 "BG007001" .
+
+<urn:mdciii:1603:45:16:100:2:7002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7002" ;
+    skos:prefLabel "Bobov Dol"@eng-Latn ;
+    wdata:q7200235 "BG007002" .
+
+<urn:mdciii:1603:45:16:100:2:7003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7003" ;
+    skos:prefLabel "Dupnitsa"@eng-Latn ;
+    wdata:q7200235 "BG007003" .
+
+<urn:mdciii:1603:45:16:100:2:7004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7004" ;
+    skos:prefLabel "Kocherinovo"@eng-Latn ;
+    wdata:q7200235 "BG007004" .
+
+<urn:mdciii:1603:45:16:100:2:7005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7005" ;
+    skos:prefLabel "Kyustendil"@eng-Latn ;
+    wdata:q7200235 "BG007005" .
+
+<urn:mdciii:1603:45:16:100:2:7006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7006" ;
+    skos:prefLabel "Nevestino"@eng-Latn ;
+    wdata:q7200235 "BG007006" .
+
+<urn:mdciii:1603:45:16:100:2:7007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7007" ;
+    skos:prefLabel "Rila"@eng-Latn ;
+    wdata:q7200235 "BG007007" .
+
+<urn:mdciii:1603:45:16:100:2:7008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7008" ;
+    skos:prefLabel "Sapareva Bania"@eng-Latn ;
+    wdata:q7200235 "BG007008" .
+
+<urn:mdciii:1603:45:16:100:2:7009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:7009" ;
+    skos:prefLabel "Trekliano"@eng-Latn ;
+    wdata:q7200235 "BG007009" .
+
+<urn:mdciii:1603:45:16:100:2:8001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:8001" ;
+    skos:prefLabel "Apriltsi"@eng-Latn ;
+    wdata:q7200235 "BG008001" .
+
+<urn:mdciii:1603:45:16:100:2:8002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:8002" ;
+    skos:prefLabel "Letnitsa"@eng-Latn ;
+    wdata:q7200235 "BG008002" .
+
+<urn:mdciii:1603:45:16:100:2:8003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:8003" ;
+    skos:prefLabel "Lovech"@eng-Latn ;
+    wdata:q7200235 "BG008003" .
+
+<urn:mdciii:1603:45:16:100:2:8004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:8004" ;
+    skos:prefLabel "Lukovit"@eng-Latn ;
+    wdata:q7200235 "BG008004" .
+
+<urn:mdciii:1603:45:16:100:2:8005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:8005" ;
+    skos:prefLabel "Teteven"@eng-Latn ;
+    wdata:q7200235 "BG008005" .
+
+<urn:mdciii:1603:45:16:100:2:8006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:8006" ;
+    skos:prefLabel "Troian"@eng-Latn ;
+    wdata:q7200235 "BG008006" .
+
+<urn:mdciii:1603:45:16:100:2:8007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:8007" ;
+    skos:prefLabel "Ugarchin"@eng-Latn ;
+    wdata:q7200235 "BG008007" .
+
+<urn:mdciii:1603:45:16:100:2:8008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:8008" ;
+    skos:prefLabel "Yablanitsa"@eng-Latn ;
+    wdata:q7200235 "BG008008" .
+
+<urn:mdciii:1603:45:16:100:2:9001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9001" ;
+    skos:prefLabel "Berkovitsa"@eng-Latn ;
+    wdata:q7200235 "BG009001" .
+
+<urn:mdciii:1603:45:16:100:2:9002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9002" ;
+    skos:prefLabel "Boichinovtsi"@eng-Latn ;
+    wdata:q7200235 "BG009002" .
+
+<urn:mdciii:1603:45:16:100:2:9003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9003" ;
+    skos:prefLabel "Brusartsi"@eng-Latn ;
+    wdata:q7200235 "BG009003" .
+
+<urn:mdciii:1603:45:16:100:2:9004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9004" ;
+    skos:prefLabel "Chiprovtsi"@eng-Latn ;
+    wdata:q7200235 "BG009004" .
+
+<urn:mdciii:1603:45:16:100:2:9005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9005" ;
+    skos:prefLabel "Georgi Damianovo"@eng-Latn ;
+    wdata:q7200235 "BG009005" .
+
+<urn:mdciii:1603:45:16:100:2:9006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9006" ;
+    skos:prefLabel "Lom"@eng-Latn ;
+    wdata:q7200235 "BG009006" .
+
+<urn:mdciii:1603:45:16:100:2:9007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9007" ;
+    skos:prefLabel "Medkovets"@eng-Latn ;
+    wdata:q7200235 "BG009007" .
+
+<urn:mdciii:1603:45:16:100:2:9008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9008" ;
+    skos:prefLabel "Montana"@eng-Latn ;
+    wdata:q7200235 "BG009008" .
+
+<urn:mdciii:1603:45:16:100:2:9009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9009" ;
+    skos:prefLabel "Valchedrum"@eng-Latn ;
+    wdata:q7200235 "BG009009" .
+
+<urn:mdciii:1603:45:16:100:2:9010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9010" ;
+    skos:prefLabel "Varshets"@eng-Latn ;
+    wdata:q7200235 "BG009010" .
+
+<urn:mdciii:1603:45:16:100:2:9011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:2:9011" ;
+    skos:prefLabel "Yakimovo"@eng-Latn ;
+    wdata:q7200235 "BG009011" .
+

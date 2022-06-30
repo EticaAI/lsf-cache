@@ -1,0 +1,150 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:64()> .
+
+<urn:mdciii:1603:45:16:64()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:64)" ;
+    skos:member <urn:mdciii:1603:45:16:64:1()> .
+
+<urn:mdciii:1603:45:16:64:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:64:1)" ;
+    skos:member <urn:mdciii:1603:45:16:64:1:10>, <urn:mdciii:1603:45:16:64:1:11>, <urn:mdciii:1603:45:16:64:1:12>, <urn:mdciii:1603:45:16:64:1:13>, <urn:mdciii:1603:45:16:64:1:14>, <urn:mdciii:1603:45:16:64:1:15>, <urn:mdciii:1603:45:16:64:1:16>, <urn:mdciii:1603:45:16:64:1:17>, <urn:mdciii:1603:45:16:64:1:18>, <urn:mdciii:1603:45:16:64:1:19>, <urn:mdciii:1603:45:16:64:1:2>, <urn:mdciii:1603:45:16:64:1:20>, <urn:mdciii:1603:45:16:64:1:3>, <urn:mdciii:1603:45:16:64:1:4>, <urn:mdciii:1603:45:16:64:1:5>, <urn:mdciii:1603:45:16:64:1:6>, <urn:mdciii:1603:45:16:64:1:7>, <urn:mdciii:1603:45:16:64:1:8>, <urn:mdciii:1603:45:16:64:1:9> .
+
+<urn:mdciii:1603:45:16:64:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:64:1:1>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:1" ;
+    skos:prefLabel "Bumthang"@eng-Latn ;
+    wdata:q7200235 "BT001" .
+
+<urn:mdciii:1603:45:16:64:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:10" ;
+    skos:prefLabel "Punakha"@eng-Latn ;
+    wdata:q7200235 "BT010" .
+
+<urn:mdciii:1603:45:16:64:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:11" ;
+    skos:prefLabel "Samdrupjongkhar"@eng-Latn ;
+    wdata:q7200235 "BT011" .
+
+<urn:mdciii:1603:45:16:64:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:12" ;
+    skos:prefLabel "Samtse"@eng-Latn ;
+    wdata:q7200235 "BT012" .
+
+<urn:mdciii:1603:45:16:64:1:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:13" ;
+    skos:prefLabel "Sarpang"@eng-Latn ;
+    wdata:q7200235 "BT013" .
+
+<urn:mdciii:1603:45:16:64:1:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:14" ;
+    skos:prefLabel "Thimphu"@eng-Latn ;
+    wdata:q7200235 "BT014" .
+
+<urn:mdciii:1603:45:16:64:1:15>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:15" ;
+    skos:prefLabel "Trashigang"@eng-Latn ;
+    wdata:q7200235 "BT015" .
+
+<urn:mdciii:1603:45:16:64:1:16>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:16" ;
+    skos:prefLabel "Yangtse"@eng-Latn ;
+    wdata:q7200235 "BT016" .
+
+<urn:mdciii:1603:45:16:64:1:17>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:17" ;
+    skos:prefLabel "Trongsa"@eng-Latn ;
+    wdata:q7200235 "BT017" .
+
+<urn:mdciii:1603:45:16:64:1:18>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:18" ;
+    skos:prefLabel "Tsirang"@eng-Latn ;
+    wdata:q7200235 "BT018" .
+
+<urn:mdciii:1603:45:16:64:1:19>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:19" ;
+    skos:prefLabel "Wangduephodrang"@eng-Latn ;
+    wdata:q7200235 "BT019" .
+
+<urn:mdciii:1603:45:16:64:1:2>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:2" ;
+    skos:prefLabel "Chhukha"@eng-Latn ;
+    wdata:q7200235 "BT002" .
+
+<urn:mdciii:1603:45:16:64:1:20>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:20" ;
+    skos:prefLabel "Zhemgang"@eng-Latn ;
+    wdata:q7200235 "BT020" .
+
+<urn:mdciii:1603:45:16:64:1:3>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:3" ;
+    skos:prefLabel "Dagana"@eng-Latn ;
+    wdata:q7200235 "BT003" .
+
+<urn:mdciii:1603:45:16:64:1:4>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:4" ;
+    skos:prefLabel "Gasa"@eng-Latn ;
+    wdata:q7200235 "BT004" .
+
+<urn:mdciii:1603:45:16:64:1:5>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:5" ;
+    skos:prefLabel "Haa"@eng-Latn ;
+    wdata:q7200235 "BT005" .
+
+<urn:mdciii:1603:45:16:64:1:6>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:6" ;
+    skos:prefLabel "Lhuentse"@eng-Latn ;
+    wdata:q7200235 "BT006" .
+
+<urn:mdciii:1603:45:16:64:1:7>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:7" ;
+    skos:prefLabel "Monggar"@eng-Latn ;
+    wdata:q7200235 "BT007" .
+
+<urn:mdciii:1603:45:16:64:1:8>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:8" ;
+    skos:prefLabel "Paro"@eng-Latn ;
+    wdata:q7200235 "BT008" .
+
+<urn:mdciii:1603:45:16:64:1:9>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:64:1:9" ;
+    skos:prefLabel "Pemagatshel"@eng-Latn ;
+    wdata:q7200235 "BT009" .
+

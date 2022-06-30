@@ -1,0 +1,192 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:76()> .
+
+<urn:mdciii:1603:45:16:76()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:76)" ;
+    skos:member <urn:mdciii:1603:45:16:76:1()> .
+
+<urn:mdciii:1603:45:16:76:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:76:1)" ;
+    skos:member <urn:mdciii:1603:45:16:76:1:12>, <urn:mdciii:1603:45:16:76:1:13>, <urn:mdciii:1603:45:16:76:1:14>, <urn:mdciii:1603:45:16:76:1:15>, <urn:mdciii:1603:45:16:76:1:16>, <urn:mdciii:1603:45:16:76:1:17>, <urn:mdciii:1603:45:16:76:1:21>, <urn:mdciii:1603:45:16:76:1:22>, <urn:mdciii:1603:45:16:76:1:23>, <urn:mdciii:1603:45:16:76:1:24>, <urn:mdciii:1603:45:16:76:1:25>, <urn:mdciii:1603:45:16:76:1:26>, <urn:mdciii:1603:45:16:76:1:27>, <urn:mdciii:1603:45:16:76:1:28>, <urn:mdciii:1603:45:16:76:1:29>, <urn:mdciii:1603:45:16:76:1:31>, <urn:mdciii:1603:45:16:76:1:32>, <urn:mdciii:1603:45:16:76:1:33>, <urn:mdciii:1603:45:16:76:1:35>, <urn:mdciii:1603:45:16:76:1:41>, <urn:mdciii:1603:45:16:76:1:42>, <urn:mdciii:1603:45:16:76:1:43>, <urn:mdciii:1603:45:16:76:1:50>, <urn:mdciii:1603:45:16:76:1:51>, <urn:mdciii:1603:45:16:76:1:52>, <urn:mdciii:1603:45:16:76:1:53> .
+
+<urn:mdciii:1603:45:16:76:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:76:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:11" ;
+    skos:prefLabel "Rondônia"@por-Latn ;
+    wdata:q7200235 "BR11" .
+
+<urn:mdciii:1603:45:16:76:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:12" ;
+    skos:prefLabel "Acre"@por-Latn ;
+    wdata:q7200235 "BR12" .
+
+<urn:mdciii:1603:45:16:76:1:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:13" ;
+    skos:prefLabel "Amazonas"@por-Latn ;
+    wdata:q7200235 "BR13" .
+
+<urn:mdciii:1603:45:16:76:1:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:14" ;
+    skos:prefLabel "Roraima"@por-Latn ;
+    wdata:q7200235 "BR14" .
+
+<urn:mdciii:1603:45:16:76:1:15>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:15" ;
+    skos:prefLabel "Pará"@por-Latn ;
+    wdata:q7200235 "BR15" .
+
+<urn:mdciii:1603:45:16:76:1:16>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:16" ;
+    skos:prefLabel "Amapá"@por-Latn ;
+    wdata:q7200235 "BR16" .
+
+<urn:mdciii:1603:45:16:76:1:17>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:17" ;
+    skos:prefLabel "Tocantins"@por-Latn ;
+    wdata:q7200235 "BR17" .
+
+<urn:mdciii:1603:45:16:76:1:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:21" ;
+    skos:prefLabel "Maranhão"@por-Latn ;
+    wdata:q7200235 "BR21" .
+
+<urn:mdciii:1603:45:16:76:1:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:22" ;
+    skos:prefLabel "Piauí"@por-Latn ;
+    wdata:q7200235 "BR22" .
+
+<urn:mdciii:1603:45:16:76:1:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:23" ;
+    skos:prefLabel "Ceará"@por-Latn ;
+    wdata:q7200235 "BR23" .
+
+<urn:mdciii:1603:45:16:76:1:24>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:24" ;
+    skos:prefLabel "Rio Grande do Norte"@por-Latn ;
+    wdata:q7200235 "BR24" .
+
+<urn:mdciii:1603:45:16:76:1:25>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:25" ;
+    skos:prefLabel "Paraíba"@por-Latn ;
+    wdata:q7200235 "BR25" .
+
+<urn:mdciii:1603:45:16:76:1:26>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:26" ;
+    skos:prefLabel "Pernambuco"@por-Latn ;
+    wdata:q7200235 "BR26" .
+
+<urn:mdciii:1603:45:16:76:1:27>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:27" ;
+    skos:prefLabel "Alagoas"@por-Latn ;
+    wdata:q7200235 "BR27" .
+
+<urn:mdciii:1603:45:16:76:1:28>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:28" ;
+    skos:prefLabel "Sergipe"@por-Latn ;
+    wdata:q7200235 "BR28" .
+
+<urn:mdciii:1603:45:16:76:1:29>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:29" ;
+    skos:prefLabel "Bahia"@por-Latn ;
+    wdata:q7200235 "BR29" .
+
+<urn:mdciii:1603:45:16:76:1:31>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:31" ;
+    skos:prefLabel "Minas Gerais"@por-Latn ;
+    wdata:q7200235 "BR31" .
+
+<urn:mdciii:1603:45:16:76:1:32>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:32" ;
+    skos:prefLabel "Espírito Santo"@por-Latn ;
+    wdata:q7200235 "BR32" .
+
+<urn:mdciii:1603:45:16:76:1:33>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:33" ;
+    skos:prefLabel "Rio de Janeiro"@por-Latn ;
+    wdata:q7200235 "BR33" .
+
+<urn:mdciii:1603:45:16:76:1:35>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:35" ;
+    skos:prefLabel "São Paulo"@por-Latn ;
+    wdata:q7200235 "BR35" .
+
+<urn:mdciii:1603:45:16:76:1:41>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:41" ;
+    skos:prefLabel "Paraná"@por-Latn ;
+    wdata:q7200235 "BR41" .
+
+<urn:mdciii:1603:45:16:76:1:42>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:42" ;
+    skos:prefLabel "Santa Catarina"@por-Latn ;
+    wdata:q7200235 "BR42" .
+
+<urn:mdciii:1603:45:16:76:1:43>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:43" ;
+    skos:prefLabel "Rio Grande do Sul"@por-Latn ;
+    wdata:q7200235 "BR43" .
+
+<urn:mdciii:1603:45:16:76:1:50>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:50" ;
+    skos:prefLabel "Mato Grosso do Sul"@por-Latn ;
+    wdata:q7200235 "BR50" .
+
+<urn:mdciii:1603:45:16:76:1:51>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:51" ;
+    skos:prefLabel "Mato Grosso"@por-Latn ;
+    wdata:q7200235 "BR51" .
+
+<urn:mdciii:1603:45:16:76:1:52>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:52" ;
+    skos:prefLabel "Goiás"@por-Latn ;
+    wdata:q7200235 "BR52" .
+
+<urn:mdciii:1603:45:16:76:1:53>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:76:1:53" ;
+    skos:prefLabel "Distrito Federal"@por-Latn ;
+    wdata:q7200235 "BR53" .
+

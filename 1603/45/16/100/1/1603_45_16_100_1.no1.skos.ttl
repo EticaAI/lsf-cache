@@ -1,0 +1,198 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:100()> .
+
+<urn:mdciii:1603:45:16:100()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:100)" ;
+    skos:member <urn:mdciii:1603:45:16:100:1()> .
+
+<urn:mdciii:1603:45:16:100:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:100:1)" ;
+    skos:member <urn:mdciii:1603:45:16:100:1:10>, <urn:mdciii:1603:45:16:100:1:11>, <urn:mdciii:1603:45:16:100:1:12>, <urn:mdciii:1603:45:16:100:1:13>, <urn:mdciii:1603:45:16:100:1:14>, <urn:mdciii:1603:45:16:100:1:15>, <urn:mdciii:1603:45:16:100:1:16>, <urn:mdciii:1603:45:16:100:1:17>, <urn:mdciii:1603:45:16:100:1:18>, <urn:mdciii:1603:45:16:100:1:19>, <urn:mdciii:1603:45:16:100:1:2>, <urn:mdciii:1603:45:16:100:1:20>, <urn:mdciii:1603:45:16:100:1:21>, <urn:mdciii:1603:45:16:100:1:22>, <urn:mdciii:1603:45:16:100:1:23>, <urn:mdciii:1603:45:16:100:1:24>, <urn:mdciii:1603:45:16:100:1:25>, <urn:mdciii:1603:45:16:100:1:26>, <urn:mdciii:1603:45:16:100:1:27>, <urn:mdciii:1603:45:16:100:1:28>, <urn:mdciii:1603:45:16:100:1:3>, <urn:mdciii:1603:45:16:100:1:4>, <urn:mdciii:1603:45:16:100:1:5>, <urn:mdciii:1603:45:16:100:1:6>, <urn:mdciii:1603:45:16:100:1:7>, <urn:mdciii:1603:45:16:100:1:8>, <urn:mdciii:1603:45:16:100:1:9> .
+
+<urn:mdciii:1603:45:16:100:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:100:1:1>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:1" ;
+    skos:prefLabel "Blagoevgrad"@eng-Latn, "Благоевград"@bul-Cyrl ;
+    wdata:q7200235 "BG001" .
+
+<urn:mdciii:1603:45:16:100:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:10" ;
+    skos:prefLabel "Pazardzhik"@eng-Latn, "Пазарджик"@bul-Cyrl ;
+    wdata:q7200235 "BG010" .
+
+<urn:mdciii:1603:45:16:100:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:11" ;
+    skos:prefLabel "Pernik"@eng-Latn, "Перник"@bul-Cyrl ;
+    wdata:q7200235 "BG011" .
+
+<urn:mdciii:1603:45:16:100:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:12" ;
+    skos:prefLabel "Pleven"@eng-Latn, "Плевен"@bul-Cyrl ;
+    wdata:q7200235 "BG012" .
+
+<urn:mdciii:1603:45:16:100:1:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:13" ;
+    skos:prefLabel "Plovdiv"@eng-Latn, "Пловдив"@bul-Cyrl ;
+    wdata:q7200235 "BG013" .
+
+<urn:mdciii:1603:45:16:100:1:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:14" ;
+    skos:prefLabel "Razgrad"@eng-Latn, "Разград"@bul-Cyrl ;
+    wdata:q7200235 "BG014" .
+
+<urn:mdciii:1603:45:16:100:1:15>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:15" ;
+    skos:prefLabel "Ruse"@eng-Latn, "Русе"@bul-Cyrl ;
+    wdata:q7200235 "BG015" .
+
+<urn:mdciii:1603:45:16:100:1:16>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:16" ;
+    skos:prefLabel "Shumen"@eng-Latn, "Шумен"@bul-Cyrl ;
+    wdata:q7200235 "BG016" .
+
+<urn:mdciii:1603:45:16:100:1:17>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:17" ;
+    skos:prefLabel "Silistra"@eng-Latn, "Силистра"@bul-Cyrl ;
+    wdata:q7200235 "BG017" .
+
+<urn:mdciii:1603:45:16:100:1:18>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:18" ;
+    skos:prefLabel "Sliven"@eng-Latn, "Сливен"@bul-Cyrl ;
+    wdata:q7200235 "BG018" .
+
+<urn:mdciii:1603:45:16:100:1:19>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:19" ;
+    skos:prefLabel "Smolyan"@eng-Latn, "Смолян"@bul-Cyrl ;
+    wdata:q7200235 "BG019" .
+
+<urn:mdciii:1603:45:16:100:1:2>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:2" ;
+    skos:prefLabel "Burgas"@eng-Latn, "Бургас"@bul-Cyrl ;
+    wdata:q7200235 "BG002" .
+
+<urn:mdciii:1603:45:16:100:1:20>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:20" ;
+    skos:prefLabel "Sofia"@eng-Latn, "Софийска"@bul-Cyrl ;
+    wdata:q7200235 "BG020" .
+
+<urn:mdciii:1603:45:16:100:1:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:21" ;
+    skos:prefLabel "Sofia-City"@eng-Latn, "София-град"@bul-Cyrl ;
+    wdata:q7200235 "BG021" .
+
+<urn:mdciii:1603:45:16:100:1:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:22" ;
+    skos:prefLabel "Stara Zagora"@eng-Latn, "Стара Загора"@bul-Cyrl ;
+    wdata:q7200235 "BG022" .
+
+<urn:mdciii:1603:45:16:100:1:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:23" ;
+    skos:prefLabel "Targovishte"@eng-Latn, "Търговище"@bul-Cyrl ;
+    wdata:q7200235 "BG023" .
+
+<urn:mdciii:1603:45:16:100:1:24>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:24" ;
+    skos:prefLabel "Varna"@eng-Latn, "Варна"@bul-Cyrl ;
+    wdata:q7200235 "BG024" .
+
+<urn:mdciii:1603:45:16:100:1:25>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:25" ;
+    skos:prefLabel "Veliko Tarnovo"@eng-Latn, "Велико Търново"@bul-Cyrl ;
+    wdata:q7200235 "BG025" .
+
+<urn:mdciii:1603:45:16:100:1:26>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:26" ;
+    skos:prefLabel "Vidin"@eng-Latn, "Видин"@bul-Cyrl ;
+    wdata:q7200235 "BG026" .
+
+<urn:mdciii:1603:45:16:100:1:27>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:27" ;
+    skos:prefLabel "Vratsa"@eng-Latn, "Враца"@bul-Cyrl ;
+    wdata:q7200235 "BG027" .
+
+<urn:mdciii:1603:45:16:100:1:28>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:28" ;
+    skos:prefLabel "Yambol"@eng-Latn, "Ямбол"@bul-Cyrl ;
+    wdata:q7200235 "BG028" .
+
+<urn:mdciii:1603:45:16:100:1:3>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:3" ;
+    skos:prefLabel "Dobrich"@eng-Latn, "Добрич"@bul-Cyrl ;
+    wdata:q7200235 "BG003" .
+
+<urn:mdciii:1603:45:16:100:1:4>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:4" ;
+    skos:prefLabel "Gabrovo"@eng-Latn, "Габрово"@bul-Cyrl ;
+    wdata:q7200235 "BG004" .
+
+<urn:mdciii:1603:45:16:100:1:5>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:5" ;
+    skos:prefLabel "Haskovo"@eng-Latn, "Хасково"@bul-Cyrl ;
+    wdata:q7200235 "BG005" .
+
+<urn:mdciii:1603:45:16:100:1:6>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:6" ;
+    skos:prefLabel "Kardzhali"@eng-Latn, "Кърджали"@bul-Cyrl ;
+    wdata:q7200235 "BG006" .
+
+<urn:mdciii:1603:45:16:100:1:7>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:7" ;
+    skos:prefLabel "Kyustendil"@eng-Latn, "Кюстендил"@bul-Cyrl ;
+    wdata:q7200235 "BG007" .
+
+<urn:mdciii:1603:45:16:100:1:8>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:8" ;
+    skos:prefLabel "Lovech"@eng-Latn, "Ловеч"@bul-Cyrl ;
+    wdata:q7200235 "BG008" .
+
+<urn:mdciii:1603:45:16:100:1:9>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:100:1:9" ;
+    skos:prefLabel "Montana"@eng-Latn, "Монтана"@bul-Cyrl ;
+    wdata:q7200235 "BG009" .
+
