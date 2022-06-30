@@ -1,0 +1,2010 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:104()> .
+
+<urn:mdciii:1603:45:16:104()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:104)" ;
+    skos:member <urn:mdciii:1603:45:16:104:3()> .
+
+<urn:mdciii:1603:45:16:104:3()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:104:3)" ;
+    skos:member <urn:mdciii:1603:45:16:104:3:10001>, <urn:mdciii:1603:45:16:104:3:10002>, <urn:mdciii:1603:45:16:104:3:10003>, <urn:mdciii:1603:45:16:104:3:10004>, <urn:mdciii:1603:45:16:104:3:10005>, <urn:mdciii:1603:45:16:104:3:10006>, <urn:mdciii:1603:45:16:104:3:10007>, <urn:mdciii:1603:45:16:104:3:10008>, <urn:mdciii:1603:45:16:104:3:10009>, <urn:mdciii:1603:45:16:104:3:10010>, <urn:mdciii:1603:45:16:104:3:10011>, <urn:mdciii:1603:45:16:104:3:10012>, <urn:mdciii:1603:45:16:104:3:10013>, <urn:mdciii:1603:45:16:104:3:10014>, <urn:mdciii:1603:45:16:104:3:10015>, <urn:mdciii:1603:45:16:104:3:10016>, <urn:mdciii:1603:45:16:104:3:10017>, <urn:mdciii:1603:45:16:104:3:10018>, <urn:mdciii:1603:45:16:104:3:10019>, <urn:mdciii:1603:45:16:104:3:1002>, <urn:mdciii:1603:45:16:104:3:10020>, <urn:mdciii:1603:45:16:104:3:10021>, <urn:mdciii:1603:45:16:104:3:10022>, <urn:mdciii:1603:45:16:104:3:10023>, <urn:mdciii:1603:45:16:104:3:10024>, <urn:mdciii:1603:45:16:104:3:10028>, <urn:mdciii:1603:45:16:104:3:10029>, <urn:mdciii:1603:45:16:104:3:1003>, <urn:mdciii:1603:45:16:104:3:10030>, <urn:mdciii:1603:45:16:104:3:10031>, <urn:mdciii:1603:45:16:104:3:1004>, <urn:mdciii:1603:45:16:104:3:1005>, <urn:mdciii:1603:45:16:104:3:1006>, <urn:mdciii:1603:45:16:104:3:1007>, <urn:mdciii:1603:45:16:104:3:1008>, <urn:mdciii:1603:45:16:104:3:1009>, <urn:mdciii:1603:45:16:104:3:1010>, <urn:mdciii:1603:45:16:104:3:1011>, <urn:mdciii:1603:45:16:104:3:1012>, <urn:mdciii:1603:45:16:104:3:1013>, <urn:mdciii:1603:45:16:104:3:1014>, <urn:mdciii:1603:45:16:104:3:1015>, <urn:mdciii:1603:45:16:104:3:1016>, <urn:mdciii:1603:45:16:104:3:1017>, <urn:mdciii:1603:45:16:104:3:1018>, <urn:mdciii:1603:45:16:104:3:11001>, <urn:mdciii:1603:45:16:104:3:11002>, <urn:mdciii:1603:45:16:104:3:11003>, <urn:mdciii:1603:45:16:104:3:11004>, <urn:mdciii:1603:45:16:104:3:11005>, <urn:mdciii:1603:45:16:104:3:11006>, <urn:mdciii:1603:45:16:104:3:11007>, <urn:mdciii:1603:45:16:104:3:11008>, <urn:mdciii:1603:45:16:104:3:11009>, <urn:mdciii:1603:45:16:104:3:11010>, <urn:mdciii:1603:45:16:104:3:12001>, <urn:mdciii:1603:45:16:104:3:12002>, <urn:mdciii:1603:45:16:104:3:12003>, <urn:mdciii:1603:45:16:104:3:12004>, <urn:mdciii:1603:45:16:104:3:12005>, <urn:mdciii:1603:45:16:104:3:12006>, <urn:mdciii:1603:45:16:104:3:12007>, <urn:mdciii:1603:45:16:104:3:12008>, <urn:mdciii:1603:45:16:104:3:12009>, <urn:mdciii:1603:45:16:104:3:12010>, <urn:mdciii:1603:45:16:104:3:12011>, <urn:mdciii:1603:45:16:104:3:12012>, <urn:mdciii:1603:45:16:104:3:12013>, <urn:mdciii:1603:45:16:104:3:12014>, <urn:mdciii:1603:45:16:104:3:12015>, <urn:mdciii:1603:45:16:104:3:12016>, <urn:mdciii:1603:45:16:104:3:12017>, <urn:mdciii:1603:45:16:104:3:13001>, <urn:mdciii:1603:45:16:104:3:13002>, <urn:mdciii:1603:45:16:104:3:13003>, <urn:mdciii:1603:45:16:104:3:13004>, <urn:mdciii:1603:45:16:104:3:13005>, <urn:mdciii:1603:45:16:104:3:13006>, <urn:mdciii:1603:45:16:104:3:13007>, <urn:mdciii:1603:45:16:104:3:13009>, <urn:mdciii:1603:45:16:104:3:13010>, <urn:mdciii:1603:45:16:104:3:13011>, <urn:mdciii:1603:45:16:104:3:13012>, <urn:mdciii:1603:45:16:104:3:13013>, <urn:mdciii:1603:45:16:104:3:13014>, <urn:mdciii:1603:45:16:104:3:13015>, <urn:mdciii:1603:45:16:104:3:13016>, <urn:mdciii:1603:45:16:104:3:13017>, <urn:mdciii:1603:45:16:104:3:13018>, <urn:mdciii:1603:45:16:104:3:13019>, <urn:mdciii:1603:45:16:104:3:13020>, <urn:mdciii:1603:45:16:104:3:13021>, <urn:mdciii:1603:45:16:104:3:13022>, <urn:mdciii:1603:45:16:104:3:13023>, <urn:mdciii:1603:45:16:104:3:13024>, <urn:mdciii:1603:45:16:104:3:13025>, <urn:mdciii:1603:45:16:104:3:13026>, <urn:mdciii:1603:45:16:104:3:13027>, <urn:mdciii:1603:45:16:104:3:13028>, <urn:mdciii:1603:45:16:104:3:13029>, <urn:mdciii:1603:45:16:104:3:13030>, <urn:mdciii:1603:45:16:104:3:13031>, <urn:mdciii:1603:45:16:104:3:13032>, <urn:mdciii:1603:45:16:104:3:13033>, <urn:mdciii:1603:45:16:104:3:13034>, <urn:mdciii:1603:45:16:104:3:13035>, <urn:mdciii:1603:45:16:104:3:13036>, <urn:mdciii:1603:45:16:104:3:13037>, <urn:mdciii:1603:45:16:104:3:13038>, <urn:mdciii:1603:45:16:104:3:13039>, <urn:mdciii:1603:45:16:104:3:13040>, <urn:mdciii:1603:45:16:104:3:13041>, <urn:mdciii:1603:45:16:104:3:13042>, <urn:mdciii:1603:45:16:104:3:13043>, <urn:mdciii:1603:45:16:104:3:13044>, <urn:mdciii:1603:45:16:104:3:13046>, <urn:mdciii:1603:45:16:104:3:13047>, <urn:mdciii:1603:45:16:104:3:14001>, <urn:mdciii:1603:45:16:104:3:14002>, <urn:mdciii:1603:45:16:104:3:14003>, <urn:mdciii:1603:45:16:104:3:14004>, <urn:mdciii:1603:45:16:104:3:14005>, <urn:mdciii:1603:45:16:104:3:14006>, <urn:mdciii:1603:45:16:104:3:14007>, <urn:mdciii:1603:45:16:104:3:14008>, <urn:mdciii:1603:45:16:104:3:14009>, <urn:mdciii:1603:45:16:104:3:14010>, <urn:mdciii:1603:45:16:104:3:14011>, <urn:mdciii:1603:45:16:104:3:14012>, <urn:mdciii:1603:45:16:104:3:14013>, <urn:mdciii:1603:45:16:104:3:14014>, <urn:mdciii:1603:45:16:104:3:14015>, <urn:mdciii:1603:45:16:104:3:14016>, <urn:mdciii:1603:45:16:104:3:14017>, <urn:mdciii:1603:45:16:104:3:14018>, <urn:mdciii:1603:45:16:104:3:14019>, <urn:mdciii:1603:45:16:104:3:14020>, <urn:mdciii:1603:45:16:104:3:14021>, <urn:mdciii:1603:45:16:104:3:15001>, <urn:mdciii:1603:45:16:104:3:15002>, <urn:mdciii:1603:45:16:104:3:15003>, <urn:mdciii:1603:45:16:104:3:15004>, <urn:mdciii:1603:45:16:104:3:15005>, <urn:mdciii:1603:45:16:104:3:15006>, <urn:mdciii:1603:45:16:104:3:15007>, <urn:mdciii:1603:45:16:104:3:15008>, <urn:mdciii:1603:45:16:104:3:15009>, <urn:mdciii:1603:45:16:104:3:15010>, <urn:mdciii:1603:45:16:104:3:15011>, <urn:mdciii:1603:45:16:104:3:15012>, <urn:mdciii:1603:45:16:104:3:15013>, <urn:mdciii:1603:45:16:104:3:15014>, <urn:mdciii:1603:45:16:104:3:15015>, <urn:mdciii:1603:45:16:104:3:15016>, <urn:mdciii:1603:45:16:104:3:15017>, <urn:mdciii:1603:45:16:104:3:15018>, <urn:mdciii:1603:45:16:104:3:15019>, <urn:mdciii:1603:45:16:104:3:15020>, <urn:mdciii:1603:45:16:104:3:15021>, <urn:mdciii:1603:45:16:104:3:15022>, <urn:mdciii:1603:45:16:104:3:15023>, <urn:mdciii:1603:45:16:104:3:15024>, <urn:mdciii:1603:45:16:104:3:16001>, <urn:mdciii:1603:45:16:104:3:16002>, <urn:mdciii:1603:45:16:104:3:16003>, <urn:mdciii:1603:45:16:104:3:16005>, <urn:mdciii:1603:45:16:104:3:16006>, <urn:mdciii:1603:45:16:104:3:16007>, <urn:mdciii:1603:45:16:104:3:16008>, <urn:mdciii:1603:45:16:104:3:16009>, <urn:mdciii:1603:45:16:104:3:16010>, <urn:mdciii:1603:45:16:104:3:16011>, <urn:mdciii:1603:45:16:104:3:17001>, <urn:mdciii:1603:45:16:104:3:17002>, <urn:mdciii:1603:45:16:104:3:17003>, <urn:mdciii:1603:45:16:104:3:17004>, <urn:mdciii:1603:45:16:104:3:17005>, <urn:mdciii:1603:45:16:104:3:17006>, <urn:mdciii:1603:45:16:104:3:17007>, <urn:mdciii:1603:45:16:104:3:17008>, <urn:mdciii:1603:45:16:104:3:17009>, <urn:mdciii:1603:45:16:104:3:17010>, <urn:mdciii:1603:45:16:104:3:17011>, <urn:mdciii:1603:45:16:104:3:17012>, <urn:mdciii:1603:45:16:104:3:17013>, <urn:mdciii:1603:45:16:104:3:17014>, <urn:mdciii:1603:45:16:104:3:17015>, <urn:mdciii:1603:45:16:104:3:17016>, <urn:mdciii:1603:45:16:104:3:17017>, <urn:mdciii:1603:45:16:104:3:17018>, <urn:mdciii:1603:45:16:104:3:17019>, <urn:mdciii:1603:45:16:104:3:17020>, <urn:mdciii:1603:45:16:104:3:17021>, <urn:mdciii:1603:45:16:104:3:17022>, <urn:mdciii:1603:45:16:104:3:17023>, <urn:mdciii:1603:45:16:104:3:17024>, <urn:mdciii:1603:45:16:104:3:17025>, <urn:mdciii:1603:45:16:104:3:17026>, <urn:mdciii:1603:45:16:104:3:18001>, <urn:mdciii:1603:45:16:104:3:18002>, <urn:mdciii:1603:45:16:104:3:18003>, <urn:mdciii:1603:45:16:104:3:18004>, <urn:mdciii:1603:45:16:104:3:18005>, <urn:mdciii:1603:45:16:104:3:18006>, <urn:mdciii:1603:45:16:104:3:18007>, <urn:mdciii:1603:45:16:104:3:18008>, <urn:mdciii:1603:45:16:104:3:2001>, <urn:mdciii:1603:45:16:104:3:2002>, <urn:mdciii:1603:45:16:104:3:2003>, <urn:mdciii:1603:45:16:104:3:2004>, <urn:mdciii:1603:45:16:104:3:2005>, <urn:mdciii:1603:45:16:104:3:2006>, <urn:mdciii:1603:45:16:104:3:2007>, <urn:mdciii:1603:45:16:104:3:3001>, <urn:mdciii:1603:45:16:104:3:3002>, <urn:mdciii:1603:45:16:104:3:3003>, <urn:mdciii:1603:45:16:104:3:3004>, <urn:mdciii:1603:45:16:104:3:3005>, <urn:mdciii:1603:45:16:104:3:3006>, <urn:mdciii:1603:45:16:104:3:3007>, <urn:mdciii:1603:45:16:104:3:4001>, <urn:mdciii:1603:45:16:104:3:4002>, <urn:mdciii:1603:45:16:104:3:4003>, <urn:mdciii:1603:45:16:104:3:4004>, <urn:mdciii:1603:45:16:104:3:4005>, <urn:mdciii:1603:45:16:104:3:4006>, <urn:mdciii:1603:45:16:104:3:4007>, <urn:mdciii:1603:45:16:104:3:4008>, <urn:mdciii:1603:45:16:104:3:4009>, <urn:mdciii:1603:45:16:104:3:5001>, <urn:mdciii:1603:45:16:104:3:5002>, <urn:mdciii:1603:45:16:104:3:5003>, <urn:mdciii:1603:45:16:104:3:5004>, <urn:mdciii:1603:45:16:104:3:5005>, <urn:mdciii:1603:45:16:104:3:5006>, <urn:mdciii:1603:45:16:104:3:5007>, <urn:mdciii:1603:45:16:104:3:5008>, <urn:mdciii:1603:45:16:104:3:5009>, <urn:mdciii:1603:45:16:104:3:5010>, <urn:mdciii:1603:45:16:104:3:5011>, <urn:mdciii:1603:45:16:104:3:5012>, <urn:mdciii:1603:45:16:104:3:5013>, <urn:mdciii:1603:45:16:104:3:5014>, <urn:mdciii:1603:45:16:104:3:5015>, <urn:mdciii:1603:45:16:104:3:5016>, <urn:mdciii:1603:45:16:104:3:5017>, <urn:mdciii:1603:45:16:104:3:5018>, <urn:mdciii:1603:45:16:104:3:5019>, <urn:mdciii:1603:45:16:104:3:5020>, <urn:mdciii:1603:45:16:104:3:5021>, <urn:mdciii:1603:45:16:104:3:5022>, <urn:mdciii:1603:45:16:104:3:5023>, <urn:mdciii:1603:45:16:104:3:5024>, <urn:mdciii:1603:45:16:104:3:5025>, <urn:mdciii:1603:45:16:104:3:5026>, <urn:mdciii:1603:45:16:104:3:5027>, <urn:mdciii:1603:45:16:104:3:5028>, <urn:mdciii:1603:45:16:104:3:5029>, <urn:mdciii:1603:45:16:104:3:5030>, <urn:mdciii:1603:45:16:104:3:5031>, <urn:mdciii:1603:45:16:104:3:5032>, <urn:mdciii:1603:45:16:104:3:5033>, <urn:mdciii:1603:45:16:104:3:5034>, <urn:mdciii:1603:45:16:104:3:5035>, <urn:mdciii:1603:45:16:104:3:5036>, <urn:mdciii:1603:45:16:104:3:5037>, <urn:mdciii:1603:45:16:104:3:6001>, <urn:mdciii:1603:45:16:104:3:6002>, <urn:mdciii:1603:45:16:104:3:6003>, <urn:mdciii:1603:45:16:104:3:6004>, <urn:mdciii:1603:45:16:104:3:6005>, <urn:mdciii:1603:45:16:104:3:6006>, <urn:mdciii:1603:45:16:104:3:6007>, <urn:mdciii:1603:45:16:104:3:6008>, <urn:mdciii:1603:45:16:104:3:6009>, <urn:mdciii:1603:45:16:104:3:6010>, <urn:mdciii:1603:45:16:104:3:7001>, <urn:mdciii:1603:45:16:104:3:7002>, <urn:mdciii:1603:45:16:104:3:7003>, <urn:mdciii:1603:45:16:104:3:7004>, <urn:mdciii:1603:45:16:104:3:7005>, <urn:mdciii:1603:45:16:104:3:7006>, <urn:mdciii:1603:45:16:104:3:7007>, <urn:mdciii:1603:45:16:104:3:7008>, <urn:mdciii:1603:45:16:104:3:7009>, <urn:mdciii:1603:45:16:104:3:7010>, <urn:mdciii:1603:45:16:104:3:7011>, <urn:mdciii:1603:45:16:104:3:7012>, <urn:mdciii:1603:45:16:104:3:7013>, <urn:mdciii:1603:45:16:104:3:7014>, <urn:mdciii:1603:45:16:104:3:8001>, <urn:mdciii:1603:45:16:104:3:8002>, <urn:mdciii:1603:45:16:104:3:8003>, <urn:mdciii:1603:45:16:104:3:8004>, <urn:mdciii:1603:45:16:104:3:8005>, <urn:mdciii:1603:45:16:104:3:8006>, <urn:mdciii:1603:45:16:104:3:8007>, <urn:mdciii:1603:45:16:104:3:8008>, <urn:mdciii:1603:45:16:104:3:8009>, <urn:mdciii:1603:45:16:104:3:8010>, <urn:mdciii:1603:45:16:104:3:8011>, <urn:mdciii:1603:45:16:104:3:8012>, <urn:mdciii:1603:45:16:104:3:8013>, <urn:mdciii:1603:45:16:104:3:8014>, <urn:mdciii:1603:45:16:104:3:9001>, <urn:mdciii:1603:45:16:104:3:9002>, <urn:mdciii:1603:45:16:104:3:9003>, <urn:mdciii:1603:45:16:104:3:9004>, <urn:mdciii:1603:45:16:104:3:9005>, <urn:mdciii:1603:45:16:104:3:9006>, <urn:mdciii:1603:45:16:104:3:9007>, <urn:mdciii:1603:45:16:104:3:9008>, <urn:mdciii:1603:45:16:104:3:9009>, <urn:mdciii:1603:45:16:104:3:9010>, <urn:mdciii:1603:45:16:104:3:9011>, <urn:mdciii:1603:45:16:104:3:9012>, <urn:mdciii:1603:45:16:104:3:9013>, <urn:mdciii:1603:45:16:104:3:9014>, <urn:mdciii:1603:45:16:104:3:9015>, <urn:mdciii:1603:45:16:104:3:9016>, <urn:mdciii:1603:45:16:104:3:9017>, <urn:mdciii:1603:45:16:104:3:9018>, <urn:mdciii:1603:45:16:104:3:9019>, <urn:mdciii:1603:45:16:104:3:9020>, <urn:mdciii:1603:45:16:104:3:9021>, <urn:mdciii:1603:45:16:104:3:9022>, <urn:mdciii:1603:45:16:104:3:9023>, <urn:mdciii:1603:45:16:104:3:9024>, <urn:mdciii:1603:45:16:104:3:9025> .
+
+<urn:mdciii:1603:45:16:104:3(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:104:3:10001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10001" ;
+    skos:prefLabel "Aungmyaythazan"@eng-Latn, "အောင်မြေသာစံ"@mya-Mymr ;
+    wdata:q7200235 "MM010001" .
+
+<urn:mdciii:1603:45:16:104:3:10002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10002" ;
+    skos:prefLabel "Chanayethazan"@eng-Latn, "ချမ်းအေးသာစံ"@mya-Mymr ;
+    wdata:q7200235 "MM010002" .
+
+<urn:mdciii:1603:45:16:104:3:10003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10003" ;
+    skos:prefLabel "Mahaaungmyay"@eng-Latn, "မဟာအောင်မြေ"@mya-Mymr ;
+    wdata:q7200235 "MM010003" .
+
+<urn:mdciii:1603:45:16:104:3:10004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10004" ;
+    skos:prefLabel "Chanmyathazi"@eng-Latn, "ချမ်းမြသာစည်"@mya-Mymr ;
+    wdata:q7200235 "MM010004" .
+
+<urn:mdciii:1603:45:16:104:3:10005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10005" ;
+    skos:prefLabel "Pyigyitagon"@eng-Latn, "ပြည်ကြီးတံခွန်"@mya-Mymr ;
+    wdata:q7200235 "MM010005" .
+
+<urn:mdciii:1603:45:16:104:3:10006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10006" ;
+    skos:prefLabel "Amarapura"@eng-Latn, "အမရပူရ"@mya-Mymr ;
+    wdata:q7200235 "MM010006" .
+
+<urn:mdciii:1603:45:16:104:3:10007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10007" ;
+    skos:prefLabel "Patheingyi"@eng-Latn, "ပုသိမ်ကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM010007" .
+
+<urn:mdciii:1603:45:16:104:3:10008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10008" ;
+    skos:prefLabel "Pyinoolwin"@eng-Latn, "ပြင်ဦးလွင်"@mya-Mymr ;
+    wdata:q7200235 "MM010008" .
+
+<urn:mdciii:1603:45:16:104:3:10009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10009" ;
+    skos:prefLabel "Madaya"@eng-Latn, "မတ္တရာ"@mya-Mymr ;
+    wdata:q7200235 "MM010009" .
+
+<urn:mdciii:1603:45:16:104:3:1001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1001" ;
+    skos:prefLabel "Myitkyina"@eng-Latn, "မြစ်ကြီးနား"@mya-Mymr ;
+    wdata:q7200235 "MM001001" .
+
+<urn:mdciii:1603:45:16:104:3:10010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10010" ;
+    skos:prefLabel "Singu"@eng-Latn, "စဉ့်ကူး"@mya-Mymr ;
+    wdata:q7200235 "MM010010" .
+
+<urn:mdciii:1603:45:16:104:3:10011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10011" ;
+    skos:prefLabel "Mogoke"@eng-Latn, "မိုးကုတ်"@mya-Mymr ;
+    wdata:q7200235 "MM010011" .
+
+<urn:mdciii:1603:45:16:104:3:10012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10012" ;
+    skos:prefLabel "Thabeikkyin"@eng-Latn, "သပိတ်ကျင်း"@mya-Mymr ;
+    wdata:q7200235 "MM010012" .
+
+<urn:mdciii:1603:45:16:104:3:10013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10013" ;
+    skos:prefLabel "Kyaukse"@eng-Latn, "ကျောက်ဆည်"@mya-Mymr ;
+    wdata:q7200235 "MM010013" .
+
+<urn:mdciii:1603:45:16:104:3:10014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10014" ;
+    skos:prefLabel "Sintgaing"@eng-Latn, "စဉ့်ကိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010014" .
+
+<urn:mdciii:1603:45:16:104:3:10015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10015" ;
+    skos:prefLabel "Myittha"@eng-Latn, "မြစ်သား"@mya-Mymr ;
+    wdata:q7200235 "MM010015" .
+
+<urn:mdciii:1603:45:16:104:3:10016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10016" ;
+    skos:prefLabel "Tada-U"@eng-Latn, "တံတားဦး"@mya-Mymr ;
+    wdata:q7200235 "MM010016" .
+
+<urn:mdciii:1603:45:16:104:3:10017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10017" ;
+    skos:prefLabel "Myingyan"@eng-Latn, "မြင်းခြံ"@mya-Mymr ;
+    wdata:q7200235 "MM010017" .
+
+<urn:mdciii:1603:45:16:104:3:10018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10018" ;
+    skos:prefLabel "Taungtha"@eng-Latn, "တောင်သာ"@mya-Mymr ;
+    wdata:q7200235 "MM010018" .
+
+<urn:mdciii:1603:45:16:104:3:10019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10019" ;
+    skos:prefLabel "Natogyi"@eng-Latn, "နွားထိုးကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM010019" .
+
+<urn:mdciii:1603:45:16:104:3:1002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1002" ;
+    skos:prefLabel "Waingmaw"@eng-Latn, "ဝိုင်းမော်"@mya-Mymr ;
+    wdata:q7200235 "MM001002" .
+
+<urn:mdciii:1603:45:16:104:3:10020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10020" ;
+    skos:prefLabel "Kyaukpadaung"@eng-Latn, "ကျောက်ပန်းတောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM010020" .
+
+<urn:mdciii:1603:45:16:104:3:10021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10021" ;
+    skos:prefLabel "Ngazun"@eng-Latn, "ငါန်းဇွန်"@mya-Mymr ;
+    wdata:q7200235 "MM010021" .
+
+<urn:mdciii:1603:45:16:104:3:10022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10022" ;
+    skos:prefLabel "Nyaung-U"@eng-Latn, "ညောင်ဦး"@mya-Mymr ;
+    wdata:q7200235 "MM010022" .
+
+<urn:mdciii:1603:45:16:104:3:10023>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10023" ;
+    skos:prefLabel "Yamethin"@eng-Latn, "ရမည်းသင်း"@mya-Mymr ;
+    wdata:q7200235 "MM010023" .
+
+<urn:mdciii:1603:45:16:104:3:10024>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10024" ;
+    skos:prefLabel "Pyawbwe"@eng-Latn, "ပျော်ဘွယ်"@mya-Mymr ;
+    wdata:q7200235 "MM010024" .
+
+<urn:mdciii:1603:45:16:104:3:10028>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10028" ;
+    skos:prefLabel "Meiktila"@eng-Latn, "မိတ္ထီလာ"@mya-Mymr ;
+    wdata:q7200235 "MM010028" .
+
+<urn:mdciii:1603:45:16:104:3:10029>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10029" ;
+    skos:prefLabel "Mahlaing"@eng-Latn, "မလှိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010029" .
+
+<urn:mdciii:1603:45:16:104:3:1003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1003" ;
+    skos:prefLabel "Injangyang"@eng-Latn, "အင်ဂျန်းယန်"@mya-Mymr ;
+    wdata:q7200235 "MM001003" .
+
+<urn:mdciii:1603:45:16:104:3:10030>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10030" ;
+    skos:prefLabel "Thazi"@eng-Latn, "သာစည်"@mya-Mymr ;
+    wdata:q7200235 "MM010030" .
+
+<urn:mdciii:1603:45:16:104:3:10031>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:10031" ;
+    skos:prefLabel "Wundwin"@eng-Latn, "ဝမ်းတွင်း"@mya-Mymr ;
+    wdata:q7200235 "MM010031" .
+
+<urn:mdciii:1603:45:16:104:3:1004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1004" ;
+    skos:prefLabel "Tanai"@eng-Latn, "တနိုင်း"@mya-Mymr ;
+    wdata:q7200235 "MM001004" .
+
+<urn:mdciii:1603:45:16:104:3:1005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1005" ;
+    skos:prefLabel "Chipwi"@eng-Latn, "ချီ​ဖွေ"@mya-Mymr ;
+    wdata:q7200235 "MM001005" .
+
+<urn:mdciii:1603:45:16:104:3:1006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1006" ;
+    skos:prefLabel "Tsawlaw"@eng-Latn, "ဆော့လော်"@mya-Mymr ;
+    wdata:q7200235 "MM001006" .
+
+<urn:mdciii:1603:45:16:104:3:1007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1007" ;
+    skos:prefLabel "Mohnyin"@eng-Latn, "မိုးညှင်း"@mya-Mymr ;
+    wdata:q7200235 "MM001007" .
+
+<urn:mdciii:1603:45:16:104:3:1008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1008" ;
+    skos:prefLabel "Mogaung"@eng-Latn, "မိုးကောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM001008" .
+
+<urn:mdciii:1603:45:16:104:3:1009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1009" ;
+    skos:prefLabel "Hpakant"@eng-Latn, "ဖားကန့်"@mya-Mymr ;
+    wdata:q7200235 "MM001009" .
+
+<urn:mdciii:1603:45:16:104:3:1010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1010" ;
+    skos:prefLabel "Bhamo"@eng-Latn, "ဗန်းမော်"@mya-Mymr ;
+    wdata:q7200235 "MM001010" .
+
+<urn:mdciii:1603:45:16:104:3:1011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1011" ;
+    skos:prefLabel "Shwegu"@eng-Latn, "ရွှေကူ"@mya-Mymr ;
+    wdata:q7200235 "MM001011" .
+
+<urn:mdciii:1603:45:16:104:3:1012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1012" ;
+    skos:prefLabel "Momauk"@eng-Latn, "မိုးမောက်"@mya-Mymr ;
+    wdata:q7200235 "MM001012" .
+
+<urn:mdciii:1603:45:16:104:3:1013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1013" ;
+    skos:prefLabel "Mansi"@eng-Latn, "မံစီ"@mya-Mymr ;
+    wdata:q7200235 "MM001013" .
+
+<urn:mdciii:1603:45:16:104:3:1014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1014" ;
+    skos:prefLabel "Puta-O"@eng-Latn, "ပူတာအို"@mya-Mymr ;
+    wdata:q7200235 "MM001014" .
+
+<urn:mdciii:1603:45:16:104:3:1015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1015" ;
+    skos:prefLabel "Sumprabum"@eng-Latn, "ဆွမ်ပရာဘွမ်"@mya-Mymr ;
+    wdata:q7200235 "MM001015" .
+
+<urn:mdciii:1603:45:16:104:3:1016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1016" ;
+    skos:prefLabel "Machanbaw"@eng-Latn, "မချမ်းဘော"@mya-Mymr ;
+    wdata:q7200235 "MM001016" .
+
+<urn:mdciii:1603:45:16:104:3:1017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1017" ;
+    skos:prefLabel "Nawngmun"@eng-Latn, "နောင်မွန်း"@mya-Mymr ;
+    wdata:q7200235 "MM001017" .
+
+<urn:mdciii:1603:45:16:104:3:1018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:1018" ;
+    skos:prefLabel "Khaunglanhpu"@eng-Latn, "ခေါင်လန်ဖူး"@mya-Mymr ;
+    wdata:q7200235 "MM001018" .
+
+<urn:mdciii:1603:45:16:104:3:11001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11001" ;
+    skos:prefLabel "Mawlamyine"@eng-Latn, "မော်လမြိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM011001" .
+
+<urn:mdciii:1603:45:16:104:3:11002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11002" ;
+    skos:prefLabel "Kyaikmaraw"@eng-Latn, "ကျိုက်မရော"@mya-Mymr ;
+    wdata:q7200235 "MM011002" .
+
+<urn:mdciii:1603:45:16:104:3:11003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11003" ;
+    skos:prefLabel "Chaungzon"@eng-Latn, "ချောင်းဆုံ"@mya-Mymr ;
+    wdata:q7200235 "MM011003" .
+
+<urn:mdciii:1603:45:16:104:3:11004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11004" ;
+    skos:prefLabel "Thanbyuzayat"@eng-Latn, "သံဖြူဇရပ်"@mya-Mymr ;
+    wdata:q7200235 "MM011004" .
+
+<urn:mdciii:1603:45:16:104:3:11005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11005" ;
+    skos:prefLabel "Mudon"@eng-Latn, "မုဒုံ"@mya-Mymr ;
+    wdata:q7200235 "MM011005" .
+
+<urn:mdciii:1603:45:16:104:3:11006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11006" ;
+    skos:prefLabel "Ye"@eng-Latn, "ရေး"@mya-Mymr ;
+    wdata:q7200235 "MM011006" .
+
+<urn:mdciii:1603:45:16:104:3:11007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11007" ;
+    skos:prefLabel "Thaton"@eng-Latn, "သထုံ"@mya-Mymr ;
+    wdata:q7200235 "MM011007" .
+
+<urn:mdciii:1603:45:16:104:3:11008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11008" ;
+    skos:prefLabel "Paung"@eng-Latn, "ပေါင်"@mya-Mymr ;
+    wdata:q7200235 "MM011008" .
+
+<urn:mdciii:1603:45:16:104:3:11009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11009" ;
+    skos:prefLabel "Kyaikto"@eng-Latn, "ကျိုက်ထို"@mya-Mymr ;
+    wdata:q7200235 "MM011009" .
+
+<urn:mdciii:1603:45:16:104:3:11010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:11010" ;
+    skos:prefLabel "Bilin"@eng-Latn, "ဘီးလင်း"@mya-Mymr ;
+    wdata:q7200235 "MM011010" .
+
+<urn:mdciii:1603:45:16:104:3:12001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12001" ;
+    skos:prefLabel "Sittwe"@eng-Latn, "စစ်တွေ"@mya-Mymr ;
+    wdata:q7200235 "MM012001" .
+
+<urn:mdciii:1603:45:16:104:3:12002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12002" ;
+    skos:prefLabel "Ponnagyun"@eng-Latn, "ပုဏ္ဏားကျွန်း"@mya-Mymr ;
+    wdata:q7200235 "MM012002" .
+
+<urn:mdciii:1603:45:16:104:3:12003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12003" ;
+    skos:prefLabel "Mrauk-U"@eng-Latn, "မြောက်ဦး"@mya-Mymr ;
+    wdata:q7200235 "MM012003" .
+
+<urn:mdciii:1603:45:16:104:3:12004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12004" ;
+    skos:prefLabel "Kyauktaw"@eng-Latn, "ကျောက်တော်"@mya-Mymr ;
+    wdata:q7200235 "MM012004" .
+
+<urn:mdciii:1603:45:16:104:3:12005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12005" ;
+    skos:prefLabel "Minbya"@eng-Latn, "မင်းပြား"@mya-Mymr ;
+    wdata:q7200235 "MM012005" .
+
+<urn:mdciii:1603:45:16:104:3:12006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12006" ;
+    skos:prefLabel "Myebon"@eng-Latn, "မြေပုံ"@mya-Mymr ;
+    wdata:q7200235 "MM012006" .
+
+<urn:mdciii:1603:45:16:104:3:12007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12007" ;
+    skos:prefLabel "Pauktaw"@eng-Latn, "ပေါက်တော"@mya-Mymr ;
+    wdata:q7200235 "MM012007" .
+
+<urn:mdciii:1603:45:16:104:3:12008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12008" ;
+    skos:prefLabel "Rathedaung"@eng-Latn, "ရသေ့တောင်"@mya-Mymr ;
+    wdata:q7200235 "MM012008" .
+
+<urn:mdciii:1603:45:16:104:3:12009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12009" ;
+    skos:prefLabel "Maungdaw"@eng-Latn, "မောင်တော"@mya-Mymr ;
+    wdata:q7200235 "MM012009" .
+
+<urn:mdciii:1603:45:16:104:3:12010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12010" ;
+    skos:prefLabel "Buthidaung"@eng-Latn, "ဘူးသီးတောင်"@mya-Mymr ;
+    wdata:q7200235 "MM012010" .
+
+<urn:mdciii:1603:45:16:104:3:12011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12011" ;
+    skos:prefLabel "Kyaukpyu"@eng-Latn, "ကျောက်ဖြူ"@mya-Mymr ;
+    wdata:q7200235 "MM012011" .
+
+<urn:mdciii:1603:45:16:104:3:12012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12012" ;
+    skos:prefLabel "Munaung"@eng-Latn, "မာန်အောင်"@mya-Mymr ;
+    wdata:q7200235 "MM012012" .
+
+<urn:mdciii:1603:45:16:104:3:12013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12013" ;
+    skos:prefLabel "Ramree"@eng-Latn, "ရမ်းဗြဲ"@mya-Mymr ;
+    wdata:q7200235 "MM012013" .
+
+<urn:mdciii:1603:45:16:104:3:12014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12014" ;
+    skos:prefLabel "Ann"@eng-Latn, "အမ်း"@mya-Mymr ;
+    wdata:q7200235 "MM012014" .
+
+<urn:mdciii:1603:45:16:104:3:12015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12015" ;
+    skos:prefLabel "Thandwe"@eng-Latn, "သံတွဲ"@mya-Mymr ;
+    wdata:q7200235 "MM012015" .
+
+<urn:mdciii:1603:45:16:104:3:12016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12016" ;
+    skos:prefLabel "Toungup"@eng-Latn, "တောင်ကုတ်"@mya-Mymr ;
+    wdata:q7200235 "MM012016" .
+
+<urn:mdciii:1603:45:16:104:3:12017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:12017" ;
+    skos:prefLabel "Gwa"@eng-Latn, "ဂွ"@mya-Mymr ;
+    wdata:q7200235 "MM012017" .
+
+<urn:mdciii:1603:45:16:104:3:13001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13001" ;
+    skos:prefLabel "Insein"@eng-Latn, "အင်းစိန်"@mya-Mymr ;
+    wdata:q7200235 "MM013001" .
+
+<urn:mdciii:1603:45:16:104:3:13002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13002" ;
+    skos:prefLabel "Mingaladon"@eng-Latn, "မင်္ဂလာဒုံ"@mya-Mymr ;
+    wdata:q7200235 "MM013002" .
+
+<urn:mdciii:1603:45:16:104:3:13003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13003" ;
+    skos:prefLabel "Hmawbi"@eng-Latn, "မှော်ဘီ"@mya-Mymr ;
+    wdata:q7200235 "MM013003" .
+
+<urn:mdciii:1603:45:16:104:3:13004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13004" ;
+    skos:prefLabel "Hlegu"@eng-Latn, "လှည်းကူး"@mya-Mymr ;
+    wdata:q7200235 "MM013004" .
+
+<urn:mdciii:1603:45:16:104:3:13005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13005" ;
+    skos:prefLabel "Taikkyi"@eng-Latn, "တိုက်ကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM013005" .
+
+<urn:mdciii:1603:45:16:104:3:13006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13006" ;
+    skos:prefLabel "Htantabin"@eng-Latn, "ထန်းတပင်"@mya-Mymr ;
+    wdata:q7200235 "MM013006" .
+
+<urn:mdciii:1603:45:16:104:3:13007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13007" ;
+    skos:prefLabel "Shwepyithar"@eng-Latn, "ရွှေပြည်သာ"@mya-Mymr ;
+    wdata:q7200235 "MM013007" .
+
+<urn:mdciii:1603:45:16:104:3:13009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13009" ;
+    skos:prefLabel "Thingangyun"@eng-Latn, "သင်္ဃန်းကျွန်း"@mya-Mymr ;
+    wdata:q7200235 "MM013009" .
+
+<urn:mdciii:1603:45:16:104:3:13010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13010" ;
+    skos:prefLabel "Yankin"@eng-Latn, "ရန်ကင်း"@mya-Mymr ;
+    wdata:q7200235 "MM013010" .
+
+<urn:mdciii:1603:45:16:104:3:13011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13011" ;
+    skos:prefLabel "South Okkalapa"@eng-Latn, "တောင်ဥက္ကလာပ"@mya-Mymr ;
+    wdata:q7200235 "MM013011" .
+
+<urn:mdciii:1603:45:16:104:3:13012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13012" ;
+    skos:prefLabel "North Okkalapa"@eng-Latn, "မြောက်ဥက္ကလာပ"@mya-Mymr ;
+    wdata:q7200235 "MM013012" .
+
+<urn:mdciii:1603:45:16:104:3:13013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13013" ;
+    skos:prefLabel "Thaketa"@eng-Latn, "သာကေတ"@mya-Mymr ;
+    wdata:q7200235 "MM013013" .
+
+<urn:mdciii:1603:45:16:104:3:13014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13014" ;
+    skos:prefLabel "Dawbon"@eng-Latn, "ဒေါပုံ"@mya-Mymr ;
+    wdata:q7200235 "MM013014" .
+
+<urn:mdciii:1603:45:16:104:3:13015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13015" ;
+    skos:prefLabel "Tamwe"@eng-Latn, "တာမွေ"@mya-Mymr ;
+    wdata:q7200235 "MM013015" .
+
+<urn:mdciii:1603:45:16:104:3:13016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13016" ;
+    skos:prefLabel "Pazundaung"@eng-Latn, "ပုဇွန်တောင်"@mya-Mymr ;
+    wdata:q7200235 "MM013016" .
+
+<urn:mdciii:1603:45:16:104:3:13017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13017" ;
+    skos:prefLabel "Botahtaung"@eng-Latn, "ဗိုလ်တထောင်"@mya-Mymr ;
+    wdata:q7200235 "MM013017" .
+
+<urn:mdciii:1603:45:16:104:3:13018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13018" ;
+    skos:prefLabel "Dagon Myothit (South)"@eng-Latn, "ဒဂုံမြို့သစ် (တောင်ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013018" .
+
+<urn:mdciii:1603:45:16:104:3:13019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13019" ;
+    skos:prefLabel "Dagon Myothit (North)"@eng-Latn, "ဒဂုံမြို့သစ် (မြောက်ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013019" .
+
+<urn:mdciii:1603:45:16:104:3:13020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13020" ;
+    skos:prefLabel "Dagon Myothit (East)"@eng-Latn, "ဒဂုံမြို့သစ် (အရှေ့ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013020" .
+
+<urn:mdciii:1603:45:16:104:3:13021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13021" ;
+    skos:prefLabel "Dagon Myothit (Seikkan)"@eng-Latn, "ဒဂုံမြို့သစ် (ဆိပ်ကမ်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013021" .
+
+<urn:mdciii:1603:45:16:104:3:13022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13022" ;
+    skos:prefLabel "Mingalartaungnyunt"@eng-Latn, "မင်္ဂလာတောင်ညွန့်"@mya-Mymr ;
+    wdata:q7200235 "MM013022" .
+
+<urn:mdciii:1603:45:16:104:3:13023>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13023" ;
+    skos:prefLabel "Thanlyin"@eng-Latn, "သန်လျင်"@mya-Mymr ;
+    wdata:q7200235 "MM013023" .
+
+<urn:mdciii:1603:45:16:104:3:13024>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13024" ;
+    skos:prefLabel "Kyauktan"@eng-Latn, "ကျောက်တန်း"@mya-Mymr ;
+    wdata:q7200235 "MM013024" .
+
+<urn:mdciii:1603:45:16:104:3:13025>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13025" ;
+    skos:prefLabel "Thongwa"@eng-Latn, "သုံးခွ"@mya-Mymr ;
+    wdata:q7200235 "MM013025" .
+
+<urn:mdciii:1603:45:16:104:3:13026>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13026" ;
+    skos:prefLabel "Kayan"@eng-Latn, "ခရမ်း"@mya-Mymr ;
+    wdata:q7200235 "MM013026" .
+
+<urn:mdciii:1603:45:16:104:3:13027>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13027" ;
+    skos:prefLabel "Twantay"@eng-Latn, "တွံတေး"@mya-Mymr ;
+    wdata:q7200235 "MM013027" .
+
+<urn:mdciii:1603:45:16:104:3:13028>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13028" ;
+    skos:prefLabel "Kawhmu"@eng-Latn, "ကော့မှုး"@mya-Mymr ;
+    wdata:q7200235 "MM013028" .
+
+<urn:mdciii:1603:45:16:104:3:13029>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13029" ;
+    skos:prefLabel "Kungyangon"@eng-Latn, "ကွမ်းခြံကုန်း"@mya-Mymr ;
+    wdata:q7200235 "MM013029" .
+
+<urn:mdciii:1603:45:16:104:3:13030>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13030" ;
+    skos:prefLabel "Dala"@eng-Latn, "ဒလ"@mya-Mymr ;
+    wdata:q7200235 "MM013030" .
+
+<urn:mdciii:1603:45:16:104:3:13031>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13031" ;
+    skos:prefLabel "Seikgyikanaungto"@eng-Latn, "ဆိပ်ကြီး/ခနောင်တို"@mya-Mymr ;
+    wdata:q7200235 "MM013031" .
+
+<urn:mdciii:1603:45:16:104:3:13032>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13032" ;
+    skos:prefLabel "Cocokyun"@eng-Latn, "ကိုကိုးကျွန်း"@mya-Mymr ;
+    wdata:q7200235 "MM013032" .
+
+<urn:mdciii:1603:45:16:104:3:13033>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13033" ;
+    skos:prefLabel "Kyauktada"@eng-Latn, "ကျောက်တံတား"@mya-Mymr ;
+    wdata:q7200235 "MM013033" .
+
+<urn:mdciii:1603:45:16:104:3:13034>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13034" ;
+    skos:prefLabel "Pabedan"@eng-Latn, "ပန်းဘဲတန်း"@mya-Mymr ;
+    wdata:q7200235 "MM013034" .
+
+<urn:mdciii:1603:45:16:104:3:13035>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13035" ;
+    skos:prefLabel "Lanmadaw"@eng-Latn, "လမ်းမတော်"@mya-Mymr ;
+    wdata:q7200235 "MM013035" .
+
+<urn:mdciii:1603:45:16:104:3:13036>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13036" ;
+    skos:prefLabel "Latha"@eng-Latn, "လသာ"@mya-Mymr ;
+    wdata:q7200235 "MM013036" .
+
+<urn:mdciii:1603:45:16:104:3:13037>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13037" ;
+    skos:prefLabel "Ahlone"@eng-Latn, "အလုံ"@mya-Mymr ;
+    wdata:q7200235 "MM013037" .
+
+<urn:mdciii:1603:45:16:104:3:13038>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13038" ;
+    skos:prefLabel "Kyeemyindaing"@eng-Latn, "ကြည့်မြင်တိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM013038" .
+
+<urn:mdciii:1603:45:16:104:3:13039>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13039" ;
+    skos:prefLabel "Sanchaung"@eng-Latn, "စမ်းချောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM013039" .
+
+<urn:mdciii:1603:45:16:104:3:13040>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13040" ;
+    skos:prefLabel "Hlaing"@eng-Latn, "လှိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM013040" .
+
+<urn:mdciii:1603:45:16:104:3:13041>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13041" ;
+    skos:prefLabel "Kamaryut"@eng-Latn, "ကမာရွတ်"@mya-Mymr ;
+    wdata:q7200235 "MM013041" .
+
+<urn:mdciii:1603:45:16:104:3:13042>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13042" ;
+    skos:prefLabel "Mayangone"@eng-Latn, "မရမ်းကုန်း"@mya-Mymr ;
+    wdata:q7200235 "MM013042" .
+
+<urn:mdciii:1603:45:16:104:3:13043>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13043" ;
+    skos:prefLabel "Dagon"@eng-Latn, "ဒဂုံ"@mya-Mymr ;
+    wdata:q7200235 "MM013043" .
+
+<urn:mdciii:1603:45:16:104:3:13044>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13044" ;
+    skos:prefLabel "Bahan"@eng-Latn, "ဗဟန်း"@mya-Mymr ;
+    wdata:q7200235 "MM013044" .
+
+<urn:mdciii:1603:45:16:104:3:13046>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13046" ;
+    skos:prefLabel "Hlaingtharya (East)"@eng-Latn, "လှိုင်သာယာ (အရှေ့ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013046" .
+
+<urn:mdciii:1603:45:16:104:3:13047>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:13047" ;
+    skos:prefLabel "Hlaingtharya (West)"@eng-Latn, "လှိုင်သာယာ (အနောက်ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013047" .
+
+<urn:mdciii:1603:45:16:104:3:14001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14001" ;
+    skos:prefLabel "Taunggyi"@eng-Latn, "တောင်ကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM014001" .
+
+<urn:mdciii:1603:45:16:104:3:14002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14002" ;
+    skos:prefLabel "Nyaungshwe"@eng-Latn, "ညောင်ရွှေ"@mya-Mymr ;
+    wdata:q7200235 "MM014002" .
+
+<urn:mdciii:1603:45:16:104:3:14003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14003" ;
+    skos:prefLabel "Hopong"@eng-Latn, "ဟိုပုံး"@mya-Mymr ;
+    wdata:q7200235 "MM014003" .
+
+<urn:mdciii:1603:45:16:104:3:14004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14004" ;
+    skos:prefLabel "Hsihseng"@eng-Latn, "ဆီဆိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM014004" .
+
+<urn:mdciii:1603:45:16:104:3:14005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14005" ;
+    skos:prefLabel "Kalaw"@eng-Latn, "ကလော"@mya-Mymr ;
+    wdata:q7200235 "MM014005" .
+
+<urn:mdciii:1603:45:16:104:3:14006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14006" ;
+    skos:prefLabel "Pindaya"@eng-Latn, "ပင်းတယ"@mya-Mymr ;
+    wdata:q7200235 "MM014006" .
+
+<urn:mdciii:1603:45:16:104:3:14007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14007" ;
+    skos:prefLabel "Ywangan"@eng-Latn, "ရွာငံ"@mya-Mymr ;
+    wdata:q7200235 "MM014007" .
+
+<urn:mdciii:1603:45:16:104:3:14008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14008" ;
+    skos:prefLabel "Lawksawk"@eng-Latn, "ရပ်စောက်"@mya-Mymr ;
+    wdata:q7200235 "MM014008" .
+
+<urn:mdciii:1603:45:16:104:3:14009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14009" ;
+    skos:prefLabel "Pinlaung"@eng-Latn, "ပင်လောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM014009" .
+
+<urn:mdciii:1603:45:16:104:3:14010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14010" ;
+    skos:prefLabel "Pekon"@eng-Latn, "ဖယ်ခုံ"@mya-Mymr ;
+    wdata:q7200235 "MM014010" .
+
+<urn:mdciii:1603:45:16:104:3:14011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14011" ;
+    skos:prefLabel "Loilen"@eng-Latn, "လွိုင်လင်"@mya-Mymr ;
+    wdata:q7200235 "MM014011" .
+
+<urn:mdciii:1603:45:16:104:3:14012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14012" ;
+    skos:prefLabel "Laihka"@eng-Latn, "လဲချား"@mya-Mymr ;
+    wdata:q7200235 "MM014012" .
+
+<urn:mdciii:1603:45:16:104:3:14013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14013" ;
+    skos:prefLabel "Nansang"@eng-Latn, "နမ့်စန်"@mya-Mymr ;
+    wdata:q7200235 "MM014013" .
+
+<urn:mdciii:1603:45:16:104:3:14014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14014" ;
+    skos:prefLabel "Kunhing"@eng-Latn, "ကွန်ဟိန်း"@mya-Mymr ;
+    wdata:q7200235 "MM014014" .
+
+<urn:mdciii:1603:45:16:104:3:14015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14015" ;
+    skos:prefLabel "Kyethi"@eng-Latn, "ကျေးသီး"@mya-Mymr ;
+    wdata:q7200235 "MM014015" .
+
+<urn:mdciii:1603:45:16:104:3:14016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14016" ;
+    skos:prefLabel "Mongkaing"@eng-Latn, "မိုင်းကိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM014016" .
+
+<urn:mdciii:1603:45:16:104:3:14017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14017" ;
+    skos:prefLabel "Monghsu"@eng-Latn, "မိုင်းရှူး"@mya-Mymr ;
+    wdata:q7200235 "MM014017" .
+
+<urn:mdciii:1603:45:16:104:3:14018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14018" ;
+    skos:prefLabel "Langkho"@eng-Latn, "လင်းခေး"@mya-Mymr ;
+    wdata:q7200235 "MM014018" .
+
+<urn:mdciii:1603:45:16:104:3:14019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14019" ;
+    skos:prefLabel "Mongnai"@eng-Latn, "မိုးနဲ"@mya-Mymr ;
+    wdata:q7200235 "MM014019" .
+
+<urn:mdciii:1603:45:16:104:3:14020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14020" ;
+    skos:prefLabel "Mawkmai"@eng-Latn, "မောက်မယ်"@mya-Mymr ;
+    wdata:q7200235 "MM014020" .
+
+<urn:mdciii:1603:45:16:104:3:14021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:14021" ;
+    skos:prefLabel "Mongpan"@eng-Latn, "မိုင်းပန်"@mya-Mymr ;
+    wdata:q7200235 "MM014021" .
+
+<urn:mdciii:1603:45:16:104:3:15001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15001" ;
+    skos:prefLabel "Lashio"@eng-Latn, "လားရှိုး"@mya-Mymr ;
+    wdata:q7200235 "MM015001" .
+
+<urn:mdciii:1603:45:16:104:3:15002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15002" ;
+    skos:prefLabel "Hseni"@eng-Latn, "သိန္နီ"@mya-Mymr ;
+    wdata:q7200235 "MM015002" .
+
+<urn:mdciii:1603:45:16:104:3:15003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15003" ;
+    skos:prefLabel "Mongyai"@eng-Latn, "မိုင်းရယ်"@mya-Mymr ;
+    wdata:q7200235 "MM015003" .
+
+<urn:mdciii:1603:45:16:104:3:15004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15004" ;
+    skos:prefLabel "Tangyan"@eng-Latn, "တန့်ယန်း"@mya-Mymr ;
+    wdata:q7200235 "MM015004" .
+
+<urn:mdciii:1603:45:16:104:3:15005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15005" ;
+    skos:prefLabel "Pangsang"@eng-Latn, "ပန်ဆန်း (ပန်ခမ်း)"@mya-Mymr ;
+    wdata:q7200235 "MM015005" .
+
+<urn:mdciii:1603:45:16:104:3:15006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15006" ;
+    skos:prefLabel "Narphan"@eng-Latn, "နားဖန်း"@mya-Mymr ;
+    wdata:q7200235 "MM015006" .
+
+<urn:mdciii:1603:45:16:104:3:15007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15007" ;
+    skos:prefLabel "Pangwaun"@eng-Latn, "ပန်ဝိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015007" .
+
+<urn:mdciii:1603:45:16:104:3:15008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15008" ;
+    skos:prefLabel "Mongmao"@eng-Latn, "မိုင်းမော"@mya-Mymr ;
+    wdata:q7200235 "MM015008" .
+
+<urn:mdciii:1603:45:16:104:3:15009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15009" ;
+    skos:prefLabel "Muse"@eng-Latn, "မူဆယ်"@mya-Mymr ;
+    wdata:q7200235 "MM015009" .
+
+<urn:mdciii:1603:45:16:104:3:15010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15010" ;
+    skos:prefLabel "Namhkan"@eng-Latn, "နမ့်ခမ်း"@mya-Mymr ;
+    wdata:q7200235 "MM015010" .
+
+<urn:mdciii:1603:45:16:104:3:15011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15011" ;
+    skos:prefLabel "Kutkai"@eng-Latn, "ကွတ်ခိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015011" .
+
+<urn:mdciii:1603:45:16:104:3:15012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15012" ;
+    skos:prefLabel "Kyaukme"@eng-Latn, "ကျောက်မဲ"@mya-Mymr ;
+    wdata:q7200235 "MM015012" .
+
+<urn:mdciii:1603:45:16:104:3:15013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15013" ;
+    skos:prefLabel "Nawnghkio"@eng-Latn, "နောင်ချို"@mya-Mymr ;
+    wdata:q7200235 "MM015013" .
+
+<urn:mdciii:1603:45:16:104:3:15014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15014" ;
+    skos:prefLabel "Hsipaw"@eng-Latn, "သီပေါ"@mya-Mymr ;
+    wdata:q7200235 "MM015014" .
+
+<urn:mdciii:1603:45:16:104:3:15015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15015" ;
+    skos:prefLabel "Namtu"@eng-Latn, "နမ္မတူ"@mya-Mymr ;
+    wdata:q7200235 "MM015015" .
+
+<urn:mdciii:1603:45:16:104:3:15016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15016" ;
+    skos:prefLabel "Namhsan"@eng-Latn, "နမ့်ဆန်"@mya-Mymr ;
+    wdata:q7200235 "MM015016" .
+
+<urn:mdciii:1603:45:16:104:3:15017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15017" ;
+    skos:prefLabel "Mongmit"@eng-Latn, "မိုးမိတ်"@mya-Mymr ;
+    wdata:q7200235 "MM015017" .
+
+<urn:mdciii:1603:45:16:104:3:15018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15018" ;
+    skos:prefLabel "Mabein"@eng-Latn, "မဘိမ်း"@mya-Mymr ;
+    wdata:q7200235 "MM015018" .
+
+<urn:mdciii:1603:45:16:104:3:15019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15019" ;
+    skos:prefLabel "Manton"@eng-Latn, "မန်တုံ"@mya-Mymr ;
+    wdata:q7200235 "MM015019" .
+
+<urn:mdciii:1603:45:16:104:3:15020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15020" ;
+    skos:prefLabel "Kunlong"@eng-Latn, "ကွမ်းလုံ"@mya-Mymr ;
+    wdata:q7200235 "MM015020" .
+
+<urn:mdciii:1603:45:16:104:3:15021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15021" ;
+    skos:prefLabel "Hopang"@eng-Latn, "ဟိုပန်"@mya-Mymr ;
+    wdata:q7200235 "MM015021" .
+
+<urn:mdciii:1603:45:16:104:3:15022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15022" ;
+    skos:prefLabel "Laukkaing"@eng-Latn, "လောက်ကိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015022" .
+
+<urn:mdciii:1603:45:16:104:3:15023>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15023" ;
+    skos:prefLabel "Konkyan"@eng-Latn, "ကုန်းကြမ်း"@mya-Mymr ;
+    wdata:q7200235 "MM015023" .
+
+<urn:mdciii:1603:45:16:104:3:15024>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:15024" ;
+    skos:prefLabel "Matman"@eng-Latn, "မက်မန်း"@mya-Mymr ;
+    wdata:q7200235 "MM015024" .
+
+<urn:mdciii:1603:45:16:104:3:16001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16001" ;
+    skos:prefLabel "Kengtung"@eng-Latn, "ကျိုင်းတုံ"@mya-Mymr ;
+    wdata:q7200235 "MM016001" .
+
+<urn:mdciii:1603:45:16:104:3:16002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16002" ;
+    skos:prefLabel "Mongkhet"@eng-Latn, "မိုင်းခတ်"@mya-Mymr ;
+    wdata:q7200235 "MM016002" .
+
+<urn:mdciii:1603:45:16:104:3:16003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16003" ;
+    skos:prefLabel "Mongyang"@eng-Latn, "မိုင်းယန်း"@mya-Mymr ;
+    wdata:q7200235 "MM016003" .
+
+<urn:mdciii:1603:45:16:104:3:16005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16005" ;
+    skos:prefLabel "Mongla"@eng-Latn, "မိုင်းလား"@mya-Mymr ;
+    wdata:q7200235 "MM016005" .
+
+<urn:mdciii:1603:45:16:104:3:16006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16006" ;
+    skos:prefLabel "Monghsat"@eng-Latn, "မိုင်းဆတ်"@mya-Mymr ;
+    wdata:q7200235 "MM016006" .
+
+<urn:mdciii:1603:45:16:104:3:16007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16007" ;
+    skos:prefLabel "Mongping"@eng-Latn, "မိုင်းပျဉ်း"@mya-Mymr ;
+    wdata:q7200235 "MM016007" .
+
+<urn:mdciii:1603:45:16:104:3:16008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16008" ;
+    skos:prefLabel "Mongton"@eng-Latn, "မိုင်းတုံ"@mya-Mymr ;
+    wdata:q7200235 "MM016008" .
+
+<urn:mdciii:1603:45:16:104:3:16009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16009" ;
+    skos:prefLabel "Tachileik"@eng-Latn, "တာချီလိတ်"@mya-Mymr ;
+    wdata:q7200235 "MM016009" .
+
+<urn:mdciii:1603:45:16:104:3:16010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16010" ;
+    skos:prefLabel "Monghpyak"@eng-Latn, "မိုင်းဖြတ်"@mya-Mymr ;
+    wdata:q7200235 "MM016010" .
+
+<urn:mdciii:1603:45:16:104:3:16011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:16011" ;
+    skos:prefLabel "Mongyawng"@eng-Latn, "မိုင်းယောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM016011" .
+
+<urn:mdciii:1603:45:16:104:3:17001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17001" ;
+    skos:prefLabel "Pathein"@eng-Latn, "ပုသိမ်"@mya-Mymr ;
+    wdata:q7200235 "MM017001" .
+
+<urn:mdciii:1603:45:16:104:3:17002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17002" ;
+    skos:prefLabel "Kangyidaunt"@eng-Latn, "ကန်ကြီးထောင့်"@mya-Mymr ;
+    wdata:q7200235 "MM017002" .
+
+<urn:mdciii:1603:45:16:104:3:17003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17003" ;
+    skos:prefLabel "Thabaung"@eng-Latn, "သာပေါင်း"@mya-Mymr ;
+    wdata:q7200235 "MM017003" .
+
+<urn:mdciii:1603:45:16:104:3:17004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17004" ;
+    skos:prefLabel "Ngapudaw"@eng-Latn, "ငပုတော"@mya-Mymr ;
+    wdata:q7200235 "MM017004" .
+
+<urn:mdciii:1603:45:16:104:3:17005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17005" ;
+    skos:prefLabel "Kyonpyaw"@eng-Latn, "ကျုံပျော်"@mya-Mymr ;
+    wdata:q7200235 "MM017005" .
+
+<urn:mdciii:1603:45:16:104:3:17006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17006" ;
+    skos:prefLabel "Yegyi"@eng-Latn, "ရေကြည်"@mya-Mymr ;
+    wdata:q7200235 "MM017006" .
+
+<urn:mdciii:1603:45:16:104:3:17007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17007" ;
+    skos:prefLabel "Kyaunggon"@eng-Latn, "ကျောင်းကုန်း"@mya-Mymr ;
+    wdata:q7200235 "MM017007" .
+
+<urn:mdciii:1603:45:16:104:3:17008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17008" ;
+    skos:prefLabel "Hinthada"@eng-Latn, "ဟင်္သာတ"@mya-Mymr ;
+    wdata:q7200235 "MM017008" .
+
+<urn:mdciii:1603:45:16:104:3:17009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17009" ;
+    skos:prefLabel "Zalun"@eng-Latn, "ဇလွန်"@mya-Mymr ;
+    wdata:q7200235 "MM017009" .
+
+<urn:mdciii:1603:45:16:104:3:17010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17010" ;
+    skos:prefLabel "Lemyethna"@eng-Latn, "လေးမျက်နှာ"@mya-Mymr ;
+    wdata:q7200235 "MM017010" .
+
+<urn:mdciii:1603:45:16:104:3:17011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17011" ;
+    skos:prefLabel "Myanaung"@eng-Latn, "မြန်အောင်"@mya-Mymr ;
+    wdata:q7200235 "MM017011" .
+
+<urn:mdciii:1603:45:16:104:3:17012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17012" ;
+    skos:prefLabel "Kyangin"@eng-Latn, "ကြံခင်း"@mya-Mymr ;
+    wdata:q7200235 "MM017012" .
+
+<urn:mdciii:1603:45:16:104:3:17013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17013" ;
+    skos:prefLabel "Ingapu"@eng-Latn, "အင်္ဂပူ"@mya-Mymr ;
+    wdata:q7200235 "MM017013" .
+
+<urn:mdciii:1603:45:16:104:3:17014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17014" ;
+    skos:prefLabel "Myaungmya"@eng-Latn, "မြောင်းမြ"@mya-Mymr ;
+    wdata:q7200235 "MM017014" .
+
+<urn:mdciii:1603:45:16:104:3:17015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17015" ;
+    skos:prefLabel "Einme"@eng-Latn, "အိမ်မဲ"@mya-Mymr ;
+    wdata:q7200235 "MM017015" .
+
+<urn:mdciii:1603:45:16:104:3:17016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17016" ;
+    skos:prefLabel "Labutta"@eng-Latn, "လပွတ္တာ"@mya-Mymr ;
+    wdata:q7200235 "MM017016" .
+
+<urn:mdciii:1603:45:16:104:3:17017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17017" ;
+    skos:prefLabel "Wakema"@eng-Latn, "ဝါးခယ်မ"@mya-Mymr ;
+    wdata:q7200235 "MM017017" .
+
+<urn:mdciii:1603:45:16:104:3:17018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17018" ;
+    skos:prefLabel "Mawlamyinegyun"@eng-Latn, "မော်လမြိုင်ကျွန်း"@mya-Mymr ;
+    wdata:q7200235 "MM017018" .
+
+<urn:mdciii:1603:45:16:104:3:17019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17019" ;
+    skos:prefLabel "Maubin"@eng-Latn, "မအူပင်"@mya-Mymr ;
+    wdata:q7200235 "MM017019" .
+
+<urn:mdciii:1603:45:16:104:3:17020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17020" ;
+    skos:prefLabel "Pantanaw"@eng-Latn, "ပန်းတနော်"@mya-Mymr ;
+    wdata:q7200235 "MM017020" .
+
+<urn:mdciii:1603:45:16:104:3:17021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17021" ;
+    skos:prefLabel "Nyaungdon"@eng-Latn, "ညောင်တုန်း"@mya-Mymr ;
+    wdata:q7200235 "MM017021" .
+
+<urn:mdciii:1603:45:16:104:3:17022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17022" ;
+    skos:prefLabel "Danubyu"@eng-Latn, "ဓနုဖြူ"@mya-Mymr ;
+    wdata:q7200235 "MM017022" .
+
+<urn:mdciii:1603:45:16:104:3:17023>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17023" ;
+    skos:prefLabel "Pyapon"@eng-Latn, "ဖျာပုံ"@mya-Mymr ;
+    wdata:q7200235 "MM017023" .
+
+<urn:mdciii:1603:45:16:104:3:17024>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17024" ;
+    skos:prefLabel "Bogale"@eng-Latn, "ဘိုကလေး"@mya-Mymr ;
+    wdata:q7200235 "MM017024" .
+
+<urn:mdciii:1603:45:16:104:3:17025>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17025" ;
+    skos:prefLabel "Kyaiklat"@eng-Latn, "ကျိုက်လတ်"@mya-Mymr ;
+    wdata:q7200235 "MM017025" .
+
+<urn:mdciii:1603:45:16:104:3:17026>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:17026" ;
+    skos:prefLabel "Dedaye"@eng-Latn, "ဒေးဒရဲ"@mya-Mymr ;
+    wdata:q7200235 "MM017026" .
+
+<urn:mdciii:1603:45:16:104:3:18001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:18001" ;
+    skos:prefLabel "Zay Yar Thi Ri"@eng-Latn, "ဇေယျာသီရိ"@mya-Mymr ;
+    wdata:q7200235 "MM018001" .
+
+<urn:mdciii:1603:45:16:104:3:18002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:18002" ;
+    skos:prefLabel "Za Bu Thi Ri"@eng-Latn, "ဇမ္ဗူသီရိ"@mya-Mymr ;
+    wdata:q7200235 "MM018002" .
+
+<urn:mdciii:1603:45:16:104:3:18003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:18003" ;
+    skos:prefLabel "Tatkon"@eng-Latn, "တပ်ကုန်း"@mya-Mymr ;
+    wdata:q7200235 "MM018003" .
+
+<urn:mdciii:1603:45:16:104:3:18004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:18004" ;
+    skos:prefLabel "Det Khi Na Thi Ri"@eng-Latn, "ဒက္ခိဏသီရိ"@mya-Mymr ;
+    wdata:q7200235 "MM018004" .
+
+<urn:mdciii:1603:45:16:104:3:18005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:18005" ;
+    skos:prefLabel "Poke Ba Thi Ri"@eng-Latn, "ပုဗ္ဗသီရိ"@mya-Mymr ;
+    wdata:q7200235 "MM018005" .
+
+<urn:mdciii:1603:45:16:104:3:18006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:18006" ;
+    skos:prefLabel "Pyinmana"@eng-Latn, "ပျဉ်းမနား"@mya-Mymr ;
+    wdata:q7200235 "MM018006" .
+
+<urn:mdciii:1603:45:16:104:3:18007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:18007" ;
+    skos:prefLabel "Lewe"@eng-Latn, "လယ်ဝေး"@mya-Mymr ;
+    wdata:q7200235 "MM018007" .
+
+<urn:mdciii:1603:45:16:104:3:18008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:18008" ;
+    skos:prefLabel "Oke Ta Ra Thi Ri"@eng-Latn, "ဥတ္တရသီရိ"@mya-Mymr ;
+    wdata:q7200235 "MM018008" .
+
+<urn:mdciii:1603:45:16:104:3:2001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:2001" ;
+    skos:prefLabel "Loikaw"@eng-Latn, "လွိုင်ကော်"@mya-Mymr ;
+    wdata:q7200235 "MM002001" .
+
+<urn:mdciii:1603:45:16:104:3:2002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:2002" ;
+    skos:prefLabel "Demoso"@eng-Latn, "ဒီးမော့ဆို"@mya-Mymr ;
+    wdata:q7200235 "MM002002" .
+
+<urn:mdciii:1603:45:16:104:3:2003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:2003" ;
+    skos:prefLabel "Hpruso"@eng-Latn, "ဖရူဆို"@mya-Mymr ;
+    wdata:q7200235 "MM002003" .
+
+<urn:mdciii:1603:45:16:104:3:2004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:2004" ;
+    skos:prefLabel "Shadaw"@eng-Latn, "ရှားတော"@mya-Mymr ;
+    wdata:q7200235 "MM002004" .
+
+<urn:mdciii:1603:45:16:104:3:2005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:2005" ;
+    skos:prefLabel "Bawlake"@eng-Latn, "ဘောလခဲ"@mya-Mymr ;
+    wdata:q7200235 "MM002005" .
+
+<urn:mdciii:1603:45:16:104:3:2006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:2006" ;
+    skos:prefLabel "Hpasawng"@eng-Latn, "ဖားဆောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM002006" .
+
+<urn:mdciii:1603:45:16:104:3:2007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:2007" ;
+    skos:prefLabel "Mese"@eng-Latn, "မယ်စဲ"@mya-Mymr ;
+    wdata:q7200235 "MM002007" .
+
+<urn:mdciii:1603:45:16:104:3:3001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:3001" ;
+    skos:prefLabel "Hpa-An"@eng-Latn, "ဘားအံ"@mya-Mymr ;
+    wdata:q7200235 "MM003001" .
+
+<urn:mdciii:1603:45:16:104:3:3002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:3002" ;
+    skos:prefLabel "Hlaingbwe"@eng-Latn, "လှိုင်းဘွဲ့"@mya-Mymr ;
+    wdata:q7200235 "MM003002" .
+
+<urn:mdciii:1603:45:16:104:3:3003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:3003" ;
+    skos:prefLabel "Hpapun"@eng-Latn, "ဖာပွန်"@mya-Mymr ;
+    wdata:q7200235 "MM003003" .
+
+<urn:mdciii:1603:45:16:104:3:3004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:3004" ;
+    skos:prefLabel "Thandaunggyi"@eng-Latn, "သံတောင်ကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM003004" .
+
+<urn:mdciii:1603:45:16:104:3:3005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:3005" ;
+    skos:prefLabel "Myawaddy"@eng-Latn, "မြဝတီ"@mya-Mymr ;
+    wdata:q7200235 "MM003005" .
+
+<urn:mdciii:1603:45:16:104:3:3006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:3006" ;
+    skos:prefLabel "Kawkareik"@eng-Latn, "ကော့ကရိတ်"@mya-Mymr ;
+    wdata:q7200235 "MM003006" .
+
+<urn:mdciii:1603:45:16:104:3:3007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:3007" ;
+    skos:prefLabel "Kyainseikgyi"@eng-Latn, "ကြာအင်းဆိပ်ကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM003007" .
+
+<urn:mdciii:1603:45:16:104:3:4001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4001" ;
+    skos:prefLabel "Falam"@eng-Latn, "ဖလမ်း"@mya-Mymr ;
+    wdata:q7200235 "MM004001" .
+
+<urn:mdciii:1603:45:16:104:3:4002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4002" ;
+    skos:prefLabel "Hakha"@eng-Latn, "ဟားခါး"@mya-Mymr ;
+    wdata:q7200235 "MM004002" .
+
+<urn:mdciii:1603:45:16:104:3:4003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4003" ;
+    skos:prefLabel "Thantlang"@eng-Latn, "ထန်တလန်"@mya-Mymr ;
+    wdata:q7200235 "MM004003" .
+
+<urn:mdciii:1603:45:16:104:3:4004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4004" ;
+    skos:prefLabel "Tedim"@eng-Latn, "တီးတိန်"@mya-Mymr ;
+    wdata:q7200235 "MM004004" .
+
+<urn:mdciii:1603:45:16:104:3:4005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4005" ;
+    skos:prefLabel "Tonzang"@eng-Latn, "တွန်းဇန်"@mya-Mymr ;
+    wdata:q7200235 "MM004005" .
+
+<urn:mdciii:1603:45:16:104:3:4006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4006" ;
+    skos:prefLabel "Mindat"@eng-Latn, "မင်းတပ်"@mya-Mymr ;
+    wdata:q7200235 "MM004006" .
+
+<urn:mdciii:1603:45:16:104:3:4007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4007" ;
+    skos:prefLabel "Matupi"@eng-Latn, "မတူပီ"@mya-Mymr ;
+    wdata:q7200235 "MM004007" .
+
+<urn:mdciii:1603:45:16:104:3:4008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4008" ;
+    skos:prefLabel "Kanpetlet"@eng-Latn, "ကန်ပက်လက်"@mya-Mymr ;
+    wdata:q7200235 "MM004008" .
+
+<urn:mdciii:1603:45:16:104:3:4009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:4009" ;
+    skos:prefLabel "Paletwa"@eng-Latn, "ပလက်ဝ"@mya-Mymr ;
+    wdata:q7200235 "MM004009" .
+
+<urn:mdciii:1603:45:16:104:3:5001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5001" ;
+    skos:prefLabel "Sagaing"@eng-Latn, "စစ်ကိုင်း"@mya-Mymr ;
+    wdata:q7200235 "MM005001" .
+
+<urn:mdciii:1603:45:16:104:3:5002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5002" ;
+    skos:prefLabel "Myinmu"@eng-Latn, "မြင်းမူ"@mya-Mymr ;
+    wdata:q7200235 "MM005002" .
+
+<urn:mdciii:1603:45:16:104:3:5003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5003" ;
+    skos:prefLabel "Myaung"@eng-Latn, "မြောင်"@mya-Mymr ;
+    wdata:q7200235 "MM005003" .
+
+<urn:mdciii:1603:45:16:104:3:5004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5004" ;
+    skos:prefLabel "Shwebo"@eng-Latn, "ရွှေဘို"@mya-Mymr ;
+    wdata:q7200235 "MM005004" .
+
+<urn:mdciii:1603:45:16:104:3:5005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5005" ;
+    skos:prefLabel "Khin-U"@eng-Latn, "ခင်ဦး"@mya-Mymr ;
+    wdata:q7200235 "MM005005" .
+
+<urn:mdciii:1603:45:16:104:3:5006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5006" ;
+    skos:prefLabel "Wetlet"@eng-Latn, "ဝက်လက်"@mya-Mymr ;
+    wdata:q7200235 "MM005006" .
+
+<urn:mdciii:1603:45:16:104:3:5007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5007" ;
+    skos:prefLabel "Kanbalu"@eng-Latn, "ကန့်ဘလူ"@mya-Mymr ;
+    wdata:q7200235 "MM005007" .
+
+<urn:mdciii:1603:45:16:104:3:5008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5008" ;
+    skos:prefLabel "Kyunhla"@eng-Latn, "ကျွန်းလှ"@mya-Mymr ;
+    wdata:q7200235 "MM005008" .
+
+<urn:mdciii:1603:45:16:104:3:5009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5009" ;
+    skos:prefLabel "Ye-U"@eng-Latn, "ရေဦး"@mya-Mymr ;
+    wdata:q7200235 "MM005009" .
+
+<urn:mdciii:1603:45:16:104:3:5010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5010" ;
+    skos:prefLabel "Tabayin"@eng-Latn, "ဒီပဲယင်း"@mya-Mymr ;
+    wdata:q7200235 "MM005010" .
+
+<urn:mdciii:1603:45:16:104:3:5011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5011" ;
+    skos:prefLabel "Taze"@eng-Latn, "တန့်ဆည်"@mya-Mymr ;
+    wdata:q7200235 "MM005011" .
+
+<urn:mdciii:1603:45:16:104:3:5012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5012" ;
+    skos:prefLabel "Monywa"@eng-Latn, "မုံရွာ"@mya-Mymr ;
+    wdata:q7200235 "MM005012" .
+
+<urn:mdciii:1603:45:16:104:3:5013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5013" ;
+    skos:prefLabel "Budalin"@eng-Latn, "ဘုတလင်"@mya-Mymr ;
+    wdata:q7200235 "MM005013" .
+
+<urn:mdciii:1603:45:16:104:3:5014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5014" ;
+    skos:prefLabel "Ayadaw"@eng-Latn, "အရာတော်"@mya-Mymr ;
+    wdata:q7200235 "MM005014" .
+
+<urn:mdciii:1603:45:16:104:3:5015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5015" ;
+    skos:prefLabel "Chaung-U"@eng-Latn, "ချောင်းဦး"@mya-Mymr ;
+    wdata:q7200235 "MM005015" .
+
+<urn:mdciii:1603:45:16:104:3:5016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5016" ;
+    skos:prefLabel "Yinmarbin"@eng-Latn, "ယင်းမာပင်"@mya-Mymr ;
+    wdata:q7200235 "MM005016" .
+
+<urn:mdciii:1603:45:16:104:3:5017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5017" ;
+    skos:prefLabel "Kani"@eng-Latn, "ကနီ"@mya-Mymr ;
+    wdata:q7200235 "MM005017" .
+
+<urn:mdciii:1603:45:16:104:3:5018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5018" ;
+    skos:prefLabel "Salingyi"@eng-Latn, "ဆားလင်းကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM005018" .
+
+<urn:mdciii:1603:45:16:104:3:5019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5019" ;
+    skos:prefLabel "Pale"@eng-Latn, "ပုလဲ"@mya-Mymr ;
+    wdata:q7200235 "MM005019" .
+
+<urn:mdciii:1603:45:16:104:3:5020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5020" ;
+    skos:prefLabel "Katha"@eng-Latn, "ကသာ"@mya-Mymr ;
+    wdata:q7200235 "MM005020" .
+
+<urn:mdciii:1603:45:16:104:3:5021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5021" ;
+    skos:prefLabel "Indaw"@eng-Latn, "အင်းတော်"@mya-Mymr ;
+    wdata:q7200235 "MM005021" .
+
+<urn:mdciii:1603:45:16:104:3:5022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5022" ;
+    skos:prefLabel "Tigyaing"@eng-Latn, "ထီးချိုင့်"@mya-Mymr ;
+    wdata:q7200235 "MM005022" .
+
+<urn:mdciii:1603:45:16:104:3:5023>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5023" ;
+    skos:prefLabel "Banmauk"@eng-Latn, "ဗန်းမောက်"@mya-Mymr ;
+    wdata:q7200235 "MM005023" .
+
+<urn:mdciii:1603:45:16:104:3:5024>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5024" ;
+    skos:prefLabel "Kawlin"@eng-Latn, "ကောလင်း"@mya-Mymr ;
+    wdata:q7200235 "MM005024" .
+
+<urn:mdciii:1603:45:16:104:3:5025>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5025" ;
+    skos:prefLabel "Wuntho"@eng-Latn, "ဝန်းသို"@mya-Mymr ;
+    wdata:q7200235 "MM005025" .
+
+<urn:mdciii:1603:45:16:104:3:5026>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5026" ;
+    skos:prefLabel "Pinlebu"@eng-Latn, "ပင်လည်ဘူး"@mya-Mymr ;
+    wdata:q7200235 "MM005026" .
+
+<urn:mdciii:1603:45:16:104:3:5027>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5027" ;
+    skos:prefLabel "Kale"@eng-Latn, "ကလေး"@mya-Mymr ;
+    wdata:q7200235 "MM005027" .
+
+<urn:mdciii:1603:45:16:104:3:5028>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5028" ;
+    skos:prefLabel "Kalewa"@eng-Latn, "ကလေးဝ"@mya-Mymr ;
+    wdata:q7200235 "MM005028" .
+
+<urn:mdciii:1603:45:16:104:3:5029>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5029" ;
+    skos:prefLabel "Mingin"@eng-Latn, "မင်းကင်း"@mya-Mymr ;
+    wdata:q7200235 "MM005029" .
+
+<urn:mdciii:1603:45:16:104:3:5030>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5030" ;
+    skos:prefLabel "Tamu"@eng-Latn, "တမူး"@mya-Mymr ;
+    wdata:q7200235 "MM005030" .
+
+<urn:mdciii:1603:45:16:104:3:5031>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5031" ;
+    skos:prefLabel "Mawlaik"@eng-Latn, "မော်လိုက်"@mya-Mymr ;
+    wdata:q7200235 "MM005031" .
+
+<urn:mdciii:1603:45:16:104:3:5032>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5032" ;
+    skos:prefLabel "Paungbyin"@eng-Latn, "ဖောင်းပြင်"@mya-Mymr ;
+    wdata:q7200235 "MM005032" .
+
+<urn:mdciii:1603:45:16:104:3:5033>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5033" ;
+    skos:prefLabel "Hkamti"@eng-Latn, "ခန္တီး"@mya-Mymr ;
+    wdata:q7200235 "MM005033" .
+
+<urn:mdciii:1603:45:16:104:3:5034>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5034" ;
+    skos:prefLabel "Homalin"@eng-Latn, "ဟုမ္မလင်း"@mya-Mymr ;
+    wdata:q7200235 "MM005034" .
+
+<urn:mdciii:1603:45:16:104:3:5035>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5035" ;
+    skos:prefLabel "Lay Shi"@eng-Latn, "လေရှီး"@mya-Mymr ;
+    wdata:q7200235 "MM005035" .
+
+<urn:mdciii:1603:45:16:104:3:5036>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5036" ;
+    skos:prefLabel "Lahe"@eng-Latn, "လဟယ်"@mya-Mymr ;
+    wdata:q7200235 "MM005036" .
+
+<urn:mdciii:1603:45:16:104:3:5037>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:5037" ;
+    skos:prefLabel "Nanyun"@eng-Latn, "နန်းယွန်း"@mya-Mymr ;
+    wdata:q7200235 "MM005037" .
+
+<urn:mdciii:1603:45:16:104:3:6001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6001" ;
+    skos:prefLabel "Dawei"@eng-Latn, "ထားဝယ်"@mya-Mymr ;
+    wdata:q7200235 "MM006001" .
+
+<urn:mdciii:1603:45:16:104:3:6002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6002" ;
+    skos:prefLabel "Launglon"@eng-Latn, "လောင်းလုံး"@mya-Mymr ;
+    wdata:q7200235 "MM006002" .
+
+<urn:mdciii:1603:45:16:104:3:6003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6003" ;
+    skos:prefLabel "Thayetchaung"@eng-Latn, "သရက်ချောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM006003" .
+
+<urn:mdciii:1603:45:16:104:3:6004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6004" ;
+    skos:prefLabel "Yebyu"@eng-Latn, "ရေဖြူ"@mya-Mymr ;
+    wdata:q7200235 "MM006004" .
+
+<urn:mdciii:1603:45:16:104:3:6005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6005" ;
+    skos:prefLabel "Myeik"@eng-Latn, "မြိတ်"@mya-Mymr ;
+    wdata:q7200235 "MM006005" .
+
+<urn:mdciii:1603:45:16:104:3:6006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6006" ;
+    skos:prefLabel "Kyunsu"@eng-Latn, "ကျွန်းစု"@mya-Mymr ;
+    wdata:q7200235 "MM006006" .
+
+<urn:mdciii:1603:45:16:104:3:6007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6007" ;
+    skos:prefLabel "Palaw"@eng-Latn, "ပုလော"@mya-Mymr ;
+    wdata:q7200235 "MM006007" .
+
+<urn:mdciii:1603:45:16:104:3:6008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6008" ;
+    skos:prefLabel "Tanintharyi"@eng-Latn, "တနင်္သာရီ"@mya-Mymr ;
+    wdata:q7200235 "MM006008" .
+
+<urn:mdciii:1603:45:16:104:3:6009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6009" ;
+    skos:prefLabel "Kawthoung"@eng-Latn, "ကော့သောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM006009" .
+
+<urn:mdciii:1603:45:16:104:3:6010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:6010" ;
+    skos:prefLabel "Bokpyin"@eng-Latn, "ဘုတ်ပြင်း"@mya-Mymr ;
+    wdata:q7200235 "MM006010" .
+
+<urn:mdciii:1603:45:16:104:3:7001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7001" ;
+    skos:prefLabel "Bago"@eng-Latn, "ပဲခူး"@mya-Mymr ;
+    wdata:q7200235 "MM007001" .
+
+<urn:mdciii:1603:45:16:104:3:7002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7002" ;
+    skos:prefLabel "Thanatpin"@eng-Latn, "သနပ်ပင်"@mya-Mymr ;
+    wdata:q7200235 "MM007002" .
+
+<urn:mdciii:1603:45:16:104:3:7003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7003" ;
+    skos:prefLabel "Kawa"@eng-Latn, "ကဝ"@mya-Mymr ;
+    wdata:q7200235 "MM007003" .
+
+<urn:mdciii:1603:45:16:104:3:7004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7004" ;
+    skos:prefLabel "Waw"@eng-Latn, "ဝေါ"@mya-Mymr ;
+    wdata:q7200235 "MM007004" .
+
+<urn:mdciii:1603:45:16:104:3:7005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7005" ;
+    skos:prefLabel "Nyaunglebin"@eng-Latn, "ညောင်လေးပင်"@mya-Mymr ;
+    wdata:q7200235 "MM007005" .
+
+<urn:mdciii:1603:45:16:104:3:7006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7006" ;
+    skos:prefLabel "Kyauktaga"@eng-Latn, "ကျောက်တံခါး"@mya-Mymr ;
+    wdata:q7200235 "MM007006" .
+
+<urn:mdciii:1603:45:16:104:3:7007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7007" ;
+    skos:prefLabel "Daik-U"@eng-Latn, "ဒိုက်ဦး"@mya-Mymr ;
+    wdata:q7200235 "MM007007" .
+
+<urn:mdciii:1603:45:16:104:3:7008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7008" ;
+    skos:prefLabel "Shwegyin"@eng-Latn, "ရွှေကျင်"@mya-Mymr ;
+    wdata:q7200235 "MM007008" .
+
+<urn:mdciii:1603:45:16:104:3:7009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7009" ;
+    skos:prefLabel "Taungoo"@eng-Latn, "တောင်ငူ"@mya-Mymr ;
+    wdata:q7200235 "MM007009" .
+
+<urn:mdciii:1603:45:16:104:3:7010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7010" ;
+    skos:prefLabel "Yedashe"@eng-Latn, "ရေတာရှည်"@mya-Mymr ;
+    wdata:q7200235 "MM007010" .
+
+<urn:mdciii:1603:45:16:104:3:7011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7011" ;
+    skos:prefLabel "Kyaukkyi"@eng-Latn, "ကျောက်ကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM007011" .
+
+<urn:mdciii:1603:45:16:104:3:7012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7012" ;
+    skos:prefLabel "Phyu"@eng-Latn, "ဖြူး"@mya-Mymr ;
+    wdata:q7200235 "MM007012" .
+
+<urn:mdciii:1603:45:16:104:3:7013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7013" ;
+    skos:prefLabel "Oktwin"@eng-Latn, "အုတ်တွင်း"@mya-Mymr ;
+    wdata:q7200235 "MM007013" .
+
+<urn:mdciii:1603:45:16:104:3:7014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:7014" ;
+    skos:prefLabel "Htantabin"@eng-Latn, "ထန်းတပင်"@mya-Mymr ;
+    wdata:q7200235 "MM007014" .
+
+<urn:mdciii:1603:45:16:104:3:8001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8001" ;
+    skos:prefLabel "Pyay"@eng-Latn, "ပြည်"@mya-Mymr ;
+    wdata:q7200235 "MM008001" .
+
+<urn:mdciii:1603:45:16:104:3:8002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8002" ;
+    skos:prefLabel "Paukkhaung"@eng-Latn, "ပေါက်ခေါင်း"@mya-Mymr ;
+    wdata:q7200235 "MM008002" .
+
+<urn:mdciii:1603:45:16:104:3:8003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8003" ;
+    skos:prefLabel "Padaung"@eng-Latn, "ပန်းတောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM008003" .
+
+<urn:mdciii:1603:45:16:104:3:8004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8004" ;
+    skos:prefLabel "Paungde"@eng-Latn, "ပေါင်းတည်"@mya-Mymr ;
+    wdata:q7200235 "MM008004" .
+
+<urn:mdciii:1603:45:16:104:3:8005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8005" ;
+    skos:prefLabel "Thegon"@eng-Latn, "သဲကုန်း"@mya-Mymr ;
+    wdata:q7200235 "MM008005" .
+
+<urn:mdciii:1603:45:16:104:3:8006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8006" ;
+    skos:prefLabel "Shwedaung"@eng-Latn, "ရွှေတောင်"@mya-Mymr ;
+    wdata:q7200235 "MM008006" .
+
+<urn:mdciii:1603:45:16:104:3:8007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8007" ;
+    skos:prefLabel "Thayarwady"@eng-Latn, "သာယာဝတီ"@mya-Mymr ;
+    wdata:q7200235 "MM008007" .
+
+<urn:mdciii:1603:45:16:104:3:8008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8008" ;
+    skos:prefLabel "Letpadan"@eng-Latn, "လက်ပံတန်း"@mya-Mymr ;
+    wdata:q7200235 "MM008008" .
+
+<urn:mdciii:1603:45:16:104:3:8009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8009" ;
+    skos:prefLabel "Minhla"@eng-Latn, "မင်းလှ"@mya-Mymr ;
+    wdata:q7200235 "MM008009" .
+
+<urn:mdciii:1603:45:16:104:3:8010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8010" ;
+    skos:prefLabel "Okpho"@eng-Latn, "အုတ်ဖို"@mya-Mymr ;
+    wdata:q7200235 "MM008010" .
+
+<urn:mdciii:1603:45:16:104:3:8011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8011" ;
+    skos:prefLabel "Zigon"@eng-Latn, "ဇီးကုန်း"@mya-Mymr ;
+    wdata:q7200235 "MM008011" .
+
+<urn:mdciii:1603:45:16:104:3:8012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8012" ;
+    skos:prefLabel "Nattalin"@eng-Latn, "နတ်တလင်း"@mya-Mymr ;
+    wdata:q7200235 "MM008012" .
+
+<urn:mdciii:1603:45:16:104:3:8013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8013" ;
+    skos:prefLabel "Monyo"@eng-Latn, "မိုးညို"@mya-Mymr ;
+    wdata:q7200235 "MM008013" .
+
+<urn:mdciii:1603:45:16:104:3:8014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:8014" ;
+    skos:prefLabel "Gyobingauk"@eng-Latn, "ကြို့ပင်ကောက်"@mya-Mymr ;
+    wdata:q7200235 "MM008014" .
+
+<urn:mdciii:1603:45:16:104:3:9001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9001" ;
+    skos:prefLabel "Magway"@eng-Latn, "မကွေး"@mya-Mymr ;
+    wdata:q7200235 "MM009001" .
+
+<urn:mdciii:1603:45:16:104:3:9002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9002" ;
+    skos:prefLabel "Yenangyaung"@eng-Latn, "ရေနံချောင်း"@mya-Mymr ;
+    wdata:q7200235 "MM009002" .
+
+<urn:mdciii:1603:45:16:104:3:9003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9003" ;
+    skos:prefLabel "Chauk"@eng-Latn, "ချောက်"@mya-Mymr ;
+    wdata:q7200235 "MM009003" .
+
+<urn:mdciii:1603:45:16:104:3:9004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9004" ;
+    skos:prefLabel "Taungdwingyi"@eng-Latn, "တောင်တွင်းကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM009004" .
+
+<urn:mdciii:1603:45:16:104:3:9005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9005" ;
+    skos:prefLabel "Myothit"@eng-Latn, "မြို့သစ်"@mya-Mymr ;
+    wdata:q7200235 "MM009005" .
+
+<urn:mdciii:1603:45:16:104:3:9006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9006" ;
+    skos:prefLabel "Natmauk"@eng-Latn, "နတ်မောက်"@mya-Mymr ;
+    wdata:q7200235 "MM009006" .
+
+<urn:mdciii:1603:45:16:104:3:9007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9007" ;
+    skos:prefLabel "Minbu"@eng-Latn, "မင်းဘူး"@mya-Mymr ;
+    wdata:q7200235 "MM009007" .
+
+<urn:mdciii:1603:45:16:104:3:9008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9008" ;
+    skos:prefLabel "Pwintbyu"@eng-Latn, "ပွင့်ဖြူ"@mya-Mymr ;
+    wdata:q7200235 "MM009008" .
+
+<urn:mdciii:1603:45:16:104:3:9009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9009" ;
+    skos:prefLabel "Ngape"@eng-Latn, "ငဖဲ"@mya-Mymr ;
+    wdata:q7200235 "MM009009" .
+
+<urn:mdciii:1603:45:16:104:3:9010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9010" ;
+    skos:prefLabel "Salin"@eng-Latn, "စလင်း"@mya-Mymr ;
+    wdata:q7200235 "MM009010" .
+
+<urn:mdciii:1603:45:16:104:3:9011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9011" ;
+    skos:prefLabel "Sidoktaya"@eng-Latn, "စေတုတ္ထရာ"@mya-Mymr ;
+    wdata:q7200235 "MM009011" .
+
+<urn:mdciii:1603:45:16:104:3:9012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9012" ;
+    skos:prefLabel "Thayet"@eng-Latn, "သရက်"@mya-Mymr ;
+    wdata:q7200235 "MM009012" .
+
+<urn:mdciii:1603:45:16:104:3:9013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9013" ;
+    skos:prefLabel "Minhla"@eng-Latn, "မင်းလှ"@mya-Mymr ;
+    wdata:q7200235 "MM009013" .
+
+<urn:mdciii:1603:45:16:104:3:9014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9014" ;
+    skos:prefLabel "Mindon"@eng-Latn, "မင်းတုန်း"@mya-Mymr ;
+    wdata:q7200235 "MM009014" .
+
+<urn:mdciii:1603:45:16:104:3:9015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9015" ;
+    skos:prefLabel "Kamma"@eng-Latn, "ကံမ"@mya-Mymr ;
+    wdata:q7200235 "MM009015" .
+
+<urn:mdciii:1603:45:16:104:3:9016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9016" ;
+    skos:prefLabel "Aunglan"@eng-Latn, "အောင်လံ"@mya-Mymr ;
+    wdata:q7200235 "MM009016" .
+
+<urn:mdciii:1603:45:16:104:3:9017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9017" ;
+    skos:prefLabel "Sinbaungwe"@eng-Latn, "ဆင်ပေါင်ဝဲ"@mya-Mymr ;
+    wdata:q7200235 "MM009017" .
+
+<urn:mdciii:1603:45:16:104:3:9018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9018" ;
+    skos:prefLabel "Pakokku"@eng-Latn, "ပခုက္ကူ"@mya-Mymr ;
+    wdata:q7200235 "MM009018" .
+
+<urn:mdciii:1603:45:16:104:3:9019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9019" ;
+    skos:prefLabel "Yesagyo"@eng-Latn, "ရေစကြို"@mya-Mymr ;
+    wdata:q7200235 "MM009019" .
+
+<urn:mdciii:1603:45:16:104:3:9020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9020" ;
+    skos:prefLabel "Myaing"@eng-Latn, "မြိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM009020" .
+
+<urn:mdciii:1603:45:16:104:3:9021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9021" ;
+    skos:prefLabel "Pauk"@eng-Latn, "ပေါက်"@mya-Mymr ;
+    wdata:q7200235 "MM009021" .
+
+<urn:mdciii:1603:45:16:104:3:9022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9022" ;
+    skos:prefLabel "Seikphyu"@eng-Latn, "ဆိပ်ဖြူ"@mya-Mymr ;
+    wdata:q7200235 "MM009022" .
+
+<urn:mdciii:1603:45:16:104:3:9023>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9023" ;
+    skos:prefLabel "Gangaw"@eng-Latn, "ဂန့်ဂေါ"@mya-Mymr ;
+    wdata:q7200235 "MM009023" .
+
+<urn:mdciii:1603:45:16:104:3:9024>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9024" ;
+    skos:prefLabel "Tilin"@eng-Latn, "ထီးလင်း"@mya-Mymr ;
+    wdata:q7200235 "MM009024" .
+
+<urn:mdciii:1603:45:16:104:3:9025>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:3:9025" ;
+    skos:prefLabel "Saw"@eng-Latn, "ဆော"@mya-Mymr ;
+    wdata:q7200235 "MM009025" .
+

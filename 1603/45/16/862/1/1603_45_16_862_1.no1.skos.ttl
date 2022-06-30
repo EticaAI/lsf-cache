@@ -1,0 +1,174 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:862()> .
+
+<urn:mdciii:1603:45:16:862()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:862)" ;
+    skos:member <urn:mdciii:1603:45:16:862:1()> .
+
+<urn:mdciii:1603:45:16:862:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:862:1)" ;
+    skos:member <urn:mdciii:1603:45:16:862:1:10>, <urn:mdciii:1603:45:16:862:1:11>, <urn:mdciii:1603:45:16:862:1:12>, <urn:mdciii:1603:45:16:862:1:13>, <urn:mdciii:1603:45:16:862:1:14>, <urn:mdciii:1603:45:16:862:1:15>, <urn:mdciii:1603:45:16:862:1:16>, <urn:mdciii:1603:45:16:862:1:17>, <urn:mdciii:1603:45:16:862:1:18>, <urn:mdciii:1603:45:16:862:1:19>, <urn:mdciii:1603:45:16:862:1:2>, <urn:mdciii:1603:45:16:862:1:20>, <urn:mdciii:1603:45:16:862:1:21>, <urn:mdciii:1603:45:16:862:1:22>, <urn:mdciii:1603:45:16:862:1:23>, <urn:mdciii:1603:45:16:862:1:24>, <urn:mdciii:1603:45:16:862:1:3>, <urn:mdciii:1603:45:16:862:1:4>, <urn:mdciii:1603:45:16:862:1:5>, <urn:mdciii:1603:45:16:862:1:6>, <urn:mdciii:1603:45:16:862:1:7>, <urn:mdciii:1603:45:16:862:1:8>, <urn:mdciii:1603:45:16:862:1:9> .
+
+<urn:mdciii:1603:45:16:862:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:862:1:1>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:1" ;
+    skos:prefLabel "Distrito Federal"@spa-Latn ;
+    wdata:q7200235 "VE01" .
+
+<urn:mdciii:1603:45:16:862:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:10" ;
+    skos:prefLabel "Delta Amacuro"@spa-Latn ;
+    wdata:q7200235 "VE10" .
+
+<urn:mdciii:1603:45:16:862:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:11" ;
+    skos:prefLabel "Falcon"@spa-Latn ;
+    wdata:q7200235 "VE11" .
+
+<urn:mdciii:1603:45:16:862:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:12" ;
+    skos:prefLabel "Guarico"@spa-Latn ;
+    wdata:q7200235 "VE12" .
+
+<urn:mdciii:1603:45:16:862:1:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:13" ;
+    skos:prefLabel "Lara"@spa-Latn ;
+    wdata:q7200235 "VE13" .
+
+<urn:mdciii:1603:45:16:862:1:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:14" ;
+    skos:prefLabel "Merida"@spa-Latn ;
+    wdata:q7200235 "VE14" .
+
+<urn:mdciii:1603:45:16:862:1:15>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:15" ;
+    skos:prefLabel "Miranda"@spa-Latn ;
+    wdata:q7200235 "VE15" .
+
+<urn:mdciii:1603:45:16:862:1:16>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:16" ;
+    skos:prefLabel "Monagas"@spa-Latn ;
+    wdata:q7200235 "VE16" .
+
+<urn:mdciii:1603:45:16:862:1:17>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:17" ;
+    skos:prefLabel "Nueva Esparta"@spa-Latn ;
+    wdata:q7200235 "VE17" .
+
+<urn:mdciii:1603:45:16:862:1:18>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:18" ;
+    skos:prefLabel "Portuguesa"@spa-Latn ;
+    wdata:q7200235 "VE18" .
+
+<urn:mdciii:1603:45:16:862:1:19>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:19" ;
+    skos:prefLabel "Sucre"@spa-Latn ;
+    wdata:q7200235 "VE19" .
+
+<urn:mdciii:1603:45:16:862:1:2>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:2" ;
+    skos:prefLabel "Amazonas"@spa-Latn ;
+    wdata:q7200235 "VE02" .
+
+<urn:mdciii:1603:45:16:862:1:20>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:20" ;
+    skos:prefLabel "Tachira"@spa-Latn ;
+    wdata:q7200235 "VE20" .
+
+<urn:mdciii:1603:45:16:862:1:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:21" ;
+    skos:prefLabel "Trujillo"@spa-Latn ;
+    wdata:q7200235 "VE21" .
+
+<urn:mdciii:1603:45:16:862:1:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:22" ;
+    skos:prefLabel "Yaracuy"@spa-Latn ;
+    wdata:q7200235 "VE22" .
+
+<urn:mdciii:1603:45:16:862:1:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:23" ;
+    skos:prefLabel "Zulia"@spa-Latn ;
+    wdata:q7200235 "VE23" .
+
+<urn:mdciii:1603:45:16:862:1:24>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:24" ;
+    skos:prefLabel "Vargas"@spa-Latn ;
+    wdata:q7200235 "VE24" .
+
+<urn:mdciii:1603:45:16:862:1:3>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:3" ;
+    skos:prefLabel "Anzoategui"@spa-Latn ;
+    wdata:q7200235 "VE03" .
+
+<urn:mdciii:1603:45:16:862:1:4>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:4" ;
+    skos:prefLabel "Apure"@spa-Latn ;
+    wdata:q7200235 "VE04" .
+
+<urn:mdciii:1603:45:16:862:1:5>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:5" ;
+    skos:prefLabel "Aragua"@spa-Latn ;
+    wdata:q7200235 "VE05" .
+
+<urn:mdciii:1603:45:16:862:1:6>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:6" ;
+    skos:prefLabel "Barinas"@spa-Latn ;
+    wdata:q7200235 "VE06" .
+
+<urn:mdciii:1603:45:16:862:1:7>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:7" ;
+    skos:prefLabel "Bolivar"@spa-Latn ;
+    wdata:q7200235 "VE07" .
+
+<urn:mdciii:1603:45:16:862:1:8>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:8" ;
+    skos:prefLabel "Carabobo"@spa-Latn ;
+    wdata:q7200235 "VE08" .
+
+<urn:mdciii:1603:45:16:862:1:9>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:862:1:9" ;
+    skos:prefLabel "Cojedes"@spa-Latn ;
+    wdata:q7200235 "VE09" .
+

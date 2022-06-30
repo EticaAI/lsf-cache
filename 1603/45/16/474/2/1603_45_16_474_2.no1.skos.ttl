@@ -1,0 +1,234 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:474()> .
+
+<urn:mdciii:1603:45:16:474()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:474)" ;
+    skos:member <urn:mdciii:1603:45:16:474:2()> .
+
+<urn:mdciii:1603:45:16:474:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:474:2)" ;
+    skos:member <urn:mdciii:1603:45:16:474:2:102>, <urn:mdciii:1603:45:16:474:2:103>, <urn:mdciii:1603:45:16:474:2:104>, <urn:mdciii:1603:45:16:474:2:201>, <urn:mdciii:1603:45:16:474:2:202>, <urn:mdciii:1603:45:16:474:2:203>, <urn:mdciii:1603:45:16:474:2:204>, <urn:mdciii:1603:45:16:474:2:205>, <urn:mdciii:1603:45:16:474:2:206>, <urn:mdciii:1603:45:16:474:2:207>, <urn:mdciii:1603:45:16:474:2:208>, <urn:mdciii:1603:45:16:474:2:209>, <urn:mdciii:1603:45:16:474:2:210>, <urn:mdciii:1603:45:16:474:2:211>, <urn:mdciii:1603:45:16:474:2:212>, <urn:mdciii:1603:45:16:474:2:301>, <urn:mdciii:1603:45:16:474:2:302>, <urn:mdciii:1603:45:16:474:2:303>, <urn:mdciii:1603:45:16:474:2:304>, <urn:mdciii:1603:45:16:474:2:305>, <urn:mdciii:1603:45:16:474:2:306>, <urn:mdciii:1603:45:16:474:2:307>, <urn:mdciii:1603:45:16:474:2:308>, <urn:mdciii:1603:45:16:474:2:401>, <urn:mdciii:1603:45:16:474:2:402>, <urn:mdciii:1603:45:16:474:2:403>, <urn:mdciii:1603:45:16:474:2:404>, <urn:mdciii:1603:45:16:474:2:405>, <urn:mdciii:1603:45:16:474:2:406>, <urn:mdciii:1603:45:16:474:2:407>, <urn:mdciii:1603:45:16:474:2:408>, <urn:mdciii:1603:45:16:474:2:409>, <urn:mdciii:1603:45:16:474:2:410> .
+
+<urn:mdciii:1603:45:16:474:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:474:2:101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:101" ;
+    skos:prefLabel "Fort-de-France"@fra-Latn ;
+    wdata:q7200235 "MQ0101" .
+
+<urn:mdciii:1603:45:16:474:2:102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:102" ;
+    skos:prefLabel "Lamentin"@fra-Latn ;
+    wdata:q7200235 "MQ0102" .
+
+<urn:mdciii:1603:45:16:474:2:103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:103" ;
+    skos:prefLabel "Saint-Joseph"@fra-Latn ;
+    wdata:q7200235 "MQ0103" .
+
+<urn:mdciii:1603:45:16:474:2:104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:104" ;
+    skos:prefLabel "Schœlcher"@fra-Latn ;
+    wdata:q7200235 "MQ0104" .
+
+<urn:mdciii:1603:45:16:474:2:201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:201" ;
+    skos:prefLabel "Anses-d'arlet"@fra-Latn ;
+    wdata:q7200235 "MQ0201" .
+
+<urn:mdciii:1603:45:16:474:2:202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:202" ;
+    skos:prefLabel "Diamant"@fra-Latn ;
+    wdata:q7200235 "MQ0202" .
+
+<urn:mdciii:1603:45:16:474:2:203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:203" ;
+    skos:prefLabel "Ducos"@fra-Latn ;
+    wdata:q7200235 "MQ0203" .
+
+<urn:mdciii:1603:45:16:474:2:204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:204" ;
+    skos:prefLabel "François"@fra-Latn ;
+    wdata:q7200235 "MQ0204" .
+
+<urn:mdciii:1603:45:16:474:2:205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:205" ;
+    skos:prefLabel "Marin"@fra-Latn ;
+    wdata:q7200235 "MQ0205" .
+
+<urn:mdciii:1603:45:16:474:2:206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:206" ;
+    skos:prefLabel "Rivière-Pilote"@fra-Latn ;
+    wdata:q7200235 "MQ0206" .
+
+<urn:mdciii:1603:45:16:474:2:207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:207" ;
+    skos:prefLabel "Rivière-Salée"@fra-Latn ;
+    wdata:q7200235 "MQ0207" .
+
+<urn:mdciii:1603:45:16:474:2:208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:208" ;
+    skos:prefLabel "Sainte-Anne"@fra-Latn ;
+    wdata:q7200235 "MQ0208" .
+
+<urn:mdciii:1603:45:16:474:2:209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:209" ;
+    skos:prefLabel "Sainte-Luce"@fra-Latn ;
+    wdata:q7200235 "MQ0209" .
+
+<urn:mdciii:1603:45:16:474:2:210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:210" ;
+    skos:prefLabel "Saint-Esprit"@fra-Latn ;
+    wdata:q7200235 "MQ0210" .
+
+<urn:mdciii:1603:45:16:474:2:211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:211" ;
+    skos:prefLabel "Trois-Îlets"@fra-Latn ;
+    wdata:q7200235 "MQ0211" .
+
+<urn:mdciii:1603:45:16:474:2:212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:212" ;
+    skos:prefLabel "Vauclin"@fra-Latn ;
+    wdata:q7200235 "MQ0212" .
+
+<urn:mdciii:1603:45:16:474:2:301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:301" ;
+    skos:prefLabel "Bellefontaine"@fra-Latn ;
+    wdata:q7200235 "MQ0301" .
+
+<urn:mdciii:1603:45:16:474:2:302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:302" ;
+    skos:prefLabel "Carbet"@fra-Latn ;
+    wdata:q7200235 "MQ0302" .
+
+<urn:mdciii:1603:45:16:474:2:303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:303" ;
+    skos:prefLabel "Case-Pilote"@fra-Latn ;
+    wdata:q7200235 "MQ0303" .
+
+<urn:mdciii:1603:45:16:474:2:304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:304" ;
+    skos:prefLabel "Fonds-Saint-Denis"@fra-Latn ;
+    wdata:q7200235 "MQ0304" .
+
+<urn:mdciii:1603:45:16:474:2:305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:305" ;
+    skos:prefLabel "Morne-Rouge"@fra-Latn ;
+    wdata:q7200235 "MQ0305" .
+
+<urn:mdciii:1603:45:16:474:2:306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:306" ;
+    skos:prefLabel "Morne-Vert"@fra-Latn ;
+    wdata:q7200235 "MQ0306" .
+
+<urn:mdciii:1603:45:16:474:2:307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:307" ;
+    skos:prefLabel "Prêcheur"@fra-Latn ;
+    wdata:q7200235 "MQ0307" .
+
+<urn:mdciii:1603:45:16:474:2:308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:308" ;
+    skos:prefLabel "Saint-Pierre"@fra-Latn ;
+    wdata:q7200235 "MQ0308" .
+
+<urn:mdciii:1603:45:16:474:2:401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:401" ;
+    skos:prefLabel "Ajoupa-Bouillon"@fra-Latn ;
+    wdata:q7200235 "MQ0401" .
+
+<urn:mdciii:1603:45:16:474:2:402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:402" ;
+    skos:prefLabel "Basse-Pointe"@fra-Latn ;
+    wdata:q7200235 "MQ0402" .
+
+<urn:mdciii:1603:45:16:474:2:403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:403" ;
+    skos:prefLabel "Grand'Rivière"@fra-Latn ;
+    wdata:q7200235 "MQ0403" .
+
+<urn:mdciii:1603:45:16:474:2:404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:404" ;
+    skos:prefLabel "Gros-Morne"@fra-Latn ;
+    wdata:q7200235 "MQ0404" .
+
+<urn:mdciii:1603:45:16:474:2:405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:405" ;
+    skos:prefLabel "Lorrain"@fra-Latn ;
+    wdata:q7200235 "MQ0405" .
+
+<urn:mdciii:1603:45:16:474:2:406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:406" ;
+    skos:prefLabel "Macouba"@fra-Latn ;
+    wdata:q7200235 "MQ0406" .
+
+<urn:mdciii:1603:45:16:474:2:407>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:407" ;
+    skos:prefLabel "Marigot"@fra-Latn ;
+    wdata:q7200235 "MQ0407" .
+
+<urn:mdciii:1603:45:16:474:2:408>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:408" ;
+    skos:prefLabel "Robert"@fra-Latn ;
+    wdata:q7200235 "MQ0408" .
+
+<urn:mdciii:1603:45:16:474:2:409>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:409" ;
+    skos:prefLabel "Sainte-Marie"@fra-Latn ;
+    wdata:q7200235 "MQ0409" .
+
+<urn:mdciii:1603:45:16:474:2:410>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:474:2:410" ;
+    skos:prefLabel "Trinité"@fra-Latn ;
+    wdata:q7200235 "MQ0410" .
+

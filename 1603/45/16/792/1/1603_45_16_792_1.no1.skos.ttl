@@ -1,0 +1,516 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:792()> .
+
+<urn:mdciii:1603:45:16:792()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:792)" ;
+    skos:member <urn:mdciii:1603:45:16:792:1()> .
+
+<urn:mdciii:1603:45:16:792:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:792:1)" ;
+    skos:member <urn:mdciii:1603:45:16:792:1:10>, <urn:mdciii:1603:45:16:792:1:11>, <urn:mdciii:1603:45:16:792:1:12>, <urn:mdciii:1603:45:16:792:1:13>, <urn:mdciii:1603:45:16:792:1:14>, <urn:mdciii:1603:45:16:792:1:15>, <urn:mdciii:1603:45:16:792:1:16>, <urn:mdciii:1603:45:16:792:1:17>, <urn:mdciii:1603:45:16:792:1:18>, <urn:mdciii:1603:45:16:792:1:19>, <urn:mdciii:1603:45:16:792:1:2>, <urn:mdciii:1603:45:16:792:1:20>, <urn:mdciii:1603:45:16:792:1:21>, <urn:mdciii:1603:45:16:792:1:22>, <urn:mdciii:1603:45:16:792:1:23>, <urn:mdciii:1603:45:16:792:1:24>, <urn:mdciii:1603:45:16:792:1:25>, <urn:mdciii:1603:45:16:792:1:26>, <urn:mdciii:1603:45:16:792:1:27>, <urn:mdciii:1603:45:16:792:1:28>, <urn:mdciii:1603:45:16:792:1:29>, <urn:mdciii:1603:45:16:792:1:3>, <urn:mdciii:1603:45:16:792:1:30>, <urn:mdciii:1603:45:16:792:1:31>, <urn:mdciii:1603:45:16:792:1:32>, <urn:mdciii:1603:45:16:792:1:33>, <urn:mdciii:1603:45:16:792:1:34>, <urn:mdciii:1603:45:16:792:1:35>, <urn:mdciii:1603:45:16:792:1:36>, <urn:mdciii:1603:45:16:792:1:37>, <urn:mdciii:1603:45:16:792:1:38>, <urn:mdciii:1603:45:16:792:1:39>, <urn:mdciii:1603:45:16:792:1:4>, <urn:mdciii:1603:45:16:792:1:40>, <urn:mdciii:1603:45:16:792:1:41>, <urn:mdciii:1603:45:16:792:1:42>, <urn:mdciii:1603:45:16:792:1:43>, <urn:mdciii:1603:45:16:792:1:44>, <urn:mdciii:1603:45:16:792:1:45>, <urn:mdciii:1603:45:16:792:1:46>, <urn:mdciii:1603:45:16:792:1:47>, <urn:mdciii:1603:45:16:792:1:48>, <urn:mdciii:1603:45:16:792:1:49>, <urn:mdciii:1603:45:16:792:1:5>, <urn:mdciii:1603:45:16:792:1:50>, <urn:mdciii:1603:45:16:792:1:51>, <urn:mdciii:1603:45:16:792:1:52>, <urn:mdciii:1603:45:16:792:1:53>, <urn:mdciii:1603:45:16:792:1:54>, <urn:mdciii:1603:45:16:792:1:55>, <urn:mdciii:1603:45:16:792:1:56>, <urn:mdciii:1603:45:16:792:1:57>, <urn:mdciii:1603:45:16:792:1:58>, <urn:mdciii:1603:45:16:792:1:59>, <urn:mdciii:1603:45:16:792:1:6>, <urn:mdciii:1603:45:16:792:1:60>, <urn:mdciii:1603:45:16:792:1:61>, <urn:mdciii:1603:45:16:792:1:62>, <urn:mdciii:1603:45:16:792:1:63>, <urn:mdciii:1603:45:16:792:1:64>, <urn:mdciii:1603:45:16:792:1:65>, <urn:mdciii:1603:45:16:792:1:66>, <urn:mdciii:1603:45:16:792:1:67>, <urn:mdciii:1603:45:16:792:1:68>, <urn:mdciii:1603:45:16:792:1:69>, <urn:mdciii:1603:45:16:792:1:7>, <urn:mdciii:1603:45:16:792:1:70>, <urn:mdciii:1603:45:16:792:1:71>, <urn:mdciii:1603:45:16:792:1:72>, <urn:mdciii:1603:45:16:792:1:73>, <urn:mdciii:1603:45:16:792:1:74>, <urn:mdciii:1603:45:16:792:1:75>, <urn:mdciii:1603:45:16:792:1:76>, <urn:mdciii:1603:45:16:792:1:77>, <urn:mdciii:1603:45:16:792:1:78>, <urn:mdciii:1603:45:16:792:1:79>, <urn:mdciii:1603:45:16:792:1:8>, <urn:mdciii:1603:45:16:792:1:80>, <urn:mdciii:1603:45:16:792:1:81>, <urn:mdciii:1603:45:16:792:1:9> .
+
+<urn:mdciii:1603:45:16:792:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:792:1:1>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:1" ;
+    skos:prefLabel "Adana"@eng-Latn, "Adana"@tur-Latn ;
+    wdata:q7200235 "TR001" .
+
+<urn:mdciii:1603:45:16:792:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:10" ;
+    skos:prefLabel "Balikesir"@eng-Latn, "Balikesir"@tur-Latn ;
+    wdata:q7200235 "TR010" .
+
+<urn:mdciii:1603:45:16:792:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:11" ;
+    skos:prefLabel "Bilecik"@eng-Latn, "Bilecik"@tur-Latn ;
+    wdata:q7200235 "TR011" .
+
+<urn:mdciii:1603:45:16:792:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:12" ;
+    skos:prefLabel "Bingol"@eng-Latn, "Bingöl"@tur-Latn ;
+    wdata:q7200235 "TR012" .
+
+<urn:mdciii:1603:45:16:792:1:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:13" ;
+    skos:prefLabel "Bitlis"@eng-Latn, "Bitlis"@tur-Latn ;
+    wdata:q7200235 "TR013" .
+
+<urn:mdciii:1603:45:16:792:1:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:14" ;
+    skos:prefLabel "Bolu"@eng-Latn, "Bolu"@tur-Latn ;
+    wdata:q7200235 "TR014" .
+
+<urn:mdciii:1603:45:16:792:1:15>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:15" ;
+    skos:prefLabel "Burdur"@eng-Latn, "Burdur"@tur-Latn ;
+    wdata:q7200235 "TR015" .
+
+<urn:mdciii:1603:45:16:792:1:16>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:16" ;
+    skos:prefLabel "Bursa"@eng-Latn, "Bursa"@tur-Latn ;
+    wdata:q7200235 "TR016" .
+
+<urn:mdciii:1603:45:16:792:1:17>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:17" ;
+    skos:prefLabel "Canakkale"@eng-Latn, "Çanakkale"@tur-Latn ;
+    wdata:q7200235 "TR017" .
+
+<urn:mdciii:1603:45:16:792:1:18>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:18" ;
+    skos:prefLabel "Cankiri"@eng-Latn, "Çankiri"@tur-Latn ;
+    wdata:q7200235 "TR018" .
+
+<urn:mdciii:1603:45:16:792:1:19>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:19" ;
+    skos:prefLabel "Corum"@eng-Latn, "Çorum"@tur-Latn ;
+    wdata:q7200235 "TR019" .
+
+<urn:mdciii:1603:45:16:792:1:2>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:2" ;
+    skos:prefLabel "Adiyaman"@eng-Latn, "Adiyaman"@tur-Latn ;
+    wdata:q7200235 "TR002" .
+
+<urn:mdciii:1603:45:16:792:1:20>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:20" ;
+    skos:prefLabel "Denizli"@eng-Latn, "Denizli"@tur-Latn ;
+    wdata:q7200235 "TR020" .
+
+<urn:mdciii:1603:45:16:792:1:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:21" ;
+    skos:prefLabel "Diyarbakir"@eng-Latn, "Diyarbakir"@tur-Latn ;
+    wdata:q7200235 "TR021" .
+
+<urn:mdciii:1603:45:16:792:1:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:22" ;
+    skos:prefLabel "Edirne"@eng-Latn, "Edirne"@tur-Latn ;
+    wdata:q7200235 "TR022" .
+
+<urn:mdciii:1603:45:16:792:1:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:23" ;
+    skos:prefLabel "Elazig"@eng-Latn, "Elaziğ"@tur-Latn ;
+    wdata:q7200235 "TR023" .
+
+<urn:mdciii:1603:45:16:792:1:24>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:24" ;
+    skos:prefLabel "Erzincan"@eng-Latn, "Erzincan"@tur-Latn ;
+    wdata:q7200235 "TR024" .
+
+<urn:mdciii:1603:45:16:792:1:25>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:25" ;
+    skos:prefLabel "Erzurum"@eng-Latn, "Erzurum"@tur-Latn ;
+    wdata:q7200235 "TR025" .
+
+<urn:mdciii:1603:45:16:792:1:26>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:26" ;
+    skos:prefLabel "Eskisehir"@eng-Latn, "Eskişehir"@tur-Latn ;
+    wdata:q7200235 "TR026" .
+
+<urn:mdciii:1603:45:16:792:1:27>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:27" ;
+    skos:prefLabel "Gaziantep"@eng-Latn, "Gaziantep"@tur-Latn ;
+    wdata:q7200235 "TR027" .
+
+<urn:mdciii:1603:45:16:792:1:28>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:28" ;
+    skos:prefLabel "Giresun"@eng-Latn, "Giresun"@tur-Latn ;
+    wdata:q7200235 "TR028" .
+
+<urn:mdciii:1603:45:16:792:1:29>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:29" ;
+    skos:prefLabel "Gumushane"@eng-Latn, "Gümüşhane"@tur-Latn ;
+    wdata:q7200235 "TR029" .
+
+<urn:mdciii:1603:45:16:792:1:3>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:3" ;
+    skos:prefLabel "Afyonkarahisar"@eng-Latn, "Afyonkarahisar"@tur-Latn ;
+    wdata:q7200235 "TR003" .
+
+<urn:mdciii:1603:45:16:792:1:30>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:30" ;
+    skos:prefLabel "Hakkari"@eng-Latn, "Hakkari"@tur-Latn ;
+    wdata:q7200235 "TR030" .
+
+<urn:mdciii:1603:45:16:792:1:31>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:31" ;
+    skos:prefLabel "Hatay"@eng-Latn, "Hatay"@tur-Latn ;
+    wdata:q7200235 "TR031" .
+
+<urn:mdciii:1603:45:16:792:1:32>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:32" ;
+    skos:prefLabel "Isparta"@eng-Latn, "Isparta"@tur-Latn ;
+    wdata:q7200235 "TR032" .
+
+<urn:mdciii:1603:45:16:792:1:33>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:33" ;
+    skos:prefLabel "Mersin"@eng-Latn, "Mersin"@tur-Latn ;
+    wdata:q7200235 "TR033" .
+
+<urn:mdciii:1603:45:16:792:1:34>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:34" ;
+    skos:prefLabel "Istanbul"@eng-Latn, "Istanbul"@tur-Latn ;
+    wdata:q7200235 "TR034" .
+
+<urn:mdciii:1603:45:16:792:1:35>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:35" ;
+    skos:prefLabel "Izmir"@eng-Latn, "Izmir"@tur-Latn ;
+    wdata:q7200235 "TR035" .
+
+<urn:mdciii:1603:45:16:792:1:36>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:36" ;
+    skos:prefLabel "Kars"@eng-Latn, "Kars"@tur-Latn ;
+    wdata:q7200235 "TR036" .
+
+<urn:mdciii:1603:45:16:792:1:37>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:37" ;
+    skos:prefLabel "Kastamonu"@eng-Latn, "Kastamonu"@tur-Latn ;
+    wdata:q7200235 "TR037" .
+
+<urn:mdciii:1603:45:16:792:1:38>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:38" ;
+    skos:prefLabel "Kayseri"@eng-Latn, "Kayseri"@tur-Latn ;
+    wdata:q7200235 "TR038" .
+
+<urn:mdciii:1603:45:16:792:1:39>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:39" ;
+    skos:prefLabel "Kirklareli"@eng-Latn, "Kirklareli"@tur-Latn ;
+    wdata:q7200235 "TR039" .
+
+<urn:mdciii:1603:45:16:792:1:4>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:4" ;
+    skos:prefLabel "Agri"@eng-Latn, "Ağri"@tur-Latn ;
+    wdata:q7200235 "TR004" .
+
+<urn:mdciii:1603:45:16:792:1:40>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:40" ;
+    skos:prefLabel "Kirsehir"@eng-Latn, "Kirşehir"@tur-Latn ;
+    wdata:q7200235 "TR040" .
+
+<urn:mdciii:1603:45:16:792:1:41>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:41" ;
+    skos:prefLabel "Kocaeli"@eng-Latn, "Kocaeli"@tur-Latn ;
+    wdata:q7200235 "TR041" .
+
+<urn:mdciii:1603:45:16:792:1:42>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:42" ;
+    skos:prefLabel "Konya"@eng-Latn, "Konya"@tur-Latn ;
+    wdata:q7200235 "TR042" .
+
+<urn:mdciii:1603:45:16:792:1:43>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:43" ;
+    skos:prefLabel "Kutahya"@eng-Latn, "Kütahya"@tur-Latn ;
+    wdata:q7200235 "TR043" .
+
+<urn:mdciii:1603:45:16:792:1:44>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:44" ;
+    skos:prefLabel "Malatya"@eng-Latn, "Malatya"@tur-Latn ;
+    wdata:q7200235 "TR044" .
+
+<urn:mdciii:1603:45:16:792:1:45>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:45" ;
+    skos:prefLabel "Manisa"@eng-Latn, "Manisa"@tur-Latn ;
+    wdata:q7200235 "TR045" .
+
+<urn:mdciii:1603:45:16:792:1:46>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:46" ;
+    skos:prefLabel "Kahramanmaras"@eng-Latn, "Kahramanmaraş"@tur-Latn ;
+    wdata:q7200235 "TR046" .
+
+<urn:mdciii:1603:45:16:792:1:47>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:47" ;
+    skos:prefLabel "Mardin"@eng-Latn, "Mardin"@tur-Latn ;
+    wdata:q7200235 "TR047" .
+
+<urn:mdciii:1603:45:16:792:1:48>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:48" ;
+    skos:prefLabel "Mugla"@eng-Latn, "Muğla"@tur-Latn ;
+    wdata:q7200235 "TR048" .
+
+<urn:mdciii:1603:45:16:792:1:49>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:49" ;
+    skos:prefLabel "Mus"@eng-Latn, "Muş"@tur-Latn ;
+    wdata:q7200235 "TR049" .
+
+<urn:mdciii:1603:45:16:792:1:5>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:5" ;
+    skos:prefLabel "Amasya"@eng-Latn, "Amasya"@tur-Latn ;
+    wdata:q7200235 "TR005" .
+
+<urn:mdciii:1603:45:16:792:1:50>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:50" ;
+    skos:prefLabel "Nevsehir"@eng-Latn, "Nevşehir"@tur-Latn ;
+    wdata:q7200235 "TR050" .
+
+<urn:mdciii:1603:45:16:792:1:51>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:51" ;
+    skos:prefLabel "Nigde"@eng-Latn, "Niğde"@tur-Latn ;
+    wdata:q7200235 "TR051" .
+
+<urn:mdciii:1603:45:16:792:1:52>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:52" ;
+    skos:prefLabel "Ordu"@eng-Latn, "Ordu"@tur-Latn ;
+    wdata:q7200235 "TR052" .
+
+<urn:mdciii:1603:45:16:792:1:53>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:53" ;
+    skos:prefLabel "Rize"@eng-Latn, "Rize"@tur-Latn ;
+    wdata:q7200235 "TR053" .
+
+<urn:mdciii:1603:45:16:792:1:54>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:54" ;
+    skos:prefLabel "Sakarya"@eng-Latn, "Sakarya"@tur-Latn ;
+    wdata:q7200235 "TR054" .
+
+<urn:mdciii:1603:45:16:792:1:55>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:55" ;
+    skos:prefLabel "Samsun"@eng-Latn, "Samsun"@tur-Latn ;
+    wdata:q7200235 "TR055" .
+
+<urn:mdciii:1603:45:16:792:1:56>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:56" ;
+    skos:prefLabel "Siirt"@eng-Latn, "Siirt"@tur-Latn ;
+    wdata:q7200235 "TR056" .
+
+<urn:mdciii:1603:45:16:792:1:57>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:57" ;
+    skos:prefLabel "Sinop"@eng-Latn, "Sinop"@tur-Latn ;
+    wdata:q7200235 "TR057" .
+
+<urn:mdciii:1603:45:16:792:1:58>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:58" ;
+    skos:prefLabel "Sivas"@eng-Latn, "Sivas"@tur-Latn ;
+    wdata:q7200235 "TR058" .
+
+<urn:mdciii:1603:45:16:792:1:59>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:59" ;
+    skos:prefLabel "Tekirdag"@eng-Latn, "Tekirdağ"@tur-Latn ;
+    wdata:q7200235 "TR059" .
+
+<urn:mdciii:1603:45:16:792:1:6>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:6" ;
+    skos:prefLabel "Ankara"@eng-Latn, "Ankara"@tur-Latn ;
+    wdata:q7200235 "TR006" .
+
+<urn:mdciii:1603:45:16:792:1:60>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:60" ;
+    skos:prefLabel "Tokat"@eng-Latn, "Tokat"@tur-Latn ;
+    wdata:q7200235 "TR060" .
+
+<urn:mdciii:1603:45:16:792:1:61>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:61" ;
+    skos:prefLabel "Trabzon"@eng-Latn, "Trabzon"@tur-Latn ;
+    wdata:q7200235 "TR061" .
+
+<urn:mdciii:1603:45:16:792:1:62>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:62" ;
+    skos:prefLabel "Tunceli"@eng-Latn, "Tunceli"@tur-Latn ;
+    wdata:q7200235 "TR062" .
+
+<urn:mdciii:1603:45:16:792:1:63>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:63" ;
+    skos:prefLabel "Sanliurfa"@eng-Latn, "Şanliurfa"@tur-Latn ;
+    wdata:q7200235 "TR063" .
+
+<urn:mdciii:1603:45:16:792:1:64>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:64" ;
+    skos:prefLabel "Usak"@eng-Latn, "Uşak"@tur-Latn ;
+    wdata:q7200235 "TR064" .
+
+<urn:mdciii:1603:45:16:792:1:65>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:65" ;
+    skos:prefLabel "Van"@eng-Latn, "Van"@tur-Latn ;
+    wdata:q7200235 "TR065" .
+
+<urn:mdciii:1603:45:16:792:1:66>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:66" ;
+    skos:prefLabel "Yozgat"@eng-Latn, "Yozgat"@tur-Latn ;
+    wdata:q7200235 "TR066" .
+
+<urn:mdciii:1603:45:16:792:1:67>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:67" ;
+    skos:prefLabel "Zonguldak"@eng-Latn, "Zonguldak"@tur-Latn ;
+    wdata:q7200235 "TR067" .
+
+<urn:mdciii:1603:45:16:792:1:68>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:68" ;
+    skos:prefLabel "Aksaray"@eng-Latn, "Aksaray"@tur-Latn ;
+    wdata:q7200235 "TR068" .
+
+<urn:mdciii:1603:45:16:792:1:69>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:69" ;
+    skos:prefLabel "Bayburt"@eng-Latn, "Bayburt"@tur-Latn ;
+    wdata:q7200235 "TR069" .
+
+<urn:mdciii:1603:45:16:792:1:7>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:7" ;
+    skos:prefLabel "Antalya"@eng-Latn, "Antalya"@tur-Latn ;
+    wdata:q7200235 "TR007" .
+
+<urn:mdciii:1603:45:16:792:1:70>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:70" ;
+    skos:prefLabel "Karaman"@eng-Latn, "Karaman"@tur-Latn ;
+    wdata:q7200235 "TR070" .
+
+<urn:mdciii:1603:45:16:792:1:71>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:71" ;
+    skos:prefLabel "Kirikkale"@eng-Latn, "Kirikkale"@tur-Latn ;
+    wdata:q7200235 "TR071" .
+
+<urn:mdciii:1603:45:16:792:1:72>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:72" ;
+    skos:prefLabel "Batman"@eng-Latn, "Batman"@tur-Latn ;
+    wdata:q7200235 "TR072" .
+
+<urn:mdciii:1603:45:16:792:1:73>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:73" ;
+    skos:prefLabel "Sirnak"@eng-Latn, "Şirnak"@tur-Latn ;
+    wdata:q7200235 "TR073" .
+
+<urn:mdciii:1603:45:16:792:1:74>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:74" ;
+    skos:prefLabel "Bartin"@eng-Latn, "Bartin"@tur-Latn ;
+    wdata:q7200235 "TR074" .
+
+<urn:mdciii:1603:45:16:792:1:75>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:75" ;
+    skos:prefLabel "Ardahan"@eng-Latn, "Ardahan"@tur-Latn ;
+    wdata:q7200235 "TR075" .
+
+<urn:mdciii:1603:45:16:792:1:76>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:76" ;
+    skos:prefLabel "Igdir"@eng-Latn, "Iğdir"@tur-Latn ;
+    wdata:q7200235 "TR076" .
+
+<urn:mdciii:1603:45:16:792:1:77>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:77" ;
+    skos:prefLabel "Yalova"@eng-Latn, "Yalova"@tur-Latn ;
+    wdata:q7200235 "TR077" .
+
+<urn:mdciii:1603:45:16:792:1:78>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:78" ;
+    skos:prefLabel "Karabuk"@eng-Latn, "Karabük"@tur-Latn ;
+    wdata:q7200235 "TR078" .
+
+<urn:mdciii:1603:45:16:792:1:79>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:79" ;
+    skos:prefLabel "Kilis"@eng-Latn, "Kilis"@tur-Latn ;
+    wdata:q7200235 "TR079" .
+
+<urn:mdciii:1603:45:16:792:1:8>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:8" ;
+    skos:prefLabel "Artvin"@eng-Latn, "Artvin"@tur-Latn ;
+    wdata:q7200235 "TR008" .
+
+<urn:mdciii:1603:45:16:792:1:80>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:80" ;
+    skos:prefLabel "Osmaniye"@eng-Latn, "Osmaniye"@tur-Latn ;
+    wdata:q7200235 "TR080" .
+
+<urn:mdciii:1603:45:16:792:1:81>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:81" ;
+    skos:prefLabel "Duzce"@eng-Latn, "Düzce"@tur-Latn ;
+    wdata:q7200235 "TR081" .
+
+<urn:mdciii:1603:45:16:792:1:9>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:792:1:9" ;
+    skos:prefLabel "Aydin"@eng-Latn, "Aydin"@tur-Latn ;
+    wdata:q7200235 "TR009" .
+

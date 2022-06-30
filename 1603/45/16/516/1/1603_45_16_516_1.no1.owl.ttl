@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,73 +27,104 @@
     rdfs:label "(1603:45:16:516:1)" ;
     skos:member <urn:mdciii:1603:45:16:516:1:10>, <urn:mdciii:1603:45:16:516:1:11>, <urn:mdciii:1603:45:16:516:1:12>, <urn:mdciii:1603:45:16:516:1:13>, <urn:mdciii:1603:45:16:516:1:14>, <urn:mdciii:1603:45:16:516:1:2>, <urn:mdciii:1603:45:16:516:1:3>, <urn:mdciii:1603:45:16:516:1:4>, <urn:mdciii:1603:45:16:516:1:5>, <urn:mdciii:1603:45:16:516:1:6>, <urn:mdciii:1603:45:16:516:1:7>, <urn:mdciii:1603:45:16:516:1:8>, <urn:mdciii:1603:45:16:516:1:9> .
 
+<urn:mdciii:1603:45:16:516:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:516:1:1>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:1" .
+    rdfs:label "1603:45:16:516:1:1" ;
+    skos:prefLabel "Zambezi"@eng-Latn ;
+    wdata:q7200235 "NA01" .
 
 <urn:mdciii:1603:45:16:516:1:10>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:10" .
+    rdfs:label "1603:45:16:516:1:10" ;
+    skos:prefLabel "Omusati"@eng-Latn ;
+    wdata:q7200235 "NA10" .
 
 <urn:mdciii:1603:45:16:516:1:11>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:11" .
+    rdfs:label "1603:45:16:516:1:11" ;
+    skos:prefLabel "Oshana"@eng-Latn ;
+    wdata:q7200235 "NA11" .
 
 <urn:mdciii:1603:45:16:516:1:12>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:12" .
+    rdfs:label "1603:45:16:516:1:12" ;
+    skos:prefLabel "Oshikoto"@eng-Latn ;
+    wdata:q7200235 "NA12" .
 
 <urn:mdciii:1603:45:16:516:1:13>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:13" .
+    rdfs:label "1603:45:16:516:1:13" ;
+    skos:prefLabel "Otjozondjupa"@eng-Latn ;
+    wdata:q7200235 "NA13" .
 
 <urn:mdciii:1603:45:16:516:1:14>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:14" .
+    rdfs:label "1603:45:16:516:1:14" ;
+    skos:prefLabel "Kavango West"@eng-Latn ;
+    wdata:q7200235 "NA14" .
 
 <urn:mdciii:1603:45:16:516:1:2>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:2" .
+    rdfs:label "1603:45:16:516:1:2" ;
+    skos:prefLabel "Erongo"@eng-Latn ;
+    wdata:q7200235 "NA02" .
 
 <urn:mdciii:1603:45:16:516:1:3>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:3" .
+    rdfs:label "1603:45:16:516:1:3" ;
+    skos:prefLabel "Hardap"@eng-Latn ;
+    wdata:q7200235 "NA03" .
 
 <urn:mdciii:1603:45:16:516:1:4>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:4" .
+    rdfs:label "1603:45:16:516:1:4" ;
+    skos:prefLabel "//Karas"@eng-Latn, "Karas"@eng-Latn ;
+    wdata:q7200235 "NA04" .
 
 <urn:mdciii:1603:45:16:516:1:5>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:5" .
+    rdfs:label "1603:45:16:516:1:5" ;
+    skos:prefLabel "Kavango East"@eng-Latn ;
+    wdata:q7200235 "NA05" .
 
 <urn:mdciii:1603:45:16:516:1:6>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:6" .
+    rdfs:label "1603:45:16:516:1:6" ;
+    skos:prefLabel "Khomas"@eng-Latn ;
+    wdata:q7200235 "NA06" .
 
 <urn:mdciii:1603:45:16:516:1:7>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:7" .
+    rdfs:label "1603:45:16:516:1:7" ;
+    skos:prefLabel "Kunene"@eng-Latn ;
+    wdata:q7200235 "NA07" .
 
 <urn:mdciii:1603:45:16:516:1:8>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:8" .
+    rdfs:label "1603:45:16:516:1:8" ;
+    skos:prefLabel "Ohangwena"@eng-Latn ;
+    wdata:q7200235 "NA08" .
 
 <urn:mdciii:1603:45:16:516:1:9>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:516:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:516:1:9" .
+    rdfs:label "1603:45:16:516:1:9" ;
+    skos:prefLabel "Omaheke"@eng-Latn ;
+    wdata:q7200235 "NA09" .
 

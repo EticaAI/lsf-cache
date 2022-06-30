@@ -1,0 +1,330 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:90()> .
+
+<urn:mdciii:1603:45:16:90()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:90)" ;
+    skos:member <urn:mdciii:1603:45:16:90:2()> .
+
+<urn:mdciii:1603:45:16:90:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:90:2)" ;
+    skos:member <urn:mdciii:1603:45:16:90:2:10102>, <urn:mdciii:1603:45:16:90:2:10103>, <urn:mdciii:1603:45:16:90:2:101041>, <urn:mdciii:1603:45:16:90:2:101042>, <urn:mdciii:1603:45:16:90:2:101043>, <urn:mdciii:1603:45:16:90:2:20204>, <urn:mdciii:1603:45:16:90:2:20205>, <urn:mdciii:1603:45:16:90:2:20206>, <urn:mdciii:1603:45:16:90:2:20207>, <urn:mdciii:1603:45:16:90:2:20208>, <urn:mdciii:1603:45:16:90:2:20209>, <urn:mdciii:1603:45:16:90:2:20210>, <urn:mdciii:1603:45:16:90:2:20211>, <urn:mdciii:1603:45:16:90:2:20212>, <urn:mdciii:1603:45:16:90:2:30313>, <urn:mdciii:1603:45:16:90:2:30314>, <urn:mdciii:1603:45:16:90:2:30315>, <urn:mdciii:1603:45:16:90:2:40430>, <urn:mdciii:1603:45:16:90:2:40431>, <urn:mdciii:1603:45:16:90:2:50532>, <urn:mdciii:1603:45:16:90:2:60633>, <urn:mdciii:1603:45:16:90:2:60634>, <urn:mdciii:1603:45:16:90:2:60635>, <urn:mdciii:1603:45:16:90:2:60636>, <urn:mdciii:1603:45:16:90:2:60637>, <urn:mdciii:1603:45:16:90:2:60638>, <urn:mdciii:1603:45:16:90:2:60639>, <urn:mdciii:1603:45:16:90:2:60640>, <urn:mdciii:1603:45:16:90:2:70716>, <urn:mdciii:1603:45:16:90:2:70717>, <urn:mdciii:1603:45:16:90:2:70718>, <urn:mdciii:1603:45:16:90:2:70719>, <urn:mdciii:1603:45:16:90:2:70720>, <urn:mdciii:1603:45:16:90:2:70721>, <urn:mdciii:1603:45:16:90:2:70722>, <urn:mdciii:1603:45:16:90:2:70723>, <urn:mdciii:1603:45:16:90:2:70724>, <urn:mdciii:1603:45:16:90:2:70725>, <urn:mdciii:1603:45:16:90:2:70726>, <urn:mdciii:1603:45:16:90:2:70727>, <urn:mdciii:1603:45:16:90:2:70728>, <urn:mdciii:1603:45:16:90:2:70729>, <urn:mdciii:1603:45:16:90:2:80844>, <urn:mdciii:1603:45:16:90:2:80845>, <urn:mdciii:1603:45:16:90:2:80846>, <urn:mdciii:1603:45:16:90:2:80847>, <urn:mdciii:1603:45:16:90:2:90948>, <urn:mdciii:1603:45:16:90:2:90949>, <urn:mdciii:1603:45:16:90:2:90950> .
+
+<urn:mdciii:1603:45:16:90:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:90:2:10101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:10101" ;
+    skos:prefLabel "South Choiseul"@eng-Latn ;
+    wdata:q7200235 "SB010101" .
+
+<urn:mdciii:1603:45:16:90:2:10102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:10102" ;
+    skos:prefLabel "North West Choiseul"@eng-Latn ;
+    wdata:q7200235 "SB010102" .
+
+<urn:mdciii:1603:45:16:90:2:10103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:10103" ;
+    skos:prefLabel "East Choiseul"@eng-Latn ;
+    wdata:q7200235 "SB010103" .
+
+<urn:mdciii:1603:45:16:90:2:101041>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:101041" ;
+    skos:prefLabel "East Honiara"@eng-Latn ;
+    wdata:q7200235 "SB101041" .
+
+<urn:mdciii:1603:45:16:90:2:101042>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:101042" ;
+    skos:prefLabel "Central Honiara"@eng-Latn ;
+    wdata:q7200235 "SB101042" .
+
+<urn:mdciii:1603:45:16:90:2:101043>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:101043" ;
+    skos:prefLabel "West Honiara"@eng-Latn ;
+    wdata:q7200235 "SB101043" .
+
+<urn:mdciii:1603:45:16:90:2:20204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20204" ;
+    skos:prefLabel "Shortland Islands"@eng-Latn ;
+    wdata:q7200235 "SB020204" .
+
+<urn:mdciii:1603:45:16:90:2:20205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20205" ;
+    skos:prefLabel "North Vella la Vella"@eng-Latn ;
+    wdata:q7200235 "SB020205" .
+
+<urn:mdciii:1603:45:16:90:2:20206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20206" ;
+    skos:prefLabel "South Vella la Vella"@eng-Latn ;
+    wdata:q7200235 "SB020206" .
+
+<urn:mdciii:1603:45:16:90:2:20207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20207" ;
+    skos:prefLabel "Ranongga-Simbo"@eng-Latn ;
+    wdata:q7200235 "SB020207" .
+
+<urn:mdciii:1603:45:16:90:2:20208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20208" ;
+    skos:prefLabel "Gizo-Kolombangara"@eng-Latn ;
+    wdata:q7200235 "SB020208" .
+
+<urn:mdciii:1603:45:16:90:2:20209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20209" ;
+    skos:prefLabel "West New Georgia-Vonavona"@eng-Latn ;
+    wdata:q7200235 "SB020209" .
+
+<urn:mdciii:1603:45:16:90:2:20210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20210" ;
+    skos:prefLabel "North New Georgia"@eng-Latn ;
+    wdata:q7200235 "SB020210" .
+
+<urn:mdciii:1603:45:16:90:2:20211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20211" ;
+    skos:prefLabel "South New Georgia-Rendova"@eng-Latn ;
+    wdata:q7200235 "SB020211" .
+
+<urn:mdciii:1603:45:16:90:2:20212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:20212" ;
+    skos:prefLabel "Marovo"@eng-Latn ;
+    wdata:q7200235 "SB020212" .
+
+<urn:mdciii:1603:45:16:90:2:30313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:30313" ;
+    skos:prefLabel "Hograno-Kia-Havulei"@eng-Latn ;
+    wdata:q7200235 "SB030313" .
+
+<urn:mdciii:1603:45:16:90:2:30314>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:30314" ;
+    skos:prefLabel "Marigne-Kokota"@eng-Latn ;
+    wdata:q7200235 "SB030314" .
+
+<urn:mdciii:1603:45:16:90:2:30315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:30315" ;
+    skos:prefLabel "Gao-Bugotu"@eng-Latn ;
+    wdata:q7200235 "SB030315" .
+
+<urn:mdciii:1603:45:16:90:2:40430>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:40430" ;
+    skos:prefLabel "Nggela"@eng-Latn ;
+    wdata:q7200235 "SB040430" .
+
+<urn:mdciii:1603:45:16:90:2:40431>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:40431" ;
+    skos:prefLabel "Savo-Russull Islands"@eng-Latn ;
+    wdata:q7200235 "SB040431" .
+
+<urn:mdciii:1603:45:16:90:2:50532>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:50532" ;
+    skos:prefLabel "Rennell-Bellona"@eng-Latn ;
+    wdata:q7200235 "SB050532" .
+
+<urn:mdciii:1603:45:16:90:2:60633>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:60633" ;
+    skos:prefLabel "North West Guadalcanl"@eng-Latn ;
+    wdata:q7200235 "SB060633" .
+
+<urn:mdciii:1603:45:16:90:2:60634>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:60634" ;
+    skos:prefLabel "West Guadalcanal"@eng-Latn ;
+    wdata:q7200235 "SB060634" .
+
+<urn:mdciii:1603:45:16:90:2:60635>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:60635" ;
+    skos:prefLabel "South Guadalcanal"@eng-Latn ;
+    wdata:q7200235 "SB060635" .
+
+<urn:mdciii:1603:45:16:90:2:60636>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:60636" ;
+    skos:prefLabel "East Guadalcanal"@eng-Latn ;
+    wdata:q7200235 "SB060636" .
+
+<urn:mdciii:1603:45:16:90:2:60637>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:60637" ;
+    skos:prefLabel "East-Central"@eng-Latn ;
+    wdata:q7200235 "SB060637" .
+
+<urn:mdciii:1603:45:16:90:2:60638>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:60638" ;
+    skos:prefLabel "North-East"@eng-Latn ;
+    wdata:q7200235 "SB060638" .
+
+<urn:mdciii:1603:45:16:90:2:60639>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:60639" ;
+    skos:prefLabel "North Guadalcanal"@eng-Latn ;
+    wdata:q7200235 "SB060639" .
+
+<urn:mdciii:1603:45:16:90:2:60640>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:60640" ;
+    skos:prefLabel "Central Guadalcanal"@eng-Latn ;
+    wdata:q7200235 "SB060640" .
+
+<urn:mdciii:1603:45:16:90:2:70716>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70716" ;
+    skos:prefLabel "North Malaita"@eng-Latn ;
+    wdata:q7200235 "SB070716" .
+
+<urn:mdciii:1603:45:16:90:2:70717>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70717" ;
+    skos:prefLabel "Lau-Mbaelela"@eng-Latn ;
+    wdata:q7200235 "SB070717" .
+
+<urn:mdciii:1603:45:16:90:2:70718>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70718" ;
+    skos:prefLabel "Baegu-Asifola"@eng-Latn ;
+    wdata:q7200235 "SB070718" .
+
+<urn:mdciii:1603:45:16:90:2:70719>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70719" ;
+    skos:prefLabel "Fataleka"@eng-Latn ;
+    wdata:q7200235 "SB070719" .
+
+<urn:mdciii:1603:45:16:90:2:70720>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70720" ;
+    skos:prefLabel "West Kwara'ae"@eng-Latn ;
+    wdata:q7200235 "SB070720" .
+
+<urn:mdciii:1603:45:16:90:2:70721>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70721" ;
+    skos:prefLabel "Central Kwara'ae"@eng-Latn ;
+    wdata:q7200235 "SB070721" .
+
+<urn:mdciii:1603:45:16:90:2:70722>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70722" ;
+    skos:prefLabel "East Malaita"@eng-Latn ;
+    wdata:q7200235 "SB070722" .
+
+<urn:mdciii:1603:45:16:90:2:70723>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70723" ;
+    skos:prefLabel "Auki-Langalanga"@eng-Latn ;
+    wdata:q7200235 "SB070723" .
+
+<urn:mdciii:1603:45:16:90:2:70724>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70724" ;
+    skos:prefLabel "East Kwaio"@eng-Latn ;
+    wdata:q7200235 "SB070724" .
+
+<urn:mdciii:1603:45:16:90:2:70725>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70725" ;
+    skos:prefLabel "West Kwaio"@eng-Latn ;
+    wdata:q7200235 "SB070725" .
+
+<urn:mdciii:1603:45:16:90:2:70726>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70726" ;
+    skos:prefLabel "East AreAre"@eng-Latn ;
+    wdata:q7200235 "SB070726" .
+
+<urn:mdciii:1603:45:16:90:2:70727>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70727" ;
+    skos:prefLabel "West Areare"@eng-Latn ;
+    wdata:q7200235 "SB070727" .
+
+<urn:mdciii:1603:45:16:90:2:70728>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70728" ;
+    skos:prefLabel "Small Malaita"@eng-Latn ;
+    wdata:q7200235 "SB070728" .
+
+<urn:mdciii:1603:45:16:90:2:70729>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:70729" ;
+    skos:prefLabel "Malaita Outer Island"@eng-Latn ;
+    wdata:q7200235 "SB070729" .
+
+<urn:mdciii:1603:45:16:90:2:80844>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:80844" ;
+    skos:prefLabel "West Makira"@eng-Latn ;
+    wdata:q7200235 "SB080844" .
+
+<urn:mdciii:1603:45:16:90:2:80845>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:80845" ;
+    skos:prefLabel "Central Makira"@eng-Latn ;
+    wdata:q7200235 "SB080845" .
+
+<urn:mdciii:1603:45:16:90:2:80846>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:80846" ;
+    skos:prefLabel "East Makira"@eng-Latn ;
+    wdata:q7200235 "SB080846" .
+
+<urn:mdciii:1603:45:16:90:2:80847>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:80847" ;
+    skos:prefLabel "Ulawa-Ugi"@eng-Latn ;
+    wdata:q7200235 "SB080847" .
+
+<urn:mdciii:1603:45:16:90:2:90948>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:90948" ;
+    skos:prefLabel "Temotu Pele"@eng-Latn ;
+    wdata:q7200235 "SB090948" .
+
+<urn:mdciii:1603:45:16:90:2:90949>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:90949" ;
+    skos:prefLabel "Temotu-Nende"@eng-Latn ;
+    wdata:q7200235 "SB090949" .
+
+<urn:mdciii:1603:45:16:90:2:90950>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:90:2:90950" ;
+    skos:prefLabel "Temotu Vatu"@eng-Latn ;
+    wdata:q7200235 "SB090950" .
+

@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,393 +27,552 @@
     rdfs:label "(1603:45:16:630:1)" ;
     skos:member <urn:mdciii:1603:45:16:630:1:10>, <urn:mdciii:1603:45:16:630:1:11>, <urn:mdciii:1603:45:16:630:1:12>, <urn:mdciii:1603:45:16:630:1:13>, <urn:mdciii:1603:45:16:630:1:14>, <urn:mdciii:1603:45:16:630:1:15>, <urn:mdciii:1603:45:16:630:1:16>, <urn:mdciii:1603:45:16:630:1:17>, <urn:mdciii:1603:45:16:630:1:18>, <urn:mdciii:1603:45:16:630:1:19>, <urn:mdciii:1603:45:16:630:1:2>, <urn:mdciii:1603:45:16:630:1:20>, <urn:mdciii:1603:45:16:630:1:21>, <urn:mdciii:1603:45:16:630:1:22>, <urn:mdciii:1603:45:16:630:1:23>, <urn:mdciii:1603:45:16:630:1:24>, <urn:mdciii:1603:45:16:630:1:25>, <urn:mdciii:1603:45:16:630:1:26>, <urn:mdciii:1603:45:16:630:1:27>, <urn:mdciii:1603:45:16:630:1:28>, <urn:mdciii:1603:45:16:630:1:29>, <urn:mdciii:1603:45:16:630:1:3>, <urn:mdciii:1603:45:16:630:1:30>, <urn:mdciii:1603:45:16:630:1:31>, <urn:mdciii:1603:45:16:630:1:32>, <urn:mdciii:1603:45:16:630:1:33>, <urn:mdciii:1603:45:16:630:1:34>, <urn:mdciii:1603:45:16:630:1:35>, <urn:mdciii:1603:45:16:630:1:36>, <urn:mdciii:1603:45:16:630:1:37>, <urn:mdciii:1603:45:16:630:1:38>, <urn:mdciii:1603:45:16:630:1:39>, <urn:mdciii:1603:45:16:630:1:4>, <urn:mdciii:1603:45:16:630:1:40>, <urn:mdciii:1603:45:16:630:1:41>, <urn:mdciii:1603:45:16:630:1:42>, <urn:mdciii:1603:45:16:630:1:43>, <urn:mdciii:1603:45:16:630:1:44>, <urn:mdciii:1603:45:16:630:1:45>, <urn:mdciii:1603:45:16:630:1:46>, <urn:mdciii:1603:45:16:630:1:47>, <urn:mdciii:1603:45:16:630:1:48>, <urn:mdciii:1603:45:16:630:1:49>, <urn:mdciii:1603:45:16:630:1:5>, <urn:mdciii:1603:45:16:630:1:50>, <urn:mdciii:1603:45:16:630:1:51>, <urn:mdciii:1603:45:16:630:1:52>, <urn:mdciii:1603:45:16:630:1:53>, <urn:mdciii:1603:45:16:630:1:54>, <urn:mdciii:1603:45:16:630:1:55>, <urn:mdciii:1603:45:16:630:1:56>, <urn:mdciii:1603:45:16:630:1:57>, <urn:mdciii:1603:45:16:630:1:58>, <urn:mdciii:1603:45:16:630:1:59>, <urn:mdciii:1603:45:16:630:1:6>, <urn:mdciii:1603:45:16:630:1:60>, <urn:mdciii:1603:45:16:630:1:61>, <urn:mdciii:1603:45:16:630:1:62>, <urn:mdciii:1603:45:16:630:1:63>, <urn:mdciii:1603:45:16:630:1:64>, <urn:mdciii:1603:45:16:630:1:65>, <urn:mdciii:1603:45:16:630:1:66>, <urn:mdciii:1603:45:16:630:1:67>, <urn:mdciii:1603:45:16:630:1:68>, <urn:mdciii:1603:45:16:630:1:69>, <urn:mdciii:1603:45:16:630:1:7>, <urn:mdciii:1603:45:16:630:1:70>, <urn:mdciii:1603:45:16:630:1:71>, <urn:mdciii:1603:45:16:630:1:72>, <urn:mdciii:1603:45:16:630:1:73>, <urn:mdciii:1603:45:16:630:1:74>, <urn:mdciii:1603:45:16:630:1:75>, <urn:mdciii:1603:45:16:630:1:76>, <urn:mdciii:1603:45:16:630:1:77>, <urn:mdciii:1603:45:16:630:1:78>, <urn:mdciii:1603:45:16:630:1:8>, <urn:mdciii:1603:45:16:630:1:9> .
 
+<urn:mdciii:1603:45:16:630:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:630:1:1>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:1" .
+    rdfs:label "1603:45:16:630:1:1" ;
+    skos:prefLabel "Adjuntas"@spa-Latn ;
+    wdata:q7200235 "PR01" .
 
 <urn:mdciii:1603:45:16:630:1:10>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:10" .
+    rdfs:label "1603:45:16:630:1:10" ;
+    skos:prefLabel "Barranquitas"@spa-Latn ;
+    wdata:q7200235 "PR10" .
 
 <urn:mdciii:1603:45:16:630:1:11>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:11" .
+    rdfs:label "1603:45:16:630:1:11" ;
+    skos:prefLabel "Bayamón"@spa-Latn ;
+    wdata:q7200235 "PR11" .
 
 <urn:mdciii:1603:45:16:630:1:12>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:12" .
+    rdfs:label "1603:45:16:630:1:12" ;
+    skos:prefLabel "Cabo Rojo"@spa-Latn ;
+    wdata:q7200235 "PR12" .
 
 <urn:mdciii:1603:45:16:630:1:13>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:13" .
+    rdfs:label "1603:45:16:630:1:13" ;
+    skos:prefLabel "Caguas"@spa-Latn ;
+    wdata:q7200235 "PR13" .
 
 <urn:mdciii:1603:45:16:630:1:14>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:14" .
+    rdfs:label "1603:45:16:630:1:14" ;
+    skos:prefLabel "Camuy"@spa-Latn ;
+    wdata:q7200235 "PR14" .
 
 <urn:mdciii:1603:45:16:630:1:15>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:15" .
+    rdfs:label "1603:45:16:630:1:15" ;
+    skos:prefLabel "Canóvanas"@spa-Latn ;
+    wdata:q7200235 "PR15" .
 
 <urn:mdciii:1603:45:16:630:1:16>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:16" .
+    rdfs:label "1603:45:16:630:1:16" ;
+    skos:prefLabel "Carolina"@spa-Latn ;
+    wdata:q7200235 "PR16" .
 
 <urn:mdciii:1603:45:16:630:1:17>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:17" .
+    rdfs:label "1603:45:16:630:1:17" ;
+    skos:prefLabel "Cataño"@spa-Latn ;
+    wdata:q7200235 "PR17" .
 
 <urn:mdciii:1603:45:16:630:1:18>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:18" .
+    rdfs:label "1603:45:16:630:1:18" ;
+    skos:prefLabel "Cayey"@spa-Latn ;
+    wdata:q7200235 "PR18" .
 
 <urn:mdciii:1603:45:16:630:1:19>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:19" .
+    rdfs:label "1603:45:16:630:1:19" ;
+    skos:prefLabel "Ceiba"@spa-Latn ;
+    wdata:q7200235 "PR19" .
 
 <urn:mdciii:1603:45:16:630:1:2>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:2" .
+    rdfs:label "1603:45:16:630:1:2" ;
+    skos:prefLabel "Aguada"@spa-Latn ;
+    wdata:q7200235 "PR02" .
 
 <urn:mdciii:1603:45:16:630:1:20>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:20" .
+    rdfs:label "1603:45:16:630:1:20" ;
+    skos:prefLabel "Ciales"@spa-Latn ;
+    wdata:q7200235 "PR20" .
 
 <urn:mdciii:1603:45:16:630:1:21>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:21" .
+    rdfs:label "1603:45:16:630:1:21" ;
+    skos:prefLabel "Cidra"@spa-Latn ;
+    wdata:q7200235 "PR21" .
 
 <urn:mdciii:1603:45:16:630:1:22>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:22" .
+    rdfs:label "1603:45:16:630:1:22" ;
+    skos:prefLabel "Coamo"@spa-Latn ;
+    wdata:q7200235 "PR22" .
 
 <urn:mdciii:1603:45:16:630:1:23>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:23" .
+    rdfs:label "1603:45:16:630:1:23" ;
+    skos:prefLabel "Comerío"@spa-Latn ;
+    wdata:q7200235 "PR23" .
 
 <urn:mdciii:1603:45:16:630:1:24>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:24" .
+    rdfs:label "1603:45:16:630:1:24" ;
+    skos:prefLabel "Corozal"@spa-Latn ;
+    wdata:q7200235 "PR24" .
 
 <urn:mdciii:1603:45:16:630:1:25>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:25" .
+    rdfs:label "1603:45:16:630:1:25" ;
+    skos:prefLabel "Culebra"@spa-Latn ;
+    wdata:q7200235 "PR25" .
 
 <urn:mdciii:1603:45:16:630:1:26>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:26" .
+    rdfs:label "1603:45:16:630:1:26" ;
+    skos:prefLabel "Dorado"@spa-Latn ;
+    wdata:q7200235 "PR26" .
 
 <urn:mdciii:1603:45:16:630:1:27>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:27" .
+    rdfs:label "1603:45:16:630:1:27" ;
+    skos:prefLabel "Fajardo"@spa-Latn ;
+    wdata:q7200235 "PR27" .
 
 <urn:mdciii:1603:45:16:630:1:28>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:28" .
+    rdfs:label "1603:45:16:630:1:28" ;
+    skos:prefLabel "Florida"@spa-Latn ;
+    wdata:q7200235 "PR28" .
 
 <urn:mdciii:1603:45:16:630:1:29>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:29" .
+    rdfs:label "1603:45:16:630:1:29" ;
+    skos:prefLabel "Guánica"@spa-Latn ;
+    wdata:q7200235 "PR29" .
 
 <urn:mdciii:1603:45:16:630:1:3>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:3" .
+    rdfs:label "1603:45:16:630:1:3" ;
+    skos:prefLabel "Aguadilla"@spa-Latn ;
+    wdata:q7200235 "PR03" .
 
 <urn:mdciii:1603:45:16:630:1:30>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:30" .
+    rdfs:label "1603:45:16:630:1:30" ;
+    skos:prefLabel "Guayama"@spa-Latn ;
+    wdata:q7200235 "PR30" .
 
 <urn:mdciii:1603:45:16:630:1:31>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:31" .
+    rdfs:label "1603:45:16:630:1:31" ;
+    skos:prefLabel "Guayanilla"@spa-Latn ;
+    wdata:q7200235 "PR31" .
 
 <urn:mdciii:1603:45:16:630:1:32>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:32" .
+    rdfs:label "1603:45:16:630:1:32" ;
+    skos:prefLabel "Guaynabo"@spa-Latn ;
+    wdata:q7200235 "PR32" .
 
 <urn:mdciii:1603:45:16:630:1:33>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:33" .
+    rdfs:label "1603:45:16:630:1:33" ;
+    skos:prefLabel "Gurabo"@spa-Latn ;
+    wdata:q7200235 "PR33" .
 
 <urn:mdciii:1603:45:16:630:1:34>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:34" .
+    rdfs:label "1603:45:16:630:1:34" ;
+    skos:prefLabel "Hatillo"@spa-Latn ;
+    wdata:q7200235 "PR34" .
 
 <urn:mdciii:1603:45:16:630:1:35>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:35" .
+    rdfs:label "1603:45:16:630:1:35" ;
+    skos:prefLabel "Hormigueros"@spa-Latn ;
+    wdata:q7200235 "PR35" .
 
 <urn:mdciii:1603:45:16:630:1:36>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:36" .
+    rdfs:label "1603:45:16:630:1:36" ;
+    skos:prefLabel "Humacao"@spa-Latn ;
+    wdata:q7200235 "PR36" .
 
 <urn:mdciii:1603:45:16:630:1:37>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:37" .
+    rdfs:label "1603:45:16:630:1:37" ;
+    skos:prefLabel "Isabela"@spa-Latn ;
+    wdata:q7200235 "PR37" .
 
 <urn:mdciii:1603:45:16:630:1:38>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:38" .
+    rdfs:label "1603:45:16:630:1:38" ;
+    skos:prefLabel "Jayuya"@spa-Latn ;
+    wdata:q7200235 "PR38" .
 
 <urn:mdciii:1603:45:16:630:1:39>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:39" .
+    rdfs:label "1603:45:16:630:1:39" ;
+    skos:prefLabel "Juana Díaz"@spa-Latn ;
+    wdata:q7200235 "PR39" .
 
 <urn:mdciii:1603:45:16:630:1:4>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:4" .
+    rdfs:label "1603:45:16:630:1:4" ;
+    skos:prefLabel "Aguas Buenas"@spa-Latn ;
+    wdata:q7200235 "PR04" .
 
 <urn:mdciii:1603:45:16:630:1:40>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:40" .
+    rdfs:label "1603:45:16:630:1:40" ;
+    skos:prefLabel "Juncos"@spa-Latn ;
+    wdata:q7200235 "PR40" .
 
 <urn:mdciii:1603:45:16:630:1:41>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:41" .
+    rdfs:label "1603:45:16:630:1:41" ;
+    skos:prefLabel "Lajas"@spa-Latn ;
+    wdata:q7200235 "PR41" .
 
 <urn:mdciii:1603:45:16:630:1:42>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:42" .
+    rdfs:label "1603:45:16:630:1:42" ;
+    skos:prefLabel "Lares"@spa-Latn ;
+    wdata:q7200235 "PR42" .
 
 <urn:mdciii:1603:45:16:630:1:43>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:43" .
+    rdfs:label "1603:45:16:630:1:43" ;
+    skos:prefLabel "Las Marías"@spa-Latn ;
+    wdata:q7200235 "PR43" .
 
 <urn:mdciii:1603:45:16:630:1:44>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:44" .
+    rdfs:label "1603:45:16:630:1:44" ;
+    skos:prefLabel "Las Piedras"@spa-Latn ;
+    wdata:q7200235 "PR44" .
 
 <urn:mdciii:1603:45:16:630:1:45>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:45" .
+    rdfs:label "1603:45:16:630:1:45" ;
+    skos:prefLabel "Loíza"@spa-Latn ;
+    wdata:q7200235 "PR45" .
 
 <urn:mdciii:1603:45:16:630:1:46>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:46" .
+    rdfs:label "1603:45:16:630:1:46" ;
+    skos:prefLabel "Luquillo"@spa-Latn ;
+    wdata:q7200235 "PR46" .
 
 <urn:mdciii:1603:45:16:630:1:47>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:47" .
+    rdfs:label "1603:45:16:630:1:47" ;
+    skos:prefLabel "Manatí"@spa-Latn ;
+    wdata:q7200235 "PR47" .
 
 <urn:mdciii:1603:45:16:630:1:48>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:48" .
+    rdfs:label "1603:45:16:630:1:48" ;
+    skos:prefLabel "Maricao"@spa-Latn ;
+    wdata:q7200235 "PR48" .
 
 <urn:mdciii:1603:45:16:630:1:49>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:49" .
+    rdfs:label "1603:45:16:630:1:49" ;
+    skos:prefLabel "Maunabo"@spa-Latn ;
+    wdata:q7200235 "PR49" .
 
 <urn:mdciii:1603:45:16:630:1:5>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:5" .
+    rdfs:label "1603:45:16:630:1:5" ;
+    skos:prefLabel "Aibonito"@spa-Latn ;
+    wdata:q7200235 "PR05" .
 
 <urn:mdciii:1603:45:16:630:1:50>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:50" .
+    rdfs:label "1603:45:16:630:1:50" ;
+    skos:prefLabel "Mayagüez"@spa-Latn ;
+    wdata:q7200235 "PR50" .
 
 <urn:mdciii:1603:45:16:630:1:51>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:51" .
+    rdfs:label "1603:45:16:630:1:51" ;
+    skos:prefLabel "Moca"@spa-Latn ;
+    wdata:q7200235 "PR51" .
 
 <urn:mdciii:1603:45:16:630:1:52>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:52" .
+    rdfs:label "1603:45:16:630:1:52" ;
+    skos:prefLabel "Morovis"@spa-Latn ;
+    wdata:q7200235 "PR52" .
 
 <urn:mdciii:1603:45:16:630:1:53>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:53" .
+    rdfs:label "1603:45:16:630:1:53" ;
+    skos:prefLabel "Naguabo"@spa-Latn ;
+    wdata:q7200235 "PR53" .
 
 <urn:mdciii:1603:45:16:630:1:54>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:54" .
+    rdfs:label "1603:45:16:630:1:54" ;
+    skos:prefLabel "Naranjito"@spa-Latn ;
+    wdata:q7200235 "PR54" .
 
 <urn:mdciii:1603:45:16:630:1:55>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:55" .
+    rdfs:label "1603:45:16:630:1:55" ;
+    skos:prefLabel "Orocovis"@spa-Latn ;
+    wdata:q7200235 "PR55" .
 
 <urn:mdciii:1603:45:16:630:1:56>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:56" .
+    rdfs:label "1603:45:16:630:1:56" ;
+    skos:prefLabel "Patillas"@spa-Latn ;
+    wdata:q7200235 "PR56" .
 
 <urn:mdciii:1603:45:16:630:1:57>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:57" .
+    rdfs:label "1603:45:16:630:1:57" ;
+    skos:prefLabel "Peñuelas"@spa-Latn ;
+    wdata:q7200235 "PR57" .
 
 <urn:mdciii:1603:45:16:630:1:58>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:58" .
+    rdfs:label "1603:45:16:630:1:58" ;
+    skos:prefLabel "Ponce"@spa-Latn ;
+    wdata:q7200235 "PR58" .
 
 <urn:mdciii:1603:45:16:630:1:59>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:59" .
+    rdfs:label "1603:45:16:630:1:59" ;
+    skos:prefLabel "Quebradillas"@spa-Latn ;
+    wdata:q7200235 "PR59" .
 
 <urn:mdciii:1603:45:16:630:1:6>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:6" .
+    rdfs:label "1603:45:16:630:1:6" ;
+    skos:prefLabel "Añasco"@spa-Latn ;
+    wdata:q7200235 "PR06" .
 
 <urn:mdciii:1603:45:16:630:1:60>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:60" .
+    rdfs:label "1603:45:16:630:1:60" ;
+    skos:prefLabel "Rincón"@spa-Latn ;
+    wdata:q7200235 "PR60" .
 
 <urn:mdciii:1603:45:16:630:1:61>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:61" .
+    rdfs:label "1603:45:16:630:1:61" ;
+    skos:prefLabel "Río Grande"@spa-Latn ;
+    wdata:q7200235 "PR61" .
 
 <urn:mdciii:1603:45:16:630:1:62>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:62" .
+    rdfs:label "1603:45:16:630:1:62" ;
+    skos:prefLabel "Sabana Grande"@spa-Latn ;
+    wdata:q7200235 "PR62" .
 
 <urn:mdciii:1603:45:16:630:1:63>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:63" .
+    rdfs:label "1603:45:16:630:1:63" ;
+    skos:prefLabel "Salinas"@spa-Latn ;
+    wdata:q7200235 "PR63" .
 
 <urn:mdciii:1603:45:16:630:1:64>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:64" .
+    rdfs:label "1603:45:16:630:1:64" ;
+    skos:prefLabel "San Germán"@spa-Latn ;
+    wdata:q7200235 "PR64" .
 
 <urn:mdciii:1603:45:16:630:1:65>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:65" .
+    rdfs:label "1603:45:16:630:1:65" ;
+    skos:prefLabel "San Juan"@spa-Latn ;
+    wdata:q7200235 "PR65" .
 
 <urn:mdciii:1603:45:16:630:1:66>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:66" .
+    rdfs:label "1603:45:16:630:1:66" ;
+    skos:prefLabel "San Lorenzo"@spa-Latn ;
+    wdata:q7200235 "PR66" .
 
 <urn:mdciii:1603:45:16:630:1:67>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:67" .
+    rdfs:label "1603:45:16:630:1:67" ;
+    skos:prefLabel "San Sebastián"@spa-Latn ;
+    wdata:q7200235 "PR67" .
 
 <urn:mdciii:1603:45:16:630:1:68>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:68" .
+    rdfs:label "1603:45:16:630:1:68" ;
+    skos:prefLabel "Santa Isabel"@spa-Latn ;
+    wdata:q7200235 "PR68" .
 
 <urn:mdciii:1603:45:16:630:1:69>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:69" .
+    rdfs:label "1603:45:16:630:1:69" ;
+    skos:prefLabel "Toa Alta"@spa-Latn ;
+    wdata:q7200235 "PR69" .
 
 <urn:mdciii:1603:45:16:630:1:7>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:7" .
+    rdfs:label "1603:45:16:630:1:7" ;
+    skos:prefLabel "Arecibo"@spa-Latn ;
+    wdata:q7200235 "PR07" .
 
 <urn:mdciii:1603:45:16:630:1:70>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:70" .
+    rdfs:label "1603:45:16:630:1:70" ;
+    skos:prefLabel "Toa Baja"@spa-Latn ;
+    wdata:q7200235 "PR70" .
 
 <urn:mdciii:1603:45:16:630:1:71>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:71" .
+    rdfs:label "1603:45:16:630:1:71" ;
+    skos:prefLabel "Trujillo Alto"@spa-Latn ;
+    wdata:q7200235 "PR71" .
 
 <urn:mdciii:1603:45:16:630:1:72>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:72" .
+    rdfs:label "1603:45:16:630:1:72" ;
+    skos:prefLabel "Utuado"@spa-Latn ;
+    wdata:q7200235 "PR72" .
 
 <urn:mdciii:1603:45:16:630:1:73>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:73" .
+    rdfs:label "1603:45:16:630:1:73" ;
+    skos:prefLabel "Vega Alta"@spa-Latn ;
+    wdata:q7200235 "PR73" .
 
 <urn:mdciii:1603:45:16:630:1:74>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:74" .
+    rdfs:label "1603:45:16:630:1:74" ;
+    skos:prefLabel "Vega Baja"@spa-Latn ;
+    wdata:q7200235 "PR74" .
 
 <urn:mdciii:1603:45:16:630:1:75>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:75" .
+    rdfs:label "1603:45:16:630:1:75" ;
+    skos:prefLabel "Vieques"@spa-Latn ;
+    wdata:q7200235 "PR75" .
 
 <urn:mdciii:1603:45:16:630:1:76>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:76" .
+    rdfs:label "1603:45:16:630:1:76" ;
+    skos:prefLabel "Villalba"@spa-Latn ;
+    wdata:q7200235 "PR76" .
 
 <urn:mdciii:1603:45:16:630:1:77>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:77" .
+    rdfs:label "1603:45:16:630:1:77" ;
+    skos:prefLabel "Yabucoa"@spa-Latn ;
+    wdata:q7200235 "PR77" .
 
 <urn:mdciii:1603:45:16:630:1:78>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:78" .
+    rdfs:label "1603:45:16:630:1:78" ;
+    skos:prefLabel "Yauco"@spa-Latn ;
+    wdata:q7200235 "PR78" .
 
 <urn:mdciii:1603:45:16:630:1:8>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:8" .
+    rdfs:label "1603:45:16:630:1:8" ;
+    skos:prefLabel "Arroyo"@spa-Latn ;
+    wdata:q7200235 "PR08" .
 
 <urn:mdciii:1603:45:16:630:1:9>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:630:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:630:1:9" .
+    rdfs:label "1603:45:16:630:1:9" ;
+    skos:prefLabel "Barceloneta"@spa-Latn ;
+    wdata:q7200235 "PR09" .
 

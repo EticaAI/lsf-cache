@@ -1,0 +1,186 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:144()> .
+
+<urn:mdciii:1603:45:16:144()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:144)" ;
+    skos:member <urn:mdciii:1603:45:16:144:2()> .
+
+<urn:mdciii:1603:45:16:144:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:144:2)" ;
+    skos:member <urn:mdciii:1603:45:16:144:2:12>, <urn:mdciii:1603:45:16:144:2:13>, <urn:mdciii:1603:45:16:144:2:21>, <urn:mdciii:1603:45:16:144:2:22>, <urn:mdciii:1603:45:16:144:2:23>, <urn:mdciii:1603:45:16:144:2:31>, <urn:mdciii:1603:45:16:144:2:32>, <urn:mdciii:1603:45:16:144:2:33>, <urn:mdciii:1603:45:16:144:2:41>, <urn:mdciii:1603:45:16:144:2:42>, <urn:mdciii:1603:45:16:144:2:43>, <urn:mdciii:1603:45:16:144:2:44>, <urn:mdciii:1603:45:16:144:2:45>, <urn:mdciii:1603:45:16:144:2:51>, <urn:mdciii:1603:45:16:144:2:52>, <urn:mdciii:1603:45:16:144:2:53>, <urn:mdciii:1603:45:16:144:2:60>, <urn:mdciii:1603:45:16:144:2:61>, <urn:mdciii:1603:45:16:144:2:62>, <urn:mdciii:1603:45:16:144:2:71>, <urn:mdciii:1603:45:16:144:2:72>, <urn:mdciii:1603:45:16:144:2:81>, <urn:mdciii:1603:45:16:144:2:82>, <urn:mdciii:1603:45:16:144:2:91>, <urn:mdciii:1603:45:16:144:2:92> .
+
+<urn:mdciii:1603:45:16:144:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:144:2:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:11" ;
+    skos:prefLabel "Colombo"@eng-Latn, "கொழும்பு மாவட்டம்"@tam-Taml, "කොළඹ දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK11" .
+
+<urn:mdciii:1603:45:16:144:2:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:12" ;
+    skos:prefLabel "Gampaha"@eng-Latn, "கம்பஹா மாவட்டம்"@tam-Taml, "ගම්පහ දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK12" .
+
+<urn:mdciii:1603:45:16:144:2:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:13" ;
+    skos:prefLabel "Kalutara"@eng-Latn, "களுத்துறை மாவட்டம்"@tam-Taml, "කඵතර දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK13" .
+
+<urn:mdciii:1603:45:16:144:2:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:21" ;
+    skos:prefLabel "Kandy"@eng-Latn, "கண்டி மாவட்டம்"@tam-Taml, "මහනුවර දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK21" .
+
+<urn:mdciii:1603:45:16:144:2:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:22" ;
+    skos:prefLabel "Matale"@eng-Latn, "மாத்தளை மாவட்டம்"@tam-Taml, "මාතලේ දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK22" .
+
+<urn:mdciii:1603:45:16:144:2:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:23" ;
+    skos:prefLabel "Nuwara Eliya"@eng-Latn, "நுவரேலியா மாவட்டம்"@tam-Taml, "නුවරඑළිය දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK23" .
+
+<urn:mdciii:1603:45:16:144:2:31>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:31" ;
+    skos:prefLabel "Galle"@eng-Latn, "காலி மாவட்டம்"@tam-Taml, "ගාල්ල දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK31" .
+
+<urn:mdciii:1603:45:16:144:2:32>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:32" ;
+    skos:prefLabel "Matara"@eng-Latn, "மாத்தறை மாவட்டம்"@tam-Taml, "මාතර දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK32" .
+
+<urn:mdciii:1603:45:16:144:2:33>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:33" ;
+    skos:prefLabel "Hambantota"@eng-Latn, "அம்பாந்தோட்டை மாவட்டம்"@tam-Taml, "හම්බන්තොට දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK33" .
+
+<urn:mdciii:1603:45:16:144:2:41>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:41" ;
+    skos:prefLabel "Jaffna"@eng-Latn, "யாழ்ப்பாணம் மாவட்டம்"@tam-Taml, "යාපනය දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK41" .
+
+<urn:mdciii:1603:45:16:144:2:42>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:42" ;
+    skos:prefLabel "Mannar"@eng-Latn, "மன்னார் மாவட்டம்"@tam-Taml, "මන්නාරම දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK42" .
+
+<urn:mdciii:1603:45:16:144:2:43>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:43" ;
+    skos:prefLabel "Vavuniya"@eng-Latn, "வவுனியா மாவட்டம்"@tam-Taml, "වවුනියා දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK43" .
+
+<urn:mdciii:1603:45:16:144:2:44>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:44" ;
+    skos:prefLabel "Mullaitivu"@eng-Latn, "முல்லைத்தீவு மாவட்டம்"@tam-Taml, "මුලතිවු දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK44" .
+
+<urn:mdciii:1603:45:16:144:2:45>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:45" ;
+    skos:prefLabel "Kilinochchi"@eng-Latn, "கிளிநொச்சி மாவட்டம்"@tam-Taml, "කිලිනොච්චි දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK45" .
+
+<urn:mdciii:1603:45:16:144:2:51>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:51" ;
+    skos:prefLabel "Batticaloa"@eng-Latn, "மட்டக்களப்பு மாவட்டம்"@tam-Taml, "මඩකලපුව දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK51" .
+
+<urn:mdciii:1603:45:16:144:2:52>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:52" ;
+    skos:prefLabel "Ampara"@eng-Latn, "அம்பாறை மாவட்டம்"@tam-Taml, "අම්පාර දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK52" .
+
+<urn:mdciii:1603:45:16:144:2:53>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:53" ;
+    skos:prefLabel "Trincomalee"@eng-Latn, "திருகோணமலை மாவட்டம்"@tam-Taml, "ත්‍රිකුණාමළය දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK53" .
+
+<urn:mdciii:1603:45:16:144:2:60>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:60" ;
+    skos:prefLabel "[unknown]"@eng-Latn, "[unknown]"@sin-Sinh, "[unknoபுத்தளம் மாவட்டம்wn]"@tam-Taml ;
+    wdata:q7200235 "LK60" .
+
+<urn:mdciii:1603:45:16:144:2:61>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:61" ;
+    skos:prefLabel "Kurunegala"@eng-Latn, "குருநாகல் மாவட்டம்"@tam-Taml, "කුරුණෑගල දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK61" .
+
+<urn:mdciii:1603:45:16:144:2:62>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:62" ;
+    skos:prefLabel "Puttalam"@eng-Latn, "புத்தளம் மாவட்டம்"@tam-Taml, "පුත්තලම දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK62" .
+
+<urn:mdciii:1603:45:16:144:2:71>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:71" ;
+    skos:prefLabel "Anuradhapura"@eng-Latn, "அனுராதபுரம் மாவட்டம்"@tam-Taml, "අනුරාධපුර දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK71" .
+
+<urn:mdciii:1603:45:16:144:2:72>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:72" ;
+    skos:prefLabel "Polonnaruwa"@eng-Latn, "பொலன்னறுவை மாவட்டம்"@tam-Taml, "පොළොන්නරුව දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK72" .
+
+<urn:mdciii:1603:45:16:144:2:81>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:81" ;
+    skos:prefLabel "Badulla"@eng-Latn, "பதுளை மாவட்டம்"@tam-Taml, "බදුල්ල දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK81" .
+
+<urn:mdciii:1603:45:16:144:2:82>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:82" ;
+    skos:prefLabel "Monaragala"@eng-Latn, "மொணராகலை மாவட்டம்"@tam-Taml, "මොණරාගල දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK82" .
+
+<urn:mdciii:1603:45:16:144:2:91>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:91" ;
+    skos:prefLabel "Ratnapura"@eng-Latn, "இரத்தினபுரம் மாவட்டம்"@tam-Taml, "රත්නපුර දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK91" .
+
+<urn:mdciii:1603:45:16:144:2:92>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:144:2:92" ;
+    skos:prefLabel "Kegalle"@eng-Latn, "கேகாலை மாவட்டம்"@tam-Taml, "කෑගල්ල දිස්ත්‍රික්කය"@sin-Sinh ;
+    wdata:q7200235 "LK92" .
+

@@ -1,0 +1,150 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:850()> .
+
+<urn:mdciii:1603:45:16:850()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:850)" ;
+    skos:member <urn:mdciii:1603:45:16:850:2()> .
+
+<urn:mdciii:1603:45:16:850:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:850:2)" ;
+    skos:member <urn:mdciii:1603:45:16:850:2:1020800>, <urn:mdciii:1603:45:16:850:2:1031600>, <urn:mdciii:1603:45:16:850:2:1038800>, <urn:mdciii:1603:45:16:850:2:1059500>, <urn:mdciii:1603:45:16:850:2:1062200>, <urn:mdciii:1603:45:16:850:2:1071200>, <urn:mdciii:1603:45:16:850:2:1073900>, <urn:mdciii:1603:45:16:850:2:1075700>, <urn:mdciii:1603:45:16:850:2:2015400>, <urn:mdciii:1603:45:16:850:2:2027100>, <urn:mdciii:1603:45:16:850:2:2028900>, <urn:mdciii:1603:45:16:850:2:2033400>, <urn:mdciii:1603:45:16:850:2:3017200>, <urn:mdciii:1603:45:16:850:2:3034300>, <urn:mdciii:1603:45:16:850:2:3061300>, <urn:mdciii:1603:45:16:850:2:3074800>, <urn:mdciii:1603:45:16:850:2:3078400>, <urn:mdciii:1603:45:16:850:2:3082000>, <urn:mdciii:1603:45:16:850:2:3082900> .
+
+<urn:mdciii:1603:45:16:850:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:850:2:1004600>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1004600" ;
+    skos:prefLabel "Anna's Hope Village"@eng-Latn ;
+    wdata:q7200235 "VI01004600" .
+
+<urn:mdciii:1603:45:16:850:2:1020800>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1020800" ;
+    skos:prefLabel "Christiansted"@eng-Latn ;
+    wdata:q7200235 "VI01020800" .
+
+<urn:mdciii:1603:45:16:850:2:1031600>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1031600" ;
+    skos:prefLabel "East End"@eng-Latn ;
+    wdata:q7200235 "VI01031600" .
+
+<urn:mdciii:1603:45:16:850:2:1038800>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1038800" ;
+    skos:prefLabel "Frederiksted"@eng-Latn ;
+    wdata:q7200235 "VI01038800" .
+
+<urn:mdciii:1603:45:16:850:2:1059500>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1059500" ;
+    skos:prefLabel "Northcentral"@eng-Latn ;
+    wdata:q7200235 "VI01059500" .
+
+<urn:mdciii:1603:45:16:850:2:1062200>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1062200" ;
+    skos:prefLabel "Northwest"@eng-Latn ;
+    wdata:q7200235 "VI01062200" .
+
+<urn:mdciii:1603:45:16:850:2:1071200>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1071200" ;
+    skos:prefLabel "Sion Farm"@eng-Latn ;
+    wdata:q7200235 "VI01071200" .
+
+<urn:mdciii:1603:45:16:850:2:1073900>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1073900" ;
+    skos:prefLabel "Southcentral"@eng-Latn ;
+    wdata:q7200235 "VI01073900" .
+
+<urn:mdciii:1603:45:16:850:2:1075700>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:1075700" ;
+    skos:prefLabel "Southwest"@eng-Latn ;
+    wdata:q7200235 "VI01075700" .
+
+<urn:mdciii:1603:45:16:850:2:2015400>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:2015400" ;
+    skos:prefLabel "Central"@eng-Latn ;
+    wdata:q7200235 "VI02015400" .
+
+<urn:mdciii:1603:45:16:850:2:2027100>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:2027100" ;
+    skos:prefLabel "Coral Bay"@eng-Latn ;
+    wdata:q7200235 "VI02027100" .
+
+<urn:mdciii:1603:45:16:850:2:2028900>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:2028900" ;
+    skos:prefLabel "Cruz Bay"@eng-Latn ;
+    wdata:q7200235 "VI02028900" .
+
+<urn:mdciii:1603:45:16:850:2:2033400>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:2033400" ;
+    skos:prefLabel "East End"@eng-Latn ;
+    wdata:q7200235 "VI02033400" .
+
+<urn:mdciii:1603:45:16:850:2:3017200>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:3017200" ;
+    skos:prefLabel "Charlotte Amalie"@eng-Latn ;
+    wdata:q7200235 "VI03017200" .
+
+<urn:mdciii:1603:45:16:850:2:3034300>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:3034300" ;
+    skos:prefLabel "East End"@eng-Latn ;
+    wdata:q7200235 "VI03034300" .
+
+<urn:mdciii:1603:45:16:850:2:3061300>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:3061300" ;
+    skos:prefLabel "Northside"@eng-Latn ;
+    wdata:q7200235 "VI03061300" .
+
+<urn:mdciii:1603:45:16:850:2:3074800>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:3074800" ;
+    skos:prefLabel "Southside"@eng-Latn ;
+    wdata:q7200235 "VI03074800" .
+
+<urn:mdciii:1603:45:16:850:2:3078400>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:3078400" ;
+    skos:prefLabel "Tutu"@eng-Latn ;
+    wdata:q7200235 "VI03078400" .
+
+<urn:mdciii:1603:45:16:850:2:3082000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:3082000" ;
+    skos:prefLabel "Water Island"@eng-Latn ;
+    wdata:q7200235 "VI03082000" .
+
+<urn:mdciii:1603:45:16:850:2:3082900>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:850:2:3082900" ;
+    skos:prefLabel "West End"@eng-Latn ;
+    wdata:q7200235 "VI03082900" .
+

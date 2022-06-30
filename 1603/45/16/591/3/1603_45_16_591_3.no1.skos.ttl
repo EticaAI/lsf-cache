@@ -1,0 +1,3594 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:591()> .
+
+<urn:mdciii:1603:45:16:591()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:591)" ;
+    skos:member <urn:mdciii:1603:45:16:591:3()> .
+
+<urn:mdciii:1603:45:16:591:3()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:591:3)" ;
+    skos:member <urn:mdciii:1603:45:16:591:3:100101>, <urn:mdciii:1603:45:16:591:3:100102>, <urn:mdciii:1603:45:16:591:3:100103>, <urn:mdciii:1603:45:16:591:3:100104>, <urn:mdciii:1603:45:16:591:3:100105>, <urn:mdciii:1603:45:16:591:3:100106>, <urn:mdciii:1603:45:16:591:3:100107>, <urn:mdciii:1603:45:16:591:3:100108>, <urn:mdciii:1603:45:16:591:3:100201>, <urn:mdciii:1603:45:16:591:3:100202>, <urn:mdciii:1603:45:16:591:3:100203>, <urn:mdciii:1603:45:16:591:3:100204>, <urn:mdciii:1603:45:16:591:3:100205>, <urn:mdciii:1603:45:16:591:3:100206>, <urn:mdciii:1603:45:16:591:3:100207>, <urn:mdciii:1603:45:16:591:3:100208>, <urn:mdciii:1603:45:16:591:3:100301>, <urn:mdciii:1603:45:16:591:3:100302>, <urn:mdciii:1603:45:16:591:3:100303>, <urn:mdciii:1603:45:16:591:3:100304>, <urn:mdciii:1603:45:16:591:3:100305>, <urn:mdciii:1603:45:16:591:3:100306>, <urn:mdciii:1603:45:16:591:3:100307>, <urn:mdciii:1603:45:16:591:3:100308>, <urn:mdciii:1603:45:16:591:3:100309>, <urn:mdciii:1603:45:16:591:3:100310>, <urn:mdciii:1603:45:16:591:3:100311>, <urn:mdciii:1603:45:16:591:3:100312>, <urn:mdciii:1603:45:16:591:3:100401>, <urn:mdciii:1603:45:16:591:3:100402>, <urn:mdciii:1603:45:16:591:3:100403>, <urn:mdciii:1603:45:16:591:3:100404>, <urn:mdciii:1603:45:16:591:3:100405>, <urn:mdciii:1603:45:16:591:3:100501>, <urn:mdciii:1603:45:16:591:3:100502>, <urn:mdciii:1603:45:16:591:3:100503>, <urn:mdciii:1603:45:16:591:3:100504>, <urn:mdciii:1603:45:16:591:3:100505>, <urn:mdciii:1603:45:16:591:3:100506>, <urn:mdciii:1603:45:16:591:3:100507>, <urn:mdciii:1603:45:16:591:3:100508>, <urn:mdciii:1603:45:16:591:3:100509>, <urn:mdciii:1603:45:16:591:3:100601>, <urn:mdciii:1603:45:16:591:3:100602>, <urn:mdciii:1603:45:16:591:3:100603>, <urn:mdciii:1603:45:16:591:3:100604>, <urn:mdciii:1603:45:16:591:3:100605>, <urn:mdciii:1603:45:16:591:3:100606>, <urn:mdciii:1603:45:16:591:3:100607>, <urn:mdciii:1603:45:16:591:3:100608>, <urn:mdciii:1603:45:16:591:3:100701>, <urn:mdciii:1603:45:16:591:3:100702>, <urn:mdciii:1603:45:16:591:3:100703>, <urn:mdciii:1603:45:16:591:3:100704>, <urn:mdciii:1603:45:16:591:3:100705>, <urn:mdciii:1603:45:16:591:3:100706>, <urn:mdciii:1603:45:16:591:3:100707>, <urn:mdciii:1603:45:16:591:3:10102>, <urn:mdciii:1603:45:16:591:3:10103>, <urn:mdciii:1603:45:16:591:3:10104>, <urn:mdciii:1603:45:16:591:3:10105>, <urn:mdciii:1603:45:16:591:3:10201>, <urn:mdciii:1603:45:16:591:3:10202>, <urn:mdciii:1603:45:16:591:3:10203>, <urn:mdciii:1603:45:16:591:3:10204>, <urn:mdciii:1603:45:16:591:3:10205>, <urn:mdciii:1603:45:16:591:3:10301>, <urn:mdciii:1603:45:16:591:3:10302>, <urn:mdciii:1603:45:16:591:3:10303>, <urn:mdciii:1603:45:16:591:3:10304>, <urn:mdciii:1603:45:16:591:3:10305>, <urn:mdciii:1603:45:16:591:3:110101>, <urn:mdciii:1603:45:16:591:3:110102>, <urn:mdciii:1603:45:16:591:3:110103>, <urn:mdciii:1603:45:16:591:3:110104>, <urn:mdciii:1603:45:16:591:3:110105>, <urn:mdciii:1603:45:16:591:3:110106>, <urn:mdciii:1603:45:16:591:3:110201>, <urn:mdciii:1603:45:16:591:3:110202>, <urn:mdciii:1603:45:16:591:3:110203>, <urn:mdciii:1603:45:16:591:3:110204>, <urn:mdciii:1603:45:16:591:3:110205>, <urn:mdciii:1603:45:16:591:3:110206>, <urn:mdciii:1603:45:16:591:3:110207>, <urn:mdciii:1603:45:16:591:3:110208>, <urn:mdciii:1603:45:16:591:3:110209>, <urn:mdciii:1603:45:16:591:3:110210>, <urn:mdciii:1603:45:16:591:3:110211>, <urn:mdciii:1603:45:16:591:3:110212>, <urn:mdciii:1603:45:16:591:3:110213>, <urn:mdciii:1603:45:16:591:3:110301>, <urn:mdciii:1603:45:16:591:3:110302>, <urn:mdciii:1603:45:16:591:3:110303>, <urn:mdciii:1603:45:16:591:3:110304>, <urn:mdciii:1603:45:16:591:3:110305>, <urn:mdciii:1603:45:16:591:3:110306>, <urn:mdciii:1603:45:16:591:3:110307>, <urn:mdciii:1603:45:16:591:3:110308>, <urn:mdciii:1603:45:16:591:3:110309>, <urn:mdciii:1603:45:16:591:3:110310>, <urn:mdciii:1603:45:16:591:3:110311>, <urn:mdciii:1603:45:16:591:3:110401>, <urn:mdciii:1603:45:16:591:3:110402>, <urn:mdciii:1603:45:16:591:3:110403>, <urn:mdciii:1603:45:16:591:3:110404>, <urn:mdciii:1603:45:16:591:3:110405>, <urn:mdciii:1603:45:16:591:3:110406>, <urn:mdciii:1603:45:16:591:3:110407>, <urn:mdciii:1603:45:16:591:3:110408>, <urn:mdciii:1603:45:16:591:3:110409>, <urn:mdciii:1603:45:16:591:3:110410>, <urn:mdciii:1603:45:16:591:3:110411>, <urn:mdciii:1603:45:16:591:3:110412>, <urn:mdciii:1603:45:16:591:3:110413>, <urn:mdciii:1603:45:16:591:3:110414>, <urn:mdciii:1603:45:16:591:3:110415>, <urn:mdciii:1603:45:16:591:3:110416>, <urn:mdciii:1603:45:16:591:3:110417>, <urn:mdciii:1603:45:16:591:3:110418>, <urn:mdciii:1603:45:16:591:3:110501>, <urn:mdciii:1603:45:16:591:3:110502>, <urn:mdciii:1603:45:16:591:3:110503>, <urn:mdciii:1603:45:16:591:3:110504>, <urn:mdciii:1603:45:16:591:3:110505>, <urn:mdciii:1603:45:16:591:3:110506>, <urn:mdciii:1603:45:16:591:3:110507>, <urn:mdciii:1603:45:16:591:3:110508>, <urn:mdciii:1603:45:16:591:3:110509>, <urn:mdciii:1603:45:16:591:3:120101>, <urn:mdciii:1603:45:16:591:3:120102>, <urn:mdciii:1603:45:16:591:3:120103>, <urn:mdciii:1603:45:16:591:3:120104>, <urn:mdciii:1603:45:16:591:3:120105>, <urn:mdciii:1603:45:16:591:3:120106>, <urn:mdciii:1603:45:16:591:3:120201>, <urn:mdciii:1603:45:16:591:3:120202>, <urn:mdciii:1603:45:16:591:3:120203>, <urn:mdciii:1603:45:16:591:3:120204>, <urn:mdciii:1603:45:16:591:3:120205>, <urn:mdciii:1603:45:16:591:3:120206>, <urn:mdciii:1603:45:16:591:3:120207>, <urn:mdciii:1603:45:16:591:3:120208>, <urn:mdciii:1603:45:16:591:3:120301>, <urn:mdciii:1603:45:16:591:3:120302>, <urn:mdciii:1603:45:16:591:3:120303>, <urn:mdciii:1603:45:16:591:3:120304>, <urn:mdciii:1603:45:16:591:3:120305>, <urn:mdciii:1603:45:16:591:3:120401>, <urn:mdciii:1603:45:16:591:3:120402>, <urn:mdciii:1603:45:16:591:3:120403>, <urn:mdciii:1603:45:16:591:3:120404>, <urn:mdciii:1603:45:16:591:3:120405>, <urn:mdciii:1603:45:16:591:3:120406>, <urn:mdciii:1603:45:16:591:3:120407>, <urn:mdciii:1603:45:16:591:3:120408>, <urn:mdciii:1603:45:16:591:3:120409>, <urn:mdciii:1603:45:16:591:3:120410>, <urn:mdciii:1603:45:16:591:3:120411>, <urn:mdciii:1603:45:16:591:3:120412>, <urn:mdciii:1603:45:16:591:3:120413>, <urn:mdciii:1603:45:16:591:3:120414>, <urn:mdciii:1603:45:16:591:3:120415>, <urn:mdciii:1603:45:16:591:3:120416>, <urn:mdciii:1603:45:16:591:3:120417>, <urn:mdciii:1603:45:16:591:3:120418>, <urn:mdciii:1603:45:16:591:3:120419>, <urn:mdciii:1603:45:16:591:3:120501>, <urn:mdciii:1603:45:16:591:3:120502>, <urn:mdciii:1603:45:16:591:3:120503>, <urn:mdciii:1603:45:16:591:3:120504>, <urn:mdciii:1603:45:16:591:3:120505>, <urn:mdciii:1603:45:16:591:3:120506>, <urn:mdciii:1603:45:16:591:3:120507>, <urn:mdciii:1603:45:16:591:3:120508>, <urn:mdciii:1603:45:16:591:3:120509>, <urn:mdciii:1603:45:16:591:3:120601>, <urn:mdciii:1603:45:16:591:3:120602>, <urn:mdciii:1603:45:16:591:3:120603>, <urn:mdciii:1603:45:16:591:3:130101>, <urn:mdciii:1603:45:16:591:3:130102>, <urn:mdciii:1603:45:16:591:3:130103>, <urn:mdciii:1603:45:16:591:3:130104>, <urn:mdciii:1603:45:16:591:3:130105>, <urn:mdciii:1603:45:16:591:3:130201>, <urn:mdciii:1603:45:16:591:3:130202>, <urn:mdciii:1603:45:16:591:3:130203>, <urn:mdciii:1603:45:16:591:3:130204>, <urn:mdciii:1603:45:16:591:3:130205>, <urn:mdciii:1603:45:16:591:3:130206>, <urn:mdciii:1603:45:16:591:3:130207>, <urn:mdciii:1603:45:16:591:3:130208>, <urn:mdciii:1603:45:16:591:3:130209>, <urn:mdciii:1603:45:16:591:3:130210>, <urn:mdciii:1603:45:16:591:3:130211>, <urn:mdciii:1603:45:16:591:3:130212>, <urn:mdciii:1603:45:16:591:3:130301>, <urn:mdciii:1603:45:16:591:3:130302>, <urn:mdciii:1603:45:16:591:3:130303>, <urn:mdciii:1603:45:16:591:3:130304>, <urn:mdciii:1603:45:16:591:3:130305>, <urn:mdciii:1603:45:16:591:3:130306>, <urn:mdciii:1603:45:16:591:3:130401>, <urn:mdciii:1603:45:16:591:3:130402>, <urn:mdciii:1603:45:16:591:3:130403>, <urn:mdciii:1603:45:16:591:3:130404>, <urn:mdciii:1603:45:16:591:3:130405>, <urn:mdciii:1603:45:16:591:3:130501>, <urn:mdciii:1603:45:16:591:3:130502>, <urn:mdciii:1603:45:16:591:3:130503>, <urn:mdciii:1603:45:16:591:3:130504>, <urn:mdciii:1603:45:16:591:3:130505>, <urn:mdciii:1603:45:16:591:3:130506>, <urn:mdciii:1603:45:16:591:3:130507>, <urn:mdciii:1603:45:16:591:3:130508>, <urn:mdciii:1603:45:16:591:3:130509>, <urn:mdciii:1603:45:16:591:3:130510>, <urn:mdciii:1603:45:16:591:3:130511>, <urn:mdciii:1603:45:16:591:3:130512>, <urn:mdciii:1603:45:16:591:3:130601>, <urn:mdciii:1603:45:16:591:3:130602>, <urn:mdciii:1603:45:16:591:3:130603>, <urn:mdciii:1603:45:16:591:3:130604>, <urn:mdciii:1603:45:16:591:3:130701>, <urn:mdciii:1603:45:16:591:3:130702>, <urn:mdciii:1603:45:16:591:3:130703>, <urn:mdciii:1603:45:16:591:3:130704>, <urn:mdciii:1603:45:16:591:3:130705>, <urn:mdciii:1603:45:16:591:3:130801>, <urn:mdciii:1603:45:16:591:3:130802>, <urn:mdciii:1603:45:16:591:3:130803>, <urn:mdciii:1603:45:16:591:3:130804>, <urn:mdciii:1603:45:16:591:3:130805>, <urn:mdciii:1603:45:16:591:3:130901>, <urn:mdciii:1603:45:16:591:3:130902>, <urn:mdciii:1603:45:16:591:3:130903>, <urn:mdciii:1603:45:16:591:3:130904>, <urn:mdciii:1603:45:16:591:3:130905>, <urn:mdciii:1603:45:16:591:3:131001>, <urn:mdciii:1603:45:16:591:3:131002>, <urn:mdciii:1603:45:16:591:3:131003>, <urn:mdciii:1603:45:16:591:3:131004>, <urn:mdciii:1603:45:16:591:3:131005>, <urn:mdciii:1603:45:16:591:3:131006>, <urn:mdciii:1603:45:16:591:3:131007>, <urn:mdciii:1603:45:16:591:3:131101>, <urn:mdciii:1603:45:16:591:3:131102>, <urn:mdciii:1603:45:16:591:3:131103>, <urn:mdciii:1603:45:16:591:3:131104>, <urn:mdciii:1603:45:16:591:3:131105>, <urn:mdciii:1603:45:16:591:3:131106>, <urn:mdciii:1603:45:16:591:3:131107>, <urn:mdciii:1603:45:16:591:3:131108>, <urn:mdciii:1603:45:16:591:3:131201>, <urn:mdciii:1603:45:16:591:3:131202>, <urn:mdciii:1603:45:16:591:3:131203>, <urn:mdciii:1603:45:16:591:3:131204>, <urn:mdciii:1603:45:16:591:3:131205>, <urn:mdciii:1603:45:16:591:3:131206>, <urn:mdciii:1603:45:16:591:3:131207>, <urn:mdciii:1603:45:16:591:3:131208>, <urn:mdciii:1603:45:16:591:3:131209>, <urn:mdciii:1603:45:16:591:3:131210>, <urn:mdciii:1603:45:16:591:3:20101>, <urn:mdciii:1603:45:16:591:3:20102>, <urn:mdciii:1603:45:16:591:3:20103>, <urn:mdciii:1603:45:16:591:3:20104>, <urn:mdciii:1603:45:16:591:3:20105>, <urn:mdciii:1603:45:16:591:3:20106>, <urn:mdciii:1603:45:16:591:3:20107>, <urn:mdciii:1603:45:16:591:3:20201>, <urn:mdciii:1603:45:16:591:3:20202>, <urn:mdciii:1603:45:16:591:3:20203>, <urn:mdciii:1603:45:16:591:3:20204>, <urn:mdciii:1603:45:16:591:3:20205>, <urn:mdciii:1603:45:16:591:3:20301>, <urn:mdciii:1603:45:16:591:3:20302>, <urn:mdciii:1603:45:16:591:3:20303>, <urn:mdciii:1603:45:16:591:3:20304>, <urn:mdciii:1603:45:16:591:3:20305>, <urn:mdciii:1603:45:16:591:3:20306>, <urn:mdciii:1603:45:16:591:3:20307>, <urn:mdciii:1603:45:16:591:3:20308>, <urn:mdciii:1603:45:16:591:3:20401>, <urn:mdciii:1603:45:16:591:3:20402>, <urn:mdciii:1603:45:16:591:3:20403>, <urn:mdciii:1603:45:16:591:3:20404>, <urn:mdciii:1603:45:16:591:3:20405>, <urn:mdciii:1603:45:16:591:3:20406>, <urn:mdciii:1603:45:16:591:3:20501>, <urn:mdciii:1603:45:16:591:3:20502>, <urn:mdciii:1603:45:16:591:3:20503>, <urn:mdciii:1603:45:16:591:3:20504>, <urn:mdciii:1603:45:16:591:3:20505>, <urn:mdciii:1603:45:16:591:3:20506>, <urn:mdciii:1603:45:16:591:3:20507>, <urn:mdciii:1603:45:16:591:3:20508>, <urn:mdciii:1603:45:16:591:3:20509>, <urn:mdciii:1603:45:16:591:3:20510>, <urn:mdciii:1603:45:16:591:3:20511>, <urn:mdciii:1603:45:16:591:3:20512>, <urn:mdciii:1603:45:16:591:3:20513>, <urn:mdciii:1603:45:16:591:3:20601>, <urn:mdciii:1603:45:16:591:3:20602>, <urn:mdciii:1603:45:16:591:3:20603>, <urn:mdciii:1603:45:16:591:3:20604>, <urn:mdciii:1603:45:16:591:3:20605>, <urn:mdciii:1603:45:16:591:3:20606>, <urn:mdciii:1603:45:16:591:3:20607>, <urn:mdciii:1603:45:16:591:3:20608>, <urn:mdciii:1603:45:16:591:3:20609>, <urn:mdciii:1603:45:16:591:3:20610>, <urn:mdciii:1603:45:16:591:3:20701>, <urn:mdciii:1603:45:16:591:3:20702>, <urn:mdciii:1603:45:16:591:3:20703>, <urn:mdciii:1603:45:16:591:3:20704>, <urn:mdciii:1603:45:16:591:3:20705>, <urn:mdciii:1603:45:16:591:3:20706>, <urn:mdciii:1603:45:16:591:3:20707>, <urn:mdciii:1603:45:16:591:3:20801>, <urn:mdciii:1603:45:16:591:3:20802>, <urn:mdciii:1603:45:16:591:3:20803>, <urn:mdciii:1603:45:16:591:3:20804>, <urn:mdciii:1603:45:16:591:3:20805>, <urn:mdciii:1603:45:16:591:3:20901>, <urn:mdciii:1603:45:16:591:3:20902>, <urn:mdciii:1603:45:16:591:3:20903>, <urn:mdciii:1603:45:16:591:3:20904>, <urn:mdciii:1603:45:16:591:3:20905>, <urn:mdciii:1603:45:16:591:3:21001>, <urn:mdciii:1603:45:16:591:3:21002>, <urn:mdciii:1603:45:16:591:3:21003>, <urn:mdciii:1603:45:16:591:3:21004>, <urn:mdciii:1603:45:16:591:3:21005>, <urn:mdciii:1603:45:16:591:3:21006>, <urn:mdciii:1603:45:16:591:3:21101>, <urn:mdciii:1603:45:16:591:3:21102>, <urn:mdciii:1603:45:16:591:3:21103>, <urn:mdciii:1603:45:16:591:3:21104>, <urn:mdciii:1603:45:16:591:3:21105>, <urn:mdciii:1603:45:16:591:3:21201>, <urn:mdciii:1603:45:16:591:3:21202>, <urn:mdciii:1603:45:16:591:3:21203>, <urn:mdciii:1603:45:16:591:3:21204>, <urn:mdciii:1603:45:16:591:3:21205>, <urn:mdciii:1603:45:16:591:3:21301>, <urn:mdciii:1603:45:16:591:3:21302>, <urn:mdciii:1603:45:16:591:3:21303>, <urn:mdciii:1603:45:16:591:3:21304>, <urn:mdciii:1603:45:16:591:3:21305>, <urn:mdciii:1603:45:16:591:3:21306>, <urn:mdciii:1603:45:16:591:3:21307>, <urn:mdciii:1603:45:16:591:3:21308>, <urn:mdciii:1603:45:16:591:3:21309>, <urn:mdciii:1603:45:16:591:3:30101>, <urn:mdciii:1603:45:16:591:3:30102>, <urn:mdciii:1603:45:16:591:3:30103>, <urn:mdciii:1603:45:16:591:3:30104>, <urn:mdciii:1603:45:16:591:3:30105>, <urn:mdciii:1603:45:16:591:3:30201>, <urn:mdciii:1603:45:16:591:3:30202>, <urn:mdciii:1603:45:16:591:3:30203>, <urn:mdciii:1603:45:16:591:3:30204>, <urn:mdciii:1603:45:16:591:3:30205>, <urn:mdciii:1603:45:16:591:3:30206>, <urn:mdciii:1603:45:16:591:3:30207>, <urn:mdciii:1603:45:16:591:3:30208>, <urn:mdciii:1603:45:16:591:3:30209>, <urn:mdciii:1603:45:16:591:3:30210>, <urn:mdciii:1603:45:16:591:3:30301>, <urn:mdciii:1603:45:16:591:3:30302>, <urn:mdciii:1603:45:16:591:3:30303>, <urn:mdciii:1603:45:16:591:3:30304>, <urn:mdciii:1603:45:16:591:3:30305>, <urn:mdciii:1603:45:16:591:3:30306>, <urn:mdciii:1603:45:16:591:3:30401>, <urn:mdciii:1603:45:16:591:3:30402>, <urn:mdciii:1603:45:16:591:3:30403>, <urn:mdciii:1603:45:16:591:3:30404>, <urn:mdciii:1603:45:16:591:3:30405>, <urn:mdciii:1603:45:16:591:3:30406>, <urn:mdciii:1603:45:16:591:3:30501>, <urn:mdciii:1603:45:16:591:3:30502>, <urn:mdciii:1603:45:16:591:3:30503>, <urn:mdciii:1603:45:16:591:3:30504>, <urn:mdciii:1603:45:16:591:3:30505>, <urn:mdciii:1603:45:16:591:3:30601>, <urn:mdciii:1603:45:16:591:3:30602>, <urn:mdciii:1603:45:16:591:3:30603>, <urn:mdciii:1603:45:16:591:3:30604>, <urn:mdciii:1603:45:16:591:3:30605>, <urn:mdciii:1603:45:16:591:3:30606>, <urn:mdciii:1603:45:16:591:3:30607>, <urn:mdciii:1603:45:16:591:3:30608>, <urn:mdciii:1603:45:16:591:3:30609>, <urn:mdciii:1603:45:16:591:3:30610>, <urn:mdciii:1603:45:16:591:3:40101>, <urn:mdciii:1603:45:16:591:3:40102>, <urn:mdciii:1603:45:16:591:3:40103>, <urn:mdciii:1603:45:16:591:3:40104>, <urn:mdciii:1603:45:16:591:3:40105>, <urn:mdciii:1603:45:16:591:3:40106>, <urn:mdciii:1603:45:16:591:3:40107>, <urn:mdciii:1603:45:16:591:3:40201>, <urn:mdciii:1603:45:16:591:3:40202>, <urn:mdciii:1603:45:16:591:3:40203>, <urn:mdciii:1603:45:16:591:3:40204>, <urn:mdciii:1603:45:16:591:3:40205>, <urn:mdciii:1603:45:16:591:3:40206>, <urn:mdciii:1603:45:16:591:3:40207>, <urn:mdciii:1603:45:16:591:3:40208>, <urn:mdciii:1603:45:16:591:3:40209>, <urn:mdciii:1603:45:16:591:3:40210>, <urn:mdciii:1603:45:16:591:3:40211>, <urn:mdciii:1603:45:16:591:3:40212>, <urn:mdciii:1603:45:16:591:3:40213>, <urn:mdciii:1603:45:16:591:3:40214>, <urn:mdciii:1603:45:16:591:3:40301>, <urn:mdciii:1603:45:16:591:3:40302>, <urn:mdciii:1603:45:16:591:3:40303>, <urn:mdciii:1603:45:16:591:3:40304>, <urn:mdciii:1603:45:16:591:3:40305>, <urn:mdciii:1603:45:16:591:3:40306>, <urn:mdciii:1603:45:16:591:3:40401>, <urn:mdciii:1603:45:16:591:3:40402>, <urn:mdciii:1603:45:16:591:3:40403>, <urn:mdciii:1603:45:16:591:3:40404>, <urn:mdciii:1603:45:16:591:3:40405>, <urn:mdciii:1603:45:16:591:3:40501>, <urn:mdciii:1603:45:16:591:3:40502>, <urn:mdciii:1603:45:16:591:3:40503>, <urn:mdciii:1603:45:16:591:3:40504>, <urn:mdciii:1603:45:16:591:3:40505>, <urn:mdciii:1603:45:16:591:3:40506>, <urn:mdciii:1603:45:16:591:3:40507>, <urn:mdciii:1603:45:16:591:3:40508>, <urn:mdciii:1603:45:16:591:3:50101>, <urn:mdciii:1603:45:16:591:3:50102>, <urn:mdciii:1603:45:16:591:3:50103>, <urn:mdciii:1603:45:16:591:3:50104>, <urn:mdciii:1603:45:16:591:3:50105>, <urn:mdciii:1603:45:16:591:3:50106>, <urn:mdciii:1603:45:16:591:3:50107>, <urn:mdciii:1603:45:16:591:3:50108>, <urn:mdciii:1603:45:16:591:3:50109>, <urn:mdciii:1603:45:16:591:3:50110>, <urn:mdciii:1603:45:16:591:3:50111>, <urn:mdciii:1603:45:16:591:3:50112>, <urn:mdciii:1603:45:16:591:3:50113>, <urn:mdciii:1603:45:16:591:3:50114>, <urn:mdciii:1603:45:16:591:3:50115>, <urn:mdciii:1603:45:16:591:3:50116>, <urn:mdciii:1603:45:16:591:3:50201>, <urn:mdciii:1603:45:16:591:3:50202>, <urn:mdciii:1603:45:16:591:3:50203>, <urn:mdciii:1603:45:16:591:3:50204>, <urn:mdciii:1603:45:16:591:3:50205>, <urn:mdciii:1603:45:16:591:3:50206>, <urn:mdciii:1603:45:16:591:3:50207>, <urn:mdciii:1603:45:16:591:3:50208>, <urn:mdciii:1603:45:16:591:3:50209>, <urn:mdciii:1603:45:16:591:3:60101>, <urn:mdciii:1603:45:16:591:3:60102>, <urn:mdciii:1603:45:16:591:3:60103>, <urn:mdciii:1603:45:16:591:3:60201>, <urn:mdciii:1603:45:16:591:3:60202>, <urn:mdciii:1603:45:16:591:3:70101>, <urn:mdciii:1603:45:16:591:3:70102>, <urn:mdciii:1603:45:16:591:3:70103>, <urn:mdciii:1603:45:16:591:3:70104>, <urn:mdciii:1603:45:16:591:3:70105>, <urn:mdciii:1603:45:16:591:3:70201>, <urn:mdciii:1603:45:16:591:3:70202>, <urn:mdciii:1603:45:16:591:3:70203>, <urn:mdciii:1603:45:16:591:3:70204>, <urn:mdciii:1603:45:16:591:3:70205>, <urn:mdciii:1603:45:16:591:3:70206>, <urn:mdciii:1603:45:16:591:3:70301>, <urn:mdciii:1603:45:16:591:3:70302>, <urn:mdciii:1603:45:16:591:3:70303>, <urn:mdciii:1603:45:16:591:3:70304>, <urn:mdciii:1603:45:16:591:3:70305>, <urn:mdciii:1603:45:16:591:3:70306>, <urn:mdciii:1603:45:16:591:3:70307>, <urn:mdciii:1603:45:16:591:3:70308>, <urn:mdciii:1603:45:16:591:3:70401>, <urn:mdciii:1603:45:16:591:3:70402>, <urn:mdciii:1603:45:16:591:3:70403>, <urn:mdciii:1603:45:16:591:3:70404>, <urn:mdciii:1603:45:16:591:3:70405>, <urn:mdciii:1603:45:16:591:3:70406>, <urn:mdciii:1603:45:16:591:3:70501>, <urn:mdciii:1603:45:16:591:3:70502>, <urn:mdciii:1603:45:16:591:3:70503>, <urn:mdciii:1603:45:16:591:3:70504>, <urn:mdciii:1603:45:16:591:3:70505>, <urn:mdciii:1603:45:16:591:3:70506>, <urn:mdciii:1603:45:16:591:3:70507>, <urn:mdciii:1603:45:16:591:3:70601>, <urn:mdciii:1603:45:16:591:3:70602>, <urn:mdciii:1603:45:16:591:3:70603>, <urn:mdciii:1603:45:16:591:3:70604>, <urn:mdciii:1603:45:16:591:3:70605>, <urn:mdciii:1603:45:16:591:3:70606>, <urn:mdciii:1603:45:16:591:3:70607>, <urn:mdciii:1603:45:16:591:3:70608>, <urn:mdciii:1603:45:16:591:3:70701>, <urn:mdciii:1603:45:16:591:3:70702>, <urn:mdciii:1603:45:16:591:3:70703>, <urn:mdciii:1603:45:16:591:3:70704>, <urn:mdciii:1603:45:16:591:3:70705>, <urn:mdciii:1603:45:16:591:3:80101>, <urn:mdciii:1603:45:16:591:3:80102>, <urn:mdciii:1603:45:16:591:3:80103>, <urn:mdciii:1603:45:16:591:3:80104>, <urn:mdciii:1603:45:16:591:3:90101>, <urn:mdciii:1603:45:16:591:3:90102>, <urn:mdciii:1603:45:16:591:3:90103>, <urn:mdciii:1603:45:16:591:3:90104>, <urn:mdciii:1603:45:16:591:3:90105>, <urn:mdciii:1603:45:16:591:3:90106>, <urn:mdciii:1603:45:16:591:3:90107>, <urn:mdciii:1603:45:16:591:3:90108>, <urn:mdciii:1603:45:16:591:3:90109>, <urn:mdciii:1603:45:16:591:3:90110>, <urn:mdciii:1603:45:16:591:3:90201>, <urn:mdciii:1603:45:16:591:3:90202>, <urn:mdciii:1603:45:16:591:3:90203>, <urn:mdciii:1603:45:16:591:3:90204>, <urn:mdciii:1603:45:16:591:3:90205>, <urn:mdciii:1603:45:16:591:3:90206>, <urn:mdciii:1603:45:16:591:3:90207>, <urn:mdciii:1603:45:16:591:3:90208>, <urn:mdciii:1603:45:16:591:3:90209>, <urn:mdciii:1603:45:16:591:3:90210>, <urn:mdciii:1603:45:16:591:3:90211>, <urn:mdciii:1603:45:16:591:3:90212>, <urn:mdciii:1603:45:16:591:3:90213>, <urn:mdciii:1603:45:16:591:3:90214>, <urn:mdciii:1603:45:16:591:3:90215>, <urn:mdciii:1603:45:16:591:3:90216>, <urn:mdciii:1603:45:16:591:3:90217>, <urn:mdciii:1603:45:16:591:3:90218>, <urn:mdciii:1603:45:16:591:3:90219>, <urn:mdciii:1603:45:16:591:3:90220>, <urn:mdciii:1603:45:16:591:3:90221>, <urn:mdciii:1603:45:16:591:3:90222>, <urn:mdciii:1603:45:16:591:3:90223>, <urn:mdciii:1603:45:16:591:3:90224>, <urn:mdciii:1603:45:16:591:3:90301>, <urn:mdciii:1603:45:16:591:3:90302>, <urn:mdciii:1603:45:16:591:3:90303>, <urn:mdciii:1603:45:16:591:3:90304>, <urn:mdciii:1603:45:16:591:3:90305>, <urn:mdciii:1603:45:16:591:3:90306>, <urn:mdciii:1603:45:16:591:3:90307>, <urn:mdciii:1603:45:16:591:3:90308>, <urn:mdciii:1603:45:16:591:3:90309>, <urn:mdciii:1603:45:16:591:3:90310>, <urn:mdciii:1603:45:16:591:3:90311>, <urn:mdciii:1603:45:16:591:3:90312>, <urn:mdciii:1603:45:16:591:3:90313>, <urn:mdciii:1603:45:16:591:3:90314>, <urn:mdciii:1603:45:16:591:3:90401>, <urn:mdciii:1603:45:16:591:3:90402>, <urn:mdciii:1603:45:16:591:3:90403>, <urn:mdciii:1603:45:16:591:3:90404>, <urn:mdciii:1603:45:16:591:3:90405>, <urn:mdciii:1603:45:16:591:3:90406>, <urn:mdciii:1603:45:16:591:3:90407>, <urn:mdciii:1603:45:16:591:3:90408>, <urn:mdciii:1603:45:16:591:3:90409>, <urn:mdciii:1603:45:16:591:3:90410>, <urn:mdciii:1603:45:16:591:3:90411>, <urn:mdciii:1603:45:16:591:3:90501>, <urn:mdciii:1603:45:16:591:3:90502>, <urn:mdciii:1603:45:16:591:3:90503>, <urn:mdciii:1603:45:16:591:3:90504>, <urn:mdciii:1603:45:16:591:3:90505>, <urn:mdciii:1603:45:16:591:3:90601>, <urn:mdciii:1603:45:16:591:3:90602>, <urn:mdciii:1603:45:16:591:3:90603>, <urn:mdciii:1603:45:16:591:3:90604>, <urn:mdciii:1603:45:16:591:3:90605>, <urn:mdciii:1603:45:16:591:3:90701>, <urn:mdciii:1603:45:16:591:3:90702>, <urn:mdciii:1603:45:16:591:3:90703>, <urn:mdciii:1603:45:16:591:3:90704>, <urn:mdciii:1603:45:16:591:3:90705>, <urn:mdciii:1603:45:16:591:3:90706>, <urn:mdciii:1603:45:16:591:3:90707>, <urn:mdciii:1603:45:16:591:3:90708>, <urn:mdciii:1603:45:16:591:3:90709>, <urn:mdciii:1603:45:16:591:3:90710> .
+
+<urn:mdciii:1603:45:16:591:3(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:591:3:100101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100101" ;
+    skos:prefLabel "Boca De Balsa"@spa-Latn ;
+    wdata:q7200235 "PA100101" .
+
+<urn:mdciii:1603:45:16:591:3:100102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100102" ;
+    skos:prefLabel "Camarón Arriba"@spa-Latn ;
+    wdata:q7200235 "PA100102" .
+
+<urn:mdciii:1603:45:16:591:3:100103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100103" ;
+    skos:prefLabel "Cerro Banco"@spa-Latn ;
+    wdata:q7200235 "PA100103" .
+
+<urn:mdciii:1603:45:16:591:3:100104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100104" ;
+    skos:prefLabel "Cerro De Patena"@spa-Latn ;
+    wdata:q7200235 "PA100104" .
+
+<urn:mdciii:1603:45:16:591:3:100105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100105" ;
+    skos:prefLabel "Emplanada de Chorcha"@spa-Latn ;
+    wdata:q7200235 "PA100105" .
+
+<urn:mdciii:1603:45:16:591:3:100106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100106" ;
+    skos:prefLabel "Nämnoni"@spa-Latn ;
+    wdata:q7200235 "PA100106" .
+
+<urn:mdciii:1603:45:16:591:3:100107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100107" ;
+    skos:prefLabel "Niba"@spa-Latn ;
+    wdata:q7200235 "PA100107" .
+
+<urn:mdciii:1603:45:16:591:3:100108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100108" ;
+    skos:prefLabel "Soloy"@spa-Latn ;
+    wdata:q7200235 "PA100108" .
+
+<urn:mdciii:1603:45:16:591:3:100201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100201" ;
+    skos:prefLabel "Cascabel"@spa-Latn ;
+    wdata:q7200235 "PA100201" .
+
+<urn:mdciii:1603:45:16:591:3:100202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100202" ;
+    skos:prefLabel "Hato Corotú"@spa-Latn ;
+    wdata:q7200235 "PA100202" .
+
+<urn:mdciii:1603:45:16:591:3:100203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100203" ;
+    skos:prefLabel "Hato Culantro"@spa-Latn ;
+    wdata:q7200235 "PA100203" .
+
+<urn:mdciii:1603:45:16:591:3:100204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100204" ;
+    skos:prefLabel "Hato Jobo"@spa-Latn ;
+    wdata:q7200235 "PA100204" .
+
+<urn:mdciii:1603:45:16:591:3:100205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100205" ;
+    skos:prefLabel "Hato Julí"@spa-Latn ;
+    wdata:q7200235 "PA100205" .
+
+<urn:mdciii:1603:45:16:591:3:100206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100206" ;
+    skos:prefLabel "Hato Pilón"@spa-Latn ;
+    wdata:q7200235 "PA100206" .
+
+<urn:mdciii:1603:45:16:591:3:100207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100207" ;
+    skos:prefLabel "Quebrada de Loro"@spa-Latn ;
+    wdata:q7200235 "PA100207" .
+
+<urn:mdciii:1603:45:16:591:3:100208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100208" ;
+    skos:prefLabel "Salto Dupí"@spa-Latn ;
+    wdata:q7200235 "PA100208" .
+
+<urn:mdciii:1603:45:16:591:3:100301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100301" ;
+    skos:prefLabel "Alto Caballero"@spa-Latn ;
+    wdata:q7200235 "PA100301" .
+
+<urn:mdciii:1603:45:16:591:3:100302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100302" ;
+    skos:prefLabel "Bakama"@spa-Latn ;
+    wdata:q7200235 "PA100302" .
+
+<urn:mdciii:1603:45:16:591:3:100303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100303" ;
+    skos:prefLabel "Cerro Caña"@spa-Latn ;
+    wdata:q7200235 "PA100303" .
+
+<urn:mdciii:1603:45:16:591:3:100304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100304" ;
+    skos:prefLabel "Cerro Puerco"@spa-Latn ;
+    wdata:q7200235 "PA100304" .
+
+<urn:mdciii:1603:45:16:591:3:100305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100305" ;
+    skos:prefLabel "Chichica"@spa-Latn ;
+    wdata:q7200235 "PA100305" .
+
+<urn:mdciii:1603:45:16:591:3:100306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100306" ;
+    skos:prefLabel "Krüa"@spa-Latn ;
+    wdata:q7200235 "PA100306" .
+
+<urn:mdciii:1603:45:16:591:3:100307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100307" ;
+    skos:prefLabel "Maraca"@spa-Latn ;
+    wdata:q7200235 "PA100307" .
+
+<urn:mdciii:1603:45:16:591:3:100308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100308" ;
+    skos:prefLabel "Nibra"@spa-Latn ;
+    wdata:q7200235 "PA100308" .
+
+<urn:mdciii:1603:45:16:591:3:100309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100309" ;
+    skos:prefLabel "Peña Blanca"@spa-Latn ;
+    wdata:q7200235 "PA100309" .
+
+<urn:mdciii:1603:45:16:591:3:100310>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100310" ;
+    skos:prefLabel "Roka"@spa-Latn ;
+    wdata:q7200235 "PA100310" .
+
+<urn:mdciii:1603:45:16:591:3:100311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100311" ;
+    skos:prefLabel "Sitio Prado"@spa-Latn ;
+    wdata:q7200235 "PA100311" .
+
+<urn:mdciii:1603:45:16:591:3:100312>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100312" ;
+    skos:prefLabel "Umani"@spa-Latn ;
+    wdata:q7200235 "PA100312" .
+
+<urn:mdciii:1603:45:16:591:3:100401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100401" ;
+    skos:prefLabel "Cerro Iglesias"@spa-Latn ;
+    wdata:q7200235 "PA100401" .
+
+<urn:mdciii:1603:45:16:591:3:100402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100402" ;
+    skos:prefLabel "Hato Chamí"@spa-Latn ;
+    wdata:q7200235 "PA100402" .
+
+<urn:mdciii:1603:45:16:591:3:100403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100403" ;
+    skos:prefLabel "Jädeberi"@spa-Latn ;
+    wdata:q7200235 "PA100403" .
+
+<urn:mdciii:1603:45:16:591:3:100404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100404" ;
+    skos:prefLabel "Lajero"@spa-Latn ;
+    wdata:q7200235 "PA100404" .
+
+<urn:mdciii:1603:45:16:591:3:100405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100405" ;
+    skos:prefLabel "Susama"@spa-Latn ;
+    wdata:q7200235 "PA100405" .
+
+<urn:mdciii:1603:45:16:591:3:100501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100501" ;
+    skos:prefLabel "Agua De Salud"@spa-Latn ;
+    wdata:q7200235 "PA100501" .
+
+<urn:mdciii:1603:45:16:591:3:100502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100502" ;
+    skos:prefLabel "Alto de Jesús"@spa-Latn ;
+    wdata:q7200235 "PA100502" .
+
+<urn:mdciii:1603:45:16:591:3:100503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100503" ;
+    skos:prefLabel "Buenos Aires"@spa-Latn ;
+    wdata:q7200235 "PA100503" .
+
+<urn:mdciii:1603:45:16:591:3:100504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100504" ;
+    skos:prefLabel "Cerro Pelado"@spa-Latn ;
+    wdata:q7200235 "PA100504" .
+
+<urn:mdciii:1603:45:16:591:3:100505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100505" ;
+    skos:prefLabel "El Bale"@spa-Latn ;
+    wdata:q7200235 "PA100505" .
+
+<urn:mdciii:1603:45:16:591:3:100506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100506" ;
+    skos:prefLabel "El Paredón"@spa-Latn ;
+    wdata:q7200235 "PA100506" .
+
+<urn:mdciii:1603:45:16:591:3:100507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100507" ;
+    skos:prefLabel "El Piro"@spa-Latn ;
+    wdata:q7200235 "PA100507" .
+
+<urn:mdciii:1603:45:16:591:3:100508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100508" ;
+    skos:prefLabel "Güibale"@spa-Latn ;
+    wdata:q7200235 "PA100508" .
+
+<urn:mdciii:1603:45:16:591:3:100509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100509" ;
+    skos:prefLabel "Guayabito"@spa-Latn ;
+    wdata:q7200235 "PA100509" .
+
+<urn:mdciii:1603:45:16:591:3:100601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100601" ;
+    skos:prefLabel "Büri"@spa-Latn ;
+    wdata:q7200235 "PA100601" .
+
+<urn:mdciii:1603:45:16:591:3:100602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100602" ;
+    skos:prefLabel "Bisira"@spa-Latn ;
+    wdata:q7200235 "PA100602" .
+
+<urn:mdciii:1603:45:16:591:3:100603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100603" ;
+    skos:prefLabel "Guariviara"@spa-Latn ;
+    wdata:q7200235 "PA100603" .
+
+<urn:mdciii:1603:45:16:591:3:100604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100604" ;
+    skos:prefLabel "Guoroní"@spa-Latn ;
+    wdata:q7200235 "PA100604" .
+
+<urn:mdciii:1603:45:16:591:3:100605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100605" ;
+    skos:prefLabel "Kankintú"@spa-Latn ;
+    wdata:q7200235 "PA100605" .
+
+<urn:mdciii:1603:45:16:591:3:100606>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100606" ;
+    skos:prefLabel "Mününi"@spa-Latn ;
+    wdata:q7200235 "PA100606" .
+
+<urn:mdciii:1603:45:16:591:3:100607>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100607" ;
+    skos:prefLabel "Piedra Roja"@spa-Latn ;
+    wdata:q7200235 "PA100607" .
+
+<urn:mdciii:1603:45:16:591:3:100608>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100608" ;
+    skos:prefLabel "Tuwai"@spa-Latn ;
+    wdata:q7200235 "PA100608" .
+
+<urn:mdciii:1603:45:16:591:3:100701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100701" ;
+    skos:prefLabel "Bahía Azul"@spa-Latn ;
+    wdata:q7200235 "PA100701" .
+
+<urn:mdciii:1603:45:16:591:3:100702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100702" ;
+    skos:prefLabel "Calavébora o Santa Catalina"@spa-Latn ;
+    wdata:q7200235 "PA100702" .
+
+<urn:mdciii:1603:45:16:591:3:100703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100703" ;
+    skos:prefLabel "Kusapín"@spa-Latn ;
+    wdata:q7200235 "PA100703" .
+
+<urn:mdciii:1603:45:16:591:3:100704>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100704" ;
+    skos:prefLabel "Loma Yuca"@spa-Latn ;
+    wdata:q7200235 "PA100704" .
+
+<urn:mdciii:1603:45:16:591:3:100705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100705" ;
+    skos:prefLabel "Río Chiriquí"@spa-Latn ;
+    wdata:q7200235 "PA100705" .
+
+<urn:mdciii:1603:45:16:591:3:100706>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100706" ;
+    skos:prefLabel "Tobobe"@spa-Latn ;
+    wdata:q7200235 "PA100706" .
+
+<urn:mdciii:1603:45:16:591:3:100707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:100707" ;
+    skos:prefLabel "Valle Bonito"@spa-Latn ;
+    wdata:q7200235 "PA100707" .
+
+<urn:mdciii:1603:45:16:591:3:10101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10101" ;
+    skos:prefLabel "Bastimentos"@spa-Latn ;
+    wdata:q7200235 "PA010101" .
+
+<urn:mdciii:1603:45:16:591:3:10102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10102" ;
+    skos:prefLabel "Bocas del Toro"@spa-Latn ;
+    wdata:q7200235 "PA010102" .
+
+<urn:mdciii:1603:45:16:591:3:10103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10103" ;
+    skos:prefLabel "Cauchero"@spa-Latn ;
+    wdata:q7200235 "PA010103" .
+
+<urn:mdciii:1603:45:16:591:3:10104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10104" ;
+    skos:prefLabel "Punta Laurel"@spa-Latn ;
+    wdata:q7200235 "PA010104" .
+
+<urn:mdciii:1603:45:16:591:3:10105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10105" ;
+    skos:prefLabel "Tierra Oscura"@spa-Latn ;
+    wdata:q7200235 "PA010105" .
+
+<urn:mdciii:1603:45:16:591:3:10201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10201" ;
+    skos:prefLabel "Almirante"@spa-Latn ;
+    wdata:q7200235 "PA010201" .
+
+<urn:mdciii:1603:45:16:591:3:10202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10202" ;
+    skos:prefLabel "Changuinola"@spa-Latn ;
+    wdata:q7200235 "PA010202" .
+
+<urn:mdciii:1603:45:16:591:3:10203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10203" ;
+    skos:prefLabel "Guabito"@spa-Latn ;
+    wdata:q7200235 "PA010203" .
+
+<urn:mdciii:1603:45:16:591:3:10204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10204" ;
+    skos:prefLabel "Teribe"@spa-Latn ;
+    wdata:q7200235 "PA010204" .
+
+<urn:mdciii:1603:45:16:591:3:10205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10205" ;
+    skos:prefLabel "Valle del Risco"@spa-Latn ;
+    wdata:q7200235 "PA010205" .
+
+<urn:mdciii:1603:45:16:591:3:10301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10301" ;
+    skos:prefLabel "Chiriquí Grande"@spa-Latn ;
+    wdata:q7200235 "PA010301" .
+
+<urn:mdciii:1603:45:16:591:3:10302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10302" ;
+    skos:prefLabel "Miramar"@spa-Latn ;
+    wdata:q7200235 "PA010302" .
+
+<urn:mdciii:1603:45:16:591:3:10303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10303" ;
+    skos:prefLabel "Punta Peña"@spa-Latn ;
+    wdata:q7200235 "PA010303" .
+
+<urn:mdciii:1603:45:16:591:3:10304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10304" ;
+    skos:prefLabel "Punta Robalo"@spa-Latn ;
+    wdata:q7200235 "PA010304" .
+
+<urn:mdciii:1603:45:16:591:3:10305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:10305" ;
+    skos:prefLabel "Rambala"@spa-Latn ;
+    wdata:q7200235 "PA010305" .
+
+<urn:mdciii:1603:45:16:591:3:110101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110101" ;
+    skos:prefLabel "Arraiján"@spa-Latn ;
+    wdata:q7200235 "PA110101" .
+
+<urn:mdciii:1603:45:16:591:3:110102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110102" ;
+    skos:prefLabel "Juan Demóstenes Arosemena"@spa-Latn ;
+    wdata:q7200235 "PA110102" .
+
+<urn:mdciii:1603:45:16:591:3:110103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110103" ;
+    skos:prefLabel "Nuevo Emperador"@spa-Latn ;
+    wdata:q7200235 "PA110103" .
+
+<urn:mdciii:1603:45:16:591:3:110104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110104" ;
+    skos:prefLabel "Santa Clara"@spa-Latn ;
+    wdata:q7200235 "PA110104" .
+
+<urn:mdciii:1603:45:16:591:3:110105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110105" ;
+    skos:prefLabel "Veracruz"@spa-Latn ;
+    wdata:q7200235 "PA110105" .
+
+<urn:mdciii:1603:45:16:591:3:110106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110106" ;
+    skos:prefLabel "Vista Alegre"@spa-Latn ;
+    wdata:q7200235 "PA110106" .
+
+<urn:mdciii:1603:45:16:591:3:110201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110201" ;
+    skos:prefLabel "Caimito"@spa-Latn ;
+    wdata:q7200235 "PA110201" .
+
+<urn:mdciii:1603:45:16:591:3:110202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110202" ;
+    skos:prefLabel "Campana"@spa-Latn ;
+    wdata:q7200235 "PA110202" .
+
+<urn:mdciii:1603:45:16:591:3:110203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110203" ;
+    skos:prefLabel "Capira"@spa-Latn ;
+    wdata:q7200235 "PA110203" .
+
+<urn:mdciii:1603:45:16:591:3:110204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110204" ;
+    skos:prefLabel "Cermeño"@spa-Latn ;
+    wdata:q7200235 "PA110204" .
+
+<urn:mdciii:1603:45:16:591:3:110205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110205" ;
+    skos:prefLabel "Cirí de los Sotos"@spa-Latn ;
+    wdata:q7200235 "PA110205" .
+
+<urn:mdciii:1603:45:16:591:3:110206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110206" ;
+    skos:prefLabel "Cirí Grande"@spa-Latn ;
+    wdata:q7200235 "PA110206" .
+
+<urn:mdciii:1603:45:16:591:3:110207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110207" ;
+    skos:prefLabel "El Cacao"@spa-Latn ;
+    wdata:q7200235 "PA110207" .
+
+<urn:mdciii:1603:45:16:591:3:110208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110208" ;
+    skos:prefLabel "La Trinidad"@spa-Latn ;
+    wdata:q7200235 "PA110208" .
+
+<urn:mdciii:1603:45:16:591:3:110209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110209" ;
+    skos:prefLabel "Lídice"@spa-Latn ;
+    wdata:q7200235 "PA110209" .
+
+<urn:mdciii:1603:45:16:591:3:110210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110210" ;
+    skos:prefLabel "Las Ollas Arriba"@spa-Latn ;
+    wdata:q7200235 "PA110210" .
+
+<urn:mdciii:1603:45:16:591:3:110211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110211" ;
+    skos:prefLabel "Santa Rosa"@spa-Latn ;
+    wdata:q7200235 "PA110211" .
+
+<urn:mdciii:1603:45:16:591:3:110212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110212" ;
+    skos:prefLabel "Villa Carmen"@spa-Latn ;
+    wdata:q7200235 "PA110212" .
+
+<urn:mdciii:1603:45:16:591:3:110213>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110213" ;
+    skos:prefLabel "Villa Rosario"@spa-Latn ;
+    wdata:q7200235 "PA110213" .
+
+<urn:mdciii:1603:45:16:591:3:110301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110301" ;
+    skos:prefLabel "Bejuco"@spa-Latn ;
+    wdata:q7200235 "PA110301" .
+
+<urn:mdciii:1603:45:16:591:3:110302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110302" ;
+    skos:prefLabel "Buenos Aires"@spa-Latn ;
+    wdata:q7200235 "PA110302" .
+
+<urn:mdciii:1603:45:16:591:3:110303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110303" ;
+    skos:prefLabel "Cabuya"@spa-Latn ;
+    wdata:q7200235 "PA110303" .
+
+<urn:mdciii:1603:45:16:591:3:110304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110304" ;
+    skos:prefLabel "Chame"@spa-Latn ;
+    wdata:q7200235 "PA110304" .
+
+<urn:mdciii:1603:45:16:591:3:110305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110305" ;
+    skos:prefLabel "Chicá"@spa-Latn ;
+    wdata:q7200235 "PA110305" .
+
+<urn:mdciii:1603:45:16:591:3:110306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110306" ;
+    skos:prefLabel "El Libano"@spa-Latn ;
+    wdata:q7200235 "PA110306" .
+
+<urn:mdciii:1603:45:16:591:3:110307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110307" ;
+    skos:prefLabel "Las Lajas"@spa-Latn ;
+    wdata:q7200235 "PA110307" .
+
+<urn:mdciii:1603:45:16:591:3:110308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110308" ;
+    skos:prefLabel "Nueva Gorgona"@spa-Latn ;
+    wdata:q7200235 "PA110308" .
+
+<urn:mdciii:1603:45:16:591:3:110309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110309" ;
+    skos:prefLabel "Punta Chame"@spa-Latn ;
+    wdata:q7200235 "PA110309" .
+
+<urn:mdciii:1603:45:16:591:3:110310>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110310" ;
+    skos:prefLabel "Sajalices"@spa-Latn ;
+    wdata:q7200235 "PA110310" .
+
+<urn:mdciii:1603:45:16:591:3:110311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110311" ;
+    skos:prefLabel "Sorá"@spa-Latn ;
+    wdata:q7200235 "PA110311" .
+
+<urn:mdciii:1603:45:16:591:3:110401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110401" ;
+    skos:prefLabel "Amador"@spa-Latn ;
+    wdata:q7200235 "PA110401" .
+
+<urn:mdciii:1603:45:16:591:3:110402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110402" ;
+    skos:prefLabel "Arosemena"@spa-Latn ;
+    wdata:q7200235 "PA110402" .
+
+<urn:mdciii:1603:45:16:591:3:110403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110403" ;
+    skos:prefLabel "Barrio Balboa"@spa-Latn ;
+    wdata:q7200235 "PA110403" .
+
+<urn:mdciii:1603:45:16:591:3:110404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110404" ;
+    skos:prefLabel "Barrio Colón"@spa-Latn ;
+    wdata:q7200235 "PA110404" .
+
+<urn:mdciii:1603:45:16:591:3:110405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110405" ;
+    skos:prefLabel "El Arado"@spa-Latn ;
+    wdata:q7200235 "PA110405" .
+
+<urn:mdciii:1603:45:16:591:3:110406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110406" ;
+    skos:prefLabel "El Coco"@spa-Latn ;
+    wdata:q7200235 "PA110406" .
+
+<urn:mdciii:1603:45:16:591:3:110407>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110407" ;
+    skos:prefLabel "Feuillet"@spa-Latn ;
+    wdata:q7200235 "PA110407" .
+
+<urn:mdciii:1603:45:16:591:3:110408>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110408" ;
+    skos:prefLabel "Guadalupe"@spa-Latn ;
+    wdata:q7200235 "PA110408" .
+
+<urn:mdciii:1603:45:16:591:3:110409>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110409" ;
+    skos:prefLabel "Herrera"@spa-Latn ;
+    wdata:q7200235 "PA110409" .
+
+<urn:mdciii:1603:45:16:591:3:110410>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110410" ;
+    skos:prefLabel "Hurtado"@spa-Latn ;
+    wdata:q7200235 "PA110410" .
+
+<urn:mdciii:1603:45:16:591:3:110411>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110411" ;
+    skos:prefLabel "Iturralde"@spa-Latn ;
+    wdata:q7200235 "PA110411" .
+
+<urn:mdciii:1603:45:16:591:3:110412>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110412" ;
+    skos:prefLabel "La Represa"@spa-Latn ;
+    wdata:q7200235 "PA110412" .
+
+<urn:mdciii:1603:45:16:591:3:110413>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110413" ;
+    skos:prefLabel "Los Díaz"@spa-Latn ;
+    wdata:q7200235 "PA110413" .
+
+<urn:mdciii:1603:45:16:591:3:110414>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110414" ;
+    skos:prefLabel "Mendoza"@spa-Latn ;
+    wdata:q7200235 "PA110414" .
+
+<urn:mdciii:1603:45:16:591:3:110415>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110415" ;
+    skos:prefLabel "Obaldía"@spa-Latn ;
+    wdata:q7200235 "PA110415" .
+
+<urn:mdciii:1603:45:16:591:3:110416>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110416" ;
+    skos:prefLabel "Playa Leona"@spa-Latn ;
+    wdata:q7200235 "PA110416" .
+
+<urn:mdciii:1603:45:16:591:3:110417>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110417" ;
+    skos:prefLabel "Puerto Caimito"@spa-Latn ;
+    wdata:q7200235 "PA110417" .
+
+<urn:mdciii:1603:45:16:591:3:110418>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110418" ;
+    skos:prefLabel "Santa Rita"@spa-Latn ;
+    wdata:q7200235 "PA110418" .
+
+<urn:mdciii:1603:45:16:591:3:110501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110501" ;
+    skos:prefLabel "El Espino"@spa-Latn ;
+    wdata:q7200235 "PA110501" .
+
+<urn:mdciii:1603:45:16:591:3:110502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110502" ;
+    skos:prefLabel "El Higo"@spa-Latn ;
+    wdata:q7200235 "PA110502" .
+
+<urn:mdciii:1603:45:16:591:3:110503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110503" ;
+    skos:prefLabel "Guayabito"@spa-Latn ;
+    wdata:q7200235 "PA110503" .
+
+<urn:mdciii:1603:45:16:591:3:110504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110504" ;
+    skos:prefLabel "La Ermita"@spa-Latn ;
+    wdata:q7200235 "PA110504" .
+
+<urn:mdciii:1603:45:16:591:3:110505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110505" ;
+    skos:prefLabel "La Laguna"@spa-Latn ;
+    wdata:q7200235 "PA110505" .
+
+<urn:mdciii:1603:45:16:591:3:110506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110506" ;
+    skos:prefLabel "Las Uvas"@spa-Latn ;
+    wdata:q7200235 "PA110506" .
+
+<urn:mdciii:1603:45:16:591:3:110507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110507" ;
+    skos:prefLabel "Los Llanitos"@spa-Latn ;
+    wdata:q7200235 "PA110507" .
+
+<urn:mdciii:1603:45:16:591:3:110508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110508" ;
+    skos:prefLabel "San Carlos"@spa-Latn ;
+    wdata:q7200235 "PA110508" .
+
+<urn:mdciii:1603:45:16:591:3:110509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:110509" ;
+    skos:prefLabel "San José"@spa-Latn ;
+    wdata:q7200235 "PA110509" .
+
+<urn:mdciii:1603:45:16:591:3:120101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120101" ;
+    skos:prefLabel "La Ensenada"@spa-Latn ;
+    wdata:q7200235 "PA120101" .
+
+<urn:mdciii:1603:45:16:591:3:120102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120102" ;
+    skos:prefLabel "La Esmeralda"@spa-Latn ;
+    wdata:q7200235 "PA120102" .
+
+<urn:mdciii:1603:45:16:591:3:120103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120103" ;
+    skos:prefLabel "La Guinea"@spa-Latn ;
+    wdata:q7200235 "PA120103" .
+
+<urn:mdciii:1603:45:16:591:3:120104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120104" ;
+    skos:prefLabel "Pedro González"@spa-Latn ;
+    wdata:q7200235 "PA120104" .
+
+<urn:mdciii:1603:45:16:591:3:120105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120105" ;
+    skos:prefLabel "Saboga"@spa-Latn ;
+    wdata:q7200235 "PA120105" .
+
+<urn:mdciii:1603:45:16:591:3:120106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120106" ;
+    skos:prefLabel "San Miguel"@spa-Latn ;
+    wdata:q7200235 "PA120106" .
+
+<urn:mdciii:1603:45:16:591:3:120201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120201" ;
+    skos:prefLabel "Cañita"@spa-Latn ;
+    wdata:q7200235 "PA120201" .
+
+<urn:mdciii:1603:45:16:591:3:120202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120202" ;
+    skos:prefLabel "Chepillo"@spa-Latn ;
+    wdata:q7200235 "PA120202" .
+
+<urn:mdciii:1603:45:16:591:3:120203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120203" ;
+    skos:prefLabel "Chepo"@spa-Latn ;
+    wdata:q7200235 "PA120203" .
+
+<urn:mdciii:1603:45:16:591:3:120204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120204" ;
+    skos:prefLabel "El Llano"@spa-Latn ;
+    wdata:q7200235 "PA120204" .
+
+<urn:mdciii:1603:45:16:591:3:120205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120205" ;
+    skos:prefLabel "Kuna de Madungandí"@spa-Latn ;
+    wdata:q7200235 "PA120205" .
+
+<urn:mdciii:1603:45:16:591:3:120206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120206" ;
+    skos:prefLabel "Las Margaritas"@spa-Latn ;
+    wdata:q7200235 "PA120206" .
+
+<urn:mdciii:1603:45:16:591:3:120207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120207" ;
+    skos:prefLabel "Santa Cruz de Chinina"@spa-Latn ;
+    wdata:q7200235 "PA120207" .
+
+<urn:mdciii:1603:45:16:591:3:120208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120208" ;
+    skos:prefLabel "Tortí"@spa-Latn ;
+    wdata:q7200235 "PA120208" .
+
+<urn:mdciii:1603:45:16:591:3:120301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120301" ;
+    skos:prefLabel "Brujas"@spa-Latn ;
+    wdata:q7200235 "PA120301" .
+
+<urn:mdciii:1603:45:16:591:3:120302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120302" ;
+    skos:prefLabel "Chimán"@spa-Latn ;
+    wdata:q7200235 "PA120302" .
+
+<urn:mdciii:1603:45:16:591:3:120303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120303" ;
+    skos:prefLabel "Gonzalo Vasquez"@spa-Latn ;
+    wdata:q7200235 "PA120303" .
+
+<urn:mdciii:1603:45:16:591:3:120304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120304" ;
+    skos:prefLabel "Pasiga"@spa-Latn ;
+    wdata:q7200235 "PA120304" .
+
+<urn:mdciii:1603:45:16:591:3:120305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120305" ;
+    skos:prefLabel "Unión Santeña"@spa-Latn ;
+    wdata:q7200235 "PA120305" .
+
+<urn:mdciii:1603:45:16:591:3:120401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120401" ;
+    skos:prefLabel "Ancón"@spa-Latn ;
+    wdata:q7200235 "PA120401" .
+
+<urn:mdciii:1603:45:16:591:3:120402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120402" ;
+    skos:prefLabel "Bella Vista"@spa-Latn ;
+    wdata:q7200235 "PA120402" .
+
+<urn:mdciii:1603:45:16:591:3:120403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120403" ;
+    skos:prefLabel "Betania"@spa-Latn ;
+    wdata:q7200235 "PA120403" .
+
+<urn:mdciii:1603:45:16:591:3:120404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120404" ;
+    skos:prefLabel "Chilibre"@spa-Latn ;
+    wdata:q7200235 "PA120404" .
+
+<urn:mdciii:1603:45:16:591:3:120405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120405" ;
+    skos:prefLabel "Curundú"@spa-Latn ;
+    wdata:q7200235 "PA120405" .
+
+<urn:mdciii:1603:45:16:591:3:120406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120406" ;
+    skos:prefLabel "El Chorrillo"@spa-Latn ;
+    wdata:q7200235 "PA120406" .
+
+<urn:mdciii:1603:45:16:591:3:120407>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120407" ;
+    skos:prefLabel "Juan Díaz"@spa-Latn ;
+    wdata:q7200235 "PA120407" .
+
+<urn:mdciii:1603:45:16:591:3:120408>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120408" ;
+    skos:prefLabel "La Exposición o Calidonia"@spa-Latn ;
+    wdata:q7200235 "PA120408" .
+
+<urn:mdciii:1603:45:16:591:3:120409>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120409" ;
+    skos:prefLabel "Las Cumbres"@spa-Latn ;
+    wdata:q7200235 "PA120409" .
+
+<urn:mdciii:1603:45:16:591:3:120410>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120410" ;
+    skos:prefLabel "Pacora"@spa-Latn ;
+    wdata:q7200235 "PA120410" .
+
+<urn:mdciii:1603:45:16:591:3:120411>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120411" ;
+    skos:prefLabel "Parque Lefevre"@spa-Latn ;
+    wdata:q7200235 "PA120411" .
+
+<urn:mdciii:1603:45:16:591:3:120412>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120412" ;
+    skos:prefLabel "Pedregal"@spa-Latn ;
+    wdata:q7200235 "PA120412" .
+
+<urn:mdciii:1603:45:16:591:3:120413>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120413" ;
+    skos:prefLabel "Pueblo Nuevo"@spa-Latn ;
+    wdata:q7200235 "PA120413" .
+
+<urn:mdciii:1603:45:16:591:3:120414>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120414" ;
+    skos:prefLabel "Río Abajo"@spa-Latn ;
+    wdata:q7200235 "PA120414" .
+
+<urn:mdciii:1603:45:16:591:3:120415>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120415" ;
+    skos:prefLabel "San Felipe"@spa-Latn ;
+    wdata:q7200235 "PA120415" .
+
+<urn:mdciii:1603:45:16:591:3:120416>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120416" ;
+    skos:prefLabel "San Francisco"@spa-Latn ;
+    wdata:q7200235 "PA120416" .
+
+<urn:mdciii:1603:45:16:591:3:120417>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120417" ;
+    skos:prefLabel "San Martín"@spa-Latn ;
+    wdata:q7200235 "PA120417" .
+
+<urn:mdciii:1603:45:16:591:3:120418>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120418" ;
+    skos:prefLabel "Santa Ana"@spa-Latn ;
+    wdata:q7200235 "PA120418" .
+
+<urn:mdciii:1603:45:16:591:3:120419>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120419" ;
+    skos:prefLabel "Tocumen"@spa-Latn ;
+    wdata:q7200235 "PA120419" .
+
+<urn:mdciii:1603:45:16:591:3:120501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120501" ;
+    skos:prefLabel "Amelia Denis de Icaza"@spa-Latn ;
+    wdata:q7200235 "PA120501" .
+
+<urn:mdciii:1603:45:16:591:3:120502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120502" ;
+    skos:prefLabel "Arnulfo Arias"@spa-Latn ;
+    wdata:q7200235 "PA120502" .
+
+<urn:mdciii:1603:45:16:591:3:120503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120503" ;
+    skos:prefLabel "Belisario Frías"@spa-Latn ;
+    wdata:q7200235 "PA120503" .
+
+<urn:mdciii:1603:45:16:591:3:120504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120504" ;
+    skos:prefLabel "Belisario Porras"@spa-Latn ;
+    wdata:q7200235 "PA120504" .
+
+<urn:mdciii:1603:45:16:591:3:120505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120505" ;
+    skos:prefLabel "José Domingo Espinar"@spa-Latn ;
+    wdata:q7200235 "PA120505" .
+
+<urn:mdciii:1603:45:16:591:3:120506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120506" ;
+    skos:prefLabel "Mateo Iturralde"@spa-Latn ;
+    wdata:q7200235 "PA120506" .
+
+<urn:mdciii:1603:45:16:591:3:120507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120507" ;
+    skos:prefLabel "Omar Torrijos"@spa-Latn ;
+    wdata:q7200235 "PA120507" .
+
+<urn:mdciii:1603:45:16:591:3:120508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120508" ;
+    skos:prefLabel "Rufina Alfaro"@spa-Latn ;
+    wdata:q7200235 "PA120508" .
+
+<urn:mdciii:1603:45:16:591:3:120509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120509" ;
+    skos:prefLabel "Victoriano Lorenzo"@spa-Latn ;
+    wdata:q7200235 "PA120509" .
+
+<urn:mdciii:1603:45:16:591:3:120601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120601" ;
+    skos:prefLabel "Otoque Occidente"@spa-Latn ;
+    wdata:q7200235 "PA120601" .
+
+<urn:mdciii:1603:45:16:591:3:120602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120602" ;
+    skos:prefLabel "Otoque Oriente"@spa-Latn ;
+    wdata:q7200235 "PA120602" .
+
+<urn:mdciii:1603:45:16:591:3:120603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:120603" ;
+    skos:prefLabel "Taboga"@spa-Latn ;
+    wdata:q7200235 "PA120603" .
+
+<urn:mdciii:1603:45:16:591:3:130101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130101" ;
+    skos:prefLabel "Atalaya"@spa-Latn ;
+    wdata:q7200235 "PA130101" .
+
+<urn:mdciii:1603:45:16:591:3:130102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130102" ;
+    skos:prefLabel "El Barrito"@spa-Latn ;
+    wdata:q7200235 "PA130102" .
+
+<urn:mdciii:1603:45:16:591:3:130103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130103" ;
+    skos:prefLabel "La Carrillo"@spa-Latn ;
+    wdata:q7200235 "PA130103" .
+
+<urn:mdciii:1603:45:16:591:3:130104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130104" ;
+    skos:prefLabel "La Montañuela"@spa-Latn ;
+    wdata:q7200235 "PA130104" .
+
+<urn:mdciii:1603:45:16:591:3:130105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130105" ;
+    skos:prefLabel "San Antonio"@spa-Latn ;
+    wdata:q7200235 "PA130105" .
+
+<urn:mdciii:1603:45:16:591:3:130201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130201" ;
+    skos:prefLabel "Barnizal"@spa-Latn ;
+    wdata:q7200235 "PA130201" .
+
+<urn:mdciii:1603:45:16:591:3:130202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130202" ;
+    skos:prefLabel "Calobre"@spa-Latn ;
+    wdata:q7200235 "PA130202" .
+
+<urn:mdciii:1603:45:16:591:3:130203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130203" ;
+    skos:prefLabel "Chitra"@spa-Latn ;
+    wdata:q7200235 "PA130203" .
+
+<urn:mdciii:1603:45:16:591:3:130204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130204" ;
+    skos:prefLabel "El Cocla"@spa-Latn ;
+    wdata:q7200235 "PA130204" .
+
+<urn:mdciii:1603:45:16:591:3:130205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130205" ;
+    skos:prefLabel "El Potrero"@spa-Latn ;
+    wdata:q7200235 "PA130205" .
+
+<urn:mdciii:1603:45:16:591:3:130206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130206" ;
+    skos:prefLabel "La Laguna"@spa-Latn ;
+    wdata:q7200235 "PA130206" .
+
+<urn:mdciii:1603:45:16:591:3:130207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130207" ;
+    skos:prefLabel "La Raya de Calobre"@spa-Latn ;
+    wdata:q7200235 "PA130207" .
+
+<urn:mdciii:1603:45:16:591:3:130208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130208" ;
+    skos:prefLabel "La Tetilla"@spa-Latn ;
+    wdata:q7200235 "PA130208" .
+
+<urn:mdciii:1603:45:16:591:3:130209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130209" ;
+    skos:prefLabel "La Yeguada"@spa-Latn ;
+    wdata:q7200235 "PA130209" .
+
+<urn:mdciii:1603:45:16:591:3:130210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130210" ;
+    skos:prefLabel "Las Guías"@spa-Latn ;
+    wdata:q7200235 "PA130210" .
+
+<urn:mdciii:1603:45:16:591:3:130211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130211" ;
+    skos:prefLabel "Monjarás"@spa-Latn ;
+    wdata:q7200235 "PA130211" .
+
+<urn:mdciii:1603:45:16:591:3:130212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130212" ;
+    skos:prefLabel "San José"@spa-Latn ;
+    wdata:q7200235 "PA130212" .
+
+<urn:mdciii:1603:45:16:591:3:130301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130301" ;
+    skos:prefLabel "Cañazas"@spa-Latn ;
+    wdata:q7200235 "PA130301" .
+
+<urn:mdciii:1603:45:16:591:3:130302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130302" ;
+    skos:prefLabel "Cerro de Plata"@spa-Latn ;
+    wdata:q7200235 "PA130302" .
+
+<urn:mdciii:1603:45:16:591:3:130303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130303" ;
+    skos:prefLabel "El Picador"@spa-Latn ;
+    wdata:q7200235 "PA130303" .
+
+<urn:mdciii:1603:45:16:591:3:130304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130304" ;
+    skos:prefLabel "Los Valles"@spa-Latn ;
+    wdata:q7200235 "PA130304" .
+
+<urn:mdciii:1603:45:16:591:3:130305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130305" ;
+    skos:prefLabel "San José"@spa-Latn ;
+    wdata:q7200235 "PA130305" .
+
+<urn:mdciii:1603:45:16:591:3:130306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130306" ;
+    skos:prefLabel "San Marcelo"@spa-Latn ;
+    wdata:q7200235 "PA130306" .
+
+<urn:mdciii:1603:45:16:591:3:130401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130401" ;
+    skos:prefLabel "Bisvalles"@spa-Latn ;
+    wdata:q7200235 "PA130401" .
+
+<urn:mdciii:1603:45:16:591:3:130402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130402" ;
+    skos:prefLabel "Boró"@spa-Latn ;
+    wdata:q7200235 "PA130402" .
+
+<urn:mdciii:1603:45:16:591:3:130403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130403" ;
+    skos:prefLabel "La Mesa"@spa-Latn ;
+    wdata:q7200235 "PA130403" .
+
+<urn:mdciii:1603:45:16:591:3:130404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130404" ;
+    skos:prefLabel "Llano Grande"@spa-Latn ;
+    wdata:q7200235 "PA130404" .
+
+<urn:mdciii:1603:45:16:591:3:130405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130405" ;
+    skos:prefLabel "San Bartolo"@spa-Latn ;
+    wdata:q7200235 "PA130405" .
+
+<urn:mdciii:1603:45:16:591:3:130501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130501" ;
+    skos:prefLabel "Cerro de Casa"@spa-Latn ;
+    wdata:q7200235 "PA130501" .
+
+<urn:mdciii:1603:45:16:591:3:130502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130502" ;
+    skos:prefLabel "Corozal"@spa-Latn ;
+    wdata:q7200235 "PA130502" .
+
+<urn:mdciii:1603:45:16:591:3:130503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130503" ;
+    skos:prefLabel "El María"@spa-Latn ;
+    wdata:q7200235 "PA130503" .
+
+<urn:mdciii:1603:45:16:591:3:130504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130504" ;
+    skos:prefLabel "El Prado"@spa-Latn ;
+    wdata:q7200235 "PA130504" .
+
+<urn:mdciii:1603:45:16:591:3:130505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130505" ;
+    skos:prefLabel "El Rincón"@spa-Latn ;
+    wdata:q7200235 "PA130505" .
+
+<urn:mdciii:1603:45:16:591:3:130506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130506" ;
+    skos:prefLabel "Las Palmas"@spa-Latn ;
+    wdata:q7200235 "PA130506" .
+
+<urn:mdciii:1603:45:16:591:3:130507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130507" ;
+    skos:prefLabel "Lolá"@spa-Latn ;
+    wdata:q7200235 "PA130507" .
+
+<urn:mdciii:1603:45:16:591:3:130508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130508" ;
+    skos:prefLabel "Pixvae"@spa-Latn ;
+    wdata:q7200235 "PA130508" .
+
+<urn:mdciii:1603:45:16:591:3:130509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130509" ;
+    skos:prefLabel "Puerto Vidal"@spa-Latn ;
+    wdata:q7200235 "PA130509" .
+
+<urn:mdciii:1603:45:16:591:3:130510>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130510" ;
+    skos:prefLabel "San Martín de Porres"@spa-Latn ;
+    wdata:q7200235 "PA130510" .
+
+<urn:mdciii:1603:45:16:591:3:130511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130511" ;
+    skos:prefLabel "Viguí"@spa-Latn ;
+    wdata:q7200235 "PA130511" .
+
+<urn:mdciii:1603:45:16:591:3:130512>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130512" ;
+    skos:prefLabel "Zapotillo"@spa-Latn ;
+    wdata:q7200235 "PA130512" .
+
+<urn:mdciii:1603:45:16:591:3:130601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130601" ;
+    skos:prefLabel "Arenas"@spa-Latn ;
+    wdata:q7200235 "PA130601" .
+
+<urn:mdciii:1603:45:16:591:3:130602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130602" ;
+    skos:prefLabel "Llano de Catival"@spa-Latn ;
+    wdata:q7200235 "PA130602" .
+
+<urn:mdciii:1603:45:16:591:3:130603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130603" ;
+    skos:prefLabel "Quebro"@spa-Latn ;
+    wdata:q7200235 "PA130603" .
+
+<urn:mdciii:1603:45:16:591:3:130604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130604" ;
+    skos:prefLabel "Tebario"@spa-Latn ;
+    wdata:q7200235 "PA130604" .
+
+<urn:mdciii:1603:45:16:591:3:130701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130701" ;
+    skos:prefLabel "Gobernadora"@spa-Latn ;
+    wdata:q7200235 "PA130701" .
+
+<urn:mdciii:1603:45:16:591:3:130702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130702" ;
+    skos:prefLabel "La Garceana"@spa-Latn ;
+    wdata:q7200235 "PA130702" .
+
+<urn:mdciii:1603:45:16:591:3:130703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130703" ;
+    skos:prefLabel "Leones"@spa-Latn ;
+    wdata:q7200235 "PA130703" .
+
+<urn:mdciii:1603:45:16:591:3:130704>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130704" ;
+    skos:prefLabel "Montijo"@spa-Latn ;
+    wdata:q7200235 "PA130704" .
+
+<urn:mdciii:1603:45:16:591:3:130705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130705" ;
+    skos:prefLabel "Pilón"@spa-Latn ;
+    wdata:q7200235 "PA130705" .
+
+<urn:mdciii:1603:45:16:591:3:130801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130801" ;
+    skos:prefLabel "Catorce de Noviembre"@spa-Latn ;
+    wdata:q7200235 "PA130801" .
+
+<urn:mdciii:1603:45:16:591:3:130802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130802" ;
+    skos:prefLabel "Las Huacas"@spa-Latn ;
+    wdata:q7200235 "PA130802" .
+
+<urn:mdciii:1603:45:16:591:3:130803>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130803" ;
+    skos:prefLabel "Los Castillos"@spa-Latn ;
+    wdata:q7200235 "PA130803" .
+
+<urn:mdciii:1603:45:16:591:3:130804>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130804" ;
+    skos:prefLabel "Río de Jesús"@spa-Latn ;
+    wdata:q7200235 "PA130804" .
+
+<urn:mdciii:1603:45:16:591:3:130805>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130805" ;
+    skos:prefLabel "Utira"@spa-Latn ;
+    wdata:q7200235 "PA130805" .
+
+<urn:mdciii:1603:45:16:591:3:130901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130901" ;
+    skos:prefLabel "Corral Falso"@spa-Latn ;
+    wdata:q7200235 "PA130901" .
+
+<urn:mdciii:1603:45:16:591:3:130902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130902" ;
+    skos:prefLabel "Los Hatillos"@spa-Latn ;
+    wdata:q7200235 "PA130902" .
+
+<urn:mdciii:1603:45:16:591:3:130903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130903" ;
+    skos:prefLabel "Remance"@spa-Latn ;
+    wdata:q7200235 "PA130903" .
+
+<urn:mdciii:1603:45:16:591:3:130904>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130904" ;
+    skos:prefLabel "San Francisco"@spa-Latn ;
+    wdata:q7200235 "PA130904" .
+
+<urn:mdciii:1603:45:16:591:3:130905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:130905" ;
+    skos:prefLabel "San Juan"@spa-Latn ;
+    wdata:q7200235 "PA130905" .
+
+<urn:mdciii:1603:45:16:591:3:131001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131001" ;
+    skos:prefLabel "Calovébora"@spa-Latn ;
+    wdata:q7200235 "PA131001" .
+
+<urn:mdciii:1603:45:16:591:3:131002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131002" ;
+    skos:prefLabel "El Alto"@spa-Latn ;
+    wdata:q7200235 "PA131002" .
+
+<urn:mdciii:1603:45:16:591:3:131003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131003" ;
+    skos:prefLabel "El Cuay"@spa-Latn ;
+    wdata:q7200235 "PA131003" .
+
+<urn:mdciii:1603:45:16:591:3:131004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131004" ;
+    skos:prefLabel "El Pantano"@spa-Latn ;
+    wdata:q7200235 "PA131004" .
+
+<urn:mdciii:1603:45:16:591:3:131005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131005" ;
+    skos:prefLabel "Gatú o Gatucito"@spa-Latn ;
+    wdata:q7200235 "PA131005" .
+
+<urn:mdciii:1603:45:16:591:3:131006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131006" ;
+    skos:prefLabel "Río Luis"@spa-Latn ;
+    wdata:q7200235 "PA131006" .
+
+<urn:mdciii:1603:45:16:591:3:131007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131007" ;
+    skos:prefLabel "Santa Fe"@spa-Latn ;
+    wdata:q7200235 "PA131007" .
+
+<urn:mdciii:1603:45:16:591:3:131101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131101" ;
+    skos:prefLabel "Canto del Llano"@spa-Latn ;
+    wdata:q7200235 "PA131101" .
+
+<urn:mdciii:1603:45:16:591:3:131102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131102" ;
+    skos:prefLabel "La Colorada"@spa-Latn ;
+    wdata:q7200235 "PA131102" .
+
+<urn:mdciii:1603:45:16:591:3:131103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131103" ;
+    skos:prefLabel "La Peña"@spa-Latn ;
+    wdata:q7200235 "PA131103" .
+
+<urn:mdciii:1603:45:16:591:3:131104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131104" ;
+    skos:prefLabel "La Raya de Santa María"@spa-Latn ;
+    wdata:q7200235 "PA131104" .
+
+<urn:mdciii:1603:45:16:591:3:131105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131105" ;
+    skos:prefLabel "Los Algarrobos"@spa-Latn ;
+    wdata:q7200235 "PA131105" .
+
+<urn:mdciii:1603:45:16:591:3:131106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131106" ;
+    skos:prefLabel "Ponuga"@spa-Latn ;
+    wdata:q7200235 "PA131106" .
+
+<urn:mdciii:1603:45:16:591:3:131107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131107" ;
+    skos:prefLabel "San Pedro del Espino"@spa-Latn ;
+    wdata:q7200235 "PA131107" .
+
+<urn:mdciii:1603:45:16:591:3:131108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131108" ;
+    skos:prefLabel "Santiago"@spa-Latn ;
+    wdata:q7200235 "PA131108" .
+
+<urn:mdciii:1603:45:16:591:3:131201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131201" ;
+    skos:prefLabel "Bahía Honda"@spa-Latn ;
+    wdata:q7200235 "PA131201" .
+
+<urn:mdciii:1603:45:16:591:3:131202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131202" ;
+    skos:prefLabel "Calidonia"@spa-Latn ;
+    wdata:q7200235 "PA131202" .
+
+<urn:mdciii:1603:45:16:591:3:131203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131203" ;
+    skos:prefLabel "Cativé"@spa-Latn ;
+    wdata:q7200235 "PA131203" .
+
+<urn:mdciii:1603:45:16:591:3:131204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131204" ;
+    skos:prefLabel "El Marañón"@spa-Latn ;
+    wdata:q7200235 "PA131204" .
+
+<urn:mdciii:1603:45:16:591:3:131205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131205" ;
+    skos:prefLabel "Guarumal"@spa-Latn ;
+    wdata:q7200235 "PA131205" .
+
+<urn:mdciii:1603:45:16:591:3:131206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131206" ;
+    skos:prefLabel "La Soledad"@spa-Latn ;
+    wdata:q7200235 "PA131206" .
+
+<urn:mdciii:1603:45:16:591:3:131207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131207" ;
+    skos:prefLabel "Quebrada de Oro"@spa-Latn ;
+    wdata:q7200235 "PA131207" .
+
+<urn:mdciii:1603:45:16:591:3:131208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131208" ;
+    skos:prefLabel "Río Grande"@spa-Latn ;
+    wdata:q7200235 "PA131208" .
+
+<urn:mdciii:1603:45:16:591:3:131209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131209" ;
+    skos:prefLabel "Rodeo Viejo"@spa-Latn ;
+    wdata:q7200235 "PA131209" .
+
+<urn:mdciii:1603:45:16:591:3:131210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:131210" ;
+    skos:prefLabel "Soná"@spa-Latn ;
+    wdata:q7200235 "PA131210" .
+
+<urn:mdciii:1603:45:16:591:3:20101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20101" ;
+    skos:prefLabel "Alanje"@spa-Latn ;
+    wdata:q7200235 "PA020101" .
+
+<urn:mdciii:1603:45:16:591:3:20102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20102" ;
+    skos:prefLabel "Divalá"@spa-Latn ;
+    wdata:q7200235 "PA020102" .
+
+<urn:mdciii:1603:45:16:591:3:20103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20103" ;
+    skos:prefLabel "El Tejar"@spa-Latn ;
+    wdata:q7200235 "PA020103" .
+
+<urn:mdciii:1603:45:16:591:3:20104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20104" ;
+    skos:prefLabel "Guarumal"@spa-Latn ;
+    wdata:q7200235 "PA020104" .
+
+<urn:mdciii:1603:45:16:591:3:20105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20105" ;
+    skos:prefLabel "Palo Grande"@spa-Latn ;
+    wdata:q7200235 "PA020105" .
+
+<urn:mdciii:1603:45:16:591:3:20106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20106" ;
+    skos:prefLabel "Querévalo"@spa-Latn ;
+    wdata:q7200235 "PA020106" .
+
+<urn:mdciii:1603:45:16:591:3:20107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20107" ;
+    skos:prefLabel "Santo Tomás"@spa-Latn ;
+    wdata:q7200235 "PA020107" .
+
+<urn:mdciii:1603:45:16:591:3:20201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20201" ;
+    skos:prefLabel "Baco"@spa-Latn ;
+    wdata:q7200235 "PA020201" .
+
+<urn:mdciii:1603:45:16:591:3:20202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20202" ;
+    skos:prefLabel "Limones"@spa-Latn ;
+    wdata:q7200235 "PA020202" .
+
+<urn:mdciii:1603:45:16:591:3:20203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20203" ;
+    skos:prefLabel "Progreso"@spa-Latn ;
+    wdata:q7200235 "PA020203" .
+
+<urn:mdciii:1603:45:16:591:3:20204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20204" ;
+    skos:prefLabel "Puerto Armuelles"@spa-Latn ;
+    wdata:q7200235 "PA020204" .
+
+<urn:mdciii:1603:45:16:591:3:20205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20205" ;
+    skos:prefLabel "Rodolfo Aguilar Delgado"@spa-Latn ;
+    wdata:q7200235 "PA020205" .
+
+<urn:mdciii:1603:45:16:591:3:20301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20301" ;
+    skos:prefLabel "Bágala"@spa-Latn ;
+    wdata:q7200235 "PA020301" .
+
+<urn:mdciii:1603:45:16:591:3:20302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20302" ;
+    skos:prefLabel "Boquerón"@spa-Latn ;
+    wdata:q7200235 "PA020302" .
+
+<urn:mdciii:1603:45:16:591:3:20303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20303" ;
+    skos:prefLabel "Cordillera"@spa-Latn ;
+    wdata:q7200235 "PA020303" .
+
+<urn:mdciii:1603:45:16:591:3:20304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20304" ;
+    skos:prefLabel "Guabal"@spa-Latn ;
+    wdata:q7200235 "PA020304" .
+
+<urn:mdciii:1603:45:16:591:3:20305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20305" ;
+    skos:prefLabel "Guayabal"@spa-Latn ;
+    wdata:q7200235 "PA020305" .
+
+<urn:mdciii:1603:45:16:591:3:20306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20306" ;
+    skos:prefLabel "Paraíso"@spa-Latn ;
+    wdata:q7200235 "PA020306" .
+
+<urn:mdciii:1603:45:16:591:3:20307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20307" ;
+    skos:prefLabel "Pedregal"@spa-Latn ;
+    wdata:q7200235 "PA020307" .
+
+<urn:mdciii:1603:45:16:591:3:20308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20308" ;
+    skos:prefLabel "Tijeras"@spa-Latn ;
+    wdata:q7200235 "PA020308" .
+
+<urn:mdciii:1603:45:16:591:3:20401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20401" ;
+    skos:prefLabel "Alto Boquete"@spa-Latn ;
+    wdata:q7200235 "PA020401" .
+
+<urn:mdciii:1603:45:16:591:3:20402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20402" ;
+    skos:prefLabel "Bajo Boquete"@spa-Latn ;
+    wdata:q7200235 "PA020402" .
+
+<urn:mdciii:1603:45:16:591:3:20403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20403" ;
+    skos:prefLabel "Caldera"@spa-Latn ;
+    wdata:q7200235 "PA020403" .
+
+<urn:mdciii:1603:45:16:591:3:20404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20404" ;
+    skos:prefLabel "Jaramillo"@spa-Latn ;
+    wdata:q7200235 "PA020404" .
+
+<urn:mdciii:1603:45:16:591:3:20405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20405" ;
+    skos:prefLabel "Los Naranjos"@spa-Latn ;
+    wdata:q7200235 "PA020405" .
+
+<urn:mdciii:1603:45:16:591:3:20406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20406" ;
+    skos:prefLabel "Palmira"@spa-Latn ;
+    wdata:q7200235 "PA020406" .
+
+<urn:mdciii:1603:45:16:591:3:20501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20501" ;
+    skos:prefLabel "Aserrío de Gariché"@spa-Latn ;
+    wdata:q7200235 "PA020501" .
+
+<urn:mdciii:1603:45:16:591:3:20502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20502" ;
+    skos:prefLabel "Bugaba"@spa-Latn ;
+    wdata:q7200235 "PA020502" .
+
+<urn:mdciii:1603:45:16:591:3:20503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20503" ;
+    skos:prefLabel "Cerro Punta"@spa-Latn ;
+    wdata:q7200235 "PA020503" .
+
+<urn:mdciii:1603:45:16:591:3:20504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20504" ;
+    skos:prefLabel "El Bongo"@spa-Latn ;
+    wdata:q7200235 "PA020504" .
+
+<urn:mdciii:1603:45:16:591:3:20505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20505" ;
+    skos:prefLabel "Gómez"@spa-Latn ;
+    wdata:q7200235 "PA020505" .
+
+<urn:mdciii:1603:45:16:591:3:20506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20506" ;
+    skos:prefLabel "La Concepción"@spa-Latn ;
+    wdata:q7200235 "PA020506" .
+
+<urn:mdciii:1603:45:16:591:3:20507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20507" ;
+    skos:prefLabel "La Estrella"@spa-Latn ;
+    wdata:q7200235 "PA020507" .
+
+<urn:mdciii:1603:45:16:591:3:20508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20508" ;
+    skos:prefLabel "San Andrés"@spa-Latn ;
+    wdata:q7200235 "PA020508" .
+
+<urn:mdciii:1603:45:16:591:3:20509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20509" ;
+    skos:prefLabel "Santa Marta"@spa-Latn ;
+    wdata:q7200235 "PA020509" .
+
+<urn:mdciii:1603:45:16:591:3:20510>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20510" ;
+    skos:prefLabel "Santa Rosa"@spa-Latn ;
+    wdata:q7200235 "PA020510" .
+
+<urn:mdciii:1603:45:16:591:3:20511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20511" ;
+    skos:prefLabel "Santo Domingo"@spa-Latn ;
+    wdata:q7200235 "PA020511" .
+
+<urn:mdciii:1603:45:16:591:3:20512>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20512" ;
+    skos:prefLabel "Sortová"@spa-Latn ;
+    wdata:q7200235 "PA020512" .
+
+<urn:mdciii:1603:45:16:591:3:20513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20513" ;
+    skos:prefLabel "Volcán"@spa-Latn ;
+    wdata:q7200235 "PA020513" .
+
+<urn:mdciii:1603:45:16:591:3:20601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20601" ;
+    skos:prefLabel "Bijagual"@spa-Latn ;
+    wdata:q7200235 "PA020601" .
+
+<urn:mdciii:1603:45:16:591:3:20602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20602" ;
+    skos:prefLabel "Chiriquí"@spa-Latn ;
+    wdata:q7200235 "PA020602" .
+
+<urn:mdciii:1603:45:16:591:3:20603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20603" ;
+    skos:prefLabel "Cochea"@spa-Latn ;
+    wdata:q7200235 "PA020603" .
+
+<urn:mdciii:1603:45:16:591:3:20604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20604" ;
+    skos:prefLabel "David"@spa-Latn ;
+    wdata:q7200235 "PA020604" .
+
+<urn:mdciii:1603:45:16:591:3:20605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20605" ;
+    skos:prefLabel "Guacá"@spa-Latn ;
+    wdata:q7200235 "PA020605" .
+
+<urn:mdciii:1603:45:16:591:3:20606>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20606" ;
+    skos:prefLabel "Las Lomas"@spa-Latn ;
+    wdata:q7200235 "PA020606" .
+
+<urn:mdciii:1603:45:16:591:3:20607>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20607" ;
+    skos:prefLabel "Pedregal"@spa-Latn ;
+    wdata:q7200235 "PA020607" .
+
+<urn:mdciii:1603:45:16:591:3:20608>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20608" ;
+    skos:prefLabel "San Carlos"@spa-Latn ;
+    wdata:q7200235 "PA020608" .
+
+<urn:mdciii:1603:45:16:591:3:20609>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20609" ;
+    skos:prefLabel "San Pablo Nuevo"@spa-Latn ;
+    wdata:q7200235 "PA020609" .
+
+<urn:mdciii:1603:45:16:591:3:20610>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20610" ;
+    skos:prefLabel "San Pablo Viejo"@spa-Latn ;
+    wdata:q7200235 "PA020610" .
+
+<urn:mdciii:1603:45:16:591:3:20701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20701" ;
+    skos:prefLabel "Dolega"@spa-Latn ;
+    wdata:q7200235 "PA020701" .
+
+<urn:mdciii:1603:45:16:591:3:20702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20702" ;
+    skos:prefLabel "Dos Ríos"@spa-Latn ;
+    wdata:q7200235 "PA020702" .
+
+<urn:mdciii:1603:45:16:591:3:20703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20703" ;
+    skos:prefLabel "Los Anastacios"@spa-Latn ;
+    wdata:q7200235 "PA020703" .
+
+<urn:mdciii:1603:45:16:591:3:20704>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20704" ;
+    skos:prefLabel "Potrerillos Abajo"@spa-Latn ;
+    wdata:q7200235 "PA020704" .
+
+<urn:mdciii:1603:45:16:591:3:20705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20705" ;
+    skos:prefLabel "Potrerillos"@spa-Latn ;
+    wdata:q7200235 "PA020705" .
+
+<urn:mdciii:1603:45:16:591:3:20706>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20706" ;
+    skos:prefLabel "Rovira"@spa-Latn ;
+    wdata:q7200235 "PA020706" .
+
+<urn:mdciii:1603:45:16:591:3:20707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20707" ;
+    skos:prefLabel "Tinajas"@spa-Latn ;
+    wdata:q7200235 "PA020707" .
+
+<urn:mdciii:1603:45:16:591:3:20801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20801" ;
+    skos:prefLabel "Gualaca"@spa-Latn ;
+    wdata:q7200235 "PA020801" .
+
+<urn:mdciii:1603:45:16:591:3:20802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20802" ;
+    skos:prefLabel "Hornito"@spa-Latn ;
+    wdata:q7200235 "PA020802" .
+
+<urn:mdciii:1603:45:16:591:3:20803>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20803" ;
+    skos:prefLabel "Los Angeles"@spa-Latn ;
+    wdata:q7200235 "PA020803" .
+
+<urn:mdciii:1603:45:16:591:3:20804>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20804" ;
+    skos:prefLabel "Paja de Sombrero"@spa-Latn ;
+    wdata:q7200235 "PA020804" .
+
+<urn:mdciii:1603:45:16:591:3:20805>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20805" ;
+    skos:prefLabel "Rincón"@spa-Latn ;
+    wdata:q7200235 "PA020805" .
+
+<urn:mdciii:1603:45:16:591:3:20901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20901" ;
+    skos:prefLabel "El Nancito"@spa-Latn ;
+    wdata:q7200235 "PA020901" .
+
+<urn:mdciii:1603:45:16:591:3:20902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20902" ;
+    skos:prefLabel "El Porvenir"@spa-Latn ;
+    wdata:q7200235 "PA020902" .
+
+<urn:mdciii:1603:45:16:591:3:20903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20903" ;
+    skos:prefLabel "El Puerto"@spa-Latn ;
+    wdata:q7200235 "PA020903" .
+
+<urn:mdciii:1603:45:16:591:3:20904>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20904" ;
+    skos:prefLabel "Remedios"@spa-Latn ;
+    wdata:q7200235 "PA020904" .
+
+<urn:mdciii:1603:45:16:591:3:20905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:20905" ;
+    skos:prefLabel "Santa Lucía"@spa-Latn ;
+    wdata:q7200235 "PA020905" .
+
+<urn:mdciii:1603:45:16:591:3:21001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21001" ;
+    skos:prefLabel "Breñón"@spa-Latn ;
+    wdata:q7200235 "PA021001" .
+
+<urn:mdciii:1603:45:16:591:3:21002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21002" ;
+    skos:prefLabel "Cañas Gordas"@spa-Latn ;
+    wdata:q7200235 "PA021002" .
+
+<urn:mdciii:1603:45:16:591:3:21003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21003" ;
+    skos:prefLabel "Monte Lirio"@spa-Latn ;
+    wdata:q7200235 "PA021003" .
+
+<urn:mdciii:1603:45:16:591:3:21004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21004" ;
+    skos:prefLabel "Plaza Caisán"@spa-Latn ;
+    wdata:q7200235 "PA021004" .
+
+<urn:mdciii:1603:45:16:591:3:21005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21005" ;
+    skos:prefLabel "Río Sereno"@spa-Latn ;
+    wdata:q7200235 "PA021005" .
+
+<urn:mdciii:1603:45:16:591:3:21006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21006" ;
+    skos:prefLabel "Santa Cruz"@spa-Latn ;
+    wdata:q7200235 "PA021006" .
+
+<urn:mdciii:1603:45:16:591:3:21101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21101" ;
+    skos:prefLabel "Juay"@spa-Latn ;
+    wdata:q7200235 "PA021101" .
+
+<urn:mdciii:1603:45:16:591:3:21102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21102" ;
+    skos:prefLabel "La Lajas"@spa-Latn ;
+    wdata:q7200235 "PA021102" .
+
+<urn:mdciii:1603:45:16:591:3:21103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21103" ;
+    skos:prefLabel "Lajas Adentro"@spa-Latn ;
+    wdata:q7200235 "PA021103" .
+
+<urn:mdciii:1603:45:16:591:3:21104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21104" ;
+    skos:prefLabel "San Félix"@spa-Latn ;
+    wdata:q7200235 "PA021104" .
+
+<urn:mdciii:1603:45:16:591:3:21105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21105" ;
+    skos:prefLabel "Santa Cruz"@spa-Latn ;
+    wdata:q7200235 "PA021105" .
+
+<urn:mdciii:1603:45:16:591:3:21201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21201" ;
+    skos:prefLabel "Boca Chica"@spa-Latn ;
+    wdata:q7200235 "PA021201" .
+
+<urn:mdciii:1603:45:16:591:3:21202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21202" ;
+    skos:prefLabel "Boca del Monte"@spa-Latn ;
+    wdata:q7200235 "PA021202" .
+
+<urn:mdciii:1603:45:16:591:3:21203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21203" ;
+    skos:prefLabel "Horconcitos"@spa-Latn ;
+    wdata:q7200235 "PA021203" .
+
+<urn:mdciii:1603:45:16:591:3:21204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21204" ;
+    skos:prefLabel "San Juan"@spa-Latn ;
+    wdata:q7200235 "PA021204" .
+
+<urn:mdciii:1603:45:16:591:3:21205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21205" ;
+    skos:prefLabel "San Lorenzo"@spa-Latn ;
+    wdata:q7200235 "PA021205" .
+
+<urn:mdciii:1603:45:16:591:3:21301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21301" ;
+    skos:prefLabel "Bella Vista"@spa-Latn ;
+    wdata:q7200235 "PA021301" .
+
+<urn:mdciii:1603:45:16:591:3:21302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21302" ;
+    skos:prefLabel "Cerro Viejo"@spa-Latn ;
+    wdata:q7200235 "PA021302" .
+
+<urn:mdciii:1603:45:16:591:3:21303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21303" ;
+    skos:prefLabel "El Cristo"@spa-Latn ;
+    wdata:q7200235 "PA021303" .
+
+<urn:mdciii:1603:45:16:591:3:21304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21304" ;
+    skos:prefLabel "Justo Fidel Palacios"@spa-Latn ;
+    wdata:q7200235 "PA021304" .
+
+<urn:mdciii:1603:45:16:591:3:21305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21305" ;
+    skos:prefLabel "Lajas de Tolé"@spa-Latn ;
+    wdata:q7200235 "PA021305" .
+
+<urn:mdciii:1603:45:16:591:3:21306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21306" ;
+    skos:prefLabel "Potrero de Caña"@spa-Latn ;
+    wdata:q7200235 "PA021306" .
+
+<urn:mdciii:1603:45:16:591:3:21307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21307" ;
+    skos:prefLabel "Quebrada de Piedra"@spa-Latn ;
+    wdata:q7200235 "PA021307" .
+
+<urn:mdciii:1603:45:16:591:3:21308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21308" ;
+    skos:prefLabel "Tolé"@spa-Latn ;
+    wdata:q7200235 "PA021308" .
+
+<urn:mdciii:1603:45:16:591:3:21309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:21309" ;
+    skos:prefLabel "Veladero"@spa-Latn ;
+    wdata:q7200235 "PA021309" .
+
+<urn:mdciii:1603:45:16:591:3:30101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30101" ;
+    skos:prefLabel "Aguadulce"@spa-Latn ;
+    wdata:q7200235 "PA030101" .
+
+<urn:mdciii:1603:45:16:591:3:30102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30102" ;
+    skos:prefLabel "Barrios Unidos"@spa-Latn ;
+    wdata:q7200235 "PA030102" .
+
+<urn:mdciii:1603:45:16:591:3:30103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30103" ;
+    skos:prefLabel "El Cristo"@spa-Latn ;
+    wdata:q7200235 "PA030103" .
+
+<urn:mdciii:1603:45:16:591:3:30104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30104" ;
+    skos:prefLabel "El Roble"@spa-Latn ;
+    wdata:q7200235 "PA030104" .
+
+<urn:mdciii:1603:45:16:591:3:30105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30105" ;
+    skos:prefLabel "Pocrí"@spa-Latn ;
+    wdata:q7200235 "PA030105" .
+
+<urn:mdciii:1603:45:16:591:3:30201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30201" ;
+    skos:prefLabel "Antón"@spa-Latn ;
+    wdata:q7200235 "PA030201" .
+
+<urn:mdciii:1603:45:16:591:3:30202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30202" ;
+    skos:prefLabel "Caballero"@spa-Latn ;
+    wdata:q7200235 "PA030202" .
+
+<urn:mdciii:1603:45:16:591:3:30203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30203" ;
+    skos:prefLabel "Cabuya"@spa-Latn ;
+    wdata:q7200235 "PA030203" .
+
+<urn:mdciii:1603:45:16:591:3:30204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30204" ;
+    skos:prefLabel "El Chirú"@spa-Latn ;
+    wdata:q7200235 "PA030204" .
+
+<urn:mdciii:1603:45:16:591:3:30205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30205" ;
+    skos:prefLabel "El Retiro"@spa-Latn ;
+    wdata:q7200235 "PA030205" .
+
+<urn:mdciii:1603:45:16:591:3:30206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30206" ;
+    skos:prefLabel "El Valle"@spa-Latn ;
+    wdata:q7200235 "PA030206" .
+
+<urn:mdciii:1603:45:16:591:3:30207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30207" ;
+    skos:prefLabel "Juan Diaz"@spa-Latn ;
+    wdata:q7200235 "PA030207" .
+
+<urn:mdciii:1603:45:16:591:3:30208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30208" ;
+    skos:prefLabel "Río Hato"@spa-Latn ;
+    wdata:q7200235 "PA030208" .
+
+<urn:mdciii:1603:45:16:591:3:30209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30209" ;
+    skos:prefLabel "San Juan de Dios"@spa-Latn ;
+    wdata:q7200235 "PA030209" .
+
+<urn:mdciii:1603:45:16:591:3:30210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30210" ;
+    skos:prefLabel "Santa Rita"@spa-Latn ;
+    wdata:q7200235 "PA030210" .
+
+<urn:mdciii:1603:45:16:591:3:30301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30301" ;
+    skos:prefLabel "El Harino"@spa-Latn ;
+    wdata:q7200235 "PA030301" .
+
+<urn:mdciii:1603:45:16:591:3:30302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30302" ;
+    skos:prefLabel "El Potrero"@spa-Latn ;
+    wdata:q7200235 "PA030302" .
+
+<urn:mdciii:1603:45:16:591:3:30303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30303" ;
+    skos:prefLabel "La Pintada"@spa-Latn ;
+    wdata:q7200235 "PA030303" .
+
+<urn:mdciii:1603:45:16:591:3:30304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30304" ;
+    skos:prefLabel "Las Lomas"@spa-Latn ;
+    wdata:q7200235 "PA030304" .
+
+<urn:mdciii:1603:45:16:591:3:30305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30305" ;
+    skos:prefLabel "Llano Grande"@spa-Latn ;
+    wdata:q7200235 "PA030305" .
+
+<urn:mdciii:1603:45:16:591:3:30306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30306" ;
+    skos:prefLabel "Piedras Gordas"@spa-Latn ;
+    wdata:q7200235 "PA030306" .
+
+<urn:mdciii:1603:45:16:591:3:30401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30401" ;
+    skos:prefLabel "Capellania"@spa-Latn ;
+    wdata:q7200235 "PA030401" .
+
+<urn:mdciii:1603:45:16:591:3:30402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30402" ;
+    skos:prefLabel "El Caño"@spa-Latn ;
+    wdata:q7200235 "PA030402" .
+
+<urn:mdciii:1603:45:16:591:3:30403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30403" ;
+    skos:prefLabel "Guzmán"@spa-Latn ;
+    wdata:q7200235 "PA030403" .
+
+<urn:mdciii:1603:45:16:591:3:30404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30404" ;
+    skos:prefLabel "Las Huacas"@spa-Latn ;
+    wdata:q7200235 "PA030404" .
+
+<urn:mdciii:1603:45:16:591:3:30405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30405" ;
+    skos:prefLabel "Natá"@spa-Latn ;
+    wdata:q7200235 "PA030405" .
+
+<urn:mdciii:1603:45:16:591:3:30406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30406" ;
+    skos:prefLabel "Toza"@spa-Latn ;
+    wdata:q7200235 "PA030406" .
+
+<urn:mdciii:1603:45:16:591:3:30501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30501" ;
+    skos:prefLabel "El Copé"@spa-Latn ;
+    wdata:q7200235 "PA030501" .
+
+<urn:mdciii:1603:45:16:591:3:30502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30502" ;
+    skos:prefLabel "El Palmar"@spa-Latn ;
+    wdata:q7200235 "PA030502" .
+
+<urn:mdciii:1603:45:16:591:3:30503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30503" ;
+    skos:prefLabel "El Picacho"@spa-Latn ;
+    wdata:q7200235 "PA030503" .
+
+<urn:mdciii:1603:45:16:591:3:30504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30504" ;
+    skos:prefLabel "La Pava"@spa-Latn ;
+    wdata:q7200235 "PA030504" .
+
+<urn:mdciii:1603:45:16:591:3:30505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30505" ;
+    skos:prefLabel "Olá"@spa-Latn ;
+    wdata:q7200235 "PA030505" .
+
+<urn:mdciii:1603:45:16:591:3:30601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30601" ;
+    skos:prefLabel "Cañaveral"@spa-Latn ;
+    wdata:q7200235 "PA030601" .
+
+<urn:mdciii:1603:45:16:591:3:30602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30602" ;
+    skos:prefLabel "Chiguirí Arriba"@spa-Latn ;
+    wdata:q7200235 "PA030602" .
+
+<urn:mdciii:1603:45:16:591:3:30603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30603" ;
+    skos:prefLabel "Coclé"@spa-Latn ;
+    wdata:q7200235 "PA030603" .
+
+<urn:mdciii:1603:45:16:591:3:30604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30604" ;
+    skos:prefLabel "El Coco"@spa-Latn ;
+    wdata:q7200235 "PA030604" .
+
+<urn:mdciii:1603:45:16:591:3:30605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30605" ;
+    skos:prefLabel "Pajonal"@spa-Latn ;
+    wdata:q7200235 "PA030605" .
+
+<urn:mdciii:1603:45:16:591:3:30606>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30606" ;
+    skos:prefLabel "Penonomé"@spa-Latn ;
+    wdata:q7200235 "PA030606" .
+
+<urn:mdciii:1603:45:16:591:3:30607>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30607" ;
+    skos:prefLabel "Río Grande"@spa-Latn ;
+    wdata:q7200235 "PA030607" .
+
+<urn:mdciii:1603:45:16:591:3:30608>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30608" ;
+    skos:prefLabel "Río Indio"@spa-Latn ;
+    wdata:q7200235 "PA030608" .
+
+<urn:mdciii:1603:45:16:591:3:30609>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30609" ;
+    skos:prefLabel "Toabré"@spa-Latn ;
+    wdata:q7200235 "PA030609" .
+
+<urn:mdciii:1603:45:16:591:3:30610>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:30610" ;
+    skos:prefLabel "Tulu"@spa-Latn ;
+    wdata:q7200235 "PA030610" .
+
+<urn:mdciii:1603:45:16:591:3:40101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40101" ;
+    skos:prefLabel "Achiote"@spa-Latn ;
+    wdata:q7200235 "PA040101" .
+
+<urn:mdciii:1603:45:16:591:3:40102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40102" ;
+    skos:prefLabel "El Guabo"@spa-Latn ;
+    wdata:q7200235 "PA040102" .
+
+<urn:mdciii:1603:45:16:591:3:40103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40103" ;
+    skos:prefLabel "La Encantada"@spa-Latn ;
+    wdata:q7200235 "PA040103" .
+
+<urn:mdciii:1603:45:16:591:3:40104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40104" ;
+    skos:prefLabel "Nuevo Chagres"@spa-Latn ;
+    wdata:q7200235 "PA040104" .
+
+<urn:mdciii:1603:45:16:591:3:40105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40105" ;
+    skos:prefLabel "Palmas Bellas"@spa-Latn ;
+    wdata:q7200235 "PA040105" .
+
+<urn:mdciii:1603:45:16:591:3:40106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40106" ;
+    skos:prefLabel "Piña"@spa-Latn ;
+    wdata:q7200235 "PA040106" .
+
+<urn:mdciii:1603:45:16:591:3:40107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40107" ;
+    skos:prefLabel "Salud"@spa-Latn ;
+    wdata:q7200235 "PA040107" .
+
+<urn:mdciii:1603:45:16:591:3:40201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40201" ;
+    skos:prefLabel "Barrio Norte"@spa-Latn ;
+    wdata:q7200235 "PA040201" .
+
+<urn:mdciii:1603:45:16:591:3:40202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40202" ;
+    skos:prefLabel "Barrio Sur"@spa-Latn ;
+    wdata:q7200235 "PA040202" .
+
+<urn:mdciii:1603:45:16:591:3:40203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40203" ;
+    skos:prefLabel "Buena Vista"@spa-Latn ;
+    wdata:q7200235 "PA040203" .
+
+<urn:mdciii:1603:45:16:591:3:40204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40204" ;
+    skos:prefLabel "Cativá"@spa-Latn ;
+    wdata:q7200235 "PA040204" .
+
+<urn:mdciii:1603:45:16:591:3:40205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40205" ;
+    skos:prefLabel "Ciricito"@spa-Latn ;
+    wdata:q7200235 "PA040205" .
+
+<urn:mdciii:1603:45:16:591:3:40206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40206" ;
+    skos:prefLabel "Cristóbal"@spa-Latn ;
+    wdata:q7200235 "PA040206" .
+
+<urn:mdciii:1603:45:16:591:3:40207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40207" ;
+    skos:prefLabel "Escobal"@spa-Latn ;
+    wdata:q7200235 "PA040207" .
+
+<urn:mdciii:1603:45:16:591:3:40208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40208" ;
+    skos:prefLabel "Limón"@spa-Latn ;
+    wdata:q7200235 "PA040208" .
+
+<urn:mdciii:1603:45:16:591:3:40209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40209" ;
+    skos:prefLabel "Nueva Providencia"@spa-Latn ;
+    wdata:q7200235 "PA040209" .
+
+<urn:mdciii:1603:45:16:591:3:40210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40210" ;
+    skos:prefLabel "Puerto Pilón"@spa-Latn ;
+    wdata:q7200235 "PA040210" .
+
+<urn:mdciii:1603:45:16:591:3:40211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40211" ;
+    skos:prefLabel "Sabanitas"@spa-Latn ;
+    wdata:q7200235 "PA040211" .
+
+<urn:mdciii:1603:45:16:591:3:40212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40212" ;
+    skos:prefLabel "Salamanca"@spa-Latn ;
+    wdata:q7200235 "PA040212" .
+
+<urn:mdciii:1603:45:16:591:3:40213>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40213" ;
+    skos:prefLabel "San Juan"@spa-Latn ;
+    wdata:q7200235 "PA040213" .
+
+<urn:mdciii:1603:45:16:591:3:40214>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40214" ;
+    skos:prefLabel "Santa Rosa"@spa-Latn ;
+    wdata:q7200235 "PA040214" .
+
+<urn:mdciii:1603:45:16:591:3:40301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40301" ;
+    skos:prefLabel "Coclé del Norte"@spa-Latn ;
+    wdata:q7200235 "PA040301" .
+
+<urn:mdciii:1603:45:16:591:3:40302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40302" ;
+    skos:prefLabel "El Guásimo"@spa-Latn ;
+    wdata:q7200235 "PA040302" .
+
+<urn:mdciii:1603:45:16:591:3:40303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40303" ;
+    skos:prefLabel "Gobea"@spa-Latn ;
+    wdata:q7200235 "PA040303" .
+
+<urn:mdciii:1603:45:16:591:3:40304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40304" ;
+    skos:prefLabel "Miguel de la Borda"@spa-Latn ;
+    wdata:q7200235 "PA040304" .
+
+<urn:mdciii:1603:45:16:591:3:40305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40305" ;
+    skos:prefLabel "Río Indio"@spa-Latn ;
+    wdata:q7200235 "PA040305" .
+
+<urn:mdciii:1603:45:16:591:3:40306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40306" ;
+    skos:prefLabel "San José del General"@spa-Latn ;
+    wdata:q7200235 "PA040306" .
+
+<urn:mdciii:1603:45:16:591:3:40401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40401" ;
+    skos:prefLabel "Cacique"@spa-Latn ;
+    wdata:q7200235 "PA040401" .
+
+<urn:mdciii:1603:45:16:591:3:40402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40402" ;
+    skos:prefLabel "Garrote"@spa-Latn ;
+    wdata:q7200235 "PA040402" .
+
+<urn:mdciii:1603:45:16:591:3:40403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40403" ;
+    skos:prefLabel "Isla Grande"@spa-Latn ;
+    wdata:q7200235 "PA040403" .
+
+<urn:mdciii:1603:45:16:591:3:40404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40404" ;
+    skos:prefLabel "María Chiquita"@spa-Latn ;
+    wdata:q7200235 "PA040404" .
+
+<urn:mdciii:1603:45:16:591:3:40405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40405" ;
+    skos:prefLabel "Portobelo"@spa-Latn ;
+    wdata:q7200235 "PA040405" .
+
+<urn:mdciii:1603:45:16:591:3:40501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40501" ;
+    skos:prefLabel "Cuango"@spa-Latn ;
+    wdata:q7200235 "PA040501" .
+
+<urn:mdciii:1603:45:16:591:3:40502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40502" ;
+    skos:prefLabel "Miramar"@spa-Latn ;
+    wdata:q7200235 "PA040502" .
+
+<urn:mdciii:1603:45:16:591:3:40503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40503" ;
+    skos:prefLabel "Nombre de Dios"@spa-Latn ;
+    wdata:q7200235 "PA040503" .
+
+<urn:mdciii:1603:45:16:591:3:40504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40504" ;
+    skos:prefLabel "Palenque"@spa-Latn ;
+    wdata:q7200235 "PA040504" .
+
+<urn:mdciii:1603:45:16:591:3:40505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40505" ;
+    skos:prefLabel "Palmira"@spa-Latn ;
+    wdata:q7200235 "PA040505" .
+
+<urn:mdciii:1603:45:16:591:3:40506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40506" ;
+    skos:prefLabel "Playa Chiquita"@spa-Latn ;
+    wdata:q7200235 "PA040506" .
+
+<urn:mdciii:1603:45:16:591:3:40507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40507" ;
+    skos:prefLabel "Santa Isabel"@spa-Latn ;
+    wdata:q7200235 "PA040507" .
+
+<urn:mdciii:1603:45:16:591:3:40508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:40508" ;
+    skos:prefLabel "Viento Frío"@spa-Latn ;
+    wdata:q7200235 "PA040508" .
+
+<urn:mdciii:1603:45:16:591:3:50101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50101" ;
+    skos:prefLabel "Agua Fría"@spa-Latn ;
+    wdata:q7200235 "PA050101" .
+
+<urn:mdciii:1603:45:16:591:3:50102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50102" ;
+    skos:prefLabel "Camogantí"@spa-Latn ;
+    wdata:q7200235 "PA050102" .
+
+<urn:mdciii:1603:45:16:591:3:50103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50103" ;
+    skos:prefLabel "Chepigana"@spa-Latn ;
+    wdata:q7200235 "PA050103" .
+
+<urn:mdciii:1603:45:16:591:3:50104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50104" ;
+    skos:prefLabel "Cucunatí"@spa-Latn ;
+    wdata:q7200235 "PA050104" .
+
+<urn:mdciii:1603:45:16:591:3:50105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50105" ;
+    skos:prefLabel "Garachiné"@spa-Latn ;
+    wdata:q7200235 "PA050105" .
+
+<urn:mdciii:1603:45:16:591:3:50106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50106" ;
+    skos:prefLabel "Jaqué"@spa-Latn ;
+    wdata:q7200235 "PA050106" .
+
+<urn:mdciii:1603:45:16:591:3:50107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50107" ;
+    skos:prefLabel "La Palma"@spa-Latn ;
+    wdata:q7200235 "PA050107" .
+
+<urn:mdciii:1603:45:16:591:3:50108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50108" ;
+    skos:prefLabel "Puerto Piña"@spa-Latn ;
+    wdata:q7200235 "PA050108" .
+
+<urn:mdciii:1603:45:16:591:3:50109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50109" ;
+    skos:prefLabel "Río Congo Arriba"@spa-Latn ;
+    wdata:q7200235 "PA050109" .
+
+<urn:mdciii:1603:45:16:591:3:50110>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50110" ;
+    skos:prefLabel "Río Congo"@spa-Latn ;
+    wdata:q7200235 "PA050110" .
+
+<urn:mdciii:1603:45:16:591:3:50111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50111" ;
+    skos:prefLabel "Río Iglesias"@spa-Latn ;
+    wdata:q7200235 "PA050111" .
+
+<urn:mdciii:1603:45:16:591:3:50112>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50112" ;
+    skos:prefLabel "Sambú"@spa-Latn ;
+    wdata:q7200235 "PA050112" .
+
+<urn:mdciii:1603:45:16:591:3:50113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50113" ;
+    skos:prefLabel "Santa Fé"@spa-Latn ;
+    wdata:q7200235 "PA050113" .
+
+<urn:mdciii:1603:45:16:591:3:50114>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50114" ;
+    skos:prefLabel "Setegantí"@spa-Latn ;
+    wdata:q7200235 "PA050114" .
+
+<urn:mdciii:1603:45:16:591:3:50115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50115" ;
+    skos:prefLabel "Taimatí"@spa-Latn ;
+    wdata:q7200235 "PA050115" .
+
+<urn:mdciii:1603:45:16:591:3:50116>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50116" ;
+    skos:prefLabel "Tucutí"@spa-Latn ;
+    wdata:q7200235 "PA050116" .
+
+<urn:mdciii:1603:45:16:591:3:50201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50201" ;
+    skos:prefLabel "Boca de Cupé"@spa-Latn ;
+    wdata:q7200235 "PA050201" .
+
+<urn:mdciii:1603:45:16:591:3:50202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50202" ;
+    skos:prefLabel "El Real de Santa María"@spa-Latn ;
+    wdata:q7200235 "PA050202" .
+
+<urn:mdciii:1603:45:16:591:3:50203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50203" ;
+    skos:prefLabel "Kuna de Wargandí"@spa-Latn ;
+    wdata:q7200235 "PA050203" .
+
+<urn:mdciii:1603:45:16:591:3:50204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50204" ;
+    skos:prefLabel "Metetí"@spa-Latn ;
+    wdata:q7200235 "PA050204" .
+
+<urn:mdciii:1603:45:16:591:3:50205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50205" ;
+    skos:prefLabel "Púcuro"@spa-Latn ;
+    wdata:q7200235 "PA050205" .
+
+<urn:mdciii:1603:45:16:591:3:50206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50206" ;
+    skos:prefLabel "Paya"@spa-Latn ;
+    wdata:q7200235 "PA050206" .
+
+<urn:mdciii:1603:45:16:591:3:50207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50207" ;
+    skos:prefLabel "Pinogana"@spa-Latn ;
+    wdata:q7200235 "PA050207" .
+
+<urn:mdciii:1603:45:16:591:3:50208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50208" ;
+    skos:prefLabel "Yape"@spa-Latn ;
+    wdata:q7200235 "PA050208" .
+
+<urn:mdciii:1603:45:16:591:3:50209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:50209" ;
+    skos:prefLabel "Yaviza"@spa-Latn ;
+    wdata:q7200235 "PA050209" .
+
+<urn:mdciii:1603:45:16:591:3:60101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:60101" ;
+    skos:prefLabel "Cirilo Guainora"@spa-Latn ;
+    wdata:q7200235 "PA060101" .
+
+<urn:mdciii:1603:45:16:591:3:60102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:60102" ;
+    skos:prefLabel "Lajas Blancas"@spa-Latn ;
+    wdata:q7200235 "PA060102" .
+
+<urn:mdciii:1603:45:16:591:3:60103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:60103" ;
+    skos:prefLabel "Manuel Ortega"@spa-Latn ;
+    wdata:q7200235 "PA060103" .
+
+<urn:mdciii:1603:45:16:591:3:60201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:60201" ;
+    skos:prefLabel "Jingurudó"@spa-Latn ;
+    wdata:q7200235 "PA060201" .
+
+<urn:mdciii:1603:45:16:591:3:60202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:60202" ;
+    skos:prefLabel "Río Sábalo"@spa-Latn ;
+    wdata:q7200235 "PA060202" .
+
+<urn:mdciii:1603:45:16:591:3:70101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70101" ;
+    skos:prefLabel "Chitré"@spa-Latn ;
+    wdata:q7200235 "PA070101" .
+
+<urn:mdciii:1603:45:16:591:3:70102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70102" ;
+    skos:prefLabel "La Arena"@spa-Latn ;
+    wdata:q7200235 "PA070102" .
+
+<urn:mdciii:1603:45:16:591:3:70103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70103" ;
+    skos:prefLabel "Llano Bonito"@spa-Latn ;
+    wdata:q7200235 "PA070103" .
+
+<urn:mdciii:1603:45:16:591:3:70104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70104" ;
+    skos:prefLabel "Monagrillo"@spa-Latn ;
+    wdata:q7200235 "PA070104" .
+
+<urn:mdciii:1603:45:16:591:3:70105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70105" ;
+    skos:prefLabel "San Juan Bautista"@spa-Latn ;
+    wdata:q7200235 "PA070105" .
+
+<urn:mdciii:1603:45:16:591:3:70201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70201" ;
+    skos:prefLabel "Chepo"@spa-Latn ;
+    wdata:q7200235 "PA070201" .
+
+<urn:mdciii:1603:45:16:591:3:70202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70202" ;
+    skos:prefLabel "Chumical"@spa-Latn ;
+    wdata:q7200235 "PA070202" .
+
+<urn:mdciii:1603:45:16:591:3:70203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70203" ;
+    skos:prefLabel "El Toro"@spa-Latn ;
+    wdata:q7200235 "PA070203" .
+
+<urn:mdciii:1603:45:16:591:3:70204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70204" ;
+    skos:prefLabel "Las Minas"@spa-Latn ;
+    wdata:q7200235 "PA070204" .
+
+<urn:mdciii:1603:45:16:591:3:70205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70205" ;
+    skos:prefLabel "Leones"@spa-Latn ;
+    wdata:q7200235 "PA070205" .
+
+<urn:mdciii:1603:45:16:591:3:70206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70206" ;
+    skos:prefLabel "Quebrada del Rosario"@spa-Latn ;
+    wdata:q7200235 "PA070206" .
+
+<urn:mdciii:1603:45:16:591:3:70301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70301" ;
+    skos:prefLabel "Capurí"@spa-Latn ;
+    wdata:q7200235 "PA070301" .
+
+<urn:mdciii:1603:45:16:591:3:70302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70302" ;
+    skos:prefLabel "El Calabacito"@spa-Latn ;
+    wdata:q7200235 "PA070302" .
+
+<urn:mdciii:1603:45:16:591:3:70303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70303" ;
+    skos:prefLabel "El Cedro"@spa-Latn ;
+    wdata:q7200235 "PA070303" .
+
+<urn:mdciii:1603:45:16:591:3:70304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70304" ;
+    skos:prefLabel "La Arena"@spa-Latn ;
+    wdata:q7200235 "PA070304" .
+
+<urn:mdciii:1603:45:16:591:3:70305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70305" ;
+    skos:prefLabel "La Pitalosa"@spa-Latn ;
+    wdata:q7200235 "PA070305" .
+
+<urn:mdciii:1603:45:16:591:3:70306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70306" ;
+    skos:prefLabel "Los Cerritos"@spa-Latn ;
+    wdata:q7200235 "PA070306" .
+
+<urn:mdciii:1603:45:16:591:3:70307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70307" ;
+    skos:prefLabel "Los Cerros de Paja"@spa-Latn ;
+    wdata:q7200235 "PA070307" .
+
+<urn:mdciii:1603:45:16:591:3:70308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70308" ;
+    skos:prefLabel "Los Pozos"@spa-Latn ;
+    wdata:q7200235 "PA070308" .
+
+<urn:mdciii:1603:45:16:591:3:70401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70401" ;
+    skos:prefLabel "Cerro Largo"@spa-Latn ;
+    wdata:q7200235 "PA070401" .
+
+<urn:mdciii:1603:45:16:591:3:70402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70402" ;
+    skos:prefLabel "El Tijera"@spa-Latn ;
+    wdata:q7200235 "PA070402" .
+
+<urn:mdciii:1603:45:16:591:3:70403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70403" ;
+    skos:prefLabel "Llano Grande"@spa-Latn ;
+    wdata:q7200235 "PA070403" .
+
+<urn:mdciii:1603:45:16:591:3:70404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70404" ;
+    skos:prefLabel "Los Llanos"@spa-Latn ;
+    wdata:q7200235 "PA070404" .
+
+<urn:mdciii:1603:45:16:591:3:70405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70405" ;
+    skos:prefLabel "Ocú"@spa-Latn ;
+    wdata:q7200235 "PA070405" .
+
+<urn:mdciii:1603:45:16:591:3:70406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70406" ;
+    skos:prefLabel "Peñas Chatas"@spa-Latn ;
+    wdata:q7200235 "PA070406" .
+
+<urn:mdciii:1603:45:16:591:3:70501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70501" ;
+    skos:prefLabel "Cabuya"@spa-Latn ;
+    wdata:q7200235 "PA070501" .
+
+<urn:mdciii:1603:45:16:591:3:70502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70502" ;
+    skos:prefLabel "Llano de la Cruz"@spa-Latn ;
+    wdata:q7200235 "PA070502" .
+
+<urn:mdciii:1603:45:16:591:3:70503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70503" ;
+    skos:prefLabel "Los Castillos"@spa-Latn ;
+    wdata:q7200235 "PA070503" .
+
+<urn:mdciii:1603:45:16:591:3:70504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70504" ;
+    skos:prefLabel "París"@spa-Latn ;
+    wdata:q7200235 "PA070504" .
+
+<urn:mdciii:1603:45:16:591:3:70505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70505" ;
+    skos:prefLabel "Parita"@spa-Latn ;
+    wdata:q7200235 "PA070505" .
+
+<urn:mdciii:1603:45:16:591:3:70506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70506" ;
+    skos:prefLabel "Portobelillo"@spa-Latn ;
+    wdata:q7200235 "PA070506" .
+
+<urn:mdciii:1603:45:16:591:3:70507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70507" ;
+    skos:prefLabel "Potuga"@spa-Latn ;
+    wdata:q7200235 "PA070507" .
+
+<urn:mdciii:1603:45:16:591:3:70601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70601" ;
+    skos:prefLabel "El Barrero"@spa-Latn ;
+    wdata:q7200235 "PA070601" .
+
+<urn:mdciii:1603:45:16:591:3:70602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70602" ;
+    skos:prefLabel "El Ciruelo"@spa-Latn ;
+    wdata:q7200235 "PA070602" .
+
+<urn:mdciii:1603:45:16:591:3:70603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70603" ;
+    skos:prefLabel "El Pájaro"@spa-Latn ;
+    wdata:q7200235 "PA070603" .
+
+<urn:mdciii:1603:45:16:591:3:70604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70604" ;
+    skos:prefLabel "El Pedregoso"@spa-Latn ;
+    wdata:q7200235 "PA070604" .
+
+<urn:mdciii:1603:45:16:591:3:70605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70605" ;
+    skos:prefLabel "Las Cabras"@spa-Latn ;
+    wdata:q7200235 "PA070605" .
+
+<urn:mdciii:1603:45:16:591:3:70606>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70606" ;
+    skos:prefLabel "Pesé"@spa-Latn ;
+    wdata:q7200235 "PA070606" .
+
+<urn:mdciii:1603:45:16:591:3:70607>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70607" ;
+    skos:prefLabel "Rincón Hondo"@spa-Latn ;
+    wdata:q7200235 "PA070607" .
+
+<urn:mdciii:1603:45:16:591:3:70608>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70608" ;
+    skos:prefLabel "Sabanagrande"@spa-Latn ;
+    wdata:q7200235 "PA070608" .
+
+<urn:mdciii:1603:45:16:591:3:70701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70701" ;
+    skos:prefLabel "Chupampa"@spa-Latn ;
+    wdata:q7200235 "PA070701" .
+
+<urn:mdciii:1603:45:16:591:3:70702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70702" ;
+    skos:prefLabel "El Limón"@spa-Latn ;
+    wdata:q7200235 "PA070702" .
+
+<urn:mdciii:1603:45:16:591:3:70703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70703" ;
+    skos:prefLabel "El Rincón"@spa-Latn ;
+    wdata:q7200235 "PA070703" .
+
+<urn:mdciii:1603:45:16:591:3:70704>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70704" ;
+    skos:prefLabel "Los Canelos"@spa-Latn ;
+    wdata:q7200235 "PA070704" .
+
+<urn:mdciii:1603:45:16:591:3:70705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:70705" ;
+    skos:prefLabel "Santa María"@spa-Latn ;
+    wdata:q7200235 "PA070705" .
+
+<urn:mdciii:1603:45:16:591:3:80101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:80101" ;
+    skos:prefLabel "Ailigandí"@spa-Latn ;
+    wdata:q7200235 "PA080101" .
+
+<urn:mdciii:1603:45:16:591:3:80102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:80102" ;
+    skos:prefLabel "Narganá"@spa-Latn ;
+    wdata:q7200235 "PA080102" .
+
+<urn:mdciii:1603:45:16:591:3:80103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:80103" ;
+    skos:prefLabel "Puerto Obaldía"@spa-Latn ;
+    wdata:q7200235 "PA080103" .
+
+<urn:mdciii:1603:45:16:591:3:80104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:80104" ;
+    skos:prefLabel "Tubualá"@spa-Latn ;
+    wdata:q7200235 "PA080104" .
+
+<urn:mdciii:1603:45:16:591:3:90101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90101" ;
+    skos:prefLabel "El Espinal"@spa-Latn ;
+    wdata:q7200235 "PA090101" .
+
+<urn:mdciii:1603:45:16:591:3:90102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90102" ;
+    skos:prefLabel "El Hato"@spa-Latn ;
+    wdata:q7200235 "PA090102" .
+
+<urn:mdciii:1603:45:16:591:3:90103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90103" ;
+    skos:prefLabel "El Macano"@spa-Latn ;
+    wdata:q7200235 "PA090103" .
+
+<urn:mdciii:1603:45:16:591:3:90104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90104" ;
+    skos:prefLabel "Guararé Arriba"@spa-Latn ;
+    wdata:q7200235 "PA090104" .
+
+<urn:mdciii:1603:45:16:591:3:90105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90105" ;
+    skos:prefLabel "Guararé"@spa-Latn ;
+    wdata:q7200235 "PA090105" .
+
+<urn:mdciii:1603:45:16:591:3:90106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90106" ;
+    skos:prefLabel "La Enea"@spa-Latn ;
+    wdata:q7200235 "PA090106" .
+
+<urn:mdciii:1603:45:16:591:3:90107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90107" ;
+    skos:prefLabel "La Pasera"@spa-Latn ;
+    wdata:q7200235 "PA090107" .
+
+<urn:mdciii:1603:45:16:591:3:90108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90108" ;
+    skos:prefLabel "Las Trancas"@spa-Latn ;
+    wdata:q7200235 "PA090108" .
+
+<urn:mdciii:1603:45:16:591:3:90109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90109" ;
+    skos:prefLabel "Llano Abajo"@spa-Latn ;
+    wdata:q7200235 "PA090109" .
+
+<urn:mdciii:1603:45:16:591:3:90110>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90110" ;
+    skos:prefLabel "Perales"@spa-Latn ;
+    wdata:q7200235 "PA090110" .
+
+<urn:mdciii:1603:45:16:591:3:90201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90201" ;
+    skos:prefLabel "Bajo Corral"@spa-Latn ;
+    wdata:q7200235 "PA090201" .
+
+<urn:mdciii:1603:45:16:591:3:90202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90202" ;
+    skos:prefLabel "Bayano"@spa-Latn ;
+    wdata:q7200235 "PA090202" .
+
+<urn:mdciii:1603:45:16:591:3:90203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90203" ;
+    skos:prefLabel "El Carate"@spa-Latn ;
+    wdata:q7200235 "PA090203" .
+
+<urn:mdciii:1603:45:16:591:3:90204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90204" ;
+    skos:prefLabel "El Cocal"@spa-Latn ;
+    wdata:q7200235 "PA090204" .
+
+<urn:mdciii:1603:45:16:591:3:90205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90205" ;
+    skos:prefLabel "El Manantial"@spa-Latn ;
+    wdata:q7200235 "PA090205" .
+
+<urn:mdciii:1603:45:16:591:3:90206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90206" ;
+    skos:prefLabel "El Muñoz"@spa-Latn ;
+    wdata:q7200235 "PA090206" .
+
+<urn:mdciii:1603:45:16:591:3:90207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90207" ;
+    skos:prefLabel "El Pedregoso"@spa-Latn ;
+    wdata:q7200235 "PA090207" .
+
+<urn:mdciii:1603:45:16:591:3:90208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90208" ;
+    skos:prefLabel "La Laja"@spa-Latn ;
+    wdata:q7200235 "PA090208" .
+
+<urn:mdciii:1603:45:16:591:3:90209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90209" ;
+    skos:prefLabel "La Miel"@spa-Latn ;
+    wdata:q7200235 "PA090209" .
+
+<urn:mdciii:1603:45:16:591:3:90210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90210" ;
+    skos:prefLabel "La Palma"@spa-Latn ;
+    wdata:q7200235 "PA090210" .
+
+<urn:mdciii:1603:45:16:591:3:90211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90211" ;
+    skos:prefLabel "La Tiza"@spa-Latn ;
+    wdata:q7200235 "PA090211" .
+
+<urn:mdciii:1603:45:16:591:3:90212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90212" ;
+    skos:prefLabel "Las Palmitas"@spa-Latn ;
+    wdata:q7200235 "PA090212" .
+
+<urn:mdciii:1603:45:16:591:3:90213>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90213" ;
+    skos:prefLabel "Las Tablas Abajo"@spa-Latn ;
+    wdata:q7200235 "PA090213" .
+
+<urn:mdciii:1603:45:16:591:3:90214>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90214" ;
+    skos:prefLabel "Las Tablas"@spa-Latn ;
+    wdata:q7200235 "PA090214" .
+
+<urn:mdciii:1603:45:16:591:3:90215>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90215" ;
+    skos:prefLabel "Nuario"@spa-Latn ;
+    wdata:q7200235 "PA090215" .
+
+<urn:mdciii:1603:45:16:591:3:90216>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90216" ;
+    skos:prefLabel "Palmira"@spa-Latn ;
+    wdata:q7200235 "PA090216" .
+
+<urn:mdciii:1603:45:16:591:3:90217>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90217" ;
+    skos:prefLabel "Peña Blanca"@spa-Latn ;
+    wdata:q7200235 "PA090217" .
+
+<urn:mdciii:1603:45:16:591:3:90218>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90218" ;
+    skos:prefLabel "Río Hondo"@spa-Latn ;
+    wdata:q7200235 "PA090218" .
+
+<urn:mdciii:1603:45:16:591:3:90219>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90219" ;
+    skos:prefLabel "San José"@spa-Latn ;
+    wdata:q7200235 "PA090219" .
+
+<urn:mdciii:1603:45:16:591:3:90220>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90220" ;
+    skos:prefLabel "San Miguel"@spa-Latn ;
+    wdata:q7200235 "PA090220" .
+
+<urn:mdciii:1603:45:16:591:3:90221>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90221" ;
+    skos:prefLabel "Santo Domingo"@spa-Latn ;
+    wdata:q7200235 "PA090221" .
+
+<urn:mdciii:1603:45:16:591:3:90222>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90222" ;
+    skos:prefLabel "Sesteadero"@spa-Latn ;
+    wdata:q7200235 "PA090222" .
+
+<urn:mdciii:1603:45:16:591:3:90223>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90223" ;
+    skos:prefLabel "Valle Rico"@spa-Latn ;
+    wdata:q7200235 "PA090223" .
+
+<urn:mdciii:1603:45:16:591:3:90224>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90224" ;
+    skos:prefLabel "Vallerriquito"@spa-Latn ;
+    wdata:q7200235 "PA090224" .
+
+<urn:mdciii:1603:45:16:591:3:90301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90301" ;
+    skos:prefLabel "Agua Buena"@spa-Latn ;
+    wdata:q7200235 "PA090301" .
+
+<urn:mdciii:1603:45:16:591:3:90302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90302" ;
+    skos:prefLabel "El Guásimo"@spa-Latn ;
+    wdata:q7200235 "PA090302" .
+
+<urn:mdciii:1603:45:16:591:3:90303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90303" ;
+    skos:prefLabel "La Colorada"@spa-Latn ;
+    wdata:q7200235 "PA090303" .
+
+<urn:mdciii:1603:45:16:591:3:90304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90304" ;
+    skos:prefLabel "La Espigadilla"@spa-Latn ;
+    wdata:q7200235 "PA090304" .
+
+<urn:mdciii:1603:45:16:591:3:90305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90305" ;
+    skos:prefLabel "La Villa de Los Santos"@spa-Latn ;
+    wdata:q7200235 "PA090305" .
+
+<urn:mdciii:1603:45:16:591:3:90306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90306" ;
+    skos:prefLabel "Las Cruces"@spa-Latn ;
+    wdata:q7200235 "PA090306" .
+
+<urn:mdciii:1603:45:16:591:3:90307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90307" ;
+    skos:prefLabel "Las Guabas"@spa-Latn ;
+    wdata:q7200235 "PA090307" .
+
+<urn:mdciii:1603:45:16:591:3:90308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90308" ;
+    skos:prefLabel "Llano Largo"@spa-Latn ;
+    wdata:q7200235 "PA090308" .
+
+<urn:mdciii:1603:45:16:591:3:90309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90309" ;
+    skos:prefLabel "Los Angeles"@spa-Latn ;
+    wdata:q7200235 "PA090309" .
+
+<urn:mdciii:1603:45:16:591:3:90310>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90310" ;
+    skos:prefLabel "Los Olivos"@spa-Latn ;
+    wdata:q7200235 "PA090310" .
+
+<urn:mdciii:1603:45:16:591:3:90311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90311" ;
+    skos:prefLabel "Sabanagrande"@spa-Latn ;
+    wdata:q7200235 "PA090311" .
+
+<urn:mdciii:1603:45:16:591:3:90312>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90312" ;
+    skos:prefLabel "Santa Ana"@spa-Latn ;
+    wdata:q7200235 "PA090312" .
+
+<urn:mdciii:1603:45:16:591:3:90313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90313" ;
+    skos:prefLabel "Tres Quebradas"@spa-Latn ;
+    wdata:q7200235 "PA090313" .
+
+<urn:mdciii:1603:45:16:591:3:90314>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90314" ;
+    skos:prefLabel "Villa Lourdes"@spa-Latn ;
+    wdata:q7200235 "PA090314" .
+
+<urn:mdciii:1603:45:16:591:3:90401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90401" ;
+    skos:prefLabel "Bahía Honda"@spa-Latn ;
+    wdata:q7200235 "PA090401" .
+
+<urn:mdciii:1603:45:16:591:3:90402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90402" ;
+    skos:prefLabel "Bajos de Güera"@spa-Latn ;
+    wdata:q7200235 "PA090402" .
+
+<urn:mdciii:1603:45:16:591:3:90403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90403" ;
+    skos:prefLabel "Chupá"@spa-Latn ;
+    wdata:q7200235 "PA090403" .
+
+<urn:mdciii:1603:45:16:591:3:90404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90404" ;
+    skos:prefLabel "Corozal"@spa-Latn ;
+    wdata:q7200235 "PA090404" .
+
+<urn:mdciii:1603:45:16:591:3:90405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90405" ;
+    skos:prefLabel "El Cedro"@spa-Latn ;
+    wdata:q7200235 "PA090405" .
+
+<urn:mdciii:1603:45:16:591:3:90406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90406" ;
+    skos:prefLabel "Espino Amarillo"@spa-Latn ;
+    wdata:q7200235 "PA090406" .
+
+<urn:mdciii:1603:45:16:591:3:90407>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90407" ;
+    skos:prefLabel "La Mesa"@spa-Latn ;
+    wdata:q7200235 "PA090407" .
+
+<urn:mdciii:1603:45:16:591:3:90408>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90408" ;
+    skos:prefLabel "Las Palmas"@spa-Latn ;
+    wdata:q7200235 "PA090408" .
+
+<urn:mdciii:1603:45:16:591:3:90409>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90409" ;
+    skos:prefLabel "Llano de Piedra"@spa-Latn ;
+    wdata:q7200235 "PA090409" .
+
+<urn:mdciii:1603:45:16:591:3:90410>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90410" ;
+    skos:prefLabel "Macaracas"@spa-Latn ;
+    wdata:q7200235 "PA090410" .
+
+<urn:mdciii:1603:45:16:591:3:90411>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90411" ;
+    skos:prefLabel "Mogollón"@spa-Latn ;
+    wdata:q7200235 "PA090411" .
+
+<urn:mdciii:1603:45:16:591:3:90501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90501" ;
+    skos:prefLabel "Los Asientos"@spa-Latn ;
+    wdata:q7200235 "PA090501" .
+
+<urn:mdciii:1603:45:16:591:3:90502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90502" ;
+    skos:prefLabel "Mariabé"@spa-Latn ;
+    wdata:q7200235 "PA090502" .
+
+<urn:mdciii:1603:45:16:591:3:90503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90503" ;
+    skos:prefLabel "Oria Arriba"@spa-Latn ;
+    wdata:q7200235 "PA090503" .
+
+<urn:mdciii:1603:45:16:591:3:90504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90504" ;
+    skos:prefLabel "Pedasí"@spa-Latn ;
+    wdata:q7200235 "PA090504" .
+
+<urn:mdciii:1603:45:16:591:3:90505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90505" ;
+    skos:prefLabel "Purio"@spa-Latn ;
+    wdata:q7200235 "PA090505" .
+
+<urn:mdciii:1603:45:16:591:3:90601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90601" ;
+    skos:prefLabel "El Cañafístulo"@spa-Latn ;
+    wdata:q7200235 "PA090601" .
+
+<urn:mdciii:1603:45:16:591:3:90602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90602" ;
+    skos:prefLabel "Lajamina"@spa-Latn ;
+    wdata:q7200235 "PA090602" .
+
+<urn:mdciii:1603:45:16:591:3:90603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90603" ;
+    skos:prefLabel "Paraíso"@spa-Latn ;
+    wdata:q7200235 "PA090603" .
+
+<urn:mdciii:1603:45:16:591:3:90604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90604" ;
+    skos:prefLabel "Paritilla"@spa-Latn ;
+    wdata:q7200235 "PA090604" .
+
+<urn:mdciii:1603:45:16:591:3:90605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90605" ;
+    skos:prefLabel "Pocrí"@spa-Latn ;
+    wdata:q7200235 "PA090605" .
+
+<urn:mdciii:1603:45:16:591:3:90701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90701" ;
+    skos:prefLabel "Altos de Güera"@spa-Latn ;
+    wdata:q7200235 "PA090701" .
+
+<urn:mdciii:1603:45:16:591:3:90702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90702" ;
+    skos:prefLabel "Cañas"@spa-Latn ;
+    wdata:q7200235 "PA090702" .
+
+<urn:mdciii:1603:45:16:591:3:90703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90703" ;
+    skos:prefLabel "Cambutal"@spa-Latn ;
+    wdata:q7200235 "PA090703" .
+
+<urn:mdciii:1603:45:16:591:3:90704>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90704" ;
+    skos:prefLabel "El Bebedero"@spa-Latn ;
+    wdata:q7200235 "PA090704" .
+
+<urn:mdciii:1603:45:16:591:3:90705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90705" ;
+    skos:prefLabel "El Cacao"@spa-Latn ;
+    wdata:q7200235 "PA090705" .
+
+<urn:mdciii:1603:45:16:591:3:90706>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90706" ;
+    skos:prefLabel "El Cortezo"@spa-Latn ;
+    wdata:q7200235 "PA090706" .
+
+<urn:mdciii:1603:45:16:591:3:90707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90707" ;
+    skos:prefLabel "Flores"@spa-Latn ;
+    wdata:q7200235 "PA090707" .
+
+<urn:mdciii:1603:45:16:591:3:90708>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90708" ;
+    skos:prefLabel "Guánico"@spa-Latn ;
+    wdata:q7200235 "PA090708" .
+
+<urn:mdciii:1603:45:16:591:3:90709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90709" ;
+    skos:prefLabel "La Tronosa"@spa-Latn ;
+    wdata:q7200235 "PA090709" .
+
+<urn:mdciii:1603:45:16:591:3:90710>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:591:3:90710" ;
+    skos:prefLabel "Tonosí"@spa-Latn ;
+    wdata:q7200235 "PA090710" .
+

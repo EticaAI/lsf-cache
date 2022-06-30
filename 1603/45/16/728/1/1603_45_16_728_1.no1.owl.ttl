@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,53 +27,76 @@
     rdfs:label "(1603:45:16:728:1)" ;
     skos:member <urn:mdciii:1603:45:16:728:1:10>, <urn:mdciii:1603:45:16:728:1:2>, <urn:mdciii:1603:45:16:728:1:3>, <urn:mdciii:1603:45:16:728:1:4>, <urn:mdciii:1603:45:16:728:1:5>, <urn:mdciii:1603:45:16:728:1:6>, <urn:mdciii:1603:45:16:728:1:7>, <urn:mdciii:1603:45:16:728:1:8>, <urn:mdciii:1603:45:16:728:1:9> .
 
+<urn:mdciii:1603:45:16:728:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:728:1:1>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:1" .
+    rdfs:label "1603:45:16:728:1:1" ;
+    skos:prefLabel "Central Equatoria"@eng-Latn ;
+    wdata:q7200235 "SS01" .
 
 <urn:mdciii:1603:45:16:728:1:10>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:10" .
+    rdfs:label "1603:45:16:728:1:10" ;
+    skos:prefLabel "Western Equatoria"@eng-Latn ;
+    wdata:q7200235 "SS10" .
 
 <urn:mdciii:1603:45:16:728:1:2>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:2" .
+    rdfs:label "1603:45:16:728:1:2" ;
+    skos:prefLabel "Eastern Equatoria"@eng-Latn ;
+    wdata:q7200235 "SS02" .
 
 <urn:mdciii:1603:45:16:728:1:3>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:3" .
+    rdfs:label "1603:45:16:728:1:3" ;
+    skos:prefLabel "Jonglei"@eng-Latn ;
+    wdata:q7200235 "SS03" .
 
 <urn:mdciii:1603:45:16:728:1:4>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:4" .
+    rdfs:label "1603:45:16:728:1:4" ;
+    skos:prefLabel "Lakes"@eng-Latn ;
+    wdata:q7200235 "SS04" .
 
 <urn:mdciii:1603:45:16:728:1:5>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:5" .
+    rdfs:label "1603:45:16:728:1:5" ;
+    skos:prefLabel "Northern Bahr el Ghazal"@eng-Latn ;
+    wdata:q7200235 "SS05" .
 
 <urn:mdciii:1603:45:16:728:1:6>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:6" .
+    rdfs:label "1603:45:16:728:1:6" ;
+    skos:prefLabel "Unity"@eng-Latn ;
+    wdata:q7200235 "SS06" .
 
 <urn:mdciii:1603:45:16:728:1:7>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:7" .
+    rdfs:label "1603:45:16:728:1:7" ;
+    skos:prefLabel "Upper Nile"@eng-Latn ;
+    wdata:q7200235 "SS07" .
 
 <urn:mdciii:1603:45:16:728:1:8>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:8" .
+    rdfs:label "1603:45:16:728:1:8" ;
+    skos:prefLabel "Warrap"@eng-Latn ;
+    wdata:q7200235 "SS08" .
 
 <urn:mdciii:1603:45:16:728:1:9>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:728:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:728:1:9" .
+    rdfs:label "1603:45:16:728:1:9" ;
+    skos:prefLabel "Western Bahr el Ghazal"@eng-Latn ;
+    wdata:q7200235 "SS09" .
 

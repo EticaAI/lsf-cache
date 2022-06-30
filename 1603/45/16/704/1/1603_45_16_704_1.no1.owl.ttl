@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,318 +27,447 @@
     rdfs:label "(1603:45:16:704:1)" ;
     skos:member <urn:mdciii:1603:45:16:704:1:103>, <urn:mdciii:1603:45:16:704:1:104>, <urn:mdciii:1603:45:16:704:1:106>, <urn:mdciii:1603:45:16:704:1:107>, <urn:mdciii:1603:45:16:704:1:109>, <urn:mdciii:1603:45:16:704:1:111>, <urn:mdciii:1603:45:16:704:1:113>, <urn:mdciii:1603:45:16:704:1:115>, <urn:mdciii:1603:45:16:704:1:117>, <urn:mdciii:1603:45:16:704:1:201>, <urn:mdciii:1603:45:16:704:1:203>, <urn:mdciii:1603:45:16:704:1:205>, <urn:mdciii:1603:45:16:704:1:207>, <urn:mdciii:1603:45:16:704:1:209>, <urn:mdciii:1603:45:16:704:1:211>, <urn:mdciii:1603:45:16:704:1:213>, <urn:mdciii:1603:45:16:704:1:215>, <urn:mdciii:1603:45:16:704:1:217>, <urn:mdciii:1603:45:16:704:1:221>, <urn:mdciii:1603:45:16:704:1:225>, <urn:mdciii:1603:45:16:704:1:301>, <urn:mdciii:1603:45:16:704:1:302>, <urn:mdciii:1603:45:16:704:1:303>, <urn:mdciii:1603:45:16:704:1:305>, <urn:mdciii:1603:45:16:704:1:401>, <urn:mdciii:1603:45:16:704:1:403>, <urn:mdciii:1603:45:16:704:1:405>, <urn:mdciii:1603:45:16:704:1:407>, <urn:mdciii:1603:45:16:704:1:409>, <urn:mdciii:1603:45:16:704:1:411>, <urn:mdciii:1603:45:16:704:1:501>, <urn:mdciii:1603:45:16:704:1:503>, <urn:mdciii:1603:45:16:704:1:505>, <urn:mdciii:1603:45:16:704:1:507>, <urn:mdciii:1603:45:16:704:1:509>, <urn:mdciii:1603:45:16:704:1:511>, <urn:mdciii:1603:45:16:704:1:601>, <urn:mdciii:1603:45:16:704:1:603>, <urn:mdciii:1603:45:16:704:1:605>, <urn:mdciii:1603:45:16:704:1:606>, <urn:mdciii:1603:45:16:704:1:607>, <urn:mdciii:1603:45:16:704:1:701>, <urn:mdciii:1603:45:16:704:1:705>, <urn:mdciii:1603:45:16:704:1:707>, <urn:mdciii:1603:45:16:704:1:709>, <urn:mdciii:1603:45:16:704:1:711>, <urn:mdciii:1603:45:16:704:1:713>, <urn:mdciii:1603:45:16:704:1:715>, <urn:mdciii:1603:45:16:704:1:717>, <urn:mdciii:1603:45:16:704:1:801>, <urn:mdciii:1603:45:16:704:1:803>, <urn:mdciii:1603:45:16:704:1:805>, <urn:mdciii:1603:45:16:704:1:807>, <urn:mdciii:1603:45:16:704:1:809>, <urn:mdciii:1603:45:16:704:1:811>, <urn:mdciii:1603:45:16:704:1:813>, <urn:mdciii:1603:45:16:704:1:815>, <urn:mdciii:1603:45:16:704:1:816>, <urn:mdciii:1603:45:16:704:1:817>, <urn:mdciii:1603:45:16:704:1:819>, <urn:mdciii:1603:45:16:704:1:821>, <urn:mdciii:1603:45:16:704:1:823> .
 
+<urn:mdciii:1603:45:16:704:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:704:1:101>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:101" .
+    rdfs:label "1603:45:16:704:1:101" ;
+    skos:prefLabel "Ha Noi"@eng-Latn, "TP. Hà Nội"@vie-Latn ;
+    wdata:q7200235 "VN101" .
 
 <urn:mdciii:1603:45:16:704:1:103>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:103" .
+    rdfs:label "1603:45:16:704:1:103" ;
+    skos:prefLabel "Hai Phong city"@eng-Latn, "TP. Hải Phòng"@vie-Latn ;
+    wdata:q7200235 "VN103" .
 
 <urn:mdciii:1603:45:16:704:1:104>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:104" .
+    rdfs:label "1603:45:16:704:1:104" ;
+    skos:prefLabel "Vinh Phuc"@eng-Latn, "Vĩnh Phúc"@vie-Latn ;
+    wdata:q7200235 "VN104" .
 
 <urn:mdciii:1603:45:16:704:1:106>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:106" .
+    rdfs:label "1603:45:16:704:1:106" ;
+    skos:prefLabel "Bac Ninh"@eng-Latn, "Bắc Ninh"@vie-Latn ;
+    wdata:q7200235 "VN106" .
 
 <urn:mdciii:1603:45:16:704:1:107>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:107" .
+    rdfs:label "1603:45:16:704:1:107" ;
+    skos:prefLabel "Hai Duong"@eng-Latn, "Hải Dương"@vie-Latn ;
+    wdata:q7200235 "VN107" .
 
 <urn:mdciii:1603:45:16:704:1:109>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:109" .
+    rdfs:label "1603:45:16:704:1:109" ;
+    skos:prefLabel "Hung Yen"@eng-Latn, "Hưng Yên"@vie-Latn ;
+    wdata:q7200235 "VN109" .
 
 <urn:mdciii:1603:45:16:704:1:111>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:111" .
+    rdfs:label "1603:45:16:704:1:111" ;
+    skos:prefLabel "Ha Nam"@eng-Latn, "Hà Nam"@vie-Latn ;
+    wdata:q7200235 "VN111" .
 
 <urn:mdciii:1603:45:16:704:1:113>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:113" .
+    rdfs:label "1603:45:16:704:1:113" ;
+    skos:prefLabel "Nam Dinh"@eng-Latn, "Nam Định"@vie-Latn ;
+    wdata:q7200235 "VN113" .
 
 <urn:mdciii:1603:45:16:704:1:115>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:115" .
+    rdfs:label "1603:45:16:704:1:115" ;
+    skos:prefLabel "Thai Binh"@eng-Latn, "Thái Bình"@vie-Latn ;
+    wdata:q7200235 "VN115" .
 
 <urn:mdciii:1603:45:16:704:1:117>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:117" .
+    rdfs:label "1603:45:16:704:1:117" ;
+    skos:prefLabel "Ninh Binh"@eng-Latn, "Ninh Bình"@vie-Latn ;
+    wdata:q7200235 "VN117" .
 
 <urn:mdciii:1603:45:16:704:1:201>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:201" .
+    rdfs:label "1603:45:16:704:1:201" ;
+    skos:prefLabel "Ha Giang"@eng-Latn, "Hà Giang"@vie-Latn ;
+    wdata:q7200235 "VN201" .
 
 <urn:mdciii:1603:45:16:704:1:203>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:203" .
+    rdfs:label "1603:45:16:704:1:203" ;
+    skos:prefLabel "Cao Bang"@eng-Latn, "Cao Bằng"@vie-Latn ;
+    wdata:q7200235 "VN203" .
 
 <urn:mdciii:1603:45:16:704:1:205>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:205" .
+    rdfs:label "1603:45:16:704:1:205" ;
+    skos:prefLabel "Lao Cai"@eng-Latn, "Lào Cai"@vie-Latn ;
+    wdata:q7200235 "VN205" .
 
 <urn:mdciii:1603:45:16:704:1:207>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:207" .
+    rdfs:label "1603:45:16:704:1:207" ;
+    skos:prefLabel "Bac Kan"@eng-Latn, "Bắc Kạn"@vie-Latn ;
+    wdata:q7200235 "VN207" .
 
 <urn:mdciii:1603:45:16:704:1:209>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:209" .
+    rdfs:label "1603:45:16:704:1:209" ;
+    skos:prefLabel "Lang Son"@eng-Latn, "Lạng Sơn"@vie-Latn ;
+    wdata:q7200235 "VN209" .
 
 <urn:mdciii:1603:45:16:704:1:211>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:211" .
+    rdfs:label "1603:45:16:704:1:211" ;
+    skos:prefLabel "Tuyen Quang"@eng-Latn, "Tuyên Quang"@vie-Latn ;
+    wdata:q7200235 "VN211" .
 
 <urn:mdciii:1603:45:16:704:1:213>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:213" .
+    rdfs:label "1603:45:16:704:1:213" ;
+    skos:prefLabel "Yen Bai"@eng-Latn, "Yên Bái"@vie-Latn ;
+    wdata:q7200235 "VN213" .
 
 <urn:mdciii:1603:45:16:704:1:215>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:215" .
+    rdfs:label "1603:45:16:704:1:215" ;
+    skos:prefLabel "Thai Nguyen"@eng-Latn, "Thái Nguyên"@vie-Latn ;
+    wdata:q7200235 "VN215" .
 
 <urn:mdciii:1603:45:16:704:1:217>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:217" .
+    rdfs:label "1603:45:16:704:1:217" ;
+    skos:prefLabel "Phu Tho"@eng-Latn, "Phú Thọ"@vie-Latn ;
+    wdata:q7200235 "VN217" .
 
 <urn:mdciii:1603:45:16:704:1:221>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:221" .
+    rdfs:label "1603:45:16:704:1:221" ;
+    skos:prefLabel "Bac Giang"@eng-Latn, "Bắc Giang"@vie-Latn ;
+    wdata:q7200235 "VN221" .
 
 <urn:mdciii:1603:45:16:704:1:225>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:225" .
+    rdfs:label "1603:45:16:704:1:225" ;
+    skos:prefLabel "Quang Ninh"@eng-Latn, "Quảng Ninh"@vie-Latn ;
+    wdata:q7200235 "VN225" .
 
 <urn:mdciii:1603:45:16:704:1:301>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:301" .
+    rdfs:label "1603:45:16:704:1:301" ;
+    skos:prefLabel "Lai Chau"@eng-Latn, "Lai Châu"@vie-Latn ;
+    wdata:q7200235 "VN301" .
 
 <urn:mdciii:1603:45:16:704:1:302>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:302" .
+    rdfs:label "1603:45:16:704:1:302" ;
+    skos:prefLabel "Dien Bien"@eng-Latn, "Điện Biên"@vie-Latn ;
+    wdata:q7200235 "VN302" .
 
 <urn:mdciii:1603:45:16:704:1:303>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:303" .
+    rdfs:label "1603:45:16:704:1:303" ;
+    skos:prefLabel "Son La"@eng-Latn, "Sơn La"@vie-Latn ;
+    wdata:q7200235 "VN303" .
 
 <urn:mdciii:1603:45:16:704:1:305>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:305" .
+    rdfs:label "1603:45:16:704:1:305" ;
+    skos:prefLabel "Hoa Binh"@eng-Latn, "Hòa Bình"@vie-Latn ;
+    wdata:q7200235 "VN305" .
 
 <urn:mdciii:1603:45:16:704:1:401>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:401" .
+    rdfs:label "1603:45:16:704:1:401" ;
+    skos:prefLabel "Thanh Hoa"@eng-Latn, "Thanh Hóa"@vie-Latn ;
+    wdata:q7200235 "VN401" .
 
 <urn:mdciii:1603:45:16:704:1:403>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:403" .
+    rdfs:label "1603:45:16:704:1:403" ;
+    skos:prefLabel "Nghe An"@eng-Latn, "Nghệ An"@vie-Latn ;
+    wdata:q7200235 "VN403" .
 
 <urn:mdciii:1603:45:16:704:1:405>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:405" .
+    rdfs:label "1603:45:16:704:1:405" ;
+    skos:prefLabel "Ha Tinh"@eng-Latn, "Hà Tĩnh"@vie-Latn ;
+    wdata:q7200235 "VN405" .
 
 <urn:mdciii:1603:45:16:704:1:407>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:407" .
+    rdfs:label "1603:45:16:704:1:407" ;
+    skos:prefLabel "Quang Binh"@eng-Latn, "Quảng Bình"@vie-Latn ;
+    wdata:q7200235 "VN407" .
 
 <urn:mdciii:1603:45:16:704:1:409>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:409" .
+    rdfs:label "1603:45:16:704:1:409" ;
+    skos:prefLabel "Quang Tri"@eng-Latn, "Quảng Trị"@vie-Latn ;
+    wdata:q7200235 "VN409" .
 
 <urn:mdciii:1603:45:16:704:1:411>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:411" .
+    rdfs:label "1603:45:16:704:1:411" ;
+    skos:prefLabel "Thua Thien Hue"@eng-Latn, "Thừa Thiên Huế"@vie-Latn ;
+    wdata:q7200235 "VN411" .
 
 <urn:mdciii:1603:45:16:704:1:501>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:501" .
+    rdfs:label "1603:45:16:704:1:501" ;
+    skos:prefLabel "Da Nang city"@eng-Latn, "TP. Đà Nẵng"@vie-Latn ;
+    wdata:q7200235 "VN501" .
 
 <urn:mdciii:1603:45:16:704:1:503>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:503" .
+    rdfs:label "1603:45:16:704:1:503" ;
+    skos:prefLabel "Quang Nam"@eng-Latn, "Quảng Nam"@vie-Latn ;
+    wdata:q7200235 "VN503" .
 
 <urn:mdciii:1603:45:16:704:1:505>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:505" .
+    rdfs:label "1603:45:16:704:1:505" ;
+    skos:prefLabel "Quang Ngai"@eng-Latn, "Quảng Ngãi"@vie-Latn ;
+    wdata:q7200235 "VN505" .
 
 <urn:mdciii:1603:45:16:704:1:507>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:507" .
+    rdfs:label "1603:45:16:704:1:507" ;
+    skos:prefLabel "Binh Dinh"@eng-Latn, "Bình Định"@vie-Latn ;
+    wdata:q7200235 "VN507" .
 
 <urn:mdciii:1603:45:16:704:1:509>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:509" .
+    rdfs:label "1603:45:16:704:1:509" ;
+    skos:prefLabel "Phu Yen"@eng-Latn, "Phú Yên"@vie-Latn ;
+    wdata:q7200235 "VN509" .
 
 <urn:mdciii:1603:45:16:704:1:511>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:511" .
+    rdfs:label "1603:45:16:704:1:511" ;
+    skos:prefLabel "Khanh Hoa"@eng-Latn, "Khánh Hòa"@vie-Latn ;
+    wdata:q7200235 "VN511" .
 
 <urn:mdciii:1603:45:16:704:1:601>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:601" .
+    rdfs:label "1603:45:16:704:1:601" ;
+    skos:prefLabel "Kon Tum"@eng-Latn, "Kon Tum"@vie-Latn ;
+    wdata:q7200235 "VN601" .
 
 <urn:mdciii:1603:45:16:704:1:603>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:603" .
+    rdfs:label "1603:45:16:704:1:603" ;
+    skos:prefLabel "Gia Lai"@eng-Latn, "Gia Lai"@vie-Latn ;
+    wdata:q7200235 "VN603" .
 
 <urn:mdciii:1603:45:16:704:1:605>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:605" .
+    rdfs:label "1603:45:16:704:1:605" ;
+    skos:prefLabel "Dak Lak"@eng-Latn, "Đăk Lắk"@vie-Latn ;
+    wdata:q7200235 "VN605" .
 
 <urn:mdciii:1603:45:16:704:1:606>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:606" .
+    rdfs:label "1603:45:16:704:1:606" ;
+    skos:prefLabel "Dak Nong"@eng-Latn, "Đăk Nông"@vie-Latn ;
+    wdata:q7200235 "VN606" .
 
 <urn:mdciii:1603:45:16:704:1:607>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:607" .
+    rdfs:label "1603:45:16:704:1:607" ;
+    skos:prefLabel "Lam Dong"@eng-Latn, "Lâm Đồng"@vie-Latn ;
+    wdata:q7200235 "VN607" .
 
 <urn:mdciii:1603:45:16:704:1:701>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:701" .
+    rdfs:label "1603:45:16:704:1:701" ;
+    skos:prefLabel "Ho Chi Minh city"@eng-Latn, "TP. Hồ Chí Minh"@vie-Latn ;
+    wdata:q7200235 "VN701" .
 
 <urn:mdciii:1603:45:16:704:1:705>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:705" .
+    rdfs:label "1603:45:16:704:1:705" ;
+    skos:prefLabel "Ninh Thuan"@eng-Latn, "Ninh Thuận"@vie-Latn ;
+    wdata:q7200235 "VN705" .
 
 <urn:mdciii:1603:45:16:704:1:707>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:707" .
+    rdfs:label "1603:45:16:704:1:707" ;
+    skos:prefLabel "Binh Phuoc"@eng-Latn, "Bình Phước"@vie-Latn ;
+    wdata:q7200235 "VN707" .
 
 <urn:mdciii:1603:45:16:704:1:709>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:709" .
+    rdfs:label "1603:45:16:704:1:709" ;
+    skos:prefLabel "Tay Ninh"@eng-Latn, "Tây Ninh"@vie-Latn ;
+    wdata:q7200235 "VN709" .
 
 <urn:mdciii:1603:45:16:704:1:711>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:711" .
+    rdfs:label "1603:45:16:704:1:711" ;
+    skos:prefLabel "Binh Duong"@eng-Latn, "Bình Dương"@vie-Latn ;
+    wdata:q7200235 "VN711" .
 
 <urn:mdciii:1603:45:16:704:1:713>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:713" .
+    rdfs:label "1603:45:16:704:1:713" ;
+    skos:prefLabel "Dong Nai"@eng-Latn, "Đồng Nai"@vie-Latn ;
+    wdata:q7200235 "VN713" .
 
 <urn:mdciii:1603:45:16:704:1:715>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:715" .
+    rdfs:label "1603:45:16:704:1:715" ;
+    skos:prefLabel "Binh Thuan"@eng-Latn, "Bình Thuận"@vie-Latn ;
+    wdata:q7200235 "VN715" .
 
 <urn:mdciii:1603:45:16:704:1:717>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:717" .
+    rdfs:label "1603:45:16:704:1:717" ;
+    skos:prefLabel "Ba Ria - Vung Tau"@eng-Latn, "Bà Rịa - Vũng Tàu"@vie-Latn ;
+    wdata:q7200235 "VN717" .
 
 <urn:mdciii:1603:45:16:704:1:801>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:801" .
+    rdfs:label "1603:45:16:704:1:801" ;
+    skos:prefLabel "Long An"@eng-Latn, "Long An"@vie-Latn ;
+    wdata:q7200235 "VN801" .
 
 <urn:mdciii:1603:45:16:704:1:803>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:803" .
+    rdfs:label "1603:45:16:704:1:803" ;
+    skos:prefLabel "Dong Thap"@eng-Latn, "Đồng Tháp"@vie-Latn ;
+    wdata:q7200235 "VN803" .
 
 <urn:mdciii:1603:45:16:704:1:805>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:805" .
+    rdfs:label "1603:45:16:704:1:805" ;
+    skos:prefLabel "An Giang"@eng-Latn, "An Giang"@vie-Latn ;
+    wdata:q7200235 "VN805" .
 
 <urn:mdciii:1603:45:16:704:1:807>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:807" .
+    rdfs:label "1603:45:16:704:1:807" ;
+    skos:prefLabel "Tien Giang"@eng-Latn, "Tiền Giang"@vie-Latn ;
+    wdata:q7200235 "VN807" .
 
 <urn:mdciii:1603:45:16:704:1:809>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:809" .
+    rdfs:label "1603:45:16:704:1:809" ;
+    skos:prefLabel "Vinh Long"@eng-Latn, "Vĩnh Long"@vie-Latn ;
+    wdata:q7200235 "VN809" .
 
 <urn:mdciii:1603:45:16:704:1:811>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:811" .
+    rdfs:label "1603:45:16:704:1:811" ;
+    skos:prefLabel "Ben Tre"@eng-Latn, "Bến Tre"@vie-Latn ;
+    wdata:q7200235 "VN811" .
 
 <urn:mdciii:1603:45:16:704:1:813>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:813" .
+    rdfs:label "1603:45:16:704:1:813" ;
+    skos:prefLabel "Kien Giang"@eng-Latn, "Kiên Giang"@vie-Latn ;
+    wdata:q7200235 "VN813" .
 
 <urn:mdciii:1603:45:16:704:1:815>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:815" .
+    rdfs:label "1603:45:16:704:1:815" ;
+    skos:prefLabel "Can Tho city"@eng-Latn, "TP. Cần Thơ"@vie-Latn ;
+    wdata:q7200235 "VN815" .
 
 <urn:mdciii:1603:45:16:704:1:816>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:816" .
+    rdfs:label "1603:45:16:704:1:816" ;
+    skos:prefLabel "Hau Giang"@eng-Latn, "Hậu Giang"@vie-Latn ;
+    wdata:q7200235 "VN816" .
 
 <urn:mdciii:1603:45:16:704:1:817>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:817" .
+    rdfs:label "1603:45:16:704:1:817" ;
+    skos:prefLabel "Tra Vinh"@eng-Latn, "Trà Vinh"@vie-Latn ;
+    wdata:q7200235 "VN817" .
 
 <urn:mdciii:1603:45:16:704:1:819>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:819" .
+    rdfs:label "1603:45:16:704:1:819" ;
+    skos:prefLabel "Soc Trang"@eng-Latn, "Sóc Trăng"@vie-Latn ;
+    wdata:q7200235 "VN819" .
 
 <urn:mdciii:1603:45:16:704:1:821>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:821" .
+    rdfs:label "1603:45:16:704:1:821" ;
+    skos:prefLabel "Bac Lieu"@eng-Latn, "Bạc Liêu"@vie-Latn ;
+    wdata:q7200235 "VN821" .
 
 <urn:mdciii:1603:45:16:704:1:823>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:704:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:704:1:823" .
+    rdfs:label "1603:45:16:704:1:823" ;
+    skos:prefLabel "Ca Mau"@eng-Latn, "Cà Mau"@vie-Latn ;
+    wdata:q7200235 "VN823" .
 

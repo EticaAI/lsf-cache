@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,88 +27,125 @@
     rdfs:label "(1603:45:16:608:1)" ;
     skos:member <urn:mdciii:1603:45:16:608:1:100000000>, <urn:mdciii:1603:45:16:608:1:110000000>, <urn:mdciii:1603:45:16:608:1:120000000>, <urn:mdciii:1603:45:16:608:1:130000000>, <urn:mdciii:1603:45:16:608:1:140000000>, <urn:mdciii:1603:45:16:608:1:150000000>, <urn:mdciii:1603:45:16:608:1:160000000>, <urn:mdciii:1603:45:16:608:1:170000000>, <urn:mdciii:1603:45:16:608:1:20000000>, <urn:mdciii:1603:45:16:608:1:30000000>, <urn:mdciii:1603:45:16:608:1:40000000>, <urn:mdciii:1603:45:16:608:1:50000000>, <urn:mdciii:1603:45:16:608:1:60000000>, <urn:mdciii:1603:45:16:608:1:70000000>, <urn:mdciii:1603:45:16:608:1:80000000>, <urn:mdciii:1603:45:16:608:1:90000000> .
 
+<urn:mdciii:1603:45:16:608:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:608:1:10000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:10000000" .
+    rdfs:label "1603:45:16:608:1:10000000" ;
+    skos:prefLabel "Ilocos Region"@eng-Latn, "Region I"@eng-Latn ;
+    wdata:q7200235 "PH010000000" .
 
 <urn:mdciii:1603:45:16:608:1:100000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:100000000" .
+    rdfs:label "1603:45:16:608:1:100000000" ;
+    skos:prefLabel "Northern Mindanao"@eng-Latn, "Region X"@eng-Latn ;
+    wdata:q7200235 "PH100000000" .
 
 <urn:mdciii:1603:45:16:608:1:110000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:110000000" .
+    rdfs:label "1603:45:16:608:1:110000000" ;
+    skos:prefLabel "Davao Region"@eng-Latn, "Region XI"@eng-Latn ;
+    wdata:q7200235 "PH110000000" .
 
 <urn:mdciii:1603:45:16:608:1:120000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:120000000" .
+    rdfs:label "1603:45:16:608:1:120000000" ;
+    skos:prefLabel "Region XII"@eng-Latn, "Soccsksargen"@eng-Latn ;
+    wdata:q7200235 "PH120000000" .
 
 <urn:mdciii:1603:45:16:608:1:130000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:130000000" .
+    rdfs:label "1603:45:16:608:1:130000000" ;
+    skos:prefLabel "NCR"@eng-Latn, "National Capital Region"@eng-Latn ;
+    wdata:q7200235 "PH130000000" .
 
 <urn:mdciii:1603:45:16:608:1:140000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:140000000" .
+    rdfs:label "1603:45:16:608:1:140000000" ;
+    skos:prefLabel "CAR"@eng-Latn, "Cordillera Administrative Region"@eng-Latn ;
+    wdata:q7200235 "PH140000000" .
 
 <urn:mdciii:1603:45:16:608:1:150000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:150000000" .
+    rdfs:label "1603:45:16:608:1:150000000" ;
+    skos:prefLabel "ARMM"@eng-Latn, "Autonomous Region in Muslim Mindanao"@eng-Latn ;
+    wdata:q7200235 "PH150000000" .
 
 <urn:mdciii:1603:45:16:608:1:160000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:160000000" .
+    rdfs:label "1603:45:16:608:1:160000000" ;
+    skos:prefLabel "Caraga"@eng-Latn, "Region XIII"@eng-Latn ;
+    wdata:q7200235 "PH160000000" .
 
 <urn:mdciii:1603:45:16:608:1:170000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:170000000" .
+    rdfs:label "1603:45:16:608:1:170000000" ;
+    skos:prefLabel "Mimaropa"@eng-Latn, "Region IV-B"@eng-Latn ;
+    wdata:q7200235 "PH170000000" .
 
 <urn:mdciii:1603:45:16:608:1:20000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:20000000" .
+    rdfs:label "1603:45:16:608:1:20000000" ;
+    skos:prefLabel "Cagayan Valley"@eng-Latn, "Region II"@eng-Latn ;
+    wdata:q7200235 "PH020000000" .
 
 <urn:mdciii:1603:45:16:608:1:30000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:30000000" .
+    rdfs:label "1603:45:16:608:1:30000000" ;
+    skos:prefLabel "Central Luzon"@eng-Latn, "Region III"@eng-Latn ;
+    wdata:q7200235 "PH030000000" .
 
 <urn:mdciii:1603:45:16:608:1:40000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:40000000" .
+    rdfs:label "1603:45:16:608:1:40000000" ;
+    skos:prefLabel "Calabarzon"@eng-Latn, "Region IV-A"@eng-Latn ;
+    wdata:q7200235 "PH040000000" .
 
 <urn:mdciii:1603:45:16:608:1:50000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:50000000" .
+    rdfs:label "1603:45:16:608:1:50000000" ;
+    skos:prefLabel "Bicol Region"@eng-Latn, "Region V"@eng-Latn ;
+    wdata:q7200235 "PH050000000" .
 
 <urn:mdciii:1603:45:16:608:1:60000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:60000000" .
+    rdfs:label "1603:45:16:608:1:60000000" ;
+    skos:prefLabel "Region VI"@eng-Latn, "Western Visayas"@eng-Latn ;
+    wdata:q7200235 "PH060000000" .
 
 <urn:mdciii:1603:45:16:608:1:70000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:70000000" .
+    rdfs:label "1603:45:16:608:1:70000000" ;
+    skos:prefLabel "Central Visayas"@eng-Latn, "Region VII"@eng-Latn ;
+    wdata:q7200235 "PH070000000" .
 
 <urn:mdciii:1603:45:16:608:1:80000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:80000000" .
+    rdfs:label "1603:45:16:608:1:80000000" ;
+    skos:prefLabel "Eastern Visayas"@eng-Latn, "Region VIII"@eng-Latn ;
+    wdata:q7200235 "PH080000000" .
 
 <urn:mdciii:1603:45:16:608:1:90000000>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:608:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:608:1:90000000" .
+    rdfs:label "1603:45:16:608:1:90000000" ;
+    skos:prefLabel "Region IX"@eng-Latn, "Zamboanga Peninsula"@eng-Latn ;
+    wdata:q7200235 "PH090000000" .
 

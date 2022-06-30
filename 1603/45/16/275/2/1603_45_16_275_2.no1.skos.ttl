@@ -1,0 +1,126 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:275()> .
+
+<urn:mdciii:1603:45:16:275()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:275)" ;
+    skos:member <urn:mdciii:1603:45:16:275:2()> .
+
+<urn:mdciii:1603:45:16:275:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:275:2)" ;
+    skos:member <urn:mdciii:1603:45:16:275:2:105>, <urn:mdciii:1603:45:16:275:2:110>, <urn:mdciii:1603:45:16:275:2:115>, <urn:mdciii:1603:45:16:275:2:120>, <urn:mdciii:1603:45:16:275:2:125>, <urn:mdciii:1603:45:16:275:2:130>, <urn:mdciii:1603:45:16:275:2:135>, <urn:mdciii:1603:45:16:275:2:140>, <urn:mdciii:1603:45:16:275:2:145>, <urn:mdciii:1603:45:16:275:2:150>, <urn:mdciii:1603:45:16:275:2:255>, <urn:mdciii:1603:45:16:275:2:260>, <urn:mdciii:1603:45:16:275:2:265>, <urn:mdciii:1603:45:16:275:2:270>, <urn:mdciii:1603:45:16:275:2:275> .
+
+<urn:mdciii:1603:45:16:275:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:275:2:101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:101" ;
+    skos:prefLabel "Jenin"@eng-Latn ;
+    wdata:q7200235 "PS0101" .
+
+<urn:mdciii:1603:45:16:275:2:105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:105" ;
+    skos:prefLabel "Tubas"@eng-Latn ;
+    wdata:q7200235 "PS0105" .
+
+<urn:mdciii:1603:45:16:275:2:110>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:110" ;
+    skos:prefLabel "Tulkarm"@eng-Latn ;
+    wdata:q7200235 "PS0110" .
+
+<urn:mdciii:1603:45:16:275:2:115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:115" ;
+    skos:prefLabel "Nablus"@eng-Latn ;
+    wdata:q7200235 "PS0115" .
+
+<urn:mdciii:1603:45:16:275:2:120>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:120" ;
+    skos:prefLabel "Qalqilya"@eng-Latn ;
+    wdata:q7200235 "PS0120" .
+
+<urn:mdciii:1603:45:16:275:2:125>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:125" ;
+    skos:prefLabel "Salfit"@eng-Latn ;
+    wdata:q7200235 "PS0125" .
+
+<urn:mdciii:1603:45:16:275:2:130>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:130" ;
+    skos:prefLabel "Ramallah"@eng-Latn ;
+    wdata:q7200235 "PS0130" .
+
+<urn:mdciii:1603:45:16:275:2:135>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:135" ;
+    skos:prefLabel "Jericho"@eng-Latn ;
+    wdata:q7200235 "PS0135" .
+
+<urn:mdciii:1603:45:16:275:2:140>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:140" ;
+    skos:prefLabel "Jerusalem"@eng-Latn ;
+    wdata:q7200235 "PS0140" .
+
+<urn:mdciii:1603:45:16:275:2:145>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:145" ;
+    skos:prefLabel "Bethlehem"@eng-Latn ;
+    wdata:q7200235 "PS0145" .
+
+<urn:mdciii:1603:45:16:275:2:150>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:150" ;
+    skos:prefLabel "Hebron"@eng-Latn ;
+    wdata:q7200235 "PS0150" .
+
+<urn:mdciii:1603:45:16:275:2:255>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:255" ;
+    skos:prefLabel "North Gaza"@eng-Latn ;
+    wdata:q7200235 "PS0255" .
+
+<urn:mdciii:1603:45:16:275:2:260>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:260" ;
+    skos:prefLabel "Gaza"@eng-Latn ;
+    wdata:q7200235 "PS0260" .
+
+<urn:mdciii:1603:45:16:275:2:265>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:265" ;
+    skos:prefLabel "Deir Al-Balah"@eng-Latn ;
+    wdata:q7200235 "PS0265" .
+
+<urn:mdciii:1603:45:16:275:2:270>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:270" ;
+    skos:prefLabel "Khan Younis"@eng-Latn ;
+    wdata:q7200235 "PS0270" .
+
+<urn:mdciii:1603:45:16:275:2:275>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:275:2:275" ;
+    skos:prefLabel "Rafah"@eng-Latn ;
+    wdata:q7200235 "PS0275" .
+

@@ -1,0 +1,120 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:104()> .
+
+<urn:mdciii:1603:45:16:104()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:104)" ;
+    skos:member <urn:mdciii:1603:45:16:104:1()> .
+
+<urn:mdciii:1603:45:16:104:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:104:1)" ;
+    skos:member <urn:mdciii:1603:45:16:104:1:10>, <urn:mdciii:1603:45:16:104:1:11>, <urn:mdciii:1603:45:16:104:1:111>, <urn:mdciii:1603:45:16:104:1:12>, <urn:mdciii:1603:45:16:104:1:13>, <urn:mdciii:1603:45:16:104:1:17>, <urn:mdciii:1603:45:16:104:1:18>, <urn:mdciii:1603:45:16:104:1:2>, <urn:mdciii:1603:45:16:104:1:222>, <urn:mdciii:1603:45:16:104:1:3>, <urn:mdciii:1603:45:16:104:1:4>, <urn:mdciii:1603:45:16:104:1:5>, <urn:mdciii:1603:45:16:104:1:6>, <urn:mdciii:1603:45:16:104:1:9> .
+
+<urn:mdciii:1603:45:16:104:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:104:1:1>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:1" ;
+    skos:prefLabel "Kachin"@eng-Latn, "ကချင်ပြည်နယ်"@mya-Mymr ;
+    wdata:q7200235 "MM001" .
+
+<urn:mdciii:1603:45:16:104:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:10" ;
+    skos:prefLabel "Mandalay"@eng-Latn, "မန္တလေးတိုင်းဒေသကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM010" .
+
+<urn:mdciii:1603:45:16:104:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:11" ;
+    skos:prefLabel "Mon"@eng-Latn, "မွန်ပြည်နယ်"@mya-Mymr ;
+    wdata:q7200235 "MM011" .
+
+<urn:mdciii:1603:45:16:104:1:111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:111" ;
+    skos:prefLabel "Bago"@eng-Latn, "ပဲခူးတိုင်းဒေသကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM111" .
+
+<urn:mdciii:1603:45:16:104:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:12" ;
+    skos:prefLabel "Rakhine"@eng-Latn, "ရခိုင်ပြည်နယ်"@mya-Mymr ;
+    wdata:q7200235 "MM012" .
+
+<urn:mdciii:1603:45:16:104:1:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:13" ;
+    skos:prefLabel "Yangon"@eng-Latn, "ရန်ကုန်တိုင်းဒေသကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM013" .
+
+<urn:mdciii:1603:45:16:104:1:17>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:17" ;
+    skos:prefLabel "Ayeyarwady"@eng-Latn, "ဧရာဝတီတိုင်းဒေသကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM017" .
+
+<urn:mdciii:1603:45:16:104:1:18>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:18" ;
+    skos:prefLabel "Nay Pyi Taw"@eng-Latn, "နေပြည်တော်"@mya-Mymr ;
+    wdata:q7200235 "MM018" .
+
+<urn:mdciii:1603:45:16:104:1:2>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:2" ;
+    skos:prefLabel "Kayah"@eng-Latn, "ကယားပြည်နယ်"@mya-Mymr ;
+    wdata:q7200235 "MM002" .
+
+<urn:mdciii:1603:45:16:104:1:222>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:222" ;
+    skos:prefLabel "Shan"@eng-Latn, "ရှမ်းပြည်နယ်"@mya-Mymr ;
+    wdata:q7200235 "MM222" .
+
+<urn:mdciii:1603:45:16:104:1:3>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:3" ;
+    skos:prefLabel "Kayin"@eng-Latn, "ကရင်ပြည်နယ်"@mya-Mymr ;
+    wdata:q7200235 "MM003" .
+
+<urn:mdciii:1603:45:16:104:1:4>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:4" ;
+    skos:prefLabel "Chin"@eng-Latn, "ချင်းပြည်နယ်"@mya-Mymr ;
+    wdata:q7200235 "MM004" .
+
+<urn:mdciii:1603:45:16:104:1:5>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:5" ;
+    skos:prefLabel "Sagaing"@eng-Latn, "စစ်ကိုင်းတိုင်းဒေသကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM005" .
+
+<urn:mdciii:1603:45:16:104:1:6>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:6" ;
+    skos:prefLabel "Tanintharyi"@eng-Latn, "တနင်္သာရီတိုင်းဒေသကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM006" .
+
+<urn:mdciii:1603:45:16:104:1:9>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:1:9" ;
+    skos:prefLabel "Magway"@eng-Latn, "မကွေးတိုင်းဒေသကြီး"@mya-Mymr ;
+    wdata:q7200235 "MM009" .
+

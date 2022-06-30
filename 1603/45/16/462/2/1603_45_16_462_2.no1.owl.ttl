@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,129 +27,174 @@
     rdfs:label "(1603:45:16:462:2)" ;
     skos:member <urn:mdciii:1603:45:16:462:2:1002>, <urn:mdciii:1603:45:16:462:2:1003>, <urn:mdciii:1603:45:16:462:2:2004>, <urn:mdciii:1603:45:16:462:2:2005>, <urn:mdciii:1603:45:16:462:2:2006>, <urn:mdciii:1603:45:16:462:2:2007>, <urn:mdciii:1603:45:16:462:2:3021>, <urn:mdciii:1603:45:16:462:2:4008>, <urn:mdciii:1603:45:16:462:2:4009>, <urn:mdciii:1603:45:16:462:2:4010>, <urn:mdciii:1603:45:16:462:2:4011>, <urn:mdciii:1603:45:16:462:2:4012>, <urn:mdciii:1603:45:16:462:2:4013>, <urn:mdciii:1603:45:16:462:2:4014>, <urn:mdciii:1603:45:16:462:2:4015>, <urn:mdciii:1603:45:16:462:2:4020>, <urn:mdciii:1603:45:16:462:2:5016>, <urn:mdciii:1603:45:16:462:2:5017>, <urn:mdciii:1603:45:16:462:2:5018>, <urn:mdciii:1603:45:16:462:2:5019> .
 
+<urn:mdciii:1603:45:16:462:2(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:462:2:1001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:1001" .
+    rdfs:label "1603:45:16:462:2:1001" ;
+    skos:prefLabel "Haa Alif Atoll"@eng-Latn, "North Thiladhunmathe"@eng-Latn ;
+    wdata:q7200235 "MV001001" .
 
 <urn:mdciii:1603:45:16:462:2:1002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:1002" .
+    rdfs:label "1603:45:16:462:2:1002" ;
+    skos:prefLabel "Haa Dhaal Atoll"@eng-Latn, "South Thiladhunmathe"@eng-Latn ;
+    wdata:q7200235 "MV001002" .
 
 <urn:mdciii:1603:45:16:462:2:1003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:1003" .
+    rdfs:label "1603:45:16:462:2:1003" ;
+    skos:prefLabel "North Miladhunmadulu"@eng-Latn, "Shaviyani Atoll"@eng-Latn ;
+    wdata:q7200235 "MV001003" .
 
 <urn:mdciii:1603:45:16:462:2:2004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:2004" .
+    rdfs:label "1603:45:16:462:2:2004" ;
+    skos:prefLabel "Noonu Atoll"@eng-Latn, "South Miladhunmadulu"@eng-Latn ;
+    wdata:q7200235 "MV002004" .
 
 <urn:mdciii:1603:45:16:462:2:2005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:2005" .
+    rdfs:label "1603:45:16:462:2:2005" ;
+    skos:prefLabel "Faadhippolhu"@eng-Latn, "Lhaviyani Atoll"@eng-Latn ;
+    wdata:q7200235 "MV002005" .
 
 <urn:mdciii:1603:45:16:462:2:2006>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:2006" .
+    rdfs:label "1603:45:16:462:2:2006" ;
+    skos:prefLabel "North Maalhosmadulu"@eng-Latn, "Raa Atoll"@eng-Latn ;
+    wdata:q7200235 "MV002006" .
 
 <urn:mdciii:1603:45:16:462:2:2007>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:2007" .
+    rdfs:label "1603:45:16:462:2:2007" ;
+    skos:prefLabel "Baa Atoll"@eng-Latn, "South Maalhosmadulu"@eng-Latn ;
+    wdata:q7200235 "MV002007" .
 
 <urn:mdciii:1603:45:16:462:2:3021>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:3021" .
+    rdfs:label "1603:45:16:462:2:3021" ;
+    skos:prefLabel "Male"@eng-Latn, "Male'"@eng-Latn ;
+    wdata:q7200235 "MV003021" .
 
 <urn:mdciii:1603:45:16:462:2:4008>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4008" .
+    rdfs:label "1603:45:16:462:2:4008" ;
+    skos:prefLabel "Alif Uthuru Buri"@eng-Latn, "North Ari"@eng-Latn ;
+    wdata:q7200235 "MV004008" .
 
 <urn:mdciii:1603:45:16:462:2:4009>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4009" .
+    rdfs:label "1603:45:16:462:2:4009" ;
+    skos:prefLabel "Kaafu Atoll"@eng-Latn, "Male'"@eng-Latn ;
+    wdata:q7200235 "MV004009" .
 
 <urn:mdciii:1603:45:16:462:2:4010>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4010" .
+    rdfs:label "1603:45:16:462:2:4010" ;
+    skos:prefLabel "Felidhoo"@eng-Latn, "Vaavu Atoll"@eng-Latn ;
+    wdata:q7200235 "MV004010" .
 
 <urn:mdciii:1603:45:16:462:2:4011>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4011" .
+    rdfs:label "1603:45:16:462:2:4011" ;
+    skos:prefLabel "Faafu Atoll"@eng-Latn, "North Nilandhoo"@eng-Latn ;
+    wdata:q7200235 "MV004011" .
 
 <urn:mdciii:1603:45:16:462:2:4012>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4012" .
+    rdfs:label "1603:45:16:462:2:4012" ;
+    skos:prefLabel "Dhaal Atoll"@eng-Latn, "South Nilandhoo"@eng-Latn ;
+    wdata:q7200235 "MV004012" .
 
 <urn:mdciii:1603:45:16:462:2:4013>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4013" .
+    rdfs:label "1603:45:16:462:2:4013" ;
+    skos:prefLabel "Meemu Atoll"@eng-Latn, "Mulaku"@eng-Latn ;
+    wdata:q7200235 "MV004013" .
 
 <urn:mdciii:1603:45:16:462:2:4014>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4014" .
+    rdfs:label "1603:45:16:462:2:4014" ;
+    skos:prefLabel "Kolhumadulu"@eng-Latn, "Thaa Atoll"@eng-Latn ;
+    wdata:q7200235 "MV004014" .
 
 <urn:mdciii:1603:45:16:462:2:4015>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4015" .
+    rdfs:label "1603:45:16:462:2:4015" ;
+    skos:prefLabel "Hadhdhunmathee"@eng-Latn, "Laamu Atoll"@eng-Latn ;
+    wdata:q7200235 "MV004015" .
 
 <urn:mdciii:1603:45:16:462:2:4020>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:4020" .
+    rdfs:label "1603:45:16:462:2:4020" ;
+    skos:prefLabel "Alif Dhekunu Buri"@eng-Latn, "South Ari"@eng-Latn ;
+    wdata:q7200235 "MV004020" .
 
 <urn:mdciii:1603:45:16:462:2:5016>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:5016" .
+    rdfs:label "1603:45:16:462:2:5016" ;
+    skos:prefLabel "Gaaf Alif Atoll"@eng-Latn, "North Huvadhoo"@eng-Latn ;
+    wdata:q7200235 "MV005016" .
 
 <urn:mdciii:1603:45:16:462:2:5017>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:5017" .
+    rdfs:label "1603:45:16:462:2:5017" ;
+    skos:prefLabel "Gaaf Dhaal Atoll"@eng-Latn, "South Huvadhoo"@eng-Latn ;
+    wdata:q7200235 "MV005017" .
 
 <urn:mdciii:1603:45:16:462:2:5018>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:5018" .
+    rdfs:label "1603:45:16:462:2:5018" ;
+    skos:prefLabel "Foammulah"@eng-Latn, "Gnaviyani Atoll"@eng-Latn ;
+    wdata:q7200235 "MV005018" .
 
 <urn:mdciii:1603:45:16:462:2:5019>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:462:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:462:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:462:2:5019" .
+    rdfs:label "1603:45:16:462:2:5019" ;
+    skos:prefLabel "Addoo"@eng-Latn, "Seenu Atoll"@eng-Latn ;
+    wdata:q7200235 "MV005019" .
 

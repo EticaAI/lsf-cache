@@ -1,0 +1,102 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:480()> .
+
+<urn:mdciii:1603:45:16:480()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:480)" ;
+    skos:member <urn:mdciii:1603:45:16:480:1()> .
+
+<urn:mdciii:1603:45:16:480:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:480:1)" ;
+    skos:member <urn:mdciii:1603:45:16:480:1:12>, <urn:mdciii:1603:45:16:480:1:13>, <urn:mdciii:1603:45:16:480:1:14>, <urn:mdciii:1603:45:16:480:1:15>, <urn:mdciii:1603:45:16:480:1:16>, <urn:mdciii:1603:45:16:480:1:17>, <urn:mdciii:1603:45:16:480:1:18>, <urn:mdciii:1603:45:16:480:1:19>, <urn:mdciii:1603:45:16:480:1:21>, <urn:mdciii:1603:45:16:480:1:22>, <urn:mdciii:1603:45:16:480:1:23> .
+
+<urn:mdciii:1603:45:16:480:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:480:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:11" ;
+    skos:prefLabel "Port Louis"@eng-Latn ;
+    wdata:q7200235 "MU11" .
+
+<urn:mdciii:1603:45:16:480:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:12" ;
+    skos:prefLabel "Pamplemousses"@eng-Latn ;
+    wdata:q7200235 "MU12" .
+
+<urn:mdciii:1603:45:16:480:1:13>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:13" ;
+    skos:prefLabel "Riviere du Rempart"@eng-Latn ;
+    wdata:q7200235 "MU13" .
+
+<urn:mdciii:1603:45:16:480:1:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:14" ;
+    skos:prefLabel "Flacq"@eng-Latn ;
+    wdata:q7200235 "MU14" .
+
+<urn:mdciii:1603:45:16:480:1:15>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:15" ;
+    skos:prefLabel "Grand Port"@eng-Latn ;
+    wdata:q7200235 "MU15" .
+
+<urn:mdciii:1603:45:16:480:1:16>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:16" ;
+    skos:prefLabel "Savanne"@eng-Latn ;
+    wdata:q7200235 "MU16" .
+
+<urn:mdciii:1603:45:16:480:1:17>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:17" ;
+    skos:prefLabel "Plaine Wilhems"@eng-Latn ;
+    wdata:q7200235 "MU17" .
+
+<urn:mdciii:1603:45:16:480:1:18>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:18" ;
+    skos:prefLabel "Moka"@eng-Latn ;
+    wdata:q7200235 "MU18" .
+
+<urn:mdciii:1603:45:16:480:1:19>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:19" ;
+    skos:prefLabel "Black River"@eng-Latn ;
+    wdata:q7200235 "MU19" .
+
+<urn:mdciii:1603:45:16:480:1:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:21" ;
+    skos:prefLabel "Rodriguez Island"@eng-Latn ;
+    wdata:q7200235 "MU21" .
+
+<urn:mdciii:1603:45:16:480:1:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:22" ;
+    skos:prefLabel "North Islands"@eng-Latn ;
+    wdata:q7200235 "MU22" .
+
+<urn:mdciii:1603:45:16:480:1:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:480:1:23" ;
+    skos:prefLabel "Saint Brandon Islands"@eng-Latn ;
+    wdata:q7200235 "MU23" .
+

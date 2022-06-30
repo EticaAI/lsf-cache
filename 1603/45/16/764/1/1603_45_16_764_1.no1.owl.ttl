@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,388 +27,545 @@
     rdfs:label "(1603:45:16:764:1)" ;
     skos:member <urn:mdciii:1603:45:16:764:1:11>, <urn:mdciii:1603:45:16:764:1:12>, <urn:mdciii:1603:45:16:764:1:13>, <urn:mdciii:1603:45:16:764:1:14>, <urn:mdciii:1603:45:16:764:1:15>, <urn:mdciii:1603:45:16:764:1:16>, <urn:mdciii:1603:45:16:764:1:17>, <urn:mdciii:1603:45:16:764:1:18>, <urn:mdciii:1603:45:16:764:1:19>, <urn:mdciii:1603:45:16:764:1:20>, <urn:mdciii:1603:45:16:764:1:21>, <urn:mdciii:1603:45:16:764:1:22>, <urn:mdciii:1603:45:16:764:1:23>, <urn:mdciii:1603:45:16:764:1:24>, <urn:mdciii:1603:45:16:764:1:25>, <urn:mdciii:1603:45:16:764:1:26>, <urn:mdciii:1603:45:16:764:1:27>, <urn:mdciii:1603:45:16:764:1:30>, <urn:mdciii:1603:45:16:764:1:31>, <urn:mdciii:1603:45:16:764:1:32>, <urn:mdciii:1603:45:16:764:1:33>, <urn:mdciii:1603:45:16:764:1:34>, <urn:mdciii:1603:45:16:764:1:35>, <urn:mdciii:1603:45:16:764:1:36>, <urn:mdciii:1603:45:16:764:1:37>, <urn:mdciii:1603:45:16:764:1:38>, <urn:mdciii:1603:45:16:764:1:39>, <urn:mdciii:1603:45:16:764:1:40>, <urn:mdciii:1603:45:16:764:1:41>, <urn:mdciii:1603:45:16:764:1:42>, <urn:mdciii:1603:45:16:764:1:43>, <urn:mdciii:1603:45:16:764:1:44>, <urn:mdciii:1603:45:16:764:1:45>, <urn:mdciii:1603:45:16:764:1:46>, <urn:mdciii:1603:45:16:764:1:47>, <urn:mdciii:1603:45:16:764:1:48>, <urn:mdciii:1603:45:16:764:1:49>, <urn:mdciii:1603:45:16:764:1:50>, <urn:mdciii:1603:45:16:764:1:51>, <urn:mdciii:1603:45:16:764:1:52>, <urn:mdciii:1603:45:16:764:1:53>, <urn:mdciii:1603:45:16:764:1:54>, <urn:mdciii:1603:45:16:764:1:55>, <urn:mdciii:1603:45:16:764:1:56>, <urn:mdciii:1603:45:16:764:1:57>, <urn:mdciii:1603:45:16:764:1:58>, <urn:mdciii:1603:45:16:764:1:60>, <urn:mdciii:1603:45:16:764:1:61>, <urn:mdciii:1603:45:16:764:1:62>, <urn:mdciii:1603:45:16:764:1:63>, <urn:mdciii:1603:45:16:764:1:64>, <urn:mdciii:1603:45:16:764:1:65>, <urn:mdciii:1603:45:16:764:1:66>, <urn:mdciii:1603:45:16:764:1:67>, <urn:mdciii:1603:45:16:764:1:70>, <urn:mdciii:1603:45:16:764:1:71>, <urn:mdciii:1603:45:16:764:1:72>, <urn:mdciii:1603:45:16:764:1:73>, <urn:mdciii:1603:45:16:764:1:74>, <urn:mdciii:1603:45:16:764:1:75>, <urn:mdciii:1603:45:16:764:1:76>, <urn:mdciii:1603:45:16:764:1:77>, <urn:mdciii:1603:45:16:764:1:80>, <urn:mdciii:1603:45:16:764:1:81>, <urn:mdciii:1603:45:16:764:1:82>, <urn:mdciii:1603:45:16:764:1:83>, <urn:mdciii:1603:45:16:764:1:84>, <urn:mdciii:1603:45:16:764:1:85>, <urn:mdciii:1603:45:16:764:1:86>, <urn:mdciii:1603:45:16:764:1:90>, <urn:mdciii:1603:45:16:764:1:91>, <urn:mdciii:1603:45:16:764:1:92>, <urn:mdciii:1603:45:16:764:1:93>, <urn:mdciii:1603:45:16:764:1:94>, <urn:mdciii:1603:45:16:764:1:95>, <urn:mdciii:1603:45:16:764:1:96> .
 
+<urn:mdciii:1603:45:16:764:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:764:1:10>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:10" .
+    rdfs:label "1603:45:16:764:1:10" ;
+    skos:prefLabel "Bangkok"@eng-Latn, "กรุงเทพมหานคร"@tha-Thai ;
+    wdata:q7200235 "TH10" .
 
 <urn:mdciii:1603:45:16:764:1:11>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:11" .
+    rdfs:label "1603:45:16:764:1:11" ;
+    skos:prefLabel "Samut Prakan"@eng-Latn, "สมุทรปราการ"@tha-Thai ;
+    wdata:q7200235 "TH11" .
 
 <urn:mdciii:1603:45:16:764:1:12>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:12" .
+    rdfs:label "1603:45:16:764:1:12" ;
+    skos:prefLabel "Nonthaburi"@eng-Latn, "นนทบุรี"@tha-Thai ;
+    wdata:q7200235 "TH12" .
 
 <urn:mdciii:1603:45:16:764:1:13>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:13" .
+    rdfs:label "1603:45:16:764:1:13" ;
+    skos:prefLabel "Pathum Thani"@eng-Latn, "ปทุมธานี"@tha-Thai ;
+    wdata:q7200235 "TH13" .
 
 <urn:mdciii:1603:45:16:764:1:14>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:14" .
+    rdfs:label "1603:45:16:764:1:14" ;
+    skos:prefLabel "Phra Nakhon Si Ayutthaya"@eng-Latn, "พระนครศรีอยุธยา"@tha-Thai ;
+    wdata:q7200235 "TH14" .
 
 <urn:mdciii:1603:45:16:764:1:15>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:15" .
+    rdfs:label "1603:45:16:764:1:15" ;
+    skos:prefLabel "Ang Thong"@eng-Latn, "อ่างทอง"@tha-Thai ;
+    wdata:q7200235 "TH15" .
 
 <urn:mdciii:1603:45:16:764:1:16>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:16" .
+    rdfs:label "1603:45:16:764:1:16" ;
+    skos:prefLabel "Lop Buri"@eng-Latn, "ลพบุรี"@tha-Thai ;
+    wdata:q7200235 "TH16" .
 
 <urn:mdciii:1603:45:16:764:1:17>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:17" .
+    rdfs:label "1603:45:16:764:1:17" ;
+    skos:prefLabel "Sing Buri"@eng-Latn, "สิงห์บุรี"@tha-Thai ;
+    wdata:q7200235 "TH17" .
 
 <urn:mdciii:1603:45:16:764:1:18>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:18" .
+    rdfs:label "1603:45:16:764:1:18" ;
+    skos:prefLabel "Chai Nat"@eng-Latn, "ชัยนาท"@tha-Thai ;
+    wdata:q7200235 "TH18" .
 
 <urn:mdciii:1603:45:16:764:1:19>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:19" .
+    rdfs:label "1603:45:16:764:1:19" ;
+    skos:prefLabel "Saraburi"@eng-Latn, "สระบุรี"@tha-Thai ;
+    wdata:q7200235 "TH19" .
 
 <urn:mdciii:1603:45:16:764:1:20>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:20" .
+    rdfs:label "1603:45:16:764:1:20" ;
+    skos:prefLabel "Chon Buri"@eng-Latn, "ชลบุรี"@tha-Thai ;
+    wdata:q7200235 "TH20" .
 
 <urn:mdciii:1603:45:16:764:1:21>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:21" .
+    rdfs:label "1603:45:16:764:1:21" ;
+    skos:prefLabel "Rayong"@eng-Latn, "ระยอง"@tha-Thai ;
+    wdata:q7200235 "TH21" .
 
 <urn:mdciii:1603:45:16:764:1:22>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:22" .
+    rdfs:label "1603:45:16:764:1:22" ;
+    skos:prefLabel "Chanthaburi"@eng-Latn, "จันทบุรี"@tha-Thai ;
+    wdata:q7200235 "TH22" .
 
 <urn:mdciii:1603:45:16:764:1:23>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:23" .
+    rdfs:label "1603:45:16:764:1:23" ;
+    skos:prefLabel "Trat"@eng-Latn, "ตราด"@tha-Thai ;
+    wdata:q7200235 "TH23" .
 
 <urn:mdciii:1603:45:16:764:1:24>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:24" .
+    rdfs:label "1603:45:16:764:1:24" ;
+    skos:prefLabel "Chachoengsao"@eng-Latn, "ฉะเชิงเทรา"@tha-Thai ;
+    wdata:q7200235 "TH24" .
 
 <urn:mdciii:1603:45:16:764:1:25>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:25" .
+    rdfs:label "1603:45:16:764:1:25" ;
+    skos:prefLabel "Prachin Buri"@eng-Latn, "ปราจีนบุรี"@tha-Thai ;
+    wdata:q7200235 "TH25" .
 
 <urn:mdciii:1603:45:16:764:1:26>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:26" .
+    rdfs:label "1603:45:16:764:1:26" ;
+    skos:prefLabel "Nakhon Nayok"@eng-Latn, "นครนายก"@tha-Thai ;
+    wdata:q7200235 "TH26" .
 
 <urn:mdciii:1603:45:16:764:1:27>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:27" .
+    rdfs:label "1603:45:16:764:1:27" ;
+    skos:prefLabel "Sa Kaeo"@eng-Latn, "สระแก้ว"@tha-Thai ;
+    wdata:q7200235 "TH27" .
 
 <urn:mdciii:1603:45:16:764:1:30>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:30" .
+    rdfs:label "1603:45:16:764:1:30" ;
+    skos:prefLabel "Nakhon Ratchasima"@eng-Latn, "นครราชสีมา"@tha-Thai ;
+    wdata:q7200235 "TH30" .
 
 <urn:mdciii:1603:45:16:764:1:31>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:31" .
+    rdfs:label "1603:45:16:764:1:31" ;
+    skos:prefLabel "Buri Ram"@eng-Latn, "บุรีรัมย์"@tha-Thai ;
+    wdata:q7200235 "TH31" .
 
 <urn:mdciii:1603:45:16:764:1:32>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:32" .
+    rdfs:label "1603:45:16:764:1:32" ;
+    skos:prefLabel "Surin"@eng-Latn, "สุรินทร์"@tha-Thai ;
+    wdata:q7200235 "TH32" .
 
 <urn:mdciii:1603:45:16:764:1:33>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:33" .
+    rdfs:label "1603:45:16:764:1:33" ;
+    skos:prefLabel "Si Sa Ket"@eng-Latn, "ศรีสะเกษ"@tha-Thai ;
+    wdata:q7200235 "TH33" .
 
 <urn:mdciii:1603:45:16:764:1:34>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:34" .
+    rdfs:label "1603:45:16:764:1:34" ;
+    skos:prefLabel "Ubon Ratchathani"@eng-Latn, "อุบลราชธานี"@tha-Thai ;
+    wdata:q7200235 "TH34" .
 
 <urn:mdciii:1603:45:16:764:1:35>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:35" .
+    rdfs:label "1603:45:16:764:1:35" ;
+    skos:prefLabel "Yasothon"@eng-Latn, "ยโสธร"@tha-Thai ;
+    wdata:q7200235 "TH35" .
 
 <urn:mdciii:1603:45:16:764:1:36>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:36" .
+    rdfs:label "1603:45:16:764:1:36" ;
+    skos:prefLabel "Chaiyaphum"@eng-Latn, "ชัยภูมิ"@tha-Thai ;
+    wdata:q7200235 "TH36" .
 
 <urn:mdciii:1603:45:16:764:1:37>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:37" .
+    rdfs:label "1603:45:16:764:1:37" ;
+    skos:prefLabel "Amnat Charoen"@eng-Latn, "อำนาจเจริญ"@tha-Thai ;
+    wdata:q7200235 "TH37" .
 
 <urn:mdciii:1603:45:16:764:1:38>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:38" .
+    rdfs:label "1603:45:16:764:1:38" ;
+    skos:prefLabel "Bueng Kan"@eng-Latn, "บึงกาฬ"@tha-Thai ;
+    wdata:q7200235 "TH38" .
 
 <urn:mdciii:1603:45:16:764:1:39>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:39" .
+    rdfs:label "1603:45:16:764:1:39" ;
+    skos:prefLabel "Nong Bua Lam Phu"@eng-Latn, "หนองบัวลำภู"@tha-Thai ;
+    wdata:q7200235 "TH39" .
 
 <urn:mdciii:1603:45:16:764:1:40>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:40" .
+    rdfs:label "1603:45:16:764:1:40" ;
+    skos:prefLabel "Khon Kaen"@eng-Latn, "ขอนแก่น"@tha-Thai ;
+    wdata:q7200235 "TH40" .
 
 <urn:mdciii:1603:45:16:764:1:41>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:41" .
+    rdfs:label "1603:45:16:764:1:41" ;
+    skos:prefLabel "Udon Thani"@eng-Latn, "อุดรธานี"@tha-Thai ;
+    wdata:q7200235 "TH41" .
 
 <urn:mdciii:1603:45:16:764:1:42>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:42" .
+    rdfs:label "1603:45:16:764:1:42" ;
+    skos:prefLabel "Loei"@eng-Latn, "เลย"@tha-Thai ;
+    wdata:q7200235 "TH42" .
 
 <urn:mdciii:1603:45:16:764:1:43>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:43" .
+    rdfs:label "1603:45:16:764:1:43" ;
+    skos:prefLabel "Nong Khai"@eng-Latn, "หนองคาย"@tha-Thai ;
+    wdata:q7200235 "TH43" .
 
 <urn:mdciii:1603:45:16:764:1:44>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:44" .
+    rdfs:label "1603:45:16:764:1:44" ;
+    skos:prefLabel "Maha Sarakham"@eng-Latn, "มหาสารคาม"@tha-Thai ;
+    wdata:q7200235 "TH44" .
 
 <urn:mdciii:1603:45:16:764:1:45>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:45" .
+    rdfs:label "1603:45:16:764:1:45" ;
+    skos:prefLabel "Roi Et"@eng-Latn, "ร้อยเอ็ด"@tha-Thai ;
+    wdata:q7200235 "TH45" .
 
 <urn:mdciii:1603:45:16:764:1:46>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:46" .
+    rdfs:label "1603:45:16:764:1:46" ;
+    skos:prefLabel "Kalasin"@eng-Latn, "กาฬสินธุ์"@tha-Thai ;
+    wdata:q7200235 "TH46" .
 
 <urn:mdciii:1603:45:16:764:1:47>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:47" .
+    rdfs:label "1603:45:16:764:1:47" ;
+    skos:prefLabel "Sakon Nakhon"@eng-Latn, "สกลนคร"@tha-Thai ;
+    wdata:q7200235 "TH47" .
 
 <urn:mdciii:1603:45:16:764:1:48>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:48" .
+    rdfs:label "1603:45:16:764:1:48" ;
+    skos:prefLabel "Nakhon Phanom"@eng-Latn, "นครพนม"@tha-Thai ;
+    wdata:q7200235 "TH48" .
 
 <urn:mdciii:1603:45:16:764:1:49>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:49" .
+    rdfs:label "1603:45:16:764:1:49" ;
+    skos:prefLabel "Mukdahan"@eng-Latn, "มุกดาหาร"@tha-Thai ;
+    wdata:q7200235 "TH49" .
 
 <urn:mdciii:1603:45:16:764:1:50>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:50" .
+    rdfs:label "1603:45:16:764:1:50" ;
+    skos:prefLabel "Chiang Mai"@eng-Latn, "เชียงใหม่"@tha-Thai ;
+    wdata:q7200235 "TH50" .
 
 <urn:mdciii:1603:45:16:764:1:51>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:51" .
+    rdfs:label "1603:45:16:764:1:51" ;
+    skos:prefLabel "Lamphun"@eng-Latn, "ลำพูน"@tha-Thai ;
+    wdata:q7200235 "TH51" .
 
 <urn:mdciii:1603:45:16:764:1:52>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:52" .
+    rdfs:label "1603:45:16:764:1:52" ;
+    skos:prefLabel "Lampang"@eng-Latn, "ลำปาง"@tha-Thai ;
+    wdata:q7200235 "TH52" .
 
 <urn:mdciii:1603:45:16:764:1:53>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:53" .
+    rdfs:label "1603:45:16:764:1:53" ;
+    skos:prefLabel "Uttaradit"@eng-Latn, "อุตรดิตถ์"@tha-Thai ;
+    wdata:q7200235 "TH53" .
 
 <urn:mdciii:1603:45:16:764:1:54>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:54" .
+    rdfs:label "1603:45:16:764:1:54" ;
+    skos:prefLabel "Phrae"@eng-Latn, "แพร่"@tha-Thai ;
+    wdata:q7200235 "TH54" .
 
 <urn:mdciii:1603:45:16:764:1:55>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:55" .
+    rdfs:label "1603:45:16:764:1:55" ;
+    skos:prefLabel "Nan"@eng-Latn, "น่าน"@tha-Thai ;
+    wdata:q7200235 "TH55" .
 
 <urn:mdciii:1603:45:16:764:1:56>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:56" .
+    rdfs:label "1603:45:16:764:1:56" ;
+    skos:prefLabel "Phayao"@eng-Latn, "พะเยา"@tha-Thai ;
+    wdata:q7200235 "TH56" .
 
 <urn:mdciii:1603:45:16:764:1:57>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:57" .
+    rdfs:label "1603:45:16:764:1:57" ;
+    skos:prefLabel "Chiang Rai"@eng-Latn, "เชียงราย"@tha-Thai ;
+    wdata:q7200235 "TH57" .
 
 <urn:mdciii:1603:45:16:764:1:58>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:58" .
+    rdfs:label "1603:45:16:764:1:58" ;
+    skos:prefLabel "Mae Hong Son"@eng-Latn, "แม่ฮ่องสอน"@tha-Thai ;
+    wdata:q7200235 "TH58" .
 
 <urn:mdciii:1603:45:16:764:1:60>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:60" .
+    rdfs:label "1603:45:16:764:1:60" ;
+    skos:prefLabel "Nakhon Sawan"@eng-Latn, "นครสวรรค์"@tha-Thai ;
+    wdata:q7200235 "TH60" .
 
 <urn:mdciii:1603:45:16:764:1:61>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:61" .
+    rdfs:label "1603:45:16:764:1:61" ;
+    skos:prefLabel "Uthai Thani"@eng-Latn, "อุทัยธานี"@tha-Thai ;
+    wdata:q7200235 "TH61" .
 
 <urn:mdciii:1603:45:16:764:1:62>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:62" .
+    rdfs:label "1603:45:16:764:1:62" ;
+    skos:prefLabel "Kamphaeng Phet"@eng-Latn, "กำแพงเพชร"@tha-Thai ;
+    wdata:q7200235 "TH62" .
 
 <urn:mdciii:1603:45:16:764:1:63>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:63" .
+    rdfs:label "1603:45:16:764:1:63" ;
+    skos:prefLabel "Tak"@eng-Latn, "ตาก"@tha-Thai ;
+    wdata:q7200235 "TH63" .
 
 <urn:mdciii:1603:45:16:764:1:64>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:64" .
+    rdfs:label "1603:45:16:764:1:64" ;
+    skos:prefLabel "Sukhothai"@eng-Latn, "สุโขทัย"@tha-Thai ;
+    wdata:q7200235 "TH64" .
 
 <urn:mdciii:1603:45:16:764:1:65>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:65" .
+    rdfs:label "1603:45:16:764:1:65" ;
+    skos:prefLabel "Phitsanulok"@eng-Latn, "พิษณุโลก"@tha-Thai ;
+    wdata:q7200235 "TH65" .
 
 <urn:mdciii:1603:45:16:764:1:66>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:66" .
+    rdfs:label "1603:45:16:764:1:66" ;
+    skos:prefLabel "Phichit"@eng-Latn, "พิจิตร"@tha-Thai ;
+    wdata:q7200235 "TH66" .
 
 <urn:mdciii:1603:45:16:764:1:67>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:67" .
+    rdfs:label "1603:45:16:764:1:67" ;
+    skos:prefLabel "Phetchabun"@eng-Latn, "เพชรบูรณ์"@tha-Thai ;
+    wdata:q7200235 "TH67" .
 
 <urn:mdciii:1603:45:16:764:1:70>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:70" .
+    rdfs:label "1603:45:16:764:1:70" ;
+    skos:prefLabel "Ratchaburi"@eng-Latn, "ราชบุรี"@tha-Thai ;
+    wdata:q7200235 "TH70" .
 
 <urn:mdciii:1603:45:16:764:1:71>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:71" .
+    rdfs:label "1603:45:16:764:1:71" ;
+    skos:prefLabel "Kanchanaburi"@eng-Latn, "กาญจนบุรี"@tha-Thai ;
+    wdata:q7200235 "TH71" .
 
 <urn:mdciii:1603:45:16:764:1:72>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:72" .
+    rdfs:label "1603:45:16:764:1:72" ;
+    skos:prefLabel "Suphan Buri"@eng-Latn, "สุพรรณบุรี"@tha-Thai ;
+    wdata:q7200235 "TH72" .
 
 <urn:mdciii:1603:45:16:764:1:73>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:73" .
+    rdfs:label "1603:45:16:764:1:73" ;
+    skos:prefLabel "Nakhon Pathom"@eng-Latn, "นครปฐม"@tha-Thai ;
+    wdata:q7200235 "TH73" .
 
 <urn:mdciii:1603:45:16:764:1:74>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:74" .
+    rdfs:label "1603:45:16:764:1:74" ;
+    skos:prefLabel "Samut Sakhon"@eng-Latn, "สมุทรสาคร"@tha-Thai ;
+    wdata:q7200235 "TH74" .
 
 <urn:mdciii:1603:45:16:764:1:75>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:75" .
+    rdfs:label "1603:45:16:764:1:75" ;
+    skos:prefLabel "Samut Songkhram"@eng-Latn, "สมุทรสงคราม"@tha-Thai ;
+    wdata:q7200235 "TH75" .
 
 <urn:mdciii:1603:45:16:764:1:76>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:76" .
+    rdfs:label "1603:45:16:764:1:76" ;
+    skos:prefLabel "Phetchaburi"@eng-Latn, "เพชรบุรี"@tha-Thai ;
+    wdata:q7200235 "TH76" .
 
 <urn:mdciii:1603:45:16:764:1:77>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:77" .
+    rdfs:label "1603:45:16:764:1:77" ;
+    skos:prefLabel "Prachuap Khiri Khan"@eng-Latn, "ประจวบคีรีขันธ์"@tha-Thai ;
+    wdata:q7200235 "TH77" .
 
 <urn:mdciii:1603:45:16:764:1:80>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:80" .
+    rdfs:label "1603:45:16:764:1:80" ;
+    skos:prefLabel "Nakhon Si Thammarat"@eng-Latn, "นครศรีธรรมราช"@tha-Thai ;
+    wdata:q7200235 "TH80" .
 
 <urn:mdciii:1603:45:16:764:1:81>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:81" .
+    rdfs:label "1603:45:16:764:1:81" ;
+    skos:prefLabel "Krabi"@eng-Latn, "กระบี่"@tha-Thai ;
+    wdata:q7200235 "TH81" .
 
 <urn:mdciii:1603:45:16:764:1:82>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:82" .
+    rdfs:label "1603:45:16:764:1:82" ;
+    skos:prefLabel "Phangnga"@eng-Latn, "พังงา"@tha-Thai ;
+    wdata:q7200235 "TH82" .
 
 <urn:mdciii:1603:45:16:764:1:83>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:83" .
+    rdfs:label "1603:45:16:764:1:83" ;
+    skos:prefLabel "Phuket"@eng-Latn, "ภูเก็ต"@tha-Thai ;
+    wdata:q7200235 "TH83" .
 
 <urn:mdciii:1603:45:16:764:1:84>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:84" .
+    rdfs:label "1603:45:16:764:1:84" ;
+    skos:prefLabel "Surat Thani"@eng-Latn, "สุราษฎร์ธานี"@tha-Thai ;
+    wdata:q7200235 "TH84" .
 
 <urn:mdciii:1603:45:16:764:1:85>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:85" .
+    rdfs:label "1603:45:16:764:1:85" ;
+    skos:prefLabel "Ranong"@eng-Latn, "ระนอง"@tha-Thai ;
+    wdata:q7200235 "TH85" .
 
 <urn:mdciii:1603:45:16:764:1:86>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:86" .
+    rdfs:label "1603:45:16:764:1:86" ;
+    skos:prefLabel "Chumphon"@eng-Latn, "ชุมพร"@tha-Thai ;
+    wdata:q7200235 "TH86" .
 
 <urn:mdciii:1603:45:16:764:1:90>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:90" .
+    rdfs:label "1603:45:16:764:1:90" ;
+    skos:prefLabel "Songkhla"@eng-Latn, "สงขลา"@tha-Thai ;
+    wdata:q7200235 "TH90" .
 
 <urn:mdciii:1603:45:16:764:1:91>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:91" .
+    rdfs:label "1603:45:16:764:1:91" ;
+    skos:prefLabel "Satun"@eng-Latn, "สตูล"@tha-Thai ;
+    wdata:q7200235 "TH91" .
 
 <urn:mdciii:1603:45:16:764:1:92>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:92" .
+    rdfs:label "1603:45:16:764:1:92" ;
+    skos:prefLabel "Trang"@eng-Latn, "ตรัง"@tha-Thai ;
+    wdata:q7200235 "TH92" .
 
 <urn:mdciii:1603:45:16:764:1:93>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:93" .
+    rdfs:label "1603:45:16:764:1:93" ;
+    skos:prefLabel "Phatthalung"@eng-Latn, "พัทลุง"@tha-Thai ;
+    wdata:q7200235 "TH93" .
 
 <urn:mdciii:1603:45:16:764:1:94>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:94" .
+    rdfs:label "1603:45:16:764:1:94" ;
+    skos:prefLabel "Pattani"@eng-Latn, "ปัตตานี"@tha-Thai ;
+    wdata:q7200235 "TH94" .
 
 <urn:mdciii:1603:45:16:764:1:95>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:95" .
+    rdfs:label "1603:45:16:764:1:95" ;
+    skos:prefLabel "Yala"@eng-Latn, "ยะลา"@tha-Thai ;
+    wdata:q7200235 "TH95" .
 
 <urn:mdciii:1603:45:16:764:1:96>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:764:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:764:1:96" .
+    rdfs:label "1603:45:16:764:1:96" ;
+    skos:prefLabel "Narathiwat"@eng-Latn, "นราธิวาส"@tha-Thai ;
+    wdata:q7200235 "TH96" .
 

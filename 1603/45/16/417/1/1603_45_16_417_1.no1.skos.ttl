@@ -1,0 +1,84 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:417()> .
+
+<urn:mdciii:1603:45:16:417()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:417)" ;
+    skos:member <urn:mdciii:1603:45:16:417:1()> .
+
+<urn:mdciii:1603:45:16:417:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:417:1)" ;
+    skos:member <urn:mdciii:1603:45:16:417:1:11000000000>, <urn:mdciii:1603:45:16:417:1:21000000000>, <urn:mdciii:1603:45:16:417:1:3000000000>, <urn:mdciii:1603:45:16:417:1:4000000000>, <urn:mdciii:1603:45:16:417:1:5000000000>, <urn:mdciii:1603:45:16:417:1:6000000000>, <urn:mdciii:1603:45:16:417:1:7000000000>, <urn:mdciii:1603:45:16:417:1:8000000000> .
+
+<urn:mdciii:1603:45:16:417:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:417:1:11000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:11000000000" ;
+    skos:prefLabel "Bishkek (city)"@eng-Latn, "Бишкек ш."@kir-Zyyy, "г.Бишкек"@rus-Cyrl ;
+    wdata:q7200235 "KG11000000000" .
+
+<urn:mdciii:1603:45:16:417:1:2000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:2000000000" ;
+    skos:prefLabel "Issyk-Kul"@eng-Latn, "Иссык-Кульская"@rus-Cyrl, "Ысык-Көл"@kir-Zyyy ;
+    wdata:q7200235 "KG02000000000" .
+
+<urn:mdciii:1603:45:16:417:1:21000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:21000000000" ;
+    skos:prefLabel "Osh (city)"@eng-Latn, "Ош ш."@kir-Zyyy, "г.Ош"@rus-Cyrl ;
+    wdata:q7200235 "KG21000000000" .
+
+<urn:mdciii:1603:45:16:417:1:3000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:3000000000" ;
+    skos:prefLabel "Jalal-Abad"@eng-Latn, "Джалал-Абадская"@rus-Cyrl, "Жалалабат"@kir-Zyyy ;
+    wdata:q7200235 "KG03000000000" .
+
+<urn:mdciii:1603:45:16:417:1:4000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:4000000000" ;
+    skos:prefLabel "Naryn"@eng-Latn, "Нарын"@kir-Zyyy, "Нарынская"@rus-Cyrl ;
+    wdata:q7200235 "KG04000000000" .
+
+<urn:mdciii:1603:45:16:417:1:5000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:5000000000" ;
+    skos:prefLabel "Batken"@eng-Latn, "Баткен"@kir-Zyyy, "Баткенская"@rus-Cyrl ;
+    wdata:q7200235 "KG05000000000" .
+
+<urn:mdciii:1603:45:16:417:1:6000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:6000000000" ;
+    skos:prefLabel "Osh"@eng-Latn, "Ош"@kir-Zyyy, "Ошская"@rus-Cyrl ;
+    wdata:q7200235 "KG06000000000" .
+
+<urn:mdciii:1603:45:16:417:1:7000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:7000000000" ;
+    skos:prefLabel "Talas"@eng-Latn, "Талас"@kir-Zyyy, "Таласская"@rus-Cyrl ;
+    wdata:q7200235 "KG07000000000" .
+
+<urn:mdciii:1603:45:16:417:1:8000000000>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:417:1:8000000000" ;
+    skos:prefLabel "Chui"@eng-Latn, "Чуйская"@rus-Cyrl, "Чүй"@kir-Zyyy ;
+    wdata:q7200235 "KG08000000000" .
+

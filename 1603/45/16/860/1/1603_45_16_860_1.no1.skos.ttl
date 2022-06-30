@@ -1,0 +1,114 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:860()> .
+
+<urn:mdciii:1603:45:16:860()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:860)" ;
+    skos:member <urn:mdciii:1603:45:16:860:1()> .
+
+<urn:mdciii:1603:45:16:860:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:860:1)" ;
+    skos:member <urn:mdciii:1603:45:16:860:1:10>, <urn:mdciii:1603:45:16:860:1:12>, <urn:mdciii:1603:45:16:860:1:14>, <urn:mdciii:1603:45:16:860:1:18>, <urn:mdciii:1603:45:16:860:1:22>, <urn:mdciii:1603:45:16:860:1:24>, <urn:mdciii:1603:45:16:860:1:26>, <urn:mdciii:1603:45:16:860:1:27>, <urn:mdciii:1603:45:16:860:1:30>, <urn:mdciii:1603:45:16:860:1:33>, <urn:mdciii:1603:45:16:860:1:35>, <urn:mdciii:1603:45:16:860:1:6>, <urn:mdciii:1603:45:16:860:1:8> .
+
+<urn:mdciii:1603:45:16:860:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:860:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:10" ;
+    skos:prefLabel "Kashkadarya"@eng-Latn, "Qashqadaryo"@uzb-Latn, "Кашкадарьинская"@rus-Cyrl ;
+    wdata:q7200235 "UZ10" .
+
+<urn:mdciii:1603:45:16:860:1:12>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:12" ;
+    skos:prefLabel "Navoi"@eng-Latn, "Navoiy"@uzb-Latn, "Навоийская"@rus-Cyrl ;
+    wdata:q7200235 "UZ12" .
+
+<urn:mdciii:1603:45:16:860:1:14>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:14" ;
+    skos:prefLabel "Namangan"@eng-Latn, "Namangan"@uzb-Latn, "Наманганская"@rus-Cyrl ;
+    wdata:q7200235 "UZ14" .
+
+<urn:mdciii:1603:45:16:860:1:18>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:18" ;
+    skos:prefLabel "Samarkand"@eng-Latn, "Samarqand"@uzb-Latn, "Самаркандская"@rus-Cyrl ;
+    wdata:q7200235 "UZ18" .
+
+<urn:mdciii:1603:45:16:860:1:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:22" ;
+    skos:prefLabel "Surkhandarya"@eng-Latn, "Surxandaryo"@uzb-Latn, "Сурхандарьинская"@rus-Cyrl ;
+    wdata:q7200235 "UZ22" .
+
+<urn:mdciii:1603:45:16:860:1:24>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:24" ;
+    skos:prefLabel "Sirdaryo"@uzb-Latn, "Syrdarya"@eng-Latn, "Сырдарьинская"@rus-Cyrl ;
+    wdata:q7200235 "UZ24" .
+
+<urn:mdciii:1603:45:16:860:1:26>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:26" ;
+    skos:prefLabel "Tashkent city"@eng-Latn, "Toshkent ш."@uzb-Latn, "г.Ташкент"@rus-Cyrl ;
+    wdata:q7200235 "UZ26" .
+
+<urn:mdciii:1603:45:16:860:1:27>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:27" ;
+    skos:prefLabel "Tashkent"@eng-Latn, "Toshkent"@uzb-Latn, "Ташкентская"@rus-Cyrl ;
+    wdata:q7200235 "UZ27" .
+
+<urn:mdciii:1603:45:16:860:1:3>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:3" ;
+    skos:prefLabel "Andijon"@uzb-Latn, "Andizhan"@eng-Latn, "Андижанская"@rus-Cyrl ;
+    wdata:q7200235 "UZ03" .
+
+<urn:mdciii:1603:45:16:860:1:30>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:30" ;
+    skos:prefLabel "Farg'ona"@uzb-Latn, "Fergana"@eng-Latn, "Ферганская"@rus-Cyrl ;
+    wdata:q7200235 "UZ30" .
+
+<urn:mdciii:1603:45:16:860:1:33>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:33" ;
+    skos:prefLabel "Khorezm"@eng-Latn, "Xorazm"@uzb-Latn, "Хорезмская"@rus-Cyrl ;
+    wdata:q7200235 "UZ33" .
+
+<urn:mdciii:1603:45:16:860:1:35>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:35" ;
+    skos:prefLabel "Qoraqalpog'iston Respublikasi"@uzb-Latn, "Republic of Karakalpakstan"@eng-Latn, "Республика Каракалпакстан"@rus-Cyrl ;
+    wdata:q7200235 "UZ35" .
+
+<urn:mdciii:1603:45:16:860:1:6>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:6" ;
+    skos:prefLabel "Bukhara"@eng-Latn, "Buxoro"@uzb-Latn, "Бухарская"@rus-Cyrl ;
+    wdata:q7200235 "UZ06" .
+
+<urn:mdciii:1603:45:16:860:1:8>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:1:8" ;
+    skos:prefLabel "Dzhizak"@eng-Latn, "Jizzax"@uzb-Latn, "Джизакская"@rus-Cyrl ;
+    wdata:q7200235 "UZ08" .
+

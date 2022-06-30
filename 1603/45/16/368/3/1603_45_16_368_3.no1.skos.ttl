@@ -1,0 +1,1794 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:368()> .
+
+<urn:mdciii:1603:45:16:368()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:368)" ;
+    skos:member <urn:mdciii:1603:45:16:368:3()> .
+
+<urn:mdciii:1603:45:16:368:3()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:368:3)" ;
+    skos:member <urn:mdciii:1603:45:16:368:3:100101>, <urn:mdciii:1603:45:16:368:3:100102>, <urn:mdciii:1603:45:16:368:3:100103>, <urn:mdciii:1603:45:16:368:3:100104>, <urn:mdciii:1603:45:16:368:3:100105>, <urn:mdciii:1603:45:16:368:3:100201>, <urn:mdciii:1603:45:16:368:3:100202>, <urn:mdciii:1603:45:16:368:3:100301>, <urn:mdciii:1603:45:16:368:3:100302>, <urn:mdciii:1603:45:16:368:3:100303>, <urn:mdciii:1603:45:16:368:3:100401>, <urn:mdciii:1603:45:16:368:3:100402>, <urn:mdciii:1603:45:16:368:3:100403>, <urn:mdciii:1603:45:16:368:3:100501>, <urn:mdciii:1603:45:16:368:3:100502>, <urn:mdciii:1603:45:16:368:3:100503>, <urn:mdciii:1603:45:16:368:3:100504>, <urn:mdciii:1603:45:16:368:3:100505>, <urn:mdciii:1603:45:16:368:3:100601>, <urn:mdciii:1603:45:16:368:3:100602>, <urn:mdciii:1603:45:16:368:3:100603>, <urn:mdciii:1603:45:16:368:3:10102>, <urn:mdciii:1603:45:16:368:3:10103>, <urn:mdciii:1603:45:16:368:3:10201>, <urn:mdciii:1603:45:16:368:3:10202>, <urn:mdciii:1603:45:16:368:3:10203>, <urn:mdciii:1603:45:16:368:3:10301>, <urn:mdciii:1603:45:16:368:3:10302>, <urn:mdciii:1603:45:16:368:3:10303>, <urn:mdciii:1603:45:16:368:3:10401>, <urn:mdciii:1603:45:16:368:3:10402>, <urn:mdciii:1603:45:16:368:3:10403>, <urn:mdciii:1603:45:16:368:3:10501>, <urn:mdciii:1603:45:16:368:3:10502>, <urn:mdciii:1603:45:16:368:3:10601>, <urn:mdciii:1603:45:16:368:3:10602>, <urn:mdciii:1603:45:16:368:3:10701>, <urn:mdciii:1603:45:16:368:3:10702>, <urn:mdciii:1603:45:16:368:3:10703>, <urn:mdciii:1603:45:16:368:3:10704>, <urn:mdciii:1603:45:16:368:3:110101>, <urn:mdciii:1603:45:16:368:3:110102>, <urn:mdciii:1603:45:16:368:3:110201>, <urn:mdciii:1603:45:16:368:3:110202>, <urn:mdciii:1603:45:16:368:3:110301>, <urn:mdciii:1603:45:16:368:3:110302>, <urn:mdciii:1603:45:16:368:3:110303>, <urn:mdciii:1603:45:16:368:3:110401>, <urn:mdciii:1603:45:16:368:3:110402>, <urn:mdciii:1603:45:16:368:3:110403>, <urn:mdciii:1603:45:16:368:3:110404>, <urn:mdciii:1603:45:16:368:3:110501>, <urn:mdciii:1603:45:16:368:3:110502>, <urn:mdciii:1603:45:16:368:3:110503>, <urn:mdciii:1603:45:16:368:3:110504>, <urn:mdciii:1603:45:16:368:3:110505>, <urn:mdciii:1603:45:16:368:3:110506>, <urn:mdciii:1603:45:16:368:3:110507>, <urn:mdciii:1603:45:16:368:3:110601>, <urn:mdciii:1603:45:16:368:3:110602>, <urn:mdciii:1603:45:16:368:3:110603>, <urn:mdciii:1603:45:16:368:3:120101>, <urn:mdciii:1603:45:16:368:3:120201>, <urn:mdciii:1603:45:16:368:3:120202>, <urn:mdciii:1603:45:16:368:3:120301>, <urn:mdciii:1603:45:16:368:3:120302>, <urn:mdciii:1603:45:16:368:3:130101>, <urn:mdciii:1603:45:16:368:3:130102>, <urn:mdciii:1603:45:16:368:3:130103>, <urn:mdciii:1603:45:16:368:3:130104>, <urn:mdciii:1603:45:16:368:3:130201>, <urn:mdciii:1603:45:16:368:3:130202>, <urn:mdciii:1603:45:16:368:3:130301>, <urn:mdciii:1603:45:16:368:3:130302>, <urn:mdciii:1603:45:16:368:3:130303>, <urn:mdciii:1603:45:16:368:3:130401>, <urn:mdciii:1603:45:16:368:3:130402>, <urn:mdciii:1603:45:16:368:3:130403>, <urn:mdciii:1603:45:16:368:3:130404>, <urn:mdciii:1603:45:16:368:3:130405>, <urn:mdciii:1603:45:16:368:3:130406>, <urn:mdciii:1603:45:16:368:3:130407>, <urn:mdciii:1603:45:16:368:3:140101>, <urn:mdciii:1603:45:16:368:3:140102>, <urn:mdciii:1603:45:16:368:3:140201>, <urn:mdciii:1603:45:16:368:3:140202>, <urn:mdciii:1603:45:16:368:3:140301>, <urn:mdciii:1603:45:16:368:3:140302>, <urn:mdciii:1603:45:16:368:3:140303>, <urn:mdciii:1603:45:16:368:3:140401>, <urn:mdciii:1603:45:16:368:3:140402>, <urn:mdciii:1603:45:16:368:3:140501>, <urn:mdciii:1603:45:16:368:3:140502>, <urn:mdciii:1603:45:16:368:3:140601>, <urn:mdciii:1603:45:16:368:3:150101>, <urn:mdciii:1603:45:16:368:3:150102>, <urn:mdciii:1603:45:16:368:3:150103>, <urn:mdciii:1603:45:16:368:3:150104>, <urn:mdciii:1603:45:16:368:3:150105>, <urn:mdciii:1603:45:16:368:3:150201>, <urn:mdciii:1603:45:16:368:3:150202>, <urn:mdciii:1603:45:16:368:3:150301>, <urn:mdciii:1603:45:16:368:3:150302>, <urn:mdciii:1603:45:16:368:3:150303>, <urn:mdciii:1603:45:16:368:3:150401>, <urn:mdciii:1603:45:16:368:3:150501>, <urn:mdciii:1603:45:16:368:3:150502>, <urn:mdciii:1603:45:16:368:3:150503>, <urn:mdciii:1603:45:16:368:3:150504>, <urn:mdciii:1603:45:16:368:3:150601>, <urn:mdciii:1603:45:16:368:3:150602>, <urn:mdciii:1603:45:16:368:3:150603>, <urn:mdciii:1603:45:16:368:3:150701>, <urn:mdciii:1603:45:16:368:3:150702>, <urn:mdciii:1603:45:16:368:3:150703>, <urn:mdciii:1603:45:16:368:3:150801>, <urn:mdciii:1603:45:16:368:3:150802>, <urn:mdciii:1603:45:16:368:3:150803>, <urn:mdciii:1603:45:16:368:3:150804>, <urn:mdciii:1603:45:16:368:3:150901>, <urn:mdciii:1603:45:16:368:3:150902>, <urn:mdciii:1603:45:16:368:3:150903>, <urn:mdciii:1603:45:16:368:3:160101>, <urn:mdciii:1603:45:16:368:3:160102>, <urn:mdciii:1603:45:16:368:3:160201>, <urn:mdciii:1603:45:16:368:3:160301>, <urn:mdciii:1603:45:16:368:3:160302>, <urn:mdciii:1603:45:16:368:3:160303>, <urn:mdciii:1603:45:16:368:3:160401>, <urn:mdciii:1603:45:16:368:3:160402>, <urn:mdciii:1603:45:16:368:3:160403>, <urn:mdciii:1603:45:16:368:3:160404>, <urn:mdciii:1603:45:16:368:3:160501>, <urn:mdciii:1603:45:16:368:3:160502>, <urn:mdciii:1603:45:16:368:3:160503>, <urn:mdciii:1603:45:16:368:3:160504>, <urn:mdciii:1603:45:16:368:3:160601>, <urn:mdciii:1603:45:16:368:3:160602>, <urn:mdciii:1603:45:16:368:3:160701>, <urn:mdciii:1603:45:16:368:3:160702>, <urn:mdciii:1603:45:16:368:3:160703>, <urn:mdciii:1603:45:16:368:3:170101>, <urn:mdciii:1603:45:16:368:3:170102>, <urn:mdciii:1603:45:16:368:3:170103>, <urn:mdciii:1603:45:16:368:3:170201>, <urn:mdciii:1603:45:16:368:3:170202>, <urn:mdciii:1603:45:16:368:3:170203>, <urn:mdciii:1603:45:16:368:3:170204>, <urn:mdciii:1603:45:16:368:3:170301>, <urn:mdciii:1603:45:16:368:3:170302>, <urn:mdciii:1603:45:16:368:3:170303>, <urn:mdciii:1603:45:16:368:3:170401>, <urn:mdciii:1603:45:16:368:3:170402>, <urn:mdciii:1603:45:16:368:3:170403>, <urn:mdciii:1603:45:16:368:3:170404>, <urn:mdciii:1603:45:16:368:3:170501>, <urn:mdciii:1603:45:16:368:3:170502>, <urn:mdciii:1603:45:16:368:3:170503>, <urn:mdciii:1603:45:16:368:3:170504>, <urn:mdciii:1603:45:16:368:3:180101>, <urn:mdciii:1603:45:16:368:3:180102>, <urn:mdciii:1603:45:16:368:3:180201>, <urn:mdciii:1603:45:16:368:3:180202>, <urn:mdciii:1603:45:16:368:3:180203>, <urn:mdciii:1603:45:16:368:3:180301>, <urn:mdciii:1603:45:16:368:3:180302>, <urn:mdciii:1603:45:16:368:3:180401>, <urn:mdciii:1603:45:16:368:3:180402>, <urn:mdciii:1603:45:16:368:3:180403>, <urn:mdciii:1603:45:16:368:3:180404>, <urn:mdciii:1603:45:16:368:3:180405>, <urn:mdciii:1603:45:16:368:3:180501>, <urn:mdciii:1603:45:16:368:3:180502>, <urn:mdciii:1603:45:16:368:3:20101>, <urn:mdciii:1603:45:16:368:3:20102>, <urn:mdciii:1603:45:16:368:3:20201>, <urn:mdciii:1603:45:16:368:3:20202>, <urn:mdciii:1603:45:16:368:3:20301>, <urn:mdciii:1603:45:16:368:3:20302>, <urn:mdciii:1603:45:16:368:3:20401>, <urn:mdciii:1603:45:16:368:3:20402>, <urn:mdciii:1603:45:16:368:3:20403>, <urn:mdciii:1603:45:16:368:3:20501>, <urn:mdciii:1603:45:16:368:3:20502>, <urn:mdciii:1603:45:16:368:3:20503>, <urn:mdciii:1603:45:16:368:3:20601>, <urn:mdciii:1603:45:16:368:3:20602>, <urn:mdciii:1603:45:16:368:3:20603>, <urn:mdciii:1603:45:16:368:3:20701>, <urn:mdciii:1603:45:16:368:3:20702>, <urn:mdciii:1603:45:16:368:3:20703>, <urn:mdciii:1603:45:16:368:3:30101>, <urn:mdciii:1603:45:16:368:3:30201>, <urn:mdciii:1603:45:16:368:3:30202>, <urn:mdciii:1603:45:16:368:3:30203>, <urn:mdciii:1603:45:16:368:3:30204>, <urn:mdciii:1603:45:16:368:3:30205>, <urn:mdciii:1603:45:16:368:3:30301>, <urn:mdciii:1603:45:16:368:3:30401>, <urn:mdciii:1603:45:16:368:3:40101>, <urn:mdciii:1603:45:16:368:3:40102>, <urn:mdciii:1603:45:16:368:3:40201>, <urn:mdciii:1603:45:16:368:3:40301>, <urn:mdciii:1603:45:16:368:3:40302>, <urn:mdciii:1603:45:16:368:3:40303>, <urn:mdciii:1603:45:16:368:3:50101>, <urn:mdciii:1603:45:16:368:3:50102>, <urn:mdciii:1603:45:16:368:3:50103>, <urn:mdciii:1603:45:16:368:3:50104>, <urn:mdciii:1603:45:16:368:3:50201>, <urn:mdciii:1603:45:16:368:3:50202>, <urn:mdciii:1603:45:16:368:3:50203>, <urn:mdciii:1603:45:16:368:3:50204>, <urn:mdciii:1603:45:16:368:3:50301>, <urn:mdciii:1603:45:16:368:3:50302>, <urn:mdciii:1603:45:16:368:3:50303>, <urn:mdciii:1603:45:16:368:3:50401>, <urn:mdciii:1603:45:16:368:3:50402>, <urn:mdciii:1603:45:16:368:3:60101>, <urn:mdciii:1603:45:16:368:3:60102>, <urn:mdciii:1603:45:16:368:3:60103>, <urn:mdciii:1603:45:16:368:3:60201>, <urn:mdciii:1603:45:16:368:3:60202>, <urn:mdciii:1603:45:16:368:3:60203>, <urn:mdciii:1603:45:16:368:3:60204>, <urn:mdciii:1603:45:16:368:3:60301>, <urn:mdciii:1603:45:16:368:3:60401>, <urn:mdciii:1603:45:16:368:3:60402>, <urn:mdciii:1603:45:16:368:3:60501>, <urn:mdciii:1603:45:16:368:3:60502>, <urn:mdciii:1603:45:16:368:3:60503>, <urn:mdciii:1603:45:16:368:3:60504>, <urn:mdciii:1603:45:16:368:3:60601>, <urn:mdciii:1603:45:16:368:3:60602>, <urn:mdciii:1603:45:16:368:3:60603>, <urn:mdciii:1603:45:16:368:3:60701>, <urn:mdciii:1603:45:16:368:3:60702>, <urn:mdciii:1603:45:16:368:3:60801>, <urn:mdciii:1603:45:16:368:3:60802>, <urn:mdciii:1603:45:16:368:3:60803>, <urn:mdciii:1603:45:16:368:3:60901>, <urn:mdciii:1603:45:16:368:3:60902>, <urn:mdciii:1603:45:16:368:3:60903>, <urn:mdciii:1603:45:16:368:3:61001>, <urn:mdciii:1603:45:16:368:3:61002>, <urn:mdciii:1603:45:16:368:3:61003>, <urn:mdciii:1603:45:16:368:3:61004>, <urn:mdciii:1603:45:16:368:3:70101>, <urn:mdciii:1603:45:16:368:3:70102>, <urn:mdciii:1603:45:16:368:3:70103>, <urn:mdciii:1603:45:16:368:3:70201>, <urn:mdciii:1603:45:16:368:3:70202>, <urn:mdciii:1603:45:16:368:3:70203>, <urn:mdciii:1603:45:16:368:3:70301>, <urn:mdciii:1603:45:16:368:3:70302>, <urn:mdciii:1603:45:16:368:3:70303>, <urn:mdciii:1603:45:16:368:3:70401>, <urn:mdciii:1603:45:16:368:3:70402>, <urn:mdciii:1603:45:16:368:3:80101>, <urn:mdciii:1603:45:16:368:3:80102>, <urn:mdciii:1603:45:16:368:3:80103>, <urn:mdciii:1603:45:16:368:3:80201>, <urn:mdciii:1603:45:16:368:3:80202>, <urn:mdciii:1603:45:16:368:3:80203>, <urn:mdciii:1603:45:16:368:3:80204>, <urn:mdciii:1603:45:16:368:3:80205>, <urn:mdciii:1603:45:16:368:3:80301>, <urn:mdciii:1603:45:16:368:3:80302>, <urn:mdciii:1603:45:16:368:3:80303>, <urn:mdciii:1603:45:16:368:3:80401>, <urn:mdciii:1603:45:16:368:3:80402>, <urn:mdciii:1603:45:16:368:3:80403>, <urn:mdciii:1603:45:16:368:3:80501>, <urn:mdciii:1603:45:16:368:3:80502>, <urn:mdciii:1603:45:16:368:3:80503>, <urn:mdciii:1603:45:16:368:3:80504>, <urn:mdciii:1603:45:16:368:3:80601>, <urn:mdciii:1603:45:16:368:3:80602>, <urn:mdciii:1603:45:16:368:3:80701>, <urn:mdciii:1603:45:16:368:3:90101>, <urn:mdciii:1603:45:16:368:3:90102>, <urn:mdciii:1603:45:16:368:3:90103>, <urn:mdciii:1603:45:16:368:3:90104>, <urn:mdciii:1603:45:16:368:3:90201>, <urn:mdciii:1603:45:16:368:3:90202>, <urn:mdciii:1603:45:16:368:3:90203>, <urn:mdciii:1603:45:16:368:3:90301>, <urn:mdciii:1603:45:16:368:3:90302>, <urn:mdciii:1603:45:16:368:3:90303>, <urn:mdciii:1603:45:16:368:3:90304>, <urn:mdciii:1603:45:16:368:3:90401>, <urn:mdciii:1603:45:16:368:3:90402>, <urn:mdciii:1603:45:16:368:3:90403> .
+
+<urn:mdciii:1603:45:16:368:3(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:368:3:100101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100101" ;
+    skos:prefLabel "Al-Atheem"@eng-Latn, "العظيم"@ara-Arab ;
+    wdata:q7200235 "IQG10Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:100102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100102" ;
+    skos:prefLabel "Al-Mansouriyah"@eng-Latn, "المنصورية"@ara-Arab ;
+    wdata:q7200235 "IQG10Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:100103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100103" ;
+    skos:prefLabel "Hibhib"@eng-Latn, "هبهب"@ara-Arab ;
+    wdata:q7200235 "IQG10Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:100104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100104" ;
+    skos:prefLabel "Markaz Al-Khalis"@eng-Latn, "مركز الخالص"@ara-Arab ;
+    wdata:q7200235 "IQG10Q01N04" .
+
+<urn:mdciii:1603:45:16:368:3:100105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100105" ;
+    skos:prefLabel "Qalaa't Ansab"@eng-Latn, "قلعة انصاب"@ara-Arab ;
+    wdata:q7200235 "IQG10Q01N05" .
+
+<urn:mdciii:1603:45:16:368:3:100201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100201" ;
+    skos:prefLabel "Al-Wajihia"@eng-Latn, "الوجيهية"@ara-Arab ;
+    wdata:q7200235 "IQG10Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:100202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100202" ;
+    skos:prefLabel "Markaz Al-Muqdadiya"@eng-Latn, "مركز المقدادية"@ara-Arab ;
+    wdata:q7200235 "IQG10Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:100301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100301" ;
+    skos:prefLabel "Mandali"@eng-Latn, "مندلي"@ara-Arab ;
+    wdata:q7200235 "IQG10Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:100302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100302" ;
+    skos:prefLabel "Markaz Baladruz"@eng-Latn, "مركز بلدروز"@ara-Arab ;
+    wdata:q7200235 "IQG10Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:100303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100303" ;
+    skos:prefLabel "Qazanya"@eng-Latn, "قزانية"@ara-Arab ;
+    wdata:q7200235 "IQG10Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:100401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100401" ;
+    skos:prefLabel "Buhriz"@eng-Latn, "بهرز"@ara-Arab ;
+    wdata:q7200235 "IQG10Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:100402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100402" ;
+    skos:prefLabel "Beni Saad"@eng-Latn, "بني سعد"@ara-Arab ;
+    wdata:q7200235 "IQG10Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:100403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100403" ;
+    skos:prefLabel "Kanan"@eng-Latn, "كنعان"@ara-Arab ;
+    wdata:q7200235 "IQG10Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:100501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100501" ;
+    skos:prefLabel "Al-Saadiya"@eng-Latn, "السعدية"@ara-Arab ;
+    wdata:q7200235 "IQG10Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:100502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100502" ;
+    skos:prefLabel "Markaz Khanaqin"@eng-Latn, "مركز خانقين"@ara-Arab ;
+    wdata:q7200235 "IQG10Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:100503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100503" ;
+    skos:prefLabel "Midan"@eng-Latn, "ميدان"@ara-Arab ;
+    wdata:q7200235 "IQG10Q05N03" .
+
+<urn:mdciii:1603:45:16:368:3:100504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100504" ;
+    skos:prefLabel "Jalawla"@eng-Latn, "جلولاء"@ara-Arab ;
+    wdata:q7200235 "IQG10Q05N04" .
+
+<urn:mdciii:1603:45:16:368:3:100505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100505" ;
+    skos:prefLabel "Qaratu"@eng-Latn, "قرة تو"@ara-Arab ;
+    wdata:q7200235 "IQG10Q05N05" .
+
+<urn:mdciii:1603:45:16:368:3:100601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100601" ;
+    skos:prefLabel "Jabarra"@eng-Latn, "جبارة"@ara-Arab ;
+    wdata:q7200235 "IQG10Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:100602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100602" ;
+    skos:prefLabel "Markaz Kifri"@eng-Latn, "مركز كفري"@ara-Arab ;
+    wdata:q7200235 "IQG10Q06N02" .
+
+<urn:mdciii:1603:45:16:368:3:100603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:100603" ;
+    skos:prefLabel "Qara Tabe"@eng-Latn, "قرة تبة"@ara-Arab ;
+    wdata:q7200235 "IQG10Q06N03" .
+
+<urn:mdciii:1603:45:16:368:3:10101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10101" ;
+    skos:prefLabel "Al-Amirya"@eng-Latn, "العامرية"@ara-Arab ;
+    wdata:q7200235 "IQG01Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:10102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10102" ;
+    skos:prefLabel "Al-Garma"@eng-Latn, "الكرمة"@ara-Arab ;
+    wdata:q7200235 "IQG01Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:10103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10103" ;
+    skos:prefLabel "Markaz Al-Falluja"@eng-Latn, "مركز الفلوجة"@ara-Arab ;
+    wdata:q7200235 "IQG01Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:10201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10201" ;
+    skos:prefLabel "Al-Karabla"@eng-Latn, "الكرابلة"@ara-Arab ;
+    wdata:q7200235 "IQG01Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:10202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10202" ;
+    skos:prefLabel "Al-Obiadi"@eng-Latn, "العبيدي"@ara-Arab ;
+    wdata:q7200235 "IQG01Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:10203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10203" ;
+    skos:prefLabel "Al-Rummaneh"@eng-Latn, "الرمانة"@ara-Arab ;
+    wdata:q7200235 "IQG01Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:10301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10301" ;
+    skos:prefLabel "Al-Habbaniya"@eng-Latn, "الحبانية"@ara-Arab ;
+    wdata:q7200235 "IQG01Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:10302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10302" ;
+    skos:prefLabel "Al-Rahhaliya"@eng-Latn, "الرحالية"@ara-Arab ;
+    wdata:q7200235 "IQG01Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:10303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10303" ;
+    skos:prefLabel "Markaz Al-Ramadi"@eng-Latn, "مركز الرمادي"@ara-Arab ;
+    wdata:q7200235 "IQG01Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:10401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10401" ;
+    skos:prefLabel "Al-Nekhaeeb"@eng-Latn, "النخيب"@ara-Arab ;
+    wdata:q7200235 "IQG01Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:10402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10402" ;
+    skos:prefLabel "Al-Walid"@eng-Latn, "الوليد"@ara-Arab ;
+    wdata:q7200235 "IQG01Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:10403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10403" ;
+    skos:prefLabel "Markaz Al-Rutba"@eng-Latn, "مركز الرطبة"@ara-Arab ;
+    wdata:q7200235 "IQG01Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:10501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10501" ;
+    skos:prefLabel "Markaz Ana"@eng-Latn, "مركز عنه"@ara-Arab ;
+    wdata:q7200235 "IQG01Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:10502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10502" ;
+    skos:prefLabel "Rawa"@eng-Latn, "راوه"@ara-Arab ;
+    wdata:q7200235 "IQG01Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:10601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10601" ;
+    skos:prefLabel "Al-Haqlaniya"@eng-Latn, "الحقلانية"@ara-Arab ;
+    wdata:q7200235 "IQG01Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:10602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10602" ;
+    skos:prefLabel "Barwana"@eng-Latn, "بروانه"@ara-Arab ;
+    wdata:q7200235 "IQG01Q06N02" .
+
+<urn:mdciii:1603:45:16:368:3:10701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10701" ;
+    skos:prefLabel "Al-Baghdady"@eng-Latn, "البغدادي"@ara-Arab ;
+    wdata:q7200235 "IQG01Q07N01" .
+
+<urn:mdciii:1603:45:16:368:3:10702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10702" ;
+    skos:prefLabel "Al-Forat"@eng-Latn, "الفرات"@ara-Arab ;
+    wdata:q7200235 "IQG01Q07N02" .
+
+<urn:mdciii:1603:45:16:368:3:10703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10703" ;
+    skos:prefLabel "Kubaisa"@eng-Latn, "كبيسة"@ara-Arab ;
+    wdata:q7200235 "IQG01Q07N03" .
+
+<urn:mdciii:1603:45:16:368:3:10704>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:10704" ;
+    skos:prefLabel "Markaz Heet"@eng-Latn, "مركز هيت"@ara-Arab ;
+    wdata:q7200235 "IQG01Q07N04" .
+
+<urn:mdciii:1603:45:16:368:3:110101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110101" ;
+    skos:prefLabel "Barzan"@eng-Latn, "بارزان"@ara-Arab ;
+    wdata:q7200235 "IQG11Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:110102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110102" ;
+    skos:prefLabel "Mazouri Bala"@eng-Latn, "مزوري بالا"@ara-Arab ;
+    wdata:q7200235 "IQG11Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:110201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110201" ;
+    skos:prefLabel "Qushtappa"@eng-Latn, "قوش تبه"@ara-Arab ;
+    wdata:q7200235 "IQG11Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:110202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110202" ;
+    skos:prefLabel "Markaz Erbil"@eng-Latn, "مركز اربيل"@ara-Arab ;
+    wdata:q7200235 "IQG11Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:110301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110301" ;
+    skos:prefLabel "Taq Taq"@eng-Latn, "طق طق"@ara-Arab ;
+    wdata:q7200235 "IQG11Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:110302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110302" ;
+    skos:prefLabel "Shorsh"@eng-Latn, "سورش"@ara-Arab ;
+    wdata:q7200235 "IQG11Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:110303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110303" ;
+    skos:prefLabel "Markaz Koysinjaq"@eng-Latn, "مركز كويسنجق"@ara-Arab ;
+    wdata:q7200235 "IQG11Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:110401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110401" ;
+    skos:prefLabel "Qaraj"@eng-Latn, "القرج"@ara-Arab ;
+    wdata:q7200235 "IQG11Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:110402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110402" ;
+    skos:prefLabel "Markaz Makhmour"@eng-Latn, "مركز مخمور"@ara-Arab ;
+    wdata:q7200235 "IQG11Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:110403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110403" ;
+    skos:prefLabel "Dibaga"@eng-Latn, "ديبكة"@ara-Arab ;
+    wdata:q7200235 "IQG11Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:110404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110404" ;
+    skos:prefLabel "Gwyer"@eng-Latn, "الكوير"@ara-Arab ;
+    wdata:q7200235 "IQG11Q04N04" .
+
+<urn:mdciii:1603:45:16:368:3:110501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110501" ;
+    skos:prefLabel "Markaz Rawanduz"@eng-Latn, "مركز راوندوز"@ara-Arab ;
+    wdata:q7200235 "IQG11Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:110502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110502" ;
+    skos:prefLabel "Diana"@eng-Latn, "ديانا"@ara-Arab ;
+    wdata:q7200235 "IQG11Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:110503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110503" ;
+    skos:prefLabel "Balak"@eng-Latn, "بالك"@ara-Arab ;
+    wdata:q7200235 "IQG11Q05N03" .
+
+<urn:mdciii:1603:45:16:368:3:110504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110504" ;
+    skos:prefLabel "Khailfan"@eng-Latn, "خليفان"@ara-Arab ;
+    wdata:q7200235 "IQG11Q05N04" .
+
+<urn:mdciii:1603:45:16:368:3:110505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110505" ;
+    skos:prefLabel "Mergasur"@eng-Latn, "ميركة سور"@ara-Arab ;
+    wdata:q7200235 "IQG11Q05N05" .
+
+<urn:mdciii:1603:45:16:368:3:110506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110506" ;
+    skos:prefLabel "Bradost"@eng-Latn, "برادوست"@ara-Arab ;
+    wdata:q7200235 "IQG11Q05N06" .
+
+<urn:mdciii:1603:45:16:368:3:110507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110507" ;
+    skos:prefLabel "Haji Omaran"@eng-Latn, "الحج عمران"@ara-Arab ;
+    wdata:q7200235 "IQG11Q05N07" .
+
+<urn:mdciii:1603:45:16:368:3:110601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110601" ;
+    skos:prefLabel "Khoshnaw"@eng-Latn, "خوشناو"@ara-Arab ;
+    wdata:q7200235 "IQG11Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:110602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110602" ;
+    skos:prefLabel "Salah Al-Din"@eng-Latn, "صلاح الدين"@ara-Arab ;
+    wdata:q7200235 "IQG11Q06N02" .
+
+<urn:mdciii:1603:45:16:368:3:110603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:110603" ;
+    skos:prefLabel "Harir"@eng-Latn, "ديرة حرير"@ara-Arab ;
+    wdata:q7200235 "IQG11Q06N03" .
+
+<urn:mdciii:1603:45:16:368:3:120101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:120101" ;
+    skos:prefLabel "Markaz Ain Al-Tamur"@eng-Latn, "مركز عين التمر"@ara-Arab ;
+    wdata:q7200235 "IQG12Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:120201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:120201" ;
+    skos:prefLabel "Al-Jadwal Al-Ghrabi"@eng-Latn, "الجدول الغربي"@ara-Arab ;
+    wdata:q7200235 "IQG12Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:120202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:120202" ;
+    skos:prefLabel "Markaz Al-Hindiya"@eng-Latn, "مركز الهندية"@ara-Arab ;
+    wdata:q7200235 "IQG12Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:120301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:120301" ;
+    skos:prefLabel "Markaz Kerbela"@eng-Latn, "مركز كربلاء"@ara-Arab ;
+    wdata:q7200235 "IQG12Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:120302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:120302" ;
+    skos:prefLabel "Al-Hassainya"@eng-Latn, "الحسينية"@ara-Arab ;
+    wdata:q7200235 "IQG12Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:130101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130101" ;
+    skos:prefLabel "Markaz Al-Hawiga"@eng-Latn, "مركز الحويجة"@ara-Arab ;
+    wdata:q7200235 "IQG13Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:130102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130102" ;
+    skos:prefLabel "Al-Zab"@eng-Latn, "الزاب"@ara-Arab ;
+    wdata:q7200235 "IQG13Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:130103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130103" ;
+    skos:prefLabel "Al-Riyadh"@eng-Latn, "الرياض"@ara-Arab ;
+    wdata:q7200235 "IQG13Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:130104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130104" ;
+    skos:prefLabel "Al-Abbasi"@eng-Latn, "العباسية"@ara-Arab ;
+    wdata:q7200235 "IQG13Q01N04" .
+
+<urn:mdciii:1603:45:16:368:3:130201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130201" ;
+    skos:prefLabel "Al-Rashad"@eng-Latn, "الرشاد"@ara-Arab ;
+    wdata:q7200235 "IQG13Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:130202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130202" ;
+    skos:prefLabel "Markaz Daquq"@eng-Latn, "مركز داقوق"@ara-Arab ;
+    wdata:q7200235 "IQG13Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:130301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130301" ;
+    skos:prefLabel "Sarkran"@eng-Latn, "سركران"@ara-Arab ;
+    wdata:q7200235 "IQG13Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:130302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130302" ;
+    skos:prefLabel "Markaz Dibis"@eng-Latn, "مركز الدبس"@ara-Arab ;
+    wdata:q7200235 "IQG13Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:130303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130303" ;
+    skos:prefLabel "Altun Qupri"@eng-Latn, "التون كوبري"@ara-Arab ;
+    wdata:q7200235 "IQG13Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:130401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130401" ;
+    skos:prefLabel "Taza Khormato"@eng-Latn, "تازة خورماتو"@ara-Arab ;
+    wdata:q7200235 "IQG13Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:130402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130402" ;
+    skos:prefLabel "Lilan"@eng-Latn, "ليلان"@ara-Arab ;
+    wdata:q7200235 "IQG13Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:130403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130403" ;
+    skos:prefLabel "Al-Multaka"@eng-Latn, "الملتقى"@ara-Arab ;
+    wdata:q7200235 "IQG13Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:130404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130404" ;
+    skos:prefLabel "Yaijy"@eng-Latn, "يايجي"@ara-Arab ;
+    wdata:q7200235 "IQG13Q04N04" .
+
+<urn:mdciii:1603:45:16:368:3:130405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130405" ;
+    skos:prefLabel "Shwan"@eng-Latn, "شوان"@ara-Arab ;
+    wdata:q7200235 "IQG13Q04N05" .
+
+<urn:mdciii:1603:45:16:368:3:130406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130406" ;
+    skos:prefLabel "Markaz Kirkuk"@eng-Latn, "مركز كركوك"@ara-Arab ;
+    wdata:q7200235 "IQG13Q04N06" .
+
+<urn:mdciii:1603:45:16:368:3:130407>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:130407" ;
+    skos:prefLabel "Qura Hanjeer"@eng-Latn, "قرة هنجير"@ara-Arab ;
+    wdata:q7200235 "IQG13Q04N07" .
+
+<urn:mdciii:1603:45:16:368:3:140101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140101" ;
+    skos:prefLabel "Kumait"@eng-Latn, "كميت"@ara-Arab ;
+    wdata:q7200235 "IQG14Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:140102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140102" ;
+    skos:prefLabel "Al-Teeb"@eng-Latn, "الطيب"@ara-Arab ;
+    wdata:q7200235 "IQG14Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:140201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140201" ;
+    skos:prefLabel "Markaz Ali Al-Gharbi"@eng-Latn, "مركز علي الغربي"@ara-Arab ;
+    wdata:q7200235 "IQG14Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:140202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140202" ;
+    skos:prefLabel "Ali Al-Sharki"@eng-Latn, "علي الشرقي"@ara-Arab ;
+    wdata:q7200235 "IQG14Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:140301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140301" ;
+    skos:prefLabel "Beni Hasheem"@eng-Latn, "بني هاشم"@ara-Arab ;
+    wdata:q7200235 "IQG14Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:140302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140302" ;
+    skos:prefLabel "Al-Msharah"@eng-Latn, "المشرح"@ara-Arab ;
+    wdata:q7200235 "IQG14Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:140303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140303" ;
+    skos:prefLabel "Markaz Al-Kahla"@eng-Latn, "مركز الكحلاء"@ara-Arab ;
+    wdata:q7200235 "IQG14Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:140401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140401" ;
+    skos:prefLabel "Al-Salam"@eng-Latn, "السلام"@ara-Arab ;
+    wdata:q7200235 "IQG14Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:140402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140402" ;
+    skos:prefLabel "Markaz Al-Maimouna"@eng-Latn, "مركز الميمونة"@ara-Arab ;
+    wdata:q7200235 "IQG14Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:140501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140501" ;
+    skos:prefLabel "Al-Aziz"@eng-Latn, "العزير"@ara-Arab ;
+    wdata:q7200235 "IQG14Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:140502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140502" ;
+    skos:prefLabel "Al-Adel"@eng-Latn, "العدل"@ara-Arab ;
+    wdata:q7200235 "IQG14Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:140601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:140601" ;
+    skos:prefLabel "Markaz Qalat Saleh"@eng-Latn, "مركز قلعة صالح"@ara-Arab ;
+    wdata:q7200235 "IQG14Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:150101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150101" ;
+    skos:prefLabel "Bardarash"@eng-Latn, "بردرش"@ara-Arab ;
+    wdata:q7200235 "IQG15Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:150102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150102" ;
+    skos:prefLabel "Begeel"@eng-Latn, "بجيل"@ara-Arab ;
+    wdata:q7200235 "IQG15Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:150103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150103" ;
+    skos:prefLabel "Kurdsein"@eng-Latn, "كردسين"@ara-Arab ;
+    wdata:q7200235 "IQG15Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:150104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150104" ;
+    skos:prefLabel "Dinarta"@eng-Latn, "دينارتة"@ara-Arab ;
+    wdata:q7200235 "IQG15Q01N04" .
+
+<urn:mdciii:1603:45:16:368:3:150105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150105" ;
+    skos:prefLabel "Markaz Aqra"@eng-Latn, "مركز عقرة"@ara-Arab ;
+    wdata:q7200235 "IQG15Q01N05" .
+
+<urn:mdciii:1603:45:16:368:3:150201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150201" ;
+    skos:prefLabel "Markaz Al-Baaj"@eng-Latn, "مركز البعاج"@ara-Arab ;
+    wdata:q7200235 "IQG15Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:150202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150202" ;
+    skos:prefLabel "Al-Qahtanya"@eng-Latn, "القحطانية"@ara-Arab ;
+    wdata:q7200235 "IQG15Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:150301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150301" ;
+    skos:prefLabel "Namroud"@eng-Latn, "نمرود"@ara-Arab ;
+    wdata:q7200235 "IQG15Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:150302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150302" ;
+    skos:prefLabel "Bartilla"@eng-Latn, "برطلة"@ara-Arab ;
+    wdata:q7200235 "IQG15Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:150303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150303" ;
+    skos:prefLabel "Markaz Al-Hamdaniya"@eng-Latn, "مركز الحمدانية"@ara-Arab ;
+    wdata:q7200235 "IQG15Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:150401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150401" ;
+    skos:prefLabel "Markaz Hatra"@eng-Latn, "مركز الحضر"@ara-Arab ;
+    wdata:q7200235 "IQG15Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:150501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150501" ;
+    skos:prefLabel "Al-Qayarra"@eng-Latn, "القيارة"@ara-Arab ;
+    wdata:q7200235 "IQG15Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:150502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150502" ;
+    skos:prefLabel "Hammam Al-Alil"@eng-Latn, "حمام العليل"@ara-Arab ;
+    wdata:q7200235 "IQG15Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:150503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150503" ;
+    skos:prefLabel "Bashiqa"@eng-Latn, "بعشيقة"@ara-Arab ;
+    wdata:q7200235 "IQG15Q05N03" .
+
+<urn:mdciii:1603:45:16:368:3:150504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150504" ;
+    skos:prefLabel "Al-Muhamadath"@eng-Latn, "المحمداث"@ara-Arab ;
+    wdata:q7200235 "IQG15Q05N04" .
+
+<urn:mdciii:1603:45:16:368:3:150601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150601" ;
+    skos:prefLabel "Markaz Al-Shikhan"@eng-Latn, "مركز الشيخان"@ara-Arab ;
+    wdata:q7200235 "IQG15Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:150602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150602" ;
+    skos:prefLabel "Qasruk"@eng-Latn, "قسروك"@ara-Arab ;
+    wdata:q7200235 "IQG15Q06N02" .
+
+<urn:mdciii:1603:45:16:368:3:150603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150603" ;
+    skos:prefLabel "Atreesh"@eng-Latn, "ئةتريش"@ara-Arab ;
+    wdata:q7200235 "IQG15Q06N03" .
+
+<urn:mdciii:1603:45:16:368:3:150701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150701" ;
+    skos:prefLabel "Al-Qairawan"@eng-Latn, "القيروان"@ara-Arab ;
+    wdata:q7200235 "IQG15Q07N01" .
+
+<urn:mdciii:1603:45:16:368:3:150702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150702" ;
+    skos:prefLabel "Al-Shamal"@eng-Latn, "الشمال"@ara-Arab ;
+    wdata:q7200235 "IQG15Q07N02" .
+
+<urn:mdciii:1603:45:16:368:3:150703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150703" ;
+    skos:prefLabel "Markaz Sinjar"@eng-Latn, "مركز سنجار"@ara-Arab ;
+    wdata:q7200235 "IQG15Q07N03" .
+
+<urn:mdciii:1603:45:16:368:3:150801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150801" ;
+    skos:prefLabel "Markaz Telafar"@eng-Latn, "مركز تلعفر"@ara-Arab ;
+    wdata:q7200235 "IQG15Q08N01" .
+
+<urn:mdciii:1603:45:16:368:3:150802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150802" ;
+    skos:prefLabel "Al-Ayadiya"@eng-Latn, "العياضية"@ara-Arab ;
+    wdata:q7200235 "IQG15Q08N02" .
+
+<urn:mdciii:1603:45:16:368:3:150803>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150803" ;
+    skos:prefLabel "Zummar"@eng-Latn, "زمار"@ara-Arab ;
+    wdata:q7200235 "IQG15Q08N03" .
+
+<urn:mdciii:1603:45:16:368:3:150804>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150804" ;
+    skos:prefLabel "Rabia"@eng-Latn, "ربيعة"@ara-Arab ;
+    wdata:q7200235 "IQG15Q08N04" .
+
+<urn:mdciii:1603:45:16:368:3:150901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150901" ;
+    skos:prefLabel "Markaz Tilkaef"@eng-Latn, "مركز تلكيف"@ara-Arab ;
+    wdata:q7200235 "IQG15Q09N01" .
+
+<urn:mdciii:1603:45:16:368:3:150902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150902" ;
+    skos:prefLabel "Al-Qosh"@eng-Latn, "القوش"@ara-Arab ;
+    wdata:q7200235 "IQG15Q09N02" .
+
+<urn:mdciii:1603:45:16:368:3:150903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:150903" ;
+    skos:prefLabel "Wana"@eng-Latn, "وانة"@ara-Arab ;
+    wdata:q7200235 "IQG15Q09N03" .
+
+<urn:mdciii:1603:45:16:368:3:160101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160101" ;
+    skos:prefLabel "Hamreen"@eng-Latn, "حمرين"@ara-Arab ;
+    wdata:q7200235 "IQG16Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:160102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160102" ;
+    skos:prefLabel "Abu Dalf"@eng-Latn, "ابو دلف"@ara-Arab ;
+    wdata:q7200235 "IQG16Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:160201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160201" ;
+    skos:prefLabel "Markaz Al-Shirqat"@eng-Latn, "مركز الشرقاط"@ara-Arab ;
+    wdata:q7200235 "IQG16Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:160301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160301" ;
+    skos:prefLabel "Markaz Beygee"@eng-Latn, "مركز بيجي"@ara-Arab ;
+    wdata:q7200235 "IQG16Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:160302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160302" ;
+    skos:prefLabel "Al-Synia"@eng-Latn, "الصينية"@ara-Arab ;
+    wdata:q7200235 "IQG16Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:160303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160303" ;
+    skos:prefLabel "Makkhoul"@eng-Latn, "مكحول"@ara-Arab ;
+    wdata:q7200235 "IQG16Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:160401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160401" ;
+    skos:prefLabel "Yathreb"@eng-Latn, "يثرب"@ara-Arab ;
+    wdata:q7200235 "IQG16Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:160402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160402" ;
+    skos:prefLabel "Al-Esshaqi"@eng-Latn, "الاسحاقي"@ara-Arab ;
+    wdata:q7200235 "IQG16Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:160403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160403" ;
+    skos:prefLabel "Al-Duloeyah"@eng-Latn, "الضلوعية"@ara-Arab ;
+    wdata:q7200235 "IQG16Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:160404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160404" ;
+    skos:prefLabel "Al-Dujeel"@eng-Latn, "الدجيل"@ara-Arab ;
+    wdata:q7200235 "IQG16Q04N04" .
+
+<urn:mdciii:1603:45:16:368:3:160501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160501" ;
+    skos:prefLabel "Al-Muotasim"@eng-Latn, "المعتصم"@ara-Arab ;
+    wdata:q7200235 "IQG16Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:160502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160502" ;
+    skos:prefLabel "Al-Tharthar"@eng-Latn, "الثرثار"@ara-Arab ;
+    wdata:q7200235 "IQG16Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:160503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160503" ;
+    skos:prefLabel "Markaz Samarra"@eng-Latn, "مركز سامراء"@ara-Arab ;
+    wdata:q7200235 "IQG16Q05N03" .
+
+<urn:mdciii:1603:45:16:368:3:160504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160504" ;
+    skos:prefLabel "Dijla"@eng-Latn, "دجلة"@ara-Arab ;
+    wdata:q7200235 "IQG16Q05N04" .
+
+<urn:mdciii:1603:45:16:368:3:160601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160601" ;
+    skos:prefLabel "Um Al-Qura"@eng-Latn, "ام القرى"@ara-Arab ;
+    wdata:q7200235 "IQG16Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:160602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160602" ;
+    skos:prefLabel "Al-Alam"@eng-Latn, "العلم"@ara-Arab ;
+    wdata:q7200235 "IQG16Q06N02" .
+
+<urn:mdciii:1603:45:16:368:3:160701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160701" ;
+    skos:prefLabel "Ameraly"@eng-Latn, "آمرلي"@ara-Arab ;
+    wdata:q7200235 "IQG16Q07N01" .
+
+<urn:mdciii:1603:45:16:368:3:160702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160702" ;
+    skos:prefLabel "Markaz Tooz Khurmato"@eng-Latn, "مركز طوز خورماتو"@ara-Arab ;
+    wdata:q7200235 "IQG16Q07N02" .
+
+<urn:mdciii:1603:45:16:368:3:160703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:160703" ;
+    skos:prefLabel "Sulaiman Baig"@eng-Latn, "سليمان بيك"@ara-Arab ;
+    wdata:q7200235 "IQG16Q07N03" .
+
+<urn:mdciii:1603:45:16:368:3:170101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170101" ;
+    skos:prefLabel "Al-Fuhood"@eng-Latn, "الفهود"@ara-Arab ;
+    wdata:q7200235 "IQG17Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:170102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170102" ;
+    skos:prefLabel "Al-Hammar"@eng-Latn, "الحمار"@ara-Arab ;
+    wdata:q7200235 "IQG17Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:170103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170103" ;
+    skos:prefLabel "Markaz Al-Chibayish"@eng-Latn, "مركز الجبايش"@ara-Arab ;
+    wdata:q7200235 "IQG17Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:170201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170201" ;
+    skos:prefLabel "Al-Fajer"@eng-Latn, "الفجر"@ara-Arab ;
+    wdata:q7200235 "IQG17Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:170202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170202" ;
+    skos:prefLabel "Al-Nasr"@eng-Latn, "النصر"@ara-Arab ;
+    wdata:q7200235 "IQG17Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:170203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170203" ;
+    skos:prefLabel "Markaz Al-Rifai"@eng-Latn, "مركز الرفاعي"@ara-Arab ;
+    wdata:q7200235 "IQG17Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:170204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170204" ;
+    skos:prefLabel "Qalat Siker"@eng-Latn, "قلعة السكر"@ara-Arab ;
+    wdata:q7200235 "IQG17Q02N04" .
+
+<urn:mdciii:1603:45:16:368:3:170301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170301" ;
+    skos:prefLabel "Markaz Al-Shatra"@eng-Latn, "مركز الشطرة"@ara-Arab ;
+    wdata:q7200235 "IQG17Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:170302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170302" ;
+    skos:prefLabel "Al-Gharraf"@eng-Latn, "القراف"@ara-Arab ;
+    wdata:q7200235 "IQG17Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:170303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170303" ;
+    skos:prefLabel "Al-Dawaya"@eng-Latn, "الدواية"@ara-Arab ;
+    wdata:q7200235 "IQG17Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:170401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170401" ;
+    skos:prefLabel "Al-Battha'a"@eng-Latn, "البطحاء"@ara-Arab ;
+    wdata:q7200235 "IQG17Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:170402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170402" ;
+    skos:prefLabel "Markaz Al-Nasiriya"@eng-Latn, "مركزالناصرية"@ara-Arab ;
+    wdata:q7200235 "IQG17Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:170403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170403" ;
+    skos:prefLabel "Said Dekhil"@eng-Latn, "سيد خليل"@ara-Arab ;
+    wdata:q7200235 "IQG17Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:170404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170404" ;
+    skos:prefLabel "Al-Islah"@eng-Latn, "الاصلاح"@ara-Arab ;
+    wdata:q7200235 "IQG17Q04N04" .
+
+<urn:mdciii:1603:45:16:368:3:170501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170501" ;
+    skos:prefLabel "Garmat Beni Said"@eng-Latn, "كرمة بني سعد"@ara-Arab ;
+    wdata:q7200235 "IQG17Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:170502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170502" ;
+    skos:prefLabel "Al-Tar"@eng-Latn, "الطار"@ara-Arab ;
+    wdata:q7200235 "IQG17Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:170503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170503" ;
+    skos:prefLabel "Al-Fadhliya"@eng-Latn, "الفضلية"@ara-Arab ;
+    wdata:q7200235 "IQG17Q05N03" .
+
+<urn:mdciii:1603:45:16:368:3:170504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:170504" ;
+    skos:prefLabel "Akaika"@eng-Latn, "عكيكة"@ara-Arab ;
+    wdata:q7200235 "IQG17Q05N04" .
+
+<urn:mdciii:1603:45:16:368:3:180101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180101" ;
+    skos:prefLabel "Al-Bashaer"@eng-Latn, "البشائر"@ara-Arab ;
+    wdata:q7200235 "IQG18Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:180102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180102" ;
+    skos:prefLabel "Al-Mowafaqiya"@eng-Latn, "الموفقية"@ara-Arab ;
+    wdata:q7200235 "IQG18Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:180201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180201" ;
+    skos:prefLabel "Wasit"@eng-Latn, "واسط"@ara-Arab ;
+    wdata:q7200235 "IQG18Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:180202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180202" ;
+    skos:prefLabel "Shaekh Saad"@eng-Latn, "شيخ سعد"@ara-Arab ;
+    wdata:q7200235 "IQG18Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:180203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180203" ;
+    skos:prefLabel "Markaz Al-Kut"@eng-Latn, "مركز الكوت"@ara-Arab ;
+    wdata:q7200235 "IQG18Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:180301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180301" ;
+    skos:prefLabel "Al-Ahrar"@eng-Latn, "الاحرار"@ara-Arab ;
+    wdata:q7200235 "IQG18Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:180302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180302" ;
+    skos:prefLabel "Markaz Al-Noamaniya"@eng-Latn, "مركز النعمانية"@ara-Arab ;
+    wdata:q7200235 "IQG18Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:180401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180401" ;
+    skos:prefLabel "Al-Zubaidiya"@eng-Latn, "الزبيدية"@ara-Arab ;
+    wdata:q7200235 "IQG18Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:180402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180402" ;
+    skos:prefLabel "Al-Shehamiya"@eng-Latn, "الشحيمية"@ara-Arab ;
+    wdata:q7200235 "IQG18Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:180403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180403" ;
+    skos:prefLabel "Markaz Al-Suwaira"@eng-Latn, "مركز الصويرة"@ara-Arab ;
+    wdata:q7200235 "IQG18Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:180404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180404" ;
+    skos:prefLabel "Al-Hafriya"@eng-Latn, "الحفرية"@ara-Arab ;
+    wdata:q7200235 "IQG18Q04N04" .
+
+<urn:mdciii:1603:45:16:368:3:180405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180405" ;
+    skos:prefLabel "Al-Aziziya"@eng-Latn, "العزيزية"@ara-Arab ;
+    wdata:q7200235 "IQG18Q04N05" .
+
+<urn:mdciii:1603:45:16:368:3:180501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180501" ;
+    skos:prefLabel "Markaz Badra"@eng-Latn, "مركز بدرة"@ara-Arab ;
+    wdata:q7200235 "IQG18Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:180502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:180502" ;
+    skos:prefLabel "Jassan"@eng-Latn, "جصان"@ara-Arab ;
+    wdata:q7200235 "IQG18Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:20101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20101" ;
+    skos:prefLabel "Al-Siba"@eng-Latn, "السيبة"@ara-Arab ;
+    wdata:q7200235 "IQG02Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:20102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20102" ;
+    skos:prefLabel "Markaz Abu Al-Khaseeb"@eng-Latn, "مركز ابي الخصيب"@ara-Arab ;
+    wdata:q7200235 "IQG02Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:20201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20201" ;
+    skos:prefLabel "Al-Hartha"@eng-Latn, "الهارثة"@ara-Arab ;
+    wdata:q7200235 "IQG02Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:20202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20202" ;
+    skos:prefLabel "Markaz Al-Basrah"@eng-Latn, "مركز البصرة"@ara-Arab ;
+    wdata:q7200235 "IQG02Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:20301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20301" ;
+    skos:prefLabel "Al-Bahhar"@eng-Latn, "البحار"@ara-Arab ;
+    wdata:q7200235 "IQG02Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:20302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20302" ;
+    skos:prefLabel "Markaz Al-Faw"@eng-Latn, "مركز الفاو"@ara-Arab ;
+    wdata:q7200235 "IQG02Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:20401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20401" ;
+    skos:prefLabel "Al-Howweir"@eng-Latn, "الهوير"@ara-Arab ;
+    wdata:q7200235 "IQG02Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:20402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20402" ;
+    skos:prefLabel "Markaz Al-Midaina"@eng-Latn, "مركز المدينة"@ara-Arab ;
+    wdata:q7200235 "IQG02Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:20403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20403" ;
+    skos:prefLabel "Talha"@eng-Latn, "طلحة"@ara-Arab ;
+    wdata:q7200235 "IQG02Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:20501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20501" ;
+    skos:prefLabel "Al-Dair"@eng-Latn, "الدير"@ara-Arab ;
+    wdata:q7200235 "IQG02Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:20502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20502" ;
+    skos:prefLabel "Al-Thagar"@eng-Latn, "الثغر"@ara-Arab ;
+    wdata:q7200235 "IQG02Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:20503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20503" ;
+    skos:prefLabel "Markaz Al-Qurna"@eng-Latn, "مركز القرنة"@ara-Arab ;
+    wdata:q7200235 "IQG02Q05N03" .
+
+<urn:mdciii:1603:45:16:368:3:20601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20601" ;
+    skos:prefLabel "Markaz Al-Zubair"@eng-Latn, "مركز الزبير"@ara-Arab ;
+    wdata:q7200235 "IQG02Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:20602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20602" ;
+    skos:prefLabel "Safwan"@eng-Latn, "سفوان"@ara-Arab ;
+    wdata:q7200235 "IQG02Q06N02" .
+
+<urn:mdciii:1603:45:16:368:3:20603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20603" ;
+    skos:prefLabel "Um Qasr"@eng-Latn, "ام قصر"@ara-Arab ;
+    wdata:q7200235 "IQG02Q06N03" .
+
+<urn:mdciii:1603:45:16:368:3:20701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20701" ;
+    skos:prefLabel "Al-Nashwa"@eng-Latn, "النشوة"@ara-Arab ;
+    wdata:q7200235 "IQG02Q07N01" .
+
+<urn:mdciii:1603:45:16:368:3:20702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20702" ;
+    skos:prefLabel "Markaz Shat Al-Arab"@eng-Latn, "مركز شط العرب"@ara-Arab ;
+    wdata:q7200235 "IQG02Q07N02" .
+
+<urn:mdciii:1603:45:16:368:3:20703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:20703" ;
+    skos:prefLabel "Outba"@eng-Latn, "عتبة"@ara-Arab ;
+    wdata:q7200235 "IQG02Q07N03" .
+
+<urn:mdciii:1603:45:16:368:3:30101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:30101" ;
+    skos:prefLabel "Markaz Al-Khidhir"@eng-Latn, "مركز الخضر"@ara-Arab ;
+    wdata:q7200235 "IQG03Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:30201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:30201" ;
+    skos:prefLabel "Al-Hilal"@eng-Latn, "الهلال"@ara-Arab ;
+    wdata:q7200235 "IQG03Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:30202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:30202" ;
+    skos:prefLabel "Al-Majd"@eng-Latn, "المجد"@ara-Arab ;
+    wdata:q7200235 "IQG03Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:30203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:30203" ;
+    skos:prefLabel "Al-Najmi"@eng-Latn, "النجمي"@ara-Arab ;
+    wdata:q7200235 "IQG03Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:30204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:30204" ;
+    skos:prefLabel "Al-Warka"@eng-Latn, "الوركاء"@ara-Arab ;
+    wdata:q7200235 "IQG03Q02N04" .
+
+<urn:mdciii:1603:45:16:368:3:30205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:30205" ;
+    skos:prefLabel "Markaz Al-Rumaitha"@eng-Latn, "مركز الرميثة"@ara-Arab ;
+    wdata:q7200235 "IQG03Q02N05" .
+
+<urn:mdciii:1603:45:16:368:3:30301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:30301" ;
+    skos:prefLabel "Markaz Al-Salman"@eng-Latn, "مركز السلمان"@ara-Arab ;
+    wdata:q7200235 "IQG03Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:30401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:30401" ;
+    skos:prefLabel "Al-Sowair"@eng-Latn, "السوير"@ara-Arab ;
+    wdata:q7200235 "IQG03Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:40101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:40101" ;
+    skos:prefLabel "Al-Huriya"@eng-Latn, "الحرية"@ara-Arab ;
+    wdata:q7200235 "IQG04Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:40102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:40102" ;
+    skos:prefLabel "Markaz Al-Kufa"@eng-Latn, "مركز الكوفة"@ara-Arab ;
+    wdata:q7200235 "IQG04Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:40201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:40201" ;
+    skos:prefLabel "Al-Heera"@eng-Latn, "الحيرة"@ara-Arab ;
+    wdata:q7200235 "IQG04Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:40301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:40301" ;
+    skos:prefLabel "Al-Haydariya"@eng-Latn, "الحيدرية"@ara-Arab ;
+    wdata:q7200235 "IQG04Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:40302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:40302" ;
+    skos:prefLabel "Al-Shabaka"@eng-Latn, "الشبكة"@ara-Arab ;
+    wdata:q7200235 "IQG04Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:40303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:40303" ;
+    skos:prefLabel "Markaz Al-Najaf"@eng-Latn, "مركز النجف"@ara-Arab ;
+    wdata:q7200235 "IQG04Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:50101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50101" ;
+    skos:prefLabel "Al-Bdair"@eng-Latn, "البدير"@ara-Arab ;
+    wdata:q7200235 "IQG05Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:50102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50102" ;
+    skos:prefLabel "Al-Fawwar"@eng-Latn, "الفوار"@ara-Arab ;
+    wdata:q7200235 "IQG05Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:50103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50103" ;
+    skos:prefLabel "Markaz Afaq"@eng-Latn, "مركز عفك"@ara-Arab ;
+    wdata:q7200235 "IQG05Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:50104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50104" ;
+    skos:prefLabel "Sumer"@eng-Latn, "سومر"@ara-Arab ;
+    wdata:q7200235 "IQG05Q01N04" .
+
+<urn:mdciii:1603:45:16:368:3:50201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50201" ;
+    skos:prefLabel "Al-Daghara"@eng-Latn, "الدغارة"@ara-Arab ;
+    wdata:q7200235 "IQG05Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:50202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50202" ;
+    skos:prefLabel "Al-Saniya"@eng-Latn, "السنية"@ara-Arab ;
+    wdata:q7200235 "IQG05Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:50203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50203" ;
+    skos:prefLabel "Al-Shafeia"@eng-Latn, "الشافعية"@ara-Arab ;
+    wdata:q7200235 "IQG05Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:50204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50204" ;
+    skos:prefLabel "Markaz Al-Diwaniya"@eng-Latn, "مركز الديوانية"@ara-Arab ;
+    wdata:q7200235 "IQG05Q02N04" .
+
+<urn:mdciii:1603:45:16:368:3:50301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50301" ;
+    skos:prefLabel "Al-Sadeer"@eng-Latn, "السدير"@ara-Arab ;
+    wdata:q7200235 "IQG05Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:50302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50302" ;
+    skos:prefLabel "Al-Shinafiya"@eng-Latn, "الشنافية"@ara-Arab ;
+    wdata:q7200235 "IQG05Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:50303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50303" ;
+    skos:prefLabel "Markaz Al-Hamza"@eng-Latn, "مركز الحمزة"@ara-Arab ;
+    wdata:q7200235 "IQG05Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:50401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50401" ;
+    skos:prefLabel "Al-Mihanawiya"@eng-Latn, "المهناوية"@ara-Arab ;
+    wdata:q7200235 "IQG05Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:50402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:50402" ;
+    skos:prefLabel "Ghammas"@eng-Latn, "غماس"@ara-Arab ;
+    wdata:q7200235 "IQG05Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:60101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60101" ;
+    skos:prefLabel "Bazian"@eng-Latn, "بازيان"@ara-Arab ;
+    wdata:q7200235 "IQG06Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:60102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60102" ;
+    skos:prefLabel "Qaradagh"@eng-Latn, "قره داغ"@ara-Arab ;
+    wdata:q7200235 "IQG06Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:60103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60103" ;
+    skos:prefLabel "Sarchnar"@eng-Latn, "سرجنار"@ara-Arab ;
+    wdata:q7200235 "IQG06Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:60201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60201" ;
+    skos:prefLabel "Agjalare"@eng-Latn, "ئاغجة لةر"@ara-Arab ;
+    wdata:q7200235 "IQG06Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:60202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60202" ;
+    skos:prefLabel "Markaz Chamchamal"@eng-Latn, "مركز جمجمال"@ara-Arab ;
+    wdata:q7200235 "IQG06Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:60203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60203" ;
+    skos:prefLabel "Kadr Karam"@eng-Latn, "قادر كرم"@ara-Arab ;
+    wdata:q7200235 "IQG06Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:60204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60204" ;
+    skos:prefLabel "Cenkaw"@eng-Latn, "سنكاو"@ara-Arab ;
+    wdata:q7200235 "IQG06Q02N04" .
+
+<urn:mdciii:1603:45:16:368:3:60301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60301" ;
+    skos:prefLabel "Markaz Derbendikhan"@eng-Latn, "مركز دربندخان"@ara-Arab ;
+    wdata:q7200235 "IQG06Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:60401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60401" ;
+    skos:prefLabel "Gnareen"@eng-Latn, "جنارين"@ara-Arab ;
+    wdata:q7200235 "IQG06Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:60402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60402" ;
+    skos:prefLabel "Sourdash"@eng-Latn, "سورداش"@ara-Arab ;
+    wdata:q7200235 "IQG06Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:60501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60501" ;
+    skos:prefLabel "Beyara"@eng-Latn, "بيارة"@ara-Arab ;
+    wdata:q7200235 "IQG06Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:60502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60502" ;
+    skos:prefLabel "Khourmal"@eng-Latn, "خورمال"@ara-Arab ;
+    wdata:q7200235 "IQG06Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:60503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60503" ;
+    skos:prefLabel "Markaz Halabja"@eng-Latn, "مركز حلبجة"@ara-Arab ;
+    wdata:q7200235 "IQG06Q05N03" .
+
+<urn:mdciii:1603:45:16:368:3:60504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60504" ;
+    skos:prefLabel "Shahrazur"@eng-Latn, "شهرزور"@ara-Arab ;
+    wdata:q7200235 "IQG06Q05N04" .
+
+<urn:mdciii:1603:45:16:368:3:60601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60601" ;
+    skos:prefLabel "Markaz Kalar"@eng-Latn, "مركز كلار"@ara-Arab ;
+    wdata:q7200235 "IQG06Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:60602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60602" ;
+    skos:prefLabel "Bebaz"@eng-Latn, "بيباز"@ara-Arab ;
+    wdata:q7200235 "IQG06Q06N02" .
+
+<urn:mdciii:1603:45:16:368:3:60603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60603" ;
+    skos:prefLabel "Tilako"@eng-Latn, "تيلاكو"@ara-Arab ;
+    wdata:q7200235 "IQG06Q06N03" .
+
+<urn:mdciii:1603:45:16:368:3:60701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60701" ;
+    skos:prefLabel "Karmak"@eng-Latn, "كرمك"@ara-Arab ;
+    wdata:q7200235 "IQG06Q07N01" .
+
+<urn:mdciii:1603:45:16:368:3:60702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60702" ;
+    skos:prefLabel "Markaz Panjwin"@eng-Latn, "مركز بنجوين"@ara-Arab ;
+    wdata:q7200235 "IQG06Q07N02" .
+
+<urn:mdciii:1603:45:16:368:3:60801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60801" ;
+    skos:prefLabel "Hero"@eng-Latn, "هيرو"@ara-Arab ;
+    wdata:q7200235 "IQG06Q08N01" .
+
+<urn:mdciii:1603:45:16:368:3:60802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60802" ;
+    skos:prefLabel "Nawdasht"@eng-Latn, "ناودشت"@ara-Arab ;
+    wdata:q7200235 "IQG06Q08N02" .
+
+<urn:mdciii:1603:45:16:368:3:60803>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60803" ;
+    skos:prefLabel "Markaz Pshdar"@eng-Latn, "مركز بشدر"@ara-Arab ;
+    wdata:q7200235 "IQG06Q08N03" .
+
+<urn:mdciii:1603:45:16:368:3:60901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60901" ;
+    skos:prefLabel "Mirka"@eng-Latn, "ميركه"@ara-Arab ;
+    wdata:q7200235 "IQG06Q09N01" .
+
+<urn:mdciii:1603:45:16:368:3:60902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60902" ;
+    skos:prefLabel "Markaz Rania"@eng-Latn, "مركز رانية"@ara-Arab ;
+    wdata:q7200235 "IQG06Q09N02" .
+
+<urn:mdciii:1603:45:16:368:3:60903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:60903" ;
+    skos:prefLabel "Bitwana"@eng-Latn, "بتوانه"@ara-Arab ;
+    wdata:q7200235 "IQG06Q09N03" .
+
+<urn:mdciii:1603:45:16:368:3:61001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:61001" ;
+    skos:prefLabel "Saruchik"@eng-Latn, "سروجك"@ara-Arab ;
+    wdata:q7200235 "IQG06Q10N01" .
+
+<urn:mdciii:1603:45:16:368:3:61002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:61002" ;
+    skos:prefLabel "Markaz Sharbazher"@eng-Latn, "مركز شهربازار"@ara-Arab ;
+    wdata:q7200235 "IQG06Q10N02" .
+
+<urn:mdciii:1603:45:16:368:3:61003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:61003" ;
+    skos:prefLabel "Siwail"@eng-Latn, "سويل"@ara-Arab ;
+    wdata:q7200235 "IQG06Q10N03" .
+
+<urn:mdciii:1603:45:16:368:3:61004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:61004" ;
+    skos:prefLabel "Mawat"@eng-Latn, "ماوت"@ara-Arab ;
+    wdata:q7200235 "IQG06Q10N04" .
+
+<urn:mdciii:1603:45:16:368:3:70101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70101" ;
+    skos:prefLabel "Al-Qasim"@eng-Latn, "القاسم"@ara-Arab ;
+    wdata:q7200235 "IQG07Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:70102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70102" ;
+    skos:prefLabel "Al-Shomaly"@eng-Latn, "الشوملي"@ara-Arab ;
+    wdata:q7200235 "IQG07Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:70103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70103" ;
+    skos:prefLabel "Al-Madhatiya"@eng-Latn, "المدحتية"@ara-Arab ;
+    wdata:q7200235 "IQG07Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:70201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70201" ;
+    skos:prefLabel "Al-Kifil"@eng-Latn, "الكفل"@ara-Arab ;
+    wdata:q7200235 "IQG07Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:70202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70202" ;
+    skos:prefLabel "Abi Gharaq"@eng-Latn, "ابي غرق"@ara-Arab ;
+    wdata:q7200235 "IQG07Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:70203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70203" ;
+    skos:prefLabel "Markaz Al-Hilla"@eng-Latn, "مركز الحلة"@ara-Arab ;
+    wdata:q7200235 "IQG07Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:70301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70301" ;
+    skos:prefLabel "Markaz Al-Mahawil"@eng-Latn, "مركز المحاويل"@ara-Arab ;
+    wdata:q7200235 "IQG07Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:70302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70302" ;
+    skos:prefLabel "Al-Emam"@eng-Latn, "الامام"@ara-Arab ;
+    wdata:q7200235 "IQG07Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:70303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70303" ;
+    skos:prefLabel "Al-Mashroo"@eng-Latn, "المشروع"@ara-Arab ;
+    wdata:q7200235 "IQG07Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:70401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70401" ;
+    skos:prefLabel "Jurf Al-Sakhar"@eng-Latn, "جرف الصخر"@ara-Arab ;
+    wdata:q7200235 "IQG07Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:70402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:70402" ;
+    skos:prefLabel "Al-Iskandaria"@eng-Latn, "الاسكندرية"@ara-Arab ;
+    wdata:q7200235 "IQG07Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:80101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80101" ;
+    skos:prefLabel "Markaz Al-Adhamiya"@eng-Latn, "مركز الاعظمية"@ara-Arab ;
+    wdata:q7200235 "IQG08Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:80102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80102" ;
+    skos:prefLabel "Al-Fahama"@eng-Latn, "الفحامة"@ara-Arab ;
+    wdata:q7200235 "IQG08Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:80103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80103" ;
+    skos:prefLabel "Al-Rashdia"@eng-Latn, "الراشدية"@ara-Arab ;
+    wdata:q7200235 "IQG08Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:80201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80201" ;
+    skos:prefLabel "Markaz Al-Kadhimiya"@eng-Latn, "مركز الكاظمية"@ara-Arab ;
+    wdata:q7200235 "IQG08Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:80202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80202" ;
+    skos:prefLabel "Abu Ghraib"@eng-Latn, "ابي غريب"@ara-Arab ;
+    wdata:q7200235 "IQG08Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:80203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80203" ;
+    skos:prefLabel "That al Salasil"@eng-Latn, "ذات السلاسل"@ara-Arab ;
+    wdata:q7200235 "IQG08Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:80204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80204" ;
+    skos:prefLabel "Al-Tarmiya"@eng-Latn, "الطارمية"@ara-Arab ;
+    wdata:q7200235 "IQG08Q02N04" .
+
+<urn:mdciii:1603:45:16:368:3:80205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80205" ;
+    skos:prefLabel "Al-Taji"@eng-Latn, "التاجي"@ara-Arab ;
+    wdata:q7200235 "IQG08Q02N05" .
+
+<urn:mdciii:1603:45:16:368:3:80301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80301" ;
+    skos:prefLabel "Al-Mamoon"@eng-Latn, "المأمون"@ara-Arab ;
+    wdata:q7200235 "IQG08Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:80302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80302" ;
+    skos:prefLabel "Markaz Al-Karkh"@eng-Latn, "مركز الكرخ"@ara-Arab ;
+    wdata:q7200235 "IQG08Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:80303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80303" ;
+    skos:prefLabel "Al-Mansour"@eng-Latn, "المنصور"@ara-Arab ;
+    wdata:q7200235 "IQG08Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:80401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80401" ;
+    skos:prefLabel "Markaz Al-Mada'in"@eng-Latn, "مركز المدائن"@ara-Arab ;
+    wdata:q7200235 "IQG08Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:80402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80402" ;
+    skos:prefLabel "Al-Jisr"@eng-Latn, "الجسر"@ara-Arab ;
+    wdata:q7200235 "IQG08Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:80403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80403" ;
+    skos:prefLabel "Al-Wihda"@eng-Latn, "الوحدة"@ara-Arab ;
+    wdata:q7200235 "IQG08Q04N03" .
+
+<urn:mdciii:1603:45:16:368:3:80501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80501" ;
+    skos:prefLabel "Markaz Al-Mahmoudiya"@eng-Latn, "مركز المحمودية"@ara-Arab ;
+    wdata:q7200235 "IQG08Q05N01" .
+
+<urn:mdciii:1603:45:16:368:3:80502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80502" ;
+    skos:prefLabel "Al-Rasheed"@eng-Latn, "الرشيد"@ara-Arab ;
+    wdata:q7200235 "IQG08Q05N02" .
+
+<urn:mdciii:1603:45:16:368:3:80503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80503" ;
+    skos:prefLabel "Al-Latifya"@eng-Latn, "اللطيفية"@ara-Arab ;
+    wdata:q7200235 "IQG08Q05N03" .
+
+<urn:mdciii:1603:45:16:368:3:80504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80504" ;
+    skos:prefLabel "Al-Yousifya"@eng-Latn, "اليوسفية"@ara-Arab ;
+    wdata:q7200235 "IQG08Q05N04" .
+
+<urn:mdciii:1603:45:16:368:3:80601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80601" ;
+    skos:prefLabel "Al-Karrada Al-Sharqia"@eng-Latn, "الكرادة الشرقية"@ara-Arab ;
+    wdata:q7200235 "IQG08Q06N01" .
+
+<urn:mdciii:1603:45:16:368:3:80602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80602" ;
+    skos:prefLabel "Baghdad Al-Jedeeda"@eng-Latn, "بغداد الجديدة"@ara-Arab ;
+    wdata:q7200235 "IQG08Q06N02" .
+
+<urn:mdciii:1603:45:16:368:3:80701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:80701" ;
+    skos:prefLabel "Markaz Al-Thawra"@eng-Latn, "مركز الثورة"@ara-Arab ;
+    wdata:q7200235 "IQG08Q07N01" .
+
+<urn:mdciii:1603:45:16:368:3:90101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90101" ;
+    skos:prefLabel "Barwari Bala"@eng-Latn, "برواري بالا"@ara-Arab ;
+    wdata:q7200235 "IQG09Q01N01" .
+
+<urn:mdciii:1603:45:16:368:3:90102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90102" ;
+    skos:prefLabel "Markaz Al-Amadiya"@eng-Latn, "مركز العمادية"@ara-Arab ;
+    wdata:q7200235 "IQG09Q01N02" .
+
+<urn:mdciii:1603:45:16:368:3:90103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90103" ;
+    skos:prefLabel "Nerwa Rekan"@eng-Latn, "نروة ريكان"@ara-Arab ;
+    wdata:q7200235 "IQG09Q01N03" .
+
+<urn:mdciii:1603:45:16:368:3:90104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90104" ;
+    skos:prefLabel "Sarsank"@eng-Latn, "سرسنك"@ara-Arab ;
+    wdata:q7200235 "IQG09Q01N04" .
+
+<urn:mdciii:1603:45:16:368:3:90201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90201" ;
+    skos:prefLabel "Al-Duski"@eng-Latn, "الدوسكي"@ara-Arab ;
+    wdata:q7200235 "IQG09Q02N01" .
+
+<urn:mdciii:1603:45:16:368:3:90202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90202" ;
+    skos:prefLabel "Markaz Duhok"@eng-Latn, "مركز دهوك"@ara-Arab ;
+    wdata:q7200235 "IQG09Q02N02" .
+
+<urn:mdciii:1603:45:16:368:3:90203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90203" ;
+    skos:prefLabel "Zawita"@eng-Latn, "زاويتة"@ara-Arab ;
+    wdata:q7200235 "IQG09Q02N03" .
+
+<urn:mdciii:1603:45:16:368:3:90301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90301" ;
+    skos:prefLabel "Bateel"@eng-Latn, "باتيل"@ara-Arab ;
+    wdata:q7200235 "IQG09Q03N01" .
+
+<urn:mdciii:1603:45:16:368:3:90302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90302" ;
+    skos:prefLabel "Fayde"@eng-Latn, "فايدة"@ara-Arab ;
+    wdata:q7200235 "IQG09Q03N02" .
+
+<urn:mdciii:1603:45:16:368:3:90303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90303" ;
+    skos:prefLabel "Markaz Sumail"@eng-Latn, "مركز سميل"@ara-Arab ;
+    wdata:q7200235 "IQG09Q03N03" .
+
+<urn:mdciii:1603:45:16:368:3:90304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90304" ;
+    skos:prefLabel "Sindi"@eng-Latn, "سندي"@ara-Arab ;
+    wdata:q7200235 "IQG09Q03N04" .
+
+<urn:mdciii:1603:45:16:368:3:90401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90401" ;
+    skos:prefLabel "Markaz Zakho"@eng-Latn, "مركز زاخو"@ara-Arab ;
+    wdata:q7200235 "IQG09Q04N01" .
+
+<urn:mdciii:1603:45:16:368:3:90402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90402" ;
+    skos:prefLabel "Batifa"@eng-Latn, "باتيفا"@ara-Arab ;
+    wdata:q7200235 "IQG09Q04N02" .
+
+<urn:mdciii:1603:45:16:368:3:90403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:368:3:90403" ;
+    skos:prefLabel "Dercar"@eng-Latn, "دركار"@ara-Arab ;
+    wdata:q7200235 "IQG09Q04N03" .
+

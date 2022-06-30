@@ -1,0 +1,552 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:598()> .
+
+<urn:mdciii:1603:45:16:598()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:598)" ;
+    skos:member <urn:mdciii:1603:45:16:598:2()> .
+
+<urn:mdciii:1603:45:16:598:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:598:2)" ;
+    skos:member <urn:mdciii:1603:45:16:598:2:1001>, <urn:mdciii:1603:45:16:598:2:1002>, <urn:mdciii:1603:45:16:598:2:1003>, <urn:mdciii:1603:45:16:598:2:1004>, <urn:mdciii:1603:45:16:598:2:1005>, <urn:mdciii:1603:45:16:598:2:1006>, <urn:mdciii:1603:45:16:598:2:102>, <urn:mdciii:1603:45:16:598:2:103>, <urn:mdciii:1603:45:16:598:2:1101>, <urn:mdciii:1603:45:16:598:2:1102>, <urn:mdciii:1603:45:16:598:2:1103>, <urn:mdciii:1603:45:16:598:2:1104>, <urn:mdciii:1603:45:16:598:2:1105>, <urn:mdciii:1603:45:16:598:2:1106>, <urn:mdciii:1603:45:16:598:2:1107>, <urn:mdciii:1603:45:16:598:2:1108>, <urn:mdciii:1603:45:16:598:2:1201>, <urn:mdciii:1603:45:16:598:2:1202>, <urn:mdciii:1603:45:16:598:2:1203>, <urn:mdciii:1603:45:16:598:2:1204>, <urn:mdciii:1603:45:16:598:2:1205>, <urn:mdciii:1603:45:16:598:2:1206>, <urn:mdciii:1603:45:16:598:2:1207>, <urn:mdciii:1603:45:16:598:2:1208>, <urn:mdciii:1603:45:16:598:2:1209>, <urn:mdciii:1603:45:16:598:2:1301>, <urn:mdciii:1603:45:16:598:2:1302>, <urn:mdciii:1603:45:16:598:2:1303>, <urn:mdciii:1603:45:16:598:2:1304>, <urn:mdciii:1603:45:16:598:2:1305>, <urn:mdciii:1603:45:16:598:2:1306>, <urn:mdciii:1603:45:16:598:2:1401>, <urn:mdciii:1603:45:16:598:2:1402>, <urn:mdciii:1603:45:16:598:2:1403>, <urn:mdciii:1603:45:16:598:2:1404>, <urn:mdciii:1603:45:16:598:2:1405>, <urn:mdciii:1603:45:16:598:2:1406>, <urn:mdciii:1603:45:16:598:2:1501>, <urn:mdciii:1603:45:16:598:2:1502>, <urn:mdciii:1603:45:16:598:2:1503>, <urn:mdciii:1603:45:16:598:2:1504>, <urn:mdciii:1603:45:16:598:2:1601>, <urn:mdciii:1603:45:16:598:2:1701>, <urn:mdciii:1603:45:16:598:2:1702>, <urn:mdciii:1603:45:16:598:2:1801>, <urn:mdciii:1603:45:16:598:2:1802>, <urn:mdciii:1603:45:16:598:2:1803>, <urn:mdciii:1603:45:16:598:2:1804>, <urn:mdciii:1603:45:16:598:2:1901>, <urn:mdciii:1603:45:16:598:2:1902>, <urn:mdciii:1603:45:16:598:2:2001>, <urn:mdciii:1603:45:16:598:2:2002>, <urn:mdciii:1603:45:16:598:2:2003>, <urn:mdciii:1603:45:16:598:2:201>, <urn:mdciii:1603:45:16:598:2:202>, <urn:mdciii:1603:45:16:598:2:2104>, <urn:mdciii:1603:45:16:598:2:2105>, <urn:mdciii:1603:45:16:598:2:2108>, <urn:mdciii:1603:45:16:598:2:2201>, <urn:mdciii:1603:45:16:598:2:2204>, <urn:mdciii:1603:45:16:598:2:2206>, <urn:mdciii:1603:45:16:598:2:301>, <urn:mdciii:1603:45:16:598:2:302>, <urn:mdciii:1603:45:16:598:2:303>, <urn:mdciii:1603:45:16:598:2:304>, <urn:mdciii:1603:45:16:598:2:401>, <urn:mdciii:1603:45:16:598:2:501>, <urn:mdciii:1603:45:16:598:2:502>, <urn:mdciii:1603:45:16:598:2:503>, <urn:mdciii:1603:45:16:598:2:504>, <urn:mdciii:1603:45:16:598:2:601>, <urn:mdciii:1603:45:16:598:2:602>, <urn:mdciii:1603:45:16:598:2:701>, <urn:mdciii:1603:45:16:598:2:702>, <urn:mdciii:1603:45:16:598:2:703>, <urn:mdciii:1603:45:16:598:2:706>, <urn:mdciii:1603:45:16:598:2:707>, <urn:mdciii:1603:45:16:598:2:801>, <urn:mdciii:1603:45:16:598:2:802>, <urn:mdciii:1603:45:16:598:2:803>, <urn:mdciii:1603:45:16:598:2:804>, <urn:mdciii:1603:45:16:598:2:805>, <urn:mdciii:1603:45:16:598:2:902>, <urn:mdciii:1603:45:16:598:2:903>, <urn:mdciii:1603:45:16:598:2:905>, <urn:mdciii:1603:45:16:598:2:907> .
+
+<urn:mdciii:1603:45:16:598:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:598:2:1001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1001" ;
+    skos:prefLabel "Chuave District"@eng-Latn ;
+    wdata:q7200235 "PG1001" .
+
+<urn:mdciii:1603:45:16:598:2:1002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1002" ;
+    skos:prefLabel "Gumine District"@eng-Latn ;
+    wdata:q7200235 "PG1002" .
+
+<urn:mdciii:1603:45:16:598:2:1003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1003" ;
+    skos:prefLabel "Karimui/Nomane District"@eng-Latn ;
+    wdata:q7200235 "PG1003" .
+
+<urn:mdciii:1603:45:16:598:2:1004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1004" ;
+    skos:prefLabel "Kerowagi District"@eng-Latn ;
+    wdata:q7200235 "PG1004" .
+
+<urn:mdciii:1603:45:16:598:2:1005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1005" ;
+    skos:prefLabel "Kundiawa/Gembogl District"@eng-Latn ;
+    wdata:q7200235 "PG1005" .
+
+<urn:mdciii:1603:45:16:598:2:1006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1006" ;
+    skos:prefLabel "Sina Sina Yonggomugl District"@eng-Latn ;
+    wdata:q7200235 "PG1006" .
+
+<urn:mdciii:1603:45:16:598:2:101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:101" ;
+    skos:prefLabel "Middle Fly District"@eng-Latn ;
+    wdata:q7200235 "PG0101" .
+
+<urn:mdciii:1603:45:16:598:2:102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:102" ;
+    skos:prefLabel "North Fly District"@eng-Latn ;
+    wdata:q7200235 "PG0102" .
+
+<urn:mdciii:1603:45:16:598:2:103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:103" ;
+    skos:prefLabel "South Fly District"@eng-Latn ;
+    wdata:q7200235 "PG0103" .
+
+<urn:mdciii:1603:45:16:598:2:1101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1101" ;
+    skos:prefLabel "Daulo District"@eng-Latn ;
+    wdata:q7200235 "PG1101" .
+
+<urn:mdciii:1603:45:16:598:2:1102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1102" ;
+    skos:prefLabel "Goroka District"@eng-Latn ;
+    wdata:q7200235 "PG1102" .
+
+<urn:mdciii:1603:45:16:598:2:1103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1103" ;
+    skos:prefLabel "Henganofi District"@eng-Latn ;
+    wdata:q7200235 "PG1103" .
+
+<urn:mdciii:1603:45:16:598:2:1104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1104" ;
+    skos:prefLabel "Kainanatu District"@eng-Latn ;
+    wdata:q7200235 "PG1104" .
+
+<urn:mdciii:1603:45:16:598:2:1105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1105" ;
+    skos:prefLabel "Lufa District"@eng-Latn ;
+    wdata:q7200235 "PG1105" .
+
+<urn:mdciii:1603:45:16:598:2:1106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1106" ;
+    skos:prefLabel "Obura/Wonenara District"@eng-Latn ;
+    wdata:q7200235 "PG1106" .
+
+<urn:mdciii:1603:45:16:598:2:1107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1107" ;
+    skos:prefLabel "Okapa District"@eng-Latn ;
+    wdata:q7200235 "PG1107" .
+
+<urn:mdciii:1603:45:16:598:2:1108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1108" ;
+    skos:prefLabel "Unggai/Benna District"@eng-Latn ;
+    wdata:q7200235 "PG1108" .
+
+<urn:mdciii:1603:45:16:598:2:1201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1201" ;
+    skos:prefLabel "Bulolo District"@eng-Latn ;
+    wdata:q7200235 "PG1201" .
+
+<urn:mdciii:1603:45:16:598:2:1202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1202" ;
+    skos:prefLabel "Finschafen District"@eng-Latn ;
+    wdata:q7200235 "PG1202" .
+
+<urn:mdciii:1603:45:16:598:2:1203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1203" ;
+    skos:prefLabel "Huon District"@eng-Latn ;
+    wdata:q7200235 "PG1203" .
+
+<urn:mdciii:1603:45:16:598:2:1204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1204" ;
+    skos:prefLabel "Kabwum District"@eng-Latn ;
+    wdata:q7200235 "PG1204" .
+
+<urn:mdciii:1603:45:16:598:2:1205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1205" ;
+    skos:prefLabel "Lae District"@eng-Latn ;
+    wdata:q7200235 "PG1205" .
+
+<urn:mdciii:1603:45:16:598:2:1206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1206" ;
+    skos:prefLabel "Markham District"@eng-Latn ;
+    wdata:q7200235 "PG1206" .
+
+<urn:mdciii:1603:45:16:598:2:1207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1207" ;
+    skos:prefLabel "Menyamya District"@eng-Latn ;
+    wdata:q7200235 "PG1207" .
+
+<urn:mdciii:1603:45:16:598:2:1208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1208" ;
+    skos:prefLabel "Nawae District"@eng-Latn ;
+    wdata:q7200235 "PG1208" .
+
+<urn:mdciii:1603:45:16:598:2:1209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1209" ;
+    skos:prefLabel "Tawae/Siassi District"@eng-Latn ;
+    wdata:q7200235 "PG1209" .
+
+<urn:mdciii:1603:45:16:598:2:1301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1301" ;
+    skos:prefLabel "Bogia District"@eng-Latn ;
+    wdata:q7200235 "PG1301" .
+
+<urn:mdciii:1603:45:16:598:2:1302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1302" ;
+    skos:prefLabel "Madang District"@eng-Latn ;
+    wdata:q7200235 "PG1302" .
+
+<urn:mdciii:1603:45:16:598:2:1303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1303" ;
+    skos:prefLabel "Middle Ramu District"@eng-Latn ;
+    wdata:q7200235 "PG1303" .
+
+<urn:mdciii:1603:45:16:598:2:1304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1304" ;
+    skos:prefLabel "Rai Coast District"@eng-Latn ;
+    wdata:q7200235 "PG1304" .
+
+<urn:mdciii:1603:45:16:598:2:1305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1305" ;
+    skos:prefLabel "Sumkar District"@eng-Latn ;
+    wdata:q7200235 "PG1305" .
+
+<urn:mdciii:1603:45:16:598:2:1306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1306" ;
+    skos:prefLabel "Usino Bundi District"@eng-Latn ;
+    wdata:q7200235 "PG1306" .
+
+<urn:mdciii:1603:45:16:598:2:1401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1401" ;
+    skos:prefLabel "Ambunti/Drekikier District"@eng-Latn ;
+    wdata:q7200235 "PG1401" .
+
+<urn:mdciii:1603:45:16:598:2:1402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1402" ;
+    skos:prefLabel "Angoram District"@eng-Latn ;
+    wdata:q7200235 "PG1402" .
+
+<urn:mdciii:1603:45:16:598:2:1403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1403" ;
+    skos:prefLabel "Maprik District"@eng-Latn ;
+    wdata:q7200235 "PG1403" .
+
+<urn:mdciii:1603:45:16:598:2:1404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1404" ;
+    skos:prefLabel "Wewak District"@eng-Latn ;
+    wdata:q7200235 "PG1404" .
+
+<urn:mdciii:1603:45:16:598:2:1405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1405" ;
+    skos:prefLabel "Wosera Gawi District"@eng-Latn ;
+    wdata:q7200235 "PG1405" .
+
+<urn:mdciii:1603:45:16:598:2:1406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1406" ;
+    skos:prefLabel "Yangoru Saussia District"@eng-Latn ;
+    wdata:q7200235 "PG1406" .
+
+<urn:mdciii:1603:45:16:598:2:1501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1501" ;
+    skos:prefLabel "Aitape/Lumi District"@eng-Latn ;
+    wdata:q7200235 "PG1501" .
+
+<urn:mdciii:1603:45:16:598:2:1502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1502" ;
+    skos:prefLabel "Nuku District"@eng-Latn ;
+    wdata:q7200235 "PG1502" .
+
+<urn:mdciii:1603:45:16:598:2:1503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1503" ;
+    skos:prefLabel "Telefomin District"@eng-Latn ;
+    wdata:q7200235 "PG1503" .
+
+<urn:mdciii:1603:45:16:598:2:1504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1504" ;
+    skos:prefLabel "Vanimo/Green River District"@eng-Latn ;
+    wdata:q7200235 "PG1504" .
+
+<urn:mdciii:1603:45:16:598:2:1601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1601" ;
+    skos:prefLabel "Manus District"@eng-Latn ;
+    wdata:q7200235 "PG1601" .
+
+<urn:mdciii:1603:45:16:598:2:1701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1701" ;
+    skos:prefLabel "Kavieng District"@eng-Latn ;
+    wdata:q7200235 "PG1701" .
+
+<urn:mdciii:1603:45:16:598:2:1702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1702" ;
+    skos:prefLabel "Namatanai District"@eng-Latn ;
+    wdata:q7200235 "PG1702" .
+
+<urn:mdciii:1603:45:16:598:2:1801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1801" ;
+    skos:prefLabel "Gazelle District"@eng-Latn ;
+    wdata:q7200235 "PG1801" .
+
+<urn:mdciii:1603:45:16:598:2:1802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1802" ;
+    skos:prefLabel "Kokopo District"@eng-Latn ;
+    wdata:q7200235 "PG1802" .
+
+<urn:mdciii:1603:45:16:598:2:1803>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1803" ;
+    skos:prefLabel "Pomio District"@eng-Latn ;
+    wdata:q7200235 "PG1803" .
+
+<urn:mdciii:1603:45:16:598:2:1804>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1804" ;
+    skos:prefLabel "Rabaul District"@eng-Latn ;
+    wdata:q7200235 "PG1804" .
+
+<urn:mdciii:1603:45:16:598:2:1901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1901" ;
+    skos:prefLabel "Kandrian/Gloucester District"@eng-Latn ;
+    wdata:q7200235 "PG1901" .
+
+<urn:mdciii:1603:45:16:598:2:1902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:1902" ;
+    skos:prefLabel "Talasea District"@eng-Latn ;
+    wdata:q7200235 "PG1902" .
+
+<urn:mdciii:1603:45:16:598:2:2001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2001" ;
+    skos:prefLabel "North Bougainville District"@eng-Latn ;
+    wdata:q7200235 "PG2001" .
+
+<urn:mdciii:1603:45:16:598:2:2002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2002" ;
+    skos:prefLabel "Central Bougainville District"@eng-Latn ;
+    wdata:q7200235 "PG2002" .
+
+<urn:mdciii:1603:45:16:598:2:2003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2003" ;
+    skos:prefLabel "South Bougainville District"@eng-Latn ;
+    wdata:q7200235 "PG2003" .
+
+<urn:mdciii:1603:45:16:598:2:201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:201" ;
+    skos:prefLabel "Kerema District"@eng-Latn ;
+    wdata:q7200235 "PG0201" .
+
+<urn:mdciii:1603:45:16:598:2:202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:202" ;
+    skos:prefLabel "Kikori District"@eng-Latn ;
+    wdata:q7200235 "PG0202" .
+
+<urn:mdciii:1603:45:16:598:2:2104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2104" ;
+    skos:prefLabel "Komo/Magarima District"@eng-Latn ;
+    wdata:q7200235 "PG2104" .
+
+<urn:mdciii:1603:45:16:598:2:2105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2105" ;
+    skos:prefLabel "Koroba/Kopiago District"@eng-Latn ;
+    wdata:q7200235 "PG2105" .
+
+<urn:mdciii:1603:45:16:598:2:2108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2108" ;
+    skos:prefLabel "Tari/Pori District"@eng-Latn ;
+    wdata:q7200235 "PG2108" .
+
+<urn:mdciii:1603:45:16:598:2:2201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2201" ;
+    skos:prefLabel "Anglimp/South Waghi District"@eng-Latn ;
+    wdata:q7200235 "PG2201" .
+
+<urn:mdciii:1603:45:16:598:2:2204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2204" ;
+    skos:prefLabel "Jimi District"@eng-Latn ;
+    wdata:q7200235 "PG2204" .
+
+<urn:mdciii:1603:45:16:598:2:2206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:2206" ;
+    skos:prefLabel "North Waghi District"@eng-Latn ;
+    wdata:q7200235 "PG2206" .
+
+<urn:mdciii:1603:45:16:598:2:301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:301" ;
+    skos:prefLabel "Abau District"@eng-Latn ;
+    wdata:q7200235 "PG0301" .
+
+<urn:mdciii:1603:45:16:598:2:302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:302" ;
+    skos:prefLabel "Goilala District"@eng-Latn ;
+    wdata:q7200235 "PG0302" .
+
+<urn:mdciii:1603:45:16:598:2:303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:303" ;
+    skos:prefLabel "Kairuku - Hiri District"@eng-Latn ;
+    wdata:q7200235 "PG0303" .
+
+<urn:mdciii:1603:45:16:598:2:304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:304" ;
+    skos:prefLabel "Rigo District"@eng-Latn ;
+    wdata:q7200235 "PG0304" .
+
+<urn:mdciii:1603:45:16:598:2:401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:401" ;
+    skos:prefLabel "National Capital District"@eng-Latn ;
+    wdata:q7200235 "PG0401" .
+
+<urn:mdciii:1603:45:16:598:2:501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:501" ;
+    skos:prefLabel "Alotau District"@eng-Latn ;
+    wdata:q7200235 "PG0501" .
+
+<urn:mdciii:1603:45:16:598:2:502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:502" ;
+    skos:prefLabel "Samarai-Murua District"@eng-Latn ;
+    wdata:q7200235 "PG0502" .
+
+<urn:mdciii:1603:45:16:598:2:503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:503" ;
+    skos:prefLabel "Kiriwina-Goodenough District"@eng-Latn ;
+    wdata:q7200235 "PG0503" .
+
+<urn:mdciii:1603:45:16:598:2:504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:504" ;
+    skos:prefLabel "Esa'ala District"@eng-Latn ;
+    wdata:q7200235 "PG0504" .
+
+<urn:mdciii:1603:45:16:598:2:601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:601" ;
+    skos:prefLabel "Ijivitari District"@eng-Latn ;
+    wdata:q7200235 "PG0601" .
+
+<urn:mdciii:1603:45:16:598:2:602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:602" ;
+    skos:prefLabel "Sohe District"@eng-Latn ;
+    wdata:q7200235 "PG0602" .
+
+<urn:mdciii:1603:45:16:598:2:701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:701" ;
+    skos:prefLabel "Ialibu/Pangia District"@eng-Latn ;
+    wdata:q7200235 "PG0701" .
+
+<urn:mdciii:1603:45:16:598:2:702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:702" ;
+    skos:prefLabel "Imbonggu District"@eng-Latn ;
+    wdata:q7200235 "PG0702" .
+
+<urn:mdciii:1603:45:16:598:2:703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:703" ;
+    skos:prefLabel "Kagua/Erave District"@eng-Latn ;
+    wdata:q7200235 "PG0703" .
+
+<urn:mdciii:1603:45:16:598:2:706>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:706" ;
+    skos:prefLabel "Mendi/Munihu District"@eng-Latn ;
+    wdata:q7200235 "PG0706" .
+
+<urn:mdciii:1603:45:16:598:2:707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:707" ;
+    skos:prefLabel "Nipa/Kutubu District"@eng-Latn ;
+    wdata:q7200235 "PG0707" .
+
+<urn:mdciii:1603:45:16:598:2:801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:801" ;
+    skos:prefLabel "Kandep District"@eng-Latn ;
+    wdata:q7200235 "PG0801" .
+
+<urn:mdciii:1603:45:16:598:2:802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:802" ;
+    skos:prefLabel "Kompiam District"@eng-Latn ;
+    wdata:q7200235 "PG0802" .
+
+<urn:mdciii:1603:45:16:598:2:803>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:803" ;
+    skos:prefLabel "Lagaip/Pogera District"@eng-Latn ;
+    wdata:q7200235 "PG0803" .
+
+<urn:mdciii:1603:45:16:598:2:804>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:804" ;
+    skos:prefLabel "Wabag District"@eng-Latn ;
+    wdata:q7200235 "PG0804" .
+
+<urn:mdciii:1603:45:16:598:2:805>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:805" ;
+    skos:prefLabel "Wapenamanda District"@eng-Latn ;
+    wdata:q7200235 "PG0805" .
+
+<urn:mdciii:1603:45:16:598:2:902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:902" ;
+    skos:prefLabel "Dei District"@eng-Latn ;
+    wdata:q7200235 "PG0902" .
+
+<urn:mdciii:1603:45:16:598:2:903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:903" ;
+    skos:prefLabel "Mt Hagen District"@eng-Latn ;
+    wdata:q7200235 "PG0903" .
+
+<urn:mdciii:1603:45:16:598:2:905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:905" ;
+    skos:prefLabel "Mul/Baiyer District"@eng-Latn ;
+    wdata:q7200235 "PG0905" .
+
+<urn:mdciii:1603:45:16:598:2:907>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:598:2:907" ;
+    skos:prefLabel "Tambul/Nebilyer District"@eng-Latn ;
+    wdata:q7200235 "PG0907" .
+

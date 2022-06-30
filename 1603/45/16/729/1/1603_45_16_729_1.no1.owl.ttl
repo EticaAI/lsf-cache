@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,98 +27,139 @@
     rdfs:label "(1603:45:16:729:1)" ;
     skos:member <urn:mdciii:1603:45:16:729:1:10>, <urn:mdciii:1603:45:16:729:1:11>, <urn:mdciii:1603:45:16:729:1:12>, <urn:mdciii:1603:45:16:729:1:13>, <urn:mdciii:1603:45:16:729:1:14>, <urn:mdciii:1603:45:16:729:1:15>, <urn:mdciii:1603:45:16:729:1:16>, <urn:mdciii:1603:45:16:729:1:17>, <urn:mdciii:1603:45:16:729:1:18>, <urn:mdciii:1603:45:16:729:1:19>, <urn:mdciii:1603:45:16:729:1:2>, <urn:mdciii:1603:45:16:729:1:3>, <urn:mdciii:1603:45:16:729:1:4>, <urn:mdciii:1603:45:16:729:1:5>, <urn:mdciii:1603:45:16:729:1:6>, <urn:mdciii:1603:45:16:729:1:7>, <urn:mdciii:1603:45:16:729:1:8>, <urn:mdciii:1603:45:16:729:1:9> .
 
+<urn:mdciii:1603:45:16:729:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:729:1:1>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:1" .
+    rdfs:label "1603:45:16:729:1:1" ;
+    skos:prefLabel "Khartoum"@eng-Latn, "الخرطوم"@ara-Arab ;
+    wdata:q7200235 "SD01" .
 
 <urn:mdciii:1603:45:16:729:1:10>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:10" .
+    rdfs:label "1603:45:16:729:1:10" ;
+    skos:prefLabel "Red Sea"@eng-Latn, "البحر الأحمر"@ara-Arab ;
+    wdata:q7200235 "SD10" .
 
 <urn:mdciii:1603:45:16:729:1:11>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:11" .
+    rdfs:label "1603:45:16:729:1:11" ;
+    skos:prefLabel "Kassala"@eng-Latn, "كسلا"@ara-Arab ;
+    wdata:q7200235 "SD11" .
 
 <urn:mdciii:1603:45:16:729:1:12>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:12" .
+    rdfs:label "1603:45:16:729:1:12" ;
+    skos:prefLabel "Gedaref"@eng-Latn, "القضارف"@ara-Arab ;
+    wdata:q7200235 "SD12" .
 
 <urn:mdciii:1603:45:16:729:1:13>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:13" .
+    rdfs:label "1603:45:16:729:1:13" ;
+    skos:prefLabel "North Kordofan"@eng-Latn, "شمال كردفان"@ara-Arab ;
+    wdata:q7200235 "SD13" .
 
 <urn:mdciii:1603:45:16:729:1:14>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:14" .
+    rdfs:label "1603:45:16:729:1:14" ;
+    skos:prefLabel "Sennar"@eng-Latn, "سنار"@ara-Arab ;
+    wdata:q7200235 "SD14" .
 
 <urn:mdciii:1603:45:16:729:1:15>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:15" .
+    rdfs:label "1603:45:16:729:1:15" ;
+    skos:prefLabel "Aj Jazirah"@eng-Latn, "الجزيرة"@ara-Arab ;
+    wdata:q7200235 "SD15" .
 
 <urn:mdciii:1603:45:16:729:1:16>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:16" .
+    rdfs:label "1603:45:16:729:1:16" ;
+    skos:prefLabel "River Nile"@eng-Latn, "نهر النيل"@ara-Arab ;
+    wdata:q7200235 "SD16" .
 
 <urn:mdciii:1603:45:16:729:1:17>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:17" .
+    rdfs:label "1603:45:16:729:1:17" ;
+    skos:prefLabel "Northern"@eng-Latn, "الشمالية"@ara-Arab ;
+    wdata:q7200235 "SD17" .
 
 <urn:mdciii:1603:45:16:729:1:18>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:18" .
+    rdfs:label "1603:45:16:729:1:18" ;
+    skos:prefLabel "West Kordofan"@eng-Latn, "غرب كردفان"@ara-Arab ;
+    wdata:q7200235 "SD18" .
 
 <urn:mdciii:1603:45:16:729:1:19>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:19" .
+    rdfs:label "1603:45:16:729:1:19" ;
+    skos:prefLabel "Abyei PCA"@eng-Latn, "إدارية أبيي"@ara-Arab ;
+    wdata:q7200235 "SD19" .
 
 <urn:mdciii:1603:45:16:729:1:2>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:2" .
+    rdfs:label "1603:45:16:729:1:2" ;
+    skos:prefLabel "North Darfur"@eng-Latn, "شمال دارفور"@ara-Arab ;
+    wdata:q7200235 "SD02" .
 
 <urn:mdciii:1603:45:16:729:1:3>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:3" .
+    rdfs:label "1603:45:16:729:1:3" ;
+    skos:prefLabel "South Darfur"@eng-Latn, "جنوب دارفور"@ara-Arab ;
+    wdata:q7200235 "SD03" .
 
 <urn:mdciii:1603:45:16:729:1:4>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:4" .
+    rdfs:label "1603:45:16:729:1:4" ;
+    skos:prefLabel "West Darfur"@eng-Latn, "غرب دارفور"@ara-Arab ;
+    wdata:q7200235 "SD04" .
 
 <urn:mdciii:1603:45:16:729:1:5>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:5" .
+    rdfs:label "1603:45:16:729:1:5" ;
+    skos:prefLabel "East Darfur"@eng-Latn, "شرق دارفور"@ara-Arab ;
+    wdata:q7200235 "SD05" .
 
 <urn:mdciii:1603:45:16:729:1:6>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:6" .
+    rdfs:label "1603:45:16:729:1:6" ;
+    skos:prefLabel "Central Darfur"@eng-Latn, "وسط دارفور"@ara-Arab ;
+    wdata:q7200235 "SD06" .
 
 <urn:mdciii:1603:45:16:729:1:7>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:7" .
+    rdfs:label "1603:45:16:729:1:7" ;
+    skos:prefLabel "South Kordofan"@eng-Latn, "جنوب كردفان"@ara-Arab ;
+    wdata:q7200235 "SD07" .
 
 <urn:mdciii:1603:45:16:729:1:8>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:8" .
+    rdfs:label "1603:45:16:729:1:8" ;
+    skos:prefLabel "Blue Nile"@eng-Latn, "النيل الأزرق"@ara-Arab ;
+    wdata:q7200235 "SD08" .
 
 <urn:mdciii:1603:45:16:729:1:9>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:729:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:729:1:9" .
+    rdfs:label "1603:45:16:729:1:9" ;
+    skos:prefLabel "White Nile"@eng-Latn, "النيل الأبيض"@ara-Arab ;
+    wdata:q7200235 "SD09" .
 

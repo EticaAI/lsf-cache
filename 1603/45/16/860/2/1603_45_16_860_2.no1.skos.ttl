@@ -1,0 +1,1224 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:860()> .
+
+<urn:mdciii:1603:45:16:860()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:860)" ;
+    skos:member <urn:mdciii:1603:45:16:860:2()> .
+
+<urn:mdciii:1603:45:16:860:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:860:2)" ;
+    skos:member <urn:mdciii:1603:45:16:860:2:10207>, <urn:mdciii:1603:45:16:860:2:10212>, <urn:mdciii:1603:45:16:860:2:10220>, <urn:mdciii:1603:45:16:860:2:10224>, <urn:mdciii:1603:45:16:860:2:10229>, <urn:mdciii:1603:45:16:860:2:10232>, <urn:mdciii:1603:45:16:860:2:10233>, <urn:mdciii:1603:45:16:860:2:10234>, <urn:mdciii:1603:45:16:860:2:10235>, <urn:mdciii:1603:45:16:860:2:10237>, <urn:mdciii:1603:45:16:860:2:10242>, <urn:mdciii:1603:45:16:860:2:10245>, <urn:mdciii:1603:45:16:860:2:10250>, <urn:mdciii:1603:45:16:860:2:10401>, <urn:mdciii:1603:45:16:860:2:10405>, <urn:mdciii:1603:45:16:860:2:12211>, <urn:mdciii:1603:45:16:860:2:12216>, <urn:mdciii:1603:45:16:860:2:12230>, <urn:mdciii:1603:45:16:860:2:12234>, <urn:mdciii:1603:45:16:860:2:12238>, <urn:mdciii:1603:45:16:860:2:12244>, <urn:mdciii:1603:45:16:860:2:12248>, <urn:mdciii:1603:45:16:860:2:12251>, <urn:mdciii:1603:45:16:860:2:12401>, <urn:mdciii:1603:45:16:860:2:12408>, <urn:mdciii:1603:45:16:860:2:14204>, <urn:mdciii:1603:45:16:860:2:14207>, <urn:mdciii:1603:45:16:860:2:14212>, <urn:mdciii:1603:45:16:860:2:14216>, <urn:mdciii:1603:45:16:860:2:14219>, <urn:mdciii:1603:45:16:860:2:14224>, <urn:mdciii:1603:45:16:860:2:14229>, <urn:mdciii:1603:45:16:860:2:14234>, <urn:mdciii:1603:45:16:860:2:14236>, <urn:mdciii:1603:45:16:860:2:14237>, <urn:mdciii:1603:45:16:860:2:14242>, <urn:mdciii:1603:45:16:860:2:14401>, <urn:mdciii:1603:45:16:860:2:18203>, <urn:mdciii:1603:45:16:860:2:18206>, <urn:mdciii:1603:45:16:860:2:18209>, <urn:mdciii:1603:45:16:860:2:18212>, <urn:mdciii:1603:45:16:860:2:18215>, <urn:mdciii:1603:45:16:860:2:18216>, <urn:mdciii:1603:45:16:860:2:18218>, <urn:mdciii:1603:45:16:860:2:18224>, <urn:mdciii:1603:45:16:860:2:18227>, <urn:mdciii:1603:45:16:860:2:18230>, <urn:mdciii:1603:45:16:860:2:18233>, <urn:mdciii:1603:45:16:860:2:18235>, <urn:mdciii:1603:45:16:860:2:18236>, <urn:mdciii:1603:45:16:860:2:18238>, <urn:mdciii:1603:45:16:860:2:18401>, <urn:mdciii:1603:45:16:860:2:18406>, <urn:mdciii:1603:45:16:860:2:22201>, <urn:mdciii:1603:45:16:860:2:22202>, <urn:mdciii:1603:45:16:860:2:22204>, <urn:mdciii:1603:45:16:860:2:22207>, <urn:mdciii:1603:45:16:860:2:22210>, <urn:mdciii:1603:45:16:860:2:22212>, <urn:mdciii:1603:45:16:860:2:22214>, <urn:mdciii:1603:45:16:860:2:22215>, <urn:mdciii:1603:45:16:860:2:22217>, <urn:mdciii:1603:45:16:860:2:22220>, <urn:mdciii:1603:45:16:860:2:22221>, <urn:mdciii:1603:45:16:860:2:22223>, <urn:mdciii:1603:45:16:860:2:22226>, <urn:mdciii:1603:45:16:860:2:22401>, <urn:mdciii:1603:45:16:860:2:24206>, <urn:mdciii:1603:45:16:860:2:24212>, <urn:mdciii:1603:45:16:860:2:24216>, <urn:mdciii:1603:45:16:860:2:24220>, <urn:mdciii:1603:45:16:860:2:24226>, <urn:mdciii:1603:45:16:860:2:24228>, <urn:mdciii:1603:45:16:860:2:24231>, <urn:mdciii:1603:45:16:860:2:24235>, <urn:mdciii:1603:45:16:860:2:24401>, <urn:mdciii:1603:45:16:860:2:24410>, <urn:mdciii:1603:45:16:860:2:24413>, <urn:mdciii:1603:45:16:860:2:26262>, <urn:mdciii:1603:45:16:860:2:26264>, <urn:mdciii:1603:45:16:860:2:26266>, <urn:mdciii:1603:45:16:860:2:26269>, <urn:mdciii:1603:45:16:860:2:26273>, <urn:mdciii:1603:45:16:860:2:26277>, <urn:mdciii:1603:45:16:860:2:26280>, <urn:mdciii:1603:45:16:860:2:26283>, <urn:mdciii:1603:45:16:860:2:26287>, <urn:mdciii:1603:45:16:860:2:26290>, <urn:mdciii:1603:45:16:860:2:26294>, <urn:mdciii:1603:45:16:860:2:27206>, <urn:mdciii:1603:45:16:860:2:27212>, <urn:mdciii:1603:45:16:860:2:27220>, <urn:mdciii:1603:45:16:860:2:27224>, <urn:mdciii:1603:45:16:860:2:27228>, <urn:mdciii:1603:45:16:860:2:27233>, <urn:mdciii:1603:45:16:860:2:27237>, <urn:mdciii:1603:45:16:860:2:27239>, <urn:mdciii:1603:45:16:860:2:27248>, <urn:mdciii:1603:45:16:860:2:27249>, <urn:mdciii:1603:45:16:860:2:27250>, <urn:mdciii:1603:45:16:860:2:27253>, <urn:mdciii:1603:45:16:860:2:27256>, <urn:mdciii:1603:45:16:860:2:27259>, <urn:mdciii:1603:45:16:860:2:27265>, <urn:mdciii:1603:45:16:860:2:27401>, <urn:mdciii:1603:45:16:860:2:27404>, <urn:mdciii:1603:45:16:860:2:27407>, <urn:mdciii:1603:45:16:860:2:27413>, <urn:mdciii:1603:45:16:860:2:27415>, <urn:mdciii:1603:45:16:860:2:27419>, <urn:mdciii:1603:45:16:860:2:27424>, <urn:mdciii:1603:45:16:860:2:30203>, <urn:mdciii:1603:45:16:860:2:30206>, <urn:mdciii:1603:45:16:860:2:30209>, <urn:mdciii:1603:45:16:860:2:30212>, <urn:mdciii:1603:45:16:860:2:30215>, <urn:mdciii:1603:45:16:860:2:30218>, <urn:mdciii:1603:45:16:860:2:30221>, <urn:mdciii:1603:45:16:860:2:30224>, <urn:mdciii:1603:45:16:860:2:30226>, <urn:mdciii:1603:45:16:860:2:30227>, <urn:mdciii:1603:45:16:860:2:30230>, <urn:mdciii:1603:45:16:860:2:30233>, <urn:mdciii:1603:45:16:860:2:30236>, <urn:mdciii:1603:45:16:860:2:30238>, <urn:mdciii:1603:45:16:860:2:30242>, <urn:mdciii:1603:45:16:860:2:30401>, <urn:mdciii:1603:45:16:860:2:30405>, <urn:mdciii:1603:45:16:860:2:30408>, <urn:mdciii:1603:45:16:860:2:30412>, <urn:mdciii:1603:45:16:860:2:3203>, <urn:mdciii:1603:45:16:860:2:3206>, <urn:mdciii:1603:45:16:860:2:3209>, <urn:mdciii:1603:45:16:860:2:3210>, <urn:mdciii:1603:45:16:860:2:3211>, <urn:mdciii:1603:45:16:860:2:3214>, <urn:mdciii:1603:45:16:860:2:3217>, <urn:mdciii:1603:45:16:860:2:3220>, <urn:mdciii:1603:45:16:860:2:3224>, <urn:mdciii:1603:45:16:860:2:3227>, <urn:mdciii:1603:45:16:860:2:3230>, <urn:mdciii:1603:45:16:860:2:3232>, <urn:mdciii:1603:45:16:860:2:3236>, <urn:mdciii:1603:45:16:860:2:33204>, <urn:mdciii:1603:45:16:860:2:33208>, <urn:mdciii:1603:45:16:860:2:33212>, <urn:mdciii:1603:45:16:860:2:33217>, <urn:mdciii:1603:45:16:860:2:33220>, <urn:mdciii:1603:45:16:860:2:33223>, <urn:mdciii:1603:45:16:860:2:33226>, <urn:mdciii:1603:45:16:860:2:33230>, <urn:mdciii:1603:45:16:860:2:33233>, <urn:mdciii:1603:45:16:860:2:33236>, <urn:mdciii:1603:45:16:860:2:33401>, <urn:mdciii:1603:45:16:860:2:33406>, <urn:mdciii:1603:45:16:860:2:3401>, <urn:mdciii:1603:45:16:860:2:3408>, <urn:mdciii:1603:45:16:860:2:35204>, <urn:mdciii:1603:45:16:860:2:35207>, <urn:mdciii:1603:45:16:860:2:35211>, <urn:mdciii:1603:45:16:860:2:35212>, <urn:mdciii:1603:45:16:860:2:35215>, <urn:mdciii:1603:45:16:860:2:35218>, <urn:mdciii:1603:45:16:860:2:35222>, <urn:mdciii:1603:45:16:860:2:35225>, <urn:mdciii:1603:45:16:860:2:35230>, <urn:mdciii:1603:45:16:860:2:35233>, <urn:mdciii:1603:45:16:860:2:35236>, <urn:mdciii:1603:45:16:860:2:35240>, <urn:mdciii:1603:45:16:860:2:35243>, <urn:mdciii:1603:45:16:860:2:35250>, <urn:mdciii:1603:45:16:860:2:35401>, <urn:mdciii:1603:45:16:860:2:6204>, <urn:mdciii:1603:45:16:860:2:6207>, <urn:mdciii:1603:45:16:860:2:6212>, <urn:mdciii:1603:45:16:860:2:6215>, <urn:mdciii:1603:45:16:860:2:6219>, <urn:mdciii:1603:45:16:860:2:6230>, <urn:mdciii:1603:45:16:860:2:6232>, <urn:mdciii:1603:45:16:860:2:6240>, <urn:mdciii:1603:45:16:860:2:6242>, <urn:mdciii:1603:45:16:860:2:6246>, <urn:mdciii:1603:45:16:860:2:6258>, <urn:mdciii:1603:45:16:860:2:6401>, <urn:mdciii:1603:45:16:860:2:6403>, <urn:mdciii:1603:45:16:860:2:8201>, <urn:mdciii:1603:45:16:860:2:8204>, <urn:mdciii:1603:45:16:860:2:8209>, <urn:mdciii:1603:45:16:860:2:8212>, <urn:mdciii:1603:45:16:860:2:8215>, <urn:mdciii:1603:45:16:860:2:8218>, <urn:mdciii:1603:45:16:860:2:8220>, <urn:mdciii:1603:45:16:860:2:8223>, <urn:mdciii:1603:45:16:860:2:8225>, <urn:mdciii:1603:45:16:860:2:8228>, <urn:mdciii:1603:45:16:860:2:8235>, <urn:mdciii:1603:45:16:860:2:8237>, <urn:mdciii:1603:45:16:860:2:8401> .
+
+<urn:mdciii:1603:45:16:860:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:860:2:10207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10207" ;
+    skos:prefLabel "G'uzor"@uzb-Latn, "Guzar"@eng-Latn, "Гузарский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10207" .
+
+<urn:mdciii:1603:45:16:860:2:10212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10212" ;
+    skos:prefLabel "Dehkanabad"@eng-Latn, "Dehqonobod"@uzb-Latn, "Дехканабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10212" .
+
+<urn:mdciii:1603:45:16:860:2:10220>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10220" ;
+    skos:prefLabel "Kamashi"@eng-Latn, "Qamashi"@uzb-Latn, "Камашинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10220" .
+
+<urn:mdciii:1603:45:16:860:2:10224>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10224" ;
+    skos:prefLabel "Karshi"@eng-Latn, "Qarshi"@uzb-Latn, "Каршинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10224" .
+
+<urn:mdciii:1603:45:16:860:2:10229>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10229" ;
+    skos:prefLabel "Kasan"@eng-Latn, "Koson"@uzb-Latn, "Касанский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10229" .
+
+<urn:mdciii:1603:45:16:860:2:10232>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10232" ;
+    skos:prefLabel "Kitab"@eng-Latn, "Kitob"@uzb-Latn, "Китабский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10232" .
+
+<urn:mdciii:1603:45:16:860:2:10233>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10233" ;
+    skos:prefLabel "Mirishkar"@eng-Latn, "Mirishkor"@uzb-Latn, "Миришкорский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10233" .
+
+<urn:mdciii:1603:45:16:860:2:10234>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10234" ;
+    skos:prefLabel "Mubarek"@eng-Latn, "Muborak"@uzb-Latn, "Мубарекский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10234" .
+
+<urn:mdciii:1603:45:16:860:2:10235>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10235" ;
+    skos:prefLabel "Nishan"@eng-Latn, "Nishon"@uzb-Latn, "Нишанский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10235" .
+
+<urn:mdciii:1603:45:16:860:2:10237>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10237" ;
+    skos:prefLabel "Kasbi"@eng-Latn, "Kasbi"@uzb-Latn, "Касбинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10237" .
+
+<urn:mdciii:1603:45:16:860:2:10242>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10242" ;
+    skos:prefLabel "Chirakchi"@eng-Latn, "Chiroqchi"@uzb-Latn, "Чиракчинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10242" .
+
+<urn:mdciii:1603:45:16:860:2:10245>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10245" ;
+    skos:prefLabel "Shahrisabz"@uzb-Latn, "Shakhrisabz"@eng-Latn, "Шахрисабзский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10245" .
+
+<urn:mdciii:1603:45:16:860:2:10250>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10250" ;
+    skos:prefLabel "Yakkabag"@eng-Latn, "Yakkabog'"@uzb-Latn, "Яккабагский"@rus-Cyrl ;
+    wdata:q7200235 "UZ10250" .
+
+<urn:mdciii:1603:45:16:860:2:10401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10401" ;
+    skos:prefLabel "Karshi city"@eng-Latn, "Qarshi ш."@uzb-Latn, "г.Карши"@rus-Cyrl ;
+    wdata:q7200235 "UZ10401" .
+
+<urn:mdciii:1603:45:16:860:2:10405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:10405" ;
+    skos:prefLabel "Shahrisabz ш."@uzb-Latn, "Shakhrisabz city"@eng-Latn, "г.Шахрисабз"@rus-Cyrl ;
+    wdata:q7200235 "UZ10405" .
+
+<urn:mdciii:1603:45:16:860:2:12211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12211" ;
+    skos:prefLabel "Kanimekh"@eng-Latn, "Konimex"@uzb-Latn, "Канимехский"@rus-Cyrl ;
+    wdata:q7200235 "UZ12211" .
+
+<urn:mdciii:1603:45:16:860:2:12216>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12216" ;
+    skos:prefLabel "Kiziltepa"@eng-Latn, "Qiziltepa"@uzb-Latn, "Кызылтепинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ12216" .
+
+<urn:mdciii:1603:45:16:860:2:12230>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12230" ;
+    skos:prefLabel "Navbahor"@uzb-Latn, "Navbakhor"@eng-Latn, "Навбахорский"@rus-Cyrl ;
+    wdata:q7200235 "UZ12230" .
+
+<urn:mdciii:1603:45:16:860:2:12234>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12234" ;
+    skos:prefLabel "Karmana"@eng-Latn, "Karmana"@uzb-Latn, "Карманинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ12234" .
+
+<urn:mdciii:1603:45:16:860:2:12238>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12238" ;
+    skos:prefLabel "Nurata"@eng-Latn, "Nurota"@uzb-Latn, "Нуратинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ12238" .
+
+<urn:mdciii:1603:45:16:860:2:12244>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12244" ;
+    skos:prefLabel "Tamdi"@eng-Latn, "Tomdi"@uzb-Latn, "Тамдынский"@rus-Cyrl ;
+    wdata:q7200235 "UZ12244" .
+
+<urn:mdciii:1603:45:16:860:2:12248>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12248" ;
+    skos:prefLabel "Uchkuduk"@eng-Latn, "Uchquduq"@uzb-Latn, "Учкудукский"@rus-Cyrl ;
+    wdata:q7200235 "UZ12248" .
+
+<urn:mdciii:1603:45:16:860:2:12251>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12251" ;
+    skos:prefLabel "Khatirchi"@eng-Latn, "Xatirchi"@uzb-Latn, "Хатырчинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ12251" .
+
+<urn:mdciii:1603:45:16:860:2:12401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12401" ;
+    skos:prefLabel "Navoi city"@eng-Latn, "Navoiy ш."@uzb-Latn, "г.Навои"@rus-Cyrl ;
+    wdata:q7200235 "UZ12401" .
+
+<urn:mdciii:1603:45:16:860:2:12408>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:12408" ;
+    skos:prefLabel "Zarafshan city"@eng-Latn, "Zarafshon ш."@uzb-Latn, "г.Заpафшан"@rus-Cyrl ;
+    wdata:q7200235 "UZ12408" .
+
+<urn:mdciii:1603:45:16:860:2:14204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14204" ;
+    skos:prefLabel "Mingbulak"@eng-Latn, "Mingbuloq"@uzb-Latn, "Мингбулакский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14204" .
+
+<urn:mdciii:1603:45:16:860:2:14207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14207" ;
+    skos:prefLabel "Kasansay"@eng-Latn, "Kosonsoy"@uzb-Latn, "Касансайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14207" .
+
+<urn:mdciii:1603:45:16:860:2:14212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14212" ;
+    skos:prefLabel "Namangan"@eng-Latn, "Namangan"@uzb-Latn, "Наманганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14212" .
+
+<urn:mdciii:1603:45:16:860:2:14216>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14216" ;
+    skos:prefLabel "Narin"@eng-Latn, "Norin"@uzb-Latn, "Нарынский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14216" .
+
+<urn:mdciii:1603:45:16:860:2:14219>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14219" ;
+    skos:prefLabel "Pap"@eng-Latn, "Pop"@uzb-Latn, "Папский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14219" .
+
+<urn:mdciii:1603:45:16:860:2:14224>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14224" ;
+    skos:prefLabel "To'raqo'rg'on"@uzb-Latn, "Turakurgan"@eng-Latn, "Туракурганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14224" .
+
+<urn:mdciii:1603:45:16:860:2:14229>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14229" ;
+    skos:prefLabel "Uychi"@eng-Latn, "Uychi"@uzb-Latn, "Уйчинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14229" .
+
+<urn:mdciii:1603:45:16:860:2:14234>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14234" ;
+    skos:prefLabel "Uchkurgan"@eng-Latn, "Uchqo'rg'on"@uzb-Latn, "Учкурганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14234" .
+
+<urn:mdciii:1603:45:16:860:2:14236>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14236" ;
+    skos:prefLabel "Chartak"@eng-Latn, "Chortoq"@uzb-Latn, "Чартакский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14236" .
+
+<urn:mdciii:1603:45:16:860:2:14237>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14237" ;
+    skos:prefLabel "Chust"@eng-Latn, "Chust"@uzb-Latn, "Чустский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14237" .
+
+<urn:mdciii:1603:45:16:860:2:14242>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14242" ;
+    skos:prefLabel "Yangikurgan"@eng-Latn, "Yangiqo'rg'on"@uzb-Latn, "Янгикурганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ14242" .
+
+<urn:mdciii:1603:45:16:860:2:14401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:14401" ;
+    skos:prefLabel "Namangan city"@eng-Latn, "Namangan ш."@uzb-Latn, "г.Наманган"@rus-Cyrl ;
+    wdata:q7200235 "UZ14401" .
+
+<urn:mdciii:1603:45:16:860:2:18203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18203" ;
+    skos:prefLabel "Akdarya"@eng-Latn, "Oqdaryo"@uzb-Latn, "Акдарьинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18203" .
+
+<urn:mdciii:1603:45:16:860:2:18206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18206" ;
+    skos:prefLabel "Bulung'ur"@uzb-Latn, "Bulungur"@eng-Latn, "Булунгурский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18206" .
+
+<urn:mdciii:1603:45:16:860:2:18209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18209" ;
+    skos:prefLabel "Dzhambay"@eng-Latn, "Jomboy"@uzb-Latn, "Джамбайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18209" .
+
+<urn:mdciii:1603:45:16:860:2:18212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18212" ;
+    skos:prefLabel "Ishtikhan"@eng-Latn, "Ishtixon"@uzb-Latn, "Иштыханский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18212" .
+
+<urn:mdciii:1603:45:16:860:2:18215>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18215" ;
+    skos:prefLabel "Kattakurgan"@eng-Latn, "Kattaqo'rg'on"@uzb-Latn, "Каттакурганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18215" .
+
+<urn:mdciii:1603:45:16:860:2:18216>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18216" ;
+    skos:prefLabel "Koshrabad"@eng-Latn, "Qo'shrabot"@uzb-Latn, "Кошрабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18216" .
+
+<urn:mdciii:1603:45:16:860:2:18218>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18218" ;
+    skos:prefLabel "Narpay"@eng-Latn, "Narpay"@uzb-Latn, "Нарпайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18218" .
+
+<urn:mdciii:1603:45:16:860:2:18224>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18224" ;
+    skos:prefLabel "Payarik"@eng-Latn, "Payariq"@uzb-Latn, "Пайарыкский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18224" .
+
+<urn:mdciii:1603:45:16:860:2:18227>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18227" ;
+    skos:prefLabel "Pastdarg'om"@uzb-Latn, "Pastdargom"@eng-Latn, "Пастдаргомский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18227" .
+
+<urn:mdciii:1603:45:16:860:2:18230>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18230" ;
+    skos:prefLabel "Pakhtachi"@eng-Latn, "Paxtachi"@uzb-Latn, "Пахтачийский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18230" .
+
+<urn:mdciii:1603:45:16:860:2:18233>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18233" ;
+    skos:prefLabel "Samarkand"@eng-Latn, "Samarqand"@uzb-Latn, "Самаркандский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18233" .
+
+<urn:mdciii:1603:45:16:860:2:18235>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18235" ;
+    skos:prefLabel "Nurabad"@eng-Latn, "Nurobod"@uzb-Latn, "Нурабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18235" .
+
+<urn:mdciii:1603:45:16:860:2:18236>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18236" ;
+    skos:prefLabel "Urgut"@eng-Latn, "Urgut"@uzb-Latn, "Ургутский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18236" .
+
+<urn:mdciii:1603:45:16:860:2:18238>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18238" ;
+    skos:prefLabel "Taylak"@eng-Latn, "Tayloq"@uzb-Latn, "Тайлякский"@rus-Cyrl ;
+    wdata:q7200235 "UZ18238" .
+
+<urn:mdciii:1603:45:16:860:2:18401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18401" ;
+    skos:prefLabel "Samarkand city"@eng-Latn, "Samarqand ш."@uzb-Latn, "г.Самарканд"@rus-Cyrl ;
+    wdata:q7200235 "UZ18401" .
+
+<urn:mdciii:1603:45:16:860:2:18406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:18406" ;
+    skos:prefLabel "Kattakurgan city"@eng-Latn, "Kattaqo'rg'on ш."@uzb-Latn, "г.Каттакурган"@rus-Cyrl ;
+    wdata:q7200235 "UZ18406" .
+
+<urn:mdciii:1603:45:16:860:2:22201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22201" ;
+    skos:prefLabel "Altinsay"@eng-Latn, "Oltinsoy"@uzb-Latn, "Алтынсайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22201" .
+
+<urn:mdciii:1603:45:16:860:2:22202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22202" ;
+    skos:prefLabel "Angor"@eng-Latn, "Angor"@uzb-Latn, "Ангорский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22202" .
+
+<urn:mdciii:1603:45:16:860:2:22204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22204" ;
+    skos:prefLabel "Baysun"@eng-Latn, "Boysun"@uzb-Latn, "Байсунский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22204" .
+
+<urn:mdciii:1603:45:16:860:2:22207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22207" ;
+    skos:prefLabel "Muzrabad"@eng-Latn, "Muzrabot"@uzb-Latn, "Музрабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22207" .
+
+<urn:mdciii:1603:45:16:860:2:22210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22210" ;
+    skos:prefLabel "Denau"@eng-Latn, "Denov"@uzb-Latn, "Денауский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22210" .
+
+<urn:mdciii:1603:45:16:860:2:22212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22212" ;
+    skos:prefLabel "Dzharkurgan"@eng-Latn, "Jarqo'rg'on"@uzb-Latn, "Джаркурганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22212" .
+
+<urn:mdciii:1603:45:16:860:2:22214>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22214" ;
+    skos:prefLabel "Kumkurgan"@eng-Latn, "Qumqo'rg'on"@uzb-Latn, "Кумкурганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22214" .
+
+<urn:mdciii:1603:45:16:860:2:22215>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22215" ;
+    skos:prefLabel "Kizirik"@eng-Latn, "Qiziriq"@uzb-Latn, "Кизирикский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22215" .
+
+<urn:mdciii:1603:45:16:860:2:22217>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22217" ;
+    skos:prefLabel "Sariasiya"@eng-Latn, "Sariosiyo"@uzb-Latn, "Сариасийский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22217" .
+
+<urn:mdciii:1603:45:16:860:2:22220>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22220" ;
+    skos:prefLabel "Termez"@eng-Latn, "Termiz"@uzb-Latn, "Термезский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22220" .
+
+<urn:mdciii:1603:45:16:860:2:22221>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22221" ;
+    skos:prefLabel "Uzun"@eng-Latn, "Uzun"@uzb-Latn, "Узунский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22221" .
+
+<urn:mdciii:1603:45:16:860:2:22223>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22223" ;
+    skos:prefLabel "Sherabad"@eng-Latn, "Sherobod"@uzb-Latn, "Шерабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22223" .
+
+<urn:mdciii:1603:45:16:860:2:22226>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22226" ;
+    skos:prefLabel "Sho'rchi"@uzb-Latn, "Shurchi"@eng-Latn, "Шурчинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ22226" .
+
+<urn:mdciii:1603:45:16:860:2:22401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:22401" ;
+    skos:prefLabel "Termez city"@eng-Latn, "Termiz ш."@uzb-Latn, "г.Термез"@rus-Cyrl ;
+    wdata:q7200235 "UZ22401" .
+
+<urn:mdciii:1603:45:16:860:2:24206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24206" ;
+    skos:prefLabel "Akaltin"@eng-Latn, "Oqoltin"@uzb-Latn, "Акалтынский"@rus-Cyrl ;
+    wdata:q7200235 "UZ24206" .
+
+<urn:mdciii:1603:45:16:860:2:24212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24212" ;
+    skos:prefLabel "Bayaut"@eng-Latn, "Boyovut"@uzb-Latn, "Баяутский"@rus-Cyrl ;
+    wdata:q7200235 "UZ24212" .
+
+<urn:mdciii:1603:45:16:860:2:24216>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24216" ;
+    skos:prefLabel "Saykhunabad"@eng-Latn, "Sayxunobod"@uzb-Latn, "Сайхунабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ24216" .
+
+<urn:mdciii:1603:45:16:860:2:24220>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24220" ;
+    skos:prefLabel "Gulistan"@eng-Latn, "Guliston"@uzb-Latn, "Гулистанский"@rus-Cyrl ;
+    wdata:q7200235 "UZ24220" .
+
+<urn:mdciii:1603:45:16:860:2:24226>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24226" ;
+    skos:prefLabel "Sardoba"@eng-Latn, "Sardoba"@uzb-Latn, "Сардобский"@rus-Cyrl ;
+    wdata:q7200235 "UZ24226" .
+
+<urn:mdciii:1603:45:16:860:2:24228>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24228" ;
+    skos:prefLabel "Mirzaabad"@eng-Latn, "Mirzaobod"@uzb-Latn, "Мирзаабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ24228" .
+
+<urn:mdciii:1603:45:16:860:2:24231>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24231" ;
+    skos:prefLabel "Sirdarya"@eng-Latn, "Sirdaryo"@uzb-Latn, "Сырдарьинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ24231" .
+
+<urn:mdciii:1603:45:16:860:2:24235>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24235" ;
+    skos:prefLabel "Khavas"@eng-Latn, "Xovos"@uzb-Latn, "Хавасский"@rus-Cyrl ;
+    wdata:q7200235 "UZ24235" .
+
+<urn:mdciii:1603:45:16:860:2:24401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24401" ;
+    skos:prefLabel "Gulistan city"@eng-Latn, "Guliston ш."@uzb-Latn, "г.Гулистан"@rus-Cyrl ;
+    wdata:q7200235 "UZ24401" .
+
+<urn:mdciii:1603:45:16:860:2:24410>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24410" ;
+    skos:prefLabel "Shirin city"@eng-Latn, "Shirin ш."@uzb-Latn, "г.Шиpин"@rus-Cyrl ;
+    wdata:q7200235 "UZ24410" .
+
+<urn:mdciii:1603:45:16:860:2:24413>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:24413" ;
+    skos:prefLabel "Yangiyer city"@eng-Latn, "Yangiyer ш."@uzb-Latn, "г.Янгиеp"@rus-Cyrl ;
+    wdata:q7200235 "UZ24413" .
+
+<urn:mdciii:1603:45:16:860:2:26262>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26262" ;
+    skos:prefLabel "Uchtepa"@eng-Latn, "Uchtepa"@uzb-Latn, "Учтепинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26262" .
+
+<urn:mdciii:1603:45:16:860:2:26264>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26264" ;
+    skos:prefLabel "Bektemir"@eng-Latn, "Bektemir"@uzb-Latn, "Бектемирский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26264" .
+
+<urn:mdciii:1603:45:16:860:2:26266>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26266" ;
+    skos:prefLabel "Yunusabad"@eng-Latn, "Yunusobod"@uzb-Latn, "Юнусабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26266" .
+
+<urn:mdciii:1603:45:16:860:2:26269>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26269" ;
+    skos:prefLabel "Mirzo Ulug'bek"@uzb-Latn, "Mirzo Ulugbek"@eng-Latn, "Мирзо-Улугбекский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26269" .
+
+<urn:mdciii:1603:45:16:860:2:26273>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26273" ;
+    skos:prefLabel "Mirabad"@eng-Latn, "Mirobod"@uzb-Latn, "Мирабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26273" .
+
+<urn:mdciii:1603:45:16:860:2:26277>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26277" ;
+    skos:prefLabel "Shaykhantokhur"@eng-Latn, "Shayxontoxur"@uzb-Latn, "Шайхантахурский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26277" .
+
+<urn:mdciii:1603:45:16:860:2:26280>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26280" ;
+    skos:prefLabel "Almazar"@eng-Latn, "Olmazor"@uzb-Latn, "Алмазарский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26280" .
+
+<urn:mdciii:1603:45:16:860:2:26283>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26283" ;
+    skos:prefLabel "Sergeli"@eng-Latn, "Sirg'ali"@uzb-Latn, "Сергелийский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26283" .
+
+<urn:mdciii:1603:45:16:860:2:26287>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26287" ;
+    skos:prefLabel "Yakkasaray"@eng-Latn, "Yakkasaroy"@uzb-Latn, "Яккасарайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26287" .
+
+<urn:mdciii:1603:45:16:860:2:26290>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26290" ;
+    skos:prefLabel "Yashnobod"@eng-Latn, "Yashnobod"@uzb-Latn, "Яшнободский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26290" .
+
+<urn:mdciii:1603:45:16:860:2:26294>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:26294" ;
+    skos:prefLabel "Chilanzar"@eng-Latn, "Chilonzor"@uzb-Latn, "Чиланзарский"@rus-Cyrl ;
+    wdata:q7200235 "UZ26294" .
+
+<urn:mdciii:1603:45:16:860:2:27206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27206" ;
+    skos:prefLabel "Akkurgan"@eng-Latn, "Oqqo'rg'on"@uzb-Latn, "Аккурганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27206" .
+
+<urn:mdciii:1603:45:16:860:2:27212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27212" ;
+    skos:prefLabel "Akhangaran"@eng-Latn, "Ohangaron"@uzb-Latn, "Ахангаранский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27212" .
+
+<urn:mdciii:1603:45:16:860:2:27220>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27220" ;
+    skos:prefLabel "Bekabad"@eng-Latn, "Bekobod"@uzb-Latn, "Бекабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27220" .
+
+<urn:mdciii:1603:45:16:860:2:27224>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27224" ;
+    skos:prefLabel "Bo'stonliq"@uzb-Latn, "Bostanlik"@eng-Latn, "Бостанлыкский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27224" .
+
+<urn:mdciii:1603:45:16:860:2:27228>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27228" ;
+    skos:prefLabel "Bo'ka"@uzb-Latn, "Buka"@eng-Latn, "Букинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27228" .
+
+<urn:mdciii:1603:45:16:860:2:27233>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27233" ;
+    skos:prefLabel "Kuyichirchik"@eng-Latn, "Qiyichirchiq"@uzb-Latn, "Куйичирчикский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27233" .
+
+<urn:mdciii:1603:45:16:860:2:27237>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27237" ;
+    skos:prefLabel "Zangiata"@eng-Latn, "Zangiota"@uzb-Latn, "Зангиатинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27237" .
+
+<urn:mdciii:1603:45:16:860:2:27239>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27239" ;
+    skos:prefLabel "Yukarichirchik"@eng-Latn, "Yuqorichirchiq"@uzb-Latn, "Юкоричирчикский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27239" .
+
+<urn:mdciii:1603:45:16:860:2:27248>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27248" ;
+    skos:prefLabel "Kibray"@eng-Latn, "Qibray"@uzb-Latn, "Кибрайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27248" .
+
+<urn:mdciii:1603:45:16:860:2:27249>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27249" ;
+    skos:prefLabel "Parkent"@eng-Latn, "Parkent"@uzb-Latn, "Паркентский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27249" .
+
+<urn:mdciii:1603:45:16:860:2:27250>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27250" ;
+    skos:prefLabel "Pskent"@eng-Latn, "Pskent"@uzb-Latn, "Пскентский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27250" .
+
+<urn:mdciii:1603:45:16:860:2:27253>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27253" ;
+    skos:prefLabel "O'rtachirchiq"@uzb-Latn, "Urtachirchik"@eng-Latn, "Уртачирчикский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27253" .
+
+<urn:mdciii:1603:45:16:860:2:27256>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27256" ;
+    skos:prefLabel "Chinaz"@eng-Latn, "Chinoz"@uzb-Latn, "Чиназский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27256" .
+
+<urn:mdciii:1603:45:16:860:2:27259>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27259" ;
+    skos:prefLabel "Yangiyo'l"@uzb-Latn, "Yangiyul"@eng-Latn, "Янгиюльский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27259" .
+
+<urn:mdciii:1603:45:16:860:2:27265>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27265" ;
+    skos:prefLabel "Tashkent"@eng-Latn, "Toshkent"@uzb-Latn, "Ташкентский"@rus-Cyrl ;
+    wdata:q7200235 "UZ27265" .
+
+<urn:mdciii:1603:45:16:860:2:27401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27401" ;
+    skos:prefLabel "Nurafshon city"@eng-Latn, "Nurafshon ш."@uzb-Latn, "г.Нурафшон"@rus-Cyrl ;
+    wdata:q7200235 "UZ27401" .
+
+<urn:mdciii:1603:45:16:860:2:27404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27404" ;
+    skos:prefLabel "Almalik city"@eng-Latn, "Olmaliq ш."@uzb-Latn, "г.Алмалык"@rus-Cyrl ;
+    wdata:q7200235 "UZ27404" .
+
+<urn:mdciii:1603:45:16:860:2:27407>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27407" ;
+    skos:prefLabel "Angren city"@eng-Latn, "Angren ш."@uzb-Latn, "г.Ангрен"@rus-Cyrl ;
+    wdata:q7200235 "UZ27407" .
+
+<urn:mdciii:1603:45:16:860:2:27413>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27413" ;
+    skos:prefLabel "Bekabad city"@eng-Latn, "Bekobod ш."@uzb-Latn, "г.Бекабад"@rus-Cyrl ;
+    wdata:q7200235 "UZ27413" .
+
+<urn:mdciii:1603:45:16:860:2:27415>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27415" ;
+    skos:prefLabel "Akhangaran city"@eng-Latn, "Ohangaron ш."@uzb-Latn, "г.Ахангаран"@rus-Cyrl ;
+    wdata:q7200235 "UZ27415" .
+
+<urn:mdciii:1603:45:16:860:2:27419>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27419" ;
+    skos:prefLabel "Chirchik city"@eng-Latn, "Chirchiq ш."@uzb-Latn, "г.Чиpчик"@rus-Cyrl ;
+    wdata:q7200235 "UZ27419" .
+
+<urn:mdciii:1603:45:16:860:2:27424>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:27424" ;
+    skos:prefLabel "Yangiyo'l ш."@uzb-Latn, "Yangiyul city"@eng-Latn, "г.Янгиюль"@rus-Cyrl ;
+    wdata:q7200235 "UZ27424" .
+
+<urn:mdciii:1603:45:16:860:2:30203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30203" ;
+    skos:prefLabel "Altiarik"@eng-Latn, "Oltiariq"@uzb-Latn, "Алтыарыкский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30203" .
+
+<urn:mdciii:1603:45:16:860:2:30206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30206" ;
+    skos:prefLabel "Kushtepa"@eng-Latn, "Qo'shtepa"@uzb-Latn, "Куштепинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30206" .
+
+<urn:mdciii:1603:45:16:860:2:30209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30209" ;
+    skos:prefLabel "Bagdad"@eng-Latn, "Bog'dod"@uzb-Latn, "Багдадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30209" .
+
+<urn:mdciii:1603:45:16:860:2:30212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30212" ;
+    skos:prefLabel "Buvayda"@eng-Latn, "Buvayda"@uzb-Latn, "Бувайдинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30212" .
+
+<urn:mdciii:1603:45:16:860:2:30215>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30215" ;
+    skos:prefLabel "Besharik"@eng-Latn, "Beshariq"@uzb-Latn, "Бешарыкский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30215" .
+
+<urn:mdciii:1603:45:16:860:2:30218>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30218" ;
+    skos:prefLabel "Kuva"@eng-Latn, "Quva"@uzb-Latn, "Кувинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30218" .
+
+<urn:mdciii:1603:45:16:860:2:30221>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30221" ;
+    skos:prefLabel "Uchko'prik"@uzb-Latn, "Uchkuprik"@eng-Latn, "Учкуприкский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30221" .
+
+<urn:mdciii:1603:45:16:860:2:30224>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30224" ;
+    skos:prefLabel "Rishtan"@eng-Latn, "Rishton"@uzb-Latn, "Риштанский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30224" .
+
+<urn:mdciii:1603:45:16:860:2:30226>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30226" ;
+    skos:prefLabel "So'x"@uzb-Latn, "Sokh"@eng-Latn, "Сохский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30226" .
+
+<urn:mdciii:1603:45:16:860:2:30227>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30227" ;
+    skos:prefLabel "Tashlak"@eng-Latn, "Toshloq"@uzb-Latn, "Ташлакский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30227" .
+
+<urn:mdciii:1603:45:16:860:2:30230>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30230" ;
+    skos:prefLabel "O'zbekiston"@uzb-Latn, "Uzbekistan"@eng-Latn, "Узбекистанский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30230" .
+
+<urn:mdciii:1603:45:16:860:2:30233>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30233" ;
+    skos:prefLabel "Farg'ona"@uzb-Latn, "Fergana"@eng-Latn, "Ферганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30233" .
+
+<urn:mdciii:1603:45:16:860:2:30236>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30236" ;
+    skos:prefLabel "Dang'ara"@uzb-Latn, "Dangara"@eng-Latn, "Дангаринский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30236" .
+
+<urn:mdciii:1603:45:16:860:2:30238>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30238" ;
+    skos:prefLabel "Furkat"@eng-Latn, "Furqat"@uzb-Latn, "Фуркатский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30238" .
+
+<urn:mdciii:1603:45:16:860:2:30242>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30242" ;
+    skos:prefLabel "Yazyavan"@eng-Latn, "Yozyovon"@uzb-Latn, "Язъяванский"@rus-Cyrl ;
+    wdata:q7200235 "UZ30242" .
+
+<urn:mdciii:1603:45:16:860:2:30401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30401" ;
+    skos:prefLabel "Farg'ona ш."@uzb-Latn, "Fergana city"@eng-Latn, "г.Фергана"@rus-Cyrl ;
+    wdata:q7200235 "UZ30401" .
+
+<urn:mdciii:1603:45:16:860:2:30405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30405" ;
+    skos:prefLabel "Kokand city"@eng-Latn, "Qo'qon ш."@uzb-Latn, "г.Коканд"@rus-Cyrl ;
+    wdata:q7200235 "UZ30405" .
+
+<urn:mdciii:1603:45:16:860:2:30408>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30408" ;
+    skos:prefLabel "Kuvasay city"@eng-Latn, "Quvasoy ш."@uzb-Latn, "г.Кувасай"@rus-Cyrl ;
+    wdata:q7200235 "UZ30408" .
+
+<urn:mdciii:1603:45:16:860:2:30412>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:30412" ;
+    skos:prefLabel "Marg'ilon ш."@uzb-Latn, "Margilan city"@eng-Latn, "г.Маpгилан"@rus-Cyrl ;
+    wdata:q7200235 "UZ30412" .
+
+<urn:mdciii:1603:45:16:860:2:3202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3202" ;
+    skos:prefLabel "Altinkul"@eng-Latn, "Oltinko'l"@uzb-Latn, "Алтынкульский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03202" .
+
+<urn:mdciii:1603:45:16:860:2:3203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3203" ;
+    skos:prefLabel "Andijan"@eng-Latn, "Andijon"@uzb-Latn, "Андижанский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03203" .
+
+<urn:mdciii:1603:45:16:860:2:3206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3206" ;
+    skos:prefLabel "Balikchi"@eng-Latn, "Baliqchi"@uzb-Latn, "Балыкчинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03206" .
+
+<urn:mdciii:1603:45:16:860:2:3209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3209" ;
+    skos:prefLabel "Bo'z"@uzb-Latn, "Boz"@eng-Latn, "Бозский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03209" .
+
+<urn:mdciii:1603:45:16:860:2:3210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3210" ;
+    skos:prefLabel "Bulakbashi"@eng-Latn, "Buloqboshi"@uzb-Latn, "Булакбашинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03210" .
+
+<urn:mdciii:1603:45:16:860:2:3211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3211" ;
+    skos:prefLabel "Djalalkuduk"@eng-Latn, "Jalaquduq"@uzb-Latn, "Жалакудукский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03211" .
+
+<urn:mdciii:1603:45:16:860:2:3214>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3214" ;
+    skos:prefLabel "Izboskan"@eng-Latn, "Izboskan"@uzb-Latn, "Избасканский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03214" .
+
+<urn:mdciii:1603:45:16:860:2:3217>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3217" ;
+    skos:prefLabel "Ulug'nor"@uzb-Latn, "Ulugnar"@eng-Latn, "Улугноpский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03217" .
+
+<urn:mdciii:1603:45:16:860:2:3220>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3220" ;
+    skos:prefLabel "Kurgantepa"@eng-Latn, "Qo'rg'ontepa"@uzb-Latn, "Кургантепинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03220" .
+
+<urn:mdciii:1603:45:16:860:2:3224>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3224" ;
+    skos:prefLabel "Asaka"@eng-Latn, "Asaka"@uzb-Latn, "Асакинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03224" .
+
+<urn:mdciii:1603:45:16:860:2:3227>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3227" ;
+    skos:prefLabel "Markhamat"@eng-Latn, "Marxamat"@uzb-Latn, "Мархаматский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03227" .
+
+<urn:mdciii:1603:45:16:860:2:3230>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3230" ;
+    skos:prefLabel "Shakhrixan"@eng-Latn, "Shaxrixon"@uzb-Latn, "Шахриханский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03230" .
+
+<urn:mdciii:1603:45:16:860:2:3232>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3232" ;
+    skos:prefLabel "Paxtaabad"@eng-Latn, "Paxtaobod"@uzb-Latn, "Пахтаабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03232" .
+
+<urn:mdciii:1603:45:16:860:2:3236>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3236" ;
+    skos:prefLabel "Khadjaabad"@eng-Latn, "Xo'jaobod"@uzb-Latn, "Ходжаабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ03236" .
+
+<urn:mdciii:1603:45:16:860:2:33204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33204" ;
+    skos:prefLabel "Bagat"@eng-Latn, "Bog'ot"@uzb-Latn, "Багатский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33204" .
+
+<urn:mdciii:1603:45:16:860:2:33208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33208" ;
+    skos:prefLabel "Gurlan"@uzb-Latn, "Gurlen"@eng-Latn, "Гурленский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33208" .
+
+<urn:mdciii:1603:45:16:860:2:33212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33212" ;
+    skos:prefLabel "Koshkupir"@eng-Latn, "Qo'shko'pir"@uzb-Latn, "Кошкупырский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33212" .
+
+<urn:mdciii:1603:45:16:860:2:33217>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33217" ;
+    skos:prefLabel "Urganch"@uzb-Latn, "Urgench"@eng-Latn, "Ургенчский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33217" .
+
+<urn:mdciii:1603:45:16:860:2:33220>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33220" ;
+    skos:prefLabel "Khazarasp"@eng-Latn, "Xazorasp"@uzb-Latn, "Хазараспский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33220" .
+
+<urn:mdciii:1603:45:16:860:2:33223>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33223" ;
+    skos:prefLabel "Khanka"@eng-Latn, "Xonqa"@uzb-Latn, "Ханкинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33223" .
+
+<urn:mdciii:1603:45:16:860:2:33226>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33226" ;
+    skos:prefLabel "Khiva"@eng-Latn, "Xiva"@uzb-Latn, "Хивинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33226" .
+
+<urn:mdciii:1603:45:16:860:2:33230>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33230" ;
+    skos:prefLabel "Shavat"@eng-Latn, "Shovot"@uzb-Latn, "Шаватский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33230" .
+
+<urn:mdciii:1603:45:16:860:2:33233>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33233" ;
+    skos:prefLabel "Yangiarik"@eng-Latn, "Yangiariq"@uzb-Latn, "Янгиарыкский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33233" .
+
+<urn:mdciii:1603:45:16:860:2:33236>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33236" ;
+    skos:prefLabel "Yangibazar"@eng-Latn, "Yangibozor"@uzb-Latn, "Янгибазарский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33236" .
+
+<urn:mdciii:1603:45:16:860:2:33401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33401" ;
+    skos:prefLabel "Urganch ш."@uzb-Latn, "Urgench city"@eng-Latn, "г.Ургенч"@rus-Cyrl ;
+    wdata:q7200235 "UZ33401" .
+
+<urn:mdciii:1603:45:16:860:2:33406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:33406" ;
+    skos:prefLabel "Khiva city"@eng-Latn, "Xiva ш."@uzb-Latn, "г.Хивинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ33406" .
+
+<urn:mdciii:1603:45:16:860:2:3401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3401" ;
+    skos:prefLabel "Andijan city"@eng-Latn, "Andijon ш."@uzb-Latn, "г.Андижан"@rus-Cyrl ;
+    wdata:q7200235 "UZ03401" .
+
+<urn:mdciii:1603:45:16:860:2:3408>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:3408" ;
+    skos:prefLabel "Khanabad city"@eng-Latn, "Xonobod ш."@uzb-Latn, "г.Ханабад"@rus-Cyrl ;
+    wdata:q7200235 "UZ03408" .
+
+<urn:mdciii:1603:45:16:860:2:35204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35204" ;
+    skos:prefLabel "Amudarya"@eng-Latn, "Amudaryo"@uzb-Latn, "Амударьинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35204" .
+
+<urn:mdciii:1603:45:16:860:2:35207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35207" ;
+    skos:prefLabel "Beruniy"@eng-Latn, "Beruniy"@uzb-Latn, "Берунийский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35207" .
+
+<urn:mdciii:1603:45:16:860:2:35211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35211" ;
+    skos:prefLabel "Karauzyak"@eng-Latn, "Qorao'zak"@uzb-Latn, "Караузякский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35211" .
+
+<urn:mdciii:1603:45:16:860:2:35212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35212" ;
+    skos:prefLabel "Kegeyli"@eng-Latn, "Kegeyli"@uzb-Latn, "Кегейлийский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35212" .
+
+<urn:mdciii:1603:45:16:860:2:35215>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35215" ;
+    skos:prefLabel "Kungrad"@eng-Latn, "Qo'ng'irot"@uzb-Latn, "Кунградский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35215" .
+
+<urn:mdciii:1603:45:16:860:2:35218>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35218" ;
+    skos:prefLabel "Kanlikul"@eng-Latn, "Qanliko'l"@uzb-Latn, "Канлыкульский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35218" .
+
+<urn:mdciii:1603:45:16:860:2:35222>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35222" ;
+    skos:prefLabel "Mo'ynoq"@uzb-Latn, "Muynak"@eng-Latn, "Муйнакский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35222" .
+
+<urn:mdciii:1603:45:16:860:2:35225>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35225" ;
+    skos:prefLabel "Nukus"@eng-Latn, "Nukus"@uzb-Latn, "Нукусский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35225" .
+
+<urn:mdciii:1603:45:16:860:2:35230>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35230" ;
+    skos:prefLabel "Takhtakupir"@eng-Latn, "Taxtako'pir"@uzb-Latn, "Тахтакупырский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35230" .
+
+<urn:mdciii:1603:45:16:860:2:35233>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35233" ;
+    skos:prefLabel "To'rtko'l"@uzb-Latn, "Turtkul"@eng-Latn, "Турткульский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35233" .
+
+<urn:mdciii:1603:45:16:860:2:35236>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35236" ;
+    skos:prefLabel "Khojeyli"@eng-Latn, "Xo'jayli"@uzb-Latn, "Ходжейлийский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35236" .
+
+<urn:mdciii:1603:45:16:860:2:35240>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35240" ;
+    skos:prefLabel "Chimbay"@eng-Latn, "Chimboy"@uzb-Latn, "Чимбайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35240" .
+
+<urn:mdciii:1603:45:16:860:2:35243>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35243" ;
+    skos:prefLabel "Shumanay"@eng-Latn, "Shumanay"@uzb-Latn, "Шуманайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35243" .
+
+<urn:mdciii:1603:45:16:860:2:35250>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35250" ;
+    skos:prefLabel "Ellikkala"@eng-Latn, "Ellikkala"@uzb-Latn, "Элликкалинский"@rus-Cyrl ;
+    wdata:q7200235 "UZ35250" .
+
+<urn:mdciii:1603:45:16:860:2:35401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:35401" ;
+    skos:prefLabel "Nukus city"@eng-Latn, "Nukus ш."@uzb-Latn, "г.Нукус"@rus-Cyrl ;
+    wdata:q7200235 "UZ35401" .
+
+<urn:mdciii:1603:45:16:860:2:6204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6204" ;
+    skos:prefLabel "Alat"@eng-Latn, "Olot"@uzb-Latn, "Алатский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06204" .
+
+<urn:mdciii:1603:45:16:860:2:6207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6207" ;
+    skos:prefLabel "Bukhara"@eng-Latn, "Buxoro"@uzb-Latn, "Бухарский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06207" .
+
+<urn:mdciii:1603:45:16:860:2:6212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6212" ;
+    skos:prefLabel "Vabkent"@eng-Latn, "Vobkent"@uzb-Latn, "Вабкентский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06212" .
+
+<urn:mdciii:1603:45:16:860:2:6215>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6215" ;
+    skos:prefLabel "G'ijduvon"@uzb-Latn, "Gijduvan"@eng-Latn, "Гиждуванский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06215" .
+
+<urn:mdciii:1603:45:16:860:2:6219>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6219" ;
+    skos:prefLabel "Kagan"@eng-Latn, "Kogon"@uzb-Latn, "Каганский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06219" .
+
+<urn:mdciii:1603:45:16:860:2:6230>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6230" ;
+    skos:prefLabel "Karakul"@eng-Latn, "Qorako'l"@uzb-Latn, "Каракульский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06230" .
+
+<urn:mdciii:1603:45:16:860:2:6232>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6232" ;
+    skos:prefLabel "Karaulbazar"@eng-Latn, "Qorovulbozor"@uzb-Latn, "Караулбазарский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06232" .
+
+<urn:mdciii:1603:45:16:860:2:6240>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6240" ;
+    skos:prefLabel "Peshku"@eng-Latn, "Peshku"@uzb-Latn, "Пешкунский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06240" .
+
+<urn:mdciii:1603:45:16:860:2:6242>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6242" ;
+    skos:prefLabel "Romitan"@uzb-Latn, "Rаmitan"@eng-Latn, "Ромитанский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06242" .
+
+<urn:mdciii:1603:45:16:860:2:6246>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6246" ;
+    skos:prefLabel "Jondor"@eng-Latn, "Jondor"@uzb-Latn, "Жондоpский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06246" .
+
+<urn:mdciii:1603:45:16:860:2:6258>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6258" ;
+    skos:prefLabel "Shafirkan"@eng-Latn, "Shofirkon"@uzb-Latn, "Шафирканский"@rus-Cyrl ;
+    wdata:q7200235 "UZ06258" .
+
+<urn:mdciii:1603:45:16:860:2:6401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6401" ;
+    skos:prefLabel "Bukhara city"@eng-Latn, "Buxoro ш."@uzb-Latn, "г.Бухара"@rus-Cyrl ;
+    wdata:q7200235 "UZ06401" .
+
+<urn:mdciii:1603:45:16:860:2:6403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:6403" ;
+    skos:prefLabel "Kagan city"@eng-Latn, "Kogon ш."@uzb-Latn, "г.Каган"@rus-Cyrl ;
+    wdata:q7200235 "UZ06403" .
+
+<urn:mdciii:1603:45:16:860:2:8201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8201" ;
+    skos:prefLabel "Arnasay"@eng-Latn, "Arnasoy"@uzb-Latn, "Арнасайский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08201" .
+
+<urn:mdciii:1603:45:16:860:2:8204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8204" ;
+    skos:prefLabel "Bakhmal"@eng-Latn, "Baxmal"@uzb-Latn, "Бахмальский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08204" .
+
+<urn:mdciii:1603:45:16:860:2:8209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8209" ;
+    skos:prefLabel "G'allaorol"@uzb-Latn, "Gallyaaral"@eng-Latn, "Галляаральский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08209" .
+
+<urn:mdciii:1603:45:16:860:2:8212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8212" ;
+    skos:prefLabel "Sharof Rashidov"@eng-Latn, "Sharof Rashidov"@uzb-Latn, "Шароф Рашидовский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08212" .
+
+<urn:mdciii:1603:45:16:860:2:8215>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8215" ;
+    skos:prefLabel "Do'stlik"@uzb-Latn, "Dustlik"@eng-Latn, "Дустликский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08215" .
+
+<urn:mdciii:1603:45:16:860:2:8218>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8218" ;
+    skos:prefLabel "Zaаmin"@eng-Latn, "Zomin"@uzb-Latn, "Зааминский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08218" .
+
+<urn:mdciii:1603:45:16:860:2:8220>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8220" ;
+    skos:prefLabel "Zarbdar"@eng-Latn, "Zarbdor"@uzb-Latn, "Зарбдарский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08220" .
+
+<urn:mdciii:1603:45:16:860:2:8223>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8223" ;
+    skos:prefLabel "Mirzacho'l"@uzb-Latn, "Mirzachul"@eng-Latn, "Мирзачульский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08223" .
+
+<urn:mdciii:1603:45:16:860:2:8225>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8225" ;
+    skos:prefLabel "Zafarabad"@eng-Latn, "Zafarobod"@uzb-Latn, "Зафарабадский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08225" .
+
+<urn:mdciii:1603:45:16:860:2:8228>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8228" ;
+    skos:prefLabel "Paxtakor"@eng-Latn, "Paxtakor"@uzb-Latn, "Пахтакорский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08228" .
+
+<urn:mdciii:1603:45:16:860:2:8235>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8235" ;
+    skos:prefLabel "Farish"@eng-Latn, "Forish"@uzb-Latn, "Фаришский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08235" .
+
+<urn:mdciii:1603:45:16:860:2:8237>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8237" ;
+    skos:prefLabel "Yangiabad"@eng-Latn, "Yangiobod"@uzb-Latn, "Янгиободский"@rus-Cyrl ;
+    wdata:q7200235 "UZ08237" .
+
+<urn:mdciii:1603:45:16:860:2:8401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:860:2:8401" ;
+    skos:prefLabel "Dzhizak city"@eng-Latn, "Jizzax ш."@uzb-Latn, "г.Джизак"@rus-Cyrl ;
+    wdata:q7200235 "UZ08401" .
+

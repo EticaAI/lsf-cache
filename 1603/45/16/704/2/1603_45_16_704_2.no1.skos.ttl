@@ -1,0 +1,4278 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:704()> .
+
+<urn:mdciii:1603:45:16:704()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:704)" ;
+    skos:member <urn:mdciii:1603:45:16:704:2()> .
+
+<urn:mdciii:1603:45:16:704:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:704:2)" ;
+    skos:member <urn:mdciii:1603:45:16:704:2:10103>, <urn:mdciii:1603:45:16:704:2:10105>, <urn:mdciii:1603:45:16:704:2:10107>, <urn:mdciii:1603:45:16:704:2:10108>, <urn:mdciii:1603:45:16:704:2:10109>, <urn:mdciii:1603:45:16:704:2:10111>, <urn:mdciii:1603:45:16:704:2:10113>, <urn:mdciii:1603:45:16:704:2:10114>, <urn:mdciii:1603:45:16:704:2:10115>, <urn:mdciii:1603:45:16:704:2:10117>, <urn:mdciii:1603:45:16:704:2:10119>, <urn:mdciii:1603:45:16:704:2:10121>, <urn:mdciii:1603:45:16:704:2:10123>, <urn:mdciii:1603:45:16:704:2:10125>, <urn:mdciii:1603:45:16:704:2:10127>, <urn:mdciii:1603:45:16:704:2:10129>, <urn:mdciii:1603:45:16:704:2:10131>, <urn:mdciii:1603:45:16:704:2:10133>, <urn:mdciii:1603:45:16:704:2:10135>, <urn:mdciii:1603:45:16:704:2:10137>, <urn:mdciii:1603:45:16:704:2:10139>, <urn:mdciii:1603:45:16:704:2:10141>, <urn:mdciii:1603:45:16:704:2:10143>, <urn:mdciii:1603:45:16:704:2:10145>, <urn:mdciii:1603:45:16:704:2:10147>, <urn:mdciii:1603:45:16:704:2:10149>, <urn:mdciii:1603:45:16:704:2:10151>, <urn:mdciii:1603:45:16:704:2:10153>, <urn:mdciii:1603:45:16:704:2:10155>, <urn:mdciii:1603:45:16:704:2:10301>, <urn:mdciii:1603:45:16:704:2:10303>, <urn:mdciii:1603:45:16:704:2:10305>, <urn:mdciii:1603:45:16:704:2:10307>, <urn:mdciii:1603:45:16:704:2:10309>, <urn:mdciii:1603:45:16:704:2:10310>, <urn:mdciii:1603:45:16:704:2:10311>, <urn:mdciii:1603:45:16:704:2:10313>, <urn:mdciii:1603:45:16:704:2:10314>, <urn:mdciii:1603:45:16:704:2:10315>, <urn:mdciii:1603:45:16:704:2:10317>, <urn:mdciii:1603:45:16:704:2:10319>, <urn:mdciii:1603:45:16:704:2:10321>, <urn:mdciii:1603:45:16:704:2:10323>, <urn:mdciii:1603:45:16:704:2:10325>, <urn:mdciii:1603:45:16:704:2:10401>, <urn:mdciii:1603:45:16:704:2:10402>, <urn:mdciii:1603:45:16:704:2:10403>, <urn:mdciii:1603:45:16:704:2:10404>, <urn:mdciii:1603:45:16:704:2:10405>, <urn:mdciii:1603:45:16:704:2:10406>, <urn:mdciii:1603:45:16:704:2:10407>, <urn:mdciii:1603:45:16:704:2:10409>, <urn:mdciii:1603:45:16:704:2:10411>, <urn:mdciii:1603:45:16:704:2:10601>, <urn:mdciii:1603:45:16:704:2:10603>, <urn:mdciii:1603:45:16:704:2:10605>, <urn:mdciii:1603:45:16:704:2:10607>, <urn:mdciii:1603:45:16:704:2:10608>, <urn:mdciii:1603:45:16:704:2:10609>, <urn:mdciii:1603:45:16:704:2:10611>, <urn:mdciii:1603:45:16:704:2:10612>, <urn:mdciii:1603:45:16:704:2:10701>, <urn:mdciii:1603:45:16:704:2:10703>, <urn:mdciii:1603:45:16:704:2:10705>, <urn:mdciii:1603:45:16:704:2:10707>, <urn:mdciii:1603:45:16:704:2:10709>, <urn:mdciii:1603:45:16:704:2:10711>, <urn:mdciii:1603:45:16:704:2:10713>, <urn:mdciii:1603:45:16:704:2:10715>, <urn:mdciii:1603:45:16:704:2:10717>, <urn:mdciii:1603:45:16:704:2:10719>, <urn:mdciii:1603:45:16:704:2:10721>, <urn:mdciii:1603:45:16:704:2:10723>, <urn:mdciii:1603:45:16:704:2:10901>, <urn:mdciii:1603:45:16:704:2:10902>, <urn:mdciii:1603:45:16:704:2:10903>, <urn:mdciii:1603:45:16:704:2:10904>, <urn:mdciii:1603:45:16:704:2:10905>, <urn:mdciii:1603:45:16:704:2:10906>, <urn:mdciii:1603:45:16:704:2:10907>, <urn:mdciii:1603:45:16:704:2:10909>, <urn:mdciii:1603:45:16:704:2:10911>, <urn:mdciii:1603:45:16:704:2:10913>, <urn:mdciii:1603:45:16:704:2:11101>, <urn:mdciii:1603:45:16:704:2:11103>, <urn:mdciii:1603:45:16:704:2:11105>, <urn:mdciii:1603:45:16:704:2:11107>, <urn:mdciii:1603:45:16:704:2:11109>, <urn:mdciii:1603:45:16:704:2:11111>, <urn:mdciii:1603:45:16:704:2:11301>, <urn:mdciii:1603:45:16:704:2:11303>, <urn:mdciii:1603:45:16:704:2:11305>, <urn:mdciii:1603:45:16:704:2:11307>, <urn:mdciii:1603:45:16:704:2:11309>, <urn:mdciii:1603:45:16:704:2:11311>, <urn:mdciii:1603:45:16:704:2:11313>, <urn:mdciii:1603:45:16:704:2:11315>, <urn:mdciii:1603:45:16:704:2:11317>, <urn:mdciii:1603:45:16:704:2:11319>, <urn:mdciii:1603:45:16:704:2:11501>, <urn:mdciii:1603:45:16:704:2:11503>, <urn:mdciii:1603:45:16:704:2:11505>, <urn:mdciii:1603:45:16:704:2:11507>, <urn:mdciii:1603:45:16:704:2:11509>, <urn:mdciii:1603:45:16:704:2:11511>, <urn:mdciii:1603:45:16:704:2:11513>, <urn:mdciii:1603:45:16:704:2:11515>, <urn:mdciii:1603:45:16:704:2:11701>, <urn:mdciii:1603:45:16:704:2:11703>, <urn:mdciii:1603:45:16:704:2:11705>, <urn:mdciii:1603:45:16:704:2:11707>, <urn:mdciii:1603:45:16:704:2:11709>, <urn:mdciii:1603:45:16:704:2:11711>, <urn:mdciii:1603:45:16:704:2:11713>, <urn:mdciii:1603:45:16:704:2:11715>, <urn:mdciii:1603:45:16:704:2:20101>, <urn:mdciii:1603:45:16:704:2:20103>, <urn:mdciii:1603:45:16:704:2:20105>, <urn:mdciii:1603:45:16:704:2:20107>, <urn:mdciii:1603:45:16:704:2:20109>, <urn:mdciii:1603:45:16:704:2:20111>, <urn:mdciii:1603:45:16:704:2:20113>, <urn:mdciii:1603:45:16:704:2:20115>, <urn:mdciii:1603:45:16:704:2:20117>, <urn:mdciii:1603:45:16:704:2:20119>, <urn:mdciii:1603:45:16:704:2:20120>, <urn:mdciii:1603:45:16:704:2:20301>, <urn:mdciii:1603:45:16:704:2:20303>, <urn:mdciii:1603:45:16:704:2:20304>, <urn:mdciii:1603:45:16:704:2:20305>, <urn:mdciii:1603:45:16:704:2:20307>, <urn:mdciii:1603:45:16:704:2:20309>, <urn:mdciii:1603:45:16:704:2:20311>, <urn:mdciii:1603:45:16:704:2:20313>, <urn:mdciii:1603:45:16:704:2:20315>, <urn:mdciii:1603:45:16:704:2:20317>, <urn:mdciii:1603:45:16:704:2:20318>, <urn:mdciii:1603:45:16:704:2:20319>, <urn:mdciii:1603:45:16:704:2:20321>, <urn:mdciii:1603:45:16:704:2:20501>, <urn:mdciii:1603:45:16:704:2:20505>, <urn:mdciii:1603:45:16:704:2:20507>, <urn:mdciii:1603:45:16:704:2:20508>, <urn:mdciii:1603:45:16:704:2:20509>, <urn:mdciii:1603:45:16:704:2:20511>, <urn:mdciii:1603:45:16:704:2:20513>, <urn:mdciii:1603:45:16:704:2:20515>, <urn:mdciii:1603:45:16:704:2:20519>, <urn:mdciii:1603:45:16:704:2:20701>, <urn:mdciii:1603:45:16:704:2:20703>, <urn:mdciii:1603:45:16:704:2:20704>, <urn:mdciii:1603:45:16:704:2:20705>, <urn:mdciii:1603:45:16:704:2:20707>, <urn:mdciii:1603:45:16:704:2:20709>, <urn:mdciii:1603:45:16:704:2:20711>, <urn:mdciii:1603:45:16:704:2:20712>, <urn:mdciii:1603:45:16:704:2:20901>, <urn:mdciii:1603:45:16:704:2:20903>, <urn:mdciii:1603:45:16:704:2:20905>, <urn:mdciii:1603:45:16:704:2:20907>, <urn:mdciii:1603:45:16:704:2:20909>, <urn:mdciii:1603:45:16:704:2:20911>, <urn:mdciii:1603:45:16:704:2:20913>, <urn:mdciii:1603:45:16:704:2:20915>, <urn:mdciii:1603:45:16:704:2:20917>, <urn:mdciii:1603:45:16:704:2:20919>, <urn:mdciii:1603:45:16:704:2:20921>, <urn:mdciii:1603:45:16:704:2:21101>, <urn:mdciii:1603:45:16:704:2:21103>, <urn:mdciii:1603:45:16:704:2:21105>, <urn:mdciii:1603:45:16:704:2:21107>, <urn:mdciii:1603:45:16:704:2:21109>, <urn:mdciii:1603:45:16:704:2:21111>, <urn:mdciii:1603:45:16:704:2:21112>, <urn:mdciii:1603:45:16:704:2:21301>, <urn:mdciii:1603:45:16:704:2:21303>, <urn:mdciii:1603:45:16:704:2:21305>, <urn:mdciii:1603:45:16:704:2:21307>, <urn:mdciii:1603:45:16:704:2:21309>, <urn:mdciii:1603:45:16:704:2:21311>, <urn:mdciii:1603:45:16:704:2:21313>, <urn:mdciii:1603:45:16:704:2:21315>, <urn:mdciii:1603:45:16:704:2:21317>, <urn:mdciii:1603:45:16:704:2:21501>, <urn:mdciii:1603:45:16:704:2:21503>, <urn:mdciii:1603:45:16:704:2:21505>, <urn:mdciii:1603:45:16:704:2:21507>, <urn:mdciii:1603:45:16:704:2:21509>, <urn:mdciii:1603:45:16:704:2:21511>, <urn:mdciii:1603:45:16:704:2:21513>, <urn:mdciii:1603:45:16:704:2:21515>, <urn:mdciii:1603:45:16:704:2:21517>, <urn:mdciii:1603:45:16:704:2:21701>, <urn:mdciii:1603:45:16:704:2:21703>, <urn:mdciii:1603:45:16:704:2:21705>, <urn:mdciii:1603:45:16:704:2:21707>, <urn:mdciii:1603:45:16:704:2:21709>, <urn:mdciii:1603:45:16:704:2:21711>, <urn:mdciii:1603:45:16:704:2:21712>, <urn:mdciii:1603:45:16:704:2:21713>, <urn:mdciii:1603:45:16:704:2:21715>, <urn:mdciii:1603:45:16:704:2:21717>, <urn:mdciii:1603:45:16:704:2:21718>, <urn:mdciii:1603:45:16:704:2:21719>, <urn:mdciii:1603:45:16:704:2:21720>, <urn:mdciii:1603:45:16:704:2:22101>, <urn:mdciii:1603:45:16:704:2:22103>, <urn:mdciii:1603:45:16:704:2:22105>, <urn:mdciii:1603:45:16:704:2:22107>, <urn:mdciii:1603:45:16:704:2:22109>, <urn:mdciii:1603:45:16:704:2:22111>, <urn:mdciii:1603:45:16:704:2:22113>, <urn:mdciii:1603:45:16:704:2:22115>, <urn:mdciii:1603:45:16:704:2:22117>, <urn:mdciii:1603:45:16:704:2:22119>, <urn:mdciii:1603:45:16:704:2:22501>, <urn:mdciii:1603:45:16:704:2:22503>, <urn:mdciii:1603:45:16:704:2:22505>, <urn:mdciii:1603:45:16:704:2:22506>, <urn:mdciii:1603:45:16:704:2:22507>, <urn:mdciii:1603:45:16:704:2:22511>, <urn:mdciii:1603:45:16:704:2:22512>, <urn:mdciii:1603:45:16:704:2:22513>, <urn:mdciii:1603:45:16:704:2:22515>, <urn:mdciii:1603:45:16:704:2:22517>, <urn:mdciii:1603:45:16:704:2:22519>, <urn:mdciii:1603:45:16:704:2:22521>, <urn:mdciii:1603:45:16:704:2:22523>, <urn:mdciii:1603:45:16:704:2:22525>, <urn:mdciii:1603:45:16:704:2:30101>, <urn:mdciii:1603:45:16:704:2:30103>, <urn:mdciii:1603:45:16:704:2:30105>, <urn:mdciii:1603:45:16:704:2:30107>, <urn:mdciii:1603:45:16:704:2:30108>, <urn:mdciii:1603:45:16:704:2:30109>, <urn:mdciii:1603:45:16:704:2:30117>, <urn:mdciii:1603:45:16:704:2:30118>, <urn:mdciii:1603:45:16:704:2:30201>, <urn:mdciii:1603:45:16:704:2:30202>, <urn:mdciii:1603:45:16:704:2:30203>, <urn:mdciii:1603:45:16:704:2:30204>, <urn:mdciii:1603:45:16:704:2:30211>, <urn:mdciii:1603:45:16:704:2:30213>, <urn:mdciii:1603:45:16:704:2:30215>, <urn:mdciii:1603:45:16:704:2:30216>, <urn:mdciii:1603:45:16:704:2:30217>, <urn:mdciii:1603:45:16:704:2:30219>, <urn:mdciii:1603:45:16:704:2:30301>, <urn:mdciii:1603:45:16:704:2:30303>, <urn:mdciii:1603:45:16:704:2:30305>, <urn:mdciii:1603:45:16:704:2:30307>, <urn:mdciii:1603:45:16:704:2:30309>, <urn:mdciii:1603:45:16:704:2:30311>, <urn:mdciii:1603:45:16:704:2:30313>, <urn:mdciii:1603:45:16:704:2:30315>, <urn:mdciii:1603:45:16:704:2:30316>, <urn:mdciii:1603:45:16:704:2:30317>, <urn:mdciii:1603:45:16:704:2:30319>, <urn:mdciii:1603:45:16:704:2:30320>, <urn:mdciii:1603:45:16:704:2:30501>, <urn:mdciii:1603:45:16:704:2:30503>, <urn:mdciii:1603:45:16:704:2:30505>, <urn:mdciii:1603:45:16:704:2:30507>, <urn:mdciii:1603:45:16:704:2:30509>, <urn:mdciii:1603:45:16:704:2:30510>, <urn:mdciii:1603:45:16:704:2:30511>, <urn:mdciii:1603:45:16:704:2:30513>, <urn:mdciii:1603:45:16:704:2:30515>, <urn:mdciii:1603:45:16:704:2:30517>, <urn:mdciii:1603:45:16:704:2:30519>, <urn:mdciii:1603:45:16:704:2:40101>, <urn:mdciii:1603:45:16:704:2:40103>, <urn:mdciii:1603:45:16:704:2:40105>, <urn:mdciii:1603:45:16:704:2:40107>, <urn:mdciii:1603:45:16:704:2:40109>, <urn:mdciii:1603:45:16:704:2:40111>, <urn:mdciii:1603:45:16:704:2:40113>, <urn:mdciii:1603:45:16:704:2:40115>, <urn:mdciii:1603:45:16:704:2:40117>, <urn:mdciii:1603:45:16:704:2:40119>, <urn:mdciii:1603:45:16:704:2:40121>, <urn:mdciii:1603:45:16:704:2:40123>, <urn:mdciii:1603:45:16:704:2:40125>, <urn:mdciii:1603:45:16:704:2:40127>, <urn:mdciii:1603:45:16:704:2:40129>, <urn:mdciii:1603:45:16:704:2:40131>, <urn:mdciii:1603:45:16:704:2:40133>, <urn:mdciii:1603:45:16:704:2:40135>, <urn:mdciii:1603:45:16:704:2:40137>, <urn:mdciii:1603:45:16:704:2:40139>, <urn:mdciii:1603:45:16:704:2:40141>, <urn:mdciii:1603:45:16:704:2:40143>, <urn:mdciii:1603:45:16:704:2:40145>, <urn:mdciii:1603:45:16:704:2:40147>, <urn:mdciii:1603:45:16:704:2:40149>, <urn:mdciii:1603:45:16:704:2:40151>, <urn:mdciii:1603:45:16:704:2:40153>, <urn:mdciii:1603:45:16:704:2:40301>, <urn:mdciii:1603:45:16:704:2:40303>, <urn:mdciii:1603:45:16:704:2:40305>, <urn:mdciii:1603:45:16:704:2:40307>, <urn:mdciii:1603:45:16:704:2:40309>, <urn:mdciii:1603:45:16:704:2:40311>, <urn:mdciii:1603:45:16:704:2:40313>, <urn:mdciii:1603:45:16:704:2:40314>, <urn:mdciii:1603:45:16:704:2:40315>, <urn:mdciii:1603:45:16:704:2:40317>, <urn:mdciii:1603:45:16:704:2:40319>, <urn:mdciii:1603:45:16:704:2:40321>, <urn:mdciii:1603:45:16:704:2:40323>, <urn:mdciii:1603:45:16:704:2:40325>, <urn:mdciii:1603:45:16:704:2:40327>, <urn:mdciii:1603:45:16:704:2:40329>, <urn:mdciii:1603:45:16:704:2:40331>, <urn:mdciii:1603:45:16:704:2:40333>, <urn:mdciii:1603:45:16:704:2:40335>, <urn:mdciii:1603:45:16:704:2:40337>, <urn:mdciii:1603:45:16:704:2:40338>, <urn:mdciii:1603:45:16:704:2:40501>, <urn:mdciii:1603:45:16:704:2:40503>, <urn:mdciii:1603:45:16:704:2:40505>, <urn:mdciii:1603:45:16:704:2:40507>, <urn:mdciii:1603:45:16:704:2:40509>, <urn:mdciii:1603:45:16:704:2:40510>, <urn:mdciii:1603:45:16:704:2:40511>, <urn:mdciii:1603:45:16:704:2:40512>, <urn:mdciii:1603:45:16:704:2:40513>, <urn:mdciii:1603:45:16:704:2:40515>, <urn:mdciii:1603:45:16:704:2:40517>, <urn:mdciii:1603:45:16:704:2:40519>, <urn:mdciii:1603:45:16:704:2:40701>, <urn:mdciii:1603:45:16:704:2:40703>, <urn:mdciii:1603:45:16:704:2:40705>, <urn:mdciii:1603:45:16:704:2:40707>, <urn:mdciii:1603:45:16:704:2:40709>, <urn:mdciii:1603:45:16:704:2:40711>, <urn:mdciii:1603:45:16:704:2:40713>, <urn:mdciii:1603:45:16:704:2:40715>, <urn:mdciii:1603:45:16:704:2:40901>, <urn:mdciii:1603:45:16:704:2:40903>, <urn:mdciii:1603:45:16:704:2:40905>, <urn:mdciii:1603:45:16:704:2:40906>, <urn:mdciii:1603:45:16:704:2:40907>, <urn:mdciii:1603:45:16:704:2:40909>, <urn:mdciii:1603:45:16:704:2:40911>, <urn:mdciii:1603:45:16:704:2:40913>, <urn:mdciii:1603:45:16:704:2:40915>, <urn:mdciii:1603:45:16:704:2:40917>, <urn:mdciii:1603:45:16:704:2:41101>, <urn:mdciii:1603:45:16:704:2:41103>, <urn:mdciii:1603:45:16:704:2:41105>, <urn:mdciii:1603:45:16:704:2:41107>, <urn:mdciii:1603:45:16:704:2:41109>, <urn:mdciii:1603:45:16:704:2:41111>, <urn:mdciii:1603:45:16:704:2:41113>, <urn:mdciii:1603:45:16:704:2:41115>, <urn:mdciii:1603:45:16:704:2:41117>, <urn:mdciii:1603:45:16:704:2:50101>, <urn:mdciii:1603:45:16:704:2:50103>, <urn:mdciii:1603:45:16:704:2:50105>, <urn:mdciii:1603:45:16:704:2:50107>, <urn:mdciii:1603:45:16:704:2:50109>, <urn:mdciii:1603:45:16:704:2:50111>, <urn:mdciii:1603:45:16:704:2:50112>, <urn:mdciii:1603:45:16:704:2:50190>, <urn:mdciii:1603:45:16:704:2:50301>, <urn:mdciii:1603:45:16:704:2:50303>, <urn:mdciii:1603:45:16:704:2:50304>, <urn:mdciii:1603:45:16:704:2:50305>, <urn:mdciii:1603:45:16:704:2:50307>, <urn:mdciii:1603:45:16:704:2:50309>, <urn:mdciii:1603:45:16:704:2:50311>, <urn:mdciii:1603:45:16:704:2:50313>, <urn:mdciii:1603:45:16:704:2:50315>, <urn:mdciii:1603:45:16:704:2:50317>, <urn:mdciii:1603:45:16:704:2:50318>, <urn:mdciii:1603:45:16:704:2:50319>, <urn:mdciii:1603:45:16:704:2:50321>, <urn:mdciii:1603:45:16:704:2:50323>, <urn:mdciii:1603:45:16:704:2:50325>, <urn:mdciii:1603:45:16:704:2:50327>, <urn:mdciii:1603:45:16:704:2:50328>, <urn:mdciii:1603:45:16:704:2:50329>, <urn:mdciii:1603:45:16:704:2:50501>, <urn:mdciii:1603:45:16:704:2:50503>, <urn:mdciii:1603:45:16:704:2:50505>, <urn:mdciii:1603:45:16:704:2:50507>, <urn:mdciii:1603:45:16:704:2:50508>, <urn:mdciii:1603:45:16:704:2:50509>, <urn:mdciii:1603:45:16:704:2:50511>, <urn:mdciii:1603:45:16:704:2:50513>, <urn:mdciii:1603:45:16:704:2:50515>, <urn:mdciii:1603:45:16:704:2:50517>, <urn:mdciii:1603:45:16:704:2:50519>, <urn:mdciii:1603:45:16:704:2:50521>, <urn:mdciii:1603:45:16:704:2:50523>, <urn:mdciii:1603:45:16:704:2:50525>, <urn:mdciii:1603:45:16:704:2:50701>, <urn:mdciii:1603:45:16:704:2:50703>, <urn:mdciii:1603:45:16:704:2:50705>, <urn:mdciii:1603:45:16:704:2:50707>, <urn:mdciii:1603:45:16:704:2:50709>, <urn:mdciii:1603:45:16:704:2:50711>, <urn:mdciii:1603:45:16:704:2:50713>, <urn:mdciii:1603:45:16:704:2:50715>, <urn:mdciii:1603:45:16:704:2:50717>, <urn:mdciii:1603:45:16:704:2:50719>, <urn:mdciii:1603:45:16:704:2:50721>, <urn:mdciii:1603:45:16:704:2:50901>, <urn:mdciii:1603:45:16:704:2:50903>, <urn:mdciii:1603:45:16:704:2:50905>, <urn:mdciii:1603:45:16:704:2:50907>, <urn:mdciii:1603:45:16:704:2:50909>, <urn:mdciii:1603:45:16:704:2:50910>, <urn:mdciii:1603:45:16:704:2:50911>, <urn:mdciii:1603:45:16:704:2:50912>, <urn:mdciii:1603:45:16:704:2:50913>, <urn:mdciii:1603:45:16:704:2:51101>, <urn:mdciii:1603:45:16:704:2:51102>, <urn:mdciii:1603:45:16:704:2:51103>, <urn:mdciii:1603:45:16:704:2:51105>, <urn:mdciii:1603:45:16:704:2:51107>, <urn:mdciii:1603:45:16:704:2:51108>, <urn:mdciii:1603:45:16:704:2:51111>, <urn:mdciii:1603:45:16:704:2:51113>, <urn:mdciii:1603:45:16:704:2:51190>, <urn:mdciii:1603:45:16:704:2:60101>, <urn:mdciii:1603:45:16:704:2:60103>, <urn:mdciii:1603:45:16:704:2:60105>, <urn:mdciii:1603:45:16:704:2:60107>, <urn:mdciii:1603:45:16:704:2:60108>, <urn:mdciii:1603:45:16:704:2:60109>, <urn:mdciii:1603:45:16:704:2:60111>, <urn:mdciii:1603:45:16:704:2:60113>, <urn:mdciii:1603:45:16:704:2:60114>, <urn:mdciii:1603:45:16:704:2:60301>, <urn:mdciii:1603:45:16:704:2:60303>, <urn:mdciii:1603:45:16:704:2:60305>, <urn:mdciii:1603:45:16:704:2:60306>, <urn:mdciii:1603:45:16:704:2:60307>, <urn:mdciii:1603:45:16:704:2:60309>, <urn:mdciii:1603:45:16:704:2:60311>, <urn:mdciii:1603:45:16:704:2:60312>, <urn:mdciii:1603:45:16:704:2:60313>, <urn:mdciii:1603:45:16:704:2:60315>, <urn:mdciii:1603:45:16:704:2:60317>, <urn:mdciii:1603:45:16:704:2:60319>, <urn:mdciii:1603:45:16:704:2:60321>, <urn:mdciii:1603:45:16:704:2:60322>, <urn:mdciii:1603:45:16:704:2:60323>, <urn:mdciii:1603:45:16:704:2:60324>, <urn:mdciii:1603:45:16:704:2:60325>, <urn:mdciii:1603:45:16:704:2:60501>, <urn:mdciii:1603:45:16:704:2:60502>, <urn:mdciii:1603:45:16:704:2:60503>, <urn:mdciii:1603:45:16:704:2:60505>, <urn:mdciii:1603:45:16:704:2:60507>, <urn:mdciii:1603:45:16:704:2:60509>, <urn:mdciii:1603:45:16:704:2:60511>, <urn:mdciii:1603:45:16:704:2:60513>, <urn:mdciii:1603:45:16:704:2:60515>, <urn:mdciii:1603:45:16:704:2:60517>, <urn:mdciii:1603:45:16:704:2:60519>, <urn:mdciii:1603:45:16:704:2:60523>, <urn:mdciii:1603:45:16:704:2:60524>, <urn:mdciii:1603:45:16:704:2:60525>, <urn:mdciii:1603:45:16:704:2:60531>, <urn:mdciii:1603:45:16:704:2:60611>, <urn:mdciii:1603:45:16:704:2:60621>, <urn:mdciii:1603:45:16:704:2:60627>, <urn:mdciii:1603:45:16:704:2:60629>, <urn:mdciii:1603:45:16:704:2:60632>, <urn:mdciii:1603:45:16:704:2:60633>, <urn:mdciii:1603:45:16:704:2:60634>, <urn:mdciii:1603:45:16:704:2:60635>, <urn:mdciii:1603:45:16:704:2:60701>, <urn:mdciii:1603:45:16:704:2:60703>, <urn:mdciii:1603:45:16:704:2:60705>, <urn:mdciii:1603:45:16:704:2:60707>, <urn:mdciii:1603:45:16:704:2:60709>, <urn:mdciii:1603:45:16:704:2:60711>, <urn:mdciii:1603:45:16:704:2:60713>, <urn:mdciii:1603:45:16:704:2:60715>, <urn:mdciii:1603:45:16:704:2:60717>, <urn:mdciii:1603:45:16:704:2:60719>, <urn:mdciii:1603:45:16:704:2:60721>, <urn:mdciii:1603:45:16:704:2:60723>, <urn:mdciii:1603:45:16:704:2:70101>, <urn:mdciii:1603:45:16:704:2:70103>, <urn:mdciii:1603:45:16:704:2:70105>, <urn:mdciii:1603:45:16:704:2:70107>, <urn:mdciii:1603:45:16:704:2:70109>, <urn:mdciii:1603:45:16:704:2:70111>, <urn:mdciii:1603:45:16:704:2:70113>, <urn:mdciii:1603:45:16:704:2:70115>, <urn:mdciii:1603:45:16:704:2:70117>, <urn:mdciii:1603:45:16:704:2:70119>, <urn:mdciii:1603:45:16:704:2:70121>, <urn:mdciii:1603:45:16:704:2:70123>, <urn:mdciii:1603:45:16:704:2:70125>, <urn:mdciii:1603:45:16:704:2:70127>, <urn:mdciii:1603:45:16:704:2:70128>, <urn:mdciii:1603:45:16:704:2:70129>, <urn:mdciii:1603:45:16:704:2:70131>, <urn:mdciii:1603:45:16:704:2:70133>, <urn:mdciii:1603:45:16:704:2:70135>, <urn:mdciii:1603:45:16:704:2:70137>, <urn:mdciii:1603:45:16:704:2:70139>, <urn:mdciii:1603:45:16:704:2:70140>, <urn:mdciii:1603:45:16:704:2:70141>, <urn:mdciii:1603:45:16:704:2:70143>, <urn:mdciii:1603:45:16:704:2:70501>, <urn:mdciii:1603:45:16:704:2:70503>, <urn:mdciii:1603:45:16:704:2:70504>, <urn:mdciii:1603:45:16:704:2:70505>, <urn:mdciii:1603:45:16:704:2:70506>, <urn:mdciii:1603:45:16:704:2:70507>, <urn:mdciii:1603:45:16:704:2:70508>, <urn:mdciii:1603:45:16:704:2:70701>, <urn:mdciii:1603:45:16:704:2:70702>, <urn:mdciii:1603:45:16:704:2:70703>, <urn:mdciii:1603:45:16:704:2:70705>, <urn:mdciii:1603:45:16:704:2:70706>, <urn:mdciii:1603:45:16:704:2:70707>, <urn:mdciii:1603:45:16:704:2:70708>, <urn:mdciii:1603:45:16:704:2:70709>, <urn:mdciii:1603:45:16:704:2:70710>, <urn:mdciii:1603:45:16:704:2:70711>, <urn:mdciii:1603:45:16:704:2:70901>, <urn:mdciii:1603:45:16:704:2:70903>, <urn:mdciii:1603:45:16:704:2:70905>, <urn:mdciii:1603:45:16:704:2:70907>, <urn:mdciii:1603:45:16:704:2:70909>, <urn:mdciii:1603:45:16:704:2:70911>, <urn:mdciii:1603:45:16:704:2:70913>, <urn:mdciii:1603:45:16:704:2:70915>, <urn:mdciii:1603:45:16:704:2:70917>, <urn:mdciii:1603:45:16:704:2:71101>, <urn:mdciii:1603:45:16:704:2:71102>, <urn:mdciii:1603:45:16:704:2:71103>, <urn:mdciii:1603:45:16:704:2:71104>, <urn:mdciii:1603:45:16:704:2:71105>, <urn:mdciii:1603:45:16:704:2:71107>, <urn:mdciii:1603:45:16:704:2:71108>, <urn:mdciii:1603:45:16:704:2:71109>, <urn:mdciii:1603:45:16:704:2:71110>, <urn:mdciii:1603:45:16:704:2:71301>, <urn:mdciii:1603:45:16:704:2:71303>, <urn:mdciii:1603:45:16:704:2:71305>, <urn:mdciii:1603:45:16:704:2:71307>, <urn:mdciii:1603:45:16:704:2:71309>, <urn:mdciii:1603:45:16:704:2:71310>, <urn:mdciii:1603:45:16:704:2:71311>, <urn:mdciii:1603:45:16:704:2:71312>, <urn:mdciii:1603:45:16:704:2:71313>, <urn:mdciii:1603:45:16:704:2:71315>, <urn:mdciii:1603:45:16:704:2:71317>, <urn:mdciii:1603:45:16:704:2:71501>, <urn:mdciii:1603:45:16:704:2:71502>, <urn:mdciii:1603:45:16:704:2:71503>, <urn:mdciii:1603:45:16:704:2:71505>, <urn:mdciii:1603:45:16:704:2:71507>, <urn:mdciii:1603:45:16:704:2:71509>, <urn:mdciii:1603:45:16:704:2:71511>, <urn:mdciii:1603:45:16:704:2:71513>, <urn:mdciii:1603:45:16:704:2:71515>, <urn:mdciii:1603:45:16:704:2:71517>, <urn:mdciii:1603:45:16:704:2:71701>, <urn:mdciii:1603:45:16:704:2:71703>, <urn:mdciii:1603:45:16:704:2:71705>, <urn:mdciii:1603:45:16:704:2:71707>, <urn:mdciii:1603:45:16:704:2:71709>, <urn:mdciii:1603:45:16:704:2:71711>, <urn:mdciii:1603:45:16:704:2:71712>, <urn:mdciii:1603:45:16:704:2:71714>, <urn:mdciii:1603:45:16:704:2:80101>, <urn:mdciii:1603:45:16:704:2:80103>, <urn:mdciii:1603:45:16:704:2:80105>, <urn:mdciii:1603:45:16:704:2:80107>, <urn:mdciii:1603:45:16:704:2:80109>, <urn:mdciii:1603:45:16:704:2:80111>, <urn:mdciii:1603:45:16:704:2:80113>, <urn:mdciii:1603:45:16:704:2:80115>, <urn:mdciii:1603:45:16:704:2:80117>, <urn:mdciii:1603:45:16:704:2:80119>, <urn:mdciii:1603:45:16:704:2:80121>, <urn:mdciii:1603:45:16:704:2:80123>, <urn:mdciii:1603:45:16:704:2:80125>, <urn:mdciii:1603:45:16:704:2:80127>, <urn:mdciii:1603:45:16:704:2:80128>, <urn:mdciii:1603:45:16:704:2:80301>, <urn:mdciii:1603:45:16:704:2:80303>, <urn:mdciii:1603:45:16:704:2:80305>, <urn:mdciii:1603:45:16:704:2:80307>, <urn:mdciii:1603:45:16:704:2:80308>, <urn:mdciii:1603:45:16:704:2:80309>, <urn:mdciii:1603:45:16:704:2:80311>, <urn:mdciii:1603:45:16:704:2:80313>, <urn:mdciii:1603:45:16:704:2:80315>, <urn:mdciii:1603:45:16:704:2:80317>, <urn:mdciii:1603:45:16:704:2:80319>, <urn:mdciii:1603:45:16:704:2:80321>, <urn:mdciii:1603:45:16:704:2:80501>, <urn:mdciii:1603:45:16:704:2:80503>, <urn:mdciii:1603:45:16:704:2:80505>, <urn:mdciii:1603:45:16:704:2:80507>, <urn:mdciii:1603:45:16:704:2:80509>, <urn:mdciii:1603:45:16:704:2:80511>, <urn:mdciii:1603:45:16:704:2:80513>, <urn:mdciii:1603:45:16:704:2:80515>, <urn:mdciii:1603:45:16:704:2:80517>, <urn:mdciii:1603:45:16:704:2:80519>, <urn:mdciii:1603:45:16:704:2:80521>, <urn:mdciii:1603:45:16:704:2:80701>, <urn:mdciii:1603:45:16:704:2:80703>, <urn:mdciii:1603:45:16:704:2:80705>, <urn:mdciii:1603:45:16:704:2:80707>, <urn:mdciii:1603:45:16:704:2:80709>, <urn:mdciii:1603:45:16:704:2:80711>, <urn:mdciii:1603:45:16:704:2:80713>, <urn:mdciii:1603:45:16:704:2:80715>, <urn:mdciii:1603:45:16:704:2:80717>, <urn:mdciii:1603:45:16:704:2:80718>, <urn:mdciii:1603:45:16:704:2:80719>, <urn:mdciii:1603:45:16:704:2:80901>, <urn:mdciii:1603:45:16:704:2:80903>, <urn:mdciii:1603:45:16:704:2:80905>, <urn:mdciii:1603:45:16:704:2:80907>, <urn:mdciii:1603:45:16:704:2:80908>, <urn:mdciii:1603:45:16:704:2:80909>, <urn:mdciii:1603:45:16:704:2:80911>, <urn:mdciii:1603:45:16:704:2:80913>, <urn:mdciii:1603:45:16:704:2:81101>, <urn:mdciii:1603:45:16:704:2:81102>, <urn:mdciii:1603:45:16:704:2:81103>, <urn:mdciii:1603:45:16:704:2:81105>, <urn:mdciii:1603:45:16:704:2:81107>, <urn:mdciii:1603:45:16:704:2:81109>, <urn:mdciii:1603:45:16:704:2:81111>, <urn:mdciii:1603:45:16:704:2:81113>, <urn:mdciii:1603:45:16:704:2:81115>, <urn:mdciii:1603:45:16:704:2:81301>, <urn:mdciii:1603:45:16:704:2:81303>, <urn:mdciii:1603:45:16:704:2:81304>, <urn:mdciii:1603:45:16:704:2:81305>, <urn:mdciii:1603:45:16:704:2:81307>, <urn:mdciii:1603:45:16:704:2:81309>, <urn:mdciii:1603:45:16:704:2:81311>, <urn:mdciii:1603:45:16:704:2:81313>, <urn:mdciii:1603:45:16:704:2:81315>, <urn:mdciii:1603:45:16:704:2:81317>, <urn:mdciii:1603:45:16:704:2:81319>, <urn:mdciii:1603:45:16:704:2:81321>, <urn:mdciii:1603:45:16:704:2:81323>, <urn:mdciii:1603:45:16:704:2:81325>, <urn:mdciii:1603:45:16:704:2:81326>, <urn:mdciii:1603:45:16:704:2:81501>, <urn:mdciii:1603:45:16:704:2:81503>, <urn:mdciii:1603:45:16:704:2:81505>, <urn:mdciii:1603:45:16:704:2:81507>, <urn:mdciii:1603:45:16:704:2:81509>, <urn:mdciii:1603:45:16:704:2:81511>, <urn:mdciii:1603:45:16:704:2:81513>, <urn:mdciii:1603:45:16:704:2:81514>, <urn:mdciii:1603:45:16:704:2:81515>, <urn:mdciii:1603:45:16:704:2:81601>, <urn:mdciii:1603:45:16:704:2:81602>, <urn:mdciii:1603:45:16:704:2:81603>, <urn:mdciii:1603:45:16:704:2:81605>, <urn:mdciii:1603:45:16:704:2:81607>, <urn:mdciii:1603:45:16:704:2:81609>, <urn:mdciii:1603:45:16:704:2:81611>, <urn:mdciii:1603:45:16:704:2:81701>, <urn:mdciii:1603:45:16:704:2:81703>, <urn:mdciii:1603:45:16:704:2:81705>, <urn:mdciii:1603:45:16:704:2:81707>, <urn:mdciii:1603:45:16:704:2:81709>, <urn:mdciii:1603:45:16:704:2:81711>, <urn:mdciii:1603:45:16:704:2:81713>, <urn:mdciii:1603:45:16:704:2:81715>, <urn:mdciii:1603:45:16:704:2:81901>, <urn:mdciii:1603:45:16:704:2:81903>, <urn:mdciii:1603:45:16:704:2:81905>, <urn:mdciii:1603:45:16:704:2:81906>, <urn:mdciii:1603:45:16:704:2:81907>, <urn:mdciii:1603:45:16:704:2:81908>, <urn:mdciii:1603:45:16:704:2:81909>, <urn:mdciii:1603:45:16:704:2:81911>, <urn:mdciii:1603:45:16:704:2:81912>, <urn:mdciii:1603:45:16:704:2:81913>, <urn:mdciii:1603:45:16:704:2:81915>, <urn:mdciii:1603:45:16:704:2:82101>, <urn:mdciii:1603:45:16:704:2:82103>, <urn:mdciii:1603:45:16:704:2:82104>, <urn:mdciii:1603:45:16:704:2:82105>, <urn:mdciii:1603:45:16:704:2:82106>, <urn:mdciii:1603:45:16:704:2:82107>, <urn:mdciii:1603:45:16:704:2:82109>, <urn:mdciii:1603:45:16:704:2:82301>, <urn:mdciii:1603:45:16:704:2:82303>, <urn:mdciii:1603:45:16:704:2:82305>, <urn:mdciii:1603:45:16:704:2:82307>, <urn:mdciii:1603:45:16:704:2:82309>, <urn:mdciii:1603:45:16:704:2:82310>, <urn:mdciii:1603:45:16:704:2:82311>, <urn:mdciii:1603:45:16:704:2:82313>, <urn:mdciii:1603:45:16:704:2:82314> .
+
+<urn:mdciii:1603:45:16:704:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:704:2:10101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10101" ;
+    skos:prefLabel "Ba Dinh"@eng-Latn, "Quận Ba Đình"@vie-Latn ;
+    wdata:q7200235 "VN10101" .
+
+<urn:mdciii:1603:45:16:704:2:10103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10103" ;
+    skos:prefLabel "Quận Tây Hồ"@vie-Latn, "Tay Ho"@eng-Latn ;
+    wdata:q7200235 "VN10103" .
+
+<urn:mdciii:1603:45:16:704:2:10105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10105" ;
+    skos:prefLabel "Hoan Kiem"@eng-Latn, "Quận Hoàn Kiếm"@vie-Latn ;
+    wdata:q7200235 "VN10105" .
+
+<urn:mdciii:1603:45:16:704:2:10107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10107" ;
+    skos:prefLabel "Hai Ba Trung"@eng-Latn, "Quận Hai Bà Trưng"@vie-Latn ;
+    wdata:q7200235 "VN10107" .
+
+<urn:mdciii:1603:45:16:704:2:10108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10108" ;
+    skos:prefLabel "Hoang Mai"@eng-Latn, "Quận Hoàng Mai"@vie-Latn ;
+    wdata:q7200235 "VN10108" .
+
+<urn:mdciii:1603:45:16:704:2:10109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10109" ;
+    skos:prefLabel "Dong Da"@eng-Latn, "Quận Đống Đa"@vie-Latn ;
+    wdata:q7200235 "VN10109" .
+
+<urn:mdciii:1603:45:16:704:2:10111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10111" ;
+    skos:prefLabel "Quận Thanh Xuân"@vie-Latn, "Thanh Xuan"@eng-Latn ;
+    wdata:q7200235 "VN10111" .
+
+<urn:mdciii:1603:45:16:704:2:10113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10113" ;
+    skos:prefLabel "Cau Giay"@eng-Latn, "Quận Cầu Giấy"@vie-Latn ;
+    wdata:q7200235 "VN10113" .
+
+<urn:mdciii:1603:45:16:704:2:10114>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10114" ;
+    skos:prefLabel "Long Bien"@eng-Latn, "Quận Long Biên"@vie-Latn ;
+    wdata:q7200235 "VN10114" .
+
+<urn:mdciii:1603:45:16:704:2:10115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10115" ;
+    skos:prefLabel "Huyện Sóc Sơn"@vie-Latn, "Soc Son"@eng-Latn ;
+    wdata:q7200235 "VN10115" .
+
+<urn:mdciii:1603:45:16:704:2:10117>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10117" ;
+    skos:prefLabel "Dong Anh"@eng-Latn, "Huyện Đông Anh"@vie-Latn ;
+    wdata:q7200235 "VN10117" .
+
+<urn:mdciii:1603:45:16:704:2:10119>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10119" ;
+    skos:prefLabel "Gia Lam"@eng-Latn, "Huyện Gia Lâm"@vie-Latn ;
+    wdata:q7200235 "VN10119" .
+
+<urn:mdciii:1603:45:16:704:2:10121>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10121" ;
+    skos:prefLabel "Nam Tu Liem"@eng-Latn, "Quận Nam Từ Liêm"@vie-Latn ;
+    wdata:q7200235 "VN10121" .
+
+<urn:mdciii:1603:45:16:704:2:10123>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10123" ;
+    skos:prefLabel "Huyện Thanh Trì"@vie-Latn, "Thanh Tri"@eng-Latn ;
+    wdata:q7200235 "VN10123" .
+
+<urn:mdciii:1603:45:16:704:2:10125>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10125" ;
+    skos:prefLabel "Ha Dong"@eng-Latn, "Quận Hà Đông"@vie-Latn ;
+    wdata:q7200235 "VN10125" .
+
+<urn:mdciii:1603:45:16:704:2:10127>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10127" ;
+    skos:prefLabel "Son Tay"@eng-Latn, "Thị xã Sơn Tây"@vie-Latn ;
+    wdata:q7200235 "VN10127" .
+
+<urn:mdciii:1603:45:16:704:2:10129>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10129" ;
+    skos:prefLabel "Ba Vi"@eng-Latn, "Huyện Ba Vì"@vie-Latn ;
+    wdata:q7200235 "VN10129" .
+
+<urn:mdciii:1603:45:16:704:2:10131>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10131" ;
+    skos:prefLabel "Huyện Phúc Thọ"@vie-Latn, "Phuc Tho"@eng-Latn ;
+    wdata:q7200235 "VN10131" .
+
+<urn:mdciii:1603:45:16:704:2:10133>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10133" ;
+    skos:prefLabel "Dan Phuong"@eng-Latn, "Huyện Đan Phượng"@vie-Latn ;
+    wdata:q7200235 "VN10133" .
+
+<urn:mdciii:1603:45:16:704:2:10135>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10135" ;
+    skos:prefLabel "Huyện Thạch Thất"@vie-Latn, "Thach That"@eng-Latn ;
+    wdata:q7200235 "VN10135" .
+
+<urn:mdciii:1603:45:16:704:2:10137>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10137" ;
+    skos:prefLabel "Hoai Duc"@eng-Latn, "Huyện Hoài Đức"@vie-Latn ;
+    wdata:q7200235 "VN10137" .
+
+<urn:mdciii:1603:45:16:704:2:10139>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10139" ;
+    skos:prefLabel "Huyện Quốc Oai"@vie-Latn, "Quoc Oai"@eng-Latn ;
+    wdata:q7200235 "VN10139" .
+
+<urn:mdciii:1603:45:16:704:2:10141>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10141" ;
+    skos:prefLabel "Chuong My"@eng-Latn, "Huyện Chương Mỹ"@vie-Latn ;
+    wdata:q7200235 "VN10141" .
+
+<urn:mdciii:1603:45:16:704:2:10143>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10143" ;
+    skos:prefLabel "Huyện Thanh Oai"@vie-Latn, "Thanh Oai"@eng-Latn ;
+    wdata:q7200235 "VN10143" .
+
+<urn:mdciii:1603:45:16:704:2:10145>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10145" ;
+    skos:prefLabel "Huyện Thường Tín"@vie-Latn, "Thuong Tin"@eng-Latn ;
+    wdata:q7200235 "VN10145" .
+
+<urn:mdciii:1603:45:16:704:2:10147>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10147" ;
+    skos:prefLabel "Huyện Mỹ Đức"@vie-Latn, "My Duc"@eng-Latn ;
+    wdata:q7200235 "VN10147" .
+
+<urn:mdciii:1603:45:16:704:2:10149>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10149" ;
+    skos:prefLabel "Huyện Ứng Hòa"@vie-Latn, "Ung Hoa"@eng-Latn ;
+    wdata:q7200235 "VN10149" .
+
+<urn:mdciii:1603:45:16:704:2:10151>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10151" ;
+    skos:prefLabel "Huyện Phú Xuyên"@vie-Latn, "Phu Xuyen"@eng-Latn ;
+    wdata:q7200235 "VN10151" .
+
+<urn:mdciii:1603:45:16:704:2:10153>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10153" ;
+    skos:prefLabel "Huyện Mê Linh"@vie-Latn, "Me Linh"@eng-Latn ;
+    wdata:q7200235 "VN10153" .
+
+<urn:mdciii:1603:45:16:704:2:10155>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10155" ;
+    skos:prefLabel "Bac Tu Liem"@eng-Latn, "Quận Bắc Từ Liêm"@vie-Latn ;
+    wdata:q7200235 "VN10155" .
+
+<urn:mdciii:1603:45:16:704:2:10301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10301" ;
+    skos:prefLabel "Hong Bang"@eng-Latn, "Quận Hồng Bàng"@vie-Latn ;
+    wdata:q7200235 "VN10301" .
+
+<urn:mdciii:1603:45:16:704:2:10303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10303" ;
+    skos:prefLabel "Ngo Quyen"@eng-Latn, "Quận Ngô Quyền"@vie-Latn ;
+    wdata:q7200235 "VN10303" .
+
+<urn:mdciii:1603:45:16:704:2:10305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10305" ;
+    skos:prefLabel "Le Chan"@eng-Latn, "Quận Lê Chân"@vie-Latn ;
+    wdata:q7200235 "VN10305" .
+
+<urn:mdciii:1603:45:16:704:2:10307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10307" ;
+    skos:prefLabel "Kien An"@eng-Latn, "Quận Kiến An"@vie-Latn ;
+    wdata:q7200235 "VN10307" .
+
+<urn:mdciii:1603:45:16:704:2:10309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10309" ;
+    skos:prefLabel "Do Son"@eng-Latn, "Quận Đồ Sơn"@vie-Latn ;
+    wdata:q7200235 "VN10309" .
+
+<urn:mdciii:1603:45:16:704:2:10310>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10310" ;
+    skos:prefLabel "Duong Kinh"@eng-Latn, "Quận Dương Kinh"@vie-Latn ;
+    wdata:q7200235 "VN10310" .
+
+<urn:mdciii:1603:45:16:704:2:10311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10311" ;
+    skos:prefLabel "Huyện Thủy Nguyên"@vie-Latn, "Thuy Nguyen"@eng-Latn ;
+    wdata:q7200235 "VN10311" .
+
+<urn:mdciii:1603:45:16:704:2:10313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10313" ;
+    skos:prefLabel "An Duong"@eng-Latn, "Huyện An Dương"@vie-Latn ;
+    wdata:q7200235 "VN10313" .
+
+<urn:mdciii:1603:45:16:704:2:10314>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10314" ;
+    skos:prefLabel "Hai An"@eng-Latn, "Quận Hải An"@vie-Latn ;
+    wdata:q7200235 "VN10314" .
+
+<urn:mdciii:1603:45:16:704:2:10315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10315" ;
+    skos:prefLabel "An Lao"@eng-Latn, "Huyện An Lão"@vie-Latn ;
+    wdata:q7200235 "VN10315" .
+
+<urn:mdciii:1603:45:16:704:2:10317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10317" ;
+    skos:prefLabel "Huyện Kiến Thụy"@vie-Latn, "Kien Thuy"@eng-Latn ;
+    wdata:q7200235 "VN10317" .
+
+<urn:mdciii:1603:45:16:704:2:10319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10319" ;
+    skos:prefLabel "Huyện Tiên Lãng"@vie-Latn, "Tien Lang"@eng-Latn ;
+    wdata:q7200235 "VN10319" .
+
+<urn:mdciii:1603:45:16:704:2:10321>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10321" ;
+    skos:prefLabel "Huyện Vĩnh Bảo"@vie-Latn, "Vinh Bao"@eng-Latn ;
+    wdata:q7200235 "VN10321" .
+
+<urn:mdciii:1603:45:16:704:2:10323>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10323" ;
+    skos:prefLabel "Cat Hai"@eng-Latn, "Huyện Cát Hải"@vie-Latn ;
+    wdata:q7200235 "VN10323" .
+
+<urn:mdciii:1603:45:16:704:2:10325>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10325" ;
+    skos:prefLabel "Bach Long Vi"@eng-Latn, "Huyện Bạch Long Vĩ"@vie-Latn ;
+    wdata:q7200235 "VN10325" .
+
+<urn:mdciii:1603:45:16:704:2:10401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10401" ;
+    skos:prefLabel "TP. Vĩnh Yên"@vie-Latn, "Vinh Yen"@eng-Latn ;
+    wdata:q7200235 "VN10401" .
+
+<urn:mdciii:1603:45:16:704:2:10402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10402" ;
+    skos:prefLabel "Phuc Yen"@eng-Latn, "Thị xã Phúc Yên"@vie-Latn ;
+    wdata:q7200235 "VN10402" .
+
+<urn:mdciii:1603:45:16:704:2:10403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10403" ;
+    skos:prefLabel "Huyện Lập Thạch"@vie-Latn, "Lap Thach"@eng-Latn ;
+    wdata:q7200235 "VN10403" .
+
+<urn:mdciii:1603:45:16:704:2:10404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10404" ;
+    skos:prefLabel "Huyện Tam Đảo"@vie-Latn, "Tam Dao"@eng-Latn ;
+    wdata:q7200235 "VN10404" .
+
+<urn:mdciii:1603:45:16:704:2:10405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10405" ;
+    skos:prefLabel "Huyện Tam Dương"@vie-Latn, "Tam Duong"@eng-Latn ;
+    wdata:q7200235 "VN10405" .
+
+<urn:mdciii:1603:45:16:704:2:10406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10406" ;
+    skos:prefLabel "Binh Xuyen"@eng-Latn, "Huyện Bình Xuyên"@vie-Latn ;
+    wdata:q7200235 "VN10406" .
+
+<urn:mdciii:1603:45:16:704:2:10407>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10407" ;
+    skos:prefLabel "Huyện Vĩnh Tường"@vie-Latn, "Vinh Tuong"@eng-Latn ;
+    wdata:q7200235 "VN10407" .
+
+<urn:mdciii:1603:45:16:704:2:10409>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10409" ;
+    skos:prefLabel "Huyện Yên Lạc"@vie-Latn, "Yen Lac"@eng-Latn ;
+    wdata:q7200235 "VN10409" .
+
+<urn:mdciii:1603:45:16:704:2:10411>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10411" ;
+    skos:prefLabel "Huyện Sông Lô"@vie-Latn, "Song Lo"@eng-Latn ;
+    wdata:q7200235 "VN10411" .
+
+<urn:mdciii:1603:45:16:704:2:10601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10601" ;
+    skos:prefLabel "Bac Ninh"@eng-Latn, "TP. Bắc Ninh"@vie-Latn ;
+    wdata:q7200235 "VN10601" .
+
+<urn:mdciii:1603:45:16:704:2:10603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10603" ;
+    skos:prefLabel "Huyện Yên Phong"@vie-Latn, "Yen Phong"@eng-Latn ;
+    wdata:q7200235 "VN10603" .
+
+<urn:mdciii:1603:45:16:704:2:10605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10605" ;
+    skos:prefLabel "Huyện Quế Võ"@vie-Latn, "Que Vo"@eng-Latn ;
+    wdata:q7200235 "VN10605" .
+
+<urn:mdciii:1603:45:16:704:2:10607>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10607" ;
+    skos:prefLabel "Huyện Tiên Du"@vie-Latn, "Tien Du"@eng-Latn ;
+    wdata:q7200235 "VN10607" .
+
+<urn:mdciii:1603:45:16:704:2:10608>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10608" ;
+    skos:prefLabel "Thị xã Từ Sơn"@vie-Latn, "Tu Son"@eng-Latn ;
+    wdata:q7200235 "VN10608" .
+
+<urn:mdciii:1603:45:16:704:2:10609>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10609" ;
+    skos:prefLabel "Huyện Thuận Thành"@vie-Latn, "Thuan Thanh"@eng-Latn ;
+    wdata:q7200235 "VN10609" .
+
+<urn:mdciii:1603:45:16:704:2:10611>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10611" ;
+    skos:prefLabel "Huyện Lương Tài"@vie-Latn, "Luong Tai"@eng-Latn ;
+    wdata:q7200235 "VN10611" .
+
+<urn:mdciii:1603:45:16:704:2:10612>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10612" ;
+    skos:prefLabel "Gia Binh"@eng-Latn, "Huyện Gia Bình"@vie-Latn ;
+    wdata:q7200235 "VN10612" .
+
+<urn:mdciii:1603:45:16:704:2:10701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10701" ;
+    skos:prefLabel "Hai Duong"@eng-Latn, "TP. Hải Dương"@vie-Latn ;
+    wdata:q7200235 "VN10701" .
+
+<urn:mdciii:1603:45:16:704:2:10703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10703" ;
+    skos:prefLabel "Chi Linh"@eng-Latn, "Thị xã Chí Linh"@vie-Latn ;
+    wdata:q7200235 "VN10703" .
+
+<urn:mdciii:1603:45:16:704:2:10705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10705" ;
+    skos:prefLabel "Huyện Nam Sách"@vie-Latn, "Nam Sach"@eng-Latn ;
+    wdata:q7200235 "VN10705" .
+
+<urn:mdciii:1603:45:16:704:2:10707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10707" ;
+    skos:prefLabel "Huyện Thanh Hà"@vie-Latn, "Thanh Ha"@eng-Latn ;
+    wdata:q7200235 "VN10707" .
+
+<urn:mdciii:1603:45:16:704:2:10709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10709" ;
+    skos:prefLabel "Huyện Kinh Môn"@vie-Latn, "Kinh Mon"@eng-Latn ;
+    wdata:q7200235 "VN10709" .
+
+<urn:mdciii:1603:45:16:704:2:10711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10711" ;
+    skos:prefLabel "Huyện Kim Thành"@vie-Latn, "Kim Thanh"@eng-Latn ;
+    wdata:q7200235 "VN10711" .
+
+<urn:mdciii:1603:45:16:704:2:10713>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10713" ;
+    skos:prefLabel "Gia Loc"@eng-Latn, "Huyện Gia Lộc"@vie-Latn ;
+    wdata:q7200235 "VN10713" .
+
+<urn:mdciii:1603:45:16:704:2:10715>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10715" ;
+    skos:prefLabel "Huyện Tứ Kỳ"@vie-Latn, "Tu Ky"@eng-Latn ;
+    wdata:q7200235 "VN10715" .
+
+<urn:mdciii:1603:45:16:704:2:10717>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10717" ;
+    skos:prefLabel "Cam Giang"@eng-Latn, "Huyện Cẩm Giàng"@vie-Latn ;
+    wdata:q7200235 "VN10717" .
+
+<urn:mdciii:1603:45:16:704:2:10719>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10719" ;
+    skos:prefLabel "Binh Giang"@eng-Latn, "Huyện Bình Giang"@vie-Latn ;
+    wdata:q7200235 "VN10719" .
+
+<urn:mdciii:1603:45:16:704:2:10721>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10721" ;
+    skos:prefLabel "Huyện Thanh Miện"@vie-Latn, "Thanh Mien"@eng-Latn ;
+    wdata:q7200235 "VN10721" .
+
+<urn:mdciii:1603:45:16:704:2:10723>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10723" ;
+    skos:prefLabel "Huyện Ninh Giang"@vie-Latn, "Ninh Giang"@eng-Latn ;
+    wdata:q7200235 "VN10723" .
+
+<urn:mdciii:1603:45:16:704:2:10901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10901" ;
+    skos:prefLabel "Hung Yen"@eng-Latn, "TP. Hưng Yên"@vie-Latn ;
+    wdata:q7200235 "VN10901" .
+
+<urn:mdciii:1603:45:16:704:2:10902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10902" ;
+    skos:prefLabel "Huyện Văn Lâm"@vie-Latn, "Van Lam"@eng-Latn ;
+    wdata:q7200235 "VN10902" .
+
+<urn:mdciii:1603:45:16:704:2:10903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10903" ;
+    skos:prefLabel "Huyện Mỹ Hào"@vie-Latn, "My Hao"@eng-Latn ;
+    wdata:q7200235 "VN10903" .
+
+<urn:mdciii:1603:45:16:704:2:10904>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10904" ;
+    skos:prefLabel "Huyện Yên Mỹ"@vie-Latn, "Yen My"@eng-Latn ;
+    wdata:q7200235 "VN10904" .
+
+<urn:mdciii:1603:45:16:704:2:10905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10905" ;
+    skos:prefLabel "Huyện Văn Giang"@vie-Latn, "Van Giang"@eng-Latn ;
+    wdata:q7200235 "VN10905" .
+
+<urn:mdciii:1603:45:16:704:2:10906>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10906" ;
+    skos:prefLabel "Huyện Khoái Châu"@vie-Latn, "Khoai Chau"@eng-Latn ;
+    wdata:q7200235 "VN10906" .
+
+<urn:mdciii:1603:45:16:704:2:10907>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10907" ;
+    skos:prefLabel "An Thi"@eng-Latn, "Huyện Ân Thi"@vie-Latn ;
+    wdata:q7200235 "VN10907" .
+
+<urn:mdciii:1603:45:16:704:2:10909>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10909" ;
+    skos:prefLabel "Huyện Kim Động"@vie-Latn, "Kim Dong"@eng-Latn ;
+    wdata:q7200235 "VN10909" .
+
+<urn:mdciii:1603:45:16:704:2:10911>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10911" ;
+    skos:prefLabel "Huyện Phù Cừ"@vie-Latn, "Phu Cu"@eng-Latn ;
+    wdata:q7200235 "VN10911" .
+
+<urn:mdciii:1603:45:16:704:2:10913>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:10913" ;
+    skos:prefLabel "Huyện Tiên Lữ"@vie-Latn, "Tien Lu"@eng-Latn ;
+    wdata:q7200235 "VN10913" .
+
+<urn:mdciii:1603:45:16:704:2:11101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11101" ;
+    skos:prefLabel "Phu Ly"@eng-Latn, "TP. Phủ Lý"@vie-Latn ;
+    wdata:q7200235 "VN11101" .
+
+<urn:mdciii:1603:45:16:704:2:11103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11103" ;
+    skos:prefLabel "Duy Tien"@eng-Latn, "Huyện Duy Tiên"@vie-Latn ;
+    wdata:q7200235 "VN11103" .
+
+<urn:mdciii:1603:45:16:704:2:11105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11105" ;
+    skos:prefLabel "Huyện Kim Bảng"@vie-Latn, "Kim Bang"@eng-Latn ;
+    wdata:q7200235 "VN11105" .
+
+<urn:mdciii:1603:45:16:704:2:11107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11107" ;
+    skos:prefLabel "Huyện Lý Nhân"@vie-Latn, "Ly Nhan"@eng-Latn ;
+    wdata:q7200235 "VN11107" .
+
+<urn:mdciii:1603:45:16:704:2:11109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11109" ;
+    skos:prefLabel "Huyện Thanh Liêm"@vie-Latn, "Thanh Liem"@eng-Latn ;
+    wdata:q7200235 "VN11109" .
+
+<urn:mdciii:1603:45:16:704:2:11111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11111" ;
+    skos:prefLabel "Binh Luc"@eng-Latn, "Huyện Bình Lục"@vie-Latn ;
+    wdata:q7200235 "VN11111" .
+
+<urn:mdciii:1603:45:16:704:2:11301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11301" ;
+    skos:prefLabel "Nam Định"@eng-Latn, "TP. Nam Định"@vie-Latn ;
+    wdata:q7200235 "VN11301" .
+
+<urn:mdciii:1603:45:16:704:2:11303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11303" ;
+    skos:prefLabel "Huyện Vụ Bản"@vie-Latn, "Vu Ban"@eng-Latn ;
+    wdata:q7200235 "VN11303" .
+
+<urn:mdciii:1603:45:16:704:2:11305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11305" ;
+    skos:prefLabel "Huyện Mỹ Lộc"@vie-Latn, "My Loc"@eng-Latn ;
+    wdata:q7200235 "VN11305" .
+
+<urn:mdciii:1603:45:16:704:2:11307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11307" ;
+    skos:prefLabel "Huyện Ý Yên"@vie-Latn, "Y Yen"@eng-Latn ;
+    wdata:q7200235 "VN11307" .
+
+<urn:mdciii:1603:45:16:704:2:11309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11309" ;
+    skos:prefLabel "Huyện Nam Trực"@vie-Latn, "Nam Truc"@eng-Latn ;
+    wdata:q7200235 "VN11309" .
+
+<urn:mdciii:1603:45:16:704:2:11311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11311" ;
+    skos:prefLabel "Huyện Trực Ninh"@vie-Latn, "Truc Ninh"@eng-Latn ;
+    wdata:q7200235 "VN11311" .
+
+<urn:mdciii:1603:45:16:704:2:11313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11313" ;
+    skos:prefLabel "Huyện Xuân Trường"@vie-Latn, "Xuan Truong"@eng-Latn ;
+    wdata:q7200235 "VN11313" .
+
+<urn:mdciii:1603:45:16:704:2:11315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11315" ;
+    skos:prefLabel "Giao Thuy"@eng-Latn, "Huyện Giao Thủy"@vie-Latn ;
+    wdata:q7200235 "VN11315" .
+
+<urn:mdciii:1603:45:16:704:2:11317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11317" ;
+    skos:prefLabel "Huyện Nghĩa Hưng"@vie-Latn, "Nghia Hung"@eng-Latn ;
+    wdata:q7200235 "VN11317" .
+
+<urn:mdciii:1603:45:16:704:2:11319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11319" ;
+    skos:prefLabel "Hai Hau"@eng-Latn, "Huyện Hải Hậu"@vie-Latn ;
+    wdata:q7200235 "VN11319" .
+
+<urn:mdciii:1603:45:16:704:2:11501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11501" ;
+    skos:prefLabel "TP. Thái Bình"@vie-Latn, "Thai Binh"@eng-Latn ;
+    wdata:q7200235 "VN11501" .
+
+<urn:mdciii:1603:45:16:704:2:11503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11503" ;
+    skos:prefLabel "Huyện Quỳnh Phụ"@vie-Latn, "Quynh Phu"@eng-Latn ;
+    wdata:q7200235 "VN11503" .
+
+<urn:mdciii:1603:45:16:704:2:11505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11505" ;
+    skos:prefLabel "Hung Ha"@eng-Latn, "Huyện Hưng Hà"@vie-Latn ;
+    wdata:q7200235 "VN11505" .
+
+<urn:mdciii:1603:45:16:704:2:11507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11507" ;
+    skos:prefLabel "Huyện Thái Thụy"@vie-Latn, "Thai Thuy"@eng-Latn ;
+    wdata:q7200235 "VN11507" .
+
+<urn:mdciii:1603:45:16:704:2:11509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11509" ;
+    skos:prefLabel "Dong Hung"@eng-Latn, "Huyện Đông Hưng"@vie-Latn ;
+    wdata:q7200235 "VN11509" .
+
+<urn:mdciii:1603:45:16:704:2:11511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11511" ;
+    skos:prefLabel "Huyện Vũ Thư"@vie-Latn, "Vu Thu"@eng-Latn ;
+    wdata:q7200235 "VN11511" .
+
+<urn:mdciii:1603:45:16:704:2:11513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11513" ;
+    skos:prefLabel "Huyện Kiến Xương"@vie-Latn, "Kien Xuong"@eng-Latn ;
+    wdata:q7200235 "VN11513" .
+
+<urn:mdciii:1603:45:16:704:2:11515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11515" ;
+    skos:prefLabel "Huyện Tiền Hải"@vie-Latn, "Tien Hai"@eng-Latn ;
+    wdata:q7200235 "VN11515" .
+
+<urn:mdciii:1603:45:16:704:2:11701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11701" ;
+    skos:prefLabel "Ninh Bình"@eng-Latn, "TP. Ninh Bình"@vie-Latn ;
+    wdata:q7200235 "VN11701" .
+
+<urn:mdciii:1603:45:16:704:2:11703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11703" ;
+    skos:prefLabel "Tam Diep"@eng-Latn, "Thị xã Tam Điệp"@vie-Latn ;
+    wdata:q7200235 "VN11703" .
+
+<urn:mdciii:1603:45:16:704:2:11705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11705" ;
+    skos:prefLabel "Huyện Nho Quan"@vie-Latn, "Nho Quan"@eng-Latn ;
+    wdata:q7200235 "VN11705" .
+
+<urn:mdciii:1603:45:16:704:2:11707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11707" ;
+    skos:prefLabel "Gia Vien"@eng-Latn, "Huyện Gia Viễn"@vie-Latn ;
+    wdata:q7200235 "VN11707" .
+
+<urn:mdciii:1603:45:16:704:2:11709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11709" ;
+    skos:prefLabel "Hoa Lu"@eng-Latn, "Huyện Hoa Lư"@vie-Latn ;
+    wdata:q7200235 "VN11709" .
+
+<urn:mdciii:1603:45:16:704:2:11711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11711" ;
+    skos:prefLabel "Huyện Yên Mô"@vie-Latn, "Yen Mo"@eng-Latn ;
+    wdata:q7200235 "VN11711" .
+
+<urn:mdciii:1603:45:16:704:2:11713>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11713" ;
+    skos:prefLabel "Huyện Yên Khánh"@vie-Latn, "Yen Khanh"@eng-Latn ;
+    wdata:q7200235 "VN11713" .
+
+<urn:mdciii:1603:45:16:704:2:11715>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:11715" ;
+    skos:prefLabel "Huyện Kim Sơn"@vie-Latn, "Kim Son"@eng-Latn ;
+    wdata:q7200235 "VN11715" .
+
+<urn:mdciii:1603:45:16:704:2:20101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20101" ;
+    skos:prefLabel "Ha Giang"@eng-Latn, "TP. Hà Giang"@vie-Latn ;
+    wdata:q7200235 "VN20101" .
+
+<urn:mdciii:1603:45:16:704:2:20103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20103" ;
+    skos:prefLabel "Dong Van"@eng-Latn, "Huyện Đồng Văn"@vie-Latn ;
+    wdata:q7200235 "VN20103" .
+
+<urn:mdciii:1603:45:16:704:2:20105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20105" ;
+    skos:prefLabel "Huyện Mèo Vạc"@vie-Latn, "Meo Vac"@eng-Latn ;
+    wdata:q7200235 "VN20105" .
+
+<urn:mdciii:1603:45:16:704:2:20107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20107" ;
+    skos:prefLabel "Huyện Yên Minh"@vie-Latn, "Yen Minh"@eng-Latn ;
+    wdata:q7200235 "VN20107" .
+
+<urn:mdciii:1603:45:16:704:2:20109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20109" ;
+    skos:prefLabel "Huyện Quản Bạ"@vie-Latn, "Quan Ba"@eng-Latn ;
+    wdata:q7200235 "VN20109" .
+
+<urn:mdciii:1603:45:16:704:2:20111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20111" ;
+    skos:prefLabel "Bac Me"@eng-Latn, "Huyện Bắc Mê"@vie-Latn ;
+    wdata:q7200235 "VN20111" .
+
+<urn:mdciii:1603:45:16:704:2:20113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20113" ;
+    skos:prefLabel "Hoang Su Phi"@eng-Latn, "Huyện Hoàng Su Phì"@vie-Latn ;
+    wdata:q7200235 "VN20113" .
+
+<urn:mdciii:1603:45:16:704:2:20115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20115" ;
+    skos:prefLabel "Huyện Vị Xuyên"@vie-Latn, "Vi Xuyen"@eng-Latn ;
+    wdata:q7200235 "VN20115" .
+
+<urn:mdciii:1603:45:16:704:2:20117>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20117" ;
+    skos:prefLabel "Huyện Xín Mần"@vie-Latn, "Xin Man"@eng-Latn ;
+    wdata:q7200235 "VN20117" .
+
+<urn:mdciii:1603:45:16:704:2:20119>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20119" ;
+    skos:prefLabel "Bac Quang"@eng-Latn, "Huyện Bắc Quang"@vie-Latn ;
+    wdata:q7200235 "VN20119" .
+
+<urn:mdciii:1603:45:16:704:2:20120>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20120" ;
+    skos:prefLabel "Huyện Quang Bình"@vie-Latn, "Quang Binh"@eng-Latn ;
+    wdata:q7200235 "VN20120" .
+
+<urn:mdciii:1603:45:16:704:2:20301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20301" ;
+    skos:prefLabel "Cao Bang"@eng-Latn, "TP. Cao Bằng"@vie-Latn ;
+    wdata:q7200235 "VN20301" .
+
+<urn:mdciii:1603:45:16:704:2:20303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20303" ;
+    skos:prefLabel "Bao Lac"@eng-Latn, "Huyện Bảo Lạc"@vie-Latn ;
+    wdata:q7200235 "VN20303" .
+
+<urn:mdciii:1603:45:16:704:2:20304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20304" ;
+    skos:prefLabel "Bao Lam"@eng-Latn, "Huyện Bảo Lâm"@vie-Latn ;
+    wdata:q7200235 "VN20304" .
+
+<urn:mdciii:1603:45:16:704:2:20305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20305" ;
+    skos:prefLabel "Ha Quang"@eng-Latn, "Huyện Hà Quảng"@vie-Latn ;
+    wdata:q7200235 "VN20305" .
+
+<urn:mdciii:1603:45:16:704:2:20307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20307" ;
+    skos:prefLabel "Huyện Thông Nông"@vie-Latn, "Thong Nong"@eng-Latn ;
+    wdata:q7200235 "VN20307" .
+
+<urn:mdciii:1603:45:16:704:2:20309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20309" ;
+    skos:prefLabel "Huyện Trà Lĩnh"@vie-Latn, "Tra Linh"@eng-Latn ;
+    wdata:q7200235 "VN20309" .
+
+<urn:mdciii:1603:45:16:704:2:20311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20311" ;
+    skos:prefLabel "Huyện Trùng Khánh"@vie-Latn, "Trung Khanh"@eng-Latn ;
+    wdata:q7200235 "VN20311" .
+
+<urn:mdciii:1603:45:16:704:2:20313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20313" ;
+    skos:prefLabel "Huyện Nguyên Bình"@vie-Latn, "Nguyen Binh"@eng-Latn ;
+    wdata:q7200235 "VN20313" .
+
+<urn:mdciii:1603:45:16:704:2:20315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20315" ;
+    skos:prefLabel "Hoa An"@eng-Latn, "Huyện Hòa An"@vie-Latn ;
+    wdata:q7200235 "VN20315" .
+
+<urn:mdciii:1603:45:16:704:2:20317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20317" ;
+    skos:prefLabel "Huyện Quảng Uyên"@vie-Latn, "Quang Uyen"@eng-Latn ;
+    wdata:q7200235 "VN20317" .
+
+<urn:mdciii:1603:45:16:704:2:20318>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20318" ;
+    skos:prefLabel "Huyện Phục Hòa"@vie-Latn, "Phuc Hoa"@eng-Latn ;
+    wdata:q7200235 "VN20318" .
+
+<urn:mdciii:1603:45:16:704:2:20319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20319" ;
+    skos:prefLabel "Ha Lang"@eng-Latn, "Huyện Hạ Lang"@vie-Latn ;
+    wdata:q7200235 "VN20319" .
+
+<urn:mdciii:1603:45:16:704:2:20321>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20321" ;
+    skos:prefLabel "Huyện Thạch An"@vie-Latn, "Thach An"@eng-Latn ;
+    wdata:q7200235 "VN20321" .
+
+<urn:mdciii:1603:45:16:704:2:20501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20501" ;
+    skos:prefLabel "Lao Cai"@eng-Latn, "TP. Lào Cai"@vie-Latn ;
+    wdata:q7200235 "VN20501" .
+
+<urn:mdciii:1603:45:16:704:2:20505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20505" ;
+    skos:prefLabel "Huyện Mường Khương"@vie-Latn, "Muong Khuong"@eng-Latn ;
+    wdata:q7200235 "VN20505" .
+
+<urn:mdciii:1603:45:16:704:2:20507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20507" ;
+    skos:prefLabel "Bat Xat"@eng-Latn, "Huyện Bát Xát"@vie-Latn ;
+    wdata:q7200235 "VN20507" .
+
+<urn:mdciii:1603:45:16:704:2:20508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20508" ;
+    skos:prefLabel "Huyện Si Ma Cai"@vie-Latn, "Si Ma Cai"@eng-Latn ;
+    wdata:q7200235 "VN20508" .
+
+<urn:mdciii:1603:45:16:704:2:20509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20509" ;
+    skos:prefLabel "Bac Ha"@eng-Latn, "Huyện Bắc Hà"@vie-Latn ;
+    wdata:q7200235 "VN20509" .
+
+<urn:mdciii:1603:45:16:704:2:20511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20511" ;
+    skos:prefLabel "Bao Thang"@eng-Latn, "Huyện Bảo Thắng"@vie-Latn ;
+    wdata:q7200235 "VN20511" .
+
+<urn:mdciii:1603:45:16:704:2:20513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20513" ;
+    skos:prefLabel "Huyện Sa Pa"@vie-Latn, "Sa Pa"@eng-Latn ;
+    wdata:q7200235 "VN20513" .
+
+<urn:mdciii:1603:45:16:704:2:20515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20515" ;
+    skos:prefLabel "Bao Yen"@eng-Latn, "Huyện Bảo Yên"@vie-Latn ;
+    wdata:q7200235 "VN20515" .
+
+<urn:mdciii:1603:45:16:704:2:20519>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20519" ;
+    skos:prefLabel "Huyện Văn Bàn"@vie-Latn, "Van Ban"@eng-Latn ;
+    wdata:q7200235 "VN20519" .
+
+<urn:mdciii:1603:45:16:704:2:20701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20701" ;
+    skos:prefLabel "Bac Kan"@eng-Latn, "Thị xã Bắc Kạn"@vie-Latn ;
+    wdata:q7200235 "VN20701" .
+
+<urn:mdciii:1603:45:16:704:2:20703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20703" ;
+    skos:prefLabel "Ba Be"@eng-Latn, "Huyện Ba Bể"@vie-Latn ;
+    wdata:q7200235 "VN20703" .
+
+<urn:mdciii:1603:45:16:704:2:20704>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20704" ;
+    skos:prefLabel "Huyện Pác Nặm"@vie-Latn, "Pac Nam"@eng-Latn ;
+    wdata:q7200235 "VN20704" .
+
+<urn:mdciii:1603:45:16:704:2:20705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20705" ;
+    skos:prefLabel "Huyện Ngân Sơn"@vie-Latn, "Ngan Son"@eng-Latn ;
+    wdata:q7200235 "VN20705" .
+
+<urn:mdciii:1603:45:16:704:2:20707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20707" ;
+    skos:prefLabel "Cho Don"@eng-Latn, "Huyện Chợ Đồn"@vie-Latn ;
+    wdata:q7200235 "VN20707" .
+
+<urn:mdciii:1603:45:16:704:2:20709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20709" ;
+    skos:prefLabel "Huyện Na Rì"@vie-Latn, "Na Ri"@eng-Latn ;
+    wdata:q7200235 "VN20709" .
+
+<urn:mdciii:1603:45:16:704:2:20711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20711" ;
+    skos:prefLabel "Bach Thong"@eng-Latn, "Huyện Bạch Thông"@vie-Latn ;
+    wdata:q7200235 "VN20711" .
+
+<urn:mdciii:1603:45:16:704:2:20712>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20712" ;
+    skos:prefLabel "Cho Moi"@eng-Latn, "Huyện Chợ Mới"@vie-Latn ;
+    wdata:q7200235 "VN20712" .
+
+<urn:mdciii:1603:45:16:704:2:20901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20901" ;
+    skos:prefLabel "Lang Son"@eng-Latn, "TP. Lạng Sơn"@vie-Latn ;
+    wdata:q7200235 "VN20901" .
+
+<urn:mdciii:1603:45:16:704:2:20903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20903" ;
+    skos:prefLabel "Huyện Tràng Định"@vie-Latn, "Trang Dinh"@eng-Latn ;
+    wdata:q7200235 "VN20903" .
+
+<urn:mdciii:1603:45:16:704:2:20905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20905" ;
+    skos:prefLabel "Huyện Văn Lãng"@vie-Latn, "Van Lang"@eng-Latn ;
+    wdata:q7200235 "VN20905" .
+
+<urn:mdciii:1603:45:16:704:2:20907>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20907" ;
+    skos:prefLabel "Binh Gia"@eng-Latn, "Huyện Bình Gia"@vie-Latn ;
+    wdata:q7200235 "VN20907" .
+
+<urn:mdciii:1603:45:16:704:2:20909>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20909" ;
+    skos:prefLabel "Bac Son"@eng-Latn, "Huyện Bắc Sơn"@vie-Latn ;
+    wdata:q7200235 "VN20909" .
+
+<urn:mdciii:1603:45:16:704:2:20911>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20911" ;
+    skos:prefLabel "Huyện Văn Quan"@vie-Latn, "Van Quan"@eng-Latn ;
+    wdata:q7200235 "VN20911" .
+
+<urn:mdciii:1603:45:16:704:2:20913>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20913" ;
+    skos:prefLabel "Cao Loc"@eng-Latn, "Huyện Cao Lộc"@vie-Latn ;
+    wdata:q7200235 "VN20913" .
+
+<urn:mdciii:1603:45:16:704:2:20915>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20915" ;
+    skos:prefLabel "Huyện Lộc Bình"@vie-Latn, "Loc Binh"@eng-Latn ;
+    wdata:q7200235 "VN20915" .
+
+<urn:mdciii:1603:45:16:704:2:20917>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20917" ;
+    skos:prefLabel "Chi Lang"@eng-Latn, "Huyện Chi Lăng"@vie-Latn ;
+    wdata:q7200235 "VN20917" .
+
+<urn:mdciii:1603:45:16:704:2:20919>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20919" ;
+    skos:prefLabel "Dinh Lap"@eng-Latn, "Huyện Đình Lập"@vie-Latn ;
+    wdata:q7200235 "VN20919" .
+
+<urn:mdciii:1603:45:16:704:2:20921>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:20921" ;
+    skos:prefLabel "Huu Lung"@eng-Latn, "Huyện Hữu Lũng"@vie-Latn ;
+    wdata:q7200235 "VN20921" .
+
+<urn:mdciii:1603:45:16:704:2:21101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21101" ;
+    skos:prefLabel "TP. Tuyên Quang"@vie-Latn, "Tuyen Quang"@eng-Latn ;
+    wdata:q7200235 "VN21101" .
+
+<urn:mdciii:1603:45:16:704:2:21103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21103" ;
+    skos:prefLabel "Huyện Na Hang"@vie-Latn, "Na Hang"@eng-Latn ;
+    wdata:q7200235 "VN21103" .
+
+<urn:mdciii:1603:45:16:704:2:21105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21105" ;
+    skos:prefLabel "Chiem Hoa"@eng-Latn, "Huyện Chiêm Hóa"@vie-Latn ;
+    wdata:q7200235 "VN21105" .
+
+<urn:mdciii:1603:45:16:704:2:21107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21107" ;
+    skos:prefLabel "Ham Yen"@eng-Latn, "Huyện Hàm Yên"@vie-Latn ;
+    wdata:q7200235 "VN21107" .
+
+<urn:mdciii:1603:45:16:704:2:21109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21109" ;
+    skos:prefLabel "Huyện Yên Sơn"@vie-Latn, "Yen Son"@eng-Latn ;
+    wdata:q7200235 "VN21109" .
+
+<urn:mdciii:1603:45:16:704:2:21111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21111" ;
+    skos:prefLabel "Huyện Sơn Dương"@vie-Latn, "Son Duong"@eng-Latn ;
+    wdata:q7200235 "VN21111" .
+
+<urn:mdciii:1603:45:16:704:2:21112>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21112" ;
+    skos:prefLabel "Huyện Lâm Bình"@vie-Latn, "Lam Binh"@eng-Latn ;
+    wdata:q7200235 "VN21112" .
+
+<urn:mdciii:1603:45:16:704:2:21301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21301" ;
+    skos:prefLabel "TP. Yên Bái"@vie-Latn, "Yen Bai"@eng-Latn ;
+    wdata:q7200235 "VN21301" .
+
+<urn:mdciii:1603:45:16:704:2:21303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21303" ;
+    skos:prefLabel "Nghia Lo"@eng-Latn, "Thị xã Nghĩa Lộ"@vie-Latn ;
+    wdata:q7200235 "VN21303" .
+
+<urn:mdciii:1603:45:16:704:2:21305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21305" ;
+    skos:prefLabel "Huyện Lục Yên"@vie-Latn, "Luc Yen"@eng-Latn ;
+    wdata:q7200235 "VN21305" .
+
+<urn:mdciii:1603:45:16:704:2:21307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21307" ;
+    skos:prefLabel "Huyện Văn Yên"@vie-Latn, "Van Yen"@eng-Latn ;
+    wdata:q7200235 "VN21307" .
+
+<urn:mdciii:1603:45:16:704:2:21309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21309" ;
+    skos:prefLabel "Huyện Mù Cang Chải"@vie-Latn, "Mu Cang Chai"@eng-Latn ;
+    wdata:q7200235 "VN21309" .
+
+<urn:mdciii:1603:45:16:704:2:21311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21311" ;
+    skos:prefLabel "Huyện Trấn Yên"@vie-Latn, "Tran Yen"@eng-Latn ;
+    wdata:q7200235 "VN21311" .
+
+<urn:mdciii:1603:45:16:704:2:21313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21313" ;
+    skos:prefLabel "Huyện Yên Bình"@vie-Latn, "Yen Binh"@eng-Latn ;
+    wdata:q7200235 "VN21313" .
+
+<urn:mdciii:1603:45:16:704:2:21315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21315" ;
+    skos:prefLabel "Huyện Văn Chấn"@vie-Latn, "Van Chan"@eng-Latn ;
+    wdata:q7200235 "VN21315" .
+
+<urn:mdciii:1603:45:16:704:2:21317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21317" ;
+    skos:prefLabel "Huyện Trạm Tấu"@vie-Latn, "Tram Tau"@eng-Latn ;
+    wdata:q7200235 "VN21317" .
+
+<urn:mdciii:1603:45:16:704:2:21501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21501" ;
+    skos:prefLabel "TP. Thái Nguyên"@vie-Latn, "Thai Nguyen"@eng-Latn ;
+    wdata:q7200235 "VN21501" .
+
+<urn:mdciii:1603:45:16:704:2:21503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21503" ;
+    skos:prefLabel "Song Cong"@eng-Latn, "Thị xã Sông Công"@vie-Latn ;
+    wdata:q7200235 "VN21503" .
+
+<urn:mdciii:1603:45:16:704:2:21505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21505" ;
+    skos:prefLabel "Dinh Hoa"@eng-Latn, "Huyện Định Hóa"@vie-Latn ;
+    wdata:q7200235 "VN21505" .
+
+<urn:mdciii:1603:45:16:704:2:21507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21507" ;
+    skos:prefLabel "Huyện Võ Nhai"@vie-Latn, "Vo Nhai"@eng-Latn ;
+    wdata:q7200235 "VN21507" .
+
+<urn:mdciii:1603:45:16:704:2:21509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21509" ;
+    skos:prefLabel "Huyện Phú Lương"@vie-Latn, "Phu Luong"@eng-Latn ;
+    wdata:q7200235 "VN21509" .
+
+<urn:mdciii:1603:45:16:704:2:21511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21511" ;
+    skos:prefLabel "Dong Hy"@eng-Latn, "Huyện Đồng Hỷ"@vie-Latn ;
+    wdata:q7200235 "VN21511" .
+
+<urn:mdciii:1603:45:16:704:2:21513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21513" ;
+    skos:prefLabel "Dai Tu"@eng-Latn, "Huyện Đại Từ"@vie-Latn ;
+    wdata:q7200235 "VN21513" .
+
+<urn:mdciii:1603:45:16:704:2:21515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21515" ;
+    skos:prefLabel "Huyện Phú Bình"@vie-Latn, "Phu Binh"@eng-Latn ;
+    wdata:q7200235 "VN21515" .
+
+<urn:mdciii:1603:45:16:704:2:21517>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21517" ;
+    skos:prefLabel "Huyện Phổ Yên"@vie-Latn, "Pho Yen"@eng-Latn ;
+    wdata:q7200235 "VN21517" .
+
+<urn:mdciii:1603:45:16:704:2:21701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21701" ;
+    skos:prefLabel "TP. Việt Trì"@vie-Latn, "Viet Tri"@eng-Latn ;
+    wdata:q7200235 "VN21701" .
+
+<urn:mdciii:1603:45:16:704:2:21703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21703" ;
+    skos:prefLabel "Phu Tho"@eng-Latn, "Thị xã Phú Thọ"@vie-Latn ;
+    wdata:q7200235 "VN21703" .
+
+<urn:mdciii:1603:45:16:704:2:21705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21705" ;
+    skos:prefLabel "Doan Hung"@eng-Latn, "Huyện Đoan Hùng"@vie-Latn ;
+    wdata:q7200235 "VN21705" .
+
+<urn:mdciii:1603:45:16:704:2:21707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21707" ;
+    skos:prefLabel "Ha Hoa"@eng-Latn, "Huyện Hạ Hòa"@vie-Latn ;
+    wdata:q7200235 "VN21707" .
+
+<urn:mdciii:1603:45:16:704:2:21709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21709" ;
+    skos:prefLabel "Huyện Thanh Ba"@vie-Latn, "Thanh Ba"@eng-Latn ;
+    wdata:q7200235 "VN21709" .
+
+<urn:mdciii:1603:45:16:704:2:21711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21711" ;
+    skos:prefLabel "Huyện Phù Ninh"@vie-Latn, "Phu Ninh"@eng-Latn ;
+    wdata:q7200235 "VN21711" .
+
+<urn:mdciii:1603:45:16:704:2:21712>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21712" ;
+    skos:prefLabel "Huyện Lâm Thao"@vie-Latn, "Lam Thao"@eng-Latn ;
+    wdata:q7200235 "VN21712" .
+
+<urn:mdciii:1603:45:16:704:2:21713>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21713" ;
+    skos:prefLabel "Cam Khe"@eng-Latn, "Huyện Cẩm Khê"@vie-Latn ;
+    wdata:q7200235 "VN21713" .
+
+<urn:mdciii:1603:45:16:704:2:21715>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21715" ;
+    skos:prefLabel "Huyện Yên Lập"@vie-Latn, "Yen Lap"@eng-Latn ;
+    wdata:q7200235 "VN21715" .
+
+<urn:mdciii:1603:45:16:704:2:21717>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21717" ;
+    skos:prefLabel "Huyện Tam Nông"@vie-Latn, "Tam Nong"@eng-Latn ;
+    wdata:q7200235 "VN21717" .
+
+<urn:mdciii:1603:45:16:704:2:21718>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21718" ;
+    skos:prefLabel "Huyện Thanh Thủy"@vie-Latn, "Thanh Thuy"@eng-Latn ;
+    wdata:q7200235 "VN21718" .
+
+<urn:mdciii:1603:45:16:704:2:21719>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21719" ;
+    skos:prefLabel "Huyện Thanh Sơn"@vie-Latn, "Thanh Son"@eng-Latn ;
+    wdata:q7200235 "VN21719" .
+
+<urn:mdciii:1603:45:16:704:2:21720>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:21720" ;
+    skos:prefLabel "Huyện Tân Sơn"@vie-Latn, "Tan Son"@eng-Latn ;
+    wdata:q7200235 "VN21720" .
+
+<urn:mdciii:1603:45:16:704:2:22101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22101" ;
+    skos:prefLabel "Bac Giang"@eng-Latn, "TP. Bắc Giang"@vie-Latn ;
+    wdata:q7200235 "VN22101" .
+
+<urn:mdciii:1603:45:16:704:2:22103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22103" ;
+    skos:prefLabel "Huyện Yên Thế"@vie-Latn, "Yen The"@eng-Latn ;
+    wdata:q7200235 "VN22103" .
+
+<urn:mdciii:1603:45:16:704:2:22105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22105" ;
+    skos:prefLabel "Huyện Tân Yên"@vie-Latn, "Tan Yen"@eng-Latn ;
+    wdata:q7200235 "VN22105" .
+
+<urn:mdciii:1603:45:16:704:2:22107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22107" ;
+    skos:prefLabel "Huyện Lục Ngạn"@vie-Latn, "Luc Ngan"@eng-Latn ;
+    wdata:q7200235 "VN22107" .
+
+<urn:mdciii:1603:45:16:704:2:22109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22109" ;
+    skos:prefLabel "Hiep Hoa"@eng-Latn, "Huyện Hiệp Hòa"@vie-Latn ;
+    wdata:q7200235 "VN22109" .
+
+<urn:mdciii:1603:45:16:704:2:22111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22111" ;
+    skos:prefLabel "Huyện Lạng Giang"@vie-Latn, "Lang Giang"@eng-Latn ;
+    wdata:q7200235 "VN22111" .
+
+<urn:mdciii:1603:45:16:704:2:22113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22113" ;
+    skos:prefLabel "Huyện Sơn Động"@vie-Latn, "Son Dong"@eng-Latn ;
+    wdata:q7200235 "VN22113" .
+
+<urn:mdciii:1603:45:16:704:2:22115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22115" ;
+    skos:prefLabel "Huyện Lục Nam"@vie-Latn, "Luc Nam"@eng-Latn ;
+    wdata:q7200235 "VN22115" .
+
+<urn:mdciii:1603:45:16:704:2:22117>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22117" ;
+    skos:prefLabel "Huyện Việt Yên"@vie-Latn, "Viet Yen"@eng-Latn ;
+    wdata:q7200235 "VN22117" .
+
+<urn:mdciii:1603:45:16:704:2:22119>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22119" ;
+    skos:prefLabel "Huyện Yên Dũng"@vie-Latn, "Yen Dung"@eng-Latn ;
+    wdata:q7200235 "VN22119" .
+
+<urn:mdciii:1603:45:16:704:2:22501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22501" ;
+    skos:prefLabel "Ha Long"@eng-Latn, "TP. Hạ Long"@vie-Latn ;
+    wdata:q7200235 "VN22501" .
+
+<urn:mdciii:1603:45:16:704:2:22503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22503" ;
+    skos:prefLabel "Cam Pha"@eng-Latn, "TP. Cẩm Phả"@vie-Latn ;
+    wdata:q7200235 "VN22503" .
+
+<urn:mdciii:1603:45:16:704:2:22505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22505" ;
+    skos:prefLabel "TP. Uông Bí"@vie-Latn, "Uong Bi"@eng-Latn ;
+    wdata:q7200235 "VN22505" .
+
+<urn:mdciii:1603:45:16:704:2:22506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22506" ;
+    skos:prefLabel "Mong Cai"@eng-Latn, "TP. Móng Cái"@vie-Latn ;
+    wdata:q7200235 "VN22506" .
+
+<urn:mdciii:1603:45:16:704:2:22507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22507" ;
+    skos:prefLabel "Binh Lieu"@eng-Latn, "Huyện Bình Liêu"@vie-Latn ;
+    wdata:q7200235 "VN22507" .
+
+<urn:mdciii:1603:45:16:704:2:22511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22511" ;
+    skos:prefLabel "Hai Ha"@eng-Latn, "Huyện Hải Hà"@vie-Latn ;
+    wdata:q7200235 "VN22511" .
+
+<urn:mdciii:1603:45:16:704:2:22512>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22512" ;
+    skos:prefLabel "Dam Ha"@eng-Latn, "Huyện Đầm Hà"@vie-Latn ;
+    wdata:q7200235 "VN22512" .
+
+<urn:mdciii:1603:45:16:704:2:22513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22513" ;
+    skos:prefLabel "Huyện Tiên Yên"@vie-Latn, "Tien Yen"@eng-Latn ;
+    wdata:q7200235 "VN22513" .
+
+<urn:mdciii:1603:45:16:704:2:22515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22515" ;
+    skos:prefLabel "Ba Che"@eng-Latn, "Huyện Ba Chẽ"@vie-Latn ;
+    wdata:q7200235 "VN22515" .
+
+<urn:mdciii:1603:45:16:704:2:22517>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22517" ;
+    skos:prefLabel "Huyện Vân Đồn"@vie-Latn, "Van Don"@eng-Latn ;
+    wdata:q7200235 "VN22517" .
+
+<urn:mdciii:1603:45:16:704:2:22519>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22519" ;
+    skos:prefLabel "Hoanh Bo"@eng-Latn, "Huyện Hoành Bồ"@vie-Latn ;
+    wdata:q7200235 "VN22519" .
+
+<urn:mdciii:1603:45:16:704:2:22521>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22521" ;
+    skos:prefLabel "Dong Trieu"@eng-Latn, "Huyện Đông Triều"@vie-Latn ;
+    wdata:q7200235 "VN22521" .
+
+<urn:mdciii:1603:45:16:704:2:22523>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22523" ;
+    skos:prefLabel "Co To"@eng-Latn, "Huyện Cô Tô"@vie-Latn ;
+    wdata:q7200235 "VN22523" .
+
+<urn:mdciii:1603:45:16:704:2:22525>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:22525" ;
+    skos:prefLabel "Quang Yen"@eng-Latn, "Thị xã Quảng Yên"@vie-Latn ;
+    wdata:q7200235 "VN22525" .
+
+<urn:mdciii:1603:45:16:704:2:30101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30101" ;
+    skos:prefLabel "Huyện Nậm Nhùn"@vie-Latn, "Nam Nhun"@eng-Latn ;
+    wdata:q7200235 "VN30101" .
+
+<urn:mdciii:1603:45:16:704:2:30103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30103" ;
+    skos:prefLabel "Lai Chau"@eng-Latn, "TP. Lai Châu"@vie-Latn ;
+    wdata:q7200235 "VN30103" .
+
+<urn:mdciii:1603:45:16:704:2:30105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30105" ;
+    skos:prefLabel "Huyện Mường Tè"@vie-Latn, "Muong Te"@eng-Latn ;
+    wdata:q7200235 "VN30105" .
+
+<urn:mdciii:1603:45:16:704:2:30107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30107" ;
+    skos:prefLabel "Huyện Phong Thổ"@vie-Latn, "Phong Tho"@eng-Latn ;
+    wdata:q7200235 "VN30107" .
+
+<urn:mdciii:1603:45:16:704:2:30108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30108" ;
+    skos:prefLabel "Huyện Tam Đường"@vie-Latn, "Tam Duong"@eng-Latn ;
+    wdata:q7200235 "VN30108" .
+
+<urn:mdciii:1603:45:16:704:2:30109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30109" ;
+    skos:prefLabel "Huyện Sìn Hồ"@vie-Latn, "Sin Ho"@eng-Latn ;
+    wdata:q7200235 "VN30109" .
+
+<urn:mdciii:1603:45:16:704:2:30117>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30117" ;
+    skos:prefLabel "Huyện Than Uyên"@vie-Latn, "Than Uyen"@eng-Latn ;
+    wdata:q7200235 "VN30117" .
+
+<urn:mdciii:1603:45:16:704:2:30118>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30118" ;
+    skos:prefLabel "Huyện Tân Uyên"@vie-Latn, "Tan Uyen"@eng-Latn ;
+    wdata:q7200235 "VN30118" .
+
+<urn:mdciii:1603:45:16:704:2:30201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30201" ;
+    skos:prefLabel "Dien Bien Phu"@eng-Latn, "TP. Điện Biên Phủ"@vie-Latn ;
+    wdata:q7200235 "VN30201" .
+
+<urn:mdciii:1603:45:16:704:2:30202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30202" ;
+    skos:prefLabel "Huyện Nậm Pồ"@vie-Latn, "Nam Po"@eng-Latn ;
+    wdata:q7200235 "VN30202" .
+
+<urn:mdciii:1603:45:16:704:2:30203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30203" ;
+    skos:prefLabel "Muong Lay"@eng-Latn, "Thị xã Mường Lay"@vie-Latn ;
+    wdata:q7200235 "VN30203" .
+
+<urn:mdciii:1603:45:16:704:2:30204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30204" ;
+    skos:prefLabel "Huyện Mường Nhé"@vie-Latn, "Muong Nhe"@eng-Latn ;
+    wdata:q7200235 "VN30204" .
+
+<urn:mdciii:1603:45:16:704:2:30211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30211" ;
+    skos:prefLabel "Huyện Mường Chà"@vie-Latn, "Muong Cha"@eng-Latn ;
+    wdata:q7200235 "VN30211" .
+
+<urn:mdciii:1603:45:16:704:2:30213>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30213" ;
+    skos:prefLabel "Huyện Tủa Chùa"@vie-Latn, "Tua Chua"@eng-Latn ;
+    wdata:q7200235 "VN30213" .
+
+<urn:mdciii:1603:45:16:704:2:30215>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30215" ;
+    skos:prefLabel "Huyện Tuần Giáo"@vie-Latn, "Tuan Giao"@eng-Latn ;
+    wdata:q7200235 "VN30215" .
+
+<urn:mdciii:1603:45:16:704:2:30216>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30216" ;
+    skos:prefLabel "Huyện Mường Ảng"@vie-Latn, "Muong Ang"@eng-Latn ;
+    wdata:q7200235 "VN30216" .
+
+<urn:mdciii:1603:45:16:704:2:30217>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30217" ;
+    skos:prefLabel "Dien Bien"@eng-Latn, "Huyện Điện Biên"@vie-Latn ;
+    wdata:q7200235 "VN30217" .
+
+<urn:mdciii:1603:45:16:704:2:30219>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30219" ;
+    skos:prefLabel "Dien Bien Dong"@eng-Latn, "Huyện Điện Biên Đông"@vie-Latn ;
+    wdata:q7200235 "VN30219" .
+
+<urn:mdciii:1603:45:16:704:2:30301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30301" ;
+    skos:prefLabel "Son La"@eng-Latn, "TP. Sơn La"@vie-Latn ;
+    wdata:q7200235 "VN30301" .
+
+<urn:mdciii:1603:45:16:704:2:30303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30303" ;
+    skos:prefLabel "Huyện Quỳnh Nhai"@vie-Latn, "Quynh Nhai"@eng-Latn ;
+    wdata:q7200235 "VN30303" .
+
+<urn:mdciii:1603:45:16:704:2:30305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30305" ;
+    skos:prefLabel "Huyện Mường La"@vie-Latn, "Muong La"@eng-Latn ;
+    wdata:q7200235 "VN30305" .
+
+<urn:mdciii:1603:45:16:704:2:30307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30307" ;
+    skos:prefLabel "Huyện Thuận Châu"@vie-Latn, "Thuan Chau"@eng-Latn ;
+    wdata:q7200235 "VN30307" .
+
+<urn:mdciii:1603:45:16:704:2:30309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30309" ;
+    skos:prefLabel "Bac Yen"@eng-Latn, "Huyện Bắc Yên"@vie-Latn ;
+    wdata:q7200235 "VN30309" .
+
+<urn:mdciii:1603:45:16:704:2:30311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30311" ;
+    skos:prefLabel "Huyện Phù Yên"@vie-Latn, "Phu Yen"@eng-Latn ;
+    wdata:q7200235 "VN30311" .
+
+<urn:mdciii:1603:45:16:704:2:30313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30313" ;
+    skos:prefLabel "Huyện Mai Sơn"@vie-Latn, "Mai Son"@eng-Latn ;
+    wdata:q7200235 "VN30313" .
+
+<urn:mdciii:1603:45:16:704:2:30315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30315" ;
+    skos:prefLabel "Huyện Sông Mã"@vie-Latn, "Song Ma"@eng-Latn ;
+    wdata:q7200235 "VN30315" .
+
+<urn:mdciii:1603:45:16:704:2:30316>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30316" ;
+    skos:prefLabel "Huyện Sốp Cộp"@vie-Latn, "Sop Cop"@eng-Latn ;
+    wdata:q7200235 "VN30316" .
+
+<urn:mdciii:1603:45:16:704:2:30317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30317" ;
+    skos:prefLabel "Huyện Yên Châu"@vie-Latn, "Yen Chau"@eng-Latn ;
+    wdata:q7200235 "VN30317" .
+
+<urn:mdciii:1603:45:16:704:2:30319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30319" ;
+    skos:prefLabel "Huyện Mộc Châu"@vie-Latn, "Moc Chau"@eng-Latn ;
+    wdata:q7200235 "VN30319" .
+
+<urn:mdciii:1603:45:16:704:2:30320>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30320" ;
+    skos:prefLabel "Huyện Vân Hồ"@vie-Latn, "Van Ho"@eng-Latn ;
+    wdata:q7200235 "VN30320" .
+
+<urn:mdciii:1603:45:16:704:2:30501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30501" ;
+    skos:prefLabel "Hoa Binh"@eng-Latn, "TP. Hòa Bình"@vie-Latn ;
+    wdata:q7200235 "VN30501" .
+
+<urn:mdciii:1603:45:16:704:2:30503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30503" ;
+    skos:prefLabel "Da Bac"@eng-Latn, "Huyện Đà Bắc"@vie-Latn ;
+    wdata:q7200235 "VN30503" .
+
+<urn:mdciii:1603:45:16:704:2:30505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30505" ;
+    skos:prefLabel "Huyện Mai Châu"@vie-Latn, "Mai Chau"@eng-Latn ;
+    wdata:q7200235 "VN30505" .
+
+<urn:mdciii:1603:45:16:704:2:30507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30507" ;
+    skos:prefLabel "Huyện Kỳ Sơn"@vie-Latn, "Ky Son"@eng-Latn ;
+    wdata:q7200235 "VN30507" .
+
+<urn:mdciii:1603:45:16:704:2:30509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30509" ;
+    skos:prefLabel "Huyện Lương Sơn"@vie-Latn, "Luong Son"@eng-Latn ;
+    wdata:q7200235 "VN30509" .
+
+<urn:mdciii:1603:45:16:704:2:30510>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30510" ;
+    skos:prefLabel "Cao Phong"@eng-Latn, "Huyện Cao Phong"@vie-Latn ;
+    wdata:q7200235 "VN30510" .
+
+<urn:mdciii:1603:45:16:704:2:30511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30511" ;
+    skos:prefLabel "Huyện Kim Bôi"@vie-Latn, "Kim Boi"@eng-Latn ;
+    wdata:q7200235 "VN30511" .
+
+<urn:mdciii:1603:45:16:704:2:30513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30513" ;
+    skos:prefLabel "Huyện Tân Lạc"@vie-Latn, "Tan Lac"@eng-Latn ;
+    wdata:q7200235 "VN30513" .
+
+<urn:mdciii:1603:45:16:704:2:30515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30515" ;
+    skos:prefLabel "Huyện Lạc Sơn"@vie-Latn, "Lac Son"@eng-Latn ;
+    wdata:q7200235 "VN30515" .
+
+<urn:mdciii:1603:45:16:704:2:30517>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30517" ;
+    skos:prefLabel "Huyện Lạc Thủy"@vie-Latn, "Lac Thuy"@eng-Latn ;
+    wdata:q7200235 "VN30517" .
+
+<urn:mdciii:1603:45:16:704:2:30519>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:30519" ;
+    skos:prefLabel "Huyện Yên Thủy"@vie-Latn, "Yen Thuy"@eng-Latn ;
+    wdata:q7200235 "VN30519" .
+
+<urn:mdciii:1603:45:16:704:2:40101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40101" ;
+    skos:prefLabel "Huyện Thạnh Hóa"@vie-Latn, "Thanh Hoa"@eng-Latn ;
+    wdata:q7200235 "VN40101" .
+
+<urn:mdciii:1603:45:16:704:2:40103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40103" ;
+    skos:prefLabel "Bim Son"@eng-Latn, "Thị xã Bỉm Sơn"@vie-Latn ;
+    wdata:q7200235 "VN40103" .
+
+<urn:mdciii:1603:45:16:704:2:40105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40105" ;
+    skos:prefLabel "Sam Son"@eng-Latn, "Thị xã Sầm Sơn"@vie-Latn ;
+    wdata:q7200235 "VN40105" .
+
+<urn:mdciii:1603:45:16:704:2:40107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40107" ;
+    skos:prefLabel "Huyện Mường Lát"@vie-Latn, "Muong Lat"@eng-Latn ;
+    wdata:q7200235 "VN40107" .
+
+<urn:mdciii:1603:45:16:704:2:40109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40109" ;
+    skos:prefLabel "Huyện Quan Hóa"@vie-Latn, "Quan Hoa"@eng-Latn ;
+    wdata:q7200235 "VN40109" .
+
+<urn:mdciii:1603:45:16:704:2:40111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40111" ;
+    skos:prefLabel "Huyện Quan Sơn"@vie-Latn, "Quan Son"@eng-Latn ;
+    wdata:q7200235 "VN40111" .
+
+<urn:mdciii:1603:45:16:704:2:40113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40113" ;
+    skos:prefLabel "Ba Thuoc"@eng-Latn, "Huyện Bá Thước"@vie-Latn ;
+    wdata:q7200235 "VN40113" .
+
+<urn:mdciii:1603:45:16:704:2:40115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40115" ;
+    skos:prefLabel "Cam Thuy"@eng-Latn, "Huyện Cẩm Thủy"@vie-Latn ;
+    wdata:q7200235 "VN40115" .
+
+<urn:mdciii:1603:45:16:704:2:40117>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40117" ;
+    skos:prefLabel "Huyện Lang Chánh"@vie-Latn, "Lang Chanh"@eng-Latn ;
+    wdata:q7200235 "VN40117" .
+
+<urn:mdciii:1603:45:16:704:2:40119>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40119" ;
+    skos:prefLabel "Huyện Thạch Thành"@vie-Latn, "Thach Thanh"@eng-Latn ;
+    wdata:q7200235 "VN40119" .
+
+<urn:mdciii:1603:45:16:704:2:40121>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40121" ;
+    skos:prefLabel "Huyện Ngọc Lặc"@vie-Latn, "Ngoc Lac"@eng-Latn ;
+    wdata:q7200235 "VN40121" .
+
+<urn:mdciii:1603:45:16:704:2:40123>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40123" ;
+    skos:prefLabel "Huyện Thường Xuân"@vie-Latn, "Thuong Xuan"@eng-Latn ;
+    wdata:q7200235 "VN40123" .
+
+<urn:mdciii:1603:45:16:704:2:40125>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40125" ;
+    skos:prefLabel "Huyện Như Xuân"@vie-Latn, "Nhu Xuan"@eng-Latn ;
+    wdata:q7200235 "VN40125" .
+
+<urn:mdciii:1603:45:16:704:2:40127>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40127" ;
+    skos:prefLabel "Huyện Như Thanh"@vie-Latn, "Nhu Thanh"@eng-Latn ;
+    wdata:q7200235 "VN40127" .
+
+<urn:mdciii:1603:45:16:704:2:40129>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40129" ;
+    skos:prefLabel "Huyện Vĩnh Lộc"@vie-Latn, "Vinh Loc"@eng-Latn ;
+    wdata:q7200235 "VN40129" .
+
+<urn:mdciii:1603:45:16:704:2:40131>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40131" ;
+    skos:prefLabel "Ha Trung"@eng-Latn, "Huyện Hà Trung"@vie-Latn ;
+    wdata:q7200235 "VN40131" .
+
+<urn:mdciii:1603:45:16:704:2:40133>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40133" ;
+    skos:prefLabel "Huyện Nga Sơn"@vie-Latn, "Nga Son"@eng-Latn ;
+    wdata:q7200235 "VN40133" .
+
+<urn:mdciii:1603:45:16:704:2:40135>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40135" ;
+    skos:prefLabel "Huyện Yên Định"@vie-Latn, "Yen Dinh"@eng-Latn ;
+    wdata:q7200235 "VN40135" .
+
+<urn:mdciii:1603:45:16:704:2:40137>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40137" ;
+    skos:prefLabel "Huyện Thọ Xuân"@vie-Latn, "Tho Xuan"@eng-Latn ;
+    wdata:q7200235 "VN40137" .
+
+<urn:mdciii:1603:45:16:704:2:40139>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40139" ;
+    skos:prefLabel "Hau Loc"@eng-Latn, "Huyện Hậu Lộc"@vie-Latn ;
+    wdata:q7200235 "VN40139" .
+
+<urn:mdciii:1603:45:16:704:2:40141>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40141" ;
+    skos:prefLabel "Huyện Thiệu Hóa"@vie-Latn, "Thieu Hoa"@eng-Latn ;
+    wdata:q7200235 "VN40141" .
+
+<urn:mdciii:1603:45:16:704:2:40143>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40143" ;
+    skos:prefLabel "Hoang Hoa"@eng-Latn, "Huyện Hoằng Hóa"@vie-Latn ;
+    wdata:q7200235 "VN40143" .
+
+<urn:mdciii:1603:45:16:704:2:40145>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40145" ;
+    skos:prefLabel "Dong Son"@eng-Latn, "Huyện Đông Sơn"@vie-Latn ;
+    wdata:q7200235 "VN40145" .
+
+<urn:mdciii:1603:45:16:704:2:40147>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40147" ;
+    skos:prefLabel "Huyện Triệu Sơn"@vie-Latn, "Trieu Son"@eng-Latn ;
+    wdata:q7200235 "VN40147" .
+
+<urn:mdciii:1603:45:16:704:2:40149>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40149" ;
+    skos:prefLabel "Huyện Quảng Xương"@vie-Latn, "Quang Xuong"@eng-Latn ;
+    wdata:q7200235 "VN40149" .
+
+<urn:mdciii:1603:45:16:704:2:40151>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40151" ;
+    skos:prefLabel "Huyện Nông Cống"@vie-Latn, "Nong Cong"@eng-Latn ;
+    wdata:q7200235 "VN40151" .
+
+<urn:mdciii:1603:45:16:704:2:40153>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40153" ;
+    skos:prefLabel "Huyện Tĩnh Gia"@vie-Latn, "Tinh Gia"@eng-Latn ;
+    wdata:q7200235 "VN40153" .
+
+<urn:mdciii:1603:45:16:704:2:40301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40301" ;
+    skos:prefLabel "TP. Vinh"@vie-Latn, "Vinh"@eng-Latn ;
+    wdata:q7200235 "VN40301" .
+
+<urn:mdciii:1603:45:16:704:2:40303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40303" ;
+    skos:prefLabel "Cua Lo"@eng-Latn, "Thị xã Cửa Lò"@vie-Latn ;
+    wdata:q7200235 "VN40303" .
+
+<urn:mdciii:1603:45:16:704:2:40305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40305" ;
+    skos:prefLabel "Huyện Quế Phong"@vie-Latn, "Que Phong"@eng-Latn ;
+    wdata:q7200235 "VN40305" .
+
+<urn:mdciii:1603:45:16:704:2:40307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40307" ;
+    skos:prefLabel "Huyện Quỳ Châu"@vie-Latn, "Quy Chau"@eng-Latn ;
+    wdata:q7200235 "VN40307" .
+
+<urn:mdciii:1603:45:16:704:2:40309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40309" ;
+    skos:prefLabel "Huyện Kỳ Sơn"@vie-Latn, "Ky Son"@eng-Latn ;
+    wdata:q7200235 "VN40309" .
+
+<urn:mdciii:1603:45:16:704:2:40311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40311" ;
+    skos:prefLabel "Huyện Quỳ Hợp"@vie-Latn, "Quy Hop"@eng-Latn ;
+    wdata:q7200235 "VN40311" .
+
+<urn:mdciii:1603:45:16:704:2:40313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40313" ;
+    skos:prefLabel "Huyện Nghĩa Đàn"@vie-Latn, "Nghia Dan"@eng-Latn ;
+    wdata:q7200235 "VN40313" .
+
+<urn:mdciii:1603:45:16:704:2:40314>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40314" ;
+    skos:prefLabel "Thai Hoa"@eng-Latn, "Thị xã Thái Hòa"@vie-Latn ;
+    wdata:q7200235 "VN40314" .
+
+<urn:mdciii:1603:45:16:704:2:40315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40315" ;
+    skos:prefLabel "Huyện Tương Dương"@vie-Latn, "Tuong Duong"@eng-Latn ;
+    wdata:q7200235 "VN40315" .
+
+<urn:mdciii:1603:45:16:704:2:40317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40317" ;
+    skos:prefLabel "Huyện Quỳnh Lưu"@vie-Latn, "Quynh Luu"@eng-Latn ;
+    wdata:q7200235 "VN40317" .
+
+<urn:mdciii:1603:45:16:704:2:40319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40319" ;
+    skos:prefLabel "Huyện Tân Kỳ"@vie-Latn, "Tan Ky"@eng-Latn ;
+    wdata:q7200235 "VN40319" .
+
+<urn:mdciii:1603:45:16:704:2:40321>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40321" ;
+    skos:prefLabel "Con Cuong"@eng-Latn, "Huyện Con Cuông"@vie-Latn ;
+    wdata:q7200235 "VN40321" .
+
+<urn:mdciii:1603:45:16:704:2:40323>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40323" ;
+    skos:prefLabel "Huyện Yên Thành"@vie-Latn, "Yen Thanh"@eng-Latn ;
+    wdata:q7200235 "VN40323" .
+
+<urn:mdciii:1603:45:16:704:2:40325>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40325" ;
+    skos:prefLabel "Dien Chau"@eng-Latn, "Huyện Diễn Châu"@vie-Latn ;
+    wdata:q7200235 "VN40325" .
+
+<urn:mdciii:1603:45:16:704:2:40327>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40327" ;
+    skos:prefLabel "Anh Son"@eng-Latn, "Huyện Anh Sơn"@vie-Latn ;
+    wdata:q7200235 "VN40327" .
+
+<urn:mdciii:1603:45:16:704:2:40329>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40329" ;
+    skos:prefLabel "Do Luong"@eng-Latn, "Huyện Đô Lương"@vie-Latn ;
+    wdata:q7200235 "VN40329" .
+
+<urn:mdciii:1603:45:16:704:2:40331>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40331" ;
+    skos:prefLabel "Huyện Thanh Chương"@vie-Latn, "Thanh Chuong"@eng-Latn ;
+    wdata:q7200235 "VN40331" .
+
+<urn:mdciii:1603:45:16:704:2:40333>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40333" ;
+    skos:prefLabel "Huyện Nghi Lộc"@vie-Latn, "Nghi Loc"@eng-Latn ;
+    wdata:q7200235 "VN40333" .
+
+<urn:mdciii:1603:45:16:704:2:40335>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40335" ;
+    skos:prefLabel "Huyện Nam Đàn"@vie-Latn, "Nam Dan"@eng-Latn ;
+    wdata:q7200235 "VN40335" .
+
+<urn:mdciii:1603:45:16:704:2:40337>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40337" ;
+    skos:prefLabel "Hung Nguyen"@eng-Latn, "Huyện Hưng Nguyên"@vie-Latn ;
+    wdata:q7200235 "VN40337" .
+
+<urn:mdciii:1603:45:16:704:2:40338>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40338" ;
+    skos:prefLabel "Hoang Mai"@eng-Latn, "Thị xã Hoàng Mai"@vie-Latn ;
+    wdata:q7200235 "VN40338" .
+
+<urn:mdciii:1603:45:16:704:2:40501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40501" ;
+    skos:prefLabel "Ha Tinh"@eng-Latn, "TP. Hà Tĩnh"@vie-Latn ;
+    wdata:q7200235 "VN40501" .
+
+<urn:mdciii:1603:45:16:704:2:40503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40503" ;
+    skos:prefLabel "Hong Linh"@eng-Latn, "Thị xã Hồng Lĩnh"@vie-Latn ;
+    wdata:q7200235 "VN40503" .
+
+<urn:mdciii:1603:45:16:704:2:40505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40505" ;
+    skos:prefLabel "Huyện Nghi Xuân"@vie-Latn, "Nghi Xuan"@eng-Latn ;
+    wdata:q7200235 "VN40505" .
+
+<urn:mdciii:1603:45:16:704:2:40507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40507" ;
+    skos:prefLabel "Duc Tho"@eng-Latn, "Huyện Đức Thọ"@vie-Latn ;
+    wdata:q7200235 "VN40507" .
+
+<urn:mdciii:1603:45:16:704:2:40509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40509" ;
+    skos:prefLabel "Huong Son"@eng-Latn, "Huyện Hương Sơn"@vie-Latn ;
+    wdata:q7200235 "VN40509" .
+
+<urn:mdciii:1603:45:16:704:2:40510>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40510" ;
+    skos:prefLabel "Huyện Vũ Quang"@vie-Latn, "Vu Quang"@eng-Latn ;
+    wdata:q7200235 "VN40510" .
+
+<urn:mdciii:1603:45:16:704:2:40511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40511" ;
+    skos:prefLabel "Can Loc"@eng-Latn, "Huyện Can Lộc"@vie-Latn ;
+    wdata:q7200235 "VN40511" .
+
+<urn:mdciii:1603:45:16:704:2:40512>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40512" ;
+    skos:prefLabel "Huyện Lộc Hà"@vie-Latn, "Loc Ha"@eng-Latn ;
+    wdata:q7200235 "VN40512" .
+
+<urn:mdciii:1603:45:16:704:2:40513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40513" ;
+    skos:prefLabel "Huyện Thạch Hà"@vie-Latn, "Thach Ha"@eng-Latn ;
+    wdata:q7200235 "VN40513" .
+
+<urn:mdciii:1603:45:16:704:2:40515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40515" ;
+    skos:prefLabel "Cam Xuyen"@eng-Latn, "Huyện Cẩm Xuyên"@vie-Latn ;
+    wdata:q7200235 "VN40515" .
+
+<urn:mdciii:1603:45:16:704:2:40517>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40517" ;
+    skos:prefLabel "Huong Khe"@eng-Latn, "Huyện Hương Khê"@vie-Latn ;
+    wdata:q7200235 "VN40517" .
+
+<urn:mdciii:1603:45:16:704:2:40519>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40519" ;
+    skos:prefLabel "Huyện Kỳ Anh"@vie-Latn, "Ky Anh"@eng-Latn ;
+    wdata:q7200235 "VN40519" .
+
+<urn:mdciii:1603:45:16:704:2:40701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40701" ;
+    skos:prefLabel "Dong Hoi"@eng-Latn, "TP. Đồng Hới"@vie-Latn ;
+    wdata:q7200235 "VN40701" .
+
+<urn:mdciii:1603:45:16:704:2:40703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40703" ;
+    skos:prefLabel "Huyện Tuyên Hóa"@vie-Latn, "Tuyen Hoa"@eng-Latn ;
+    wdata:q7200235 "VN40703" .
+
+<urn:mdciii:1603:45:16:704:2:40705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40705" ;
+    skos:prefLabel "Huyện Minh Hóa"@vie-Latn, "Minh Hoa"@eng-Latn ;
+    wdata:q7200235 "VN40705" .
+
+<urn:mdciii:1603:45:16:704:2:40707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40707" ;
+    skos:prefLabel "Ba Don"@eng-Latn, "Thị xã Ba Đồn"@vie-Latn ;
+    wdata:q7200235 "VN40707" .
+
+<urn:mdciii:1603:45:16:704:2:40709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40709" ;
+    skos:prefLabel "Bo Trach"@eng-Latn, "Huyện Bố Trạch"@vie-Latn ;
+    wdata:q7200235 "VN40709" .
+
+<urn:mdciii:1603:45:16:704:2:40711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40711" ;
+    skos:prefLabel "Huyện Quảng Ninh"@vie-Latn, "Quang Ninh"@eng-Latn ;
+    wdata:q7200235 "VN40711" .
+
+<urn:mdciii:1603:45:16:704:2:40713>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40713" ;
+    skos:prefLabel "Huyện Lệ Thủy"@vie-Latn, "Le Thuy"@eng-Latn ;
+    wdata:q7200235 "VN40713" .
+
+<urn:mdciii:1603:45:16:704:2:40715>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40715" ;
+    skos:prefLabel "Huyện Quảng Trạch"@vie-Latn, "Quang Trach"@eng-Latn ;
+    wdata:q7200235 "VN40715" .
+
+<urn:mdciii:1603:45:16:704:2:40901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40901" ;
+    skos:prefLabel "Dong Ha"@eng-Latn, "TP. Đông Hà"@vie-Latn ;
+    wdata:q7200235 "VN40901" .
+
+<urn:mdciii:1603:45:16:704:2:40903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40903" ;
+    skos:prefLabel "Quang Tri"@eng-Latn, "Thị xã Quảng Trị"@vie-Latn ;
+    wdata:q7200235 "VN40903" .
+
+<urn:mdciii:1603:45:16:704:2:40905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40905" ;
+    skos:prefLabel "Huyện Vĩnh Linh"@vie-Latn, "Vinh Linh"@eng-Latn ;
+    wdata:q7200235 "VN40905" .
+
+<urn:mdciii:1603:45:16:704:2:40906>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40906" ;
+    skos:prefLabel "Con Co"@eng-Latn, "Huyện Cồn Cỏ"@vie-Latn ;
+    wdata:q7200235 "VN40906" .
+
+<urn:mdciii:1603:45:16:704:2:40907>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40907" ;
+    skos:prefLabel "Gio Linh"@eng-Latn, "Huyện Gio Linh"@vie-Latn ;
+    wdata:q7200235 "VN40907" .
+
+<urn:mdciii:1603:45:16:704:2:40909>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40909" ;
+    skos:prefLabel "Cam Lo"@eng-Latn, "Huyện Cam Lộ"@vie-Latn ;
+    wdata:q7200235 "VN40909" .
+
+<urn:mdciii:1603:45:16:704:2:40911>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40911" ;
+    skos:prefLabel "Huyện Triệu Phong"@vie-Latn, "Trieu Phong"@eng-Latn ;
+    wdata:q7200235 "VN40911" .
+
+<urn:mdciii:1603:45:16:704:2:40913>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40913" ;
+    skos:prefLabel "Hai Lang"@eng-Latn, "Huyện Hải Lăng"@vie-Latn ;
+    wdata:q7200235 "VN40913" .
+
+<urn:mdciii:1603:45:16:704:2:40915>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40915" ;
+    skos:prefLabel "Huong Hoa"@eng-Latn, "Huyện Hướng Hóa"@vie-Latn ;
+    wdata:q7200235 "VN40915" .
+
+<urn:mdciii:1603:45:16:704:2:40917>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:40917" ;
+    skos:prefLabel "Da Krong"@eng-Latn, "Huyện Đa Krông"@vie-Latn ;
+    wdata:q7200235 "VN40917" .
+
+<urn:mdciii:1603:45:16:704:2:41101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41101" ;
+    skos:prefLabel "Hue"@eng-Latn, "TP. Huế"@vie-Latn ;
+    wdata:q7200235 "VN41101" .
+
+<urn:mdciii:1603:45:16:704:2:41103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41103" ;
+    skos:prefLabel "Huyện Phong Điền"@vie-Latn, "Phong Dien"@eng-Latn ;
+    wdata:q7200235 "VN41103" .
+
+<urn:mdciii:1603:45:16:704:2:41105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41105" ;
+    skos:prefLabel "Huyện Quảng Điền"@vie-Latn, "Quang Dien"@eng-Latn ;
+    wdata:q7200235 "VN41105" .
+
+<urn:mdciii:1603:45:16:704:2:41107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41107" ;
+    skos:prefLabel "Huong Tra"@eng-Latn, "Thị xã Hương Trà"@vie-Latn ;
+    wdata:q7200235 "VN41107" .
+
+<urn:mdciii:1603:45:16:704:2:41109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41109" ;
+    skos:prefLabel "Huyện Phú Vang"@vie-Latn, "Phu Vang"@eng-Latn ;
+    wdata:q7200235 "VN41109" .
+
+<urn:mdciii:1603:45:16:704:2:41111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41111" ;
+    skos:prefLabel "Huong Thuy"@eng-Latn, "Thị xã Hương Thủy"@vie-Latn ;
+    wdata:q7200235 "VN41111" .
+
+<urn:mdciii:1603:45:16:704:2:41113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41113" ;
+    skos:prefLabel "Huyện Phú Lộc"@vie-Latn, "Phu Loc"@eng-Latn ;
+    wdata:q7200235 "VN41113" .
+
+<urn:mdciii:1603:45:16:704:2:41115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41115" ;
+    skos:prefLabel "A Luoi"@eng-Latn, "Huyện A Lưới"@vie-Latn ;
+    wdata:q7200235 "VN41115" .
+
+<urn:mdciii:1603:45:16:704:2:41117>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:41117" ;
+    skos:prefLabel "Huyện Nam Đông"@vie-Latn, "Nam Dong"@eng-Latn ;
+    wdata:q7200235 "VN41117" .
+
+<urn:mdciii:1603:45:16:704:2:50101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50101" ;
+    skos:prefLabel "Hai Chau"@eng-Latn, "Quận Hải Châu"@vie-Latn ;
+    wdata:q7200235 "VN50101" .
+
+<urn:mdciii:1603:45:16:704:2:50103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50103" ;
+    skos:prefLabel "Quận Thanh Khê"@vie-Latn, "Thanh Khe"@eng-Latn ;
+    wdata:q7200235 "VN50103" .
+
+<urn:mdciii:1603:45:16:704:2:50105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50105" ;
+    skos:prefLabel "Quận Sơn Trà"@vie-Latn, "Son Tra"@eng-Latn ;
+    wdata:q7200235 "VN50105" .
+
+<urn:mdciii:1603:45:16:704:2:50107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50107" ;
+    skos:prefLabel "Ngu Hanh Son"@eng-Latn, "Quận Ngũ Hành Sơn"@vie-Latn ;
+    wdata:q7200235 "VN50107" .
+
+<urn:mdciii:1603:45:16:704:2:50109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50109" ;
+    skos:prefLabel "Lien Chieu"@eng-Latn, "Quận Liên Chiểu"@vie-Latn ;
+    wdata:q7200235 "VN50109" .
+
+<urn:mdciii:1603:45:16:704:2:50111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50111" ;
+    skos:prefLabel "Hoa Vang"@eng-Latn, "Huyện Hòa Vang"@vie-Latn ;
+    wdata:q7200235 "VN50111" .
+
+<urn:mdciii:1603:45:16:704:2:50112>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50112" ;
+    skos:prefLabel "Cam Le"@eng-Latn, "Quận Cẩm Lệ"@vie-Latn ;
+    wdata:q7200235 "VN50112" .
+
+<urn:mdciii:1603:45:16:704:2:50190>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50190" ;
+    skos:prefLabel "Hoang Sa"@eng-Latn, "Huyện Hoàng Sa"@vie-Latn ;
+    wdata:q7200235 "VN50190" .
+
+<urn:mdciii:1603:45:16:704:2:50301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50301" ;
+    skos:prefLabel "TP. Tam Kỳ"@vie-Latn, "Tam Ky"@eng-Latn ;
+    wdata:q7200235 "VN50301" .
+
+<urn:mdciii:1603:45:16:704:2:50303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50303" ;
+    skos:prefLabel "Hoi An"@eng-Latn, "TP. Hội An"@vie-Latn ;
+    wdata:q7200235 "VN50303" .
+
+<urn:mdciii:1603:45:16:704:2:50304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50304" ;
+    skos:prefLabel "Huyện Tây Giang"@vie-Latn, "Tay Giang"@eng-Latn ;
+    wdata:q7200235 "VN50304" .
+
+<urn:mdciii:1603:45:16:704:2:50305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50305" ;
+    skos:prefLabel "Dong Giang"@eng-Latn, "Huyện Đông Giang"@vie-Latn ;
+    wdata:q7200235 "VN50305" .
+
+<urn:mdciii:1603:45:16:704:2:50307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50307" ;
+    skos:prefLabel "Dai Loc"@eng-Latn, "Huyện Đại Lộc"@vie-Latn ;
+    wdata:q7200235 "VN50307" .
+
+<urn:mdciii:1603:45:16:704:2:50309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50309" ;
+    skos:prefLabel "Dien Ban"@eng-Latn, "Huyện Điện Bàn"@vie-Latn ;
+    wdata:q7200235 "VN50309" .
+
+<urn:mdciii:1603:45:16:704:2:50311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50311" ;
+    skos:prefLabel "Duy Xuyen"@eng-Latn, "Huyện Duy Xuyên"@vie-Latn ;
+    wdata:q7200235 "VN50311" .
+
+<urn:mdciii:1603:45:16:704:2:50313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50313" ;
+    skos:prefLabel "Huyện Nam Giang"@vie-Latn, "Nam Giang"@eng-Latn ;
+    wdata:q7200235 "VN50313" .
+
+<urn:mdciii:1603:45:16:704:2:50315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50315" ;
+    skos:prefLabel "Huyện Thăng Bình"@vie-Latn, "Thang Binh"@eng-Latn ;
+    wdata:q7200235 "VN50315" .
+
+<urn:mdciii:1603:45:16:704:2:50317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50317" ;
+    skos:prefLabel "Huyện Quế Sơn"@vie-Latn, "Que Son"@eng-Latn ;
+    wdata:q7200235 "VN50317" .
+
+<urn:mdciii:1603:45:16:704:2:50318>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50318" ;
+    skos:prefLabel "Huyện Nông Sơn"@vie-Latn, "Nong Son"@eng-Latn ;
+    wdata:q7200235 "VN50318" .
+
+<urn:mdciii:1603:45:16:704:2:50319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50319" ;
+    skos:prefLabel "Hiep Duc"@eng-Latn, "Huyện Hiệp Đức"@vie-Latn ;
+    wdata:q7200235 "VN50319" .
+
+<urn:mdciii:1603:45:16:704:2:50321>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50321" ;
+    skos:prefLabel "Huyện Tiên Phước"@vie-Latn, "Tien Phuoc"@eng-Latn ;
+    wdata:q7200235 "VN50321" .
+
+<urn:mdciii:1603:45:16:704:2:50323>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50323" ;
+    skos:prefLabel "Huyện Phước Sơn"@vie-Latn, "Phuoc Son"@eng-Latn ;
+    wdata:q7200235 "VN50323" .
+
+<urn:mdciii:1603:45:16:704:2:50325>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50325" ;
+    skos:prefLabel "Huyện Núi Thành"@vie-Latn, "Nui Thanh"@eng-Latn ;
+    wdata:q7200235 "VN50325" .
+
+<urn:mdciii:1603:45:16:704:2:50327>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50327" ;
+    skos:prefLabel "Bac Tra My"@eng-Latn, "Huyện Bắc Trà My"@vie-Latn ;
+    wdata:q7200235 "VN50327" .
+
+<urn:mdciii:1603:45:16:704:2:50328>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50328" ;
+    skos:prefLabel "Huyện Nam Trà My"@vie-Latn, "Nam Tra My"@eng-Latn ;
+    wdata:q7200235 "VN50328" .
+
+<urn:mdciii:1603:45:16:704:2:50329>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50329" ;
+    skos:prefLabel "Huyện Phú Ninh"@vie-Latn, "Phu Ninh"@eng-Latn ;
+    wdata:q7200235 "VN50329" .
+
+<urn:mdciii:1603:45:16:704:2:50501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50501" ;
+    skos:prefLabel "Quang Ngai"@eng-Latn, "TP. Quảng Ngãi"@vie-Latn ;
+    wdata:q7200235 "VN50501" .
+
+<urn:mdciii:1603:45:16:704:2:50503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50503" ;
+    skos:prefLabel "Huyện Lý Sơn"@vie-Latn, "Ly Son"@eng-Latn ;
+    wdata:q7200235 "VN50503" .
+
+<urn:mdciii:1603:45:16:704:2:50505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50505" ;
+    skos:prefLabel "Binh Son"@eng-Latn, "Huyện Bình Sơn"@vie-Latn ;
+    wdata:q7200235 "VN50505" .
+
+<urn:mdciii:1603:45:16:704:2:50507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50507" ;
+    skos:prefLabel "Huyện Trà Bồng"@vie-Latn, "Tra Bong"@eng-Latn ;
+    wdata:q7200235 "VN50507" .
+
+<urn:mdciii:1603:45:16:704:2:50508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50508" ;
+    skos:prefLabel "Huyện Tây Trà"@vie-Latn, "Tay Tra"@eng-Latn ;
+    wdata:q7200235 "VN50508" .
+
+<urn:mdciii:1603:45:16:704:2:50509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50509" ;
+    skos:prefLabel "Huyện Sơn Tịnh"@vie-Latn, "Son Tinh"@eng-Latn ;
+    wdata:q7200235 "VN50509" .
+
+<urn:mdciii:1603:45:16:704:2:50511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50511" ;
+    skos:prefLabel "Huyện Sơn Tây"@vie-Latn, "Son Tay"@eng-Latn ;
+    wdata:q7200235 "VN50511" .
+
+<urn:mdciii:1603:45:16:704:2:50513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50513" ;
+    skos:prefLabel "Huyện Sơn Hà"@vie-Latn, "Son Ha"@eng-Latn ;
+    wdata:q7200235 "VN50513" .
+
+<urn:mdciii:1603:45:16:704:2:50515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50515" ;
+    skos:prefLabel "Huyện Tư Nghĩa"@vie-Latn, "Tu Nghia"@eng-Latn ;
+    wdata:q7200235 "VN50515" .
+
+<urn:mdciii:1603:45:16:704:2:50517>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50517" ;
+    skos:prefLabel "Huyện Nghĩa Hành"@vie-Latn, "Nghia Hanh"@eng-Latn ;
+    wdata:q7200235 "VN50517" .
+
+<urn:mdciii:1603:45:16:704:2:50519>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50519" ;
+    skos:prefLabel "Huyện Minh Long"@vie-Latn, "Minh Long"@eng-Latn ;
+    wdata:q7200235 "VN50519" .
+
+<urn:mdciii:1603:45:16:704:2:50521>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50521" ;
+    skos:prefLabel "Huyện Mộ Đức"@vie-Latn, "Mo Duc"@eng-Latn ;
+    wdata:q7200235 "VN50521" .
+
+<urn:mdciii:1603:45:16:704:2:50523>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50523" ;
+    skos:prefLabel "Duc Pho"@eng-Latn, "Huyện Đức Phổ"@vie-Latn ;
+    wdata:q7200235 "VN50523" .
+
+<urn:mdciii:1603:45:16:704:2:50525>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50525" ;
+    skos:prefLabel "Ba To"@eng-Latn, "Huyện Ba Tơ"@vie-Latn ;
+    wdata:q7200235 "VN50525" .
+
+<urn:mdciii:1603:45:16:704:2:50701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50701" ;
+    skos:prefLabel "Quy Nhon"@eng-Latn, "TP. Quy Nhơn"@vie-Latn ;
+    wdata:q7200235 "VN50701" .
+
+<urn:mdciii:1603:45:16:704:2:50703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50703" ;
+    skos:prefLabel "An Lao"@eng-Latn, "Huyện An Lão"@vie-Latn ;
+    wdata:q7200235 "VN50703" .
+
+<urn:mdciii:1603:45:16:704:2:50705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50705" ;
+    skos:prefLabel "Hoai Nhon"@eng-Latn, "Huyện Hoài Nhơn"@vie-Latn ;
+    wdata:q7200235 "VN50705" .
+
+<urn:mdciii:1603:45:16:704:2:50707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50707" ;
+    skos:prefLabel "Hoai An"@eng-Latn, "Huyện Hoài Ân"@vie-Latn ;
+    wdata:q7200235 "VN50707" .
+
+<urn:mdciii:1603:45:16:704:2:50709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50709" ;
+    skos:prefLabel "Huyện Phù Mỹ"@vie-Latn, "Phu My"@eng-Latn ;
+    wdata:q7200235 "VN50709" .
+
+<urn:mdciii:1603:45:16:704:2:50711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50711" ;
+    skos:prefLabel "Huyện Vĩnh Thạnh"@vie-Latn, "Vinh Thanh"@eng-Latn ;
+    wdata:q7200235 "VN50711" .
+
+<urn:mdciii:1603:45:16:704:2:50713>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50713" ;
+    skos:prefLabel "Huyện Phù Cát"@vie-Latn, "Phu Cat"@eng-Latn ;
+    wdata:q7200235 "VN50713" .
+
+<urn:mdciii:1603:45:16:704:2:50715>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50715" ;
+    skos:prefLabel "Huyện Tây Sơn"@vie-Latn, "Tay Son"@eng-Latn ;
+    wdata:q7200235 "VN50715" .
+
+<urn:mdciii:1603:45:16:704:2:50717>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50717" ;
+    skos:prefLabel "An Nhon"@eng-Latn, "Thị xã An Nhơn"@vie-Latn ;
+    wdata:q7200235 "VN50717" .
+
+<urn:mdciii:1603:45:16:704:2:50719>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50719" ;
+    skos:prefLabel "Huyện Tuy Phước"@vie-Latn, "Tuy Phuoc"@eng-Latn ;
+    wdata:q7200235 "VN50719" .
+
+<urn:mdciii:1603:45:16:704:2:50721>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50721" ;
+    skos:prefLabel "Huyện Vân Canh"@vie-Latn, "Van Canh"@eng-Latn ;
+    wdata:q7200235 "VN50721" .
+
+<urn:mdciii:1603:45:16:704:2:50901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50901" ;
+    skos:prefLabel "TP. Tuy Hòa"@vie-Latn, "Tuy Hoa"@eng-Latn ;
+    wdata:q7200235 "VN50901" .
+
+<urn:mdciii:1603:45:16:704:2:50903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50903" ;
+    skos:prefLabel "Dong Xuan"@eng-Latn, "Huyện Đồng Xuân"@vie-Latn ;
+    wdata:q7200235 "VN50903" .
+
+<urn:mdciii:1603:45:16:704:2:50905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50905" ;
+    skos:prefLabel "Song Cau"@eng-Latn, "Thị xã Sông Cầu"@vie-Latn ;
+    wdata:q7200235 "VN50905" .
+
+<urn:mdciii:1603:45:16:704:2:50907>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50907" ;
+    skos:prefLabel "Huyện Tuy An"@vie-Latn, "Tuy An"@eng-Latn ;
+    wdata:q7200235 "VN50907" .
+
+<urn:mdciii:1603:45:16:704:2:50909>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50909" ;
+    skos:prefLabel "Huyện Sơn Hòa"@vie-Latn, "Son Hoa"@eng-Latn ;
+    wdata:q7200235 "VN50909" .
+
+<urn:mdciii:1603:45:16:704:2:50910>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50910" ;
+    skos:prefLabel "Huyện Phú Hòa"@vie-Latn, "Phu Hoa"@eng-Latn ;
+    wdata:q7200235 "VN50910" .
+
+<urn:mdciii:1603:45:16:704:2:50911>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50911" ;
+    skos:prefLabel "Huyện Tây Hòa"@vie-Latn, "Tay Hoa"@eng-Latn ;
+    wdata:q7200235 "VN50911" .
+
+<urn:mdciii:1603:45:16:704:2:50912>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50912" ;
+    skos:prefLabel "Dong Hoa"@eng-Latn, "Huyện Đông Hòa"@vie-Latn ;
+    wdata:q7200235 "VN50912" .
+
+<urn:mdciii:1603:45:16:704:2:50913>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:50913" ;
+    skos:prefLabel "Huyện Sông Hinh"@vie-Latn, "Song Hinh"@eng-Latn ;
+    wdata:q7200235 "VN50913" .
+
+<urn:mdciii:1603:45:16:704:2:51101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51101" ;
+    skos:prefLabel "Nha Trang"@eng-Latn, "TP. Nha Trang"@vie-Latn ;
+    wdata:q7200235 "VN51101" .
+
+<urn:mdciii:1603:45:16:704:2:51102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51102" ;
+    skos:prefLabel "Cam Ranh"@eng-Latn, "TP. Cam Ranh"@vie-Latn ;
+    wdata:q7200235 "VN51102" .
+
+<urn:mdciii:1603:45:16:704:2:51103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51103" ;
+    skos:prefLabel "Huyện Vạn Ninh"@vie-Latn, "Van Ninh"@eng-Latn ;
+    wdata:q7200235 "VN51103" .
+
+<urn:mdciii:1603:45:16:704:2:51105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51105" ;
+    skos:prefLabel "Ninh Hoa"@eng-Latn, "Thị xã Ninh Hòa"@vie-Latn ;
+    wdata:q7200235 "VN51105" .
+
+<urn:mdciii:1603:45:16:704:2:51107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51107" ;
+    skos:prefLabel "Dien Khanh"@eng-Latn, "Huyện Diên Khánh"@vie-Latn ;
+    wdata:q7200235 "VN51107" .
+
+<urn:mdciii:1603:45:16:704:2:51108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51108" ;
+    skos:prefLabel "Cam Lam"@eng-Latn, "Huyện Cam Lâm"@vie-Latn ;
+    wdata:q7200235 "VN51108" .
+
+<urn:mdciii:1603:45:16:704:2:51111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51111" ;
+    skos:prefLabel "Huyện Khánh Vĩnh"@vie-Latn, "Khanh Vinh"@eng-Latn ;
+    wdata:q7200235 "VN51111" .
+
+<urn:mdciii:1603:45:16:704:2:51113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51113" ;
+    skos:prefLabel "Huyện Khánh Sơn"@vie-Latn, "Khanh Son"@eng-Latn ;
+    wdata:q7200235 "VN51113" .
+
+<urn:mdciii:1603:45:16:704:2:51190>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:51190" ;
+    skos:prefLabel "Huyện Trường Sa"@vie-Latn, "Truong Sa"@eng-Latn ;
+    wdata:q7200235 "VN51190" .
+
+<urn:mdciii:1603:45:16:704:2:60101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60101" ;
+    skos:prefLabel "Kon Tum"@eng-Latn, "TP. Kon Tum"@vie-Latn ;
+    wdata:q7200235 "VN60101" .
+
+<urn:mdciii:1603:45:16:704:2:60103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60103" ;
+    skos:prefLabel "Dak Glei"@eng-Latn, "Huyện Đắk Glei"@vie-Latn ;
+    wdata:q7200235 "VN60103" .
+
+<urn:mdciii:1603:45:16:704:2:60105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60105" ;
+    skos:prefLabel "Huyện Ngọc Hồi"@vie-Latn, "Ngoc Hoi"@eng-Latn ;
+    wdata:q7200235 "VN60105" .
+
+<urn:mdciii:1603:45:16:704:2:60107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60107" ;
+    skos:prefLabel "Dak To"@eng-Latn, "Huyện Đắk Tô"@vie-Latn ;
+    wdata:q7200235 "VN60107" .
+
+<urn:mdciii:1603:45:16:704:2:60108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60108" ;
+    skos:prefLabel "Huyện Kon Rẫy"@vie-Latn, "Kon Ray"@eng-Latn ;
+    wdata:q7200235 "VN60108" .
+
+<urn:mdciii:1603:45:16:704:2:60109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60109" ;
+    skos:prefLabel "Huyện Kon Plông"@vie-Latn, "Kon Plong"@eng-Latn ;
+    wdata:q7200235 "VN60109" .
+
+<urn:mdciii:1603:45:16:704:2:60111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60111" ;
+    skos:prefLabel "Dak Ha"@eng-Latn, "Huyện Đắk Hà"@vie-Latn ;
+    wdata:q7200235 "VN60111" .
+
+<urn:mdciii:1603:45:16:704:2:60113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60113" ;
+    skos:prefLabel "Huyện Sa Thầy"@vie-Latn, "Sa Thay"@eng-Latn ;
+    wdata:q7200235 "VN60113" .
+
+<urn:mdciii:1603:45:16:704:2:60114>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60114" ;
+    skos:prefLabel "Huyện Tu Mơ Rông"@vie-Latn, "Tu Mo Rong"@eng-Latn ;
+    wdata:q7200235 "VN60114" .
+
+<urn:mdciii:1603:45:16:704:2:60301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60301" ;
+    skos:prefLabel "Pleiku"@eng-Latn, "TP. Pleiku"@vie-Latn ;
+    wdata:q7200235 "VN60301" .
+
+<urn:mdciii:1603:45:16:704:2:60303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60303" ;
+    skos:prefLabel "Huyện KBang"@vie-Latn, "KBang"@eng-Latn ;
+    wdata:q7200235 "VN60303" .
+
+<urn:mdciii:1603:45:16:704:2:60305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60305" ;
+    skos:prefLabel "Dak Doa"@eng-Latn, "Huyện Đắk Đoa"@vie-Latn ;
+    wdata:q7200235 "VN60305" .
+
+<urn:mdciii:1603:45:16:704:2:60306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60306" ;
+    skos:prefLabel "Huyện Mang Yang"@vie-Latn, "Mang Yang"@eng-Latn ;
+    wdata:q7200235 "VN60306" .
+
+<urn:mdciii:1603:45:16:704:2:60307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60307" ;
+    skos:prefLabel "Chu Pah"@eng-Latn, "Huyện Chư Păh"@vie-Latn ;
+    wdata:q7200235 "VN60307" .
+
+<urn:mdciii:1603:45:16:704:2:60309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60309" ;
+    skos:prefLabel "Huyện Ia Grai"@vie-Latn, "Ia Grai"@eng-Latn ;
+    wdata:q7200235 "VN60309" .
+
+<urn:mdciii:1603:45:16:704:2:60311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60311" ;
+    skos:prefLabel "An Khe"@eng-Latn, "Thị xã An Khê"@vie-Latn ;
+    wdata:q7200235 "VN60311" .
+
+<urn:mdciii:1603:45:16:704:2:60312>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60312" ;
+    skos:prefLabel "Dak Po"@eng-Latn, "Huyện Đắk Pơ"@vie-Latn ;
+    wdata:q7200235 "VN60312" .
+
+<urn:mdciii:1603:45:16:704:2:60313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60313" ;
+    skos:prefLabel "Huyện Kông Chro"@vie-Latn, "Kong Chro"@eng-Latn ;
+    wdata:q7200235 "VN60313" .
+
+<urn:mdciii:1603:45:16:704:2:60315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60315" ;
+    skos:prefLabel "Duc Co"@eng-Latn, "Huyện Đức Cơ"@vie-Latn ;
+    wdata:q7200235 "VN60315" .
+
+<urn:mdciii:1603:45:16:704:2:60317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60317" ;
+    skos:prefLabel "Chu Prong"@eng-Latn, "Huyện Chư Prông"@vie-Latn ;
+    wdata:q7200235 "VN60317" .
+
+<urn:mdciii:1603:45:16:704:2:60319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60319" ;
+    skos:prefLabel "Chu Se"@eng-Latn, "Huyện Chư Sê"@vie-Latn ;
+    wdata:q7200235 "VN60319" .
+
+<urn:mdciii:1603:45:16:704:2:60321>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60321" ;
+    skos:prefLabel "Ayun Pa"@eng-Latn, "Thị xã Ayun Pa"@vie-Latn ;
+    wdata:q7200235 "VN60321" .
+
+<urn:mdciii:1603:45:16:704:2:60322>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60322" ;
+    skos:prefLabel "Huyện Ia Pa"@vie-Latn, "Ia Pa"@eng-Latn ;
+    wdata:q7200235 "VN60322" .
+
+<urn:mdciii:1603:45:16:704:2:60323>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60323" ;
+    skos:prefLabel "Huyện Krông Pa"@vie-Latn, "Krong Pa"@eng-Latn ;
+    wdata:q7200235 "VN60323" .
+
+<urn:mdciii:1603:45:16:704:2:60324>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60324" ;
+    skos:prefLabel "Huyện Phú Thiện"@vie-Latn, "Phu Thien"@eng-Latn ;
+    wdata:q7200235 "VN60324" .
+
+<urn:mdciii:1603:45:16:704:2:60325>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60325" ;
+    skos:prefLabel "Chu Puh"@eng-Latn, "Huyện Chư Pưh"@vie-Latn ;
+    wdata:q7200235 "VN60325" .
+
+<urn:mdciii:1603:45:16:704:2:60501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60501" ;
+    skos:prefLabel "Buon Ma Thuot"@eng-Latn, "TP. Buôn Ma Thuột"@vie-Latn ;
+    wdata:q7200235 "VN60501" .
+
+<urn:mdciii:1603:45:16:704:2:60502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60502" ;
+    skos:prefLabel "Buon Ho"@eng-Latn, "Thị xã Buôn Hồ"@vie-Latn ;
+    wdata:q7200235 "VN60502" .
+
+<urn:mdciii:1603:45:16:704:2:60503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60503" ;
+    skos:prefLabel "EA Hleo"@eng-Latn, "Huyện Ea H'leo"@vie-Latn ;
+    wdata:q7200235 "VN60503" .
+
+<urn:mdciii:1603:45:16:704:2:60505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60505" ;
+    skos:prefLabel "Ea Sup"@eng-Latn, "Huyện Ea Súp"@vie-Latn ;
+    wdata:q7200235 "VN60505" .
+
+<urn:mdciii:1603:45:16:704:2:60507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60507" ;
+    skos:prefLabel "Huyện Krông Năng"@vie-Latn, "Krong Nang"@eng-Latn ;
+    wdata:q7200235 "VN60507" .
+
+<urn:mdciii:1603:45:16:704:2:60509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60509" ;
+    skos:prefLabel "Huyện Krông Búk"@vie-Latn, "Krong Buk"@eng-Latn ;
+    wdata:q7200235 "VN60509" .
+
+<urn:mdciii:1603:45:16:704:2:60511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60511" ;
+    skos:prefLabel "Buon Don"@eng-Latn, "Huyện Buôn Đôn"@vie-Latn ;
+    wdata:q7200235 "VN60511" .
+
+<urn:mdciii:1603:45:16:704:2:60513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60513" ;
+    skos:prefLabel "Cu Mgar"@eng-Latn, "Huyện Cư M'gar"@vie-Latn ;
+    wdata:q7200235 "VN60513" .
+
+<urn:mdciii:1603:45:16:704:2:60515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60515" ;
+    skos:prefLabel "Ea Kar"@eng-Latn, "Huyện Ea Kar"@vie-Latn ;
+    wdata:q7200235 "VN60515" .
+
+<urn:mdciii:1603:45:16:704:2:60517>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60517" ;
+    skos:prefLabel "Huyện M'Đrắk"@vie-Latn, "Mdrak District"@eng-Latn ;
+    wdata:q7200235 "VN60517" .
+
+<urn:mdciii:1603:45:16:704:2:60519>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60519" ;
+    skos:prefLabel "Huyện Krông Pắc"@vie-Latn, "Krong Pac"@eng-Latn ;
+    wdata:q7200235 "VN60519" .
+
+<urn:mdciii:1603:45:16:704:2:60523>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60523" ;
+    skos:prefLabel "Huyện Krông A Na"@vie-Latn, "Krong A Na"@eng-Latn ;
+    wdata:q7200235 "VN60523" .
+
+<urn:mdciii:1603:45:16:704:2:60524>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60524" ;
+    skos:prefLabel "Cu Kuin"@eng-Latn, "Huyện Cư Kuin"@vie-Latn ;
+    wdata:q7200235 "VN60524" .
+
+<urn:mdciii:1603:45:16:704:2:60525>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60525" ;
+    skos:prefLabel "Huyện Krông Bông"@vie-Latn, "Krong Bong"@eng-Latn ;
+    wdata:q7200235 "VN60525" .
+
+<urn:mdciii:1603:45:16:704:2:60531>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60531" ;
+    skos:prefLabel "Huyện Lắk"@vie-Latn, "Lak"@eng-Latn ;
+    wdata:q7200235 "VN60531" .
+
+<urn:mdciii:1603:45:16:704:2:60611>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60611" ;
+    skos:prefLabel "Gia Nghia"@eng-Latn, "Thị xã Gia Nghĩa"@vie-Latn ;
+    wdata:q7200235 "VN60611" .
+
+<urn:mdciii:1603:45:16:704:2:60621>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60621" ;
+    skos:prefLabel "Cu Jut"@eng-Latn, "Huyện Cư Jút"@vie-Latn ;
+    wdata:q7200235 "VN60621" .
+
+<urn:mdciii:1603:45:16:704:2:60627>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60627" ;
+    skos:prefLabel "Dak Mil"@eng-Latn, "Huyện Đắk Mil"@vie-Latn ;
+    wdata:q7200235 "VN60627" .
+
+<urn:mdciii:1603:45:16:704:2:60629>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60629" ;
+    skos:prefLabel "Huyện Krông Nô"@vie-Latn, "Krong No"@eng-Latn ;
+    wdata:q7200235 "VN60629" .
+
+<urn:mdciii:1603:45:16:704:2:60632>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60632" ;
+    skos:prefLabel "Dak Song"@eng-Latn, "Huyện Đắk Song"@vie-Latn ;
+    wdata:q7200235 "VN60632" .
+
+<urn:mdciii:1603:45:16:704:2:60633>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60633" ;
+    skos:prefLabel "Dak Rlap"@eng-Latn, "Huyện Đắk R'Lấp"@vie-Latn ;
+    wdata:q7200235 "VN60633" .
+
+<urn:mdciii:1603:45:16:704:2:60634>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60634" ;
+    skos:prefLabel "Huyện Tuy Đức"@vie-Latn, "Tuy Duc"@eng-Latn ;
+    wdata:q7200235 "VN60634" .
+
+<urn:mdciii:1603:45:16:704:2:60635>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60635" ;
+    skos:prefLabel "Dak Glong"@eng-Latn, "Huyện Đắk Glong"@vie-Latn ;
+    wdata:q7200235 "VN60635" .
+
+<urn:mdciii:1603:45:16:704:2:60701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60701" ;
+    skos:prefLabel "Da Lat"@eng-Latn, "TP. Đà Lạt"@vie-Latn ;
+    wdata:q7200235 "VN60701" .
+
+<urn:mdciii:1603:45:16:704:2:60703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60703" ;
+    skos:prefLabel "Bao Loc"@eng-Latn, "TP. Bảo Lộc"@vie-Latn ;
+    wdata:q7200235 "VN60703" .
+
+<urn:mdciii:1603:45:16:704:2:60705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60705" ;
+    skos:prefLabel "Huyện Lạc Dương"@vie-Latn, "Lac Duong"@eng-Latn ;
+    wdata:q7200235 "VN60705" .
+
+<urn:mdciii:1603:45:16:704:2:60707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60707" ;
+    skos:prefLabel "Don Duong"@eng-Latn, "Huyện Đơn Dương"@vie-Latn ;
+    wdata:q7200235 "VN60707" .
+
+<urn:mdciii:1603:45:16:704:2:60709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60709" ;
+    skos:prefLabel "Duc Trong"@eng-Latn, "Huyện Đức Trọng"@vie-Latn ;
+    wdata:q7200235 "VN60709" .
+
+<urn:mdciii:1603:45:16:704:2:60711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60711" ;
+    skos:prefLabel "Huyện Lâm Hà"@vie-Latn, "Lam Ha"@eng-Latn ;
+    wdata:q7200235 "VN60711" .
+
+<urn:mdciii:1603:45:16:704:2:60713>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60713" ;
+    skos:prefLabel "Bao Lam"@eng-Latn, "Huyện Bảo Lâm"@vie-Latn ;
+    wdata:q7200235 "VN60713" .
+
+<urn:mdciii:1603:45:16:704:2:60715>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60715" ;
+    skos:prefLabel "Di Linh"@eng-Latn, "Huyện Di Linh"@vie-Latn ;
+    wdata:q7200235 "VN60715" .
+
+<urn:mdciii:1603:45:16:704:2:60717>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60717" ;
+    skos:prefLabel "Da Huoai"@eng-Latn, "Huyện Đạ Huoai"@vie-Latn ;
+    wdata:q7200235 "VN60717" .
+
+<urn:mdciii:1603:45:16:704:2:60719>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60719" ;
+    skos:prefLabel "Da Teh"@eng-Latn, "Huyện Đạ Tẻh"@vie-Latn ;
+    wdata:q7200235 "VN60719" .
+
+<urn:mdciii:1603:45:16:704:2:60721>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60721" ;
+    skos:prefLabel "Cat Tien"@eng-Latn, "Huyện Cát Tiên"@vie-Latn ;
+    wdata:q7200235 "VN60721" .
+
+<urn:mdciii:1603:45:16:704:2:60723>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:60723" ;
+    skos:prefLabel "Dam Rong"@eng-Latn, "Huyện Đam Rông"@vie-Latn ;
+    wdata:q7200235 "VN60723" .
+
+<urn:mdciii:1603:45:16:704:2:70101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70101" ;
+    skos:prefLabel "Quan 1"@eng-Latn, "Quận 1"@vie-Latn ;
+    wdata:q7200235 "VN70101" .
+
+<urn:mdciii:1603:45:16:704:2:70103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70103" ;
+    skos:prefLabel "Quan 2"@eng-Latn, "Quận 2"@vie-Latn ;
+    wdata:q7200235 "VN70103" .
+
+<urn:mdciii:1603:45:16:704:2:70105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70105" ;
+    skos:prefLabel "Quan 3"@eng-Latn, "Quận 3"@vie-Latn ;
+    wdata:q7200235 "VN70105" .
+
+<urn:mdciii:1603:45:16:704:2:70107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70107" ;
+    skos:prefLabel "Quan 4"@eng-Latn, "Quận 4"@vie-Latn ;
+    wdata:q7200235 "VN70107" .
+
+<urn:mdciii:1603:45:16:704:2:70109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70109" ;
+    skos:prefLabel "Quan 5"@eng-Latn, "Quận 5"@vie-Latn ;
+    wdata:q7200235 "VN70109" .
+
+<urn:mdciii:1603:45:16:704:2:70111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70111" ;
+    skos:prefLabel "Quan 6"@eng-Latn, "Quận 6"@vie-Latn ;
+    wdata:q7200235 "VN70111" .
+
+<urn:mdciii:1603:45:16:704:2:70113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70113" ;
+    skos:prefLabel "Quan 7"@eng-Latn, "Quận 7"@vie-Latn ;
+    wdata:q7200235 "VN70113" .
+
+<urn:mdciii:1603:45:16:704:2:70115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70115" ;
+    skos:prefLabel "Quan 8"@eng-Latn, "Quận 8"@vie-Latn ;
+    wdata:q7200235 "VN70115" .
+
+<urn:mdciii:1603:45:16:704:2:70117>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70117" ;
+    skos:prefLabel "Quan 9"@eng-Latn, "Quận 9"@vie-Latn ;
+    wdata:q7200235 "VN70117" .
+
+<urn:mdciii:1603:45:16:704:2:70119>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70119" ;
+    skos:prefLabel "Quan 10"@eng-Latn, "Quận 10"@vie-Latn ;
+    wdata:q7200235 "VN70119" .
+
+<urn:mdciii:1603:45:16:704:2:70121>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70121" ;
+    skos:prefLabel "Quan 11"@eng-Latn, "Quận 11"@vie-Latn ;
+    wdata:q7200235 "VN70121" .
+
+<urn:mdciii:1603:45:16:704:2:70123>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70123" ;
+    skos:prefLabel "Quan 12"@eng-Latn, "Quận 12"@vie-Latn ;
+    wdata:q7200235 "VN70123" .
+
+<urn:mdciii:1603:45:16:704:2:70125>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70125" ;
+    skos:prefLabel "Go Vap"@eng-Latn, "Quận Gò Vấp"@vie-Latn ;
+    wdata:q7200235 "VN70125" .
+
+<urn:mdciii:1603:45:16:704:2:70127>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70127" ;
+    skos:prefLabel "Quận Tân Bình"@vie-Latn, "Tan Binh"@eng-Latn ;
+    wdata:q7200235 "VN70127" .
+
+<urn:mdciii:1603:45:16:704:2:70128>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70128" ;
+    skos:prefLabel "Quận Tân Phú"@vie-Latn, "Tan Phu"@eng-Latn ;
+    wdata:q7200235 "VN70128" .
+
+<urn:mdciii:1603:45:16:704:2:70129>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70129" ;
+    skos:prefLabel "Binh Thanh"@eng-Latn, "Quận Bình Thạnh"@vie-Latn ;
+    wdata:q7200235 "VN70129" .
+
+<urn:mdciii:1603:45:16:704:2:70131>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70131" ;
+    skos:prefLabel "Phu Nhuan"@eng-Latn, "Quận Phú Nhuận"@vie-Latn ;
+    wdata:q7200235 "VN70131" .
+
+<urn:mdciii:1603:45:16:704:2:70133>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70133" ;
+    skos:prefLabel "Quận Thủ Đức"@vie-Latn, "Thu Duc"@eng-Latn ;
+    wdata:q7200235 "VN70133" .
+
+<urn:mdciii:1603:45:16:704:2:70135>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70135" ;
+    skos:prefLabel "Cu Chi"@eng-Latn, "Huyện Củ Chi"@vie-Latn ;
+    wdata:q7200235 "VN70135" .
+
+<urn:mdciii:1603:45:16:704:2:70137>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70137" ;
+    skos:prefLabel "Hoc Mon"@eng-Latn, "Huyện Hóc Môn"@vie-Latn ;
+    wdata:q7200235 "VN70137" .
+
+<urn:mdciii:1603:45:16:704:2:70139>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70139" ;
+    skos:prefLabel "Binh Chanh"@eng-Latn, "Huyện Bình Chánh"@vie-Latn ;
+    wdata:q7200235 "VN70139" .
+
+<urn:mdciii:1603:45:16:704:2:70140>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70140" ;
+    skos:prefLabel "Binh Tan"@eng-Latn, "Quận Bình Tân"@vie-Latn ;
+    wdata:q7200235 "VN70140" .
+
+<urn:mdciii:1603:45:16:704:2:70141>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70141" ;
+    skos:prefLabel "Huyện Nhà Bè"@vie-Latn, "Nha Be"@eng-Latn ;
+    wdata:q7200235 "VN70141" .
+
+<urn:mdciii:1603:45:16:704:2:70143>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70143" ;
+    skos:prefLabel "Can Gio"@eng-Latn, "Huyện Cần Giờ"@vie-Latn ;
+    wdata:q7200235 "VN70143" .
+
+<urn:mdciii:1603:45:16:704:2:70501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70501" ;
+    skos:prefLabel "Phan Rang-Thap Cham"@eng-Latn, "TP. Phan Rang-Tháp Chàm"@vie-Latn ;
+    wdata:q7200235 "VN70501" .
+
+<urn:mdciii:1603:45:16:704:2:70503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70503" ;
+    skos:prefLabel "Huyện Ninh Sơn"@vie-Latn, "Ninh Son"@eng-Latn ;
+    wdata:q7200235 "VN70503" .
+
+<urn:mdciii:1603:45:16:704:2:70504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70504" ;
+    skos:prefLabel "Bac Ai"@eng-Latn, "Huyện Bác Ái"@vie-Latn ;
+    wdata:q7200235 "VN70504" .
+
+<urn:mdciii:1603:45:16:704:2:70505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70505" ;
+    skos:prefLabel "Huyện Ninh Hải"@vie-Latn, "Ninh Hai"@eng-Latn ;
+    wdata:q7200235 "VN70505" .
+
+<urn:mdciii:1603:45:16:704:2:70506>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70506" ;
+    skos:prefLabel "Huyện Thuận Bắc"@vie-Latn, "Thuan Bac"@eng-Latn ;
+    wdata:q7200235 "VN70506" .
+
+<urn:mdciii:1603:45:16:704:2:70507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70507" ;
+    skos:prefLabel "Huyện Ninh Phước"@vie-Latn, "Ninh Phuoc"@eng-Latn ;
+    wdata:q7200235 "VN70507" .
+
+<urn:mdciii:1603:45:16:704:2:70508>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70508" ;
+    skos:prefLabel "Huyện Thuận Nam"@vie-Latn, "Thuan Nam"@eng-Latn ;
+    wdata:q7200235 "VN70508" .
+
+<urn:mdciii:1603:45:16:704:2:70701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70701" ;
+    skos:prefLabel "Dong Xoai"@eng-Latn, "Thị xã Đồng Xoài"@vie-Latn ;
+    wdata:q7200235 "VN70701" .
+
+<urn:mdciii:1603:45:16:704:2:70702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70702" ;
+    skos:prefLabel "Dong Phu"@eng-Latn, "Huyện Đồng Phú"@vie-Latn ;
+    wdata:q7200235 "VN70702" .
+
+<urn:mdciii:1603:45:16:704:2:70703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70703" ;
+    skos:prefLabel "Phuoc Long"@eng-Latn, "Thị xã Phước Long"@vie-Latn ;
+    wdata:q7200235 "VN70703" .
+
+<urn:mdciii:1603:45:16:704:2:70705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70705" ;
+    skos:prefLabel "Huyện Lộc Ninh"@vie-Latn, "Loc Ninh"@eng-Latn ;
+    wdata:q7200235 "VN70705" .
+
+<urn:mdciii:1603:45:16:704:2:70706>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70706" ;
+    skos:prefLabel "Bu Dop"@eng-Latn, "Huyện Bù Đốp"@vie-Latn ;
+    wdata:q7200235 "VN70706" .
+
+<urn:mdciii:1603:45:16:704:2:70707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70707" ;
+    skos:prefLabel "Bu Dang"@eng-Latn, "Huyện Bù Đăng"@vie-Latn ;
+    wdata:q7200235 "VN70707" .
+
+<urn:mdciii:1603:45:16:704:2:70708>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70708" ;
+    skos:prefLabel "Chon Thanh"@eng-Latn, "Huyện Chơn Thành"@vie-Latn ;
+    wdata:q7200235 "VN70708" .
+
+<urn:mdciii:1603:45:16:704:2:70709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70709" ;
+    skos:prefLabel "Binh Long"@eng-Latn, "Thị xã Bình Long"@vie-Latn ;
+    wdata:q7200235 "VN70709" .
+
+<urn:mdciii:1603:45:16:704:2:70710>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70710" ;
+    skos:prefLabel "Hon Quan"@eng-Latn, "Huyện Hớn Quản"@vie-Latn ;
+    wdata:q7200235 "VN70710" .
+
+<urn:mdciii:1603:45:16:704:2:70711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70711" ;
+    skos:prefLabel "Bu Gia Map"@eng-Latn, "Huyện Bù Gia Mập"@vie-Latn ;
+    wdata:q7200235 "VN70711" .
+
+<urn:mdciii:1603:45:16:704:2:70901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70901" ;
+    skos:prefLabel "TP. Tây Ninh"@vie-Latn, "Tay Ninh"@eng-Latn ;
+    wdata:q7200235 "VN70901" .
+
+<urn:mdciii:1603:45:16:704:2:70903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70903" ;
+    skos:prefLabel "Huyện Tân Biên"@vie-Latn, "Tan Bien"@eng-Latn ;
+    wdata:q7200235 "VN70903" .
+
+<urn:mdciii:1603:45:16:704:2:70905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70905" ;
+    skos:prefLabel "Huyện Tân Châu"@vie-Latn, "Tan Chau"@eng-Latn ;
+    wdata:q7200235 "VN70905" .
+
+<urn:mdciii:1603:45:16:704:2:70907>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70907" ;
+    skos:prefLabel "Duong Minh Chau"@eng-Latn, "Huyện Dương Minh Châu"@vie-Latn ;
+    wdata:q7200235 "VN70907" .
+
+<urn:mdciii:1603:45:16:704:2:70909>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70909" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN70909" .
+
+<urn:mdciii:1603:45:16:704:2:70911>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70911" ;
+    skos:prefLabel "Hoa Thanh"@eng-Latn, "Huyện Hòa Thành"@vie-Latn ;
+    wdata:q7200235 "VN70911" .
+
+<urn:mdciii:1603:45:16:704:2:70913>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70913" ;
+    skos:prefLabel "Ben Cau"@eng-Latn, "Huyện Bến Cầu"@vie-Latn ;
+    wdata:q7200235 "VN70913" .
+
+<urn:mdciii:1603:45:16:704:2:70915>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70915" ;
+    skos:prefLabel "Go Dau"@eng-Latn, "Huyện Gò Dầu"@vie-Latn ;
+    wdata:q7200235 "VN70915" .
+
+<urn:mdciii:1603:45:16:704:2:70917>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:70917" ;
+    skos:prefLabel "Huyện Trảng Bàng"@vie-Latn, "Trang Bang"@eng-Latn ;
+    wdata:q7200235 "VN70917" .
+
+<urn:mdciii:1603:45:16:704:2:71101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71101" ;
+    skos:prefLabel "TP. Thủ Dầu Một"@vie-Latn, "Thu Dau Mot"@eng-Latn ;
+    wdata:q7200235 "VN71101" .
+
+<urn:mdciii:1603:45:16:704:2:71102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71102" ;
+    skos:prefLabel "Dau Tieng"@eng-Latn, "Huyện Dầu Tiếng"@vie-Latn ;
+    wdata:q7200235 "VN71102" .
+
+<urn:mdciii:1603:45:16:704:2:71103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71103" ;
+    skos:prefLabel "Ben Cat"@eng-Latn, "Thị xã Bến Cát"@vie-Latn ;
+    wdata:q7200235 "VN71103" .
+
+<urn:mdciii:1603:45:16:704:2:71104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71104" ;
+    skos:prefLabel "Huyện Phú Giáo"@vie-Latn, "Phu Giao"@eng-Latn ;
+    wdata:q7200235 "VN71104" .
+
+<urn:mdciii:1603:45:16:704:2:71105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71105" ;
+    skos:prefLabel "Tan Uyen"@eng-Latn, "Thị xã Tân Uyên"@vie-Latn ;
+    wdata:q7200235 "VN71105" .
+
+<urn:mdciii:1603:45:16:704:2:71107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71107" ;
+    skos:prefLabel "Thuan An"@eng-Latn, "Thị xã Thuận An"@vie-Latn ;
+    wdata:q7200235 "VN71107" .
+
+<urn:mdciii:1603:45:16:704:2:71108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71108" ;
+    skos:prefLabel "Di An"@eng-Latn, "Thị xã Dĩ An"@vie-Latn ;
+    wdata:q7200235 "VN71108" .
+
+<urn:mdciii:1603:45:16:704:2:71109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71109" ;
+    skos:prefLabel "Bac Tan Uyen"@eng-Latn, "Huyện Bắc Tân Uyên"@vie-Latn ;
+    wdata:q7200235 "VN71109" .
+
+<urn:mdciii:1603:45:16:704:2:71110>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71110" ;
+    skos:prefLabel "Bau Bang"@eng-Latn, "Huyện Bàu Bàng"@vie-Latn ;
+    wdata:q7200235 "VN71110" .
+
+<urn:mdciii:1603:45:16:704:2:71301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71301" ;
+    skos:prefLabel "Bien Hoa"@eng-Latn, "TP. Biên Hòa"@vie-Latn ;
+    wdata:q7200235 "VN71301" .
+
+<urn:mdciii:1603:45:16:704:2:71303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71303" ;
+    skos:prefLabel "Huyện Tân Phú"@vie-Latn, "Tan Phu"@eng-Latn ;
+    wdata:q7200235 "VN71303" .
+
+<urn:mdciii:1603:45:16:704:2:71305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71305" ;
+    skos:prefLabel "Dinh Quan"@eng-Latn, "Huyện Định Quán"@vie-Latn ;
+    wdata:q7200235 "VN71305" .
+
+<urn:mdciii:1603:45:16:704:2:71307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71307" ;
+    skos:prefLabel "Huyện Vĩnh Cửu"@vie-Latn, "Vinh Cuu"@eng-Latn ;
+    wdata:q7200235 "VN71307" .
+
+<urn:mdciii:1603:45:16:704:2:71309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71309" ;
+    skos:prefLabel "Huyện Thống Nhất"@vie-Latn, "Thong Nhat"@eng-Latn ;
+    wdata:q7200235 "VN71309" .
+
+<urn:mdciii:1603:45:16:704:2:71310>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71310" ;
+    skos:prefLabel "Huyện Trảng Bom"@vie-Latn, "Trang Bom"@eng-Latn ;
+    wdata:q7200235 "VN71310" .
+
+<urn:mdciii:1603:45:16:704:2:71311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71311" ;
+    skos:prefLabel "Long Khanh"@eng-Latn, "Thị xã Long Khánh"@vie-Latn ;
+    wdata:q7200235 "VN71311" .
+
+<urn:mdciii:1603:45:16:704:2:71312>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71312" ;
+    skos:prefLabel "Cam My"@eng-Latn, "Huyện Cẩm Mỹ"@vie-Latn ;
+    wdata:q7200235 "VN71312" .
+
+<urn:mdciii:1603:45:16:704:2:71313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71313" ;
+    skos:prefLabel "Huyện Xuân Lộc"@vie-Latn, "Xuan Loc"@eng-Latn ;
+    wdata:q7200235 "VN71313" .
+
+<urn:mdciii:1603:45:16:704:2:71315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71315" ;
+    skos:prefLabel "Huyện Long Thành"@vie-Latn, "Long Thanh"@eng-Latn ;
+    wdata:q7200235 "VN71315" .
+
+<urn:mdciii:1603:45:16:704:2:71317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71317" ;
+    skos:prefLabel "Huyện Nhơn Trạch"@vie-Latn, "Nhon Trach"@eng-Latn ;
+    wdata:q7200235 "VN71317" .
+
+<urn:mdciii:1603:45:16:704:2:71501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71501" ;
+    skos:prefLabel "Phan Thiet"@eng-Latn, "TP. Phan Thiết"@vie-Latn ;
+    wdata:q7200235 "VN71501" .
+
+<urn:mdciii:1603:45:16:704:2:71502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71502" ;
+    skos:prefLabel "La Gi"@eng-Latn, "Thị xã La Gi"@vie-Latn ;
+    wdata:q7200235 "VN71502" .
+
+<urn:mdciii:1603:45:16:704:2:71503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71503" ;
+    skos:prefLabel "Huyện Tuy Phong"@vie-Latn, "Tuy Phong"@eng-Latn ;
+    wdata:q7200235 "VN71503" .
+
+<urn:mdciii:1603:45:16:704:2:71505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71505" ;
+    skos:prefLabel "Bac Binh"@eng-Latn, "Huyện Bắc Bình"@vie-Latn ;
+    wdata:q7200235 "VN71505" .
+
+<urn:mdciii:1603:45:16:704:2:71507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71507" ;
+    skos:prefLabel "Ham Thuan Bac"@eng-Latn, "Huyện Hàm Thuận Bắc"@vie-Latn ;
+    wdata:q7200235 "VN71507" .
+
+<urn:mdciii:1603:45:16:704:2:71509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71509" ;
+    skos:prefLabel "Ham Thuan Nam"@eng-Latn, "Huyện Hàm Thuận Nam"@vie-Latn ;
+    wdata:q7200235 "VN71509" .
+
+<urn:mdciii:1603:45:16:704:2:71511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71511" ;
+    skos:prefLabel "Huyện Tánh Linh"@vie-Latn, "Tanh Linh"@eng-Latn ;
+    wdata:q7200235 "VN71511" .
+
+<urn:mdciii:1603:45:16:704:2:71513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71513" ;
+    skos:prefLabel "Ham Tan"@eng-Latn, "Huyện Hàm Tân"@vie-Latn ;
+    wdata:q7200235 "VN71513" .
+
+<urn:mdciii:1603:45:16:704:2:71515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71515" ;
+    skos:prefLabel "Duc Linh"@eng-Latn, "Huyện Đức Linh"@vie-Latn ;
+    wdata:q7200235 "VN71515" .
+
+<urn:mdciii:1603:45:16:704:2:71517>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71517" ;
+    skos:prefLabel "Huyện Phú Quý"@vie-Latn, "Phu Quy"@eng-Latn ;
+    wdata:q7200235 "VN71517" .
+
+<urn:mdciii:1603:45:16:704:2:71701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71701" ;
+    skos:prefLabel "TP. Vũng Tàu"@vie-Latn, "Vung Tau"@eng-Latn ;
+    wdata:q7200235 "VN71701" .
+
+<urn:mdciii:1603:45:16:704:2:71703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71703" ;
+    skos:prefLabel "Ba Ria"@eng-Latn, "TP. Bà Rịa"@vie-Latn ;
+    wdata:q7200235 "VN71703" .
+
+<urn:mdciii:1603:45:16:704:2:71705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71705" ;
+    skos:prefLabel "Chau Duc"@eng-Latn, "Huyện Châu Đức"@vie-Latn ;
+    wdata:q7200235 "VN71705" .
+
+<urn:mdciii:1603:45:16:704:2:71707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71707" ;
+    skos:prefLabel "Huyện Xuyên Mộc"@vie-Latn, "Xuyen Moc"@eng-Latn ;
+    wdata:q7200235 "VN71707" .
+
+<urn:mdciii:1603:45:16:704:2:71709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71709" ;
+    skos:prefLabel "Huyện Tân Thành"@vie-Latn, "Tan Thanh"@eng-Latn ;
+    wdata:q7200235 "VN71709" .
+
+<urn:mdciii:1603:45:16:704:2:71711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71711" ;
+    skos:prefLabel "Dat Do"@eng-Latn, "Huyện Đất Đỏ"@vie-Latn ;
+    wdata:q7200235 "VN71711" .
+
+<urn:mdciii:1603:45:16:704:2:71712>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71712" ;
+    skos:prefLabel "Huyện Long Điền"@vie-Latn, "Long Dien"@eng-Latn ;
+    wdata:q7200235 "VN71712" .
+
+<urn:mdciii:1603:45:16:704:2:71714>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:71714" ;
+    skos:prefLabel "Con Dao"@eng-Latn, "Huyện Côn Đảo"@vie-Latn ;
+    wdata:q7200235 "VN71714" .
+
+<urn:mdciii:1603:45:16:704:2:80101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80101" ;
+    skos:prefLabel "TP. Tân An"@vie-Latn, "Tan An"@eng-Latn ;
+    wdata:q7200235 "VN80101" .
+
+<urn:mdciii:1603:45:16:704:2:80103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80103" ;
+    skos:prefLabel "Huyện Tân Hưng"@vie-Latn, "Tan Hung"@eng-Latn ;
+    wdata:q7200235 "VN80103" .
+
+<urn:mdciii:1603:45:16:704:2:80105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80105" ;
+    skos:prefLabel "Huyện Vĩnh Hưng"@vie-Latn, "Vinh Hung"@eng-Latn ;
+    wdata:q7200235 "VN80105" .
+
+<urn:mdciii:1603:45:16:704:2:80107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80107" ;
+    skos:prefLabel "Huyện Mộc Hóa"@vie-Latn, "Moc Hoa"@eng-Latn ;
+    wdata:q7200235 "VN80107" .
+
+<urn:mdciii:1603:45:16:704:2:80109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80109" ;
+    skos:prefLabel "Huyện Tân Thạnh"@vie-Latn, "Tan Thanh"@eng-Latn ;
+    wdata:q7200235 "VN80109" .
+
+<urn:mdciii:1603:45:16:704:2:80111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80111" ;
+    skos:prefLabel "Huyện Thạnh Hóa"@vie-Latn, "Thanh Hoa"@eng-Latn ;
+    wdata:q7200235 "VN80111" .
+
+<urn:mdciii:1603:45:16:704:2:80113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80113" ;
+    skos:prefLabel "Duc Hue"@eng-Latn, "Huyện Đức Huệ"@vie-Latn ;
+    wdata:q7200235 "VN80113" .
+
+<urn:mdciii:1603:45:16:704:2:80115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80115" ;
+    skos:prefLabel "Duc Hoa"@eng-Latn, "Huyện Đức Hòa"@vie-Latn ;
+    wdata:q7200235 "VN80115" .
+
+<urn:mdciii:1603:45:16:704:2:80117>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80117" ;
+    skos:prefLabel "Ben Luc"@eng-Latn, "Huyện Bến Lức"@vie-Latn ;
+    wdata:q7200235 "VN80117" .
+
+<urn:mdciii:1603:45:16:704:2:80119>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80119" ;
+    skos:prefLabel "Huyện Thủ Thừa"@vie-Latn, "Thu Thua"@eng-Latn ;
+    wdata:q7200235 "VN80119" .
+
+<urn:mdciii:1603:45:16:704:2:80121>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80121" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN80121" .
+
+<urn:mdciii:1603:45:16:704:2:80123>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80123" ;
+    skos:prefLabel "Huyện Tân Trụ"@vie-Latn, "Tan Tru"@eng-Latn ;
+    wdata:q7200235 "VN80123" .
+
+<urn:mdciii:1603:45:16:704:2:80125>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80125" ;
+    skos:prefLabel "Can Duoc"@eng-Latn, "Huyện Cần Đước"@vie-Latn ;
+    wdata:q7200235 "VN80125" .
+
+<urn:mdciii:1603:45:16:704:2:80127>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80127" ;
+    skos:prefLabel "Can Giuoc"@eng-Latn, "Huyện Cần Giuộc"@vie-Latn ;
+    wdata:q7200235 "VN80127" .
+
+<urn:mdciii:1603:45:16:704:2:80128>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80128" ;
+    skos:prefLabel "Kien Tuong"@eng-Latn, "Thị xã Kiến Tường"@vie-Latn ;
+    wdata:q7200235 "VN80128" .
+
+<urn:mdciii:1603:45:16:704:2:80301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80301" ;
+    skos:prefLabel "TP. Cao Lãnh"@vie-Latn, "Thi xa Cao Lanh"@eng-Latn ;
+    wdata:q7200235 "VN80301" .
+
+<urn:mdciii:1603:45:16:704:2:80303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80303" ;
+    skos:prefLabel "Sa Dec"@eng-Latn, "TP. Sa Đéc"@vie-Latn ;
+    wdata:q7200235 "VN80303" .
+
+<urn:mdciii:1603:45:16:704:2:80305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80305" ;
+    skos:prefLabel "Huyện Tân Hồng"@vie-Latn, "Tan Hong"@eng-Latn ;
+    wdata:q7200235 "VN80305" .
+
+<urn:mdciii:1603:45:16:704:2:80307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80307" ;
+    skos:prefLabel "Huyen Hong Ngu"@eng-Latn, "Huyện Hồng Ngự"@vie-Latn ;
+    wdata:q7200235 "VN80307" .
+
+<urn:mdciii:1603:45:16:704:2:80308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80308" ;
+    skos:prefLabel "Thi xa Hong Ngu"@eng-Latn, "Thị xã Hồng Ngự"@vie-Latn ;
+    wdata:q7200235 "VN80308" .
+
+<urn:mdciii:1603:45:16:704:2:80309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80309" ;
+    skos:prefLabel "Huyện Tam Nông"@vie-Latn, "Tam Nong"@eng-Latn ;
+    wdata:q7200235 "VN80309" .
+
+<urn:mdciii:1603:45:16:704:2:80311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80311" ;
+    skos:prefLabel "Huyện Thanh Bình"@vie-Latn, "Thanh Binh"@eng-Latn ;
+    wdata:q7200235 "VN80311" .
+
+<urn:mdciii:1603:45:16:704:2:80313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80313" ;
+    skos:prefLabel "Huyện Tháp Mười"@vie-Latn, "Thap Muoi"@eng-Latn ;
+    wdata:q7200235 "VN80313" .
+
+<urn:mdciii:1603:45:16:704:2:80315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80315" ;
+    skos:prefLabel "Huyen Cao Lanh"@eng-Latn, "Huyện Cao Lãnh"@vie-Latn ;
+    wdata:q7200235 "VN80315" .
+
+<urn:mdciii:1603:45:16:704:2:80317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80317" ;
+    skos:prefLabel "Huyện Lấp Vò"@vie-Latn, "Lap Vo"@eng-Latn ;
+    wdata:q7200235 "VN80317" .
+
+<urn:mdciii:1603:45:16:704:2:80319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80319" ;
+    skos:prefLabel "Huyện Lai Vung"@vie-Latn, "Lai Vung"@eng-Latn ;
+    wdata:q7200235 "VN80319" .
+
+<urn:mdciii:1603:45:16:704:2:80321>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80321" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN80321" .
+
+<urn:mdciii:1603:45:16:704:2:80501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80501" ;
+    skos:prefLabel "Long Xuyen"@eng-Latn, "TP. Long Xuyên"@vie-Latn ;
+    wdata:q7200235 "VN80501" .
+
+<urn:mdciii:1603:45:16:704:2:80503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80503" ;
+    skos:prefLabel "Chau Doc"@eng-Latn, "TP. Châu Đốc"@vie-Latn ;
+    wdata:q7200235 "VN80503" .
+
+<urn:mdciii:1603:45:16:704:2:80505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80505" ;
+    skos:prefLabel "An Phu"@eng-Latn, "Huyện An Phú"@vie-Latn ;
+    wdata:q7200235 "VN80505" .
+
+<urn:mdciii:1603:45:16:704:2:80507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80507" ;
+    skos:prefLabel "Tan Chau"@eng-Latn, "Thị xã Tân Châu"@vie-Latn ;
+    wdata:q7200235 "VN80507" .
+
+<urn:mdciii:1603:45:16:704:2:80509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80509" ;
+    skos:prefLabel "Huyện Phú Tân"@vie-Latn, "Phu Tan"@eng-Latn ;
+    wdata:q7200235 "VN80509" .
+
+<urn:mdciii:1603:45:16:704:2:80511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80511" ;
+    skos:prefLabel "Chau Phu"@eng-Latn, "Huyện Châu Phú"@vie-Latn ;
+    wdata:q7200235 "VN80511" .
+
+<urn:mdciii:1603:45:16:704:2:80513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80513" ;
+    skos:prefLabel "Huyện Tịnh Biên"@vie-Latn, "Tinh Bien"@eng-Latn ;
+    wdata:q7200235 "VN80513" .
+
+<urn:mdciii:1603:45:16:704:2:80515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80515" ;
+    skos:prefLabel "Huyện Tri Tôn"@vie-Latn, "Tri Ton"@eng-Latn ;
+    wdata:q7200235 "VN80515" .
+
+<urn:mdciii:1603:45:16:704:2:80517>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80517" ;
+    skos:prefLabel "Cho Moi"@eng-Latn, "Huyện Chợ Mới"@vie-Latn ;
+    wdata:q7200235 "VN80517" .
+
+<urn:mdciii:1603:45:16:704:2:80519>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80519" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN80519" .
+
+<urn:mdciii:1603:45:16:704:2:80521>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80521" ;
+    skos:prefLabel "Huyện Thoại Sơn"@vie-Latn, "Thoai Son"@eng-Latn ;
+    wdata:q7200235 "VN80521" .
+
+<urn:mdciii:1603:45:16:704:2:80701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80701" ;
+    skos:prefLabel "My Tho"@eng-Latn, "TP. Mỹ Tho"@vie-Latn ;
+    wdata:q7200235 "VN80701" .
+
+<urn:mdciii:1603:45:16:704:2:80703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80703" ;
+    skos:prefLabel "Go Cong"@eng-Latn, "Thị xã Gò Công"@vie-Latn ;
+    wdata:q7200235 "VN80703" .
+
+<urn:mdciii:1603:45:16:704:2:80705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80705" ;
+    skos:prefLabel "Huyện Tân Phước"@vie-Latn, "Tan Phuoc"@eng-Latn ;
+    wdata:q7200235 "VN80705" .
+
+<urn:mdciii:1603:45:16:704:2:80707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80707" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN80707" .
+
+<urn:mdciii:1603:45:16:704:2:80709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80709" ;
+    skos:prefLabel "Thi xa Cai Lay"@eng-Latn, "Thị xã Cai Lậy"@vie-Latn ;
+    wdata:q7200235 "VN80709" .
+
+<urn:mdciii:1603:45:16:704:2:80711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80711" ;
+    skos:prefLabel "Cho Gao"@eng-Latn, "Huyện Chợ Gạo"@vie-Latn ;
+    wdata:q7200235 "VN80711" .
+
+<urn:mdciii:1603:45:16:704:2:80713>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80713" ;
+    skos:prefLabel "Cai Be"@eng-Latn, "Huyện Cái Bè"@vie-Latn ;
+    wdata:q7200235 "VN80713" .
+
+<urn:mdciii:1603:45:16:704:2:80715>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80715" ;
+    skos:prefLabel "Go Cong Tay"@eng-Latn, "Huyện Gò Công Tây"@vie-Latn ;
+    wdata:q7200235 "VN80715" .
+
+<urn:mdciii:1603:45:16:704:2:80717>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80717" ;
+    skos:prefLabel "Go Cong Dong"@eng-Latn, "Huyện Gò Công Đông"@vie-Latn ;
+    wdata:q7200235 "VN80717" .
+
+<urn:mdciii:1603:45:16:704:2:80718>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80718" ;
+    skos:prefLabel "Huyện Tân Phú Đông"@vie-Latn, "Tan Phu Dong"@eng-Latn ;
+    wdata:q7200235 "VN80718" .
+
+<urn:mdciii:1603:45:16:704:2:80719>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80719" ;
+    skos:prefLabel "Huyen Cai Lay"@eng-Latn, "Huyện Cai Lậy"@vie-Latn ;
+    wdata:q7200235 "VN80719" .
+
+<urn:mdciii:1603:45:16:704:2:80901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80901" ;
+    skos:prefLabel "TP. Vĩnh Long"@vie-Latn, "Vinh Long"@eng-Latn ;
+    wdata:q7200235 "VN80901" .
+
+<urn:mdciii:1603:45:16:704:2:80903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80903" ;
+    skos:prefLabel "Huyện Long Hồ"@vie-Latn, "Long Ho"@eng-Latn ;
+    wdata:q7200235 "VN80903" .
+
+<urn:mdciii:1603:45:16:704:2:80905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80905" ;
+    skos:prefLabel "Huyện Mang Thít"@vie-Latn, "Mang Thit"@eng-Latn ;
+    wdata:q7200235 "VN80905" .
+
+<urn:mdciii:1603:45:16:704:2:80907>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80907" ;
+    skos:prefLabel "Binh Minh"@eng-Latn, "Thị xã Bình Minh"@vie-Latn ;
+    wdata:q7200235 "VN80907" .
+
+<urn:mdciii:1603:45:16:704:2:80908>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80908" ;
+    skos:prefLabel "Binh Tan"@eng-Latn, "Huyện Bình Tân"@vie-Latn ;
+    wdata:q7200235 "VN80908" .
+
+<urn:mdciii:1603:45:16:704:2:80909>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80909" ;
+    skos:prefLabel "Huyện Tam Bình"@vie-Latn, "Tam Binh"@eng-Latn ;
+    wdata:q7200235 "VN80909" .
+
+<urn:mdciii:1603:45:16:704:2:80911>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80911" ;
+    skos:prefLabel "Huyện Trà Ôn"@vie-Latn, "Tra On"@eng-Latn ;
+    wdata:q7200235 "VN80911" .
+
+<urn:mdciii:1603:45:16:704:2:80913>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:80913" ;
+    skos:prefLabel "Huyện Vũng Liêm"@vie-Latn, "Vung Liem"@eng-Latn ;
+    wdata:q7200235 "VN80913" .
+
+<urn:mdciii:1603:45:16:704:2:81101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81101" ;
+    skos:prefLabel "Ben Tre"@eng-Latn, "TP. Bến Tre"@vie-Latn ;
+    wdata:q7200235 "VN81101" .
+
+<urn:mdciii:1603:45:16:704:2:81102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81102" ;
+    skos:prefLabel "Huyện Mỏ Cày Nam"@vie-Latn, "Mo Cay Nam"@eng-Latn ;
+    wdata:q7200235 "VN81102" .
+
+<urn:mdciii:1603:45:16:704:2:81103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81103" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN81103" .
+
+<urn:mdciii:1603:45:16:704:2:81105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81105" ;
+    skos:prefLabel "Cho Lach"@eng-Latn, "Huyện Chợ Lách"@vie-Latn ;
+    wdata:q7200235 "VN81105" .
+
+<urn:mdciii:1603:45:16:704:2:81107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81107" ;
+    skos:prefLabel "Huyện Mỏ Cày Bắc"@vie-Latn, "Mo Cay Bac"@eng-Latn ;
+    wdata:q7200235 "VN81107" .
+
+<urn:mdciii:1603:45:16:704:2:81109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81109" ;
+    skos:prefLabel "Giong Trom"@eng-Latn, "Huyện Giồng Trôm"@vie-Latn ;
+    wdata:q7200235 "VN81109" .
+
+<urn:mdciii:1603:45:16:704:2:81111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81111" ;
+    skos:prefLabel "Binh Dai"@eng-Latn, "Huyện Bình Đại"@vie-Latn ;
+    wdata:q7200235 "VN81111" .
+
+<urn:mdciii:1603:45:16:704:2:81113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81113" ;
+    skos:prefLabel "Ba Tri"@eng-Latn, "Huyện Ba Tri"@vie-Latn ;
+    wdata:q7200235 "VN81113" .
+
+<urn:mdciii:1603:45:16:704:2:81115>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81115" ;
+    skos:prefLabel "Huyện Thạnh Phú"@vie-Latn, "Thanh Phu"@eng-Latn ;
+    wdata:q7200235 "VN81115" .
+
+<urn:mdciii:1603:45:16:704:2:81301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81301" ;
+    skos:prefLabel "Rach Gia"@eng-Latn, "TP. Rạch Giá"@vie-Latn ;
+    wdata:q7200235 "VN81301" .
+
+<urn:mdciii:1603:45:16:704:2:81303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81303" ;
+    skos:prefLabel "Ha Tien"@eng-Latn, "Thị xã Hà Tiên"@vie-Latn ;
+    wdata:q7200235 "VN81303" .
+
+<urn:mdciii:1603:45:16:704:2:81304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81304" ;
+    skos:prefLabel "Huyện Kiên Lương"@vie-Latn, "Kien Luong"@eng-Latn ;
+    wdata:q7200235 "VN81304" .
+
+<urn:mdciii:1603:45:16:704:2:81305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81305" ;
+    skos:prefLabel "Hon Dat"@eng-Latn, "Huyện Hòn Đất"@vie-Latn ;
+    wdata:q7200235 "VN81305" .
+
+<urn:mdciii:1603:45:16:704:2:81307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81307" ;
+    skos:prefLabel "Huyện Tân Hiệp"@vie-Latn, "Tan Hiep"@eng-Latn ;
+    wdata:q7200235 "VN81307" .
+
+<urn:mdciii:1603:45:16:704:2:81309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81309" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN81309" .
+
+<urn:mdciii:1603:45:16:704:2:81311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81311" ;
+    skos:prefLabel "Giong Rieng"@eng-Latn, "Huyện Giồng Riềng"@vie-Latn ;
+    wdata:q7200235 "VN81311" .
+
+<urn:mdciii:1603:45:16:704:2:81313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81313" ;
+    skos:prefLabel "Go Quao"@eng-Latn, "Huyện Gò Quao"@vie-Latn ;
+    wdata:q7200235 "VN81313" .
+
+<urn:mdciii:1603:45:16:704:2:81315>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81315" ;
+    skos:prefLabel "An Bien"@eng-Latn, "Huyện An Biên"@vie-Latn ;
+    wdata:q7200235 "VN81315" .
+
+<urn:mdciii:1603:45:16:704:2:81317>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81317" ;
+    skos:prefLabel "An Minh"@eng-Latn, "Huyện An Minh"@vie-Latn ;
+    wdata:q7200235 "VN81317" .
+
+<urn:mdciii:1603:45:16:704:2:81319>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81319" ;
+    skos:prefLabel "Huyện Vĩnh Thuận"@vie-Latn, "Vinh Thuan"@eng-Latn ;
+    wdata:q7200235 "VN81319" .
+
+<urn:mdciii:1603:45:16:704:2:81321>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81321" ;
+    skos:prefLabel "Huyện Phú Quốc"@vie-Latn, "Phu Quoc"@eng-Latn ;
+    wdata:q7200235 "VN81321" .
+
+<urn:mdciii:1603:45:16:704:2:81323>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81323" ;
+    skos:prefLabel "Huyện Kiên Hải"@vie-Latn, "Kien Hai"@eng-Latn ;
+    wdata:q7200235 "VN81323" .
+
+<urn:mdciii:1603:45:16:704:2:81325>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81325" ;
+    skos:prefLabel "Huyện U Minh Thượng"@vie-Latn, "U Minh Thuong"@eng-Latn ;
+    wdata:q7200235 "VN81325" .
+
+<urn:mdciii:1603:45:16:704:2:81326>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81326" ;
+    skos:prefLabel "Giang Thanh"@eng-Latn, "Huyện Giang Thành"@vie-Latn ;
+    wdata:q7200235 "VN81326" .
+
+<urn:mdciii:1603:45:16:704:2:81501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81501" ;
+    skos:prefLabel "Ninh Kieu"@eng-Latn, "Quận Ninh Kiều"@vie-Latn ;
+    wdata:q7200235 "VN81501" .
+
+<urn:mdciii:1603:45:16:704:2:81503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81503" ;
+    skos:prefLabel "O Mon"@eng-Latn, "Quận Ô Môn"@vie-Latn ;
+    wdata:q7200235 "VN81503" .
+
+<urn:mdciii:1603:45:16:704:2:81505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81505" ;
+    skos:prefLabel "Binh Thuy"@eng-Latn, "Quận Bình Thủy"@vie-Latn ;
+    wdata:q7200235 "VN81505" .
+
+<urn:mdciii:1603:45:16:704:2:81507>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81507" ;
+    skos:prefLabel "Cai Rang"@eng-Latn, "Quận Cái Răng"@vie-Latn ;
+    wdata:q7200235 "VN81507" .
+
+<urn:mdciii:1603:45:16:704:2:81509>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81509" ;
+    skos:prefLabel "Quận Thốt Nốt"@vie-Latn, "Thot Not"@eng-Latn ;
+    wdata:q7200235 "VN81509" .
+
+<urn:mdciii:1603:45:16:704:2:81511>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81511" ;
+    skos:prefLabel "Huyện Vĩnh Thạnh"@vie-Latn, "Vinh Thanh"@eng-Latn ;
+    wdata:q7200235 "VN81511" .
+
+<urn:mdciii:1603:45:16:704:2:81513>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81513" ;
+    skos:prefLabel "Co Do"@eng-Latn, "Huyện Cờ Đỏ"@vie-Latn ;
+    wdata:q7200235 "VN81513" .
+
+<urn:mdciii:1603:45:16:704:2:81514>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81514" ;
+    skos:prefLabel "Huyện Thới Lai"@vie-Latn, "Thoi Lai"@eng-Latn ;
+    wdata:q7200235 "VN81514" .
+
+<urn:mdciii:1603:45:16:704:2:81515>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81515" ;
+    skos:prefLabel "Huyện Phong Điền"@vie-Latn, "Phong Dien"@eng-Latn ;
+    wdata:q7200235 "VN81515" .
+
+<urn:mdciii:1603:45:16:704:2:81601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81601" ;
+    skos:prefLabel "TP. Vị Thanh"@vie-Latn, "Vi Thanh"@eng-Latn ;
+    wdata:q7200235 "VN81601" .
+
+<urn:mdciii:1603:45:16:704:2:81602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81602" ;
+    skos:prefLabel "Nga Bay"@eng-Latn, "Thị xã Ngã Bảy"@vie-Latn ;
+    wdata:q7200235 "VN81602" .
+
+<urn:mdciii:1603:45:16:704:2:81603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81603" ;
+    skos:prefLabel "Chau Thanh A"@eng-Latn, "Huyện Châu Thành A"@vie-Latn ;
+    wdata:q7200235 "VN81603" .
+
+<urn:mdciii:1603:45:16:704:2:81605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81605" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN81605" .
+
+<urn:mdciii:1603:45:16:704:2:81607>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81607" ;
+    skos:prefLabel "Huyện Phụng Hiệp"@vie-Latn, "Phung Hiep"@eng-Latn ;
+    wdata:q7200235 "VN81607" .
+
+<urn:mdciii:1603:45:16:704:2:81609>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81609" ;
+    skos:prefLabel "Huyện Vị Thủy"@vie-Latn, "Vi Thuy"@eng-Latn ;
+    wdata:q7200235 "VN81609" .
+
+<urn:mdciii:1603:45:16:704:2:81611>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81611" ;
+    skos:prefLabel "Huyện Long Mỹ"@vie-Latn, "Long My"@eng-Latn ;
+    wdata:q7200235 "VN81611" .
+
+<urn:mdciii:1603:45:16:704:2:81701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81701" ;
+    skos:prefLabel "TP. Trà Vinh"@vie-Latn, "Tra Vinh"@eng-Latn ;
+    wdata:q7200235 "VN81701" .
+
+<urn:mdciii:1603:45:16:704:2:81703>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81703" ;
+    skos:prefLabel "Cang Long"@eng-Latn, "Huyện Càng Long"@vie-Latn ;
+    wdata:q7200235 "VN81703" .
+
+<urn:mdciii:1603:45:16:704:2:81705>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81705" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN81705" .
+
+<urn:mdciii:1603:45:16:704:2:81707>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81707" ;
+    skos:prefLabel "Cau Ke"@eng-Latn, "Huyện Cầu Kè"@vie-Latn ;
+    wdata:q7200235 "VN81707" .
+
+<urn:mdciii:1603:45:16:704:2:81709>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81709" ;
+    skos:prefLabel "Huyện Tiểu Cần"@vie-Latn, "Tieu Can"@eng-Latn ;
+    wdata:q7200235 "VN81709" .
+
+<urn:mdciii:1603:45:16:704:2:81711>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81711" ;
+    skos:prefLabel "Cau Ngang"@eng-Latn, "Huyện Cầu Ngang"@vie-Latn ;
+    wdata:q7200235 "VN81711" .
+
+<urn:mdciii:1603:45:16:704:2:81713>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81713" ;
+    skos:prefLabel "Huyện Trà Cú"@vie-Latn, "Tra Cu"@eng-Latn ;
+    wdata:q7200235 "VN81713" .
+
+<urn:mdciii:1603:45:16:704:2:81715>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81715" ;
+    skos:prefLabel "Duyen Hai"@eng-Latn, "Huyện Duyên Hải"@vie-Latn ;
+    wdata:q7200235 "VN81715" .
+
+<urn:mdciii:1603:45:16:704:2:81901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81901" ;
+    skos:prefLabel "Soc Trang"@eng-Latn, "TP. Sóc Trăng"@vie-Latn ;
+    wdata:q7200235 "VN81901" .
+
+<urn:mdciii:1603:45:16:704:2:81903>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81903" ;
+    skos:prefLabel "Huyện Kế Sách"@vie-Latn, "Ke Sach"@eng-Latn ;
+    wdata:q7200235 "VN81903" .
+
+<urn:mdciii:1603:45:16:704:2:81905>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81905" ;
+    skos:prefLabel "Huyện Long Phú"@vie-Latn, "Long Phu"@eng-Latn ;
+    wdata:q7200235 "VN81905" .
+
+<urn:mdciii:1603:45:16:704:2:81906>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81906" ;
+    skos:prefLabel "Cu Lao Dung"@eng-Latn, "Huyện Cù Lao Dung"@vie-Latn ;
+    wdata:q7200235 "VN81906" .
+
+<urn:mdciii:1603:45:16:704:2:81907>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81907" ;
+    skos:prefLabel "Huyện Mỹ Tú"@vie-Latn, "My Tu"@eng-Latn ;
+    wdata:q7200235 "VN81907" .
+
+<urn:mdciii:1603:45:16:704:2:81908>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81908" ;
+    skos:prefLabel "Chau Thanh"@eng-Latn, "Huyện Châu Thành"@vie-Latn ;
+    wdata:q7200235 "VN81908" .
+
+<urn:mdciii:1603:45:16:704:2:81909>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81909" ;
+    skos:prefLabel "Huyện Mỹ Xuyên"@vie-Latn, "My Xuyen"@eng-Latn ;
+    wdata:q7200235 "VN81909" .
+
+<urn:mdciii:1603:45:16:704:2:81911>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81911" ;
+    skos:prefLabel "Huyện Thạnh Trị"@vie-Latn, "Thanh Tri"@eng-Latn ;
+    wdata:q7200235 "VN81911" .
+
+<urn:mdciii:1603:45:16:704:2:81912>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81912" ;
+    skos:prefLabel "Nga Nam"@eng-Latn, "Thị xã Ngã Năm"@vie-Latn ;
+    wdata:q7200235 "VN81912" .
+
+<urn:mdciii:1603:45:16:704:2:81913>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81913" ;
+    skos:prefLabel "Thị xã Vĩnh Châu"@vie-Latn, "Vinh Chau"@eng-Latn ;
+    wdata:q7200235 "VN81913" .
+
+<urn:mdciii:1603:45:16:704:2:81915>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:81915" ;
+    skos:prefLabel "Huyện Trần Đề"@vie-Latn, "Tran De"@eng-Latn ;
+    wdata:q7200235 "VN81915" .
+
+<urn:mdciii:1603:45:16:704:2:82101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82101" ;
+    skos:prefLabel "Bac Lieu"@eng-Latn, "TP. Bạc Liêu"@vie-Latn ;
+    wdata:q7200235 "VN82101" .
+
+<urn:mdciii:1603:45:16:704:2:82103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82103" ;
+    skos:prefLabel "Huyện Phước Long"@vie-Latn, "Phuoc Long"@eng-Latn ;
+    wdata:q7200235 "VN82103" .
+
+<urn:mdciii:1603:45:16:704:2:82104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82104" ;
+    skos:prefLabel "Hong Dan"@eng-Latn, "Huyện Hồng Dân"@vie-Latn ;
+    wdata:q7200235 "VN82104" .
+
+<urn:mdciii:1603:45:16:704:2:82105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82105" ;
+    skos:prefLabel "Huyện Vĩnh Lợi"@vie-Latn, "Vinh Loi"@eng-Latn ;
+    wdata:q7200235 "VN82105" .
+
+<urn:mdciii:1603:45:16:704:2:82106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82106" ;
+    skos:prefLabel "Hoa Binh"@eng-Latn, "Huyện Hòa Bình"@vie-Latn ;
+    wdata:q7200235 "VN82106" .
+
+<urn:mdciii:1603:45:16:704:2:82107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82107" ;
+    skos:prefLabel "Gia Rai"@eng-Latn, "Huyện Giá Rai"@vie-Latn ;
+    wdata:q7200235 "VN82107" .
+
+<urn:mdciii:1603:45:16:704:2:82109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82109" ;
+    skos:prefLabel "Dong Hai"@eng-Latn, "Huyện Đông Hải"@vie-Latn ;
+    wdata:q7200235 "VN82109" .
+
+<urn:mdciii:1603:45:16:704:2:82301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82301" ;
+    skos:prefLabel "Ca Mau"@eng-Latn, "TP. Cà Mau"@vie-Latn ;
+    wdata:q7200235 "VN82301" .
+
+<urn:mdciii:1603:45:16:704:2:82303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82303" ;
+    skos:prefLabel "Huyện Thới Bình"@vie-Latn, "Thoi Binh"@eng-Latn ;
+    wdata:q7200235 "VN82303" .
+
+<urn:mdciii:1603:45:16:704:2:82305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82305" ;
+    skos:prefLabel "Huyện U Minh"@vie-Latn, "U Minh"@eng-Latn ;
+    wdata:q7200235 "VN82305" .
+
+<urn:mdciii:1603:45:16:704:2:82307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82307" ;
+    skos:prefLabel "Huyện Trần Văn Thời"@vie-Latn, "Tran Van Thoi"@eng-Latn ;
+    wdata:q7200235 "VN82307" .
+
+<urn:mdciii:1603:45:16:704:2:82309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82309" ;
+    skos:prefLabel "Cai Nuoc"@eng-Latn, "Huyện Cái Nước"@vie-Latn ;
+    wdata:q7200235 "VN82309" .
+
+<urn:mdciii:1603:45:16:704:2:82310>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82310" ;
+    skos:prefLabel "Huyện Phú Tân"@vie-Latn, "Phu Tan"@eng-Latn ;
+    wdata:q7200235 "VN82310" .
+
+<urn:mdciii:1603:45:16:704:2:82311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82311" ;
+    skos:prefLabel "Dam Doi"@eng-Latn, "Huyện Đầm Dơi"@vie-Latn ;
+    wdata:q7200235 "VN82311" .
+
+<urn:mdciii:1603:45:16:704:2:82313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82313" ;
+    skos:prefLabel "Huyện Ngọc Hiển"@vie-Latn, "Ngoc Hien"@eng-Latn ;
+    wdata:q7200235 "VN82313" .
+
+<urn:mdciii:1603:45:16:704:2:82314>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:704:2:82314" ;
+    skos:prefLabel "Huyện Năm Căn"@vie-Latn, "Nam Can"@eng-Latn ;
+    wdata:q7200235 "VN82314" .
+

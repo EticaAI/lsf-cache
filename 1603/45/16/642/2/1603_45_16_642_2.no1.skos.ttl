@@ -1,0 +1,282 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:642()> .
+
+<urn:mdciii:1603:45:16:642()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:642)" ;
+    skos:member <urn:mdciii:1603:45:16:642:2()> .
+
+<urn:mdciii:1603:45:16:642:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:642:2)" ;
+    skos:member <urn:mdciii:1603:45:16:642:2:1074>, <urn:mdciii:1603:45:16:642:2:1225>, <urn:mdciii:1603:45:16:642:2:1270>, <urn:mdciii:1603:45:16:642:2:1332>, <urn:mdciii:1603:45:16:642:2:1378>, <urn:mdciii:1603:45:16:642:2:2092>, <urn:mdciii:1603:45:16:642:2:2109>, <urn:mdciii:1603:45:16:642:2:2136>, <urn:mdciii:1603:45:16:642:2:2172>, <urn:mdciii:1603:45:16:642:2:2369>, <urn:mdciii:1603:45:16:642:2:2396>, <urn:mdciii:1603:45:16:642:2:3038>, <urn:mdciii:1603:45:16:642:2:3154>, <urn:mdciii:1603:45:16:642:2:3216>, <urn:mdciii:1603:45:16:642:2:3298>, <urn:mdciii:1603:45:16:642:2:3341>, <urn:mdciii:1603:45:16:642:2:3519>, <urn:mdciii:1603:45:16:642:2:3528>, <urn:mdciii:1603:45:16:642:2:4163>, <urn:mdciii:1603:45:16:642:2:4181>, <urn:mdciii:1603:45:16:642:2:4252>, <urn:mdciii:1603:45:16:642:2:4289>, <urn:mdciii:1603:45:16:642:2:4387>, <urn:mdciii:1603:45:16:642:2:5029>, <urn:mdciii:1603:45:16:642:2:5118>, <urn:mdciii:1603:45:16:642:2:5207>, <urn:mdciii:1603:45:16:642:2:5350>, <urn:mdciii:1603:45:16:642:2:6056>, <urn:mdciii:1603:45:16:642:2:6065>, <urn:mdciii:1603:45:16:642:2:6127>, <urn:mdciii:1603:45:16:642:2:6243>, <urn:mdciii:1603:45:16:642:2:6305>, <urn:mdciii:1603:45:16:642:2:6314>, <urn:mdciii:1603:45:16:642:2:7010>, <urn:mdciii:1603:45:16:642:2:7083>, <urn:mdciii:1603:45:16:642:2:7145>, <urn:mdciii:1603:45:16:642:2:7190>, <urn:mdciii:1603:45:16:642:2:7261>, <urn:mdciii:1603:45:16:642:2:7323>, <urn:mdciii:1603:45:16:642:2:8234>, <urn:mdciii:1603:45:16:642:2:8403> .
+
+<urn:mdciii:1603:45:16:642:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:642:2:1047>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:1047" ;
+    skos:prefLabel "Bacău"@ron-Latn ;
+    wdata:q7200235 "RO001047" .
+
+<urn:mdciii:1603:45:16:642:2:1074>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:1074" ;
+    skos:prefLabel "Botoșani"@ron-Latn ;
+    wdata:q7200235 "RO001074" .
+
+<urn:mdciii:1603:45:16:642:2:1225>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:1225" ;
+    skos:prefLabel "Iași"@ron-Latn ;
+    wdata:q7200235 "RO001225" .
+
+<urn:mdciii:1603:45:16:642:2:1270>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:1270" ;
+    skos:prefLabel "Neamț"@ron-Latn ;
+    wdata:q7200235 "RO001270" .
+
+<urn:mdciii:1603:45:16:642:2:1332>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:1332" ;
+    skos:prefLabel "Suceava"@ron-Latn ;
+    wdata:q7200235 "RO001332" .
+
+<urn:mdciii:1603:45:16:642:2:1378>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:1378" ;
+    skos:prefLabel "Vaslui"@ron-Latn ;
+    wdata:q7200235 "RO001378" .
+
+<urn:mdciii:1603:45:16:642:2:2092>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:2092" ;
+    skos:prefLabel "Brăila"@ron-Latn ;
+    wdata:q7200235 "RO002092" .
+
+<urn:mdciii:1603:45:16:642:2:2109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:2109" ;
+    skos:prefLabel "Buzău"@ron-Latn ;
+    wdata:q7200235 "RO002109" .
+
+<urn:mdciii:1603:45:16:642:2:2136>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:2136" ;
+    skos:prefLabel "Constanța"@ron-Latn ;
+    wdata:q7200235 "RO002136" .
+
+<urn:mdciii:1603:45:16:642:2:2172>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:2172" ;
+    skos:prefLabel "Galați"@ron-Latn ;
+    wdata:q7200235 "RO002172" .
+
+<urn:mdciii:1603:45:16:642:2:2369>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:2369" ;
+    skos:prefLabel "Tulcea"@ron-Latn ;
+    wdata:q7200235 "RO002369" .
+
+<urn:mdciii:1603:45:16:642:2:2396>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:2396" ;
+    skos:prefLabel "Vrancea"@ron-Latn ;
+    wdata:q7200235 "RO002396" .
+
+<urn:mdciii:1603:45:16:642:2:3038>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:3038" ;
+    skos:prefLabel "Argeș"@ron-Latn ;
+    wdata:q7200235 "RO003038" .
+
+<urn:mdciii:1603:45:16:642:2:3154>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:3154" ;
+    skos:prefLabel "Dâmbovița"@ron-Latn ;
+    wdata:q7200235 "RO003154" .
+
+<urn:mdciii:1603:45:16:642:2:3216>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:3216" ;
+    skos:prefLabel "Ialomița"@ron-Latn ;
+    wdata:q7200235 "RO003216" .
+
+<urn:mdciii:1603:45:16:642:2:3298>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:3298" ;
+    skos:prefLabel "Prahova"@ron-Latn ;
+    wdata:q7200235 "RO003298" .
+
+<urn:mdciii:1603:45:16:642:2:3341>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:3341" ;
+    skos:prefLabel "Teleorman"@ron-Latn ;
+    wdata:q7200235 "RO003341" .
+
+<urn:mdciii:1603:45:16:642:2:3519>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:3519" ;
+    skos:prefLabel "Călărași"@ron-Latn ;
+    wdata:q7200235 "RO003519" .
+
+<urn:mdciii:1603:45:16:642:2:3528>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:3528" ;
+    skos:prefLabel "Giurgiu"@ron-Latn ;
+    wdata:q7200235 "RO003528" .
+
+<urn:mdciii:1603:45:16:642:2:4163>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:4163" ;
+    skos:prefLabel "Dolj"@ron-Latn ;
+    wdata:q7200235 "RO004163" .
+
+<urn:mdciii:1603:45:16:642:2:4181>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:4181" ;
+    skos:prefLabel "Gorj"@ron-Latn ;
+    wdata:q7200235 "RO004181" .
+
+<urn:mdciii:1603:45:16:642:2:4252>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:4252" ;
+    skos:prefLabel "Mehedinți"@ron-Latn ;
+    wdata:q7200235 "RO004252" .
+
+<urn:mdciii:1603:45:16:642:2:4289>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:4289" ;
+    skos:prefLabel "Olt"@ron-Latn ;
+    wdata:q7200235 "RO004289" .
+
+<urn:mdciii:1603:45:16:642:2:4387>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:4387" ;
+    skos:prefLabel "Vâlcea"@ron-Latn ;
+    wdata:q7200235 "RO004387" .
+
+<urn:mdciii:1603:45:16:642:2:5029>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:5029" ;
+    skos:prefLabel "Arad"@ron-Latn ;
+    wdata:q7200235 "RO005029" .
+
+<urn:mdciii:1603:45:16:642:2:5118>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:5118" ;
+    skos:prefLabel "Caraș-Severin"@ron-Latn ;
+    wdata:q7200235 "RO005118" .
+
+<urn:mdciii:1603:45:16:642:2:5207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:5207" ;
+    skos:prefLabel "Hunedoara"@ron-Latn ;
+    wdata:q7200235 "RO005207" .
+
+<urn:mdciii:1603:45:16:642:2:5350>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:5350" ;
+    skos:prefLabel "Timiș"@ron-Latn ;
+    wdata:q7200235 "RO005350" .
+
+<urn:mdciii:1603:45:16:642:2:6056>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:6056" ;
+    skos:prefLabel "Bihor"@ron-Latn ;
+    wdata:q7200235 "RO006056" .
+
+<urn:mdciii:1603:45:16:642:2:6065>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:6065" ;
+    skos:prefLabel "Bistrița-Năsăud"@ron-Latn ;
+    wdata:q7200235 "RO006065" .
+
+<urn:mdciii:1603:45:16:642:2:6127>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:6127" ;
+    skos:prefLabel "Cluj"@ron-Latn ;
+    wdata:q7200235 "RO006127" .
+
+<urn:mdciii:1603:45:16:642:2:6243>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:6243" ;
+    skos:prefLabel "Maramureș"@ron-Latn ;
+    wdata:q7200235 "RO006243" .
+
+<urn:mdciii:1603:45:16:642:2:6305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:6305" ;
+    skos:prefLabel "Satu Mare"@ron-Latn ;
+    wdata:q7200235 "RO006305" .
+
+<urn:mdciii:1603:45:16:642:2:6314>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:6314" ;
+    skos:prefLabel "Sălaj"@ron-Latn ;
+    wdata:q7200235 "RO006314" .
+
+<urn:mdciii:1603:45:16:642:2:7010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:7010" ;
+    skos:prefLabel "Alba"@ron-Latn ;
+    wdata:q7200235 "RO007010" .
+
+<urn:mdciii:1603:45:16:642:2:7083>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:7083" ;
+    skos:prefLabel "Brașov"@ron-Latn ;
+    wdata:q7200235 "RO007083" .
+
+<urn:mdciii:1603:45:16:642:2:7145>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:7145" ;
+    skos:prefLabel "Covasna"@ron-Latn ;
+    wdata:q7200235 "RO007145" .
+
+<urn:mdciii:1603:45:16:642:2:7190>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:7190" ;
+    skos:prefLabel "Harghita"@ron-Latn ;
+    wdata:q7200235 "RO007190" .
+
+<urn:mdciii:1603:45:16:642:2:7261>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:7261" ;
+    skos:prefLabel "Mureș"@ron-Latn ;
+    wdata:q7200235 "RO007261" .
+
+<urn:mdciii:1603:45:16:642:2:7323>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:7323" ;
+    skos:prefLabel "Sibiu"@ron-Latn ;
+    wdata:q7200235 "RO007323" .
+
+<urn:mdciii:1603:45:16:642:2:8234>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:8234" ;
+    skos:prefLabel "Ilfov"@ron-Latn ;
+    wdata:q7200235 "RO008234" .
+
+<urn:mdciii:1603:45:16:642:2:8403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:642:2:8403" ;
+    skos:prefLabel "București"@ron-Latn ;
+    wdata:q7200235 "RO008403" .
+

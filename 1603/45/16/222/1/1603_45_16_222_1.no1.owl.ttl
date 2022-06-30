@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,73 +27,104 @@
     rdfs:label "(1603:45:16:222:1)" ;
     skos:member <urn:mdciii:1603:45:16:222:1:10>, <urn:mdciii:1603:45:16:222:1:11>, <urn:mdciii:1603:45:16:222:1:12>, <urn:mdciii:1603:45:16:222:1:13>, <urn:mdciii:1603:45:16:222:1:14>, <urn:mdciii:1603:45:16:222:1:2>, <urn:mdciii:1603:45:16:222:1:3>, <urn:mdciii:1603:45:16:222:1:4>, <urn:mdciii:1603:45:16:222:1:5>, <urn:mdciii:1603:45:16:222:1:6>, <urn:mdciii:1603:45:16:222:1:7>, <urn:mdciii:1603:45:16:222:1:8>, <urn:mdciii:1603:45:16:222:1:9> .
 
+<urn:mdciii:1603:45:16:222:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:222:1:1>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:1" .
+    rdfs:label "1603:45:16:222:1:1" ;
+    skos:prefLabel "Ahuachapán"@spa-Latn ;
+    wdata:q7200235 "SV01" .
 
 <urn:mdciii:1603:45:16:222:1:10>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:10" .
+    rdfs:label "1603:45:16:222:1:10" ;
+    skos:prefLabel "San Salvador"@spa-Latn ;
+    wdata:q7200235 "SV10" .
 
 <urn:mdciii:1603:45:16:222:1:11>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:11" .
+    rdfs:label "1603:45:16:222:1:11" ;
+    skos:prefLabel "San Vicente"@spa-Latn ;
+    wdata:q7200235 "SV11" .
 
 <urn:mdciii:1603:45:16:222:1:12>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:12" .
+    rdfs:label "1603:45:16:222:1:12" ;
+    skos:prefLabel "Santa Ana"@spa-Latn ;
+    wdata:q7200235 "SV12" .
 
 <urn:mdciii:1603:45:16:222:1:13>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:13" .
+    rdfs:label "1603:45:16:222:1:13" ;
+    skos:prefLabel "Sonsonate"@spa-Latn ;
+    wdata:q7200235 "SV13" .
 
 <urn:mdciii:1603:45:16:222:1:14>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:14" .
+    rdfs:label "1603:45:16:222:1:14" ;
+    skos:prefLabel "Usulután"@spa-Latn ;
+    wdata:q7200235 "SV14" .
 
 <urn:mdciii:1603:45:16:222:1:2>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:2" .
+    rdfs:label "1603:45:16:222:1:2" ;
+    skos:prefLabel "Cabañas"@spa-Latn ;
+    wdata:q7200235 "SV02" .
 
 <urn:mdciii:1603:45:16:222:1:3>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:3" .
+    rdfs:label "1603:45:16:222:1:3" ;
+    skos:prefLabel "Chalatenango"@spa-Latn ;
+    wdata:q7200235 "SV03" .
 
 <urn:mdciii:1603:45:16:222:1:4>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:4" .
+    rdfs:label "1603:45:16:222:1:4" ;
+    skos:prefLabel "Cuscatlán"@spa-Latn ;
+    wdata:q7200235 "SV04" .
 
 <urn:mdciii:1603:45:16:222:1:5>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:5" .
+    rdfs:label "1603:45:16:222:1:5" ;
+    skos:prefLabel "La Libertad"@spa-Latn ;
+    wdata:q7200235 "SV05" .
 
 <urn:mdciii:1603:45:16:222:1:6>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:6" .
+    rdfs:label "1603:45:16:222:1:6" ;
+    skos:prefLabel "La Paz"@spa-Latn ;
+    wdata:q7200235 "SV06" .
 
 <urn:mdciii:1603:45:16:222:1:7>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:7" .
+    rdfs:label "1603:45:16:222:1:7" ;
+    skos:prefLabel "La Unión"@spa-Latn ;
+    wdata:q7200235 "SV07" .
 
 <urn:mdciii:1603:45:16:222:1:8>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:8" .
+    rdfs:label "1603:45:16:222:1:8" ;
+    skos:prefLabel "Morazán"@spa-Latn ;
+    wdata:q7200235 "SV08" .
 
 <urn:mdciii:1603:45:16:222:1:9>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:222:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:222:1:9" .
+    rdfs:label "1603:45:16:222:1:9" ;
+    skos:prefLabel "San Miguel"@spa-Latn ;
+    wdata:q7200235 "SV09" .
 

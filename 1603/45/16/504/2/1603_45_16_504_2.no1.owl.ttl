@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,417 +27,558 @@
     rdfs:label "(1603:45:16:504:2)" ;
     skos:member <urn:mdciii:1603:45:16:504:2:10001>, <urn:mdciii:1603:45:16:504:2:10002>, <urn:mdciii:1603:45:16:504:2:10003>, <urn:mdciii:1603:45:16:504:2:10004>, <urn:mdciii:1603:45:16:504:2:10005>, <urn:mdciii:1603:45:16:504:2:10006>, <urn:mdciii:1603:45:16:504:2:10007>, <urn:mdciii:1603:45:16:504:2:10008>, <urn:mdciii:1603:45:16:504:2:1002>, <urn:mdciii:1603:45:16:504:2:1003>, <urn:mdciii:1603:45:16:504:2:1004>, <urn:mdciii:1603:45:16:504:2:1005>, <urn:mdciii:1603:45:16:504:2:2001>, <urn:mdciii:1603:45:16:504:2:2002>, <urn:mdciii:1603:45:16:504:2:2003>, <urn:mdciii:1603:45:16:504:2:2004>, <urn:mdciii:1603:45:16:504:2:2005>, <urn:mdciii:1603:45:16:504:2:2006>, <urn:mdciii:1603:45:16:504:2:2007>, <urn:mdciii:1603:45:16:504:2:2008>, <urn:mdciii:1603:45:16:504:2:2009>, <urn:mdciii:1603:45:16:504:2:3001>, <urn:mdciii:1603:45:16:504:2:3002>, <urn:mdciii:1603:45:16:504:2:3003>, <urn:mdciii:1603:45:16:504:2:3004>, <urn:mdciii:1603:45:16:504:2:3005>, <urn:mdciii:1603:45:16:504:2:4001>, <urn:mdciii:1603:45:16:504:2:4002>, <urn:mdciii:1603:45:16:504:2:4003>, <urn:mdciii:1603:45:16:504:2:4004>, <urn:mdciii:1603:45:16:504:2:4005>, <urn:mdciii:1603:45:16:504:2:4006>, <urn:mdciii:1603:45:16:504:2:4007>, <urn:mdciii:1603:45:16:504:2:4008>, <urn:mdciii:1603:45:16:504:2:4009>, <urn:mdciii:1603:45:16:504:2:5001>, <urn:mdciii:1603:45:16:504:2:5002>, <urn:mdciii:1603:45:16:504:2:5003>, <urn:mdciii:1603:45:16:504:2:5004>, <urn:mdciii:1603:45:16:504:2:6001>, <urn:mdciii:1603:45:16:504:2:6002>, <urn:mdciii:1603:45:16:504:2:6003>, <urn:mdciii:1603:45:16:504:2:6004>, <urn:mdciii:1603:45:16:504:2:6005>, <urn:mdciii:1603:45:16:504:2:6006>, <urn:mdciii:1603:45:16:504:2:6007>, <urn:mdciii:1603:45:16:504:2:6008>, <urn:mdciii:1603:45:16:504:2:7001>, <urn:mdciii:1603:45:16:504:2:7002>, <urn:mdciii:1603:45:16:504:2:7003>, <urn:mdciii:1603:45:16:504:2:7004>, <urn:mdciii:1603:45:16:504:2:7005>, <urn:mdciii:1603:45:16:504:2:7006>, <urn:mdciii:1603:45:16:504:2:7007>, <urn:mdciii:1603:45:16:504:2:7008>, <urn:mdciii:1603:45:16:504:2:8001>, <urn:mdciii:1603:45:16:504:2:8002>, <urn:mdciii:1603:45:16:504:2:8003>, <urn:mdciii:1603:45:16:504:2:8004>, <urn:mdciii:1603:45:16:504:2:8005>, <urn:mdciii:1603:45:16:504:2:8006>, <urn:mdciii:1603:45:16:504:2:8007>, <urn:mdciii:1603:45:16:504:2:9001>, <urn:mdciii:1603:45:16:504:2:9002>, <urn:mdciii:1603:45:16:504:2:9003>, <urn:mdciii:1603:45:16:504:2:9004>, <urn:mdciii:1603:45:16:504:2:9005>, <urn:mdciii:1603:45:16:504:2:9006> .
 
+<urn:mdciii:1603:45:16:504:2(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:504:2:10001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:10001" .
+    rdfs:label "1603:45:16:504:2:10001" ;
+    skos:prefLabel ""@ara-Arab, "Al Hoceima Province"@eng-Latn ;
+    wdata:q7200235 "MA010001" .
 
 <urn:mdciii:1603:45:16:504:2:10002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:10002" .
+    rdfs:label "1603:45:16:504:2:10002" ;
+    skos:prefLabel ""@ara-Arab, "Chefchaouen Province"@eng-Latn ;
+    wdata:q7200235 "MA010002" .
 
 <urn:mdciii:1603:45:16:504:2:10003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:10003" .
+    rdfs:label "1603:45:16:504:2:10003" ;
+    skos:prefLabel ""@ara-Arab, "Fahs Anjra Province"@eng-Latn ;
+    wdata:q7200235 "MA010003" .
 
 <urn:mdciii:1603:45:16:504:2:10004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:10004" .
+    rdfs:label "1603:45:16:504:2:10004" ;
+    skos:prefLabel ""@ara-Arab, "Larache Province"@eng-Latn ;
+    wdata:q7200235 "MA010004" .
 
 <urn:mdciii:1603:45:16:504:2:10005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:10005" .
+    rdfs:label "1603:45:16:504:2:10005" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture de M diq Fnideq"@eng-Latn ;
+    wdata:q7200235 "MA010005" .
 
 <urn:mdciii:1603:45:16:504:2:10006>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:10006" .
+    rdfs:label "1603:45:16:504:2:10006" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture of Tangier Assilah"@eng-Latn ;
+    wdata:q7200235 "MA010006" .
 
 <urn:mdciii:1603:45:16:504:2:10007>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:10007" .
+    rdfs:label "1603:45:16:504:2:10007" ;
+    skos:prefLabel ""@ara-Arab, "Province d Ouezzane"@eng-Latn ;
+    wdata:q7200235 "MA010007" .
 
 <urn:mdciii:1603:45:16:504:2:10008>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:10008" .
+    rdfs:label "1603:45:16:504:2:10008" ;
+    skos:prefLabel ""@ara-Arab, "Tetouan Province"@eng-Latn ;
+    wdata:q7200235 "MA010008" .
 
 <urn:mdciii:1603:45:16:504:2:1001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:1001" .
+    rdfs:label "1603:45:16:504:2:1001" ;
+    skos:prefLabel ""@ara-Arab, "Province d Azilal"@eng-Latn ;
+    wdata:q7200235 "MA001001" .
 
 <urn:mdciii:1603:45:16:504:2:1002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:1002" .
+    rdfs:label "1603:45:16:504:2:1002" ;
+    skos:prefLabel ""@ara-Arab, "Province de Beni Mellal"@eng-Latn ;
+    wdata:q7200235 "MA001002" .
 
 <urn:mdciii:1603:45:16:504:2:1003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:1003" .
+    rdfs:label "1603:45:16:504:2:1003" ;
+    skos:prefLabel ""@ara-Arab, "Province de Fquih Ben Saleh"@eng-Latn ;
+    wdata:q7200235 "MA001003" .
 
 <urn:mdciii:1603:45:16:504:2:1004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:1004" .
+    rdfs:label "1603:45:16:504:2:1004" ;
+    skos:prefLabel ""@ara-Arab, "Province de Khenifra"@eng-Latn ;
+    wdata:q7200235 "MA001004" .
 
 <urn:mdciii:1603:45:16:504:2:1005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:1005" .
+    rdfs:label "1603:45:16:504:2:1005" ;
+    skos:prefLabel ""@ara-Arab, "Province de Khouribga"@eng-Latn ;
+    wdata:q7200235 "MA001005" .
 
 <urn:mdciii:1603:45:16:504:2:2001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2001" .
+    rdfs:label "1603:45:16:504:2:2001" ;
+    skos:prefLabel ""@ara-Arab, "Berrechid Province"@eng-Latn ;
+    wdata:q7200235 "MA002001" .
 
 <urn:mdciii:1603:45:16:504:2:2002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2002" .
+    rdfs:label "1603:45:16:504:2:2002" ;
+    skos:prefLabel ""@ara-Arab, "El Jadida Province"@eng-Latn ;
+    wdata:q7200235 "MA002002" .
 
 <urn:mdciii:1603:45:16:504:2:2003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2003" .
+    rdfs:label "1603:45:16:504:2:2003" ;
+    skos:prefLabel ""@ara-Arab, "Mediouna Province"@eng-Latn ;
+    wdata:q7200235 "MA002003" .
 
 <urn:mdciii:1603:45:16:504:2:2004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2004" .
+    rdfs:label "1603:45:16:504:2:2004" ;
+    skos:prefLabel ""@ara-Arab, "Nouaceur Province"@eng-Latn ;
+    wdata:q7200235 "MA002004" .
 
 <urn:mdciii:1603:45:16:504:2:2005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2005" .
+    rdfs:label "1603:45:16:504:2:2005" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture of Casablanca"@eng-Latn ;
+    wdata:q7200235 "MA002005" .
 
 <urn:mdciii:1603:45:16:504:2:2006>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2006" .
+    rdfs:label "1603:45:16:504:2:2006" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture of Mohammedia"@eng-Latn ;
+    wdata:q7200235 "MA002006" .
 
 <urn:mdciii:1603:45:16:504:2:2007>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2007" .
+    rdfs:label "1603:45:16:504:2:2007" ;
+    skos:prefLabel ""@ara-Arab, "Province de Benslimane"@eng-Latn ;
+    wdata:q7200235 "MA002007" .
 
 <urn:mdciii:1603:45:16:504:2:2008>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2008" .
+    rdfs:label "1603:45:16:504:2:2008" ;
+    skos:prefLabel ""@ara-Arab, "Province de Sidi Bennour"@eng-Latn ;
+    wdata:q7200235 "MA002008" .
 
 <urn:mdciii:1603:45:16:504:2:2009>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:2009" .
+    rdfs:label "1603:45:16:504:2:2009" ;
+    skos:prefLabel ""@ara-Arab, "Settat Province"@eng-Latn ;
+    wdata:q7200235 "MA002009" .
 
 <urn:mdciii:1603:45:16:504:2:3001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:3001" .
+    rdfs:label "1603:45:16:504:2:3001" ;
+    skos:prefLabel ""@ara-Arab, "Ouarzazate Province"@eng-Latn ;
+    wdata:q7200235 "MA003001" .
 
 <urn:mdciii:1603:45:16:504:2:3002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:3002" .
+    rdfs:label "1603:45:16:504:2:3002" ;
+    skos:prefLabel ""@ara-Arab, "Province d Errachidia"@eng-Latn ;
+    wdata:q7200235 "MA003002" .
 
 <urn:mdciii:1603:45:16:504:2:3003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:3003" .
+    rdfs:label "1603:45:16:504:2:3003" ;
+    skos:prefLabel ""@ara-Arab, "Province de Midelt"@eng-Latn ;
+    wdata:q7200235 "MA003003" .
 
 <urn:mdciii:1603:45:16:504:2:3004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:3004" .
+    rdfs:label "1603:45:16:504:2:3004" ;
+    skos:prefLabel ""@ara-Arab, "Province de Tinghir"@eng-Latn ;
+    wdata:q7200235 "MA003004" .
 
 <urn:mdciii:1603:45:16:504:2:3005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:3005" .
+    rdfs:label "1603:45:16:504:2:3005" ;
+    skos:prefLabel ""@ara-Arab, "Zagora Province"@eng-Latn ;
+    wdata:q7200235 "MA003005" .
 
 <urn:mdciii:1603:45:16:504:2:4001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4001" .
+    rdfs:label "1603:45:16:504:2:4001" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture de Fes"@eng-Latn ;
+    wdata:q7200235 "MA004001" .
 
 <urn:mdciii:1603:45:16:504:2:4002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4002" .
+    rdfs:label "1603:45:16:504:2:4002" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture de Meknes"@eng-Latn ;
+    wdata:q7200235 "MA004002" .
 
 <urn:mdciii:1603:45:16:504:2:4003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4003" .
+    rdfs:label "1603:45:16:504:2:4003" ;
+    skos:prefLabel ""@ara-Arab, "Province d El Hajeb"@eng-Latn ;
+    wdata:q7200235 "MA004003" .
 
 <urn:mdciii:1603:45:16:504:2:4004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4004" .
+    rdfs:label "1603:45:16:504:2:4004" ;
+    skos:prefLabel ""@ara-Arab, "Province d Ifrane"@eng-Latn ;
+    wdata:q7200235 "MA004004" .
 
 <urn:mdciii:1603:45:16:504:2:4005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4005" .
+    rdfs:label "1603:45:16:504:2:4005" ;
+    skos:prefLabel ""@ara-Arab, "Province de Boulemane"@eng-Latn ;
+    wdata:q7200235 "MA004005" .
 
 <urn:mdciii:1603:45:16:504:2:4006>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4006" .
+    rdfs:label "1603:45:16:504:2:4006" ;
+    skos:prefLabel ""@ara-Arab, "Province de Moulay Yacoub"@eng-Latn ;
+    wdata:q7200235 "MA004006" .
 
 <urn:mdciii:1603:45:16:504:2:4007>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4007" .
+    rdfs:label "1603:45:16:504:2:4007" ;
+    skos:prefLabel ""@ara-Arab, "Province de Sefrou"@eng-Latn ;
+    wdata:q7200235 "MA004007" .
 
 <urn:mdciii:1603:45:16:504:2:4008>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4008" .
+    rdfs:label "1603:45:16:504:2:4008" ;
+    skos:prefLabel ""@ara-Arab, "Province de Taounate"@eng-Latn ;
+    wdata:q7200235 "MA004008" .
 
 <urn:mdciii:1603:45:16:504:2:4009>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:4009" .
+    rdfs:label "1603:45:16:504:2:4009" ;
+    skos:prefLabel ""@ara-Arab, "Province de Taza"@eng-Latn ;
+    wdata:q7200235 "MA004009" .
 
 <urn:mdciii:1603:45:16:504:2:5001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:5001" .
+    rdfs:label "1603:45:16:504:2:5001" ;
+    skos:prefLabel ""@ara-Arab, "Assa Zag Province"@eng-Latn ;
+    wdata:q7200235 "MA005001" .
 
 <urn:mdciii:1603:45:16:504:2:5002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:5002" .
+    rdfs:label "1603:45:16:504:2:5002" ;
+    skos:prefLabel ""@ara-Arab, "Guelmim Province"@eng-Latn ;
+    wdata:q7200235 "MA005002" .
 
 <urn:mdciii:1603:45:16:504:2:5003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:5003" .
+    rdfs:label "1603:45:16:504:2:5003" ;
+    skos:prefLabel ""@ara-Arab, "Province de Tan Tan"@eng-Latn ;
+    wdata:q7200235 "MA005003" .
 
 <urn:mdciii:1603:45:16:504:2:5004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:5004" .
+    rdfs:label "1603:45:16:504:2:5004" ;
+    skos:prefLabel ""@ara-Arab, "Sidi Ifni Province"@eng-Latn ;
+    wdata:q7200235 "MA005004" .
 
 <urn:mdciii:1603:45:16:504:2:6001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:6001" .
+    rdfs:label "1603:45:16:504:2:6001" ;
+    skos:prefLabel ""@ara-Arab, "Al Haouz Province"@eng-Latn ;
+    wdata:q7200235 "MA006001" .
 
 <urn:mdciii:1603:45:16:504:2:6002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:6002" .
+    rdfs:label "1603:45:16:504:2:6002" ;
+    skos:prefLabel ""@ara-Arab, "Chichaoua Province"@eng-Latn ;
+    wdata:q7200235 "MA006002" .
 
 <urn:mdciii:1603:45:16:504:2:6003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:6003" .
+    rdfs:label "1603:45:16:504:2:6003" ;
+    skos:prefLabel ""@ara-Arab, "Essaouira Province"@eng-Latn ;
+    wdata:q7200235 "MA006003" .
 
 <urn:mdciii:1603:45:16:504:2:6004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:6004" .
+    rdfs:label "1603:45:16:504:2:6004" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture de Marrakech"@eng-Latn ;
+    wdata:q7200235 "MA006004" .
 
 <urn:mdciii:1603:45:16:504:2:6005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:6005" .
+    rdfs:label "1603:45:16:504:2:6005" ;
+    skos:prefLabel ""@ara-Arab, "Province d El Kelaat Es Sraghna"@eng-Latn ;
+    wdata:q7200235 "MA006005" .
 
 <urn:mdciii:1603:45:16:504:2:6006>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:6006" .
+    rdfs:label "1603:45:16:504:2:6006" ;
+    skos:prefLabel ""@ara-Arab, "Province de Safi"@eng-Latn ;
+    wdata:q7200235 "MA006006" .
 
 <urn:mdciii:1603:45:16:504:2:6007>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:6007" .
+    rdfs:label "1603:45:16:504:2:6007" ;
+    skos:prefLabel ""@ara-Arab, "Province de Youssoufia"@eng-Latn ;
+    wdata:q7200235 "MA006007" .
 
 <urn:mdciii:1603:45:16:504:2:6008>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:6008" .
+    rdfs:label "1603:45:16:504:2:6008" ;
+    skos:prefLabel ""@ara-Arab, "Rhamna Province"@eng-Latn ;
+    wdata:q7200235 "MA006008" .
 
 <urn:mdciii:1603:45:16:504:2:7001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:7001" .
+    rdfs:label "1603:45:16:504:2:7001" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture d Oujda Angad"@eng-Latn ;
+    wdata:q7200235 "MA007001" .
 
 <urn:mdciii:1603:45:16:504:2:7002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:7002" .
+    rdfs:label "1603:45:16:504:2:7002" ;
+    skos:prefLabel ""@ara-Arab, "Province de Berkane"@eng-Latn ;
+    wdata:q7200235 "MA007002" .
 
 <urn:mdciii:1603:45:16:504:2:7003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:7003" .
+    rdfs:label "1603:45:16:504:2:7003" ;
+    skos:prefLabel ""@ara-Arab, "Province de Driouch"@eng-Latn ;
+    wdata:q7200235 "MA007003" .
 
 <urn:mdciii:1603:45:16:504:2:7004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:7004" .
+    rdfs:label "1603:45:16:504:2:7004" ;
+    skos:prefLabel ""@ara-Arab, "Province de Figuig"@eng-Latn ;
+    wdata:q7200235 "MA007004" .
 
 <urn:mdciii:1603:45:16:504:2:7005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:7005" .
+    rdfs:label "1603:45:16:504:2:7005" ;
+    skos:prefLabel ""@ara-Arab, "Province de Guercif"@eng-Latn ;
+    wdata:q7200235 "MA007005" .
 
 <urn:mdciii:1603:45:16:504:2:7006>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:7006" .
+    rdfs:label "1603:45:16:504:2:7006" ;
+    skos:prefLabel ""@ara-Arab, "Province de Jerada"@eng-Latn ;
+    wdata:q7200235 "MA007006" .
 
 <urn:mdciii:1603:45:16:504:2:7007>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:7007" .
+    rdfs:label "1603:45:16:504:2:7007" ;
+    skos:prefLabel ""@ara-Arab, "Province de Nador"@eng-Latn ;
+    wdata:q7200235 "MA007007" .
 
 <urn:mdciii:1603:45:16:504:2:7008>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:7008" .
+    rdfs:label "1603:45:16:504:2:7008" ;
+    skos:prefLabel ""@ara-Arab, "Province de Taourirt"@eng-Latn ;
+    wdata:q7200235 "MA007008" .
 
 <urn:mdciii:1603:45:16:504:2:8001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:8001" .
+    rdfs:label "1603:45:16:504:2:8001" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture de Skhirate Temara"@eng-Latn ;
+    wdata:q7200235 "MA008001" .
 
 <urn:mdciii:1603:45:16:504:2:8002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:8002" .
+    rdfs:label "1603:45:16:504:2:8002" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture of Rabat"@eng-Latn ;
+    wdata:q7200235 "MA008002" .
 
 <urn:mdciii:1603:45:16:504:2:8003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:8003" .
+    rdfs:label "1603:45:16:504:2:8003" ;
+    skos:prefLabel ""@ara-Arab, "Prefecture of Sale"@eng-Latn ;
+    wdata:q7200235 "MA008003" .
 
 <urn:mdciii:1603:45:16:504:2:8004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:8004" .
+    rdfs:label "1603:45:16:504:2:8004" ;
+    skos:prefLabel ""@ara-Arab, "Province de Kenitra"@eng-Latn ;
+    wdata:q7200235 "MA008004" .
 
 <urn:mdciii:1603:45:16:504:2:8005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:8005" .
+    rdfs:label "1603:45:16:504:2:8005" ;
+    skos:prefLabel ""@ara-Arab, "Province de Khemisset"@eng-Latn ;
+    wdata:q7200235 "MA008005" .
 
 <urn:mdciii:1603:45:16:504:2:8006>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:8006" .
+    rdfs:label "1603:45:16:504:2:8006" ;
+    skos:prefLabel ""@ara-Arab, "Province de Sidi Kacem"@eng-Latn ;
+    wdata:q7200235 "MA008006" .
 
 <urn:mdciii:1603:45:16:504:2:8007>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:8007" .
+    rdfs:label "1603:45:16:504:2:8007" ;
+    skos:prefLabel ""@ara-Arab, "Province de Sidi Slimane"@eng-Latn ;
+    wdata:q7200235 "MA008007" .
 
 <urn:mdciii:1603:45:16:504:2:9001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:9001" .
+    rdfs:label "1603:45:16:504:2:9001" ;
+    skos:prefLabel ""@ara-Arab, "Agadir Ida Outanane Prefecture"@eng-Latn ;
+    wdata:q7200235 "MA009001" .
 
 <urn:mdciii:1603:45:16:504:2:9002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:9002" .
+    rdfs:label "1603:45:16:504:2:9002" ;
+    skos:prefLabel ""@ara-Arab, "Chtouka Ait Baha Province"@eng-Latn ;
+    wdata:q7200235 "MA009002" .
 
 <urn:mdciii:1603:45:16:504:2:9003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:9003" .
+    rdfs:label "1603:45:16:504:2:9003" ;
+    skos:prefLabel ""@ara-Arab, "Inezgane Ait Melloul Prefecture"@eng-Latn ;
+    wdata:q7200235 "MA009003" .
 
 <urn:mdciii:1603:45:16:504:2:9004>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:9004" .
+    rdfs:label "1603:45:16:504:2:9004" ;
+    skos:prefLabel ""@ara-Arab, "Taroudant Province"@eng-Latn ;
+    wdata:q7200235 "MA009004" .
 
 <urn:mdciii:1603:45:16:504:2:9005>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:9005" .
+    rdfs:label "1603:45:16:504:2:9005" ;
+    skos:prefLabel ""@ara-Arab, "Tata Province"@eng-Latn ;
+    wdata:q7200235 "MA009005" .
 
 <urn:mdciii:1603:45:16:504:2:9006>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:504:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:504:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:504:2:9006" .
+    rdfs:label "1603:45:16:504:2:9006" ;
+    skos:prefLabel ""@ara-Arab, "Tiznit Province"@eng-Latn ;
+    wdata:q7200235 "MA009006" .
 

@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,113 +27,160 @@
     rdfs:label "(1603:45:16:598:1)" ;
     skos:member <urn:mdciii:1603:45:16:598:1:10>, <urn:mdciii:1603:45:16:598:1:11>, <urn:mdciii:1603:45:16:598:1:12>, <urn:mdciii:1603:45:16:598:1:13>, <urn:mdciii:1603:45:16:598:1:14>, <urn:mdciii:1603:45:16:598:1:15>, <urn:mdciii:1603:45:16:598:1:16>, <urn:mdciii:1603:45:16:598:1:17>, <urn:mdciii:1603:45:16:598:1:18>, <urn:mdciii:1603:45:16:598:1:19>, <urn:mdciii:1603:45:16:598:1:2>, <urn:mdciii:1603:45:16:598:1:20>, <urn:mdciii:1603:45:16:598:1:21>, <urn:mdciii:1603:45:16:598:1:22>, <urn:mdciii:1603:45:16:598:1:3>, <urn:mdciii:1603:45:16:598:1:4>, <urn:mdciii:1603:45:16:598:1:5>, <urn:mdciii:1603:45:16:598:1:6>, <urn:mdciii:1603:45:16:598:1:7>, <urn:mdciii:1603:45:16:598:1:8>, <urn:mdciii:1603:45:16:598:1:9> .
 
+<urn:mdciii:1603:45:16:598:1(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:598:1:1>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:1" .
+    rdfs:label "1603:45:16:598:1:1" ;
+    skos:prefLabel "Western Province"@eng-Latn ;
+    wdata:q7200235 "PG01" .
 
 <urn:mdciii:1603:45:16:598:1:10>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:10" .
+    rdfs:label "1603:45:16:598:1:10" ;
+    skos:prefLabel "Chimbu (Simbu) Province"@eng-Latn ;
+    wdata:q7200235 "PG10" .
 
 <urn:mdciii:1603:45:16:598:1:11>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:11" .
+    rdfs:label "1603:45:16:598:1:11" ;
+    skos:prefLabel "Eastern Highlands Province"@eng-Latn ;
+    wdata:q7200235 "PG11" .
 
 <urn:mdciii:1603:45:16:598:1:12>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:12" .
+    rdfs:label "1603:45:16:598:1:12" ;
+    skos:prefLabel "Morobe Province"@eng-Latn ;
+    wdata:q7200235 "PG12" .
 
 <urn:mdciii:1603:45:16:598:1:13>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:13" .
+    rdfs:label "1603:45:16:598:1:13" ;
+    skos:prefLabel "Madang Province"@eng-Latn ;
+    wdata:q7200235 "PG13" .
 
 <urn:mdciii:1603:45:16:598:1:14>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:14" .
+    rdfs:label "1603:45:16:598:1:14" ;
+    skos:prefLabel "East Sepik Province"@eng-Latn ;
+    wdata:q7200235 "PG14" .
 
 <urn:mdciii:1603:45:16:598:1:15>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:15" .
+    rdfs:label "1603:45:16:598:1:15" ;
+    skos:prefLabel "West Sepik (Sandaun) Province"@eng-Latn ;
+    wdata:q7200235 "PG15" .
 
 <urn:mdciii:1603:45:16:598:1:16>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:16" .
+    rdfs:label "1603:45:16:598:1:16" ;
+    skos:prefLabel "Manus Province"@eng-Latn ;
+    wdata:q7200235 "PG16" .
 
 <urn:mdciii:1603:45:16:598:1:17>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:17" .
+    rdfs:label "1603:45:16:598:1:17" ;
+    skos:prefLabel "New Ireland Province"@eng-Latn ;
+    wdata:q7200235 "PG17" .
 
 <urn:mdciii:1603:45:16:598:1:18>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:18" .
+    rdfs:label "1603:45:16:598:1:18" ;
+    skos:prefLabel "East New Britain Province"@eng-Latn ;
+    wdata:q7200235 "PG18" .
 
 <urn:mdciii:1603:45:16:598:1:19>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:19" .
+    rdfs:label "1603:45:16:598:1:19" ;
+    skos:prefLabel "West New Britain Province"@eng-Latn ;
+    wdata:q7200235 "PG19" .
 
 <urn:mdciii:1603:45:16:598:1:2>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:2" .
+    rdfs:label "1603:45:16:598:1:2" ;
+    skos:prefLabel "Gulf Province"@eng-Latn ;
+    wdata:q7200235 "PG02" .
 
 <urn:mdciii:1603:45:16:598:1:20>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:20" .
+    rdfs:label "1603:45:16:598:1:20" ;
+    skos:prefLabel "Autonomous Region of Bougainville"@eng-Latn ;
+    wdata:q7200235 "PG20" .
 
 <urn:mdciii:1603:45:16:598:1:21>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:21" .
+    rdfs:label "1603:45:16:598:1:21" ;
+    skos:prefLabel "Hela Province"@eng-Latn ;
+    wdata:q7200235 "PG21" .
 
 <urn:mdciii:1603:45:16:598:1:22>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:22" .
+    rdfs:label "1603:45:16:598:1:22" ;
+    skos:prefLabel "Jiwaka Province"@eng-Latn ;
+    wdata:q7200235 "PG22" .
 
 <urn:mdciii:1603:45:16:598:1:3>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:3" .
+    rdfs:label "1603:45:16:598:1:3" ;
+    skos:prefLabel "Central Province"@eng-Latn ;
+    wdata:q7200235 "PG03" .
 
 <urn:mdciii:1603:45:16:598:1:4>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:4" .
+    rdfs:label "1603:45:16:598:1:4" ;
+    skos:prefLabel "National Capital District"@eng-Latn ;
+    wdata:q7200235 "PG04" .
 
 <urn:mdciii:1603:45:16:598:1:5>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:5" .
+    rdfs:label "1603:45:16:598:1:5" ;
+    skos:prefLabel "Milne Bay Province"@eng-Latn ;
+    wdata:q7200235 "PG05" .
 
 <urn:mdciii:1603:45:16:598:1:6>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:6" .
+    rdfs:label "1603:45:16:598:1:6" ;
+    skos:prefLabel "Northern (Oro) Province"@eng-Latn ;
+    wdata:q7200235 "PG06" .
 
 <urn:mdciii:1603:45:16:598:1:7>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:7" .
+    rdfs:label "1603:45:16:598:1:7" ;
+    skos:prefLabel "Southern Highlands Province"@eng-Latn ;
+    wdata:q7200235 "PG07" .
 
 <urn:mdciii:1603:45:16:598:1:8>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:8" .
+    rdfs:label "1603:45:16:598:1:8" ;
+    skos:prefLabel "Enga Province"@eng-Latn ;
+    wdata:q7200235 "PG08" .
 
 <urn:mdciii:1603:45:16:598:1:9>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:598:0> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:598:1:9" .
+    rdfs:label "1603:45:16:598:1:9" ;
+    skos:prefLabel "Western Highlands Province"@eng-Latn ;
+    wdata:q7200235 "PG09" .
 

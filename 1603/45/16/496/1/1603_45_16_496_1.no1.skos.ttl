@@ -1,0 +1,162 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:496()> .
+
+<urn:mdciii:1603:45:16:496()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:496)" ;
+    skos:member <urn:mdciii:1603:45:16:496:1()> .
+
+<urn:mdciii:1603:45:16:496:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:496:1)" ;
+    skos:member <urn:mdciii:1603:45:16:496:1:21>, <urn:mdciii:1603:45:16:496:1:22>, <urn:mdciii:1603:45:16:496:1:23>, <urn:mdciii:1603:45:16:496:1:41>, <urn:mdciii:1603:45:16:496:1:42>, <urn:mdciii:1603:45:16:496:1:43>, <urn:mdciii:1603:45:16:496:1:44>, <urn:mdciii:1603:45:16:496:1:45>, <urn:mdciii:1603:45:16:496:1:46>, <urn:mdciii:1603:45:16:496:1:48>, <urn:mdciii:1603:45:16:496:1:61>, <urn:mdciii:1603:45:16:496:1:62>, <urn:mdciii:1603:45:16:496:1:63>, <urn:mdciii:1603:45:16:496:1:64>, <urn:mdciii:1603:45:16:496:1:65>, <urn:mdciii:1603:45:16:496:1:67>, <urn:mdciii:1603:45:16:496:1:81>, <urn:mdciii:1603:45:16:496:1:82>, <urn:mdciii:1603:45:16:496:1:83>, <urn:mdciii:1603:45:16:496:1:84>, <urn:mdciii:1603:45:16:496:1:85> .
+
+<urn:mdciii:1603:45:16:496:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:496:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:11" ;
+    skos:prefLabel "Ulaanbaatar"@eng-Latn, "Улаанбаатар"@mon-Cyrl ;
+    wdata:q7200235 "MN11" .
+
+<urn:mdciii:1603:45:16:496:1:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:21" ;
+    skos:prefLabel "Dornod"@eng-Latn, "Дорнод"@mon-Cyrl ;
+    wdata:q7200235 "MN21" .
+
+<urn:mdciii:1603:45:16:496:1:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:22" ;
+    skos:prefLabel "Sukhbaatar"@eng-Latn, "Сүхбаатар"@mon-Cyrl ;
+    wdata:q7200235 "MN22" .
+
+<urn:mdciii:1603:45:16:496:1:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:23" ;
+    skos:prefLabel "Hentii"@eng-Latn, "Хэнтий"@mon-Cyrl ;
+    wdata:q7200235 "MN23" .
+
+<urn:mdciii:1603:45:16:496:1:41>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:41" ;
+    skos:prefLabel "To'v"@eng-Latn, "Төв"@mon-Cyrl ;
+    wdata:q7200235 "MN41" .
+
+<urn:mdciii:1603:45:16:496:1:42>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:42" ;
+    skos:prefLabel "Govisumber"@eng-Latn, "Говьсүмбэр"@mon-Cyrl ;
+    wdata:q7200235 "MN42" .
+
+<urn:mdciii:1603:45:16:496:1:43>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:43" ;
+    skos:prefLabel "Selenge"@eng-Latn, "Сэлэнгэ"@mon-Cyrl ;
+    wdata:q7200235 "MN43" .
+
+<urn:mdciii:1603:45:16:496:1:44>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:44" ;
+    skos:prefLabel "Dornogovi"@eng-Latn, "Дорноговь"@mon-Cyrl ;
+    wdata:q7200235 "MN44" .
+
+<urn:mdciii:1603:45:16:496:1:45>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:45" ;
+    skos:prefLabel "Darkhan-Uul"@eng-Latn, "Дархан-Уул"@mon-Cyrl ;
+    wdata:q7200235 "MN45" .
+
+<urn:mdciii:1603:45:16:496:1:46>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:46" ;
+    skos:prefLabel "Omnogovi"@eng-Latn, "Өмнөговь"@mon-Cyrl ;
+    wdata:q7200235 "MN46" .
+
+<urn:mdciii:1603:45:16:496:1:48>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:48" ;
+    skos:prefLabel "Dundgovi"@eng-Latn, "Дундговь"@mon-Cyrl ;
+    wdata:q7200235 "MN48" .
+
+<urn:mdciii:1603:45:16:496:1:61>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:61" ;
+    skos:prefLabel "Orkhon"@eng-Latn, "Орхон"@mon-Cyrl ;
+    wdata:q7200235 "MN61" .
+
+<urn:mdciii:1603:45:16:496:1:62>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:62" ;
+    skos:prefLabel "Ovorkhangai"@eng-Latn, "Өвөрхангай"@mon-Cyrl ;
+    wdata:q7200235 "MN62" .
+
+<urn:mdciii:1603:45:16:496:1:63>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:63" ;
+    skos:prefLabel "Bulgan"@eng-Latn, "Булган"@mon-Cyrl ;
+    wdata:q7200235 "MN63" .
+
+<urn:mdciii:1603:45:16:496:1:64>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:64" ;
+    skos:prefLabel "Bayankhongor"@eng-Latn, "Баянхонгор"@mon-Cyrl ;
+    wdata:q7200235 "MN64" .
+
+<urn:mdciii:1603:45:16:496:1:65>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:65" ;
+    skos:prefLabel "Arxangai"@eng-Latn, "Архангай"@mon-Cyrl ;
+    wdata:q7200235 "MN65" .
+
+<urn:mdciii:1603:45:16:496:1:67>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:67" ;
+    skos:prefLabel "Khovsgol"@eng-Latn, "Хөвсгөл"@mon-Cyrl ;
+    wdata:q7200235 "MN67" .
+
+<urn:mdciii:1603:45:16:496:1:81>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:81" ;
+    skos:prefLabel "Zavkhan"@eng-Latn, "Завхан"@mon-Cyrl ;
+    wdata:q7200235 "MN81" .
+
+<urn:mdciii:1603:45:16:496:1:82>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:82" ;
+    skos:prefLabel "Govi-Altai"@eng-Latn, "Говь-Алтай"@mon-Cyrl ;
+    wdata:q7200235 "MN82" .
+
+<urn:mdciii:1603:45:16:496:1:83>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:83" ;
+    skos:prefLabel "Bayan-Olgii"@eng-Latn, "Баян-Өлгий"@mon-Cyrl ;
+    wdata:q7200235 "MN83" .
+
+<urn:mdciii:1603:45:16:496:1:84>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:84" ;
+    skos:prefLabel "Khovd"@eng-Latn, "Ховд"@mon-Cyrl ;
+    wdata:q7200235 "MN84" .
+
+<urn:mdciii:1603:45:16:496:1:85>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:496:1:85" ;
+    skos:prefLabel "Uvs"@eng-Latn, "Увс"@mon-Cyrl ;
+    wdata:q7200235 "MN85" .
+

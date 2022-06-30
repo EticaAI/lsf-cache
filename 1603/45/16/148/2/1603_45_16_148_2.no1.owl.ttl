@@ -4,6 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 @prefix p: <http://www.wikidata.org/prop/> .
 
 <urn:mdciii:1603:45()>
@@ -26,423 +27,566 @@
     rdfs:label "(1603:45:16:148:2)" ;
     skos:member <urn:mdciii:1603:45:16:148:2:1001>, <urn:mdciii:1603:45:16:148:2:1002>, <urn:mdciii:1603:45:16:148:2:1003>, <urn:mdciii:1603:45:16:148:2:102>, <urn:mdciii:1603:45:16:148:2:103>, <urn:mdciii:1603:45:16:148:2:1101>, <urn:mdciii:1603:45:16:148:2:1102>, <urn:mdciii:1603:45:16:148:2:1103>, <urn:mdciii:1603:45:16:148:2:1104>, <urn:mdciii:1603:45:16:148:2:1201>, <urn:mdciii:1603:45:16:148:2:1202>, <urn:mdciii:1603:45:16:148:2:1203>, <urn:mdciii:1603:45:16:148:2:1301>, <urn:mdciii:1603:45:16:148:2:1302>, <urn:mdciii:1603:45:16:148:2:1303>, <urn:mdciii:1603:45:16:148:2:1401>, <urn:mdciii:1603:45:16:148:2:1402>, <urn:mdciii:1603:45:16:148:2:1403>, <urn:mdciii:1603:45:16:148:2:1501>, <urn:mdciii:1603:45:16:148:2:1502>, <urn:mdciii:1603:45:16:148:2:1503>, <urn:mdciii:1603:45:16:148:2:1601>, <urn:mdciii:1603:45:16:148:2:1602>, <urn:mdciii:1603:45:16:148:2:1603>, <urn:mdciii:1603:45:16:148:2:1701>, <urn:mdciii:1603:45:16:148:2:1702>, <urn:mdciii:1603:45:16:148:2:1703>, <urn:mdciii:1603:45:16:148:2:1704>, <urn:mdciii:1603:45:16:148:2:1801>, <urn:mdciii:1603:45:16:148:2:1901>, <urn:mdciii:1603:45:16:148:2:1902>, <urn:mdciii:1603:45:16:148:2:1903>, <urn:mdciii:1603:45:16:148:2:2001>, <urn:mdciii:1603:45:16:148:2:2002>, <urn:mdciii:1603:45:16:148:2:201>, <urn:mdciii:1603:45:16:148:2:202>, <urn:mdciii:1603:45:16:148:2:2101>, <urn:mdciii:1603:45:16:148:2:2102>, <urn:mdciii:1603:45:16:148:2:2201>, <urn:mdciii:1603:45:16:148:2:2202>, <urn:mdciii:1603:45:16:148:2:2301>, <urn:mdciii:1603:45:16:148:2:2303>, <urn:mdciii:1603:45:16:148:2:301>, <urn:mdciii:1603:45:16:148:2:302>, <urn:mdciii:1603:45:16:148:2:303>, <urn:mdciii:1603:45:16:148:2:401>, <urn:mdciii:1603:45:16:148:2:402>, <urn:mdciii:1603:45:16:148:2:403>, <urn:mdciii:1603:45:16:148:2:404>, <urn:mdciii:1603:45:16:148:2:501>, <urn:mdciii:1603:45:16:148:2:502>, <urn:mdciii:1603:45:16:148:2:503>, <urn:mdciii:1603:45:16:148:2:601>, <urn:mdciii:1603:45:16:148:2:602>, <urn:mdciii:1603:45:16:148:2:603>, <urn:mdciii:1603:45:16:148:2:701>, <urn:mdciii:1603:45:16:148:2:702>, <urn:mdciii:1603:45:16:148:2:703>, <urn:mdciii:1603:45:16:148:2:704>, <urn:mdciii:1603:45:16:148:2:801>, <urn:mdciii:1603:45:16:148:2:802>, <urn:mdciii:1603:45:16:148:2:803>, <urn:mdciii:1603:45:16:148:2:804>, <urn:mdciii:1603:45:16:148:2:901>, <urn:mdciii:1603:45:16:148:2:902>, <urn:mdciii:1603:45:16:148:2:903>, <urn:mdciii:1603:45:16:148:2:904>, <urn:mdciii:1603:45:16:148:2:905>, <urn:mdciii:1603:45:16:148:2:906> .
 
+<urn:mdciii:1603:45:16:148:2(1)>
+    a owl:Ontology .
+
 <urn:mdciii:1603:45:16:148:2:1001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1001" .
+    rdfs:label "1603:45:16:148:2:1001" ;
+    skos:prefLabel "Mandoul Oriental"@fra-Latn ;
+    wdata:q7200235 "TD1001" .
 
 <urn:mdciii:1603:45:16:148:2:1002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1002" .
+    rdfs:label "1603:45:16:148:2:1002" ;
+    skos:prefLabel "Barh-Sara"@fra-Latn ;
+    wdata:q7200235 "TD1002" .
 
 <urn:mdciii:1603:45:16:148:2:1003>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:10> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:10> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1003" .
+    rdfs:label "1603:45:16:148:2:1003" ;
+    skos:prefLabel "Mandoul Occidental"@fra-Latn ;
+    wdata:q7200235 "TD1003" .
 
 <urn:mdciii:1603:45:16:148:2:101>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:101" .
+    rdfs:label "1603:45:16:148:2:101" ;
+    skos:prefLabel "Batha Ouest"@fra-Latn ;
+    wdata:q7200235 "TD0101" .
 
 <urn:mdciii:1603:45:16:148:2:102>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:102" .
+    rdfs:label "1603:45:16:148:2:102" ;
+    skos:prefLabel "Batha Est"@fra-Latn ;
+    wdata:q7200235 "TD0102" .
 
 <urn:mdciii:1603:45:16:148:2:103>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:1> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:1> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:103" .
+    rdfs:label "1603:45:16:148:2:103" ;
+    skos:prefLabel "Fitri"@fra-Latn ;
+    wdata:q7200235 "TD0103" .
 
 <urn:mdciii:1603:45:16:148:2:1101>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:11> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:11> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1101" .
+    rdfs:label "1603:45:16:148:2:1101" ;
+    skos:prefLabel "Mayo-Boneye"@fra-Latn ;
+    wdata:q7200235 "TD1101" .
 
 <urn:mdciii:1603:45:16:148:2:1102>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:11> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:11> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1102" .
+    rdfs:label "1603:45:16:148:2:1102" ;
+    skos:prefLabel "Kabbia"@fra-Latn ;
+    wdata:q7200235 "TD1102" .
 
 <urn:mdciii:1603:45:16:148:2:1103>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:11> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:11> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1103" .
+    rdfs:label "1603:45:16:148:2:1103" ;
+    skos:prefLabel "Mayo-Lemié"@fra-Latn ;
+    wdata:q7200235 "TD1103" .
 
 <urn:mdciii:1603:45:16:148:2:1104>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:11> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:11> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1104" .
+    rdfs:label "1603:45:16:148:2:1104" ;
+    skos:prefLabel "Mont Illi"@fra-Latn ;
+    wdata:q7200235 "TD1104" .
 
 <urn:mdciii:1603:45:16:148:2:1201>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:12> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:12> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1201" .
+    rdfs:label "1603:45:16:148:2:1201" ;
+    skos:prefLabel "Mayo-Dallah"@fra-Latn ;
+    wdata:q7200235 "TD1201" .
 
 <urn:mdciii:1603:45:16:148:2:1202>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:12> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:12> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1202" .
+    rdfs:label "1603:45:16:148:2:1202" ;
+    skos:prefLabel "Lac Léré"@fra-Latn ;
+    wdata:q7200235 "TD1202" .
 
 <urn:mdciii:1603:45:16:148:2:1203>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:12> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:12> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1203" .
+    rdfs:label "1603:45:16:148:2:1203" ;
+    skos:prefLabel "Mayo-Binder"@fra-Latn ;
+    wdata:q7200235 "TD1203" .
 
 <urn:mdciii:1603:45:16:148:2:1301>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:13> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:13> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1301" .
+    rdfs:label "1603:45:16:148:2:1301" ;
+    skos:prefLabel "Bahr-Köh"@fra-Latn ;
+    wdata:q7200235 "TD1301" .
 
 <urn:mdciii:1603:45:16:148:2:1302>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:13> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:13> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1302" .
+    rdfs:label "1603:45:16:148:2:1302" ;
+    skos:prefLabel "Grande Sido"@fra-Latn ;
+    wdata:q7200235 "TD1302" .
 
 <urn:mdciii:1603:45:16:148:2:1303>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:13> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:13> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1303" .
+    rdfs:label "1603:45:16:148:2:1303" ;
+    skos:prefLabel "Lac Iro"@fra-Latn ;
+    wdata:q7200235 "TD1303" .
 
 <urn:mdciii:1603:45:16:148:2:1401>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:14> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:14> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1401" .
+    rdfs:label "1603:45:16:148:2:1401" ;
+    skos:prefLabel "Ouara"@fra-Latn ;
+    wdata:q7200235 "TD1401" .
 
 <urn:mdciii:1603:45:16:148:2:1402>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:14> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:14> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1402" .
+    rdfs:label "1603:45:16:148:2:1402" ;
+    skos:prefLabel "Abdi"@fra-Latn ;
+    wdata:q7200235 "TD1402" .
 
 <urn:mdciii:1603:45:16:148:2:1403>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:14> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:14> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1403" .
+    rdfs:label "1603:45:16:148:2:1403" ;
+    skos:prefLabel "Assoungha"@fra-Latn ;
+    wdata:q7200235 "TD1403" .
 
 <urn:mdciii:1603:45:16:148:2:1501>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:15> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:15> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1501" .
+    rdfs:label "1603:45:16:148:2:1501" ;
+    skos:prefLabel "Bahr-Azoum"@fra-Latn ;
+    wdata:q7200235 "TD1501" .
 
 <urn:mdciii:1603:45:16:148:2:1502>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:15> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:15> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1502" .
+    rdfs:label "1603:45:16:148:2:1502" ;
+    skos:prefLabel "Aboudéia"@fra-Latn ;
+    wdata:q7200235 "TD1502" .
 
 <urn:mdciii:1603:45:16:148:2:1503>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:15> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:15> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1503" .
+    rdfs:label "1603:45:16:148:2:1503" ;
+    skos:prefLabel "Haraze-Mangueigne"@fra-Latn ;
+    wdata:q7200235 "TD1503" .
 
 <urn:mdciii:1603:45:16:148:2:1601>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:16> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:16> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1601" .
+    rdfs:label "1603:45:16:148:2:1601" ;
+    skos:prefLabel "Tandjilé Est"@fra-Latn ;
+    wdata:q7200235 "TD1601" .
 
 <urn:mdciii:1603:45:16:148:2:1602>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:16> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:16> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1602" .
+    rdfs:label "1603:45:16:148:2:1602" ;
+    skos:prefLabel "Tandjile Ouest"@fra-Latn ;
+    wdata:q7200235 "TD1602" .
 
 <urn:mdciii:1603:45:16:148:2:1603>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:16> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:16> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1603" .
+    rdfs:label "1603:45:16:148:2:1603" ;
+    skos:prefLabel "Tandjilé Centre"@fra-Latn ;
+    wdata:q7200235 "TD1603" .
 
 <urn:mdciii:1603:45:16:148:2:1701>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:17> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:17> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1701" .
+    rdfs:label "1603:45:16:148:2:1701" ;
+    skos:prefLabel "Biltine"@fra-Latn ;
+    wdata:q7200235 "TD1701" .
 
 <urn:mdciii:1603:45:16:148:2:1702>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:17> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:17> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1702" .
+    rdfs:label "1603:45:16:148:2:1702" ;
+    skos:prefLabel "Dar-Tama"@fra-Latn ;
+    wdata:q7200235 "TD1702" .
 
 <urn:mdciii:1603:45:16:148:2:1703>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:17> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:17> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1703" .
+    rdfs:label "1603:45:16:148:2:1703" ;
+    skos:prefLabel "Kobé"@fra-Latn ;
+    wdata:q7200235 "TD1703" .
 
 <urn:mdciii:1603:45:16:148:2:1704>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:17> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:17> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1704" .
+    rdfs:label "1603:45:16:148:2:1704" ;
+    skos:prefLabel "Mégri"@fra-Latn ;
+    wdata:q7200235 "TD1704" .
 
 <urn:mdciii:1603:45:16:148:2:1801>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:18> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:18> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1801" .
+    rdfs:label "1603:45:16:148:2:1801" ;
+    skos:prefLabel "N'Djaména"@fra-Latn ;
+    wdata:q7200235 "TD1801" .
 
 <urn:mdciii:1603:45:16:148:2:1901>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:19> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:19> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1901" .
+    rdfs:label "1603:45:16:148:2:1901" ;
+    skos:prefLabel "Barh-El-Gazel Sud"@fra-Latn ;
+    wdata:q7200235 "TD1901" .
 
 <urn:mdciii:1603:45:16:148:2:1902>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:19> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:19> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1902" .
+    rdfs:label "1603:45:16:148:2:1902" ;
+    skos:prefLabel "Barh-El-Gazel Nord"@fra-Latn ;
+    wdata:q7200235 "TD1902" .
 
 <urn:mdciii:1603:45:16:148:2:1903>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:19> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:19> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:1903" .
+    rdfs:label "1603:45:16:148:2:1903" ;
+    skos:prefLabel "Barh-El-Gazel Ouest"@fra-Latn ;
+    wdata:q7200235 "TD1903" .
 
 <urn:mdciii:1603:45:16:148:2:2001>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:20> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:20> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:2001" .
+    rdfs:label "1603:45:16:148:2:2001" ;
+    skos:prefLabel "Am-Djarass"@fra-Latn ;
+    wdata:q7200235 "TD2001" .
 
 <urn:mdciii:1603:45:16:148:2:2002>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:20> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:20> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:2002" .
+    rdfs:label "1603:45:16:148:2:2002" ;
+    skos:prefLabel "Wadi Hawar"@fra-Latn ;
+    wdata:q7200235 "TD2002" .
 
 <urn:mdciii:1603:45:16:148:2:201>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:201" .
+    rdfs:label "1603:45:16:148:2:201" ;
+    skos:prefLabel "Borkou"@fra-Latn ;
+    wdata:q7200235 "TD0201" .
 
 <urn:mdciii:1603:45:16:148:2:202>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:2> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:2> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:202" .
+    rdfs:label "1603:45:16:148:2:202" ;
+    skos:prefLabel "Borkou Yala"@fra-Latn ;
+    wdata:q7200235 "TD0202" .
 
 <urn:mdciii:1603:45:16:148:2:2101>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:21> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:21> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:2101" .
+    rdfs:label "1603:45:16:148:2:2101" ;
+    skos:prefLabel "Kimiti"@fra-Latn ;
+    wdata:q7200235 "TD2101" .
 
 <urn:mdciii:1603:45:16:148:2:2102>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:21> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:21> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:2102" .
+    rdfs:label "1603:45:16:148:2:2102" ;
+    skos:prefLabel "Djourf Al Ahmar"@fra-Latn ;
+    wdata:q7200235 "TD2102" .
 
 <urn:mdciii:1603:45:16:148:2:2201>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:22> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:22> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:2201" .
+    rdfs:label "1603:45:16:148:2:2201" ;
+    skos:prefLabel "Tibesti Est"@fra-Latn ;
+    wdata:q7200235 "TD2201" .
 
 <urn:mdciii:1603:45:16:148:2:2202>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:22> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:22> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:2202" .
+    rdfs:label "1603:45:16:148:2:2202" ;
+    skos:prefLabel "Tibesti Ouest"@fra-Latn ;
+    wdata:q7200235 "TD2202" .
 
 <urn:mdciii:1603:45:16:148:2:2301>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:23> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:23> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:2301" .
+    rdfs:label "1603:45:16:148:2:2301" ;
+    skos:prefLabel "Fada"@fra-Latn ;
+    wdata:q7200235 "TD2301" .
 
 <urn:mdciii:1603:45:16:148:2:2303>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:23> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:23> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:2303" .
+    rdfs:label "1603:45:16:148:2:2303" ;
+    skos:prefLabel "Mourtcha"@fra-Latn ;
+    wdata:q7200235 "TD2303" .
 
 <urn:mdciii:1603:45:16:148:2:301>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:301" .
+    rdfs:label "1603:45:16:148:2:301" ;
+    skos:prefLabel "Baguirmi"@fra-Latn ;
+    wdata:q7200235 "TD0301" .
 
 <urn:mdciii:1603:45:16:148:2:302>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:302" .
+    rdfs:label "1603:45:16:148:2:302" ;
+    skos:prefLabel "Chari"@fra-Latn ;
+    wdata:q7200235 "TD0302" .
 
 <urn:mdciii:1603:45:16:148:2:303>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:3> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:3> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:303" .
+    rdfs:label "1603:45:16:148:2:303" ;
+    skos:prefLabel "Loug-Chari"@fra-Latn ;
+    wdata:q7200235 "TD0303" .
 
 <urn:mdciii:1603:45:16:148:2:401>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:401" .
+    rdfs:label "1603:45:16:148:2:401" ;
+    skos:prefLabel "Guéra"@fra-Latn ;
+    wdata:q7200235 "TD0401" .
 
 <urn:mdciii:1603:45:16:148:2:402>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:402" .
+    rdfs:label "1603:45:16:148:2:402" ;
+    skos:prefLabel "Abtouyour"@fra-Latn ;
+    wdata:q7200235 "TD0402" .
 
 <urn:mdciii:1603:45:16:148:2:403>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:403" .
+    rdfs:label "1603:45:16:148:2:403" ;
+    skos:prefLabel "Barh-Signaka"@fra-Latn ;
+    wdata:q7200235 "TD0403" .
 
 <urn:mdciii:1603:45:16:148:2:404>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:4> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:4> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:404" .
+    rdfs:label "1603:45:16:148:2:404" ;
+    skos:prefLabel "Mangalmé"@fra-Latn ;
+    wdata:q7200235 "TD0404" .
 
 <urn:mdciii:1603:45:16:148:2:501>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:501" .
+    rdfs:label "1603:45:16:148:2:501" ;
+    skos:prefLabel "Dagana"@fra-Latn ;
+    wdata:q7200235 "TD0501" .
 
 <urn:mdciii:1603:45:16:148:2:502>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:502" .
+    rdfs:label "1603:45:16:148:2:502" ;
+    skos:prefLabel "Dababa"@fra-Latn ;
+    wdata:q7200235 "TD0502" .
 
 <urn:mdciii:1603:45:16:148:2:503>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:5> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:5> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:503" .
+    rdfs:label "1603:45:16:148:2:503" ;
+    skos:prefLabel "Haraze-Al-Biar"@fra-Latn ;
+    wdata:q7200235 "TD0503" .
 
 <urn:mdciii:1603:45:16:148:2:601>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:601" .
+    rdfs:label "1603:45:16:148:2:601" ;
+    skos:prefLabel "Kanem"@fra-Latn ;
+    wdata:q7200235 "TD0601" .
 
 <urn:mdciii:1603:45:16:148:2:602>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:602" .
+    rdfs:label "1603:45:16:148:2:602" ;
+    skos:prefLabel "Nord Kanem"@fra-Latn ;
+    wdata:q7200235 "TD0602" .
 
 <urn:mdciii:1603:45:16:148:2:603>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:6> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:6> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:603" .
+    rdfs:label "1603:45:16:148:2:603" ;
+    skos:prefLabel "Wadi Bissam"@fra-Latn ;
+    wdata:q7200235 "TD0603" .
 
 <urn:mdciii:1603:45:16:148:2:701>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:701" .
+    rdfs:label "1603:45:16:148:2:701" ;
+    skos:prefLabel "Mamdi"@fra-Latn ;
+    wdata:q7200235 "TD0701" .
 
 <urn:mdciii:1603:45:16:148:2:702>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:702" .
+    rdfs:label "1603:45:16:148:2:702" ;
+    skos:prefLabel "Wayi"@fra-Latn ;
+    wdata:q7200235 "TD0702" .
 
 <urn:mdciii:1603:45:16:148:2:703>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:703" .
+    rdfs:label "1603:45:16:148:2:703" ;
+    skos:prefLabel "Kaya"@fra-Latn ;
+    wdata:q7200235 "TD0703" .
 
 <urn:mdciii:1603:45:16:148:2:704>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:7> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:7> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:704" .
+    rdfs:label "1603:45:16:148:2:704" ;
+    skos:prefLabel "Fouli"@fra-Latn ;
+    wdata:q7200235 "TD0704" .
 
 <urn:mdciii:1603:45:16:148:2:801>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:801" .
+    rdfs:label "1603:45:16:148:2:801" ;
+    skos:prefLabel "Lac Wey"@fra-Latn ;
+    wdata:q7200235 "TD0801" .
 
 <urn:mdciii:1603:45:16:148:2:802>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:802" .
+    rdfs:label "1603:45:16:148:2:802" ;
+    skos:prefLabel "Dodjé"@fra-Latn ;
+    wdata:q7200235 "TD0802" .
 
 <urn:mdciii:1603:45:16:148:2:803>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:803" .
+    rdfs:label "1603:45:16:148:2:803" ;
+    skos:prefLabel "Guéni"@fra-Latn ;
+    wdata:q7200235 "TD0803" .
 
 <urn:mdciii:1603:45:16:148:2:804>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:8> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:8> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:804" .
+    rdfs:label "1603:45:16:148:2:804" ;
+    skos:prefLabel "Ngourkosso"@fra-Latn ;
+    wdata:q7200235 "TD0804" .
 
 <urn:mdciii:1603:45:16:148:2:901>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:901" .
+    rdfs:label "1603:45:16:148:2:901" ;
+    skos:prefLabel "La Pendé"@fra-Latn ;
+    wdata:q7200235 "TD0901" .
 
 <urn:mdciii:1603:45:16:148:2:902>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:902" .
+    rdfs:label "1603:45:16:148:2:902" ;
+    skos:prefLabel "Kouh Est"@fra-Latn ;
+    wdata:q7200235 "TD0902" .
 
 <urn:mdciii:1603:45:16:148:2:903>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:903" .
+    rdfs:label "1603:45:16:148:2:903" ;
+    skos:prefLabel "Kouh Ouest"@fra-Latn ;
+    wdata:q7200235 "TD0903" .
 
 <urn:mdciii:1603:45:16:148:2:904>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:904" .
+    rdfs:label "1603:45:16:148:2:904" ;
+    skos:prefLabel "La Nya"@fra-Latn ;
+    wdata:q7200235 "TD0904" .
 
 <urn:mdciii:1603:45:16:148:2:905>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:905" .
+    rdfs:label "1603:45:16:148:2:905" ;
+    skos:prefLabel "La Nya Pendé"@fra-Latn ;
+    wdata:q7200235 "TD0905" .
 
 <urn:mdciii:1603:45:16:148:2:906>
     obo:BFO_0000124 <urn:mcdiii:1603:45:16:148:1:9> ;
     obo:BFO_0000171 <urn:mcdiii:1603:45:16:148:1:9> ;
     a obo:BFO_0000029, owl:Thing, skos:Concept ;
-    rdfs:label "1603:45:16:148:2:906" .
+    rdfs:label "1603:45:16:148:2:906" ;
+    skos:prefLabel "Monts de Lam"@fra-Latn ;
+    wdata:q7200235 "TD0906" .
 

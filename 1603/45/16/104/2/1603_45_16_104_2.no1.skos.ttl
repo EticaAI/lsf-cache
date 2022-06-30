@@ -1,0 +1,480 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:104()> .
+
+<urn:mdciii:1603:45:16:104()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:104)" ;
+    skos:member <urn:mdciii:1603:45:16:104:2()> .
+
+<urn:mdciii:1603:45:16:104:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:104:2)" ;
+    skos:member <urn:mdciii:1603:45:16:104:2:10001>, <urn:mdciii:1603:45:16:104:2:10002>, <urn:mdciii:1603:45:16:104:2:10003>, <urn:mdciii:1603:45:16:104:2:10004>, <urn:mdciii:1603:45:16:104:2:10005>, <urn:mdciii:1603:45:16:104:2:10006>, <urn:mdciii:1603:45:16:104:2:10007>, <urn:mdciii:1603:45:16:104:2:1002>, <urn:mdciii:1603:45:16:104:2:1003>, <urn:mdciii:1603:45:16:104:2:1004>, <urn:mdciii:1603:45:16:104:2:11001>, <urn:mdciii:1603:45:16:104:2:11002>, <urn:mdciii:1603:45:16:104:2:12001>, <urn:mdciii:1603:45:16:104:2:12002>, <urn:mdciii:1603:45:16:104:2:12003>, <urn:mdciii:1603:45:16:104:2:12004>, <urn:mdciii:1603:45:16:104:2:12005>, <urn:mdciii:1603:45:16:104:2:13001>, <urn:mdciii:1603:45:16:104:2:13002>, <urn:mdciii:1603:45:16:104:2:13003>, <urn:mdciii:1603:45:16:104:2:13004>, <urn:mdciii:1603:45:16:104:2:14001>, <urn:mdciii:1603:45:16:104:2:14002>, <urn:mdciii:1603:45:16:104:2:14003>, <urn:mdciii:1603:45:16:104:2:15001>, <urn:mdciii:1603:45:16:104:2:15002>, <urn:mdciii:1603:45:16:104:2:15003>, <urn:mdciii:1603:45:16:104:2:15006>, <urn:mdciii:1603:45:16:104:2:15007>, <urn:mdciii:1603:45:16:104:2:15008>, <urn:mdciii:1603:45:16:104:2:16001>, <urn:mdciii:1603:45:16:104:2:16002>, <urn:mdciii:1603:45:16:104:2:16003>, <urn:mdciii:1603:45:16:104:2:17001>, <urn:mdciii:1603:45:16:104:2:17002>, <urn:mdciii:1603:45:16:104:2:17003>, <urn:mdciii:1603:45:16:104:2:17004>, <urn:mdciii:1603:45:16:104:2:17005>, <urn:mdciii:1603:45:16:104:2:17006>, <urn:mdciii:1603:45:16:104:2:18001>, <urn:mdciii:1603:45:16:104:2:18002>, <urn:mdciii:1603:45:16:104:2:2001>, <urn:mdciii:1603:45:16:104:2:2002>, <urn:mdciii:1603:45:16:104:2:3001>, <urn:mdciii:1603:45:16:104:2:3002>, <urn:mdciii:1603:45:16:104:2:3003>, <urn:mdciii:1603:45:16:104:2:3004>, <urn:mdciii:1603:45:16:104:2:4001>, <urn:mdciii:1603:45:16:104:2:4002>, <urn:mdciii:1603:45:16:104:2:4003>, <urn:mdciii:1603:45:16:104:2:4004>, <urn:mdciii:1603:45:16:104:2:5001>, <urn:mdciii:1603:45:16:104:2:5002>, <urn:mdciii:1603:45:16:104:2:5003>, <urn:mdciii:1603:45:16:104:2:5004>, <urn:mdciii:1603:45:16:104:2:5005>, <urn:mdciii:1603:45:16:104:2:5006>, <urn:mdciii:1603:45:16:104:2:5007>, <urn:mdciii:1603:45:16:104:2:5008>, <urn:mdciii:1603:45:16:104:2:5009>, <urn:mdciii:1603:45:16:104:2:5010>, <urn:mdciii:1603:45:16:104:2:5011>, <urn:mdciii:1603:45:16:104:2:6001>, <urn:mdciii:1603:45:16:104:2:6002>, <urn:mdciii:1603:45:16:104:2:6003>, <urn:mdciii:1603:45:16:104:2:7001>, <urn:mdciii:1603:45:16:104:2:7002>, <urn:mdciii:1603:45:16:104:2:8001>, <urn:mdciii:1603:45:16:104:2:8002>, <urn:mdciii:1603:45:16:104:2:9001>, <urn:mdciii:1603:45:16:104:2:9002>, <urn:mdciii:1603:45:16:104:2:9003>, <urn:mdciii:1603:45:16:104:2:9004>, <urn:mdciii:1603:45:16:104:2:9005> .
+
+<urn:mdciii:1603:45:16:104:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:104:2:10001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:10001" ;
+    skos:prefLabel "Mandalay"@eng-Latn, "မန္တလေးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010D001" .
+
+<urn:mdciii:1603:45:16:104:2:10002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:10002" ;
+    skos:prefLabel "Pyinoolwin"@eng-Latn, "ပြင်ဦးလွင်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010D002" .
+
+<urn:mdciii:1603:45:16:104:2:10003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:10003" ;
+    skos:prefLabel "Kyaukse"@eng-Latn, "ကျောက်ဆည်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010D003" .
+
+<urn:mdciii:1603:45:16:104:2:10004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:10004" ;
+    skos:prefLabel "Myingyan"@eng-Latn, "မြင်းခြံခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010D004" .
+
+<urn:mdciii:1603:45:16:104:2:10005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:10005" ;
+    skos:prefLabel "Nyaung-U"@eng-Latn, "ညောင်ဦးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010D005" .
+
+<urn:mdciii:1603:45:16:104:2:10006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:10006" ;
+    skos:prefLabel "Yamethin"@eng-Latn, "ရမည်းသင်းခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010D006" .
+
+<urn:mdciii:1603:45:16:104:2:10007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:10007" ;
+    skos:prefLabel "Meiktila"@eng-Latn, "မိတ္ထီလာခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM010D007" .
+
+<urn:mdciii:1603:45:16:104:2:1001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:1001" ;
+    skos:prefLabel "Myitkyina"@eng-Latn, "မြစ်ကြီးနားခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM001D001" .
+
+<urn:mdciii:1603:45:16:104:2:1002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:1002" ;
+    skos:prefLabel "Mohnyin"@eng-Latn, "မိုးညှင်းခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM001D002" .
+
+<urn:mdciii:1603:45:16:104:2:1003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:1003" ;
+    skos:prefLabel "Bhamo"@eng-Latn, "ဗန်းမော်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM001D003" .
+
+<urn:mdciii:1603:45:16:104:2:1004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:1004" ;
+    skos:prefLabel "Puta-O"@eng-Latn, "ပူတာအိုခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM001D004" .
+
+<urn:mdciii:1603:45:16:104:2:11001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:11001" ;
+    skos:prefLabel "Mawlamyine"@eng-Latn, "မော်လမြိုင်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM011D001" .
+
+<urn:mdciii:1603:45:16:104:2:11002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:11002" ;
+    skos:prefLabel "Thaton"@eng-Latn, "သထုံခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM011D002" .
+
+<urn:mdciii:1603:45:16:104:2:12001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:12001" ;
+    skos:prefLabel "Sittwe"@eng-Latn, "စစ်တွေခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM012D001" .
+
+<urn:mdciii:1603:45:16:104:2:12002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:12002" ;
+    skos:prefLabel "Maungdaw"@eng-Latn, "မောင်တောခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM012D002" .
+
+<urn:mdciii:1603:45:16:104:2:12003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:12003" ;
+    skos:prefLabel "Kyaukpyu"@eng-Latn, "ကျောက်ဖြူခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM012D003" .
+
+<urn:mdciii:1603:45:16:104:2:12004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:12004" ;
+    skos:prefLabel "Thandwe"@eng-Latn, "သံတွဲခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM012D004" .
+
+<urn:mdciii:1603:45:16:104:2:12005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:12005" ;
+    skos:prefLabel "Mrauk-U"@eng-Latn, "မြောက်ဦးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM012D005" .
+
+<urn:mdciii:1603:45:16:104:2:13001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:13001" ;
+    skos:prefLabel "Yangon (North)"@eng-Latn, "ရန်ကုန်(မြောက်ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013D001" .
+
+<urn:mdciii:1603:45:16:104:2:13002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:13002" ;
+    skos:prefLabel "Yangon (East)"@eng-Latn, "ရန်ကုန်(အရှေ့ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013D002" .
+
+<urn:mdciii:1603:45:16:104:2:13003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:13003" ;
+    skos:prefLabel "Yangon (South)"@eng-Latn, "ရန်ကုန်(တောင်ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013D003" .
+
+<urn:mdciii:1603:45:16:104:2:13004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:13004" ;
+    skos:prefLabel "Yangon (West)"@eng-Latn, "ရန်ကုန်(အနောက်ပိုင်း)"@mya-Mymr ;
+    wdata:q7200235 "MM013D004" .
+
+<urn:mdciii:1603:45:16:104:2:14001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:14001" ;
+    skos:prefLabel "Danu Self-Administered Zone"@eng-Latn, "Taunggyi"@eng-Latn, "တောင်ကြီးခရိုင်"@mya-Mymr, "ဓနု ကိုယ်ပိုင်အုပ်ချုပ်ခွင့်ရဒေသ"@mya-Mymr ;
+    wdata:q7200235 "MM014D001", "MM014S001" .
+
+<urn:mdciii:1603:45:16:104:2:14002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:14002" ;
+    skos:prefLabel "Loilen"@eng-Latn, "Pa-O Self-Administered Zone"@eng-Latn, "ပအိုဝ်း ကိုယ်ပိုင်အုပ်ချုပ်ခွင့်ရဒေသ"@mya-Mymr, "လွိုင်လင်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM014D002", "MM014S002" .
+
+<urn:mdciii:1603:45:16:104:2:14003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:14003" ;
+    skos:prefLabel "Langkho"@eng-Latn, "လင်းခေးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM014D003" .
+
+<urn:mdciii:1603:45:16:104:2:15001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:15001" ;
+    skos:prefLabel "Lashio"@eng-Latn, "Pa Laung Self-Administered Zone"@eng-Latn, "ပလောင် ကိုယ်ပိုင်အုပ်ချုပ်ခွင့်ရဒေသ"@mya-Mymr, "လားရှိုးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015D001", "MM015S001" .
+
+<urn:mdciii:1603:45:16:104:2:15002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:15002" ;
+    skos:prefLabel "Kokang Self-Administered Zone"@eng-Latn, "Muse"@eng-Latn, "ကိုးကန့် ကိုယ်ပိုင်အုပ်ချုပ်ခွင့်ရဒေသကိုးကန့် ကိုယ်ပိုင်အုပ်ချုပ်ခွင့်ရဒေသ"@mya-Mymr, "မူဆယ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015D002", "MM015S002" .
+
+<urn:mdciii:1603:45:16:104:2:15003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:15003" ;
+    skos:prefLabel "Kyaukme"@eng-Latn, "ကျောက်မဲခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015D003" .
+
+<urn:mdciii:1603:45:16:104:2:15006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:15006" ;
+    skos:prefLabel "Hopang"@eng-Latn, "ဟိုပန်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015D006" .
+
+<urn:mdciii:1603:45:16:104:2:15007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:15007" ;
+    skos:prefLabel "Matman"@eng-Latn, "မက်မန်းခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015D007" .
+
+<urn:mdciii:1603:45:16:104:2:15008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:15008" ;
+    skos:prefLabel "Mongmit"@eng-Latn, "မိုးမိတ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM015D008" .
+
+<urn:mdciii:1603:45:16:104:2:16001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:16001" ;
+    skos:prefLabel "Kengtung"@eng-Latn, "ကျိုင်းတုံခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM016D001" .
+
+<urn:mdciii:1603:45:16:104:2:16002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:16002" ;
+    skos:prefLabel "Monghsat"@eng-Latn, "မိုင်းဆတ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM016D002" .
+
+<urn:mdciii:1603:45:16:104:2:16003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:16003" ;
+    skos:prefLabel "Tachileik"@eng-Latn, "တာချီလိတ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM016D003" .
+
+<urn:mdciii:1603:45:16:104:2:17001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:17001" ;
+    skos:prefLabel "Pathein"@eng-Latn, "ပုသိမ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM017D001" .
+
+<urn:mdciii:1603:45:16:104:2:17002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:17002" ;
+    skos:prefLabel "Hinthada"@eng-Latn, "ဟင်္သာတခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM017D002" .
+
+<urn:mdciii:1603:45:16:104:2:17003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:17003" ;
+    skos:prefLabel "Myaungmya"@eng-Latn, "မြောင်းမြခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM017D003" .
+
+<urn:mdciii:1603:45:16:104:2:17004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:17004" ;
+    skos:prefLabel "Labutta"@eng-Latn, "လပွတ္တာခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM017D004" .
+
+<urn:mdciii:1603:45:16:104:2:17005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:17005" ;
+    skos:prefLabel "Maubin"@eng-Latn, "မအူပင်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM017D005" .
+
+<urn:mdciii:1603:45:16:104:2:17006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:17006" ;
+    skos:prefLabel "Pyapon"@eng-Latn, "ဖျာပုံခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM017D006" .
+
+<urn:mdciii:1603:45:16:104:2:18001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:18001" ;
+    skos:prefLabel "Oke Ta Ra"@eng-Latn, "ဥတ္တရခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM018D001" .
+
+<urn:mdciii:1603:45:16:104:2:18002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:18002" ;
+    skos:prefLabel "Det Khi Na"@eng-Latn, "ဒက္ခိဏခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM018D002" .
+
+<urn:mdciii:1603:45:16:104:2:2001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:2001" ;
+    skos:prefLabel "Loikaw"@eng-Latn, "လွိုင်ကော်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM002D001" .
+
+<urn:mdciii:1603:45:16:104:2:2002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:2002" ;
+    skos:prefLabel "Bawlake"@eng-Latn, "ဘောလခဲခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM002D002" .
+
+<urn:mdciii:1603:45:16:104:2:3001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:3001" ;
+    skos:prefLabel "Hpa-An"@eng-Latn, "ဘားအံခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM003D001" .
+
+<urn:mdciii:1603:45:16:104:2:3002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:3002" ;
+    skos:prefLabel "Myawaddy"@eng-Latn, "မြဝတီခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM003D002" .
+
+<urn:mdciii:1603:45:16:104:2:3003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:3003" ;
+    skos:prefLabel "Kawkareik"@eng-Latn, "ကော့ကရိတ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM003D003" .
+
+<urn:mdciii:1603:45:16:104:2:3004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:3004" ;
+    skos:prefLabel "Hpapun"@eng-Latn, "ဖာပွန်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM003D004" .
+
+<urn:mdciii:1603:45:16:104:2:4001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:4001" ;
+    skos:prefLabel "Falam"@eng-Latn, "ဖလမ်းခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM004D001" .
+
+<urn:mdciii:1603:45:16:104:2:4002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:4002" ;
+    skos:prefLabel "Mindat"@eng-Latn, "မင်းတပ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM004D002" .
+
+<urn:mdciii:1603:45:16:104:2:4003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:4003" ;
+    skos:prefLabel "Hakha"@eng-Latn, "ဟားခါးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM004D003" .
+
+<urn:mdciii:1603:45:16:104:2:4004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:4004" ;
+    skos:prefLabel "Matupi"@eng-Latn, "မတူပီခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM004D004" .
+
+<urn:mdciii:1603:45:16:104:2:5001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5001" ;
+    skos:prefLabel "Naga Self-Administered Zone"@eng-Latn, "Sagaing"@eng-Latn, "စစ်ကိုင်းခရိုင်"@mya-Mymr, "နာဂကိုယ်ပိုင်အုပ်ချုပ်ခွင့်ရဒေသ"@mya-Mymr ;
+    wdata:q7200235 "MM005D001", "MM005S001" .
+
+<urn:mdciii:1603:45:16:104:2:5002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5002" ;
+    skos:prefLabel "Shwebo"@eng-Latn, "ရွှေဘိုခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D002" .
+
+<urn:mdciii:1603:45:16:104:2:5003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5003" ;
+    skos:prefLabel "Monywa"@eng-Latn, "မုံရွာခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D003" .
+
+<urn:mdciii:1603:45:16:104:2:5004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5004" ;
+    skos:prefLabel "Katha"@eng-Latn, "ကသာခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D004" .
+
+<urn:mdciii:1603:45:16:104:2:5005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5005" ;
+    skos:prefLabel "Kale"@eng-Latn, "ကလေးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D005" .
+
+<urn:mdciii:1603:45:16:104:2:5006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5006" ;
+    skos:prefLabel "Tamu"@eng-Latn, "တမူးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D006" .
+
+<urn:mdciii:1603:45:16:104:2:5007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5007" ;
+    skos:prefLabel "Mawlaik"@eng-Latn, "မော်လိုက်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D007" .
+
+<urn:mdciii:1603:45:16:104:2:5008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5008" ;
+    skos:prefLabel "Hkamti"@eng-Latn, "ခန္တီးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D008" .
+
+<urn:mdciii:1603:45:16:104:2:5009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5009" ;
+    skos:prefLabel "Yinmarbin"@eng-Latn, "ယင်းမာပင်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D009" .
+
+<urn:mdciii:1603:45:16:104:2:5010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5010" ;
+    skos:prefLabel "Kanbalu"@eng-Latn, "ကန့်ဘလူခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D010" .
+
+<urn:mdciii:1603:45:16:104:2:5011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:5011" ;
+    skos:prefLabel "Kawlin"@eng-Latn, "ကောလင်းခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM005D011" .
+
+<urn:mdciii:1603:45:16:104:2:6001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:6001" ;
+    skos:prefLabel "Dawei"@eng-Latn, "ထားဝယ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM006D001" .
+
+<urn:mdciii:1603:45:16:104:2:6002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:6002" ;
+    skos:prefLabel "Myeik"@eng-Latn, "မြိတ်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM006D002" .
+
+<urn:mdciii:1603:45:16:104:2:6003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:6003" ;
+    skos:prefLabel "Kawthoung"@eng-Latn, "ကော့သောင်းခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM006D003" .
+
+<urn:mdciii:1603:45:16:104:2:7001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:7001" ;
+    skos:prefLabel "Bago"@eng-Latn, "ပဲခူးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM007D001" .
+
+<urn:mdciii:1603:45:16:104:2:7002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:7002" ;
+    skos:prefLabel "Taungoo"@eng-Latn, "တောင်ငူခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM007D002" .
+
+<urn:mdciii:1603:45:16:104:2:8001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:8001" ;
+    skos:prefLabel "Pyay"@eng-Latn, "ပြည်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM008D001" .
+
+<urn:mdciii:1603:45:16:104:2:8002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:8002" ;
+    skos:prefLabel "Thayarwady"@eng-Latn, "သာယာဝတီခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM008D002" .
+
+<urn:mdciii:1603:45:16:104:2:9001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:9001" ;
+    skos:prefLabel "Magway"@eng-Latn, "မကွေးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM009D001" .
+
+<urn:mdciii:1603:45:16:104:2:9002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:9002" ;
+    skos:prefLabel "Minbu"@eng-Latn, "မင်းဘူးခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM009D002" .
+
+<urn:mdciii:1603:45:16:104:2:9003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:9003" ;
+    skos:prefLabel "Thayet"@eng-Latn, "သရက်ခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM009D003" .
+
+<urn:mdciii:1603:45:16:104:2:9004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:9004" ;
+    skos:prefLabel "Pakokku"@eng-Latn, "ပခုက္ကူခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM009D004" .
+
+<urn:mdciii:1603:45:16:104:2:9005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:104:2:9005" ;
+    skos:prefLabel "Gangaw"@eng-Latn, "ဂန့်ဂေါခရိုင်"@mya-Mymr ;
+    wdata:q7200235 "MM009D005" .
+

@@ -1,0 +1,90 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:894()> .
+
+<urn:mdciii:1603:45:16:894()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:894)" ;
+    skos:member <urn:mdciii:1603:45:16:894:1()> .
+
+<urn:mdciii:1603:45:16:894:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:894:1)" ;
+    skos:member <urn:mdciii:1603:45:16:894:1:11>, <urn:mdciii:1603:45:16:894:1:20>, <urn:mdciii:1603:45:16:894:1:30>, <urn:mdciii:1603:45:16:894:1:40>, <urn:mdciii:1603:45:16:894:1:50>, <urn:mdciii:1603:45:16:894:1:60>, <urn:mdciii:1603:45:16:894:1:70>, <urn:mdciii:1603:45:16:894:1:80>, <urn:mdciii:1603:45:16:894:1:90> .
+
+<urn:mdciii:1603:45:16:894:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:894:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:10" ;
+    skos:prefLabel "Central"@eng-Latn ;
+    wdata:q7200235 "ZM10" .
+
+<urn:mdciii:1603:45:16:894:1:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:11" ;
+    skos:prefLabel "Muchinga"@eng-Latn ;
+    wdata:q7200235 "ZM11" .
+
+<urn:mdciii:1603:45:16:894:1:20>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:20" ;
+    skos:prefLabel "Copperbelt"@eng-Latn ;
+    wdata:q7200235 "ZM20" .
+
+<urn:mdciii:1603:45:16:894:1:30>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:30" ;
+    skos:prefLabel "Eastern"@eng-Latn ;
+    wdata:q7200235 "ZM30" .
+
+<urn:mdciii:1603:45:16:894:1:40>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:40" ;
+    skos:prefLabel "Luapula"@eng-Latn ;
+    wdata:q7200235 "ZM40" .
+
+<urn:mdciii:1603:45:16:894:1:50>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:50" ;
+    skos:prefLabel "Lusaka"@eng-Latn ;
+    wdata:q7200235 "ZM50" .
+
+<urn:mdciii:1603:45:16:894:1:60>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:60" ;
+    skos:prefLabel "Northern"@eng-Latn ;
+    wdata:q7200235 "ZM60" .
+
+<urn:mdciii:1603:45:16:894:1:70>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:70" ;
+    skos:prefLabel "North-Western"@eng-Latn ;
+    wdata:q7200235 "ZM70" .
+
+<urn:mdciii:1603:45:16:894:1:80>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:80" ;
+    skos:prefLabel "Southern"@eng-Latn ;
+    wdata:q7200235 "ZM80" .
+
+<urn:mdciii:1603:45:16:894:1:90>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:894:1:90" ;
+    skos:prefLabel "Western"@eng-Latn ;
+    wdata:q7200235 "ZM90" .
+
