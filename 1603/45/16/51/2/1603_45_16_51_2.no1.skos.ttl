@@ -1,0 +1,264 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:51()> .
+
+<urn:mdciii:1603:45:16:51()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:51)" ;
+    skos:member <urn:mdciii:1603:45:16:51:2()> .
+
+<urn:mdciii:1603:45:16:51:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:51:2)" ;
+    skos:member <urn:mdciii:1603:45:16:51:2:101>, <urn:mdciii:1603:45:16:51:2:102>, <urn:mdciii:1603:45:16:51:2:111>, <urn:mdciii:1603:45:16:51:2:112>, <urn:mdciii:1603:45:16:51:2:113>, <urn:mdciii:1603:45:16:51:2:114>, <urn:mdciii:1603:45:16:51:2:21>, <urn:mdciii:1603:45:16:51:2:22>, <urn:mdciii:1603:45:16:51:2:23>, <urn:mdciii:1603:45:16:51:2:24>, <urn:mdciii:1603:45:16:51:2:31>, <urn:mdciii:1603:45:16:51:2:32>, <urn:mdciii:1603:45:16:51:2:33>, <urn:mdciii:1603:45:16:51:2:41>, <urn:mdciii:1603:45:16:51:2:42>, <urn:mdciii:1603:45:16:51:2:43>, <urn:mdciii:1603:45:16:51:2:51>, <urn:mdciii:1603:45:16:51:2:52>, <urn:mdciii:1603:45:16:51:2:53>, <urn:mdciii:1603:45:16:51:2:54>, <urn:mdciii:1603:45:16:51:2:55>, <urn:mdciii:1603:45:16:51:2:61>, <urn:mdciii:1603:45:16:51:2:62>, <urn:mdciii:1603:45:16:51:2:63>, <urn:mdciii:1603:45:16:51:2:64>, <urn:mdciii:1603:45:16:51:2:65>, <urn:mdciii:1603:45:16:51:2:71>, <urn:mdciii:1603:45:16:51:2:72>, <urn:mdciii:1603:45:16:51:2:73>, <urn:mdciii:1603:45:16:51:2:81>, <urn:mdciii:1603:45:16:51:2:82>, <urn:mdciii:1603:45:16:51:2:83>, <urn:mdciii:1603:45:16:51:2:84>, <urn:mdciii:1603:45:16:51:2:85>, <urn:mdciii:1603:45:16:51:2:91>, <urn:mdciii:1603:45:16:51:2:92>, <urn:mdciii:1603:45:16:51:2:93>, <urn:mdciii:1603:45:16:51:2:94> .
+
+<urn:mdciii:1603:45:16:51:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:51:2:101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:101" ;
+    skos:prefLabel "Yeghegnadzor"@eng-Latn, "Егегнадзор"@rus-Cyrl, "Եղեգնաձոր"@hye-Armn ;
+    wdata:q7200235 "AM101" .
+
+<urn:mdciii:1603:45:16:51:2:102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:102" ;
+    skos:prefLabel "Vayk"@eng-Latn, "Вайк"@rus-Cyrl, "Վայք"@hye-Armn ;
+    wdata:q7200235 "AM102" .
+
+<urn:mdciii:1603:45:16:51:2:11>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:11" ;
+    skos:prefLabel "Yerevan"@eng-Latn, "Ереван"@rus-Cyrl, "Երևան"@hye-Armn ;
+    wdata:q7200235 "AM011" .
+
+<urn:mdciii:1603:45:16:51:2:111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:111" ;
+    skos:prefLabel "Idjevan"@eng-Latn, "Иджеван"@rus-Cyrl, "Իջևան"@hye-Armn ;
+    wdata:q7200235 "AM111" .
+
+<urn:mdciii:1603:45:16:51:2:112>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:112" ;
+    skos:prefLabel "Noyemberyan"@eng-Latn, "Ноемберян"@rus-Cyrl, "Նոյեմբերյան"@hye-Armn ;
+    wdata:q7200235 "AM112" .
+
+<urn:mdciii:1603:45:16:51:2:113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:113" ;
+    skos:prefLabel "Tavush"@eng-Latn, "Тавуш"@rus-Cyrl, "Տավուշ"@hye-Armn ;
+    wdata:q7200235 "AM113" .
+
+<urn:mdciii:1603:45:16:51:2:114>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:114" ;
+    skos:prefLabel "Dilidjan"@eng-Latn, "Дилиджан"@rus-Cyrl, "Դիլիջան"@hye-Armn ;
+    wdata:q7200235 "AM114" .
+
+<urn:mdciii:1603:45:16:51:2:21>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:21" ;
+    skos:prefLabel "Ashtarak"@eng-Latn, "Аштарак"@rus-Cyrl, "Աշտարակ"@hye-Armn ;
+    wdata:q7200235 "AM021" .
+
+<urn:mdciii:1603:45:16:51:2:22>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:22" ;
+    skos:prefLabel "Aparan"@eng-Latn, "Апаран"@rus-Cyrl, "Ապարան"@hye-Armn ;
+    wdata:q7200235 "AM022" .
+
+<urn:mdciii:1603:45:16:51:2:23>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:23" ;
+    skos:prefLabel "Aragats"@eng-Latn, "Арагац"@rus-Cyrl, "Արագած"@hye-Armn ;
+    wdata:q7200235 "AM023" .
+
+<urn:mdciii:1603:45:16:51:2:24>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:24" ;
+    skos:prefLabel "Talin"@eng-Latn, "Талин"@rus-Cyrl, "Թալին"@hye-Armn ;
+    wdata:q7200235 "AM024" .
+
+<urn:mdciii:1603:45:16:51:2:31>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:31" ;
+    skos:prefLabel "Ararat"@eng-Latn, "Арарат"@rus-Cyrl, "Արարատ"@hye-Armn ;
+    wdata:q7200235 "AM031" .
+
+<urn:mdciii:1603:45:16:51:2:32>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:32" ;
+    skos:prefLabel "Artashat"@eng-Latn, "Арташат"@rus-Cyrl, "Արտաշատ"@hye-Armn ;
+    wdata:q7200235 "AM032" .
+
+<urn:mdciii:1603:45:16:51:2:33>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:33" ;
+    skos:prefLabel "Masis"@eng-Latn, "Масис"@rus-Cyrl, "Մասիս"@hye-Armn ;
+    wdata:q7200235 "AM033" .
+
+<urn:mdciii:1603:45:16:51:2:41>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:41" ;
+    skos:prefLabel "Armavir"@eng-Latn, "Армавир"@rus-Cyrl, "Արմավիր"@hye-Armn ;
+    wdata:q7200235 "AM041" .
+
+<urn:mdciii:1603:45:16:51:2:42>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:42" ;
+    skos:prefLabel "Baghramyan"@eng-Latn, "Баграмян"@rus-Cyrl, "Բաղրամյան"@hye-Armn ;
+    wdata:q7200235 "AM042" .
+
+<urn:mdciii:1603:45:16:51:2:43>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:43" ;
+    skos:prefLabel "Vagharshapat"@eng-Latn, "Вагаршапат"@rus-Cyrl, "Վաղարշապատ"@hye-Armn ;
+    wdata:q7200235 "AM043" .
+
+<urn:mdciii:1603:45:16:51:2:51>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:51" ;
+    skos:prefLabel "Gavar"@eng-Latn, "Гавар"@rus-Cyrl, "Գավառ"@hye-Armn ;
+    wdata:q7200235 "AM051" .
+
+<urn:mdciii:1603:45:16:51:2:52>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:52" ;
+    skos:prefLabel "Karmir"@eng-Latn, "Кармир"@rus-Cyrl, "Կարմիր"@hye-Armn ;
+    wdata:q7200235 "AM052" .
+
+<urn:mdciii:1603:45:16:51:2:53>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:53" ;
+    skos:prefLabel "Martuni"@eng-Latn, "Мартуни"@rus-Cyrl, "Մարտունի"@hye-Armn ;
+    wdata:q7200235 "AM053" .
+
+<urn:mdciii:1603:45:16:51:2:54>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:54" ;
+    skos:prefLabel "Sevan"@eng-Latn, "Севан"@rus-Cyrl, "Սևան"@hye-Armn ;
+    wdata:q7200235 "AM054" .
+
+<urn:mdciii:1603:45:16:51:2:55>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:55" ;
+    skos:prefLabel "Vardenis"@eng-Latn, "Варденис"@rus-Cyrl, "Վարդենիս"@hye-Armn ;
+    wdata:q7200235 "AM055" .
+
+<urn:mdciii:1603:45:16:51:2:61>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:61" ;
+    skos:prefLabel "Gugark"@eng-Latn, "Гугарк"@rus-Cyrl, "Գուգարք"@hye-Armn ;
+    wdata:q7200235 "AM061" .
+
+<urn:mdciii:1603:45:16:51:2:62>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:62" ;
+    skos:prefLabel "Tumanian"@eng-Latn, "Туманян"@rus-Cyrl, "Թումանյան"@hye-Armn ;
+    wdata:q7200235 "AM062" .
+
+<urn:mdciii:1603:45:16:51:2:63>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:63" ;
+    skos:prefLabel "Spitak"@eng-Latn, "Спитак"@rus-Cyrl, "Սպիտակ"@hye-Armn ;
+    wdata:q7200235 "AM063" .
+
+<urn:mdciii:1603:45:16:51:2:64>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:64" ;
+    skos:prefLabel "Stepanavan"@eng-Latn, "Степанаван"@rus-Cyrl, "Ստեփանավան"@hye-Armn ;
+    wdata:q7200235 "AM064" .
+
+<urn:mdciii:1603:45:16:51:2:65>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:65" ;
+    skos:prefLabel "Tashir"@eng-Latn, "Ташир"@rus-Cyrl, "Տաշիր"@hye-Armn ;
+    wdata:q7200235 "AM065" .
+
+<urn:mdciii:1603:45:16:51:2:71>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:71" ;
+    skos:prefLabel "Kotayk"@eng-Latn, "Котайк"@rus-Cyrl, "Կոտայք"@hye-Armn ;
+    wdata:q7200235 "AM071" .
+
+<urn:mdciii:1603:45:16:51:2:72>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:72" ;
+    skos:prefLabel "Hrazdan"@eng-Latn, "Раздан"@rus-Cyrl, "Հրազդան"@hye-Armn ;
+    wdata:q7200235 "AM072" .
+
+<urn:mdciii:1603:45:16:51:2:73>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:73" ;
+    skos:prefLabel "Nairi"@eng-Latn, "Наири"@rus-Cyrl, "Նաիրի"@hye-Armn ;
+    wdata:q7200235 "AM073" .
+
+<urn:mdciii:1603:45:16:51:2:81>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:81" ;
+    skos:prefLabel "Akhuryan"@eng-Latn, "Ахурян"@rus-Cyrl, "Ախուրյան"@hye-Armn ;
+    wdata:q7200235 "AM081" .
+
+<urn:mdciii:1603:45:16:51:2:82>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:82" ;
+    skos:prefLabel "Amasia"@eng-Latn, "Амасиа"@rus-Cyrl, "Ամասիա"@hye-Armn ;
+    wdata:q7200235 "AM082" .
+
+<urn:mdciii:1603:45:16:51:2:83>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:83" ;
+    skos:prefLabel "Ani"@eng-Latn, "Ани"@rus-Cyrl, "Անի"@hye-Armn ;
+    wdata:q7200235 "AM083" .
+
+<urn:mdciii:1603:45:16:51:2:84>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:84" ;
+    skos:prefLabel "Ashotck"@eng-Latn, "Ашотцк"@rus-Cyrl, "Աշոցք"@hye-Armn ;
+    wdata:q7200235 "AM084" .
+
+<urn:mdciii:1603:45:16:51:2:85>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:85" ;
+    skos:prefLabel "Artik"@eng-Latn, "Артик"@rus-Cyrl, "Արթիկ"@hye-Armn ;
+    wdata:q7200235 "AM085" .
+
+<urn:mdciii:1603:45:16:51:2:91>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:91" ;
+    skos:prefLabel "Goris"@eng-Latn, "Горис"@rus-Cyrl, "Գորիս"@hye-Armn ;
+    wdata:q7200235 "AM091" .
+
+<urn:mdciii:1603:45:16:51:2:92>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:92" ;
+    skos:prefLabel "Kapan"@eng-Latn, "Капан"@rus-Cyrl, "Կապան"@hye-Armn ;
+    wdata:q7200235 "AM092" .
+
+<urn:mdciii:1603:45:16:51:2:93>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:93" ;
+    skos:prefLabel "Meghri"@eng-Latn, "Мегри"@rus-Cyrl, "Մեղրի"@hye-Armn ;
+    wdata:q7200235 "AM093" .
+
+<urn:mdciii:1603:45:16:51:2:94>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:51:2:94" ;
+    skos:prefLabel "Sisian"@eng-Latn, "Сисиан"@rus-Cyrl, "Սիսիան"@hye-Armn ;
+    wdata:q7200235 "AM094" .
+

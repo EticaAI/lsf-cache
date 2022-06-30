@@ -1,0 +1,414 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:50()> .
+
+<urn:mdciii:1603:45:16:50()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:50)" ;
+    skos:member <urn:mdciii:1603:45:16:50:2()> .
+
+<urn:mdciii:1603:45:16:50:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:50:2)" ;
+    skos:member <urn:mdciii:1603:45:16:50:2:1006>, <urn:mdciii:1603:45:16:50:2:1009>, <urn:mdciii:1603:45:16:50:2:1042>, <urn:mdciii:1603:45:16:50:2:1078>, <urn:mdciii:1603:45:16:50:2:1079>, <urn:mdciii:1603:45:16:50:2:2003>, <urn:mdciii:1603:45:16:50:2:2012>, <urn:mdciii:1603:45:16:50:2:2013>, <urn:mdciii:1603:45:16:50:2:2015>, <urn:mdciii:1603:45:16:50:2:2019>, <urn:mdciii:1603:45:16:50:2:2022>, <urn:mdciii:1603:45:16:50:2:2030>, <urn:mdciii:1603:45:16:50:2:2046>, <urn:mdciii:1603:45:16:50:2:2051>, <urn:mdciii:1603:45:16:50:2:2075>, <urn:mdciii:1603:45:16:50:2:2084>, <urn:mdciii:1603:45:16:50:2:3026>, <urn:mdciii:1603:45:16:50:2:3029>, <urn:mdciii:1603:45:16:50:2:3033>, <urn:mdciii:1603:45:16:50:2:3035>, <urn:mdciii:1603:45:16:50:2:3048>, <urn:mdciii:1603:45:16:50:2:3054>, <urn:mdciii:1603:45:16:50:2:3056>, <urn:mdciii:1603:45:16:50:2:3059>, <urn:mdciii:1603:45:16:50:2:3067>, <urn:mdciii:1603:45:16:50:2:3068>, <urn:mdciii:1603:45:16:50:2:3082>, <urn:mdciii:1603:45:16:50:2:3086>, <urn:mdciii:1603:45:16:50:2:3093>, <urn:mdciii:1603:45:16:50:2:4001>, <urn:mdciii:1603:45:16:50:2:4018>, <urn:mdciii:1603:45:16:50:2:4041>, <urn:mdciii:1603:45:16:50:2:4044>, <urn:mdciii:1603:45:16:50:2:4047>, <urn:mdciii:1603:45:16:50:2:4050>, <urn:mdciii:1603:45:16:50:2:4055>, <urn:mdciii:1603:45:16:50:2:4057>, <urn:mdciii:1603:45:16:50:2:4065>, <urn:mdciii:1603:45:16:50:2:4087>, <urn:mdciii:1603:45:16:50:2:4539>, <urn:mdciii:1603:45:16:50:2:4561>, <urn:mdciii:1603:45:16:50:2:4572>, <urn:mdciii:1603:45:16:50:2:4589>, <urn:mdciii:1603:45:16:50:2:5010>, <urn:mdciii:1603:45:16:50:2:5038>, <urn:mdciii:1603:45:16:50:2:5064>, <urn:mdciii:1603:45:16:50:2:5069>, <urn:mdciii:1603:45:16:50:2:5070>, <urn:mdciii:1603:45:16:50:2:5076>, <urn:mdciii:1603:45:16:50:2:5081>, <urn:mdciii:1603:45:16:50:2:5088>, <urn:mdciii:1603:45:16:50:2:5527>, <urn:mdciii:1603:45:16:50:2:5532>, <urn:mdciii:1603:45:16:50:2:5549>, <urn:mdciii:1603:45:16:50:2:5552>, <urn:mdciii:1603:45:16:50:2:5573>, <urn:mdciii:1603:45:16:50:2:5577>, <urn:mdciii:1603:45:16:50:2:5585>, <urn:mdciii:1603:45:16:50:2:5594>, <urn:mdciii:1603:45:16:50:2:6036>, <urn:mdciii:1603:45:16:50:2:6058>, <urn:mdciii:1603:45:16:50:2:6090>, <urn:mdciii:1603:45:16:50:2:6091> .
+
+<urn:mdciii:1603:45:16:50:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:50:2:1004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:1004" ;
+    skos:prefLabel "Barguna"@eng-Latn ;
+    wdata:q7200235 "BD1004" .
+
+<urn:mdciii:1603:45:16:50:2:1006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:1006" ;
+    skos:prefLabel "Barisal"@eng-Latn ;
+    wdata:q7200235 "BD1006" .
+
+<urn:mdciii:1603:45:16:50:2:1009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:1009" ;
+    skos:prefLabel "Bhola"@eng-Latn ;
+    wdata:q7200235 "BD1009" .
+
+<urn:mdciii:1603:45:16:50:2:1042>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:1042" ;
+    skos:prefLabel "Jhalokati"@eng-Latn ;
+    wdata:q7200235 "BD1042" .
+
+<urn:mdciii:1603:45:16:50:2:1078>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:1078" ;
+    skos:prefLabel "Patuakhali"@eng-Latn ;
+    wdata:q7200235 "BD1078" .
+
+<urn:mdciii:1603:45:16:50:2:1079>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:1079" ;
+    skos:prefLabel "Pirojpur"@eng-Latn ;
+    wdata:q7200235 "BD1079" .
+
+<urn:mdciii:1603:45:16:50:2:2003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2003" ;
+    skos:prefLabel "Bandarban"@eng-Latn ;
+    wdata:q7200235 "BD2003" .
+
+<urn:mdciii:1603:45:16:50:2:2012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2012" ;
+    skos:prefLabel "Brahamanbaria"@eng-Latn ;
+    wdata:q7200235 "BD2012" .
+
+<urn:mdciii:1603:45:16:50:2:2013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2013" ;
+    skos:prefLabel "Chandpur"@eng-Latn ;
+    wdata:q7200235 "BD2013" .
+
+<urn:mdciii:1603:45:16:50:2:2015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2015" ;
+    skos:prefLabel "Chittagong"@eng-Latn ;
+    wdata:q7200235 "BD2015" .
+
+<urn:mdciii:1603:45:16:50:2:2019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2019" ;
+    skos:prefLabel "Comilla"@eng-Latn ;
+    wdata:q7200235 "BD2019" .
+
+<urn:mdciii:1603:45:16:50:2:2022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2022" ;
+    skos:prefLabel "Cox's Bazar"@eng-Latn ;
+    wdata:q7200235 "BD2022" .
+
+<urn:mdciii:1603:45:16:50:2:2030>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2030" ;
+    skos:prefLabel "Feni"@eng-Latn ;
+    wdata:q7200235 "BD2030" .
+
+<urn:mdciii:1603:45:16:50:2:2046>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2046" ;
+    skos:prefLabel "Khagrachhari"@eng-Latn ;
+    wdata:q7200235 "BD2046" .
+
+<urn:mdciii:1603:45:16:50:2:2051>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2051" ;
+    skos:prefLabel "Lakshmipur"@eng-Latn ;
+    wdata:q7200235 "BD2051" .
+
+<urn:mdciii:1603:45:16:50:2:2075>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2075" ;
+    skos:prefLabel "Noakhali"@eng-Latn ;
+    wdata:q7200235 "BD2075" .
+
+<urn:mdciii:1603:45:16:50:2:2084>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:2084" ;
+    skos:prefLabel "Rangamati"@eng-Latn ;
+    wdata:q7200235 "BD2084" .
+
+<urn:mdciii:1603:45:16:50:2:3026>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3026" ;
+    skos:prefLabel "Dhaka"@eng-Latn ;
+    wdata:q7200235 "BD3026" .
+
+<urn:mdciii:1603:45:16:50:2:3029>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3029" ;
+    skos:prefLabel "Faridpur"@eng-Latn ;
+    wdata:q7200235 "BD3029" .
+
+<urn:mdciii:1603:45:16:50:2:3033>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3033" ;
+    skos:prefLabel "Gazipur"@eng-Latn ;
+    wdata:q7200235 "BD3033" .
+
+<urn:mdciii:1603:45:16:50:2:3035>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3035" ;
+    skos:prefLabel "Gopalganj"@eng-Latn ;
+    wdata:q7200235 "BD3035" .
+
+<urn:mdciii:1603:45:16:50:2:3048>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3048" ;
+    skos:prefLabel "Kishoreganj"@eng-Latn ;
+    wdata:q7200235 "BD3048" .
+
+<urn:mdciii:1603:45:16:50:2:3054>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3054" ;
+    skos:prefLabel "Madaripur"@eng-Latn ;
+    wdata:q7200235 "BD3054" .
+
+<urn:mdciii:1603:45:16:50:2:3056>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3056" ;
+    skos:prefLabel "Manikganj"@eng-Latn ;
+    wdata:q7200235 "BD3056" .
+
+<urn:mdciii:1603:45:16:50:2:3059>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3059" ;
+    skos:prefLabel "Munshiganj"@eng-Latn ;
+    wdata:q7200235 "BD3059" .
+
+<urn:mdciii:1603:45:16:50:2:3067>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3067" ;
+    skos:prefLabel "Narayanganj"@eng-Latn ;
+    wdata:q7200235 "BD3067" .
+
+<urn:mdciii:1603:45:16:50:2:3068>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3068" ;
+    skos:prefLabel "Narsingdi"@eng-Latn ;
+    wdata:q7200235 "BD3068" .
+
+<urn:mdciii:1603:45:16:50:2:3082>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3082" ;
+    skos:prefLabel "Rajbari"@eng-Latn ;
+    wdata:q7200235 "BD3082" .
+
+<urn:mdciii:1603:45:16:50:2:3086>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3086" ;
+    skos:prefLabel "Shariatpur"@eng-Latn ;
+    wdata:q7200235 "BD3086" .
+
+<urn:mdciii:1603:45:16:50:2:3093>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:3093" ;
+    skos:prefLabel "Tangail"@eng-Latn ;
+    wdata:q7200235 "BD3093" .
+
+<urn:mdciii:1603:45:16:50:2:4001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4001" ;
+    skos:prefLabel "Bagerhat"@eng-Latn ;
+    wdata:q7200235 "BD4001" .
+
+<urn:mdciii:1603:45:16:50:2:4018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4018" ;
+    skos:prefLabel "Chuadanga"@eng-Latn ;
+    wdata:q7200235 "BD4018" .
+
+<urn:mdciii:1603:45:16:50:2:4041>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4041" ;
+    skos:prefLabel "Jessore"@eng-Latn ;
+    wdata:q7200235 "BD4041" .
+
+<urn:mdciii:1603:45:16:50:2:4044>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4044" ;
+    skos:prefLabel "Jhenaidah"@eng-Latn ;
+    wdata:q7200235 "BD4044" .
+
+<urn:mdciii:1603:45:16:50:2:4047>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4047" ;
+    skos:prefLabel "Khulna"@eng-Latn ;
+    wdata:q7200235 "BD4047" .
+
+<urn:mdciii:1603:45:16:50:2:4050>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4050" ;
+    skos:prefLabel "Kushtia"@eng-Latn ;
+    wdata:q7200235 "BD4050" .
+
+<urn:mdciii:1603:45:16:50:2:4055>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4055" ;
+    skos:prefLabel "Magura"@eng-Latn ;
+    wdata:q7200235 "BD4055" .
+
+<urn:mdciii:1603:45:16:50:2:4057>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4057" ;
+    skos:prefLabel "Meherpur"@eng-Latn ;
+    wdata:q7200235 "BD4057" .
+
+<urn:mdciii:1603:45:16:50:2:4065>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4065" ;
+    skos:prefLabel "Narail"@eng-Latn ;
+    wdata:q7200235 "BD4065" .
+
+<urn:mdciii:1603:45:16:50:2:4087>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4087" ;
+    skos:prefLabel "Satkhira"@eng-Latn ;
+    wdata:q7200235 "BD4087" .
+
+<urn:mdciii:1603:45:16:50:2:4539>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4539" ;
+    skos:prefLabel "Jamalpur"@eng-Latn ;
+    wdata:q7200235 "BD4539" .
+
+<urn:mdciii:1603:45:16:50:2:4561>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4561" ;
+    skos:prefLabel "Mymensingh"@eng-Latn ;
+    wdata:q7200235 "BD4561" .
+
+<urn:mdciii:1603:45:16:50:2:4572>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4572" ;
+    skos:prefLabel "Netrakona"@eng-Latn ;
+    wdata:q7200235 "BD4572" .
+
+<urn:mdciii:1603:45:16:50:2:4589>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:4589" ;
+    skos:prefLabel "Sherpur"@eng-Latn ;
+    wdata:q7200235 "BD4589" .
+
+<urn:mdciii:1603:45:16:50:2:5010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5010" ;
+    skos:prefLabel "Bogra"@eng-Latn ;
+    wdata:q7200235 "BD5010" .
+
+<urn:mdciii:1603:45:16:50:2:5038>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5038" ;
+    skos:prefLabel "Joypurhat"@eng-Latn ;
+    wdata:q7200235 "BD5038" .
+
+<urn:mdciii:1603:45:16:50:2:5064>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5064" ;
+    skos:prefLabel "Naogaon"@eng-Latn ;
+    wdata:q7200235 "BD5064" .
+
+<urn:mdciii:1603:45:16:50:2:5069>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5069" ;
+    skos:prefLabel "Natore"@eng-Latn ;
+    wdata:q7200235 "BD5069" .
+
+<urn:mdciii:1603:45:16:50:2:5070>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5070" ;
+    skos:prefLabel "Nawabganj"@eng-Latn ;
+    wdata:q7200235 "BD5070" .
+
+<urn:mdciii:1603:45:16:50:2:5076>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5076" ;
+    skos:prefLabel "Pabna"@eng-Latn ;
+    wdata:q7200235 "BD5076" .
+
+<urn:mdciii:1603:45:16:50:2:5081>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5081" ;
+    skos:prefLabel "Rajshahi"@eng-Latn ;
+    wdata:q7200235 "BD5081" .
+
+<urn:mdciii:1603:45:16:50:2:5088>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5088" ;
+    skos:prefLabel "Sirajganj"@eng-Latn ;
+    wdata:q7200235 "BD5088" .
+
+<urn:mdciii:1603:45:16:50:2:5527>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5527" ;
+    skos:prefLabel "Dinajpur"@eng-Latn ;
+    wdata:q7200235 "BD5527" .
+
+<urn:mdciii:1603:45:16:50:2:5532>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5532" ;
+    skos:prefLabel "Gaibandha"@eng-Latn ;
+    wdata:q7200235 "BD5532" .
+
+<urn:mdciii:1603:45:16:50:2:5549>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5549" ;
+    skos:prefLabel "Kurigram"@eng-Latn ;
+    wdata:q7200235 "BD5549" .
+
+<urn:mdciii:1603:45:16:50:2:5552>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5552" ;
+    skos:prefLabel "Lalmonirhat"@eng-Latn ;
+    wdata:q7200235 "BD5552" .
+
+<urn:mdciii:1603:45:16:50:2:5573>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5573" ;
+    skos:prefLabel "Nilphamari"@eng-Latn ;
+    wdata:q7200235 "BD5573" .
+
+<urn:mdciii:1603:45:16:50:2:5577>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5577" ;
+    skos:prefLabel "Panchagarh"@eng-Latn ;
+    wdata:q7200235 "BD5577" .
+
+<urn:mdciii:1603:45:16:50:2:5585>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5585" ;
+    skos:prefLabel "Rangpur"@eng-Latn ;
+    wdata:q7200235 "BD5585" .
+
+<urn:mdciii:1603:45:16:50:2:5594>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:5594" ;
+    skos:prefLabel "Thakurgaon"@eng-Latn ;
+    wdata:q7200235 "BD5594" .
+
+<urn:mdciii:1603:45:16:50:2:6036>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:6036" ;
+    skos:prefLabel "Habiganj"@eng-Latn ;
+    wdata:q7200235 "BD6036" .
+
+<urn:mdciii:1603:45:16:50:2:6058>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:6058" ;
+    skos:prefLabel "Maulvibazar"@eng-Latn ;
+    wdata:q7200235 "BD6058" .
+
+<urn:mdciii:1603:45:16:50:2:6090>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:6090" ;
+    skos:prefLabel "Sunamganj"@eng-Latn ;
+    wdata:q7200235 "BD6090" .
+
+<urn:mdciii:1603:45:16:50:2:6091>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:2:6091" ;
+    skos:prefLabel "Sylhet"@eng-Latn ;
+    wdata:q7200235 "BD6091" .
+

@@ -256,6 +256,16 @@ class Cli:
             nargs='?'
         )
 
+        parser.add_argument(
+            '--real-infile-path',
+            help='(Quick workaround for edge cases) in case infile becomes'
+            'ambigous on shell scripting, use this to force real source path',
+            dest='real_infile',
+            nargs='?',
+            default=None,
+            required=False,
+        )
+
         # parser.add_argument(
         #     '--methodus',
         #     help='Modo de operação.',
@@ -451,12 +461,16 @@ class Cli:
                     stderr=sys.stderr):
         # self.pyargs = pyargs
 
-        if stdin.isatty():
-            _infile = pyargs.infile
+        if pyargs.real_infile is not None:
+            _infile = pyargs.real_infile
             _stdin = False
         else:
-            # _infile = None
-            _stdin = True
+            if stdin.isatty():
+                _infile = pyargs.infile
+                _stdin = False
+            else:
+                _infile = None
+                _stdin = True
 
         resultatum_separato = pyargs.resultatum_separato
         fontem_separato = pyargs.fontem_separato

@@ -1,0 +1,78 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:50()> .
+
+<urn:mdciii:1603:45:16:50()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:50)" ;
+    skos:member <urn:mdciii:1603:45:16:50:1()> .
+
+<urn:mdciii:1603:45:16:50:1()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:50:1)" ;
+    skos:member <urn:mdciii:1603:45:16:50:1:20>, <urn:mdciii:1603:45:16:50:1:30>, <urn:mdciii:1603:45:16:50:1:40>, <urn:mdciii:1603:45:16:50:1:45>, <urn:mdciii:1603:45:16:50:1:50>, <urn:mdciii:1603:45:16:50:1:55>, <urn:mdciii:1603:45:16:50:1:60> .
+
+<urn:mdciii:1603:45:16:50:1(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:50:1:10>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:1:10" ;
+    skos:prefLabel "Barisal"@eng-Latn ;
+    wdata:q7200235 "BD10" .
+
+<urn:mdciii:1603:45:16:50:1:20>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:1:20" ;
+    skos:prefLabel "Chittagong"@eng-Latn ;
+    wdata:q7200235 "BD20" .
+
+<urn:mdciii:1603:45:16:50:1:30>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:1:30" ;
+    skos:prefLabel "Dhaka"@eng-Latn ;
+    wdata:q7200235 "BD30" .
+
+<urn:mdciii:1603:45:16:50:1:40>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:1:40" ;
+    skos:prefLabel "Khulna"@eng-Latn ;
+    wdata:q7200235 "BD40" .
+
+<urn:mdciii:1603:45:16:50:1:45>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:1:45" ;
+    skos:prefLabel "Mymensingh"@eng-Latn ;
+    wdata:q7200235 "BD45" .
+
+<urn:mdciii:1603:45:16:50:1:50>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:1:50" ;
+    skos:prefLabel "Rajshahi"@eng-Latn ;
+    wdata:q7200235 "BD50" .
+
+<urn:mdciii:1603:45:16:50:1:55>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:1:55" ;
+    skos:prefLabel "Rangpur"@eng-Latn ;
+    wdata:q7200235 "BD55" .
+
+<urn:mdciii:1603:45:16:50:1:60>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:50:1:60" ;
+    skos:prefLabel "Sylhet"@eng-Latn ;
+    wdata:q7200235 "BD60" .
+

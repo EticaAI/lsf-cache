@@ -133,7 +133,49 @@ bootstrap_1603_45_16__all() {
       fi
 
       bootstrap_1603_45_16__item_no1 "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
-      bootstrap_1603_45_16__item_rdf "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0"
+      bootstrap_1603_45_16__item_bcp47 "$numerordinatio_praefixo" "${unm49}" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0" "5"
+      bootstrap_1603_45_16__item_rdf "$numerordinatio_praefixo" "$unm49" "$v_iso3" "$v_iso2" "$cod_ab_level_max" "1" "0" "5"
+
+      for ((i = 0; i <= cod_ab_level_max; i++)); do
+        cod_level="$i"
+        gh_repo_name_et_level="${numerordinatio_praefixo}_${unm49}_${cod_level}"
+        __group_path=$(numerordinatio_neo_separatum "$gh_repo_name_et_level" "/")
+
+        # archivum_no1__relative="${__group_path}/${gh_repo_name_et_level}.no1.tm.hxl.csv"
+        # archivum_bcp47__relative="${__group_path}/${gh_repo_name_et_level}.no1.bcp47.csv"
+        # archivum_rdf_owl__relative="${__group_path}/${gh_repo_name_et_level}.no1.owl.ttl"
+        # archivum_rdf_skos__relative="${__group_path}/${gh_repo_name_et_level}.no1.skos.ttl"
+
+        # arr__numerodinatio_cod_ab+=("${gh_repo_name_et_level}")
+
+        # if [ "$_iso3661p1a3_lower" == "bra" ] && [ "$cod_level" == "2" ]; then
+        #   echo ""
+        #   echo "Skiping COD-AB-BR lvl 2"
+        #   echo ""
+        #   continue
+        # fi
+        # echo "loop $cod_level [${__group_path}/${gh_repo_name_et_level}.no1.tm.hxl.csv]"
+        # echo "loop $cod_level [${gh_repo_local}/${__group_path}/${gh_repo_name_et_level}.no1.tm.hxl.csv]"
+
+        # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$archivum_no1__relative" "${ROOTDIR}"
+        # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$archivum_bcp47__relative" "${ROOTDIR}"
+        # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$archivum_rdf_owl__relative" "${ROOTDIR}"
+        # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$archivum_rdf_skos__relative" "${ROOTDIR}"
+
+        _codex_meta="{\"#item+rem+i_qcc+is_zxxx+ix_n1603\": \"${gh_repo_name_et_level}\", \"#item+rem+i_mul+is_zyyy\": \"${gh_repo_name_et_level}\"}"
+
+        # _datapackage_cod_ab_lvl="${ROOTDIR}/${__group_path}/datapackage.json"
+        _datapackage_cod_ab_lvl="${__group_path}/datapackage.json"
+
+        CODEX_AD_HOC_NUMERORDINATIO="$_codex_meta" \
+          "${ROOTDIR}/999999999/0/1603_1.py" --methodus='status-quo' \
+          --status-quo-in-datapackage \
+          --codex-de="${gh_repo_name_et_level}" \
+          >"${ROOTDIR}/${_datapackage_cod_ab_lvl}"
+
+        frictionless validate "${ROOTDIR}/${_datapackage_cod_ab_lvl}"
+        # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$_datapackage_cod_ab_lvl" "${ROOTDIR}"
+      done
 
       # printf "\t%40s\n" "${tty_red} DEBUG: [Sleep 5 (@TODO disable me later)] ${tty_normal}"
       # sleep 5
@@ -460,7 +502,7 @@ bootstrap_1603_45_16__item_bcp47() {
     set -x
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_no1_to_no1_shortnames \
-      "${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
+      --real-infile-path="${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
     # Temporary fix: remove some generated tags with error: +ix_error
     # Somewhat temporary: remove non-merget alts: +ix_alt1|+ix_alt12|+ix_alt13
@@ -476,7 +518,7 @@ bootstrap_1603_45_16__item_bcp47() {
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --objectivum-formato=_temp_data_hxl_to_bcp47 \
-      "${opus_temporibus_temporarium_2}" >"${opus_temporibus_temporarium}"
+      --real-infile-path="${opus_temporibus_temporarium_2}" >"${opus_temporibus_temporarium}"
 
     frictionless validate "${opus_temporibus_temporarium}"
 

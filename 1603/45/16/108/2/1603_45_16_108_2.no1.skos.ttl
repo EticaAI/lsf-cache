@@ -1,0 +1,744 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:108()> .
+
+<urn:mdciii:1603:45:16:108()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:108)" ;
+    skos:member <urn:mdciii:1603:45:16:108:2()> .
+
+<urn:mdciii:1603:45:16:108:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:108:2)" ;
+    skos:member <urn:mdciii:1603:45:16:108:2:10001>, <urn:mdciii:1603:45:16:108:2:10002>, <urn:mdciii:1603:45:16:108:2:10003>, <urn:mdciii:1603:45:16:108:2:10004>, <urn:mdciii:1603:45:16:108:2:10005>, <urn:mdciii:1603:45:16:108:2:10006>, <urn:mdciii:1603:45:16:108:2:1002>, <urn:mdciii:1603:45:16:108:2:1003>, <urn:mdciii:1603:45:16:108:2:1004>, <urn:mdciii:1603:45:16:108:2:1005>, <urn:mdciii:1603:45:16:108:2:11001>, <urn:mdciii:1603:45:16:108:2:11002>, <urn:mdciii:1603:45:16:108:2:11003>, <urn:mdciii:1603:45:16:108:2:11004>, <urn:mdciii:1603:45:16:108:2:11005>, <urn:mdciii:1603:45:16:108:2:12001>, <urn:mdciii:1603:45:16:108:2:12002>, <urn:mdciii:1603:45:16:108:2:12003>, <urn:mdciii:1603:45:16:108:2:12004>, <urn:mdciii:1603:45:16:108:2:12005>, <urn:mdciii:1603:45:16:108:2:12006>, <urn:mdciii:1603:45:16:108:2:12007>, <urn:mdciii:1603:45:16:108:2:13001>, <urn:mdciii:1603:45:16:108:2:13002>, <urn:mdciii:1603:45:16:108:2:13003>, <urn:mdciii:1603:45:16:108:2:13004>, <urn:mdciii:1603:45:16:108:2:13005>, <urn:mdciii:1603:45:16:108:2:13006>, <urn:mdciii:1603:45:16:108:2:14001>, <urn:mdciii:1603:45:16:108:2:14002>, <urn:mdciii:1603:45:16:108:2:14003>, <urn:mdciii:1603:45:16:108:2:14004>, <urn:mdciii:1603:45:16:108:2:14005>, <urn:mdciii:1603:45:16:108:2:14006>, <urn:mdciii:1603:45:16:108:2:14007>, <urn:mdciii:1603:45:16:108:2:14008>, <urn:mdciii:1603:45:16:108:2:14009>, <urn:mdciii:1603:45:16:108:2:15001>, <urn:mdciii:1603:45:16:108:2:15002>, <urn:mdciii:1603:45:16:108:2:15003>, <urn:mdciii:1603:45:16:108:2:15004>, <urn:mdciii:1603:45:16:108:2:15005>, <urn:mdciii:1603:45:16:108:2:15006>, <urn:mdciii:1603:45:16:108:2:16001>, <urn:mdciii:1603:45:16:108:2:16002>, <urn:mdciii:1603:45:16:108:2:16003>, <urn:mdciii:1603:45:16:108:2:16004>, <urn:mdciii:1603:45:16:108:2:16005>, <urn:mdciii:1603:45:16:108:2:16006>, <urn:mdciii:1603:45:16:108:2:16007>, <urn:mdciii:1603:45:16:108:2:17014>, <urn:mdciii:1603:45:16:108:2:17015>, <urn:mdciii:1603:45:16:108:2:17016>, <urn:mdciii:1603:45:16:108:2:18001>, <urn:mdciii:1603:45:16:108:2:18002>, <urn:mdciii:1603:45:16:108:2:18003>, <urn:mdciii:1603:45:16:108:2:18004>, <urn:mdciii:1603:45:16:108:2:18005>, <urn:mdciii:1603:45:16:108:2:2002>, <urn:mdciii:1603:45:16:108:2:2003>, <urn:mdciii:1603:45:16:108:2:2004>, <urn:mdciii:1603:45:16:108:2:2005>, <urn:mdciii:1603:45:16:108:2:2006>, <urn:mdciii:1603:45:16:108:2:2008>, <urn:mdciii:1603:45:16:108:2:2009>, <urn:mdciii:1603:45:16:108:2:2010>, <urn:mdciii:1603:45:16:108:2:2012>, <urn:mdciii:1603:45:16:108:2:3002>, <urn:mdciii:1603:45:16:108:2:3004>, <urn:mdciii:1603:45:16:108:2:3005>, <urn:mdciii:1603:45:16:108:2:3007>, <urn:mdciii:1603:45:16:108:2:3008>, <urn:mdciii:1603:45:16:108:2:3009>, <urn:mdciii:1603:45:16:108:2:4001>, <urn:mdciii:1603:45:16:108:2:4002>, <urn:mdciii:1603:45:16:108:2:4003>, <urn:mdciii:1603:45:16:108:2:4004>, <urn:mdciii:1603:45:16:108:2:4005>, <urn:mdciii:1603:45:16:108:2:5001>, <urn:mdciii:1603:45:16:108:2:5002>, <urn:mdciii:1603:45:16:108:2:5003>, <urn:mdciii:1603:45:16:108:2:5004>, <urn:mdciii:1603:45:16:108:2:5005>, <urn:mdciii:1603:45:16:108:2:5006>, <urn:mdciii:1603:45:16:108:2:6001>, <urn:mdciii:1603:45:16:108:2:6002>, <urn:mdciii:1603:45:16:108:2:6003>, <urn:mdciii:1603:45:16:108:2:6004>, <urn:mdciii:1603:45:16:108:2:6005>, <urn:mdciii:1603:45:16:108:2:6006>, <urn:mdciii:1603:45:16:108:2:6007>, <urn:mdciii:1603:45:16:108:2:6008>, <urn:mdciii:1603:45:16:108:2:6009>, <urn:mdciii:1603:45:16:108:2:6010>, <urn:mdciii:1603:45:16:108:2:6011>, <urn:mdciii:1603:45:16:108:2:7001>, <urn:mdciii:1603:45:16:108:2:7002>, <urn:mdciii:1603:45:16:108:2:7003>, <urn:mdciii:1603:45:16:108:2:7004>, <urn:mdciii:1603:45:16:108:2:7005>, <urn:mdciii:1603:45:16:108:2:7006>, <urn:mdciii:1603:45:16:108:2:7007>, <urn:mdciii:1603:45:16:108:2:8001>, <urn:mdciii:1603:45:16:108:2:8002>, <urn:mdciii:1603:45:16:108:2:8003>, <urn:mdciii:1603:45:16:108:2:8004>, <urn:mdciii:1603:45:16:108:2:8005>, <urn:mdciii:1603:45:16:108:2:8006>, <urn:mdciii:1603:45:16:108:2:8007>, <urn:mdciii:1603:45:16:108:2:8008>, <urn:mdciii:1603:45:16:108:2:8009>, <urn:mdciii:1603:45:16:108:2:9001>, <urn:mdciii:1603:45:16:108:2:9002>, <urn:mdciii:1603:45:16:108:2:9003>, <urn:mdciii:1603:45:16:108:2:9004>, <urn:mdciii:1603:45:16:108:2:9005>, <urn:mdciii:1603:45:16:108:2:9006>, <urn:mdciii:1603:45:16:108:2:9007> .
+
+<urn:mdciii:1603:45:16:108:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:108:2:10001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:10001" ;
+    skos:prefLabel "Kayogoro"@fra-Latn, "Kayogoro (Makamba)"@fra-Latn ;
+    wdata:q7200235 "BI010001" .
+
+<urn:mdciii:1603:45:16:108:2:10002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:10002" ;
+    skos:prefLabel "Kibago"@fra-Latn, "Kibago (Makamba)"@fra-Latn ;
+    wdata:q7200235 "BI010002" .
+
+<urn:mdciii:1603:45:16:108:2:10003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:10003" ;
+    skos:prefLabel "Mabanda"@fra-Latn, "Mabanda (Makamba)"@fra-Latn ;
+    wdata:q7200235 "BI010003" .
+
+<urn:mdciii:1603:45:16:108:2:10004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:10004" ;
+    skos:prefLabel "Makamba"@fra-Latn, "Makamba (Makamba)"@fra-Latn ;
+    wdata:q7200235 "BI010004" .
+
+<urn:mdciii:1603:45:16:108:2:10005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:10005" ;
+    skos:prefLabel "Nyanza-Lac"@fra-Latn, "Nyanza-Lac (Makamba)"@fra-Latn ;
+    wdata:q7200235 "BI010005" .
+
+<urn:mdciii:1603:45:16:108:2:10006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:10006" ;
+    skos:prefLabel "Vugizo"@fra-Latn, "Vugizo (Makamba)"@fra-Latn ;
+    wdata:q7200235 "BI010006" .
+
+<urn:mdciii:1603:45:16:108:2:1001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:1001" ;
+    skos:prefLabel "Bubanza"@fra-Latn, "Bubanza (Bubanza)"@fra-Latn ;
+    wdata:q7200235 "BI001001" .
+
+<urn:mdciii:1603:45:16:108:2:1002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:1002" ;
+    skos:prefLabel "Gihanga"@fra-Latn, "Gihanga (Bubanza)"@fra-Latn ;
+    wdata:q7200235 "BI001002" .
+
+<urn:mdciii:1603:45:16:108:2:1003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:1003" ;
+    skos:prefLabel "Mpanda"@fra-Latn, "Mpanda (Bubanza)"@fra-Latn ;
+    wdata:q7200235 "BI001003" .
+
+<urn:mdciii:1603:45:16:108:2:1004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:1004" ;
+    skos:prefLabel "Musigati"@fra-Latn, "Musigati (Bubanza)"@fra-Latn ;
+    wdata:q7200235 "BI001004" .
+
+<urn:mdciii:1603:45:16:108:2:1005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:1005" ;
+    skos:prefLabel "Rugazi"@fra-Latn, "Rugazi (Bubanza)"@fra-Latn ;
+    wdata:q7200235 "BI001005" .
+
+<urn:mdciii:1603:45:16:108:2:11001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:11001" ;
+    skos:prefLabel "Bukeye"@fra-Latn, "Bukeye (Muramvya)"@fra-Latn ;
+    wdata:q7200235 "BI011001" .
+
+<urn:mdciii:1603:45:16:108:2:11002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:11002" ;
+    skos:prefLabel "Kiganda"@fra-Latn, "Kiganda (Muramvya)"@fra-Latn ;
+    wdata:q7200235 "BI011002" .
+
+<urn:mdciii:1603:45:16:108:2:11003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:11003" ;
+    skos:prefLabel "Mbuye"@fra-Latn, "Mbuye (Muramvya)"@fra-Latn ;
+    wdata:q7200235 "BI011003" .
+
+<urn:mdciii:1603:45:16:108:2:11004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:11004" ;
+    skos:prefLabel "Muramvya"@fra-Latn, "Muramvya (Muramvya)"@fra-Latn ;
+    wdata:q7200235 "BI011004" .
+
+<urn:mdciii:1603:45:16:108:2:11005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:11005" ;
+    skos:prefLabel "Rutegama"@fra-Latn, "Rutegama (Muramvya)"@fra-Latn ;
+    wdata:q7200235 "BI011005" .
+
+<urn:mdciii:1603:45:16:108:2:12001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:12001" ;
+    skos:prefLabel "Buhinyuza"@fra-Latn, "Buhinyuza (Muyinga)"@fra-Latn ;
+    wdata:q7200235 "BI012001" .
+
+<urn:mdciii:1603:45:16:108:2:12002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:12002" ;
+    skos:prefLabel "Butihinda"@fra-Latn, "Butihinda (Muyinga)"@fra-Latn ;
+    wdata:q7200235 "BI012002" .
+
+<urn:mdciii:1603:45:16:108:2:12003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:12003" ;
+    skos:prefLabel "Gashoho"@fra-Latn, "Gashoho (Muyinga)"@fra-Latn ;
+    wdata:q7200235 "BI012003" .
+
+<urn:mdciii:1603:45:16:108:2:12004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:12004" ;
+    skos:prefLabel "Gasorwe"@fra-Latn, "Gasorwe (Muyinga)"@fra-Latn ;
+    wdata:q7200235 "BI012004" .
+
+<urn:mdciii:1603:45:16:108:2:12005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:12005" ;
+    skos:prefLabel "Giteranyi"@fra-Latn, "Giteranyi (Muyinga)"@fra-Latn ;
+    wdata:q7200235 "BI012005" .
+
+<urn:mdciii:1603:45:16:108:2:12006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:12006" ;
+    skos:prefLabel "Muyinga"@fra-Latn, "Muyinga (Muyinga)"@fra-Latn ;
+    wdata:q7200235 "BI012006" .
+
+<urn:mdciii:1603:45:16:108:2:12007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:12007" ;
+    skos:prefLabel "Mwakiro"@fra-Latn, "Mwakiro (Muyinga)"@fra-Latn ;
+    wdata:q7200235 "BI012007" .
+
+<urn:mdciii:1603:45:16:108:2:13001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:13001" ;
+    skos:prefLabel "Bisoro"@fra-Latn, "Bisoro (Mwaro)"@fra-Latn ;
+    wdata:q7200235 "BI013001" .
+
+<urn:mdciii:1603:45:16:108:2:13002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:13002" ;
+    skos:prefLabel "Gisozi"@fra-Latn, "Gisozi (Mwaro)"@fra-Latn ;
+    wdata:q7200235 "BI013002" .
+
+<urn:mdciii:1603:45:16:108:2:13003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:13003" ;
+    skos:prefLabel "Kayokwe"@fra-Latn, "Kayokwe (Mwaro)"@fra-Latn ;
+    wdata:q7200235 "BI013003" .
+
+<urn:mdciii:1603:45:16:108:2:13004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:13004" ;
+    skos:prefLabel "Ndava"@fra-Latn, "Ndava (Mwaro)"@fra-Latn ;
+    wdata:q7200235 "BI013004" .
+
+<urn:mdciii:1603:45:16:108:2:13005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:13005" ;
+    skos:prefLabel "Nyabihanga"@fra-Latn, "Nyabihanga (Mwaro)"@fra-Latn ;
+    wdata:q7200235 "BI013005" .
+
+<urn:mdciii:1603:45:16:108:2:13006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:13006" ;
+    skos:prefLabel "Rusaka"@fra-Latn, "Rusaka (Mwaro)"@fra-Latn ;
+    wdata:q7200235 "BI013006" .
+
+<urn:mdciii:1603:45:16:108:2:14001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14001" ;
+    skos:prefLabel "Busiga"@fra-Latn, "Busiga (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014001" .
+
+<urn:mdciii:1603:45:16:108:2:14002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14002" ;
+    skos:prefLabel "Gashikanwa"@fra-Latn, "Gashikanwa (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014002" .
+
+<urn:mdciii:1603:45:16:108:2:14003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14003" ;
+    skos:prefLabel "Kiremba"@fra-Latn, "Kiremba (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014003" .
+
+<urn:mdciii:1603:45:16:108:2:14004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14004" ;
+    skos:prefLabel "Marangara"@fra-Latn, "Marangara (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014004" .
+
+<urn:mdciii:1603:45:16:108:2:14005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14005" ;
+    skos:prefLabel "Mwumba"@fra-Latn, "Mwumba (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014005" .
+
+<urn:mdciii:1603:45:16:108:2:14006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14006" ;
+    skos:prefLabel "Ngozi"@fra-Latn, "Ngozi (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014006" .
+
+<urn:mdciii:1603:45:16:108:2:14007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14007" ;
+    skos:prefLabel "Nyamurenza"@fra-Latn, "Nyamurenza (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014007" .
+
+<urn:mdciii:1603:45:16:108:2:14008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14008" ;
+    skos:prefLabel "Ruhororo"@fra-Latn, "Ruhororo (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014008" .
+
+<urn:mdciii:1603:45:16:108:2:14009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:14009" ;
+    skos:prefLabel "Tangara"@fra-Latn, "Tangara (Ngozi)"@fra-Latn ;
+    wdata:q7200235 "BI014009" .
+
+<urn:mdciii:1603:45:16:108:2:15001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:15001" ;
+    skos:prefLabel "Bukemba"@fra-Latn, "Bukemba (Rutana)"@fra-Latn ;
+    wdata:q7200235 "BI015001" .
+
+<urn:mdciii:1603:45:16:108:2:15002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:15002" ;
+    skos:prefLabel "Giharo"@fra-Latn, "Giharo (Rutana)"@fra-Latn ;
+    wdata:q7200235 "BI015002" .
+
+<urn:mdciii:1603:45:16:108:2:15003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:15003" ;
+    skos:prefLabel "Gitanga"@fra-Latn, "Gitanga (Rutana)"@fra-Latn ;
+    wdata:q7200235 "BI015003" .
+
+<urn:mdciii:1603:45:16:108:2:15004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:15004" ;
+    skos:prefLabel "Mpinga-Kayove"@fra-Latn, "Mpinga-Kayove (Rutana)"@fra-Latn ;
+    wdata:q7200235 "BI015004" .
+
+<urn:mdciii:1603:45:16:108:2:15005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:15005" ;
+    skos:prefLabel "Musongati"@fra-Latn, "Musongati (Rutana)"@fra-Latn ;
+    wdata:q7200235 "BI015005" .
+
+<urn:mdciii:1603:45:16:108:2:15006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:15006" ;
+    skos:prefLabel "Rutana"@fra-Latn, "Rutana (Rutana)"@fra-Latn ;
+    wdata:q7200235 "BI015006" .
+
+<urn:mdciii:1603:45:16:108:2:16001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:16001" ;
+    skos:prefLabel "Butaganzwa1"@fra-Latn, "Butaganzwa1 (Ruyigi)"@fra-Latn ;
+    wdata:q7200235 "BI016001" .
+
+<urn:mdciii:1603:45:16:108:2:16002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:16002" ;
+    skos:prefLabel "Butezi"@fra-Latn, "Butezi (Ruyigi)"@fra-Latn ;
+    wdata:q7200235 "BI016002" .
+
+<urn:mdciii:1603:45:16:108:2:16003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:16003" ;
+    skos:prefLabel "Bweru"@fra-Latn, "Bweru (Ruyigi)"@fra-Latn ;
+    wdata:q7200235 "BI016003" .
+
+<urn:mdciii:1603:45:16:108:2:16004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:16004" ;
+    skos:prefLabel "Gisuru"@fra-Latn, "Gisuru (Ruyigi)"@fra-Latn ;
+    wdata:q7200235 "BI016004" .
+
+<urn:mdciii:1603:45:16:108:2:16005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:16005" ;
+    skos:prefLabel "Kinyinya"@fra-Latn, "Kinyinya (Ruyigi)"@fra-Latn ;
+    wdata:q7200235 "BI016005" .
+
+<urn:mdciii:1603:45:16:108:2:16006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:16006" ;
+    skos:prefLabel "Nyabitsinda"@fra-Latn, "Nyabitsinda (Ruyigi)"@fra-Latn ;
+    wdata:q7200235 "BI016006" .
+
+<urn:mdciii:1603:45:16:108:2:16007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:16007" ;
+    skos:prefLabel "Ruyigi"@fra-Latn, "Ruyigi (Ruyigi)"@fra-Latn ;
+    wdata:q7200235 "BI016007" .
+
+<urn:mdciii:1603:45:16:108:2:17014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:17014" ;
+    skos:prefLabel "Muha"@fra-Latn, "Muha (Bujumbura Mairie)"@fra-Latn ;
+    wdata:q7200235 "BI017014" .
+
+<urn:mdciii:1603:45:16:108:2:17015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:17015" ;
+    skos:prefLabel "Mukaza"@fra-Latn, "Mukaza (Bujumbura Mairie)"@fra-Latn ;
+    wdata:q7200235 "BI017015" .
+
+<urn:mdciii:1603:45:16:108:2:17016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:17016" ;
+    skos:prefLabel "Ntahangwa"@fra-Latn, "Ntahangwa (Bujumbura Mairie)"@fra-Latn ;
+    wdata:q7200235 "BI017016" .
+
+<urn:mdciii:1603:45:16:108:2:18001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:18001" ;
+    skos:prefLabel "Muhuta"@fra-Latn, "Muhuta (Rumonge)"@fra-Latn ;
+    wdata:q7200235 "BI018001" .
+
+<urn:mdciii:1603:45:16:108:2:18002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:18002" ;
+    skos:prefLabel "Bugarama"@fra-Latn, "Bugarama (Rumonge)"@fra-Latn ;
+    wdata:q7200235 "BI018002" .
+
+<urn:mdciii:1603:45:16:108:2:18003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:18003" ;
+    skos:prefLabel "Burambi"@fra-Latn, "Burambi (Rumonge)"@fra-Latn ;
+    wdata:q7200235 "BI018003" .
+
+<urn:mdciii:1603:45:16:108:2:18004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:18004" ;
+    skos:prefLabel "Buyengero"@fra-Latn, "Buyengero (Rumonge)"@fra-Latn ;
+    wdata:q7200235 "BI018004" .
+
+<urn:mdciii:1603:45:16:108:2:18005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:18005" ;
+    skos:prefLabel "Rumonge"@fra-Latn, "Rumonge (Rumonge)"@fra-Latn ;
+    wdata:q7200235 "BI018005" .
+
+<urn:mdciii:1603:45:16:108:2:2002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2002" ;
+    skos:prefLabel "Isale"@fra-Latn, "Isale (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002002" .
+
+<urn:mdciii:1603:45:16:108:2:2003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2003" ;
+    skos:prefLabel "Kabezi"@fra-Latn, "Kabezi (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002003" .
+
+<urn:mdciii:1603:45:16:108:2:2004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2004" ;
+    skos:prefLabel "Kanyosha1"@fra-Latn, "Kanyosha1 (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002004" .
+
+<urn:mdciii:1603:45:16:108:2:2005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2005" ;
+    skos:prefLabel "Mubimbi"@fra-Latn, "Mubimbi (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002005" .
+
+<urn:mdciii:1603:45:16:108:2:2006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2006" ;
+    skos:prefLabel "Mugongomanga"@fra-Latn, "Mugongomanga (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002006" .
+
+<urn:mdciii:1603:45:16:108:2:2008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2008" ;
+    skos:prefLabel "Mukike"@fra-Latn, "Mukike (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002008" .
+
+<urn:mdciii:1603:45:16:108:2:2009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2009" ;
+    skos:prefLabel "Mutambu"@fra-Latn, "Mutambu (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002009" .
+
+<urn:mdciii:1603:45:16:108:2:2010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2010" ;
+    skos:prefLabel "Mutimbuzi"@fra-Latn, "Mutimbuzi (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002010" .
+
+<urn:mdciii:1603:45:16:108:2:2012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:2012" ;
+    skos:prefLabel "Nyabiraba"@fra-Latn, "Nyabiraba (Bujumbura Rural)"@fra-Latn ;
+    wdata:q7200235 "BI002012" .
+
+<urn:mdciii:1603:45:16:108:2:3002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:3002" ;
+    skos:prefLabel "Bururi"@fra-Latn, "Bururi (Bururi)"@fra-Latn ;
+    wdata:q7200235 "BI003002" .
+
+<urn:mdciii:1603:45:16:108:2:3004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:3004" ;
+    skos:prefLabel "Matana"@fra-Latn, "Matana (Bururi)"@fra-Latn ;
+    wdata:q7200235 "BI003004" .
+
+<urn:mdciii:1603:45:16:108:2:3005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:3005" ;
+    skos:prefLabel "Mugamba"@fra-Latn, "Mugamba (Bururi)"@fra-Latn ;
+    wdata:q7200235 "BI003005" .
+
+<urn:mdciii:1603:45:16:108:2:3007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:3007" ;
+    skos:prefLabel "Rutovu"@fra-Latn, "Rutovu (Bururi)"@fra-Latn ;
+    wdata:q7200235 "BI003007" .
+
+<urn:mdciii:1603:45:16:108:2:3008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:3008" ;
+    skos:prefLabel "Songa"@fra-Latn, "Songa (Bururi)"@fra-Latn ;
+    wdata:q7200235 "BI003008" .
+
+<urn:mdciii:1603:45:16:108:2:3009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:3009" ;
+    skos:prefLabel "Vyanda"@fra-Latn, "Vyanda (Bururi)"@fra-Latn ;
+    wdata:q7200235 "BI003009" .
+
+<urn:mdciii:1603:45:16:108:2:4001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:4001" ;
+    skos:prefLabel "Cankuzo"@fra-Latn, "Cankuzo (Cankuzo)"@fra-Latn ;
+    wdata:q7200235 "BI004001" .
+
+<urn:mdciii:1603:45:16:108:2:4002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:4002" ;
+    skos:prefLabel "Cendajuru"@fra-Latn, "Cendajuru (Cankuzo)"@fra-Latn ;
+    wdata:q7200235 "BI004002" .
+
+<urn:mdciii:1603:45:16:108:2:4003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:4003" ;
+    skos:prefLabel "Gisagara"@fra-Latn, "Gisagara (Cankuzo)"@fra-Latn ;
+    wdata:q7200235 "BI004003" .
+
+<urn:mdciii:1603:45:16:108:2:4004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:4004" ;
+    skos:prefLabel "Kigamba"@fra-Latn, "Kigamba (Cankuzo)"@fra-Latn ;
+    wdata:q7200235 "BI004004" .
+
+<urn:mdciii:1603:45:16:108:2:4005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:4005" ;
+    skos:prefLabel "Mishiha"@fra-Latn, "Mishiha (Cankuzo)"@fra-Latn ;
+    wdata:q7200235 "BI004005" .
+
+<urn:mdciii:1603:45:16:108:2:5001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:5001" ;
+    skos:prefLabel "Buganda"@fra-Latn, "Buganda (Cibitoke)"@fra-Latn ;
+    wdata:q7200235 "BI005001" .
+
+<urn:mdciii:1603:45:16:108:2:5002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:5002" ;
+    skos:prefLabel "Bukinanyana"@fra-Latn, "Bukinanyana (Cibitoke)"@fra-Latn ;
+    wdata:q7200235 "BI005002" .
+
+<urn:mdciii:1603:45:16:108:2:5003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:5003" ;
+    skos:prefLabel "Mabayi"@fra-Latn, "Mabayi (Cibitoke)"@fra-Latn ;
+    wdata:q7200235 "BI005003" .
+
+<urn:mdciii:1603:45:16:108:2:5004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:5004" ;
+    skos:prefLabel "Mugina"@fra-Latn, "Mugina (Cibitoke)"@fra-Latn ;
+    wdata:q7200235 "BI005004" .
+
+<urn:mdciii:1603:45:16:108:2:5005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:5005" ;
+    skos:prefLabel "Murwi"@fra-Latn, "Murwi (Cibitoke)"@fra-Latn ;
+    wdata:q7200235 "BI005005" .
+
+<urn:mdciii:1603:45:16:108:2:5006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:5006" ;
+    skos:prefLabel "Rugombo"@fra-Latn, "Rugombo (Cibitoke)"@fra-Latn ;
+    wdata:q7200235 "BI005006" .
+
+<urn:mdciii:1603:45:16:108:2:6001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6001" ;
+    skos:prefLabel "Bugendana"@fra-Latn, "Bugendana (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006001" .
+
+<urn:mdciii:1603:45:16:108:2:6002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6002" ;
+    skos:prefLabel "Bukirasazi"@fra-Latn, "Bukirasazi (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006002" .
+
+<urn:mdciii:1603:45:16:108:2:6003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6003" ;
+    skos:prefLabel "Buraza"@fra-Latn, "Buraza (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006003" .
+
+<urn:mdciii:1603:45:16:108:2:6004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6004" ;
+    skos:prefLabel "Giheta"@fra-Latn, "Giheta (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006004" .
+
+<urn:mdciii:1603:45:16:108:2:6005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6005" ;
+    skos:prefLabel "Gishubi"@fra-Latn, "Gishubi (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006005" .
+
+<urn:mdciii:1603:45:16:108:2:6006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6006" ;
+    skos:prefLabel "Gitega"@fra-Latn, "Gitega (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006006" .
+
+<urn:mdciii:1603:45:16:108:2:6007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6007" ;
+    skos:prefLabel "Itaba"@fra-Latn, "Itaba (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006007" .
+
+<urn:mdciii:1603:45:16:108:2:6008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6008" ;
+    skos:prefLabel "Makebuko"@fra-Latn, "Makebuko (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006008" .
+
+<urn:mdciii:1603:45:16:108:2:6009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6009" ;
+    skos:prefLabel "Mutaho"@fra-Latn, "Mutaho (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006009" .
+
+<urn:mdciii:1603:45:16:108:2:6010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6010" ;
+    skos:prefLabel "Ryansoro"@fra-Latn, "Ryansoro (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006010" .
+
+<urn:mdciii:1603:45:16:108:2:6011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:6011" ;
+    skos:prefLabel "Nyanrusange"@fra-Latn, "Nyanrusange (Gitega)"@fra-Latn ;
+    wdata:q7200235 "BI006011" .
+
+<urn:mdciii:1603:45:16:108:2:7001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:7001" ;
+    skos:prefLabel "Bugenyuzi"@fra-Latn, "Bugenyuzi (Karuzi)"@fra-Latn ;
+    wdata:q7200235 "BI007001" .
+
+<urn:mdciii:1603:45:16:108:2:7002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:7002" ;
+    skos:prefLabel "Buhiga"@fra-Latn, "Buhiga (Karuzi)"@fra-Latn ;
+    wdata:q7200235 "BI007002" .
+
+<urn:mdciii:1603:45:16:108:2:7003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:7003" ;
+    skos:prefLabel "Gihogazi"@fra-Latn, "Gihogazi (Karuzi)"@fra-Latn ;
+    wdata:q7200235 "BI007003" .
+
+<urn:mdciii:1603:45:16:108:2:7004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:7004" ;
+    skos:prefLabel "Gitaramuka"@fra-Latn, "Gitaramuka (Karuzi)"@fra-Latn ;
+    wdata:q7200235 "BI007004" .
+
+<urn:mdciii:1603:45:16:108:2:7005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:7005" ;
+    skos:prefLabel "Mutumba"@fra-Latn, "Mutumba (Karuzi)"@fra-Latn ;
+    wdata:q7200235 "BI007005" .
+
+<urn:mdciii:1603:45:16:108:2:7006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:7006" ;
+    skos:prefLabel "Nyabikere"@fra-Latn, "Nyabikere (Karuzi)"@fra-Latn ;
+    wdata:q7200235 "BI007006" .
+
+<urn:mdciii:1603:45:16:108:2:7007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:7007" ;
+    skos:prefLabel "Shombo"@fra-Latn, "Shombo (Karuzi)"@fra-Latn ;
+    wdata:q7200235 "BI007007" .
+
+<urn:mdciii:1603:45:16:108:2:8001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8001" ;
+    skos:prefLabel "Butaganzwa"@fra-Latn, "Butaganzwa (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008001" .
+
+<urn:mdciii:1603:45:16:108:2:8002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8002" ;
+    skos:prefLabel "Gahombo"@fra-Latn, "Gahombo (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008002" .
+
+<urn:mdciii:1603:45:16:108:2:8003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8003" ;
+    skos:prefLabel "Gatara"@fra-Latn, "Gatara (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008003" .
+
+<urn:mdciii:1603:45:16:108:2:8004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8004" ;
+    skos:prefLabel "Kabarore"@fra-Latn, "Kabarore (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008004" .
+
+<urn:mdciii:1603:45:16:108:2:8005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8005" ;
+    skos:prefLabel "Kayanza"@fra-Latn, "Kayanza (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008005" .
+
+<urn:mdciii:1603:45:16:108:2:8006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8006" ;
+    skos:prefLabel "Matongo"@fra-Latn, "Matongo (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008006" .
+
+<urn:mdciii:1603:45:16:108:2:8007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8007" ;
+    skos:prefLabel "Muhanga"@fra-Latn, "Muhanga (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008007" .
+
+<urn:mdciii:1603:45:16:108:2:8008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8008" ;
+    skos:prefLabel "Muruta"@fra-Latn, "Muruta (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008008" .
+
+<urn:mdciii:1603:45:16:108:2:8009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:8009" ;
+    skos:prefLabel "Rango"@fra-Latn, "Rango (Kayanza)"@fra-Latn ;
+    wdata:q7200235 "BI008009" .
+
+<urn:mdciii:1603:45:16:108:2:9001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:9001" ;
+    skos:prefLabel "Bugabira"@fra-Latn, "Bugabira (Kirundo)"@fra-Latn ;
+    wdata:q7200235 "BI009001" .
+
+<urn:mdciii:1603:45:16:108:2:9002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:9002" ;
+    skos:prefLabel "Busoni"@fra-Latn, "Busoni (Kirundo)"@fra-Latn ;
+    wdata:q7200235 "BI009002" .
+
+<urn:mdciii:1603:45:16:108:2:9003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:9003" ;
+    skos:prefLabel "Bwambarangwe"@fra-Latn, "Bwambarangwe (Kirundo)"@fra-Latn ;
+    wdata:q7200235 "BI009003" .
+
+<urn:mdciii:1603:45:16:108:2:9004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:9004" ;
+    skos:prefLabel "Gitobe"@fra-Latn, "Gitobe (Kirundo)"@fra-Latn ;
+    wdata:q7200235 "BI009004" .
+
+<urn:mdciii:1603:45:16:108:2:9005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:9005" ;
+    skos:prefLabel "Kirundo"@fra-Latn, "Kirundo (Kirundo)"@fra-Latn ;
+    wdata:q7200235 "BI009005" .
+
+<urn:mdciii:1603:45:16:108:2:9006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:9006" ;
+    skos:prefLabel "Ntega"@fra-Latn, "Ntega (Kirundo)"@fra-Latn ;
+    wdata:q7200235 "BI009006" .
+
+<urn:mdciii:1603:45:16:108:2:9007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:108:2:9007" ;
+    skos:prefLabel "Vumbi"@fra-Latn, "Vumbi (Kirundo)"@fra-Latn ;
+    wdata:q7200235 "BI009007" .
+
