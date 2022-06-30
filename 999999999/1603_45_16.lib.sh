@@ -167,6 +167,12 @@ bootstrap_1603_45_16__all() {
         # _datapackage_cod_ab_lvl="${ROOTDIR}/${__group_path}/datapackage.json"
         _datapackage_cod_ab_lvl="${__group_path}/datapackage.json"
 
+        # warning: this old method takes way too much time to compile
+        #          360	IDN	ID	4	2020-04-08	2020-04-08
+        #          (and most of this is not necessary at all, since
+        #          it is trying to compile asciidoctor version)
+        #          we already have better optimized ways to do it, but
+        #          letting this for now (Rocha, 2022-06-30)
         CODEX_AD_HOC_NUMERORDINATIO="$_codex_meta" \
           "${ROOTDIR}/999999999/0/1603_1.py" --methodus='status-quo' \
           --status-quo-in-datapackage \
