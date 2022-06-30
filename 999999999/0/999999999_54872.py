@@ -455,7 +455,7 @@ class Cli:
             _infile = pyargs.infile
             _stdin = False
         else:
-            _infile = None
+            # _infile = None
             _stdin = True
 
         resultatum_separato = pyargs.resultatum_separato
@@ -472,7 +472,7 @@ class Cli:
                 '_temp_no1_to_no1_shortnames']:
             # if pyargs.objectivum_formato = '_temp_no1_to_no1_shortnames':
 
-            if _stdin:
+            if _stdin and not _infile:
                 raise NotImplementedError('{0} not with stdin'.format(
                     pyargs.objectivum_formato))
 

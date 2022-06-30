@@ -6738,6 +6738,7 @@ class TabulaSimplici:
     ex_radice: bool = False
     archivum_trivio_ex_radice: str = ''
     archivum_nomini: str = ''
+    est_bcp47: bool = False
     # codex_opus: list = []
     # opus: list = []
     # in_limitem: int = 0
@@ -6765,6 +6766,9 @@ class TabulaSimplici:
             # print('self.archivum_trivio', self.archivum_trivio)
             self.statum = False
             return self.statum
+
+        if self.archivum_trivio.find('bcp47') > -1:
+            self.est_bcp47 = True
 
         self.archivum_trivio_ex_radice = \
             self.archivum_trivio.replace(NUMERORDINATIO_BASIM, '')
@@ -6803,7 +6807,11 @@ class TabulaSimplici:
             reader = csv.DictReader(csvfile)
             for lineam in reader:
                 # de_codex = lineam['#item+conceptum+numerordinatio']
-                de_codex = lineam['#item+conceptum+codicem']
+
+                if self.est_bcp47:
+                    de_codex = lineam['qcc-Zxxx-r-aMDCIII-alatcodicem-anop']
+                else:
+                    de_codex = lineam['#item+conceptum+codicem']
                 self.concepta[de_codex] = lineam
                 # if len(self.caput) == 0:
                 #     self.caput = lineam
@@ -6818,13 +6826,19 @@ class TabulaSimplici:
         resultatum = []
         # resultatum.append('"todo"@en')
         for clavem, item in res.items():
-            if not clavem.startswith('#item+rem') or len(item) == 0:
+            if len(item) == 0 or \
+                (not self.est_bcp47 and not clavem.startswith('#item+rem')):
                 continue
             if item.find('"') > -1:
                 # item = item.replace('"', 'zzzz')
                 item = item.replace('"', '\\"')
             attrs = clavem.replace('#item+rem', '')
-            hxlattslinguae = qhxl_attr_2_bcp47(attrs)
+
+            if self.est_bcp47:
+                hxlattslinguae = clavem
+            else:
+                hxlattslinguae = qhxl_attr_2_bcp47(attrs)
+
             # lingua = bcp47_langtag(clavem, [
             lingua = bcp47_langtag(hxlattslinguae, [
                 # 'Language-Tag',

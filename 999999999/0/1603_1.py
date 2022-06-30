@@ -3183,6 +3183,7 @@ class LibrariaStatusQuo:
         '.mul-Latn.codex.epub',
         '.mul-Latn.codex.pdf',
         '.mul-Latn.codex.adoc',
+        '.no1.bcp47.csv',
         '.no1.tm.hxl.csv',
         '.no11.tm.hxl.csv',
         '.wikiq.tm.hxl.csv',
@@ -3194,6 +3195,7 @@ class LibrariaStatusQuo:
         '.mul-Latn.codex.adoc',
     )
     _suffix_dictionaria = (
+        '.no1.bcp47.csv',
         '.no1.tm.hxl.csv',
         '.no11.tm.hxl.csv',
         '.wikiq.tm.hxl.csv',
@@ -3456,6 +3458,11 @@ class LibrariaStatusQuo:
                 # '_TODO': ex_codice,
             }
 
+            archivum_bcp47 = TabulaSimplici(
+                _path + '/' + self.codex.de_codex + '.no1.bcp47.csv',
+                self.codex.de_codex + '.no1.bcp47.csv',
+                False
+            )
             archivum_no1 = TabulaSimplici(
                 _path + '/' + self.codex.de_codex + '.no1.tm.hxl.csv',
                 self.codex.de_codex + '.no1.tm.hxl.csv',
@@ -3471,6 +3478,9 @@ class LibrariaStatusQuo:
                 self.codex.de_codex + '.wikiq.tm.hxl.csv',
                 False
             )
+
+            if archivum_bcp47.praeparatio():
+                sarcina['resources'].append(archivum_bcp47.quod_datapackage())
 
             if archivum_no1.praeparatio():
                 sarcina['resources'].append(archivum_no1.quod_datapackage())
@@ -4511,6 +4521,9 @@ class DataApothecae:
         paginae.append('')
         paginae.append('# @TODO r2rml still working draft. This is a sample')
 
+        for codex in self.data_apothecae_ex:
+            paginae.append('# {0}'.format(codex))
+
         if temporarium:
             with open(temporarium, 'w') as archivum:
                 for lineam in paginae:
@@ -4535,42 +4548,67 @@ class DataApothecae:
         numerodination: str,
         strictum: bool = True,
         abstractum=False,
-        schema: str = 'datapackage'
+        schema: str = 'datapackage',
+        extensiones_restrictis: list = None
     ):
+        if extensiones_restrictis is None:
+            extensiones_restrictis = [
+                '.no1.bcp47.csv',
+                '.no11.tm.hxl.csv',
+                '.no1.tm.hxl.csv',
+            ]
 
         nomen = numerordinatio_neo_separatum(numerodination, '_')
         _path = numerordinatio_neo_separatum(numerodination, '/')
 
-        archivum_no11 = TabulaSimplici(
-            _path + '/' + nomen + '.no11.tm.hxl.csv',
-            nomen,
-            True
-        )
-        if archivum_no11.praeparatio():
-            if abstractum:
-                return archivum_no11
-            # return archivum_no11.quod_datapackage()
-            if schema == 'datapackage':
-                return archivum_no11.quod_datapackage()
-            elif schema == 'csvw':
-                return archivum_no11.quod_csvw()
+        if '.no1.bcp47.csv' in extensiones_restrictis:
+            archivum_bpc47 = TabulaSimplici(
+                _path + '/' + nomen + '.no1.bcp47.csv',
+                nomen,
+                True
+            )
+            if archivum_bpc47.praeparatio():
+                if abstractum:
+                    return archivum_bpc47
+                # return archivum_no11.quod_datapackage()
+                if schema == 'datapackage':
+                    return archivum_bpc47.quod_datapackage()
+                elif schema == 'csvw':
+                    return archivum_bpc47.quod_csvw()
 
-        archivum_no1 = TabulaSimplici(
-            _path + '/' + nomen + '.no1.tm.hxl.csv',
-            nomen,
-            True
-        )
-        if archivum_no1.praeparatio():
-            if abstractum:
-                return archivum_no1
-            if schema == 'datapackage':
-                return archivum_no1.quod_datapackage()
-            elif schema == 'csvw':
-                return archivum_no1.quod_csvw()
+        if '.no11.tm.hxl.csv' in extensiones_restrictis:
+            archivum_no11 = TabulaSimplici(
+                _path + '/' + nomen + '.no11.tm.hxl.csv',
+                nomen,
+                True
+            )
+            if archivum_no11.praeparatio():
+                if abstractum:
+                    return archivum_no11
+                # return archivum_no11.quod_datapackage()
+                if schema == 'datapackage':
+                    return archivum_no11.quod_datapackage()
+                elif schema == 'csvw':
+                    return archivum_no11.quod_csvw()
+
+        if '.no1.tm.hxl.csv' in extensiones_restrictis:
+            archivum_no1 = TabulaSimplici(
+                _path + '/' + nomen + '.no1.tm.hxl.csv',
+                nomen,
+                True
+            )
+            if archivum_no1.praeparatio():
+                if abstractum:
+                    return archivum_no1
+                if schema == 'datapackage':
+                    return archivum_no1.quod_datapackage()
+                elif schema == 'csvw':
+                    return archivum_no1.quod_csvw()
         # print('archivum_no11', archivum_no11)
         # print('archivum_no1', archivum_no1)
         if strictum:
-            raise ValueError('quod_tabula {0}'.format(numerodination))
+            raise ValueError('quod_tabula [{0}] ad [{1}]?'.format(
+                numerodination, _path))
         return None
 
 
