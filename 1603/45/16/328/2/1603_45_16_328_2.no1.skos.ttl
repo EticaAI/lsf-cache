@@ -1,0 +1,192 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:328()> .
+
+<urn:mdciii:1603:45:16:328()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:328)" ;
+    skos:member <urn:mdciii:1603:45:16:328:2()> .
+
+<urn:mdciii:1603:45:16:328:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:328:2)" ;
+    skos:member <urn:mdciii:1603:45:16:328:2:1001>, <urn:mdciii:1603:45:16:328:2:1002>, <urn:mdciii:1603:45:16:328:2:102>, <urn:mdciii:1603:45:16:328:2:201>, <urn:mdciii:1603:45:16:328:2:202>, <urn:mdciii:1603:45:16:328:2:301>, <urn:mdciii:1603:45:16:328:2:302>, <urn:mdciii:1603:45:16:328:2:303>, <urn:mdciii:1603:45:16:328:2:304>, <urn:mdciii:1603:45:16:328:2:401>, <urn:mdciii:1603:45:16:328:2:402>, <urn:mdciii:1603:45:16:328:2:501>, <urn:mdciii:1603:45:16:328:2:502>, <urn:mdciii:1603:45:16:328:2:601>, <urn:mdciii:1603:45:16:328:2:602>, <urn:mdciii:1603:45:16:328:2:603>, <urn:mdciii:1603:45:16:328:2:604>, <urn:mdciii:1603:45:16:328:2:605>, <urn:mdciii:1603:45:16:328:2:606>, <urn:mdciii:1603:45:16:328:2:607>, <urn:mdciii:1603:45:16:328:2:701>, <urn:mdciii:1603:45:16:328:2:702>, <urn:mdciii:1603:45:16:328:2:801>, <urn:mdciii:1603:45:16:328:2:802>, <urn:mdciii:1603:45:16:328:2:901>, <urn:mdciii:1603:45:16:328:2:902> .
+
+<urn:mdciii:1603:45:16:328:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:328:2:1001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:1001" ;
+    skos:prefLabel "Right Bank Essequibo"@eng-Latn ;
+    wdata:q7200235 "GY1001" .
+
+<urn:mdciii:1603:45:16:328:2:1002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:1002" ;
+    skos:prefLabel "Torani/Bulletwood"@eng-Latn ;
+    wdata:q7200235 "GY1002" .
+
+<urn:mdciii:1603:45:16:328:2:101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:101" ;
+    skos:prefLabel "Barima"@eng-Latn ;
+    wdata:q7200235 "GY0101" .
+
+<urn:mdciii:1603:45:16:328:2:102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:102" ;
+    skos:prefLabel "Waini"@eng-Latn ;
+    wdata:q7200235 "GY0102" .
+
+<urn:mdciii:1603:45:16:328:2:201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:201" ;
+    skos:prefLabel "Moruka/Pomeroon"@eng-Latn ;
+    wdata:q7200235 "GY0201" .
+
+<urn:mdciii:1603:45:16:328:2:202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:202" ;
+    skos:prefLabel "Somerset And Berks"@eng-Latn ;
+    wdata:q7200235 "GY0202" .
+
+<urn:mdciii:1603:45:16:328:2:301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:301" ;
+    skos:prefLabel "Essequibo I./L.B.E.River"@eng-Latn ;
+    wdata:q7200235 "GY0301" .
+
+<urn:mdciii:1603:45:16:328:2:302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:302" ;
+    skos:prefLabel "Essequibo Islands"@eng-Latn ;
+    wdata:q7200235 "GY0302" .
+
+<urn:mdciii:1603:45:16:328:2:303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:303" ;
+    skos:prefLabel "Bonasika/Boerasirie"@eng-Latn ;
+    wdata:q7200235 "GY0303" .
+
+<urn:mdciii:1603:45:16:328:2:304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:304" ;
+    skos:prefLabel "Lower West Demerara"@eng-Latn ;
+    wdata:q7200235 "GY0304" .
+
+<urn:mdciii:1603:45:16:328:2:401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:401" ;
+    skos:prefLabel "Moblissa/La Reconnai"@eng-Latn ;
+    wdata:q7200235 "GY0401" .
+
+<urn:mdciii:1603:45:16:328:2:402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:402" ;
+    skos:prefLabel "Buxton/Mahaica"@eng-Latn ;
+    wdata:q7200235 "GY0402" .
+
+<urn:mdciii:1603:45:16:328:2:501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:501" ;
+    skos:prefLabel "Mahaica/Mahaicony"@eng-Latn ;
+    wdata:q7200235 "GY0501" .
+
+<urn:mdciii:1603:45:16:328:2:502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:502" ;
+    skos:prefLabel "Mahaicony/Berbice"@eng-Latn ;
+    wdata:q7200235 "GY0502" .
+
+<urn:mdciii:1603:45:16:328:2:601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:601" ;
+    skos:prefLabel "East Berbice/W.Canje"@eng-Latn ;
+    wdata:q7200235 "GY0601" .
+
+<urn:mdciii:1603:45:16:328:2:602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:602" ;
+    skos:prefLabel "East Canje/E.C.Berb"@eng-Latn ;
+    wdata:q7200235 "GY0602" .
+
+<urn:mdciii:1603:45:16:328:2:603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:603" ;
+    skos:prefLabel "Black Bush Polder"@eng-Latn ;
+    wdata:q7200235 "GY0603" .
+
+<urn:mdciii:1603:45:16:328:2:604>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:604" ;
+    skos:prefLabel "Lower Corentyne Rive"@eng-Latn ;
+    wdata:q7200235 "GY0604" .
+
+<urn:mdciii:1603:45:16:328:2:605>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:605" ;
+    skos:prefLabel "Left Bank Upper Canj"@eng-Latn ;
+    wdata:q7200235 "GY0605" .
+
+<urn:mdciii:1603:45:16:328:2:606>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:606" ;
+    skos:prefLabel "Upper Canje/Corentyn"@eng-Latn ;
+    wdata:q7200235 "GY0606" .
+
+<urn:mdciii:1603:45:16:328:2:607>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:607" ;
+    skos:prefLabel "Upper Corentyne"@eng-Latn ;
+    wdata:q7200235 "GY0607" .
+
+<urn:mdciii:1603:45:16:328:2:701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:701" ;
+    skos:prefLabel "Cuyuni"@eng-Latn ;
+    wdata:q7200235 "GY0701" .
+
+<urn:mdciii:1603:45:16:328:2:702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:702" ;
+    skos:prefLabel "Mazaruni/L.B.E.Rive"@eng-Latn ;
+    wdata:q7200235 "GY0702" .
+
+<urn:mdciii:1603:45:16:328:2:801>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:801" ;
+    skos:prefLabel "Ireng/Upper Potaro"@eng-Latn ;
+    wdata:q7200235 "GY0801" .
+
+<urn:mdciii:1603:45:16:328:2:802>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:802" ;
+    skos:prefLabel "Lower Potaro/Ladsm"@eng-Latn ;
+    wdata:q7200235 "GY0802" .
+
+<urn:mdciii:1603:45:16:328:2:901>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:901" ;
+    skos:prefLabel "Rupununi West"@eng-Latn ;
+    wdata:q7200235 "GY0901" .
+
+<urn:mdciii:1603:45:16:328:2:902>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:328:2:902" ;
+    skos:prefLabel "Rewa(Illiwa)/U.E"@eng-Latn ;
+    wdata:q7200235 "GY0902" .
+
