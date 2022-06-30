@@ -646,7 +646,7 @@ bootstrap_1603_45_16__item_rdf() {
     rdf_trivio=$((5000 + cod_level))
 
     ##  Computational-like RDF serialization, "OWL version" --------------------
-
+    set -x
     # @TODO fix generation of invalid format if
     #       --rdf-sine-spatia-nominalibus=skos,devnull is enabled
 

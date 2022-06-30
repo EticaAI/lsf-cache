@@ -1,0 +1,1212 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:348()> .
+
+<urn:mdciii:1603:45:16:348()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:348)" ;
+    skos:member <urn:mdciii:1603:45:16:348:2()> .
+
+<urn:mdciii:1603:45:16:348:2()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:348:2)" ;
+    skos:member <urn:mdciii:1603:45:16:348:2:10001>, <urn:mdciii:1603:45:16:348:2:10002>, <urn:mdciii:1603:45:16:348:2:10003>, <urn:mdciii:1603:45:16:348:2:10004>, <urn:mdciii:1603:45:16:348:2:10005>, <urn:mdciii:1603:45:16:348:2:10006>, <urn:mdciii:1603:45:16:348:2:10007>, <urn:mdciii:1603:45:16:348:2:1002>, <urn:mdciii:1603:45:16:348:2:1003>, <urn:mdciii:1603:45:16:348:2:1004>, <urn:mdciii:1603:45:16:348:2:1005>, <urn:mdciii:1603:45:16:348:2:1006>, <urn:mdciii:1603:45:16:348:2:1007>, <urn:mdciii:1603:45:16:348:2:1008>, <urn:mdciii:1603:45:16:348:2:1009>, <urn:mdciii:1603:45:16:348:2:1010>, <urn:mdciii:1603:45:16:348:2:1011>, <urn:mdciii:1603:45:16:348:2:11001>, <urn:mdciii:1603:45:16:348:2:11002>, <urn:mdciii:1603:45:16:348:2:11003>, <urn:mdciii:1603:45:16:348:2:11004>, <urn:mdciii:1603:45:16:348:2:11005>, <urn:mdciii:1603:45:16:348:2:11006>, <urn:mdciii:1603:45:16:348:2:11007>, <urn:mdciii:1603:45:16:348:2:11008>, <urn:mdciii:1603:45:16:348:2:11009>, <urn:mdciii:1603:45:16:348:2:12001>, <urn:mdciii:1603:45:16:348:2:12002>, <urn:mdciii:1603:45:16:348:2:12003>, <urn:mdciii:1603:45:16:348:2:12004>, <urn:mdciii:1603:45:16:348:2:12005>, <urn:mdciii:1603:45:16:348:2:12006>, <urn:mdciii:1603:45:16:348:2:13001>, <urn:mdciii:1603:45:16:348:2:13002>, <urn:mdciii:1603:45:16:348:2:13003>, <urn:mdciii:1603:45:16:348:2:13004>, <urn:mdciii:1603:45:16:348:2:13005>, <urn:mdciii:1603:45:16:348:2:13006>, <urn:mdciii:1603:45:16:348:2:14001>, <urn:mdciii:1603:45:16:348:2:14002>, <urn:mdciii:1603:45:16:348:2:14003>, <urn:mdciii:1603:45:16:348:2:14004>, <urn:mdciii:1603:45:16:348:2:14005>, <urn:mdciii:1603:45:16:348:2:14006>, <urn:mdciii:1603:45:16:348:2:14007>, <urn:mdciii:1603:45:16:348:2:14008>, <urn:mdciii:1603:45:16:348:2:14009>, <urn:mdciii:1603:45:16:348:2:14010>, <urn:mdciii:1603:45:16:348:2:14011>, <urn:mdciii:1603:45:16:348:2:14012>, <urn:mdciii:1603:45:16:348:2:14013>, <urn:mdciii:1603:45:16:348:2:14014>, <urn:mdciii:1603:45:16:348:2:14015>, <urn:mdciii:1603:45:16:348:2:14016>, <urn:mdciii:1603:45:16:348:2:14017>, <urn:mdciii:1603:45:16:348:2:14018>, <urn:mdciii:1603:45:16:348:2:15001>, <urn:mdciii:1603:45:16:348:2:15002>, <urn:mdciii:1603:45:16:348:2:15003>, <urn:mdciii:1603:45:16:348:2:15004>, <urn:mdciii:1603:45:16:348:2:15005>, <urn:mdciii:1603:45:16:348:2:15006>, <urn:mdciii:1603:45:16:348:2:15007>, <urn:mdciii:1603:45:16:348:2:15008>, <urn:mdciii:1603:45:16:348:2:16001>, <urn:mdciii:1603:45:16:348:2:16002>, <urn:mdciii:1603:45:16:348:2:16003>, <urn:mdciii:1603:45:16:348:2:16004>, <urn:mdciii:1603:45:16:348:2:16005>, <urn:mdciii:1603:45:16:348:2:16006>, <urn:mdciii:1603:45:16:348:2:16007>, <urn:mdciii:1603:45:16:348:2:16008>, <urn:mdciii:1603:45:16:348:2:16009>, <urn:mdciii:1603:45:16:348:2:16010>, <urn:mdciii:1603:45:16:348:2:16011>, <urn:mdciii:1603:45:16:348:2:16012>, <urn:mdciii:1603:45:16:348:2:16013>, <urn:mdciii:1603:45:16:348:2:17001>, <urn:mdciii:1603:45:16:348:2:17002>, <urn:mdciii:1603:45:16:348:2:17003>, <urn:mdciii:1603:45:16:348:2:17004>, <urn:mdciii:1603:45:16:348:2:17005>, <urn:mdciii:1603:45:16:348:2:17006>, <urn:mdciii:1603:45:16:348:2:18001>, <urn:mdciii:1603:45:16:348:2:18002>, <urn:mdciii:1603:45:16:348:2:18003>, <urn:mdciii:1603:45:16:348:2:18004>, <urn:mdciii:1603:45:16:348:2:18005>, <urn:mdciii:1603:45:16:348:2:18006>, <urn:mdciii:1603:45:16:348:2:18007>, <urn:mdciii:1603:45:16:348:2:19001>, <urn:mdciii:1603:45:16:348:2:19002>, <urn:mdciii:1603:45:16:348:2:19003>, <urn:mdciii:1603:45:16:348:2:19004>, <urn:mdciii:1603:45:16:348:2:19005>, <urn:mdciii:1603:45:16:348:2:19006>, <urn:mdciii:1603:45:16:348:2:19007>, <urn:mdciii:1603:45:16:348:2:19008>, <urn:mdciii:1603:45:16:348:2:19009>, <urn:mdciii:1603:45:16:348:2:19010>, <urn:mdciii:1603:45:16:348:2:20001>, <urn:mdciii:1603:45:16:348:2:20002>, <urn:mdciii:1603:45:16:348:2:20003>, <urn:mdciii:1603:45:16:348:2:20004>, <urn:mdciii:1603:45:16:348:2:20005>, <urn:mdciii:1603:45:16:348:2:20006>, <urn:mdciii:1603:45:16:348:2:2001>, <urn:mdciii:1603:45:16:348:2:2002>, <urn:mdciii:1603:45:16:348:2:2003>, <urn:mdciii:1603:45:16:348:2:2004>, <urn:mdciii:1603:45:16:348:2:2005>, <urn:mdciii:1603:45:16:348:2:2006>, <urn:mdciii:1603:45:16:348:2:2007>, <urn:mdciii:1603:45:16:348:2:2008>, <urn:mdciii:1603:45:16:348:2:2009>, <urn:mdciii:1603:45:16:348:2:2010>, <urn:mdciii:1603:45:16:348:2:3001>, <urn:mdciii:1603:45:16:348:2:3002>, <urn:mdciii:1603:45:16:348:2:3003>, <urn:mdciii:1603:45:16:348:2:3004>, <urn:mdciii:1603:45:16:348:2:3005>, <urn:mdciii:1603:45:16:348:2:3006>, <urn:mdciii:1603:45:16:348:2:3007>, <urn:mdciii:1603:45:16:348:2:3008>, <urn:mdciii:1603:45:16:348:2:3009>, <urn:mdciii:1603:45:16:348:2:4001>, <urn:mdciii:1603:45:16:348:2:4002>, <urn:mdciii:1603:45:16:348:2:4003>, <urn:mdciii:1603:45:16:348:2:4004>, <urn:mdciii:1603:45:16:348:2:4005>, <urn:mdciii:1603:45:16:348:2:4006>, <urn:mdciii:1603:45:16:348:2:4007>, <urn:mdciii:1603:45:16:348:2:4008>, <urn:mdciii:1603:45:16:348:2:4009>, <urn:mdciii:1603:45:16:348:2:4010>, <urn:mdciii:1603:45:16:348:2:4011>, <urn:mdciii:1603:45:16:348:2:4012>, <urn:mdciii:1603:45:16:348:2:4013>, <urn:mdciii:1603:45:16:348:2:4014>, <urn:mdciii:1603:45:16:348:2:4015>, <urn:mdciii:1603:45:16:348:2:4016>, <urn:mdciii:1603:45:16:348:2:5001>, <urn:mdciii:1603:45:16:348:2:5002>, <urn:mdciii:1603:45:16:348:2:5003>, <urn:mdciii:1603:45:16:348:2:5004>, <urn:mdciii:1603:45:16:348:2:5005>, <urn:mdciii:1603:45:16:348:2:5006>, <urn:mdciii:1603:45:16:348:2:5007>, <urn:mdciii:1603:45:16:348:2:5008>, <urn:mdciii:1603:45:16:348:2:5009>, <urn:mdciii:1603:45:16:348:2:5010>, <urn:mdciii:1603:45:16:348:2:5011>, <urn:mdciii:1603:45:16:348:2:5012>, <urn:mdciii:1603:45:16:348:2:5013>, <urn:mdciii:1603:45:16:348:2:5014>, <urn:mdciii:1603:45:16:348:2:5015>, <urn:mdciii:1603:45:16:348:2:5016>, <urn:mdciii:1603:45:16:348:2:5017>, <urn:mdciii:1603:45:16:348:2:5018>, <urn:mdciii:1603:45:16:348:2:5019>, <urn:mdciii:1603:45:16:348:2:5020>, <urn:mdciii:1603:45:16:348:2:5021>, <urn:mdciii:1603:45:16:348:2:5022>, <urn:mdciii:1603:45:16:348:2:5023>, <urn:mdciii:1603:45:16:348:2:6001>, <urn:mdciii:1603:45:16:348:2:6002>, <urn:mdciii:1603:45:16:348:2:6003>, <urn:mdciii:1603:45:16:348:2:6004>, <urn:mdciii:1603:45:16:348:2:6005>, <urn:mdciii:1603:45:16:348:2:6006>, <urn:mdciii:1603:45:16:348:2:6007>, <urn:mdciii:1603:45:16:348:2:7001>, <urn:mdciii:1603:45:16:348:2:7002>, <urn:mdciii:1603:45:16:348:2:7003>, <urn:mdciii:1603:45:16:348:2:7004>, <urn:mdciii:1603:45:16:348:2:7005>, <urn:mdciii:1603:45:16:348:2:7006>, <urn:mdciii:1603:45:16:348:2:7007>, <urn:mdciii:1603:45:16:348:2:7008>, <urn:mdciii:1603:45:16:348:2:8001>, <urn:mdciii:1603:45:16:348:2:8002>, <urn:mdciii:1603:45:16:348:2:8003>, <urn:mdciii:1603:45:16:348:2:8004>, <urn:mdciii:1603:45:16:348:2:8005>, <urn:mdciii:1603:45:16:348:2:8006>, <urn:mdciii:1603:45:16:348:2:8007>, <urn:mdciii:1603:45:16:348:2:9001>, <urn:mdciii:1603:45:16:348:2:9002>, <urn:mdciii:1603:45:16:348:2:9003>, <urn:mdciii:1603:45:16:348:2:9004>, <urn:mdciii:1603:45:16:348:2:9005>, <urn:mdciii:1603:45:16:348:2:9006>, <urn:mdciii:1603:45:16:348:2:9007>, <urn:mdciii:1603:45:16:348:2:9008>, <urn:mdciii:1603:45:16:348:2:9009>, <urn:mdciii:1603:45:16:348:2:9010> .
+
+<urn:mdciii:1603:45:16:348:2(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:348:2:10001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:10001" ;
+    skos:prefLabel "Belapatfalvai jaras"@hun-Latn ;
+    wdata:q7200235 "HU010001" .
+
+<urn:mdciii:1603:45:16:348:2:10002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:10002" ;
+    skos:prefLabel "Egri jaras"@hun-Latn ;
+    wdata:q7200235 "HU010002" .
+
+<urn:mdciii:1603:45:16:348:2:10003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:10003" ;
+    skos:prefLabel "Fuzesabonyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU010003" .
+
+<urn:mdciii:1603:45:16:348:2:10004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:10004" ;
+    skos:prefLabel "Gyongyosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU010004" .
+
+<urn:mdciii:1603:45:16:348:2:10005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:10005" ;
+    skos:prefLabel "Hatvani jaras"@hun-Latn ;
+    wdata:q7200235 "HU010005" .
+
+<urn:mdciii:1603:45:16:348:2:10006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:10006" ;
+    skos:prefLabel "Hevesi jaras"@hun-Latn ;
+    wdata:q7200235 "HU010006" .
+
+<urn:mdciii:1603:45:16:348:2:10007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:10007" ;
+    skos:prefLabel "Petervasarai jaras"@hun-Latn ;
+    wdata:q7200235 "HU010007" .
+
+<urn:mdciii:1603:45:16:348:2:1001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1001" ;
+    skos:prefLabel "Bacsalmasi jaras"@hun-Latn ;
+    wdata:q7200235 "HU001001" .
+
+<urn:mdciii:1603:45:16:348:2:1002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1002" ;
+    skos:prefLabel "Bajai jaras"@hun-Latn ;
+    wdata:q7200235 "HU001002" .
+
+<urn:mdciii:1603:45:16:348:2:1003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1003" ;
+    skos:prefLabel "Janoshalmai jaras"@hun-Latn ;
+    wdata:q7200235 "HU001003" .
+
+<urn:mdciii:1603:45:16:348:2:1004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1004" ;
+    skos:prefLabel "Kalocsai jaras"@hun-Latn ;
+    wdata:q7200235 "HU001004" .
+
+<urn:mdciii:1603:45:16:348:2:1005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1005" ;
+    skos:prefLabel "Kecskemeti jaras"@hun-Latn ;
+    wdata:q7200235 "HU001005" .
+
+<urn:mdciii:1603:45:16:348:2:1006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1006" ;
+    skos:prefLabel "Kiskorosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU001006" .
+
+<urn:mdciii:1603:45:16:348:2:1007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1007" ;
+    skos:prefLabel "Kiskunfelegyhazi jaras"@hun-Latn ;
+    wdata:q7200235 "HU001007" .
+
+<urn:mdciii:1603:45:16:348:2:1008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1008" ;
+    skos:prefLabel "Kiskunhalasi jaras"@hun-Latn ;
+    wdata:q7200235 "HU001008" .
+
+<urn:mdciii:1603:45:16:348:2:1009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1009" ;
+    skos:prefLabel "Kiskunmajsai jaras"@hun-Latn ;
+    wdata:q7200235 "HU001009" .
+
+<urn:mdciii:1603:45:16:348:2:1010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1010" ;
+    skos:prefLabel "Kunszentmiklosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU001010" .
+
+<urn:mdciii:1603:45:16:348:2:1011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:1011" ;
+    skos:prefLabel "Tiszakecskei jaras"@hun-Latn ;
+    wdata:q7200235 "HU001011" .
+
+<urn:mdciii:1603:45:16:348:2:11001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11001" ;
+    skos:prefLabel "Jaszapati jaras"@hun-Latn ;
+    wdata:q7200235 "HU011001" .
+
+<urn:mdciii:1603:45:16:348:2:11002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11002" ;
+    skos:prefLabel "Jaszberenyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU011002" .
+
+<urn:mdciii:1603:45:16:348:2:11003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11003" ;
+    skos:prefLabel "Karcagi jaras"@hun-Latn ;
+    wdata:q7200235 "HU011003" .
+
+<urn:mdciii:1603:45:16:348:2:11004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11004" ;
+    skos:prefLabel "Kunhegyesi jaras"@hun-Latn ;
+    wdata:q7200235 "HU011004" .
+
+<urn:mdciii:1603:45:16:348:2:11005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11005" ;
+    skos:prefLabel "Kunszentmartoni jaras"@hun-Latn ;
+    wdata:q7200235 "HU011005" .
+
+<urn:mdciii:1603:45:16:348:2:11006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11006" ;
+    skos:prefLabel "Mezoturi jaras"@hun-Latn ;
+    wdata:q7200235 "HU011006" .
+
+<urn:mdciii:1603:45:16:348:2:11007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11007" ;
+    skos:prefLabel "Szolnoki jaras"@hun-Latn ;
+    wdata:q7200235 "HU011007" .
+
+<urn:mdciii:1603:45:16:348:2:11008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11008" ;
+    skos:prefLabel "Tiszafuredi jaras"@hun-Latn ;
+    wdata:q7200235 "HU011008" .
+
+<urn:mdciii:1603:45:16:348:2:11009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:11009" ;
+    skos:prefLabel "Torokszentmiklosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU011009" .
+
+<urn:mdciii:1603:45:16:348:2:12001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:12001" ;
+    skos:prefLabel "Esztergomi jaras"@hun-Latn ;
+    wdata:q7200235 "HU012001" .
+
+<urn:mdciii:1603:45:16:348:2:12002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:12002" ;
+    skos:prefLabel "Kisberi jaras"@hun-Latn ;
+    wdata:q7200235 "HU012002" .
+
+<urn:mdciii:1603:45:16:348:2:12003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:12003" ;
+    skos:prefLabel "Komaromi jaras"@hun-Latn ;
+    wdata:q7200235 "HU012003" .
+
+<urn:mdciii:1603:45:16:348:2:12004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:12004" ;
+    skos:prefLabel "Oroszlanyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU012004" .
+
+<urn:mdciii:1603:45:16:348:2:12005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:12005" ;
+    skos:prefLabel "Tatabanyai jaras"@hun-Latn ;
+    wdata:q7200235 "HU012005" .
+
+<urn:mdciii:1603:45:16:348:2:12006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:12006" ;
+    skos:prefLabel "Tatai jaras"@hun-Latn ;
+    wdata:q7200235 "HU012006" .
+
+<urn:mdciii:1603:45:16:348:2:13001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:13001" ;
+    skos:prefLabel "Balassagyarmati jaras"@hun-Latn ;
+    wdata:q7200235 "HU013001" .
+
+<urn:mdciii:1603:45:16:348:2:13002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:13002" ;
+    skos:prefLabel "Batonyterenyei jaras"@hun-Latn ;
+    wdata:q7200235 "HU013002" .
+
+<urn:mdciii:1603:45:16:348:2:13003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:13003" ;
+    skos:prefLabel "Pasztoi jaras"@hun-Latn ;
+    wdata:q7200235 "HU013003" .
+
+<urn:mdciii:1603:45:16:348:2:13004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:13004" ;
+    skos:prefLabel "Retsagi jaras"@hun-Latn ;
+    wdata:q7200235 "HU013004" .
+
+<urn:mdciii:1603:45:16:348:2:13005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:13005" ;
+    skos:prefLabel "Salgotarjani jaras"@hun-Latn ;
+    wdata:q7200235 "HU013005" .
+
+<urn:mdciii:1603:45:16:348:2:13006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:13006" ;
+    skos:prefLabel "Szecsenyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU013006" .
+
+<urn:mdciii:1603:45:16:348:2:14001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14001" ;
+    skos:prefLabel "Aszodi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014001" .
+
+<urn:mdciii:1603:45:16:348:2:14002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14002" ;
+    skos:prefLabel "Budakeszi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014002" .
+
+<urn:mdciii:1603:45:16:348:2:14003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14003" ;
+    skos:prefLabel "Cegledi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014003" .
+
+<urn:mdciii:1603:45:16:348:2:14004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14004" ;
+    skos:prefLabel "Dabasi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014004" .
+
+<urn:mdciii:1603:45:16:348:2:14005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14005" ;
+    skos:prefLabel "Dunakeszi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014005" .
+
+<urn:mdciii:1603:45:16:348:2:14006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14006" ;
+    skos:prefLabel "Erdi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014006" .
+
+<urn:mdciii:1603:45:16:348:2:14007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14007" ;
+    skos:prefLabel "Godollo Regional Unit"@hun-Latn ;
+    wdata:q7200235 "HU014007" .
+
+<urn:mdciii:1603:45:16:348:2:14008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14008" ;
+    skos:prefLabel "Gyali jaras"@hun-Latn ;
+    wdata:q7200235 "HU014008" .
+
+<urn:mdciii:1603:45:16:348:2:14009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14009" ;
+    skos:prefLabel "Monori jaras"@hun-Latn ;
+    wdata:q7200235 "HU014009" .
+
+<urn:mdciii:1603:45:16:348:2:14010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14010" ;
+    skos:prefLabel "Nagykatai jaras"@hun-Latn ;
+    wdata:q7200235 "HU014010" .
+
+<urn:mdciii:1603:45:16:348:2:14011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14011" ;
+    skos:prefLabel "Nagykorosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014011" .
+
+<urn:mdciii:1603:45:16:348:2:14012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14012" ;
+    skos:prefLabel "Pilisvorosvari jaras"@hun-Latn ;
+    wdata:q7200235 "HU014012" .
+
+<urn:mdciii:1603:45:16:348:2:14013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14013" ;
+    skos:prefLabel "Rackevei jaras"@hun-Latn ;
+    wdata:q7200235 "HU014013" .
+
+<urn:mdciii:1603:45:16:348:2:14014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14014" ;
+    skos:prefLabel "Szentendrei jaras"@hun-Latn ;
+    wdata:q7200235 "HU014014" .
+
+<urn:mdciii:1603:45:16:348:2:14015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14015" ;
+    skos:prefLabel "Szigetszentmiklosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014015" .
+
+<urn:mdciii:1603:45:16:348:2:14016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14016" ;
+    skos:prefLabel "Szobi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014016" .
+
+<urn:mdciii:1603:45:16:348:2:14017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14017" ;
+    skos:prefLabel "Vaci jaras"@hun-Latn ;
+    wdata:q7200235 "HU014017" .
+
+<urn:mdciii:1603:45:16:348:2:14018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:14018" ;
+    skos:prefLabel "Vecsesi jaras"@hun-Latn ;
+    wdata:q7200235 "HU014018" .
+
+<urn:mdciii:1603:45:16:348:2:15001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:15001" ;
+    skos:prefLabel "Barcsi jaras"@hun-Latn ;
+    wdata:q7200235 "HU015001" .
+
+<urn:mdciii:1603:45:16:348:2:15002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:15002" ;
+    skos:prefLabel "Csurgoi jaras"@hun-Latn ;
+    wdata:q7200235 "HU015002" .
+
+<urn:mdciii:1603:45:16:348:2:15003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:15003" ;
+    skos:prefLabel "Fonyodi jaras"@hun-Latn ;
+    wdata:q7200235 "HU015003" .
+
+<urn:mdciii:1603:45:16:348:2:15004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:15004" ;
+    skos:prefLabel "Kaposvari jaras"@hun-Latn ;
+    wdata:q7200235 "HU015004" .
+
+<urn:mdciii:1603:45:16:348:2:15005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:15005" ;
+    skos:prefLabel "Marcali jaras"@hun-Latn ;
+    wdata:q7200235 "HU015005" .
+
+<urn:mdciii:1603:45:16:348:2:15006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:15006" ;
+    skos:prefLabel "Nagyatadi jaras"@hun-Latn ;
+    wdata:q7200235 "HU015006" .
+
+<urn:mdciii:1603:45:16:348:2:15007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:15007" ;
+    skos:prefLabel "Siofoki jaras"@hun-Latn ;
+    wdata:q7200235 "HU015007" .
+
+<urn:mdciii:1603:45:16:348:2:15008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:15008" ;
+    skos:prefLabel "Tabi jaras"@hun-Latn ;
+    wdata:q7200235 "HU015008" .
+
+<urn:mdciii:1603:45:16:348:2:16001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16001" ;
+    skos:prefLabel "Baktaloranthazai jaras"@hun-Latn ;
+    wdata:q7200235 "HU016001" .
+
+<urn:mdciii:1603:45:16:348:2:16002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16002" ;
+    skos:prefLabel "Csengeri jaras"@hun-Latn ;
+    wdata:q7200235 "HU016002" .
+
+<urn:mdciii:1603:45:16:348:2:16003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16003" ;
+    skos:prefLabel "Fehergyarmati jaras"@hun-Latn ;
+    wdata:q7200235 "HU016003" .
+
+<urn:mdciii:1603:45:16:348:2:16004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16004" ;
+    skos:prefLabel "Ibranyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU016004" .
+
+<urn:mdciii:1603:45:16:348:2:16005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16005" ;
+    skos:prefLabel "Kemecsei jaras"@hun-Latn ;
+    wdata:q7200235 "HU016005" .
+
+<urn:mdciii:1603:45:16:348:2:16006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16006" ;
+    skos:prefLabel "Kisvardai jaras"@hun-Latn ;
+    wdata:q7200235 "HU016006" .
+
+<urn:mdciii:1603:45:16:348:2:16007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16007" ;
+    skos:prefLabel "Mateszalkai jaras"@hun-Latn ;
+    wdata:q7200235 "HU016007" .
+
+<urn:mdciii:1603:45:16:348:2:16008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16008" ;
+    skos:prefLabel "Nagykalloi jaras"@hun-Latn ;
+    wdata:q7200235 "HU016008" .
+
+<urn:mdciii:1603:45:16:348:2:16009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16009" ;
+    skos:prefLabel "NyNrbatori jaras"@hun-Latn ;
+    wdata:q7200235 "HU016009" .
+
+<urn:mdciii:1603:45:16:348:2:16010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16010" ;
+    skos:prefLabel "NyNregyhazi jaras"@hun-Latn ;
+    wdata:q7200235 "HU016010" .
+
+<urn:mdciii:1603:45:16:348:2:16011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16011" ;
+    skos:prefLabel "Tiszavasvari jaras"@hun-Latn ;
+    wdata:q7200235 "HU016011" .
+
+<urn:mdciii:1603:45:16:348:2:16012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16012" ;
+    skos:prefLabel "Vasarosnamenyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU016012" .
+
+<urn:mdciii:1603:45:16:348:2:16013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:16013" ;
+    skos:prefLabel "Zahonyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU016013" .
+
+<urn:mdciii:1603:45:16:348:2:17001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:17001" ;
+    skos:prefLabel "Bonyhadi jaras"@hun-Latn ;
+    wdata:q7200235 "HU017001" .
+
+<urn:mdciii:1603:45:16:348:2:17002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:17002" ;
+    skos:prefLabel "Dombovari jaras"@hun-Latn ;
+    wdata:q7200235 "HU017002" .
+
+<urn:mdciii:1603:45:16:348:2:17003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:17003" ;
+    skos:prefLabel "Paksi jaras"@hun-Latn ;
+    wdata:q7200235 "HU017003" .
+
+<urn:mdciii:1603:45:16:348:2:17004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:17004" ;
+    skos:prefLabel "Szekszardi jaras"@hun-Latn ;
+    wdata:q7200235 "HU017004" .
+
+<urn:mdciii:1603:45:16:348:2:17005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:17005" ;
+    skos:prefLabel "Tamasi jaras"@hun-Latn ;
+    wdata:q7200235 "HU017005" .
+
+<urn:mdciii:1603:45:16:348:2:17006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:17006" ;
+    skos:prefLabel "Tolnai jaras"@hun-Latn ;
+    wdata:q7200235 "HU017006" .
+
+<urn:mdciii:1603:45:16:348:2:18001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:18001" ;
+    skos:prefLabel "Celldomolki jaras"@hun-Latn ;
+    wdata:q7200235 "HU018001" .
+
+<urn:mdciii:1603:45:16:348:2:18002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:18002" ;
+    skos:prefLabel "Kormendi jaras"@hun-Latn ;
+    wdata:q7200235 "HU018002" .
+
+<urn:mdciii:1603:45:16:348:2:18003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:18003" ;
+    skos:prefLabel "Koszegi jaras"@hun-Latn ;
+    wdata:q7200235 "HU018003" .
+
+<urn:mdciii:1603:45:16:348:2:18004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:18004" ;
+    skos:prefLabel "Sarvari jaras"@hun-Latn ;
+    wdata:q7200235 "HU018004" .
+
+<urn:mdciii:1603:45:16:348:2:18005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:18005" ;
+    skos:prefLabel "Szentgotthardi jaras"@hun-Latn ;
+    wdata:q7200235 "HU018005" .
+
+<urn:mdciii:1603:45:16:348:2:18006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:18006" ;
+    skos:prefLabel "Szombathelyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU018006" .
+
+<urn:mdciii:1603:45:16:348:2:18007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:18007" ;
+    skos:prefLabel "Vasvari jaras"@hun-Latn ;
+    wdata:q7200235 "HU018007" .
+
+<urn:mdciii:1603:45:16:348:2:19001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19001" ;
+    skos:prefLabel "Ajkai jaras"@hun-Latn ;
+    wdata:q7200235 "HU019001" .
+
+<urn:mdciii:1603:45:16:348:2:19002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19002" ;
+    skos:prefLabel "Balatonalmadi jaras"@hun-Latn ;
+    wdata:q7200235 "HU019002" .
+
+<urn:mdciii:1603:45:16:348:2:19003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19003" ;
+    skos:prefLabel "Balatonfuredi jaras"@hun-Latn ;
+    wdata:q7200235 "HU019003" .
+
+<urn:mdciii:1603:45:16:348:2:19004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19004" ;
+    skos:prefLabel "Devecseri jaras"@hun-Latn ;
+    wdata:q7200235 "HU019004" .
+
+<urn:mdciii:1603:45:16:348:2:19005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19005" ;
+    skos:prefLabel "Papai jaras"@hun-Latn ;
+    wdata:q7200235 "HU019005" .
+
+<urn:mdciii:1603:45:16:348:2:19006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19006" ;
+    skos:prefLabel "Sumegi jaras"@hun-Latn ;
+    wdata:q7200235 "HU019006" .
+
+<urn:mdciii:1603:45:16:348:2:19007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19007" ;
+    skos:prefLabel "Tapolcai jaras"@hun-Latn ;
+    wdata:q7200235 "HU019007" .
+
+<urn:mdciii:1603:45:16:348:2:19008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19008" ;
+    skos:prefLabel "Varpalotai jaras"@hun-Latn ;
+    wdata:q7200235 "HU019008" .
+
+<urn:mdciii:1603:45:16:348:2:19009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19009" ;
+    skos:prefLabel "Veszpremi jaras"@hun-Latn ;
+    wdata:q7200235 "HU019009" .
+
+<urn:mdciii:1603:45:16:348:2:19010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:19010" ;
+    skos:prefLabel "Zirci jaras"@hun-Latn ;
+    wdata:q7200235 "HU019010" .
+
+<urn:mdciii:1603:45:16:348:2:20001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:20001" ;
+    skos:prefLabel "Keszthelyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU020001" .
+
+<urn:mdciii:1603:45:16:348:2:20002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:20002" ;
+    skos:prefLabel "Lenti jaras"@hun-Latn ;
+    wdata:q7200235 "HU020002" .
+
+<urn:mdciii:1603:45:16:348:2:20003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:20003" ;
+    skos:prefLabel "Letenyei jaras"@hun-Latn ;
+    wdata:q7200235 "HU020003" .
+
+<urn:mdciii:1603:45:16:348:2:20004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:20004" ;
+    skos:prefLabel "Nagykanizsai jaras"@hun-Latn ;
+    wdata:q7200235 "HU020004" .
+
+<urn:mdciii:1603:45:16:348:2:20005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:20005" ;
+    skos:prefLabel "Zalaegerszegi jaras"@hun-Latn ;
+    wdata:q7200235 "HU020005" .
+
+<urn:mdciii:1603:45:16:348:2:20006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:20006" ;
+    skos:prefLabel "Zalaszentgroti jaras"@hun-Latn ;
+    wdata:q7200235 "HU020006" .
+
+<urn:mdciii:1603:45:16:348:2:2001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2001" ;
+    skos:prefLabel "Bolyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU002001" .
+
+<urn:mdciii:1603:45:16:348:2:2002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2002" ;
+    skos:prefLabel "Hegyhati jaras"@hun-Latn ;
+    wdata:q7200235 "HU002002" .
+
+<urn:mdciii:1603:45:16:348:2:2003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2003" ;
+    skos:prefLabel "Komloi jaras"@hun-Latn ;
+    wdata:q7200235 "HU002003" .
+
+<urn:mdciii:1603:45:16:348:2:2004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2004" ;
+    skos:prefLabel "Mohacsi jaras"@hun-Latn ;
+    wdata:q7200235 "HU002004" .
+
+<urn:mdciii:1603:45:16:348:2:2005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2005" ;
+    skos:prefLabel "Pecsi jaras"@hun-Latn ;
+    wdata:q7200235 "HU002005" .
+
+<urn:mdciii:1603:45:16:348:2:2006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2006" ;
+    skos:prefLabel "Pecsvaradi jaras"@hun-Latn ;
+    wdata:q7200235 "HU002006" .
+
+<urn:mdciii:1603:45:16:348:2:2007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2007" ;
+    skos:prefLabel "Sellyei jaras"@hun-Latn ;
+    wdata:q7200235 "HU002007" .
+
+<urn:mdciii:1603:45:16:348:2:2008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2008" ;
+    skos:prefLabel "Siklosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU002008" .
+
+<urn:mdciii:1603:45:16:348:2:2009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2009" ;
+    skos:prefLabel "Szentlorinci Jaras"@hun-Latn ;
+    wdata:q7200235 "HU002009" .
+
+<urn:mdciii:1603:45:16:348:2:2010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:2010" ;
+    skos:prefLabel "Szigetvari jaras"@hun-Latn ;
+    wdata:q7200235 "HU002010" .
+
+<urn:mdciii:1603:45:16:348:2:3001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3001" ;
+    skos:prefLabel "Bekescsabai jaras"@hun-Latn ;
+    wdata:q7200235 "HU003001" .
+
+<urn:mdciii:1603:45:16:348:2:3002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3002" ;
+    skos:prefLabel "Bekesi jaras"@hun-Latn ;
+    wdata:q7200235 "HU003002" .
+
+<urn:mdciii:1603:45:16:348:2:3003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3003" ;
+    skos:prefLabel "Gyomaendrodi jaras"@hun-Latn ;
+    wdata:q7200235 "HU003003" .
+
+<urn:mdciii:1603:45:16:348:2:3004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3004" ;
+    skos:prefLabel "Gyulai jaras"@hun-Latn ;
+    wdata:q7200235 "HU003004" .
+
+<urn:mdciii:1603:45:16:348:2:3005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3005" ;
+    skos:prefLabel "Mezokovacshazai jaras"@hun-Latn ;
+    wdata:q7200235 "HU003005" .
+
+<urn:mdciii:1603:45:16:348:2:3006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3006" ;
+    skos:prefLabel "Oroshazi jaras"@hun-Latn ;
+    wdata:q7200235 "HU003006" .
+
+<urn:mdciii:1603:45:16:348:2:3007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3007" ;
+    skos:prefLabel "Sarkadi jaras"@hun-Latn ;
+    wdata:q7200235 "HU003007" .
+
+<urn:mdciii:1603:45:16:348:2:3008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3008" ;
+    skos:prefLabel "Szarvasi jaras"@hun-Latn ;
+    wdata:q7200235 "HU003008" .
+
+<urn:mdciii:1603:45:16:348:2:3009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:3009" ;
+    skos:prefLabel "Szeghalmi jaras"@hun-Latn ;
+    wdata:q7200235 "HU003009" .
+
+<urn:mdciii:1603:45:16:348:2:4001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4001" ;
+    skos:prefLabel "Cigandi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004001" .
+
+<urn:mdciii:1603:45:16:348:2:4002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4002" ;
+    skos:prefLabel "Edelenyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004002" .
+
+<urn:mdciii:1603:45:16:348:2:4003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4003" ;
+    skos:prefLabel "Encsi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004003" .
+
+<urn:mdciii:1603:45:16:348:2:4004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4004" ;
+    skos:prefLabel "Gonci jaras"@hun-Latn ;
+    wdata:q7200235 "HU004004" .
+
+<urn:mdciii:1603:45:16:348:2:4005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4005" ;
+    skos:prefLabel "Kazincbarcikai jaras"@hun-Latn ;
+    wdata:q7200235 "HU004005" .
+
+<urn:mdciii:1603:45:16:348:2:4006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4006" ;
+    skos:prefLabel "Mezocsati jaras"@hun-Latn ;
+    wdata:q7200235 "HU004006" .
+
+<urn:mdciii:1603:45:16:348:2:4007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4007" ;
+    skos:prefLabel "Mezokovesdi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004007" .
+
+<urn:mdciii:1603:45:16:348:2:4008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4008" ;
+    skos:prefLabel "Miskolci jaras"@hun-Latn ;
+    wdata:q7200235 "HU004008" .
+
+<urn:mdciii:1603:45:16:348:2:4009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4009" ;
+    skos:prefLabel "ozdi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004009" .
+
+<urn:mdciii:1603:45:16:348:2:4010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4010" ;
+    skos:prefLabel "Putnoki jaras"@hun-Latn ;
+    wdata:q7200235 "HU004010" .
+
+<urn:mdciii:1603:45:16:348:2:4011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4011" ;
+    skos:prefLabel "Sarospataki jaras"@hun-Latn ;
+    wdata:q7200235 "HU004011" .
+
+<urn:mdciii:1603:45:16:348:2:4012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4012" ;
+    skos:prefLabel "Satoraljaujhelyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004012" .
+
+<urn:mdciii:1603:45:16:348:2:4013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4013" ;
+    skos:prefLabel "Szerencsi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004013" .
+
+<urn:mdciii:1603:45:16:348:2:4014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4014" ;
+    skos:prefLabel "Szikszoi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004014" .
+
+<urn:mdciii:1603:45:16:348:2:4015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4015" ;
+    skos:prefLabel "Tiszaujvarosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU004015" .
+
+<urn:mdciii:1603:45:16:348:2:4016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:4016" ;
+    skos:prefLabel "Tokaji jaras"@hun-Latn ;
+    wdata:q7200235 "HU004016" .
+
+<urn:mdciii:1603:45:16:348:2:5001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5001" ;
+    skos:prefLabel "10th district"@hun-Latn ;
+    wdata:q7200235 "HU005001" .
+
+<urn:mdciii:1603:45:16:348:2:5002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5002" ;
+    skos:prefLabel "11th district"@hun-Latn ;
+    wdata:q7200235 "HU005002" .
+
+<urn:mdciii:1603:45:16:348:2:5003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5003" ;
+    skos:prefLabel "12th district"@hun-Latn ;
+    wdata:q7200235 "HU005003" .
+
+<urn:mdciii:1603:45:16:348:2:5004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5004" ;
+    skos:prefLabel "13th district"@hun-Latn ;
+    wdata:q7200235 "HU005004" .
+
+<urn:mdciii:1603:45:16:348:2:5005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5005" ;
+    skos:prefLabel "14th district"@hun-Latn ;
+    wdata:q7200235 "HU005005" .
+
+<urn:mdciii:1603:45:16:348:2:5006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5006" ;
+    skos:prefLabel "15th district"@hun-Latn ;
+    wdata:q7200235 "HU005006" .
+
+<urn:mdciii:1603:45:16:348:2:5007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5007" ;
+    skos:prefLabel "16th district"@hun-Latn ;
+    wdata:q7200235 "HU005007" .
+
+<urn:mdciii:1603:45:16:348:2:5008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5008" ;
+    skos:prefLabel "17th district"@hun-Latn ;
+    wdata:q7200235 "HU005008" .
+
+<urn:mdciii:1603:45:16:348:2:5009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5009" ;
+    skos:prefLabel "18th district"@hun-Latn ;
+    wdata:q7200235 "HU005009" .
+
+<urn:mdciii:1603:45:16:348:2:5010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5010" ;
+    skos:prefLabel "19th district"@hun-Latn ;
+    wdata:q7200235 "HU005010" .
+
+<urn:mdciii:1603:45:16:348:2:5011>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5011" ;
+    skos:prefLabel "1st district"@hun-Latn ;
+    wdata:q7200235 "HU005011" .
+
+<urn:mdciii:1603:45:16:348:2:5012>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5012" ;
+    skos:prefLabel "20th district"@hun-Latn ;
+    wdata:q7200235 "HU005012" .
+
+<urn:mdciii:1603:45:16:348:2:5013>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5013" ;
+    skos:prefLabel "21st district"@hun-Latn ;
+    wdata:q7200235 "HU005013" .
+
+<urn:mdciii:1603:45:16:348:2:5014>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5014" ;
+    skos:prefLabel "22nd district"@hun-Latn ;
+    wdata:q7200235 "HU005014" .
+
+<urn:mdciii:1603:45:16:348:2:5015>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5015" ;
+    skos:prefLabel "23rd district"@hun-Latn ;
+    wdata:q7200235 "HU005015" .
+
+<urn:mdciii:1603:45:16:348:2:5016>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5016" ;
+    skos:prefLabel "2nd district"@hun-Latn ;
+    wdata:q7200235 "HU005016" .
+
+<urn:mdciii:1603:45:16:348:2:5017>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5017" ;
+    skos:prefLabel "3rd district"@hun-Latn ;
+    wdata:q7200235 "HU005017" .
+
+<urn:mdciii:1603:45:16:348:2:5018>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5018" ;
+    skos:prefLabel "4th district"@hun-Latn ;
+    wdata:q7200235 "HU005018" .
+
+<urn:mdciii:1603:45:16:348:2:5019>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5019" ;
+    skos:prefLabel "5th district"@hun-Latn ;
+    wdata:q7200235 "HU005019" .
+
+<urn:mdciii:1603:45:16:348:2:5020>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5020" ;
+    skos:prefLabel "6th district"@hun-Latn ;
+    wdata:q7200235 "HU005020" .
+
+<urn:mdciii:1603:45:16:348:2:5021>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5021" ;
+    skos:prefLabel "7th district"@hun-Latn ;
+    wdata:q7200235 "HU005021" .
+
+<urn:mdciii:1603:45:16:348:2:5022>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5022" ;
+    skos:prefLabel "8th district"@hun-Latn ;
+    wdata:q7200235 "HU005022" .
+
+<urn:mdciii:1603:45:16:348:2:5023>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:5023" ;
+    skos:prefLabel "9th district"@hun-Latn ;
+    wdata:q7200235 "HU005023" .
+
+<urn:mdciii:1603:45:16:348:2:6001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:6001" ;
+    skos:prefLabel "Csongradi jaras"@hun-Latn ;
+    wdata:q7200235 "HU006001" .
+
+<urn:mdciii:1603:45:16:348:2:6002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:6002" ;
+    skos:prefLabel "Hodmezovasarhelyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU006002" .
+
+<urn:mdciii:1603:45:16:348:2:6003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:6003" ;
+    skos:prefLabel "Kisteleki jaras"@hun-Latn ;
+    wdata:q7200235 "HU006003" .
+
+<urn:mdciii:1603:45:16:348:2:6004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:6004" ;
+    skos:prefLabel "Makoi jaras"@hun-Latn ;
+    wdata:q7200235 "HU006004" .
+
+<urn:mdciii:1603:45:16:348:2:6005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:6005" ;
+    skos:prefLabel "Morahalmi jaras"@hun-Latn ;
+    wdata:q7200235 "HU006005" .
+
+<urn:mdciii:1603:45:16:348:2:6006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:6006" ;
+    skos:prefLabel "Szegedi jaras"@hun-Latn ;
+    wdata:q7200235 "HU006006" .
+
+<urn:mdciii:1603:45:16:348:2:6007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:6007" ;
+    skos:prefLabel "Szentesi jaras"@hun-Latn ;
+    wdata:q7200235 "HU006007" .
+
+<urn:mdciii:1603:45:16:348:2:7001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:7001" ;
+    skos:prefLabel "Bicskei jaras"@hun-Latn ;
+    wdata:q7200235 "HU007001" .
+
+<urn:mdciii:1603:45:16:348:2:7002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:7002" ;
+    skos:prefLabel "Dunaujvarosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU007002" .
+
+<urn:mdciii:1603:45:16:348:2:7003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:7003" ;
+    skos:prefLabel "Enyingi jaras"@hun-Latn ;
+    wdata:q7200235 "HU007003" .
+
+<urn:mdciii:1603:45:16:348:2:7004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:7004" ;
+    skos:prefLabel "Gardonyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU007004" .
+
+<urn:mdciii:1603:45:16:348:2:7005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:7005" ;
+    skos:prefLabel "Martonvasari jaras"@hun-Latn ;
+    wdata:q7200235 "HU007005" .
+
+<urn:mdciii:1603:45:16:348:2:7006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:7006" ;
+    skos:prefLabel "Mori jaras"@hun-Latn ;
+    wdata:q7200235 "HU007006" .
+
+<urn:mdciii:1603:45:16:348:2:7007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:7007" ;
+    skos:prefLabel "Sarbogardi jaras"@hun-Latn ;
+    wdata:q7200235 "HU007007" .
+
+<urn:mdciii:1603:45:16:348:2:7008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:7008" ;
+    skos:prefLabel "Szekesfehervari jaras"@hun-Latn ;
+    wdata:q7200235 "HU007008" .
+
+<urn:mdciii:1603:45:16:348:2:8001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:8001" ;
+    skos:prefLabel "Csornai jaras"@hun-Latn ;
+    wdata:q7200235 "HU008001" .
+
+<urn:mdciii:1603:45:16:348:2:8002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:8002" ;
+    skos:prefLabel "Gyori jaras"@hun-Latn ;
+    wdata:q7200235 "HU008002" .
+
+<urn:mdciii:1603:45:16:348:2:8003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:8003" ;
+    skos:prefLabel "Kapuvari jaras"@hun-Latn ;
+    wdata:q7200235 "HU008003" .
+
+<urn:mdciii:1603:45:16:348:2:8004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:8004" ;
+    skos:prefLabel "Mosonmagyarovari jaras"@hun-Latn ;
+    wdata:q7200235 "HU008004" .
+
+<urn:mdciii:1603:45:16:348:2:8005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:8005" ;
+    skos:prefLabel "Pannonhalmi jaras"@hun-Latn ;
+    wdata:q7200235 "HU008005" .
+
+<urn:mdciii:1603:45:16:348:2:8006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:8006" ;
+    skos:prefLabel "Soproni jaras"@hun-Latn ;
+    wdata:q7200235 "HU008006" .
+
+<urn:mdciii:1603:45:16:348:2:8007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:8007" ;
+    skos:prefLabel "Teti jaras"@hun-Latn ;
+    wdata:q7200235 "HU008007" .
+
+<urn:mdciii:1603:45:16:348:2:9001>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9001" ;
+    skos:prefLabel "Balmazujvarosi jaras"@hun-Latn ;
+    wdata:q7200235 "HU009001" .
+
+<urn:mdciii:1603:45:16:348:2:9002>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9002" ;
+    skos:prefLabel "Berettyoujfalui jaras"@hun-Latn ;
+    wdata:q7200235 "HU009002" .
+
+<urn:mdciii:1603:45:16:348:2:9003>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9003" ;
+    skos:prefLabel "Debreceni jaras"@hun-Latn ;
+    wdata:q7200235 "HU009003" .
+
+<urn:mdciii:1603:45:16:348:2:9004>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9004" ;
+    skos:prefLabel "Derecskei jaras"@hun-Latn ;
+    wdata:q7200235 "HU009004" .
+
+<urn:mdciii:1603:45:16:348:2:9005>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9005" ;
+    skos:prefLabel "Hajduboszormenyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU009005" .
+
+<urn:mdciii:1603:45:16:348:2:9006>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9006" ;
+    skos:prefLabel "Hajduhadhazi jaras"@hun-Latn ;
+    wdata:q7200235 "HU009006" .
+
+<urn:mdciii:1603:45:16:348:2:9007>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9007" ;
+    skos:prefLabel "Hajdunanasi jaras"@hun-Latn ;
+    wdata:q7200235 "HU009007" .
+
+<urn:mdciii:1603:45:16:348:2:9008>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9008" ;
+    skos:prefLabel "Hajduszoboszloi jaras"@hun-Latn ;
+    wdata:q7200235 "HU009008" .
+
+<urn:mdciii:1603:45:16:348:2:9009>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9009" ;
+    skos:prefLabel "NyNradonyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU009009" .
+
+<urn:mdciii:1603:45:16:348:2:9010>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:348:2:9010" ;
+    skos:prefLabel "Puspokladanyi jaras"@hun-Latn ;
+    wdata:q7200235 "HU009010" .
+

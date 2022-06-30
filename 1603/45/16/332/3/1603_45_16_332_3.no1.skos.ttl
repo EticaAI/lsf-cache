@@ -1,0 +1,3450 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+<urn:mdciii:1603:45()>
+    a skos:ConceptScheme ;
+    rdfs:label "(1603:45)" .
+
+<urn:mdciii:1603:45:16()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16)" ;
+    skos:inScheme <urn:mdciii:1603:45()> ;
+    skos:member <urn:mdciii:1603:45:16:332()> .
+
+<urn:mdciii:1603:45:16:332()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:332)" ;
+    skos:member <urn:mdciii:1603:45:16:332:3()> .
+
+<urn:mdciii:1603:45:16:332:3()>
+    a skos:Collection ;
+    rdfs:label "(1603:45:16:332:3)" ;
+    skos:member <urn:mdciii:1603:45:16:332:3:101101>, <urn:mdciii:1603:45:16:332:3:101102>, <urn:mdciii:1603:45:16:332:3:101103>, <urn:mdciii:1603:45:16:332:3:101104>, <urn:mdciii:1603:45:16:332:3:101201>, <urn:mdciii:1603:45:16:332:3:101202>, <urn:mdciii:1603:45:16:332:3:101203>, <urn:mdciii:1603:45:16:332:3:101204>, <urn:mdciii:1603:45:16:332:3:101301>, <urn:mdciii:1603:45:16:332:3:101302>, <urn:mdciii:1603:45:16:332:3:101303>, <urn:mdciii:1603:45:16:332:3:101304>, <urn:mdciii:1603:45:16:332:3:101401>, <urn:mdciii:1603:45:16:332:3:101402>, <urn:mdciii:1603:45:16:332:3:102101>, <urn:mdciii:1603:45:16:332:3:102102>, <urn:mdciii:1603:45:16:332:3:102103>, <urn:mdciii:1603:45:16:332:3:102201>, <urn:mdciii:1603:45:16:332:3:102202>, <urn:mdciii:1603:45:16:332:3:102203>, <urn:mdciii:1603:45:16:332:3:102301>, <urn:mdciii:1603:45:16:332:3:102302>, <urn:mdciii:1603:45:16:332:3:102303>, <urn:mdciii:1603:45:16:332:3:102304>, <urn:mdciii:1603:45:16:332:3:102401>, <urn:mdciii:1603:45:16:332:3:102402>, <urn:mdciii:1603:45:16:332:3:102403>, <urn:mdciii:1603:45:16:332:3:102501>, <urn:mdciii:1603:45:16:332:3:102502>, <urn:mdciii:1603:45:16:332:3:102503>, <urn:mdciii:1603:45:16:332:3:103101>, <urn:mdciii:1603:45:16:332:3:103102>, <urn:mdciii:1603:45:16:332:3:103103>, <urn:mdciii:1603:45:16:332:3:103104>, <urn:mdciii:1603:45:16:332:3:103105>, <urn:mdciii:1603:45:16:332:3:103201>, <urn:mdciii:1603:45:16:332:3:103202>, <urn:mdciii:1603:45:16:332:3:11102>, <urn:mdciii:1603:45:16:332:3:11103>, <urn:mdciii:1603:45:16:332:3:11201>, <urn:mdciii:1603:45:16:332:3:11301>, <urn:mdciii:1603:45:16:332:3:11302>, <urn:mdciii:1603:45:16:332:3:11303>, <urn:mdciii:1603:45:16:332:3:11304>, <urn:mdciii:1603:45:16:332:3:11305>, <urn:mdciii:1603:45:16:332:3:11306>, <urn:mdciii:1603:45:16:332:3:11307>, <urn:mdciii:1603:45:16:332:3:11308>, <urn:mdciii:1603:45:16:332:3:11309>, <urn:mdciii:1603:45:16:332:3:11310>, <urn:mdciii:1603:45:16:332:3:11311>, <urn:mdciii:1603:45:16:332:3:11312>, <urn:mdciii:1603:45:16:332:3:11313>, <urn:mdciii:1603:45:16:332:3:11401>, <urn:mdciii:1603:45:16:332:3:11402>, <urn:mdciii:1603:45:16:332:3:11403>, <urn:mdciii:1603:45:16:332:3:11404>, <urn:mdciii:1603:45:16:332:3:11405>, <urn:mdciii:1603:45:16:332:3:11501>, <urn:mdciii:1603:45:16:332:3:11502>, <urn:mdciii:1603:45:16:332:3:11503>, <urn:mdciii:1603:45:16:332:3:11504>, <urn:mdciii:1603:45:16:332:3:11505>, <urn:mdciii:1603:45:16:332:3:11601>, <urn:mdciii:1603:45:16:332:3:11602>, <urn:mdciii:1603:45:16:332:3:11603>, <urn:mdciii:1603:45:16:332:3:11701>, <urn:mdciii:1603:45:16:332:3:11702>, <urn:mdciii:1603:45:16:332:3:11803>, <urn:mdciii:1603:45:16:332:3:11804>, <urn:mdciii:1603:45:16:332:3:12101>, <urn:mdciii:1603:45:16:332:3:12102>, <urn:mdciii:1603:45:16:332:3:12103>, <urn:mdciii:1603:45:16:332:3:12104>, <urn:mdciii:1603:45:16:332:3:12105>, <urn:mdciii:1603:45:16:332:3:12106>, <urn:mdciii:1603:45:16:332:3:12107>, <urn:mdciii:1603:45:16:332:3:12108>, <urn:mdciii:1603:45:16:332:3:12109>, <urn:mdciii:1603:45:16:332:3:12110>, <urn:mdciii:1603:45:16:332:3:12111>, <urn:mdciii:1603:45:16:332:3:12112>, <urn:mdciii:1603:45:16:332:3:12113>, <urn:mdciii:1603:45:16:332:3:12201>, <urn:mdciii:1603:45:16:332:3:12202>, <urn:mdciii:1603:45:16:332:3:12203>, <urn:mdciii:1603:45:16:332:3:12204>, <urn:mdciii:1603:45:16:332:3:12205>, <urn:mdciii:1603:45:16:332:3:12206>, <urn:mdciii:1603:45:16:332:3:12207>, <urn:mdciii:1603:45:16:332:3:12208>, <urn:mdciii:1603:45:16:332:3:12209>, <urn:mdciii:1603:45:16:332:3:12210>, <urn:mdciii:1603:45:16:332:3:12211>, <urn:mdciii:1603:45:16:332:3:12212>, <urn:mdciii:1603:45:16:332:3:12301>, <urn:mdciii:1603:45:16:332:3:12302>, <urn:mdciii:1603:45:16:332:3:12303>, <urn:mdciii:1603:45:16:332:3:12304>, <urn:mdciii:1603:45:16:332:3:12305>, <urn:mdciii:1603:45:16:332:3:12306>, <urn:mdciii:1603:45:16:332:3:12307>, <urn:mdciii:1603:45:16:332:3:13101>, <urn:mdciii:1603:45:16:332:3:13102>, <urn:mdciii:1603:45:16:332:3:13103>, <urn:mdciii:1603:45:16:332:3:13104>, <urn:mdciii:1603:45:16:332:3:13105>, <urn:mdciii:1603:45:16:332:3:13106>, <urn:mdciii:1603:45:16:332:3:13107>, <urn:mdciii:1603:45:16:332:3:13108>, <urn:mdciii:1603:45:16:332:3:13109>, <urn:mdciii:1603:45:16:332:3:13110>, <urn:mdciii:1603:45:16:332:3:13201>, <urn:mdciii:1603:45:16:332:3:13202>, <urn:mdciii:1603:45:16:332:3:13203>, <urn:mdciii:1603:45:16:332:3:13204>, <urn:mdciii:1603:45:16:332:3:13301>, <urn:mdciii:1603:45:16:332:3:13302>, <urn:mdciii:1603:45:16:332:3:13303>, <urn:mdciii:1603:45:16:332:3:13304>, <urn:mdciii:1603:45:16:332:3:13305>, <urn:mdciii:1603:45:16:332:3:13401>, <urn:mdciii:1603:45:16:332:3:13402>, <urn:mdciii:1603:45:16:332:3:13403>, <urn:mdciii:1603:45:16:332:3:13404>, <urn:mdciii:1603:45:16:332:3:13405>, <urn:mdciii:1603:45:16:332:3:13501>, <urn:mdciii:1603:45:16:332:3:14101>, <urn:mdciii:1603:45:16:332:3:14102>, <urn:mdciii:1603:45:16:332:3:14103>, <urn:mdciii:1603:45:16:332:3:14104>, <urn:mdciii:1603:45:16:332:3:14105>, <urn:mdciii:1603:45:16:332:3:14106>, <urn:mdciii:1603:45:16:332:3:14201>, <urn:mdciii:1603:45:16:332:3:14202>, <urn:mdciii:1603:45:16:332:3:14203>, <urn:mdciii:1603:45:16:332:3:14204>, <urn:mdciii:1603:45:16:332:3:15101>, <urn:mdciii:1603:45:16:332:3:15102>, <urn:mdciii:1603:45:16:332:3:15103>, <urn:mdciii:1603:45:16:332:3:15104>, <urn:mdciii:1603:45:16:332:3:15105>, <urn:mdciii:1603:45:16:332:3:15106>, <urn:mdciii:1603:45:16:332:3:15201>, <urn:mdciii:1603:45:16:332:3:15202>, <urn:mdciii:1603:45:16:332:3:15203>, <urn:mdciii:1603:45:16:332:3:15204>, <urn:mdciii:1603:45:16:332:3:15205>, <urn:mdciii:1603:45:16:332:3:21101>, <urn:mdciii:1603:45:16:332:3:21102>, <urn:mdciii:1603:45:16:332:3:21103>, <urn:mdciii:1603:45:16:332:3:21104>, <urn:mdciii:1603:45:16:332:3:21105>, <urn:mdciii:1603:45:16:332:3:21106>, <urn:mdciii:1603:45:16:332:3:21107>, <urn:mdciii:1603:45:16:332:3:21108>, <urn:mdciii:1603:45:16:332:3:21109>, <urn:mdciii:1603:45:16:332:3:21110>, <urn:mdciii:1603:45:16:332:3:21111>, <urn:mdciii:1603:45:16:332:3:21201>, <urn:mdciii:1603:45:16:332:3:21202>, <urn:mdciii:1603:45:16:332:3:21203>, <urn:mdciii:1603:45:16:332:3:21204>, <urn:mdciii:1603:45:16:332:3:21205>, <urn:mdciii:1603:45:16:332:3:21301>, <urn:mdciii:1603:45:16:332:3:21302>, <urn:mdciii:1603:45:16:332:3:21303>, <urn:mdciii:1603:45:16:332:3:21304>, <urn:mdciii:1603:45:16:332:3:21401>, <urn:mdciii:1603:45:16:332:3:21402>, <urn:mdciii:1603:45:16:332:3:21403>, <urn:mdciii:1603:45:16:332:3:22101>, <urn:mdciii:1603:45:16:332:3:22102>, <urn:mdciii:1603:45:16:332:3:22103>, <urn:mdciii:1603:45:16:332:3:22104>, <urn:mdciii:1603:45:16:332:3:22105>, <urn:mdciii:1603:45:16:332:3:22106>, <urn:mdciii:1603:45:16:332:3:22107>, <urn:mdciii:1603:45:16:332:3:22108>, <urn:mdciii:1603:45:16:332:3:22109>, <urn:mdciii:1603:45:16:332:3:22201>, <urn:mdciii:1603:45:16:332:3:22202>, <urn:mdciii:1603:45:16:332:3:22203>, <urn:mdciii:1603:45:16:332:3:22204>, <urn:mdciii:1603:45:16:332:3:22205>, <urn:mdciii:1603:45:16:332:3:22206>, <urn:mdciii:1603:45:16:332:3:23101>, <urn:mdciii:1603:45:16:332:3:23102>, <urn:mdciii:1603:45:16:332:3:23103>, <urn:mdciii:1603:45:16:332:3:23104>, <urn:mdciii:1603:45:16:332:3:23105>, <urn:mdciii:1603:45:16:332:3:23106>, <urn:mdciii:1603:45:16:332:3:23107>, <urn:mdciii:1603:45:16:332:3:23201>, <urn:mdciii:1603:45:16:332:3:23301>, <urn:mdciii:1603:45:16:332:3:23302>, <urn:mdciii:1603:45:16:332:3:23401>, <urn:mdciii:1603:45:16:332:3:23402>, <urn:mdciii:1603:45:16:332:3:31101>, <urn:mdciii:1603:45:16:332:3:31102>, <urn:mdciii:1603:45:16:332:3:31103>, <urn:mdciii:1603:45:16:332:3:31201>, <urn:mdciii:1603:45:16:332:3:31202>, <urn:mdciii:1603:45:16:332:3:31301>, <urn:mdciii:1603:45:16:332:3:31302>, <urn:mdciii:1603:45:16:332:3:31303>, <urn:mdciii:1603:45:16:332:3:32101>, <urn:mdciii:1603:45:16:332:3:32102>, <urn:mdciii:1603:45:16:332:3:32103>, <urn:mdciii:1603:45:16:332:3:32104>, <urn:mdciii:1603:45:16:332:3:32105>, <urn:mdciii:1603:45:16:332:3:32106>, <urn:mdciii:1603:45:16:332:3:32201>, <urn:mdciii:1603:45:16:332:3:32202>, <urn:mdciii:1603:45:16:332:3:32203>, <urn:mdciii:1603:45:16:332:3:32204>, <urn:mdciii:1603:45:16:332:3:32301>, <urn:mdciii:1603:45:16:332:3:32302>, <urn:mdciii:1603:45:16:332:3:32303>, <urn:mdciii:1603:45:16:332:3:33101>, <urn:mdciii:1603:45:16:332:3:33102>, <urn:mdciii:1603:45:16:332:3:33103>, <urn:mdciii:1603:45:16:332:3:33104>, <urn:mdciii:1603:45:16:332:3:33105>, <urn:mdciii:1603:45:16:332:3:33106>, <urn:mdciii:1603:45:16:332:3:33201>, <urn:mdciii:1603:45:16:332:3:33202>, <urn:mdciii:1603:45:16:332:3:33203>, <urn:mdciii:1603:45:16:332:3:34101>, <urn:mdciii:1603:45:16:332:3:34102>, <urn:mdciii:1603:45:16:332:3:34103>, <urn:mdciii:1603:45:16:332:3:34104>, <urn:mdciii:1603:45:16:332:3:34201>, <urn:mdciii:1603:45:16:332:3:34202>, <urn:mdciii:1603:45:16:332:3:34203>, <urn:mdciii:1603:45:16:332:3:34204>, <urn:mdciii:1603:45:16:332:3:34205>, <urn:mdciii:1603:45:16:332:3:34301>, <urn:mdciii:1603:45:16:332:3:34302>, <urn:mdciii:1603:45:16:332:3:34303>, <urn:mdciii:1603:45:16:332:3:34401>, <urn:mdciii:1603:45:16:332:3:34402>, <urn:mdciii:1603:45:16:332:3:34501>, <urn:mdciii:1603:45:16:332:3:35101>, <urn:mdciii:1603:45:16:332:3:35102>, <urn:mdciii:1603:45:16:332:3:35103>, <urn:mdciii:1603:45:16:332:3:35104>, <urn:mdciii:1603:45:16:332:3:35105>, <urn:mdciii:1603:45:16:332:3:35106>, <urn:mdciii:1603:45:16:332:3:35107>, <urn:mdciii:1603:45:16:332:3:35201>, <urn:mdciii:1603:45:16:332:3:35202>, <urn:mdciii:1603:45:16:332:3:35203>, <urn:mdciii:1603:45:16:332:3:35204>, <urn:mdciii:1603:45:16:332:3:35205>, <urn:mdciii:1603:45:16:332:3:35206>, <urn:mdciii:1603:45:16:332:3:36101>, <urn:mdciii:1603:45:16:332:3:36102>, <urn:mdciii:1603:45:16:332:3:36103>, <urn:mdciii:1603:45:16:332:3:36104>, <urn:mdciii:1603:45:16:332:3:36105>, <urn:mdciii:1603:45:16:332:3:36106>, <urn:mdciii:1603:45:16:332:3:36201>, <urn:mdciii:1603:45:16:332:3:36202>, <urn:mdciii:1603:45:16:332:3:37101>, <urn:mdciii:1603:45:16:332:3:37102>, <urn:mdciii:1603:45:16:332:3:37103>, <urn:mdciii:1603:45:16:332:3:37104>, <urn:mdciii:1603:45:16:332:3:37105>, <urn:mdciii:1603:45:16:332:3:37106>, <urn:mdciii:1603:45:16:332:3:37107>, <urn:mdciii:1603:45:16:332:3:37108>, <urn:mdciii:1603:45:16:332:3:37201>, <urn:mdciii:1603:45:16:332:3:37202>, <urn:mdciii:1603:45:16:332:3:37203>, <urn:mdciii:1603:45:16:332:3:37204>, <urn:mdciii:1603:45:16:332:3:37205>, <urn:mdciii:1603:45:16:332:3:37206>, <urn:mdciii:1603:45:16:332:3:37207>, <urn:mdciii:1603:45:16:332:3:37208>, <urn:mdciii:1603:45:16:332:3:41101>, <urn:mdciii:1603:45:16:332:3:41102>, <urn:mdciii:1603:45:16:332:3:41103>, <urn:mdciii:1603:45:16:332:3:41104>, <urn:mdciii:1603:45:16:332:3:41201>, <urn:mdciii:1603:45:16:332:3:41301>, <urn:mdciii:1603:45:16:332:3:41302>, <urn:mdciii:1603:45:16:332:3:42101>, <urn:mdciii:1603:45:16:332:3:42102>, <urn:mdciii:1603:45:16:332:3:42103>, <urn:mdciii:1603:45:16:332:3:42104>, <urn:mdciii:1603:45:16:332:3:42105>, <urn:mdciii:1603:45:16:332:3:42201>, <urn:mdciii:1603:45:16:332:3:42202>, <urn:mdciii:1603:45:16:332:3:42301>, <urn:mdciii:1603:45:16:332:3:42302>, <urn:mdciii:1603:45:16:332:3:43101>, <urn:mdciii:1603:45:16:332:3:43102>, <urn:mdciii:1603:45:16:332:3:43103>, <urn:mdciii:1603:45:16:332:3:43201>, <urn:mdciii:1603:45:16:332:3:43202>, <urn:mdciii:1603:45:16:332:3:43203>, <urn:mdciii:1603:45:16:332:3:43204>, <urn:mdciii:1603:45:16:332:3:43205>, <urn:mdciii:1603:45:16:332:3:43206>, <urn:mdciii:1603:45:16:332:3:43301>, <urn:mdciii:1603:45:16:332:3:43302>, <urn:mdciii:1603:45:16:332:3:43401>, <urn:mdciii:1603:45:16:332:3:43402>, <urn:mdciii:1603:45:16:332:3:44101>, <urn:mdciii:1603:45:16:332:3:44102>, <urn:mdciii:1603:45:16:332:3:44103>, <urn:mdciii:1603:45:16:332:3:44201>, <urn:mdciii:1603:45:16:332:3:44202>, <urn:mdciii:1603:45:16:332:3:44301>, <urn:mdciii:1603:45:16:332:3:44302>, <urn:mdciii:1603:45:16:332:3:51101>, <urn:mdciii:1603:45:16:332:3:51102>, <urn:mdciii:1603:45:16:332:3:51103>, <urn:mdciii:1603:45:16:332:3:51104>, <urn:mdciii:1603:45:16:332:3:51105>, <urn:mdciii:1603:45:16:332:3:51201>, <urn:mdciii:1603:45:16:332:3:51202>, <urn:mdciii:1603:45:16:332:3:51203>, <urn:mdciii:1603:45:16:332:3:51204>, <urn:mdciii:1603:45:16:332:3:51301>, <urn:mdciii:1603:45:16:332:3:51302>, <urn:mdciii:1603:45:16:332:3:52101>, <urn:mdciii:1603:45:16:332:3:52102>, <urn:mdciii:1603:45:16:332:3:52103>, <urn:mdciii:1603:45:16:332:3:52104>, <urn:mdciii:1603:45:16:332:3:52105>, <urn:mdciii:1603:45:16:332:3:52106>, <urn:mdciii:1603:45:16:332:3:52107>, <urn:mdciii:1603:45:16:332:3:52108>, <urn:mdciii:1603:45:16:332:3:52201>, <urn:mdciii:1603:45:16:332:3:52202>, <urn:mdciii:1603:45:16:332:3:52203>, <urn:mdciii:1603:45:16:332:3:52301>, <urn:mdciii:1603:45:16:332:3:52302>, <urn:mdciii:1603:45:16:332:3:53101>, <urn:mdciii:1603:45:16:332:3:53102>, <urn:mdciii:1603:45:16:332:3:53103>, <urn:mdciii:1603:45:16:332:3:53104>, <urn:mdciii:1603:45:16:332:3:53105>, <urn:mdciii:1603:45:16:332:3:53106>, <urn:mdciii:1603:45:16:332:3:53201>, <urn:mdciii:1603:45:16:332:3:53202>, <urn:mdciii:1603:45:16:332:3:53203>, <urn:mdciii:1603:45:16:332:3:53204>, <urn:mdciii:1603:45:16:332:3:53205>, <urn:mdciii:1603:45:16:332:3:53206>, <urn:mdciii:1603:45:16:332:3:53301>, <urn:mdciii:1603:45:16:332:3:53302>, <urn:mdciii:1603:45:16:332:3:54101>, <urn:mdciii:1603:45:16:332:3:54102>, <urn:mdciii:1603:45:16:332:3:54103>, <urn:mdciii:1603:45:16:332:3:54104>, <urn:mdciii:1603:45:16:332:3:54105>, <urn:mdciii:1603:45:16:332:3:54106>, <urn:mdciii:1603:45:16:332:3:54201>, <urn:mdciii:1603:45:16:332:3:54202>, <urn:mdciii:1603:45:16:332:3:54203>, <urn:mdciii:1603:45:16:332:3:54204>, <urn:mdciii:1603:45:16:332:3:54205>, <urn:mdciii:1603:45:16:332:3:54206>, <urn:mdciii:1603:45:16:332:3:54301>, <urn:mdciii:1603:45:16:332:3:54401>, <urn:mdciii:1603:45:16:332:3:55101>, <urn:mdciii:1603:45:16:332:3:55102>, <urn:mdciii:1603:45:16:332:3:55103>, <urn:mdciii:1603:45:16:332:3:55104>, <urn:mdciii:1603:45:16:332:3:55105>, <urn:mdciii:1603:45:16:332:3:55106>, <urn:mdciii:1603:45:16:332:3:55107>, <urn:mdciii:1603:45:16:332:3:55108>, <urn:mdciii:1603:45:16:332:3:55201>, <urn:mdciii:1603:45:16:332:3:55202>, <urn:mdciii:1603:45:16:332:3:55203>, <urn:mdciii:1603:45:16:332:3:61101>, <urn:mdciii:1603:45:16:332:3:61102>, <urn:mdciii:1603:45:16:332:3:61103>, <urn:mdciii:1603:45:16:332:3:61104>, <urn:mdciii:1603:45:16:332:3:61201>, <urn:mdciii:1603:45:16:332:3:61202>, <urn:mdciii:1603:45:16:332:3:61203>, <urn:mdciii:1603:45:16:332:3:61301>, <urn:mdciii:1603:45:16:332:3:61302>, <urn:mdciii:1603:45:16:332:3:61303>, <urn:mdciii:1603:45:16:332:3:61304>, <urn:mdciii:1603:45:16:332:3:61401>, <urn:mdciii:1603:45:16:332:3:62101>, <urn:mdciii:1603:45:16:332:3:62102>, <urn:mdciii:1603:45:16:332:3:62103>, <urn:mdciii:1603:45:16:332:3:62104>, <urn:mdciii:1603:45:16:332:3:62201>, <urn:mdciii:1603:45:16:332:3:62202>, <urn:mdciii:1603:45:16:332:3:62203>, <urn:mdciii:1603:45:16:332:3:62204>, <urn:mdciii:1603:45:16:332:3:62301>, <urn:mdciii:1603:45:16:332:3:62302>, <urn:mdciii:1603:45:16:332:3:62303>, <urn:mdciii:1603:45:16:332:3:63101>, <urn:mdciii:1603:45:16:332:3:63102>, <urn:mdciii:1603:45:16:332:3:63201>, <urn:mdciii:1603:45:16:332:3:63202>, <urn:mdciii:1603:45:16:332:3:63203>, <urn:mdciii:1603:45:16:332:3:63301>, <urn:mdciii:1603:45:16:332:3:63302>, <urn:mdciii:1603:45:16:332:3:64101>, <urn:mdciii:1603:45:16:332:3:64102>, <urn:mdciii:1603:45:16:332:3:64103>, <urn:mdciii:1603:45:16:332:3:64201>, <urn:mdciii:1603:45:16:332:3:64202>, <urn:mdciii:1603:45:16:332:3:71101>, <urn:mdciii:1603:45:16:332:3:71102>, <urn:mdciii:1603:45:16:332:3:71103>, <urn:mdciii:1603:45:16:332:3:71104>, <urn:mdciii:1603:45:16:332:3:71105>, <urn:mdciii:1603:45:16:332:3:71106>, <urn:mdciii:1603:45:16:332:3:71201>, <urn:mdciii:1603:45:16:332:3:71202>, <urn:mdciii:1603:45:16:332:3:71203>, <urn:mdciii:1603:45:16:332:3:71204>, <urn:mdciii:1603:45:16:332:3:71301>, <urn:mdciii:1603:45:16:332:3:71302>, <urn:mdciii:1603:45:16:332:3:71303>, <urn:mdciii:1603:45:16:332:3:71401>, <urn:mdciii:1603:45:16:332:3:71402>, <urn:mdciii:1603:45:16:332:3:71403>, <urn:mdciii:1603:45:16:332:3:71501>, <urn:mdciii:1603:45:16:332:3:71502>, <urn:mdciii:1603:45:16:332:3:71503>, <urn:mdciii:1603:45:16:332:3:71601>, <urn:mdciii:1603:45:16:332:3:72101>, <urn:mdciii:1603:45:16:332:3:72102>, <urn:mdciii:1603:45:16:332:3:72201>, <urn:mdciii:1603:45:16:332:3:72202>, <urn:mdciii:1603:45:16:332:3:72203>, <urn:mdciii:1603:45:16:332:3:72301>, <urn:mdciii:1603:45:16:332:3:72302>, <urn:mdciii:1603:45:16:332:3:72303>, <urn:mdciii:1603:45:16:332:3:73101>, <urn:mdciii:1603:45:16:332:3:73102>, <urn:mdciii:1603:45:16:332:3:73103>, <urn:mdciii:1603:45:16:332:3:73104>, <urn:mdciii:1603:45:16:332:3:73105>, <urn:mdciii:1603:45:16:332:3:73106>, <urn:mdciii:1603:45:16:332:3:73107>, <urn:mdciii:1603:45:16:332:3:73108>, <urn:mdciii:1603:45:16:332:3:73109>, <urn:mdciii:1603:45:16:332:3:73110>, <urn:mdciii:1603:45:16:332:3:73201>, <urn:mdciii:1603:45:16:332:3:73202>, <urn:mdciii:1603:45:16:332:3:73203>, <urn:mdciii:1603:45:16:332:3:73204>, <urn:mdciii:1603:45:16:332:3:73205>, <urn:mdciii:1603:45:16:332:3:73206>, <urn:mdciii:1603:45:16:332:3:73207>, <urn:mdciii:1603:45:16:332:3:73208>, <urn:mdciii:1603:45:16:332:3:73301>, <urn:mdciii:1603:45:16:332:3:73302>, <urn:mdciii:1603:45:16:332:3:73303>, <urn:mdciii:1603:45:16:332:3:73304>, <urn:mdciii:1603:45:16:332:3:73305>, <urn:mdciii:1603:45:16:332:3:74101>, <urn:mdciii:1603:45:16:332:3:74102>, <urn:mdciii:1603:45:16:332:3:74103>, <urn:mdciii:1603:45:16:332:3:74201>, <urn:mdciii:1603:45:16:332:3:74202>, <urn:mdciii:1603:45:16:332:3:74301>, <urn:mdciii:1603:45:16:332:3:74302>, <urn:mdciii:1603:45:16:332:3:74303>, <urn:mdciii:1603:45:16:332:3:75101>, <urn:mdciii:1603:45:16:332:3:75102>, <urn:mdciii:1603:45:16:332:3:75103>, <urn:mdciii:1603:45:16:332:3:75201>, <urn:mdciii:1603:45:16:332:3:75202>, <urn:mdciii:1603:45:16:332:3:75203>, <urn:mdciii:1603:45:16:332:3:75301>, <urn:mdciii:1603:45:16:332:3:75302>, <urn:mdciii:1603:45:16:332:3:75303>, <urn:mdciii:1603:45:16:332:3:75304>, <urn:mdciii:1603:45:16:332:3:81101>, <urn:mdciii:1603:45:16:332:3:81102>, <urn:mdciii:1603:45:16:332:3:81103>, <urn:mdciii:1603:45:16:332:3:81104>, <urn:mdciii:1603:45:16:332:3:81105>, <urn:mdciii:1603:45:16:332:3:81106>, <urn:mdciii:1603:45:16:332:3:81107>, <urn:mdciii:1603:45:16:332:3:81108>, <urn:mdciii:1603:45:16:332:3:81109>, <urn:mdciii:1603:45:16:332:3:81201>, <urn:mdciii:1603:45:16:332:3:81202>, <urn:mdciii:1603:45:16:332:3:81203>, <urn:mdciii:1603:45:16:332:3:81204>, <urn:mdciii:1603:45:16:332:3:81301>, <urn:mdciii:1603:45:16:332:3:81401>, <urn:mdciii:1603:45:16:332:3:81402>, <urn:mdciii:1603:45:16:332:3:81403>, <urn:mdciii:1603:45:16:332:3:81501>, <urn:mdciii:1603:45:16:332:3:81502>, <urn:mdciii:1603:45:16:332:3:82101>, <urn:mdciii:1603:45:16:332:3:82102>, <urn:mdciii:1603:45:16:332:3:82103>, <urn:mdciii:1603:45:16:332:3:82104>, <urn:mdciii:1603:45:16:332:3:82201>, <urn:mdciii:1603:45:16:332:3:82202>, <urn:mdciii:1603:45:16:332:3:82203>, <urn:mdciii:1603:45:16:332:3:82204>, <urn:mdciii:1603:45:16:332:3:82205>, <urn:mdciii:1603:45:16:332:3:82301>, <urn:mdciii:1603:45:16:332:3:82302>, <urn:mdciii:1603:45:16:332:3:82303>, <urn:mdciii:1603:45:16:332:3:83101>, <urn:mdciii:1603:45:16:332:3:83102>, <urn:mdciii:1603:45:16:332:3:83103>, <urn:mdciii:1603:45:16:332:3:83201>, <urn:mdciii:1603:45:16:332:3:83202>, <urn:mdciii:1603:45:16:332:3:83203>, <urn:mdciii:1603:45:16:332:3:83204>, <urn:mdciii:1603:45:16:332:3:83301>, <urn:mdciii:1603:45:16:332:3:83302>, <urn:mdciii:1603:45:16:332:3:83303>, <urn:mdciii:1603:45:16:332:3:83401>, <urn:mdciii:1603:45:16:332:3:83402>, <urn:mdciii:1603:45:16:332:3:83403>, <urn:mdciii:1603:45:16:332:3:83404>, <urn:mdciii:1603:45:16:332:3:83405>, <urn:mdciii:1603:45:16:332:3:83406>, <urn:mdciii:1603:45:16:332:3:91101>, <urn:mdciii:1603:45:16:332:3:91102>, <urn:mdciii:1603:45:16:332:3:91103>, <urn:mdciii:1603:45:16:332:3:91104>, <urn:mdciii:1603:45:16:332:3:91105>, <urn:mdciii:1603:45:16:332:3:91106>, <urn:mdciii:1603:45:16:332:3:91201>, <urn:mdciii:1603:45:16:332:3:91202>, <urn:mdciii:1603:45:16:332:3:91301>, <urn:mdciii:1603:45:16:332:3:91302>, <urn:mdciii:1603:45:16:332:3:91303>, <urn:mdciii:1603:45:16:332:3:91401>, <urn:mdciii:1603:45:16:332:3:91402>, <urn:mdciii:1603:45:16:332:3:92101>, <urn:mdciii:1603:45:16:332:3:92102>, <urn:mdciii:1603:45:16:332:3:92103>, <urn:mdciii:1603:45:16:332:3:92104>, <urn:mdciii:1603:45:16:332:3:92105>, <urn:mdciii:1603:45:16:332:3:92106>, <urn:mdciii:1603:45:16:332:3:92201>, <urn:mdciii:1603:45:16:332:3:92202>, <urn:mdciii:1603:45:16:332:3:92203>, <urn:mdciii:1603:45:16:332:3:93101>, <urn:mdciii:1603:45:16:332:3:93102>, <urn:mdciii:1603:45:16:332:3:93103>, <urn:mdciii:1603:45:16:332:3:93201>, <urn:mdciii:1603:45:16:332:3:93202>, <urn:mdciii:1603:45:16:332:3:93203>, <urn:mdciii:1603:45:16:332:3:93204>, <urn:mdciii:1603:45:16:332:3:93301>, <urn:mdciii:1603:45:16:332:3:93302>, <urn:mdciii:1603:45:16:332:3:93303>, <urn:mdciii:1603:45:16:332:3:93401>, <urn:mdciii:1603:45:16:332:3:93402>, <urn:mdciii:1603:45:16:332:3:93403>, <urn:mdciii:1603:45:16:332:3:93404>, <urn:mdciii:1603:45:16:332:3:93405>, <urn:mdciii:1603:45:16:332:3:93406>, <urn:mdciii:1603:45:16:332:3:93407> .
+
+<urn:mdciii:1603:45:16:332:3(1)>
+    a owl:Ontology .
+
+<urn:mdciii:1603:45:16:332:3:101101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101101" ;
+    skos:prefLabel "1re Section Chalon"@eng-Latn, "1re Section Chalon"@fra-Latn ;
+    wdata:q7200235 "HT1011-01" .
+
+<urn:mdciii:1603:45:16:332:3:101102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101102" ;
+    skos:prefLabel "2e Section Belle Riviere"@eng-Latn, "2e Section Belle Rivière"@fra-Latn ;
+    wdata:q7200235 "HT1011-02" .
+
+<urn:mdciii:1603:45:16:332:3:101103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101103" ;
+    skos:prefLabel "3e Section Dessources"@eng-Latn, "3e Section Dessources"@fra-Latn ;
+    wdata:q7200235 "HT1011-03" .
+
+<urn:mdciii:1603:45:16:332:3:101104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101104" ;
+    skos:prefLabel "4e Section St-Michel"@eng-Latn, "4e Section St-Michel"@fra-Latn ;
+    wdata:q7200235 "HT1011-04" .
+
+<urn:mdciii:1603:45:16:332:3:101201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101201" ;
+    skos:prefLabel "1re Section Fond des Lianes"@eng-Latn, "1re Section Fond des Lianes"@fra-Latn ;
+    wdata:q7200235 "HT1012-01" .
+
+<urn:mdciii:1603:45:16:332:3:101202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101202" ;
+    skos:prefLabel "2e Section Cholette"@eng-Latn, "2e Section Cholette"@fra-Latn ;
+    wdata:q7200235 "HT1012-02" .
+
+<urn:mdciii:1603:45:16:332:3:101203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101203" ;
+    skos:prefLabel "3e Section Silegue"@eng-Latn, "3e Section Silègue"@fra-Latn ;
+    wdata:q7200235 "HT1012-03" .
+
+<urn:mdciii:1603:45:16:332:3:101204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101204" ;
+    skos:prefLabel "4e Section Bezin"@eng-Latn, "4e Section Bezin"@fra-Latn ;
+    wdata:q7200235 "HT1012-04" .
+
+<urn:mdciii:1603:45:16:332:3:101301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101301" ;
+    skos:prefLabel "1er Section Bouzi"@eng-Latn, "1er Section Bouzi"@fra-Latn ;
+    wdata:q7200235 "HT1013-01" .
+
+<urn:mdciii:1603:45:16:332:3:101302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101302" ;
+    skos:prefLabel "2e Section Fond-des-Negres ou Morne Brice"@eng-Latn, "2e Section Fond-des-Nègres ou Morne Brice"@fra-Latn ;
+    wdata:q7200235 "HT1013-02" .
+
+<urn:mdciii:1603:45:16:332:3:101303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101303" ;
+    skos:prefLabel "3e Section Pemerle"@eng-Latn, "3e Section Pemerle"@fra-Latn ;
+    wdata:q7200235 "HT1013-03" .
+
+<urn:mdciii:1603:45:16:332:3:101304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101304" ;
+    skos:prefLabel "4e Section Cocoyers-Ducheine"@eng-Latn, "4e Section Cocoyers-Ducheine"@fra-Latn ;
+    wdata:q7200235 "HT1013-04" .
+
+<urn:mdciii:1603:45:16:332:3:101401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101401" ;
+    skos:prefLabel "1re Section Salagnac"@eng-Latn, "1re Section Salagnac"@fra-Latn ;
+    wdata:q7200235 "HT1014-01" .
+
+<urn:mdciii:1603:45:16:332:3:101402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:101402" ;
+    skos:prefLabel "2e Section Bezin II"@eng-Latn, "2e Section Bezin II"@fra-Latn ;
+    wdata:q7200235 "HT1014-02" .
+
+<urn:mdciii:1603:45:16:332:3:102101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102101" ;
+    skos:prefLabel "1re Section Baconnois-Grand-Fond"@eng-Latn, "1re Section Baconnois-Grand-Fond"@fra-Latn ;
+    wdata:q7200235 "HT1021-01" .
+
+<urn:mdciii:1603:45:16:332:3:102102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102102" ;
+    skos:prefLabel "2e Section Grande-Riviere-Joly"@eng-Latn, "2e Section Grande-Rivière-Joly"@fra-Latn ;
+    wdata:q7200235 "HT1021-02" .
+
+<urn:mdciii:1603:45:16:332:3:102103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102103" ;
+    skos:prefLabel "3e Section Saut du Baril"@eng-Latn, "3e Section Saut du Baril"@fra-Latn ;
+    wdata:q7200235 "HT1021-03" .
+
+<urn:mdciii:1603:45:16:332:3:102201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102201" ;
+    skos:prefLabel "1re Section Raymond"@eng-Latn, "1re Section Raymond"@fra-Latn ;
+    wdata:q7200235 "HT1022-01" .
+
+<urn:mdciii:1603:45:16:332:3:102202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102202" ;
+    skos:prefLabel "2e Section Tiby"@eng-Latn, "2e Section Tiby"@fra-Latn ;
+    wdata:q7200235 "HT1022-02" .
+
+<urn:mdciii:1603:45:16:332:3:102203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102203" ;
+    skos:prefLabel "3e Section Lieve ou Vigny"@eng-Latn, "3e Section Liève ou Vigny"@fra-Latn ;
+    wdata:q7200235 "HT1022-03" .
+
+<urn:mdciii:1603:45:16:332:3:102301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102301" ;
+    skos:prefLabel "4e Section Morisseau"@eng-Latn, "4e Section Morisseau"@fra-Latn ;
+    wdata:q7200235 "HT1023-01" .
+
+<urn:mdciii:1603:45:16:332:3:102302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102302" ;
+    skos:prefLabel "2e Section Changeux (Quartier de Changeux)"@eng-Latn, "2e Section Changeux (Quartier de Changeux)"@fra-Latn ;
+    wdata:q7200235 "HT1023-02" .
+
+<urn:mdciii:1603:45:16:332:3:102303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102303" ;
+    skos:prefLabel "1re Section l'Asile ou Nan Paul"@eng-Latn, "1re Section l'Asile ou Nan Paul"@fra-Latn ;
+    wdata:q7200235 "HT1023-03" .
+
+<urn:mdciii:1603:45:16:332:3:102304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102304" ;
+    skos:prefLabel "3e Section Tournade (Quartier de Changeux)"@eng-Latn, "3e Section Tournade (Quartier de Changeux)"@fra-Latn ;
+    wdata:q7200235 "HT1023-04" .
+
+<urn:mdciii:1603:45:16:332:3:102401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102401" ;
+    skos:prefLabel "1re Section Baconnois-Barreau"@eng-Latn, "1re Section Baconnois-Barreau"@fra-Latn ;
+    wdata:q7200235 "HT1024-01" .
+
+<urn:mdciii:1603:45:16:332:3:102402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102402" ;
+    skos:prefLabel "2e Section Baquet"@eng-Latn, "2e Section Baquet"@fra-Latn ;
+    wdata:q7200235 "HT1024-02" .
+
+<urn:mdciii:1603:45:16:332:3:102403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102403" ;
+    skos:prefLabel "3e Section Arnaud (Morcou)"@eng-Latn, "3e Section Arnaud (Morcou)"@fra-Latn ;
+    wdata:q7200235 "HT1024-03" .
+
+<urn:mdciii:1603:45:16:332:3:102501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102501" ;
+    skos:prefLabel "1re Section Plaisance du Sud (ou ti François)"@eng-Latn, "1re Section Plaisance du Sud (ou ti François)"@fra-Latn ;
+    wdata:q7200235 "HT1025-01" .
+
+<urn:mdciii:1603:45:16:332:3:102502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102502" ;
+    skos:prefLabel "2e Section Anse aux Pins"@eng-Latn, "2e Section Anse aux Pins"@fra-Latn ;
+    wdata:q7200235 "HT1025-02" .
+
+<urn:mdciii:1603:45:16:332:3:102503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:102503" ;
+    skos:prefLabel "3e Section Vassal Labiche"@eng-Latn, "3e Section Vassal Labiche"@fra-Latn ;
+    wdata:q7200235 "HT1025-03" .
+
+<urn:mdciii:1603:45:16:332:3:103101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:103101" ;
+    skos:prefLabel "1re Section Gerin ou Mouton"@eng-Latn, "1re Section Gerin ou Mouton"@fra-Latn ;
+    wdata:q7200235 "HT1031-01" .
+
+<urn:mdciii:1603:45:16:332:3:103102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:103102" ;
+    skos:prefLabel "2e Section Tete d'Eau"@eng-Latn, "2e Section Tête d'Eau"@fra-Latn ;
+    wdata:q7200235 "HT1031-02" .
+
+<urn:mdciii:1603:45:16:332:3:103103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:103103" ;
+    skos:prefLabel "3e Section Fond Tortue"@eng-Latn, "3e Section Fond Tortue"@fra-Latn ;
+    wdata:q7200235 "HT1031-03" .
+
+<urn:mdciii:1603:45:16:332:3:103104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:103104" ;
+    skos:prefLabel "4e Section la Plaine"@eng-Latn, "4e Section la Plaine"@fra-Latn ;
+    wdata:q7200235 "HT1031-04" .
+
+<urn:mdciii:1603:45:16:332:3:103105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:103105" ;
+    skos:prefLabel "5e Section Riviere Salee"@eng-Latn, "5e Section Rivière Salee"@fra-Latn ;
+    wdata:q7200235 "HT1031-05" .
+
+<urn:mdciii:1603:45:16:332:3:103201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:103201" ;
+    skos:prefLabel "1re Section Grand-Boucan"@eng-Latn, "1re Section Grand-Boucan"@fra-Latn ;
+    wdata:q7200235 "HT1032-01" .
+
+<urn:mdciii:1603:45:16:332:3:103202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:103202" ;
+    skos:prefLabel "2e Section Eaux Basses"@eng-Latn, "2e Section Eaux Basses"@fra-Latn ;
+    wdata:q7200235 "HT1032-02" .
+
+<urn:mdciii:1603:45:16:332:3:11101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11101" ;
+    skos:prefLabel "1re Section Turgeau"@eng-Latn, "1re Section Turgeau"@fra-Latn ;
+    wdata:q7200235 "HT0111-01" .
+
+<urn:mdciii:1603:45:16:332:3:11102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11102" ;
+    skos:prefLabel "2e Section Morne l'Hopital"@eng-Latn, "2e Section Morne l'Hopital"@fra-Latn ;
+    wdata:q7200235 "HT0111-02" .
+
+<urn:mdciii:1603:45:16:332:3:11103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11103" ;
+    skos:prefLabel "3e Section Martissant"@eng-Latn, "3e Section Martissant"@fra-Latn ;
+    wdata:q7200235 "HT0111-03" .
+
+<urn:mdciii:1603:45:16:332:3:11201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11201" ;
+    skos:prefLabel "1re Section St Martin"@eng-Latn, "1re Section St Martin"@fra-Latn ;
+    wdata:q7200235 "HT0112-01" .
+
+<urn:mdciii:1603:45:16:332:3:11301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11301" ;
+    skos:prefLabel "1re Section Morne Chandelle"@eng-Latn, "1re Section Morne Chandelle"@fra-Latn ;
+    wdata:q7200235 "HT0113-01" .
+
+<urn:mdciii:1603:45:16:332:3:11302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11302" ;
+    skos:prefLabel "2e Section Platon Dufrene"@eng-Latn, "2e Section Platon Dufrene"@fra-Latn ;
+    wdata:q7200235 "HT0113-02" .
+
+<urn:mdciii:1603:45:16:332:3:11303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11303" ;
+    skos:prefLabel "3e Section Taifer"@eng-Latn, "3e Section Taïfer"@fra-Latn ;
+    wdata:q7200235 "HT0113-03" .
+
+<urn:mdciii:1603:45:16:332:3:11304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11304" ;
+    skos:prefLabel "4e Section Procy"@eng-Latn, "4e Section Procy"@fra-Latn ;
+    wdata:q7200235 "HT0113-04" .
+
+<urn:mdciii:1603:45:16:332:3:11305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11305" ;
+    skos:prefLabel "5e Section Coupeau"@eng-Latn, "5e Section Coupeau"@fra-Latn ;
+    wdata:q7200235 "HT0113-05" .
+
+<urn:mdciii:1603:45:16:332:3:11306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11306" ;
+    skos:prefLabel "6e Section Bouvier"@eng-Latn, "6e Section Bouvier"@fra-Latn ;
+    wdata:q7200235 "HT0113-06" .
+
+<urn:mdciii:1603:45:16:332:3:11307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11307" ;
+    skos:prefLabel "7e Section Lavalle"@eng-Latn, "7e Section Lavalle"@fra-Latn ;
+    wdata:q7200235 "HT0113-07" .
+
+<urn:mdciii:1603:45:16:332:3:11308>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11308" ;
+    skos:prefLabel "8e Section Berly"@eng-Latn, "8e Section Berly"@fra-Latn ;
+    wdata:q7200235 "HT0113-08" .
+
+<urn:mdciii:1603:45:16:332:3:11309>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11309" ;
+    skos:prefLabel "9e Section Bizoton"@eng-Latn, "9e Section Bizoton"@fra-Latn ;
+    wdata:q7200235 "HT0113-09" .
+
+<urn:mdciii:1603:45:16:332:3:11310>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11310" ;
+    skos:prefLabel "10e Section Thor"@eng-Latn, "10e Section Thor"@fra-Latn ;
+    wdata:q7200235 "HT0113-10" .
+
+<urn:mdciii:1603:45:16:332:3:11311>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11311" ;
+    skos:prefLabel "11e Section Riviere Froide"@eng-Latn, "11e Section Rivière Froide"@fra-Latn ;
+    wdata:q7200235 "HT0113-11" .
+
+<urn:mdciii:1603:45:16:332:3:11312>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11312" ;
+    skos:prefLabel "12e Section Malanga"@eng-Latn, "12e Section Malanga"@fra-Latn ;
+    wdata:q7200235 "HT0113-12" .
+
+<urn:mdciii:1603:45:16:332:3:11313>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11313" ;
+    skos:prefLabel "13e Section Corail Thor"@eng-Latn, "13e Section Corail Thor"@fra-Latn ;
+    wdata:q7200235 "HT0113-13" .
+
+<urn:mdciii:1603:45:16:332:3:11401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11401" ;
+    skos:prefLabel "1re Section Montagne Noire"@eng-Latn, "1re Section Montagne Noire"@fra-Latn ;
+    wdata:q7200235 "HT0114-01" .
+
+<urn:mdciii:1603:45:16:332:3:11402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11402" ;
+    skos:prefLabel "2e Section Aux Cadets"@eng-Latn, "2e Section Aux Cadets"@fra-Latn ;
+    wdata:q7200235 "HT0114-02" .
+
+<urn:mdciii:1603:45:16:332:3:11403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11403" ;
+    skos:prefLabel "3e Section Etang du Jonc"@eng-Latn, "3e Section Etang du Jonc"@fra-Latn ;
+    wdata:q7200235 "HT0114-03" .
+
+<urn:mdciii:1603:45:16:332:3:11404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11404" ;
+    skos:prefLabel "4e Section Bellevue la Montagne"@eng-Latn, "4e Section Bellevue la Montagne"@fra-Latn ;
+    wdata:q7200235 "HT0114-04" .
+
+<urn:mdciii:1603:45:16:332:3:11405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11405" ;
+    skos:prefLabel "5e Section Bellevue Chardonniere"@eng-Latn, "5e Section Bellevue Chardonnière"@fra-Latn ;
+    wdata:q7200235 "HT0114-05" .
+
+<urn:mdciii:1603:45:16:332:3:11501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11501" ;
+    skos:prefLabel "1re Section Nouvelle Touraine"@eng-Latn, "1re Section Nouvelle Touraine"@fra-Latn ;
+    wdata:q7200235 "HT0115-01" .
+
+<urn:mdciii:1603:45:16:332:3:11502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11502" ;
+    skos:prefLabel "2e Section Bongars"@eng-Latn, "2e Section Bongars"@fra-Latn ;
+    wdata:q7200235 "HT0115-02" .
+
+<urn:mdciii:1603:45:16:332:3:11503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11503" ;
+    skos:prefLabel "3e Section Sourcailles"@eng-Latn, "3e Section Sourcailles"@fra-Latn ;
+    wdata:q7200235 "HT0115-03" .
+
+<urn:mdciii:1603:45:16:332:3:11504>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11504" ;
+    skos:prefLabel "4e Section Belle Fontaine"@eng-Latn, "4e Section Belle Fontaine"@fra-Latn ;
+    wdata:q7200235 "HT0115-04" .
+
+<urn:mdciii:1603:45:16:332:3:11505>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11505" ;
+    skos:prefLabel "5e Section Grand Fond"@eng-Latn, "5e Section Grand Fond"@fra-Latn ;
+    wdata:q7200235 "HT0115-05" .
+
+<urn:mdciii:1603:45:16:332:3:11601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11601" ;
+    skos:prefLabel "1re Section Morne a Bateau"@eng-Latn, "1re Section Morne à Bateau"@fra-Latn ;
+    wdata:q7200235 "HT0116-01" .
+
+<urn:mdciii:1603:45:16:332:3:11602>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11602" ;
+    skos:prefLabel "2e Section Morne Chandelle"@eng-Latn, "2e Section Morne Chandelle"@fra-Latn ;
+    wdata:q7200235 "HT0116-02" .
+
+<urn:mdciii:1603:45:16:332:3:11603>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11603" ;
+    skos:prefLabel "3e Section Petit Boucan"@eng-Latn, "3e Section Petit Boucan"@fra-Latn ;
+    wdata:q7200235 "HT0116-03" .
+
+<urn:mdciii:1603:45:16:332:3:11701>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11701" ;
+    skos:prefLabel "2e Section des Varreux"@eng-Latn, "2e Section des Varreux"@fra-Latn ;
+    wdata:q7200235 "HT0117-01" .
+
+<urn:mdciii:1603:45:16:332:3:11702>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11702" ;
+    skos:prefLabel "1re Section des Varreux"@eng-Latn, "1re Section des Varreux"@fra-Latn ;
+    wdata:q7200235 "HT0117-02" .
+
+<urn:mdciii:1603:45:16:332:3:11803>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11803" ;
+    skos:prefLabel "3e Section Bellevue"@eng-Latn, "3e Section Bellevue"@fra-Latn ;
+    wdata:q7200235 "HT0118-03" .
+
+<urn:mdciii:1603:45:16:332:3:11804>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:11804" ;
+    skos:prefLabel "4e Section Bellevue"@eng-Latn, "4e Section Bellevue"@fra-Latn ;
+    wdata:q7200235 "HT0118-04" .
+
+<urn:mdciii:1603:45:16:332:3:12101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12101" ;
+    skos:prefLabel "1re Section Dessources"@eng-Latn, "1re Section Dessources"@fra-Latn ;
+    wdata:q7200235 "HT0121-01" .
+
+<urn:mdciii:1603:45:16:332:3:12102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12102" ;
+    skos:prefLabel "2e Section Petite Riviere"@eng-Latn, "2e Section Petite Rivière"@fra-Latn ;
+    wdata:q7200235 "HT0121-02" .
+
+<urn:mdciii:1603:45:16:332:3:12103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12103" ;
+    skos:prefLabel "3e Section Grande Rivere"@eng-Latn, "3e Section Grande Rivère"@fra-Latn ;
+    wdata:q7200235 "HT0121-03" .
+
+<urn:mdciii:1603:45:16:332:3:12104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12104" ;
+    skos:prefLabel "4e Section Fond de Boudin"@eng-Latn, "4e Section Fond de Boudin"@fra-Latn ;
+    wdata:q7200235 "HT0121-04" .
+
+<urn:mdciii:1603:45:16:332:3:12105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12105" ;
+    skos:prefLabel "5e Section Palmiste a Vin"@eng-Latn, "5e Section Palmiste à Vin"@fra-Latn ;
+    wdata:q7200235 "HT0121-05" .
+
+<urn:mdciii:1603:45:16:332:3:12106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12106" ;
+    skos:prefLabel "6e Section Orangers"@eng-Latn, "6e Section Orangers"@fra-Latn ;
+    wdata:q7200235 "HT0121-06" .
+
+<urn:mdciii:1603:45:16:332:3:12107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12107" ;
+    skos:prefLabel "7e Section Parques"@eng-Latn, "7e Section Parques"@fra-Latn ;
+    wdata:q7200235 "HT0121-07" .
+
+<urn:mdciii:1603:45:16:332:3:12108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12108" ;
+    skos:prefLabel "8e Section Beausejour"@eng-Latn, "8e Section Beausejour"@fra-Latn ;
+    wdata:q7200235 "HT0121-08" .
+
+<urn:mdciii:1603:45:16:332:3:12109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12109" ;
+    skos:prefLabel "9e Section Citronniers"@eng-Latn, "9e Section Citronniers"@fra-Latn ;
+    wdata:q7200235 "HT0121-09" .
+
+<urn:mdciii:1603:45:16:332:3:12110>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12110" ;
+    skos:prefLabel "10e Section Fond d'Oie"@eng-Latn, "10e Section Fond d'Oie"@fra-Latn ;
+    wdata:q7200235 "HT0121-10" .
+
+<urn:mdciii:1603:45:16:332:3:12111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12111" ;
+    skos:prefLabel "11e Section Gros Morne"@eng-Latn, "11e Section Gros Morne"@fra-Latn ;
+    wdata:q7200235 "HT0121-11" .
+
+<urn:mdciii:1603:45:16:332:3:12112>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12112" ;
+    skos:prefLabel "12e Section Cormiers"@eng-Latn, "12e Section Cormiers"@fra-Latn ;
+    wdata:q7200235 "HT0121-12" .
+
+<urn:mdciii:1603:45:16:332:3:12113>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12113" ;
+    skos:prefLabel "13e Section Petit Harpon"@eng-Latn, "13e Section Petit Harpon"@fra-Latn ;
+    wdata:q7200235 "HT0121-13" .
+
+<urn:mdciii:1603:45:16:332:3:12201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12201" ;
+    skos:prefLabel "1re Section Bino"@eng-Latn, "1re Section Bino"@fra-Latn ;
+    wdata:q7200235 "HT0122-01" .
+
+<urn:mdciii:1603:45:16:332:3:12202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12202" ;
+    skos:prefLabel "2e Section Delatre"@eng-Latn, "2e Section Delatre"@fra-Latn ;
+    wdata:q7200235 "HT0122-02" .
+
+<urn:mdciii:1603:45:16:332:3:12203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12203" ;
+    skos:prefLabel "3e Section Trou Chouchou"@eng-Latn, "3e Section Trou Chouchou"@fra-Latn ;
+    wdata:q7200235 "HT0122-03" .
+
+<urn:mdciii:1603:45:16:332:3:12204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12204" ;
+    skos:prefLabel "4e Section Fond Arabie"@eng-Latn, "4e Section Fond Arabie"@fra-Latn ;
+    wdata:q7200235 "HT0122-04" .
+
+<urn:mdciii:1603:45:16:332:3:12205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12205" ;
+    skos:prefLabel "5e Section Trou Canari"@eng-Latn, "5e Section Trou Canari"@fra-Latn ;
+    wdata:q7200235 "HT0122-05" .
+
+<urn:mdciii:1603:45:16:332:3:12206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12206" ;
+    skos:prefLabel "6e Section Trou Canari"@eng-Latn, "6e Section Trou Canari"@fra-Latn ;
+    wdata:q7200235 "HT0122-06" .
+
+<urn:mdciii:1603:45:16:332:3:12207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12207" ;
+    skos:prefLabel "7e Section des Platons"@eng-Latn, "7e Section des Platons"@fra-Latn ;
+    wdata:q7200235 "HT0122-07" .
+
+<urn:mdciii:1603:45:16:332:3:12208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12208" ;
+    skos:prefLabel "8e Section des Platons"@eng-Latn, "8e Section des Platons"@fra-Latn ;
+    wdata:q7200235 "HT0122-08" .
+
+<urn:mdciii:1603:45:16:332:3:12209>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12209" ;
+    skos:prefLabel "9e Section des Palmes"@eng-Latn, "9e Section des Palmes"@fra-Latn ;
+    wdata:q7200235 "HT0122-09" .
+
+<urn:mdciii:1603:45:16:332:3:12210>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12210" ;
+    skos:prefLabel "10e Section des Palmes"@eng-Latn, "10e Section des Palmes"@fra-Latn ;
+    wdata:q7200235 "HT0122-10" .
+
+<urn:mdciii:1603:45:16:332:3:12211>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12211" ;
+    skos:prefLabel "11e Section Ravine Seche"@eng-Latn, "11e Section Ravine Sèche"@fra-Latn ;
+    wdata:q7200235 "HT0122-11" .
+
+<urn:mdciii:1603:45:16:332:3:12212>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12212" ;
+    skos:prefLabel "12e Section des Fourques"@eng-Latn, "12e Section des Fourques"@fra-Latn ;
+    wdata:q7200235 "HT0122-12" .
+
+<urn:mdciii:1603:45:16:332:3:12301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12301" ;
+    skos:prefLabel "1re Section Tete-a-Boeuf"@eng-Latn, "1re Section Tête-à-Boeuf"@fra-Latn ;
+    wdata:q7200235 "HT0123-01" .
+
+<urn:mdciii:1603:45:16:332:3:12302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12302" ;
+    skos:prefLabel "2e Section Tete-a-Boeuf"@eng-Latn, "2e Section Tête-à-Boeuf"@fra-Latn ;
+    wdata:q7200235 "HT0123-02" .
+
+<urn:mdciii:1603:45:16:332:3:12303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12303" ;
+    skos:prefLabel "3e Section Moussambe"@eng-Latn, "3e Section Moussambe"@fra-Latn ;
+    wdata:q7200235 "HT0123-03" .
+
+<urn:mdciii:1603:45:16:332:3:12304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12304" ;
+    skos:prefLabel "4e Section Moussambe"@eng-Latn, "4e Section Moussambe"@fra-Latn ;
+    wdata:q7200235 "HT0123-04" .
+
+<urn:mdciii:1603:45:16:332:3:12305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12305" ;
+    skos:prefLabel "5e Section Grande Colline"@eng-Latn, "5e Section Grande Colline"@fra-Latn ;
+    wdata:q7200235 "HT0123-05" .
+
+<urn:mdciii:1603:45:16:332:3:12306>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12306" ;
+    skos:prefLabel "6e Section Grande Colline"@eng-Latn, "6e Section Grande Colline"@fra-Latn ;
+    wdata:q7200235 "HT0123-06" .
+
+<urn:mdciii:1603:45:16:332:3:12307>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:12307" ;
+    skos:prefLabel "7e Section Gerard"@eng-Latn, "7e Section Gerard"@fra-Latn ;
+    wdata:q7200235 "HT0123-07" .
+
+<urn:mdciii:1603:45:16:332:3:13101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13101" ;
+    skos:prefLabel "1re Section des Varreux"@eng-Latn, "1re Section des Varreux"@fra-Latn ;
+    wdata:q7200235 "HT0131-01" .
+
+<urn:mdciii:1603:45:16:332:3:13102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13102" ;
+    skos:prefLabel "2e Section des Varreux"@eng-Latn, "2e Section des Varreux"@fra-Latn ;
+    wdata:q7200235 "HT0131-02" .
+
+<urn:mdciii:1603:45:16:332:3:13103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13103" ;
+    skos:prefLabel "3e Section Petit Bois"@eng-Latn, "3e Section Petit Bois"@fra-Latn ;
+    wdata:q7200235 "HT0131-03" .
+
+<urn:mdciii:1603:45:16:332:3:13104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13104" ;
+    skos:prefLabel "4e Section Petit Bois"@eng-Latn, "4e Section Petit Bois"@fra-Latn ;
+    wdata:q7200235 "HT0131-04" .
+
+<urn:mdciii:1603:45:16:332:3:13105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13105" ;
+    skos:prefLabel "5e Section Petit Bois"@eng-Latn, "5e Section Petit Bois"@fra-Latn ;
+    wdata:q7200235 "HT0131-05" .
+
+<urn:mdciii:1603:45:16:332:3:13106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13106" ;
+    skos:prefLabel "6e Section Belle Fontaine"@eng-Latn, "6e Section Belle Fontaine"@fra-Latn ;
+    wdata:q7200235 "HT0131-06" .
+
+<urn:mdciii:1603:45:16:332:3:13107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13107" ;
+    skos:prefLabel "7e Section Belle Fontaine"@eng-Latn, "7e Section Belle Fontaine"@fra-Latn ;
+    wdata:q7200235 "HT0131-07" .
+
+<urn:mdciii:1603:45:16:332:3:13108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13108" ;
+    skos:prefLabel "8e Section Belle Fontaine"@eng-Latn, "8e Section Belle Fontaine"@fra-Latn ;
+    wdata:q7200235 "HT0131-08" .
+
+<urn:mdciii:1603:45:16:332:3:13109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13109" ;
+    skos:prefLabel "9e Section des Crochus"@eng-Latn, "9e Section des Crochus"@fra-Latn ;
+    wdata:q7200235 "HT0131-09" .
+
+<urn:mdciii:1603:45:16:332:3:13110>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13110" ;
+    skos:prefLabel "10e Section des Orangers"@eng-Latn, "10e Section des Orangers"@fra-Latn ;
+    wdata:q7200235 "HT0131-10" .
+
+<urn:mdciii:1603:45:16:332:3:13201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13201" ;
+    skos:prefLabel "1re Section Grande Plaine"@eng-Latn, "1re Section Grande Plaine"@fra-Latn ;
+    wdata:q7200235 "HT0132-01" .
+
+<urn:mdciii:1603:45:16:332:3:13202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13202" ;
+    skos:prefLabel "2e Section Grande Plaine"@eng-Latn, "2e Section Grande Plaine"@fra-Latn ;
+    wdata:q7200235 "HT0132-02" .
+
+<urn:mdciii:1603:45:16:332:3:13203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13203" ;
+    skos:prefLabel "3e Section Trou d'Eau"@eng-Latn, "3e Section Trou d'Eau"@fra-Latn ;
+    wdata:q7200235 "HT0132-03" .
+
+<urn:mdciii:1603:45:16:332:3:13204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13204" ;
+    skos:prefLabel "4e Section des Crochus"@eng-Latn, "4e Section des Crochus"@fra-Latn ;
+    wdata:q7200235 "HT0132-04" .
+
+<urn:mdciii:1603:45:16:332:3:13301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13301" ;
+    skos:prefLabel "1re Section Galette Chambon"@eng-Latn, "1re Section Galette Chambon"@fra-Latn ;
+    wdata:q7200235 "HT0133-01" .
+
+<urn:mdciii:1603:45:16:332:3:13302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13302" ;
+    skos:prefLabel "2e Section Balan"@eng-Latn, "2e Section Balan"@fra-Latn ;
+    wdata:q7200235 "HT0133-02" .
+
+<urn:mdciii:1603:45:16:332:3:13303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13303" ;
+    skos:prefLabel "3e Section Fond Parisien"@eng-Latn, "3e Section Fond Parisien"@fra-Latn ;
+    wdata:q7200235 "HT0133-03" .
+
+<urn:mdciii:1603:45:16:332:3:13304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13304" ;
+    skos:prefLabel "5e Section Pays Pourri"@eng-Latn, "5e Section Pays Pourri"@fra-Latn ;
+    wdata:q7200235 "HT0133-04" .
+
+<urn:mdciii:1603:45:16:332:3:13305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13305" ;
+    skos:prefLabel "4e Section Mare Roseaux"@eng-Latn, "4e Section Mare Roseaux"@fra-Latn ;
+    wdata:q7200235 "HT0133-05" .
+
+<urn:mdciii:1603:45:16:332:3:13401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13401" ;
+    skos:prefLabel "1re Section Plaine Celeste"@eng-Latn, "1re Section Plaine Céleste 1re  Section Plaine C"@fra-Latn ;
+    wdata:q7200235 "HT0134-01" .
+
+<urn:mdciii:1603:45:16:332:3:13402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13402" ;
+    skos:prefLabel "2e Section Plaine Celeste"@eng-Latn, "2e Section Plaine Céleste"@fra-Latn ;
+    wdata:q7200235 "HT0134-02" .
+
+<urn:mdciii:1603:45:16:332:3:13403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13403" ;
+    skos:prefLabel "3e Section Boucan Bois Pin"@eng-Latn, "3e Section Boucan Bois Pin"@fra-Latn ;
+    wdata:q7200235 "HT0134-03" .
+
+<urn:mdciii:1603:45:16:332:3:13404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13404" ;
+    skos:prefLabel "4e Section Boucan Bois Pin"@fra-Latn, "4e Section Boucan Bois Pin 4e  Section Boucan Bo*"@eng-Latn ;
+    wdata:q7200235 "HT0134-04" .
+
+<urn:mdciii:1603:45:16:332:3:13405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13405" ;
+    skos:prefLabel "5e Section Génipailler"@eng-Latn, "5e Section Génipailler"@fra-Latn ;
+    wdata:q7200235 "HT0134-05" .
+
+<urn:mdciii:1603:45:16:332:3:13501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:13501" ;
+    skos:prefLabel "1re Section Fonds-Verrettes"@eng-Latn, "1re Section Fonds-Verrettes"@fra-Latn ;
+    wdata:q7200235 "HT0135-01" .
+
+<urn:mdciii:1603:45:16:332:3:14101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14101" ;
+    skos:prefLabel "1re Section Boucassin"@eng-Latn, "1re Section Boucassin"@fra-Latn ;
+    wdata:q7200235 "HT0141-01" .
+
+<urn:mdciii:1603:45:16:332:3:14102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14102" ;
+    skos:prefLabel "2e Section Fonds Baptiste"@eng-Latn, "2e Section Fonds Baptiste"@fra-Latn ;
+    wdata:q7200235 "HT0141-02" .
+
+<urn:mdciii:1603:45:16:332:3:14103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14103" ;
+    skos:prefLabel "3e Section des Vases"@eng-Latn, "3e Section des Vases"@fra-Latn ;
+    wdata:q7200235 "HT0141-03" .
+
+<urn:mdciii:1603:45:16:332:3:14104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14104" ;
+    skos:prefLabel "4e Section Montrouis"@eng-Latn, "4e Section Montrouis"@fra-Latn ;
+    wdata:q7200235 "HT0141-04" .
+
+<urn:mdciii:1603:45:16:332:3:14105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14105" ;
+    skos:prefLabel "5e Section Delices"@eng-Latn, "5e Section Delices"@fra-Latn ;
+    wdata:q7200235 "HT0141-05" .
+
+<urn:mdciii:1603:45:16:332:3:14106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14106" ;
+    skos:prefLabel "6e Section Matheux"@eng-Latn, "6e Section Matheux"@fra-Latn ;
+    wdata:q7200235 "HT0141-06" .
+
+<urn:mdciii:1603:45:16:332:3:14201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14201" ;
+    skos:prefLabel "1re Section Boucassin"@eng-Latn, "1re Section Boucassin"@fra-Latn ;
+    wdata:q7200235 "HT0142-01" .
+
+<urn:mdciii:1603:45:16:332:3:14202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14202" ;
+    skos:prefLabel "2e Section Boucassin"@eng-Latn, "2e Section Boucassin"@fra-Latn ;
+    wdata:q7200235 "HT0142-02" .
+
+<urn:mdciii:1603:45:16:332:3:14203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14203" ;
+    skos:prefLabel "3e Section Source Matelas"@eng-Latn, "3e Section Source Matelas"@fra-Latn ;
+    wdata:q7200235 "HT0142-03" .
+
+<urn:mdciii:1603:45:16:332:3:14204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:14204" ;
+    skos:prefLabel "4e Section Fonds des Blancs (Casale)"@eng-Latn, "4e Section Fonds des Blancs (Casale)"@fra-Latn ;
+    wdata:q7200235 "HT0142-04" .
+
+<urn:mdciii:1603:45:16:332:3:15101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15101" ;
+    skos:prefLabel "1re Section Palma"@eng-Latn, "1re Section Palma"@fra-Latn ;
+    wdata:q7200235 "HT0151-01" .
+
+<urn:mdciii:1603:45:16:332:3:15102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15102" ;
+    skos:prefLabel "2e Section Petite Source"@eng-Latn, "2e Section Petite Source"@fra-Latn ;
+    wdata:q7200235 "HT0151-02" .
+
+<urn:mdciii:1603:45:16:332:3:15103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15103" ;
+    skos:prefLabel "3e Section Grande Source"@eng-Latn, "3e Section Grande Source"@fra-Latn ;
+    wdata:q7200235 "HT0151-03" .
+
+<urn:mdciii:1603:45:16:332:3:15104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15104" ;
+    skos:prefLabel "4e Section Grand Lagon"@eng-Latn, "4e Section Grand Lagon"@fra-Latn ;
+    wdata:q7200235 "HT0151-04" .
+
+<urn:mdciii:1603:45:16:332:3:15105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15105" ;
+    skos:prefLabel "5e Section Picmy"@eng-Latn, "5e Section Picmy"@fra-Latn ;
+    wdata:q7200235 "HT0151-05" .
+
+<urn:mdciii:1603:45:16:332:3:15106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15106" ;
+    skos:prefLabel "6e Section Petite Anse"@eng-Latn, "6e Section Petite Anse"@fra-Latn ;
+    wdata:q7200235 "HT0151-06" .
+
+<urn:mdciii:1603:45:16:332:3:15201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15201" ;
+    skos:prefLabel "5e Section Gros Mangle"@eng-Latn, "5e Section Gros Mangle"@fra-Latn ;
+    wdata:q7200235 "HT0152-01" .
+
+<urn:mdciii:1603:45:16:332:3:15202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15202" ;
+    skos:prefLabel "1re Section la Source"@eng-Latn, "1re Section la Source"@fra-Latn ;
+    wdata:q7200235 "HT0152-02" .
+
+<urn:mdciii:1603:45:16:332:3:15203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15203" ;
+    skos:prefLabel "2e Section Grand Vide"@eng-Latn, "2e Section Grand Vide"@fra-Latn ;
+    wdata:q7200235 "HT0152-03" .
+
+<urn:mdciii:1603:45:16:332:3:15204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15204" ;
+    skos:prefLabel "3e Section Trou Louis"@eng-Latn, "3e Section Trou Louis"@fra-Latn ;
+    wdata:q7200235 "HT0152-04" .
+
+<urn:mdciii:1603:45:16:332:3:15205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:15205" ;
+    skos:prefLabel "4e Section Pointe a Raquette"@eng-Latn, "4e Section Pointe à Raquette"@fra-Latn ;
+    wdata:q7200235 "HT0152-05" .
+
+<urn:mdciii:1603:45:16:332:3:21101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21101" ;
+    skos:prefLabel "1re Section Bas Cap Rouge"@eng-Latn, "1re Section Bas Cap Rouge"@fra-Latn ;
+    wdata:q7200235 "HT0211-01" .
+
+<urn:mdciii:1603:45:16:332:3:21102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21102" ;
+    skos:prefLabel "2e Section Fond Melon (Selles)"@eng-Latn, "2e Section Fond Melon (Selles)"@fra-Latn ;
+    wdata:q7200235 "HT0211-02" .
+
+<urn:mdciii:1603:45:16:332:3:21103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21103" ;
+    skos:prefLabel "3e Section Cochon Gras"@eng-Latn, "3e Section Cochon Gras"@fra-Latn ;
+    wdata:q7200235 "HT0211-03" .
+
+<urn:mdciii:1603:45:16:332:3:21104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21104" ;
+    skos:prefLabel "4e Section La Gosseline"@eng-Latn, "4e Section La Gosseline"@fra-Latn ;
+    wdata:q7200235 "HT0211-04" .
+
+<urn:mdciii:1603:45:16:332:3:21105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21105" ;
+    skos:prefLabel "5e Section Marbial"@eng-Latn, "5e Section Marbial"@fra-Latn ;
+    wdata:q7200235 "HT0211-05" .
+
+<urn:mdciii:1603:45:16:332:3:21106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21106" ;
+    skos:prefLabel "6e Section Montagne La Voûte"@eng-Latn, "6e Section Montagne La Voûte"@fra-Latn ;
+    wdata:q7200235 "HT0211-06" .
+
+<urn:mdciii:1603:45:16:332:3:21107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21107" ;
+    skos:prefLabel "7e Section Grande Riviere de Jacmel"@eng-Latn, "7e Section Grande Rivière de Jacmel"@fra-Latn ;
+    wdata:q7200235 "HT0211-07" .
+
+<urn:mdciii:1603:45:16:332:3:21108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21108" ;
+    skos:prefLabel "8e Section Bas Coq Chante"@eng-Latn, "8e Section Bas Coq Chante"@fra-Latn ;
+    wdata:q7200235 "HT0211-08" .
+
+<urn:mdciii:1603:45:16:332:3:21109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21109" ;
+    skos:prefLabel "9e Section Haut Coq Chante"@eng-Latn, "9e Section Haut Coq Chante"@fra-Latn ;
+    wdata:q7200235 "HT0211-09" .
+
+<urn:mdciii:1603:45:16:332:3:21110>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21110" ;
+    skos:prefLabel "10e Section La Vanneau"@eng-Latn, "10e Section La Vanneau"@fra-Latn ;
+    wdata:q7200235 "HT0211-10" .
+
+<urn:mdciii:1603:45:16:332:3:21111>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21111" ;
+    skos:prefLabel "11e Section La Montagne"@eng-Latn, "11e Section La Montagne"@fra-Latn ;
+    wdata:q7200235 "HT0211-11" .
+
+<urn:mdciii:1603:45:16:332:3:21201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21201" ;
+    skos:prefLabel "1re Section Corail Soult"@eng-Latn, "1re Section Corail Soult"@fra-Latn ;
+    wdata:q7200235 "HT0212-01" .
+
+<urn:mdciii:1603:45:16:332:3:21202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21202" ;
+    skos:prefLabel "2e Section Grande Riviere Fesles"@eng-Latn, "2e Section Grande Rivière Fesles"@fra-Latn ;
+    wdata:q7200235 "HT0212-02" .
+
+<urn:mdciii:1603:45:16:332:3:21203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21203" ;
+    skos:prefLabel "3e Section Macary"@eng-Latn, "3e Section Macary"@fra-Latn ;
+    wdata:q7200235 "HT0212-03" .
+
+<urn:mdciii:1603:45:16:332:3:21204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21204" ;
+    skos:prefLabel "4e Section Fond Jean Noël"@eng-Latn, "4e Section Fond Jean Noël"@fra-Latn ;
+    wdata:q7200235 "HT0212-04" .
+
+<urn:mdciii:1603:45:16:332:3:21205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21205" ;
+    skos:prefLabel "5e Section Savane Dubois"@eng-Latn, "5e Section Savane Dubois"@fra-Latn ;
+    wdata:q7200235 "HT0212-05" .
+
+<urn:mdciii:1603:45:16:332:3:21301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21301" ;
+    skos:prefLabel "1re Section Ravine Normande"@eng-Latn, "1re Section Ravine Normande"@fra-Latn ;
+    wdata:q7200235 "HT0213-01" .
+
+<urn:mdciii:1603:45:16:332:3:21302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21302" ;
+    skos:prefLabel "2e Section Gaillard"@eng-Latn, "2e Section Gaillard"@fra-Latn ;
+    wdata:q7200235 "HT0213-02" .
+
+<urn:mdciii:1603:45:16:332:3:21303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21303" ;
+    skos:prefLabel "3e Section Haut Cap Rouge"@eng-Latn, "3e Section Haut Cap Rouge"@fra-Latn ;
+    wdata:q7200235 "HT0213-03" .
+
+<urn:mdciii:1603:45:16:332:3:21304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21304" ;
+    skos:prefLabel "2e Section Fond Melon Michineau"@eng-Latn, "2e Section Fond Melon Michineau"@fra-Latn ;
+    wdata:q7200235 "HT0213-04" .
+
+<urn:mdciii:1603:45:16:332:3:21401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21401" ;
+    skos:prefLabel "1re Section La Vallee de Jacmel ou Muzac"@eng-Latn, "1re Section La Vallee de Jacmel ou Muzac"@fra-Latn ;
+    wdata:q7200235 "HT0214-01" .
+
+<urn:mdciii:1603:45:16:332:3:21402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21402" ;
+    skos:prefLabel "2e Section La Vallee de Bainet ou Ternier"@eng-Latn, "2e Section La Vallee de Bainet ou Ternier"@fra-Latn ;
+    wdata:q7200235 "HT0214-02" .
+
+<urn:mdciii:1603:45:16:332:3:21403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:21403" ;
+    skos:prefLabel "3e Section Morne a Brûler"@eng-Latn, "3e Section Morne à Brûler"@fra-Latn ;
+    wdata:q7200235 "HT0214-03" .
+
+<urn:mdciii:1603:45:16:332:3:22101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22101" ;
+    skos:prefLabel "1re Section Bresilienne"@eng-Latn, "1re Section Bresilienne"@fra-Latn ;
+    wdata:q7200235 "HT0221-01" .
+
+<urn:mdciii:1603:45:16:332:3:22102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22102" ;
+    skos:prefLabel "2e Section Trou Mahot"@eng-Latn, "2e Section Trou Mahot"@fra-Latn ;
+    wdata:q7200235 "HT0221-02" .
+
+<urn:mdciii:1603:45:16:332:3:22103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22103" ;
+    skos:prefLabel "3e Section La Vallee de Bainet"@eng-Latn, "3e Section La Vallee de Bainet"@fra-Latn ;
+    wdata:q7200235 "HT0221-03" .
+
+<urn:mdciii:1603:45:16:332:3:22104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22104" ;
+    skos:prefLabel "4e Section Haut Grandou"@eng-Latn, "4e Section Haut Grandou"@fra-Latn ;
+    wdata:q7200235 "HT0221-04" .
+
+<urn:mdciii:1603:45:16:332:3:22105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22105" ;
+    skos:prefLabel "5e Section Bas de Grandou"@eng-Latn, "5e Section Bas de Grandou"@fra-Latn ;
+    wdata:q7200235 "HT0221-05" .
+
+<urn:mdciii:1603:45:16:332:3:22106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22106" ;
+    skos:prefLabel "6e Section Bas de Lacroix"@eng-Latn, "6e Section Bas de Lacroix"@fra-Latn ;
+    wdata:q7200235 "HT0221-06" .
+
+<urn:mdciii:1603:45:16:332:3:22107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22107" ;
+    skos:prefLabel "7e Section Bras Gauche"@eng-Latn, "7e Section Bras Gauche"@fra-Latn ;
+    wdata:q7200235 "HT0221-07" .
+
+<urn:mdciii:1603:45:16:332:3:22108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22108" ;
+    skos:prefLabel "8e Section Oranger"@eng-Latn, "8e Section Oranger"@fra-Latn ;
+    wdata:q7200235 "HT0221-08" .
+
+<urn:mdciii:1603:45:16:332:3:22109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22109" ;
+    skos:prefLabel "9e Section Bas des Gris Gris"@eng-Latn, "9e Section Bas des Gris Gris"@fra-Latn ;
+    wdata:q7200235 "HT0221-09" .
+
+<urn:mdciii:1603:45:16:332:3:22201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22201" ;
+    skos:prefLabel "1re Section Gris Gris"@eng-Latn, "1re Section Gris Gris"@fra-Latn ;
+    wdata:q7200235 "HT0222-01" .
+
+<urn:mdciii:1603:45:16:332:3:22202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22202" ;
+    skos:prefLabel "2e Section Labiche"@eng-Latn, "2e Section Labiche"@fra-Latn ;
+    wdata:q7200235 "HT0222-02" .
+
+<urn:mdciii:1603:45:16:332:3:22203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22203" ;
+    skos:prefLabel "3e Section Bras Gauche"@eng-Latn, "3e Section Bras Gauche"@fra-Latn ;
+    wdata:q7200235 "HT0222-03" .
+
+<urn:mdciii:1603:45:16:332:3:22204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22204" ;
+    skos:prefLabel "4e Section Amazone"@eng-Latn, "4e Section Amazone"@fra-Latn ;
+    wdata:q7200235 "HT0222-04" .
+
+<urn:mdciii:1603:45:16:332:3:22205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22205" ;
+    skos:prefLabel "5e Section Boucan Belier"@eng-Latn, "5e Section Boucan Belier"@fra-Latn ;
+    wdata:q7200235 "HT0222-05" .
+
+<urn:mdciii:1603:45:16:332:3:22206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:22206" ;
+    skos:prefLabel "6e Section Jamais Vu"@eng-Latn, "6e Section Jamais Vu"@fra-Latn ;
+    wdata:q7200235 "HT0222-06" .
+
+<urn:mdciii:1603:45:16:332:3:23101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23101" ;
+    skos:prefLabel "1re Section Bais d'Orange"@eng-Latn, "1re Section Bais d'Orange"@fra-Latn ;
+    wdata:q7200235 "HT0231-01" .
+
+<urn:mdciii:1603:45:16:332:3:23102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23102" ;
+    skos:prefLabel "2e Section Mabriole"@eng-Latn, "2e Section Mabriole"@fra-Latn ;
+    wdata:q7200235 "HT0231-02" .
+
+<urn:mdciii:1603:45:16:332:3:23103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23103" ;
+    skos:prefLabel "3e Section Callumette"@eng-Latn, "3e Section Callumette"@fra-Latn ;
+    wdata:q7200235 "HT0231-03" .
+
+<urn:mdciii:1603:45:16:332:3:23104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23104" ;
+    skos:prefLabel "4e Section Corail Lamothe"@eng-Latn, "4e Section Corail Lamothe"@fra-Latn ;
+    wdata:q7200235 "HT0231-04" .
+
+<urn:mdciii:1603:45:16:332:3:23105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23105" ;
+    skos:prefLabel "5e Section Bel Air"@eng-Latn, "5e Section Bel Air"@fra-Latn ;
+    wdata:q7200235 "HT0231-05" .
+
+<urn:mdciii:1603:45:16:332:3:23106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23106" ;
+    skos:prefLabel "6e Section Pichon"@eng-Latn, "6e Section Pichon"@fra-Latn ;
+    wdata:q7200235 "HT0231-06" .
+
+<urn:mdciii:1603:45:16:332:3:23107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23107" ;
+    skos:prefLabel "7e Section Mapou"@eng-Latn, "7e Section Mapou"@fra-Latn ;
+    wdata:q7200235 "HT0231-07" .
+
+<urn:mdciii:1603:45:16:332:3:23201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23201" ;
+    skos:prefLabel "1re Section Colline des Chenes ou Bodarie"@eng-Latn, "1re Section Colline des Chênes ou Bodarie"@fra-Latn ;
+    wdata:q7200235 "HT0232-01" .
+
+<urn:mdciii:1603:45:16:332:3:23301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23301" ;
+    skos:prefLabel "1re Section Thiotte"@eng-Latn, "1re Section Thiotte"@fra-Latn ;
+    wdata:q7200235 "HT0233-01" .
+
+<urn:mdciii:1603:45:16:332:3:23302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23302" ;
+    skos:prefLabel "2e Section Pot de Chambre"@eng-Latn, "2e Section Pot de Chambre"@fra-Latn ;
+    wdata:q7200235 "HT0233-02" .
+
+<urn:mdciii:1603:45:16:332:3:23401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23401" ;
+    skos:prefLabel "1re Section Boucan Guillaume"@eng-Latn, "1re Section Boucan Guillaume"@fra-Latn ;
+    wdata:q7200235 "HT0234-01" .
+
+<urn:mdciii:1603:45:16:332:3:23402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:23402" ;
+    skos:prefLabel "2e Section Bois d'Orme"@eng-Latn, "2e Section Bois d'Orme"@fra-Latn ;
+    wdata:q7200235 "HT0234-02" .
+
+<urn:mdciii:1603:45:16:332:3:31101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:31101" ;
+    skos:prefLabel "1re Section Bande du Nord"@eng-Latn, "1re Section Bande du Nord"@fra-Latn ;
+    wdata:q7200235 "HT0311-01" .
+
+<urn:mdciii:1603:45:16:332:3:31102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:31102" ;
+    skos:prefLabel "2e Section Haut du Cap"@eng-Latn, "2e Section Haut du Cap"@fra-Latn ;
+    wdata:q7200235 "HT0311-02" .
+
+<urn:mdciii:1603:45:16:332:3:31103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:31103" ;
+    skos:prefLabel "3e Section Petit Anse"@eng-Latn, "3e Section Petit Anse"@fra-Latn ;
+    wdata:q7200235 "HT0311-03" .
+
+<urn:mdciii:1603:45:16:332:3:31201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:31201" ;
+    skos:prefLabel "1re Section Basse Plaine"@eng-Latn, "1re Section Basse Plaine"@fra-Latn ;
+    wdata:q7200235 "HT0312-01" .
+
+<urn:mdciii:1603:45:16:332:3:31202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:31202" ;
+    skos:prefLabel "2e Section Morne Pele"@eng-Latn, "2e Section Morne Pele"@fra-Latn ;
+    wdata:q7200235 "HT0312-02" .
+
+<urn:mdciii:1603:45:16:332:3:31301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:31301" ;
+    skos:prefLabel "1re Section Basse Plaine"@eng-Latn, "1re Section Basse Plaine"@fra-Latn ;
+    wdata:q7200235 "HT0313-01" .
+
+<urn:mdciii:1603:45:16:332:3:31302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:31302" ;
+    skos:prefLabel "2e Section Bois de Lance"@eng-Latn, "2e Section Bois de Lance"@fra-Latn ;
+    wdata:q7200235 "HT0313-02" .
+
+<urn:mdciii:1603:45:16:332:3:31303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:31303" ;
+    skos:prefLabel "3e Section Roucou"@eng-Latn, "3e Section Roucou"@fra-Latn ;
+    wdata:q7200235 "HT0313-03" .
+
+<urn:mdciii:1603:45:16:332:3:32101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32101" ;
+    skos:prefLabel "1re Section Camp-Louise"@eng-Latn, "1re Section Camp-Louise"@fra-Latn ;
+    wdata:q7200235 "HT0321-01" .
+
+<urn:mdciii:1603:45:16:332:3:32102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32102" ;
+    skos:prefLabel "2e Section Bas de l'Acul (Basse Plaine)"@eng-Latn, "2e Section Bas de l'Acul (Basse Plaine)"@fra-Latn ;
+    wdata:q7200235 "HT0321-02" .
+
+<urn:mdciii:1603:45:16:332:3:32103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32103" ;
+    skos:prefLabel "3e Section Mornet"@eng-Latn, "3e Section Mornet"@fra-Latn ;
+    wdata:q7200235 "HT0321-03" .
+
+<urn:mdciii:1603:45:16:332:3:32104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32104" ;
+    skos:prefLabel "4e Section Grande Ravine"@eng-Latn, "4e Section Grande Ravine"@fra-Latn ;
+    wdata:q7200235 "HT0321-04" .
+
+<urn:mdciii:1603:45:16:332:3:32105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32105" ;
+    skos:prefLabel "5e Section Coupe a David"@eng-Latn, "5e Section Coupe à David"@fra-Latn ;
+    wdata:q7200235 "HT0321-05" .
+
+<urn:mdciii:1603:45:16:332:3:32106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32106" ;
+    skos:prefLabel "6e Section Soufriere"@eng-Latn, "6e Section Soufrière"@fra-Latn ;
+    wdata:q7200235 "HT0321-06" .
+
+<urn:mdciii:1603:45:16:332:3:32201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32201" ;
+    skos:prefLabel "1re Section Morne Rouge"@eng-Latn, "1re Section Morne Rouge"@fra-Latn ;
+    wdata:q7200235 "HT0322-01" .
+
+<urn:mdciii:1603:45:16:332:3:32202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32202" ;
+    skos:prefLabel "2e Section Basse Plaine"@eng-Latn, "2e Section Basse Plaine"@fra-Latn ;
+    wdata:q7200235 "HT0322-02" .
+
+<urn:mdciii:1603:45:16:332:3:32203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32203" ;
+    skos:prefLabel "3e Section Grand Boucan"@eng-Latn, "3e Section Grand Boucan"@fra-Latn ;
+    wdata:q7200235 "HT0322-03" .
+
+<urn:mdciii:1603:45:16:332:3:32204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32204" ;
+    skos:prefLabel "4e Section Bassin Diamant"@eng-Latn, "4e Section Bassin Diamant"@fra-Latn ;
+    wdata:q7200235 "HT0322-04" .
+
+<urn:mdciii:1603:45:16:332:3:32301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32301" ;
+    skos:prefLabel "1re Section Perches-de-Bonnet"@eng-Latn, "1re Section Perches-de-Bonnet"@fra-Latn ;
+    wdata:q7200235 "HT0323-01" .
+
+<urn:mdciii:1603:45:16:332:3:32302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32302" ;
+    skos:prefLabel "2e Section Bonnet a l'Eveque"@eng-Latn, "2e Section Bonnet à l'Evêque"@fra-Latn ;
+    wdata:q7200235 "HT0323-02" .
+
+<urn:mdciii:1603:45:16:332:3:32303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:32303" ;
+    skos:prefLabel "3e Section Genipailler"@eng-Latn, "3e Section Genipailler"@fra-Latn ;
+    wdata:q7200235 "HT0323-03" .
+
+<urn:mdciii:1603:45:16:332:3:33101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33101" ;
+    skos:prefLabel "1re Section Grand Gilles"@eng-Latn, "1re Section Grand Gilles"@fra-Latn ;
+    wdata:q7200235 "HT0331-01" .
+
+<urn:mdciii:1603:45:16:332:3:33102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33102" ;
+    skos:prefLabel "2e Section Solon"@eng-Latn, "2e Section Solon"@fra-Latn ;
+    wdata:q7200235 "HT0331-02" .
+
+<urn:mdciii:1603:45:16:332:3:33103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33103" ;
+    skos:prefLabel "3e Section Caracol"@eng-Latn, "3e Section Caracol"@fra-Latn ;
+    wdata:q7200235 "HT0331-03" .
+
+<urn:mdciii:1603:45:16:332:3:33104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33104" ;
+    skos:prefLabel "4e Section Gambade"@eng-Latn, "4e Section Gambade"@fra-Latn ;
+    wdata:q7200235 "HT0331-04" .
+
+<urn:mdciii:1603:45:16:332:3:33105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33105" ;
+    skos:prefLabel "5e Section Jolitrou"@eng-Latn, "5e Section Jolitrou"@fra-Latn ;
+    wdata:q7200235 "HT0331-05" .
+
+<urn:mdciii:1603:45:16:332:3:33106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33106" ;
+    skos:prefLabel "6e Section Cormiers"@eng-Latn, "6e Section Cormiers"@fra-Latn ;
+    wdata:q7200235 "HT0331-06" .
+
+<urn:mdciii:1603:45:16:332:3:33201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33201" ;
+    skos:prefLabel "1re Section Bois Pin"@eng-Latn, "1re Section Bois Pin"@fra-Latn ;
+    wdata:q7200235 "HT0332-01" .
+
+<urn:mdciii:1603:45:16:332:3:33202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33202" ;
+    skos:prefLabel "2e Section Bailly ou Bailla"@eng-Latn, "2e Section Bailly ou Bailla"@fra-Latn ;
+    wdata:q7200235 "HT0332-02" .
+
+<urn:mdciii:1603:45:16:332:3:33203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:33203" ;
+    skos:prefLabel "3e Section Montagne Noire"@eng-Latn, "3e Section Montagne Noire"@fra-Latn ;
+    wdata:q7200235 "HT0332-03" .
+
+<urn:mdciii:1603:45:16:332:3:34101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34101" ;
+    skos:prefLabel "1re Section Bois Neuf"@eng-Latn, "1re Section Bois Neuf"@fra-Latn ;
+    wdata:q7200235 "HT0341-01" .
+
+<urn:mdciii:1603:45:16:332:3:34102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34102" ;
+    skos:prefLabel "2e Section Mathurin"@eng-Latn, "2e Section Mathurin"@fra-Latn ;
+    wdata:q7200235 "HT0341-02" .
+
+<urn:mdciii:1603:45:16:332:3:34103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34103" ;
+    skos:prefLabel "3e Section Bouyaha"@eng-Latn, "3e Section Bouyaha"@fra-Latn ;
+    wdata:q7200235 "HT0341-03" .
+
+<urn:mdciii:1603:45:16:332:3:34104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34104" ;
+    skos:prefLabel "4e Section San-Yago"@eng-Latn, "4e Section San-Yago"@fra-Latn ;
+    wdata:q7200235 "HT0341-04" .
+
+<urn:mdciii:1603:45:16:332:3:34201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34201" ;
+    skos:prefLabel "1re Section Brostage"@eng-Latn, "1re Section Brostage"@fra-Latn ;
+    wdata:q7200235 "HT0342-01" .
+
+<urn:mdciii:1603:45:16:332:3:34202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34202" ;
+    skos:prefLabel "2e Section Bassin Caiman"@eng-Latn, "2e Section Bassin Caïman"@fra-Latn ;
+    wdata:q7200235 "HT0342-02" .
+
+<urn:mdciii:1603:45:16:332:3:34203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34203" ;
+    skos:prefLabel "3e Section Matador"@eng-Latn, "3e Section Matador"@fra-Latn ;
+    wdata:q7200235 "HT0342-03" .
+
+<urn:mdciii:1603:45:16:332:3:34204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34204" ;
+    skos:prefLabel "4e Section Laguille"@eng-Latn, "4e Section Laguille"@fra-Latn ;
+    wdata:q7200235 "HT0342-04" .
+
+<urn:mdciii:1603:45:16:332:3:34205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34205" ;
+    skos:prefLabel "5e Section Haut du Trou"@eng-Latn, "5e Section Haut du Trou"@fra-Latn ;
+    wdata:q7200235 "HT0342-05" .
+
+<urn:mdciii:1603:45:16:332:3:34301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34301" ;
+    skos:prefLabel "1re Section Bac a Soude"@eng-Latn, "1re Section Bac à Soude"@fra-Latn ;
+    wdata:q7200235 "HT0343-01" .
+
+<urn:mdciii:1603:45:16:332:3:34302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34302" ;
+    skos:prefLabel "2e Section Bois de Lance"@eng-Latn, "2e Section Bois de Lance"@fra-Latn ;
+    wdata:q7200235 "HT0343-02" .
+
+<urn:mdciii:1603:45:16:332:3:34303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34303" ;
+    skos:prefLabel "3e Section Cracaraille"@eng-Latn, "3e Section Cracaraille"@fra-Latn ;
+    wdata:q7200235 "HT0343-03" .
+
+<urn:mdciii:1603:45:16:332:3:34401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34401" ;
+    skos:prefLabel "1re Section Savannette"@eng-Latn, "1re Section Savannette"@fra-Latn ;
+    wdata:q7200235 "HT0344-01" .
+
+<urn:mdciii:1603:45:16:332:3:34402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34402" ;
+    skos:prefLabel "2e Section la Belle Mere"@eng-Latn, "2e Section la Belle Mère"@fra-Latn ;
+    wdata:q7200235 "HT0344-02" .
+
+<urn:mdciii:1603:45:16:332:3:34501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:34501" ;
+    skos:prefLabel "1re Section de la Victoire"@eng-Latn, "1re Section de la Victoire"@fra-Latn ;
+    wdata:q7200235 "HT0345-01" .
+
+<urn:mdciii:1603:45:16:332:3:35101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35101" ;
+    skos:prefLabel "1re Section Margot"@eng-Latn, "1re Section Margot"@fra-Latn ;
+    wdata:q7200235 "HT0351-01" .
+
+<urn:mdciii:1603:45:16:332:3:35102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35102" ;
+    skos:prefLabel "2e Section Boucan Michel"@eng-Latn, "2e Section Boucan Michel"@fra-Latn ;
+    wdata:q7200235 "HT0351-02" .
+
+<urn:mdciii:1603:45:16:332:3:35103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35103" ;
+    skos:prefLabel "3e Section Petit Bourgde Borgne"@eng-Latn, "3e Section Petit Bourgde Borgne"@fra-Latn ;
+    wdata:q7200235 "HT0351-03" .
+
+<urn:mdciii:1603:45:16:332:3:35104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35104" ;
+    skos:prefLabel "4e Section Trou d'Enfer"@eng-Latn, "4e Section Trou d'Enfer"@fra-Latn ;
+    wdata:q7200235 "HT0351-04" .
+
+<urn:mdciii:1603:45:16:332:3:35105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35105" ;
+    skos:prefLabel "5e Section Champagne"@eng-Latn, "5e Section Champagne"@fra-Latn ;
+    wdata:q7200235 "HT0351-05" .
+
+<urn:mdciii:1603:45:16:332:3:35106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35106" ;
+    skos:prefLabel "6e Section Molas"@eng-Latn, "6e Section Molas"@fra-Latn ;
+    wdata:q7200235 "HT0351-06" .
+
+<urn:mdciii:1603:45:16:332:3:35107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35107" ;
+    skos:prefLabel "7e Section Cote de Feret Fond Lagrange"@eng-Latn, "7e Section Cote de Feret Fond Lagrange"@fra-Latn ;
+    wdata:q7200235 "HT0351-07" .
+
+<urn:mdciii:1603:45:16:332:3:35201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35201" ;
+    skos:prefLabel "1re Section de Grande Plaine"@eng-Latn, "1re Section de Grande Plaine"@fra-Latn ;
+    wdata:q7200235 "HT0352-01" .
+
+<urn:mdciii:1603:45:16:332:3:35202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35202" ;
+    skos:prefLabel "2e Section Bas Petit Borgne"@eng-Latn, "2e Section Bas Petit Borgne"@fra-Latn ;
+    wdata:q7200235 "HT0352-02" .
+
+<urn:mdciii:1603:45:16:332:3:35203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35203" ;
+    skos:prefLabel "3e Section de Corail"@eng-Latn, "3e Section de Corail"@fra-Latn ;
+    wdata:q7200235 "HT0352-03" .
+
+<urn:mdciii:1603:45:16:332:3:35204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35204" ;
+    skos:prefLabel "4e Section Haut Petit Borgne"@eng-Latn, "4e Section Haut Petit Borgne"@fra-Latn ;
+    wdata:q7200235 "HT0352-04" .
+
+<urn:mdciii:1603:45:16:332:3:35205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35205" ;
+    skos:prefLabel "5e Section Bas Quartier"@eng-Latn, "5e Section Bas Quartier"@fra-Latn ;
+    wdata:q7200235 "HT0352-05" .
+
+<urn:mdciii:1603:45:16:332:3:35206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:35206" ;
+    skos:prefLabel "6e Section Bras Gauche"@eng-Latn, "6e Section Bras Gauche"@fra-Latn ;
+    wdata:q7200235 "HT0352-06" .
+
+<urn:mdciii:1603:45:16:332:3:36101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:36101" ;
+    skos:prefLabel "1re Section Haut Limbe ou Acul Jeannot"@eng-Latn, "1re Section Haut Limbe ou Acul Jeannot"@fra-Latn ;
+    wdata:q7200235 "HT0361-01" .
+
+<urn:mdciii:1603:45:16:332:3:36102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:36102" ;
+    skos:prefLabel "2e Section Chabotte"@eng-Latn, "2e Section Chabotte"@fra-Latn ;
+    wdata:q7200235 "HT0361-02" .
+
+<urn:mdciii:1603:45:16:332:3:36103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:36103" ;
+    skos:prefLabel "3e Section Camp Coq"@eng-Latn, "3e Section Camp Coq"@fra-Latn ;
+    wdata:q7200235 "HT0361-03" .
+
+<urn:mdciii:1603:45:16:332:3:36104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:36104" ;
+    skos:prefLabel "4e Section Soufriere"@eng-Latn, "4e Section Soufrière"@fra-Latn ;
+    wdata:q7200235 "HT0361-04" .
+
+<urn:mdciii:1603:45:16:332:3:36105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:36105" ;
+    skos:prefLabel "5e Section Ravine Desroches"@eng-Latn, "5e Section Ravine Desroches"@fra-Latn ;
+    wdata:q7200235 "HT0361-05" .
+
+<urn:mdciii:1603:45:16:332:3:36106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:36106" ;
+    skos:prefLabel "6e Section Ilot-a-Corne"@eng-Latn, "6e Section Ilot-à-Corne"@fra-Latn ;
+    wdata:q7200235 "HT0361-06" .
+
+<urn:mdciii:1603:45:16:332:3:36201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:36201" ;
+    skos:prefLabel "1re Section Garde Champetre (Bas Limbe)"@eng-Latn, "1re Section Garde Champètre (Bas Limbe)"@fra-Latn ;
+    wdata:q7200235 "HT0362-01" .
+
+<urn:mdciii:1603:45:16:332:3:36202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:36202" ;
+    skos:prefLabel "2e Section Petit Howars (la Fange)"@eng-Latn, "2e Section Petit Howars (la Fange)"@fra-Latn ;
+    wdata:q7200235 "HT0362-02" .
+
+<urn:mdciii:1603:45:16:332:3:37101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37101" ;
+    skos:prefLabel "1re Section Gobert ou Colline Gobert"@eng-Latn, "1re Section Gobert ou Colline Gobert"@fra-Latn ;
+    wdata:q7200235 "HT0371-01" .
+
+<urn:mdciii:1603:45:16:332:3:37102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37102" ;
+    skos:prefLabel "2e Section Champagne"@eng-Latn, "2e Section Champagne"@fra-Latn ;
+    wdata:q7200235 "HT0371-02" .
+
+<urn:mdciii:1603:45:16:332:3:37103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37103" ;
+    skos:prefLabel "3e Section Haut Martineau"@eng-Latn, "3e Section Haut Martineau"@fra-Latn ;
+    wdata:q7200235 "HT0371-03" .
+
+<urn:mdciii:1603:45:16:332:3:37104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37104" ;
+    skos:prefLabel "4e Section Mapou"@eng-Latn, "4e Section Mapou"@fra-Latn ;
+    wdata:q7200235 "HT0371-04" .
+
+<urn:mdciii:1603:45:16:332:3:37105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37105" ;
+    skos:prefLabel "5e Section la Trouble"@eng-Latn, "5e Section la Trouble"@fra-Latn ;
+    wdata:q7200235 "HT0371-05" .
+
+<urn:mdciii:1603:45:16:332:3:37106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37106" ;
+    skos:prefLabel "6e Section la Ville"@eng-Latn, "6e Section la Ville"@fra-Latn ;
+    wdata:q7200235 "HT0371-06" .
+
+<urn:mdciii:1603:45:16:332:3:37107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37107" ;
+    skos:prefLabel "7e Section Bassin"@eng-Latn, "7e Section Bassin"@fra-Latn ;
+    wdata:q7200235 "HT0371-07" .
+
+<urn:mdciii:1603:45:16:332:3:37108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37108" ;
+    skos:prefLabel "8e Section Grande Riviere"@eng-Latn, "8e Section Grande Rivière"@fra-Latn ;
+    wdata:q7200235 "HT0371-08" .
+
+<urn:mdciii:1603:45:16:332:3:37201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37201" ;
+    skos:prefLabel "1re Section Ballon"@eng-Latn, "1re Section Ballon"@fra-Latn ;
+    wdata:q7200235 "HT0372-01" .
+
+<urn:mdciii:1603:45:16:332:3:37202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37202" ;
+    skos:prefLabel "2e Section Baudin"@eng-Latn, "2e Section Baudin"@fra-Latn ;
+    wdata:q7200235 "HT0372-02" .
+
+<urn:mdciii:1603:45:16:332:3:37203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37203" ;
+    skos:prefLabel "3e Section Ravine Trompette"@eng-Latn, "3e Section Ravine Trompette"@fra-Latn ;
+    wdata:q7200235 "HT0372-03" .
+
+<urn:mdciii:1603:45:16:332:3:37204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37204" ;
+    skos:prefLabel "4e Section Joly"@eng-Latn, "4e Section Joly"@fra-Latn ;
+    wdata:q7200235 "HT0372-04" .
+
+<urn:mdciii:1603:45:16:332:3:37205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37205" ;
+    skos:prefLabel "5e Section Dubourg"@eng-Latn, "5e Section Dubourg"@fra-Latn ;
+    wdata:q7200235 "HT0372-05" .
+
+<urn:mdciii:1603:45:16:332:3:37206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37206" ;
+    skos:prefLabel "6e Section Piment"@eng-Latn, "6e Section Piment"@fra-Latn ;
+    wdata:q7200235 "HT0372-06" .
+
+<urn:mdciii:1603:45:16:332:3:37207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37207" ;
+    skos:prefLabel "7e Section Riviere Laporte"@eng-Latn, "7e Section Rivière Laporte"@fra-Latn ;
+    wdata:q7200235 "HT0372-07" .
+
+<urn:mdciii:1603:45:16:332:3:37208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:37208" ;
+    skos:prefLabel "8e Section Margot"@eng-Latn, "8e Section Margot"@fra-Latn ;
+    wdata:q7200235 "HT0372-08" .
+
+<urn:mdciii:1603:45:16:332:3:41101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:41101" ;
+    skos:prefLabel "1re Section Dumas"@eng-Latn, "1re Section Dumas"@fra-Latn ;
+    wdata:q7200235 "HT0411-01" .
+
+<urn:mdciii:1603:45:16:332:3:41102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:41102" ;
+    skos:prefLabel "2e Section Bayaha"@eng-Latn, "2e Section Bayaha"@fra-Latn ;
+    wdata:q7200235 "HT0411-02" .
+
+<urn:mdciii:1603:45:16:332:3:41103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:41103" ;
+    skos:prefLabel "3e Section Loiseau"@eng-Latn, "3e Section Loiseau"@fra-Latn ;
+    wdata:q7200235 "HT0411-03" .
+
+<urn:mdciii:1603:45:16:332:3:41104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:41104" ;
+    skos:prefLabel "4e Section Haut Madeleine"@eng-Latn, "4e Section Haut Madeleine"@fra-Latn ;
+    wdata:q7200235 "HT0411-04" .
+
+<urn:mdciii:1603:45:16:332:3:41201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:41201" ;
+    skos:prefLabel "1re Section Bas Maribahoux"@eng-Latn, "1re Section Bas Maribahoux"@fra-Latn ;
+    wdata:q7200235 "HT0412-01" .
+
+<urn:mdciii:1603:45:16:332:3:41301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:41301" ;
+    skos:prefLabel "1re Section Haut des Perches"@eng-Latn, "1re Section Haut des Perches"@fra-Latn ;
+    wdata:q7200235 "HT0413-01" .
+
+<urn:mdciii:1603:45:16:332:3:41302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:41302" ;
+    skos:prefLabel "2e Section Bas des Perches"@eng-Latn, "2e Section Bas des Perches"@fra-Latn ;
+    wdata:q7200235 "HT0413-02" .
+
+<urn:mdciii:1603:45:16:332:3:42101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42101" ;
+    skos:prefLabel "1re Section Haut Maribahoux"@eng-Latn, "1re Section Haut Maribahoux"@fra-Latn ;
+    wdata:q7200235 "HT0421-01" .
+
+<urn:mdciii:1603:45:16:332:3:42102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42102" ;
+    skos:prefLabel "2e Section Acul des Pins"@eng-Latn, "2e Section Acul des Pins"@fra-Latn ;
+    wdata:q7200235 "HT0421-02" .
+
+<urn:mdciii:1603:45:16:332:3:42103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42103" ;
+    skos:prefLabel "3e Section Savane Longue"@eng-Latn, "3e Section Savane Longue"@fra-Latn ;
+    wdata:q7200235 "HT0421-03" .
+
+<urn:mdciii:1603:45:16:332:3:42104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42104" ;
+    skos:prefLabel "4e Section Savane au Lait"@eng-Latn, "4e Section Savane au Lait"@fra-Latn ;
+    wdata:q7200235 "HT0421-04" .
+
+<urn:mdciii:1603:45:16:332:3:42105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42105" ;
+    skos:prefLabel "5e Section Gens de Nantes"@eng-Latn, "5e Section Gens de Nantes"@fra-Latn ;
+    wdata:q7200235 "HT0421-05" .
+
+<urn:mdciii:1603:45:16:332:3:42201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42201" ;
+    skos:prefLabel "1re Section Capotille"@eng-Latn, "1re Section Capotille"@fra-Latn ;
+    wdata:q7200235 "HT0422-01" .
+
+<urn:mdciii:1603:45:16:332:3:42202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42202" ;
+    skos:prefLabel "2e Section Lamine"@eng-Latn, "2e Section Lamine"@fra-Latn ;
+    wdata:q7200235 "HT0422-02" .
+
+<urn:mdciii:1603:45:16:332:3:42301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42301" ;
+    skos:prefLabel "1re Section Savanette"@eng-Latn, "1re Section Savanette"@fra-Latn ;
+    wdata:q7200235 "HT0423-01" .
+
+<urn:mdciii:1603:45:16:332:3:42302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:42302" ;
+    skos:prefLabel "2e Section Bois Poux"@eng-Latn, "2e Section Bois Poux"@fra-Latn ;
+    wdata:q7200235 "HT0423-02" .
+
+<urn:mdciii:1603:45:16:332:3:43101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43101" ;
+    skos:prefLabel "1re Section Garcin"@eng-Latn, "1re Section Garcin"@fra-Latn ;
+    wdata:q7200235 "HT0431-01" .
+
+<urn:mdciii:1603:45:16:332:3:43102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43102" ;
+    skos:prefLabel "2e Section Roucou"@eng-Latn, "2e Section Roucou"@fra-Latn ;
+    wdata:q7200235 "HT0431-02" .
+
+<urn:mdciii:1603:45:16:332:3:43103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43103" ;
+    skos:prefLabel "3e Section Roche Plate"@eng-Latn, "3e Section Roche Plate"@fra-Latn ;
+    wdata:q7200235 "HT0431-03" .
+
+<urn:mdciii:1603:45:16:332:3:43201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43201" ;
+    skos:prefLabel "1re Section Foulon"@eng-Latn, "1re Section Foulon"@fra-Latn ;
+    wdata:q7200235 "HT0432-01" .
+
+<urn:mdciii:1603:45:16:332:3:43202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43202" ;
+    skos:prefLabel "2e Section Bois Blanc"@eng-Latn, "2e Section Bois Blanc"@fra-Latn ;
+    wdata:q7200235 "HT0432-02" .
+
+<urn:mdciii:1603:45:16:332:3:43203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43203" ;
+    skos:prefLabel "3e Section Cotelette"@eng-Latn, "3e Section Cotelette"@fra-Latn ;
+    wdata:q7200235 "HT0432-03" .
+
+<urn:mdciii:1603:45:16:332:3:43204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43204" ;
+    skos:prefLabel "4e Section Sarazin"@eng-Latn, "4e Section Sarazin"@fra-Latn ;
+    wdata:q7200235 "HT0432-04" .
+
+<urn:mdciii:1603:45:16:332:3:43205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43205" ;
+    skos:prefLabel "5e Section Moka Neuf"@eng-Latn, "5e Section Moka Neuf"@fra-Latn ;
+    wdata:q7200235 "HT0432-05" .
+
+<urn:mdciii:1603:45:16:332:3:43206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43206" ;
+    skos:prefLabel "6e Section Fond Bleu"@eng-Latn, "6e Section Fond Bleu"@fra-Latn ;
+    wdata:q7200235 "HT0432-06" .
+
+<urn:mdciii:1603:45:16:332:3:43301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43301" ;
+    skos:prefLabel "1re Section Fond Blanc"@eng-Latn, "1re Section Fond Blanc"@fra-Latn ;
+    wdata:q7200235 "HT0433-01" .
+
+<urn:mdciii:1603:45:16:332:3:43302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43302" ;
+    skos:prefLabel "2e Section Grand Bassin"@eng-Latn, "2e Section Grand Bassin"@fra-Latn ;
+    wdata:q7200235 "HT0433-02" .
+
+<urn:mdciii:1603:45:16:332:3:43401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43401" ;
+    skos:prefLabel "1re Section Champin"@eng-Latn, "1re Section Champin"@fra-Latn ;
+    wdata:q7200235 "HT0434-01" .
+
+<urn:mdciii:1603:45:16:332:3:43402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:43402" ;
+    skos:prefLabel "2e Section Glaudine ou \"Jacquesil\""@eng-Latn, "2e Section Glaudine ou \"Jacquesil\""@fra-Latn ;
+    wdata:q7200235 "HT0434-02" .
+
+<urn:mdciii:1603:45:16:332:3:44101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:44101" ;
+    skos:prefLabel "1re Section Trois Palmistes"@eng-Latn, "1re Section Trois Palmistes"@fra-Latn ;
+    wdata:q7200235 "HT0441-01" .
+
+<urn:mdciii:1603:45:16:332:3:44102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:44102" ;
+    skos:prefLabel "2e Section Ecrevisse ou Grosse Roche"@eng-Latn, "2e Section Ecrevisse ou Grosse Roche"@fra-Latn ;
+    wdata:q7200235 "HT0441-02" .
+
+<urn:mdciii:1603:45:16:332:3:44103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:44103" ;
+    skos:prefLabel "3e Section Corosse"@eng-Latn, "3e Section Corosse"@fra-Latn ;
+    wdata:q7200235 "HT0441-03" .
+
+<urn:mdciii:1603:45:16:332:3:44201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:44201" ;
+    skos:prefLabel "1re Section Bois Camelle"@eng-Latn, "1re Section Bois Camelle"@fra-Latn ;
+    wdata:q7200235 "HT0442-01" .
+
+<urn:mdciii:1603:45:16:332:3:44202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:44202" ;
+    skos:prefLabel "2e Section Rose Bonite"@eng-Latn, "2e Section Rose Bonite"@fra-Latn ;
+    wdata:q7200235 "HT0442-02" .
+
+<urn:mdciii:1603:45:16:332:3:44301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:44301" ;
+    skos:prefLabel "1re Section Sans Souci"@eng-Latn, "1re Section Sans Souci"@fra-Latn ;
+    wdata:q7200235 "HT0443-01" .
+
+<urn:mdciii:1603:45:16:332:3:44302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:44302" ;
+    skos:prefLabel "2e Section Bois Laurence"@eng-Latn, "2e Section Bois Laurence"@fra-Latn ;
+    wdata:q7200235 "HT0443-02" .
+
+<urn:mdciii:1603:45:16:332:3:51101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51101" ;
+    skos:prefLabel "1re Section Pont Tamarin"@eng-Latn, "1re Section Pont Tamarin"@fra-Latn ;
+    wdata:q7200235 "HT0511-01" .
+
+<urn:mdciii:1603:45:16:332:3:51102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51102" ;
+    skos:prefLabel "2e Section Bassin"@eng-Latn, "2e Section Bassin"@fra-Latn ;
+    wdata:q7200235 "HT0511-02" .
+
+<urn:mdciii:1603:45:16:332:3:51103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51103" ;
+    skos:prefLabel "3e Section Pte Riviere de Bayonnais"@eng-Latn, "3e Section Pte Rivière de Bayonnais"@fra-Latn ;
+    wdata:q7200235 "HT0511-03" .
+
+<urn:mdciii:1603:45:16:332:3:51104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51104" ;
+    skos:prefLabel "4e Section Poteaux"@eng-Latn, "4e Section Poteaux"@fra-Latn ;
+    wdata:q7200235 "HT0511-04" .
+
+<urn:mdciii:1603:45:16:332:3:51105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51105" ;
+    skos:prefLabel "5e Section Labranle"@eng-Latn, "5e Section Labranle"@fra-Latn ;
+    wdata:q7200235 "HT0511-05" .
+
+<urn:mdciii:1603:45:16:332:3:51201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51201" ;
+    skos:prefLabel "1re Section Savane Carree"@eng-Latn, "1re Section Savane Carree"@fra-Latn ;
+    wdata:q7200235 "HT0512-01" .
+
+<urn:mdciii:1603:45:16:332:3:51202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51202" ;
+    skos:prefLabel "2e Section Passe-Reine ou Bas d'Ennery"@eng-Latn, "2e Section Passe-Reine ou Bas d'Ennery"@fra-Latn ;
+    wdata:q7200235 "HT0512-02" .
+
+<urn:mdciii:1603:45:16:332:3:51203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51203" ;
+    skos:prefLabel "3e Section Chemin Neuf"@eng-Latn, "3e Section Chemin Neuf"@fra-Latn ;
+    wdata:q7200235 "HT0512-03" .
+
+<urn:mdciii:1603:45:16:332:3:51204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51204" ;
+    skos:prefLabel "4e Section Puilboreau"@eng-Latn, "4e Section Puilboreau"@fra-Latn ;
+    wdata:q7200235 "HT0512-04" .
+
+<urn:mdciii:1603:45:16:332:3:51301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51301" ;
+    skos:prefLabel "1re Section La Croix Perisse"@eng-Latn, "1re Section La Croix Perisse"@fra-Latn ;
+    wdata:q7200235 "HT0513-01" .
+
+<urn:mdciii:1603:45:16:332:3:51302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:51302" ;
+    skos:prefLabel "2e Section Petite Desdunes"@eng-Latn, "2e Section Petite Desdunes"@fra-Latn ;
+    wdata:q7200235 "HT0513-02" .
+
+<urn:mdciii:1603:45:16:332:3:52101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52101" ;
+    skos:prefLabel "1re Section Boucan Richard"@eng-Latn, "1re Section Boucan Richard"@fra-Latn ;
+    wdata:q7200235 "HT0521-01" .
+
+<urn:mdciii:1603:45:16:332:3:52102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52102" ;
+    skos:prefLabel "2e Section Riviere Mancelle"@eng-Latn, "2e Section Rivière Mancelle"@fra-Latn ;
+    wdata:q7200235 "HT0521-02" .
+
+<urn:mdciii:1603:45:16:332:3:52103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52103" ;
+    skos:prefLabel "3e Section Riviere Blanche"@eng-Latn, "3e Section Rivière Blanche"@fra-Latn ;
+    wdata:q7200235 "HT0521-03" .
+
+<urn:mdciii:1603:45:16:332:3:52104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52104" ;
+    skos:prefLabel "4e Section l'Acul"@eng-Latn, "4e Section l'Acul"@fra-Latn ;
+    wdata:q7200235 "HT0521-04" .
+
+<urn:mdciii:1603:45:16:332:3:52105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52105" ;
+    skos:prefLabel "5e Section Pendu"@eng-Latn, "5e Section Pendu"@fra-Latn ;
+    wdata:q7200235 "HT0521-05" .
+
+<urn:mdciii:1603:45:16:332:3:52106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52106" ;
+    skos:prefLabel "6e Section Savane Carree"@eng-Latn, "6e Section Savane Carree"@fra-Latn ;
+    wdata:q7200235 "HT0521-06" .
+
+<urn:mdciii:1603:45:16:332:3:52107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52107" ;
+    skos:prefLabel "7e Section Moulin"@eng-Latn, "7e Section Moulin"@fra-Latn ;
+    wdata:q7200235 "HT0521-07" .
+
+<urn:mdciii:1603:45:16:332:3:52108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52108" ;
+    skos:prefLabel "8e Section Ravine Gros Morne"@eng-Latn, "8e Section Ravine Gros Morne"@fra-Latn ;
+    wdata:q7200235 "HT0521-08" .
+
+<urn:mdciii:1603:45:16:332:3:52201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52201" ;
+    skos:prefLabel "1re Section Doland"@eng-Latn, "1re Section Doland"@fra-Latn ;
+    wdata:q7200235 "HT0522-01" .
+
+<urn:mdciii:1603:45:16:332:3:52202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52202" ;
+    skos:prefLabel "2e Section Bois Neuf"@eng-Latn, "2e Section Bois Neuf"@fra-Latn ;
+    wdata:q7200235 "HT0522-02" .
+
+<urn:mdciii:1603:45:16:332:3:52203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52203" ;
+    skos:prefLabel "3e Section Lagon"@eng-Latn, "3e Section Lagon"@fra-Latn ;
+    wdata:q7200235 "HT0522-03" .
+
+<urn:mdciii:1603:45:16:332:3:52301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52301" ;
+    skos:prefLabel "1re Section l'Arbre"@eng-Latn, "1re Section l'Arbre"@fra-Latn ;
+    wdata:q7200235 "HT0523-01" .
+
+<urn:mdciii:1603:45:16:332:3:52302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:52302" ;
+    skos:prefLabel "2e Section Sources Chaudes"@eng-Latn, "2e Section Sources Chaudes"@fra-Latn ;
+    wdata:q7200235 "HT0523-02" .
+
+<urn:mdciii:1603:45:16:332:3:53101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53101" ;
+    skos:prefLabel "1re Section Deluge"@eng-Latn, "1re Section Deluge"@fra-Latn ;
+    wdata:q7200235 "HT0531-01" .
+
+<urn:mdciii:1603:45:16:332:3:53102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53102" ;
+    skos:prefLabel "2e Section Bois Neuf"@eng-Latn, "2e Section Bois Neuf"@fra-Latn ;
+    wdata:q7200235 "HT0531-02" .
+
+<urn:mdciii:1603:45:16:332:3:53103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53103" ;
+    skos:prefLabel "3e Section Goyavier"@eng-Latn, "3e Section Goyavier"@fra-Latn ;
+    wdata:q7200235 "HT0531-03" .
+
+<urn:mdciii:1603:45:16:332:3:53104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53104" ;
+    skos:prefLabel "4e Section Lalouere"@eng-Latn, "4e Section Lalouère"@fra-Latn ;
+    wdata:q7200235 "HT0531-04" .
+
+<urn:mdciii:1603:45:16:332:3:53105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53105" ;
+    skos:prefLabel "5e Section Bocozelle"@eng-Latn, "5e Section Bocozelle"@fra-Latn ;
+    wdata:q7200235 "HT0531-05" .
+
+<urn:mdciii:1603:45:16:332:3:53106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53106" ;
+    skos:prefLabel "6e Section Charrette"@eng-Latn, "6e Section Charrette"@fra-Latn ;
+    wdata:q7200235 "HT0531-06" .
+
+<urn:mdciii:1603:45:16:332:3:53201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53201" ;
+    skos:prefLabel "1re Section Liancourt"@eng-Latn, "1re Section Liancourt"@fra-Latn ;
+    wdata:q7200235 "HT0532-01" .
+
+<urn:mdciii:1603:45:16:332:3:53202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53202" ;
+    skos:prefLabel "2e Section Belanger"@eng-Latn, "2e Section Belanger"@fra-Latn ;
+    wdata:q7200235 "HT0532-02" .
+
+<urn:mdciii:1603:45:16:332:3:53203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53203" ;
+    skos:prefLabel "3e Section Guillaume Moge (Quartier de Desarmes)"@eng-Latn, "3e Section Guillaume Moge (Quartier de Desarmes)"@fra-Latn ;
+    wdata:q7200235 "HT0532-03" .
+
+<urn:mdciii:1603:45:16:332:3:53204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53204" ;
+    skos:prefLabel "4e Section Desarmes (Quartier de Desarmes)"@eng-Latn, "4e Section Desarmes (Quartier de Desarmes)"@fra-Latn ;
+    wdata:q7200235 "HT0532-04" .
+
+<urn:mdciii:1603:45:16:332:3:53205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53205" ;
+    skos:prefLabel "5e Section Bastien"@eng-Latn, "5e Section Bastien"@fra-Latn ;
+    wdata:q7200235 "HT0532-05" .
+
+<urn:mdciii:1603:45:16:332:3:53206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53206" ;
+    skos:prefLabel "6e Section Terre Natte"@eng-Latn, "6e Section Terre Natte"@fra-Latn ;
+    wdata:q7200235 "HT0532-06" .
+
+<urn:mdciii:1603:45:16:332:3:53301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53301" ;
+    skos:prefLabel "1re Section Martineau"@eng-Latn, "1re Section Martineau"@fra-Latn ;
+    wdata:q7200235 "HT0533-01" .
+
+<urn:mdciii:1603:45:16:332:3:53302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:53302" ;
+    skos:prefLabel "2e Section Bossous"@eng-Latn, "2e Section Bossous"@fra-Latn ;
+    wdata:q7200235 "HT0533-02" .
+
+<urn:mdciii:1603:45:16:332:3:54101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54101" ;
+    skos:prefLabel "1re Section Villars"@eng-Latn, "1re Section Villars"@fra-Latn ;
+    wdata:q7200235 "HT0541-01" .
+
+<urn:mdciii:1603:45:16:332:3:54102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54102" ;
+    skos:prefLabel "2e Section Fosse Naboth ou Duvallon"@eng-Latn, "2e Section Fosse Naboth ou Duvallon"@fra-Latn ;
+    wdata:q7200235 "HT0541-02" .
+
+<urn:mdciii:1603:45:16:332:3:54103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54103" ;
+    skos:prefLabel "3e Section Oge"@eng-Latn, "3e Section Oge"@fra-Latn ;
+    wdata:q7200235 "HT0541-03" .
+
+<urn:mdciii:1603:45:16:332:3:54104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54104" ;
+    skos:prefLabel "4e Section Poste Pierrot"@eng-Latn, "4e Section Poste Pierrot"@fra-Latn ;
+    wdata:q7200235 "HT0541-04" .
+
+<urn:mdciii:1603:45:16:332:3:54105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54105" ;
+    skos:prefLabel "5e Section Fiefe ou Petit Cahos"@eng-Latn, "5e Section Fiefe ou Petit Cahos"@fra-Latn ;
+    wdata:q7200235 "HT0541-05" .
+
+<urn:mdciii:1603:45:16:332:3:54106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54106" ;
+    skos:prefLabel "6e Section la Croix ou Grand Cahos"@eng-Latn, "6e Section la Croix ou Grand Cahos"@fra-Latn ;
+    wdata:q7200235 "HT0541-06" .
+
+<urn:mdciii:1603:45:16:332:3:54201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54201" ;
+    skos:prefLabel "1re Section Bas Coursin I"@eng-Latn, "1re Section Bas Coursin I"@fra-Latn ;
+    wdata:q7200235 "HT0542-01" .
+
+<urn:mdciii:1603:45:16:332:3:54202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54202" ;
+    skos:prefLabel "2e Section Bas Coursin II"@eng-Latn, "2e Section Bas Coursin II"@fra-Latn ;
+    wdata:q7200235 "HT0542-02" .
+
+<urn:mdciii:1603:45:16:332:3:54203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54203" ;
+    skos:prefLabel "3e Section Labady"@eng-Latn, "3e Section Labady"@fra-Latn ;
+    wdata:q7200235 "HT0542-03" .
+
+<urn:mdciii:1603:45:16:332:3:54204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54204" ;
+    skos:prefLabel "4e Section Savane a Roche"@eng-Latn, "4e Section Savane à Roche"@fra-Latn ;
+    wdata:q7200235 "HT0542-04" .
+
+<urn:mdciii:1603:45:16:332:3:54205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54205" ;
+    skos:prefLabel "5e Section Perodin"@eng-Latn, "5e Section Perodin"@fra-Latn ;
+    wdata:q7200235 "HT0542-05" .
+
+<urn:mdciii:1603:45:16:332:3:54206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54206" ;
+    skos:prefLabel "6e Section Medor"@eng-Latn, "6e Section Medor"@fra-Latn ;
+    wdata:q7200235 "HT0542-06" .
+
+<urn:mdciii:1603:45:16:332:3:54301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54301" ;
+    skos:prefLabel "1re Section Poteneau"@eng-Latn, "1re Section Poteneau"@fra-Latn ;
+    wdata:q7200235 "HT0543-01" .
+
+<urn:mdciii:1603:45:16:332:3:54401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:54401" ;
+    skos:prefLabel "1re Section de Desdunes"@eng-Latn, "1re Section de Desdunes"@fra-Latn ;
+    wdata:q7200235 "HT0544-01" .
+
+<urn:mdciii:1603:45:16:332:3:55101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55101" ;
+    skos:prefLabel "1re Section Platana"@eng-Latn, "1re Section Platana"@fra-Latn ;
+    wdata:q7200235 "HT0551-01" .
+
+<urn:mdciii:1603:45:16:332:3:55102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55102" ;
+    skos:prefLabel "2e Section Camathe"@eng-Latn, "2e Section Camathe"@fra-Latn ;
+    wdata:q7200235 "HT0551-02" .
+
+<urn:mdciii:1603:45:16:332:3:55103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55103" ;
+    skos:prefLabel "3e Section Bas de Sault"@eng-Latn, "3e Section Bas de Sault"@fra-Latn ;
+    wdata:q7200235 "HT0551-03" .
+
+<urn:mdciii:1603:45:16:332:3:55104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55104" ;
+    skos:prefLabel "4e Section Lalomas"@eng-Latn, "4e Section Lalomas"@fra-Latn ;
+    wdata:q7200235 "HT0551-04" .
+
+<urn:mdciii:1603:45:16:332:3:55105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55105" ;
+    skos:prefLabel "5e Section l'Ermite"@eng-Latn, "5e Section l'Ermite"@fra-Latn ;
+    wdata:q7200235 "HT0551-05" .
+
+<urn:mdciii:1603:45:16:332:3:55106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55106" ;
+    skos:prefLabel "6e Section Lacedras"@eng-Latn, "6e Section Lacedras"@fra-Latn ;
+    wdata:q7200235 "HT0551-06" .
+
+<urn:mdciii:1603:45:16:332:3:55107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55107" ;
+    skos:prefLabel "7e Section Marmont"@eng-Latn, "7e Section Marmont"@fra-Latn ;
+    wdata:q7200235 "HT0551-07" .
+
+<urn:mdciii:1603:45:16:332:3:55108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55108" ;
+    skos:prefLabel "8e Section l'Attalaye"@eng-Latn, "8e Section l'Attalaye"@fra-Latn ;
+    wdata:q7200235 "HT0551-08" .
+
+<urn:mdciii:1603:45:16:332:3:55201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55201" ;
+    skos:prefLabel "1re Section Crete a Pins"@eng-Latn, "1re Section Crête à Pins"@fra-Latn ;
+    wdata:q7200235 "HT0552-01" .
+
+<urn:mdciii:1603:45:16:332:3:55202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55202" ;
+    skos:prefLabel "2e Section Bassin ou Billier"@eng-Latn, "2e Section Bassin ou Billier"@fra-Latn ;
+    wdata:q7200235 "HT0552-02" .
+
+<urn:mdciii:1603:45:16:332:3:55203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:55203" ;
+    skos:prefLabel "3e Section Platon"@eng-Latn, "3e Section Platon"@fra-Latn ;
+    wdata:q7200235 "HT0552-03" .
+
+<urn:mdciii:1603:45:16:332:3:61101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61101" ;
+    skos:prefLabel "1re Section Juanaria"@eng-Latn, "1re Section Juanaria"@fra-Latn ;
+    wdata:q7200235 "HT0611-01" .
+
+<urn:mdciii:1603:45:16:332:3:61102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61102" ;
+    skos:prefLabel "2e Section Marmont"@eng-Latn, "2e Section Marmont"@fra-Latn ;
+    wdata:q7200235 "HT0611-02" .
+
+<urn:mdciii:1603:45:16:332:3:61103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61103" ;
+    skos:prefLabel "3e Section Aguahedionde (Rive Droite)"@eng-Latn, "3e Section Aguahedionde (Rive Droite)"@fra-Latn ;
+    wdata:q7200235 "HT0611-03" .
+
+<urn:mdciii:1603:45:16:332:3:61104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61104" ;
+    skos:prefLabel "4e Section Aguahedionde (Rive Gauche)"@eng-Latn, "4e Section Aguahedionde (Rive Gauche)"@fra-Latn ;
+    wdata:q7200235 "HT0611-04" .
+
+<urn:mdciii:1603:45:16:332:3:61201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61201" ;
+    skos:prefLabel "1re Section Savane Grande"@eng-Latn, "1re Section Savane Grande"@fra-Latn ;
+    wdata:q7200235 "HT0612-01" .
+
+<urn:mdciii:1603:45:16:332:3:61202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61202" ;
+    skos:prefLabel "2e Section Narang"@eng-Latn, "2e Section Narang"@fra-Latn ;
+    wdata:q7200235 "HT0612-02" .
+
+<urn:mdciii:1603:45:16:332:3:61203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61203" ;
+    skos:prefLabel "3e Section Hatty"@eng-Latn, "3e Section Hatty"@fra-Latn ;
+    wdata:q7200235 "HT0612-03" .
+
+<urn:mdciii:1603:45:16:332:3:61301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61301" ;
+    skos:prefLabel "1re Section Cabral"@eng-Latn, "1re Section Cabral"@fra-Latn ;
+    wdata:q7200235 "HT0613-01" .
+
+<urn:mdciii:1603:45:16:332:3:61302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61302" ;
+    skos:prefLabel "2e Section Tierra Muscady"@eng-Latn, "2e Section Tierra Muscady"@fra-Latn ;
+    wdata:q7200235 "HT0613-02" .
+
+<urn:mdciii:1603:45:16:332:3:61303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61303" ;
+    skos:prefLabel "3e Section Baille Tourrible"@eng-Latn, "3e Section Baille Tourrible"@fra-Latn ;
+    wdata:q7200235 "HT0613-03" .
+
+<urn:mdciii:1603:45:16:332:3:61304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61304" ;
+    skos:prefLabel "La Hoye"@eng-Latn, "La Hoye"@fra-Latn ;
+    wdata:q7200235 "HT0613-04" .
+
+<urn:mdciii:1603:45:16:332:3:61401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:61401" ;
+    skos:prefLabel "1re Section Rang"@eng-Latn, "1re Section Rang"@fra-Latn ;
+    wdata:q7200235 "HT0614-01" .
+
+<urn:mdciii:1603:45:16:332:3:62101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62101" ;
+    skos:prefLabel "1re Section Gascogne"@eng-Latn, "1re Section Gascogne"@fra-Latn ;
+    wdata:q7200235 "HT0621-01" .
+
+<urn:mdciii:1603:45:16:332:3:62102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62102" ;
+    skos:prefLabel "2e Section Sarazin"@eng-Latn, "2e Section Sarazin"@fra-Latn ;
+    wdata:q7200235 "HT0621-02" .
+
+<urn:mdciii:1603:45:16:332:3:62103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62103" ;
+    skos:prefLabel "3e Section Grand Boucan"@eng-Latn, "3e Section Grand Boucan"@fra-Latn ;
+    wdata:q7200235 "HT0621-03" .
+
+<urn:mdciii:1603:45:16:332:3:62104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62104" ;
+    skos:prefLabel "4e Section Crete Brûlee"@eng-Latn, "4e Section Crête Brûlee"@fra-Latn ;
+    wdata:q7200235 "HT0621-04" .
+
+<urn:mdciii:1603:45:16:332:3:62201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62201" ;
+    skos:prefLabel "1re Section Canot ou Riviere Canot"@eng-Latn, "1re Section Canot ou Rivière Canot"@fra-Latn ;
+    wdata:q7200235 "HT0622-01" .
+
+<urn:mdciii:1603:45:16:332:3:62202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62202" ;
+    skos:prefLabel "2e Section la Selle"@eng-Latn, "2e Section la Selle"@fra-Latn ;
+    wdata:q7200235 "HT0622-02" .
+
+<urn:mdciii:1603:45:16:332:3:62203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62203" ;
+    skos:prefLabel "3e Section Coupe Mardi Gras"@eng-Latn, "3e Section Coupe Mardi Gras"@fra-Latn ;
+    wdata:q7200235 "HT0622-03" .
+
+<urn:mdciii:1603:45:16:332:3:62204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62204" ;
+    skos:prefLabel "4e Section Montagne Terrible"@eng-Latn, "4e Section Montagne Terrible"@fra-Latn ;
+    wdata:q7200235 "HT0622-04" .
+
+<urn:mdciii:1603:45:16:332:3:62301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62301" ;
+    skos:prefLabel "1re Section Petite Montagne"@eng-Latn, "1re Section Petite Montagne"@fra-Latn ;
+    wdata:q7200235 "HT0623-01" .
+
+<urn:mdciii:1603:45:16:332:3:62302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62302" ;
+    skos:prefLabel "2e Section Boucan Carre"@eng-Latn, "2e Section Boucan Carre"@fra-Latn ;
+    wdata:q7200235 "HT0623-02" .
+
+<urn:mdciii:1603:45:16:332:3:62303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:62303" ;
+    skos:prefLabel "3e Section des Bayes"@eng-Latn, "3e Section des Bayes"@fra-Latn ;
+    wdata:q7200235 "HT0623-03" .
+
+<urn:mdciii:1603:45:16:332:3:63101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:63101" ;
+    skos:prefLabel "1re Section Petit Fond"@eng-Latn, "1re Section Petit Fond"@fra-Latn ;
+    wdata:q7200235 "HT0631-01" .
+
+<urn:mdciii:1603:45:16:332:3:63102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:63102" ;
+    skos:prefLabel "2e Section Juampas"@eng-Latn, "2e Section Juampas"@fra-Latn ;
+    wdata:q7200235 "HT0631-02" .
+
+<urn:mdciii:1603:45:16:332:3:63201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:63201" ;
+    skos:prefLabel "1re Section Renthe Mathe"@eng-Latn, "1re Section Renthe Mathe"@fra-Latn ;
+    wdata:q7200235 "HT0632-01" .
+
+<urn:mdciii:1603:45:16:332:3:63202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:63202" ;
+    skos:prefLabel "2e Section Roye-Sec"@eng-Latn, "2e Section Roye-Sec"@fra-Latn ;
+    wdata:q7200235 "HT0632-02" .
+
+<urn:mdciii:1603:45:16:332:3:63203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:63203" ;
+    skos:prefLabel "3e Section Riaribes"@eng-Latn, "3e Section Riaribes"@fra-Latn ;
+    wdata:q7200235 "HT0632-03" .
+
+<urn:mdciii:1603:45:16:332:3:63301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:63301" ;
+    skos:prefLabel "1re Section de Savanette (Colombier)"@eng-Latn, "1re Section de Savanette (Colombier)"@fra-Latn ;
+    wdata:q7200235 "HT0633-01" .
+
+<urn:mdciii:1603:45:16:332:3:63302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:63302" ;
+    skos:prefLabel "2e Section la Haye"@eng-Latn, "2e Section la Haye"@fra-Latn ;
+    wdata:q7200235 "HT0633-02" .
+
+<urn:mdciii:1603:45:16:332:3:64101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:64101" ;
+    skos:prefLabel "1re Section Acaj ou Brûle No 1"@eng-Latn, "1re Section Acaj ou Brûle No 1"@fra-Latn ;
+    wdata:q7200235 "HT0641-01" .
+
+<urn:mdciii:1603:45:16:332:3:64102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:64102" ;
+    skos:prefLabel "2e Section Acaj ou Brûle No 1"@eng-Latn, "2e Section Acaj ou Brûle No 1"@fra-Latn ;
+    wdata:q7200235 "HT0641-02" .
+
+<urn:mdciii:1603:45:16:332:3:64103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:64103" ;
+    skos:prefLabel "3e Section Lamielle"@eng-Latn, "3e Section Lamielle"@fra-Latn ;
+    wdata:q7200235 "HT0641-03" .
+
+<urn:mdciii:1603:45:16:332:3:64201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:64201" ;
+    skos:prefLabel "1re Section Matelgate"@eng-Latn, "1re Section Matelgate"@fra-Latn ;
+    wdata:q7200235 "HT0642-01" .
+
+<urn:mdciii:1603:45:16:332:3:64202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:64202" ;
+    skos:prefLabel "2e Section Lociane"@eng-Latn, "2e Section Lociane"@fra-Latn ;
+    wdata:q7200235 "HT0642-02" .
+
+<urn:mdciii:1603:45:16:332:3:71101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71101" ;
+    skos:prefLabel "1re Section Bourdet"@eng-Latn, "1re Section Bourdet"@fra-Latn ;
+    wdata:q7200235 "HT0711-01" .
+
+<urn:mdciii:1603:45:16:332:3:71102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71102" ;
+    skos:prefLabel "2e Section Fonfrede"@eng-Latn, "2e Section Fonfrède"@fra-Latn ;
+    wdata:q7200235 "HT0711-02" .
+
+<urn:mdciii:1603:45:16:332:3:71103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71103" ;
+    skos:prefLabel "3e Section Laborde"@eng-Latn, "3e Section Laborde"@fra-Latn ;
+    wdata:q7200235 "HT0711-03" .
+
+<urn:mdciii:1603:45:16:332:3:71104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71104" ;
+    skos:prefLabel "4e Section Laurent"@eng-Latn, "4e Section Laurent"@fra-Latn ;
+    wdata:q7200235 "HT0711-04" .
+
+<urn:mdciii:1603:45:16:332:3:71105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71105" ;
+    skos:prefLabel "5e Section Mercy"@eng-Latn, "5e Section Mercy"@fra-Latn ;
+    wdata:q7200235 "HT0711-05" .
+
+<urn:mdciii:1603:45:16:332:3:71106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71106" ;
+    skos:prefLabel "6e Section Boulmier"@eng-Latn, "6e Section Boulmier"@fra-Latn ;
+    wdata:q7200235 "HT0711-06" .
+
+<urn:mdciii:1603:45:16:332:3:71201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71201" ;
+    skos:prefLabel "1re Section Boury"@eng-Latn, "1re Section Boury"@fra-Latn ;
+    wdata:q7200235 "HT0712-01" .
+
+<urn:mdciii:1603:45:16:332:3:71202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71202" ;
+    skos:prefLabel "2e Section Berault"@eng-Latn, "2e Section Berault"@fra-Latn ;
+    wdata:q7200235 "HT0712-02" .
+
+<urn:mdciii:1603:45:16:332:3:71203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71203" ;
+    skos:prefLabel "3e Section Solon"@eng-Latn, "3e Section Solon"@fra-Latn ;
+    wdata:q7200235 "HT0712-03" .
+
+<urn:mdciii:1603:45:16:332:3:71204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71204" ;
+    skos:prefLabel "4e Section Moreau"@eng-Latn, "4e Section Moreau"@fra-Latn ;
+    wdata:q7200235 "HT0712-04" .
+
+<urn:mdciii:1603:45:16:332:3:71301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71301" ;
+    skos:prefLabel "1re Section Fonds Palmiste"@eng-Latn, "1re Section Fonds Palmiste"@fra-Latn ;
+    wdata:q7200235 "HT0713-01" .
+
+<urn:mdciii:1603:45:16:332:3:71302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71302" ;
+    skos:prefLabel "2e Section Meloniere"@eng-Latn, "2e Section Melonière"@fra-Latn ;
+    wdata:q7200235 "HT0713-02" .
+
+<urn:mdciii:1603:45:16:332:3:71303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71303" ;
+    skos:prefLabel "3e Section Carrefour Canon"@eng-Latn, "3e Section Carrefour Canon"@fra-Latn ;
+    wdata:q7200235 "HT0713-03" .
+
+<urn:mdciii:1603:45:16:332:3:71401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71401" ;
+    skos:prefLabel "1re Section Levy Mersan"@eng-Latn, "1re Section Levy Mersan"@fra-Latn ;
+    wdata:q7200235 "HT0714-01" .
+
+<urn:mdciii:1603:45:16:332:3:71402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71402" ;
+    skos:prefLabel "2e Section Champlois"@eng-Latn, "2e Section Champlois"@fra-Latn ;
+    wdata:q7200235 "HT0714-02" .
+
+<urn:mdciii:1603:45:16:332:3:71403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71403" ;
+    skos:prefLabel "3e Section Tibi Davezac"@eng-Latn, "3e Section Tibi Davezac"@fra-Latn ;
+    wdata:q7200235 "HT0714-03" .
+
+<urn:mdciii:1603:45:16:332:3:71501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71501" ;
+    skos:prefLabel "1re Section Maniche"@eng-Latn, "1re Section Maniche"@fra-Latn ;
+    wdata:q7200235 "HT0715-01" .
+
+<urn:mdciii:1603:45:16:332:3:71502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71502" ;
+    skos:prefLabel "2e Section Dory"@eng-Latn, "2e Section Dory"@fra-Latn ;
+    wdata:q7200235 "HT0715-02" .
+
+<urn:mdciii:1603:45:16:332:3:71503>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71503" ;
+    skos:prefLabel "3e Section Melon"@eng-Latn, "3e Section Melon"@fra-Latn ;
+    wdata:q7200235 "HT0715-03" .
+
+<urn:mdciii:1603:45:16:332:3:71601>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:71601" ;
+    skos:prefLabel "1re Section Île a Vache"@eng-Latn, "1re Section Île à Vache"@fra-Latn ;
+    wdata:q7200235 "HT0716-01" .
+
+<urn:mdciii:1603:45:16:332:3:72101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:72101" ;
+    skos:prefLabel "1re Section Barbois"@eng-Latn, "1re Section Barbois"@fra-Latn ;
+    wdata:q7200235 "HT0721-01" .
+
+<urn:mdciii:1603:45:16:332:3:72102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:72102" ;
+    skos:prefLabel "2e Section Dumont"@eng-Latn, "2e Section Dumont"@fra-Latn ;
+    wdata:q7200235 "HT0721-02" .
+
+<urn:mdciii:1603:45:16:332:3:72201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:72201" ;
+    skos:prefLabel "1re Section Tapion"@eng-Latn, "1re Section Tapion"@fra-Latn ;
+    wdata:q7200235 "HT0722-01" .
+
+<urn:mdciii:1603:45:16:332:3:72202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:72202" ;
+    skos:prefLabel "2e Section Debouchette"@eng-Latn, "2e Section Debouchette"@fra-Latn ;
+    wdata:q7200235 "HT0722-02" .
+
+<urn:mdciii:1603:45:16:332:3:72203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:72203" ;
+    skos:prefLabel "3e Section Trichet"@eng-Latn, "3e Section Trichet"@fra-Latn ;
+    wdata:q7200235 "HT0722-03" .
+
+<urn:mdciii:1603:45:16:332:3:72301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:72301" ;
+    skos:prefLabel "1re Section Lazarre"@eng-Latn, "1re Section Lazarre"@fra-Latn ;
+    wdata:q7200235 "HT0723-01" .
+
+<urn:mdciii:1603:45:16:332:3:72302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:72302" ;
+    skos:prefLabel "2e Section Anse a Drick"@eng-Latn, "2e Section Anse à Drick"@fra-Latn ;
+    wdata:q7200235 "HT0723-02" .
+
+<urn:mdciii:1603:45:16:332:3:72303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:72303" ;
+    skos:prefLabel "3e Section d'Arniquet"@eng-Latn, "3e Section d'Arniquet"@fra-Latn ;
+    wdata:q7200235 "HT0723-03" .
+
+<urn:mdciii:1603:45:16:332:3:73101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73101" ;
+    skos:prefLabel "1re Section Macean"@eng-Latn, "1re Section Macéan"@fra-Latn ;
+    wdata:q7200235 "HT0731-01" .
+
+<urn:mdciii:1603:45:16:332:3:73102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73102" ;
+    skos:prefLabel "2e Section Bellevue"@eng-Latn, "2e Section Bellevue"@fra-Latn ;
+    wdata:q7200235 "HT0731-02" .
+
+<urn:mdciii:1603:45:16:332:3:73103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73103" ;
+    skos:prefLabel "3e Section Brodequin"@eng-Latn, "3e Section Brodequin"@fra-Latn ;
+    wdata:q7200235 "HT0731-03" .
+
+<urn:mdciii:1603:45:16:332:3:73104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73104" ;
+    skos:prefLabel "4e Section Flamands"@eng-Latn, "4e Section Flamands"@fra-Latn ;
+    wdata:q7200235 "HT0731-04" .
+
+<urn:mdciii:1603:45:16:332:3:73105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73105" ;
+    skos:prefLabel "5e Section Mare a Coiffe"@eng-Latn, "5e Section Mare à Coiffe"@fra-Latn ;
+    wdata:q7200235 "HT0731-05" .
+
+<urn:mdciii:1603:45:16:332:3:73106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73106" ;
+    skos:prefLabel "6e Section La Colline"@eng-Latn, "6e Section La Colline"@fra-Latn ;
+    wdata:q7200235 "HT0731-06" .
+
+<urn:mdciii:1603:45:16:332:3:73107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73107" ;
+    skos:prefLabel "7e Section Frangipane"@eng-Latn, "7e Section Frangipane"@fra-Latn ;
+    wdata:q7200235 "HT0731-07" .
+
+<urn:mdciii:1603:45:16:332:3:73108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73108" ;
+    skos:prefLabel "8e Section Colline a Mongons"@eng-Latn, "8e Section Colline à Mongons"@fra-Latn ;
+    wdata:q7200235 "HT0731-08" .
+
+<urn:mdciii:1603:45:16:332:3:73109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73109" ;
+    skos:prefLabel "9e Section Fond des Blancs"@eng-Latn, "9e Section Fond des Blancs"@fra-Latn ;
+    wdata:q7200235 "HT0731-09" .
+
+<urn:mdciii:1603:45:16:332:3:73110>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73110" ;
+    skos:prefLabel "10e Section Guirand"@eng-Latn, "10e Section Guirand"@fra-Latn ;
+    wdata:q7200235 "HT0731-10" .
+
+<urn:mdciii:1603:45:16:332:3:73201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73201" ;
+    skos:prefLabel "1re Section Grand Fonds"@eng-Latn, "1re Section Grand Fonds"@fra-Latn ;
+    wdata:q7200235 "HT0732-01" .
+
+<urn:mdciii:1603:45:16:332:3:73202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73202" ;
+    skos:prefLabel "2e Section Baie Dumesle"@eng-Latn, "2e Section Baie Dumesle"@fra-Latn ;
+    wdata:q7200235 "HT0732-02" .
+
+<urn:mdciii:1603:45:16:332:3:73203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73203" ;
+    skos:prefLabel "3e Section Grenodiere"@eng-Latn, "3e Section Grenodière"@fra-Latn ;
+    wdata:q7200235 "HT0732-03" .
+
+<urn:mdciii:1603:45:16:332:3:73204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73204" ;
+    skos:prefLabel "4e Section Zanglais"@eng-Latn, "4e Section Zanglais"@fra-Latn ;
+    wdata:q7200235 "HT0732-04" .
+
+<urn:mdciii:1603:45:16:332:3:73205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73205" ;
+    skos:prefLabel "5e Section Sucrerie Henri"@eng-Latn, "5e Section Sucrerie Henri"@fra-Latn ;
+    wdata:q7200235 "HT0732-05" .
+
+<urn:mdciii:1603:45:16:332:3:73206>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73206" ;
+    skos:prefLabel "6e Section Solon"@eng-Latn, "6e Section Solon"@fra-Latn ;
+    wdata:q7200235 "HT0732-06" .
+
+<urn:mdciii:1603:45:16:332:3:73207>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73207" ;
+    skos:prefLabel "7e Section Cherette"@eng-Latn, "7e Section Cherette"@fra-Latn ;
+    wdata:q7200235 "HT0732-07" .
+
+<urn:mdciii:1603:45:16:332:3:73208>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73208" ;
+    skos:prefLabel "8e Section Corail-Henri"@eng-Latn, "8e Section Corail-Henri"@fra-Latn ;
+    wdata:q7200235 "HT0732-08" .
+
+<urn:mdciii:1603:45:16:332:3:73301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73301" ;
+    skos:prefLabel "1re Section Boileau"@eng-Latn, "1re Section Boileau"@fra-Latn ;
+    wdata:q7200235 "HT0733-01" .
+
+<urn:mdciii:1603:45:16:332:3:73302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73302" ;
+    skos:prefLabel "2e Section Martineau"@eng-Latn, "2e Section Martineau"@fra-Latn ;
+    wdata:q7200235 "HT0733-02" .
+
+<urn:mdciii:1603:45:16:332:3:73303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73303" ;
+    skos:prefLabel "3e Section Gros Marin"@eng-Latn, "3e Section Gros Marin"@fra-Latn ;
+    wdata:q7200235 "HT0733-03" .
+
+<urn:mdciii:1603:45:16:332:3:73304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73304" ;
+    skos:prefLabel "4e Section Mare Henri"@eng-Latn, "4e Section Mare Henri"@fra-Latn ;
+    wdata:q7200235 "HT0733-04" .
+
+<urn:mdciii:1603:45:16:332:3:73305>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:73305" ;
+    skos:prefLabel "5e Section Laroque"@eng-Latn, "5e Section Laroque"@fra-Latn ;
+    wdata:q7200235 "HT0733-05" .
+
+<urn:mdciii:1603:45:16:332:3:74101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:74101" ;
+    skos:prefLabel "1re Section Conde"@eng-Latn, "1re Section Conde"@fra-Latn ;
+    wdata:q7200235 "HT0741-01" .
+
+<urn:mdciii:1603:45:16:332:3:74102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:74102" ;
+    skos:prefLabel "2e Section Despas"@eng-Latn, "2e Section Despas"@fra-Latn ;
+    wdata:q7200235 "HT0741-02" .
+
+<urn:mdciii:1603:45:16:332:3:74103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:74103" ;
+    skos:prefLabel "3e Section Quentin"@eng-Latn, "3e Section Quentin"@fra-Latn ;
+    wdata:q7200235 "HT0741-03" .
+
+<urn:mdciii:1603:45:16:332:3:74201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:74201" ;
+    skos:prefLabel "1re Section Paricot"@eng-Latn, "1re Section Paricot"@fra-Latn ;
+    wdata:q7200235 "HT0742-01" .
+
+<urn:mdciii:1603:45:16:332:3:74202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:74202" ;
+    skos:prefLabel "2e Section Balais"@eng-Latn, "2e Section Balais"@fra-Latn ;
+    wdata:q7200235 "HT0742-02" .
+
+<urn:mdciii:1603:45:16:332:3:74301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:74301" ;
+    skos:prefLabel "1re Section Beaulieu"@eng-Latn, "1re Section Beaulieu"@fra-Latn ;
+    wdata:q7200235 "HT0743-01" .
+
+<urn:mdciii:1603:45:16:332:3:74302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:74302" ;
+    skos:prefLabel "2e Section Renaudin"@eng-Latn, "2e Section Renaudin"@fra-Latn ;
+    wdata:q7200235 "HT0743-02" .
+
+<urn:mdciii:1603:45:16:332:3:74303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:74303" ;
+    skos:prefLabel "3e Section Beauclos"@eng-Latn, "3e Section Beauclos"@fra-Latn ;
+    wdata:q7200235 "HT0743-03" .
+
+<urn:mdciii:1603:45:16:332:3:75101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75101" ;
+    skos:prefLabel "1re Section Randel"@eng-Latn, "1re Section Randel"@fra-Latn ;
+    wdata:q7200235 "HT0751-01" .
+
+<urn:mdciii:1603:45:16:332:3:75102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75102" ;
+    skos:prefLabel "2e Section Dejoie"@eng-Latn, "2e Section Dejoie"@fra-Latn ;
+    wdata:q7200235 "HT0751-02" .
+
+<urn:mdciii:1603:45:16:332:3:75103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75103" ;
+    skos:prefLabel "3e Section Bony"@eng-Latn, "3e Section Bony"@fra-Latn ;
+    wdata:q7200235 "HT0751-03" .
+
+<urn:mdciii:1603:45:16:332:3:75201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75201" ;
+    skos:prefLabel "1re Section Verone"@eng-Latn, "1re Section Verone"@fra-Latn ;
+    wdata:q7200235 "HT0752-01" .
+
+<urn:mdciii:1603:45:16:332:3:75202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75202" ;
+    skos:prefLabel "2e Section Edelin"@eng-Latn, "2e Section Edelin"@fra-Latn ;
+    wdata:q7200235 "HT0752-02" .
+
+<urn:mdciii:1603:45:16:332:3:75203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75203" ;
+    skos:prefLabel "3e Section Cosse"@eng-Latn, "3e Section Cosse"@fra-Latn ;
+    wdata:q7200235 "HT0752-03" .
+
+<urn:mdciii:1603:45:16:332:3:75301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75301" ;
+    skos:prefLabel "1re Section Blactote"@eng-Latn, "1re Section Blactote"@fra-Latn ;
+    wdata:q7200235 "HT0753-01" .
+
+<urn:mdciii:1603:45:16:332:3:75302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75302" ;
+    skos:prefLabel "2e Section Nan Sevre"@eng-Latn, "2e Section Nan Sevre"@fra-Latn ;
+    wdata:q7200235 "HT0753-02" .
+
+<urn:mdciii:1603:45:16:332:3:75303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75303" ;
+    skos:prefLabel "3e Section Loby"@eng-Latn, "3e Section Loby"@fra-Latn ;
+    wdata:q7200235 "HT0753-03" .
+
+<urn:mdciii:1603:45:16:332:3:75304>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:75304" ;
+    skos:prefLabel "4e Section Dalmette"@eng-Latn, "4e Section Dalmette"@fra-Latn ;
+    wdata:q7200235 "HT0753-04" .
+
+<urn:mdciii:1603:45:16:332:3:81101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81101" ;
+    skos:prefLabel "1re Section Basse Voldrogue"@eng-Latn, "1re Section Basse Voldrogue"@fra-Latn ;
+    wdata:q7200235 "HT0811-01" .
+
+<urn:mdciii:1603:45:16:332:3:81102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81102" ;
+    skos:prefLabel "2e Section Haute Voldrogue"@eng-Latn, "2e Section Haute Voldrogue"@fra-Latn ;
+    wdata:q7200235 "HT0811-02" .
+
+<urn:mdciii:1603:45:16:332:3:81103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81103" ;
+    skos:prefLabel "3e Section Haute Guinaudee"@eng-Latn, "3e Section Haute Guinaudee"@fra-Latn ;
+    wdata:q7200235 "HT0811-03" .
+
+<urn:mdciii:1603:45:16:332:3:81104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81104" ;
+    skos:prefLabel "4e Section Basse Guinaudee"@eng-Latn, "4e Section Basse Guinaudee"@fra-Latn ;
+    wdata:q7200235 "HT0811-04" .
+
+<urn:mdciii:1603:45:16:332:3:81105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81105" ;
+    skos:prefLabel "5e Section Ravine a Charles"@eng-Latn, "5e Section Ravine à Charles"@fra-Latn ;
+    wdata:q7200235 "HT0811-05" .
+
+<urn:mdciii:1603:45:16:332:3:81106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81106" ;
+    skos:prefLabel "6e Section Îles Blanches"@eng-Latn, "6e Section Îles Blanches"@fra-Latn ;
+    wdata:q7200235 "HT0811-06" .
+
+<urn:mdciii:1603:45:16:332:3:81107>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81107" ;
+    skos:prefLabel "7e Section Marfranc ou Grande Riviere"@eng-Latn, "7e Section Marfranc ou Grande Rivière"@fra-Latn ;
+    wdata:q7200235 "HT0811-07" .
+
+<urn:mdciii:1603:45:16:332:3:81108>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81108" ;
+    skos:prefLabel "8e Section Fond Rouge Dahere"@eng-Latn, "8e Section Fond Rouge Dahere"@fra-Latn ;
+    wdata:q7200235 "HT0811-08" .
+
+<urn:mdciii:1603:45:16:332:3:81109>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81109" ;
+    skos:prefLabel "9e Section Fond Rouge Torbeck"@eng-Latn, "9e Section Fond Rouge Torbeck"@fra-Latn ;
+    wdata:q7200235 "HT0811-09" .
+
+<urn:mdciii:1603:45:16:332:3:81201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81201" ;
+    skos:prefLabel "1re Section Anse du Clerc"@eng-Latn, "1re Section Anse du Clerc"@fra-Latn ;
+    wdata:q7200235 "HT0812-01" .
+
+<urn:mdciii:1603:45:16:332:3:81202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81202" ;
+    skos:prefLabel "2e Section Balisiers"@eng-Latn, "2e Section Balisiers"@fra-Latn ;
+    wdata:q7200235 "HT0812-02" .
+
+<urn:mdciii:1603:45:16:332:3:81203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81203" ;
+    skos:prefLabel "3e Section Danglise"@eng-Latn, "3e Section Danglise"@fra-Latn ;
+    wdata:q7200235 "HT0812-03" .
+
+<urn:mdciii:1603:45:16:332:3:81204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81204" ;
+    skos:prefLabel "4e Section la Seringue"@eng-Latn, "4e Section la Seringue"@fra-Latn ;
+    wdata:q7200235 "HT0812-04" .
+
+<urn:mdciii:1603:45:16:332:3:81301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81301" ;
+    skos:prefLabel "1re Section Desormeau ou Bonbon"@eng-Latn, "1re Section Desormeau ou Bonbon"@fra-Latn ;
+    wdata:q7200235 "HT0813-01" .
+
+<urn:mdciii:1603:45:16:332:3:81401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81401" ;
+    skos:prefLabel "1re Section Anote ou 1re Tapion"@eng-Latn, "1re Section Anote ou 1re Tapion"@fra-Latn ;
+    wdata:q7200235 "HT0814-01" .
+
+<urn:mdciii:1603:45:16:332:3:81402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81402" ;
+    skos:prefLabel "2e Section Sources Chaudes"@eng-Latn, "2e Section Sources Chaudes"@fra-Latn ;
+    wdata:q7200235 "HT0814-02" .
+
+<urn:mdciii:1603:45:16:332:3:81403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81403" ;
+    skos:prefLabel "3e Section l'Assise ou Chameau"@eng-Latn, "3e Section l'Assise ou Chameau"@fra-Latn ;
+    wdata:q7200235 "HT0814-03" .
+
+<urn:mdciii:1603:45:16:332:3:81501>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81501" ;
+    skos:prefLabel "1re Section Dejean"@eng-Latn, "1re Section Dejean"@fra-Latn ;
+    wdata:q7200235 "HT0815-01" .
+
+<urn:mdciii:1603:45:16:332:3:81502>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:81502" ;
+    skos:prefLabel "2e Section Boucan"@eng-Latn, "2e Section Boucan"@fra-Latn ;
+    wdata:q7200235 "HT0815-02" .
+
+<urn:mdciii:1603:45:16:332:3:82101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82101" ;
+    skos:prefLabel "1re Section Grandoit"@eng-Latn, "1re Section Grandoit"@fra-Latn ;
+    wdata:q7200235 "HT0821-01" .
+
+<urn:mdciii:1603:45:16:332:3:82102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82102" ;
+    skos:prefLabel "2e Section Boudon"@eng-Latn, "2e Section Boudon"@fra-Latn ;
+    wdata:q7200235 "HT0821-02" .
+
+<urn:mdciii:1603:45:16:332:3:82103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82103" ;
+    skos:prefLabel "3e Section Îlet a Pierre Joseph"@eng-Latn, "3e Section Îlet à Pierre Joseph"@fra-Latn ;
+    wdata:q7200235 "HT0821-03" .
+
+<urn:mdciii:1603:45:16:332:3:82104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82104" ;
+    skos:prefLabel "4e Section Mandou"@eng-Latn, "4e Section Mandou"@fra-Latn ;
+    wdata:q7200235 "HT0821-04" .
+
+<urn:mdciii:1603:45:16:332:3:82201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82201" ;
+    skos:prefLabel "1re Section Bariadelle"@eng-Latn, "1re Section Bariadelle"@fra-Latn ;
+    wdata:q7200235 "HT0822-01" .
+
+<urn:mdciii:1603:45:16:332:3:82202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82202" ;
+    skos:prefLabel "2e Section Dallier"@eng-Latn, "2e Section Dallier"@fra-Latn ;
+    wdata:q7200235 "HT0822-02" .
+
+<urn:mdciii:1603:45:16:332:3:82203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82203" ;
+    skos:prefLabel "3e Section Desormeau"@eng-Latn, "3e Section Desormeau"@fra-Latn ;
+    wdata:q7200235 "HT0822-03" .
+
+<urn:mdciii:1603:45:16:332:3:82204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82204" ;
+    skos:prefLabel "4e Section Petite Riviere"@eng-Latn, "4e Section Petite Rivière"@fra-Latn ;
+    wdata:q7200235 "HT0822-04" .
+
+<urn:mdciii:1603:45:16:332:3:82205>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82205" ;
+    skos:prefLabel "5e Section Baliverne"@eng-Latn, "5e Section Baliverne"@fra-Latn ;
+    wdata:q7200235 "HT0822-05" .
+
+<urn:mdciii:1603:45:16:332:3:82301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82301" ;
+    skos:prefLabel "1re Section Matador (Jorgue)"@eng-Latn, "1re Section Matador (Jorgue)"@fra-Latn ;
+    wdata:q7200235 "HT0823-01" .
+
+<urn:mdciii:1603:45:16:332:3:82302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82302" ;
+    skos:prefLabel "2e Section Belair"@eng-Latn, "2e Section Belair"@fra-Latn ;
+    wdata:q7200235 "HT0823-02" .
+
+<urn:mdciii:1603:45:16:332:3:82303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:82303" ;
+    skos:prefLabel "3e Section Garcasse"@eng-Latn, "3e Section Garcasse"@fra-Latn ;
+    wdata:q7200235 "HT0823-03" .
+
+<urn:mdciii:1603:45:16:332:3:83101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83101" ;
+    skos:prefLabel "1re Section Duquillon"@eng-Latn, "1re Section Duquillon"@fra-Latn ;
+    wdata:q7200235 "HT0831-01" .
+
+<urn:mdciii:1603:45:16:332:3:83102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83102" ;
+    skos:prefLabel "2e Section Fond d'Icaque"@eng-Latn, "2e Section Fond d'Icaque"@fra-Latn ;
+    wdata:q7200235 "HT0831-02" .
+
+<urn:mdciii:1603:45:16:332:3:83103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83103" ;
+    skos:prefLabel "3e Section Champy (Nan Campeche)"@eng-Latn, "3e Section Champy (Nan Campêche)"@fra-Latn ;
+    wdata:q7200235 "HT0831-03" .
+
+<urn:mdciii:1603:45:16:332:3:83201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83201" ;
+    skos:prefLabel "1re Section Carrefour Charles ou Jacqui"@eng-Latn, "1re Section Carrefour Charles ou Jacqui"@fra-Latn ;
+    wdata:q7200235 "HT0832-01" .
+
+<urn:mdciii:1603:45:16:332:3:83202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83202" ;
+    skos:prefLabel "2e Section Fond Cochon ou Lopineau"@eng-Latn, "2e Section Fond Cochon ou Lopineau"@fra-Latn ;
+    wdata:q7200235 "HT0832-02" .
+
+<urn:mdciii:1603:45:16:332:3:83203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83203" ;
+    skos:prefLabel "3e Section Grand Vincent"@eng-Latn, "3e Section Grand Vincent"@fra-Latn ;
+    wdata:q7200235 "HT0832-03" .
+
+<urn:mdciii:1603:45:16:332:3:83204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83204" ;
+    skos:prefLabel "4e Section les Gommiers"@eng-Latn, "4e Section les Gommiers"@fra-Latn ;
+    wdata:q7200235 "HT0832-04" .
+
+<urn:mdciii:1603:45:16:332:3:83301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83301" ;
+    skos:prefLabel "1re Section Beaumont"@eng-Latn, "1re Section Beaumont 1re  Section Beaumont"@fra-Latn ;
+    wdata:q7200235 "HT0833-01" .
+
+<urn:mdciii:1603:45:16:332:3:83302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83302" ;
+    skos:prefLabel "2e Section Chardonnette"@eng-Latn, "2e Section Chardonnette"@fra-Latn ;
+    wdata:q7200235 "HT0833-02" .
+
+<urn:mdciii:1603:45:16:332:3:83303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83303" ;
+    skos:prefLabel "3e Section Mouline"@eng-Latn, "3e Section Mouline"@fra-Latn ;
+    wdata:q7200235 "HT0833-03" .
+
+<urn:mdciii:1603:45:16:332:3:83401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83401" ;
+    skos:prefLabel "1re Section Bernagousse"@eng-Latn, "1re Section Bernagousse"@fra-Latn ;
+    wdata:q7200235 "HT0834-01" .
+
+<urn:mdciii:1603:45:16:332:3:83402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83402" ;
+    skos:prefLabel "2e Section Espere"@eng-Latn, "2e Section Espère"@fra-Latn ;
+    wdata:q7200235 "HT0834-02" .
+
+<urn:mdciii:1603:45:16:332:3:83403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83403" ;
+    skos:prefLabel "3e Section Jean Bellune"@eng-Latn, "3e Section Jean Bellune"@fra-Latn ;
+    wdata:q7200235 "HT0834-03" .
+
+<urn:mdciii:1603:45:16:332:3:83404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83404" ;
+    skos:prefLabel "4e Section Tozia"@eng-Latn, "4e Section Tozia"@fra-Latn ;
+    wdata:q7200235 "HT0834-04" .
+
+<urn:mdciii:1603:45:16:332:3:83405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83405" ;
+    skos:prefLabel "5e Section Duchity"@eng-Latn, "5e Section Duchity"@fra-Latn ;
+    wdata:q7200235 "HT0834-05" .
+
+<urn:mdciii:1603:45:16:332:3:83406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:83406" ;
+    skos:prefLabel "6e Section Les Îles Cayemittes"@eng-Latn, "6e Section Les Îles Cayemittes"@fra-Latn ;
+    wdata:q7200235 "HT0834-06" .
+
+<urn:mdciii:1603:45:16:332:3:91101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91101" ;
+    skos:prefLabel "1re Section Baudin"@eng-Latn, "1re Section Baudin"@fra-Latn ;
+    wdata:q7200235 "HT0911-01" .
+
+<urn:mdciii:1603:45:16:332:3:91102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91102" ;
+    skos:prefLabel "2e Section la Pointe"@eng-Latn, "2e Section la Pointe"@fra-Latn ;
+    wdata:q7200235 "HT0911-02" .
+
+<urn:mdciii:1603:45:16:332:3:91103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91103" ;
+    skos:prefLabel "3e Section Aubert"@eng-Latn, "3e Section Aubert"@fra-Latn ;
+    wdata:q7200235 "HT0911-03" .
+
+<urn:mdciii:1603:45:16:332:3:91104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91104" ;
+    skos:prefLabel "4e Section Mahotiere"@eng-Latn, "4e Section Mahotière"@fra-Latn ;
+    wdata:q7200235 "HT0911-04" .
+
+<urn:mdciii:1603:45:16:332:3:91105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91105" ;
+    skos:prefLabel "5e Section Bas des Moustiques"@eng-Latn, "5e Section Bas des Moustiques"@fra-Latn ;
+    wdata:q7200235 "HT0911-05" .
+
+<urn:mdciii:1603:45:16:332:3:91106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91106" ;
+    skos:prefLabel "6e Section la Corne"@eng-Latn, "6e Section la Corne"@fra-Latn ;
+    wdata:q7200235 "HT0911-06" .
+
+<urn:mdciii:1603:45:16:332:3:91201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91201" ;
+    skos:prefLabel "1re Section Pointe des Oiseaux"@eng-Latn, "1re Section Pointe des Oiseaux"@fra-Latn ;
+    wdata:q7200235 "HT0912-01" .
+
+<urn:mdciii:1603:45:16:332:3:91202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91202" ;
+    skos:prefLabel "2e Section Mare Rouge"@eng-Latn, "2e Section Mare Rouge"@fra-Latn ;
+    wdata:q7200235 "HT0912-02" .
+
+<urn:mdciii:1603:45:16:332:3:91301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91301" ;
+    skos:prefLabel "1re Section La Plate"@eng-Latn, "1re Section La Plate"@fra-Latn ;
+    wdata:q7200235 "HT0913-01" .
+
+<urn:mdciii:1603:45:16:332:3:91302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91302" ;
+    skos:prefLabel "2e Section Carreau Datty"@eng-Latn, "2e Section Carreau Datty"@fra-Latn ;
+    wdata:q7200235 "HT0913-02" .
+
+<urn:mdciii:1603:45:16:332:3:91303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91303" ;
+    skos:prefLabel "3e Section Haut des Moustiques"@eng-Latn, "3e Section Haut des Moustiques"@fra-Latn ;
+    wdata:q7200235 "HT0913-03" .
+
+<urn:mdciii:1603:45:16:332:3:91401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91401" ;
+    skos:prefLabel "1re Section Chansolme"@eng-Latn, "1re Section Chansolme"@fra-Latn ;
+    wdata:q7200235 "HT0914-01" .
+
+<urn:mdciii:1603:45:16:332:3:91402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:91402" ;
+    skos:prefLabel "2e Source Beauvoir"@eng-Latn, "2e Source Beauvoir"@fra-Latn ;
+    wdata:q7200235 "HT0914-02" .
+
+<urn:mdciii:1603:45:16:332:3:92101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92101" ;
+    skos:prefLabel "1re Section Riviere des Negres"@eng-Latn, "1re Section Rivière des Nègres"@fra-Latn ;
+    wdata:q7200235 "HT0921-01" .
+
+<urn:mdciii:1603:45:16:332:3:92102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92102" ;
+    skos:prefLabel "2e Section Derourvay"@eng-Latn, "2e Section Derourvay"@fra-Latn ;
+    wdata:q7200235 "HT0921-02" .
+
+<urn:mdciii:1603:45:16:332:3:92103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92103" ;
+    skos:prefLabel "3e Section des Granges"@eng-Latn, "3e Section des Granges"@fra-Latn ;
+    wdata:q7200235 "HT0921-03" .
+
+<urn:mdciii:1603:45:16:332:3:92104>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92104" ;
+    skos:prefLabel "4e Section Riviere de Barre"@eng-Latn, "4e Section Rivière de Barre"@fra-Latn ;
+    wdata:q7200235 "HT0921-04" .
+
+<urn:mdciii:1603:45:16:332:3:92105>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92105" ;
+    skos:prefLabel "5e Section Bonneau"@eng-Latn, "5e Section Bonneau"@fra-Latn ;
+    wdata:q7200235 "HT0921-05" .
+
+<urn:mdciii:1603:45:16:332:3:92106>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92106" ;
+    skos:prefLabel "6e Section Lafague (Chamoise)"@eng-Latn, "6e Section Lafague (Chamoise)"@fra-Latn ;
+    wdata:q7200235 "HT0921-06" .
+
+<urn:mdciii:1603:45:16:332:3:92201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92201" ;
+    skos:prefLabel "1re Section Bas de Sainte Anne"@eng-Latn, "1re Section Bas de Sainte Anne"@fra-Latn ;
+    wdata:q7200235 "HT0922-01" .
+
+<urn:mdciii:1603:45:16:332:3:92202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92202" ;
+    skos:prefLabel "2e Section Mayance"@eng-Latn, "2e Section Mayance"@fra-Latn ;
+    wdata:q7200235 "HT0922-02" .
+
+<urn:mdciii:1603:45:16:332:3:92203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:92203" ;
+    skos:prefLabel "3e Section Cotes de Fer"@eng-Latn, "3e Section Cotes de Fer"@fra-Latn ;
+    wdata:q7200235 "HT0922-03" .
+
+<urn:mdciii:1603:45:16:332:3:93101>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93101" ;
+    skos:prefLabel "1re Section de Cotes de Fer"@eng-Latn, "1re Section de Cotes de Fer"@fra-Latn ;
+    wdata:q7200235 "HT0931-01" .
+
+<urn:mdciii:1603:45:16:332:3:93102>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93102" ;
+    skos:prefLabel "2e Section Mare-Rouge"@eng-Latn, "2e Section Mare-Rouge"@fra-Latn ;
+    wdata:q7200235 "HT0931-02" .
+
+<urn:mdciii:1603:45:16:332:3:93103>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93103" ;
+    skos:prefLabel "3e Section Dame"@eng-Latn, "3e Section Dame"@fra-Latn ;
+    wdata:q7200235 "HT0931-03" .
+
+<urn:mdciii:1603:45:16:332:3:93201>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93201" ;
+    skos:prefLabel "1re Section Citerne Remy"@eng-Latn, "1re Section Citerne Remy"@fra-Latn ;
+    wdata:q7200235 "HT0932-01" .
+
+<urn:mdciii:1603:45:16:332:3:93202>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93202" ;
+    skos:prefLabel "2e Section Dos d'Ane"@eng-Latn, "2e Section Dos d'Ane"@fra-Latn ;
+    wdata:q7200235 "HT0932-02" .
+
+<urn:mdciii:1603:45:16:332:3:93203>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93203" ;
+    skos:prefLabel "3e Section Reserve ou Ti Paradis"@eng-Latn, "3e Section Reserve ou Ti Paradis"@fra-Latn ;
+    wdata:q7200235 "HT0932-03" .
+
+<urn:mdciii:1603:45:16:332:3:93204>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93204" ;
+    skos:prefLabel "4e Section l'Estere Dere"@eng-Latn, "4e Section l'Estère Dere"@fra-Latn ;
+    wdata:q7200235 "HT0932-04" .
+
+<urn:mdciii:1603:45:16:332:3:93301>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93301" ;
+    skos:prefLabel "1re Section Plate Forme"@eng-Latn, "1re Section Plate Forme"@fra-Latn ;
+    wdata:q7200235 "HT0933-01" .
+
+<urn:mdciii:1603:45:16:332:3:93302>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93302" ;
+    skos:prefLabel "2e Section des Forges"@eng-Latn, "2e Section des Forges"@fra-Latn ;
+    wdata:q7200235 "HT0933-02" .
+
+<urn:mdciii:1603:45:16:332:3:93303>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93303" ;
+    skos:prefLabel "3e Section Plaine d'Orange"@eng-Latn, "3e Section Plaine d'Orange"@fra-Latn ;
+    wdata:q7200235 "HT0933-03" .
+
+<urn:mdciii:1603:45:16:332:3:93401>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93401" ;
+    skos:prefLabel "1re Section Lacoma"@eng-Latn, "1re Section Lacoma"@fra-Latn ;
+    wdata:q7200235 "HT0934-01" .
+
+<urn:mdciii:1603:45:16:332:3:93402>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93402" ;
+    skos:prefLabel "2e Section Guinaudee"@eng-Latn, "2e Section Guinaudee"@fra-Latn ;
+    wdata:q7200235 "HT0934-02" .
+
+<urn:mdciii:1603:45:16:332:3:93403>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93403" ;
+    skos:prefLabel "3e Section Vieille Hatte"@eng-Latn, "3e Section Vieille Hatte"@fra-Latn ;
+    wdata:q7200235 "HT0934-03" .
+
+<urn:mdciii:1603:45:16:332:3:93404>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93404" ;
+    skos:prefLabel "4e Section la Montagne"@eng-Latn, "4e Section la Montagne"@fra-Latn ;
+    wdata:q7200235 "HT0934-04" .
+
+<urn:mdciii:1603:45:16:332:3:93405>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93405" ;
+    skos:prefLabel "5e Section Dessources"@eng-Latn, "5e Section Dessources"@fra-Latn ;
+    wdata:q7200235 "HT0934-05" .
+
+<urn:mdciii:1603:45:16:332:3:93406>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93406" ;
+    skos:prefLabel "6e Section Grande Source"@eng-Latn, "6e Section Grande Source"@fra-Latn ;
+    wdata:q7200235 "HT0934-06" .
+
+<urn:mdciii:1603:45:16:332:3:93407>
+    a owl:Thing, skos:Concept ;
+    rdfs:label "1603:45:16:332:3:93407" ;
+    skos:prefLabel "7e Section Diondion"@eng-Latn, "7e Section Diondion"@fra-Latn ;
+    wdata:q7200235 "HT0934-07" .
+

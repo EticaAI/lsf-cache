@@ -6019,10 +6019,14 @@ def rdf_literal_escape(textum: str) -> str:
 
     # raise ValueError(textum)
     # TODOs [#x22, #x5C, #xA, #xD]
-    if textum.find(r'\n') > -1:
-        textum = textum.replace(r'\n', r'\\n')
-    if textum.find(r'\r') > -1:
-        textum = textum.replace(r'\r', r'\\r')
+    if textum.find("\r\n") > -1:
+        textum = textum.replace("\r\n", ' ')
+    if textum.find("\n") > -1:
+        # textum = textum.replace(r'\n', r'\\n')
+        textum = textum.replace("\n", ' ')
+    if textum.find("\r") > -1:
+        # textum = textum.replace(r'\r', r'\\r')
+        textum = textum.replace("\r", ' ')
     if textum.find(r'"') > -1:
         textum = textum.replace(r'"', r'\"')
 
