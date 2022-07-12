@@ -1,60 +1,6 @@
 {
   "name": "1603_45_16_76_2",
-  "profile": "tabular-data-package",
   "resources": [
-    {
-      "name": "1603_45_16_76_2.no1.tm.hxl.csv",
-      "path": "1603_45_16_76_2.no1.tm.hxl.csv",
-      "profile": "tabular-data-resource",
-      "schema": {
-        "fields": [
-          {
-            "name": "#item+conceptum+codicem",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikiq",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip17",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip131",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip402",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip1566",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip1585",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip1937",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip6555",
-            "type": "string"
-          },
-          {
-            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip8119",
-            "type": "string"
-          }
-        ]
-      },
-      "stats": {
-        "fields": 10,
-        "rows": 5570
-      }
-    },
     {
       "name": "1603_45_16_76_2.no11.tm.hxl.csv",
       "path": "1603_45_16_76_2.no11.tm.hxl.csv",
@@ -63,7 +9,10 @@
         "fields": [
           {
             "name": "#item+conceptum+codicem",
-            "type": "string"
+            "type": "string",
+            "constraints": {
+              "unique": true
+            }
           },
           {
             "name": "#item+rem+i_qcc+is_zxxx+ix_wikip17",
@@ -1149,10 +1098,68 @@
             "name": "#item+rem+i_zxx+is_zxxx",
             "type": "string"
           }
-        ]
+        ],
+        "primaryKey": "#item+conceptum+codicem"
       },
       "stats": {
         "fields": 272,
+        "rows": 5570
+      }
+    },
+    {
+      "name": "1603_45_16_76_2.no1.tm.hxl.csv",
+      "path": "1603_45_16_76_2.no1.tm.hxl.csv",
+      "profile": "tabular-data-resource",
+      "schema": {
+        "fields": [
+          {
+            "name": "#item+conceptum+codicem",
+            "type": "string",
+            "constraints": {
+              "unique": true
+            }
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikiq",
+            "type": "string"
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip17",
+            "type": "string"
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip131",
+            "type": "string"
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip402",
+            "type": "string"
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip1566",
+            "type": "string"
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip1585",
+            "type": "string"
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip1937",
+            "type": "string"
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip6555",
+            "type": "string"
+          },
+          {
+            "name": "#item+rem+i_qcc+is_zxxx+ix_wikip8119",
+            "type": "string"
+          }
+        ],
+        "primaryKey": "#item+conceptum+codicem"
+      },
+      "stats": {
+        "fields": 10,
         "rows": 5570
       }
     }

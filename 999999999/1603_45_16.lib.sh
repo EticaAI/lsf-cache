@@ -91,13 +91,13 @@ bootstrap_1603_45_16__all() {
   echo "${FUNCNAME[0]} ... [@TODO]"
   opus_temporibus_temporarium="${ROOTDIR}/999999/0/1603_45_16.todo.tsv"
 
-  # set -x
-  # "${ROOTDIR}/999999999/0/999999999_7200235.py" \
-  #   --methodus='cod_ab_index' \
-  #   --punctum-separato-ad-tab \
-  #   --cum-columnis='#country+code+v_unm49,#country+code+v_iso3,#country+code+v_iso2,#meta+source+cod_ab_level,#date+created,#date+updated' \
-  #   >"${opus_temporibus_temporarium}"
-  # set +x
+  set -x
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus='cod_ab_index' \
+    --punctum-separato-ad-tab \
+    --cum-columnis='#country+code+v_unm49,#country+code+v_iso3,#country+code+v_iso2,#meta+source+cod_ab_level,#date+created,#date+updated' \
+    >"${opus_temporibus_temporarium}"
+  set +x
 
   echo ""
   echo "  LIST HERE <${opus_temporibus_temporarium}>"
@@ -166,7 +166,7 @@ bootstrap_1603_45_16__all() {
 
         # _datapackage_cod_ab_lvl="${ROOTDIR}/${__group_path}/datapackage.json"
         _datapackage_cod_ab_lvl="${__group_path}/datapackage.json"
-
+        set -x
         # warning: this old method takes way too much time to compile
         #          360	IDN	ID	4	2020-04-08	2020-04-08
         #          (and most of this is not necessary at all, since
@@ -178,7 +178,7 @@ bootstrap_1603_45_16__all() {
         #   --status-quo-in-datapackage \
         #   --codex-de="${gh_repo_name_et_level}" \
         #   >"${ROOTDIR}/${_datapackage_cod_ab_lvl}"
-
+        ## Much faster alternative:
         "${ROOTDIR}/999999999/0/1603_1.py" \
           --methodus='data-apothecae-unicae' \
           --data-apothecae-ad-stdout \
@@ -188,11 +188,12 @@ bootstrap_1603_45_16__all() {
 
         frictionless validate "${ROOTDIR}/${_datapackage_cod_ab_lvl}"
         # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$_datapackage_cod_ab_lvl" "${ROOTDIR}"
+        set +x
       done
 
-      printf "\t%40s\n" "${tty_red} DEBUG: [Sleep 5 (@TODO disable me later)] ${tty_normal}"
-      exit 1
-      sleep 5
+      # printf "\t%40s\n" "${tty_red} DEBUG: [Sleep 5 (@TODO disable me later)] ${tty_normal}"
+      # exit 1
+      # sleep 5
     done
   } <"${opus_temporibus_temporarium}"
 

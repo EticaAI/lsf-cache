@@ -55,7 +55,6 @@
 # @see https://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole
 
 # from ast import Try
-from email.policy import strict
 from genericpath import exists
 import glob
 # from multiprocessing.sharedctypes import Value
