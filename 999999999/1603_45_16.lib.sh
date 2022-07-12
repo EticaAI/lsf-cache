@@ -179,11 +179,19 @@ bootstrap_1603_45_16__all() {
           --codex-de="${gh_repo_name_et_level}" \
           >"${ROOTDIR}/${_datapackage_cod_ab_lvl}"
 
+        # "${ROOTDIR}/999999999/0/1603_1.py" \
+        #   --methodus='data-apothecae-unicae' \
+        #   --data-apothecae-ad-stdout \
+        #   --data-apothecae-formato='datapackage' \
+        #   --data-apothecae-ex="${gh_repo_name_et_level}" \
+        #   >"${ROOTDIR}/${_datapackage_cod_ab_lvl}"
+
         frictionless validate "${ROOTDIR}/${_datapackage_cod_ab_lvl}"
         # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$_datapackage_cod_ab_lvl" "${ROOTDIR}"
       done
 
       printf "\t%40s\n" "${tty_red} DEBUG: [Sleep 5 (@TODO disable me later)] ${tty_normal}"
+      exit 1
       sleep 5
     done
   } <"${opus_temporibus_temporarium}"
