@@ -396,6 +396,20 @@ exit 0
 # exit 0
 
 bootstrap_1603_45_16__all "1603_45_16"
+
+# apothecae~1603_45_16.datapackage.json
+#     $ DATA_APOTHECAE_MINIMIS=1 ./999999999/0/1603_1.py --methodus='data-apothecae' --data-apothecae-ad-stdout --data-apothecae-formato='datapackage' --data-apothecae-ex-suffixis='no1.bcp47.csv' --data-apothecae-ex-praefixis='1603_45_16' > ./apothecae~1603_45_16.datapackage.json
+
+# apothecae~1603_45_16.sqlite
+#     $ ./999999999/0/frictionless_to_sqlite.py --datapackage='apothecae~1603_45_16.datapackage.json' --sqlite='999999/0/apothecae~1603_45_16.sqlite'
+
+# PostgreSQL
+#     $ ./999999999/0/frictionless_to_sqlite.py --datapackage='apothecae~1603_45_16.datapackage.json' --sqlite='999999/0/apothecae~1603_45_16.sqlite'
+#     $ ./999999999/0/frictionless_to_postgresql.py --datapackage='apothecae~1603_45_16.datapackage.json' --postgresql='fititnt:pass@localhost/mdciii'
+
+# Excel
+#     $ ./999999999/0/frictionless_to_excel.py --datapackage='apothecae~1603_45_16.datapackage.json' --excel='999999/0/apothecae~1603_45_16.xlsx'
+
 # bootstrap_999999_1603_45_16_neo ""
 # bootstrap_999999_1603_45_16_neo "BRA"
 # bootstrap_999999_1603_45_16_neo "MOZ"

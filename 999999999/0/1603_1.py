@@ -193,6 +193,20 @@ no11.skos.ttl' --data-apothecae-ex-praefixis='1603'
 --data-apothecae-ex-suffixis='no1.tm.hxl.csv,no11.tm.hxl.csv' \
 --data-apothecae-ex-praefixis='1603_1_1,1603_16_1,1603_45,!1603_45_16'
 
+    DATA_APOTHECAE_MINIMIS=1 {0} --methodus='data-apothecae' \
+--data-apothecae-ad-stdout --data-apothecae-formato='datapackage' \
+--data-apothecae-ex-suffixis='no1.bcp47.csv' \
+--data-apothecae-ex-praefixis='1603_45_16' | jq .resources[].name | wc -l
+
+Data apothēcae ūnicae . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+(Faster alternative to --methodus='status-quo' --status-quo-in-datapackage)
+(Generate output for a single dataset, but all file formats without full path)
+
+    {0} --methodus='data-apothecae-unicae' \
+--data-apothecae-ex='1603_45_1' \
+--data-apothecae-ad-stdout \
+--data-apothecae-formato='datapackage'
+
 Dictionaria Numerordĭnātĭo (deprecated) . . . . . . . . . . . . . . . . . . . .
     {0} --methodus='deprecatum-dictionaria-numerordinatio'
 
@@ -4113,7 +4127,6 @@ class CodexSarcinarumAdnexis:
 class DataApothecae:
     """Data apothēcae
 
-
     Trivia:
     - data, n, pl, nominativus, https://en.wiktionary.org/wiki/datum#Latin
     - apothēcae, f, s, dativus, https://en.wiktionary.org/wiki/apotheca#Latin
@@ -4124,13 +4137,15 @@ class DataApothecae:
     data_apothecae_ex: list = []
     data_apothecae_ad: str = ''
     data_apothecae_formato: str = None
+    unicum: bool = False
     resultatum: list = []
 
     def __init__(
         self,
         data_apothecae_ex: list,
         data_apothecae_ad: Union[bool, str] = 'apothecae.datapackage.json',
-        data_apothecae_formato: str = None
+        data_apothecae_formato: str = None,
+        unicum: bool = False
     ):
 
         # NOTE: the command line options for strout and to auto detect
@@ -4142,6 +4157,7 @@ class DataApothecae:
                 '--data-apothecae-formato="<data-apothecae-formato>"')
 
         self.data_apothecae_ex = data_apothecae_ex
+
         self.data_apothecae_ad = data_apothecae_ad
         if data_apothecae_formato:
             self.data_apothecae_formato = data_apothecae_formato
@@ -4164,6 +4180,18 @@ class DataApothecae:
         if not data_apothecae_ad and self.data_apothecae_formato == 'sqlite':
             raise SyntaxError(
                 'sqlite not work with stdout. Please specify a path')
+
+        if unicum:
+            self.unicum = True
+            # print(self.data_apothecae_ex)
+            # print(self.data_apothecae_ex[0])
+            # sys.exit()
+            self.data_apothecae_ex = [self.data_apothecae_ex[0]]
+            _valid_single = ['csvw', 'datapackage']
+            if self.data_apothecae_formato not in _valid_single:
+                raise NotImplementedError(
+                    'data_apothecae_formato <{0}> non <{1}>'.format(
+                        self.data_apothecae_formato, _valid_single))
 
         self.initiari()
 
@@ -4329,7 +4357,8 @@ class DataApothecae:
         """
         paginae = []
         sarcina = {
-            '@context': ['http://www.w3.org/ns/csvw', {'@language': 'la'}],
+            # '@context': ['http://www.w3.org/ns/csvw', {'@language': 'la'}],
+            '@context': ['http://www.w3.org/ns/csvw'],
             # '@TODO': 'CSVW',
             # 'name': '1603',
             # 'profile': 'data-package-catalog',
@@ -4347,10 +4376,12 @@ class DataApothecae:
         # raise ValueError(DATA_APOTHECAE_MINIMIS, bool(DATA_APOTHECAE_MINIMIS))
 
         # if bool(DATA_APOTHECAE_MINIMIS) is True:
-        if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1"):
+        if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1") \
+                or self.unicum:
             for codex in self.data_apothecae_ex:
                 sarcina['tables'].append(
-                    DataApothecae.quod_tabula(codex, schema='csvw'))
+                    DataApothecae.quod_tabula(
+                        codex, schema='csvw', unicum=self.unicum))
         else:
             sarcina['tables'].append(
                 DataApothecae.quod_tabula('1603_1_1', schema='csvw'))
@@ -4392,20 +4423,30 @@ class DataApothecae:
         Args:
             libraria (LibrariaStatusQuo):
         """
+        _profile = 'data-package-catalog'
+        _name = '1603'
+
+        if self.unicum:
+            _name = self.data_apothecae_ex[0]
+
         paginae = []
         sarcina = {
-            'name': '1603',
-            'profile': 'data-package-catalog',
+            'name': _name,
+            # 'profile': 'data-package-catalog',
             'resources': []
         }
+
+        # if self.unicum:
+        #     _profile = 'tabular-data-resource'
 
         # raise ValueError(DATA_APOTHECAE_MINIMIS, bool(DATA_APOTHECAE_MINIMIS))
 
         # if bool(DATA_APOTHECAE_MINIMIS) is True:
-        if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1"):
+        if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1") \
+                or self.unicum:
             for codex in self.data_apothecae_ex:
                 sarcina['resources'].append(
-                    DataApothecae.quod_tabula(codex))
+                    DataApothecae.quod_tabula(codex, unicum=self.unicum))
         else:
             sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_1'))
             sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_51'))
@@ -4549,7 +4590,8 @@ class DataApothecae:
         strictum: bool = True,
         abstractum=False,
         schema: str = 'datapackage',
-        extensiones_restrictis: list = None
+        extensiones_restrictis: list = None,
+        unicum: bool = False
     ):
         if extensiones_restrictis is None:
             extensiones_restrictis = [
@@ -4561,11 +4603,13 @@ class DataApothecae:
         nomen = numerordinatio_neo_separatum(numerodination, '_')
         _path = numerordinatio_neo_separatum(numerodination, '/')
 
+        ex_radice = not unicum
+
         if '.no1.bcp47.csv' in extensiones_restrictis:
             archivum_bpc47 = TabulaSimplici(
                 _path + '/' + nomen + '.no1.bcp47.csv',
-                nomen,
-                True
+                (nomen if ex_radice else nomen + '.no1.bcp47.csv'),
+                ex_radice
             )
             if archivum_bpc47.praeparatio():
                 if abstractum:
@@ -4579,8 +4623,8 @@ class DataApothecae:
         if '.no11.tm.hxl.csv' in extensiones_restrictis:
             archivum_no11 = TabulaSimplici(
                 _path + '/' + nomen + '.no11.tm.hxl.csv',
-                nomen,
-                True
+                (nomen if ex_radice else nomen + '.no11.tm.hxl.csv'),
+                ex_radice
             )
             if archivum_no11.praeparatio():
                 if abstractum:
@@ -4594,8 +4638,8 @@ class DataApothecae:
         if '.no1.tm.hxl.csv' in extensiones_restrictis:
             archivum_no1 = TabulaSimplici(
                 _path + '/' + nomen + '.no1.tm.hxl.csv',
-                nomen,
-                True
+                (nomen if ex_radice else nomen + '.no1.tm.hxl.csv'),
+                ex_radice
             )
             if archivum_no1.praeparatio():
                 if abstractum:
@@ -5321,6 +5365,7 @@ class CLI_2600:
             choices=[
                 'codex',
                 'data-apothecae',
+                'data-apothecae-unicae',
                 'hxltm-explanationi',
                 'ontologia-simplici',
                 'opus-temporibus',
@@ -5809,7 +5854,8 @@ class CLI_2600:
 
         # TODO: raise error if target already exist, so user could
         #       avoid override something
-        if pyargs.methodus == 'data-apothecae':
+        if pyargs.methodus == 'data-apothecae' \
+                or pyargs.methodus == 'data-apothecae-unicae':
 
             if self.pyargs.data_apothecae_ex_praefixis and \
                     len(self.pyargs.data_apothecae_ex_praefixis) > 0:
@@ -5863,6 +5909,7 @@ class CLI_2600:
                 data_apothecae_ex,
                 data_apothecae_ad=data_apothecae_ad,
                 data_apothecae_formato=self.pyargs.data_apothecae_formato,
+                unicum=(pyargs.methodus == 'data-apothecae-unicae')
             )
 
             data_apothecae.praeparatio()

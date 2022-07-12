@@ -6743,11 +6743,15 @@ class TabulaSimplici:
     archivum_trivio_ex_radice: str = ''
     archivum_nomini: str = ''
     est_bcp47: bool = False
+    urn: str = ''
     # codex_opus: list = []
     # opus: list = []
     # in_limitem: int = 0
     # in_ordinem: str = None
     # quaero_numerordinatio: list = []
+    _primaryKey: str = None
+    _propertyUrl: str = None
+    _numerordinatio_columnae: str = None
 
     def __init__(
         self,
@@ -6758,6 +6762,9 @@ class TabulaSimplici:
         self.archivum_trivio = archivum_trivio
         self.nomen = nomen
         self.ex_radice = ex_radice
+        self.urn = 'urn:mdciii:{0}'.format(numerordinatio_neo_separatum(
+            nomen, ':'
+        ))
         # self.initiari()
 
     def _initiari(self):
@@ -6784,9 +6791,27 @@ class TabulaSimplici:
             for lineam in reader:
                 if len(self.caput) == 0:
                     self.caput = lineam
+                    for _, _columna in \
+                            BCP47_EX_HXL['#item+conceptum+codicem'].items():
+                        if _columna in self.caput:
+                            self._primaryKey = _columna
+                            break
+                    for _, _columna in \
+                            BCP47_EX_HXL[
+                                '#item+conceptum+numerordinatio'].items():
+                        if _columna in self.caput:
+                            self._numerordinatio_columnae = _columna
+                            break
                     continue
                 # TODO: what about empty lines?
                 self.res_totali += 1
+
+        if self._numerordinatio_columnae is not None:
+            self._propertyUrl = '{{{0}}}'.format(
+                self._numerordinatio_columnae)
+        elif self._primaryKey is not None:
+            self._propertyUrl = '{0}:{{{1}}}'.format(
+                self.urn, self._primaryKey)
 
         self.statum = True
         return self.statum
@@ -6831,7 +6856,7 @@ class TabulaSimplici:
         # resultatum.append('"todo"@en')
         for clavem, item in res.items():
             if len(item) == 0 or \
-                (not self.est_bcp47 and not clavem.startswith('#item+rem')):
+                    (not self.est_bcp47 and not clavem.startswith('#item+rem')):
                 continue
             if item.find('"') > -1:
                 # item = item.replace('"', 'zzzz')
@@ -6896,7 +6921,9 @@ class TabulaSimplici:
             # 'profile': 'tabular-data-resource',
             'tableSchema': {
                 'columns': [],
-                'foreignKeys': []
+                'primaryKey': self._primaryKey,
+                'propertyUrl': self._propertyUrl
+                # 'foreignKeys': []
             },
             # 'stats': {
             #     'fields': len(self.caput),
@@ -6921,18 +6948,24 @@ class TabulaSimplici:
             _path = self.archivum_nomini
 
         resultatum = {
+            # 'format': 'csv',
+            # 'mediatype': 'text/csv',
             'name': self.nomen,
             # 'path': self.nomen,
             'path': _path,
             'profile': 'tabular-data-resource',
             'schema': {
-                'fields': []
+                'fields': [],
+                'primaryKey': self._primaryKey
             },
             'stats': {
                 'fields': len(self.caput),
                 'rows': self.res_totali,
             }
         }
+        _caput_codicem = BCP47_EX_HXL['#item+conceptum+codicem'].values()
+        _caput_numerordinatio = \
+            BCP47_EX_HXL['#item+conceptum+numerordinatio'].values()
 
         for caput_rei in self.caput:
             item = {
@@ -6940,6 +6973,15 @@ class TabulaSimplici:
                 # TODO: actually get rigth type from reference dictionaries
                 'type': 'string',
             }
+            if caput_rei in _caput_codicem:
+                item['constraints'] = {
+                    'unique': True
+                }
+            if caput_rei in _caput_numerordinatio:
+                item['constraints'] = {
+                    'unique': True
+                }
+
             resultatum['schema']['fields'].append(item)
 
         return resultatum

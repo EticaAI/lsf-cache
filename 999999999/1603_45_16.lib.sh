@@ -183,8 +183,8 @@ bootstrap_1603_45_16__all() {
         # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$_datapackage_cod_ab_lvl" "${ROOTDIR}"
       done
 
-      # printf "\t%40s\n" "${tty_red} DEBUG: [Sleep 5 (@TODO disable me later)] ${tty_normal}"
-      # sleep 5
+      printf "\t%40s\n" "${tty_red} DEBUG: [Sleep 5 (@TODO disable me later)] ${tty_normal}"
+      sleep 5
     done
   } <"${opus_temporibus_temporarium}"
 
