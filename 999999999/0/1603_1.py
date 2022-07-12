@@ -55,6 +55,7 @@
 # @see https://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole
 
 # from ast import Try
+from email.policy import strict
 from genericpath import exists
 import glob
 # from multiprocessing.sharedctypes import Value
@@ -4365,6 +4366,8 @@ class DataApothecae:
             'tables': []
         }
 
+        # NOTE: DATA_APOTHECAE_MINIMIS is now deprecated
+
         # # Just quick test if validate
         # import csvw
         # tg = csvw.TableGroup.from_file('csv-metadata.json')
@@ -4376,23 +4379,34 @@ class DataApothecae:
         # raise ValueError(DATA_APOTHECAE_MINIMIS, bool(DATA_APOTHECAE_MINIMIS))
 
         # if bool(DATA_APOTHECAE_MINIMIS) is True:
-        if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1") \
-                or self.unicum:
+        # if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1") \
+        #         or self.unicum:
+        #     for codex in self.data_apothecae_ex:
+        #         sarcina['tables'].append(
+        #             DataApothecae.quod_tabula(
+        #                 codex, schema='csvw', unicum=self.unicum))
+        # else:
+        #     sarcina['tables'].append(
+        #         DataApothecae.quod_tabula('1603_1_1', schema='csvw'))
+        #     sarcina['tables'].append(
+        #         DataApothecae.quod_tabula('1603_1_51', schema='csvw'))
+
+        #     for codex in self.data_apothecae_ex:
+        #         if codex in ['1603_1_1', '1603_1_51']:
+        #             continue
+        #         sarcina['tables'].append(
+        #             DataApothecae.quod_tabula(codex, schema='csvw'))
+
+        if self.unicum:
             for codex in self.data_apothecae_ex:
-                sarcina['tables'].append(
-                    DataApothecae.quod_tabula(
+                sarcina['resources'].extend(
+                    DataApothecae.quod_tabulae(
                         codex, schema='csvw', unicum=self.unicum))
         else:
-            sarcina['tables'].append(
-                DataApothecae.quod_tabula('1603_1_1', schema='csvw'))
-            sarcina['tables'].append(
-                DataApothecae.quod_tabula('1603_1_51', schema='csvw'))
-
             for codex in self.data_apothecae_ex:
-                if codex in ['1603_1_1', '1603_1_51']:
-                    continue
-                sarcina['tables'].append(
-                    DataApothecae.quod_tabula(codex, schema='csvw'))
+                sarcina['resources'].append(
+                    DataApothecae.quod_tabula(
+                        codex, schema='csvw', unicum=False))
 
         paginae.append(json.dumps(
             sarcina, indent=2, ensure_ascii=False, sort_keys=False))
@@ -4436,26 +4450,39 @@ class DataApothecae:
             'resources': []
         }
 
+        # NOTE: DATA_APOTHECAE_MINIMIS is now deprecated
+
         # if self.unicum:
         #     _profile = 'tabular-data-resource'
 
         # raise ValueError(DATA_APOTHECAE_MINIMIS, bool(DATA_APOTHECAE_MINIMIS))
 
         # if bool(DATA_APOTHECAE_MINIMIS) is True:
-        if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1") \
-                or self.unicum:
-            for codex in self.data_apothecae_ex:
-                sarcina['resources'].append(
-                    DataApothecae.quod_tabula(codex, unicum=self.unicum))
-        else:
-            sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_1'))
-            sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_51'))
+        # if DATA_APOTHECAE_MINIMIS.lower() in ("yes", "true", "t", "1") \
+        #         or self.unicum:
+        #     for codex in self.data_apothecae_ex:
+        #         sarcina['resources'].append(
+        #             DataApothecae.quod_tabula(codex, unicum=self.unicum))
+        # else:
+        #     sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_1'))
+        #     sarcina['resources'].append(DataApothecae.quod_tabula('1603_1_51'))
 
+        #     for codex in self.data_apothecae_ex:
+        #         if codex in ['1603_1_1', '1603_1_51']:
+        #             continue
+        #         sarcina['resources'].append(
+        #             DataApothecae.quod_tabula(codex))
+
+        if self.unicum:
             for codex in self.data_apothecae_ex:
-                if codex in ['1603_1_1', '1603_1_51']:
-                    continue
+                sarcina['resources'].extend(
+                    DataApothecae.quod_tabulae(
+                        codex, schema='datapackage', unicum=self.unicum))
+        else:
+            for codex in self.data_apothecae_ex:
                 sarcina['resources'].append(
-                    DataApothecae.quod_tabula(codex))
+                    DataApothecae.quod_tabula(
+                        codex, schema='datapackage', unicum=False))
 
         paginae.append(json.dumps(
             sarcina, indent=2, ensure_ascii=False, sort_keys=False))
@@ -4593,6 +4620,8 @@ class DataApothecae:
         extensiones_restrictis: list = None,
         unicum: bool = False
     ):
+        """quod_tabula Returns single table which meets the restrictions
+        """
         if extensiones_restrictis is None:
             extensiones_restrictis = [
                 '.no1.bcp47.csv',
@@ -4654,6 +4683,32 @@ class DataApothecae:
             raise ValueError('quod_tabula [{0}] ad [{1}]?'.format(
                 numerodination, _path))
         return None
+
+    @staticmethod
+    def quod_tabulae(
+        numerodination: str,
+        schema: str = 'datapackage',
+        unicum: bool = False
+    ):
+        tabulae = []
+        extensiones_restrictis = [
+            '.no1.bcp47.csv',
+            '.no11.tm.hxl.csv',
+            '.no1.tm.hxl.csv',
+        ]
+
+        for item in extensiones_restrictis:
+            resultatum = DataApothecae.quod_tabula(
+                numerodination=numerodination,
+                schema=schema,
+                extensiones_restrictis=[item],
+                unicum=unicum,
+                strictum=False
+            )
+            if resultatum is not None:
+                tabulae.append(resultatum)
+
+        return tabulae
 
 
 class DictionariaNotitiae:

@@ -173,18 +173,18 @@ bootstrap_1603_45_16__all() {
         #          it is trying to compile asciidoctor version)
         #          we already have better optimized ways to do it, but
         #          letting this for now (Rocha, 2022-06-30)
-        CODEX_AD_HOC_NUMERORDINATIO="$_codex_meta" \
-          "${ROOTDIR}/999999999/0/1603_1.py" --methodus='status-quo' \
-          --status-quo-in-datapackage \
-          --codex-de="${gh_repo_name_et_level}" \
-          >"${ROOTDIR}/${_datapackage_cod_ab_lvl}"
-
-        # "${ROOTDIR}/999999999/0/1603_1.py" \
-        #   --methodus='data-apothecae-unicae' \
-        #   --data-apothecae-ad-stdout \
-        #   --data-apothecae-formato='datapackage' \
-        #   --data-apothecae-ex="${gh_repo_name_et_level}" \
+        # CODEX_AD_HOC_NUMERORDINATIO="$_codex_meta" \
+        #   "${ROOTDIR}/999999999/0/1603_1.py" --methodus='status-quo' \
+        #   --status-quo-in-datapackage \
+        #   --codex-de="${gh_repo_name_et_level}" \
         #   >"${ROOTDIR}/${_datapackage_cod_ab_lvl}"
+
+        "${ROOTDIR}/999999999/0/1603_1.py" \
+          --methodus='data-apothecae-unicae' \
+          --data-apothecae-ad-stdout \
+          --data-apothecae-formato='datapackage' \
+          --data-apothecae-ex="${gh_repo_name_et_level}" \
+          >"${ROOTDIR}/${_datapackage_cod_ab_lvl}"
 
         frictionless validate "${ROOTDIR}/${_datapackage_cod_ab_lvl}"
         # lsf1603_to_gh_repo_local_file "$gh_repo_name" "$_datapackage_cod_ab_lvl" "${ROOTDIR}"
