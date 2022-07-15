@@ -510,6 +510,238 @@ HXL_HASH_ET_ATTRIBUTA_AD_RDF = {
     },
 }
 
+HXL_WDATA = [
+    # hxl_v based on
+    # - https://data.humdata.org/dataset/hxl-master-vocabulary-list
+    # - https://data.humdata.org/dataset/countries-and-territories
+    #
+    # fūnctiō/relātiō tags:
+    # - abl-0: administrative boundary level 0
+    # - abl-1: administrative boundary level 1
+    # - abl-0123456: administrative boundary level any
+    # - psl-t-0: Population Statistics by administrative boundary level 0
+    # - psl-t-1: Population Statistics by administrative boundary level 1
+    # - psl-t-0123456: Population Statistics by administrative boundary l. any
+    {
+        # Ontological meaning for fūnctiō: reason to exist; focus
+        '_function': ['abl-0'],
+        # Ontology meaning for relātiō: broader relation, can be used for this
+        '_relatio': [],
+        'hxl_ix': 'ix_iso3166p1a2',
+        'hxl_v': 'v_iso2',
+        'wdata_p': 'P297',
+    },
+    {
+        '_function': ['abl-0'],
+        '_relatio': [],
+        'hxl_ix': 'ix_iso3166p1a3',
+        'hxl_v': 'v_iso3',
+        'wdata_p': 'P298',
+    },
+    {
+        '_function': [],
+        '_relatio': ['abl-0'],  # weak relation: "countries can have currency"
+        'hxl_ix': 'ix_iso4217',
+        'hxl_v': 'v_currency',
+        'iri': None,
+        'wdata_p': 'P498',
+    },
+    {
+        '_function': [],
+        '_relatio': [],
+        'hxl_ix': 'ix_iso15924a4',
+        'hxl_v': None,
+        'iri': 'http://www.unicode.org/iso15924/iso15924-codes.html',
+        'wdata_p': 'P506',
+    },
+    {
+        '_function': [],
+        '_relatio': [],
+        'hxl_ix': 'ix_iso15924n3',
+        'hxl_v': None,
+        'iri': 'http://www.unicode.org/iso15924/iso15924-codes.html',
+        'wdata_p': 'P2620',
+    },
+    {
+        '_function': ['abl-0123456'],
+        '_relatio': [],
+        'hxl_ix': 'ix_jpgeolod',
+        'hxl_v': None,
+        'iri': 'https://geolod.ex.nii.ac.jp',
+        'wdata_p': 'P5400',
+    },
+    {
+        '_function': [],
+        # broader relation: "AGROVOC can have countries"
+        '_relatio': ['abl-0'],
+        'hxl_ix': 'ix_unagrovoc',
+        'hxl_v': None,
+        'iri': 'https://agrovoc.fao.org',
+        'wdata_p': 'P8061',
+    },
+    {
+        '_function': [],
+        # broader relation: "AGROVOC can have countries"
+        '_relatio': ['abl-0'],
+        'hxl_ix': 'ix_unescothes',
+        'hxl_v': None,
+        'iri': 'https://vocabularies.unesco.org',
+        'wdata_p': 'P3916',
+    },
+    {
+        '_function': ['abl-0'],
+        '_relatio': [],
+        'hxl_ix': 'ix_unm49',
+        'hxl_v': 'v_m49',
+        'iri': None,
+        'wdata_p': 'P2082',
+    },
+    {
+        '_function': ['abl-0123456'],
+        '_relatio': [],
+        'hxl_ix': 'ix_unp',  # using 'unp', ommiting 'code' / 'id' from all
+        'hxl_v': 'v_pcode',
+        'iri': None,
+        'wdata_p': None,
+    },
+    {
+        '_function': ['abl-0'],
+        '_relatio': [],
+        'hxl_ix': 'ix_usfactbook',
+        'hxl_v': None,
+        'iri': 'https://www.cia.gov/the-world-factbook/countries',
+        'wdata_p': 'P9948',
+    },
+    {
+        '_function': [],
+        '_relatio': ['abl-0123456'],  # WordNet can have several Adm levels
+                                      # But is not main function of Wordnet be
+                                      # only about administrativel levels.
+        'hxl_ix': 'ix_usworldnet',
+        'hxl_v': None,
+        'iri': 'http://wordnet-rdf.princeton.edu/',
+        'wdata_p': 'P8814',
+    },
+    {
+        '_function': ['abl-1'],
+        '_relatio': [],
+        'hxl_ix': 'ix_xzhasc',
+        'hxl_v': None,
+        # http://www.statoids.com/wab.html
+        'iri': 'http://www.statoids.com/ihasc.html',
+        'wdata_p': 'P8119',
+    },
+    {
+        '_function': ['abl-0123456'],
+        '_relatio': [],
+        'hxl_ix': 'ix_xzgeonames',
+        'hxl_v': None,
+        'iri': 'https://www.geonames.org',
+        'wdata_p': 'P1566',
+    },
+    {
+        '_function': [],
+        '_relatio': [],
+        'hxl_ix': 'ix_xzglide',
+        'hxl_v': 'v_glide',
+        'iri': 'https://glidenumber.net',
+        'wdata_p': None,
+    },
+    {
+        '_function': [],
+        '_relatio': ['abl-0'],  # GitHub topics _can_ have adm0 (but not focus)
+        'hxl_ix': 'ix_xzgithubt',
+        'hxl_v': None,
+        'iri': 'https://github.com/topics',
+        'wdata_p': 'P9100',
+    },
+    {
+        '_function': [],
+        '_relatio': [],
+        'hxl_ix': 'ix_xzglotto',
+        'hxl_v': 'v_glotto',  # Proposed as 2022-07-13
+        'iri': 'https://glottolog.org',
+        'wdata_p': 'P1394',
+    },
+    {
+        '_function': ['abl-0123456'],
+        '_relatio': [],
+        'hxl_ix': 'ix_xzosmrel',  # ommiting 'code' / 'id' from all
+        'hxl_v': None,
+        'iri': 'https://wiki.openstreetmap.org/wiki/Relation',
+        'wdata_p': 'P402',
+    },
+    {
+        '_function': ['abl-0123456'],
+        '_relatio': [],
+        # ZZ prefix (differenaited from XY) inspired by UNICODE CLDR would means
+        # "Unknown or Invalid Territory"
+        'hxl_ix': 'ix_zzgeojson',
+        'hxl_v': None,
+        'iri': 'https://www.wikidata.org/wiki/Property:P3896',
+        'wdata_p': 'P3896',
+    },
+    {
+        '_function': [],
+        '_relatio': ['abl-0123456'],  # Any adm level could have a point
+                                      # Example for Brazil: Point(-53.0 -14.0)
+
+        'hxl_ix': 'ix_zzwgs84point',
+        'hxl_v': None,
+        'iri': 'https://www.wikidata.org/wiki/Property:P625',
+        'wdata_p': 'P625',
+    },
+]
+
+# @TODO https://www.wikidata.org/wiki/Property:P3743
+#       ITU/ISO/IEC object identifier
+
+# @TODO maybe https://www.wikidata.org/wiki/Property:P901
+
+# @TODO maybe https://www.wikidata.org/wiki/Wikidata:Property_proposal/PM20_geo_code
+
+# @TODO maybe https://www.wikidata.org/wiki/Property:P998
+
+# @TODO maybe https://www.wikidata.org/wiki/Property:P5437
+# @TODO maybe https://www.wikidata.org/wiki/Property:P8374
+# @TODO maybe https://www.wikidata.org/wiki/Property:P3422
+# @TODO maybe https://www.wikidata.org/wiki/Property:P8217
+# @TODO maybe https://www.wikidata.org/wiki/Property:P4427
+# @TODO maybe https://www.wikidata.org/wiki/Property:P2163
+# @TODO https://www.wikidata.org/wiki/Property:P6366
+# @TODO not sure https://www.wikidata.org/wiki/Property:P2983
+# @TODO https://www.wikidata.org/wiki/Property:P486
+# @TODO https://www.wikidata.org/wiki/Property:P2581
+# @TODO https://www.wikidata.org/wiki/Property:P8714
+# @TODO do it https://www.wikidata.org/wiki/Property:P8717
+# @TODO do it https://www.wikidata.org/wiki/Property:P8370
+# @TODO do it https://www.wikidata.org/wiki/Property:P8672
+# @TODO do it https://www.wikidata.org/wiki/Property:P5337
+# @TODO do it https://www.wikidata.org/wiki/Property:P3553
+# @TODO do it https://www.wikidata.org/wiki/Property:P213
+# @TODO check later https://www.wikidata.org/wiki/Property:P5063
+# @TODO maybe https://www.wikidata.org/wiki/Property:P3097
+# @TODO https://www.wikidata.org/wiki/Property:P487
+# @TODO maybe https://www.wikidata.org/wiki/Property:P2979
+
+# @TODO https://www.wikidata.org/wiki/Property:P300
+#       this is for adm1, but some cases an adm0 like
+#       https://www.wikidata.org/wiki/Q26273 with code NL-SX would be adm1 of NL
+#       https://www.wikidata.org/wiki/Q16644 with code US-MP would be adm1 of US
+
+# NOTE weid case for UN M.49 528:
+#      - https://www.wikidata.org/wiki/Q55
+#      - https://www.wikidata.org/wiki/Q29999
+
+# Note: KML is not as popular on Wikidata as P3896 geoshape
+# P3096
+# https://www.wikidata.org/wiki/Property:P3096
+# ix_zzkml
+
+# P3896
+# https://www.wikidata.org/wiki/Property:P3896
+# ix_zzgeojson
+
 # @TODO reorganize this
 
 

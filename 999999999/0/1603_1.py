@@ -4398,12 +4398,12 @@ class DataApothecae:
 
         if self.unicum:
             for codex in self.data_apothecae_ex:
-                sarcina['resources'].extend(
+                sarcina['tables'].extend(
                     DataApothecae.quod_tabulae(
                         codex, schema='csvw', unicum=self.unicum))
         else:
             for codex in self.data_apothecae_ex:
-                sarcina['resources'].append(
+                sarcina['tables'].append(
                     DataApothecae.quod_tabula(
                         codex, schema='csvw', unicum=False))
 

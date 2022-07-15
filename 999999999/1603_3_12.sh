@@ -119,39 +119,42 @@ WHERE
   curl --header "Accept: text/csv" --silent --show-error \
     --get https://query.wikidata.org/sparql --data-urlencode query='
 SELECT
-  (xsd:integer(?ix_iso3166p1n) AS ?item__conceptum__codicem)
+  (xsd:integer(?ix_unm49) AS ?item__conceptum__codicem)
   (STRAFTER(STR(?item), "entity/") AS ?item__rem__i_qcc__is_zxxx__ix_wikiq)
-  #?item__rem__i_qcc__is_zxxx__ix_iso3166p1n
   (GROUP_CONCAT(DISTINCT ?ix_iso3166p1n; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p1n)
   (GROUP_CONCAT(DISTINCT ?ix_unm49; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unm49)
   (GROUP_CONCAT(DISTINCT ?ix_iso3166p1a2; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p1a2)
   (GROUP_CONCAT(DISTINCT ?ix_iso3166p1a3; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p1a3)
   (GROUP_CONCAT(DISTINCT ?ix_unescothes; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unescothes)
   (GROUP_CONCAT(DISTINCT ?ix_unagrovoc; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unagrovoc)
-  (GROUP_CONCAT(DISTINCT ?ix_osmrelid; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_osmrelid)
-  (GROUP_CONCAT(DISTINCT ?ix_geonames; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_geonames)
-  (GROUP_CONCAT(DISTINCT ?ix_geonlp; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_geonlp)
-  (GROUP_CONCAT(DISTINCT ?ix_worldnet; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_worldnet)
-  (GROUP_CONCAT(DISTINCT ?ix_usciafb; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_usciafb)
-  (GROUP_CONCAT(DISTINCT ?ix_githubtopic; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_githubtopic)
+  (GROUP_CONCAT(DISTINCT ?ix_xzosmrel; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_xzosmrel)
+  (GROUP_CONCAT(DISTINCT ?ix_xzgeonames; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_xzgeonames)
+  (GROUP_CONCAT(DISTINCT ?ix_jpgeolod; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_jpgeolod)
+  (GROUP_CONCAT(DISTINCT ?ix_usworldnet; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_usworldnet)
+  (GROUP_CONCAT(DISTINCT ?ix_usfactbook; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_usfactbook)
+  (GROUP_CONCAT(DISTINCT ?ix_xzgithubt; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_xzgithubt)
+  (GROUP_CONCAT(DISTINCT ?ix_zzwgs84point; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_zzwgs84point)
+  (GROUP_CONCAT(DISTINCT ?ix_zzgeojson; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_zzgeojson)
 
 WHERE
 {
   ?item wdt:P31 wd:Q6256 ;
-  OPTIONAL { ?item wdt:P2082 ?ix_unm49. }
-  ?item wdt:P299 ?ix_iso3166p1n.
-  OPTIONAL { ?item wdt:P297 ?ix_iso3166p1a2. }
-  OPTIONAL { ?item wdt:P298 ?ix_iso3166p1a3. }
-  OPTIONAL { ?item wdt:P3916 ?ix_unescothes. }
-  OPTIONAL { ?item wdt:P8061 ?ix_unagrovoc. }
-  OPTIONAL { ?item wdt:P402 ?ix_osmrelid. }
-  OPTIONAL { ?item wdt:P9100 ?ix_geonames. }
-  OPTIONAL { ?item wdt:P5400 ?ix_geonlp. }
-  OPTIONAL { ?item wdt:P8814 ?ix_worldnet. }
-  OPTIONAL { ?item wdt:P9948 ?ix_usciafb. }
-  OPTIONAL { ?item wdt:P9100 ?ix_githubtopic. }
+  wdt:P2082 ?ix_unm49 ;
+  OPTIONAL { ?item wdt:P299 ?ix_iso3166p1n . }
+  OPTIONAL { ?item wdt:P297 ?ix_iso3166p1a2 . }
+  OPTIONAL { ?item wdt:P298 ?ix_iso3166p1a3 . }
+  OPTIONAL { ?item wdt:P3916 ?ix_unescothes . }
+  OPTIONAL { ?item wdt:P8061 ?ix_unagrovoc . }
+  OPTIONAL { ?item wdt:P402 ?ix_xzosmrel . }
+  OPTIONAL { ?item wdt:P1566 ?ix_xzgeonames . }
+  OPTIONAL { ?item wdt:P5400 ?ix_jpgeolod . }
+  OPTIONAL { ?item wdt:P8814 ?ix_usworldnet . }
+  OPTIONAL { ?item wdt:P9948 ?ix_usfactbook . }
+  OPTIONAL { ?item wdt:P9100 ?ix_xzgithubt . }
+  OPTIONAL { ?item wdt:P625 ?ix_zzwgs84point . }
+  OPTIONAL { ?item wdt:P3896 ?ix_zzgeojson . }
 }
-GROUP BY ?item ?ix_iso3166p1n
+GROUP BY ?item ?ix_unm49
 ORDER BY ASC(?item__rem__i_qcc__is_zxxx__ix_iso3166p1n)
 ' >"$objectivum_archivum_temporarium"
 
