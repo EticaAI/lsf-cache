@@ -125,6 +125,7 @@ SELECT
   (GROUP_CONCAT(DISTINCT ?ix_unm49; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unm49)
   (GROUP_CONCAT(DISTINCT ?ix_iso3166p1a2; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p1a2)
   (GROUP_CONCAT(DISTINCT ?ix_iso3166p1a3; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p1a3)
+  (GROUP_CONCAT(DISTINCT ?ix_iso3166p2; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p2)
   (GROUP_CONCAT(DISTINCT ?ix_unescothes; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unescothes)
   (GROUP_CONCAT(DISTINCT ?ix_unagrovoc; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_unagrovoc)
   (GROUP_CONCAT(DISTINCT ?ix_xzosmrel; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_xzosmrel)
@@ -143,6 +144,7 @@ WHERE
   OPTIONAL { ?item wdt:P299 ?ix_iso3166p1n . }
   OPTIONAL { ?item wdt:P297 ?ix_iso3166p1a2 . }
   OPTIONAL { ?item wdt:P298 ?ix_iso3166p1a3 . }
+  OPTIONAL { ?item wdt:P300 ?ix_iso3166p2 . }
   OPTIONAL { ?item wdt:P3916 ?ix_unescothes . }
   OPTIONAL { ?item wdt:P8061 ?ix_unagrovoc . }
   OPTIONAL { ?item wdt:P402 ?ix_xzosmrel . }
@@ -155,8 +157,134 @@ WHERE
   OPTIONAL { ?item wdt:P3896 ?ix_zzgeojson . }
 }
 GROUP BY ?item ?ix_unm49
-ORDER BY ASC(?item__rem__i_qcc__is_zxxx__ix_iso3166p1n)
+ORDER BY ASC(?item__conceptum__codicem)
 ' >"$objectivum_archivum_temporarium"
+
+  frictionless validate "$objectivum_archivum_temporarium"
+
+  caput_csvnormali=$(head -n1 "$objectivum_archivum_temporarium")
+  caput_hxltm=$(caput_csvnormali_ad_hxltm "${caput_csvnormali}" ",")
+
+  echo "$caput_hxltm" > "$objectivum_archivum_temporarium_hxltm"
+  tail -n +2 "$objectivum_archivum_temporarium" >> "$objectivum_archivum_temporarium_hxltm"
+
+  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+  file_update_if_necessary csv "$objectivum_archivum_temporarium_hxltm" "$objectivum_archivum_hxltm"
+}
+
+#######################################
+# Return list of administrative level 1 codes
+#
+# Globals:
+#   None
+# Arguments:
+#   None
+# Outputs:
+#   csvfile (stdout)
+#######################################
+1603_3_12_wikipedia_adm1_v2() {
+  # fontem_archivum=
+  objectivum_archivum="${ROOTDIR}/1603/3/1603_3__adm1_v2.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/1603/3/1603_3__adm1_v2.TEMP.csv"
+  objectivum_archivum_temporarium_hxltm="${ROOTDIR}/1603/3/1603_3__adm1_v2.TEMP.tm.hxl.csv"
+  objectivum_archivum_hxltm="${ROOTDIR}/1603/3/1603_3__adm1.tm.hxl.csv"
+
+  # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
+
+  echo "${FUNCNAME[0]} stale data on [$objectivum_archivum], refreshing..."
+
+  curl --header "Accept: text/csv" --silent --show-error \
+    --get https://query.wikidata.org/sparql --data-urlencode query='
+SELECT
+  (xsd:integer(STRAFTER(STR(?item), "entity/Q")) AS ?item__conceptum__codicem)
+  (STRAFTER(STR(?item), "entity/") AS ?item__rem__i_qcc__is_zxxx__ix_wikiq)
+  (GROUP_CONCAT(DISTINCT ?ix_iso3166p2; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_iso3166p2)
+  (GROUP_CONCAT(DISTINCT ?ix_xzosmrel; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_xzosmrel)
+  (GROUP_CONCAT(DISTINCT ?ix_xzgeonames; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_xzgeonames)
+  (GROUP_CONCAT(DISTINCT ?ix_jpgeolod; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_jpgeolod)
+  (GROUP_CONCAT(DISTINCT ?ix_usworldnet; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_usworldnet)
+  (GROUP_CONCAT(DISTINCT ?ix_zzwgs84point; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_zzwgs84point)
+  (GROUP_CONCAT(DISTINCT ?ix_zzgeojson; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_zzgeojson)
+
+WHERE
+{
+  # ?item wdt:P31 wd:Q6256 ;
+  ?item wdt:P31 wd:Q10864048 ;
+  # wdt:P2082 ?ix_unm49 ;
+  #  wdt:P300 ?ix_iso3166p2 ;
+  OPTIONAL { ?item wdt:P300 ?ix_iso3166p2 . }
+  OPTIONAL { ?item wdt:P402 ?ix_xzosmrel . }
+  OPTIONAL { ?item wdt:P1566 ?ix_xzgeonames . }
+  OPTIONAL { ?item wdt:P5400 ?ix_jpgeolod . }
+  OPTIONAL { ?item wdt:P8814 ?ix_usworldnet . }
+  OPTIONAL { ?item wdt:P625 ?ix_zzwgs84point . }
+  OPTIONAL { ?item wdt:P3896 ?ix_zzgeojson . }
+}
+GROUP BY ?item ?ix_iso3166p2
+ORDER BY ASC(?item)
+' >"$objectivum_archivum_temporarium"
+
+
+  # Source of the query
+  # https://www.wikidata.org/wiki/Wikidata_talk:WikiProject_Country_subdivision/Items
+  # @see https://en.wikipedia.org/wiki/List_of_administrative_divisions_by_country
+  # shellcheck disable=SC2034
+  wikiproject_country_subdivisions='
+SELECT ?country ?countryLabel ?item ?itemLabel ?level ?expected ?found ?samenumber
+WITH {
+  SELECT ?item ?expected ?country ?level (COUNT(DISTINCT ?place) AS ?found) {
+    ?item wdt:P279* ?acs ; wdt:P17 ?country.
+    FILTER NOT EXISTS { ?country wdt:P576 [] }
+    ?acs p:P279 [ ps:P279 wd:Q1799794 ; pq:P1545 ?level ] .
+    
+    OPTIONAL { ?item wdt:P1114 ?expected }    
+    OPTIONAL { 
+      ?place p:P31 ?placeStatement .
+      ?placeStatement ps:P31 ?item.
+      FILTER NOT EXISTS { ?placeStatement wdt:P582 [] }
+    }  
+  } 
+  GROUP BY ?item ?expected ?country ?level
+} AS %subdivisions
+WHERE {
+  include %subdivisions.
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  BIND(IF(?expected = ?found, "✓", "✘") AS ?samenumber).
+} 
+ORDER BY ?countryLabel ?level DESC(?expected) ?itemLabel
+  '
+
+  # SPARQL subquery https://en.wikibooks.org/wiki/SPARQL/Subqueries
+  # shellcheck disable=SC2034
+  sparq_subquery_1='
+SELECT ?x ?y WHERE {
+  VALUES ?x { 1 2 3 4 }
+  {
+    SELECT ?y WHERE { VALUES ?y { 5 6 7 8 }  }
+  }  # \subQuery
+} # \mainQuery
+  '
+  # shellcheck disable=SC2034
+  sparq_subquery_2='
+SELECT ?countryLabel ?population (round(?population/?worldpopulation*1000)/10 AS ?percentage)
+WHERE {
+  ?country wdt:P31 wd:Q3624078;    # is a sovereign state
+           wdt:P1082 ?population.
+
+  { 
+    # subquery to determine ?worldpopulation
+    SELECT (sum(?population) AS ?worldpopulation)
+    WHERE { 
+      ?country wdt:P31 wd:Q3624078;    # is a sovereign state
+               wdt:P1082 ?population. 
+    }
+  }
+
+  SERVICE wikibase:label {bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}
+}
+ORDER BY desc(?population)
+  '
+
 
   frictionless validate "$objectivum_archivum_temporarium"
 
@@ -261,6 +389,7 @@ order by (?wmCode)
 1603_3_12_wikipedia_adm0
 
 1603_3_12_wikipedia_adm0_v2
+1603_3_12_wikipedia_adm1_v2
 
 # temp, see later
 # - https://www.wikidata.org/wiki/Help:Frequently_used_properties

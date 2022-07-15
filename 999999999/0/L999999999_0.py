@@ -539,6 +539,16 @@ HXL_WDATA = [
         'wdata_p': 'P298',
     },
     {
+        # The function (reason to exist) of  ISO 3166-2 is subdivision, adm1.
+        # However, in some circustances, places can have codes as if they're
+        # adm0; this means ISO 3166-2 have a relatio with adm0
+        '_function': ['abl-1'],
+        '_relatio': ['abl-0'],
+        'hxl_ix': 'ix_iso3166p2',
+        'hxl_v': 'v_iso3',
+        'wdata_p': 'P300',
+    },
+    {
         '_function': [],
         '_relatio': ['abl-0'],  # weak relation: "countries can have currency"
         'hxl_ix': 'ix_iso4217',
@@ -724,10 +734,12 @@ HXL_WDATA = [
 # @TODO https://www.wikidata.org/wiki/Property:P487
 # @TODO maybe https://www.wikidata.org/wiki/Property:P2979
 
-# @TODO https://www.wikidata.org/wiki/Property:P300
+# DONE! https://www.wikidata.org/wiki/Property:P300
 #       this is for adm1, but some cases an adm0 like
 #       https://www.wikidata.org/wiki/Q26273 with code NL-SX would be adm1 of NL
 #       https://www.wikidata.org/wiki/Q16644 with code US-MP would be adm1 of US
+
+# @TODO check https://www.naturalearthdata.com/downloads/110m-cultural-vectors/
 
 # NOTE weid case for UN M.49 528:
 #      - https://www.wikidata.org/wiki/Q55
