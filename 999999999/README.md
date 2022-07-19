@@ -81,6 +81,8 @@ gen-graphql 999999/0/personinfo-2.yaml > 999999/0/personinfo-2.graphql
 gen-excel 999999/0/personinfo-2.yaml --output 999999/0/personinfo-2.xlsx
 gen-excel --metadata 999999/0/personinfo-2.yaml --output 999999/0/personinfo-2.xlsx
 
+pip install schema-automator
+
 ### @TODOs
 - learn to manipulate geopackages (SQLite) with python
   - https://gis.stackexchange.com/questions/342855/reading-geopackage-geometries-in-python

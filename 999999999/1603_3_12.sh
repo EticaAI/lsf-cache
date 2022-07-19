@@ -65,6 +65,10 @@ ROOTDIR="$(pwd)"
 #######################################
 1603_3_12_wikipedia_adm0() {
   # fontem_archivum=
+
+  echo "DEPRECATED"
+  return 0
+
   objectivum_archivum="${ROOTDIR}/1603/3/1603_3__adm0.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/1603/3/1603_3__adm0.TEMP.csv"
 
@@ -107,10 +111,13 @@ WHERE
 #######################################
 1603_3_12_wikipedia_adm0_v2() {
   # fontem_archivum=
-  objectivum_archivum="${ROOTDIR}/1603/3/1603_3__adm0_v2.csv"
-  objectivum_archivum_temporarium="${ROOTDIR}/1603/3/1603_3__adm0_v2.TEMP.csv"
-  objectivum_archivum_temporarium_hxltm="${ROOTDIR}/1603/3/1603_3__adm0_v2.TEMP.tm.hxl.csv"
-  objectivum_archivum_hxltm="${ROOTDIR}/1603/3/1603_3__adm0.tm.hxl.csv"
+  # objectivum_archivum="${ROOTDIR}/1603/3/1603_3__adm0_v2.csv"
+  # objectivum_archivum_temporarium="${ROOTDIR}/1603/3/1603_3__adm0_v2.TEMP.csv"
+  objectivum_archivum="${ROOTDIR}/999999/0/1603_3__adm0_v2.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603_3__adm0_v2.TEMP.csv"
+  objectivum_archivum_temporarium_hxltm="${ROOTDIR}/999999/0/1603_3__adm0_v2.TEMP.tm.hxl.csv"
+  # objectivum_archivum_hxltm="${ROOTDIR}/999999/0/1603_3__adm0.tm.hxl.csv"
+  objectivum_archivum_hxltm_999999="${ROOTDIR}/999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv"
 
   # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 
@@ -165,11 +172,11 @@ ORDER BY ASC(?item__conceptum__codicem)
   caput_csvnormali=$(head -n1 "$objectivum_archivum_temporarium")
   caput_hxltm=$(caput_csvnormali_ad_hxltm "${caput_csvnormali}" ",")
 
-  echo "$caput_hxltm" > "$objectivum_archivum_temporarium_hxltm"
-  tail -n +2 "$objectivum_archivum_temporarium" >> "$objectivum_archivum_temporarium_hxltm"
+  echo "$caput_hxltm" >"$objectivum_archivum_temporarium_hxltm"
+  tail -n +2 "$objectivum_archivum_temporarium" >>"$objectivum_archivum_temporarium_hxltm"
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
-  file_update_if_necessary csv "$objectivum_archivum_temporarium_hxltm" "$objectivum_archivum_hxltm"
+  file_update_if_necessary csv "$objectivum_archivum_temporarium_hxltm" "$objectivum_archivum_hxltm_999999"
 }
 
 #######################################
@@ -224,6 +231,30 @@ GROUP BY ?item ?ix_iso3166p2
 ORDER BY ASC(?item)
 ' >"$objectivum_archivum_temporarium"
 
+  # @see https://stackoverflow.com/questions/44718137/get-wikidata-identifier-for-city-by-gps-location
+  # shellcheck disable=SC2034
+  _wikidata_by_distance='
+SELECT DISTINCT * WHERE {
+  ?place (wdt:P31/(wdt:P279*)) wd:Q515.
+  SERVICE wikibase:around {
+    ?place wdt:P625 ?location.
+    bd:serviceParam wikibase:center "Point(8.4024875340491 48.9993762209831)"^^geo:wktLiteral;
+      wikibase:radius "100";
+      wikibase:distance ?distance.
+  }
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY (?distance)
+  '
+
+  # https://www.wikidata.org/wiki/Wikidata:Request_a_query/Archive/2021/03#List_of_administrative_divisions_by_country
+  # shellcheck disable=SC2034
+  _ix_iso3166p2_only='
+SELECT DISTINCT ?item ?itemLabel ?p300 WHERE {
+  ?item wdt:P300 ?p300 .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "pt,en". }
+}
+  '
 
   # Source of the query
   # https://www.wikidata.org/wiki/Wikidata_talk:WikiProject_Country_subdivision/Items
@@ -285,14 +316,13 @@ WHERE {
 ORDER BY desc(?population)
   '
 
-
   frictionless validate "$objectivum_archivum_temporarium"
 
   caput_csvnormali=$(head -n1 "$objectivum_archivum_temporarium")
   caput_hxltm=$(caput_csvnormali_ad_hxltm "${caput_csvnormali}" ",")
 
-  echo "$caput_hxltm" > "$objectivum_archivum_temporarium_hxltm"
-  tail -n +2 "$objectivum_archivum_temporarium" >> "$objectivum_archivum_temporarium_hxltm"
+  echo "$caput_hxltm" >"$objectivum_archivum_temporarium_hxltm"
+  tail -n +2 "$objectivum_archivum_temporarium" >>"$objectivum_archivum_temporarium_hxltm"
 
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
   file_update_if_necessary csv "$objectivum_archivum_temporarium_hxltm" "$objectivum_archivum_hxltm"
@@ -386,7 +416,7 @@ order by (?wmCode)
 
 1603_3_12_wikipedia_language_codes
 
-1603_3_12_wikipedia_adm0
+# 1603_3_12_wikipedia_adm0
 
 1603_3_12_wikipedia_adm0_v2
 1603_3_12_wikipedia_adm1_v2
