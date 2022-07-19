@@ -4970,6 +4970,50 @@ def hxltm__est_data_referentibus(*options):
     return resultatum
 
 
+def hxltm__ex_dict(
+        hxltm_dict: dict, caput: list = None, caput_aliis: dict = None):
+    """hxltm__ex_dict boostrap an HXLTM caput/data from a Python dict
+
+    Args:
+        hxltm_dict (dict): _description_
+        caput (list, optional): _description_. Defaults to None.
+        caput_aliis (dict, optional): _description_. Defaults to None.
+
+    Returns:
+        (Tuple): caput_novo, data_novis
+    """
+
+    caput_novo = []
+    data_novis = []
+    if caput is None:
+        _first = list(hxltm_dict.keys())[0]
+        caput = hxltm_dict[_first].keys()
+
+    # print(caput)
+
+    if caput_aliis is not None:
+        _hxltm_dict = {}
+        for clavem, v in hxltm_dict.items():
+            _hxltm_dict[clavem] = v
+            for k_old, k_new in caput_aliis.items():
+                if k_old in _hxltm_dict[clavem]:
+                    _hxltm_dict[clavem][k_new] = _hxltm_dict[clavem].pop(k_old)
+    else:
+        _hxltm_dict = hxltm_dict
+
+    for _index, res in _hxltm_dict.items():
+        linea_novae = []
+        for item in caput:
+            if item in res:
+                linea_novae.append(res[item])
+            else:
+                linea_novae.append('')
+        data_novis.append(linea_novae)
+
+    caput_novo = caput
+    return caput_novo, data_novis
+
+
 def hxltm__quod_data_referentibus(index_nomini: str):
     _path = '{0}/999999/0/{1}.index.json'.format(
         NUMERORDINATIO_BASIM,

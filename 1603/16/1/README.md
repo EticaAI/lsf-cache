@@ -2,11 +2,15 @@
 
 - https://unstats.un.org/unsd/methodology/m49/
 - https://en.wikipedia.org/wiki/UN_M49
-- https://docs.google.com/spreadsheets/d/1NjSI2LaS3SqbgYc0HdD8oIb7lofGtiHgoKKATCpwVdY/edit#gid=1088874596
+- Sources
+  - https://docs.google.com/spreadsheets/d/1NjSI2LaS3SqbgYc0HdD8oIb7lofGtiHgoKKATCpwVdY/edit#gid=1088874596
+  - COD-AB (index of what is available as COD-AB, mostly hint about levels)
+  - WDATA-ADM0 (aditional metadata from Wikidata, mostly references to other
+    codes, using UN m49 as key)
 
 ## Challanges
 - At first, we will store "all" the territories into 0, but the actual
-  way UN M49 is otganized it have several levels.
+  way UN M49 is organized it have several levels.
   - Example:
     - first level = World
     - second level = Africa, Antartica, Americas, Asia, Europe, Oceania

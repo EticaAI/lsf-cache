@@ -34,7 +34,7 @@ import json
 import sys
 import os
 import argparse
-import csv
+# import csv
 # import re
 from pathlib import Path
 from os.path import exists
@@ -51,6 +51,7 @@ from L999999999_0 import (
     csv_imprimendo,
     # hxltm__data_referentibus,
     hxltm__est_data_referentibus,
+    hxltm__ex_dict,
     hxltm__quod_data_referentibus,
     hxltm_adde_columna,
     hxltm_carricato,
@@ -132,6 +133,14 @@ Work with local COD-AB index (levels) . . . . . . . . . . . . . . . . . . . . .
     {0} --methodus='cod_ab_index_levels' --sine-capite \
 --cum-columnis='#item+conceptum+numerordinatio'
 
+Work with WDATA ADM0 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    {0} --methodus='wdata_adm0'
+
+Work with local COD AB + WDATA ADM0 . . . . . . . . . . . . . . . . . . . . . .
+(Re-generate territories from COD AB + WDATA intermediate tables)
+
+    {0} --methodus='cod_ab_et_wdata' --numerordinatio-praefixo='1603_16'
+
 Process XLSXs from external sources . . . . . . . . . . . . . . . . . . . . . .
    {0} --methodus=xlsx_metadata 999999/1603/45/16/xlsx/ago.xlsx
    {0} --methodus=xlsx_ad_csv --ordines=2 999999/1603/45/16/xlsx/ago.xlsx
@@ -203,6 +212,9 @@ _SEE_ALSO = [
 COD_AB_INDEX = NUMERORDINATIO_BASIM + \
     '/999999/1603/45/16/1603_45_16.index.hxl.csv'
 
+WDATA_ADM0 = NUMERORDINATIO_BASIM + \
+    '/999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv'
+
 # autopep8 --list-fixes ./999999999/0/999999999_7200235.py
 # pylint --disable=W0511,C0103,C0116 ./999999999/0/999999999_7200235.py
 
@@ -262,6 +274,7 @@ class Cli:
             choices=[
                 # 'pcode_ex_xlsx',
                 # 'pcode_ex_csv',
+                'cod_ab_et_wdata',
                 'cod_ab_index',
                 'cod_ab_index_levels',
                 'cod_ab_index_levels_ttl',
@@ -270,6 +283,7 @@ class Cli:
                 'de_hxltm_ad_hxltm',  # load main file directly
                 # load main file by number (example: 1603_45_49)
                 'de_librario',
+                'wdata_adm0',
                 'xlsx_metadata',
                 'xlsx_ad_csv',
                 'xlsx_ad_hxl',
@@ -660,7 +674,8 @@ class Cli:
         if pyargs.methodus in [
             'de_hxltm_ad_hxltm', 'de_librario',
                 'index_praeparationi',  'cod_ab_index', 'cod_ab_ad_no1_csv',
-                'cod_ab_index_levels', 'cod_ab_index_levels_ttl']:
+                'cod_ab_index_levels', 'cod_ab_index_levels_ttl',
+                'wdata_adm0', 'cod_ab_et_wdata']:
             # Decide which main file to load.
             # if pyargs.methodus.startswith('de_librario'):
             if pyargs.methodus.startswith(
@@ -676,6 +691,29 @@ class Cli:
                 caput, data = hxltm_carricato(_infile, _stdin)
             elif pyargs.methodus.startswith('cod_ab_index'):
                 caput, data = hxltm_carricato(COD_AB_INDEX)
+            elif pyargs.methodus.startswith('cod_ab_et_wdata'):
+                caput, data = hxltm_carricato(COD_AB_INDEX)
+            elif pyargs.methodus.startswith('wdata_adm0'):
+                caput, data = hxltm_carricato(WDATA_ADM0)
+
+            # # if pyargs.methodus == 'cod_ab_index_levels':
+            if pyargs.methodus == 'cod_ab_et_wdata':
+                # print("Foi")
+                # @TODO cod_ab_index_levels
+                # caput, data = hxltm_carricato(COD_AB_INDEX)
+                # raise NotImplementedError(pyargs.methodus)
+                caput_cod, data_cod = hxltm_carricato__cod_ab_levels(
+                    caput, data,
+                    numerordinatio_praefixo=numerordinatio_praefixo,
+                    no1_simplici=True, cod_ab_level__inline=True)
+
+                caput_wdata, data_wdata = hxltm_carricato(WDATA_ADM0)
+                # print(data_wdata[0])
+
+                caput, data = hxltm_carricato__cod_ab_et_wdata(
+                    caput_cod, data_cod,
+                    caput_wdata, data_wdata,
+                    numerordinatio_praefixo=numerordinatio_praefixo)
 
             # if pyargs.methodus == 'cod_ab_index_levels':
             if pyargs.methodus == 'cod_ab_index_levels':
@@ -692,8 +730,7 @@ class Cli:
                 # raise NotImplementedError(pyargs.methodus)
                 caput, data = hxltm_carricato__cod_ab_levels(
                     caput, data,
-                    numerordinatio_praefixo=numerordinatio_praefixo,
-                    no1_simplici=True)
+                    numerordinatio_praefixo=numerordinatio_praefixo)
 
             if pyargs.methodus == 'cod_ab_index_levels_ttl':
                 paginae = hxltm_carricato__cod_ab_levels_ttl(
@@ -1071,9 +1108,82 @@ class CliMain:
         # print('failed')
 
 
+def hxltm_carricato__cod_ab_et_wdata(
+    caput_cod: list, data_cod: list,
+    caput_wdata: list, data_wdata: list,
+    numerordinatio_praefixo: str = '1603_45_16',
+    no1_simplici: bool = False
+) -> Tuple[list, list]:
+    # @TODO finish this draft
+    unm49_index_cod = 1  # we assume this will be the index
+    unm49_index_wdata = 0  # we assume this will be the index
+
+    caput_aliis = {
+        '#country+code+v_unm49': '#item+rem+i_qcc+is_zxxx+ix_unm49',
+        '#country+code+v_iso3': '#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3',
+        '#country+code+v_iso2': '#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2',
+        '#meta+source+cod_ab_level': '#item+rem+i_qcc+is_zxxx+ix_zzcodablevel',
+    }
+
+    numerordinatio_praefixo = numerordinatio_neo_separatum(
+        numerordinatio_praefixo, ':')
+    cod_dict = {}
+    wdata_dict = {}
+    resultatum_dict = {}
+    for item in data_cod:
+        cod_dict[int(item[unm49_index_cod])] = dict(zip(caput_cod, item))
+    for item in data_wdata:
+        wdata_dict[int(item[unm49_index_wdata])] = dict(zip(caput_wdata, item))
+
+    # print(wdata_dict)
+    caput_novo = caput_cod
+    data_novis = data_cod
+
+    # print(data_wdata[0])
+
+    for unm49 in range(0, 1000):
+        if unm49 not in cod_dict and unm49 not in wdata_dict:
+            continue
+
+        if unm49 in wdata_dict:
+            if unm49 in cod_dict:
+                # print('both')
+                resultatum_dict[unm49] = {
+                    **wdata_dict[unm49], **cod_dict[unm49]}
+            else:
+                resultatum_dict[unm49] = wdata_dict[unm49]
+        else:
+            resultatum_dict[unm49] = cod_dict[unm49]
+
+        # This :0 means "root administrative level, often 'country level'"
+        resultatum_dict[unm49]['#item+conceptum+numerordinatio'] = \
+            '{0}:{1}:0'.format(numerordinatio_praefixo, str(unm49))
+
+    _caput_novo = caput_cod
+    for item in caput_wdata:
+        if item not in _caput_novo:
+            _caput_novo.append(item)
+
+    for _index, _value in enumerate(_caput_novo):
+        #     print(idx, x)
+        # for item in _caput_novo:
+        if _value in caput_aliis:
+            _caput_novo[_index] = caput_aliis[_value]
+
+    _caput_novo = list(dict.fromkeys(_caput_novo))
+
+    # print(_caput_novo)
+
+    caput_novo, data_novis = hxltm__ex_dict(
+        resultatum_dict, caput=_caput_novo, caput_aliis=caput_aliis)
+
+    # print(resultatum_dict[4])
+    return caput_novo, data_novis
+
+
 def hxltm_carricato__cod_ab_levels(
     caput: list, data: list, numerordinatio_praefixo: str = '1603_45_16',
-    no1_simplici: bool = False
+    no1_simplici: bool = False, cod_ab_level__inline: bool = False
 ) -> Tuple[list, list]:
     """hxltm_carricato__cod_ab_levels filter cod_ab_index into a list of levels
 
@@ -1119,6 +1229,28 @@ def hxltm_carricato__cod_ab_levels(
     _numerordinatio__done = []
 
     for linea in data:
+
+        if cod_ab_level__inline:
+            _cod_ab_level = []
+            for cod_ab_level in range(0, (int(linea[1]) + 1)):
+                _cod_ab_level.append(str(cod_ab_level))
+            _cod_ab_level_str = '|'.join(_cod_ab_level)
+            linea_novae = []
+            numerordinatio = '{0}:{1}'.format(
+                numerordinatio_praefixo, linea[0]
+            )
+            _numerordinatio__done.append(numerordinatio)
+            linea_novae.append(numerordinatio)
+            if no1_simplici:
+                linea_novae.append(linea[0])
+            linea_novae.append(linea[0])
+            linea_novae.append(_cod_ab_level_str)
+            linea_novae.append(linea[2])
+            linea_novae.append(linea[3])
+            # linea_novae.extend(linea)
+            data_novis.append(linea_novae)
+            continue
+
         # for cod_ab_level in range(0, int(linea[1])):
         for cod_ab_level in range(0, (int(linea[1]) + 1)):
             linea_novae = []

@@ -54,6 +54,33 @@ ROOTDIR="$(pwd)"
 #  } ORDER BY ?start
 
 #######################################
+# COD AB Index + Wikidata Adm0
+#
+# Globals:
+#   None
+# Arguments:
+#   None
+# Outputs:
+#   csvfile (stdout)
+#######################################
+1603_3_12_cod_ab_et_wdata() {
+
+  # objectivum_archivum="${ROOTDIR}/1603/3/1603_3__adm0.csv"
+  # objectivum_archivum_temporarium="${ROOTDIR}/1603/3/1603_3__adm0.TEMP.csv"
+  # objectivum_archivum_hxltm_999999="${ROOTDIR}/999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603_3_45_16_1_1.tm.hxl.csv"
+
+  set -x
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus='cod_ab_et_wdata' \
+    --numerordinatio-praefixo='1603_16' \
+    >"$objectivum_archivum_temporarium"
+  set +x
+
+  # file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+#######################################
 # Return list of administrative level 0 codes ("country/territory" codes)
 #
 # Globals:
@@ -413,6 +440,9 @@ order by (?wmCode)
 # # caput_hxltm_ad_bcp47 "#item+rem+i_qcc+is_zxxx+ix_wikiq" ","
 # # echo ""
 # exit 0
+# 1603_3_12_cod_ab_et_wdata
+
+# exit 0
 
 1603_3_12_wikipedia_language_codes
 
@@ -420,6 +450,8 @@ order by (?wmCode)
 
 1603_3_12_wikipedia_adm0_v2
 1603_3_12_wikipedia_adm1_v2
+
+1603_3_12_cod_ab_et_wdata
 
 # temp, see later
 # - https://www.wikidata.org/wiki/Help:Frequently_used_properties
