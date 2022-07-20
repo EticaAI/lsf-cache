@@ -28,8 +28,7 @@ ROOTDIR="$(pwd)"
 # . "$ROOTDIR"/999999999/999999999.lib.sh
 
 #######################################
-# numerordiatio_caput extract from no1.tm.hxl.csv some quick metadata.
-# Mostly focused on patters of the headings.
+# Generate 999999/1603/1/1603/13/1603_1_1603_13.owl.ttl
 #
 # Globals:
 #   ROOTDIR
@@ -166,7 +165,6 @@ numerordiatio_summarium() {
 #   done
 # }
 
-
 #### Main ______________________________________________________________________
 
 hxl_vocab
@@ -187,7 +185,7 @@ hxlexpand --query="#status+ix_wikiq>0" --tags="#meta+value+ix_wikiq" 999999/1603
 # numerordiatio_caput_ix_hxlix "$ROOTDIR/1603" > 999999/0/simple_caput_ix_hxlix.csv
 
 # ./999999999/0/1603_1.py ./999999999/0/1603_1.py --dictionaria-numerordinatio
-./999999999/0/1603_1.py --methodus='deprecatum-dictionaria-numerordinatio' --punctum-separato-de-resultatum=',' > 999999/1603/13/1603~dictionaria.hxl.csv
+./999999999/0/1603_1.py --methodus='deprecatum-dictionaria-numerordinatio' --punctum-separato-de-resultatum=',' >999999/1603/13/1603~dictionaria.hxl.csv
 # ./999999999/0/1603_1.py \
 #   --objectivum-linguam="lat-Latn" \
 #   --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \

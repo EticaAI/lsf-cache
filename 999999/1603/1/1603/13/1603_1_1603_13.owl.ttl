@@ -2,26 +2,143 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
 
 # WORKING DRAFT / Early proof of concept; likely may be replaced
 
+##### Universals ######
 <urn:hxl:vocab> a owl:Ontology ;
   rdfs:label "HXLStandard/HXLTM ad hoc vocabulary"@en ;
   rdfs:comment "Only applicable for simpler cases such as use with HXLTM or Numerordinatio"@en .
 
-<urn:hxl:vocab:h> a owl:Class ;
-  rdfs:label "HXL Hashtag"@en ;
-  rdfs:subClassOf <urn:hxl:vocab> .
+<urn:hxl:vocab:h()> a owl:Class ;
+  rdfs:label "HXL Hashtag"@en .
 
-<urn:hxl:vocab:a> a owl:Class ;
-  rdfs:label "HXL Attribute"@en ;
-  rdfs:subClassOf <urn:hxl:vocab> .
+<urn:hxl:vocab:a()> a owl:Class ;
+  rdfs:label "HXL Attribute"@en .
 
-<urn:hxl:vocab:v> a owl:Class ;
+<urn:hxl:vocab:a:v()> a owl:Class ;
   rdfs:label "Controlled vocabulary attribute"@en ;
-  rdfs:subClassOf <urn:hxl:vocab:a> .
+  rdfs:subClassOf <urn:hxl:vocab:a()> .
 
-<urn:hxl:vocab:i> a owl:Class ;
+<urn:hxl:vocab:a:i()> a owl:Class ;
   rdfs:label "Language attribute"@en ;
-  rdfs:subClassOf <urn:hxl:vocab:a> .
+  rdfs:subClassOf <urn:hxl:vocab:a()> .
+
+<urn:hxl:vocab:a:is()> a owl:Class ;
+  rdfs:label "Writing system attribute"@en ;
+  rdfs:subClassOf <urn:hxl:vocab:a()> .
+
+<urn:hxl:vocab:a:ix()> a owl:Class ;
+  rdfs:label "BCP47 -x- private extension attribute"@en ;
+  rdfs:subClassOf <urn:hxl:vocab:a()> .
+
+##### Individuals ######
+<urn:hxl:vocab:a:ix:iso3166p1a2> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P297 ;
+  owl:sameAs <urn:hxl:vocab:a:v:iso2> .
+
+<urn:hxl:vocab:a:ix:iso3166p1a3> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P298 ;
+  owl:sameAs <urn:hxl:vocab:a:v:iso3> .
+
+<urn:hxl:vocab:a:ix:iso3166p2> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P300 ;
+  owl:sameAs <urn:hxl:vocab:a:v:iso3> .
+
+<urn:hxl:vocab:a:ix:iso4217> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P498 ;
+  owl:sameAs <urn:hxl:vocab:a:v:currency> .
+
+<urn:hxl:vocab:a:ix:iso15924a4> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P506 ;
+  rdfs:seeAlso <http://www.unicode.org/iso15924/iso15924-codes.html> .
+
+<urn:hxl:vocab:a:ix:iso15924n3> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P2620 ;
+  rdfs:seeAlso <http://www.unicode.org/iso15924/iso15924-codes.html> .
+
+<urn:hxl:vocab:a:ix:jpgeolod> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P5400 ;
+  rdfs:seeAlso <https://geolod.ex.nii.ac.jp> .
+
+<urn:hxl:vocab:a:ix:unagrovoc> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P8061 ;
+  rdfs:seeAlso <https://agrovoc.fao.org> .
+
+<urn:hxl:vocab:a:ix:unescothes> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P3916 ;
+  rdfs:seeAlso <https://vocabularies.unesco.org> .
+
+<urn:hxl:vocab:a:ix:unm49> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P2082 ;
+  owl:sameAs <urn:hxl:vocab:a:v:m49> .
+
+<urn:hxl:vocab:a:ix:unp> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs <urn:hxl:vocab:a:v:pcode> .
+
+<urn:hxl:vocab:a:ix:usfactbook> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P9948 ;
+  rdfs:seeAlso <https://www.cia.gov/the-world-factbook/countries> .
+
+<urn:hxl:vocab:a:ix:usworldnet> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P8814 ;
+  rdfs:seeAlso <http://wordnet-rdf.princeton.edu/> .
+
+<urn:hxl:vocab:a:ix:xzhasc> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P8119 ;
+  rdfs:seeAlso <http://www.statoids.com/ihasc.html> .
+
+<urn:hxl:vocab:a:ix:xzgeonames> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P1566 ;
+  rdfs:seeAlso <https://www.geonames.org> .
+
+<urn:hxl:vocab:a:ix:xzglide> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs <urn:hxl:vocab:a:v:glide> ;
+  rdfs:seeAlso <https://glidenumber.net> .
+
+<urn:hxl:vocab:a:ix:xzgithubt> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P9100 ;
+  rdfs:seeAlso <https://github.com/topics> .
+
+<urn:hxl:vocab:a:ix:xzglotto> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P1394 ;
+  owl:sameAs <urn:hxl:vocab:a:v:glotto> ;
+  rdfs:seeAlso <https://glottolog.org> .
+
+<urn:hxl:vocab:a:ix:xzosmrel> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P402 ;
+  rdfs:seeAlso <https://wiki.openstreetmap.org/wiki/Relation> .
+
+<urn:hxl:vocab:a:ix:zzgeojson> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P3896 ;
+  rdfs:seeAlso <https://www.wikidata.org/wiki/Property:P3896> .
+
+<urn:hxl:vocab:a:ix:zzwgs84point> a <urn:hxl:vocab:a:ix()> ;
+  owl:sameAs wdata:P625 ;
+  rdfs:seeAlso <https://www.wikidata.org/wiki/Property:P625> .
+
+<urn:hxl:vocab:a:v:iso2> a <urn:hxl:vocab:a:v()> ;
+  owl:sameAs <urn:hxl:vocab:a:ix:iso3166p1a2> .
+
+<urn:hxl:vocab:a:v:iso3> a <urn:hxl:vocab:a:v()> ;
+  owl:sameAs <urn:hxl:vocab:a:ix:iso3166p1a3> .
+
+<urn:hxl:vocab:a:v:iso3> a <urn:hxl:vocab:a:v()> ;
+  owl:sameAs <urn:hxl:vocab:a:ix:iso3166p2> .
+
+<urn:hxl:vocab:a:v:currency> a <urn:hxl:vocab:a:v()> ;
+  owl:sameAs <urn:hxl:vocab:a:ix:iso4217> .
+
+<urn:hxl:vocab:a:v:m49> a <urn:hxl:vocab:a:v()> ;
+  owl:sameAs <urn:hxl:vocab:a:ix:unm49> .
+
+<urn:hxl:vocab:a:v:pcode> a <urn:hxl:vocab:a:v()> ;
+  owl:sameAs <urn:hxl:vocab:a:ix:unp> .
+
+<urn:hxl:vocab:a:v:glide> a <urn:hxl:vocab:a:v()> ;
+  owl:sameAs <urn:hxl:vocab:a:ix:xzglide> .
+
+<urn:hxl:vocab:a:v:glotto> a <urn:hxl:vocab:a:v()> ;
+  owl:sameAs <urn:hxl:vocab:a:ix:xzglotto> .
 

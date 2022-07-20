@@ -6782,6 +6782,23 @@ class OntologiaVocabulario:
         ttl_imprimendo(self.praefixa)
         ttl_imprimendo(self.paginae)
 
+    @staticmethod
+    def turtle_item(subject: str, assertions: list):
+        pagiane = []
+        if len(assertions) == 1:
+            return ['{0} {1} .'.format(subject, assertions[0]), '']
+        if len(assertions) > 1:
+            pagiane.append('{0} {1} ;'.format(subject, assertions.pop(0)))
+            while len(assertions) > 0:
+                res = assertions.pop(0)
+                if len(assertions) > 0:
+                    pagiane.append('  {0} ;'.format(res))
+                else:
+                    pagiane.append('  {0} .'.format(res))
+
+        pagiane.append('')
+        return pagiane
+
 
 class OntologiaVocabularioHXL(OntologiaVocabulario):
     def praeparatio(self):
@@ -6790,12 +6807,19 @@ class OntologiaVocabularioHXL(OntologiaVocabulario):
         Trivia:
         - praeparātiō, s, f, Nom., https://en.wiktionary.org/wiki/praeparatio
         """
-        # self.praefixa.append('')
+
+        self.praefixa.append(
+            '@prefix wdata: '
+            '<http://www.wikidata.org/wiki/Special:EntityData/> .')
+
         self.paginae.extend([
             '# WORKING DRAFT / Early proof of concept; likely may be replaced',
             ''
         ])
 
+        self.paginae.extend([
+            '##### Universals ######',
+        ])
         self.paginae.extend([
             '<urn:hxl:vocab> a owl:Ontology ;',
             '  rdfs:label "HXLStandard/HXLTM ad hoc vocabulary"@en ;',
@@ -6804,29 +6828,98 @@ class OntologiaVocabularioHXL(OntologiaVocabulario):
             ''
         ])
         self.paginae.extend([
-            '<urn:hxl:vocab:h> a owl:Class ;',
-            '  rdfs:label "HXL Hashtag"@en ;',
-            '  rdfs:subClassOf <urn:hxl:vocab> .',
+            '<urn:hxl:vocab:h()> a owl:Class ;',
+            '  rdfs:label "HXL Hashtag"@en .',
+            #'  rdfs:subClassOf <urn:hxl:vocab> .',
             ''
         ])
         self.paginae.extend([
-            '<urn:hxl:vocab:a> a owl:Class ;',
-            '  rdfs:label "HXL Attribute"@en ;',
-            '  rdfs:subClassOf <urn:hxl:vocab> .',
+            '<urn:hxl:vocab:a()> a owl:Class ;',
+            '  rdfs:label "HXL Attribute"@en .',
+            #'  rdfs:subClassOf <urn:hxl:vocab> .',
             ''
         ])
         self.paginae.extend([
-            '<urn:hxl:vocab:v> a owl:Class ;',
+            '<urn:hxl:vocab:a:v()> a owl:Class ;',
             '  rdfs:label "Controlled vocabulary attribute"@en ;',
-            '  rdfs:subClassOf <urn:hxl:vocab:a> .',
+            '  rdfs:subClassOf <urn:hxl:vocab:a()> .',
             ''
         ])
         self.paginae.extend([
-            '<urn:hxl:vocab:i> a owl:Class ;',
+            '<urn:hxl:vocab:a:i()> a owl:Class ;',
             '  rdfs:label "Language attribute"@en ;',
-            '  rdfs:subClassOf <urn:hxl:vocab:a> .',
+            '  rdfs:subClassOf <urn:hxl:vocab:a()> .',
             ''
         ])
+        self.paginae.extend([
+            '<urn:hxl:vocab:a:is()> a owl:Class ;',
+            '  rdfs:label "Writing system attribute"@en ;',
+            '  rdfs:subClassOf <urn:hxl:vocab:a()> .',
+            ''
+        ])
+        self.paginae.extend([
+            '<urn:hxl:vocab:a:ix()> a owl:Class ;',
+            '  rdfs:label "BCP47 -x- private extension attribute"@en ;',
+            '  rdfs:subClassOf <urn:hxl:vocab:a()> .',
+            ''
+        ])
+
+        self.paginae.extend([
+            '##### Individuals ######',
+        ])
+
+        for item in HXL_WDATA:
+            if 'hxl_ix' not in item or not item['hxl_ix']:
+                continue
+            assertions = ['a <urn:hxl:vocab:a:ix()>']
+
+            if 'wdata_p' in item and item['wdata_p']:
+                assertions.append(
+                    'owl:sameAs wdata:{0}'.format(item['wdata_p']))
+
+            if 'hxl_v' in item and item['hxl_v']:
+                assertions.append(
+                    'owl:sameAs <urn:hxl:vocab:a:v:{0}>'.format(
+                        item['hxl_v'].replace('v_', '')))
+
+            if 'iri' in item and item['iri']:
+                assertions.append(
+                    'rdfs:seeAlso <{0}>'.format(item['iri']))
+
+            self.paginae.extend(OntologiaVocabulario.turtle_item(
+                '<urn:hxl:vocab:a:ix:{0}>'.format(
+                    item['hxl_ix'].replace('ix_', '')), assertions))
+
+        for item in HXL_WDATA:
+            if 'hxl_v' not in item or not item['hxl_v']:
+                continue
+            # We're using hxl_ix as pivot; so ignoring it for now
+            if 'hxl_ix' not in item or not item['hxl_ix']:
+                continue
+            assertions = [
+                'a <urn:hxl:vocab:a:v()>',
+                'owl:sameAs <urn:hxl:vocab:a:ix:{0}>'.format(
+                    item['hxl_ix'].replace('ix_', ''))
+            ]
+
+            # if 'wdata_p' in item and item['wdata_p']:
+            #     assertions.append(
+            #     '<urn:hxl:vocab:a:ix:{0}>'.format(
+            #         item['hxl_ix'].replace('ix_', '')))
+
+            # if 'hxl_v' in item and item['hxl_v']:
+            #     assertions.append(
+            #         'owl:sameAs <urn:hxl:vocab:a:v:{0}>'.format(
+            #             item['hxl_v'].replace('v_', '')))
+
+            # if 'iri' in item and item['iri']:
+            #     assertions.append(
+            #         'rdfs:seeAlso <{0}>'.format(item['iri']))
+
+            self.paginae.extend(OntologiaVocabulario.turtle_item(
+                '<urn:hxl:vocab:a:v:{0}>'.format(
+                    item['hxl_v'].replace('v_', '')), assertions))
+
         return self
 
 
