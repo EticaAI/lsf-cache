@@ -38,6 +38,27 @@ ROOTDIR="$(pwd)"
 # Outputs:
 #   HXLated tabular output (not HXLTM neither Numeroordinatio)
 #######################################
+hxl_vocab() {
+  objectivum_archivum="${ROOTDIR}/999999/1603/1/1603/13/1603_1_1603_13.owl.ttl"
+  set -x
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --objectivum-formato='_temp_hxlstandard_vocab_ix' \
+    >"$objectivum_archivum"
+  set +x
+
+}
+
+#######################################
+# numerordiatio_caput extract from no1.tm.hxl.csv some quick metadata.
+# Mostly focused on patters of the headings.
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   basim
+# Outputs:
+#   HXLated tabular output (not HXLTM neither Numeroordinatio)
+#######################################
 numerordiatio_summarium() {
   basim="$1"
   shopt -s nullglob globstar
@@ -159,7 +180,7 @@ hxlexpand --query="#status+ix_wikiq>0" --tags="#meta+value+ix_wikiq" 999999/1603
 # numerordiatio_caput_ix_hxlix "$ROOTDIR/1603" > 999999/0/simple_caput_ix_hxlix.csv
 
 # ./999999999/0/1603_1.py ./999999999/0/1603_1.py --dictionaria-numerordinatio
-./999999999/0/1603_1.py --methodus='deprecatum-dictionaria-numerordinatio' --punctum-separato-de-resultatum=',' > 999999/1603/13/1603~dictionaria.hxl.csv
+./999999999/0/1603_1.py --methodus='deprecatum-dictionaria-numerordinatio' --punctum-separato-de-resultatum=',' >999999/1603/13/1603~dictionaria.hxl.csv
 # ./999999999/0/1603_1.py \
 #   --objectivum-linguam="lat-Latn" \
 #   --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \

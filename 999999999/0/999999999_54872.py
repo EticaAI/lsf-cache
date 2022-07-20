@@ -47,9 +47,10 @@ from L999999999_0 import (
     BCP47_AD_HXL,
     RDF_SPATIA_NOMINALIBUS_EXTRAS,
     HXLHashtagSimplici,
+    OntologiaVocabularioHXL,
     SetEncoder,
     bcp47_langtag,
-    bcp47_langtag_callback_hxl,
+    # bcp47_langtag_callback_hxl,
     bcp47_rdf_extension_poc,
     hxl_hashtag_to_bcp47,
     hxltm_carricato,
@@ -316,6 +317,7 @@ class Cli:
                 '_temp_no1',
                 '_temp_bcp47_meta_in_json',
                 '_temp_hxl_meta_in_json',
+                '_temp_hxlstandard_vocab_ix',
                 '_temp_header_hxl_to_bcp47',
                 '_temp_header_bcp47_to_hxl',
                 '_temp_data_hxl_to_bcp47',
@@ -480,6 +482,17 @@ class Cli:
             rdf_namespaces_extras(pyargs.rdf_namespace_archivo)
             # print(RDF_SPATIA_NOMINALIBUS_EXTRAS)
             # pass
+
+        if pyargs.objectivum_formato == '_temp_hxlstandard_vocab_ix':
+            # Quick draft of an RDF namespace for ix_ attributes;
+            # for sake of simplification, should assume they are used
+            # on the main direct relation (otherwise would not make sense
+            # even if we could pre-compute all relations)
+            # raise NotImplementedError('TODO {0}'.format(
+            #     pyargs.objectivum_formato))
+            hxlvocab = OntologiaVocabularioHXL()
+            hxlvocab.praeparatio().imprimere_ad_ttl()
+            return self.EXIT_OK
 
         if pyargs.objectivum_formato in [
                 '_temp_bcp47_to_bcp47_shortnames',

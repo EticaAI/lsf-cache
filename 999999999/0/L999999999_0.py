@@ -6763,6 +6763,68 @@ class OntologiaSimpliciAdOWL(OntologiaSimplici):
         ttl_imprimendo(paginae)
 
 
+class OntologiaVocabulario:
+    paginae: list = []
+    praefixa: list = [
+        '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .',
+        '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .',
+        '@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .',
+        '@prefix owl: <http://www.w3.org/2002/07/owl#> .',
+    ]
+
+    def __init__(
+        self,
+    ):
+        pass
+
+    def imprimere_ad_ttl(self):
+        self.praefixa.append('')
+        ttl_imprimendo(self.praefixa)
+        ttl_imprimendo(self.paginae)
+
+
+class OntologiaVocabularioHXL(OntologiaVocabulario):
+    def praeparatio(self):
+        """praeparātiō
+
+        Trivia:
+        - praeparātiō, s, f, Nom., https://en.wiktionary.org/wiki/praeparatio
+        """
+        # self.praefixa.append('')
+        self.paginae.extend([
+            '<urn:hxl:vocab> a owl:Ontology ;',
+            '  rdfs:label "HXLStandard/HXLTM ad hoc vocabulary"@en ;',
+            '  rdfs:comment "Only applicable for simpler cases such as '
+            'use with HXLTM or Numerordinatio"@en .',
+            ''
+        ])
+        self.paginae.extend([
+            '<urn:hxl:vocab:h> a owl:Class ;',
+            '  rdfs:label "HXL Hashtag"@en ;',
+            '  rdfs:subClassOf <urn:hxl:vocab> .',
+            ''
+        ])
+        self.paginae.extend([
+            '<urn:hxl:vocab:a> a owl:Class ;',
+            '  rdfs:label "HXL Attribute"@en ;',
+            '  rdfs:subClassOf <urn:hxl:vocab> .',
+            ''
+        ])
+        self.paginae.extend([
+            '<urn:hxl:vocab:v> a owl:Class ;',
+            '  rdfs:label "Controlled vocabulary attribute"@en ;',
+            '  rdfs:subClassOf <urn:hxl:vocab:a> .',
+            ''
+        ])
+        self.paginae.extend([
+            '<urn:hxl:vocab:i> a owl:Class ;',
+            '  rdfs:label "Language attribute"@en ;',
+            '  rdfs:subClassOf <urn:hxl:vocab:a> .',
+            ''
+        ])
+        return self
+
+
 def owl_index() -> str:
     """Just an quick test
     """
