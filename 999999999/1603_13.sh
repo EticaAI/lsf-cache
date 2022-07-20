@@ -166,6 +166,13 @@ numerordiatio_summarium() {
 #   done
 # }
 
+
+#### Main ______________________________________________________________________
+
+hxl_vocab
+
+exit 0
+
 # find path/to/dir -name "*.ext1" -o -name "*.ext2"
 # echo "$ROOTDIR"
 # numerordiatio_search "$ROOTDIR/1603/"
@@ -180,7 +187,7 @@ hxlexpand --query="#status+ix_wikiq>0" --tags="#meta+value+ix_wikiq" 999999/1603
 # numerordiatio_caput_ix_hxlix "$ROOTDIR/1603" > 999999/0/simple_caput_ix_hxlix.csv
 
 # ./999999999/0/1603_1.py ./999999999/0/1603_1.py --dictionaria-numerordinatio
-./999999999/0/1603_1.py --methodus='deprecatum-dictionaria-numerordinatio' --punctum-separato-de-resultatum=',' >999999/1603/13/1603~dictionaria.hxl.csv
+./999999999/0/1603_1.py --methodus='deprecatum-dictionaria-numerordinatio' --punctum-separato-de-resultatum=',' > 999999/1603/13/1603~dictionaria.hxl.csv
 # ./999999999/0/1603_1.py \
 #   --objectivum-linguam="lat-Latn" \
 #   --auxilium-linguam="mul-Zyyy,por-Latn,eng-Latn" \

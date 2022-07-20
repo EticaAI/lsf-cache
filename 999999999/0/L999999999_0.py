@@ -6792,6 +6792,11 @@ class OntologiaVocabularioHXL(OntologiaVocabulario):
         """
         # self.praefixa.append('')
         self.paginae.extend([
+            '# WORKING DRAFT / Early proof of concept; likely may be replaced',
+            ''
+        ])
+
+        self.paginae.extend([
             '<urn:hxl:vocab> a owl:Ontology ;',
             '  rdfs:label "HXLStandard/HXLTM ad hoc vocabulary"@en ;',
             '  rdfs:comment "Only applicable for simpler cases such as '

@@ -1,0 +1,27 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# WORKING DRAFT / Early proof of concept; likely may be replaced
+
+<urn:hxl:vocab> a owl:Ontology ;
+  rdfs:label "HXLStandard/HXLTM ad hoc vocabulary"@en ;
+  rdfs:comment "Only applicable for simpler cases such as use with HXLTM or Numerordinatio"@en .
+
+<urn:hxl:vocab:h> a owl:Class ;
+  rdfs:label "HXL Hashtag"@en ;
+  rdfs:subClassOf <urn:hxl:vocab> .
+
+<urn:hxl:vocab:a> a owl:Class ;
+  rdfs:label "HXL Attribute"@en ;
+  rdfs:subClassOf <urn:hxl:vocab> .
+
+<urn:hxl:vocab:v> a owl:Class ;
+  rdfs:label "Controlled vocabulary attribute"@en ;
+  rdfs:subClassOf <urn:hxl:vocab:a> .
+
+<urn:hxl:vocab:i> a owl:Class ;
+  rdfs:label "Language attribute"@en ;
+  rdfs:subClassOf <urn:hxl:vocab:a> .
+
