@@ -6902,20 +6902,6 @@ class OntologiaVocabularioHXL(OntologiaVocabulario):
                     item['hxl_ix'].replace('ix_', ''))
             ]
 
-            # if 'wdata_p' in item and item['wdata_p']:
-            #     assertions.append(
-            #     '<urn:hxl:vocab:a:ix:{0}>'.format(
-            #         item['hxl_ix'].replace('ix_', '')))
-
-            # if 'hxl_v' in item and item['hxl_v']:
-            #     assertions.append(
-            #         'owl:sameAs <urn:hxl:vocab:a:v:{0}>'.format(
-            #             item['hxl_v'].replace('v_', '')))
-
-            # if 'iri' in item and item['iri']:
-            #     assertions.append(
-            #         'rdfs:seeAlso <{0}>'.format(item['iri']))
-
             self.paginae.extend(OntologiaVocabulario.turtle_item(
                 '<urn:hxl:vocab:a:v:{0}>'.format(
                     item['hxl_v'].replace('v_', '')), assertions))

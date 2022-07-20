@@ -169,8 +169,6 @@ numerordiatio_summarium() {
 
 hxl_vocab
 
-exit 0
-
 # find path/to/dir -name "*.ext1" -o -name "*.ext2"
 # echo "$ROOTDIR"
 # numerordiatio_search "$ROOTDIR/1603/"

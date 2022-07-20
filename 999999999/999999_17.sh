@@ -59,6 +59,14 @@ ROOTDIR="$(pwd)"
 
 # file_download_if_necessary "$DATA_1603_1_51" "1603_1_51" "csv" "tm.hxl.csv" "hxltmcli" "1"
 # file_convert_numerordinatio_de_hxltm "1603_1_51" "1" "0"
+
+### Quick tests
+
+# file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv" "999999/0/1603_3_45_16_1_1.uniq.q.txt"
+wikiq=$(file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv")
+
+wikidata_q_ex_totalibus "$wikiq" "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.wikiq.tm.hxl.csv" 
+exit 0
 ### Really boostrapping downloads, end _________________________________________
 
 # TODO: the formats .no1.tm.hxl.csv stopped being updated with the default
