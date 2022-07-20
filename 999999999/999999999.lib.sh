@@ -2618,40 +2618,65 @@ wikidata_q_ex_totalibus() {
   # Default to partition in 10
   lingua_divisioni=10
 
+  # echo "> $objectivum"
+  # return 0
+
   # @TODO for large Q items, make lingua_divisioni increase dinamically
 
   objectivum_archivum_q_temporarium="${ROOTDIR}/999999/0/$_nomen.wikiq~TEMP.tm.hxl.csv"
   objectivum_archivum_q_temporarium_cache="${ROOTDIR}/999999/0/$_nomen.wikiq~TEMP~2.tm.hxl.csv"
 
+  if [ -f "$objectivum_archivum_q_temporarium" ]; then
+    rm "$objectivum_archivum_q_temporarium"
+  fi
+  if [ -f "$objectivum_archivum_q_temporarium_cache" ]; then
+    rm "$objectivum_archivum_q_temporarium_cache"
+  fi
+
   echo "${FUNCNAME[0]} [$_nomen] _qitems [$_qitems] lingua_divisioni [$lingua_divisioni]"
 
-  # for i in $(seq 1 $lingua_divisioni); do
-  #   _temp=""
-  #   archivum_partibus="${ROOTDIR}/999999/0/$_nomen.wikiq~${i}~${lingua_divisioni}.tm.hxl.csv"
-  #   # echo "$i"
-  #   wikidata_q_ex_linguis_partibus "$wikiq" "$archivum_partibus" "$i" "$lingua_divisioni"
-  #   echo "Artificial sleep 3"
-  #   sleep 3
-  # done
+  echo "Wikidata Fetch [$lingua_divisioni] STARTED"
+  for i in $(seq 1 $lingua_divisioni); do
+    if [ "$lingua_divisioni" = "$i" ]; then
+      echo "(hotfix) skip last of sequence (as 2022-07-20 it repeat content of 1"
+      break
+    fi
+
+    archivum_partibus="${ROOTDIR}/999999/0/$_nomen.wikiq~${i}~${lingua_divisioni}.tm.hxl.csv"
+    wikidata_q_ex_linguis_partibus "$wikiq" "$archivum_partibus" "$i" "$lingua_divisioni"
+    echo "Artificial sleep 3"
+    sleep 3
+  done
+  echo "Wikidata Fetch [$lingua_divisioni] DONE"
+
+  echo "Wikidata files merge STARTED"
 
   fontem_1="${ROOTDIR}/999999/0/$_nomen.wikiq~1~${lingua_divisioni}.tm.hxl.csv"
   fontem_2="${ROOTDIR}/999999/0/$_nomen.wikiq~2~${lingua_divisioni}.tm.hxl.csv"
   tempfunc_merge_wikiq_files "$fontem_1" "$fontem_2" "$objectivum_archivum_q_temporarium"
 
+  frictionless validate "$objectivum_archivum_q_temporarium"
+
   for i in $(seq 3 $lingua_divisioni); do
+    if [ "$lingua_divisioni" = "$i" ]; then
+      echo "(hotfix) skip last of sequence (as 2022-07-20 it repeat content of 1"
+      break
+    fi
+
     echo "merge number: $i"
     fontem_2="${ROOTDIR}/999999/0/$_nomen.wikiq~${i}~${lingua_divisioni}.tm.hxl.csv"
 
     tempfunc_merge_wikiq_files "$objectivum_archivum_q_temporarium" "$fontem_2" "$objectivum_archivum_q_temporarium_cache"
 
-    #frictionless validate "$objectivum_archivum_q_temporarium_cache"
+    frictionless validate "$objectivum_archivum_q_temporarium_cache"
 
-    # TODO, maybe update file_update_if_necessary to implement frictionless validate
     file_update_if_necessary csv "$objectivum_archivum_q_temporarium_cache" "$objectivum_archivum_q_temporarium"
   done
+  echo "Wikidata files merge DONE"
 
   echo ""
   echo " Prepary to deploy..."
+  echo ""
 
   hxlrename \
     --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
@@ -2659,6 +2684,8 @@ wikidata_q_ex_totalibus() {
     >"$objectivum_archivum_q_temporarium_cache"
 
   sed -i '1d' "$objectivum_archivum_q_temporarium_cache"
+
+  frictionless validate "$objectivum_archivum_q_temporarium_cache"
 
   # file_hotfix_duplicated_merge_key "${objectivum_archivum_temporarium_no11}" '#item+rem+i_qcc+is_zxxx+ix_wikiq'
 
