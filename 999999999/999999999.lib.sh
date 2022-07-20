@@ -2678,8 +2678,13 @@ wikidata_q_ex_totalibus() {
   echo " Prepary to deploy..."
   echo ""
 
+  # hxlrename \
+  #   --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
+  #   "$objectivum_archivum_q_temporarium" \
+  #   >"$objectivum_archivum_q_temporarium_cache"
+
   hxlrename \
-    --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
+    --rename='item+rem+i_qcc+is_zxxx+ix_wikiq:#item+conceptum+codicem' \
     "$objectivum_archivum_q_temporarium" \
     >"$objectivum_archivum_q_temporarium_cache"
 
