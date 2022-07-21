@@ -128,6 +128,7 @@ WHERE
 
 #######################################
 # Return list of administrative level 0 codes ("country/territory" codes)
+# Other generic functions can be used to extract the .wikiq.tm.hxl.csv
 #
 # Globals:
 #   None
@@ -443,7 +444,9 @@ order by (?wmCode)
 # exit 0
 # 1603_3_12_cod_ab_et_wdata
 
-# exit 0
+# file_translate_csv_de_numerordinatio_q__v2 "1603_3_45_16_1_1" "1" "1"
+file_merge_numerordinatio_de_wiki_q "1603_3_45_16_1_1" "1" "1" "0"
+exit 0
 
 1603_3_12_wikipedia_language_codes
 
@@ -454,6 +457,8 @@ order by (?wmCode)
 
 1603_3_12_cod_ab_et_wdata
 
+file_translate_csv_de_numerordinatio_q__v2 "1603_3_45_16_1_1" "1" "1"
+file_merge_numerordinatio_de_wiki_q "1603_3_45_16_1_1" "1" "1" "0"
 # temp, see later
 # - https://www.wikidata.org/wiki/Help:Frequently_used_properties
 # - https://www.wikidata.org/wiki/Property:P3896

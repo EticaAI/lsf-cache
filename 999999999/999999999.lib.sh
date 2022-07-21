@@ -1436,7 +1436,7 @@ neo_codex_de_numerordinatio_pdf() {
 
 #######################################
 # Extract Wikipedia QIDs from numerordinatio no1.tm.hxl.csv and generate an
-# wikiq.tm.csv
+# wikiq.tm.hxl.csv
 # Extract QCodes from:
 #  - '+ix_wikiq'
 #  - '+v_wiki_q'
@@ -1657,17 +1657,54 @@ file_translate_csv_de_numerordinatio_q() {
   return 0
 }
 
+#######################################
+# Extract Wikipedia QIDs from numerordinatio no1.tm.hxl.csv and generate an
+# wikiq.tm.hxl.csv
+# Extract QCodes from:
+#  - '#item+rem+i_qcc+is_zxxx+ix_wikiq'
+#
+# Globals:
+#   ROOTDIR (here another case that migth be relevant add DESTDIR)
+# Arguments:
+#   numerordinatio
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (default "0", from real namespace)
+# Outputs:
+#   Create file
+#######################################
 file_translate_csv_de_numerordinatio_q__v2() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
   est_temporarium_objectivum="${3:-"0"}"
-  always_stale="${4:-"0"}"
-  echo "@TODO ..."
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${ROOTDIR}/999999"
+  else
+    _basim_fontem="${ROOTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${ROOTDIR}/999999"
+  else
+    _basim_objectivum="${ROOTDIR}"
+  fi
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no1.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.wikiq.tm.hxl.csv"
+  # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.wikiq~TEMP~TEMP.tm.hxl.csv"
+
+  printf "\n\t%40s\n" "${tty_blue}${FUNCNAME[0]} STARTED [$numerordinatio] ${tty_normal}"
 
   # file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv" "999999/0/1603_3_45_16_1_1.uniq.q.txt"
   # wikiq=$(file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv")
+  wikiq=$(file_extract_ix_wikiq "$fontem_archivum")
 
   # wikidata_q_ex_totalibus "$wikiq" "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.wikiq.tm.hxl.csv" 
+  wikidata_q_ex_totalibus "$wikiq" "$objectivum_archivum" 
+  printf "\t%40s\n" "${tty_green}${FUNCNAME[0]} FINISHED OKAY ${tty_normal}"
 }
 
 #######################################
@@ -2634,6 +2671,9 @@ wikidata_q_ex_totalibus() {
 
   # @TODO: eventually design better inference than this. Needs be based on
   #        tendency of Wikidata Query timeouts (Rocha, 2022-07-21 00:02 UTC)
+  if ((_qitems < 50)); then
+    lingua_divisioni=5
+  fi
   if ((_qitems > 300)); then
     lingua_divisioni=15
   fi
