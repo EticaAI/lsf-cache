@@ -144,7 +144,8 @@ WHERE
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/1603_3__adm0_v2.TEMP.csv"
   objectivum_archivum_temporarium_hxltm="${ROOTDIR}/999999/0/1603_3__adm0_v2.TEMP.tm.hxl.csv"
   # objectivum_archivum_hxltm="${ROOTDIR}/999999/0/1603_3__adm0.tm.hxl.csv"
-  objectivum_archivum_hxltm_999999="${ROOTDIR}/999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv"
+  # objectivum_archivum_hxltm_999999="${ROOTDIR}/999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv"
+  objectivum_archivum_hxltm_999999="${ROOTDIR}/999999/1603/3/45/16/1/1/1603_3_45_16_1_1.no1.tm.hxl.csv"
 
   # if [ -z "$(stale_archive "$objectivum_archivum")" ]; then return 0; fi
 

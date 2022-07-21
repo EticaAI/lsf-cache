@@ -1657,6 +1657,19 @@ file_translate_csv_de_numerordinatio_q() {
   return 0
 }
 
+file_translate_csv_de_numerordinatio_q__v2() {
+  numerordinatio="$1"
+  est_temporarium_fontem="${2:-"1"}"
+  est_temporarium_objectivum="${3:-"0"}"
+  always_stale="${4:-"0"}"
+  echo "@TODO ..."
+
+  # file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv" "999999/0/1603_3_45_16_1_1.uniq.q.txt"
+  # wikiq=$(file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv")
+
+  # wikidata_q_ex_totalibus "$wikiq" "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.wikiq.tm.hxl.csv" 
+}
+
 #######################################
 # Merge no1.tm.hxl.csv with wikiq.tm.hxl.csv
 #
@@ -2610,6 +2623,7 @@ wikidata_p_ex_totalibus() {
 wikidata_q_ex_totalibus() {
   wikiq="$1"
   objectivum="$2"
+  __wikidata_q_ex_totalibus_objectivum="$objectivum" # if objectivum changes (?)
 
   _nomen=$(basename "$objectivum")
   _nomen="${_nomen%%.*}"
@@ -2618,7 +2632,29 @@ wikidata_q_ex_totalibus() {
   # Default to partition in 10
   lingua_divisioni=10
 
-  # echo "> $objectivum"
+  # @TODO: eventually design better inference than this. Needs be based on
+  #        tendency of Wikidata Query timeouts (Rocha, 2022-07-21 00:02 UTC)
+  if ((_qitems > 300)); then
+    lingua_divisioni=15
+  fi
+  if ((_qitems > 500)); then
+    lingua_divisioni=20
+  fi
+  if ((_qitems > 750)); then
+    lingua_divisioni=25
+  fi
+  if ((_qitems > 1000)); then
+    lingua_divisioni=30
+  fi
+  if ((_qitems > 5000)); then
+    lingua_divisioni=40
+  fi
+  if ((_qitems > 10000)); then
+    lingua_divisioni=50
+  fi
+
+  # echo ">>> [$objectivum] [$_qitems] [$lingua_divisioni] <<<"
+  # sleep 3
   # return 0
 
   # @TODO for large Q items, make lingua_divisioni increase dinamically
@@ -2633,21 +2669,23 @@ wikidata_q_ex_totalibus() {
     rm "$objectivum_archivum_q_temporarium_cache"
   fi
 
-  echo "${FUNCNAME[0]} [$_nomen] _qitems [$_qitems] lingua_divisioni [$lingua_divisioni]"
+  # echo "${FUNCNAME[0]} [$_nomen] _qitems [$_qitems] lingua_divisioni [$lingua_divisioni]"
 
-  echo "Wikidata Fetch [$lingua_divisioni] STARTED"
+  printf "\n\t%40s\n" "${tty_blue}${FUNCNAME[0]} STARTED _qitems [$_qitems] lingua_divisioni [$lingua_divisioni] ${tty_normal}"
+
+  echo "Wikidata Fetch loop of [$lingua_divisioni] STARTED"
   for i in $(seq 1 $lingua_divisioni); do
     if [ "$lingua_divisioni" = "$i" ]; then
-      echo "(hotfix) skip last of sequence (as 2022-07-20 it repeat content of 1"
+      echo "(hotfix) skip last of sequence (as 2022-07-20 it repeat content of 1)"
       break
     fi
 
     archivum_partibus="${ROOTDIR}/999999/0/$_nomen.wikiq~${i}~${lingua_divisioni}.tm.hxl.csv"
     wikidata_q_ex_linguis_partibus "$wikiq" "$archivum_partibus" "$i" "$lingua_divisioni"
-    echo "Artificial sleep 3"
+    echo "Artificial sleep 3s"
     sleep 3
   done
-  echo "Wikidata Fetch [$lingua_divisioni] DONE"
+  echo "Wikidata Fetch loop of [$lingua_divisioni] DONE"
 
   echo "Wikidata files merge STARTED"
 
@@ -2659,7 +2697,7 @@ wikidata_q_ex_totalibus() {
 
   for i in $(seq 3 $lingua_divisioni); do
     if [ "$lingua_divisioni" = "$i" ]; then
-      echo "(hotfix) skip last of sequence (as 2022-07-20 it repeat content of 1"
+      echo "(hotfix) skip last of sequence (as 2022-07-20 it repeat content of 1)"
       break
     fi
 
@@ -2694,7 +2732,26 @@ wikidata_q_ex_totalibus() {
 
   # file_hotfix_duplicated_merge_key "${objectivum_archivum_temporarium_no11}" '#item+rem+i_qcc+is_zxxx+ix_wikiq'
 
-  file_update_if_necessary csv "$objectivum_archivum_q_temporarium_cache" "$objectivum"
+  # echo ">>> [$objectivum] [$__wikidata_q_ex_totalibus_objectivum ][$_qitems] [$lingua_divisioni] <<<"
+  # sleep 3
+  # return 0
+
+  file_update_if_necessary csv "$objectivum_archivum_q_temporarium_cache" "$__wikidata_q_ex_totalibus_objectivum"
+
+  echo "Remove temporary files after end function without errors"
+  rm "$objectivum_archivum_q_temporarium"
+  for i in $(seq 1 $lingua_divisioni); do
+    if [ "$lingua_divisioni" = "$i" ]; then
+      echo "(hotfix) skip last of sequence (as 2022-07-20 it repeat content of 1)"
+      break
+    fi
+
+    archivum_partibus="${ROOTDIR}/999999/0/$_nomen.wikiq~${i}~${lingua_divisioni}.tm.hxl.csv"
+    if [ -f "$archivum_partibus" ]; then
+      rm "$archivum_partibus"
+    fi
+  done
+  printf "\t%40s\n" "${tty_green}${FUNCNAME[0]} FINISHED OKAY ${tty_normal}"
 }
 
 #######################################
@@ -2725,29 +2782,9 @@ wikidata_q_ex_linguis_partibus() {
   _nomen="${_nomen%%.*}"
 
   echo "${FUNCNAME[0]} [$_nomen] [$lingua_paginae] [$lingua_divisioni] [$objectivum]"
-  # echo "TODO"
-  # return 0
 
-  # if [ "$est_temporarium_fontem" -eq "1" ]; then
-  #   _basim_fontem="${ROOTDIR}/999999"
-  # else
-  #   _basim_fontem="${ROOTDIR}"
-  # fi
-  # if [ "$est_temporarium_objectivum" -eq "1" ]; then
-  #   _basim_objectivum="${ROOTDIR}/999999"
-  # else
-  #   _basim_objectivum="${ROOTDIR}"
-  # fi
-
-  # fontem_archivum="${_basim_fontem}/$_path/$_nomen.$est_objectivum_linguam.codex.adoc"
-  # objectivum_archivum="${_basim_objectivum}/$_path/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
-  # objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen~wikiq~${lingua_paginae}~${lingua_divisioni}.tm.hxl.csv"
-  # objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.wikiq~${lingua_paginae}_${lingua_divisioni}.tm.hxl.csv"
   objectivum_archivum="${objectivum}"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.wikiq~${lingua_paginae}_${lingua_divisioni}~TEMP.tm.hxl.csv"
-
-  echo "${FUNCNAME[0]} [$ex_wikidata_p] [$lingua_paginae] [$lingua_divisioni] [$objectivum_archivum]"
-  # return 0
 
   start_time=$(date +%s)
 
@@ -2761,7 +2798,7 @@ wikidata_q_ex_linguis_partibus() {
 
   end_time=$(date +%s)
   elapsed=$((end_time - start_time))
-  echo "Wikidata fetch time elapsed [$elapsed]"
+  printf "\t%40s\n" "${tty_blue} INFO: Wikidata fetch time elapsed [$elapsed]s ${tty_normal}"
 
   # # VALIDATE_EXIT_CODE=0
   # : frictionless validate "$objectivum_archivum_temporarium"
@@ -2781,7 +2818,7 @@ wikidata_q_ex_linguis_partibus() {
 
     end_time=$(date +%s)
     elapsed=$((end_time - start_time))
-    echo "Wikidata fetch time elapsed [$elapsed]"
+    printf "\t%40s\n" "${tty_blue} INFO: Wikidata fetch time elapsed [$elapsed]s ${tty_normal}"
 
     VALIDATE_EXIT_CODE=0
     frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
@@ -2800,18 +2837,17 @@ wikidata_q_ex_linguis_partibus() {
 
       end_time=$(date +%s)
       elapsed=$((end_time - start_time))
-      echo "Wikidata fetch time elapsed [$elapsed]"
+      printf "\t%40s\n" "${tty_blue} INFO: Wikidata fetch time elapsed [$elapsed]s ${tty_normal}"
 
       VALIDATE_EXIT_CODE=0
       frictionless validate "$objectivum_archivum_temporarium" || VALIDATE_EXIT_CODE=$?
       if [ ! "$VALIDATE_EXIT_CODE" -eq 0 ] || [ ! -s "$objectivum_archivum_temporarium" ]; then
-        echo "Giving up on [$objectivum_archivum_temporarium]. Sorry."
+        printf "\t%40s\n" "${tty_red} ERROR: Giving up on [$objectivum_archivum_temporarium]. Sorry. ${tty_normal}"
         return 1
       fi
     fi
   fi
 
-  # TODO, maybe update file_update_if_necessary to implement frictionless validate
   file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
 }
 
