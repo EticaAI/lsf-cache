@@ -186,7 +186,7 @@ test_unesco_thesaurus() {
   # @TODO rdflib rdfpipe (if exporting to XML) really need specify namespaces?
   #       Not sure on this (Rocha, 2022-07-23 03:18 UTC)
 
-  # Re-safe concatenated RDF/XML on RDFLib longturtle
+  # Re-save concatenated RDF/XML on RDFLib longturtle
   rdfpipe --input-format=turtle --output-format=pretty-xml \
     "${archivum__resultata_ttl}" \
     >"${archivum__resultata_xml}"
@@ -311,16 +311,27 @@ test_cod_ab() {
     rdfpipe --input-format=turtle --output-format=longturtle - \
       >"${archivum__resultata_bag4}"
 
-  # @TODO eventually remove  --nocheck
-  # riot --output=Turtle \
-  riot --time --nocheck --output=RDF/XML \
+  # # @TODO eventually remove  --nocheck
+  # # riot --output=Turtle \
+  # riot --time --nocheck --output=RDF/XML \
+  #   "${archivum__resultata_bag1}" \
+  #   "${archivum__resultata_bag2}" \
+  #   >"${archivum__resultata_xml}"
+
+  # riot --time --nocheck --output=Turtle \
+  #   "${archivum__resultata_xml}" \
+  #   >"${archivum__resultata_ttl}"
+
+  rdfpipe --input-format=turtle --output-format=longturtle \
     "${archivum__resultata_bag1}" \
     "${archivum__resultata_bag2}" \
-    >"${archivum__resultata_xml}"
-
-  riot --time --nocheck --output=Turtle \
-    "${archivum__resultata_xml}" \
+    "${archivum__resultata_bag3}" \
     >"${archivum__resultata_ttl}"
+
+  # Re-save concatenated RDF/XML on RDFLib longturtle
+  rdfpipe --input-format=turtle --output-format=pretty-xml \
+    "${archivum__resultata_ttl}" \
+    >"${archivum__resultata_xml}"
 
   # Is not validating rigth now; Lets allow fail
   echo "before riot --validate"
@@ -666,7 +677,8 @@ test_hxltmlib_hxltmcli() {
 }
 
 # echo "test"
-test_unesco_thesaurus
+# test_unesco_thesaurus
+test_cod_ab
 exit 0
 
 # test_unesco_thesaurus

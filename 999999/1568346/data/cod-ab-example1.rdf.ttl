@@ -1,37 +1,65 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 <urn:mdciii:1603:45:16:24:0>
-        skos:prefLabel   "Angola"@por-Latn ;
-        obo:BFO_0000171  <urn:mcdiii:1603:45:16:24:1:7> ;
-        rdfs:label       "1603:45:16:24:0" ;
-        rdf:type         skos:Concept ;
-        rdf:type         owl:Thing ;
-        rdf:type         obo:BFO_0000029 .
-
-<urn:mdciii:1603:45:16:76:0>
-        skos:prefLabel   "Brasil"@por-Latn ;
-        obo:BFO_0000171  <urn:mcdiii:1603:45:16:76:1:31> ;
-        rdfs:label       "1603:45:16:76:0" ;
-        rdf:type         skos:Concept ;
-        rdf:type         owl:Thing ;
-        rdf:type         obo:BFO_0000029 .
-
-<urn:mdciii:1603:45:16:76:1:31>
-        skos:prefLabel   "Minas Gerais"@por-Latn ;
-        obo:BFO_0000171  <urn:mcdiii:1603:45:16:76:2:3106200> ;
-        rdfs:label       "1603:45:16:76:1:31" ;
-        rdf:type         skos:Concept ;
-        rdf:type         owl:Thing ;
-        rdf:type         obo:BFO_0000029 .
+    a
+        obo:BFO_0000029 ,
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:45:16:24:0" ;
+    obo:BFO_0000171 <urn:mcdiii:1603:45:16:24:1:7> ;
+    skos:prefLabel "Angola"@por-Latn ;
+.
 
 <urn:mdciii:1603:45:16:24:1:7>
-        skos:prefLabel   "Cuanza Sul"@por-Latn ;
-        obo:BFO_0000171  <urn:mcdiii:1603:45:16:24:2:7060> ;
-        rdfs:label       "1603:45:16:24:1:7" ;
-        rdf:type         skos:Concept ;
-        rdf:type         owl:Thing ;
-        rdf:type         obo:BFO_0000029 .
+    a
+        obo:BFO_0000029 ,
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:45:16:24:1:7" ;
+    obo:BFO_0000171 <urn:mcdiii:1603:45:16:24:2:7060> ;
+    skos:prefLabel "Cuanza Sul"@por-Latn ;
+.
+
+<urn:mdciii:1603:45:16:24:2:7060>
+    a
+        obo:BFO_0000029 ,
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:45:16:24:2:7060" ;
+    obo:BFO_0000171 <urn:mcdiii:1603:45:16:24:3:7060201> ;
+    skos:prefLabel "Sumbe (Ngangula)"@por-Latn ;
+.
+
+<urn:mdciii:1603:45:16:76:0>
+    a
+        obo:BFO_0000029 ,
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:45:16:76:0" ;
+    obo:BFO_0000171 <urn:mcdiii:1603:45:16:76:1:31> ;
+    skos:prefLabel "Brasil"@por-Latn ;
+.
+
+<urn:mdciii:1603:45:16:76:1:31>
+    a
+        obo:BFO_0000029 ,
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:45:16:76:1:31" ;
+    obo:BFO_0000171 <urn:mcdiii:1603:45:16:76:2:3106200> ;
+    skos:prefLabel "Minas Gerais"@por-Latn ;
+.
+
+<urn:mdciii:1603:45:16:76:2:3106200>
+    a
+        obo:BFO_0000029 ,
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:45:16:76:2:3106200" ;
+    obo:BFO_0000171 <urn:mcdiii:_> ;
+    skos:prefLabel "Belo Horizonte"@por-Latn ;
+.
+
