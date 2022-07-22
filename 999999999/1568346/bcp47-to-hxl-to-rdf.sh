@@ -427,18 +427,30 @@ test_cod_ab__with_inferences_prebuild() {
     rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
       >"${archivum__resultata_bag4}"
 
-  # @TODO eventually remove  --nocheck
-  # riot --output=Turtle \
-  riot --time --nocheck --output=RDF/XML \
+  # # @TODO eventually remove  --nocheck
+  # # riot --output=Turtle \
+  # riot --time --nocheck --output=RDF/XML \
+  #   "${archivum__resultata_bag1}" \
+  #   "${archivum__resultata_bag2}" \
+  #   "${archivum__resultata_bag3}" \
+  #   "${archivum__resultata_bag4}" \
+  #   >"${archivum__resultata_xml}"
+
+  # riot --time --nocheck --output=Turtle \
+  #   "${archivum__resultata_xml}" \
+  #   >"${archivum__resultata_ttl}"
+
+  rdfpipe --input-format=turtle --output-format=longturtle \
     "${archivum__resultata_bag1}" \
     "${archivum__resultata_bag2}" \
     "${archivum__resultata_bag3}" \
     "${archivum__resultata_bag4}" \
-    >"${archivum__resultata_xml}"
-
-  riot --time --nocheck --output=Turtle \
-    "${archivum__resultata_xml}" \
     >"${archivum__resultata_ttl}"
+
+  # Re-save concatenated RDF/XML on RDFLib longturtle
+  rdfpipe --input-format=turtle --output-format=pretty-xml \
+    "${archivum__resultata_ttl}" \
+    >"${archivum__resultata_xml}"
 
   # Is not validating rigth now; Lets allow fail
   # echo "before riot --validate"
@@ -679,6 +691,7 @@ test_hxltmlib_hxltmcli() {
 # echo "test"
 # test_unesco_thesaurus
 test_cod_ab
+test_cod_ab__with_inferences_prebuild
 exit 0
 
 # test_unesco_thesaurus
