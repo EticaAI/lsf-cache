@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-  xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
+  <owl:Thing rdf:about="urn:mdciii:1603:999:9">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>1603:999:9</rdfs:label>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T22:36:40+00:00</dcterms:modified>
+    <skos:prefLabel xml:lang="arb-Arab">سياسة تربوية</skos:prefLabel>
+    <skos:prefLabel xml:lang="rus-Cyrl">Политика в области образования</skos:prefLabel>
+    <skos:prefLabel xml:lang="spa-Latn">Política educacional</skos:prefLabel>
+  </owl:Thing>
   <rdf:Description rdf:about="urn:mdciii:1603:999()">
     <skos:member>
       <owl:Thing rdf:about="urn:mdciii:1603:999:10">
@@ -28,28 +36,21 @@
       </owl:Thing>
     </skos:member>
   </rdf:Description>
-  <owl:Thing rdf:about="urn:mdciii:1603:999:9">
+  <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept10">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:label>1603:999:9</rdfs:label>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T22:36:40+00:00</dcterms:modified>
-    <skos:prefLabel xml:lang="arb-Arab">سياسة تربوية</skos:prefLabel>
-    <skos:prefLabel xml:lang="rus-Cyrl">Политика в области образования</skos:prefLabel>
-    <skos:prefLabel xml:lang="spa-Latn">Política educacional</skos:prefLabel>
-  </owl:Thing>
-  <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept9">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:related>
-      <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept10">
+    <skos:narrower>
+      <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept4938">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept4938"/>
-        <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept7597"/>
-        <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept9"/>
+        <skos:broader rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
+        <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
+      </owl:Thing>
+    </skos:narrower>
+    <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept7597"/>
+    <skos:related>
+      <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept9">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
       </owl:Thing>
     </skos:related>
-  </owl:Thing>
-  <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept4938">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <skos:broader rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
-    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
   </owl:Thing>
 </rdf:RDF>

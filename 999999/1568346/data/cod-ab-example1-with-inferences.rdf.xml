@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-  xmlns:obo="http://purl.obolibrary.org/obo/"
-  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-  xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:obo="http://purl.obolibrary.org/obo/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
 >
+  <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:24:0">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>1603:45:16:24:0</rdfs:label>
+    <obo:BFO_0000124 rdf:resource="urn:mcdiii:1603:45:16:24:1:7"/>
+    <obo:BFO_0000171 rdf:resource="urn:mcdiii:1603:45:16:24:1:7"/>
+    <skos:prefLabel xml:lang="por-Latn">Angola</skos:prefLabel>
+  </obo:BFO_0000029>
   <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:24:2:7060">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -16,14 +24,6 @@
     <obo:BFO_0000171 rdf:resource="urn:mcdiii:1603:45:16:24:3:7060201"/>
     <skos:prefLabel xml:lang="por-Latn">Sumbe (Ngangula)</skos:prefLabel>
   </obo:BFO_0000029>
-  <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:76:2:3106200">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:label>1603:45:16:76:2:3106200</rdfs:label>
-    <obo:BFO_0000124 rdf:resource="urn:mcdiii:1603:45:16:76:1:31"/>
-    <obo:BFO_0000171 rdf:resource="urn:mcdiii:1603:45:16:76:1:31"/>
-    <skos:prefLabel xml:lang="por-Latn">Belo Horizonte</skos:prefLabel>
-  </obo:BFO_0000029>
   <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:24:1:7">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -32,21 +32,6 @@
     <obo:BFO_0000124 rdf:resource="urn:mcdiii:1603:45:16:24:2:7060"/>
     <obo:BFO_0000171 rdf:resource="urn:mcdiii:1603:45:16:24:2:7060"/>
     <skos:prefLabel xml:lang="por-Latn">Cuanza Sul</skos:prefLabel>
-  </obo:BFO_0000029>
-  <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:24:3:7060201">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:label>1603:45:16:24:3:7060201</rdfs:label>
-    <skos:prefLabel xml:lang="por-Latn">Kikombo</skos:prefLabel>
-  </obo:BFO_0000029>
-  <owl:Ontology rdf:about="urn:mdciii:1603:45:16:76:2(1)"/>
-  <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:24:0">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:label>1603:45:16:24:0</rdfs:label>
-    <obo:BFO_0000124 rdf:resource="urn:mcdiii:1603:45:16:24:1:7"/>
-    <obo:BFO_0000171 rdf:resource="urn:mcdiii:1603:45:16:24:1:7"/>
-    <skos:prefLabel xml:lang="por-Latn">Angola</skos:prefLabel>
   </obo:BFO_0000029>
   <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:76:1:31">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -57,6 +42,21 @@
     <obo:BFO_0000171 rdf:resource="urn:mcdiii:1603:45:16:76:2:3106200"/>
     <skos:prefLabel xml:lang="por-Latn">Minas Gerais</skos:prefLabel>
   </obo:BFO_0000029>
+  <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:24:3:7060201">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>1603:45:16:24:3:7060201</rdfs:label>
+    <skos:prefLabel xml:lang="por-Latn">Kikombo</skos:prefLabel>
+  </obo:BFO_0000029>
+  <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:76:2:3106200">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:label>1603:45:16:76:2:3106200</rdfs:label>
+    <obo:BFO_0000124 rdf:resource="urn:mcdiii:1603:45:16:76:1:31"/>
+    <obo:BFO_0000171 rdf:resource="urn:mcdiii:1603:45:16:76:1:31"/>
+    <skos:prefLabel xml:lang="por-Latn">Belo Horizonte</skos:prefLabel>
+  </obo:BFO_0000029>
+  <owl:Ontology rdf:about="urn:mdciii:1603:45:16:76:2(1)"/>
   <obo:BFO_0000029 rdf:about="urn:mdciii:1603:45:16:76:0">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -65,8 +65,6 @@
     <obo:BFO_0000171 rdf:resource="urn:mcdiii:1603:45:16:76:1:31"/>
     <skos:prefLabel xml:lang="por-Latn">Brasil</skos:prefLabel>
   </obo:BFO_0000029>
-  <owl:Ontology rdf:about="urn:mdciii:1603:45:16:24:1(1)"/>
-  <owl:Ontology rdf:about="urn:mdciii:1603:45:16:76:1(1)"/>
   <skos:Collection rdf:about="urn:mdciii:1603:45:16()">
     <rdfs:label>(1603:45:16)</rdfs:label>
     <skos:inScheme>
@@ -90,10 +88,15 @@
       </skos:Collection>
     </skos:member>
   </skos:Collection>
-  <owl:Ontology rdf:about="urn:mdciii:1603:45:16:24:2(1)"/>
+  <owl:Ontology rdf:about="urn:mdciii:1603:45:16:76:1(1)"/>
   <owl:Ontology rdf:about="urn:mdciii:1603:45:16:24:3(1)"/>
-  <skos:Collection rdf:about="urn:mdciii:1603:45:16:76:2()">
-    <rdfs:label>(1603:45:16:76:2)</rdfs:label>
+  <owl:Ontology rdf:about="urn:mdciii:1603:45:16:24:1(1)"/>
+  <owl:Ontology rdf:about="urn:mdciii:1603:45:16:24:2(1)"/>
+  <skos:Collection rdf:about="urn:mdciii:1603:45:16:76:1()">
+    <rdfs:label>(1603:45:16:76:1)</rdfs:label>
+  </skos:Collection>
+  <skos:Collection rdf:about="urn:mdciii:1603:45:16:24:2()">
+    <rdfs:label>(1603:45:16:24:2)</rdfs:label>
   </skos:Collection>
   <skos:Collection rdf:about="urn:mdciii:1603:45:16:24:3()">
     <rdfs:label>(1603:45:16:24:3)</rdfs:label>
@@ -101,10 +104,7 @@
   <skos:Collection rdf:about="urn:mdciii:1603:45:16:24:1()">
     <rdfs:label>(1603:45:16:24:1)</rdfs:label>
   </skos:Collection>
-  <skos:Collection rdf:about="urn:mdciii:1603:45:16:24:2()">
-    <rdfs:label>(1603:45:16:24:2)</rdfs:label>
-  </skos:Collection>
-  <skos:Collection rdf:about="urn:mdciii:1603:45:16:76:1()">
-    <rdfs:label>(1603:45:16:76:1)</rdfs:label>
+  <skos:Collection rdf:about="urn:mdciii:1603:45:16:76:2()">
+    <rdfs:label>(1603:45:16:76:2)</rdfs:label>
   </skos:Collection>
 </rdf:RDF>

@@ -840,7 +840,7 @@ RDF_SPATIA_NOMINALIBUS_EXTRAS = {
     # 'p': 'http://www.wikidata.org/prop/',
     'wdt': 'http://www.wikidata.org/prop/direct/',
     'wdv': 'http://www.wikidata.org/value/',
-    'p': 'http://www.wikidata.org/prop/',
+    'p': 'http://www.wikidata.org/prop/',  # NOTE: preffer wdata for datasets
 }
 # For "Base OWL" of Wikidata, download link: http://wikiba.se/ontology
 
@@ -6742,9 +6742,9 @@ class OntologiaSimpliciAdOWL(OntologiaSimplici):
         paginae.append('# {0}'.format(self.ontologia_radici))
         paginae.extend(self.PRAEFIXUM)
         paginae.append('')
-        paginae.append('p:P361 rdf:type owl:ObjectProperty .')
-        paginae.append('p:P1696 rdf:type owl:ObjectProperty .')
-        paginae.append('p:P361 owl:inverseOf p:P1696 .')
+        paginae.append('wdata:P361 rdf:type owl:ObjectProperty .')
+        paginae.append('wdata:P1696 rdf:type owl:ObjectProperty .')
+        paginae.append('wdata:P361 owl:inverseOf wdata:P1696 .')
         paginae.append('')
         paginae.extend(self.PARENTES)
         paginae.append('')
@@ -6767,7 +6767,7 @@ class OntologiaSimpliciAdOWL(OntologiaSimplici):
             # paginae.append('# {0} {1} {2}'.format(
             #     linea[0], linea[1], ordo_nunc))
 
-            paginae.append('<urn:{0}> p:P361 <urn:{1}> .'.format(
+            paginae.append('<urn:{0}> wdata:P361 <urn:{1}> .'.format(
                 numerordinatio_nunc, numerordinatio_parentī,
                 parēns[ordo_nunc]))
 

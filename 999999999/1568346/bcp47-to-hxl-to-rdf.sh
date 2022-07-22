@@ -680,7 +680,7 @@ test_hxltmlib_hxltmcli() {
   # archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.meta.json"
 
   hxltmcli "${archivum_exemplis}" \
-    --rdf-conceptum-typo='obo:BFO_0000029|p:P17' \
+    --rdf-conceptum-typo='obo:BFO_0000029|wdata:P17' \
     >"$archivum_resultata_hxltm"
 
   frictionless validate "$archivum_resultata_hxltm"
@@ -690,9 +690,9 @@ test_hxltmlib_hxltmcli() {
 
 # echo "test"
 # test_unesco_thesaurus
-test_cod_ab
-test_cod_ab__with_inferences_prebuild
-exit 0
+# test_cod_ab
+# test_cod_ab__with_inferences_prebuild
+# exit 0
 
 # test_unesco_thesaurus
 # test_cod_ab

@@ -1397,7 +1397,8 @@ def hxltm_carricato__cod_ab_levels_ttl(
     paginae.append('@prefix skos: <http://www.w3.org/2004/02/skos/core#> .')
     # paginae.append('@prefix p: <http://www.wikidata.org/prop/> .')
     # paginae.append('@prefix wdt: <http://www.wikidata.org/prop/direct/> .')
-    paginae.append('@prefix p: <http://www.wikidata.org/prop/> .')
+    # paginae.append('@prefix p: <http://www.wikidata.org/prop/> .')
+    paginae.append('@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .')
     paginae.append('')
 
     # @see stackoverflow.com/questions/55506715/nested-skos-concept-schemes
@@ -1463,11 +1464,11 @@ def hxltm_carricato__cod_ab_levels_ttl(
             f'  rdfs:label "{numerodiatio_re}:0"')
         # _paginae_basi.append(
         #     f'  skos:prefLabel "{numerodiatio_re}"@mul-Zyyy-x-n1603')
-        _paginae_basi.append(f'  p:P2082 "{linea[1].zfill(3)}"')
+        _paginae_basi.append(f'  wdata:P2082 "{linea[1].zfill(3)}"')
         # ISO 3166-1 numeric
-        _paginae_basi.append(f'  p:P299 "{linea[1].zfill(3)}"')
-        _paginae_basi.append(f'  p:P298 "{linea[2]}"')
-        _paginae_basi.append(f'  p:P297 "{linea[3]}"')
+        _paginae_basi.append(f'  wdata:P299 "{linea[1].zfill(3)}"')
+        _paginae_basi.append(f'  wdata:P298 "{linea[2]}"')
+        _paginae_basi.append(f'  wdata:P297 "{linea[3]}"')
 
         # Disablig topConceptOf
         # _paginae_basi.append(
