@@ -1,6 +1,5 @@
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix unescothes: <http://vocabularies.unesco.org/thesaurus/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
@@ -22,22 +21,22 @@ unescothes:concept9  skos:related  unescothes:concept10 ;
         rdf:type      owl:Thing .
 
 <urn:mdciii:1603:999:4938>
-        skos:prefLabel  "فرص تربوية"@arb-Arab ;
-        skos:prefLabel  "Возможности получения образования"@rus-Cyrl ;
-        skos:prefLabel  "Oportunidades educacionales"@spa-Latn ;
-        rdfs:label      "1603:999:4938" ;
-        rdf:type        skos:Concept ;
-        rdf:type        owl:Thing ;
-        dct:modified    "2019-12-15T22:36:42Z"^^xsd:dateTime .
+        skos:prefLabel    "Oportunidades educacionales"@spa-Latn ;
+        skos:prefLabel    "Возможности получения образования"@rus-Cyrl ;
+        skos:prefLabel    "فرص تربوية"@arb-Arab ;
+        dcterms:modified  "2019-12-15T22:36:42+00:00"^^xsd:dateTime ;
+        rdfs:label        "1603:999:4938" ;
+        rdf:type          skos:Concept ;
+        rdf:type          owl:Thing .
 
 <urn:mdciii:1603:999:9>
-        skos:prefLabel  "سياسة تربوية"@arb-Arab ;
-        skos:prefLabel  "Политика в области образования"@rus-Cyrl ;
-        skos:prefLabel  "Política educacional"@spa-Latn ;
-        rdfs:label      "1603:999:9" ;
-        rdf:type        skos:Concept ;
-        rdf:type        owl:Thing ;
-        dct:modified    "2019-12-15T22:36:40Z"^^xsd:dateTime .
+        skos:prefLabel    "Política educacional"@spa-Latn ;
+        skos:prefLabel    "Политика в области образования"@rus-Cyrl ;
+        skos:prefLabel    "سياسة تربوية"@arb-Arab ;
+        dcterms:modified  "2019-12-15T22:36:40+00:00"^^xsd:dateTime ;
+        rdfs:label        "1603:999:9" ;
+        rdf:type          skos:Concept ;
+        rdf:type          owl:Thing .
 
 unescothes:concept4938
         skos:related  unescothes:concept10 ;
@@ -46,10 +45,10 @@ unescothes:concept4938
         rdf:type      owl:Thing .
 
 <urn:mdciii:1603:999:10>
-        skos:prefLabel  "حق في التعليم"@arb-Arab ;
-        skos:prefLabel  "Право на образование"@rus-Cyrl ;
-        skos:prefLabel  "Derecho a la educación"@spa-Latn ;
-        rdfs:label      "1603:999:10" ;
-        rdf:type        skos:Concept ;
-        rdf:type        owl:Thing ;
-        dct:modified    "2019-12-15T13:26:49Z"^^xsd:dateTime .
+        skos:prefLabel    "Derecho a la educación"@spa-Latn ;
+        skos:prefLabel    "Право на образование"@rus-Cyrl ;
+        skos:prefLabel    "حق في التعليم"@arb-Arab ;
+        dcterms:modified  "2019-12-15T13:26:49+00:00"^^xsd:dateTime ;
+        rdfs:label        "1603:999:10" ;
+        rdf:type          skos:Concept ;
+        rdf:type          owl:Thing .

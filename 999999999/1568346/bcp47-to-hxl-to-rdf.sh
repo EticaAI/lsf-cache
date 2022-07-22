@@ -114,14 +114,32 @@ test_unesco_thesaurus() {
     "${archivum__unesco_thesaurus_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
+  # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+  #   --methodus=_temp_bcp47 \
+  #   --punctum-separato-de-fontem=$'\t' \
+  #   --rdf-trivio=1 \
+  #   --rdf-namespaces-archivo="${archivum__namespace}" \
+  #   "${archivum__unesco_thesaurus_bcp47}" |
+  #   rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+  #     >"${archivum__resultata_bag1}"
+
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__unesco_thesaurus_bcp47}" |
-    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+    rdfpipe --input-format=turtle --output-format=longturtle - \
       >"${archivum__resultata_bag1}"
+
+  # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+  #   --methodus=_temp_bcp47 \
+  #   --punctum-separato-de-fontem=$'\t' \
+  #   --rdf-trivio=2 \
+  #   --rdf-namespaces-archivo="${archivum__namespace}" \
+  #   "${archivum__unesco_thesaurus_bcp47}" |
+  #   rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+  #     >"${archivum__resultata_bag2}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --methodus=_temp_bcp47 \
@@ -129,7 +147,7 @@ test_unesco_thesaurus() {
     --rdf-trivio=2 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__unesco_thesaurus_bcp47}" |
-    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+    rdfpipe --input-format=turtle --output-format=longturtle - \
       >"${archivum__resultata_bag2}"
 
   # @TODO eventually remove  --nocheck
@@ -191,14 +209,32 @@ test_cod_ab() {
     "${archivum__cod_ab_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
+  # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+  #   --methodus=_temp_bcp47 \
+  #   --punctum-separato-de-fontem=$'\t' \
+  #   --rdf-trivio=1 \
+  #   --rdf-namespaces-archivo="${archivum__namespace}" \
+  #   "${archivum__cod_ab_bcp47}" |
+  #   rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+  #     >"${archivum__resultata_bag1}"
+
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
-    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+    rdfpipe --input-format=turtle --output-format=longturtle - \
       >"${archivum__resultata_bag1}"
+
+  # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+  #   --methodus=_temp_bcp47 \
+  #   --punctum-separato-de-fontem=$'\t' \
+  #   --rdf-trivio=2 \
+  #   --rdf-namespaces-archivo="${archivum__namespace}" \
+  #   "${archivum__cod_ab_bcp47}" |
+  #   rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+  #     >"${archivum__resultata_bag2}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --methodus=_temp_bcp47 \
@@ -206,8 +242,17 @@ test_cod_ab() {
     --rdf-trivio=2 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
-    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+    rdfpipe --input-format=turtle --output-format=longturtle - \
       >"${archivum__resultata_bag2}"
+
+  # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+  #   --methodus=_temp_bcp47 \
+  #   --punctum-separato-de-fontem=$'\t' \
+  #   --rdf-trivio=3 \
+  #   --rdf-namespaces-archivo="${archivum__namespace}" \
+  #   "${archivum__cod_ab_bcp47}" |
+  #   rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+  #     >"${archivum__resultata_bag3}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --methodus=_temp_bcp47 \
@@ -215,8 +260,17 @@ test_cod_ab() {
     --rdf-trivio=3 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
-    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+    rdfpipe --input-format=turtle --output-format=longturtle - \
       >"${archivum__resultata_bag3}"
+
+  # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+  #   --methodus=_temp_bcp47 \
+  #   --punctum-separato-de-fontem=$'\t' \
+  #   --rdf-trivio=4 \
+  #   --rdf-namespaces-archivo="${archivum__namespace}" \
+  #   "${archivum__cod_ab_bcp47}" |
+  #   rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+  #     >"${archivum__resultata_bag4}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --methodus=_temp_bcp47 \
@@ -224,7 +278,7 @@ test_cod_ab() {
     --rdf-trivio=4 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
-    rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+    rdfpipe --input-format=turtle --output-format=longturtle - \
       >"${archivum__resultata_bag4}"
 
   # @TODO eventually remove  --nocheck

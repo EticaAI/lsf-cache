@@ -72,15 +72,18 @@ ls -lha 999999/0/teste.csv
 
 ./999999999/0/999999999_54872.py --methodus=_temp_no1 --numerordinatio-cum-antecessoribus --rdf-trivio=1603 999999/0/teste.csv > 999999/0/teste.ttl-simplici.ttl
 
-rapper --quiet --input=turtle --output=turtle 999999/0/teste.ttl-simplici.ttl > 999999/0/teste.ttl
+# rapper --quiet --input=turtle --output=turtle 999999/0/teste.ttl-simplici.ttl > 999999/0/teste.ttl
+rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste.ttl-simplici.ttl > 999999/0/teste.ttl
 
 ./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-trivio=5000 999999/0/teste-4.csv > 999999/0/teste-4.ttl-simplici.ttl
 
-rapper --quiet --input=turtle --output=turtle 999999/0/teste-4.ttl-simplici.ttl > 999999/0/teste-4.ttl
+# rapper --quiet --input=turtle --output=turtle 999999/0/teste-4.ttl-simplici.ttl > 999999/0/teste-4.ttl
+rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste-4.ttl-simplici.ttl > 999999/0/teste-4.ttl
 
 ./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=devnull --rdf-trivio=5000 999999/0/teste-4.csv > 999999/0/teste-4~full.ttl-simplici.ttl
 
-rapper --quiet --input=turtle --output=turtle 999999/0/teste-4~full.ttl-simplici.ttl > 999999/0/teste-4~full.ttl
+# rapper --quiet --input=turtle --output=turtle 999999/0/teste-4~full.ttl-simplici.ttl > 999999/0/teste-4~full.ttl
+rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste-4~full.ttl-simplici.ttl > 999999/0/teste-4~full.ttl
 
 rapper --count --input=turtle 999999/0/teste-4~full.ttl
 

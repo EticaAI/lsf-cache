@@ -84,20 +84,32 @@ __EPILOGUM__ = """
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
 
+Generic Numerordinatio to RDF Turtle . . . . . . . . . . . . . . . . . . . . .
+(TODO: fix example)
+    {0} --methodus=_temp_no1 \
+--rdf-sine-spatia-nominalibus=devnull \
+--rdf-trivio=5000 \
+999999/1603/3/45/16/1/1/1603_3_45_16_1_1.no11.tm.hxl.csv
+
+Configuration-based HXLTM to Numerordinatio . . . . . . . . . . . . . . . . . .
+(Experimental; uses YAML to upgrade HXLTM to Numerordinatio tabular)
+
     cat 999999/0/ibge_un_adm2.tm.hxl.csv | \
-{0} --objectivum-formato=text/csv \
+{0} --methodus=ad_rdf_ex_configurationi --objectivum-formato=text/csv \
 --archivum-configurationi-ex-fonti=999999999/0/999999999_268072.meta.yml \
 --praefixum-configurationi-ex-fonti=methodus,ibge_un_adm2 \
 > 999999/0/ibge_un_adm2.no1.tm.hxl.csv
 
     cat 999999/0/ibge_un_adm2.tm.hxl.csv | \
-{0} --objectivum-formato=application/x-turtle \
+{0} --methodus=ad_rdf_ex_configurationi \
+--objectivum-formato=application/x-turtle \
 --archivum-configurationi-ex-fonti=999999999/0/999999999_268072.meta.yml \
 --praefixum-configurationi-ex-fonti=methodus,ibge_un_adm2 \
 > 999999/0/ibge_un_adm2.no1.skos.ttl
 
     cat 999999/0/ibge_un_adm2.tm.hxl.csv | \
-{0} --objectivum-formato=application/x-turtle \
+{0} --methodus=ad_rdf_ex_configurationi \
+--objectivum-formato=application/x-turtle \
 --archivum-configurationi-ex-fonti=999999999/0/999999999_268072.meta.yml \
 --praefixum-configurationi-ex-fonti=methodus,ibge_un_adm2 \
 | rapper --quiet --input=turtle --output=ntriples /dev/fd/0
@@ -105,53 +117,46 @@ __EPILOGUM__ = """
     rapper --quiet --input=turtle --output=ntriples \
 999999/0/ibge_un_adm2.no1.skos.ttl > 999999/0/ibge_un_adm2.no1.skos.nt
 
-Generic Numerordinatio to RDF Turtle . . . . . . . . . . . . . . . . . . . . .
-(TODO: fix example)
-    {0} --objectivum-formato=_temp_no1 \
---rdf-sine-spatia-nominalibus=devnull \
---rdf-trivio=5000 \
-999999/1603/3/45/16/1/1/1603_3_45_16_1_1.no11.tm.hxl.csv
-
 Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Debug information in JSON)
-    {0} --objectivum-formato=_temp_bcp47_meta_in_json \
+    {0} --methodus=_temp_bcp47_meta_in_json \
 --punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
 --numerordinatio-cum-antecessoribus \
 --rdf-ontologia-ordinibus=5 --rdf-trivio=5002
 
-    {0} --objectivum-formato=_temp_bcp47_meta_in_json \
+    {0} --methodus=_temp_bcp47_meta_in_json \
 --punctum-separato-de-fontem=$'\\t' \
 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv
 
-    {0} --objectivum-formato=_temp_hxl_meta_in_json \
+    {0} --methodus=_temp_hxl_meta_in_json \
 --punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.no1.tm.hxl.tsv \
 --numerordinatio-cum-antecessoribus \
 --rdf-ontologia-ordinibus=5 --rdf-trivio=5002
 
 (Data operations)
-    {0} --objectivum-formato=_temp_bcp47 \
+    {0} --methodus=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
 --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
 --rdf-trivio=5002
 
-    {0} --objectivum-formato=_temp_bcp47 \
+    {0} --methodus=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv \
 --numerordinatio-cum-antecessoribus --rdf-trivio=1
 
-    {0} --objectivum-formato=_temp_bcp47 --rdf-namespaces-archivo=\
+    {0} --methodus=_temp_bcp47 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv \
 --numerordinatio-cum-antecessoribus --rdf-trivio=5001
 
-    {0} --objectivum-formato=_temp_bcp47 \
+    {0} --methodus=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
 --rdf-namespaces-archivo=\
 999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv \
@@ -159,13 +164,13 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 | rapper --quiet --input=turtle --output=turtle /dev/fd/0
 
 (Data operation; example of "SKOS version" without OWL/OBO assertions)
-    {0} --objectivum-formato=_temp_bcp47 \
+    {0} --methodus=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
 --rdf-sine-spatia-nominalibus=owl,obo,devnull --rdf-trivio=5002
 
 (Data operation; example of "OWL + OBO" without SKOS linguistic metadata)
-    {0} --objectivum-formato=_temp_bcp47 \
+    {0} --methodus=_temp_bcp47 \
 --punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv \
 --rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-trivio=5002
@@ -173,15 +178,15 @@ Temporary tests . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Data operations, header conversion RDF+HXL -> RDF+BCP47)
     varhxl=$(head -n1 \
 999999999/1568346/data/cod-ab-example1-with-inferences.no1.tm.hxl.tsv)
-    {0} --objectivum-formato=_temp_header_hxl_to_bcp47 "$varhxl"
+    {0} --methodus=_temp_header_hxl_to_bcp47 "$varhxl"
 
 (Data operations, header conversion RDF+BCP47 -> RDF+HXL)
     varbcp47=$(head -n1 \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv)
-    {0} --objectivum-formato=_temp_header_bcp47_to_hxl "$varbcp47"
+    {0} --methodus=_temp_header_bcp47_to_hxl "$varbcp47"
 
 (Create shorter column names; good for databases, less for command line)
-    {0} --objectivum-formato=_temp_bcp47_to_bcp47_shortnames \
+    {0} --methodus=_temp_bcp47_to_bcp47_shortnames \
 --punctum-separato-de-fontem=$'\\t' \
 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv
 
@@ -279,8 +284,9 @@ class Cli:
             dest='methodus',
             nargs='?',
             choices=[
-                'auto',  # Uses
-                'hxltm_rdf_ex_configurationi',
+                'auto',  # Uses ad_rdf_ex_configurationi
+                'ad_rdf_genericae',
+                'ad_rdf_ex_configurationi',
                 '_temp_bcp47',
                 '_temp_no1',
                 '_temp_bcp47_meta_in_json',

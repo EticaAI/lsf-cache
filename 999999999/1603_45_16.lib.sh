@@ -704,7 +704,11 @@ bootstrap_1603_45_16__item_rdf() {
       --rdf-trivio="${rdf_trivio}" \
       <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
-    rapper --quiet --input=turtle --output=turtle \
+    # rapper --quiet --input=turtle --output=turtle \
+    #   "${opus_temporibus_temporarium}" \
+    #   >"${objectivum_archivum_no1_owl_ttl}"
+
+    rdfpipe --input-format=turtle --output-format=longturtle \
       "${opus_temporibus_temporarium}" \
       >"${objectivum_archivum_no1_owl_ttl}"
 
@@ -730,7 +734,11 @@ bootstrap_1603_45_16__item_rdf() {
       --rdf-trivio="${rdf_trivio}" \
       <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium_2}"
 
-    rapper --quiet --input=turtle --output=turtle \
+    # rapper --quiet --input=turtle --output=turtle \
+    #   "${opus_temporibus_temporarium_2}" \
+    #   >"${objectivum_archivum_no1_skos_ttl}"
+
+    rdfpipe --input-format=turtle --output-format=longturtle \
       "${opus_temporibus_temporarium_2}" \
       >"${objectivum_archivum_no1_skos_ttl}"
 
@@ -1335,6 +1343,16 @@ __temp_preproces_quicktest_1603_16_24() {
 
     rdf_trivio=$((5000 + cod_level))
 
+    # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    #   --methodus=_temp_no1 \
+    #   --numerordinatio-cum-antecessoribus \
+    #   --rdf-ontologia-ordinibus="5" \
+    #   --punctum-separato-de-fontem=',' \
+    #   --rdf-trivio="${rdf_trivio}" \
+    #   "${objectivum_archivum_no1}" |
+    #   rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+    #     >"${objectivum_archivum_no1_owl_ttl}"
+
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --methodus=_temp_no1 \
       --numerordinatio-cum-antecessoribus \
@@ -1342,7 +1360,7 @@ __temp_preproces_quicktest_1603_16_24() {
       --punctum-separato-de-fontem=',' \
       --rdf-trivio="${rdf_trivio}" \
       "${objectivum_archivum_no1}" |
-      rapper --quiet --input=turtle --output=turtle /dev/fd/0 \
+      rdfpipe --input-format=turtle --output-format=longturtle - \
         >"${objectivum_archivum_no1_owl_ttl}"
 
     echo "OWL TTL: [${objectivum_archivum_no1_owl_ttl}]"
