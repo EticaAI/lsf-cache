@@ -152,14 +152,44 @@ test_unesco_thesaurus() {
 
   # @TODO eventually remove  --nocheck
   # riot --output=Turtle \
-  riot --time --nocheck --output=RDF/XML \
-    "${archivum__resultata_bag1}" \
-    "${archivum__resultata_bag2}" \
-    >"${archivum__resultata_xml}"
+  # riot --time --nocheck --output=RDF/XML \
+  #   "${archivum__resultata_bag1}" \
+  #   "${archivum__resultata_bag2}" \
+  #   >"${archivum__resultata_xml}"
 
-  riot --time --nocheck --output=Turtle \
-    "${archivum__resultata_xml}" \
+  # Concatenate 2 ttl files
+  # rdfpipe --input-format=turtle --output-format=pretty-xml \
+  #   "${archivum__resultata_bag1}" "${archivum__resultata_bag2}" \
+  #   >"${archivum__resultata_xml}"
+  # rdfpipe --input-format=turtle --output-format=application/rdf+xml \
+  #   "${archivum__resultata_bag1}" "${archivum__resultata_bag2}" \
+  #   >"${archivum__resultata_xml}"
+
+  rdfpipe --input-format=turtle --output-format=longturtle \
+    "${archivum__resultata_bag1}" "${archivum__resultata_bag2}" \
     >"${archivum__resultata_ttl}"
+
+  # riot --time --nocheck --output=Turtle \
+  #   "${archivum__resultata_xml}" \
+  #   >"${archivum__resultata_ttl}"
+
+  # # Re-safe concatenated RDF/XML on RDFLib longturtle
+  # rdfpipe --input-format=application/rdf+xml --output-format=application/rdf+xml \
+  #   "${archivum__resultata_xml}" \
+  #   >"${archivum__resultata_ttl}"
+
+  # # Re-safe concatenated RDF/XML on RDFLib longturtle
+  # rdfpipe --input-format=turtle --output-format=application/rdf+xml \
+  #   "${archivum__resultata_ttl}" \
+  #   >"${archivum__resultata_xml}"
+
+  # @TODO rdflib rdfpipe (if exporting to XML) really need specify namespaces?
+  #       Not sure on this (Rocha, 2022-07-23 03:18 UTC)
+
+  # Re-safe concatenated RDF/XML on RDFLib longturtle
+  rdfpipe --input-format=turtle --output-format=pretty-xml \
+    "${archivum__resultata_ttl}" \
+    >"${archivum__resultata_xml}"
 
   # Is not validating rigth now; Lets allow fail
   echo "before riot --validate"
@@ -628,7 +658,7 @@ test_hxltmlib_hxltmcli() {
 
   hxltmcli "${archivum_exemplis}" \
     --rdf-conceptum-typo='obo:BFO_0000029|p:P17' \
-    > "$archivum_resultata_hxltm"
+    >"$archivum_resultata_hxltm"
 
   frictionless validate "$archivum_resultata_hxltm"
 
@@ -636,6 +666,8 @@ test_hxltmlib_hxltmcli() {
 }
 
 # echo "test"
+test_unesco_thesaurus
+exit 0
 
 # test_unesco_thesaurus
 # test_cod_ab

@@ -1,58 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-    xmlns:dcterms="http://purl.org/dc/terms/"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:unescothes="http://vocabularies.unesco.org/thesaurus/"
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#" > 
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
   <rdf:Description rdf:about="urn:mdciii:1603:999()">
-    <skos:member rdf:resource="urn:mdciii:1603:999:4938"/>
-    <skos:member rdf:resource="urn:mdciii:1603:999:10"/>
+    <skos:member>
+      <owl:Thing rdf:about="urn:mdciii:1603:999:10">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label>1603:999:10</rdfs:label>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T13:26:49+00:00</dcterms:modified>
+        <skos:prefLabel xml:lang="arb-Arab">حق في التعليم</skos:prefLabel>
+        <skos:prefLabel xml:lang="rus-Cyrl">Право на образование</skos:prefLabel>
+        <skos:prefLabel xml:lang="spa-Latn">Derecho a la educación</skos:prefLabel>
+      </owl:Thing>
+    </skos:member>
+    <skos:member>
+      <owl:Thing rdf:about="urn:mdciii:1603:999:4938">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:label>1603:999:4938</rdfs:label>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T22:36:42+00:00</dcterms:modified>
+        <skos:prefLabel xml:lang="arb-Arab">فرص تربوية</skos:prefLabel>
+        <skos:prefLabel xml:lang="rus-Cyrl">Возможности получения образования</skos:prefLabel>
+        <skos:prefLabel xml:lang="spa-Latn">Oportunidades educacionales</skos:prefLabel>
+      </owl:Thing>
+    </skos:member>
   </rdf:Description>
-  <rdf:Description rdf:about="http://vocabularies.unesco.org/thesaurus/concept10">
-    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept9"/>
-    <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept7597"/>
-    <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept4938"/>
+  <owl:Thing rdf:about="urn:mdciii:1603:999:9">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://vocabularies.unesco.org/thesaurus/concept9">
-    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:mdciii:1603:999:4938">
-    <skos:prefLabel xml:lang="spa-Latn">Oportunidades educacionales</skos:prefLabel>
-    <skos:prefLabel xml:lang="rus-Cyrl">Возможности получения образования</skos:prefLabel>
-    <skos:prefLabel xml:lang="arb-Arab">فرص تربوية</skos:prefLabel>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T22:36:42+00:00</dcterms:modified>
-    <rdfs:label>1603:999:4938</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:mdciii:1603:999:9">
-    <skos:prefLabel xml:lang="spa-Latn">Política educacional</skos:prefLabel>
-    <skos:prefLabel xml:lang="rus-Cyrl">Политика в области образования</skos:prefLabel>
-    <skos:prefLabel xml:lang="arb-Arab">سياسة تربوية</skos:prefLabel>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T22:36:40+00:00</dcterms:modified>
     <rdfs:label>1603:999:9</rdfs:label>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T22:36:40+00:00</dcterms:modified>
+    <skos:prefLabel xml:lang="arb-Arab">سياسة تربوية</skos:prefLabel>
+    <skos:prefLabel xml:lang="rus-Cyrl">Политика в области образования</skos:prefLabel>
+    <skos:prefLabel xml:lang="spa-Latn">Política educacional</skos:prefLabel>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept9">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://vocabularies.unesco.org/thesaurus/concept4938">
-    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
+    <skos:related>
+      <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept10">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept4938"/>
+        <skos:narrower rdf:resource="http://vocabularies.unesco.org/thesaurus/concept7597"/>
+        <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept9"/>
+      </owl:Thing>
+    </skos:related>
+  </owl:Thing>
+  <owl:Thing rdf:about="http://vocabularies.unesco.org/thesaurus/concept4938">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:broader rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="urn:mdciii:1603:999:10">
-    <skos:prefLabel xml:lang="spa-Latn">Derecho a la educación</skos:prefLabel>
-    <skos:prefLabel xml:lang="rus-Cyrl">Право на образование</skos:prefLabel>
-    <skos:prefLabel xml:lang="arb-Arab">حق في التعليم</skos:prefLabel>
-    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2019-12-15T13:26:49+00:00</dcterms:modified>
-    <rdfs:label>1603:999:10</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  </rdf:Description>
+    <skos:related rdf:resource="http://vocabularies.unesco.org/thesaurus/concept10"/>
+  </owl:Thing>
 </rdf:RDF>

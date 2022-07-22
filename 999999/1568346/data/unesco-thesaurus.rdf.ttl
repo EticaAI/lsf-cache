@@ -1,54 +1,74 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix unescothes: <http://vocabularies.unesco.org/thesaurus/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX unescothes: <http://vocabularies.unesco.org/thesaurus/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:mdciii:1603:999()>
-        skos:member  <urn:mdciii:1603:999:4938> ;
-        skos:member  <urn:mdciii:1603:999:10> .
-
-unescothes:concept10  skos:related  unescothes:concept9 ;
-        skos:narrower  unescothes:concept7597 ;
-        skos:narrower  unescothes:concept4938 ;
-        rdf:type       skos:Concept ;
-        rdf:type       owl:Thing .
-
-unescothes:concept9  skos:related  unescothes:concept10 ;
-        rdf:type      skos:Concept ;
-        rdf:type      owl:Thing .
-
-<urn:mdciii:1603:999:4938>
-        skos:prefLabel    "Oportunidades educacionales"@spa-Latn ;
-        skos:prefLabel    "Возможности получения образования"@rus-Cyrl ;
-        skos:prefLabel    "فرص تربوية"@arb-Arab ;
-        dcterms:modified  "2019-12-15T22:36:42+00:00"^^xsd:dateTime ;
-        rdfs:label        "1603:999:4938" ;
-        rdf:type          skos:Concept ;
-        rdf:type          owl:Thing .
+    skos:member
+        <urn:mdciii:1603:999:10> ,
+        <urn:mdciii:1603:999:4938> ;
+.
 
 <urn:mdciii:1603:999:9>
-        skos:prefLabel    "Política educacional"@spa-Latn ;
-        skos:prefLabel    "Политика в области образования"@rus-Cyrl ;
-        skos:prefLabel    "سياسة تربوية"@arb-Arab ;
-        dcterms:modified  "2019-12-15T22:36:40+00:00"^^xsd:dateTime ;
-        rdfs:label        "1603:999:9" ;
-        rdf:type          skos:Concept ;
-        rdf:type          owl:Thing .
+    a
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:999:9" ;
+    dcterms:modified "2019-12-15T22:36:40+00:00"^^xsd:dateTime ;
+    skos:prefLabel
+        "سياسة تربوية"@arb-Arab ,
+        "Политика в области образования"@rus-Cyrl ,
+        "Política educacional"@spa-Latn ;
+.
 
 unescothes:concept4938
-        skos:related  unescothes:concept10 ;
-        skos:broader  unescothes:concept10 ;
-        rdf:type      skos:Concept ;
-        rdf:type      owl:Thing .
+    a
+        owl:Thing ,
+        skos:Concept ;
+    skos:broader unescothes:concept10 ;
+    skos:related unescothes:concept10 ;
+.
+
+unescothes:concept9
+    a
+        owl:Thing ,
+        skos:Concept ;
+    skos:related unescothes:concept10 ;
+.
 
 <urn:mdciii:1603:999:10>
-        skos:prefLabel    "Derecho a la educación"@spa-Latn ;
-        skos:prefLabel    "Право на образование"@rus-Cyrl ;
-        skos:prefLabel    "حق في التعليم"@arb-Arab ;
-        dcterms:modified  "2019-12-15T13:26:49+00:00"^^xsd:dateTime ;
-        rdfs:label        "1603:999:10" ;
-        rdf:type          skos:Concept ;
-        rdf:type          owl:Thing .
+    a
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:999:10" ;
+    dcterms:modified "2019-12-15T13:26:49+00:00"^^xsd:dateTime ;
+    skos:prefLabel
+        "حق في التعليم"@arb-Arab ,
+        "Право на образование"@rus-Cyrl ,
+        "Derecho a la educación"@spa-Latn ;
+.
+
+<urn:mdciii:1603:999:4938>
+    a
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:999:4938" ;
+    dcterms:modified "2019-12-15T22:36:42+00:00"^^xsd:dateTime ;
+    skos:prefLabel
+        "فرص تربوية"@arb-Arab ,
+        "Возможности получения образования"@rus-Cyrl ,
+        "Oportunidades educacionales"@spa-Latn ;
+.
+
+unescothes:concept10
+    a
+        owl:Thing ,
+        skos:Concept ;
+    skos:narrower
+        unescothes:concept4938 ,
+        unescothes:concept7597 ;
+    skos:related unescothes:concept9 ;
+.
+
