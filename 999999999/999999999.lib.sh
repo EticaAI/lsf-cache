@@ -17,6 +17,7 @@
 #                 - ssconvert (sudo apt install gnumeric)
 #                 - wget
 #                 - unzip
+#                 - rapper (sudo apt install raptor2-utils)
 #
 #          BUGS:  ---
 #         NOTES:  ---
@@ -426,7 +427,7 @@ caput_bcp47_ad_hxltm_ad() {
   caput_tab=$(echo "$caput" | tr "$separatum" '\t')
 
   resultatum_tab=$("${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_header_bcp47_to_hxl "$caput_tab")
+    --methodus=_temp_header_bcp47_to_hxl "$caput_tab")
 
   resultatum_finali=$(echo "$resultatum_tab" | tr '\t' "$separatum")
 
@@ -522,7 +523,7 @@ caput_hxltm_ad_bcp47() {
   caput_tab=$(echo "$caput" | tr "$separatum" '\t')
 
   resultatum_tab=$("${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_header_hxl_to_bcp47 "$caput_tab")
+    --methodus=_temp_header_hxl_to_bcp47 "$caput_tab")
 
   resultatum_finali=$(echo "$resultatum_tab" | tr '\t' "$separatum")
 
@@ -1018,6 +1019,64 @@ file_convert_rdf_skos_ttl_de_numerordinatio11() {
 }
 
 #######################################
+# Convert a "full" .no11.tm.hxl.csv to .no11.skos.ttl, method optimized for
+# large datasets.
+#
+# @see https://www.w3.org/2015/03/ShExValidata/
+#
+# Globals:
+#   ROOTDIR
+#   DESTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+file_convert_rdf_skos_ttl_de_numerordinatio11__v2() {
+  numerordinatio="$1"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  _basim_fontem="${ROOTDIR}"
+  _basim_objectivum="${DESTDIR}"
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.no11.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.skos.ttl"
+  objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no11.skos.ttl"
+  # tmeta="${ROOTDIR}/999999999/0/hxltm-exemplum.tmeta.yml"
+
+  echo "@TODO finish this version. See also function bootstrap_1603_45_16__item_rdf()"
+  return 0
+
+  # echo "${FUNCNAME[0]}: [$fontem_archivum] --> [$objectivum_archivum]"
+
+  # "${ROOTDIR}/999999999/0/1603_1.py" \
+  #   --methodus='status-quo' \
+  #   --status-quo-in-rdf-skos-turtle \
+  #   --codex-de "$_nomen" \
+  #   >"$objectivum_archivum_temporarium"
+
+  # file_update_if_necessary 'rdf_skos_ttl' "$objectivum_archivum_temporarium" "$objectivum_archivum"
+
+  # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+  #   --methodus=_temp_no1 \
+  #   --numerordinatio-cum-antecessoribus \
+  #   --rdf-sine-spatia-nominalibus=devnull \
+  #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
+  #   --rdf-trivio="${rdf_trivio}" \
+  #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
+
+  # rapper --quiet --input=turtle --output=turtle \
+  #   "${opus_temporibus_temporarium}" \
+  #   >"${objectivum_archivum_no1_owl_ttl}"
+
+  # riot --validate "${objectivum_archivum_no1_owl_ttl}"
+
+}
+
+#######################################
 # Hotfix to remove duplicated merge keys in files (in place change)
 # See file_merge_numerordinatio_de_wiki_q() for reasoning
 #
@@ -1074,6 +1133,8 @@ file_extract_ix_wikiq() {
 
   _nomen=$(basename "$fontem")
   _nomen="${_nomen%%.*}"
+
+  # @TODO also allow use of '#meta+rem+i_qcc+is_zxxx+ix_wikiq'
 
   objectivum_archivum_temporarium_b="${ROOTDIR}/999999/0/$_nomen~1.q.txt"
   objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen~1.uniq.q.txt"
@@ -1702,8 +1763,8 @@ file_translate_csv_de_numerordinatio_q__v2() {
   # wikiq=$(file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv")
   wikiq=$(file_extract_ix_wikiq "$fontem_archivum")
 
-  # wikidata_q_ex_totalibus "$wikiq" "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.wikiq.tm.hxl.csv" 
-  wikidata_q_ex_totalibus "$wikiq" "$objectivum_archivum" 
+  # wikidata_q_ex_totalibus "$wikiq" "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.wikiq.tm.hxl.csv"
+  wikidata_q_ex_totalibus "$wikiq" "$objectivum_archivum"
   printf "\t%40s\n" "${tty_green}${FUNCNAME[0]} FINISHED OKAY ${tty_normal}"
 }
 

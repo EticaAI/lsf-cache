@@ -13,6 +13,7 @@
 #  REQUIREMENTS:  - Bash shell (or better)
 #                 - wget
 #                 - csvkit (https://github.com/wireservice/csvkit)
+#                 - rapper (sudo apt install raptor2-utils)
 #          BUGS:  ---
 #         NOTES:  ---
 #        AUTHOR:  Emerson Rocha <rocha[at]ieee.org>
@@ -538,7 +539,7 @@ bootstrap_1603_45_16__item_bcp47() {
 
     set -x
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
-      --objectivum-formato=_temp_no1_to_no1_shortnames \
+      --methodus=_temp_no1_to_no1_shortnames \
       --real-infile-path="${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
     # Temporary fix: remove some generated tags with error: +ix_error
@@ -554,13 +555,13 @@ bootstrap_1603_45_16__item_bcp47() {
     frictionless validate "${opus_temporibus_temporarium_2}"
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
-      --objectivum-formato=_temp_data_hxl_to_bcp47 \
+      --methodus=_temp_data_hxl_to_bcp47 \
       --real-infile-path="${opus_temporibus_temporarium_2}" >"${opus_temporibus_temporarium}"
 
     frictionless validate "${opus_temporibus_temporarium}"
 
     # "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    #   --objectivum-formato=_temp_no1_to_no1_shortnames \
+    #   --methodus=_temp_no1_to_no1_shortnames \
     #   --numerordinatio-cum-antecessoribus \
     #   --rdf-sine-spatia-nominalibus=skos,devnull \
     #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
@@ -688,7 +689,7 @@ bootstrap_1603_45_16__item_rdf() {
     #       --rdf-sine-spatia-nominalibus=skos,devnull is enabled
 
     # "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    #   --objectivum-formato=_temp_no1 \
+    #   --methodus=_temp_no1 \
     #   --numerordinatio-cum-antecessoribus \
     #   --rdf-sine-spatia-nominalibus=skos,devnull \
     #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
@@ -696,7 +697,7 @@ bootstrap_1603_45_16__item_rdf() {
     #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium}"
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
-      --objectivum-formato=_temp_no1 \
+      --methodus=_temp_no1 \
       --numerordinatio-cum-antecessoribus \
       --rdf-sine-spatia-nominalibus=devnull \
       --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
@@ -714,7 +715,7 @@ bootstrap_1603_45_16__item_rdf() {
     #        --rdf-sine-spatia-nominalibus=owl
 
     # "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    #   --objectivum-formato=_temp_no1 \
+    #   --methodus=_temp_no1 \
     #   --numerordinatio-cum-antecessoribus \
     #   --rdf-sine-spatia-nominalibus=owl,obo,p,geo,devnull \
     #   --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
@@ -722,7 +723,7 @@ bootstrap_1603_45_16__item_rdf() {
     #   <"${objectivum_archivum_no1}" >"${opus_temporibus_temporarium_2}"
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
-      --objectivum-formato=_temp_no1 \
+      --methodus=_temp_no1 \
       --numerordinatio-cum-antecessoribus \
       --rdf-sine-spatia-nominalibus=obo,p,geo,devnull \
       --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
@@ -1335,7 +1336,7 @@ __temp_preproces_quicktest_1603_16_24() {
     rdf_trivio=$((5000 + cod_level))
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
-      --objectivum-formato=_temp_no1 \
+      --methodus=_temp_no1 \
       --numerordinatio-cum-antecessoribus \
       --rdf-ontologia-ordinibus="5" \
       --punctum-separato-de-fontem=',' \

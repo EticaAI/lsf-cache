@@ -74,7 +74,7 @@ ROOTDIR="$(pwd)"
 
 # cat 999999/0/ibge_un_adm2.tm.hxl.csv | ./999999999/0/999999999_54872.py --objectivum-formato=application/x-turtle --archivum-configurationi-ex-fonti=999999999/0/999999999_268072.meta.yml --praefixum-configurationi-ex-fonti=methodus,ibge_un_adm2 > 999999/0/ibge_un_adm2.no1.skos.ttl
 
-# cat 999999/0/xmlCNES.tm.hxl.csv | ./999999999/0/999999999_54872.py --objectivum-formato=application/x-turtle --archivum-configurationi-ex-fonti=999999999/0/999999999_10263485.meta.yml --praefixum-configurationi-ex-fonti=methodus,datasus_xmlcnae > 999999/0/xmlCNES.no1.skos.ttl
+# cat 999999/0/xmlCNES.tm.hxl.csv | ./999999999/0/999999999_54872.py --methodus='hxltm_rdf_ex_configurationi'  --objectivum-formato=application/x-turtle --archivum-configurationi-ex-fonti=999999999/0/999999999_10263485.meta.yml --praefixum-configurationi-ex-fonti=methodus,datasus_xmlcnae > 999999/0/xmlCNES.no1.skos.ttl
 
 # archivum_unzip "999999/0/0/ftp.datasus.gov.br/cnes/CNESBRASIL.ZIP" "xmlCNES.xml" "999999/0/xmlCNES.xml"
 

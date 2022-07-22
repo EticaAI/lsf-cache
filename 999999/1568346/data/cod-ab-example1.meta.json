@@ -10,6 +10,32 @@
       "por-Latn-r-pSKOS-pprefLabel-ps3",
       "por-Latn-r-pSKOS-pprefLabel-ps4"
     ],
+    "caput_ad_columnae_i": [
+      "qcc-Zxxx-r-sU2200-s1-snop",
+      "qcc-Zxxx-r-sU2200-s2-snop",
+      "qcc-Zxxx-r-sU2200-s3-snop",
+      "qcc-Zxxx-r-sU2200-s4-snop",
+      "por-Latn-r-pSKOS-pprefLabel-ps1",
+      "por-Latn-r-pSKOS-pprefLabel-ps2",
+      "por-Latn-r-pSKOS-pprefLabel-ps3",
+      "por-Latn-r-pSKOS-pprefLabel-ps4",
+      [
+        "qcc-Zxxx-r-sU2200-s1-snop-x-hxlattrs",
+        "rdf_a_obo_bfo29"
+      ],
+      [
+        "qcc-Zxxx-r-sU2200-s2-snop-x-hxlattrs",
+        "rdf_a_obo_bfo29+rdf_p_obo_bfo171_s1"
+      ],
+      [
+        "qcc-Zxxx-r-sU2200-s3-snop-x-hxlattrs",
+        "rdf_a_obo_bfo29+rdf_p_obo_bfo171_s2"
+      ],
+      [
+        "qcc-Zxxx-r-sU2200-s4-snop-x-hxlattrs",
+        "rdf_a_obo_bfo29+rdf_p_obo_bfo171_s3"
+      ]
+    ],
     "caput_originali_asa": [
       {
         "language": "qcc",
@@ -30,6 +56,13 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_s_u2200_s1",
+          "hxl_minimal": [
+            "+i_qcc+is_zxxx+rdf_s_u2200_s1",
+            "rdf_a_obo_bfo29"
+          ]
         },
         "_index_ex_tabula": 0
       },
@@ -55,6 +88,13 @@
             "_error": []
           }
         },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo171_s1+rdf_s_u2200_s2",
+          "hxl_minimal": [
+            "+i_qcc+is_zxxx+rdf_s_u2200_s2",
+            "rdf_a_obo_bfo29+rdf_p_obo_bfo171_s1"
+          ]
+        },
         "_index_ex_tabula": 1
       },
       {
@@ -78,6 +118,13 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo171_s2+rdf_s_u2200_s3",
+          "hxl_minimal": [
+            "+i_qcc+is_zxxx+rdf_s_u2200_s3",
+            "rdf_a_obo_bfo29+rdf_p_obo_bfo171_s2"
+          ]
         },
         "_index_ex_tabula": 2
       },
@@ -103,6 +150,13 @@
             "_error": []
           }
         },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_p_obo_bfo171_s3+rdf_s_u2200_s4",
+          "hxl_minimal": [
+            "+i_qcc+is_zxxx+rdf_s_u2200_s4",
+            "rdf_a_obo_bfo29+rdf_p_obo_bfo171_s3"
+          ]
+        },
         "_index_ex_tabula": 3
       },
       {
@@ -122,6 +176,10 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_por+is_latn+rdf_p_skos_preflabel_s1",
+          "hxl_minimal": null
         },
         "_index_ex_tabula": 4
       },
@@ -143,6 +201,10 @@
             "_error": []
           }
         },
+        "_callbacks": {
+          "hxl_attrs": "+i_por+is_latn+rdf_p_skos_preflabel_s2",
+          "hxl_minimal": null
+        },
         "_index_ex_tabula": 5
       },
       {
@@ -163,6 +225,10 @@
             "_error": []
           }
         },
+        "_callbacks": {
+          "hxl_attrs": "+i_por+is_latn+rdf_p_skos_preflabel_s3",
+          "hxl_minimal": null
+        },
         "_index_ex_tabula": 6
       },
       {
@@ -182,6 +248,10 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_por+is_latn+rdf_p_skos_preflabel_s4",
+          "hxl_minimal": null
         },
         "_index_ex_tabula": 7
       }

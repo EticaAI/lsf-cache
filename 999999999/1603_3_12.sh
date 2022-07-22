@@ -445,8 +445,8 @@ order by (?wmCode)
 # 1603_3_12_cod_ab_et_wdata
 
 # file_translate_csv_de_numerordinatio_q__v2 "1603_3_45_16_1_1" "1" "1"
-file_merge_numerordinatio_de_wiki_q "1603_3_45_16_1_1" "1" "1" "0"
-exit 0
+# file_merge_numerordinatio_de_wiki_q "1603_3_45_16_1_1" "1" "1" "0"
+# exit 0
 
 1603_3_12_wikipedia_language_codes
 
@@ -457,8 +457,10 @@ exit 0
 
 1603_3_12_cod_ab_et_wdata
 
+# 1603_3_12_wikipedia_adm0_v2 expansion
 file_translate_csv_de_numerordinatio_q__v2 "1603_3_45_16_1_1" "1" "1"
 file_merge_numerordinatio_de_wiki_q "1603_3_45_16_1_1" "1" "1" "0"
+
 # temp, see later
 # - https://www.wikidata.org/wiki/Help:Frequently_used_properties
 # - https://www.wikidata.org/wiki/Property:P3896

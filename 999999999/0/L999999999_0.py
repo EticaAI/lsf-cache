@@ -539,6 +539,13 @@ HXL_WDATA = [
         'wdata_p': 'P298',
     },
     {
+        '_function': ['abl-0'],
+        '_relatio': [],
+        'hxl_ix': 'ix_iso3166p1n',
+        'hxl_v': None,
+        'wdata_p': 'P299',
+    },
+    {
         # The function (reason to exist) of  ISO 3166-2 is subdivision, adm1.
         # However, in some circustances, places can have codes as if they're
         # adm0; this means ISO 3166-2 have a relatio with adm0
@@ -701,6 +708,12 @@ HXL_WDATA = [
         'iri': 'https://www.wikidata.org/wiki/Property:P625',
         'wdata_p': 'P625',
     },
+]
+
+# Hotfixes for used ix_, but not as fully documented
+HXL_WDATA__META_IX = [
+    'ix_zzcodablevel',
+    'ix_wikiq'  # @TODO this could be improved to wdata:{value}
 ]
 
 # @TODO https://www.wikidata.org/wiki/Property:P3743
@@ -3377,14 +3390,21 @@ class CodAbTabulae:
             _identitas_locali = linea[identitas_locali_index]
             # Special case: replace ISO2/ISO3 with UN m49 if is country
             if self.ordo == 0:
-                _identitas_locali = self.unm49
-
-            _numerordinatio = '{0}:{1}:{2}:{3}'.format(
-                self.numerordinatio_praefixo,
-                self.unm49,
-                str(self.ordo),
-                _identitas_locali,
-            )
+                # _identitas_locali = self.unm49
+                # adm0 is an special case: the unm49 already is at the base
+                # so we as only one option can exist ("0"), no redundancy need
+                _numerordinatio = '{0}:{1}:{2}'.format(
+                    self.numerordinatio_praefixo,
+                    self.unm49,
+                    str(self.ordo)
+                )
+            else:
+                _numerordinatio = '{0}:{1}:{2}:{3}'.format(
+                    self.numerordinatio_praefixo,
+                    self.unm49,
+                    str(self.ordo),
+                    _identitas_locali,
+                )
             # linea_novae = [_numerordinatio, _numerordinatio]
             linea_novae = [_numerordinatio]
             linea_novae.extend(linea)

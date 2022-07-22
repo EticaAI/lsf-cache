@@ -108,14 +108,14 @@ test_unesco_thesaurus() {
 
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47_meta_in_json \
+    --methodus=_temp_bcp47_meta_in_json \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__unesco_thesaurus_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
@@ -124,7 +124,7 @@ test_unesco_thesaurus() {
       >"${archivum__resultata_bag1}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=2 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
@@ -185,14 +185,14 @@ test_cod_ab() {
 
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47_meta_in_json \
+    --methodus=_temp_bcp47_meta_in_json \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     "${archivum__cod_ab_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=1 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
@@ -201,7 +201,7 @@ test_cod_ab() {
       >"${archivum__resultata_bag1}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=2 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
@@ -210,7 +210,7 @@ test_cod_ab() {
       >"${archivum__resultata_bag2}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=3 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
@@ -219,7 +219,7 @@ test_cod_ab() {
       >"${archivum__resultata_bag3}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-trivio=4 \
     --rdf-namespaces-archivo="${archivum__namespace}" \
@@ -284,7 +284,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47_meta_in_json \
+    --methodus=_temp_bcp47_meta_in_json \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-namespaces-archivo="${archivum__namespace}" \
     --rdf-trivio=5000 \
@@ -292,7 +292,7 @@ test_cod_ab__with_inferences_prebuild() {
     jq >"${archivum__resultata_meta_json}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
     --rdf-trivio=5000 \
@@ -302,7 +302,7 @@ test_cod_ab__with_inferences_prebuild() {
       >"${archivum__resultata_bag1}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
     --rdf-trivio=5001 \
@@ -312,7 +312,7 @@ test_cod_ab__with_inferences_prebuild() {
       >"${archivum__resultata_bag2}"
 
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
     --rdf-trivio=5002 \
@@ -323,7 +323,7 @@ test_cod_ab__with_inferences_prebuild() {
 
   # --rdf-trivio=503 is equivalent to --rdf-trivio=1
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato=_temp_bcp47 \
+    --methodus=_temp_bcp47 \
     --punctum-separato-de-fontem=$'\t' \
     --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 \
     --rdf-trivio=1 \
@@ -609,17 +609,17 @@ test_hxltmlib_hxltmcli
 
 exit 0
 
-# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/0/unesco-thesaurus.meta.json
+# ./999999999/0/999999999_54872.py --methodus=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/0/unesco-thesaurus.meta.json
 
-# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/1568346/data/unesco-thesaurus.meta.json
+# ./999999999/0/999999999_54872.py --methodus=_temp_bcp47_meta_in_json --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv | jq > 999999/1568346/data/unesco-thesaurus.meta.json
 
-# ./999999999/0/999999999_54872.py 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv --objectivum-formato=_temp_bcp47_meta_in_json --rdf-trivio=1 | jq
+# ./999999999/0/999999999_54872.py 999999999/1568346/data/unesco-thesaurus.bcp47g.tsv --rdf-namespaces-archivo=999999999/1568346/data/hxlstandard-rdf-namespaces-example.hxl.csv --methodus=_temp_bcp47_meta_in_json --rdf-trivio=1 | jq
 
-# ./999999999/0/999999999_54872.py 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --objectivum-formato=_temp_bcp47_meta_in_json --rdf-trivio=1 | jq
+# ./999999999/0/999999999_54872.py 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --methodus=_temp_bcp47_meta_in_json --rdf-trivio=1 | jq
 
 # ./999999999/0/linguacodex.py --de_bcp47_simplex --de_codex=por-Latn-r-pSKOS-pprefLabel-ps4
 
-# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2 --rdf-sine-spatia-nominalibus=skos
+# ./999999999/0/999999999_54872.py --methodus=_temp_bcp47 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --rdf-trivio=2 --rdf-sine-spatia-nominalibus=skos
 
 #### BFO _______________________________________________________________________
 # @see https://standards.iso.org/iso-iec/21838/-2/ed-1/en/

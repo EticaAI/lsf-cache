@@ -31,6 +31,7 @@
 #   /hxl-geolocation-standard-draft.pdf
 
 import json
+import re
 import sys
 import os
 import argparse
@@ -47,7 +48,10 @@ import yaml
 
 # l999999999_0 = __import__('999999999_0')
 from L999999999_0 import (
+    HXL_WDATA,
+    HXL_WDATA__META_IX,
     CodAbTabulae,
+    HXLHashtagSimplici,
     csv_imprimendo,
     # hxltm__data_referentibus,
     hxltm__est_data_referentibus,
@@ -140,6 +144,12 @@ Work with local COD AB + WDATA ADM0 . . . . . . . . . . . . . . . . . . . . . .
 (Re-generate territories from COD AB + WDATA intermediate tables)
 
     {0} --methodus='cod_ab_et_wdata' --numerordinatio-praefixo='1603_16'
+
+Upgrade NO11 or HXLTM adm0 (without RDF attributes) if not already ready . . . .
+(Tabular input re-processsed as if was XLSX with hardcoded ordo=0)
+
+    {0} --methodus='cod_ab_et_wdata' --numerordinatio-praefixo='1603_16' \
+| {0} --methodus='de_hxltm_ordo0_ad_no11'
 
 Process XLSXs from external sources . . . . . . . . . . . . . . . . . . . . . .
    {0} --methodus=xlsx_metadata 999999/1603/45/16/xlsx/ago.xlsx
@@ -284,6 +294,7 @@ class Cli:
                 'cod_ab_ad_rdf_skos_ttl',
                 'cod_ab_ad_no1_csv',  # Temporary hacky way to generate no1
                 'de_hxltm_ad_hxltm',  # load main file directly
+                'de_hxltm_ordo0_ad_no11',  # load main file directly
                 # load main file by number (example: 1603_45_49)
                 'de_librario',
                 'wdata_adm0',
@@ -675,7 +686,7 @@ class Cli:
         _infile = pyargs.infile
         # raise NotImplementedError(pyargs.methodus)
         if pyargs.methodus in [
-            'de_hxltm_ad_hxltm', 'de_librario',
+            'de_hxltm_ad_hxltm', 'de_hxltm_ordo0_ad_no11', 'de_librario',
                 'index_praeparationi',  'cod_ab_index', 'cod_ab_ad_no1_csv',
                 'cod_ab_index_levels', 'cod_ab_index_levels_ttl',
                 'wdata_adm0', 'cod_ab_et_wdata']:
@@ -691,6 +702,8 @@ class Cli:
                 # caput, data = hxltm_carricato(_infile, _stdin)
                 caput, data = hxltm_carricato(_path)
             elif pyargs.methodus.startswith('de_hxltm_ad_hxltm'):
+                caput, data = hxltm_carricato(_infile, _stdin)
+            elif pyargs.methodus.startswith('de_hxltm_ordo0_ad_no11'):
                 caput, data = hxltm_carricato(_infile, _stdin)
             elif pyargs.methodus.startswith('cod_ab_index'):
                 caput, data = hxltm_carricato(COD_AB_INDEX)
@@ -710,7 +723,14 @@ class Cli:
                     numerordinatio_praefixo=numerordinatio_praefixo,
                     no1_simplici=True, cod_ab_level__inline=True)
 
-                caput_wdata, data_wdata = hxltm_carricato(WDATA_ADM0)
+                if exists(WDATA_ADM0_NO11):
+                    caput_wdata, data_wdata = hxltm_carricato(WDATA_ADM0_NO11)
+                elif exists(WDATA_ADM0):
+                    caput_wdata, data_wdata = hxltm_carricato(WDATA_ADM0)
+                else:
+                    raise FileNotFoundError('[{0}, {1}] ?'.format(
+                        WDATA_ADM0_NO11, WDATA_ADM0
+                    ))
                 # print(data_wdata[0])
 
                 caput, data = hxltm_carricato__cod_ab_et_wdata(
@@ -732,6 +752,14 @@ class Cli:
                 caput, data = hxltm_carricato(COD_AB_INDEX)
                 # raise NotImplementedError(pyargs.methodus)
                 caput, data = hxltm_carricato__cod_ab_levels(
+                    caput, data,
+                    numerordinatio_praefixo=numerordinatio_praefixo)
+
+            if pyargs.methodus == 'de_hxltm_ordo0_ad_no11':
+                # @TODO cod_ab_index_levels
+                # caput, data = hxltm_carricato(COD_AB_INDEX)
+                # raise NotImplementedError(pyargs.methodus)
+                caput, data = hxltm_carricato__de_hxltm_ordo0_ad_no11(
                     caput, data,
                     numerordinatio_praefixo=numerordinatio_praefixo)
 
@@ -1560,109 +1588,113 @@ def hxltm_carricato__cod_ab_levels_ttl(
             ))
         continue
 
-        # paginae_basi = (
-        #     f'<urn:{numerodiatio_re}> a skos:ConceptScheme ;\n'
-        #     f'  skos:prefLabel "{numerodiatio_re}"@mul-Zyyy-x-n1603 ;\n'
-        #     f'  skos:topConceptOf <urn:{basi}> .\n'
-        # )
-        # paginae_basi += ("  skos:topConceptOf\n    {0} .".format(
-        #     " ,\n    ".join(map(lambda x: f'<urn:{x}>', numerodiatio_collecti))
-        # ))
-
-        # paginae.append("<urn:{0}> a skos:Concept ;".format(numerodiatio_re))
-        # paginae.append('  skos:topConceptOf <urn:{0}> ;'.format(basi))
-        # paginae.append("  skos:prefLabel \"{0}\"@mul-Zyyy-x-n1603 ;".format(
-        #                numerodiatio_re))
-
-        # paginae.append("  # unm49 {0}".format(linea[1]))
-        # paginae.append("  # v_iso3 {0}".format(linea[2]))
-        # paginae.append("  # v_iso2 {0}".format(linea[3]))
-
-        paginae.append(paginae_basi)
-
-        if ordo_maximo >= 1:
-
-            _paginae_basi.append(
-                f'  skos:broaderTransitive <urn:{numerodiatio_re}:1>')
-
-            paginae.append(
-                f'  skos:broaderTransitive <urn:{numerodiatio_re}:1> ;')
-            paginae.append('')
-            paginae.append(
-                "<urn:{0}:1> a skos:Concept ;".format(numerodiatio_re))
-            paginae.append("  skos:prefLabel \"{0}:1\"@mul-Zyyy-x-n1603 ;".format(
-                numerodiatio_re))
-            paginae.append(
-                f'  skos:narrowerTransitive <urn:{numerodiatio_re}> .')
-
-        # if ordo_maximo >= 2:
-
-        #     paginae.append(
-        #         f'  skos:broaderTransitive <urn:{numerodiatio_re}:2> ;')
-        #     paginae.append('')
-        #     paginae.append(
-        #         "<urn:{0}:2> a skos:Concept ;".format(numerodiatio_re))
-        #     paginae.append(
-        #         "  skos:prefLabel \"{0}:1\"@mul-Zyyy-x-n1603 ;".format(
-        #             numerodiatio_re))
-        #     paginae.append(
-        #         f'  skos:narrowerTransitive <urn:{numerodiatio_re}:1> ;')
-
-        # if ordo_maximo >= 3:
-
-        #     paginae.append(
-        #         f'  skos:broaderTransitive <urn:{numerodiatio_re}:3> ;')
-        #     paginae.append('')
-        #     paginae.append(
-        #         "<urn:{0}:3> a skos:Concept ;".format(numerodiatio_re))
-        #     paginae.append(
-        #         "  skos:prefLabel \"{0}:1\"@mul-Zyyy-x-n1603 ;".format(
-        #             numerodiatio_re))
-        #     paginae.append(
-        #         f'  skos:narrowerTransitive <urn:{numerodiatio_re}:2> ;')
-
-        # if ordo_maximo >= 4:
-
-        #     paginae.append(
-        #         f'  skos:broaderTransitive <urn:{numerodiatio_re}:4> ;')
-        #     paginae.append('')
-        #     paginae.append(
-        #         "<urn:{0}:4> a skos:Concept ;".format(numerodiatio_re))
-        #     paginae.append(
-        #         "  skos:prefLabel \"{0}:1\"@mul-Zyyy-x-n1603 ;".format(
-        #             numerodiatio_re))
-        #     paginae.append(
-        #         f'  skos:narrowerTransitive <urn:{numerodiatio_re}:3> ;')
-
-        # if ordo_maximo >= 5:
-
-        #     paginae.append(
-        #         f'  skos:broaderTransitive <urn:{numerodiatio_re}:5> ;')
-        #     paginae.append('')
-        #     paginae.append(
-        #         "<urn:{0}:5> a skos:Concept ;".format(numerodiatio_re))
-        #     paginae.append(
-        #         "  skos:prefLabel \"{0}:1\"@mul-Zyyy-x-n1603 ;".format(
-        #             numerodiatio_re))
-        #     paginae.append(
-        #         f'  skos:narrowerTransitive <urn:{numerodiatio_re}:4> ;')
-
-        # if ordo_maximo >= 6:
-
-        #     paginae.append(
-        #         f'  skos:broaderTransitive <urn:{numerodiatio_re}:6> ;')
-        #     paginae.append('')
-        #     paginae.append(
-        #         "<urn:{0}:6> a skos:Concept ;".format(numerodiatio_re))
-        #     paginae.append(
-        #         "  skos:prefLabel \"{0}:1\"@mul-Zyyy-x-n1603 ;".format(
-        #             numerodiatio_re))
-        #     paginae.append(
-        #         f'  skos:narrowerTransitive <urn:{numerodiatio_re}:6> ;')
-
-        paginae.append('')
-
     return paginae
+
+
+def hxltm_carricato__de_hxltm_ordo0_ad_no11(
+    caput: list, data: list, numerordinatio_praefixo: str = '1603_45_16',
+    no1_simplici: bool = False, cod_ab_level__inline: bool = False
+) -> Tuple[list, list]:
+    """hxltm_carricato__de_hxltm_ordo0_ad_no11 filter cod_ab_index into a list of levels
+
+    Args:
+        caput (list): _description_
+        data (list): _description_
+        numerordinatio_praefixo (str): _description_
+
+    Returns:
+        Tuple[list, list]: _description_
+    """
+
+    if '#item+conceptum+numerordinatio' not in caput:
+        raise SyntaxError('de_hxltm_ordo0_ad_no11 needs previous '
+                          '#item+conceptum+numerordinatio')
+    for item in caput:
+        if item.startswith('#country'):
+            raise SyntaxError(
+                'de_hxltm_ordo0_ad_no11 needs upgraded hashtags. '
+                'Found [{0}]'.format(item))
+
+        if item.find('+preferred') > -1:
+            raise NotImplementedError(
+                '@TODO de_hxltm_ordo0_ad_no11 needs support skos:altLabel '
+                'if +preferred found in some existing tag.'
+                'Found [{0}]'.format(item))
+
+    if '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_s_u2200_s5000' in caput:
+        # Already processed input. Return without changes
+        return caput, data
+
+    caput_novo = []
+    data_novis = []
+    _inject_pivot_adm0_index = caput.index('#item+conceptum+codicem') + 1
+    _inject_pivot_adm0_value = caput.index('#item+conceptum+numerordinatio')
+    _pattern_lang = r"\#item\+rem\+i_[a-z]{3}\+is_[a-z]{4}.*"
+    _pattern_ix = r"(\+ix_[a-z0-9]{2,99})"
+    for hxlhashtag in caput:
+        if not hxlhashtag or len(hxlhashtag) == 0 or \
+                not hxlhashtag.startswith('#'):
+            caput_novo.append('')
+            continue
+
+        # raise ValueError(re.match(_pattern_lang, '#item+rem+i_ara+is_arab'))
+
+        if hxlhashtag.startswith('#item+rem+i_qcc+is_zxxx'):
+            # TODO process +ix_
+            res_rdf = []
+            _ix_list = re.findall(_pattern_ix, hxlhashtag)
+            # raise ValueError(_ix_list)
+            for _ix_item in _ix_list:
+                _ix_item = _ix_item.replace('+', '')
+
+                if _ix_item in HXL_WDATA__META_IX:
+                    hxlhashtag = hxlhashtag.replace(
+                        '#item+rem+i_qcc+is_zxxx', '#meta+rem+i_qcc+is_zxxx')
+                    # caput_novo.append(hxlhashtag)
+                    break
+
+                _okay = False
+                for _hxlwdata in HXL_WDATA:
+                    if 'hxl_ix' in _hxlwdata and \
+                        _hxlwdata['hxl_ix'] == _ix_item and \
+                            'wdata_p' in _hxlwdata and _hxlwdata['wdata_p']:
+
+                        res_rdf.append('+rdf_p_p_{0}_s5000'.format(
+                            _hxlwdata['wdata_p'].lower()))
+                        # raise SyntaxError('foi')
+                        _okay = True
+                        # continue
+                # @TODO decide prefered ix over '+ix_p297' vs 'ix_iso3166p1a2'
+                # for _hxlwdata in HXL_WDATA:
+                #     _ix_item_p = _ix_item.replace('+ix_wdata', '')
+                #     _ix_item_p = _ix_item_p.replace('+ix_', '').upper()
+                #     if 'wdata_p' in _hxlwdata and \
+                #         _hxlwdata['wdata_p'] == _ix_item_p:
+                #         hxlhashtag = hxlhashtag.replace(
+                #             '+' + _ix_item + 'p', '+ix_wdatap')
+                #         res_rdf.append('+rdf_p_p_{0}_s5000'.format(
+                #             _hxlwdata['wdata_p'].lower()))
+                #         continue
+                if not _okay:
+                    raise SyntaxError(
+                        'Unknown [{0}] on [{1}]'.format(_ix_item, hxlhashtag))
+
+            # for item in _ix_list
+            caput_novo.append(hxlhashtag)
+        elif bool(re.match(_pattern_lang, hxlhashtag)):
+            caput_novo.append(hxlhashtag + '+rdf_p_skos_preflabel_s5000')
+        else:
+            caput_novo.append(hxlhashtag)
+            if hxlhashtag == '#item+conceptum+codicem':
+                caput_novo.append(
+                    '#item+rem+i_qcc+is_zxxx+rdf_a_obo_bfo29+rdf_s_u2200_s5000')
+
+    for linea in data:
+        _pivot_value = linea[_inject_pivot_adm0_value]
+        linea.insert(_inject_pivot_adm0_index, _pivot_value)
+        data_novis.append(linea)
+
+    return caput_novo, data_novis
 
 
 if __name__ == "__main__":

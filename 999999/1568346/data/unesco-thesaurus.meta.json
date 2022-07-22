@@ -11,6 +11,29 @@
       "spa-Latn-r-pSKOS-pprefLabel-ps1",
       "qcc-Zxxx-r-pDCT-pmodified-ps1-txsd-tdatetime-tnop"
     ],
+    "caput_ad_columnae_i": [
+      "qcc-Zxxx-r-sU2200-s1-snop",
+      "qcc-Zxxx-r-sU2203-s2-snop",
+      "qcc-Zxxx-r-pSKOS-pbroader-ps2-sU0001D53B-s2-snop-yU001D-yu007c-ynop-yU0002-yunescothes-ynop",
+      "qcc-Zxxx-r-pSKOS-pnarrower-ps2-yU001D-yu007c-ynop-yU0002-yunescothes-ynop",
+      "qcc-Zxxx-r-pSKOS-prelated-ps2-yU001D-yu007c-ynop-yU0002-yunescothes-ynop",
+      "rus-Cyrl-r-pSKOS-pprefLabel-ps1",
+      "arb-Arab-r-pSKOS-pprefLabel-ps1",
+      "spa-Latn-r-pSKOS-pprefLabel-ps1",
+      "qcc-Zxxx-r-pDCT-pmodified-ps1",
+      [
+        "qcc-Zxxx-r-sU2200-s1-snop-x-hxlattrs",
+        null
+      ],
+      [
+        "qcc-Zxxx-r-sU2203-s2-snop-x-hxlattrs",
+        "rdf_y_u0002_unescothes+rdf_y_u001d_u007c"
+      ],
+      [
+        "qcc-Zxxx-r-pDCT-pmodified-ps1-x-hxlattrs",
+        "rdf_t_xsd_datetime"
+      ]
+    ],
     "caput_originali_asa": [
       {
         "language": "qcc",
@@ -29,6 +52,13 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_s_u2200_s1",
+          "hxl_minimal": [
+            "+i_qcc+is_zxxx+rdf_s_u2200_s1",
+            null
+          ]
         },
         "_index_ex_tabula": 0
       },
@@ -52,6 +82,13 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_s_u2203_s2+rdf_y_u0002_unescothes+rdf_y_u001d_u007c",
+          "hxl_minimal": [
+            "+i_qcc+is_zxxx+rdf_s_u2203_s2",
+            "rdf_y_u0002_unescothes+rdf_y_u001d_u007c"
+          ]
         },
         "_index_ex_tabula": 1
       },
@@ -78,6 +115,10 @@
             "_error": []
           }
         },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_p_skos_broader_s2+rdf_s_u0001d53b_s2+rdf_y_u0002_unescothes+rdf_y_u001d_u007c",
+          "hxl_minimal": false
+        },
         "_index_ex_tabula": 2
       },
       {
@@ -100,6 +141,10 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_p_skos_narrower_s2+rdf_y_u0002_unescothes+rdf_y_u001d_u007c",
+          "hxl_minimal": false
         },
         "_index_ex_tabula": 3
       },
@@ -124,6 +169,10 @@
             "_error": []
           }
         },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_p_skos_related_s2+rdf_y_u0002_unescothes+rdf_y_u001d_u007c",
+          "hxl_minimal": false
+        },
         "_index_ex_tabula": 4
       },
       {
@@ -143,6 +192,10 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_rus+is_cyrl+rdf_p_skos_preflabel_s1",
+          "hxl_minimal": null
         },
         "_index_ex_tabula": 5
       },
@@ -164,6 +217,10 @@
             "_error": []
           }
         },
+        "_callbacks": {
+          "hxl_attrs": "+i_arb+is_arab+rdf_p_skos_preflabel_s1",
+          "hxl_minimal": null
+        },
         "_index_ex_tabula": 6
       },
       {
@@ -184,6 +241,10 @@
             "_error": []
           }
         },
+        "_callbacks": {
+          "hxl_attrs": "+i_spa+is_latn+rdf_p_skos_preflabel_s1",
+          "hxl_minimal": null
+        },
         "_index_ex_tabula": 7
       },
       {
@@ -203,6 +264,13 @@
             "_unknown": [],
             "_error": []
           }
+        },
+        "_callbacks": {
+          "hxl_attrs": "+i_qcc+is_zxxx+rdf_p_dct_modified_s1+rdf_t_xsd_datetime",
+          "hxl_minimal": [
+            "+i_qcc+is_zxxx+rdf_p_dct_modified_s1",
+            "rdf_t_xsd_datetime"
+          ]
         },
         "_index_ex_tabula": 8
       }

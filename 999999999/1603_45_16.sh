@@ -265,7 +265,7 @@ __temp_preproces_quicktest_1603_16_24() {
     rdf_trivio=$((5000 + cod_level))
 
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
-      --objectivum-formato=_temp_no1 \
+      --methodus=_temp_no1 \
       --numerordinatio-cum-antecessoribus \
       --punctum-separato-de-fontem=',' \
       --rdf-trivio="${rdf_trivio}" \
@@ -475,11 +475,11 @@ deploy_1603_45_16_global_admX_unicum
 
 ## Collection of items
 
-# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_bcp47_meta_in_json --punctum-separato-de-fontem=$'\t' 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 --rdf-trivio=5002 | jq
+# ./999999999/0/999999999_54872.py --methodus=_temp_bcp47_meta_in_json --punctum-separato-de-fontem=$'\t' 999999999/1568346/data/cod-ab-example1-with-inferences.bcp47.tsv --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 --rdf-trivio=5002 | jq
 
-# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_hxl_meta_in_json --punctum-separato-de-fontem=$'\t' 999999999/1568346/data/cod-ab-example1-with-inferences.no1.tm.hxl.tsv --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 --rdf-trivio=5002 | jq
+# ./999999999/0/999999999_54872.py --methodus=_temp_hxl_meta_in_json --punctum-separato-de-fontem=$'\t' 999999999/1568346/data/cod-ab-example1-with-inferences.no1.tm.hxl.tsv --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 --rdf-trivio=5002 | jq
 
-# ./999999999/0/999999999_54872.py --objectivum-formato=_temp_hxl_meta_in_json --punctum-separato-de-fontem=$'\t' 999999999/1568346/data/cod-ab-example1-with-inferences.no1.tm.hxl.tsv --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 --rdf-trivio=5002 | jq .caput_asa.caput_ad_columnae_i
+# ./999999999/0/999999999_54872.py --methodus=_temp_hxl_meta_in_json --punctum-separato-de-fontem=$'\t' 999999999/1568346/data/cod-ab-example1-with-inferences.no1.tm.hxl.tsv --numerordinatio-cum-antecessoribus --rdf-ontologia-ordinibus=5 --rdf-trivio=5002 | jq .caput_asa.caput_ad_columnae_i
 
 #---- csv
 # ./999999999/0/999999999_7200235.py --methodus=xlsx_ad_csv --ordines=0 999999/1603/45/16/xlsx/ago.xlsx > 999999/0/ago_0.csv
