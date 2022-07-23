@@ -840,7 +840,7 @@ RDF_SPATIA_NOMINALIBUS_EXTRAS = {
     # 'p': 'http://www.wikidata.org/prop/',
     'wdt': 'http://www.wikidata.org/prop/direct/',
     'wdv': 'http://www.wikidata.org/value/',
-    'p': 'http://www.wikidata.org/prop/',  # NOTE: preffer wdata for datasets
+    'p': 'http://www.wikidata.org/prop/',  # NOTE: preffer use wdata for datasets
 }
 # For "Base OWL" of Wikidata, download link: http://wikiba.se/ontology
 
@@ -1060,7 +1060,7 @@ RDF_SPATIA_NOMINALIBUS_PREFIX = {
     'obo:locationofatsometime': 'obo:BFO_0000124',
     'obo:bfo124': 'obo:BFO_0000124',
 }
-# Note: prefixes that already are lower case do not be here
+# Note: prefixes that already are lower case should not be here
 RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS = {
 }
 
@@ -1071,6 +1071,7 @@ RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS = {
 
 def _rdf_spatia_nominalibus_prefix_normali(rem: str) -> dict:
     # exemplum: obo:bfo29 -> obo:BFO_0000029
+    # exemplum: wdata:p2082 -> wdata:P2082
     rem_l = rem.lower()
     if rem_l in RDF_SPATIA_NOMINALIBUS_PREFIX:
         return RDF_SPATIA_NOMINALIBUS_PREFIX[rem_l]
@@ -1084,6 +1085,10 @@ def _rdf_spatia_nominalibus_prefix_normali(rem: str) -> dict:
         rem_item_alpha = rem_ls.replace(rem_digits, '').upper()
         rem_digits_full = rem_digits.zfill(7)
         return 'obo:{0}_{1}'.format(rem_item_alpha, rem_digits_full)
+    if rem_l.startswith('wdata:'):
+        rem_ls = rem_l.replace('wdata:', '')
+        rem_item_alpha = rem_ls.upper()
+        return 'wdata:{0}'.format(rem_item_alpha)
 
     # Worst case: assume input already is normalized
     return rem
@@ -2589,6 +2594,10 @@ def bcp47_rdf_extension_poc(
         '_error': [],
     }
 
+    # Enforce normalization for Wikidata predicates, we apply
+    # _rdf_spatia_nominalibus_prefix_normali()
+    _to_upper = ['wdata']
+
     if not rdf_sine_spatia_nominalibus or len(rdf_sine_spatia_nominalibus) == 0:
         rdf_sine_spatia_nominalibus = None
 
@@ -2751,6 +2760,10 @@ def bcp47_rdf_extension_poc(
 
             _temp1, _temp2 = predicate_and_subject.split('||')
             predicate = _temp1
+            for _item in _to_upper:
+                if predicate.startswith(_item + ':'):
+                    predicate = _rdf_spatia_nominalibus_prefix_normali(
+                        predicate)
 
             if value_separator is not None and \
                 object_literal.find(value_separator) > -1 and \
