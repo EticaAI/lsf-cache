@@ -1411,7 +1411,8 @@ def hxltm_carricato__cod_ab_levels_ttl(
     # paginae.append('@prefix p: <http://www.wikidata.org/prop/> .')
     # paginae.append('@prefix wdt: <http://www.wikidata.org/prop/direct/> .')
     # paginae.append('@prefix p: <http://www.wikidata.org/prop/> .')
-    paginae.append('@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .')
+    paginae.append(
+        '@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .')
     paginae.append('')
 
     # @see stackoverflow.com/questions/55506715/nested-skos-concept-schemes

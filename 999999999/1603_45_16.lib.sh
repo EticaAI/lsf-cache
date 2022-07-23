@@ -91,9 +91,16 @@ bootstrap_1603_16_1__lsf() {
   fontem_archivum_temporarium_no11="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"
   fontem_archivum_temporarium_no1="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
   objetivum_archivum_no1="${ROOTDIR}/1603/16/1/0/$_nomen.no1.tm.hxl.csv"
+  objetivum_archivum_no1_bcp47min="${ROOTDIR}/1603/16/1/0/$_nomen.no1.bcp47.csv"
   objetivum_archivum_no11="${ROOTDIR}/1603/16/1/0/$_nomen.no11.tm.hxl.csv"
+  objetivum_archivum_no11_bcp47min="${ROOTDIR}/1603/16/1/0/$_nomen.no11.bcp47.csv"
+
+  opus_temporibus_temporarium="${DESTDIR}/999999/0/${_nomen}~TEMP~1.csv"
+  opus_temporibus_temporarium_2="${DESTDIR}/999999/0/${_nomen}~TEMP~2.csv"
 
   set -x
+
+  # NO11 -----------------------------------------------------------------------
 
   # This will generate a dataset with likely stale translations from Wikidata
   # cached (but not commited) on main EticaAI/lexicographi-sine-finibus
@@ -107,6 +114,33 @@ bootstrap_1603_16_1__lsf() {
 
   frictionless validate "${fontem_archivum_temporarium_no11}"
 
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --methodus=_temp_no1_to_no1_shortnames \
+    --real-infile-path="${fontem_archivum_temporarium_no11}" >"${opus_temporibus_temporarium}"
+
+  # Temporary fix: remove some generated tags with error: +ix_error
+  # Somewhat temporary: remove non-merget alts: +ix_alt1|+ix_alt12|+ix_alt13
+  # Non-temporary: remove implicit tags: +ix_hxlattrs
+  hxlcut \
+    --exclude='#*+ix_error,#*+ix_hxlattrs,#*+ix_alt1,#*+ix_alt2,#*+ix_alt3' \
+    "${opus_temporibus_temporarium}" >"${opus_temporibus_temporarium_2}"
+
+  # Delete first line ,,,,,
+  sed -i '1d' "${opus_temporibus_temporarium_2}"
+
+  frictionless validate "${opus_temporibus_temporarium_2}"
+
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --methodus=_temp_data_hxl_to_bcp47 \
+    --real-infile-path="${opus_temporibus_temporarium_2}" >"${opus_temporibus_temporarium}"
+
+  frictionless validate "${opus_temporibus_temporarium}"
+  set +x
+
+  file_update_if_necessary "csv" "${opus_temporibus_temporarium}" "${objetivum_archivum_no11_bcp47min}"
+
+  # NO1 ------------------------------------------------------------------------
+  set -x
   # We're removint linguistic content and Wikidata path to geojson
   hxlcut \
     --exclude='#meta,#item+rdf_p_skos_preflabel_s5000,#item+ix_zzgeojson,#item+ix_zzwgs84point' \
@@ -117,10 +151,34 @@ bootstrap_1603_16_1__lsf() {
 
   frictionless validate "${fontem_archivum_temporarium_no1}"
 
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --methodus=_temp_no1_to_no1_shortnames \
+    --real-infile-path="${fontem_archivum_temporarium_no1}" >"${opus_temporibus_temporarium}"
+
+  # Temporary fix: remove some generated tags with error: +ix_error
+  # Somewhat temporary: remove non-merget alts: +ix_alt1|+ix_alt12|+ix_alt13
+  # Non-temporary: remove implicit tags: +ix_hxlattrs
+  hxlcut \
+    --exclude='#*+ix_error,#*+ix_hxlattrs,#*+ix_alt1,#*+ix_alt2,#*+ix_alt3' \
+    "${opus_temporibus_temporarium}" >"${opus_temporibus_temporarium_2}"
+
+  # Delete first line ,,,,,
+  sed -i '1d' "${opus_temporibus_temporarium_2}"
+
+  frictionless validate "${opus_temporibus_temporarium_2}"
+
   set +x
 
+  file_update_if_necessary "csv" "${opus_temporibus_temporarium_2}" "${objetivum_archivum_no1_bcp47min}"
   file_update_if_necessary "csv" "${fontem_archivum_temporarium_no11}" "${objetivum_archivum_no11}"
   file_update_if_necessary "csv" "${fontem_archivum_temporarium_no1}" "${objetivum_archivum_no1}"
+
+  ##  Computational-like RDF serialization, "OWL version" --------------------
+  set -x
+
+  ##  Linguistic-like RDF serialization, "SKOS version" ----------------------
+  # @TODO fix invalid generation if disabling OWL with
+  #        --rdf-sine-spatia-nominalibus=owl
 }
 
 #######################################
