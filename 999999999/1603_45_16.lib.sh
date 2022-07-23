@@ -96,6 +96,7 @@ bootstrap_1603_16_1__lsf() {
   objetivum_archivum_no11="${ROOTDIR}/1603/16/1/0/$_nomen.no11.tm.hxl.csv"
   objetivum_archivum_no11_bcp47min="${ROOTDIR}/1603/16/1/0/$_nomen.no11.bcp47.csv"
   objetivum_archivum_no11_skos="${ROOTDIR}/1603/16/1/0/$_nomen.no11.skos.ttl"
+  objetivum_archivum_datapackage="${ROOTDIR}/1603/16/1/0/datapackage.json"
 
   opus_temporibus_temporarium="${DESTDIR}/999999/0/${_nomen}~TEMP~1.csv"
   opus_temporibus_temporarium_2="${DESTDIR}/999999/0/${_nomen}~TEMP~2.csv"
@@ -187,8 +188,6 @@ bootstrap_1603_16_1__lsf() {
   file_update_if_necessary "csv" "${fontem_archivum_temporarium_no11}" "${objetivum_archivum_no11}"
   file_update_if_necessary "csv" "${fontem_archivum_temporarium_no1}" "${objetivum_archivum_no1}"
 
-  
-
   ##  Computational-like RDF serialization, "OWL version" --------------------
   # @TODO fix generation of invalid format if
   #       --rdf-sine-spatia-nominalibus=skos,devnull is enabled
@@ -242,6 +241,18 @@ bootstrap_1603_16_1__lsf() {
   file_update_if_necessary "ttl" "${opus_temporibus_temporarium_ttl_2}" "${objetivum_archivum_no11_skos}"
 
   ## Now create the packages ---------------------------------------------------
+
+  set -x
+  "${ROOTDIR}/999999999/0/1603_1.py" \
+    --methodus='data-apothecae-unicae' \
+    --data-apothecae-ex='1603_16_1_0' \
+    --data-apothecae-ad-stdout \
+    --data-apothecae-formato='datapackage' \
+    >"$objetivum_archivum_datapackage"
+
+  frictionless validate "$objetivum_archivum_datapackage"
+
+  set +x
 }
 
 #######################################
