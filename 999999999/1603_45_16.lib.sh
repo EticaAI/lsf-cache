@@ -79,13 +79,12 @@ bootstrap_999999_1603_45_16_fetch_data() {
 #   ROOTDIR
 #
 # Arguments:
+#  est_radix  (values: "0", "1"; if "1" will boostrap from zero)
 #
 # Outputs:
 #   Convert files
 #######################################
-bootstrap_1603_16_1__lsf() {
-  # echo "TODO"
-
+bootstrap_1603_16_1_0__radix() {
   _nomen='1603_16_1_0'
 
   fontem_archivum_temporarium_no11="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"

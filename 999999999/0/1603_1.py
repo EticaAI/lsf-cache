@@ -3199,6 +3199,7 @@ class LibrariaStatusQuo:
         '.mul-Latn.codex.adoc',
         '.no1.bcp47.csv',
         '.no1.tm.hxl.csv',
+        '.no11.bcp47.csv',
         '.no11.tm.hxl.csv',
         '.wikiq.tm.hxl.csv',
         '.nnx.tm.hxl.csv'  # 0.nnx.tm.hxl.csv, anexes index
@@ -3211,6 +3212,7 @@ class LibrariaStatusQuo:
     _suffix_dictionaria = (
         '.no1.bcp47.csv',
         '.no1.tm.hxl.csv',
+        '.no11.bcp47.csv',
         '.no11.tm.hxl.csv',
         '.wikiq.tm.hxl.csv',
         '.no1.tmx',
@@ -4624,8 +4626,9 @@ class DataApothecae:
         if extensiones_restrictis is None:
             extensiones_restrictis = [
                 '.no1.bcp47.csv',
-                '.no11.tm.hxl.csv',
+                '.no11.bcp47.csv',
                 '.no1.tm.hxl.csv',
+                '.no11.tm.hxl.csv',
             ]
 
         nomen = numerordinatio_neo_separatum(numerodination, '_')
@@ -4637,6 +4640,21 @@ class DataApothecae:
             archivum_bpc47 = TabulaSimplici(
                 _path + '/' + nomen + '.no1.bcp47.csv',
                 (nomen if ex_radice else nomen + '.no1.bcp47.csv'),
+                ex_radice
+            )
+            if archivum_bpc47.praeparatio():
+                if abstractum:
+                    return archivum_bpc47
+                # return archivum_no11.quod_datapackage()
+                if schema == 'datapackage':
+                    return archivum_bpc47.quod_datapackage()
+                elif schema == 'csvw':
+                    return archivum_bpc47.quod_csvw()
+
+        if '.no11.bcp47.csv' in extensiones_restrictis:
+            archivum_bpc47 = TabulaSimplici(
+                _path + '/' + nomen + '.no11.bcp47.csv',
+                (nomen if ex_radice else nomen + '.no11.bcp47.csv'),
                 ex_radice
             )
             if archivum_bpc47.praeparatio():
@@ -4692,6 +4710,7 @@ class DataApothecae:
         tabulae = []
         extensiones_restrictis = [
             '.no1.bcp47.csv',
+            '.no11.bcp47.csv',
             '.no11.tm.hxl.csv',
             '.no1.tm.hxl.csv',
         ]
