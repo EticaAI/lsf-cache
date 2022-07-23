@@ -187,18 +187,41 @@ bootstrap_1603_16_1__lsf() {
   file_update_if_necessary "csv" "${fontem_archivum_temporarium_no11}" "${objetivum_archivum_no11}"
   file_update_if_necessary "csv" "${fontem_archivum_temporarium_no1}" "${objetivum_archivum_no1}"
 
-  set -x
+  
 
   ##  Computational-like RDF serialization, "OWL version" --------------------
-  # @TODO ...
+  # @TODO fix generation of invalid format if
+  #       --rdf-sine-spatia-nominalibus=skos,devnull is enabled
+  rdf_ontologia_ordinibus='4'
+  rdf_trivio='5000'
+  set -x
 
-  ##  Linguistic-like RDF serialization, "SKOS version" ----------------------
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --methodus=_temp_no1 \
+    --numerordinatio-cum-antecessoribus \
+    --rdf-sine-spatia-nominalibus=devnull \
+    --rdf-ontologia-ordinibus="${rdf_ontologia_ordinibus}" \
+    --rdf-trivio="${rdf_trivio}" \
+    <"${objetivum_archivum_no1}" >"${opus_temporibus_temporarium_ttl_1}"
+
+  rdfpipe --input-format=turtle --output-format=longturtle \
+    "${opus_temporibus_temporarium_ttl_1}" \
+    >"${opus_temporibus_temporarium_ttl_2}"
+
+  riot --validate "${opus_temporibus_temporarium_ttl_2}"
+
+  # sleep 10
+  set +x
+
+  file_update_if_necessary "ttl" "${opus_temporibus_temporarium_ttl_2}" "${objetivum_archivum_no1_owl}"
+
+  ##  Linguistic-like RDF serialization, "SKOS version" ------------------------
   # @TODO fix invalid generation if disabling OWL with
   #        --rdf-sine-spatia-nominalibus=owl
-
   rdf_ontologia_ordinibus='4'
   rdf_trivio='5000'
 
+  set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
     --methodus=_temp_no1 \
     --numerordinatio-cum-antecessoribus \
@@ -207,15 +230,18 @@ bootstrap_1603_16_1__lsf() {
     --rdf-trivio="${rdf_trivio}" \
     <"${objetivum_archivum_no11}" >"${opus_temporibus_temporarium_ttl_1}"
 
-    rdfpipe --input-format=turtle --output-format=longturtle \
-      "${opus_temporibus_temporarium_ttl_1}" \
-      >"${opus_temporibus_temporarium_ttl_2}"
+  rdfpipe --input-format=turtle --output-format=longturtle \
+    "${opus_temporibus_temporarium_ttl_1}" \
+    >"${opus_temporibus_temporarium_ttl_2}"
 
   riot --validate "${opus_temporibus_temporarium_ttl_2}"
 
   set +x
 
+  # file_update_if_necessary "ttl" "${opus_temporibus_temporarium_ttl_2}" "${objetivum_archivum_no1_owl}"
   file_update_if_necessary "ttl" "${opus_temporibus_temporarium_ttl_2}" "${objetivum_archivum_no11_skos}"
+
+  ## Now create the packages ---------------------------------------------------
 }
 
 #######################################
