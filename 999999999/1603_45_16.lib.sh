@@ -68,6 +68,62 @@ bootstrap_999999_1603_45_16_fetch_data() {
 }
 
 #######################################
+# Pre-create common 1603/16/1 shared with the library and always commited
+# with the code. Is used later by 1603_16_1 to expand languages and other
+# informaiton.
+#
+# NOTE: this is NOT designed to be executed by EticaAI/MDCIII-boostrapper.
+#       otherwise will run with circular dependencies
+#
+# Globals:
+#   ROOTDIR
+#
+# Arguments:
+#
+# Outputs:
+#   Convert files
+#######################################
+bootstrap_1603_16_1__lsf() {
+  # echo "TODO"
+
+  _nomen='1603_16_1_0'
+
+  fontem_archivum_temporarium_no11="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"
+  fontem_archivum_temporarium_no1="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
+  objetivum_archivum_no1="${ROOTDIR}/1603/16/1/0/$_nomen.no1.tm.hxl.csv"
+  objetivum_archivum_no11="${ROOTDIR}/1603/16/1/0/$_nomen.no11.tm.hxl.csv"
+
+  set -x
+
+  # This will generate a dataset with likely stale translations from Wikidata
+  # cached (but not commited) on main EticaAI/lexicographi-sine-finibus
+  "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+    --methodus='cod_ab_et_wdata' --numerordinatio-praefixo='1603_16' |
+    "${ROOTDIR}/999999999/0/999999999_7200235.py" \
+      --methodus='de_hxltm_ordo0_ad_no11' \
+      >"$fontem_archivum_temporarium_no11"
+
+  # sed -i '1,2d' "${fontem_archivum_temporarium_no11}"
+
+  frictionless validate "${fontem_archivum_temporarium_no11}"
+
+  # We're removint linguistic content and Wikidata path to geojson
+  hxlcut \
+    --exclude='#meta,#item+rdf_p_skos_preflabel_s5000,#item+ix_zzgeojson,#item+ix_zzwgs84point' \
+    "$fontem_archivum_temporarium_no11" \
+    "$fontem_archivum_temporarium_no1"
+
+  sed -i '1d' "${fontem_archivum_temporarium_no1}"
+
+  frictionless validate "${fontem_archivum_temporarium_no1}"
+
+  set +x
+
+  file_update_if_necessary "csv" "${fontem_archivum_temporarium_no11}" "${objetivum_archivum_no11}"
+  file_update_if_necessary "csv" "${fontem_archivum_temporarium_no1}" "${objetivum_archivum_no1}"
+}
+
+#######################################
 # Convert the XLSXs to intermediate formats on 999999/1603/45/16 using
 # 999999999_7200235.py to 1603/45/16/{cod_ab_level}/
 #

@@ -38,10 +38,6 @@ from pathlib import Path
 
 from rdflib.graph import Graph
 
-# head -n 22 999999/0/teste-4~full.ttl > 999999/0/teste-4~full+head22.ttl
-# rdfpipe --input-format=turtle --output-format=turtle 999999/0/teste-4~full+head22.ttl > 999999/0/teste-4~full+head22+formated.ttl
-# head -n 22 999999/0/teste-4~full.ttl | rdfpipe --input-format=turtle --output-format=turtle -
-
 STDIN = sys.stdin.buffer
 
 NOMEN = 'rdf_ttl_canonization'

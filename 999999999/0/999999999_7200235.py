@@ -31,6 +31,7 @@
 #   /hxl-geolocation-standard-draft.pdf
 
 import json
+from multiprocessing.sharedctypes import Value
 import re
 import sys
 import os
@@ -1150,11 +1151,23 @@ def hxltm_carricato__cod_ab_et_wdata(
     unm49_index_wdata = 0  # we assume this will be the index
 
     caput_aliis = {
-        '#country+code+v_unm49': '#item+rem+i_qcc+is_zxxx+ix_unm49',
-        '#country+code+v_iso3': '#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3',
-        '#country+code+v_iso2': '#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2',
+        '#country+code+v_unm49': '#item+rem+i_qcc+is_zxxx+ix_unm49+rdf_p_wdata_p2082_s5000',
+        '#country+code+v_iso3': '#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3+rdf_p_wdata_p298_s5000',
+        '#country+code+v_iso2': '#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2+rdf_p_wdata_p297_s5000',
+        # The next one we do not have a semantic way to express... yet
         '#meta+source+cod_ab_level': '#item+rem+i_qcc+is_zxxx+ix_zzcodablevel',
+        # ... The next steps really should be infered from HXL_WDATA
     }
+
+    for item in HXL_WDATA:
+        if 'hxl_ix' in item and item['hxl_ix'] and 'wdata_p' in item and item['wdata_p']:
+            _fontem = '#item+rem+i_qcc+is_zxxx+{0}'.format(
+                item['hxl_ix'])
+            _objetivum = '{0}+rdf_p_wdata_{1}_s5000'.format(
+                _fontem, item['wdata_p'].lower())
+            caput_aliis[_fontem] = _objetivum
+
+    # raise ValueError(caput_aliis)
 
     numerordinatio_praefixo = numerordinatio_neo_separatum(
         numerordinatio_praefixo, ':')
