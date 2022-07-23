@@ -155,6 +155,9 @@ bootstrap_1603_16_1__lsf() {
     --methodus=_temp_no1_to_no1_shortnames \
     --real-infile-path="${fontem_archivum_temporarium_no1}" >"${opus_temporibus_temporarium}"
 
+  head -n 2 "$opus_temporibus_temporarium"
+  sleep 5
+
   # Temporary fix: remove some generated tags with error: +ix_error
   # Somewhat temporary: remove non-merget alts: +ix_alt1|+ix_alt12|+ix_alt13
   # Non-temporary: remove implicit tags: +ix_hxlattrs
@@ -165,11 +168,18 @@ bootstrap_1603_16_1__lsf() {
   # Delete first line ,,,,,
   sed -i '1d' "${opus_temporibus_temporarium_2}"
 
-  frictionless validate "${opus_temporibus_temporarium_2}"
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --methodus=_temp_data_hxl_to_bcp47 \
+    --real-infile-path="${opus_temporibus_temporarium_2}" >"${opus_temporibus_temporarium}"
+
+  frictionless validate "${opus_temporibus_temporarium}"
 
   set +x
 
-  file_update_if_necessary "csv" "${opus_temporibus_temporarium_2}" "${objetivum_archivum_no1_bcp47min}"
+  head -n 2 "$opus_temporibus_temporarium"
+  sleep 5
+
+  file_update_if_necessary "csv" "${opus_temporibus_temporarium}" "${objetivum_archivum_no1_bcp47min}"
   file_update_if_necessary "csv" "${fontem_archivum_temporarium_no11}" "${objetivum_archivum_no11}"
   file_update_if_necessary "csv" "${fontem_archivum_temporarium_no1}" "${objetivum_archivum_no1}"
 
