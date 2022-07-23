@@ -187,6 +187,7 @@ test_unesco_thesaurus() {
   #       Not sure on this (Rocha, 2022-07-23 03:18 UTC)
 
   # Re-save concatenated RDF/XML on RDFLib longturtle
+  # KNOW ISSUE: generated RDF/XML can change every run
   rdfpipe --input-format=turtle --output-format=pretty-xml \
     "${archivum__resultata_ttl}" \
     >"${archivum__resultata_xml}"
