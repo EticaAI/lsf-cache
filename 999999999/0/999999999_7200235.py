@@ -1155,16 +1155,26 @@ def hxltm_carricato__cod_ab_et_wdata(
         '#country+code+v_iso3': '#item+rem+i_qcc+is_zxxx+ix_iso3166p1a3+rdf_p_wdata_p298_s5000',
         '#country+code+v_iso2': '#item+rem+i_qcc+is_zxxx+ix_iso3166p1a2+rdf_p_wdata_p297_s5000',
         # The next one we do not have a semantic way to express... yet
+        # TODO we somewhat have semantic way to express, just needs testing
         '#meta+source+cod_ab_level': '#item+rem+i_qcc+is_zxxx+ix_zzcodablevel',
         # ... The next steps really should be infered from HXL_WDATA
     }
 
     for item in HXL_WDATA:
-        if 'hxl_ix' in item and item['hxl_ix'] and 'wdata_p' in item and item['wdata_p']:
+        if 'hxl_ix' in item and item['hxl_ix'] and \
+                'wdata_p' in item and item['wdata_p']:
             _fontem = '#item+rem+i_qcc+is_zxxx+{0}'.format(
                 item['hxl_ix'])
             _objetivum = '{0}+rdf_p_wdata_{1}_s5000'.format(
                 _fontem, item['wdata_p'].lower())
+            caput_aliis[_fontem] = _objetivum
+        elif 'hxl_ix' in item and item['hxl_ix'] and \
+                'wdata_q' in item and item['wdata_q']:
+            _fontem = '#item+rem+i_qcc+is_zxxx+{0}'.format(
+                item['hxl_ix'])
+            # Example: for ab 0: +rdf_p_wdata_q43649390_s5000
+            _objetivum = '{0}+rdf_p_wdata_{1}_s5000'.format(
+                _fontem, item['wdata_q'].lower())
             caput_aliis[_fontem] = _objetivum
 
     # raise ValueError(caput_aliis)
@@ -1677,6 +1687,16 @@ def hxltm_carricato__de_hxltm_ordo0_ad_no11(
                         res_rdf.append('+rdf_p_p_{0}_s5000'.format(
                             _hxlwdata['wdata_p'].lower()))
                         # raise SyntaxError('foi')
+                        _okay = True
+                    elif 'hxl_ix' in _hxlwdata and \
+                        _hxlwdata['hxl_ix'] == _ix_item and \
+                            'wdata_q' in _hxlwdata and _hxlwdata['wdata_q']:
+                        # does not have an wikidata property, but at least
+                        # have an Q item
+                        # +rdf_p_wdata_q43649390_s5000
+                        res_rdf.append('+rdf_p_wdata_{0}_s5000'.format(
+                            _hxlwdata['wdata_q'].lower()))
+                        # raise SyntaxError('foi 2')
                         _okay = True
                         # continue
                 # @TODO decide prefered ix over '+ix_p297' vs 'ix_iso3166p1a2'

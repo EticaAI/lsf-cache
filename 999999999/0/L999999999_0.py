@@ -530,6 +530,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_iso3166p1a2',
         'hxl_v': 'v_iso2',
         'wdata_p': 'P297',
+        'wdata_q': None,
     },
     {
         '_function': ['abl-0'],
@@ -537,6 +538,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_iso3166p1a3',
         'hxl_v': 'v_iso3',
         'wdata_p': 'P298',
+        'wdata_q': None,
     },
     {
         '_function': ['abl-0'],
@@ -544,6 +546,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_iso3166p1n',
         'hxl_v': None,
         'wdata_p': 'P299',
+        'wdata_q': None,
     },
     {
         # The function (reason to exist) of  ISO 3166-2 is subdivision, adm1.
@@ -554,6 +557,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_iso3166p2',
         'hxl_v': 'v_iso3',
         'wdata_p': 'P300',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -562,6 +566,7 @@ HXL_WDATA = [
         'hxl_v': 'v_currency',
         'iri': None,
         'wdata_p': 'P498',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -570,6 +575,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'http://www.unicode.org/iso15924/iso15924-codes.html',
         'wdata_p': 'P506',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -578,6 +584,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'http://www.unicode.org/iso15924/iso15924-codes.html',
         'wdata_p': 'P2620',
+        'wdata_q': None,
     },
     {
         '_function': ['abl-0123456'],
@@ -586,6 +593,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://geolod.ex.nii.ac.jp',
         'wdata_p': 'P5400',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -595,6 +603,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://agrovoc.fao.org',
         'wdata_p': 'P8061',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -604,6 +613,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://vocabularies.unesco.org',
         'wdata_p': 'P3916',
+        'wdata_q': None,
     },
     {
         '_function': ['abl-0'],
@@ -612,6 +622,7 @@ HXL_WDATA = [
         'hxl_v': 'v_m49',
         'iri': None,
         'wdata_p': 'P2082',
+        'wdata_q': None,
     },
     {
         '_function': ['abl-0123456'],
@@ -620,6 +631,7 @@ HXL_WDATA = [
         'hxl_v': 'v_pcode',
         'iri': None,
         'wdata_p': None,
+        'wdata_q': None,
     },
     {
         '_function': ['abl-0'],
@@ -628,6 +640,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://www.cia.gov/the-world-factbook/countries',
         'wdata_p': 'P9948',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -638,6 +651,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'http://wordnet-rdf.princeton.edu/',
         'wdata_p': 'P8814',
+        'wdata_q': None,
     },
     {
         '_function': ['abl-1'],
@@ -647,6 +661,7 @@ HXL_WDATA = [
         # http://www.statoids.com/wab.html
         'iri': 'http://www.statoids.com/ihasc.html',
         'wdata_p': 'P8119',
+        'wdata_q': None,
     },
     {
         '_function': ['abl-0123456'],
@@ -655,6 +670,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://www.geonames.org',
         'wdata_p': 'P1566',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -663,6 +679,7 @@ HXL_WDATA = [
         'hxl_v': 'v_glide',
         'iri': 'https://glidenumber.net',
         'wdata_p': None,
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -671,6 +688,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://github.com/topics',
         'wdata_p': 'P9100',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -679,6 +697,7 @@ HXL_WDATA = [
         'hxl_v': 'v_glotto',  # Proposed as 2022-07-13
         'iri': 'https://glottolog.org',
         'wdata_p': 'P1394',
+        'wdata_q': None,
     },
     {
         '_function': ['abl-0123456'],
@@ -687,6 +706,17 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://wiki.openstreetmap.org/wiki/Relation',
         'wdata_p': 'P402',
+        'wdata_q': None,
+    },
+    # administrative territorial entity of a specific level (Q1799794)
+    {
+        '_function': ['abl-0123456'],
+        '_relatio': [],
+        'hxl_ix': 'ix_zzcodablevel',
+        'hxl_v': None,
+        'iri': 'https://www.wikidata.org/wiki/Q1799794',
+        'wdata_p': None,
+        'wdata_q': 'Q1799794',
     },
     {
         '_function': ['abl-0123456'],
@@ -697,6 +727,7 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://www.wikidata.org/wiki/Property:P3896',
         'wdata_p': 'P3896',
+        'wdata_q': None,
     },
     {
         '_function': [],
@@ -707,13 +738,36 @@ HXL_WDATA = [
         'hxl_v': None,
         'iri': 'https://www.wikidata.org/wiki/Property:P625',
         'wdata_p': 'P625',
+        'wdata_q': None,
+    },
+    {
+        '_function': [],
+        '_relatio': [],
+        'hxl_ix': 'ix_zzwikiq',
+        'hxl_v': None,
+        'iri': 'https://www.wikidata.org/wiki/Q43649390',
+        'wdata_p': None,
+        'wdata_q': 'Q43649390',
+    },
+    # +ix_wikiq is same as +ix_zzwikiq, maybe deal with this inconsistency
+    # of prefixes of ix_wikiq toghetuer with ix_iso*
+    {
+        '_function': [],
+        '_relatio': [],
+        'hxl_ix': 'ix_wikiq',
+        'hxl_v': None,
+        'iri': 'https://www.wikidata.org/wiki/Q43649390',
+        'wdata_p': None,
+        'wdata_q': 'Q43649390',
     },
 ]
 
 # Hotfixes for used ix_, but not as fully documented
 HXL_WDATA__META_IX = [
-    'ix_zzcodablevel',
-    'ix_wikiq'  # @TODO this could be improved to wdata:{value}
+    # 'ix_zzcodablevel',
+    # 'ix_wikiq'  # @TODO this could be improved to wdata:{value}
+    # @TODO implement ix_wikiq as https://www.wikidata.org/wiki/Q43649390
+    #       Example: for ab 0: +rdf_p_wdata_q43649390_s5000
 ]
 
 # @TODO https://www.wikidata.org/wiki/Property:P3743
