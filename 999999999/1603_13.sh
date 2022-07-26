@@ -41,7 +41,7 @@ hxl_vocab() {
   objectivum_archivum="${ROOTDIR}/999999/1603/1/1603/13/1603_1_1603_13.owl.ttl"
   set -x
   "${ROOTDIR}/999999999/0/999999999_54872.py" \
-    --objectivum-formato='_temp_hxlstandard_vocab_ix' \
+    --methodus='_temp_hxlstandard_vocab_ix' \
     >"$objectivum_archivum"
   set +x
 

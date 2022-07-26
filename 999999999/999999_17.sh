@@ -85,6 +85,8 @@ rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste-4.ttl-si
 # rapper --quiet --input=turtle --output=turtle 999999/0/teste-4~full.ttl-simplici.ttl > 999999/0/teste-4~full.ttl
 rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste-4~full.ttl-simplici.ttl > 999999/0/teste-4~full.ttl
 
+# @TODO
+
 rapper --count --input=turtle 999999/0/teste-4~full.ttl
 
 set +x

@@ -529,6 +529,7 @@ HXL_WDATA = [
         '_relatio': [],
         'hxl_ix': 'ix_iso3166p1a2',
         'hxl_v': 'v_iso2',
+        'rdf_datatype': None,
         'wdata_p': 'P297',
         'wdata_q': None,
     },
@@ -537,6 +538,7 @@ HXL_WDATA = [
         '_relatio': [],
         'hxl_ix': 'ix_iso3166p1a3',
         'hxl_v': 'v_iso3',
+        'rdf_datatype': None,
         'wdata_p': 'P298',
         'wdata_q': None,
     },
@@ -545,6 +547,7 @@ HXL_WDATA = [
         '_relatio': [],
         'hxl_ix': 'ix_iso3166p1n',
         'hxl_v': None,
+        'rdf_datatype': None,
         'wdata_p': 'P299',
         'wdata_q': None,
     },
@@ -556,6 +559,7 @@ HXL_WDATA = [
         '_relatio': ['abl-0'],
         'hxl_ix': 'ix_iso3166p2',
         'hxl_v': 'v_iso3',
+        'rdf_datatype': None,
         'wdata_p': 'P300',
         'wdata_q': None,
     },
@@ -565,6 +569,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_iso4217',
         'hxl_v': 'v_currency',
         'iri': None,
+        'rdf_datatype': None,
         'wdata_p': 'P498',
         'wdata_q': None,
     },
@@ -574,6 +579,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_iso15924a4',
         'hxl_v': None,
         'iri': 'http://www.unicode.org/iso15924/iso15924-codes.html',
+        'rdf_datatype': None,
         'wdata_p': 'P506',
         'wdata_q': None,
     },
@@ -583,6 +589,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_iso15924n3',
         'hxl_v': None,
         'iri': 'http://www.unicode.org/iso15924/iso15924-codes.html',
+        'rdf_datatype': None,
         'wdata_p': 'P2620',
         'wdata_q': None,
     },
@@ -592,6 +599,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_jpgeolod',
         'hxl_v': None,
         'iri': 'https://geolod.ex.nii.ac.jp',
+        'rdf_datatype': None,
         'wdata_p': 'P5400',
         'wdata_q': None,
     },
@@ -602,6 +610,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_unagrovoc',
         'hxl_v': None,
         'iri': 'https://agrovoc.fao.org',
+        'rdf_datatype': None,
         'wdata_p': 'P8061',
         'wdata_q': None,
     },
@@ -612,6 +621,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_unescothes',
         'hxl_v': None,
         'iri': 'https://vocabularies.unesco.org',
+        'rdf_datatype': None,
         'wdata_p': 'P3916',
         'wdata_q': None,
     },
@@ -621,6 +631,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_unm49',
         'hxl_v': 'v_m49',
         'iri': None,
+        'rdf_datatype': None,
         'wdata_p': 'P2082',
         'wdata_q': None,
     },
@@ -630,6 +641,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_unp',  # using 'unp', ommiting 'code' / 'id' from all
         'hxl_v': 'v_pcode',
         'iri': None,
+        'rdf_datatype': None,
         'wdata_p': None,
         'wdata_q': None,
     },
@@ -639,6 +651,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_usfactbook',
         'hxl_v': None,
         'iri': 'https://www.cia.gov/the-world-factbook/countries',
+        'rdf_datatype': None,
         'wdata_p': 'P9948',
         'wdata_q': None,
     },
@@ -650,6 +663,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_usworldnet',
         'hxl_v': None,
         'iri': 'http://wordnet-rdf.princeton.edu/',
+        'rdf_datatype': None,
         'wdata_p': 'P8814',
         'wdata_q': None,
     },
@@ -660,6 +674,7 @@ HXL_WDATA = [
         'hxl_v': None,
         # http://www.statoids.com/wab.html
         'iri': 'http://www.statoids.com/ihasc.html',
+        'rdf_datatype': None,
         'wdata_p': 'P8119',
         'wdata_q': None,
     },
@@ -669,6 +684,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_xzgeonames',
         'hxl_v': None,
         'iri': 'https://www.geonames.org',
+        'rdf_datatype': None,
         'wdata_p': 'P1566',
         'wdata_q': None,
     },
@@ -678,6 +694,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_xzglide',
         'hxl_v': 'v_glide',
         'iri': 'https://glidenumber.net',
+        'rdf_datatype': None,
         'wdata_p': None,
         'wdata_q': None,
     },
@@ -687,6 +704,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_xzgithubt',
         'hxl_v': None,
         'iri': 'https://github.com/topics',
+        'rdf_datatype': None,
         'wdata_p': 'P9100',
         'wdata_q': None,
     },
@@ -696,6 +714,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_xzglotto',
         'hxl_v': 'v_glotto',  # Proposed as 2022-07-13
         'iri': 'https://glottolog.org',
+        'rdf_datatype': None,
         'wdata_p': 'P1394',
         'wdata_q': None,
     },
@@ -705,6 +724,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_xzosmrel',  # ommiting 'code' / 'id' from all
         'hxl_v': None,
         'iri': 'https://wiki.openstreetmap.org/wiki/Relation',
+        'rdf_datatype': None,
         'wdata_p': 'P402',
         'wdata_q': None,
     },
@@ -715,6 +735,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_zzcodablevel',
         'hxl_v': None,
         'iri': 'https://www.wikidata.org/wiki/Q1799794',
+        'rdf_datatype': None,
         'wdata_p': None,
         'wdata_q': 'Q1799794',
     },
@@ -726,17 +747,22 @@ HXL_WDATA = [
         'hxl_ix': 'ix_zzgeojson',
         'hxl_v': None,
         'iri': 'https://www.wikidata.org/wiki/Property:P3896',
+        'rdf_datatype': None,
         'wdata_p': 'P3896',
         'wdata_q': None,
     },
+    # @TODO think about some "default" type in textual format
+    #       https://www.wikidata.org/wiki/Special:EntityData/Q155.ttl
+    #       @prefix geo: <http://www.opengis.net/ont/geosparql#> .
     {
         '_function': [],
         '_relatio': ['abl-0123456'],  # Any adm level could have a point
                                       # Example for Brazil: Point(-53.0 -14.0)
-
         'hxl_ix': 'ix_zzwgs84point',
         'hxl_v': None,
         'iri': 'https://www.wikidata.org/wiki/Property:P625',
+        # Example: wdt:P625 "Point(-53 -14)"^^geo:wktLiteral ;
+        'rdf_datatype': 'geo:wktLiteral',
         'wdata_p': 'P625',
         'wdata_q': None,
     },
@@ -746,6 +772,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_zzwikiq',
         'hxl_v': None,
         'iri': 'https://www.wikidata.org/wiki/Q43649390',
+        'rdf_datatype': None,
         'wdata_p': None,
         'wdata_q': 'Q43649390',
     },
@@ -757,6 +784,7 @@ HXL_WDATA = [
         'hxl_ix': 'ix_wikiq',
         'hxl_v': None,
         'iri': 'https://www.wikidata.org/wiki/Q43649390',
+        'rdf_datatype': None,
         'wdata_p': None,
         'wdata_q': 'Q43649390',
     },
@@ -890,6 +918,7 @@ RDF_SPATIA_NOMINALIBUS = {
 # @see https://www.wikidata.org/wiki/EntitySchema:E49
 RDF_SPATIA_NOMINALIBUS_EXTRAS = {
     'devnull': 'http://example.org/dev/null/',
+    'geo': 'hhttp://www.opengis.net/ont/geosparql#',
     'wdata': 'http://www.wikidata.org/wiki/Special:EntityData/',
     # 'p': 'http://www.wikidata.org/prop/',
     'wdt': 'http://www.wikidata.org/prop/direct/',
@@ -1113,6 +1142,10 @@ RDF_SPATIA_NOMINALIBUS_PREFIX = {
     'obo:bfo171': 'obo:BFO_0000171',
     'obo:locationofatsometime': 'obo:BFO_0000124',
     'obo:bfo124': 'obo:BFO_0000124',
+
+    # @SEE http://www.opengis.net/ont/geosparql# _______________________________
+    # @TODO maybe add others (the ones necessary)
+    'geo:wktliteral': 'geo:wktLiteral',
 }
 # Note: prefixes that already are lower case should not be here
 RDF_SPATIA_NOMINALIBUS_PREFIX_EXTRAS = {
@@ -1763,6 +1796,7 @@ def bcp47_langtag_callback_hxl_minimal(
     Returns:
         str: return HXL attributes (without HXL hashtag)
     """
+    # print('langtag_meta', langtag_meta)
     res = bcp47_langtag_callback_hxl(langtag_meta, strictum)
     minimal_parts = []
     extra_parts = []
@@ -4952,12 +4986,27 @@ def hxl_hashtag_to_bcp47(
 
             elif item.startswith('t_'):
                 # _cell_transformer = item.replace('y_', '').lower()
+                # print(item)
                 _cell_transformer = item[2:]
+                # print(_cell_transformer)
                 tverb, tval_1 = _cell_transformer.split('_')
+                # print(tverb, tval_1)
                 # raise ValueError(item)
                 _bcp47_g_parts.append('t{0}-t{1}-tnop'.format(
                     tverb.upper(), tval_1.lower()
                 ))
+                _rdf_prefix = '{0}:{1}'.format(tverb, tval_1)
+                if _rdf_prefix in RDF_SPATIA_NOMINALIBUS_PREFIX:
+                    _rdf_prefix = RDF_SPATIA_NOMINALIBUS_PREFIX[_rdf_prefix]
+
+                if result['extension']['r']['rdfs:Datatype'] is not None:
+                    result['_error'].append(
+                        '> 1 explicity rdfs:Datatype. Old <{0}>'.format(
+                            str(result['extension']['r']['rdfs:Datatype'])
+                        ))
+
+                result['extension']['r']['rdfs:Datatype'] = \
+                    '{0}||NOP:NOP'.format(_rdf_prefix)
 
             elif item.startswith('o_'):
                 _object = item.replace('o_', '').replace('_', ':')

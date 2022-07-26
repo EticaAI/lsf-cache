@@ -1650,6 +1650,8 @@ def hxltm_carricato__de_hxltm_ordo0_ad_no11(
         # Already processed input. Return without changes
         return caput, data
 
+    # print('caput', caput)
+
     caput_novo = []
     data_novis = []
     _inject_pivot_adm0_index = caput.index('#item+conceptum+codicem') + 1
@@ -1665,7 +1667,6 @@ def hxltm_carricato__de_hxltm_ordo0_ad_no11(
         # raise ValueError(re.match(_pattern_lang, '#item+rem+i_ara+is_arab'))
 
         if hxlhashtag.startswith('#item+rem+i_qcc+is_zxxx'):
-            # TODO process +ix_
             res_rdf = []
             _ix_list = re.findall(_pattern_ix, hxlhashtag)
             # raise ValueError(_ix_list)
@@ -1679,14 +1680,23 @@ def hxltm_carricato__de_hxltm_ordo0_ad_no11(
                     break
 
                 _okay = False
+                # print(HXL_WDATA)
+
                 for _hxlwdata in HXL_WDATA:
                     if 'hxl_ix' in _hxlwdata and \
                         _hxlwdata['hxl_ix'] == _ix_item and \
                             'wdata_p' in _hxlwdata and _hxlwdata['wdata_p']:
 
-                        res_rdf.append('+rdf_p_p_{0}_s5000'.format(
+                        res_rdf.append('+rdf_p_wdata_{0}_s5000'.format(
                             _hxlwdata['wdata_p'].lower()))
                         # raise SyntaxError('foi')
+                        if 'rdf_datatype' in _hxlwdata and \
+                                _hxlwdata['rdf_datatype']:
+                            _dt = _hxlwdata['rdf_datatype']
+                            _dtprefix, _dtvalue = _dt.lower().split(':')
+                            res_rdf.append('+rdf_t_{0}_{1}'.format(
+                                _dtprefix, _dtvalue))
+
                         _okay = True
                     elif 'hxl_ix' in _hxlwdata and \
                         _hxlwdata['hxl_ix'] == _ix_item and \
@@ -1697,6 +1707,13 @@ def hxltm_carricato__de_hxltm_ordo0_ad_no11(
                         res_rdf.append('+rdf_p_wdata_{0}_s5000'.format(
                             _hxlwdata['wdata_q'].lower()))
                         # raise SyntaxError('foi 2')
+
+                        if 'rdf_datatype' in _hxlwdata and \
+                                _hxlwdata['rdf_datatype']:
+                            _dt = _hxlwdata['rdf_datatype']
+                            _dtprefix, _dtvalue = _dt.lower().split(':')
+                            res_rdf.append('+rdf_t_{0}_{1}'.format(
+                                _dtprefix, _dtvalue))
                         _okay = True
                         # continue
                 # @TODO decide prefered ix over '+ix_p297' vs 'ix_iso3166p1a2'
@@ -1713,6 +1730,17 @@ def hxltm_carricato__de_hxltm_ordo0_ad_no11(
                 if not _okay:
                     raise SyntaxError(
                         'Unknown [{0}] on [{1}]'.format(_ix_item, hxlhashtag))
+
+                if len(res_rdf) > 0:
+                    res_rdf = sorted(res_rdf)
+                    for _hxlattr in res_rdf:
+                        if hxlhashtag.find(_hxlattr) == -1:
+                            hxlhashtag = hxlhashtag + _hxlattr
+                        # pass
+
+                # if hxlhashtag.startswith(
+                #         '#item+rem+i_qcc+is_zxxx+ix_zzwgs84point'):
+                #     raise ValueError('test', hxlhashtag, res_rdf)
 
             # for item in _ix_list
             caput_novo.append(hxlhashtag)

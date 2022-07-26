@@ -149,8 +149,13 @@ bootstrap_1603_16_1_0__radix() {
   # NO1 ------------------------------------------------------------------------
   set -x
   # We're removint linguistic content and Wikidata path to geojson
+  # hxlcut \
+  #   --exclude='#meta,#item+rdf_p_skos_preflabel_s5000,#item+ix_zzgeojson,#item+ix_zzwgs84point' \
+  #   "$fontem_archivum_temporarium_no11" \
+  #   "$fontem_archivum_temporarium_no1"
+
   hxlcut \
-    --exclude='#meta,#item+rdf_p_skos_preflabel_s5000,#item+ix_zzgeojson,#item+ix_zzwgs84point' \
+    --exclude='#meta,#item+rdf_p_skos_preflabel_s5000,#item+ix_zzgeojson' \
     "$fontem_archivum_temporarium_no11" \
     "$fontem_archivum_temporarium_no1"
 

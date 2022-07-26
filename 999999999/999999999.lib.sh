@@ -163,6 +163,10 @@ file_update_if_necessary() {
   echo "${FUNCNAME[0]} ... [$fontem_archivum] --> [$objectivum_archivum]"
 
   case "${formatum_archivum}" in
+  skip-validation)
+    # echo "INFO: skip-validation"
+    echo ""
+    ;;
   csv)
     is_valid=$(csvclean --dry-run "$fontem_archivum")
     if [ "$is_valid" != "No errors." ]; then
@@ -693,6 +697,83 @@ file_download_1603_xlsx() {
   fi
 
   mv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+}
+
+#######################################
+# Convert a "full" .no1.tm.hxl.csv/.no11.tm.hxl.csv to
+# .no1.bcp47.csv/.no11.bcp47.csv while removing overlong HXL attributes at cost
+# of lose direct RDF translation. Result likely to fit < 60 characters, so
+# easier to be imported on databases
+#
+# Globals:
+#   ROOTDIR     (base path used for tools)
+#   DESTDIR     (base path used for data, both source and objective)
+# Arguments:
+#   numerordinatio
+#   numerordinatio_typo  (values: no1, no11)
+#   est_temporarium_fontem (default "1", from 99999/)
+#   est_temporarium_objectivumm (dfault "0", from real namespace)
+# Outputs:
+#   Convert files
+#######################################
+file_convert_bpc47min_de_numerordinatio() {
+  numerordinatio="$1"
+  numerordinatio_typo="${2:-"no1"}"
+  est_temporarium_fontem="${3:-"1"}"
+  est_temporarium_objectivum="${4:-"1"}"
+
+  _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
+  _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
+  _prefix=$(numerordinatio_neo_separatum "$numerordinatio" ":")
+
+  if [ "$est_temporarium_fontem" -eq "1" ]; then
+    _basim_fontem="${DESTDIR}/999999"
+  else
+    _basim_fontem="${DESTDIR}"
+  fi
+  if [ "$est_temporarium_objectivum" -eq "1" ]; then
+    _basim_objectivum="${DESTDIR}/999999"
+  else
+    _basim_objectivum="${DESTDIR}"
+  fi
+
+  # _basim_fontem="${ROOTDIR}"
+  # _basim_objectivum="${DESTDIR}"
+  # tmeta="${ROOTDIR}/999999999/0/hxltm-exemplum.tmeta.yml"
+
+  fontem_archivum="${_basim_fontem}/$_path/$_nomen.${numerordinatio_typo}.tm.hxl.csv"
+  objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.${numerordinatio_typo}.bcp47.csv"
+  csv_temporarium_1="${DESTDIR}/999999/0/${_nomen}_bcp47min~TEMP~1.csv"
+  csv_temporarium_2="${DESTDIR}/999999/0/${_nomen}_bcp47min~TEMP~2.csv"
+
+  # set -x
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --methodus=_temp_no1_to_no1_shortnames \
+    --real-infile-path="${fontem_archivum}" \
+    >"${csv_temporarium_1}"
+
+  # Temporary fix: remove some generated tags with error: +ix_error
+  # Somewhat temporary: remove non-merget alts: +ix_alt1|+ix_alt12|+ix_alt13
+  # Non-temporary: remove implicit tags: +ix_hxlattrs
+  hxlcut \
+    --exclude='#*+ix_error,#*+ix_hxlattrs,#*+ix_alt1,#*+ix_alt2,#*+ix_alt3' \
+    "${csv_temporarium_1}" >"${csv_temporarium_2}"
+
+  # Delete first line ,,,,,
+  sed -i '1d' "${csv_temporarium_2}"
+
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --methodus=_temp_data_hxl_to_bcp47 \
+    --real-infile-path="${csv_temporarium_2}" >"${csv_temporarium_1}"
+
+  frictionless validate "${csv_temporarium_1}"
+
+  # set +x
+  file_update_if_necessary "skip-validation" \
+    "${csv_temporarium_1}" \
+    "${objectivum_archivum}"
+
+  rm "${csv_temporarium_2}"
 }
 
 #######################################
@@ -1778,6 +1859,8 @@ file_translate_csv_de_numerordinatio_q__v2() {
 #   est_temporarium_fontem (default "1", from 99999/)
 #   est_temporarium_objectivumm (dfault "0", from real namespace)
 #   est_non_normale
+#   rdf_predicates (default "", example: 'skos:preflabel,rdf:label')
+#   rdf_trivio (default "", example: '5000')
 # Outputs:
 #   Convert files
 #######################################
@@ -1785,7 +1868,9 @@ file_merge_numerordinatio_de_wiki_q() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
   est_temporarium_objectivum="${3:-"0"}"
-  est_non_normale="${4:-"0"}"
+  est_non_normale="${4:-"0"}" # DEPRECATED
+  rdf_predicates="${5:-""}"
+  rdf_trivio="${6:-""}"
 
   _path=$(numerordinatio_neo_separatum "$numerordinatio" "/")
   _nomen=$(numerordinatio_neo_separatum "$numerordinatio" "_")
@@ -1807,74 +1892,29 @@ file_merge_numerordinatio_de_wiki_q() {
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tm.hxl.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"
   fontem_q_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
-  # objectivum_archivum_temporarium_b="${ROOTDIR}/999999/0/$_nomen.q.txt"
-  # objectivum_archivum_temporarium_b_u="${ROOTDIR}/999999/0/$_nomen.uniq.q.txt"
-  # objectivum_archivum_temporarium_b_u_wiki="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
+  # fontem_q_archivum_temporarium_2="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
 
-  # TODO: implement check if necessary to revalidate
-  echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
+  # echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
 
-  # NOTE: explanation on the hotfix +ix_deleteme here:
-  #       https://github.com/EticaAI/multilingual-lexicography/issues/
-  #       29#issuecomment-1111707350
-  #       This may be removed when hxlmerge --replace works with so many
-  #       columns at once.
-
-  if [ "$est_non_normale" -eq "1" ]; then
-    # We apply 'hxlclean --lower' only on writting systems which this make
-    # sence. On this case at least '+is_latn,+is_cyrl'
-    hxlrename \
-      --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
-      "$fontem_q_archivum" |
-      hxlclean --lower='#*+is_latn,#*+is_cyrl' \
-        >"$fontem_q_archivum_temporarium"
+  if [ "$rdf_predicates" != "" ] && [ "$rdf_trivio" != "" ]; then
+    "${ROOTDIR}/999999999/0/999999999_54872.py" \
+      --methodus=hxltm_combinatio_linguae \
+      --rdf-combinatio-archivum-linguae="$fontem_q_archivum" \
+      --rdf-combinatio-praedicatis-linguae="$rdf_predicates" \
+      --rdf-trivio="$rdf_trivio" \
+      "$fontem_archivum" > "$objectivum_archivum_temporarium"
   else
-    # We apply 'hxlclean --lower' only on writting systems which this make
-    # sence. On this case at least '+is_latn,+is_cyrl'
-    hxlrename \
-      --rename='item+conceptum+codicem:#item+rem+i_qcc+is_zxxx+ix_wikiq' \
-      "$fontem_q_archivum" \
-      >"$fontem_q_archivum_temporarium"
+    "${ROOTDIR}/999999999/0/999999999_54872.py" \
+      --methodus=hxltm_combinatio_linguae \
+      --rdf-combinatio-archivum-linguae="$fontem_q_archivum" \
+      "$fontem_archivum" > "$objectivum_archivum_temporarium"
   fi
 
-  # hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
-  #   --tags='#item+rem' \
-  #   --merge="$fontem_q_archivum" \
-  #   "$fontem_archivum" \
-  #   >"$objectivum_archivum_temporarium"
+  frictionless validate "${objectivum_archivum_temporarium}"
 
-  # echo "oi2"
-
-  hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
-    --tags='#item+rem' \
-    --merge="$fontem_q_archivum_temporarium" \
-    "$fontem_archivum" \
-    >"$objectivum_archivum_temporarium"
-
-  # BUG: if we use hxlmerge --replace, instead of not be repeated on final
-  #      dataset, we lost all additional column data. This migth be because
-  #      we're far beyond typical number of columns libhxl-python is tested to
-  #      work
-
-  # set -x
-  # hxlmerge --keys='#item+rem+i_qcc+is_zxxx+ix_wikiq' \
-  #   --replace \
-  #   --tags='#item+rem' \
-  #   --merge="$fontem_q_archivum_temporarium" \
-  #   "$fontem_archivum" \
-  #   >"$objectivum_archivum_temporarium"
-  # set +x
-
-  # | hxlcut --exclude='#item+rem+i_qcc+is_zxxx+ix_wikiq+ix_deleteme'
-
-  sed -i '1d' "${objectivum_archivum_temporarium}"
-
-  file_hotfix_duplicated_merge_key "${objectivum_archivum_temporarium}" '#item+rem+i_qcc+is_zxxx+ix_wikiq'
-
-  # cp "$objectivum_archivum_temporarium" "$objectivum_archivum_temporarium.tmp"
-  # rm "$fontem_q_archivum_temporarium"
-
-  file_update_if_necessary csv "$objectivum_archivum_temporarium" "$objectivum_archivum"
+  file_update_if_necessary "skip-validation" \
+    "$objectivum_archivum_temporarium" \
+    "$objectivum_archivum"
 
   return 0
 }

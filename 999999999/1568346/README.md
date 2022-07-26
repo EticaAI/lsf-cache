@@ -112,7 +112,7 @@ for datasets that already are highly reusable, as mere suggestion:
   - maybe `-r-bVERB-bitem-bnop` ? (this would make result hardcoded to `rdfs:seeAlso`)
   - maybe `-r-bRDFSx1dseeAlso-bitem-bnop` ?
 - `urn:uuid:`
-  - beyond `urn:mciii:` prefix, potentially create some built-in `urn:uuid`
+  - beyond `urn:mdciii:` prefix, potentially create some built-in `urn:uuid`
     to unique items.
 - `urn:(hash-term)`
   - Same as `urn:uuid:`, but with somewhat predictable output

@@ -97,7 +97,7 @@ test_unesco_thesaurus() {
   archivum__resultata_bag1="${ROOTDIR}/999999/0/unesco-thesaurus~rdfbag1.ttl"
   archivum__resultata_bag2="${ROOTDIR}/999999/0/unesco-thesaurus~rdfbag2.ttl"
   archivum__resultata_ttl="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.rdf.ttl"
-  archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.rdf.xml"
+  # archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.rdf.xml"
   archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/unesco-thesaurus.meta.json"
 
   stype_blue=$(tput setaf 4)
@@ -111,6 +111,7 @@ test_unesco_thesaurus() {
     --methodus=_temp_bcp47_meta_in_json \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-namespaces-archivo="${archivum__namespace}" \
+    --rdf-trivio=1 \
     "${archivum__unesco_thesaurus_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
@@ -186,11 +187,11 @@ test_unesco_thesaurus() {
   # @TODO rdflib rdfpipe (if exporting to XML) really need specify namespaces?
   #       Not sure on this (Rocha, 2022-07-23 03:18 UTC)
 
-  # Re-save concatenated RDF/XML on RDFLib longturtle
-  # KNOW ISSUE: generated RDF/XML can change every run
-  rdfpipe --input-format=turtle --output-format=pretty-xml \
-    "${archivum__resultata_ttl}" \
-    >"${archivum__resultata_xml}"
+  # # Re-save concatenated RDF/XML on RDFLib longturtle
+  # # KNOW ISSUE: generated RDF/XML can change every run
+  # rdfpipe --input-format=turtle --output-format=pretty-xml \
+  #   "${archivum__resultata_ttl}" \
+  #   >"${archivum__resultata_xml}"
 
   # Is not validating rigth now; Lets allow fail
   echo "before riot --validate"
@@ -221,7 +222,7 @@ test_cod_ab() {
   archivum__resultata_bag3="${ROOTDIR}/999999/0/cod-ab-example1~rdfbag3.ttl"
   archivum__resultata_bag4="${ROOTDIR}/999999/0/cod-ab-example1~rdfbag4.ttl"
   archivum__resultata_ttl="${ROOTDIR}/999999/1568346/data/cod-ab-example1.rdf.ttl"
-  archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/cod-ab-example1.rdf.xml"
+  # archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/cod-ab-example1.rdf.xml"
   archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/cod-ab-example1.meta.json"
 
   stype_blue=$(tput setaf 4)
@@ -237,6 +238,7 @@ test_cod_ab() {
     --methodus=_temp_bcp47_meta_in_json \
     --punctum-separato-de-fontem=$'\t' \
     --rdf-namespaces-archivo="${archivum__namespace}" \
+    --rdf-trivio=1 \
     "${archivum__cod_ab_bcp47}" |
     jq >"${archivum__resultata_meta_json}"
 
@@ -329,11 +331,11 @@ test_cod_ab() {
     "${archivum__resultata_bag3}" \
     >"${archivum__resultata_ttl}"
 
-  # Re-save concatenated RDF/XML on RDFLib longturtle
-  # KNOW ISSUE: generated RDF/XML can change every run
-  rdfpipe --input-format=turtle --output-format=pretty-xml \
-    "${archivum__resultata_ttl}" \
-    >"${archivum__resultata_xml}"
+  # # Re-save concatenated RDF/XML on RDFLib longturtle
+  # # KNOW ISSUE: generated RDF/XML can change every run
+  # rdfpipe --input-format=turtle --output-format=pretty-xml \
+  #   "${archivum__resultata_ttl}" \
+  #   >"${archivum__resultata_xml}"
 
   # Is not validating rigth now; Lets allow fail
   echo "before riot --validate"
@@ -364,7 +366,7 @@ test_cod_ab__with_inferences_prebuild() {
   archivum__resultata_bag3="${ROOTDIR}/999999/0/cod-ab-example1-with-inferences~rdfbag3.ttl"
   archivum__resultata_bag4="${ROOTDIR}/999999/0/cod-ab-example1-with-inferences~rdfbag4.ttl"
   archivum__resultata_ttl="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.ttl"
-  archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.xml"
+  # archivum__resultata_xml="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.rdf.xml"
   archivum__resultata_meta_json="${ROOTDIR}/999999/1568346/data/cod-ab-example1-with-inferences.meta.json"
 
   stype_blue=$(tput setaf 4)
@@ -449,10 +451,10 @@ test_cod_ab__with_inferences_prebuild() {
     "${archivum__resultata_bag4}" \
     >"${archivum__resultata_ttl}"
 
-  # Re-save concatenated RDF/XML on RDFLib longturtle
-  rdfpipe --input-format=turtle --output-format=pretty-xml \
-    "${archivum__resultata_ttl}" \
-    >"${archivum__resultata_xml}"
+  # # Re-save concatenated RDF/XML on RDFLib longturtle
+  # rdfpipe --input-format=turtle --output-format=pretty-xml \
+  #   "${archivum__resultata_ttl}" \
+  #   >"${archivum__resultata_xml}"
 
   # Is not validating rigth now; Lets allow fail
   # echo "before riot --validate"

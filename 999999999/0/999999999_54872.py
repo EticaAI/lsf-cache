@@ -45,14 +45,18 @@ import yaml
 # l999999999_0 = __import__('999999999_0')
 from L999999999_0 import (
     BCP47_AD_HXL,
-    RDF_SPATIA_NOMINALIBUS_EXTRAS,
+    # RDF_SPATIA_NOMINALIBUS_EXTRAS,
+    # RDF_SPATIA_NOMINALIBUS_PREFIX,
     HXLHashtagSimplici,
     OntologiaVocabularioHXL,
     SetEncoder,
+    _rdf_spatia_nominalibus_prefix_normali,
     bcp47_langtag,
     # bcp47_langtag_callback_hxl,
     bcp47_rdf_extension_poc,
+    csv_imprimendo,
     hxl_hashtag_to_bcp47,
+    hxltm__ex_dict,
     hxltm_carricato,
     HXLTMAdRDFSimplicis,
     hxltm_carricato_brevibus,
@@ -83,6 +87,13 @@ __EPILOGUM__ = """
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
+
+Merge NO1 + wikiq into NO11 . . . . . . . . . . . . . . . . . . . . . . . . .
+    {0} --methodus=hxltm_combinatio_linguae \
+--rdf-combinatio-archivum-linguae=1603/16/1/0/1603_16_1_0.wikiq.tm.hxl.csv \
+--rdf-combinatio-praedicatis-linguae=skos:prefLabel \
+--rdf-trivio=5000 \
+1603/16/1/0/1603_16_1_0.no1.tm.hxl.csv
 
 Generic Numerordinatio to RDF Turtle . . . . . . . . . . . . . . . . . . . . .
 (TODO: fix example)
@@ -287,6 +298,7 @@ class Cli:
                 'auto',  # Uses ad_rdf_ex_configurationi
                 'ad_rdf_genericae',
                 'ad_rdf_ex_configurationi',
+                'hxltm_combinatio_linguae',
                 '_temp_bcp47',
                 '_temp_no1',
                 '_temp_bcp47_meta_in_json',
@@ -350,11 +362,11 @@ class Cli:
         parser.add_argument(
             '--rdf-trivio',
             help='(Advanced) RDF bag; extract triples from tabular data from '
-            'other groups than 1',
+            'other groups than 1603',
             dest='rdf_bag',
             nargs='?',
             # required=True,
-            default='1'
+            default='1603'
         )
 
         # - spatium, s, n, nominativus, https://en.wiktionary.org/wiki/spatium#Latin
@@ -476,6 +488,32 @@ class Cli:
         #     nargs='?'
         # )
 
+        combinatio_linguae = parser.add_argument_group(
+            "HXLTM combīnātiō",
+            '[ --methodus=\'hxltm_combinatio_linguae\' ] '
+            "NO1 + wikiq = NO11. Merge terminology translations to "
+            "the key tables"
+        )
+
+        combinatio_linguae.add_argument(
+            '--rdf-combinatio-archivum-linguae',
+            help='Path to .wikiq.tm.hxl.csv',
+            dest='combinatio_archivum',
+            nargs='?',
+            default=None
+        )
+
+        # praedicātīs, pl, n, https://en.wiktionary.org/wiki/praedicatum#Latin
+        combinatio_linguae.add_argument(
+            '--rdf-combinatio-praedicatis-linguae',
+            help='Predicates to add. Use --rdf-trivio to signal the group. '
+            'Add several using commas , as separator'
+            'Example: skos:prefLabel',
+            dest='praedicatis_linguae',
+            nargs='?',
+            type=lambda x: x.split(',')
+        )
+
         return parser.parse_args()
 
     def execute_cli(self, pyargs, stdin=STDIN, stdout=sys.stdout,
@@ -501,6 +539,36 @@ class Cli:
             rdf_namespaces_extras(pyargs.rdf_namespace_archivo)
             # print(RDF_SPATIA_NOMINALIBUS_EXTRAS)
             # pass
+
+        if pyargs.methodus == 'hxltm_combinatio_linguae':
+            # Quick draft of an RDF namespace for ix_ attributes;
+            # for sake of simplification, should assume they are used
+            # on the main direct relation (otherwise would not make sense
+            # even if we could pre-compute all relations)
+            # raise NotImplementedError('TODO {0}'.format(
+            #     pyargs.methodus))
+            # caput, data = hxltm_carricato(
+            #     _infile, _stdin, punctum_separato=fontem_separato)
+            # caput_wikiq, data_wikiq = hxltm_carricato(
+            #     pyargs.combinatio_archivum, False)
+
+            # csv_imprimendo(caput, data, punctum_separato=fontem_separato)
+            # csv_imprimendo(caput_wikiq, data_wikiq, punctum_separato=fontem_separato)
+
+            # numerordinatio_data__combinatio_linguae(
+            #     caput, data, pyargs.combinatio_archivum
+            # )
+            numerordinatio_data__combinatio_linguae(
+                no1=_infile, wikiq=pyargs.combinatio_archivum,
+                rdf_trivio=pyargs.rdf_bag,
+                praedicatis_linguae=pyargs.praedicatis_linguae
+            )
+
+            # print()
+            # print('@TODO not implemented yet')
+
+            # xlsx.finis()
+            return self.EXIT_OK
 
         if pyargs.methodus == '_temp_hxlstandard_vocab_ix':
             # Quick draft of an RDF namespace for ix_ attributes;
@@ -945,6 +1013,113 @@ class CliMain:
             # print('oi actio')
             # numerordinatio_neo_separatum
         # print('failed')
+
+
+def numerordinatio_data__combinatio_linguae(
+    no1: str, wikiq: str, punctum_separato: str = ",",
+    rdf_trivio: str = '1603', praedicatis_linguae: list = None
+):
+    """numerordinatio_data__combinatio_linguae
+
+    For an reference table (likely no1.tm.hxl.csv) and path to a reference table
+    with labels (likely pre-processed wikiq.tm.hxl.csv) merge the end result
+    in a new value.
+
+    Args:
+        no1 (str): _description_
+        wikiq (str): _description_
+        punctum_separato (str, optional): _description_. Defaults to ",".
+        rdf_trivio (str, optional): _description_. Defaults to '1603'.
+        praedicatis_linguae (list, optional): _description_. Defaults to None.
+    """
+    # @TODO this function is not optimized for large datasets, but it could be.
+    #       Not a priority now, but it can be partially replaced to do the
+    #       steps here on demand (Rocha, 2022-07*24 00:59 UTC)
+
+    _no1_stdin = True if no1 is None else False
+
+    caput_wikiq, data_wikiq = hxltm_carricato(wikiq)
+    # wikiq__dict = dict(zip(caput_wikiq, data_wikiq))
+
+    hxlattrs = []
+    if praedicatis_linguae is not None:
+        for item in praedicatis_linguae:
+            item = _rdf_spatia_nominalibus_prefix_normali(item)
+            _rdf_p_prefix, _rdf_p_value = item.split(':')
+
+            hxlattrs.append('+rdf_p_{0}_{1}_s{2}'.format(
+                _rdf_p_prefix, _rdf_p_value, rdf_trivio))
+
+        hxlattrs = sorted(hxlattrs)
+
+        # Since we replace in place, this means we can reuse the caput
+        for _i, _v in enumerate(caput_wikiq):
+            if _v.find('+i_qcc+is_zxxx') == -1 and \
+                    _v.startswith(('#item+rem+i_', '#meta+rem+i_')):
+                for _attr in hxlattrs:
+                    if _v.find(_attr) == -1:
+                        caput_wikiq[_i] = caput_wikiq[_i] + _attr
+
+    wikiq__dicts_by_key = {}
+    for linea in data_wikiq:
+        # referens__dicts.append(dict(zip(caput, linea)))
+        # wikiq__dicts.append(zip(caput_wikiq, data_wikiq))
+        _wikiq_value = linea[0]
+        _values = linea[1:]
+        wikiq__dicts_by_key[_wikiq_value] = (
+            dict(zip(caput_wikiq[1:], _values)))
+
+    # raise ValueError(wikiq__dicts_by_key['Q155'])
+
+    caput, data = hxltm_carricato(
+        no1, _no1_stdin, punctum_separato=punctum_separato)
+
+    referens__dicts = []
+
+    _referens_wikiq_index = -1
+    if '#item+rem+i_qcc+is_zxxx+ix_wikiq' in caput:
+        _referens_wikiq_index = caput.index('#item+rem+i_qcc+is_zxxx+ix_wikiq')
+        _referens_wikiq_hxl = '#item+rem+i_qcc+is_zxxx+ix_wikiq'
+        # raise ValueError('foi2')
+    if _referens_wikiq_index == -1:
+        # need investigate
+        for _item in caput:
+            if _item.find('+rem+i_qcc+is_zxxx+ix_wikiq') > -1 and \
+                    _item.find(rdf_trivio) > -1:
+                # have both the signal and already with bag.
+                _referens_wikiq_index = caput.index(_item)
+                _referens_wikiq_hxl = _item
+                break
+            elif _item.find('+rem+i_qcc+is_zxxx+ix_wikiq') > -1:
+                # Fallback assuming only one exists
+                _referens_wikiq_index = caput.index(_item)
+                _referens_wikiq_hxl = _item
+                # raise ValueError('foi2', _item)
+                break
+    if _referens_wikiq_index == -1:
+        raise ValueError('+ix_wiki_q? <{0}>'.format(caput))
+
+    referens__dicts = {}
+    for _i, linea in enumerate(data):
+        # referens__dicts.append(dict(zip(caput, linea)))
+        res = dict(zip(caput, linea))
+        # print(_referens_wikiq_hxl)
+        # print(res[_referens_wikiq_hxl])
+        if res[_referens_wikiq_hxl] in wikiq__dicts_by_key:
+            res = {**res, **wikiq__dicts_by_key[res[_referens_wikiq_hxl]]}
+            # raise ValueError('deu', res)
+        # else:
+        #     raise ValueError('n deu', res)
+        referens__dicts[_i] = res
+
+    # raise ValueError('')
+    # raise ValueError(referens__dicts)
+
+    _dict_keys = caput
+    _dict_keys.extend(caput_wikiq[1:])
+
+    caput_novo, data_novis = hxltm__ex_dict(referens__dicts, caput=_dict_keys)
+    csv_imprimendo(caput_novo, data_novis, punctum_separato=punctum_separato)
 
 
 def numerordinatio_data__hxltm_to_bcp47(
