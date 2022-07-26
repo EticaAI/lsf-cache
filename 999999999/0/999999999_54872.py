@@ -99,8 +99,7 @@ Generic Numerordinatio to RDF Turtle . . . . . . . . . . . . . . . . . . . . .
 (TODO: fix example)
     {0} --methodus=_temp_no1 \
 --rdf-sine-spatia-nominalibus=devnull \
---rdf-trivio=5000 \
-999999/1603/3/45/16/1/1/1603_3_45_16_1_1.no11.tm.hxl.csv
+--rdf-trivio=5000 1603/16/1/0/1603_16_1_0.no1.tm.hxl.csv
 
 Configuration-based HXLTM to Numerordinatio . . . . . . . . . . . . . . . . . .
 (Experimental; uses YAML to upgrade HXLTM to Numerordinatio tabular)

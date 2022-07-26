@@ -1650,8 +1650,6 @@ def hxltm_carricato__de_hxltm_ordo0_ad_no11(
         # Already processed input. Return without changes
         return caput, data
 
-    # print('caput', caput)
-
     caput_novo = []
     data_novis = []
     _inject_pivot_adm0_index = caput.index('#item+conceptum+codicem') + 1

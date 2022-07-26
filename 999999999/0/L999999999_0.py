@@ -918,7 +918,7 @@ RDF_SPATIA_NOMINALIBUS = {
 # @see https://www.wikidata.org/wiki/EntitySchema:E49
 RDF_SPATIA_NOMINALIBUS_EXTRAS = {
     'devnull': 'http://example.org/dev/null/',
-    'geo': 'hhttp://www.opengis.net/ont/geosparql#',
+    'geo': 'http://www.opengis.net/ont/geosparql#',
     'wdata': 'http://www.wikidata.org/wiki/Special:EntityData/',
     # 'p': 'http://www.wikidata.org/prop/',
     'wdt': 'http://www.wikidata.org/prop/direct/',
@@ -2226,10 +2226,20 @@ def bcp47_rdf_extension_caput_ad_columnae_i(
             # resultatum.append(caput_originali[index])
             _meta = hxl_hashtag_to_bcp47('#item' + _hxl_minimal[0])
             resultatum.append(_meta['Language-Tag_normalized'])
-            extras.append([
-                _meta['Language-Tag_normalized'] + '-x-hxlattrs',
-                _hxl_minimal[1]
-            ])
+
+            # @TODO this strategy to check if already -x- is too simplistic.
+            #       eventually could be improved. Just doing a quick hacky here
+            #       (Rocha, 2022-07-26 03:36 UTC)
+            if _meta['Language-Tag_normalized'].find('-x-') > -1:
+                extras.append([
+                    _meta['Language-Tag_normalized'] + '-hxlattrs',
+                    _hxl_minimal[1]
+                ])
+            else:
+                extras.append([
+                    _meta['Language-Tag_normalized'] + '-x-hxlattrs',
+                    _hxl_minimal[1]
+                ])
             # resultatum.append(caput_originali[index])
         # resultatum.append(caput_originali_asa[index])
         # print(caput_originali_asa[index])
@@ -2754,6 +2764,21 @@ def bcp47_rdf_extension_poc(
         if 'r' not in caput_originali_asa['extension']:
             continue
 
+        _dt = caput_originali_asa['extension']['r']['rdfs:Datatype']
+        if _dt is not None:
+            _predicate, _ = _dt.split('||')
+            prefix_datatype, _ = _predicate.split(':')
+            if prefix_datatype not in result['rdf_spatia_nominalibus']:
+                if prefix_datatype not in RDF_SPATIA_NOMINALIBUS_EXTRAS:
+                    raise ValueError('prefix_datatype [{0}] not in [{1}]'.format(
+                        prefix_datatype, RDF_SPATIA_NOMINALIBUS_EXTRAS
+                    ))
+                result['caput_asa']['rdf_spatia_nominalibus'][prefix_datatype] = \
+                    RDF_SPATIA_NOMINALIBUS_EXTRAS[prefix_datatype]
+
+            # raise ValueError(caput_originali_asa, result['rdf_spatia_nominalibus'])
+        # result['rdf_spatia_nominalibus'][prefix_pivot]
+
         xsl_items = caput_originali_asa['extension']['r']['xsl:transform']
         if not xsl_items or len(xsl_items) == 0:
             continue
@@ -2763,9 +2788,11 @@ def bcp47_rdf_extension_poc(
                 continue
             _temp1, _temp2 = xsx_item_meta.split('||')
             xsl_transform_prefix_missing.add(_temp2.split(':').pop(0))
-        pass
+
+        # pass
         # print(xsl_transform_prefix_missing)
 
+    # raise ValueError(result['rdf_spatia_nominalibus'])
     if len(xsl_transform_prefix_missing) > 0:
         for xsl_item in xsl_transform_prefix_missing:
             # print('todo', xsl_item,
