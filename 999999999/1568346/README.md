@@ -105,6 +105,10 @@ for datasets that already are highly reusable, as mere suggestion:
 ## GeoJSON
 > Initial discussion at https://github.com/EticaAI/lexicographi-sine-finibus/issues/48
 
+- Temporary example: https://geojson.io/#data=data:text/x-url,https://raw.githubusercontent.com/EticaAI/lsf-cache/main/1603/16/1/0/1603_16_1_0.data.ld.geojson
+  - https://jsonschema.dev/
+  - https://json-ld.org/playground/
+    - https://www.easyrdf.org/converter
 ## Other links
 <!--
 

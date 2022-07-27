@@ -1260,7 +1260,7 @@ def numerordinatio_data__geojson(
             if 'wdata_p' in res_hxl_ix and res_hxl_ix['wdata_p']:
                 _res = {
                     'index': caput.index(_item),
-                    'predicate': 'wdatap:{0}'.format(res_hxl_ix['wdata_p']),
+                    'predicate': 'wdata:{0}'.format(res_hxl_ix['wdata_p']),
                     'alias': 'x-{0}'.format(
                         res_hxl_ix['hxl_ix'].replace('ix_', '')),
                 }
