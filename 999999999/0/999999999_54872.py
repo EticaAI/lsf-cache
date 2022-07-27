@@ -96,8 +96,13 @@ Merge NO1 + wikiq into NO11 . . . . . . . . . . . . . . . . . . . . . . . . .
 1603/16/1/0/1603_16_1_0.no1.tm.hxl.csv
 
 Generic Numerordinatio to RDF Turtle . . . . . . . . . . . . . . . . . . . . .
-(TODO: fix example)
     {0} --methodus=_temp_no1 \
+--rdf-sine-spatia-nominalibus=devnull \
+--rdf-trivio=5000 1603/16/1/0/1603_16_1_0.no1.tm.hxl.csv
+
+Generic Numerordinatio to GeoJSON Linked Data (minimalistic) . . . . . . . . .
+(@TODO implement MVP)
+    {0} --methodus=geojson \
 --rdf-sine-spatia-nominalibus=devnull \
 --rdf-trivio=5000 1603/16/1/0/1603_16_1_0.no1.tm.hxl.csv
 
@@ -295,8 +300,9 @@ class Cli:
             nargs='?',
             choices=[
                 'auto',  # Uses ad_rdf_ex_configurationi
-                'ad_rdf_genericae',
+                'ad_rdf_genericae',  # @TODO rename from _temp_no1
                 'ad_rdf_ex_configurationi',
+                'geojson',
                 'hxltm_combinatio_linguae',
                 '_temp_bcp47',
                 '_temp_no1',
@@ -855,6 +861,10 @@ class Cli:
 
             return self.EXIT_OK
 
+        if pyargs.methodus == 'geojson':
+            numerordinatio_data__geojson(_infile)
+            return self.EXIT_OK
+
         # _infile = None
         # _stdin = None
         configuratio = self.quod_configuratio(
@@ -1157,6 +1167,157 @@ def numerordinatio_data__hxltm_to_bcp47(
             if len(res_novae) > 0:
                 linea_novae.extend(res_novae)
             _writer.writerow(linea_novae)
+
+
+def numerordinatio_data__geojson(
+    fontem: str, punctum_separato: str = ","
+):
+    # json.dumps(caput_asa)
+    # print(json.dumps(caput_asa))
+    # return ''
+    # print(caput_asa['caput_originali'])
+    # print(caput_asa['caput_ad_columnae_i'])
+
+    resutatum = {
+        "$schema": "https://geojson.org/schema/GeoJSON.json",
+        "@context": {
+            "@version": 1.1,
+            "geojson": "https://purl.org/geojson/vocab#",
+            "wdata": "http://www.wikidata.org/wiki/Special:EntityData/",
+            "Feature": "geojson:Feature",
+            "FeatureCollection": "geojson:FeatureCollection",
+            "Point": "geojson:Point",
+            "Polygon": "geojson:Polygon",
+            "coordinates": {
+                "@container": "@list",
+                "@id": "geojson:coordinates"
+            },
+            "features": {
+                "@container": "@set",
+                "@id": "geojson:features"
+            },
+            "geometry": "geojson:geometry",
+            "id": "@id",
+            "properties": "geojson:properties",
+            "type": "@type",
+            "x-iso3166p1a2": "wdata:P297",
+            "x-iso3166p1a3": "wdata:P298",
+        },
+        "type": "FeatureCollection",
+        "features": [
+            # {
+            #     "type": "Feature",
+            #     "id": "urn:mdciii:1603:16:24:0",
+            #     "geometry": {
+            #         "type": "Point",
+            #         "coordinates": [
+            #             17.35,
+            #             -12.35
+            #         ]
+            #     },
+            #     "properties": {
+            #         "x-iso3166p1a2": "AO",
+            #         "x-iso3166p1a3": "AGO",
+            #     }
+            # },
+            # {
+            #     "type": "Feature",
+            #     "id": "urn:mdciii:1603:16:76:0",
+            #     "geometry": {
+            #         "type": "Point",
+            #         "coordinates": [
+            #             -53.0,
+            #             -14.0
+            #         ]
+            #     },
+            #     "properties": {
+            #         "x-iso3166p1a2": "BR",
+            #         "x-iso3166p1a3": "BRA",
+            #     }
+            # }
+        ]
+    }
+
+    caput, _data = hxltm_carricato_brevibus(
+        fontem, est_stdin=False, punctum_separato=punctum_separato)
+    _index_numerordinatio = caput.index(
+        '#item+conceptum+numerordinatio')
+    _index_point = -1
+
+    caput_novo = []
+    geojson_properties_meta = []
+    for _item in caput:
+        # print('hxl item     > ', _item)
+
+        if _item.find('+ix_zzwgs84point') > -1:
+            _index_point = caput.index(_item)
+
+        _hxl = HXLHashtagSimplici(_item).praeparatio()
+        _item_bcp47 = _hxl.quod_bcp47(strictum=False)
+
+        res_hxl_ix = _hxl.habeo_attributa__hxl_wdata('hxl_ix')
+        if res_hxl_ix is not None:
+            if 'wdata_p' in res_hxl_ix and res_hxl_ix['wdata_p']:
+                geojson_properties_meta.append({
+                    'index': caput.index(_item),
+                    'predicate': 'wdatap:{0}'.format(res_hxl_ix['wdata_p']),
+                    'alias': 'x-{0}'.format(res_hxl_ix['hxl_ix'].replace('ix_', '')),
+                })
+
+        caput_novo.append(_item_bcp47)
+
+    _, data = hxltm_carricato(
+        fontem, est_stdin=False, punctum_separato=punctum_separato)
+
+    def _wkt_point(wtk_literal_point: str):
+        if not wtk_literal_point or wtk_literal_point.find('Point(') == -1:
+            return None
+        parts = wtk_literal_point.strip().replace(
+            'Point(', '').replace(')', '').split(' ')
+        coords = []
+        for item in parts:
+            coords.append(float(item))
+        return coords
+
+    def _properties(geojson_properties_meta, linea):
+        resultatum = {}
+        for _item in geojson_properties_meta:
+            if linea[_item['index']]:
+                resultatum[_item['alias']] = linea[_item['index']]
+        return resultatum
+
+    _invalid = []
+
+    for linea in data:
+        coords = _wkt_point(linea[_index_point])
+        properties = _properties(geojson_properties_meta, linea)
+
+        if not coords and coords not in _invalid:
+            _invalid.append("urn:mdciii:{0}".format(
+                linea[_index_numerordinatio]))
+            continue
+        if not properties and properties not in _invalid:
+            _invalid.append("urn:mdciii:{0}".format(
+                linea[_index_numerordinatio]))
+            continue
+
+        res = {
+            "geometry": {
+                "coordinates": _wkt_point(linea[_index_point]),
+                "type": "Point"
+            },
+            "type": "Feature",
+            'id': "urn:mdciii:{0}".format(linea[_index_numerordinatio]),
+            'properties': properties
+        }
+        resutatum['features'].append(res)
+
+    if len(_invalid):
+        resutatum['_missing'] = _invalid
+
+    # print(json.dumps(resutatum, indent=2, ensure_ascii=False, sort_keys=True))
+
+    print(json.dumps(resutatum, indent=2, ensure_ascii=False, sort_keys=False))
 
 
 def numerordinatio_data__sortnames(

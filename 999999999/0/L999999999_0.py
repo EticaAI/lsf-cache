@@ -4582,6 +4582,30 @@ class HXLHashtagSimplici:
         # return True
         return (_habeo_attributa_total >= minimae)
 
+    def habeo_attributa__hxl_wdata(
+            self,
+            quaestio: str) -> dict:
+        """habeo_attributa__hxl_wdata Pre-filter HXL_WDATA value (if exists)
+
+
+        Args:
+            quaestio (str): _description_
+
+        Returns:
+            dict: _description_
+        """
+        # @TODO: this function is very simplistic. Does not handle two ix_ attrs
+        #        at this moment.
+        res = None
+        if quaestio == 'hxl_ix':
+            for _item in self.attributes:
+                if _item.startswith('ix_'):
+                    for _wditem in HXL_WDATA:
+                        if 'hxl_ix' in _wditem and _wditem['hxl_ix'] == _item:
+                            res = _wditem
+                            return res
+        return None
+
     def quod_ad_rdf(self, quaestio: str, default: Any = None):
         if self.ad_rdf is None:
             return None

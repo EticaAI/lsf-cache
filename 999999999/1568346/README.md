@@ -102,8 +102,37 @@ for datasets that already are highly reusable, as mere suggestion:
 >   - BCP47 RDF extension part (self): `r-sU2200-s1-snop-sU2200-s5003-snop`
 >   - HXL RDF attribute (self): `+rdf_s_u2200_s1+rdf_s_u2200_s5003`
 
+## GeoJSON
+> Initial discussion at https://github.com/EticaAI/lexicographi-sine-finibus/issues/48
 
-## To Dos
+## Other links
+<!--
+
+- This one have example with a lot of data
+  - https://github.com/geojson/schema/issues/33
+- Using @id to interlink things
+  - http://niem.github.io/json/reference/json-ld/identifiers/
+- https://jsonschema.dev/
+- https://code.visualstudio.com/docs/languages/json
+- https://json-schema.org/
+- https://json-ld.org/spec/ED/json-ld-syntax/20120122/
+
+- Playground
+  - https://json-ld.org/playground/
+    - https://www.easyrdf.org/converter
+
+
+pip install jsonschema
+
+jsonschema --instance sample.json sample.schema
+
+
+curl https://geojson.org/schema/GeoJSON.json --output 999999/0/GeoJSON-schema.json
+
+jsonschema --instance 999999999/1568346/data/cod-ab-example2.geojson 999999/0/GeoJSON-schema.json
+-->
+
+# To Dos
 - improve baseline relations with SKOS even when loading a single file
   (e.g. show the entire previous parents)
 - Change the new implementation to divide the SKOS and OWL format
