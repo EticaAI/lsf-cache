@@ -1200,8 +1200,8 @@ def numerordinatio_data__geojson(
             "id": "@id",
             "properties": "geojson:properties",
             "type": "@type",
-            "x-iso3166p1a2": "wdata:P297",
-            "x-iso3166p1a3": "wdata:P298",
+            # "x-iso3166p1a2": "wdata:P297",
+            # "x-iso3166p1a3": "wdata:P298",
         },
         "type": "FeatureCollection",
         "features": [
@@ -1258,13 +1258,23 @@ def numerordinatio_data__geojson(
         res_hxl_ix = _hxl.habeo_attributa__hxl_wdata('hxl_ix')
         if res_hxl_ix is not None:
             if 'wdata_p' in res_hxl_ix and res_hxl_ix['wdata_p']:
-                geojson_properties_meta.append({
+                _res = {
                     'index': caput.index(_item),
                     'predicate': 'wdatap:{0}'.format(res_hxl_ix['wdata_p']),
-                    'alias': 'x-{0}'.format(res_hxl_ix['hxl_ix'].replace('ix_', '')),
-                })
+                    'alias': 'x-{0}'.format(
+                        res_hxl_ix['hxl_ix'].replace('ix_', '')),
+                }
+                geojson_properties_meta.append(_res)
+            # resutatum['@context'][_res['alias']] = _res['predicate']
 
         caput_novo.append(_item_bcp47)
+
+    if len(geojson_properties_meta) > 0:
+        geojson_properties_meta = sorted(
+            geojson_properties_meta, key=lambda d: d['alias'])
+        # pass
+        for _res in geojson_properties_meta:
+            resutatum['@context'][_res['alias']] = _res['predicate']
 
     _, data = hxltm_carricato(
         fontem, est_stdin=False, punctum_separato=punctum_separato)

@@ -90,6 +90,11 @@ bootstrap_1603_16_1_0__radix() {
   fontem_archivum_temporarium_no11="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"
   fontem_archivum_temporarium_no1="${ROOTDIR}/999999/0/$_nomen.no1.tm.hxl.csv"
   objetivum_archivum_no1="${ROOTDIR}/1603/16/1/0/$_nomen.no1.tm.hxl.csv"
+
+  # # Not yet sure about this suffix convention of data-focused geojson
+  # objetivum_archivum_no1_geojson="${ROOTDIR}/1603/16/1/0/$_nomen.no1.data.ld.geojson"
+  # Removing "no1" (like we do with wikiq)
+  objetivum_archivum_no1_geojson="${ROOTDIR}/1603/16/1/0/$_nomen.data.ld.geojson"
   objetivum_archivum_no1_bcp47min="${ROOTDIR}/1603/16/1/0/$_nomen.no1.bcp47.csv"
   objetivum_archivum_no1_owl="${ROOTDIR}/1603/16/1/0/$_nomen.no1.owl.ttl"
   objetivum_archivum_no11="${ROOTDIR}/1603/16/1/0/$_nomen.no11.tm.hxl.csv"
@@ -101,6 +106,7 @@ bootstrap_1603_16_1_0__radix() {
   opus_temporibus_temporarium_2="${DESTDIR}/999999/0/${_nomen}~TEMP~2.csv"
   opus_temporibus_temporarium_ttl_1="${DESTDIR}/999999/0/${_nomen}~TEMP~1.ttl"
   opus_temporibus_temporarium_ttl_2="${DESTDIR}/999999/0/${_nomen}~TEMP~2.ttl"
+  opus_temporibus_temporarium_geojson="${DESTDIR}/999999/0/${_nomen}~TEMP~1.geojson"
 
   printf "\n\t%40s\n" "${tty_blue}${FUNCNAME[0]} STARTED ${tty_normal}"
   start_time_fn=$(date +%s)
@@ -246,6 +252,25 @@ bootstrap_1603_16_1_0__radix() {
 
   # file_update_if_necessary "ttl" "${opus_temporibus_temporarium_ttl_2}" "${objetivum_archivum_no1_owl}"
   file_update_if_necessary "ttl" "${opus_temporibus_temporarium_ttl_2}" "${objetivum_archivum_no11_skos}"
+
+  ## Now create the packages ---------------------------------------------------
+  set -x
+  # "${ROOTDIR}/999999999/0/999999999_54872.py" \
+  #   --methodus=geojson 1603/16/1/0/1603_16_1_0.no1.tm.hxl.csv > 999999/0/test-5.geojson
+  "${ROOTDIR}/999999999/0/999999999_54872.py" \
+    --methodus=geojson "$objetivum_archivum_no1" \
+    >"$opus_temporibus_temporarium_geojson"
+
+  echo "TODO validate [$opus_temporibus_temporarium_geojson]"
+
+  # _geojson_schema="999999/0/GeoJSON-schema.json"
+  # jsonschema --instance "$opus_temporibus_temporarium_geojson" "$_geojson_schema"
+  # sleep 10
+
+  set +x
+  file_update_if_necessary "skip-validation" \
+    "${opus_temporibus_temporarium_geojson}" \
+    "${objetivum_archivum_no1_geojson}"
 
   ## Now create the packages ---------------------------------------------------
 
