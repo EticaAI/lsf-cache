@@ -1367,7 +1367,8 @@ def bcp47_langtag(
     {'variant': ['variant1'], 'extension': {'a': 'extend1'}, \
 'privateuse': ['wadegile', 'private1']}
     >>> bcp47_langtag(
-    ... 'en-Latn-US-lojban-gaulish-a-12345678-ABCD-b-ABCDEFGH-x-a-b-c-12345678')
+    ... 'en-Latn-US-lojban-gaulish-a-12345678-ABCD-b-ABCDEFGH-x-a-b-c-12345678',
+    ... strictum=False)
     {'Language-Tag': \
 'en-Latn-US-lojban-gaulish-a-12345678-ABCD-b-ABCDEFGH-x-a-b-c-12345678', \
 'Language-Tag_normalized': \
@@ -1376,8 +1377,11 @@ def bcp47_langtag(
 'variant': ['lojban', 'gaulish'], \
 'extension': {'a': '12345678-ABCD', 'b': 'ABCDEFGH'}, \
 'privateuse': ['a', 'b', 'c', '12345678'], 'grandfathered': None, \
-'_callbacks': {'hxl_attrs': '+i_en+is_latn+ix_12345678+ix_a+ix_b+ix_c', \
-'hxl_minimal': None}, '_unknown': [], '_error': []}
+'_callbacks': {'hxl_attrs': '+i_en+is_latn+ix_12345678', 'hxl_minimal': None}, \
+'_unknown': [], '_error': ['private tag len = 1 [a]', \
+'private tag len = 1 [b]', 'private tag len = 1 [c]', \
+'private tag len = 1 [a]', 'private tag len = 1 [b]', \
+'private tag len = 1 [c]']}
 
     # BCP47: "Example: The language tag "en-a-aaa-b-ccc-bbb-x-xyz" is in
     # canonical form, while "en-b-ccc-bbb-a-aaa-X-xyz" is well-formed (...)
@@ -4841,6 +4845,102 @@ class HXLHashtagSimplici:
         return self
 
 
+def hxl_hashtag_normalizatio(hashtag: str) -> str:
+    """hxl_hashtag_normalizatio Canonical form of HXL and HXLTM hashtags
+
+    Quick function to remove extra spaces and repeated attributes. If
+    the hashtag starts with HXLTM pattern, we also do extra sorting
+    and make sure have at least language and stript
+
+    Args:
+        hashtag (str): _description_
+
+    Raises:
+        SyntaxError: _description_
+
+    Returns:
+        str: _description_
+
+
+    >>> hxl_hashtag_normalizatio(' #date+stArT ')
+    '#date+start'
+    >>> hxl_hashtag_normalizatio(
+    ...     '#item+rem+i_qcc+is_zxxx+ix_zza+rdf_t_xsd_datetime+ix_aaa+ix_aaa')
+    '#item+rem+i_qcc+is_zxxx+ix_aaa+ix_zza+rdf_t_xsd_datetime'
+
+    >>> hxl_hashtag_normalizatio(
+    ...     '#item+rem+i_qcc+is_zxxx+ix_zza+rdf_t_xsd_datetime+ix_aaz')
+    '#item+rem+i_qcc+is_zxxx+ix_aaa+ix_zzzz+rdf_t_xsd_datetime'
+
+    >>> hxl_hashtag_normalizatio(
+    ...     '#item+rem+i_qcc+is_zxxx+ix_zzzz+ix_zzz+rdf_t_xsd_int+ix_aaa')
+    '#item+rem+i_qcc+is_zxxx+ix_aaa+ix_zzzz+rdf_t_xsd_datetime'
+
+    """
+    hxltm_prefix = ('#item+rem', '#meta+rem', '#status+rem')
+    hxltm_hashtag = None
+    _hxltm_attrs = []
+    _hxltm_attrs_lang = None
+    _hxltm_attrs_script = None
+    _hxltm_attrs_ix = []
+    _hxltm_attrs_rest = []
+
+    if not hashtag or not hashtag.strip().startswith('#'):
+        raise SyntaxError(hashtag)
+    hashtag = hashtag.strip().lower()
+    if not hashtag.startswith(hxltm_prefix):
+        # Assime is a generic HXL hashtag. Return as it is
+        # Similar to #item+conceptum+(...), which are simpler and require
+        # no special sorting
+        return hashtag
+
+    for item in hxltm_prefix:
+        if hashtag.startswith(item):
+            hxltm_hashtag = item
+            _hxltm_attrs = hashtag.replace(item + '+', '').split('+')
+            break
+
+    # Remove duplicates
+    _hxltm_attrs = list(dict.fromkeys(_hxltm_attrs))
+
+    for item in _hxltm_attrs:
+        if item.startswith('i_') and len(item) == 5:
+            _hxltm_attrs_lang = item
+        elif item.startswith('is_') and len(item) == 7:
+            _hxltm_attrs_script = item
+        elif item.startswith('ix_') and len(item) >= 5:
+            _hxltm_attrs_ix.append(item)
+        else:
+            _hxltm_attrs_rest.append(item)
+
+    if _hxltm_attrs_lang is None:
+        raise SyntaxError(f'+i_qqq? <{hashtag}>')
+    if _hxltm_attrs_script is None:
+        raise SyntaxError(f'+is_qqqq? <{hashtag}>')
+
+    # if _hxltm_attrs_lang is None or _hxltm_attrs_script is None:
+    #     raise SyntaxError(hashtag)
+
+    hxltm_hashtag += '+' + _hxltm_attrs_lang
+    hxltm_hashtag += '+' + _hxltm_attrs_script
+    if len(_hxltm_attrs_ix) > 0:
+        _hxltm_attrs_ix.sort()
+        hxltm_hashtag += '+{0}'.format('+'.join(_hxltm_attrs_ix))
+    if len(_hxltm_attrs_rest) > 0:
+        _hxltm_attrs_rest.sort()
+        hxltm_hashtag += '+{0}'.format('+'.join(_hxltm_attrs_rest))
+
+    return hxltm_hashtag
+    # # @TODO improve sorthing
+    # _hxltm_attrs.sort()
+
+    # # return hashtag
+    # return '{0}+{1}'.format(
+    #     hxltm_hashtag,
+    #     '+'.join(_hxltm_attrs)
+    # )
+
+
 def hxl_hashtag_to_bcp47(
     hashtag: str,
 ) -> str:
@@ -4946,6 +5046,8 @@ def hxl_hashtag_to_bcp47(
         result['privateuse'] = privateuse
 
     if len(rdf_parts) > 0:
+        # rdf_parts = sorted(rdf_parts)
+        rdf_parts.sort()
         result['_callbacks']['rdf_parts'] = rdf_parts
         # value_prefixes = None
         for item in rdf_parts:
@@ -5117,6 +5219,7 @@ def hxl_hashtag_to_bcp47(
                 result['_unknown'].append('rdf_parts [{0}]'.format(item))
             # pass
         if len(_bcp47_g_parts) > 0:
+            _bcp47_g_parts.sort()
             result['extension']['r']['rdf:Statement_raw'] = \
                 'r-' + '-'.join(_bcp47_g_parts)
             # norm.append('r-' + '-'.join(_bcp47_g_parts))
