@@ -313,11 +313,11 @@ yU001D-yu007c-ynop-yU0002-yunescothes-ynop-pSKOS-pbroader-ps2-\
 tXSD-tdatetime-tnop
 
    {0} --de_hxl_simplex --de_hxlhashtag=\
-'#item+i_qcc+is_zxxx+rdf_p_skos_broader_s2+rdf_s_u2203_s2+rdf_t_xsd_datetime\
+'#item+rem+i_qcc+is_zxxx+rdf_p_skos_broader_s2+rdf_s_u2203_s2+rdf_t_xsd_datetime\
 +rdf_y_u0002_unescothes+rdf_y_u001d_u007c'
 
    {0} --de_hxl_simplex --de_hxlhashtag=\
-'#item+i_qcc+is_zxxx+rdf_s_u2200_s1+rdf_p_skos_related_s2+ix_wdatap123' \
+'#item+rem+i_qcc+is_zxxx+rdf_s_u2200_s1+rdf_p_skos_related_s2+ix_wdatap123' \
 --quod=.Language-Tag_normalized
 
    {0} --de_hxl_simplex --de_bcp47_simplex \
