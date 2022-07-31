@@ -925,6 +925,7 @@ RDF_SPATIA_NOMINALIBUS_EXTRAS = {
     'wdt': 'http://www.wikidata.org/prop/direct/',
     'wdv': 'http://www.wikidata.org/value/',
     'p': 'http://www.wikidata.org/prop/',  # NOTE: preffer use wdata for datasets
+    'xsd': 'http://www.w3.org/2001/XMLSchema#',
 }
 # For "Base OWL" of Wikidata, download link: http://wikiba.se/ontology
 
