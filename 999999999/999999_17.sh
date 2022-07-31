@@ -65,25 +65,95 @@ ROOTDIR="$(pwd)"
 # file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv" "999999/0/1603_3_45_16_1_1.uniq.q.txt"
 # wikiq=$(file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv")
 
-# wikidata_q_ex_totalibus "$wikiq" "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.wikiq.tm.hxl.csv" 
+# wikidata_q_ex_totalibus "$wikiq" "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.wikiq.tm.hxl.csv"
 set -x
-./999999999/0/999999999_7200235.py --methodus='cod_ab_et_wdata' --numerordinatio-praefixo='1603_16' > 999999/0/teste.csv
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="SP.POP.TOTL" \
+  --objectivum-formato=hxltm \
+  >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.tm.hxl.csv"
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="SP.POP.TOTL" \
+  --objectivum-formato=no1 \
+  --numerordinatio-praefixo="1603_992_1_0" \
+  >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv"
+
+./999999999/0/999999999_54872.py \
+  --methodus=_temp_no1 \
+  --rdf-sine-spatia-nominalibus=devnull,mdciii \
+  --rdf-trivio=1603 \
+  --rdf-per-trivio='iso8601v' \
+  "999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv" \
+  >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL~TEMP.no1.owl.ttl"
+
+# @TODO fix the extra namespace when we use default 1603
+rdfpipe --input-format=turtle --output-format=longturtle \
+  "999999/0/1603_992_1_0~worldbank~SP_POP_TOTL~TEMP.no1.owl.ttl" \
+  >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.owl.ttl"
+
+
+# ./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=devnull,mdciii --rdf-trivio=1603 999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv | head -n 20
+# head -n 3 999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv
+
+# rdfpipe --input-format=turtle --output-format=longturtle --ns=ix=urn:hxl:vocab:a:ix: 999999/0/poc-3.ttl
+
+# rdfpipe --input-format=turtle --output-format=longturtle 999999/0/1603_992_1_0~worldbank~SP_POP_TOTL~TEMP.no1.owl.ttl
+
+# ./999999999/0/999999999_521850.py --methodus-fonti=worldbank --methodus=SP.POP.TOTL --objectivum-formato=no1 --rdf-trivio=12345 | hea
+
+# ./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=devnull,mdciii --rdf-trivio=1603  --rdf-per-trivio='ix_iso8601v' 999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv | head -n 20
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="SP.RUR.TOTL" \
+  --objectivum-formato=hxltm \
+  >"999999/0/1603_992_1_0~worldbank~SP_RUR_TOTL.tm.hxl.csv"
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="SP.POP.TOTL.MA.IN" \
+  --objectivum-formato=hxltm \
+  >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL_MA_IN.tm.hxl.csv"
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="SP.POP.TOTL.FE.IN" \
+  --objectivum-formato=hxltm \
+  >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL_FE_IN.tm.hxl.csv"
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="BX.GRT.EXTA.CD.WD" \
+  --objectivum-formato=hxltm \
+  >"999999/0/1603_992_1_0~worldbank~BX_GRT_EXTA_CD_WD.tm.hxl.csv"
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="BX.GRT.TECH.CD.WD" \
+  --objectivum-formato=hxltm \
+  >"999999/0/1603_992_1_0~worldbank~BX_GRT_TECH_CD_WD.tm.hxl.csv"
+
+exit 0
+./999999999/0/999999999_7200235.py --methodus='cod_ab_et_wdata' --numerordinatio-praefixo='1603_16' >999999/0/teste.csv
 ls -lha 999999/0/teste.csv
 
-./999999999/0/999999999_54872.py --methodus=_temp_no1 --numerordinatio-cum-antecessoribus --rdf-trivio=1603 999999/0/teste.csv > 999999/0/teste.ttl-simplici.ttl
+./999999999/0/999999999_54872.py --methodus=_temp_no1 --numerordinatio-cum-antecessoribus --rdf-trivio=1603 999999/0/teste.csv >999999/0/teste.ttl-simplici.ttl
 
 # rapper --quiet --input=turtle --output=turtle 999999/0/teste.ttl-simplici.ttl > 999999/0/teste.ttl
-rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste.ttl-simplici.ttl > 999999/0/teste.ttl
+rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste.ttl-simplici.ttl >999999/0/teste.ttl
 
-./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-trivio=5000 999999/0/teste-4.csv > 999999/0/teste-4.ttl-simplici.ttl
+./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=skos,wdata,devnull --rdf-trivio=5000 999999/0/teste-4.csv >999999/0/teste-4.ttl-simplici.ttl
 
 # rapper --quiet --input=turtle --output=turtle 999999/0/teste-4.ttl-simplici.ttl > 999999/0/teste-4.ttl
-rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste-4.ttl-simplici.ttl > 999999/0/teste-4.ttl
+rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste-4.ttl-simplici.ttl >999999/0/teste-4.ttl
 
-./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=devnull --rdf-trivio=5000 999999/0/teste-4.csv > 999999/0/teste-4~full.ttl-simplici.ttl
+./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=devnull --rdf-trivio=5000 999999/0/teste-4.csv >999999/0/teste-4~full.ttl-simplici.ttl
 
 # rapper --quiet --input=turtle --output=turtle 999999/0/teste-4~full.ttl-simplici.ttl > 999999/0/teste-4~full.ttl
-rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste-4~full.ttl-simplici.ttl > 999999/0/teste-4~full.ttl
+rdfpipe --input-format=turtle --output-format=longturtle 999999/0/teste-4~full.ttl-simplici.ttl >999999/0/teste-4~full.ttl
 
 # @TODO
 
@@ -156,7 +226,6 @@ deploy_0_9_markdown
 # ./999999999/0/1603_1.py --methodus='status-quo' --status-quo-in-rdf-skos-turtle --codex-de 1603_1_7
 
 # ./999999999/0/1603_1.py --methodus='status-quo' --status-quo-in-rdf-skos-turtle --codex-de 1603_1_7 > ~/Downloads/1603_1_7.no11.skos.ttl
-
 
 #### TODO ______________________________________________________________________
 # GitHub gist, create from command line

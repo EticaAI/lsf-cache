@@ -345,6 +345,33 @@ WHERE {
 ORDER BY desc(?population)
   '
 
+  # pop total/male/female; brazil IBGE code
+  # shellcheck disable=SC2034
+  sparq_subquery_3='
+SELECT DISTINCT 
+(?wikidata_p_value AS ?item__conceptum__codicem) (STRAFTER(STR(?item), "entity/") AS ?item__rem__i_qcc__is_zxxx__ix_wikiq) 
+
+(GROUP_CONCAT(DISTINCT ?p1082_values; separator = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wdatap1082)
+(GROUP_CONCAT(DISTINCT ?p1539_values; SEPARATOR = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wdatap1539)
+(GROUP_CONCAT(DISTINCT ?p1540_values; SEPARATOR = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wdatap1540)
+(GROUP_CONCAT(DISTINCT ?p1566_values; SEPARATOR = "|") AS ?item__rem__i_qcc__is_zxxx__ix_wdatap1566) 
+WHERE {
+  {
+    SELECT DISTINCT ?item WHERE {
+      ?item p:P1585 ?statement0.
+      ?statement0 ps:P1585 _:anyValueP1585.
+    }
+  }
+  ?item wdt:P1585 ?wikidata_p_value.
+  OPTIONAL { ?item wdt:P1082 ?p1082_values. } # total population
+  OPTIONAL { ?item wdt:P1539 ?p1539_values. } # female population
+  OPTIONAL { ?item wdt:P1540 ?p1540_values. } # male population
+  OPTIONAL { ?item wdt:P1566 ?p1566_values. } # ibge code
+}
+GROUP BY ?wikidata_p_value ?item
+ORDER BY (?item__conceptum__codicem)
+  '
+
   frictionless validate "$objectivum_archivum_temporarium"
 
   caput_csvnormali=$(head -n1 "$objectivum_archivum_temporarium")

@@ -15,6 +15,13 @@
   - `BCP47_EX_HXL` on L999999999_0.py is just a syntatic sugar for
     `#item+conceptum+codicem` and `#item+conceptum+numerordinatio`
 
+## Note on harecoded special cases for cell value expansion: HXL `+rdf_t_xsd_datetime*` and BCP47 `-r-y*`
+Full example:
+
+- `xsd:dateTime`
+  - HXL attribute: `#item+rem+i_qcc+is_zxxx+rdf_t_xsd_datetime`
+  - BPC 47 part attribute: `qcc-Zxxx-r-tXSD-tdatetime-tnop`
+
 ## Note on harecoded special cases for cell value expansion: HXL `+rdf_y_*` and BCP47 `-r-y*`
 
 ### Explode list of items
@@ -109,6 +116,14 @@ for datasets that already are highly reusable, as mere suggestion:
   - https://jsonschema.dev/
   - https://json-ld.org/playground/
     - https://www.easyrdf.org/converter
+
+### How to merge back all data files with geojson
+> TODO needs testing:
+>
+> - https://stackoverflow.com/questions/60228327/use-jq-to-merge-keys-with-common-id
+> - https://stackoverflow.com/questions/71563226/combine-two-jsons-by-key-using-jq
+> - https://stackoverflow.com/questions/72609247/jq-how-to-left-join-and-merge-fields-from-two-input-json-files
+
 ## Other links
 <!--
 
@@ -158,3 +173,137 @@ jsonschema --instance 999999999/1568346/data/cod-ab-example2.geojson 999999/0/Ge
   - @prefix ro http://purl.obolibrary.org/obo/
   - @prefix obo http://purl.obolibrary.org/obo/
 -->
+
+## Attempting to deal with complex relations (maybe qualifiers)
+- https://www.wikidata.org/wiki/Help:Qualifiers
+  - https://www.wikidata.org/wiki/Q7742
+    - https://www.wikidata.org/wiki/Special:EntityData/Q7742.ttl
+
+```bash
+curl https://www.wikidata.org/wiki/Special:EntityData/Q7742.ttl --output 999999/0/Q7742.ttl
+
+rdfpipe --input-format=turtle --output-format=longturtle 999999/0/Q7742.ttl > 999999/0/Q7742~norm.ttl
+```
+
+- https://en.wikipedia.org/wiki/ISO_8601#Years
+  - `urn:hxla:+iso8601v2022`, year 2022 (https://en.wikipedia.org/wiki/ISO_8601)
+  - `urn:hxla:+iso3166p1v076`, country/territory Brazil (BR/BRA/076) (https://en.wikipedia.org/wiki/ISO_3166-1)
+  - `urn:hxla:+iso5218v0`, sex Not known (https://en.wikipedia.org/wiki/ISO/IEC_5218)
+  - `urn:hxla:+iso5218v1`, sex Male
+  - `urn:hxla:+iso5218v2`, sex Female
+  - `urn:hxla:+iso5218v9`, sex Not applicable
+  - Compositions, need sorting
+    - `urn:hxla:+iso5218v2+iso8601v2022`; sex Female && year 2022
+
+
+```ttl
+## 999999/0/poc.ttl
+# https://censo2010.ibge.gov.br/noticias-censo.html?busca=1&id=3&idnoticia=1766&t=censo-2010-populacao-brasil-190-732-694-pessoas&view=noticia
+
+PREFIX hxla: <urn:hxla:>
+PREFIX wdata: <http://www.wikidata.org/wiki/Special:EntityData/>
+
+<urn:example:BR>
+    wdata:P1082 [
+            hxla:iso8601v2010 "190732694" ;
+            hxla:iso8601v2020 "123456"
+        ] ;
+    wdata:P1539 [
+            hxla:iso8601v2010 "97342162" ;
+            hxla:iso8601v2020 "123456"
+        ] ;
+    wdata:P1540 [
+            hxla:iso8601v2010 "97342162" ;
+            hxla:iso8601v2020 "123456"
+        ] ;
+.
+```
+
+```trig
+@prefix wdata: <http://www.wikidata.org/wiki/Special:EntityData/> .
+
+#<urn:hxla:+iso3166p1v076> <http://www.wikidata.org/wiki/Special:EntityData/P1540> "93390532" <urn:hxla:iso8601v2010> .
+<urn:example:BR> <http://www.wikidata.org/wiki/Special:EntityData/P1540> "93390532" .
+
+<urn:hxla:iso8601v2010> {
+    <urn:example:BR> wdata:P1082 "190732694" ;
+        wdata:P1539 "97342162" ;
+        wdata:P1540 "93390532" .
+}
+
+```
+
+```nq
+### 999999/0/poc.nq
+<urn:hxla:+iso3166p1v076> <http://www.wikidata.org/wiki/Special:EntityData/P1082> "190732694" <urn:hxla:+iso8601v2010> .
+<urn:hxla:+iso3166p1v076> <http://www.wikidata.org/wiki/Special:EntityData/P1539> "97342162" <urn:hxla:+iso8601v2010> .
+<urn:hxla:+iso3166p1v076> <http://www.wikidata.org/wiki/Special:EntityData/P1540> "93390532" <urn:hxla:+iso8601v2010> .
+
+```
+
+rdfpipe --input-format=turtle --output-format=longturtle 999999/0/poc.ttl
+rdfpipe --input-format=trig --output-format=trig --ns=hxla=urn:hxla 999999/0/poc.trig
+
+rdfpipe --input-format=trig --output-format=json-ld --ns=hxla=urn:hxla: 999999/0/poc.trig
+
+
+### Attempt 3
+
+rdfpipe --input-format=turtle --output-format=longturtle --ns=ix=urn:hxl:vocab:a:ix: 999999/0/poc-3.ttl
+
+```ttl
+# 999999/0/poc-3.ttl
+PREFIX ix: <urn:hxl:vocab:a:ix:>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX wdata: <http://www.wikidata.org/wiki/Special:EntityData/>
+
+<urn:mdciii:1603:992:1:0:1>
+    a
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:992:1:0:1" ;
+    wdata:P1082 _:b1 
+        # "54208" ,
+        # "55434" ,
+        # "56234" ,
+        # "56699" ,
+        # "57029" ,
+        # "57357" ,
+        # "57702" ,
+        # "58044" ,
+        # "58377" ,
+        # "58734" ;
+.
+
+_:b1 <urn:hxl:vocab:a:ix:iso8601v1960> "54208" .
+_:b1 <urn:hxl:vocab:a:ix:iso8601v1961> "55434" .
+_:b1 <urn:hxl:vocab:a:ix:iso8601v1962> "56234" .
+_:b1 <urn:hxl:vocab:a:ix:iso8601v1963> "56699" .
+_:b1 <urn:hxl:vocab:a:ix:iso8601v1965> "57029" .
+
+```
+#### Result
+```ttl
+PREFIX ix: <urn:hxl:vocab:a:ix:>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX wdata: <http://www.wikidata.org/wiki/Special:EntityData/>
+
+<urn:mdciii:1603:992:1:0:1>
+    a
+        owl:Thing ,
+        skos:Concept ;
+    rdfs:label "1603:992:1:0:1" ;
+    wdata:P1082 [
+            ix:iso8601v1960 "54208" ;
+            ix:iso8601v1961 "55434" ;
+            ix:iso8601v1962 "56234" ;
+            ix:iso8601v1963 "56699" ;
+            ix:iso8601v1965 "57029"
+        ] ;
+.
+
+```

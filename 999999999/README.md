@@ -89,3 +89,20 @@ pip install schema-automator
   - hummm, VSCode extensions
     - https://github.com/RandomFractals/geo-data-viewer
 -->
+
+
+<!--
+UNData
+- Population statistics 2022, total, medium
+  - http://data.un.org/Data.aspx?q=population&d=PopDiv&f=variableID%3a12%3btimeID%3a88%3bvarID%3a2&c=2,4,6,7&s=_crEngNameOrderBy:asc,_timeEngNameOrderBy:desc,_varEngNameOrderBy:asc&v=1
+- http://data.un.org/Data.aspx?q=population&d=PopDiv&f=variableID%3a12%3btimeID%3a88%3bvarID%3a2&c=0,1,2,3,4,5,6,7&s=_crEngNameOrderBy:asc,_timeEngNameOrderBy:desc,_varEngNameOrderBy:asc&v=1
+
+- Male, 35-39 http://data.un.org/Data.aspx?q=population&d=PopDiv&f=variableID%3a1070%3btimeID%3a88&c=0,1,2,3,4,5,6,7&s=_crEngNameOrderBy:asc,_timeEngNameOrderBy:desc,_varEngNameOrderBy:asc&v=1
+-->
+
+<!--
+## Ontology example of person (as individual)
+### Interpol red notices
+- https://interpol.api.bund.dev/
+  - https://ws-public.interpol.int/notices/v1/red?nationality=BR&resultPerPage=200&page=1
+-->

@@ -53,6 +53,7 @@ from typing import (
     Type,
     Union
 )
+import uuid
 
 # Allow fail if user does not have, but just using part of the tools
 # import yaml
@@ -2428,7 +2429,8 @@ def bcp47_rdf_extension_relationship(
     # ========= Fist iteration over each column, START =========
     for index, item in enumerate(header):
         item_meta = bcp47_langtag(
-            item, ['language', 'script', 'extension', '_callbacks'],
+            item, ['language', 'script', 'extension',
+                   'privateuse', '_callbacks'],
             strictum=False)
         # @TODO; get erros and export them to upper level
         # item_meta['_column'] = index
@@ -2630,6 +2632,7 @@ def bcp47_rdf_extension_poc(
         header: List[str],
         data: List[List],
         objective_bag: str = '1',
+        rdf_trivio_hxla: List[str] = None,
         _auxiliary_bags: List[str] = None,
         namespaces: List[dict] = None,
         rdf_sine_spatia_nominalibus: List = None,
@@ -2814,9 +2817,11 @@ def bcp47_rdf_extension_poc(
     index_id = bag_meta['trivium']['index']
     triples_delayed = []
 
+    # raise ValueError(meta['caput_originali_asa'])
     def _helper_aux_triple(
         bag_meta, bcp47_lang=None, subject=None,
-        object_literal=None, object_tabula_indici: int = None
+        object_literal=None, object_tabula_indici: int = None,
+        bcp47_privateuse: list = None, rdf_trivio_hxla: list = None
     ) -> Tuple:
         triples = []
 
@@ -2824,6 +2829,7 @@ def bcp47_rdf_extension_poc(
             return []
 
         # raise ValueError(bag_meta)
+        # raise ValueError(rdf_trivio_hxla)
         # print(bag_meta)
 
         # @TODO: implement some way to discover implicit relations
@@ -2968,8 +2974,40 @@ def bcp47_rdf_extension_poc(
                 triples.append([subject, predicate, object_result])
                 # continue
 
-        # print('bag_meta', bag_meta)
+        # print('bag_meta', rdf_trivio_hxla, bcp47_privateuse)
         # raise ValueError(bag_meta)
+        if rdf_trivio_hxla and len(rdf_trivio_hxla) > 0 \
+                and bcp47_privateuse and len(bcp47_privateuse) > 0:
+            # print('bag_meta', rdf_trivio_hxla, bcp47_privateuse)
+            # print('bag_meta', bcp47_privateuse[0].startswith(rdf_trivio_hxla[0]))
+            _trivio_hxla = None
+            for _hxla in rdf_trivio_hxla:
+                for _item in bcp47_privateuse:
+                    if _item.startswith(_hxla):
+                        # raise ValueError('foi', triples)
+                        _trivio_hxla = 'ix:{0}'.format(_item)
+                        # triples.append(['#<foi>', _trivio_hxla, _hxla])
+
+            if _trivio_hxla is not None:
+                triples_novo = []
+                for _triple_item in triples:
+                    _bn = '_:{0}'.format(uuid.uuid3(
+                        uuid.NAMESPACE_DNS,
+                        _triple_item[0]
+                        # str(_triple_item[0], _triple_item[1])
+                    ))
+                    triples_novo.append([
+                        _triple_item[0],
+                        _triple_item[1],
+                        _bn
+                    ])
+                    triples_novo.append([
+                        _bn,
+                        _trivio_hxla,
+                        _triple_item[2]
+                    ])
+                    # pass
+                triples = triples_novo
 
         return triples, triples_delayed
 
@@ -3053,12 +3091,17 @@ def bcp47_rdf_extension_poc(
             # _objects_parsed = _helper_aux_object(
             #     object_literal, bcp47lang=_bcp47lang, trivium=objective_bag)
 
+            _privateuse = \
+                meta['caput_originali_asa'][referenced_by]['privateuse']
             aux_triples, triples_delayed = _helper_aux_triple(
                 meta['caput_originali_asa'][referenced_by]['extension']['r'],
                 bcp47_lang=_bcp47lang,
                 subject=triple_subject,
                 object_literal=object_literal,
-                object_tabula_indici=object_tabula_indici)
+                object_tabula_indici=object_tabula_indici,
+                bcp47_privateuse=_privateuse,
+                rdf_trivio_hxla=rdf_trivio_hxla
+            )
 
             if len(aux_triples) > 0:
                 result['rdf_triplis'].extend(aux_triples)
@@ -3077,6 +3120,11 @@ def bcp47_rdf_extension_poc(
     if 'rdf_spatia_nominalibus' in result:
         # @TODO remove this later.
         del result['rdf_spatia_nominalibus']
+
+    # raise ValueError(result['caput_asa'].keys())
+    if rdf_trivio_hxla and len(rdf_trivio_hxla) > 0:
+        # We're likely to need upfront. So lets already add it
+        result['caput_asa']['rdf_spatia_nominalibus']['ix'] = 'urn:hxl:vocab:a:ix:'
 
     result['antecessoribus_rdf_triplis'] = \
         NUMERODINATIO_ANTECESSORIBUS__RDF_TRIPLIS

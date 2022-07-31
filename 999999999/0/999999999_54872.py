@@ -374,6 +374,18 @@ class Cli:
             default='1603'
         )
 
+        parser.add_argument(
+            '--rdf-per-trivio',
+            help='(Advanced) Define ix_atts which furter act as pivots for '
+            'exported data, so it can "fit" on RDF. Uses blank nodes. '
+            'Example: iso8601v (no ix_ prefix, only common prefix need)'
+            '(Expands: iso8601v2010, iso8601v2011, ...)',
+            dest='rdf_trivio_hxla',
+            nargs='?',
+            type=lambda x: x.split(','),
+            default=None
+        )
+
         # - spatium, s, n, nominativus, https://en.wiktionary.org/wiki/spatium#Latin
         # - nōminālī, s, n, dativus, https://en.wiktionary.org/wiki/nominalis#Latin
         # - ... /spatium nominali/ (s, n)
@@ -704,18 +716,30 @@ class Cli:
             if pyargs.methodus == '_temp_no1':
                 caput_novo = []
                 for _item in caput:
-                    # print('hxl item     > ', _item)
-                    _hxl = HXLHashtagSimplici(_item).praeparatio()
-                    _item_bcp47 = _hxl.quod_bcp47(strictum=False)
-                    # print('_item_bcp47  > ', _item_bcp47)
-                    caput_novo.append(_item_bcp47)
+                    if not _item or len(_item) == 0:
+                        raise SyntaxError(
+                            'Input have empty hashtag, <{0}>'.format(caput))
+                    # print('hxl item     > ', _item, caput)
+                    try:
+                        _hxl = HXLHashtagSimplici(_item).praeparatio()
+                        _item_bcp47 = _hxl.quod_bcp47(strictum=False)
+                        # print('_item_bcp47  > ', _item_bcp47)
+                        caput_novo.append(_item_bcp47)
+                    except AttributeError:
+                        # raise SyntaxError('HXLTM/No1 non hashtag[{0}]? <{1}>'.format(_item, caput))
+                        raise SyntaxError(
+                            'HXLTM/No1 non hashtag[{0}]?'.format(_item))
                 caput = caput_novo
                 # print('caput', caput)
 
             # print(caput, data)
             # print('')
+            rdf_trivio_hxla = None
+            if pyargs.rdf_trivio_hxla and len(pyargs.rdf_trivio_hxla) > 0:
+                rdf_trivio_hxla = pyargs.rdf_trivio_hxla
             meta = bcp47_rdf_extension_poc(
                 caput, data, objective_bag=pyargs.rdf_bag,
+                rdf_trivio_hxla=rdf_trivio_hxla,
                 rdf_sine_spatia_nominalibus=pyargs.rdf_sine_spatia_nominalibus,
                 cum_antecessoribus=pyargs.cum_antecessoribus,
                 rdf_ontologia_ordinibus=pyargs.rdf_ontologia_ordinibus)
