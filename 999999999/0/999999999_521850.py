@@ -721,6 +721,16 @@ class Cli:
             type=lambda x: x.split(','),
             default=None
         )
+        # ignōrātiō, s, f, nominativus, https://en.wiktionary.org/wiki/ignoratio
+        # incognitīs, pl, m/f/n, dativus, en.wiktionary.org/wiki/incognitus
+        parser.add_argument(
+            '--ignoratio-incognitis',
+            help='Ignore UN m49 bellow 900 for adm0 places. '
+            'Used only with hxltm-wide',
+            dest='ignoratio_incognitis',
+            default=False,
+            action='store_true'
+        )
 
         # archīvum, n, s, nominativus, https://en.wiktionary.org/wiki/archivum
         # cōnfigūrātiōnī, f, s, dativus,
@@ -846,7 +856,8 @@ class Cli:
                 pyargs.objectivum_transformationi,
                 pyargs.numerordinatio_praefixo,
                 pyargs.rdf_trivio,
-                hxltm_wide_indicators=pyargs.hxltm_wide_indicators
+                hxltm_wide_indicators=pyargs.hxltm_wide_indicators,
+                ignoratio_incognitis=pyargs.ignoratio_incognitis
             )
             ds_worldbank.praeparatio()
             ds_worldbank.imprimere()
@@ -1029,7 +1040,8 @@ class DataScrapping:
         objectivum_transformationi: list = None,
         numerordinatio_praefixo: str = '999999:0',
         rdf_trivio: str = '1603',
-        hxltm_wide_indicators: list = None
+        hxltm_wide_indicators: list = None,
+        ignoratio_incognitis: bool = False
     ):
 
         self.methodus = methodus
@@ -1048,6 +1060,7 @@ class DataScrapping:
             if len(hxltm_wide_indicators) == 0:
                 hxltm_wide_indicators = None
         self.hxltm_wide_indicators = hxltm_wide_indicators
+        self.ignoratio_incognitis = ignoratio_incognitis
         self._caput = []
         self._temp = {}
 
@@ -1579,6 +1592,25 @@ class DataScrapping:
                 data_sorted.extend(data_novo)
         else:
             data_sorted = hxltm__data_sort(fonti)
+
+
+        if self.ignoratio_incognitis:
+            indicator_index = data_sorted[0].index(
+                '#item+conceptum+codicem')
+
+            data_novo = []
+            for linea in data_sorted[1:]:
+                if linea[indicator_index] and int(linea[indicator_index]) < 900:
+                    data_novo.append(linea)
+
+            # print(len(data_novo))
+            # print(len(data_sorted[1:]))
+            # raise ValueError(indicator_index, data_sorted[0], self.hxltm_wide_indicators, data_novo[0])
+            data_sorted = [data_sorted[0]]
+            data_sorted.extend(data_novo)
+
+            # raise NotImplementedError
+
 
         is_hotfix_need = False
         if self.objectivum_transformationi and \

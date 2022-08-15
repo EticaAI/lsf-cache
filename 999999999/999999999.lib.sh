@@ -3888,6 +3888,7 @@ zzz_baseline_ab0_info() {
     --methodus-fonti=worldbank \
     --methodus=file://999999/0/pivot-merged.csv \
     --objectivum-transformationi=annus-recenti-exclusivo \
+    --ignoratio-incognitis \
     --hxltm-wide-indicators="$indicators" \
     --objectivum-formato=hxltm-wide >999999/0/pivot-merged-final.tm.csv.hxl.csv
 
@@ -3898,6 +3899,13 @@ zzz_baseline_ab0_info() {
   ls -lha 999999/0/pivot-merged-final.tm.csv.hxl.csv
 
   set +x
+
+  file_update_if_necessary "skip-validation" \
+    999999/0/pivot-merged-final.tm.csv.hxl.csv \
+    999999/999999/1603_9999_1_0~tier1.tm.csv.hxl.csv
+
+  # @TODO create the other data
+
   printf "\t%40s\n" "${tty_green}${FUNCNAME[0]} FINISHED OKAY ${tty_normal}"
 
 }
