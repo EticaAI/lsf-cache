@@ -27,8 +27,13 @@
 #      REVISION:  ---
 # ==============================================================================
 
+# pytest
+#    python3 -m doctest ./999999999/0/999999999_521850.py
+
+import json
 import os
 import re
+import shutil
 import sys
 import argparse
 import csv
@@ -42,14 +47,20 @@ from typing import (
     Any,
     List,
     Pattern,
+    Type,
     # Dict,
     # List,
 )
+
 import zipfile
 
 from L999999999_0 import (
     # hxltm_carricato,
     NUMERORDINATIO_BASIM,
+    hxltm__data_pivot_wide,
+    hxltm__data_sort,
+    hxltm__ixattr_ex_urn,
+    hxltm_hashtag_ix_ad_rdf,
     numerordinatio_neo_separatum,
     # TabulaAdHXLTM
 )
@@ -83,72 +94,116 @@ STDIN = sys.stdin.buffer
 
 NOMEN = '999999999_521850'
 
-DESCRIPTION = """
-{0} Generic pre-processor for data scrapping. Mostly access external services
-and prepare their data to HXLTM (which then can be reused by rest of the
-tools)
+DESCRIPTION = f"""
+{__file__} Generic pre-processor for data scrapping. Mostly access external
+services and prepare their data to HXLTM (which then can be reused by rest of
+the tools)
 
 Trivia:
 - Q521850, https://www.wikidata.org/wiki/Q521850
   - data scraping (Q521850)
-""".format(__file__)
+"""
 
-__EPILOGUM__ = """
+__EPILOGUM__ = f"""
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
 (Collective of humans / adm0 statistics) . . . . . . . . . . . . . . . . . . . .
 
-    {0} --methodus-fonti=undata
+    {__file__} --methodus-fonti=undata
 
-    {0} --methodus-fonti=undata --methodus=POP
+    {__file__} --methodus-fonti=undata --methodus=POP
 
-    {0} --methodus-fonti=unhcr
+    {__file__} --methodus-fonti=unhcr
 
-    {0} --methodus-fonti=unochafts
+    {__file__} --methodus-fonti=unochafts
 
-    {0} --methodus-fonti=unwpf
+    {__file__} --methodus-fonti=unwpf
 
-(Total population)
-    {0} --methodus-fonti=worldbank --methodus=SP.POP.TOTL
+(Total population)  . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    {__file__} --methodus-fonti=worldbank --methodus=SP.POP.TOTL
 
-    {0} --methodus-fonti=worldbank --methodus=SP.POP.TOTL \
+    {__file__} --methodus-fonti=worldbank --methodus=SP.POP.TOTL \
 --objectivum-formato=link-fonti
 
-    {0} --methodus-fonti=worldbank --methodus=SP.POP.TOTL \
+    {__file__} --methodus-fonti=worldbank --methodus=SP.POP.TOTL \
 --objectivum-formato=csv
 
-    {0} --methodus-fonti=worldbank --methodus=SP.POP.TOTL \
+    {__file__} --methodus-fonti=worldbank --methodus=SP.POP.TOTL \
+--objectivum-transformationi=annus-recenti --objectivum-formato=hxltm
+
+(Rural population) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    {__file__} --methodus-fonti=worldbank --methodus=SP.RUR.TOTL \
 --objectivum-formato=hxltm
 
-(Rural population)
-    {0} --methodus-fonti=worldbank --methodus=SP.RUR.TOTL \
---objectivum-formato=hxltm
+(Subpopulation; population by themes, such as by age, gender/sex, ...) . . . . .
+    {__file__} --methodus-fonti=worldbank --methodus=health \
+--objectivum-formato=hxltm-wide
 
+    {__file__} --methodus-fonti=worldbank --methodus=health \
+--objectivum-transformationi=annus-recenti --objectivum-formato=hxltm-wide
+
+(Everything HXLTMlized and Wide format, all indicators from group) . . . . . .
+    {__file__} --methodus-fonti=worldbank --methodus=environment \
+--objectivum-transformationi='annus-recenti-exclusivo,hxlize-urn-worldbank' \
+--objectivum-formato=hxltm-wide
+
+(Merge several thematic groups from Worldbank, then extract explicity know ) . .
+
+    {__file__} --methodus-fonti=worldbank --methodus=health \
+--objectivum-formato=csv > 999999/0/pivot-health.csv
+    {__file__} --methodus-fonti=worldbank --methodus=environment \
+--objectivum-formato=csv > 999999/0/pivot-environment.csv
+    tail -n +2 999999/0/pivot-health.csv > 999999/0/pivot--dataonly.csv
+    tail -n +2 999999/0/pivot-environment.csv >> 999999/0/pivot--dataonly.csv
+    sort --output=999999/0/pivot--dataonly.csv 999999/0/pivot--dataonly.csv
+    head -n 1 999999/0/pivot-health.csv > 999999/0/pivot-merged.csv
+    cat 999999/0/pivot--dataonly.csv >> 999999/0/pivot-merged.csv
+    {__file__} --methodus-fonti=worldbank \
+--methodus=file://999999/0/pivot-merged.csv \
+--objectivum-transformationi=annus-recenti-exclusivo \
+--objectivum-formato=hxltm-wide > 999999/0/pivot-merged-final.tm.csv.hxl.csv
+    frictionless validate 999999/0/pivot-merged-final.tm.csv.hxl.csv
 
 (Individual humans) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 See https://interpol.api.bund.dev/
 
-    {0} --methodus-fonti=interpol --methodus=red \
+    {__file__} --methodus-fonti=interpol --methodus=red \
 --archivum-objetivum=999999/0/interpol-red.csv
 
-    {0} --methodus-fonti=interpol --methodus=un \
+    {__file__} --methodus-fonti=interpol --methodus=un \
 --archivum-objetivum=999999/0/interpol-un.csv
 
-    {0} --methodus-fonti=interpol --methodus=red --objectivum-formato=hxltm \
+    {__file__} --methodus-fonti=interpol --methodus=red \
+--objectivum-formato=hxltm \
 --archivum-objetivum=999999/0/interpol-red.tm.hxl.csv
 
-    {0} --methodus-fonti=interpol --methodus=un --objectivum-formato=hxltm \
+    {__file__} --methodus-fonti=interpol --methodus=un \
+--objectivum-formato=hxltm \
 --archivum-objetivum=999999/0/interpol-un.tm.hxl.csv
 
+(Worldbank, simpler format, without RDF-like mapping) . . . . . . . . . . . . .
+    {__file__} --methodus-fonti=worldbank --methodus=aid-effectiveness \
+--objectivum-formato=csv
+    {__file__} --methodus-fonti=worldbank --methodus=health \
+--objectivum-formato=csv
 
 (Etc) . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    {0} --methodus-fonti=sdmx-tests
+    {__file__} --methodus-fonti=sdmx-tests
 
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
-""".format(__file__)
+"""
+
+# @TODO create some sort of unocha-fts-simple and get the spreadsheet from
+#       https://fts.unocha.org/global-funding/countries/2022
+#       already with country/territory codes (Rocha, 2022-08-10 22:56 UTC)
+
+# @TODO maybe do some data mining from:
+#       - https://en.wikipedia.org/wiki/List_of_ongoing_armed_conflicts
+#       - https://en.wikipedia.org/wiki/List_of_countries_by_intentional_homicide_rate
+#       - https://dataunodc.un.org/content/homicide-country-data
 
 # Other sources here https://pandasdmx.readthedocs.io/en/v1.0/
 DATA_SCRAPPING_HELP = {
@@ -188,6 +243,8 @@ DATA_HXL_DE_CSV_GENERIC = {
     'country code': '#country+code+v_iso3',  # World Bank
     'indicator name': '#indicator+name',  # World Bank
     'indicator code': '#indicator+code',  # World Bank
+    'indicator value': '#indicator+value',  # World Bank (if recent-year)
+    'indicator date': '#indicator+date',  # World Bank (if recent-year)
     'entity_id': '#item+code+v_interpol',  # INTERPOL
     'un_reference': '#item+code+unref',  # INTERPOL
     'forename': '#item+forename',  # INTERPOL
@@ -202,6 +259,8 @@ DATA_HXLTM_DE_HXL_GENERIC = {
     # Population statistics, with year -----------------------------------------
     # population (P1082)
     '#item+rem+i_qcc+is_zxxx+ix_iso8601v{v1}+ix_xywdatap1082': r"^#population\+t\+year(?P<v1>[0-9]{4})$",
+    '#item+rem+i_qcc+is_zxxx+ix_xywdatap1082': r"^#population\+t$",
+    '#meta+rem+i_qcc+is_zxxx+ix_xywdatap1082': r"^#meta\+population\+t$",
     # female population (P1539)
     '#item+rem+i_qcc+is_zxxx+ix_iso8601v{v1}+ix_xywdatap1539': r"^#population\+f\+year(?P<v1>[0-9]{4})$",
     # male population (P1540)
@@ -221,11 +280,92 @@ DATA_HXLTM_DE_HXL_GENERIC = {
     # '#item+rem+i_qcc+is_zxxx+ix_xywdatap1539': r"^#population\+f$",
     # # male population (P1540)
     # '#item+rem+i_qcc+is_zxxx+ix_xywdatap1540': r"^#population\+m$",
+
+    '#item+rem+i_qcc+is_zxxx+ix_iso8601v{v1}+ix_xyexhxltrivio': r"^#indicator\+value\+year(?P<v1>[0-9]{4})$",
+
+    # HXL hashtags to replace ix_xyexhxltrivio when exploding the coluns
+    # '#item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio': None,
 }
 
 DATA_NO1_DE_HXLTM_GENERIC = {
     # '^(?P<t>#[a-z0-9]{3,99})\+rem\+i_qcc\+is_zxxx\+ix_xywdatap(?P<v2>[0-9]{1,12})'
-    '#{t}+rem+i_qcc+is_zxxx+ix_iso8601v{v1}+rdf_p_wdata_p{v2}_s{trivio}': r"^#(?P<t>[a-z0-9]{3,99})\+rem\+i_qcc\+is_zxxx\+ix_iso8601v(?P<v1>[0-9]{4})\+ix_xywdatap(?P<v2>[0-9]{1,12})"
+    '#{t}+rem+i_qcc+is_zxxx+ix_iso8601v{v1}+rdf_p_wdata_p{v2}_s{trivio}+rdf_t_xsd_int': r"^#(?P<t>[a-z0-9]{3,99})\+rem\+i_qcc\+is_zxxx\+ix_iso8601v(?P<v1>[0-9]{4})\+ix_xywdatap(?P<v2>[0-9]{1,12})"
+}
+
+DATA_HXLTM_CASTTYPE = {
+    'ix_xywdatap1082': 'rdf_t_xsd_int',
+    'ix_xywdatap1539': 'rdf_t_xsd_int',
+    'ix_xywdatap1540': 'rdf_t_xsd_int',
+    'ix_xywdatap6344': 'rdf_t_xsd_int',
+    'ix_xywdatap6343': 'rdf_t_xsd_int',
+}
+
+DATA_METHODUS = {
+    'worldbank': {
+        # https://data.worldbank.org/topic/agriculture-and-rural-development?view=chart
+        'agriculture-and-rural-development': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/1?downloadformat=csv'
+        },
+        # https://data.worldbank.org/topic/aid-effectiveness?view=chart
+        'aid-effectiveness': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/2?downloadformat=csv'
+        },
+        'climate-change': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/19?downloadformat=csv'
+        },
+        'economy-and-growth': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/3?downloadformat=csv'
+        },
+        'education': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/4?downloadformat=csv'
+        },
+        'energy-and-mining': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/5?downloadformat=csv'
+        },
+        'environment': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/6?downloadformat=csv'
+        },
+        'external-debt': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/20?downloadformat=csv'
+        },
+        'financial-sector': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/7?downloadformat=csv'
+        },
+        'gender': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/17?downloadformat=csv'
+        },
+        # https://data.worldbank.org/topic/health?view=chart
+        'health': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/8?downloadformat=csv'
+        },
+        'infrastructure': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/9?downloadformat=csv'
+        },
+        'poverty': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/11?downloadformat=csv'
+        },
+        'private-sector': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/12?downloadformat=csv'
+        },
+        'public-sector': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/13?downloadformat=csv'
+        },
+        'science-and-technology': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/14?downloadformat=csv'
+        },
+        'social-development': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/15?downloadformat=csv'
+        },
+        'social-protection-and-labor': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/10?downloadformat=csv'
+        },
+        'trade': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/21?downloadformat=csv'
+        },
+        'urban-development': {
+            'download_url': 'https://api.worldbank.org/v2/en/topic/16?downloadformat=csv'
+        },
+    }
 }
 
 DATA_HXL_DE_CSV_REGEX = {
@@ -235,28 +375,140 @@ DATA_HXL_DE_CSV_REGEX = {
 
         # Population statistics, thematic
         # Only for numeric
-        'SP.POP.TOTL': '#population+t+year{0}',
+        # https://www.wikidata.org/wiki/Property:P1082
+        'SP.POP.TOTL': ['#population+t+year{0}', ['ix_xywdatap1082']],
 
         # https://data.worldbank.org/indicator/SP.RUR.TOTL
         # https://www.wikidata.org/wiki/Property:P6344
         # 'SP.RUR.TOTL': '#population+ix_xywdatap6344+year{0}',
-        'SP.RUR.TOTL': '#population+rural+year{0}',
-        # https://data.worldbank.org/indicator/SP.POP.TOTL.MA.IN
-        'SP.POP.TOTL.MA.IN': '#population+m+year{0}',
+        'SP.RUR.TOTL': ['#population+rural+year{0}', ['ix_xywdatap6344']],
+
         # https://data.worldbank.org/indicator/SP.POP.TOTL.FE.IN
-        'SP.POP.TOTL.FE.IN': '#population+f+year{0}',
+        # https://www.wikidata.org/wiki/Property:P1539
+        'SP.POP.TOTL.FE.IN': ['#population+f+year{0}', ['ix_xywdatap1539']],
+
+        # https://data.worldbank.org/indicator/SP.POP.TOTL.MA.IN
+        # https://www.wikidata.org/wiki/Property:P1540
+        'SP.POP.TOTL.MA.IN': ['#population+m+year{0}', ['ix_xywdatap1540']],
+
+        # - minimum age (P2899)
+        #   - https://www.wikidata.org/wiki/Property:P2899
+
+        # - maximum age (P4135)
+        #   - https://www.wikidata.org/wiki/Property:P4135
+
+        # Population ages 0-14, total
+        'SP.POP.0014.TO': ['#population+t_0_14+year{0}', [
+            'ix_xywdatap1082', 'ix_xywdatap2899v0', 'ix_xywdatap4135v14']],
+        # Population ages 0-14, female
+        'SP.POP.0014.FE.IN': ['#population+f_0_14+year{0}', [
+            'ix_xywdatap1539', 'ix_xywdatap2899v0', 'ix_xywdatap4135v14']],
+        # Population ages 0-14, male
+        'SP.POP.0014.MA.IN': ['#population+m_0_14+year{0}', [
+            'ix_xywdatap1540', 'ix_xywdatap2899v0', 'ix_xywdatap4135v14']],
+
+        # Population ages 15-64, total
+        'SP.POP.1564.TO': ['#population+t_15_64+year{0}', [
+            'ix_xywdatap1082', 'ix_xywdatap2899v15', 'ix_xywdatap4135v64']],
+        # Population ages 15-64, female
+        'SP.POP.1564.FE.IN': ['#population+f_15_64+year{0}', [
+            'ix_xywdatap1539', 'ix_xywdatap2899v15', 'ix_xywdatap4135v64']],
+        # Population ages 15-64, male
+        'SP.POP.1564.MA.IN': ['#population+m_15_64+year{0}', [
+            'ix_xywdatap1540', 'ix_xywdatap2899v15', 'ix_xywdatap4135v64']],
+
+
+        # Population ages 65 and above, total
+        'SP.POP.65UP.TO': ['#population+t_65_999+year{0}', [
+            'ix_xywdatap1082', 'ix_xywdatap2899v65']],
+        # Population ages 65 and above, female
+        'SP.POP.65UP.FE.IN': ['#population+f_65_999+year{0}', [
+            'ix_xywdatap1539', 'ix_xywdatap2899v65']],
+        # Population ages 65 and above, male
+        'SP.POP.65UP.MA.IN': ['#population+m_65_999+year{0}', [
+            'ix_xywdatap1540', 'ix_xywdatap2899v65']],
+
+        # @TODO if we take the %, there are other age ranges. Eventualy
+        #       deal with this
+
+        # ---------------------------------------------------------------------
+        # nominal GDP (P2131)
+        'NY.GDP.MKTP.CD': ['#indicator+value+year{0}', [
+            'ix_xywdatap2131']],
+        # area (P2046)
+        'AG.SRF.TOTL.K2': ['#indicator+value+year{0}', [
+            'ix_xywdatap2046']],
+        # literacy rate (P6897)
+        'SE.ADT.LITR.ZS': ['#indicator+value+year{0}', [
+            'ix_xywdatap6897']],
+        # life expectancy (P2250)
+        'SP.DYN.LE00.IN': ['#indicator+value+year{0}', [
+            'ix_xywdatap2250']],
+        # Gini coefficient (P1125)
+        'SI.POV.GINI': ['#indicator+value+year{0}', [
+            'ix_xywdatap1125']],
+        # unemployment rate (P1198)
+        # - https://data.worldbank.org/indicator/SL.UEM.TOTL.ZS
+        #   - See also https://data.worldbank.org/indicator/SL.EMP.TOTL.SP.ZS
+        'SL.UEM.TOTL.ZS': ['#indicator+value+year{0}', [
+            'ix_xywdatap1198']],
+
+        # https://data.worldbank.org/indicator/EN.ATM.CO2E.KT
+        # https://www.wikidata.org/wiki/Q67201057
+        # carbon emission (Q67201057)
+        'EN.ATM.CO2E.KT': ['#indicator+value+year{0}', [
+            'ix_xywdataq67201057']],
+
+        # https://data.worldbank.org/indicator/AG.LND.PRCP.MM
+        # annual precipitation (Q10726724)
+        'AG.LND.PRCP.MM': ['#indicator+value+year{0}', [
+            'ix_xywdataq10726724']],
 
         # Money related, thematic
         # https://data.worldbank.org/indicator/BX.GRT.EXTA.CD.WD?view=chart
-        'BX.GRT.EXTA.CD.WD': '#value+funding+usd+year{0}',
+        'BX.GRT.EXTA.CD.WD': ['#value+funding+usd+year{0}'],
         # https://data.worldbank.org/indicator/BX.GRT.TECH.CD.WD?view=chart
-        'BX.GRT.TECH.CD.WD': '#value+funding+usd+year{0}',
+        'BX.GRT.TECH.CD.WD': ['#value+funding+usd+year{0}'],
 
         # TODOs
         # GINI https://data.worldbank.org/indicator/SI.POV.GINI?view=chart
         # Redugees https://data.worldbank.org/indicator/SM.POP.REFG?view=chart
+
+        # - https://data.worldbank.org/indicator?tab=all
+        # From all indicators, the health bring most of agregated data
+        # - https://data.worldbank.org/topic/health?view=chart
+        # - https://api.worldbank.org/v2/en/topic/8?downloadformat=csv
+        'health': ['#indicator+value+year{0}'],
+        'environment': ['#indicator+value+year{0}'],
+        'aid-effectiveness': ['#indicator+value+year{0}'],
+
+        # - ASCII: 29 GS (Group separator)
+        #   - x29 = replace non a-z0-9 with this
+        # 'SH.STA.WASH.P5': ['#indicator+value+year{0}', [
+        #     'ix_urnx29worldbankx29shx29stax29washx29p5']],
+
+        # used with --methodus=file://(...)
+        'file': ['#indicator+value+year{0}'],
     }
 }
+
+
+def data_hxl_de_csv_regex_ex_urn(res: str, urn_basi: str = 'worldbank'):
+    """data_hxl_de_csv_regex_ex_urn
+
+    Populate DATA_HXL_DE_CSV_REGEX with URN-like ix_ tags
+
+    Args:
+        res (str): _description_
+        urn_basi (str, optional): _description_. Defaults to 'worldbank'.
+    """
+    if res not in DATA_HXL_DE_CSV_REGEX[urn_basi]:
+        res_ix = hxltm__ixattr_ex_urn(res, urn_basi)
+        DATA_HXL_DE_CSV_REGEX[urn_basi][res] = [
+            '#indicator+value+year{0}',
+            [res_ix]
+        ]
+
 
 DATA_HXL_AD_HXLTM = {
     'ix_iso5218v1': [
@@ -273,9 +525,9 @@ DATA_HXL_AD_HXLTM = {
     ],
 }
 
-DATA_HXLTM_AD_RDFTYPE = {
-    'ix_iso8601v': ''
-}
+# DATA_HXLTM_AD_RDFTYPE = {
+#     'ix_iso8601v': 'rdf_t_xsd_int'
+# }
 
 
 def parse_hashtag(hashtag: str) -> dict:
@@ -428,6 +680,7 @@ class Cli:
                 'csv',
                 'hxl',
                 'hxltm',
+                'hxltm-wide',
                 'no1',
                 'link-fonti',
                 # 'tsv',
@@ -438,6 +691,35 @@ class Cli:
             ],
             # required=True
             default='csv'
+        )
+
+        parser.add_argument(
+            '--objectivum-transformationi',
+            help='Apply additional transformation. Varies by source' +
+            'Example: "annus-recenti", "annus-recenti-exclusivo", '
+            '"annus-recenti-exclusivo,hxlize-urn-worldbank", ',
+            dest='objectivum_transformationi',
+            # nargs='?',
+            # default=None
+            # default='help'
+            nargs='?',
+            type=lambda x: x.split(','),
+            default=None
+        )
+
+        parser.add_argument(
+            '--hxltm-wide-indicators',
+            help='For (mostly only) Worldbank operations in group of '
+            'this option can be used to restrict to only these indicators. '
+            'Useful when already cached everything on disk. '
+            'Example: "SP.POP.TOTL,AG.SRF.TOTL.K2,NY.GDP.MKTP.CD"',
+            dest='hxltm_wide_indicators',
+            # nargs='?',
+            # default=None
+            # default='help'
+            nargs='?',
+            type=lambda x: x.split(','),
+            default=None
         )
 
         # archīvum, n, s, nominativus, https://en.wiktionary.org/wiki/archivum
@@ -561,7 +843,11 @@ class Cli:
             # print(DATA_SCRAPPING_HELP['WORLDBANK'])
             ds_worldbank = DataScrappingWorldbank(
                 pyargs.methodus, pyargs.objectivum_formato,
-                pyargs.numerordinatio_praefixo, pyargs.rdf_trivio)
+                pyargs.objectivum_transformationi,
+                pyargs.numerordinatio_praefixo,
+                pyargs.rdf_trivio,
+                hxltm_wide_indicators=pyargs.hxltm_wide_indicators
+            )
             ds_worldbank.praeparatio()
             ds_worldbank.imprimere()
             return self.EXIT_OK
@@ -691,13 +977,59 @@ class Cli:
         return self.EXIT_ERROR
 
 
+# ./999999999/0/999999999_7200235.py  --methodus=index_praeparationi 1603_16_1_0 --index-nomini=i1603_16_1_0 --index-ad-columnam='ix_unm49'
+class Adm0CodexLocali:
+
+    i1603_16_1_0: dict = None
+    i1603_16_1_0_alt: dict = {}
+
+    def __init__(
+        self
+    ):
+        _path = NUMERORDINATIO_BASIM + '/999999/0/i1603_16_1_0.index.json'
+        if not exists(_path):
+            raise FileNotFoundError(
+                "Warm up required. Use ./999999999/0/999999999_7200235.py "
+                " --methodus=index_praeparationi 1603_16_1_0 "
+                "--index-nomini=i1603_16_1_0 --index-ad-columnam='ix_unm49'")
+
+        with open(_path, 'r') as f:
+            self.i1603_16_1_0 = json.load(f)
+
+    def quod(self, res: str) -> str:
+        if res and res in self.i1603_16_1_0:
+            _v = str(int(self.i1603_16_1_0[res]))
+            return _v
+        if res and res in self.i1603_16_1_0_alt:
+            _v = str(int(self.i1603_16_1_0_alt[res]))
+            return _v
+        return None
+
+    def est(self, clavem: str, res: str) -> str:
+        """est create an on-the-fly code.
+
+        Use for loops, so alternative codes can be remembered
+
+        Args:
+            clavem (str): _description_
+            res (str): _description_
+
+        Returns:
+            str: _description_
+        """
+        self.i1603_16_1_0_alt[clavem] = res
+        return None
+
+
 class DataScrapping:
 
     def __init__(
         self, methodus: str,
         objectivum_formato: str,
+        objectivum_transformationi: list = None,
         numerordinatio_praefixo: str = '999999:0',
-        rdf_trivio: str = '1603'
+        rdf_trivio: str = '1603',
+        hxltm_wide_indicators: list = None
     ):
 
         self.methodus = methodus
@@ -709,39 +1041,112 @@ class DataScrapping:
         self.rdf_trivio = rdf_trivio
 
         self.objectivum_formato = objectivum_formato
+        self.objectivum_transformationi = objectivum_transformationi
+        if hxltm_wide_indicators:
+            hxltm_wide_indicators = \
+                [x.strip() for x in hxltm_wide_indicators if x]
+            if len(hxltm_wide_indicators) == 0:
+                hxltm_wide_indicators = None
+        self.hxltm_wide_indicators = hxltm_wide_indicators
+        self._caput = []
         self._temp = {}
 
+        self._skipLineMetaCsv = [
+            {
+                'index': 0
+            },
+            # # Example of rule
+            # {
+            #     'index': 3,
+            #     'not_in': DATA_HXL_DE_CSV_REGEX['worldbank'].keys()
+            # },
+        ]
+        self._hxlPivot = {}
+        # self._hxlPivot = DATA_HXL_DE_CSV_REGEX['worldbank']
+        self._hxlPivotCode = ['#indicator+code',
+                              '#meta+rem+i_qcc+is_zxxx+indicator_code']
+        # #item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio
+
+        # Use case: --objectivum-transformationi=annus-recenti-exclusivo
+        self._skipHXLTMIndex = []
+
+        self._Adm0CodexLocali = None
+
     def __del__(self):
+        """__del__ remove temporary files
+
+        PROTIP: commenting this part allow to inspect partial files
+                generated at 999999/0/*.ext
+        """
         for clavem, res in self._temp.items():
             # if clavem in ['__source_zip__', '__source_main_csv__']:
             if clavem in ['__source_zip__']:
                 continue
-            if exists(res):
-                # print('removing', res)
-                os.remove(res)
-        # print('destructor called')
+            # if exists(res):
+            #     os.remove(res)
 
-    def _init_temp(self):
+    def _init_temp(self, suffixus: str = None):
+        if not suffixus:
+            suffixus = self.methodus
         self._temp = {
             '__source_zip__': '{0}/999999/0/{1}~{2}.zip'.format(
-                NUMERORDINATIO_BASIM, type(self).__name__, self.methodus
+                NUMERORDINATIO_BASIM, type(self).__name__, suffixus
             ),
             '__source_main_csv__': '{0}/999999/0/{1}~{2}.csv'.format(
-                NUMERORDINATIO_BASIM, type(self).__name__, self.methodus
+                NUMERORDINATIO_BASIM, type(self).__name__, suffixus
             ),
             'csv': '{0}/999999/0/{1}~{2}.norm.csv'.format(
-                NUMERORDINATIO_BASIM, type(self).__name__, self.methodus
+                NUMERORDINATIO_BASIM, type(self).__name__, suffixus
             ),
             'hxl': '{0}/999999/0/{1}~{2}.hxl.csv'.format(
-                NUMERORDINATIO_BASIM, type(self).__name__, self.methodus
+                NUMERORDINATIO_BASIM, type(self).__name__, suffixus
             ),
             'hxltm': '{0}/999999/0/{1}~{2}.tm.hxl.csv'.format(
-                NUMERORDINATIO_BASIM, type(self).__name__, self.methodus
+                NUMERORDINATIO_BASIM, type(self).__name__, suffixus
+            ),
+            'hxltm_wide': '{0}/999999/0/{1}~{2}~WIDE.tm.hxl.csv'.format(
+                NUMERORDINATIO_BASIM, type(self).__name__, suffixus
             ),
             'no1': '{0}/999999/0/{1}~{2}.no1.tm.hxl.csv'.format(
-                NUMERORDINATIO_BASIM, type(self).__name__, self.methodus
+                NUMERORDINATIO_BASIM, type(self).__name__, suffixus
             ),
         }
+
+    def _linea_annus_recenti(
+            self, caput: list, linea: list, numerae: bool = True) -> list:
+        if len(caput) != len(linea) and (len(caput) - 2) != len(linea):
+            raise SyntaxError(
+                f'len caput != linea [{len(caput)}, {len(linea)}]')
+
+        _index = len(linea) - 1
+        for item in reversed(linea):
+            if item and len(item) > 0:
+                if numerae is True:
+                    if not caput[_index].isnumeric():
+                        break
+                return [item, caput[_index]]
+            _index -= 1
+        return ['', '']
+
+    def _codicem(self, res: str, strictum: bool = False, index: int = 0) -> str:
+        if self._Adm0CodexLocali is None:
+            self._Adm0CodexLocali = Adm0CodexLocali()
+        _v = self._Adm0CodexLocali.quod(res)
+        if _v:
+            return _v
+        else:
+            # if not strict, and exist res, we create a consistent one
+            if strictum is False and res:
+                self._Adm0CodexLocali.est(res, str(900 + index))
+                _v = self._Adm0CodexLocali.quod(res)
+                return _v
+            # if strictum or not res:
+            #     return None
+            # self._Adm0CodexLocali.est(res, str(900 + index))
+            # print(self._Adm0CodexLocali)
+            # _v = self._Adm0CodexLocali.quod(res)
+            # return _v
+            return None if strictum else str(900 + index)
 
     def _hxlize_dummy(self, caput: list):
         resultatum = []
@@ -756,7 +1161,16 @@ class DataScrapping:
             if self.methodus in DATA_HXL_DE_CSV_REGEX['worldbank'].keys():
                 if len(res) == 4:
                     resultatum.append(DATA_HXL_DE_CSV_REGEX[
-                        'worldbank'][self.methodus].format(res))
+                        'worldbank'][self.methodus][0].format(res))
+                    continue
+
+            # if self.methodus.startswith('file://') and \
+            #     self.methodus_fonti == 'worldbank':
+            if self.methodus.startswith('file://'):
+                # print(res, resultatum)
+                if len(res) == 4:
+                    resultatum.append(DATA_HXL_DE_CSV_REGEX[
+                        'worldbank']['file'][0].format(res))
                     continue
 
             resultatum.append(
@@ -765,6 +1179,16 @@ class DataScrapping:
                         ' ', '').replace('-', '_'))
             )
         return resultatum
+
+    # def _hxlize_without_year(self, caput_item: str, referens: str):
+    #     # Example '#population+t+year2016'
+    #     referens_basi = referens.split('+year')[0]
+    #     if caput_item == '#indicator+value':
+    #         return referens_basi
+    #     if caput_item == '#indicator+date':
+    #         return referens_basi.replace('#', '#date+')
+    #     else:
+    #         raise SyntaxError(f'caput_item [{caput_item}]?')
 
     def _hxltmize(self, caput: list):
         resultatum = []
@@ -795,13 +1219,76 @@ class DataScrapping:
             if _done is True:
                 continue
 
+            # if self.objectivum_transformationi == 'annus-recenti':
+            # if self.objectivum_transformationi and \
+            #         self.objectivum_transformationi.startswith('annus-recenti'):
+            if self.objectivum_transformationi and \
+                    ('annus-recenti' in self.objectivum_transformationi or
+                        'annus-recenti-exclusivo' in self.objectivum_transformationi):
+                # self.objectivum_transformationi.startswith('annus-recenti'):
+                if res in ['#indicator+value', '#indicator+date']:
+                    # -3 is arbritrary, but will range 1960-2020+
+                    resultatum.append(
+                        self._hxltmize_without_year(res, resultatum[-3])
+                    )
+                    continue
+
+                # if caput.find('#indicator+value') == -1:
+                if '#indicator+value' not in caput:
+                    raise SyntaxError(
+                        f'internal error, previus step not ready <{caput}>')
+
             resultatum.append(
                 '#meta+rem+i_qcc+is_zxxx+{0}'.format(
                     res.lower().strip().replace(
                         ' ', '').replace('-', '_').replace(
                             '#', '').replace('+', '_'))
             )
+
+        # We keep the value in the memory, but allow conversors exclude
+        # if self.objectivum_transformationi == 'annus-recenti-exclusivo':
+        if self.objectivum_transformationi and \
+                'annus-recenti-exclusivo' in self.objectivum_transformationi:
+            # Use case: --objectivum-transformationi=annus-recenti-exclusivo
+
+            # 1 if generic
+            # 2 if wide enabled
+            _drift = 1
+
+            # if '#item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio' in resultatum:
+            #     _drift += 1
+
+            # if self.objectivum_formato == 'hxltm-wide':
+            #     _drift = 2
+
+            for item in resultatum:
+                if item.find('+ix_iso8601v') > -1:
+                    index_without_codicem = resultatum.index(item)
+                    # self._skipHXLTMIndex.append(resultatum.index(item))
+                    self._skipHXLTMIndex.append(
+                        index_without_codicem + _drift
+                    )
+            # raise ValueError(len(resultatum), self._skipHXLTMIndex, resultatum)
         return resultatum
+
+    def _hxltmize_without_year(self, caput_item: str, referens: str):
+        # Example '#population+t+year2016' (if was HXL)
+        # Example '#item+rem+i_qcc+is_zxxx+ix_iso8601v2021+ix_xywdatap1082'
+        referens_basi = referens.split('+year')[0]
+        if caput_item == '#indicator+value':
+            # return referens_basi
+            # basi = referens_basi.replace('#item+', '#date+')
+            val2 = re.sub('\+ix_iso8601v(.*)?\+', '+', referens)
+            # return referens_basi.replace('#item+', '#date+')
+            return val2
+
+        if caput_item == '#indicator+date':
+            basi = referens_basi.replace('#item+', '#date+')
+            val2 = re.sub('\+ix_iso8601v(.*)?\+', '+', basi)
+            # return referens_basi.replace('#item+', '#date+')
+            return val2
+        else:
+            raise SyntaxError(f'caput_item [{caput_item}]?')
 
     def _no1lize(self, caput: list):
         resultatum = []
@@ -809,6 +1296,15 @@ class DataScrapping:
             if not res:
                 resultatum.append('')
                 continue
+
+            for ix_item, rdf_t_item in DATA_HXLTM_CASTTYPE.items():
+                if res.find(ix_item) > -1 and res.find(rdf_t_item) == -1:
+                    res = res + '+' + rdf_t_item
+                # pass
+
+            res = hxltm_hashtag_ix_ad_rdf(res)
+            resultatum.append(res)
+            continue
 
             _done = False
             for _ht_novo, _ht_retest in DATA_NO1_DE_HXLTM_GENERIC.items():
@@ -846,6 +1342,22 @@ class DataScrapping:
             # )
         return resultatum
 
+    def _skip_line(self, line: list) -> bool:
+
+        # return False
+
+        for rule in self._skipLineMetaCsv:
+            if 'not_in' in rule:
+                # for r_n_item in rule['not_in']:
+                if line[rule['index']] not in rule['not_in']:
+                    return True
+                # return False
+            # Most basic, just check if index exist at all not evaluate to empy
+            elif not line[rule['index']] or \
+                    len(line[rule['index']].strip()) == 0:
+                return True
+        return False
+
     def de_csv_ad_csvnorm(
             self, fonti: str, objetivum: str, caput_initiali: list):
         # print("TODO de_csv_ad_csvnorm")
@@ -854,6 +1366,7 @@ class DataScrapping:
                 _csv_reader = csv.reader(_fons)
                 _csv_writer = csv.writer(_objetivum)
                 started = False
+                started_2 = False
                 strip_last = None
                 for linea in _csv_reader:
 
@@ -861,15 +1374,42 @@ class DataScrapping:
                         if linea and linea[0].strip() in caput_initiali:
                             started = True
                             strip_last = len(linea[-1]) == 0
+                            # if self.objectivum_transformationi == \
+                            #         'annus-recenti':
+                            #     linea.append('indicator value')
+                            #     linea.append('indicator date')
+                            self._caput = linea
                         else:
                             continue
                     if strip_last:
                         linea.pop()
+
+                    # if self.objectivum_transformationi == 'annus-recenti':
+                    # if self.objectivum_transformationi and \
+                    #     self.objectivum_transformationi.startswith(
+                    #         'annus-recenti'):
+                    if self.objectivum_transformationi and \
+                            ('annus-recenti' in self.objectivum_transformationi or
+                                'annus-recenti-exclusivo' in self.objectivum_transformationi):
+                        if started_2 is False:
+                            started_2 = True
+                            # print('   >> caput part')
+                            linea.append('indicator value')
+                            linea.append('indicator date')
+                            self._caput = linea
+                        else:
+                            annus_recenti = self._linea_annus_recenti(
+                                self._caput,
+                                linea
+                            )
+                            linea.extend(annus_recenti)
+
                     _csv_writer.writerow(linea)
 
         # print("TODO")
-    def de_csvnorm_ad_hxl(self, fonti: str, objetivum):
-        # print("TODO de_csv_ad_csvnorm")
+    def de_csvnorm_ad_hxl(
+            self, fonti: str, objetivum, callback: Type['function'] = None):
+        # print("TODO de_csv_ad_csvnorm", self._skipLineMetaCsv)
         with open(objetivum, 'w') as _objetivum:
             with open(fonti, 'r') as _fons:
                 _csv_reader = csv.reader(_fons)
@@ -878,13 +1418,22 @@ class DataScrapping:
                 for linea in _csv_reader:
                     if not started:
                         started = True
+                        caput = self._hxlize_dummy(linea)
+                        self._caput = caput
                         _csv_writer.writerow(self._hxlize_dummy(linea))
+                        # if callback is not None:
+                        #     callback(qself=self, caput=caput)
                         continue
-                    _csv_writer.writerow(linea)
+                    if not self._skip_line(linea):
+                        _csv_writer.writerow(linea)
 
-    def de_hxl_ad_hxltm(self, fonti: str, objetivum: str):
-        # print("TODO de_csv_ad_csvnorm")
+    def de_hxl_ad_hxltm(
+        self, fonti: str,
+        objetivum: str,
+        hxl_vocab: bool = False
+    ):
         index_linea = 0
+        index_ix_xyadhxltrivio = -1
         codicem_inconito = False
         with open(objetivum, 'w') as _objetivum:
             with open(fonti, 'r') as _fons:
@@ -898,15 +1447,173 @@ class DataScrapping:
                         if '#item+conceptum+codicem' not in caput:
                             codicem_inconito = True
                             caput.insert(0, '#item+conceptum+codicem')
+                        if hxl_vocab is True and \
+                                '#item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio' \
+                                not in caput:
+                            for _p in self._hxlPivotCode:
+                                if _p in caput:
+                                    # _index_ref = caput.index(self._hxlPivotCode)
+                                    _index_ref = caput.index(_p)
+                                    break
+                            index_ix_xyadhxltrivio = _index_ref + 1
+                            caput.insert(
+                                index_ix_xyadhxltrivio,
+                                '#item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio')
+
+                            # Since we injected new artificial table, lets
+                            # increment self._skipHXLTMIndex)
+                            if len(self._skipHXLTMIndex) > 0:
+                                _old = self._skipHXLTMIndex
+                                self._skipHXLTMIndex = []
+                                for _val in _old:
+                                    self._skipHXLTMIndex.append(_val + 1)
+
+                        self._caput = caput
+                        # if self.objectivum_transformationi == \
+                        #     'annus-recenti-exclusivo' and \
+                        #         len(self._skipHXLTMIndex) > 0:
+                        if self.objectivum_transformationi and \
+                            'annus-recenti-exclusivo' in self.objectivum_transformationi and \
+                                len(self._skipHXLTMIndex) > 0:
+                            # raise ValueError('teste', self._skipHXLTMIndex)
+                            _caput_new = []
+                            for idx, val in enumerate(caput):
+                                if idx not in self._skipHXLTMIndex:
+                                    _caput_new.append(val)
+                            caput = _caput_new
+                            # _caput_old = caput
                         _csv_writer.writerow(caput)
                         continue
                     if codicem_inconito is True:
-                        index_linea += 1
-                        linea.insert(0, str(index_linea))
+                        # index_linea += 1
+                        # linea.insert(0, str(index_linea))
+                        # _v = self._codicem(index_linea, index_linea)
+
+                        # Brute force whathever is on first 3 columns
+                        _pseudo_hash = ''
+                        for i in range(2):
+                            _pseudo_hash += linea[i]
+                            _v = self._codicem(linea[i], strictum=True)
+                            if _v is not None:
+                                break
+                        if _v is None:
+                            index_linea += 1
+                            # _v = self._codicem(
+                            #     False, index=index_linea, strictum=False)
+                            # raise ValueError(caput)
+                            # caput will be off-by-one on this check
+                            if caput[2].find('code'):
+                                _v = self._codicem(
+                                    linea[1], index=index_linea, strictum=False)
+                            elif caput[1].find('code'):
+                                _v = self._codicem(
+                                    linea[0], index=index_linea, strictum=False)
+                            else:
+                                _v = self._codicem(
+                                    False, index=index_linea, strictum=False)
+
+                        linea.insert(0, _v)
+                    if index_ix_xyadhxltrivio > -1:
+                        _v_refs = linea[index_ix_xyadhxltrivio - 1]
+
+                        # Special case: if asked hxlize-urn-worldbank, here
+                        # we pre-populate DATA_HXL_DE_CSV_REGEX
+                        if self.objectivum_transformationi and \
+                            'hxlize-urn-worldbank' in self.objectivum_transformationi and \
+                                len(self._skipHXLTMIndex) > 0:
+                            data_hxl_de_csv_regex_ex_urn(_v_refs)
+
+                        _v_novo_parts = self._hxlPivot[_v_refs][1]
+                        _v_novo_parts = sorted(_v_novo_parts)
+                        _v = '+'.join(_v_novo_parts)
+                        # _v = "@todo"
+                        linea.insert(index_ix_xyadhxltrivio, _v)
+
+                    # if self.objectivum_transformationi == \
+                    #     'annus-recenti-exclusivo' and \
+                    #         len(self._skipHXLTMIndex) > 0:
+                    if self.objectivum_transformationi and \
+                        'annus-recenti-exclusivo' in self.objectivum_transformationi and \
+                            len(self._skipHXLTMIndex) > 0:
+
+                        _linea_new = []
+                        for idx, val in enumerate(linea):
+                            if idx not in self._skipHXLTMIndex:
+                                _linea_new.append(val)
+                        linea = _linea_new
+
                     _csv_writer.writerow(linea)
 
+    def de_hxltm_ad_hxltm_wide(
+        self, fonti: str,
+        objetivum: str
+    ):
+        """de_hxltm_ad_hxltm_wide
+
+        @see https://en.wikipedia.org/wiki/Wide_and_narrow_data
+
+        Args:
+            fonti (str): _description_
+            objetivum (str): _description_
+        """
+
+        # data_sorted = self._data_sort(fonti)
+
+        if '#item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio' in self._caput:
+            data_sorted = hxltm__data_sort(
+                fonti, ['#item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio'])
+
+            if self.hxltm_wide_indicators:
+                indicator_index = data_sorted[0].index(
+                    '#meta+rem+i_qcc+is_zxxx+indicator_code')
+
+                data_novo = []
+                for linea in data_sorted[1:]:
+                    if linea[indicator_index] in self.hxltm_wide_indicators:
+                        data_novo.append(linea)
+
+                # print(len(data_novo))
+                # print(len(data_sorted[1:]))
+                # raise ValueError(indicator_index, data_sorted[0], self.hxltm_wide_indicators, data_novo[0])
+                data_sorted = [data_sorted[0]]
+                data_sorted.extend(data_novo)
+        else:
+            data_sorted = hxltm__data_sort(fonti)
+
+        is_hotfix_need = False
+        if self.objectivum_transformationi and \
+                'annus-recenti-exclusivo' in self.objectivum_transformationi:
+            is_hotfix_need = True
+
+        caput, data = hxltm__data_pivot_wide(
+            data_sorted[0], data_sorted[1:], is_hotfix_need)
+
+        # # print(data_sorted[0:10])
+        # print('is_hotfix_need', is_hotfix_need)
+        # print('')
+        # print('    > data_sorted sample')
+        # print(len(data_sorted[0:10][0]), data_sorted[0:10][0])
+        # print(len(data_sorted[0:10][1]), data_sorted[0:10][1])
+        # print('')
+        # print('')
+        # print('')
+        # # print(caput, data[0:10])
+        # print('    >>>> (final caput, data) sample')
+        # print(len(caput), caput)
+        # print(len(data[0]), data[0])
+        # print('')
+
+        # raise NotImplementedError
+
+        with open(objetivum, 'w') as _objetivum:
+            # with open(fonti, 'r') as _fons:
+            _csv_writer = csv.writer(_objetivum)
+            _csv_writer.writerow(caput)
+            for linea in data:
+                _csv_writer.writerow(linea)
+
     def de_hxltm_ad_no1(self, fonti: str, objetivum: str):
-        # print("TODO de_csv_ad_csvnorm")
+
         numerordinatio_inconito = False
         codicem_index = -1
         with open(objetivum, 'w') as _objetivum:
@@ -923,6 +1630,7 @@ class DataScrapping:
                             codicem_index = caput.index(
                                 '#item+conceptum+codicem')
                             caput.insert(0, '#item+conceptum+numerordinatio')
+                        self._caput = caput
                         _csv_writer.writerow(caput)
                         continue
                     if numerordinatio_inconito is True:
@@ -1069,6 +1777,8 @@ class DataScrappingInterpol(DataScrapping):
 
         # print('@TODO', __class__.__name__)
 
+        self._init_temp()
+
         while (self._page == 1 and self._total == None) or self._done is False:
             # print(self._quod_request())
             self._quod_request()
@@ -1168,6 +1878,7 @@ class DataScrappingWorldbank(DataScrapping):
     temp_fonti_csvnorm: str = ''
     temp_fonti_hxl: str = ''
     temp_fonti_hxltm: str = ''
+    temp_fonti_hxltm_wide: str = ''
     temp_fonti_no1: str = ''
 
     # print('oioioi', self.dictionaria_codex )
@@ -1183,6 +1894,8 @@ class DataScrappingWorldbank(DataScrapping):
             fonti = self.temp_fonti_hxl
         if self.objectivum_formato == 'hxltm':
             fonti = self.temp_fonti_hxltm
+        if self.objectivum_formato == 'hxltm-wide':
+            fonti = self.temp_fonti_hxltm_wide
         if self.objectivum_formato == 'no1':
             fonti = self.temp_fonti_no1
 
@@ -1199,6 +1912,14 @@ class DataScrappingWorldbank(DataScrapping):
         - praeparātiō, s, f, Nom., https://en.wiktionary.org/wiki/praeparatio
         """
         # return True
+
+        if self.methodus in DATA_METHODUS['worldbank']:
+            self.link_fonti = DATA_METHODUS['worldbank'][self.methodus][
+                'download_url']
+        else:
+            self.link_fonti = 'https://api.worldbank.org/v2/en/indicator/{0}?downloadformat=csv'.format(
+                self.methodus)
+
         if self.objectivum_formato == 'link-fonti':
             # print(self.link_fonti)
             return True
@@ -1206,75 +1927,179 @@ class DataScrappingWorldbank(DataScrapping):
         #     NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
         # )
 
-        self._init_temp()
+        suffixus = self.methodus
+        if self.methodus.startswith('file://'):
+            suffixus = 'fromlocalfile'
+
+        self._init_temp(suffixus=suffixus)
 
         # temp_fonti_zip = '{0}/999999/0/{1}~{2}.zip'.format(
         #     NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
         # )
+        # self.temp_fonti_csv = '{0}/999999/0/{1}~{2}.csv'.format(
+        #     NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
+        # )
+        # self.temp_fonti_csvnorm = '{0}/999999/0/{1}~{2}.norm.csv'.format(
+        #     NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
+        # )
+        # self.temp_fonti_hxl = '{0}/999999/0/{1}~{2}.hxl.csv'.format(
+        #     NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
+        # )
+        # self.temp_fonti_hxltm = '{0}/999999/0/{1}~{2}.tm.hxl.csv'.format(
+        #     NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
+        # )
+        # self.temp_fonti_hxltm_wide = '{0}/999999/0/{1}~{2}~WIDE.tm.hxl.csv'.format(
+        #     NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
+        # )
+        # self.temp_fonti_no1 = '{0}/999999/0/{1}~{2}.no1.tm.hxl.csv'.format(
+        #     NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
+        # )
+
         self.temp_fonti_csv = '{0}/999999/0/{1}~{2}.csv'.format(
-            NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
+            NUMERORDINATIO_BASIM, __class__.__name__, suffixus
         )
-        self.temp_fonti_csvnorm = '{0}/999999/0/{1}~{2}.norm.csv'.format(
-            NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
-        )
-        self.temp_fonti_hxl = '{0}/999999/0/{1}~{2}.hxl.csv'.format(
-            NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
-        )
-        self.temp_fonti_hxltm = '{0}/999999/0/{1}~{2}.tm.hxl.csv'.format(
-            NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
-        )
-        self.temp_fonti_no1 = '{0}/999999/0/{1}~{2}.no1.tm.hxl.csv'.format(
-            NUMERORDINATIO_BASIM, __class__.__name__, self.methodus
-        )
+        # self.temp_fonti_csv = self._temp['csv']
+        self.temp_fonti_csvnorm = self._temp['csv']
+        self.temp_fonti_hxl = self._temp['hxl']
+        self.temp_fonti_hxltm = self._temp['hxltm']
+        self.temp_fonti_hxltm_wide = self._temp['hxltm_wide']
+        self.temp_fonti_no1 = self._temp['no1']
 
-        # raise ValueError(self._temp)
+        # raise ValueError(self.methodus)
 
-        temp_fonti_zip = self._temp['__source_zip__']
+        if not self.methodus.startswith('file://'):
 
-        if not exists(temp_fonti_zip):
-            # Download to local cache if alreayd there
-            r = requests.get(self.link_fonti)
-            with open(temp_fonti_zip, 'wb') as f:
-                f.write(r.content)
+            temp_fonti_zip = self._temp['__source_zip__']
 
-        # zip file handler
-        zip = zipfile.ZipFile(temp_fonti_zip)
-        data_file_main = ''
-        for _res in zip.namelist():
-            if _res.lower().find('meta') > -1:
-                continue
-            if _res.lower().startswith('api_'):
-                data_file_main = _res
-        # list available files in the container
-        # print(zip.namelist())
+            if not exists(temp_fonti_zip):
+                # Download to local cache if alreayd there
+                r = requests.get(self.link_fonti)
+                with open(temp_fonti_zip, 'wb') as f:
+                    f.write(r.content)
+            # else:
+            #     print('already cached', temp_fonti_zip)
 
-        # extract a specific file from the zip container
-        f = zip.open(data_file_main)
+            # zip file handler
+            zip = zipfile.ZipFile(temp_fonti_zip)
+            data_file_main = ''
+            for _res in zip.namelist():
+                if _res.lower().find('meta') > -1:
+                    continue
+                if _res.lower().startswith('api_'):
+                    data_file_main = _res
+            # list available files in the container
+            # print(zip.namelist())
 
-        # save the extraced file
-        content = f.read()
-        # f = open(self.temp_fonti_csv, 'wb')
-        f = open(self._temp['__source_main_csv__'], 'wb')
-        f.write(content)
-        f.close()
+            # extract a specific file from the zip container
+            f = zip.open(data_file_main)
 
-        self.de_csv_ad_csvnorm(
-            self._temp['__source_main_csv__'], self._temp['csv'], [
-                'Country Name', 'Country Code'
-            ]
-        )
-        if self.objectivum_formato in ['hxl', 'hxltm', 'no1']:
+            # save the extraced file
+            content = f.read()
+            # f = open(self.temp_fonti_csv, 'wb')
+            f = open(self._temp['__source_main_csv__'], 'wb')
+            f.write(content)
+            f.close()
+
+            self.de_csv_ad_csvnorm(
+                self._temp['__source_main_csv__'], self._temp['csv'], [
+                    'Country Name', 'Country Code'
+                ]
+            )
+        else:
+            source = self.methodus.replace('file://', '')
+            # raise ValueError(source, self.temp_fonti_csv)
+            # shutil.copyfile(source, self.temp_fonti_csv)
+
+            self.de_csv_ad_csvnorm(
+                source, self._temp['csv'], [
+                    'Country Name', 'Country Code'
+                ]
+            )
+
+            # # We copy the file here since the default behavior of self.__del__
+            # # would delete the file
+            # shutil.copyfile(source, self.temp_fonti_csvnorm)
+
+            # # We still need to mimic self.de_csv_ad_csvnorm() which
+            # # would cache elf._caput
+            # with open(self.temp_fonti_csvnorm) as _fons:
+            #     # first_line = f.readline()
+            #     _csv_reader = csv.reader(_fons)
+            #     self._caput = next(_csv_reader)
+
+            # from genericpath import exists
+            # raise ValueError(source, self.temp_fonti_csv, exists(
+            #     source), exists(self.temp_fonti_csv))
+
+        if self.objectivum_formato in ['hxl', 'hxltm', 'hxltm-wide', 'no1']:
+            # raise ValueError(self._caput)
+            _indicator_code_index = self._caput.index('Indicator Code')
+
+            # If the output format is HXL, we only require indicator column
+            # to not the empty
+            if self.objectivum_formato == 'hxl' or \
+                (self.objectivum_transformationi and 'hxlize-urn-worldbank'
+                    in self.objectivum_transformationi):
+                self._skipLineMetaCsv.append(
+                    {
+                        'index': _indicator_code_index
+                    }
+                )
+            else:
+                self._skipLineMetaCsv.append(
+                    {
+                        'index': _indicator_code_index,
+                        'not_in': DATA_HXL_DE_CSV_REGEX['worldbank'].keys()
+                    }
+                )
             self.de_csvnorm_ad_hxl(
                 self._temp['csv'], self._temp['hxl']
             )
-        if self.objectivum_formato in ['hxltm', 'no1']:
+
+        if self.objectivum_formato in ['hxltm',  'hxltm-wide', 'no1']:
+            hxl_vocab = False
+            # if self.methodus == 'health':
+            if self.methodus in DATA_METHODUS['worldbank'] or \
+                    self.methodus.startswith('file://'):
+                self._hxlPivot = DATA_HXL_DE_CSV_REGEX['worldbank']
+                hxl_vocab = True
+
             self.de_hxl_ad_hxltm(
-                self._temp['hxl'], self._temp['hxltm']
+                self._temp['hxl'], self._temp['hxltm'], hxl_vocab=hxl_vocab
             )
-        if self.objectivum_formato in ['no1']:
+
+            # raise ValueError(self._temp['hxltm'])
+
+        if self.objectivum_formato == 'hxltm-wide':
+            hxl_vocab = False
+            # if self.methodus == 'health':
+            #     self._hxlPivot = DATA_HXL_DE_CSV_REGEX['worldbank']
+            #     hxl_vocab = True
+            self.de_hxltm_ad_hxltm_wide(
+                self._temp['hxltm'], self._temp['hxltm_wide']
+            )
+
+        # We also generate wide data implicitly if result needs it
+        if self.objectivum_formato == 'no1' and \
+                ('#item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio' in self._caput):
+            hxl_vocab = False
+            # if self.methodus == 'health':
+            #     self._hxlPivot = DATA_HXL_DE_CSV_REGEX['worldbank']
+            #     hxl_vocab = True
+            self.de_hxltm_ad_hxltm_wide(
+                self._temp['hxltm'], self._temp['hxltm_wide']
+            )
+
+            self.de_hxltm_ad_no1(
+                self._temp['hxltm_wide'], self._temp['no1']
+            )
+
+        elif self.objectivum_formato in ['no1']:
             self.de_hxltm_ad_no1(
                 self._temp['hxltm'], self._temp['no1']
             )
+        else:
+            SyntaxError('{}??'.format(self.objectivum_formato))
 
 
 if __name__ == "__main__":

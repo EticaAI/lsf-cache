@@ -210,6 +210,10 @@ Index preparation (warn up cache) . . . . . . . . . . . . . . . . . . . . . . .
 '#item+rem+i_qcc+is_zxxx+ix_unm49=\
 DATA_REFERENTIBUS(i1603_45_49;#country+code+v_iso3)'
 
+
+   {0}  --methodus=index_praeparationi 1603_16_1_0 \
+--index-nomini=i1603_16_1_0 --index-ad-columnam='ix_unm49'
+
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------

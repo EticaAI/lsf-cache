@@ -1868,7 +1868,7 @@ file_merge_numerordinatio_de_wiki_q() {
   numerordinatio="$1"
   est_temporarium_fontem="${2:-"1"}"
   est_temporarium_objectivum="${3:-"0"}"
-  est_non_normale="${4:-"0"}" # DEPRECATED
+  #est_non_normale="${4:-"0"}" # DEPRECATED
   rdf_predicates="${5:-""}"
   rdf_trivio="${6:-""}"
 
@@ -1891,7 +1891,7 @@ file_merge_numerordinatio_de_wiki_q() {
   fontem_q_archivum="${_basim_fontem}/$_path/$_nomen.wikiq.tm.hxl.csv"
   objectivum_archivum="${_basim_objectivum}/$_path/$_nomen.no11.tm.hxl.csv"
   objectivum_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.no11.tm.hxl.csv"
-  fontem_q_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
+  #fontem_q_archivum_temporarium="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
   # fontem_q_archivum_temporarium_2="${ROOTDIR}/999999/0/$_nomen.wikiq.tm.hxl.csv"
 
   # echo "${FUNCNAME[0]} sources changed_recently. Reloading... [$fontem_archivum]"
@@ -1902,12 +1902,12 @@ file_merge_numerordinatio_de_wiki_q() {
       --rdf-combinatio-archivum-linguae="$fontem_q_archivum" \
       --rdf-combinatio-praedicatis-linguae="$rdf_predicates" \
       --rdf-trivio="$rdf_trivio" \
-      "$fontem_archivum" > "$objectivum_archivum_temporarium"
+      "$fontem_archivum" >"$objectivum_archivum_temporarium"
   else
     "${ROOTDIR}/999999999/0/999999999_54872.py" \
       --methodus=hxltm_combinatio_linguae \
       --rdf-combinatio-archivum-linguae="$fontem_q_archivum" \
-      "$fontem_archivum" > "$objectivum_archivum_temporarium"
+      "$fontem_archivum" >"$objectivum_archivum_temporarium"
   fi
 
   frictionless validate "${objectivum_archivum_temporarium}"
@@ -3825,4 +3825,79 @@ deploy_0_9_markdown() {
     --ex-librario="cdn" \
     --status-quo-in-markdown \
     >"$objectivum_archivum"
+}
+
+#### Reusable functions to move from here ______________________________________
+# reusable, however as generate specific dataset, better move out the generic
+# library
+
+#######################################
+# zzz_baseline_ab0_info
+#
+# Globals:
+#   ROOTDIR
+# Arguments:
+#   numerordinatio
+# Outputs:
+#   Convert files
+#######################################
+zzz_baseline_ab0_info() {
+  #numerordinatio="$1"
+  # echo ""
+
+  # AG.SRF.TOTL.K2   : country/territory area
+  # SP.POP.TOTL      : populaton total P1082
+  # NY.GDP.MKTP.CD   : GDP (US$)
+  # EN.ATM.CO2E.KT   : carbon emission (Q67201057)
+  # AG.LND.PRCP.MM   : annual precipitation (Q10726724)
+  # SI.POV.GINI      : Gini coefficient (P1125)
+  # SE.ADT.LITR.ZS   : literacy rate (P6897)
+  # SP.DYN.LE00.IN   : life expectancy (P2250)
+  # SL.UEM.TOTL.ZS   : unemployment rate (P1198)
+  indicators="AG.SRF.TOTL.K2,SP.POP.TOTL,NY.GDP.MKTP.CD,EN.ATM.CO2E.KT,G.LND.PRCP.MM,SI.POV.GINI,SE.ADT.LITR.ZS,SP.DYN.LE00.IN,SL.UEM.TOTL.ZS"
+
+  printf "\n\t%40s\n" "${tty_blue}${FUNCNAME[0]} STARTED ${tty_normal}"
+
+  set -x
+
+  "${ROOTDIR}/999999999/0/999999999_521850.py" \
+    --methodus-fonti=worldbank \
+    --methodus=health \
+    --objectivum-formato=csv \
+    >999999/0/pivot-health.csv
+
+  ls -lah 999999/0/pivot-health.csv
+
+  "${ROOTDIR}/999999999/0/999999999_521850.py" \
+    --methodus-fonti=worldbank \
+    --methodus=environment \
+    --objectivum-formato=csv \
+    >999999/0/pivot-environment.csv
+
+  ls -lah 999999/0/pivot-environment.csv
+
+  tail -n +2 999999/0/pivot-health.csv >999999/0/pivot--dataonly.csv
+  tail -n +2 999999/0/pivot-environment.csv >>999999/0/pivot--dataonly.csv
+
+  sort --output=999999/0/pivot--dataonly.csv 999999/0/pivot--dataonly.csv
+
+  head -n 1 999999/0/pivot-health.csv >999999/0/pivot-merged.csv
+  cat 999999/0/pivot--dataonly.csv >>999999/0/pivot-merged.csv
+
+  "${ROOTDIR}/999999999/0/999999999_521850.py" \
+    --methodus-fonti=worldbank \
+    --methodus=file://999999/0/pivot-merged.csv \
+    --objectivum-transformationi=annus-recenti-exclusivo \
+    --hxltm-wide-indicators="$indicators" \
+    --objectivum-formato=hxltm-wide >999999/0/pivot-merged-final.tm.csv.hxl.csv
+
+  frictionless validate 999999/0/pivot-merged-final.tm.csv.hxl.csv
+
+  frictionless describe 999999/0/pivot-merged-final.tm.csv.hxl.csv
+
+  ls -lha 999999/0/pivot-merged-final.tm.csv.hxl.csv
+
+  set +x
+  printf "\t%40s\n" "${tty_green}${FUNCNAME[0]} FINISHED OKAY ${tty_normal}"
+
 }

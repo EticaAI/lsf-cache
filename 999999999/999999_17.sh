@@ -66,7 +66,63 @@ ROOTDIR="$(pwd)"
 # wikiq=$(file_extract_ix_wikiq "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.tm.hxl.csv")
 
 # wikidata_q_ex_totalibus "$wikiq" "999999/1603/3/45/16/1/1/1603_3_45_16_1_1.wikiq.tm.hxl.csv"
+
+
+# ./999999999/0/999999999_7200235.py  --methodus=index_praeparationi 1603_16_1_0 --index-nomini=i1603_16_1_0 --index-ad-columnam='ix_unm49'
+
+# ./999999999/0/999999999_54872.py \
+#   --methodus=_temp_no1 \
+#   --rdf-sine-spatia-nominalibus=devnull,mdciii \
+#   --rdf-trivio=1603 \
+#   --rdf-per-trivio='iso8601v,xywdatap2899v,xywdatap4135v' \
+#   "999999/0/1603_99966_1_0~worldbank~health~wide.no1.tm.hxl.csv" \
+#   >"999999/0/1603_99966_1_0~worldbank~health~TEMP.no1.owl.ttl"
+
+# rdfpipe --input-format=turtle --output-format=longturtle \
+#   "999999/0/1603_99966_1_0~worldbank~health~TEMP.no1.owl.ttl" \
+#   >"999999/0/1603_99966_1_0~worldbank~health.no1.owl.ttl"
+
+
+# @TODO https://data.worldbank.org/topic/aid-effectiveness?view=chart
+# - https://github.com/robdmc/pandashells
+#   - pip install pandashells[console]
+#   - pip install pandashells[full]
+#     - p.config --plot_backend TkAgg
+# p.example_data -d tips | head
+# p.example_data -d tips | p.df 'df.head()' -o table
+# p.example_data -d tips | p.df 'df.describe().T' -o table index 
+#
+# cat "999999/0/1603_99966_1_0~worldbank~health~wide.tm.hxl.csv" | p.df 'df.head()' -o table
+
+# cat 999999/0/1603_99966_1_0~worldbank~health~wide.tm.hxl.csv | p.df 'df.describe().T' -o table index 
+# cat 999999/0/1603_99966_1_0~worldbank~health.tm.hxl.csv | p.df 'df.describe().T' -o table index 
+
+zzz_baseline_ab0_info
+
+exit 0
+
 set -x
+./999999999/0/999999999_521850.py --methodus-fonti=worldbank --methodus=health --objectivum-formato=csv > 999999/0/pivot-health.csv
+
+ls -lah 999999/0/pivot-health.csv
+
+./999999999/0/999999999_521850.py --methodus-fonti=worldbank --methodus=environment --objectivum-formato=csv > 999999/0/pivot-environment.csv
+
+ls -lah 999999/0/pivot-environment.csv
+
+tail -n +2 999999/0/pivot-health.csv > 999999/0/pivot--dataonly.csv
+tail -n +2 999999/0/pivot-environment.csv >> 999999/0/pivot--dataonly.csv
+
+sort --output=999999/0/pivot--dataonly.csv 999999/0/pivot--dataonly.csv
+
+head -n 1 999999/0/pivot-health.csv > 999999/0/pivot-merged.csv
+cat 999999/0/pivot--dataonly.csv >> 999999/0/pivot-merged.csv
+
+./999999999/0/999999999_521850.py --methodus-fonti=worldbank --methodus=file://999999/0/pivot-merged.csv --objectivum-transformationi=annus-recenti-exclusivo --objectivum-formato=hxltm-wide > 999999/0/pivot-merged-final.tm.csv.hxl.csv
+
+frictionless validate 999999/0/pivot-merged-final.tm.csv.hxl.csv
+
+exit 0
 
 ./999999999/0/999999999_521850.py \
   --methodus-fonti=worldbank \
@@ -74,12 +130,16 @@ set -x
   --objectivum-formato=hxltm \
   >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.tm.hxl.csv"
 
+frictionless validate "999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.tm.hxl.csv"
+
 ./999999999/0/999999999_521850.py \
   --methodus-fonti=worldbank \
   --methodus="SP.POP.TOTL" \
   --objectivum-formato=no1 \
   --numerordinatio-praefixo="1603_992_1_0" \
   >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv"
+
+frictionless validate "999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv"
 
 ./999999999/0/999999999_54872.py \
   --methodus=_temp_no1 \
@@ -94,6 +154,59 @@ rdfpipe --input-format=turtle --output-format=longturtle \
   "999999/0/1603_992_1_0~worldbank~SP_POP_TOTL~TEMP.no1.owl.ttl" \
   >"999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.owl.ttl"
 
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="health" \
+  --objectivum-formato=hxl \
+  >"999999/0/1603_99966_1_0~worldbank~health.hxl.csv"
+
+frictionless validate "999999/0/1603_99966_1_0~worldbank~health.hxl.csv"
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="health" \
+  --objectivum-formato=hxltm \
+  >"999999/0/1603_99966_1_0~worldbank~health.tm.hxl.csv"
+
+frictionless validate "999999/0/1603_99966_1_0~worldbank~health.tm.hxl.csv"
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="health" \
+  --objectivum-formato=hxltm-wide \
+  >"999999/0/1603_99966_1_0~worldbank~health~wide.tm.hxl.csv"
+
+frictionless validate "999999/0/1603_99966_1_0~worldbank~health~wide.tm.hxl.csv"
+
+./999999999/0/999999999_521850.py \
+  --methodus-fonti=worldbank \
+  --methodus="health" \
+  --objectivum-formato=no1 \
+  --numerordinatio-praefixo="1603_992_1_0" \
+  >"999999/0/1603_99966_1_0~worldbank~health~wide.no1.tm.hxl.csv"
+
+frictionless validate "999999/0/1603_99966_1_0~worldbank~health~wide.no1.tm.hxl.csv"
+
+# @TODO add other pivots
+# ./999999999/0/999999999_54872.py \
+#   --methodus=_temp_no1 \
+#   --rdf-sine-spatia-nominalibus=devnull,mdciii \
+#   --rdf-trivio=1603 \
+#   --rdf-per-trivio='iso8601v' \
+#   "999999/0/1603_99966_1_0~worldbank~health~wide.no1.tm.hxl.csv" \
+#   >"999999/0/1603_99966_1_0~worldbank~health~TEMP.no1.owl.ttl"
+
+./999999999/0/999999999_54872.py \
+  --methodus=_temp_no1 \
+  --rdf-sine-spatia-nominalibus=devnull,mdciii \
+  --rdf-trivio=1603 \
+  --rdf-per-trivio='iso8601v,xywdatap2899v,xywdatap4135v' \
+  "999999/0/1603_99966_1_0~worldbank~health~wide.no1.tm.hxl.csv" \
+  >"999999/0/1603_99966_1_0~worldbank~health~TEMP.no1.owl.ttl"
+
+rdfpipe --input-format=turtle --output-format=longturtle \
+  "999999/0/1603_99966_1_0~worldbank~health~TEMP.no1.owl.ttl" \
+  >"999999/0/1603_99966_1_0~worldbank~health.no1.owl.ttl"
 
 # ./999999999/0/999999999_54872.py --methodus=_temp_no1 --rdf-sine-spatia-nominalibus=devnull,mdciii --rdf-trivio=1603 999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv | head -n 20
 # head -n 3 999999/0/1603_992_1_0~worldbank~SP_POP_TOTL.no1.tm.hxl.csv

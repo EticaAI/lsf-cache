@@ -149,6 +149,22 @@ jsonschema --instance sample.json sample.schema
 curl https://geojson.org/schema/GeoJSON.json --output 999999/0/GeoJSON-schema.json
 
 jsonschema --instance 999999999/1568346/data/cod-ab-example2.geojson 999999/0/GeoJSON-schema.json
+
+### Orange3
+```
+# http://biolab.github.io/install-orange/
+source ~/orange3venv/bin/activate
+python -m Orange.canvas
+
+# @see /workspace/data/brasil-dataset-covid-pacientes-hospital-albert-einstein
+# https://github.com/search?q=extension%3Aows&type=Code
+# https://github.com/search?q=repo%3Abiolab%2Forange3+extension%3Aows&type=Code&ref=advsearch&l=&l=
+
+
+# Map on Orange3
+# https://orangedatamining.com/widget-catalog/geo/geomap/
+```
+
 -->
 
 # To Dos

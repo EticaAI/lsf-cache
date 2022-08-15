@@ -26,6 +26,8 @@
 #       CREATED:  2022-01-27 17:07 UTC created. Based on 1603_3_12.py
 #      REVISION:  ---
 # ==============================================================================
+# pylint: disable=too-many-lines,missing-module-docstring,invalid-name
+# pylint: disable=consider-using-f-string
 
 # pytest
 #    python3 -m doctest ./999999999/0/1603_1.py
@@ -55,7 +57,6 @@
 # @see https://www.w3.org/2001/sw/BestPractices/OEP/SimplePartWhole
 
 # from ast import Try
-from genericpath import exists
 import glob
 # from multiprocessing.sharedctypes import Value
 import sys
@@ -77,13 +78,15 @@ import datetime
 # from datetime import datetime
 # from pathlib import Path
 
+import csv
 import json
 from zlib import crc32
+
+from genericpath import exists
 
 # from itertools import permutations
 # from itertools import product
 # valueee = list(itertools.permutations([1, 2, 3]))
-import csv
 
 # Allow fail if user does not have, but just using part of the tools
 # import yaml
@@ -95,9 +98,9 @@ except ModuleNotFoundError:
 
 
 from L999999999_0 import (
-    OntologiaSimplici,
+    # OntologiaSimplici,
     OntologiaSimpliciAdOWL,
-    bcp47_langtag,
+    # bcp47_langtag,
     DictionariaLinguarum,
     DictionariaInterlinguarum,
     NUMERORDINATIO_BASIM,
@@ -112,9 +115,9 @@ from L999999999_0 import (
     TabulaSimplici
 )
 
-DESCRIPTION = """
+DESCRIPTION = f"""
 ------------------------------------------------------------------------------
-The {0} is main Numerordĭnātĭo program to explain simple HXLTM files and \
+The {__file__} is main Numerordĭnātĭo program to explain simple HXLTM files and \
 the stricter Numerordĭnātĭo format (e.g. group of dictionaries using \
 HXLTM container) by using \
 information from other Numerordĭnātĭo dictionaries. \
@@ -140,116 +143,126 @@ PDFs, ebooks, HTML and more.
   - Other tools to work with CSVs and tabular format, such as CSVKit and \
 Frictionless, can be used to convert/validate files.
 ------------------------------------------------------------------------------
-""".format(__file__)
+"""
+# """.format(__file__)
 
-__EPILOGUM__ = """
+__EPILOGUM__ = f"""
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
 HXLTM explānātiōnī . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
     printf "#item+conceptum+codicem,#item+rem+i_qcc+is_zxxx+ix_wikiq" | \
-{0} --methodus='hxltm-explanationi'
+{__file__} --methodus='hxltm-explanationi'
     cat 1603/1/1/1603_1_1.no1.tm.hxl.csv | \
-{0} --methodus='hxltm-explanationi'
-    {0} --methodus='hxltm-explanationi' 1603/1/1/1603_1_1.no1.tm.hxl.csv
+{__file__} --methodus='hxltm-explanationi'
+    {__file__} --methodus='hxltm-explanationi' 1603/1/1/1603_1_1.no1.tm.hxl.csv
 
 
 Data apothēcae . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
     printf "1603_45_1\\n1603_45_31" > 999999/0/apothecae-list.txt
-    {0} --methodus='data-apothecae' \
+    {__file__} --methodus='data-apothecae' \
 --data-apothecae-ex-archivo='999999/0/apothecae-list.txt' \
 --data-apothecae-ad='apothecae.datapackage.json'
 
-    {0} --methodus='data-apothecae' \
+    {__file__} --methodus='data-apothecae' \
 --data-apothecae-ex='1603_45_1,1603_45_31' \
 --data-apothecae-ad='apothecae.datapackage.json'
 
-    {0} --methodus='data-apothecae' \
+    {__file__} --methodus='data-apothecae' \
 --data-apothecae-ex='1603_1_1,1603_1_51' \
 --data-apothecae-ad='999999/0/catalog-v001.xml'
 
-    {0} --methodus='data-apothecae' \
+    {__file__} --methodus='data-apothecae' \
 --data-apothecae-ex='1603_45_1,1603_45_31' \
 --data-apothecae-ad='apothecae.sqlite'
 
-    {0} --methodus='opus-temporibus' --ex-opere-temporibus='locale' \
+    {__file__} --methodus='opus-temporibus' --ex-opere-temporibus='locale' \
 --quaero-ix_n1603ia='({{publicum}}>=9)' > 999999/0/apothecae-list.txt
-    {0} --methodus='data-apothecae' \
+    {__file__} --methodus='data-apothecae' \
 --data-apothecae-ex-archivo='999999/0/apothecae-list.txt' \
 --data-apothecae-ad='apothecae.datapackage.json'
-    {0} --methodus='data-apothecae' \
+    {__file__} --methodus='data-apothecae' \
 --data-apothecae-ex-archivo='999999/0/apothecae-list.txt' \
 --data-apothecae-ad='apothecae.sqlite'
 
 (Data catalog / Datapackage, ex-suffixis, ex-praefixis)
 
-    {0} --methodus='data-apothecae' --data-apothecae-ad-stdout \
+    {__file__} --methodus='data-apothecae' --data-apothecae-ad-stdout \
 --data-apothecae-formato='catalog' \
 --data-apothecae-ex-suffixis='no1.owl.ttl,no11.owl.ttl,no1.skos.ttl,\
 no11.skos.ttl' --data-apothecae-ex-praefixis='1603'
 
-    {0} --methodus='data-apothecae' --data-apothecae-ad-stdout \
+    {__file__} --methodus='data-apothecae' --data-apothecae-ad-stdout \
 --data-apothecae-formato='datapackage' \
 --data-apothecae-ex-suffixis='no1.tm.hxl.csv,no11.tm.hxl.csv' \
 --data-apothecae-ex-praefixis='1603_1_1,1603_16_1,1603_45,!1603_45_16'
 
-    DATA_APOTHECAE_MINIMIS=1 {0} --methodus='data-apothecae' \
+    DATA_APOTHECAE_MINIMIS=1 {__file__} --methodus='data-apothecae' \
 --data-apothecae-ad-stdout --data-apothecae-formato='datapackage' \
 --data-apothecae-ex-suffixis='no1.bcp47.csv' \
 --data-apothecae-ex-praefixis='1603_45_16' | jq .resources[].name | wc -l
+
+Data apothēcae + machine learning . . . . . . . . . . . . . . . . . . . . . . .
+(Orange Data Mining project file)
+
+     {__file__} --methodus='data-apothecae' --data-apothecae-ad-stdout \
+--data-apothecae-formato='ows' \
+--data-apothecae-ex-suffixis='no1.bcp47.csv' \
+--data-apothecae-ex='1603_16_1_0' > orange.ows
 
 Data apothēcae ūnicae . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
 (Faster alternative to --methodus='status-quo' --status-quo-in-datapackage)
 (Generate output for a single dataset, but all file formats without full path)
 
-    {0} --methodus='data-apothecae-unicae' \
+    {__file__} --methodus='data-apothecae-unicae' \
 --data-apothecae-ex='1603_45_1' \
 --data-apothecae-ad-stdout \
 --data-apothecae-formato='datapackage'
 
 Dictionaria Numerordĭnātĭo (deprecated) . . . . . . . . . . . . . . . . . . . .
-    {0} --methodus='deprecatum-dictionaria-numerordinatio'
+    {__file__} --methodus='deprecatum-dictionaria-numerordinatio'
 
 Cōdex . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    {0} --methodus='codex' --codex-de 1603_63_101
+    {__file__} --methodus='codex' --codex-de 1603_63_101
 
-    {0} --methodus='codex' --codex-de 1603_63_101 --codex-copertae
+    {__file__} --methodus='codex' --codex-de 1603_63_101 --codex-copertae
 
-    {0} --methodus='codex' --codex-de 1603_63_101 --codex-in-tabulam-json
+    {__file__} --methodus='codex' --codex-de 1603_63_101 --codex-in-tabulam-json
 
 
 Status quō . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    {0} --methodus='status-quo' --status-quo-in-json --codex-de 1603_63_101
+    {__file__} --methodus='status-quo' --status-quo-in-json --codex-de 1603_63_101
 
-    {0} --methodus='status-quo' --status-quo-in-rdf-skos-turtle --codex-de 1603_63_101
+    {__file__} --methodus='status-quo' --status-quo-in-rdf-skos-turtle --codex-de 1603_63_101
 
-    {0} --methodus='status-quo' --status-quo-in-yaml --ex-librario='cdn'
+    {__file__} --methodus='status-quo' --status-quo-in-yaml --ex-librario='cdn'
 
-    {0} --methodus='status-quo' --status-quo-in-datapackage \
+    {__file__} --methodus='status-quo' --status-quo-in-datapackage \
 --ex-librario='locale'
 
 Ontologia simplicī . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    {0} --methodus='ontologia-simplici' --ontologia-radici=1603_1_1
+    {__file__} --methodus='ontologia-simplici' --ontologia-radici=1603_1_1
 
-    {0} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7
+    {__file__} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7
 
-    {0} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 \
+    {__file__} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 \
 --ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv
 
-    {0} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 \
+    {__file__} --methodus='ontologia-simplici' --ontologia-radici=1603_1_7 \
 --ontologia-ex-archivo=1603/1/7/1603_1_7.no1.tm.hxl.csv \
 | rapper --quiet --input=turtle --output=turtle /dev/fd/0
 
 Opus temporibus . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-    {0} --methodus='opus-temporibus' --ex-opere-temporibus='cdn'
+    {__file__} --methodus='opus-temporibus' --ex-opere-temporibus='cdn'
 
-    {0} --methodus='opus-temporibus' --ex-opere-temporibus='cdn' \
+    {__file__} --methodus='opus-temporibus' --ex-opere-temporibus='cdn' \
 --quaero-ix_n1603ia='({{publicum}}>=9)&&({{victionarium_q}}>9)'
 
 ------------------------------------------------------------------------------
                             EXEMPLŌRUM GRATIĀ
 ------------------------------------------------------------------------------
-""".format(__file__)
+"""
+# """.format(__file__)
 
 # NUMERORDINATIO_BASIM = os.getenv('NUMERORDINATIO_BASIM', os.getcwd())
 # NUMERORDINATIO_DEFALLO = int(os.getenv('NUMERORDINATIO_DEFALLO', '60'))  # �
@@ -948,12 +961,17 @@ class Codex:
                 codex_ad_hoc = json.loads(CODEX_AD_HOC_NUMERORDINATIO)
                 if not '#item+rem+i_qcc+is_zxxx+ix_n1603' in codex_ad_hoc or \
                         not '#item+rem+i_mul+is_zyyy' in codex_ad_hoc:
-                    raise SyntaxError("bad CODEX_AD_HOC_NUMERORDINATIO [{1}]".format(
-                        self.de_codex, CODEX_AD_HOC_NUMERORDINATIO))
+                    # raise SyntaxError("bad CODEX_AD_HOC_NUMERORDINATIO [{1}]".format(
+                    #     self.de_codex, CODEX_AD_HOC_NUMERORDINATIO))
+                    raise SyntaxError(
+                        f"bad CODEX_AD_HOC_NUMERORDINATIO" +
+                        f"[{CODEX_AD_HOC_NUMERORDINATIO}]")
                 self.m1603_1_1__de_codex = codex_ad_hoc
             else:
-                raise ValueError("{0} not defined on 1603_1_1 [{1}]".format(
-                    self.de_codex, fullpath))
+                # raise ValueError("{0} not defined on 1603_1_1 [{1}]".format(
+                #     self.de_codex, fullpath))
+                raise ValueError(
+                    f"{self.de_codex} not defined on 1603_1_1 [{fullpath}]")
 
     def _init_codex(self):
         # numerordinatio = numerordinatio_neo_separatum(self.de_codex, ':')
@@ -2720,8 +2738,10 @@ class Codex:
 
                 nomen = '**' + pictura.quod_id() + '**'
                 if link and len(link):
-                    nomen = '**{2}** (link:++{1}++[fōns {2} 🔗])'.format(
-                        titulum, link, pictura.quod_id())
+                    # nomen = '**{2}** (link:++{1}++[fōns {2} 🔗])'.format(
+                    #     titulum, link, pictura.quod_id())
+                    nomen = '**{1}** (link:++{0}++[fōns {1} 🔗])'.format(
+                        link, pictura.quod_id())
 
                 # paginae.append('  {0}:::'.format(pictura.quod_id()))
                 paginae.append(
@@ -4149,7 +4169,7 @@ class DataApothecae:
         data_apothecae_formato: str = None,
         unicum: bool = False
     ):
-
+        # raise NotImplementedError
         # NOTE: the command line options for strout and to auto detect
         #       numerordinatios from paths is done outsite DataApothecae
 
@@ -4176,6 +4196,8 @@ class DataApothecae:
                 self.data_apothecae_formato = 'datapackage'
             elif data_apothecae_ad.endswith('.xml'):
                 self.data_apothecae_formato = 'catalog'
+            elif data_apothecae_ad.endswith('.ows'):
+                self.data_apothecae_formato = 'ows'
             else:
                 raise ValueError('--data-apothecae-formato ?')
 
@@ -4225,7 +4247,7 @@ class DataApothecae:
         # libraria = LibrariaStatusQuo(
         #     codex,
         #     'locale')
-
+        # raise NotImplementedError(self.data_apothecae_formato)
         if self.data_apothecae_formato == 'csvw':
             # return self.praeparatio_datapackage(libraria)
             return self.praeparatio_csvw()
@@ -4245,6 +4267,10 @@ class DataApothecae:
         if self.data_apothecae_formato == 'r2rml':
             # return self.praeparatio_sqlite(libraria)
             return self.praeparatio_r2rml()
+
+        if self.data_apothecae_formato == 'ows':
+            # return self.praeparatio_sqlite(libraria)
+            return self.praeparatio_ows()
 
         return True
 
@@ -4538,6 +4564,77 @@ class DataApothecae:
         self.resultatum.append(sqlite_path)
 
     # ./999999999/0/1603_1.py --methodus='data-apothecae' --data-apothecae-ad-stdout --data-apothecae-formato='r2rml' --data-apothecae-ex-suffixis='no1.tm.hxl.csv,no11.tm.hxl.csv' --data-apothecae-ex-praefixis='1603_1_1'
+
+    def praeparatio_ows(
+            self,
+            temporarium: str = None):
+        """praeparatio_r2rml
+
+        See:
+            - https://www.w3.org/TR/r2rml/
+
+        Args:
+            libraria (LibrariaStatusQuo):
+        """
+        # raise NotImplementedError
+
+        if len(self.data_apothecae_ex) > 1:
+            raise NotImplementedError('len > 1: [{0}] [{1}]'.format(
+                len(self.data_apothecae_ex), self.data_apothecae_ex
+            ))
+
+        objetivum = '{0}/{1}{2}'.format(
+            numerordinatio_neo_separatum(self.data_apothecae_ex[0], '/'),
+            numerordinatio_neo_separatum(self.data_apothecae_ex[0], '_'),
+            '.no1.bcp47.csv'  # @TODO maybe make it flexible or discoverable
+        )
+
+        archivum_ows = NUMERORDINATIO_BASIM + \
+            '/999999999/0/orange/orange-project-1.🗣️.ows'
+        textum_ows = None
+        with open(archivum_ows, 'r') as f:
+            textum_ows = f.read()
+
+        # raise ValueError(textum_ows.find("[[numerordinatio_archivo]]"))
+
+        textum_ows_finale = textum_ows.replace(
+            "[[numerordinatio_archivo]]", objetivum)
+
+        paginae = []
+        # paginae.append(textum_ows)
+        # paginae.append(
+        #     '@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .')
+        # paginae.append(
+        #     '@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .')
+        # paginae.append('@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .')
+        # paginae.append('@prefix rr: <http://www.w3.org/ns/r2rml#> .')
+
+        # paginae.append('')
+        # paginae.append('# @TODO r2rml still working draft. This is a sample')
+
+        # for codex in self.data_apothecae_ex:
+        #     paginae.append('# {0}'.format(codex))
+
+        paginae = [textum_ows_finale]
+
+        if temporarium:
+            with open(temporarium, 'w') as archivum:
+                for lineam in paginae:
+                    archivum.write(lineam)
+        else:
+            if self.data_apothecae_ad is False:
+                for lineam in paginae:
+                    print(lineam)
+            else:
+                _path_archivum = \
+                    NUMERORDINATIO_BASIM + '/' + self.data_apothecae_ad
+                # self.resultatum.append('TODO praeparatio_datapackage')
+                self.resultatum.append(_path_archivum)
+
+                with open(_path_archivum, 'w') as archivum:
+                    # Further file processing goes here
+                    for lineam in paginae:
+                        archivum.write(lineam)
 
     def praeparatio_r2rml(
             self,
@@ -5584,7 +5681,8 @@ class CLI_2600:
             '--data-apothecae-ad pattern.',
             dest='data_apothecae_formato',
             nargs='?',
-            choices=['catalog', 'csvw', 'datapackage', 'sqlite', 'r2rml'],
+            choices=['catalog', 'csvw', 'datapackage',
+                     'sqlite', 'ows', 'r2rml'],
             default=None
         )
 

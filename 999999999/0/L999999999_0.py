@@ -2070,7 +2070,7 @@ def bcp47_rdf_extension(
             elif r_op == 't':
                 if result['rdfs:Datatype'] is None:
                     datatype = _rdf_spatia_nominalibus_prefix_normali(
-                        '{0}:{1}'.format(r_verb, r_op_1)
+                        '{0}:{1}'.format(r_verb.lower(), r_op_1)
                     )
                     # raise ValueError(r_verb, datatype)
                     # r_verb = r_verb.lower()
@@ -2986,20 +2986,37 @@ def bcp47_rdf_extension_poc(
             # print('bag_meta', rdf_trivio_hxla, bcp47_privateuse)
             # print('bag_meta', bcp47_privateuse[0].startswith(rdf_trivio_hxla[0]))
             _trivio_hxla = None
+            _trivio_hxla_list = []
             for _hxla in rdf_trivio_hxla:
                 for _item in bcp47_privateuse:
                     if _item.startswith(_hxla):
                         # raise ValueError('foi', triples)
-                        _trivio_hxla = 'ix:{0}'.format(_item)
+                        # _trivio_hxla = 'ix:{0}'.format(_item)
+                        _trivio_hxla_list.append(_item)
                         # triples.append(['#<foi>', _trivio_hxla, _hxla])
+
+            if len(_trivio_hxla_list) > 0:
+                sorted(_trivio_hxla_list)
+                if len(_trivio_hxla_list) == 1:
+                    _trivio_hxla = 'ix:{0}'.format(_trivio_hxla_list[0])
+                else:
+                    _parts = []
+                    # if using owl:unionOf (ix:item1 ix:item2 ix:item3)
+                    # for _item in _trivio_hxla_list:
+                    #     _parts.append('ix:{0}'.format(_item))
+                    # _trivio_hxla = 'owl:unionOf ({0})'.format(' '.join(_parts))
+                    for _item in _trivio_hxla_list:
+                        _parts.append('ix:{0}'.format(_item))
+                    _trivio_hxla = 'ix:{0}'.format(
+                        '__'.join(_trivio_hxla_list))
 
             if _trivio_hxla is not None:
                 triples_novo = []
                 for _triple_item in triples:
                     _bn = '_:{0}'.format(uuid.uuid3(
                         uuid.NAMESPACE_DNS,
-                        _triple_item[0]
-                        # str(_triple_item[0], _triple_item[1])
+                        # _triple_item[0]
+                        str('{}{}'.format(_triple_item[0], _triple_item[1]))
                     ))
                     triples_novo.append([
                         _triple_item[0],
@@ -3012,7 +3029,12 @@ def bcp47_rdf_extension_poc(
                         _triple_item[2]
                     ])
                     # pass
+                    # if len(triples):
+                    #     print(_bn)
+                # print('old', triples)
                 triples = triples_novo
+                # if len(triples):
+                #     raise ValueError(triples, triples_novo)
 
         return triples, triples_delayed
 
@@ -5351,6 +5373,41 @@ def hxltm__ex_dict(
     return caput_novo, data_novis
 
 
+def hxltm__ixattr_ex_urn(res: str, urn_basi: str, gs_encoder: str = 'x29') -> str:
+    """hxltm__ixattr_ex_urn Create normalized +ix_urn attribute
+
+    For some special cases which ammount of data to strictly label with RDF
+    is way to much, this function can be used to create an +ix_ attribute
+    which will use only [a-z0-9] range in a way that is reversible.
+    However, this strategy of encoding will generate -x- attributes which
+    will be > 8, as per BCP47 definition of allowed values to -x-.
+
+    Trivia, the gs_encoder default is a hint to ASCII "29 GS (Group separator)"
+
+    Args:
+        res (str): the argument
+        urn_basi (str): the base for URN.
+        gs_encoder (str, optional): character to replace non [a-z0-9].
+                                    Defaults to 'x29'.
+
+    >>> hxltm__ixattr_ex_urn('SH.STA.WASH.P5', 'worldbank')
+    'ix_urnx29worldbankx29shx29stax29washx29p5'
+
+    >>> hxltm__ixattr_ex_urn('001', 'unm49')
+    'ix_urnx29unm49x29001'
+
+    """
+    # - ASCII: 29 GS (Group separator)
+    #   - x29 = replace non a-z0-9 with this
+    res_normali = res.strip().lower()
+
+    if res_normali.find(gs_encoder) > - 1:
+        raise NotImplementedError(f'[{res}] have gs_encoder [{gs_encoder}]')
+
+    res_encoded = re.sub('([^a-z0-9z])', gs_encoder, res_normali)
+    return f'ix_urn{gs_encoder}{urn_basi}{gs_encoder}{res_encoded}'
+
+
 def hxltm__quod_data_referentibus(index_nomini: str):
     _path = '{0}/999999/0/{1}.index.json'.format(
         NUMERORDINATIO_BASIM,
@@ -5391,6 +5448,258 @@ def hxltm__data_referentibus(
     else:
         # @TODO maybe allow raise error instead of return empty
         return ''
+
+
+def hxltm__data_sort(fonti: str, sortkeys: list = None) -> list:
+    """hxltm__data_sort sort contents of HXLTM on disk
+
+    Load all data into memory. Return full List[List]. Header first row
+
+    Args:
+        fonti (str): path to file
+        sortkeys (list, optional): List of keys to sort. Defaults to None.
+
+    Returns:
+        list: sorted data
+    """
+
+    if not sortkeys:
+        sortkeys = []
+
+    if '#item+conceptum+codicem' not in sortkeys:
+        sortkeys.insert(0, '#item+conceptum+codicem')
+
+    _data = []
+    caput = []
+    with open(fonti, 'r') as _fons:
+        _csv_reader = csv.reader(_fons)
+        # started = False
+        for linea in _csv_reader:
+            # print(linea)
+            if len(caput) == 0:
+                caput = linea
+                continue
+            _data.append(linea)
+
+    _i0 = caput.index(sortkeys[0])
+    if len(sortkeys) == 1:
+        _data = sorted(_data, key=lambda row: int(row[_i0]))
+    elif len(sortkeys) == 2:
+        _i1 = caput.index(sortkeys[1])
+        _data = sorted(_data, key=lambda row: (int(row[_i0]), row[_i1]))
+    elif len(sortkeys) == 3:
+        _i1 = caput.index(sortkeys[1])
+        _i2 = caput.index(sortkeys[2])
+        _data = sorted(
+            _data, key=lambda row: (int(row[_i0]), row[_i1], row[_i2]))
+    else:
+        raise NotImplementedError('len > 3; [{}] <{}>'.format(
+            len(sortkeys), sortkeys))
+
+    resultatum = []
+    resultatum.append(caput)
+    resultatum.extend(_data)
+
+    return resultatum
+
+
+def hxltm__data_pivot_wide(caput: list, data: list, is_hotfix_need: bool = False
+                           ) -> Tuple[list, List[list]]:
+    """hxltm__data_pivot_wide
+
+    For an HXL dataset with strict HXLTM documented attributes, convert data
+    from narrow (or long) to wide.
+    It works by getting attributes from an column +ix_xyadhxltrivio ("ad")
+    and using to pivo from its value all other columns with
+    +ix_xyexhxltrivio ("ex").
+
+    Args:
+        caput (list): header
+        data (list): all data, long format
+        is_hotfix_need (bool): edge case for de_hxltm_ad_hxltm_wide
+
+    Returns:
+        Tuple[list, List[list]]: caput, data
+    """
+
+    referens_columnae = '#item+rem+i_qcc+is_zxxx+ix_xyadhxltrivio'
+
+    # No + as prefix here
+    hxlatt_ex = 'ix_xyexhxltrivio'
+    if referens_columnae not in caput:
+        raise SyntaxError('[{}] must exist on header <{}>'.format(
+            referens_columnae, caput))
+
+    referens_per_indici = caput.index(referens_columnae)
+    referens_ad_indici = []
+    for item in caput:
+        if hxlatt_ex in item:
+            referens_ad_indici.append(caput.index(item))
+    if len(referens_ad_indici) == 0:
+        raise SyntaxError('{} not in header <{}>'.format(hxlatt_ex, caput))
+
+    referens_hxlattrs = []
+    for linea in data:
+        if linea[referens_per_indici] not in referens_hxlattrs:
+            referens_hxlattrs.append(linea[referens_per_indici])
+
+    sorted(referens_hxlattrs)
+
+    # raise ValueError(len(referens_hxlattrs) * len(referens_ad_indici))
+
+    columna_novae__list = []
+    columna_novae__mapping = {}
+
+    for item_I in referens_hxlattrs:
+        for item_II in referens_ad_indici:
+
+            res = hxl_hashtag_normalizatio(
+                caput[item_II].replace(hxlatt_ex, item_I))
+            if res in columna_novae__list:
+                continue
+            columna_novae__list.append(res)
+            columna_novae__mapping[item_I] = columna_novae__list.index(res)
+            # columna_novae__mapping[item_I] = len(columna_novae__list) - 1
+            # pass
+        # columna_novae__list
+
+    # raise ValueError(columna_novae__list)
+
+    data_novae__dict = {}
+    _codice_indici = caput.index('#item+conceptum+codicem')
+    _matrix_size = len(referens_hxlattrs) * len(referens_ad_indici)
+    # raise ValueError(_matrix_size, [''] * _matrix_size)
+
+    if is_hotfix_need:
+        _matrix_size = _matrix_size + 1
+
+    _do_not_merge = []
+    # These already will be on data
+    _do_not_merge.extend(referens_ad_indici)
+    for linea in data:
+        _codicem = linea[_codice_indici]
+        _referens = linea[referens_per_indici]
+        __start = columna_novae__mapping[_referens]
+        __diff = len(columna_novae__list)
+        if _codicem not in data_novae__dict:
+            data_novae__dict[_codicem] = {
+                'originalis': linea,
+                # 'data_novae': [''] * len(columna_novae__list),
+                # 'data_novae': [''] * (len(columna_novae__list) + 1),
+                'data_novae': [''] * _matrix_size,
+                'data_meta': [],
+            }
+        else:
+            # This will try to compare if we can safely add columns that would
+            # be equal anyway
+            for item_index, item_value in enumerate(linea):
+                if item_index in _do_not_merge:
+                    continue
+                if item_value != \
+                        data_novae__dict[_codicem]['originalis'][item_index]:
+                    _do_not_merge.append(item_index)
+
+        __loop = 0
+        # __loop = -1
+        # print(len(data_novae__dict[_codicem]['data_novae']))
+        # raise NotImplementedError(referens_ad_indici)
+        for index_originalis in referens_ad_indici:
+            # index_novae = __start + index_originalis
+            # print(__loop, len(data_novae__dict[_codicem]['data_novae']))
+            index_novae = __start + __loop
+            if not index_novae < len(data_novae__dict[_codicem]['data_novae']):
+                break
+            # if index_novae not in data_novae__dict[_codicem]['data_novae']:
+            #     print('error', __start, index_novae, len(data_novae__dict[_codicem]['data_novae']))
+            #     continue
+            # print('antes', index_novae, len(data_novae__dict[_codicem]['data_novae']))
+            data_novae__dict[_codicem]['data_novae'][index_novae] = \
+                linea[index_originalis]
+            # print('depois', index_novae)
+            # data_novae__dict[_codicem]['data_novae'][index_originalis] = \
+            #     linea[index_originalis]
+            __loop += 1
+
+    for codicem in data_novae__dict:
+        for _old_index, _old_value in enumerate(data_novae__dict[codicem]['originalis']):
+            if _old_index not in _do_not_merge:
+                data_novae__dict[codicem]['data_meta'].append(_old_value)
+
+    _gambiarra = []
+    for codicem in data_novae__dict:
+        data_novae__dict[codicem]['data_finalis'] = []
+        data_novae__dict[codicem]['data_finalis'].extend(
+            data_novae__dict[codicem]['data_meta']
+        )
+
+        if is_hotfix_need:
+            # now we remove that last part we added early
+            data_novae__dict[codicem]['data_finalis'].extend(
+                data_novae__dict[codicem]['data_novae'][1:]
+            )
+        else:
+            data_novae__dict[codicem]['data_finalis'].extend(
+                data_novae__dict[codicem]['data_novae']
+            )
+
+        _gambiarra.append(list(data_novae__dict[codicem]['data_finalis']))
+
+        # raise ValueError(data_novae__dict[codicem]['data_finalis'])
+
+    # raise ValueError(_gambiarra[0])
+
+    # for item in caput:
+    #     for item_II in referens_ad_indici:
+
+    #     pass
+    # raise ValueError(_old_index)
+    _caput_novo_meta = []
+    for _old_index, _old_caput in enumerate(caput):
+        if _old_index not in _do_not_merge:
+            _caput_novo_meta.append(_old_caput)
+
+    caput_novo = _caput_novo_meta + columna_novae__list
+    # data_novo = []
+    # for codicem in data_novae__dict:
+    # _novus = [*data_novae__dict[codicem]['data_meta'], *data_novae__dict[_codicem]['data_novae']]
+
+    # _novus = data_novae__dict[codicem]['data_meta']
+    # _novus.extend(data_novae__dict[_codicem]['data_novae'])
+    # data_novo.append(data_novae__dict[codicem]['data_meta'] \
+    #     + data_novae__dict[_codicem]['data_novae'])
+
+    # Weid way to merge 2 lists. Whatever. Eventually review
+    # _novus = []
+    # for item in list(data_novae__dict[codicem]['data_meta']):
+    #     _novus.append(item)
+    # for item in list(data_novae__dict[_codicem]['data_novae']):
+    #     _novus.append(item)
+
+    # # raise ValueError(_novus, data_novae__dict[_codicem]['data_novae'])
+
+    # _novus = list(data_novae__dict[_codicem]['data_novae'])
+
+    # data_novo.append(_novus)
+    # raise ValueError(data_novae__dict[_codicem]['data_finalis'])
+    # data_novo.append(data_novae__dict[_codicem]['data_finalis'])
+
+    # raise NotImplementedError(data_novo[0], data_novae__dict['4'])
+    # raise NotImplementedError(caput_novo, data_novo[0])
+    # raise NotImplementedError(data_novo[0], data_novae__dict['4']['data_novae'])
+    # raise NotImplementedError(data_novae__dict['4'])
+    # raise NotImplementedError(columna_novae__list, columna_novae__mapping)
+
+    _duplicates = []
+    for item in caput_novo:
+        if caput_novo.count(item) != 1 and item not in _duplicates:
+            _duplicates.append(item)
+    if len(_duplicates) > 0:
+        raise SyntaxError('duplicates <{0}> at header'.format(_duplicates))
+    # return caput_novo, data_novo
+
+    # raise ValueError(caput_novo, _gambiarra[0])
+
+    return caput_novo, _gambiarra
 
 
 def hxltm__concat(
@@ -6469,6 +6778,143 @@ def hxltm_ex_selectis(
     return caput, _data
 
 
+def hxltm_hashtag_ix_ad_rdf(
+    hashtag: str,
+    proprietates: list = None,
+    rdf_trivio: int = 1603,
+    limes_minimo: int = 1,
+    limes_maximo: int = 1,
+    proprietates_ignorato: list = None,
+    strictum: bool = False
+) -> str:
+    """hxltm_hashtag_ix_ad_rdf selectively upgrade some +ix_ to +rdf_p_
+
+    Args:
+        hashtag (str): The original hashtag
+        proprietates (list, optional): _description_. Defaults to None.
+        rdf_trivio (int, optional): _description_. Defaults to 1603.
+        limes_minimo (int, optional): Mininum number of upgrades. Defaults to 1.
+        limes_maximo (int, optional): Maximum number of ugrades. Defaults to 1.
+        proprietates_ignorato (list, optional): Regex list of ix_ hashtags
+                                                to ignore. Set to False to
+                                                disable defaults.
+        strictum (bool, optional): Less tolerant behavior. Defaults to False.
+
+
+    >>> _basi = '#item+rem+i_qcc+is_zxxx'
+    >>> _ix_III = '+ix_iso8601v2020+ix_xywdatap1540+ix_xywdatap2899v65'
+
+    ### Simpler case: if only one option is possible, assume it what user want
+    >>> hxltm_hashtag_ix_ad_rdf(_basi + '+ix_xywdatap1540')
+    '#item+rem+i_qcc+is_zxxx+rdf_p_wdata_p1540_s1603'
+
+    >>> hxltm_hashtag_ix_ad_rdf(_basi + _ix_III, proprietates=[
+    ...    'ix_xywdatap1540'])
+    '#item+rem+i_qcc+is_zxxx+ix_iso8601v2020+ix_xywdatap2899v65\
++rdf_p_wdata_p1540_s1603'
+
+    >>> hxltm_hashtag_ix_ad_rdf(_basi + _ix_III, proprietates=[
+    ...    r"ix_xywdatap1540"])
+    '#item+rem+i_qcc+is_zxxx+ix_iso8601v2020+ix_xywdatap2899v65\
++rdf_p_wdata_p1540_s1603'
+
+
+    ###>>> hxltm_hashtag_ix_ad_rdf(_basi + _ix_III)
+
+    Returns:
+        str: HXL hashtag
+    """
+    hashtag = hxl_hashtag_normalizatio(hashtag)
+
+    hxltm_prefix = ('#item+rem', '#meta+rem', '#status+rem')
+
+    if proprietates_ignorato is None:
+        proprietates_ignorato = [
+            # Example: ix_iso8601v2020
+            r"^ix_iso.*$",
+            # Example: ix_xywdatap2899v65 (but not ix_xywdatap2899)
+            r"^ix_xywdata(p|q)[0-9]{1,12}v.*$"
+        ]
+
+    ix_attrs = []
+    rdf_p_attrs = []
+    if not hashtag.startswith(hxltm_prefix):
+        # Assime is a generic HXL hashtag. Return as it is
+        # Similar to #item+conceptum+(...), which are simpler and require
+        # no special sorting
+        return hashtag
+
+    for item in hxltm_prefix:
+        if hashtag.startswith(item):
+            hxltm_hashtag = item
+            _hxltm_attrs = hashtag.replace(item + '+', '').split('+')
+            for item_II in _hxltm_attrs:
+                _ignore = False
+                if proprietates_ignorato is not None:
+                    for _ig_test in proprietates_ignorato:
+                        if re.match(_ig_test, item_II):
+                            _ignore = True
+                if not _ignore and item_II.startswith('ix_'):
+                    ix_attrs.append(item_II)
+                if item_II.startswith('rdf_p_'):
+                    rdf_p_attrs.append(item_II)
+            break
+
+    def _helper(rem: str, strictum: bool = True):
+        if rem.startswith('ix_xywdata'):
+            # ix_xywdatap
+            # ix_xywdataq
+            return 'rdf_p_wdata_{0}_s{1}'.format(
+                rem.replace('ix_xywdata', ''), str(rdf_trivio)
+            )
+        if strictum:
+            raise NotImplementedError('[{0}] [{1}]'.format(
+                rem, hashtag
+            ))
+        else:
+            return False
+
+    if proprietates is None:
+        if limes_minimo == 1 and len(rdf_p_attrs) == 1:
+            # Already parsed before, let's keep at it is
+            pass
+        elif limes_minimo == 1 and len(ix_attrs) == 1:
+            _old = ix_attrs[0]
+            _new = _helper(_old)
+            _hxltm_attrs[_hxltm_attrs.index(_old)] = _new
+        elif limes_minimo == 0 and len(ix_attrs) == 0:
+            # Allowed to ignore
+            pass
+        else:
+            if not hxltm_hashtag.startswith('#meta'):
+                # Tolerate malformated #meta's
+                raise SyntaxError(
+                    '[{0}] limes[{1}] limes_minimo [{2}]'.format(
+                        hashtag, len(ix_attrs), limes_minimo))
+    else:
+        _old_and_new = {}
+        _done = False
+        for prop_test in proprietates:
+            if isinstance(prop_test, str):
+                for ix_item in ix_attrs:
+                    if ix_item.startswith(prop_test):
+                        _new = _helper(ix_item)
+                        _old_and_new[ix_item] = _new
+                # resultatum.append(_ht_novo)
+
+                if len(_old_and_new.keys()) <= limes_maximo:
+                    _done = True
+                    break
+        if len(_old_and_new.keys()) <= limes_maximo and \
+                len(_old_and_new.keys()) >= limes_minimo:
+            for _old, _new in _old_and_new.items():
+                _hxltm_attrs[_hxltm_attrs.index(_old)] = _new
+
+    # @TODO replace _hxltm_attrs final values
+    return hxl_hashtag_normalizatio(
+        hxltm_hashtag + '+{0}'.format('+'.join(_hxltm_attrs)))
+
+
 def hxltm_index_praeparationi(
     caput: list, data: list,
     index_ad_columnam: str = None, strictum: bool = False
@@ -6500,7 +6946,11 @@ def hxltm_index_praeparationi(
     if not index_ad_columnam:
         index_ad_columnam = 0
     else:
-        index_ad_columnam = caput.index(index_ad_columnam)
+        de_facto = qhxl_select(
+            caput, index_ad_columnam, unicum=True, strictum=True)
+        # print('de_facto', de_facto, caput)
+        # index_ad_columnam = caput.index(index_ad_columnam)
+        index_ad_columnam = caput.index(de_facto)
 
     _data_json = {}
     data_json = {}
@@ -7332,6 +7782,53 @@ def qhxl_bcp47_2_hxlattr(bcp47: str) -> str:
             resultatum += '+ix_' + item
 
     return resultatum
+
+
+def qhxl_select(caput: list, query: str, unicum: bool = False, strictum: bool = False):
+    """qhxl_select
+
+    Select HXL hashtags from list of header of hashtags without
+    need be exact
+
+    Args:
+        caput (list): HXL hashtags header
+        query (str): query to search for parts
+        unicum (bool): Return just one item instead of always list
+        strictum (bool): Force have at least one value
+
+    Returns:
+        list: 0 or more results
+    """
+    result_filtered = []
+
+    if query in caput:
+        # Exact match
+        return query if unicum else [query]
+
+    query_parts = query.replace('#', '').strip('+').split('+')
+    # query_parts = filter(None, query_parts)
+    for res in caput:
+        _failed = False
+        _res_parts = res.replace('#', '').strip('+').split('+')
+        # _res_parts = filter(None, _res_parts)
+        for _q in query_parts:
+            if _q not in _res_parts:
+                _failed = True
+                continue
+        if not _failed:
+            result_filtered.append(res)
+
+    if strictum is True and len(result_filtered) == 0:
+        raise ValueError('<{0}> not found in <{1}>'.format(query, caput))
+
+    if strictum is True and unicum is True and len(result_filtered) > 1:
+        raise ValueError('Non unicum <{0}>: <{1}>; caput <{2}>'.format(
+            query, result_filtered, caput))
+
+    if unicum:
+        return result_filtered[0]
+
+    return result_filtered
 
 
 def res_interlingualibus_formata(rem: dict, query) -> str:
