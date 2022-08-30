@@ -364,10 +364,10 @@ __temp_download_external_cod_data() {
 # bootstrap_999999_1603_45_16_fetch_data
 # bootstrap_999999_1603_45_16
 
-# __temp_fetch_external_indexes
+__temp_fetch_external_indexes
 # __temp_index_praeparationi_1603_45_16
 # __temp_preprocess_external_indexes
-# exit 1
+exit 1
 
 # @TODO manualy renamed 999999/1603/45/16/xlsx/aze.xlsx[aze_adm1]
 #       from 'admin0Name_en' to 'admin0Pcode' (2022-06-12 )

@@ -1593,7 +1593,6 @@ class DataScrapping:
         else:
             data_sorted = hxltm__data_sort(fonti)
 
-
         if self.ignoratio_incognitis:
             indicator_index = data_sorted[0].index(
                 '#item+conceptum+codicem')
@@ -1610,7 +1609,6 @@ class DataScrapping:
             data_sorted.extend(data_novo)
 
             # raise NotImplementedError
-
 
         is_hotfix_need = False
         if self.objectivum_transformationi and \
