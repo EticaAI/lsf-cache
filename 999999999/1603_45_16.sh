@@ -291,11 +291,14 @@ __temp_preproces_quicktest_1603_16_24() {
 }
 
 __temp_download_external_cod_data() {
+  since="${1-'2022-01-01'}"
   USER_AGENT="EticaAI/lexicographi-sine-finibus/2022.05.19 (https://meta.wikimedia.org/wiki/User:EmericusPetro; rocha@ieee.org) 1603_45_16.sh/0.1"
 
   fontem_archivum="${ROOTDIR}/999999/1603/45/16/1603_45_16.index.hxl.csv"
   objectivum_archivum_temporarium_todo="${ROOTDIR}/999999/0/1603_45_16.todo.hxl.csv"
+  # objectivum_archivum_temporarium_todo_date="${ROOTDIR}/999999/0/1603_45_16.tododate.hxl.csv"
   objectivum_archivum_temporarium_todo_txt="${ROOTDIR}/999999/0/1603_45_16.todo.txt"
+  objectivum_archivum_temporarium_todo_txt_recent="${ROOTDIR}/999999/0/1603_45_16.todo-recent.txt"
   objectivum_archivum_temporarium_todo_txt2="${ROOTDIR}/999999/0/1603_45_16.todo~2.txt"
   objectivum_archivum="${ROOTDIR}/999999/1603/45/16/1603_45_16.index.hxl.csv"
   echo "${FUNCNAME[0]} ... USER_AGENT [$USER_AGENT] "
@@ -314,7 +317,7 @@ __temp_download_external_cod_data() {
   "${ROOTDIR}/999999999/0/999999999_7200235.py" \
     --methodus=de_hxltm_ad_hxltm \
     --cum-filtris='LOWER(#country+code+v_iso3)' \
-    --cum-columnis='#country+code+v_iso3,#item+source+type_xlsx' \
+    --cum-columnis='#country+code+v_iso3,#date+updated,#item+source+type_xlsx' \
     "$fontem_archivum" |
     hxldedup --tags='#item+source+type_xlsx' \
       >"$objectivum_archivum_temporarium_todo_txt"
@@ -324,8 +327,25 @@ __temp_download_external_cod_data() {
   sort "${objectivum_archivum_temporarium_todo_txt}" | uniq \
     >"$objectivum_archivum_temporarium_todo_txt2"
 
+  hxlselect --query="#date+updated>$since" \
+    "${objectivum_archivum_temporarium_todo_txt}" \
+    "${objectivum_archivum_temporarium_todo_txt_recent}"
+
+  sed -i '1d' "${objectivum_archivum_temporarium_todo_txt_recent}"
+
+  todo_lines=$(wc -l "${objectivum_archivum_temporarium_todo_txt_recent}" | cut -f1 -d' ')
+
+  if [ "$todo_lines" = "1" ]; then
+    echo "No updates since [$since]. Stoping now..."
+    return 0
+  else
+    echo "[($todo_lines - 1)] recent changes. Continuing now..."
+  fi
+
+  # exit 1
+
   # while IFS= read -r line; do
-  while IFS=, read -r iso3 source_url; do
+  while IFS=, read -r iso3 updated source_url; do
     # if [ -n "$iso3" ]; then
     if [[ $iso3 != \#* ]]; then
 
@@ -334,6 +354,8 @@ __temp_download_external_cod_data() {
       objectivum_archivum="${ROOTDIR}/999999/1603/45/16/xlsx/${_iso3}.xlsx"
 
       echo "iso3 [${_iso3}]"
+      echo ""
+      echo "updated [${updated}]"
       echo ""
       echo "source_url [${_source_url}]"
       echo ""
@@ -350,9 +372,10 @@ __temp_download_external_cod_data() {
 
       ls -lha "$objectivum_archivum" || true
       # 5 min sleep
-      sleep 300
+      sleep 10
     fi
-  done <"$objectivum_archivum_temporarium_todo_txt"
+    # done <"$objectivum_archivum_temporarium_todo_txt"
+  done <"$objectivum_archivum_temporarium_todo_txt_recent"
 
   # curl --user-agent "$USER_AGENT" \
   #   "https://data.humdata.org/api/3/action/package_search?q=vocab_Topics=common+operational+dataset+-+cod" |
@@ -364,16 +387,17 @@ __temp_download_external_cod_data() {
 # bootstrap_999999_1603_45_16_fetch_data
 # bootstrap_999999_1603_45_16
 
-__temp_fetch_external_indexes
-# __temp_index_praeparationi_1603_45_16
-# __temp_preprocess_external_indexes
+# __temp_fetch_external_indexes
+__temp_index_praeparationi_1603_45_16
+__temp_preprocess_external_indexes
 exit 1
 
 # @TODO manualy renamed 999999/1603/45/16/xlsx/aze.xlsx[aze_adm1]
 #       from 'admin0Name_en' to 'admin0Pcode' (2022-06-12 )
 
-# __temp_download_external_cod_data
-# exit 1
+LASTRUN="2022-08-01"
+__temp_download_external_cod_data "$LASTRUN"
+exit 1
 # echo "all"
 
 ## DEBUG: re-enable later if this line still commented
